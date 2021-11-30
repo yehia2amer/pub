@@ -1,0 +1,27 @@
+- [x] Initial wizard on Apps
+- [x] Add catalog
+- [x] Install app
+- [x] Edit app
+- [x] Upgrade app
+- [x] Rollback app
+- [x] Delete app
+- [x] Showcase validation (from an app that haves)
+- [x] Generate Cert (Cloudflare)
+- [x] Install traefik
+- [x] Change traefik ports to 80/443
+- [x] Add ingress on app using the cert
+- [x] Add Middlewares
+- [x] Network Connect Apps 
+- [ ] Setting up External-Services
+	- [x] Setup ExternalIP service with ingress
+	- [ ] Setup ExternalName service with ingress
+- [x] Setting up additional Storage
+- [ ] Migration Guide (docker-compose -> SCALE)
+- [ ] Setup cloudflare to point to WAN
+	- [ ] Static
+	- [ ] DHCP
+	- [ ] ExternalDNS (Delayed)
+- [ ] Setup local DNS resolution (Delayed)
+- [x] VPN
+	- [x] Wireguard
+	- [x] OpenVPN
