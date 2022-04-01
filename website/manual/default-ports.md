@@ -372,6 +372,7 @@ These defaults can of course be changed, but as we guarantee "sane, working defa
 | typecho                    |      main       |      main       | 10207 |   TCP    |                                                         |
 | xwiki                      |      main       |      main       | 10208 |   TCP    |                                                         |
 | picoshare                  |      main       |      main       | 10209 |   TCP    |                                                         |
+| linkding                   |      main       |      main       | 10210 |   TCP    |                                                         |
 | storj-node                 |      main       |      main       | 14002 |   TCP    |                                                         |
 | satisfactory               |     beacon      |     beacon      | 15000 |   UDP    |                                                         |
 | satisfactory               |      query      |      query      | 15777 |   UDP    |                                                         |
