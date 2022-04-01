@@ -23,16 +23,7 @@ Name: ntopng
 Network: host
 Networking:
   Mode: host
-Overview: "High-Speed Web-based Traffic Analysis and Flow Collection \r\n\r\n\r\n\r\
-  \nClick advanced view and in post arguments change eth0 to the network interface\
-  \ you want to monitor.\r\nSince this is running host mode you can change the default\
-  \ port of 3000 to whatever you need by by\r\nchanging the --http-port in post arguments\
-  \ to the port you would like to use. Don't forget to change\r\nWebUI to match.\r\
-  \n\r\nThis image runs a redis server so if you are already hosting one you will\
-  \ need to add \r\n-r YOUR_REDIST_SERVER:YOUR_REDIS_PORT at the very least to post\
-  \ arguments. The\r\nformat that -r takes is the following: [h[:port[:pwd]]][@db-id]\
-  \ \r\nYou will also want this container to start after your redis container so it\
-  \ doesn't conflict."
+Overview: "High-Speed Web-based Traffic Analysis and Flow Collection \r\n"
 PostArgs: -i eth0 --http-port 0.0.0.0:3000
 Privileged: 'false'
 Project: https://www.ntop.org/

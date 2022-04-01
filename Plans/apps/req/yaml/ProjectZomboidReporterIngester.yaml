@@ -79,22 +79,7 @@ Network: bridge
 Networking:
   Mode: bridge
 Overview: "This is the ingester which grabs statiscs from your Project Zomboid server\
-  \ files and uploads them to the SQL database for the API to access.\r\n\r\nNOTE:\
-  \ if you havnt had a player connect to your server yet, you will get an error.\r\
-  \n\r\nIf you are having issues with the database tables not being autocreated, connect\
-  \ to the database with adminer (or another program of your choice) and create the\
-  \ tables and structure with the following:\r\n\r\nUSE `Zombo`;\r\n\r\nSET NAMES\
-  \ utf8mb4;\r\n\r\nCREATE TABLE `Game` (\r\n  `id` int NOT NULL AUTO_INCREMENT,\r\
-  \n  `dayofmonth` int NOT NULL,\r\n  `month` int NOT NULL,\r\n  `daysSinceStart`\
-  \ int NOT NULL,\r\n  `name` text NOT NULL,\r\n  `maxPlayers` int NOT NULL,\r\n \
-  \ `startDay` int NOT NULL,\r\n  `startMonth` int NOT NULL,\r\n  `startYear` int\
-  \ NOT NULL,\r\n  `year` int NOT NULL,\r\n  PRIMARY KEY (`id`)\r\n) ENGINE=InnoDB\
-  \ DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;\r\n\r\n\r\nCREATE TABLE `Players`\
-  \ (\r\n  `id` int NOT NULL AUTO_INCREMENT,\r\n  `username` text NOT NULL,\r\n  `charname`\
-  \ text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,\r\n  `x` float\
-  \ NOT NULL,\r\n  `y` float NOT NULL,\r\n  `data` blob NOT NULL,\r\n  `lastOnline`\
-  \ text NOT NULL,\r\n  PRIMARY KEY (`id`)\r\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4\
-  \ COLLATE=utf8mb4_0900_ai_ci;"
+  \ files and uploads them to the SQL database for the API to access.\r\n"
 PostArgs: ''
 Privileged: 'false'
 Project: https://github.com/ChrisAshtear/Zomboid-Server-Stats-Reporter/

@@ -179,18 +179,7 @@ Networking:
 Official: true
 Overview: "Very simple WebDAV server based on Apache. You need a WebDAV client to\
   \ transfer files. It does not include a WebUI to upload files through your browser.\r\
-  \n\r\nSpecifying USERNAME and PASSWORD only supports a single user. If you want\
-  \ to have lots of different logins for various users, bind mount user.passwd as\
-  \ follows:\r\n\r\nOpen the Unraid WebTerminal &gt;_ and execute the following:\r\
-  \n[b]mkdir /mnt/user/appdata/apachewebdav[/b]\r\n[b]touch /mnt/user/appdata/apachewebdav/user.passwd[/b]\r\
-  \n\r\nAdd a new Path to this container with the following values:\r\n[b]Container\
-  \ Path: /user.passwd[/b]\r\n[b]Host Path: /mnt/user/appdata/apachewebdav/user.passwd[/b]\r\
-  \n\r\nAfter starting the container, open its console and execute the following for\
-  \ \"Basic\" authentification by changing \"John\" to your username (it asks for\
-  \ your password after executing):\r\n[b]htpasswd -B /user.passwd John[/b]\r\n\r\n\
-  or this if you choosed \"Digest\" authentification:\r\n[b]htdigest user.passwd WebDAV-Login\
-  \ John[/b]\r\n\r\nExecute the command multiple times with different usernames to\
-  \ add more users."
+  \n"
 PostArgs: ''
 Privileged: 'false'
 Project: https://httpd.apache.org/docs/2.4/mod/mod_dav.html

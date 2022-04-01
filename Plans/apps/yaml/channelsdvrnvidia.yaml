@@ -104,27 +104,7 @@ Networking:
   Mode: host
 Overview: 'The Channels DVR backend engine with NVIDIA HW transcoding.[br]
 
-  [b][span style=''color: #E80000;'']Here is an explanation of the default mappings:[/span][/b]
-
-  [b]Port 8089[/b]: This is the default port that ChannelsDVR listens on. Changing
-  the port is not recommended.
-
-  [b]/shares/DVR[/b]: This is where the ChannelsDVR folder exists for recordings to
-  be stored. The DVR folder in the Channels Settings would then be: /shares/DVR and
-  you enter the location on your server where the data will be. Recommend: /mnt/user/data/Media/ChannelsDVR
-
-  [b]/channels-dvr[/b]: This is where the DVR application and configuration is stored.
-  Recommend having this locally at /mnt/user/appdata/channels-dvr
-
-  [b]--runtime=nvidia[/b]: This is in [b]"extra parameters"[/b] (switch on advanced
-  view) and allows passing through the NVIDIA graphics card to the container. Environmental
-  Variables for [b]NVIDIA_VISIBLE_DEVICES[/b] and [b]NVIDIA_DRIVER_CAPABILITIES[/b]
-  are already in the template, but you can change the ''all'' variable for the device
-  to match the UUID of a specific device if you have more than one.
-
-  [b]Optional[/b]: Add in a mapping for your personal media, i.e. Host Directory of
-  ''/mnt/user/data/Media/Movies'' with a Container Directory of ''/shares/Movies''
-  and then add that as a Movie Source for Local Content in the server settings.'
+  '
 PostArgs: ''
 Privileged: 'false'
 Project: https://getchannels.com/dvr

@@ -113,36 +113,7 @@
   Name: 2FAuth
   Network: bridge
   Official: true
-  Overview: "DESCRIPTION\r\n2FAuth is a web based self-hosted alternative to One Time\
-    \ Passcode (OTP) generators like Google Authenticator, designed for both mobile\
-    \ and desktop.\r\n\r\nIt aims to ease you perform your 2FA authentication steps\
-    \ whatever the device you handle, with a clean and suitable interface.\r\n\r\n\
-    Main features:\r\n\u2022 Manage your 2FA accounts and organize them using Groups\r\
-    \n\u2022 Scan and decode any QR code to add account in no time\r\n\u2022 Add custom\
-    \ account without QR code thanks to an advanced form\r\n\u2022 Edit accounts,\
-    \ even the imported ones\r\n\u2022 Generate TOTP and HOTP security codes\r\n\r\
-    \nLive demo:\r\nhttps://demo.2fauth.app/\r\nuser: demo@2fauth.app\r\npass: demo\r\
-    \n\r\nHow to proceed when restoring the container?\r\n0. Be sure to backup the\
-    \ DB file (database.sqlite) somewhere in your server, located under '/.../appdata/2fauth/',\
-    \ or you can back up the whole directory to simplify.\r\n1. Load and fill-in all\
-    \ the requiered fields in the template (same configuration as it was in previous\
-    \ container), then create the container, as usual. Stop it now.\r\n2. Navigate\
-    \ to where you could save the DB file (i.e.: using Krusader), and place it under\
-    \ '/.../appdata/2fauth' directory. Launch the container again.\r\n3. Done!\r\n\
-    \r\nWARNING\r\nEven if the config dir (/.../appdata/2fauth) is supposed to work\
-    \ with 700 (chmod) permissions, I could not get it working as it should on unRAID.\
-    \ Instead, I had to set full permissions: 777, if not, the container refused to\
-    \ start. If someone could help on this I would thank you very much.\r\n\r\nNOTES\r\
-    \n\u2022 Run the following cmd via Terminal (unRAID) before building the container:\
-    \ mkdir -m 777 /mnt/user/appdata/2fauth.\r\n\u2022 A default app key (APP_KEY)\
-    \ is already included in the template, but it's highly recommended to change it\
-    \ by your own. Then, copy and paste it into the template, and rebuild the container.\
-    \ Be sure to clean the config directory (appdata), so the DB is re-generated with\
-    \ new the key.\r\n\u2022 There are some other variables that the user can use\
-    \ on this template, if needed, but I didn't include all of them because them are\
-    \ not really necessary for the most basic configuration.  Check the '.env.example'\
-    \ file in the root of the GitHub repo to know more.\r\n\u2022 Redis server is\
-    \ needed.\r\n\r\nVERSION\r\n1.0 (2022-01-23)"
+  Overview: "DESCRIPTION\r\n"
   PostArgs: ''
   Privileged: 'false'
   Project: https://github.com/Bubka/2FAuth
@@ -223,15 +194,7 @@ Admidio:
   Name: Admidio
   Network: bridge
   Official: true
-  Overview: "DESCRIPTION\r\nAdmidio is a free open source user management system for\
-    \ websites of organizations and groups. The system has a flexible role model so\
-    \ that it\u2019s possible to reflect the structure and permissions of your organization.\
-    \ You can create an individual profile for your members by adding or removing\
-    \ fields. Additional to these functions the system contains several modules like\
-    \ member lists, event manager, guestbook, photo album or a documents &amp; files\
-    \ area.\r\n\r\nLive demo:\r\nhttps://www.admidio.org/demo_en/adm_program/modules/announcements/announcements.php\r\
-    \n\r\nNOTES\r\n\u2022 MySQL or PostgreSQL database is required.\r\n\r\nVERSION\r\
-    \n1.0 (2022-02-24)"
+  Overview: "DESCRIPTION\r\n"
   PostArgs: ''
   Privileged: 'false'
   Project: https://github.com/Admidio/admidio
@@ -520,25 +483,7 @@ LogicalDOCCE:
   Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/logicaldoc-ce_200x200.png
   Name: LogicalDOC-CE
   Network: bridge
-  Overview: "DESCRIPTION\r\nLogicalDOC Community Edition (LogicalDOC CE) is an open-source\
-    \ document management software platform. By leveraging on the best-of-breed Java\
-    \ frameworks, it creates a flexible and powerful document management platform,\
-    \ which thanks to the most advanced presentation technology (Google GWT), is able\
-    \ to meet the needs of usability and more demanding management. LogicalDOC is\
-    \ both document management and collaboration system. The software is loaded with\
-    \ many functions and allows organizing, index, retrieving, controlling and distributing\
-    \ important business documents securely and safely for any organization and individual.\r\
-    \n\r\nThe design of LogicalDOC is based on best-of-breed Java technologies in\
-    \ order to provide a reliable DMS platform. The main interface is Web-based, no\
-    \ need to install anything else; users can access the system through their browser.\
-    \ LogicalDOC CE is 100% free software, supports all major DBMS and this particular\
-    \ distribution installation can be used with MySQL, MariaDB and PostreSQL.\r\n\
-    \r\nNOTES\r\n\u2022 The default credentials are: admin/admin (user/pass).\r\n\u2022\
-    \ An external database instance (MySQL, MariaDB, PosgreSQL, MSSQL or Oracle) is\
-    \ required to be connected to LogicalDOC.\r\n\u2022 If you are going to use a\
-    \ different database instance, other than MySQL (MySQL or MariaDB), add the 'DB_ENGINE'\
-    \ variable, and set it accordingly: mysql (default), mssql, oracle or postgres.\r\
-    \n\r\nVERSION\r\n1.0 (2021-12-02)"
+  Overview: "DESCRIPTION\r\n"
   PostArgs: ''
   Privileged: 'false'
   Project: https://github.com/logicaldoc/logicaldoc-ce
@@ -795,10 +740,7 @@ OneTimeSecret:
   Networking:
     Mode: bridge
   Overview: "Containerized OneTimeSecret with customization, and without paid/account\
-    \ features.\r\n&lt;br&gt;\r\nJust simple, secure password sharing.\r\n&lt;br&gt;\r\
-    \nKeep sensitive info (passwords) out of your email &amp; chat logs.\r\n&lt;br&gt;\r\
-    \n&lt;br&gt;\r\nRequires Redis container with a password set on it! See support\
-    \ thread for more information."
+    \ features.\r\n"
   PostArgs: ''
   Privileged: 'false'
   Project: https://github.com/siw36/onetimesecret
@@ -980,13 +922,7 @@ OpenEats:
   Networking:
     Mode: bridge
   Overview: "OpenEats is a recipe management site that allows users to create, share,\
-    \ and store their personal collection of recipes.\r\nRequires MariaDB container\
-    \ (I recommend LinuxServer's container)\r\n\r\nFIRST RUN: Please wait while the\
-    \ container creats all the necessary tables in the SQL database.\r\nThis can take\
-    \ 5-10 minutes or so and the container will have NO log output when it does this.\r\
-    \nPlease be patient, if you interrupt this by stopping the container it will leave\
-    \ you with a broken database!\r\n\r\nPlease use support link for more information\
-    \ about this container."
+    \ and store their personal collection of recipes.\r\n"
   PostArgs: ''
   Privileged: 'false'
   Project: https://github.com/open-eats/OpenEats
@@ -1274,25 +1210,7 @@ PassboltCE:
   Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/passbolt.png
   Name: Passbolt-CE
   Network: bridge
-  Overview: "DESCRIPTION\r\nThis is the template for Passbolt CE (Community Edition),\
-    \ a free and open source password manager that allows team members to store and\
-    \ share credentials securely.\r\n\r\nComparison chart:\r\nhttps://signup.passbolt.com/pricing/pro#features\r\
-    \n\r\nHow to proceed after first launch?\r\n1. Register new user at first launch...\r\
-    \nOpen unRAID Terminal (not from container), and enter the following cmd (your\
-    \ details): 'docker exec CONTAINER_NAME su -m -c \"bin/cake passbolt register_user\
-    \ -u USER@EMAIL.COM -f USER_NAME -l USER_SURNAME -r admin\" -s /bin/sh www-data'.\r\
-    \n2. Generating registration link...\r\nOnce the previous cmd finishes, it will\
-    \ generate a registration link based on your data entered before. The URL will\
-    \ be something like: 'https://HOST_IP:PORT/setup/install/5426733-63k6...'. Now,\
-    \ copy/paste (or just click) the address and open it with your favourite web browser.\r\
-    \n3. Finishing registration process...\r\nYou will be asked to create a passphrase\
-    \ to protect your account, and after entering it a recovery kit file (passbolt-recovery-kit.asc)\
-    \ will be generated and downloaded locally. Now, continue with the rest of the\
-    \ steps. Done!\r\n\r\nNOTES\r\n\u2022 It requires an external database. (MariaDB,\
-    \ MySQL)\r\n\u2022 It may asks you to install the browser's extension (Chrome,\
-    \ Mozilla...).\r\n\u2022 You have many other variables to use on this template\
-    \ if you need them. Check the GitHub repo to know more.\r\n\r\nVERSION\r\n1.0\
-    \ (2022-02-03)"
+  Overview: "DESCRIPTION\r\n"
   PostArgs: ''
   Privileged: 'false'
   Project: https://github.com/passbolt/passbolt_docker
@@ -1427,26 +1345,7 @@ PassboltPRO:
   Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/passbolt.png
   Name: Passbolt-PRO
   Network: bridge
-  Overview: "DESCRIPTION\r\nThis is the template for Passbolt PRO (Business Edition),\
-    \ a free and open source password manager that allows team members to store and\
-    \ share credentials securely.\r\n\r\nComparison chart:\r\nhttps://signup.passbolt.com/pricing/pro#features\r\
-    \n\r\nHow to proceed after first launch?\r\n1. Register new user at first launch...\r\
-    \nOpen unRAID Terminal (not from container), and enter the following cmd (your\
-    \ details): 'docker exec CONTAINER_NAME su -m -c \"bin/cake passbolt register_user\
-    \ -u USER@EMAIL.COM -f USER_NAME -l USER_SURNAME -r admin\" -s /bin/sh www-data'.\r\
-    \n2. Generating registration link...\r\nOnce the previous cmd finishes, it will\
-    \ generate a registration link based on your data entered before. The URL will\
-    \ be something like: 'https://HOST_IP:PORT/setup/install/5426733-63k6...'. Now,\
-    \ copy/paste (or just click) the address and open it with your favourite web browser.\r\
-    \n3. Finishing registration process...\r\nYou will be asked to create a passphrase\
-    \ to protect your account, and after entering it a recovery kit file (passbolt-recovery-kit.asc)\
-    \ will be generated and downloaded locally. Now, continue with the rest of the\
-    \ steps. Done!\r\n\r\nNOTES\r\n\u2022 It requires an external database. (MariaDB,\
-    \ MySQL)\r\n\u2022 It may asks you to install the browser's extension (Chrome,\
-    \ Mozilla...).\r\n\u2022 You have many other variables to use on this template\
-    \ if you need them. Check the GitHub repo to know more.\r\n\u2022 Be sure to place\
-    \ your key under: '/.../passbolt-pro/key/subscription_key.txt'.\r\n\r\nVERSION\r\
-    \n1.0 (2022-02-03)"
+  Overview: "DESCRIPTION\r\n"
   PostArgs: ''
   Privileged: 'false'
   Project: https://github.com/passbolt/passbolt_docker
@@ -1621,15 +1520,7 @@ Pastefy:
   Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/pastefy.png
   Name: Pastefy
   Network: bridge
-  Overview: "DESCRIPTION\r\nPastefy is an open source alternative to Gists or Pastebin.\r\
-    \nYou want to share some code to your friends or just save it for yourself? Just\
-    \ paste it.\r\n\r\nFeatures:\r\n\u2022 Raw-Preview\r\n\u2022 Copy Button\r\n\u2022\
-    \ Fork\r\n\u2022 An API available\r\n\u2022 Log in\r\n\u2022 Folders\r\n\u2022\
-    \ See your created pastes\r\n\u2022 Delete created pastes\r\n\u2022 Create paste\
-    \ with 'curl -F f=@file.txt pastefy.ga'\r\n\r\nLive demo:\r\nhttps://pastefy.ga/\r\
-    \n\r\nNOTES\r\n\u2022 MySQL database linked to this container is required.\r\n\
-    \u2022 You can know more about all the available variables, check the file '.env.example'\
-    \ in the root of GitHub branch.\r\n\r\nVERSION\r\n1.0 (2022-01-25)"
+  Overview: "DESCRIPTION\r\n"
   PostArgs: ''
   Privileged: 'false'
   Project: https://github.com/interaapps/pastefy
@@ -1713,12 +1604,7 @@ PornVault:
   Name: PornVault
   Network: bridge
   Overview: "\U0001F48B Manage your ever-growing porn collection. Using Vue &amp;\
-    \ GraphQL\r\n\r\n[b]This container needs Elasticsearch![b]\r\n\r\n1. Fill out\
-    \ this template.\r\n2. Wait for the container to start.\r\n3. Edit the config.json\
-    \ file within the config directory. Add the following to the top:\r\n\r\n  \"\
-    search\": {\r\n    \"host\": \"http://IpToYourElasticsearchInstance:9200\",\r\n\
-    \    \"log\": false,\r\n    \"version\": \"7.x\",\r\n    \"auth\": null\r\n  },\r\
-    \n\r\n4. Restart the container.\r\n5. You should now be able to access the WebUI."
+    \ GraphQL\r\n"
   Privileged: 'false'
   Project: https://github.com/porn-vault/porn-vault
   Registry: https://hub.docker.com/r/leadwolf/porn-vault/
@@ -1822,11 +1708,7 @@ ProjectZomboidReporterAPI:
   Networking:
     Mode: bridge
   Overview: "This api is used to access your project zomboid data stored in sql to\
-    \ pass to the main reporter.\r\n\r\nNOTE: if your sql database is not running\
-    \ on the default port, you will need to provide a value for it below\r\nYou will\
-    \ also need to complete the index.js override path below.\r\nThe current image\
-    \ doesnt allow for a custom sql port, tweaked file available below.\r\n\r\nFixed\
-    \ index.js: https://raw.githubusercontent.com/natcoso9955/Zomboid-Server-Stats-Reporter/main/backend/index.js"
+    \ pass to the main reporter.\r\n"
   PostArgs: ''
   Privileged: 'false'
   Project: https://github.com/ChrisAshtear/Zomboid-Server-Stats-Reporter/
@@ -1918,22 +1800,7 @@ ProjectZomboidReporterIngester:
   Networking:
     Mode: bridge
   Overview: "This is the ingester which grabs statiscs from your Project Zomboid server\
-    \ files and uploads them to the SQL database for the API to access.\r\n\r\nNOTE:\
-    \ if you havnt had a player connect to your server yet, you will get an error.\r\
-    \n\r\nIf you are having issues with the database tables not being autocreated,\
-    \ connect to the database with adminer (or another program of your choice) and\
-    \ create the tables and structure with the following:\r\n\r\nUSE `Zombo`;\r\n\r\
-    \nSET NAMES utf8mb4;\r\n\r\nCREATE TABLE `Game` (\r\n  `id` int NOT NULL AUTO_INCREMENT,\r\
-    \n  `dayofmonth` int NOT NULL,\r\n  `month` int NOT NULL,\r\n  `daysSinceStart`\
-    \ int NOT NULL,\r\n  `name` text NOT NULL,\r\n  `maxPlayers` int NOT NULL,\r\n\
-    \  `startDay` int NOT NULL,\r\n  `startMonth` int NOT NULL,\r\n  `startYear` int\
-    \ NOT NULL,\r\n  `year` int NOT NULL,\r\n  PRIMARY KEY (`id`)\r\n) ENGINE=InnoDB\
-    \ DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;\r\n\r\n\r\nCREATE TABLE\
-    \ `Players` (\r\n  `id` int NOT NULL AUTO_INCREMENT,\r\n  `username` text NOT\
-    \ NULL,\r\n  `charname` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci\
-    \ NOT NULL,\r\n  `x` float NOT NULL,\r\n  `y` float NOT NULL,\r\n  `data` blob\
-    \ NOT NULL,\r\n  `lastOnline` text NOT NULL,\r\n  PRIMARY KEY (`id`)\r\n) ENGINE=InnoDB\
-    \ DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;"
+    \ files and uploads them to the SQL database for the API to access.\r\n"
   PostArgs: ''
   Privileged: 'false'
   Project: https://github.com/ChrisAshtear/Zomboid-Server-Stats-Reporter/
@@ -1982,10 +1849,7 @@ ProjectZomboidReporterWeb:
     Mode: bridge
   Overview: "This is an nginx server with a custom conf applied. It will grab combined\
     \ API calls to the api endpoint, and also components from the frontend template.\r\
-    \n\r\nYou will need to download the conf file from the below and modify the below\
-    \ lines to match your server ip, then place in the appdata folder.\r\n\r\nhttps://raw.githubusercontent.com/natcoso9955/Zomboid-Server-Stats-Reporter/main/nginx/default.conf\r\
-    \n\r\nupstream client {\r\n  server YOURSERVERIPHERE:3000;\r\n}\r\n\r\nupstream\
-    \ api {\r\n  server YOURSERVERIPHERE:3001;\r\n}"
+    \n"
   PostArgs: ''
   Privileged: 'true'
   Project: https://github.com/ChrisAshtear/Zomboid-Server-Stats-Reporter/
@@ -2134,9 +1998,7 @@ PterodactylDeamons:
   Overview: "Pterodactyl\xAE is a free, open-source game server management panel built\
     \ with PHP, React, and Go. Designed with security in mind, Pterodactyl runs all\
     \ game servers in isolated Docker containers while exposing a beautiful and intuitive\
-    \ UI to end users.\r\n\r\nStop settling for less. Make game servers a first class\
-    \ citizen on your platform.\r\n\r\nAll the setups requiried is on the support\
-    \ area (Discord or Forum)"
+    \ UI to end users.\r\n"
   PostArgs: ''
   Privileged: 'true'
   Project: https://github.com/pterodactyl
@@ -2284,9 +2146,7 @@ PterodactylPanel:
   Overview: "Pterodactyl\xAE is a free, open-source game server management panel built\
     \ with PHP, React, and Go. Designed with security in mind, Pterodactyl runs all\
     \ game servers in isolated Docker containers while exposing a beautiful and intuitive\
-    \ UI to end users.\r\n\r\nStop settling for less. Make game servers a first class\
-    \ citizen on your platform.\r\n\r\nAll the setups requiried is on the support\
-    \ area (Discord or Forum)"
+    \ UI to end users.\r\n"
   PostArgs: ''
   Privileged: 'false'
   Project: https://github.com/pterodactyl
@@ -2333,15 +2193,7 @@ Sharry:
   Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/sharry2.png
   Name: Sharry
   Network: bridge
-  Overview: "DESCRIPTION\r\nSharry allows to share files with others in a simple way.\
-    \ It is a self-hosted web application. The basic concept is: upload files and\
-    \ get a url back that can then be shared.\r\n\r\nNOTES\r\n\u2022 Before building\
-    \ the container, you have to create the 'sharry.conf' file, and place in the directory\
-    \ that is mapped within the template (Config File). (click here to access the\
-    \ file content)\r\n\u2022 If you don't want to use an external database (PostgreSQL,\
-    \ MariaDB/MySQL), you can use H2. But, you will need to configure the template\
-    \ and 'sharry.conf' file accordingly. (check documentation for more info)\r\n\r\
-    \nVERSION\r\n1.0 (2021-12-16)"
+  Overview: "DESCRIPTION\r\n"
   PostArgs: -- /opt/sharry.conf
   Privileged: 'false'
   Project: https://github.com/eikek/sharry
@@ -2457,18 +2309,7 @@ Spotweb:
   Networking:
     Mode: bridge
   Overview: "Spotweb is a decentralized usenet community based on the Spotnet protocol.\r\
-    \n\r\nThe only required manual configuration is setting up a valid usenet server.\
-    \ You can follow this https://github.com/L4stIdi0t/Unraid-template/blob/master/Spotweb/write-up-spotweb.md\
-    \ \r\n\r\nSpotweb is configured as an open system after running docker-compose\
-    \ up, so everyone who can access can register an account (keep this in mind)\r\
-    \n\r\nIf you want to use the Spotweb API, create a new user and use the API key\
-    \ associated with that user\r\n\r\nTo prevent having to configure Spotweb manually\
-    \ upgrade-db.php is run to upgrade the database and reset the password for the\
-    \ admin user (so currently the admin always has password spotweb)\r\n\r\nCrond\
-    \ is used to run the retrieve.php script which updates Spotweb with the latest\
-    \ headers from a configured usenet server, the crontab is run every hour\r\n\r\
-    \nDepending on what you like, you can mount the /nzb volume and let Spotweb save\
-    \ nzb's to that directory (e.g. mount /nzb to a folder watched by sabnzbd)"
+    \n"
   PostArgs: ''
   Privileged: 'false'
   Project: https://github.com/spotweb/spotweb
@@ -2552,11 +2393,7 @@ Taskcafe:
   Official: true
   Overview: 'A free and open source alternative project management tool.
 
-    Please note that this project is still in active development. Some options may
-    not work yet!
-
-    Setup: Please install Postgresql first and then fill in the conncetion details
-    below'
+    '
   Project: https://github.com/JordanKnott/taskcafe
   Registry: https://hub.docker.com/r/taskcafe/taskcafe
   Repo: cheesemarathon's Repository
@@ -2691,11 +2528,7 @@ TrackManiaEvoSC:
   Network: bridge
   Networking:
     Mode: bridge
-  Overview: "A modern server controller for the game Trackmania (TM\xB2, 2020).\r\n\
-    EvoSC for trackmania servers, default configuration is that it works with my trackmania2020\
-    \ server template.\r\n\r\nEasiest way to make yourself admin for trackmania2020\
-    \ is to join the server, then you login your database and go to the Players table.\
-    \ Then you change the 3 to 1 behind your username under group."
+  Overview: "A modern server controller for the game Trackmania (TM\xB2, 2020).\r\n"
   PostArgs: ''
   Privileged: 'false'
   Project: https://github.com/EvoTM/EvoSC
@@ -2764,20 +2597,7 @@ Void:
   Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/void.png
   Name: Void
   Network: bridge
-  Overview: "DESCRIPTION\r\nA self-hosted file hosting service based on Zipline with\
-    \ many features.\r\n\r\nHow to proceed after container installation?\r\nBefore\
-    \ going into the next steps, configure the database container and run the required\
-    \ cmds. Then, after you have filled-in all the required fields (capital letters)\
-    \ from 'config.toml' file and Void's container was created (running)...\r\n1.\
-    \ Wait until the container loads and is being configured internally. Then, it\
-    \ will be stopped (fail to start).\r\n2. Launch the container again, and open\
-    \ the terminal on it.\r\n3. Run the following cmds: 'export DATABASE_URL=postgres://USER:PASS@HOST_IP:PORT/DB_NAME'\
-    \ (edit with your details) and 'yarn prisma db seed'.\r\n4. Now you can login\
-    \ with default credentials.\r\n5. Done!\r\n\r\nNOTES\r\n\u2022 The default credentials:\
-    \ admin/voiduser (user/pass).\r\n\u2022 An external PostgreSQL database is required.\r\
-    \n\u2022 Run the followind cmds and edit the 'config.toml' file before building\
-    \ the container: 'mkdir -m755 -p /mnt/user/appdata/void/config' and 'curl https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/dependencies/void/config.toml\
-    \ --output /mnt/user/appdata/void/config/config.toml'.\r\n\r\nVERSION\r\n1.0 (2022-02-10)"
+  Overview: "DESCRIPTION\r\n"
   PostArgs: ''
   Privileged: 'false'
   Project: https://github.com/AlphaNecron/Void/
@@ -2810,23 +2630,7 @@ WhatsAppAnalyzer:
   Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/whatsapp-analyzer_200x200.png
   Name: WhatsApp-Analyzer
   Network: bridge
-  Overview: "DESCRIPTION\r\nThis is a docker template for WhatsApp Analyzer, a simple\
-    \ analytics and visualization Python app, dashboard powered by Twitter-bootstrap\
-    \ and D3.js.\r\n\r\nWhatsApp Analyzer uses a number of open source projects to\
-    \ work properly:\r\n\u2022 Flask: microframework for Python based on Werkzeug,\
-    \ Jinja 2\r\n\u2022 Pandas: pandas is an open source, library providing high-performance,\
-    \ easy-to-use data structures and data analysis tools for the Python\r\n\u2022\
-    \ Twitter Bootstrap: great UI boilerplate for modern web apps\r\n\u2022 D3.js:\
-    \ JavaScript library for manipulating documents based on data, helps you bring\
-    \ data to life using HTML, SVG, and CSS.\r\n\u2022 jQuery: duh\r\n\r\nHere you\
-    \ can test a live demo:\r\nhttp://whatsapp-analyzer.herokuapp.com/\r\n\r\nINSTRUCTONS\r\
-    \n1\xBA Export your WhatsApp conversation(s) to a text file (.txt), without media\
-    \ export.\r\n2\xBA Upload it to analyzer via its web interface, and configure\
-    \ the date format.\r\n3\xBA All the information will be shown on the dashboard.\r\
-    \n\r\nNOTES\r\n\u2022 There\u2019s no way that it will work for everyone because\
-    \ I\u2019ve found that depending on your OS and version of WhatsApp, the format\
-    \ of text file lines varies wildly. I\u2019m sorry if it doesn\u2019t work for\
-    \ you.\r\n\u2022 Python 3.6+ is required on the host.\r\n\r\nVERSION\r\n1.0 (2021-11-30)"
+  Overview: "DESCRIPTION\r\n"
   PostArgs: ''
   Privileged: 'false'
   Project: https://github.com/Dineshkarthik/Whatsapp-analyzer
@@ -2921,8 +2725,7 @@ WordPress:
     Mode: bridge
   Official: true
   Overview: "WordPress is a free and open source blogging tool and a content management\
-    \ system (CMS) based on PHP and MySQL, which runs on a web hosting service.\r\n\
-    Use MariaDB (recommended) or Mysql as the external database."
+    \ system (CMS) based on PHP and MySQL, which runs on a web hosting service.\r\n"
   PostArgs: ''
   Privileged: 'false'
   Project: https://wordpress.org/
@@ -3114,13 +2917,7 @@ Zipline:
   Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/zipline.png
   Name: Zipline
   Network: bridge
-  Overview: "DESCRIPTION\r\nZipline is a ShareX/file upload server that is easy to\
-    \ use, packed with features and can be setup in one command!\r\n\r\nNOTES\r\n\u2022\
-    \ An external PostgreSQL database is required.\r\n\u2022 Default credentials:\
-    \ administrator/password (user/pass). If, for whatever reason, you can't access\
-    \ with default credentials, run the cmd 'yarn prisma migrate deploy' from container's\
-    \ terminal. Then, try again.\r\n\u2022 Zipline supports the use of an API to interact\
-    \ with. Check the documentation to know more.\r\n\r\nVERSION\r\n1.0 (2022-02-13)"
+  Overview: "DESCRIPTION\r\n"
   PostArgs: ''
   Privileged: 'false'
   Project: https://github.com/diced/zipline
@@ -3167,11 +2964,9 @@ antennas:
   Network: bridge
   Networking:
     Mode: bridge
-  Overview: "HDHomeRun emulator for Plex/Jellyfin/Emby DVR to connect to Tvheadend.[br][br]\n\
-    \    To run this container, [b]first create a config.yml on the config folder[/b]\
-    \ with the following lines (changing to the IPs, ports and tuner count of your\
-    \ system)[br][br]\n    tvheadend_url: http://user:pas@X.X.X.X:9981[br][br]\n \
-    \   antennas_url: http://X.X.X.X:5004[br][br]\n    tuner_count: 4"
+  Overview: 'HDHomeRun emulator for Plex/Jellyfin/Emby DVR to connect to Tvheadend.[br][br]
+
+    '
   PostArgs: ''
   Privileged: 'false'
   Project: https://github.com/TheJF/antennas
@@ -3338,15 +3133,7 @@ cryptgeon:
   Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/cryptgeon.png
   Name: cryptgeon
   Network: bridge
-  Overview: "DESCRIPTION\r\ncryptgeon is a secure, open source sharing note or file\
-    \ service inspired by PrivNote.\r\n\r\nFeatures:\r\n\u2022 Server cannot decrypt\
-    \ contents due to client side encryption\r\n\u2022 View or time constraints\r\n\
-    \u2022 In memory, no persistence\r\n\u2022 Obligatory dark mode support\r\n\r\n\
-    Live demo:\r\nhttps://cryptgeon.nicco.io/\r\n\r\nNOTES\r\n\u2022 HTTPS certificate\
-    \ (NPM/Nginx) is required to use this service, otherwise browsers will not support\
-    \ the cryptographic functions.\r\n\u2022 Memcached is required to be already running\
-    \ as a separate container, as it is used for caching the information in memory\
-    \ (nothing is saved locally).\r\n\r\nVERSION\r\n1.0 (2021-12-24)"
+  Overview: "DESCRIPTION\r\n"
   PostArgs: ''
   Privileged: 'false'
   Project: https://github.com/cupcakearmy/cryptgeon
@@ -3453,8 +3240,7 @@ deepstackui:
     \ object detection or face recognition with Deepstack. Also faces can be registered\
     \ with Deepstack. The effect of various parameters can be explored, including\
     \ filtering objects by confidence, type and location in the image. Created by\
-    \ robmarkcole.\r\n\r\n*I am not the creator or maintainer of this container I\
-    \ am merely providing the Unraid template."
+    \ robmarkcole.\r\n"
   PostArgs: ''
   Privileged: 'false'
   Project: https://github.com/robmarkcole/deepstack-ui
@@ -3723,11 +3509,7 @@ hedgedoc:
   Overview: 'HedgeDoc(https://hedgedoc.org/) gives you access to all your files wherever
     you are.
 
-
-    HedgeDoc is a real-time, multi-platform collaborative markdown note editor.  This
-    means that you can write notes with other people on your desktop, tablet or even
-    on the phone.  You can sign-in via multiple auth providers like Facebook, Twitter,
-    GitHub and many more on the homepage.'
+    '
   Privileged: 'false'
   Project: https://hedgedoc.org/
   ReadMe: https://github.com/linuxserver/docker-hedgedoc#readme
@@ -3799,8 +3581,7 @@ jfago:
     Mode: bridge
   Overview: "jfa-go is a user management app for Jellyfin (and now Emby) that provides\
     \ invite-based account creation as well as other features that make one's instance\
-    \ much easier to manage.\r\n\r\n*I am not the creator or maintainer of this container\
-    \ I am merely providing the Unraid template."
+    \ much easier to manage.\r\n"
   PostArgs: ''
   Privileged: 'false'
   Project: https://github.com/hrfee/jfa-go
@@ -3850,10 +3631,7 @@ kibana:
     Mode: bridge
   Official: true
   Overview: "Kibana gives shape to any kind of data \u2014 structured and unstructured\
-    \ \u2014 indexed in Elasticsearch.  \r\n\r\nPlease install and run Elasticsearch\
-    \ docker first. Set the tag to it to match the one you are using \r\non Kibana\
-    \ (currently 7.12.0)\r\n\r\nChange ELASTIC_SEARCH_HOSTS to match the address of\
-    \ your Elasticsearch"
+    \ \u2014 indexed in Elasticsearch.  \r\n"
   PostArgs: ''
   Privileged: 'false'
   Project: https://www.elastic.co/kibana
@@ -4045,23 +3823,7 @@ machinarisbtcgreen:
   Networking:
     Mode: bridge
   Overview: "Adds on farming of the BTCGreen blockchain to the main Machinaris application,\
-    \ alongside Chia. \r\n  \r\n  PREREQUISITE: Machinaris application, containing\
-    \ Chia blockchain, which this BTCGreen container will register with. \r\n  \r\n\
-    \  INSTALL: Set the host path to first directory containing plots using '/plots1'\
-    \ Path. Add more Paths for additional host directories. Also be sure to set the\
-    \ LAN IP address of your Unraid server in the controller_host and worker_address\
-    \ variables. \r  \n  \r\n  SETUP: The BTCGreen blockchain will be accessible within\
-    \ the Machinaris WebUI.  Don't forget to port-forward tcp/9282 at your router.\r\
-    \n  \r\n  SUPPORT: Join the Discord server for fastest response: https://discord.gg/mX4AtMTt87\
-    \ Ask a question or start a discussion on Github: https://github.com/guydavis/machinaris/discussions\
-    \ \r\n  \r\n  DISCLAIMER OF WARRANTY. Unless required by applicable law or agreed\
-    \ to in writing, Licensor provides the Work (and each Contributor provides its\
-    \ Contributions) on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY\
-    \ KIND, either express or implied, including, without limitation, any warranties\
-    \ or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A\
-    \ PARTICULAR PURPOSE. You are solely responsible for determining the appropriateness\
-    \ of using or redistributing the Work and assume any risks associated with Your\
-    \ exercise of permissions under this License."
+    \ alongside Chia. \r\n"
   PostArgs: ''
   Privileged: 'false'
   Project: https://github.com/guydavis/machinaris
@@ -4216,26 +3978,7 @@ machinarisbtcgreenharvester:
   Networking:
     Mode: bridge
   Overview: "On a secondary Unraid system, allows for harvesting of local Chia plots.\
-    \  Connects to the main Machinaris application.\r\n  \r\n  PREREQUISITE: On another\
-    \ machine! Install the Machinaris applicatione, which this harvester container\
-    \ will connect with.\r\n  \r\n  WARNING: Do NOT install this harvester on the\
-    \ same system as you installed the fullnode.  The fullnode already runs a harvester\
-    \ internally.  This harvester software is for a second physical server.\r\n  \r\
-    \n  INSTALL: Set the host path to first directory containing plots using '/plots1'\
-    \ Path. Add more Paths for additional host directories. Also be sure to set the\
-    \ LAN IP address of your Unraid server in the controller_host, farmer_address\
-    \  and worker_address variables.\r\n  \r\n  SETUP: Control of this harvester will\
-    \ be available within the Machinaris WebUI.\r\n  \r\n  SUPPORT: Join the Discord\
-    \ server for fastest response: https://discord.gg/mX4AtMTt87 Ask a question or\
-    \ start a discussion on Github: https://github.com/guydavis/machinaris/discussions\
-    \ \r\n  \r\n  DISCLAIMER OF WARRANTY. Unless required by applicable law or agreed\
-    \ to in writing, Licensor provides the Work (and each Contributor provides its\
-    \ Contributions) on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY\
-    \ KIND, either express or implied, including, without limitation, any warranties\
-    \ or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A\
-    \ PARTICULAR PURPOSE. You are solely responsible for determining the appropriateness\
-    \ of using or redistributing the Work and assume any risks associated with Your\
-    \ exercise of permissions under this License."
+    \  Connects to the main Machinaris application.\r\n"
   PostArgs: ''
   Privileged: 'false'
   Project: https://github.com/guydavis/machinaris
@@ -4427,23 +4170,7 @@ machinariscactus:
   Networking:
     Mode: bridge
   Overview: "Adds on farming of the Cactus blockchain to the main Machinaris application,\
-    \ alongside Chia. \r\n  \r\n  PREREQUISITE: Machinaris application, containing\
-    \ Chia blockchain, which this Cactus container will register with. \r\n  \r\n\
-    \  INSTALL: Set the host path to first directory containing plots using '/plots1'\
-    \ Path. Add more Paths for additional host directories. Also be sure to set the\
-    \ LAN IP address of your Unraid server in the controller_host and worker_address\
-    \ variables. \r  \n  \r\n  SETUP: The Cactus blockchain will be accessible within\
-    \ the Machinaris WebUI.  Don't forget to port-forward tcp/11444 at your router.\r\
-    \n  \r\n  SUPPORT: Join the Discord server for fastest response: https://discord.gg/mX4AtMTt87\
-    \ Ask a question or start a discussion on Github: https://github.com/guydavis/machinaris/discussions\
-    \ \r\n  \r\n  DISCLAIMER OF WARRANTY. Unless required by applicable law or agreed\
-    \ to in writing, Licensor provides the Work (and each Contributor provides its\
-    \ Contributions) on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY\
-    \ KIND, either express or implied, including, without limitation, any warranties\
-    \ or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A\
-    \ PARTICULAR PURPOSE. You are solely responsible for determining the appropriateness\
-    \ of using or redistributing the Work and assume any risks associated with Your\
-    \ exercise of permissions under this License."
+    \ alongside Chia. \r\n"
   PostArgs: ''
   Privileged: 'false'
   Project: https://github.com/guydavis/machinaris
@@ -4598,26 +4325,7 @@ machinariscactusharvester:
   Networking:
     Mode: bridge
   Overview: "On a secondary Unraid system, allows for harvesting of local Chia plots.\
-    \  Connects to the main Machinaris application.\r\n  \r\n  PREREQUISITE: On another\
-    \ machine! Install the Machinaris applicatione, which this harvester container\
-    \ will connect with.\r\n  \r\n  WARNING: Do NOT install this harvester on the\
-    \ same system as you installed the fullnode.  The fullnode already runs a harvester\
-    \ internally.  This harvester software is for a second physical server.\r\n  \r\
-    \n  INSTALL: Set the host path to first directory containing plots using '/plots1'\
-    \ Path. Add more Paths for additional host directories. Also be sure to set the\
-    \ LAN IP address of your Unraid server in the controller_host, farmer_address\
-    \  and worker_address variables.\r\n  \r\n  SETUP: Control of this harvester will\
-    \ be available within the Machinaris WebUI.\r\n  \r\n  SUPPORT: Join the Discord\
-    \ server for fastest response: https://discord.gg/mX4AtMTt87 Ask a question or\
-    \ start a discussion on Github: https://github.com/guydavis/machinaris/discussions\
-    \ \r\n  \r\n  DISCLAIMER OF WARRANTY. Unless required by applicable law or agreed\
-    \ to in writing, Licensor provides the Work (and each Contributor provides its\
-    \ Contributions) on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY\
-    \ KIND, either express or implied, including, without limitation, any warranties\
-    \ or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A\
-    \ PARTICULAR PURPOSE. You are solely responsible for determining the appropriateness\
-    \ of using or redistributing the Work and assume any risks associated with Your\
-    \ exercise of permissions under this License."
+    \  Connects to the main Machinaris application.\r\n"
   PostArgs: ''
   Privileged: 'false'
   Project: https://github.com/guydavis/machinaris
@@ -4809,23 +4517,7 @@ machinarischives:
   Networking:
     Mode: bridge
   Overview: "Adds on farming of the Chives blockchain to the main Machinaris application,\
-    \ alongside Chia. \r\n  \r\n  PREREQUISITE: Machinaris application, containing\
-    \ Chia blockchain, which this Chives container will register with. \r\n  \r\n\
-    \  INSTALL: Set the host path to first directory containing plots using '/plots1'\
-    \ Path. Add more Paths for additional host directories. Also be sure to set the\
-    \ LAN IP address of your Unraid server in the controller_host and worker_address\
-    \ variables. \r  \n  \r\n  SETUP: The Chives blockchain will be accessible within\
-    \ the Machinaris WebUI.  Don't forget to port-forward tcp/9699 at your router.\r\
-    \n  \r\n  SUPPORT: Join the Discord server for fastest response: https://discord.gg/mX4AtMTt87\
-    \ Ask a question or start a discussion on Github: https://github.com/guydavis/machinaris/discussions\
-    \ \r\n  \r\n  DISCLAIMER OF WARRANTY. Unless required by applicable law or agreed\
-    \ to in writing, Licensor provides the Work (and each Contributor provides its\
-    \ Contributions) on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY\
-    \ KIND, either express or implied, including, without limitation, any warranties\
-    \ or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A\
-    \ PARTICULAR PURPOSE. You are solely responsible for determining the appropriateness\
-    \ of using or redistributing the Work and assume any risks associated with Your\
-    \ exercise of permissions under this License."
+    \ alongside Chia. \r\n"
   PostArgs: ''
   Privileged: 'false'
   Project: https://github.com/guydavis/machinaris
@@ -4981,26 +4673,7 @@ machinarischivesharvester:
   Networking:
     Mode: bridge
   Overview: "On a secondary Unraid system, allows for harvesting of local Chives (NOT\
-    \ CHIA) plots.  Connects to the main Machinaris application.\r\n  \r\n  PREREQUISITE:\
-    \ On another machine! Install the Machinaris applicatione, which this harvester\
-    \ container will connect with.\r\n  \r\n  WARNING: Do NOT install this harvester\
-    \ on the same system as you installed the fullnode.  The fullnode already runs\
-    \ a harvester internally.  This harvester software is for a second physical server.\r\
-    \n  \r\n  INSTALL: Set the host path to first directory containing plots using\
-    \ '/plots1' Path. Add more Paths for additional host directories. Also be sure\
-    \ to set the LAN IP address of your Unraid server in the controller_host, farmer_address\
-    \  and worker_address variables.\r\n  \r\n  SETUP: Control of this harvester will\
-    \ be available within the Machinaris WebUI.\r\n  \r\n  SUPPORT: Join the Discord\
-    \ server for fastest response: https://discord.gg/mX4AtMTt87 Ask a question or\
-    \ start a discussion on Github: https://github.com/guydavis/machinaris/discussions\
-    \ \r\n  \r\n  DISCLAIMER OF WARRANTY. Unless required by applicable law or agreed\
-    \ to in writing, Licensor provides the Work (and each Contributor provides its\
-    \ Contributions) on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY\
-    \ KIND, either express or implied, including, without limitation, any warranties\
-    \ or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A\
-    \ PARTICULAR PURPOSE. You are solely responsible for determining the appropriateness\
-    \ of using or redistributing the Work and assume any risks associated with Your\
-    \ exercise of permissions under this License."
+    \ CHIA) plots.  Connects to the main Machinaris application.\r\n"
   PostArgs: ''
   Privileged: 'false'
   Project: https://github.com/guydavis/machinaris
@@ -5192,23 +4865,7 @@ machinariscryptodoge:
   Networking:
     Mode: bridge
   Overview: "Adds on farming of the Cryptodoge blockchain to the main Machinaris application,\
-    \ alongside Chia. \r\n  \r\n  PREREQUISITE: Machinaris application, containing\
-    \ Chia blockchain, which this Cryptodoge container will register with. \r\n  \r\
-    \n  INSTALL: Set the host path to first directory containing plots using '/plots1'\
-    \ Path. Add more Paths for additional host directories. Also be sure to set the\
-    \ LAN IP address of your Unraid server in the controller_host and worker_address\
-    \ variables. \r  \n  \r\n  SETUP: The Cryptodoge blockchain will be accessible\
-    \ within the Machinaris WebUI.  Don't forget to port-forward tcp/15994 at your\
-    \ router.\r\n  \r\n  SUPPORT: Join the Discord server for fastest response: https://discord.gg/mX4AtMTt87\
-    \ Ask a question or start a discussion on Github: https://github.com/guydavis/machinaris/discussions\
-    \ \r\n  \r\n  DISCLAIMER OF WARRANTY. Unless required by applicable law or agreed\
-    \ to in writing, Licensor provides the Work (and each Contributor provides its\
-    \ Contributions) on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY\
-    \ KIND, either express or implied, including, without limitation, any warranties\
-    \ or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A\
-    \ PARTICULAR PURPOSE. You are solely responsible for determining the appropriateness\
-    \ of using or redistributing the Work and assume any risks associated with Your\
-    \ exercise of permissions under this License."
+    \ alongside Chia. \r\n"
   PostArgs: ''
   Privileged: 'false'
   Project: https://github.com/guydavis/machinaris
@@ -5363,26 +5020,7 @@ machinariscryptodogeharvester:
   Networking:
     Mode: bridge
   Overview: "On a secondary Unraid system, allows for harvesting of local Chia plots.\
-    \  Connects to the main Machinaris application.\r\n  \r\n  PREREQUISITE: On another\
-    \ machine! Install the Machinaris applicatione, which this harvester container\
-    \ will connect with.\r\n  \r\n  WARNING: Do NOT install this harvester on the\
-    \ same system as you installed the fullnode.  The fullnode already runs a harvester\
-    \ internally.  This harvester software is for a second physical server.\r\n  \r\
-    \n  INSTALL: Set the host path to first directory containing plots using '/plots1'\
-    \ Path. Add more Paths for additional host directories. Also be sure to set the\
-    \ LAN IP address of your Unraid server in the controller_host, farmer_address\
-    \  and worker_address variables.\r\n  \r\n  SETUP: Control of this harvester will\
-    \ be available within the Machinaris WebUI.\r\n  \r\n  SUPPORT: Join the Discord\
-    \ server for fastest response: https://discord.gg/mX4AtMTt87 Ask a question or\
-    \ start a discussion on Github: https://github.com/guydavis/machinaris/discussions\
-    \ \r\n  \r\n  DISCLAIMER OF WARRANTY. Unless required by applicable law or agreed\
-    \ to in writing, Licensor provides the Work (and each Contributor provides its\
-    \ Contributions) on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY\
-    \ KIND, either express or implied, including, without limitation, any warranties\
-    \ or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A\
-    \ PARTICULAR PURPOSE. You are solely responsible for determining the appropriateness\
-    \ of using or redistributing the Work and assume any risks associated with Your\
-    \ exercise of permissions under this License."
+    \  Connects to the main Machinaris application.\r\n"
   PostArgs: ''
   Privileged: 'false'
   Project: https://github.com/guydavis/machinaris
@@ -5574,23 +5212,7 @@ machinarisflax:
   Networking:
     Mode: bridge
   Overview: "Adds on farming of the Flax blockchain to the main Machinaris application,\
-    \ alongside Chia. \r\n  \r\n  PREREQUISITE: Machinaris application (v0.6.0+),\
-    \ containing Chia blockchain, which this Flax container will register with. \r\
-    \n  \r\n  INSTALL: Set the host path to first directory containing plots using\
-    \ '/plots1' Path. Add more Paths for additional host directories. Also be sure\
-    \ to set the LAN IP address of your Unraid server in the controller_host and worker_address\
-    \ variables. \r  \n  \r\n  SETUP: The Flax blockchain will be accessible within\
-    \ the Machinaris WebUI.  Don't forget to port-forward tcp/6888 at your router.\
-    \ \r\n  \r\n  SUPPORT: Join the Discord server for fastest response: https://discord.gg/mX4AtMTt87\
-    \ Ask a question or start a discussion on Github: https://github.com/guydavis/machinaris/discussions\
-    \ \r\n  \r\n  DISCLAIMER OF WARRANTY. Unless required by applicable law or agreed\
-    \ to in writing, Licensor provides the Work (and each Contributor provides its\
-    \ Contributions) on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY\
-    \ KIND, either express or implied, including, without limitation, any warranties\
-    \ or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A\
-    \ PARTICULAR PURPOSE. You are solely responsible for determining the appropriateness\
-    \ of using or redistributing the Work and assume any risks associated with Your\
-    \ exercise of permissions under this License."
+    \ alongside Chia. \r\n"
   PostArgs: ''
   Privileged: 'false'
   Project: https://github.com/guydavis/machinaris
@@ -5745,26 +5367,7 @@ machinarisflaxharvester:
   Networking:
     Mode: bridge
   Overview: "On a secondary Unraid system, allows for harvesting of local Chia plots.\
-    \  Connects to the main Machinaris application.\r\n  \r\n  PREREQUISITE: On another\
-    \ machine! Install the Machinaris applicatione, which this harvester container\
-    \ will connect with.\r\n  \r\n  WARNING: Do NOT install this harvester on the\
-    \ same system as you installed the fullnode.  The fullnode already runs a harvester\
-    \ internally.  This harvester software is for a second physical server.\r\n  \r\
-    \n  INSTALL: Set the host path to first directory containing plots using '/plots1'\
-    \ Path. Add more Paths for additional host directories. Also be sure to set the\
-    \ LAN IP address of your Unraid server in the controller_host, farmer_address\
-    \  and worker_address variables.\r\n  \r\n  SETUP: Control of this harvester will\
-    \ be available within the Machinaris WebUI.\r\n  \r\n  SUPPORT: Join the Discord\
-    \ server for fastest response: https://discord.gg/mX4AtMTt87 Ask a question or\
-    \ start a discussion on Github: https://github.com/guydavis/machinaris/discussions\
-    \ \r\n  \r\n  DISCLAIMER OF WARRANTY. Unless required by applicable law or agreed\
-    \ to in writing, Licensor provides the Work (and each Contributor provides its\
-    \ Contributions) on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY\
-    \ KIND, either express or implied, including, without limitation, any warranties\
-    \ or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A\
-    \ PARTICULAR PURPOSE. You are solely responsible for determining the appropriateness\
-    \ of using or redistributing the Work and assume any risks associated with Your\
-    \ exercise of permissions under this License."
+    \  Connects to the main Machinaris application.\r\n"
   PostArgs: ''
   Privileged: 'false'
   Project: https://github.com/guydavis/machinaris
@@ -5956,23 +5559,7 @@ machinarisflora:
   Networking:
     Mode: bridge
   Overview: "Adds on farming of the Flora blockchain to the main Machinaris application,\
-    \ alongside Chia. \r\n  \r\n  PREREQUISITE: Machinaris application, containing\
-    \ Chia blockchain, which this Flora container will register with. \r\n  \r\n \
-    \ INSTALL: Set the host path to first directory containing plots using '/plots1'\
-    \ Path. Add more Paths for additional host directories. Also be sure to set the\
-    \ LAN IP address of your Unraid server in the controller_host and worker_address\
-    \ variables. \r  \n  \r\n  SETUP: The Flora blockchain will be accessible within\
-    \ the Machinaris WebUI.  Don't forget to port-forward tcp/18644 at your router.\r\
-    \n  \r\n  SUPPORT: Join the Discord server for fastest response: https://discord.gg/mX4AtMTt87\
-    \ Ask a question or start a discussion on Github: https://github.com/guydavis/machinaris/discussions\
-    \ \r\n  \r\n  DISCLAIMER OF WARRANTY. Unless required by applicable law or agreed\
-    \ to in writing, Licensor provides the Work (and each Contributor provides its\
-    \ Contributions) on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY\
-    \ KIND, either express or implied, including, without limitation, any warranties\
-    \ or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A\
-    \ PARTICULAR PURPOSE. You are solely responsible for determining the appropriateness\
-    \ of using or redistributing the Work and assume any risks associated with Your\
-    \ exercise of permissions under this License."
+    \ alongside Chia. \r\n"
   PostArgs: ''
   Privileged: 'false'
   Project: https://github.com/guydavis/machinaris
@@ -6127,26 +5714,7 @@ machinarisfloraharvester:
   Networking:
     Mode: bridge
   Overview: "On a secondary Unraid system, allows for harvesting of local Chia plots.\
-    \  Connects to the main Machinaris application.\r\n  \r\n  PREREQUISITE: On another\
-    \ machine! Install the Machinaris applicatione, which this harvester container\
-    \ will connect with.\r\n  \r\n  WARNING: Do NOT install this harvester on the\
-    \ same system as you installed the fullnode.  The fullnode already runs a harvester\
-    \ internally.  This harvester software is for a second physical server.\r\n  \r\
-    \n  INSTALL: Set the host path to first directory containing plots using '/plots1'\
-    \ Path. Add more Paths for additional host directories. Also be sure to set the\
-    \ LAN IP address of your Unraid server in the controller_host, farmer_address\
-    \  and worker_address variables.\r\n  \r\n  SETUP: Control of this harvester will\
-    \ be available within the Machinaris WebUI.\r\n  \r\n  SUPPORT: Join the Discord\
-    \ server for fastest response: https://discord.gg/mX4AtMTt87 Ask a question or\
-    \ start a discussion on Github: https://github.com/guydavis/machinaris/discussions\
-    \ \r\n  \r\n  DISCLAIMER OF WARRANTY. Unless required by applicable law or agreed\
-    \ to in writing, Licensor provides the Work (and each Contributor provides its\
-    \ Contributions) on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY\
-    \ KIND, either express or implied, including, without limitation, any warranties\
-    \ or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A\
-    \ PARTICULAR PURPOSE. You are solely responsible for determining the appropriateness\
-    \ of using or redistributing the Work and assume any risks associated with Your\
-    \ exercise of permissions under this License."
+    \  Connects to the main Machinaris application.\r\n"
   PostArgs: ''
   Privileged: 'false'
   Project: https://github.com/guydavis/machinaris
@@ -6338,23 +5906,7 @@ machinarishddcoin:
   Networking:
     Mode: bridge
   Overview: "Adds on farming of the HDDCoin blockchain to the main Machinaris application,\
-    \ alongside Chia. \r\n  \r\n  PREREQUISITE: Machinaris application, containing\
-    \ Chia blockchain, which this HDDCoin container will register with. \r\n  \r\n\
-    \  INSTALL: Set the host path to first directory containing plots using '/plots1'\
-    \ Path. Add more Paths for additional host directories. Also be sure to set the\
-    \ LAN IP address of your Unraid server in the controller_host and worker_address\
-    \ variables. \r  \n  \r\n  SETUP: The HDDCoin blockchain will be accessible within\
-    \ the Machinaris WebUI.  Don't forget to port-forward tcp/28444 at your router.\
-    \ \r\n  \r\n  SUPPORT: Join the Discord server for fastest response: https://discord.gg/mX4AtMTt87\
-    \ Ask a question or start a discussion on Github: https://github.com/guydavis/machinaris/discussions\
-    \ \r\n  \r\n  DISCLAIMER OF WARRANTY. Unless required by applicable law or agreed\
-    \ to in writing, Licensor provides the Work (and each Contributor provides its\
-    \ Contributions) on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY\
-    \ KIND, either express or implied, including, without limitation, any warranties\
-    \ or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or  FITNESS FOR A\
-    \ PARTICULAR PURPOSE. You are solely responsible for determining the appropriateness\
-    \ of using or redistributing the Work and assume any risks associated with Your\
-    \ exercise of permissions under this License."
+    \ alongside Chia. \r\n"
   PostArgs: ''
   Privileged: 'false'
   Project: https://github.com/guydavis/machinaris
@@ -6509,26 +6061,7 @@ machinarishddcoinharvester:
   Networking:
     Mode: bridge
   Overview: "On a secondary Unraid system, allows for harvesting of local Chia plots.\
-    \  Connects to the main Machinaris application.\r\n  \r\n  PREREQUISITE: On another\
-    \ machine! Install the Machinaris applicatione, which this harvester container\
-    \ will connect with.\r\n  \r\n  WARNING: Do NOT install this harvester on the\
-    \ same system as you installed the fullnode.  The fullnode already runs a harvester\
-    \ internally.  This harvester software is for a second physical server.\r\n  \r\
-    \n  INSTALL: Set the host path to first directory containing plots using '/plots1'\
-    \ Path. Add more Paths for additional host directories. Also be sure to set the\
-    \ LAN IP address of your Unraid server in the controller_host, farmer_address\
-    \  and worker_address variables.\r\n  \r\n  SETUP: Control of this harvester will\
-    \ be available within the Machinaris WebUI.\r\n  \r\n  SUPPORT: Join the Discord\
-    \ server for fastest response: https://discord.gg/mX4AtMTt87 Ask a question or\
-    \ start a discussion on Github: https://github.com/guydavis/machinaris/discussions\
-    \ \r\n  \r\n  DISCLAIMER OF WARRANTY. Unless required by applicable law or agreed\
-    \ to in writing, Licensor provides the Work (and each Contributor provides its\
-    \ Contributions) on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY\
-    \ KIND, either express or implied, including, without limitation, any warranties\
-    \ or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A\
-    \ PARTICULAR PURPOSE. You are solely responsible for determining the appropriateness\
-    \ of using or redistributing the Work and assume any risks associated with Your\
-    \ exercise of permissions under this License."
+    \  Connects to the main Machinaris application.\r\n"
   PostArgs: ''
   Privileged: 'false'
   Project: https://github.com/guydavis/machinaris
@@ -6720,23 +6253,7 @@ machinarismaize:
   Networking:
     Mode: bridge
   Overview: "Adds on farming of the Maize blockchain to the main Machinaris application,\
-    \ alongside Chia. \r\n  \r\n  PREREQUISITE: Machinaris application, containing\
-    \ Chia blockchain, which this Maize container will register with. \r\n  \r\n \
-    \ INSTALL: Set the host path to first directory containing plots using '/plots1'\
-    \ Path. Add more Paths for additional host directories. Also be sure to set the\
-    \ LAN IP address of your Unraid server in the controller_host and worker_address\
-    \ variables. \r  \n  \r\n  SETUP: The Maize blockchain will be accessible within\
-    \ the Machinaris WebUI.  Don't forget to port-forward tcp/8644 at your router.\r\
-    \n  \r\n  SUPPORT: Join the Discord server for fastest response: https://discord.gg/mX4AtMTt87\
-    \ Ask a question or start a discussion on Github: https://github.com/guydavis/machinaris/discussions\
-    \ \r\n  \r\n  DISCLAIMER OF WARRANTY. Unless required by applicable law or agreed\
-    \ to in writing, Licensor provides the Work (and each Contributor provides its\
-    \ Contributions) on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY\
-    \ KIND, either express or implied, including, without limitation, any warranties\
-    \ or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A\
-    \ PARTICULAR PURPOSE. You are solely responsible for determining the appropriateness\
-    \ of using or redistributing the Work and assume any risks associated with Your\
-    \ exercise of permissions under this License."
+    \ alongside Chia. \r\n"
   PostArgs: ''
   Privileged: 'false'
   Project: https://github.com/guydavis/machinaris
@@ -6891,26 +6408,7 @@ machinarismaizeharvester:
   Networking:
     Mode: bridge
   Overview: "On a secondary Unraid system, allows for harvesting of local Chia plots.\
-    \  Connects to the main Machinaris application.\r\n  \r\n  PREREQUISITE: On another\
-    \ machine! Install the Machinaris applicatione, which this harvester container\
-    \ will connect with.\r\n  \r\n  WARNING: Do NOT install this harvester on the\
-    \ same system as you installed the fullnode.  The fullnode already runs a harvester\
-    \ internally.  This harvester software is for a second physical server.\r\n  \r\
-    \n  INSTALL: Set the host path to first directory containing plots using '/plots1'\
-    \ Path. Add more Paths for additional host directories. Also be sure to set the\
-    \ LAN IP address of your Unraid server in the controller_host, farmer_address\
-    \  and worker_address variables.\r\n  \r\n  SETUP: Control of this harvester will\
-    \ be available within the Machinaris WebUI.\r\n  \r\n  SUPPORT: Join the Discord\
-    \ server for fastest response: https://discord.gg/mX4AtMTt87 Ask a question or\
-    \ start a discussion on Github: https://github.com/guydavis/machinaris/discussions\
-    \ \r\n  \r\n  DISCLAIMER OF WARRANTY. Unless required by applicable law or agreed\
-    \ to in writing, Licensor provides the Work (and each Contributor provides its\
-    \ Contributions) on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY\
-    \ KIND, either express or implied, including, without limitation, any warranties\
-    \ or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A\
-    \ PARTICULAR PURPOSE. You are solely responsible for determining the appropriateness\
-    \ of using or redistributing the Work and assume any risks associated with Your\
-    \ exercise of permissions under this License."
+    \  Connects to the main Machinaris application.\r\n"
   PostArgs: ''
   Privileged: 'false'
   Project: https://github.com/guydavis/machinaris
@@ -7112,24 +6610,7 @@ machinarismmx:
   Networking:
     Mode: bridge
   Overview: "Adds on farming of the MMX blockchain to the main Machinaris application,\
-    \ alongside Chia. x86_64 required, MMX does not support aarch64.\r\n  \r\n  PREREQUISITE:\
-    \ Machinaris application, containing Chia blockchain, which this MMX container\
-    \ will register with. \r\n  \r\n  INSTALL: Set the host path to first directory\
-    \ containing plots using '/plots1' Path. Add more Paths for additional host directories.\
-    \ Also be sure to set the LAN IP address of your Unraid server in the controller_host\
-    \ and worker_address variables. \r  \n  \r\n  SETUP: The MMX blockchain will be\
-    \ accessible within the Machinaris WebUI.  Don't forget to port-forward tcp/12334\
-    \ at your router. A GPU is recommended, but not required.  See: https://github.com/guydavis/machinaris/wiki/MMX#can-i-use-my-gpu\r\
-    \n  \r\n  SUPPORT: Join the Discord server for fastest response: https://discord.gg/mX4AtMTt87\
-    \ Ask a question or start a discussion on Github: https://github.com/guydavis/machinaris/discussions\
-    \ \r\n  \r\n  DISCLAIMER OF WARRANTY. Unless required by applicable law or agreed\
-    \ to in writing, Licensor provides the Work (and each Contributor provides its\
-    \ Contributions) on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY\
-    \ KIND, either express or implied, including, without limitation, any warranties\
-    \ or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A\
-    \ PARTICULAR PURPOSE. You are solely responsible for determining the appropriateness\
-    \ of using or redistributing the Work and assume any risks associated with Your\
-    \ exercise of permissions under this License."
+    \ alongside Chia. x86_64 required, MMX does not support aarch64.\r\n"
   PostArgs: ''
   Privileged: 'false'
   Project: https://github.com/guydavis/machinaris
@@ -7287,25 +6768,7 @@ machinarismmxharvester:
     Mode: bridge
   Overview: "On a secondary Unraid system, allows for harvesting of local MMX (NOT\
     \ CHIA) plots.  Connects to the main Machinaris application. x86_64 required,\
-    \ MMX does not support aarch64.\r\n  \r\n  PREREQUISITE: On another machine! Install\
-    \ the Machinaris applicatione, which this harvester container will connect with.\r\
-    \n  \r\n  WARNING: Do NOT install this harvester on the same system as you installed\
-    \ the fullnode.  The fullnode already runs a harvester internally.  This harvester\
-    \ software is for a second physical server.\r\n  \r\n  INSTALL: Set the host path\
-    \ to first directory containing plots using '/plots1' Path. Add more Paths for\
-    \ additional host directories. Also be sure to set the LAN IP address of your\
-    \ Unraid server in the controller_host, farmer_address  and worker_address variables.\r\
-    \n  \r\n  SETUP: Control of this harvester will be available within the Machinaris\
-    \ WebUI.\r\n  \r\n  SUPPORT: Join the Discord server for fastest response: https://discord.gg/mX4AtMTt87\
-    \ Ask a question or start a discussion on Github: https://github.com/guydavis/machinaris/discussions\
-    \ \r\n  \r\n  DISCLAIMER OF WARRANTY. Unless required by applicable law or agreed\
-    \ to in writing, Licensor provides the Work (and each Contributor provides its\
-    \ Contributions) on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY\
-    \ KIND, either express or implied, including, without limitation, any warranties\
-    \ or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A\
-    \ PARTICULAR PURPOSE. You are solely responsible for determining the appropriateness\
-    \ of using or redistributing the Work and assume any risks associated with Your\
-    \ exercise of permissions under this License."
+    \ MMX does not support aarch64.\r\n"
   PostArgs: ''
   Privileged: 'false'
   Project: https://github.com/guydavis/machinaris
@@ -7497,23 +6960,7 @@ machinarisnchain:
   Networking:
     Mode: bridge
   Overview: "Adds on farming of the NChain blockchain to the main Machinaris application,\
-    \ alongside Chia. \r\n  \r\n  PREREQUISITE: Machinaris application, containing\
-    \ Chia blockchain, which this NChain container will register with. \r\n  \r\n\
-    \  INSTALL: Set the host path to first directory containing plots using '/plots1'\
-    \ Path. Add more Paths for additional host directories. Also be sure to set the\
-    \ LAN IP address of your Unraid server in the controller_host and worker_address\
-    \ variables. \r  \n  \r\n  SETUP: The N-Chain blockchain will be accessible within\
-    \ the Machinaris WebUI.  Don't forget to port-forward tcp/58445 at your router.\r\
-    \n  \r\n  SUPPORT: Join the Discord server for fastest response: https://discord.gg/mX4AtMTt87\
-    \ Ask a question or start a discussion on Github: https://github.com/guydavis/machinaris/discussions\
-    \ \r\n  \r\n  DISCLAIMER OF WARRANTY. Unless required by applicable law or agreed\
-    \ to in writing, Licensor provides the Work (and each Contributor provides its\
-    \ Contributions) on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY\
-    \ KIND, either express or implied, including, without limitation, any warranties\
-    \ or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A\
-    \ PARTICULAR PURPOSE. You are solely responsible for determining the appropriateness\
-    \ of using or redistributing the Work and assume any risks associated with Your\
-    \ exercise of permissions under this License."
+    \ alongside Chia. \r\n"
   PostArgs: ''
   Privileged: 'false'
   Project: https://github.com/guydavis/machinaris
@@ -7668,26 +7115,7 @@ machinarisnchainharvester:
   Networking:
     Mode: bridge
   Overview: "On a secondary Unraid system, allows for harvesting of local Chia plots.\
-    \  Connects to the main Machinaris application.\r\n  \r\n  PREREQUISITE: On another\
-    \ machine! Install the Machinaris applicatione, which this harvester container\
-    \ will connect with.\r\n  \r\n  WARNING: Do NOT install this harvester on the\
-    \ same system as you installed the fullnode.  The fullnode already runs a harvester\
-    \ internally.  This harvester software is for a second physical server.\r\n  \r\
-    \n  INSTALL: Set the host path to first directory containing plots using '/plots1'\
-    \ Path. Add more Paths for additional host directories. Also be sure to set the\
-    \ LAN IP address of your Unraid server in the controller_host, farmer_address\
-    \  and worker_address variables.\r\n  \r\n  SETUP: Control of this harvester will\
-    \ be available within the Machinaris WebUI.\r\n  \r\n  SUPPORT: Join the Discord\
-    \ server for fastest response: https://discord.gg/mX4AtMTt87 Ask a question or\
-    \ start a discussion on Github: https://github.com/guydavis/machinaris/discussions\
-    \ \r\n  \r\n  DISCLAIMER OF WARRANTY. Unless required by applicable law or agreed\
-    \ to in writing, Licensor provides the Work (and each Contributor provides its\
-    \ Contributions) on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY\
-    \ KIND, either express or implied, including, without limitation, any warranties\
-    \ or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A\
-    \ PARTICULAR PURPOSE. You are solely responsible for determining the appropriateness\
-    \ of using or redistributing the Work and assume any risks associated with Your\
-    \ exercise of permissions under this License."
+    \  Connects to the main Machinaris application.\r\n"
   PostArgs: ''
   Privileged: 'false'
   Project: https://github.com/guydavis/machinaris
@@ -7879,23 +7307,7 @@ machinarisshibgreen:
   Networking:
     Mode: bridge
   Overview: "Adds on farming of the SHIBGreen blockchain to the main Machinaris application,\
-    \ alongside Chia. \r\n  \r\n  PREREQUISITE: Machinaris application, containing\
-    \ Chia blockchain, which this SHIBGreen container will register with. \r\n  \r\
-    \n  INSTALL: Set the host path to first directory containing plots using '/plots1'\
-    \ Path. Add more Paths for additional host directories. Also be sure to set the\
-    \ LAN IP address of your Unraid server in the controller_host and worker_address\
-    \ variables. \r  \n  \r\n  SETUP: The SHIBGreen blockchain will be accessible\
-    \ within the Machinaris WebUI.  Don't forget to port-forward tcp/7442 at your\
-    \ router.\r\n  \r\n  SUPPORT: Join the Discord server for fastest response: https://discord.gg/mX4AtMTt87\
-    \ Ask a question or start a discussion on Github: https://github.com/guydavis/machinaris/discussions\
-    \ \r\n  \r\n  DISCLAIMER OF WARRANTY. Unless required by applicable law or agreed\
-    \ to in writing, Licensor provides the Work (and each Contributor provides its\
-    \ Contributions) on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY\
-    \ KIND, either express or implied, including, without limitation, any warranties\
-    \ or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A\
-    \ PARTICULAR PURPOSE. You are solely responsible for determining the appropriateness\
-    \ of using or redistributing the Work and assume any risks associated with Your\
-    \ exercise of permissions under this License."
+    \ alongside Chia. \r\n"
   PostArgs: ''
   Privileged: 'false'
   Project: https://github.com/guydavis/machinaris
@@ -8050,26 +7462,7 @@ machinarisshibgreenharvester:
   Networking:
     Mode: bridge
   Overview: "On a secondary Unraid system, allows for harvesting of local Chia plots.\
-    \  Connects to the main Machinaris application.\r\n  \r\n  PREREQUISITE: On another\
-    \ machine! Install the Machinaris applicatione, which this harvester container\
-    \ will connect with.\r\n  \r\n  WARNING: Do NOT install this harvester on the\
-    \ same system as you installed the fullnode.  The fullnode already runs a harvester\
-    \ internally.  This harvester software is for a second physical server.\r\n  \r\
-    \n  INSTALL: Set the host path to first directory containing plots using '/plots1'\
-    \ Path. Add more Paths for additional host directories. Also be sure to set the\
-    \ LAN IP address of your Unraid server in the controller_host, farmer_address\
-    \  and worker_address variables.\r\n  \r\n  SETUP: Control of this harvester will\
-    \ be available within the Machinaris WebUI.\r\n  \r\n  SUPPORT: Join the Discord\
-    \ server for fastest response: https://discord.gg/mX4AtMTt87 Ask a question or\
-    \ start a discussion on Github: https://github.com/guydavis/machinaris/discussions\
-    \ \r\n  \r\n  DISCLAIMER OF WARRANTY. Unless required by applicable law or agreed\
-    \ to in writing, Licensor provides the Work (and each Contributor provides its\
-    \ Contributions) on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY\
-    \ KIND, either express or implied, including, without limitation, any warranties\
-    \ or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A\
-    \ PARTICULAR PURPOSE. You are solely responsible for determining the appropriateness\
-    \ of using or redistributing the Work and assume any risks associated with Your\
-    \ exercise of permissions under this License."
+    \  Connects to the main Machinaris application.\r\n"
   PostArgs: ''
   Privileged: 'false'
   Project: https://github.com/guydavis/machinaris
@@ -8262,23 +7655,7 @@ machinarissilicoin:
   Networking:
     Mode: bridge
   Overview: "Adds on farming of the Silicoin blockchain to the main Machinaris application,\
-    \ alongside Chia. \r\n  \r\n  PREREQUISITE: Machinaris application, containing\
-    \ Chia blockchain, which this Silicoin container will register with. \r\n  \r\n\
-    \  INSTALL: Set the host path to first directory containing plots using '/plots1'\
-    \ Path. Add more Paths for additional host directories. Also be sure to set the\
-    \ LAN IP address of your Unraid server in the controller_host and worker_address\
-    \ variables. \r  \n  \r\n  SETUP: The Silicoin blockchain will be accessible within\
-    \ the Machinaris WebUI.  Don't forget to port-forward tcp/22222 at your router.\r\
-    \n  \r\n  SUPPORT: Join the Discord server for fastest response: https://discord.gg/mX4AtMTt87\
-    \ Ask a question or start a discussion on Github: https://github.com/guydavis/machinaris/discussions\
-    \ \r\n  \r\n  DISCLAIMER OF WARRANTY. Unless required by applicable law or agreed\
-    \ to in writing, Licensor provides the Work (and each Contributor provides its\
-    \ Contributions) on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY\
-    \ KIND, either express or implied, including, without limitation, any warranties\
-    \ or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A\
-    \ PARTICULAR PURPOSE. You are solely responsible for determining the appropriateness\
-    \ of using or redistributing the Work and assume any risks associated with Your\
-    \ exercise of permissions under this License."
+    \ alongside Chia. \r\n"
   PostArgs: ''
   Privileged: 'false'
   Project: https://github.com/guydavis/machinaris
@@ -8434,26 +7811,7 @@ machinarissilicoinharvester:
   Networking:
     Mode: bridge
   Overview: "On a secondary Unraid system, allows for harvesting of local Chia plots.\
-    \  Connects to the main Machinaris application.\r\n  \r\n  PREREQUISITE: On another\
-    \ machine! Install the Machinaris applicatione, which this harvester container\
-    \ will connect with.\r\n  \r\n  WARNING: Do NOT install this harvester on the\
-    \ same system as you installed the fullnode.  The fullnode already runs a harvester\
-    \ internally.  This harvester software is for a second physical server.\r\n  \r\
-    \n  INSTALL: Set the host path to first directory containing plots using '/plots1'\
-    \ Path. Add more Paths for additional host directories. Also be sure to set the\
-    \ LAN IP address of your Unraid server in the controller_host, farmer_address\
-    \  and worker_address variables.\r\n  \r\n  SETUP: Control of this harvester will\
-    \ be available within the Machinaris WebUI.\r\n  \r\n  SUPPORT: Join the Discord\
-    \ server for fastest response: https://discord.gg/mX4AtMTt87 Ask a question or\
-    \ start a discussion on Github: https://github.com/guydavis/machinaris/discussions\
-    \ \r\n  \r\n  DISCLAIMER OF WARRANTY. Unless required by applicable law or agreed\
-    \ to in writing, Licensor provides the Work (and each Contributor provides its\
-    \ Contributions) on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY\
-    \ KIND, either express or implied, including, without limitation, any warranties\
-    \ or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A\
-    \ PARTICULAR PURPOSE. You are solely responsible for determining the appropriateness\
-    \ of using or redistributing the Work and assume any risks associated with Your\
-    \ exercise of permissions under this License."
+    \  Connects to the main Machinaris application.\r\n"
   PostArgs: ''
   Privileged: 'false'
   Project: https://github.com/guydavis/machinaris
@@ -8645,23 +8003,7 @@ machinarisstaicoin:
   Networking:
     Mode: bridge
   Overview: "Adds on farming of the Staicoin blockchain to the main Machinaris application,\
-    \ alongside Chia. \r\n  \r\n  PREREQUISITE: Machinaris application, containing\
-    \ Chia blockchain, which this Staicoin container will register with. \r\n  \r\n\
-    \  INSTALL: Set the host path to first directory containing plots using '/plots1'\
-    \ Path. Add more Paths for additional host directories. Also be sure to set the\
-    \ LAN IP address of your Unraid server in the controller_host and worker_address\
-    \ variables. \r  \n  \r\n  SETUP: The Staicoin blockchain will be accessible within\
-    \ the Machinaris WebUI.  Don't forget to port-forward tcp/1999 at your router.\r\
-    \n  \r\n  SUPPORT: Join the Discord server for fastest response: https://discord.gg/mX4AtMTt87\
-    \ Ask a question or start a discussion on Github: https://github.com/guydavis/machinaris/discussions\
-    \ \r\n  \r\n  DISCLAIMER OF WARRANTY. Unless required by applicable law or agreed\
-    \ to in writing, Licensor provides the Work (and each Contributor provides its\
-    \ Contributions) on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY\
-    \ KIND, either express or implied, including, without limitation, any warranties\
-    \ or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A\
-    \ PARTICULAR PURPOSE. You are solely responsible for determining the appropriateness\
-    \ of using or redistributing the Work and assume any risks associated with Your\
-    \ exercise of permissions under this License."
+    \ alongside Chia. \r\n"
   PostArgs: ''
   Privileged: 'false'
   Project: https://github.com/guydavis/machinaris
@@ -8816,26 +8158,7 @@ machinarisstaicoinharvester:
   Networking:
     Mode: bridge
   Overview: "On a secondary Unraid system, allows for harvesting of local Chia plots.\
-    \  Connects to the main Machinaris application.\r\n  \r\n  PREREQUISITE: On another\
-    \ machine! Install the Machinaris applicatione, which this harvester container\
-    \ will connect with.\r\n  \r\n  WARNING: Do NOT install this harvester on the\
-    \ same system as you installed the fullnode.  The fullnode already runs a harvester\
-    \ internally.  This harvester software is for a second physical server.\r\n  \r\
-    \n  INSTALL: Set the host path to first directory containing plots using '/plots1'\
-    \ Path. Add more Paths for additional host directories. Also be sure to set the\
-    \ LAN IP address of your Unraid server in the controller_host, farmer_address\
-    \  and worker_address variables.\r\n  \r\n  SETUP: Control of this harvester will\
-    \ be available within the Machinaris WebUI.\r\n  \r\n  SUPPORT: Join the Discord\
-    \ server for fastest response: https://discord.gg/mX4AtMTt87 Ask a question or\
-    \ start a discussion on Github: https://github.com/guydavis/machinaris/discussions\
-    \ \r\n  \r\n  DISCLAIMER OF WARRANTY. Unless required by applicable law or agreed\
-    \ to in writing, Licensor provides the Work (and each Contributor provides its\
-    \ Contributions) on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY\
-    \ KIND, either express or implied, including, without limitation, any warranties\
-    \ or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A\
-    \ PARTICULAR PURPOSE. You are solely responsible for determining the appropriateness\
-    \ of using or redistributing the Work and assume any risks associated with Your\
-    \ exercise of permissions under this License."
+    \  Connects to the main Machinaris application.\r\n"
   PostArgs: ''
   Privileged: 'false'
   Project: https://github.com/guydavis/machinaris
@@ -9027,23 +8350,7 @@ machinarisstor:
   Networking:
     Mode: bridge
   Overview: "Adds on farming of the Stor blockchain to the main Machinaris application,\
-    \ alongside Chia. \r\n  \r\n  PREREQUISITE: Machinaris application, containing\
-    \ Chia blockchain, which this Stor container will register with. \r\n  \r\n  INSTALL:\
-    \ Set the host path to first directory containing plots using '/plots1' Path.\
-    \ Add more Paths for additional host directories. Also be sure to set the LAN\
-    \ IP address of your Unraid server in the controller_host and worker_address variables.\
-    \ \r  \n  \r\n  SETUP: The Stor blockchain will be accessible within the Machinaris\
-    \ WebUI.  Don't forget to port-forward tcp/8668 at your router.\r\n  \r\n  SUPPORT:\
-    \ Join the Discord server for fastest response: https://discord.gg/mX4AtMTt87\
-    \ Ask a question or start a discussion on Github: https://github.com/guydavis/machinaris/discussions\
-    \ \r\n  \r\n  DISCLAIMER OF WARRANTY. Unless required by applicable law or agreed\
-    \ to in writing, Licensor provides the Work (and each Contributor provides its\
-    \ Contributions) on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY\
-    \ KIND, either express or implied, including, without limitation, any warranties\
-    \ or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A\
-    \ PARTICULAR PURPOSE. You are solely responsible for determining the appropriateness\
-    \ of using or redistributing the Work and assume any risks associated with Your\
-    \ exercise of permissions under this License."
+    \ alongside Chia. \r\n"
   PostArgs: ''
   Privileged: 'false'
   Project: https://github.com/guydavis/machinaris
@@ -9198,26 +8505,7 @@ machinarisstorharvester:
   Networking:
     Mode: bridge
   Overview: "On a secondary Unraid system, allows for harvesting of local Chia plots.\
-    \  Connects to the main Machinaris application.\r\n  \r\n  PREREQUISITE: On another\
-    \ machine! Install the Machinaris applicatione, which this harvester container\
-    \ will connect with.\r\n  \r\n  WARNING: Do NOT install this harvester on the\
-    \ same system as you installed the fullnode.  The fullnode already runs a harvester\
-    \ internally.  This harvester software is for a second physical server.\r\n  \r\
-    \n  INSTALL: Set the host path to first directory containing plots using '/plots1'\
-    \ Path. Add more Paths for additional host directories. Also be sure to set the\
-    \ LAN IP address of your Unraid server in the controller_host, farmer_address\
-    \  and worker_address variables.\r\n  \r\n  SETUP: Control of this harvester will\
-    \ be available within the Machinaris WebUI.\r\n  \r\n  SUPPORT: Join the Discord\
-    \ server for fastest response: https://discord.gg/mX4AtMTt87 Ask a question or\
-    \ start a discussion on Github: https://github.com/guydavis/machinaris/discussions\
-    \ \r\n  \r\n  DISCLAIMER OF WARRANTY. Unless required by applicable law or agreed\
-    \ to in writing, Licensor provides the Work (and each Contributor provides its\
-    \ Contributions) on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY\
-    \ KIND, either express or implied, including, without limitation, any warranties\
-    \ or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A\
-    \ PARTICULAR PURPOSE. You are solely responsible for determining the appropriateness\
-    \ of using or redistributing the Work and assume any risks associated with Your\
-    \ exercise of permissions under this License."
+    \  Connects to the main Machinaris application.\r\n"
   PostArgs: ''
   Privileged: 'false'
   Project: https://github.com/guydavis/machinaris
@@ -9422,27 +8710,7 @@ macinabox:
     \ a macOS VM on the server. Also it can prepare all files ready for a manual install\
     \ if you prefer. Tools are also provided to fix the xml when the custom xml has\
     \ been stripped out of the VM after its been edited by the Unraid VM manager.\r\
-    \n## Usage\r\n **Operating System Version:**   Choose version from below\r\n\r\
-    \n - Big Sur (default)\r\n - Monterey\r\n - Catalina\r\n - Mojave\r\n - High Sierra\r\
-    \n\t\t\t\r\n**VM Images Location:**      Location of your vm share ( default /mnt/user/domains/\
-    \ )\r\n\r\n**Install Type:** \t\t\r\n   Auto install  # (This will download MacOS\
-    \ and install needed files into your VM location.)\r\n   Manual- install # (This\
-    \ will download MacOS and put all needed files into correct place ready for easy\
-    \ manual install.)\r\n \r\n**Vdisk size :**   The size you want your vdisk to\
-    \ be created\r\n\r\n**Vdisk type:**    Set vdisk type raw or qcow2\r\n\r\n**Opencore\
-    \ stock or custom:**   Select the defualt Opencore in Macinabox or use one added\
-    \ in macinabox appdata in the folder custom_opencore\r\n\r\n**Delete and replace\
-    \ Opencore:**  Select No or Yes to delete your vms opencore image and replace\
-    \ with fresh one.\r\n\r\n**Override defualt NIC type:**  Default No -  Override\
-    \ the default nic type in the vm going to be installed.\r\n\r\n**VM Images Location:**\
-    \  You only need to change if your VM images are not in the default location /mnt/user/domains\r\
-    \n\r\n**VM Images Location AGAIN:**  Only needs changing if you changed the above.\
-    \ Location must match the above.\r\n\t\t\t\t \r\n**Isos Share Location:**  This\
-    \ is where macinabox will put install media and Opencore bootloader\r\n\r\n**Isos\
-    \ Share Location AGAIN:** You only need to change if your ISO images are not in\
-    \ the default location /mnt/user/isos\r\n                  \r\n**appdata location:**\
-    \     If you change this you will need to do the same in the macinabox help user\
-    \ script"
+    \n"
   PostArgs: ''
   Privileged: 'true'
   Project: https://github.com/SpaceinvaderOne/Macinabox
@@ -9511,9 +8779,9 @@ monitorssbot:
   Icon: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/monitorss.png
   Name: monitorss-bot
   Network: bridge
-  Overview: "Discord RSS bot (formerly known as Discord.RSS) with customizable feeds.\n\
-    \n  Requires a separate container for MongoDB. Also has a optional WebUI\n\n \
-    \ More configuration options available on [monitorss.xyz](https://docs.monitorss.xyz/configuration/bot-configuration)"
+  Overview: 'Discord RSS bot (formerly known as Discord.RSS) with customizable feeds.
+
+    '
   Privileged: 'false'
   Project: https://github.com/synzen/MonitoRSS
   Registry: https://hub.docker.com/r/synzen/monitorss
@@ -10182,15 +9450,10 @@ paperlessng:
   Icon: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/paperless.png
   Name: paperless-ng
   Network: bridge
-  Overview: "Index and archive all of your scanned paper documents. Paperless-ng is\
-    \ a fork of paperless, adding a new interface and many other changes under the\
-    \ hood.[br][br]\n  [b]Requirements:[/b] Paperless-ng requires Redis as external\
-    \ service. You can install it from the CA store. Make sure to adjust the configuration\
-    \ in the template accordingly.\n  [b]Setup:[/b] Create a user account after this\
-    \ container is created i.e. from Unraids Docker UI, click the paperless-ng icon\
-    \ and choose Console. Then enter \"python manage.py createsuperuser\" in the prompt\
-    \ and follow the instructions.\n  [b]Paperless-ng Documentation:[/b] https://paperless-ng.readthedocs.io/en/latest/\n\
-    \  [b]Additional Template Variables:[/b] https://paperless-ng.readthedocs.io/en/latest/configuration.html"
+  Overview: 'Index and archive all of your scanned paper documents. Paperless-ng is
+    a fork of paperless, adding a new interface and many other changes under the hood.[br][br]
+
+    '
   Privileged: 'false'
   Project: https://github.com/jonaswinkler/paperless-ng
   Registry: https://hub.docker.com/r/jonaswinkler/paperless-ng/
@@ -10408,18 +9671,12 @@ paperlessngx:
   Name: paperless-ngx
   Network: bridge
   Official: true
-  Overview: "Paperless-ngx is a document management system that transforms your physical\
-    \ documents into a searchable online archive so you can keep, well, less paper.\
-    \ Paperless-ngx forked from paperless-ng to continue the great work and distribute\
-    \ responsibility of supporting and advancing the project among a team of people.[br][br]\n\
-    \  [b]Requirements:[/b] Paperless-ngx requires Redis as external service. You\
-    \ can install it from the CA store. Make sure to adjust the configuration in the\
-    \ template accordingly.\n  [b]Setup:[/b] Create a user account after this container\
-    \ is created i.e. from Unraids Docker UI, click the paperless-ngx icon and choose\
-    \ Console. Then enter \"python manage.py createsuperuser\" in the prompt and follow\
-    \ the instructions.\n  [b]Paperless-ngx Documentation:[/b] https://paperless-ngx.readthedocs.io/en/latest/\n\
-    \  [b]Additional Template Variables:[/b] https://paperless-ngx.readthedocs.io/en/latest/configuration.html\n\
-    \  [b]Demo:[/b] https://demo.paperless-ngx.com/"
+  Overview: 'Paperless-ngx is a document management system that transforms your physical
+    documents into a searchable online archive so you can keep, well, less paper.
+    Paperless-ngx forked from paperless-ng to continue the great work and distribute
+    responsibility of supporting and advancing the project among a team of people.[br][br]
+
+    '
   Privileged: 'false'
   Project: https://github.com/paperless-ngx/paperless-ngx
   Registry: https://github.com/paperless-ngx/paperless-ngx/pkgs/container/paperless-ngx
@@ -10519,8 +9776,7 @@ planka:
   Icon: https://raw.githubusercontent.com/C4ArtZ/Unraid-Templates/master/templates/icons/planka.png
   Name: planka
   Network: bridge
-  Overview: "A Trello-like kanban board built with React and Redux.\r\rDefault user\
-    \ is 'demo@demo.demo' with password 'demo'."
+  Overview: "A Trello-like kanban board built with React and Redux.\r"
   Privileged: 'false'
   Project: https://github.com/plankanban/planka
   Registry: https://hub.docker.com/r/meltyshev/planka/
@@ -10967,40 +10223,7 @@ steamheadless:
   Icon: https://raw.githubusercontent.com/Josh5/docker-steam-headless/master/images/steam-icon.png
   Name: steam-headless
   Network: host
-  Overview: "Headless Steam Service\r\nPlay your games in the browser with audio.\
-    \ Connect another device and use it with Steam Remote Play. \r\n\r\n## Features:\r\
-    \n- Full video/audio noVNC web access to a Xfce4 Desktop\r\n- NVIDIA GPU support\r\
-    \n- Full controller support (requires ich777's uinput plugin installed)\r\n- SSH\
-    \ server for remote terminal access (port 2222)\r\n- Root access\r\n- Based on\
-    \ Debain Bullseye\r\n\r\n---\r\n## Notes:\r\n\r\n### ADDITIONAL SOFTWARE:\r\n\
-    If you wish to install additional applications, you can generate a\r\nscript inside\
-    \ the `~/init.d` directory ending with \".sh\". This will be executed on the container\
-    \ startup.\r\n\r\n### STORAGE PATHS:\r\nEverything that you wish to save in this\
-    \ container should be stored in the home directory or a docker container mount\
-    \ that you have specified. All files that are store outside your home directory\
-    \ are not persistent and will be wiped if there is an update of the container\
-    \ or you change something in the template.\r\n\r\n### GAMES LIBRARY:\r\nIt is\
-    \ recommended that you mount your games library to `/mnt/games` and configure\
-    \ Steam to add that path.\r\n\r\n### AUTO START APPLICATIONS:\r\nIn this container,\
-    \ Steam is configured to automatically start. If you wish to add additional services\
-    \ to automatically start, add them under **Applications &gt; Settings &gt; Session\
-    \ and Startup** in the WebUI.\r\n\r\n### NETWORK MODE:\r\nIf you want to use the\
-    \ container as a Steam Remote Play (previously \"In Home Streaming\") host device\
-    \ you should set the **\"Network Type:\"** to *\"Host\"*. This is a requirement\
-    \ for controller hardware to work and to prevent traffic being routed through\
-    \ the internet since Steam thinks you are on a different network.\r\n\r\n### NVIDIA\
-    \ GPU:\r\nTo enable NVIDIA GPU support, ensure that you have installed the **Nvidia-Driver**\
-    \ plugin and add the *\"--runtime=nvidia\"* parameter added to **\"Extra Parameters:\"\
-    **\r\n\r\n### AMD GPU:\r\nTo enable AMD GPU support, ensure that you have installed\
-    \ the **Radeon-TOP** plugin.\r\n\r\n### USING HOST X SERVER:\r\nIf your host is\
-    \ already running X, you can just use that. To do this, be sure to configure:\r\
-    \n  - DISPLAY=:0    \r\n    **(Variable)** - *Configures the sceen to use the\
-    \ primary display. Set this to whatever your host is using*\r\n  - MODE=secondary\
-    \    \r\n    **(Variable)** - *Configures the container to not start an X server\
-    \ of its own*\r\n  - HOST_DBUS=true    \r\n    **(Variable)** - *Optional - Configures\
-    \ the container to use the host dbus process*\r\n  - /run/dbus:/run/dbus:ro  \
-    \  \r\n    **(Mount)**  - *Optional - Configures the container to use the host\
-    \ dbus process*"
+  Overview: "Headless Steam Service\r\n"
   PostArgs: ''
   Privileged: 'true'
   Project: https://store.steampowered.com/
@@ -11137,24 +10360,7 @@ steamheadlesssecondary:
   Icon: https://raw.githubusercontent.com/Josh5/docker-steam-headless/master/images/steam-icon.png
   Name: steam-headless-secondary
   Network: br0
-  Overview: "Headless Steam Service (Secondary)\r\nThis container relies on an existing\
-    \ working SteamHeadless running.\r\n\r\n## Features:\r\n- Run a second (or third\
-    \ or fourth) instance of steam on the Steam Headless desktop.\r\n- All the same\
-    \ features as Steam Headless accessed through an existing Steam Headless container\r\
-    \n\r\n\r\n---\r\n## Notes:\r\n\r\n### NETWORK TYPE:\r\nEach instance of this container\
-    \ should be run on a \"**Custom: br0**\" network and should be configured with\
-    \ a unique \"**Fixed IP address**\".\r\n\r\n### RUNNING MULTIPLE INSTANCES:\r\n\
-    Only one instance of Steam Headless can play a game at any time. If you start\
-    \ a second Remote Play link, it wil hijack the virtual monitor, and all input\
-    \ devices from the first one.\r\n\r\n### STORAGE PATHS:\r\nEverything that you\
-    \ wish to save in this container should be stored in the home directory or a docker\
-    \ container mount that you have specified. All files that are store outside your\
-    \ home directory are not persistent and will be wiped if there is an update of\
-    \ the container or you change something in the template.\r\n\r\n### GAMES LIBRARY:\r\
-    \nIt is recommended that you mount your games library to `/mnt/games` and configure\
-    \ Steam to add that path.\r\n\r\n### NVIDIA GPU:\r\nTo enable NVIDIA GPU support,\
-    \ ensure that you have the *\"--runtime=nvidia\"* parameter added to **\"Extra\
-    \ Parameters:\"**"
+  Overview: "Headless Steam Service (Secondary)\r\n"
   PostArgs: ''
   Privileged: 'true'
   Project: https://store.steampowered.com/

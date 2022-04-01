@@ -23,8 +23,7 @@ Network: br0
 Networking:
   Mode: br0
 Overview: "use this Audio option in  mopidy.conf in mopidy docker to use Snapcast:\r\
-  \n\r\n[audio]\r\noutput = audioresample ! audio/x-raw,rate=48000,channels=2,format=S16LE\
-  \ ! audioconvert ! wavenc ! filesink location=/tmp/snapfifo"
+  \n"
 PostArgs: snapserver -s pipe:///data/snapfifo?name=Example&amp;sampleformat=44100:16:2
 Privileged: 'false'
 Project: https://hub.docker.com/r/kevineye/snapcast

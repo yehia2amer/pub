@@ -157,19 +157,10 @@ Config:
       value: ''
 Name: UniFi-Protect-Backup
 Network: bridge
-Overview: "A Python based tool for backing up UniFi Protect event clips as they occur\
-  \ to cloud storage.\n\n  By default it will backup clips locally to `/data` inside\
-  \ the container. However you can create an `rclone` config file to backup to\n \
-  \ dozens of cloud providers. You can do this by running the following commands:\n\
-  \n  ```\n  $ mkdir /mnt/user/appdata/unifi-protect-backup\n  $ docker run -it --rm\
-  \ -v /mnt/user/appdata/unifi-protect-backup:/root/.config/rclone rclone/rclone config\n\
-  \  ```\n  \n  Use the interactive configuration tool to setup your desired backup\
-  \ destination. Once complete you can start the container ensuring\n  that the `RCLONE_DESTINATION`\
-  \ uses the name of your rclone remote e.g `MyDropbox:/path/on/dropbx`\n\n  NOTE:\
-  \ If you are using the `local` remote type, the path set in `RCLONE_DESTINATION`\
-  \ will be inside the container so please use \n        `/data`. You then need to\
-  \ set the optional \"Clip directory\" below to where you actually want the data\
-  \ to be stored."
+Overview: 'A Python based tool for backing up UniFi Protect event clips as they occur
+  to cloud storage.
+
+  '
 Privileged: 'false'
 Project: https://github.com/ep1cman/unifi-protect-backup
 Registry: https://github.com/ep1cman/unifi-protect-backup/pkgs/container/unifi-protect-backup

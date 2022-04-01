@@ -32,6 +32,21 @@ for n in afList:
     n.pop("LastUpdate", "")
     n.pop("LastUpdateScan", "")
     
+    if "Overview" in n.keys() and n["Overview"]:
+      ovlist = n["Overview"].splitlines(keepends=True)
+      try:
+        while True:
+          ovlist.remove("\r\n")
+        while True:
+          ovlist.remove("\n")
+        while True:
+          ovlist.remove("DESCRIPTION\r\n")
+        while True:
+          ovlist.remove("DESCRIPTION")
+      except ValueError:
+        pass
+      n["Overview"] = ovlist[0]
+    
     if "Config" in n.keys() and n["Config"]:
       hold = {}
       hold["Port"] = {}

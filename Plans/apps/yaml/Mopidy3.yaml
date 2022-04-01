@@ -49,23 +49,7 @@ Name: Mopidy3
 Network: br0
 Networking:
   Mode: br0
-Overview: "Mopidy is an extensible music server written in Python.\r\nMopidy plays\
-  \ music from local disk, Spotify, SoundCloud, Google Play Music, and more. You edit\
-  \ the playlist from any phone, tablet, or computer using a range of MPD and web\
-  \ clients.\r\n\r\nThis is Mopidy3 for unraid with support for snapcast and icecast.\n\
-  \r\n- set up the docker\r\n- set up the network to br0 with an ip\r\n- set up volume\
-  \ mount to /mnt/user/appdata/mopidy/ &gt;&gt; /config/\n- set up volume mount for\
-  \ tmp/snapfifo if you use snapcast /mnt/user/appdata/mopidy/tmp/ &gt;&gt; /tmp \
-  \ \r\n- set up volume mount for your local media \r\n\r\ngenerate the mopidy.conf\
-  \ file *Doc here https://docs.mopidy.com/en/latest/config/ *example here https://github.com/maschhoff/docker/blob/master/mopidy/mopidy.conf\n\
-  \nauthentication for soundcloud and spotify https://www.mopidy.com/authenticate/\
-  \ *authenticate spotify https://developer.spotify.com/documentation/web-api/quick-start/\n\
-  \r\nuse my docker icecast or snapcast for music streaming:\r\n \r\nfor audio you\
-  \ need a special config\r\nfor snapcast you have to generate the audio output in\
-  \ a pipe file /tmp/snapfifo this is mounted in both docker container\r\n\r\n[audio]\r\
-  \noutput = audioresample ! audio/x-raw,rate=48000,channels=2,format=S16LE ! audioconvert\
-  \ ! wavenc ! filesink location=/tmp/snapfifo\r\n\r\nicecast\r\n\r\n[audio]\r\noutput\
-  \ = lamemp3enc ! shout2send async=false mount=mopidy ip=X.X.X.X port=8000 password=XXXXX"
+Overview: "Mopidy is an extensible music server written in Python.\r\n"
 PostArgs: mopidy --config /config/mopidy.conf
 Privileged: 'false'
 Project: https://github.com/maschhoff/docker/tree/master/mopidy
