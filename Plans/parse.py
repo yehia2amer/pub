@@ -23,6 +23,14 @@ for n in afList:
     n.pop("templatePath", "")
     n.pop("Shell", "")
     n.pop("CPUset", "")
+    n.pop("DonateImg", "")
+    n.pop("DonateLink", "")
+    n.pop("DonateText", "")
+    n.pop("Video", "")
+    n.pop("Support", "")
+    n.pop("FirstSeen", "")
+    n.pop("LastUpdate", "")
+    n.pop("LastUpdateScan", "")
     
     if "Config" in n.keys() and n["Config"]:
       hold = {}
