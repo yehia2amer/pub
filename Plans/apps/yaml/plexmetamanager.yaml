@@ -1,70 +1,115 @@
-CategoryList:
-- Tools-Utilities
+ChangeLogPresent: true
 Config:
   Device: {}
   Label: {}
   Path:
-    Config:
+    Appdata:
       Default: ''
-      Description: 'Container Path: /config'
-      Display: always
+      Description: Local path for plex-meta-manager config files.
+      Display: advanced
       Mask: 'false'
       Mode: rw
-      Name: Config
-      Required: 'false'
+      Name: Appdata
+      Required: 'true'
       Target: /config
       Type: Path
-      value: /mnt/user/appdata/plex-meta-manager
+      value: ''
   Port: {}
   Variable:
-    Divider Character:
-      Default: ''
-      Description: 'Container Variable: PMM_DIVIDER'
-      Display: always
+    PGID:
+      Default: '100'
+      Description: 'Container Variable: PGID'
+      Display: advanced
       Mask: 'false'
-      Mode: ''
-      Name: Divider Character
-      Required: 'false'
-      Target: PMM_DIVIDER
+      Name: PGID
+      Required: 'true'
+      Target: PGID
       Type: Variable
-      value: '='
-    Screen Width:
-      Default: ''
-      Description: 'Container Variable: PMM_WIDTH'
+      value: ''
+    PMM_CONFIG:
+      Default: /config/config.yml
+      Description: Specify a custom config file to use.
       Display: always
       Mask: 'false'
-      Mode: ''
-      Name: Screen Width
+      Name: PMM_CONFIG
       Required: 'false'
-      Target: PMM_WIDTH
+      Target: PMM_CONFIG
       Type: Variable
-      value: '200'
-    Time to Run:
-      Default: '6:00'
-      Description: 'Container Variable: PMM_TIME'
+      value: ''
+    PMM_NO_MISSING:
+      Default: 'False'
+      Description: Set to `True` to run without any of the missing movie/show functions.
       Display: always
       Mask: 'false'
-      Mode: ''
-      Name: Time to Run
+      Name: PMM_NO_MISSING
+      Required: 'false'
+      Target: PMM_NO_MISSING
+      Type: Variable
+      value: ''
+    PMM_RUN:
+      Default: 'False'
+      Description: Set to `True` to run without the scheduler.
+      Display: always
+      Mask: 'false'
+      Name: PMM_RUN
+      Required: 'false'
+      Target: PMM_RUN
+      Type: Variable
+      value: ''
+    PMM_TEST:
+      Default: 'False'
+      Description: 'Set to `True` to run in debug mode with only collections that
+        have `test: true`.'
+      Display: always
+      Mask: 'false'
+      Name: PMM_TEST
+      Required: 'false'
+      Target: PMM_TEST
+      Type: Variable
+      value: ''
+    PMM_TIME:
+      Default: 03:00
+      Description: 'Comma-separated list of times to update each day. Format: `HH:MM`.'
+      Display: always
+      Mask: 'false'
+      Name: PMM_TIME
       Required: 'false'
       Target: PMM_TIME
       Type: Variable
-      value: '6:00'
-Icon: https://metamanager.wiki/en/latest/_static/pmm.png
-Name: Plex-Meta-Manager
-Network: host
-Networking:
-  Mode: host
-Overview: 'Python script to update metadata and automatically build collections.
-
-  '
-PostArgs: ''
+      value: ''
+    PUID:
+      Default: '99'
+      Description: 'Container Variable: PUID'
+      Display: advanced
+      Mask: 'false'
+      Name: PUID
+      Required: 'true'
+      Target: PUID
+      Type: Variable
+      value: ''
+    UMASK:
+      Default: '022'
+      Description: 'Container Variable: UMASK'
+      Display: advanced
+      Mask: 'false'
+      Name: UMASK
+      Required: 'false'
+      Target: UMASK
+      Type: Variable
+      value: ''
+GitHub: https://github.com/linuxserver/docker-plex-meta-manager#application-setup
+Icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/linuxserver-ls-logo.png
+Name: plex-meta-manager
+Network: bridge
+Overview: Plex-meta-manager(https://github.com/meisnate12/Plex-Meta-Manager) is a
+  Python 3 script that can be continuously run using YAML configuration files to update
+  on a schedule the metadata of the movies, shows, and collections in your libraries
+  as well as automatically build collections based on various methods all detailed
+  in the wiki.
 Privileged: 'false'
-Project: https://github.com/meisnate12/Plex-Meta-Manager/wiki/
-Registry: https://hub.docker.com/r/meisnate12/plex-meta-manager/
-Repository: meisnate12/plex-meta-manager
-TemplateURL: https://raw.githubusercontent.com/Data-Monkey/docker-templates/master/Data-Monkey/plex-meta-manager.xml
+Project: https://github.com/meisnate12/Plex-Meta-Manager
+ReadMe: https://github.com/linuxserver/docker-plex-meta-manager#readme
+Registry: https://github.com/orgs/linuxserver/packages/container/package/plex-meta-manager
+Repository: lscr.io/linuxserver/plex-meta-manager
+TemplateURL: https://raw.githubusercontent.com/linuxserver/templates/master/unraid/plex-meta-manager.xml
 WebUI: ''
-changes: ''
-topPerforming: 1.427
-topTrending: -35.898

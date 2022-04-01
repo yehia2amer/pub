@@ -100,7 +100,7 @@ for n in afList:
       print("skipping "+tmp+" is a unraid plugin...")
     else:
       combined[tmp] = n
-      if "Requires" in n.keys() and n["Requires"]:
+      if ("Requires" in n.keys() and n["Requires"]) or ("Network" in n.keys() and n["Network"] == "host"):
         combinedreq[tmp] = n
         jsonString = json.dumps(n)
         jsonFile = open("apps/"+"req/"+"json/"+tmp+".json", "w")

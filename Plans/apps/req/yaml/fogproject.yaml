@@ -1,0 +1,114 @@
+CAComment: Note that this container appears to have been abandonded and is only installing
+  a very old version of FOG.  While functional, do not expect updates to happen to
+  this app
+CategoryList:
+- Network-Other
+Config:
+  Device: {}
+  Label: {}
+  Path:
+    Images:
+      Default: ''
+      Description: 'Container Path: /images'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Images
+      Required: 'false'
+      Target: /images
+      Type: Path
+      value: /mnt/cache/FOGServer/images
+    MySQL:
+      Default: ''
+      Description: 'Container Path: /var/lib/mysql'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: MySQL
+      Required: 'false'
+      Target: /var/lib/mysql
+      Type: Path
+      value: /mnt/cache/FOGServer/MySQL
+  Port:
+    Port 21:
+      Default: ''
+      Description: 'Container Port: '
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Port 21
+      Required: 'false'
+      Target: '21'
+      Type: Port
+      value: '21'
+    Port 69 TCP:
+      Default: ''
+      Description: 'Container Port: '
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Port 69 TCP
+      Required: 'false'
+      Target: '69'
+      Type: Port
+      value: '69'
+    Port 69 UDP:
+      Default: ''
+      Description: 'Container Port: '
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: Port 69 UDP
+      Required: 'false'
+      Target: '69'
+      Type: Port
+      value: '69'
+    Port 80:
+      Default: ''
+      Description: 'Container Port: '
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Port 80
+      Required: 'false'
+      Target: '80'
+      Type: Port
+      value: '80'
+    Port 9000:
+      Default: ''
+      Description: 'Container Port: '
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Port 9000
+      Required: 'false'
+      Target: '9000'
+      Type: Port
+      value: '9000'
+  Variable:
+    IP Server:
+      Default: ''
+      Description: 'Container Variable: IP'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: IP Server
+      Required: 'false'
+      Target: IP
+      Type: Variable
+      value: 192.168.0.200
+Icon: https://raw.githubusercontent.com/Mudislander/docker-templates/master/img/fogproject_icon.png
+Name: fogproject
+Network: host
+Networking:
+  Mode: host
+Overview: FOG Project can capture, deploy, and manage Windows, Mac OSX, and various
+  Linux distributions.
+PostArgs: ''
+Privileged: 'true'
+Project: https://fogproject.org/
+Registry: https://hub.docker.com/r/mudislander/fogproject//Dockerfile/
+Repository: mudislander/fogproject
+TemplateURL: https://raw.githubusercontent.com/Mudislander/docker-templates/master/fogproject.xml
+topPerforming: 0.686
+topTrending: -6.257

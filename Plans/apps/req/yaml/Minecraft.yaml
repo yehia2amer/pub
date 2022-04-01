@@ -1,0 +1,105 @@
+BindTime: 'true'
+CategoryList:
+- GameServers
+ChangeLogPresent: true
+Config:
+  Device: {}
+  Label: {}
+  Path:
+    AppData Config Path:
+      Default: /mnt/user/appdata/minecraft-server
+      Description: 'Container Path: /MCserver'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: rw
+      Name: AppData Config Path
+      Required: 'true'
+      Target: /MCserver
+      Type: Path
+      value: /mnt/user/appdata/minecraft-server
+    Save Data:
+      Default: ''
+      Description: 'Container Path: /MCserver/world/'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Save Data
+      Required: 'false'
+      Target: /MCserver/world/
+      Type: Path
+      value: ''
+  Port:
+    Host Port 1:
+      Default: '25565'
+      Description: 'Container Port: 25565'
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: Host Port 1
+      Required: 'true'
+      Target: '25565'
+      Type: Port
+      value: '25565'
+    Host Port 2:
+      Default: '25565'
+      Description: 'Container Port: 25565'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Host Port 2
+      Required: 'true'
+      Target: '25565'
+      Type: Port
+      value: '25565'
+  Variable:
+    Accept EULA:
+      Default: 'false'
+      Description: 'Head over to: https://account.mojang.com/documents/minecraft_eula
+        to read the EULA. (If you accept the EULA change the value to ''true'' without
+        quotes).'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Accept EULA
+      Required: 'true'
+      Target: ACCEPT_EULA
+      Type: Variable
+      value: 'true'
+    Key 2:
+      Default: '99'
+      Description: 'Container Variable: PUID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: Key 2
+      Required: 'false'
+      Target: PUID
+      Type: Variable
+      value: '99'
+    Key 3:
+      Default: '100'
+      Description: 'Container Variable: PGID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: Key 3
+      Required: 'false'
+      Target: PGID
+      Type: Variable
+      value: '100'
+Icon: https://raw.githubusercontent.com/fithwum/files-for-dockers/master/icons/Minecraft.png
+Name: Minecraft
+Network: host
+Networking:
+  Mode: host
+Overview: This docker is for running Minecraft vanilla server version 1.18 and java
+  17. You can run a modded server you can just do not delete the files that are in
+  the folder.
+PostArgs: ''
+Privileged: 'false'
+Project: https://www.minecraft.net/en-us/
+Registry: https://hub.docker.com/r/fithwum/minecraft/
+Repository: fithwum/minecraft
+TemplateURL: https://raw.githubusercontent.com/fithwum/files-for-dockers/master/templates/minecraft_server_unraid.xml
+WebUI: ''
+topTrending: -6.205
