@@ -1,116 +1,50 @@
-CAComment: This template is set up to use a custom network. You may have to adjust
-  the network or IP address etc to match your system
+BindTime: 'true'
 CategoryList:
 - Productivity
-- Tools-Utilities
-Config:
-  Device: {}
-  Label: {}
-  Path:
-    Mounted folder for data files ( SSL certificates can be added in the /cert subfolder ):
-      Default: /mnt/user/appdata/onlyoffice/DocumentServer/data
-      Description: 'Container Path: /var/www/onlyoffice/Data'
-      Display: always
-      Mask: 'false'
-      Mode: rw
-      Name: Mounted folder for data files ( SSL certificates can be added in the /cert
-        subfolder )
-      Required: 'false'
-      Target: /var/www/onlyoffice/Data
-      Type: Path
-      value: /mnt/user/appdata/onlyoffice/DocumentServer/data
-    Mounted folder for database:
-      Default: /mnt/user/appdata/onlyoffice/DocumentServer/db
-      Description: 'Container Path: /var/lib/postgresql'
-      Display: always
-      Mask: 'false'
-      Mode: rw
-      Name: Mounted folder for database
-      Required: 'false'
-      Target: /var/lib/postgresql
-      Type: Path
-      value: /mnt/user/appdata/onlyoffice/DocumentServer/db
-    Mounted folder for file cache:
-      Default: /mnt/user/appdata/onlyoffice/DocumentServer/lib
-      Description: 'Container Path: /var/lib/onlyoffice'
-      Display: always
-      Mask: 'false'
-      Mode: rw
-      Name: Mounted folder for file cache
-      Required: 'false'
-      Target: /var/lib/onlyoffice
-      Type: Path
-      value: /mnt/user/appdata/onlyoffice/DocumentServer/lib
-    Mounted folder for logs:
-      Default: /mnt/user/appdata/onlyoffice/DocumentServer/logs
-      Description: 'Container Path: /var/log/onlyoffice'
-      Display: always
-      Mask: 'false'
-      Mode: rw
-      Name: Mounted folder for logs
-      Required: 'false'
-      Target: /var/log/onlyoffice
-      Type: Path
-      value: /mnt/user/appdata/onlyoffice/DocumentServer/logs
-    Mounted folder for unsaved files:
-      Default: /mnt/user/appdata/onlyoffice/DocumentServer/forgotten
-      Description: 'Container Path: /var/lib/onlyoffice/documentserver/App_Data/cache/files/forgotten'
-      Display: always
-      Mask: 'false'
-      Mode: rw
-      Name: Mounted folder for unsaved files
-      Required: 'false'
-      Target: /var/lib/onlyoffice/documentserver/App_Data/cache/files/forgotten
-      Type: Path
-      value: /mnt/user/appdata/onlyoffice/DocumentServer/forgotten
-    Mounted folder where you can add your custom fonts:
-      Default: /mnt/user/appdata/onlyoffice/DocumentServer/fonts
-      Description: 'Container Path: /usr/share/fonts/truetype/custom'
-      Display: always
-      Mask: 'false'
-      Mode: rw
-      Name: Mounted folder where you can add your custom fonts
-      Required: 'false'
-      Target: /usr/share/fonts/truetype/custom
-      Type: Path
-      value: /mnt/user/appdata/onlyoffice/DocumentServer/fonts
-  Port:
-    HTTP Port:
-      Default: '8082'
-      Description: 'Container Port: 80'
-      Display: always
-      Mask: 'false'
-      Mode: tcp
-      Name: HTTP Port
-      Required: 'false'
-      Target: '80'
-      Type: Port
-      value: '8082'
-    HTTPS Port:
-      Default: '4432'
-      Description: 'Container Port: 443'
-      Display: always
-      Mask: 'false'
-      Mode: tcp
-      Name: HTTPS Port
-      Required: 'false'
-      Target: '443'
-      Type: Port
-      value: '4432'
-  Variable: {}
-Icon: https://raw.githubusercontent.com/AMJidovu/unraid-repository/d5a562fa4a7b73065dd022e585d80d4b77d0abfa/img/onlyoffice-ce-ds.jpg
-Name: onlyoffice-document-server
-Network: onlyoffice
+- Tools
+Data:
+  Volume:
+  - ContainerDir: /var/log/onlyoffice
+    HostDir: /mnt/user/appdata/onlyofficeds/logs
+    Mode: rw
+  - ContainerDir: /var/www/onlyoffice/Data
+    HostDir: /mnt/user/appdata/onlyofficeds/Data
+    Mode: rw
+  - ContainerDir: /var/lib/onlyoffice
+    HostDir: /mnt/user/appdata/onlyofficeds/lib
+    Mode: rw
+  - ContainerDir: /var/lib/postgresql
+    HostDir: /mnt/user/appdata/onlyofficeds/database
+    Mode: rw
+  - ContainerDir: /usr/share/fonts/
+    HostDir: /mnt/user/appdata/onlyofficeds/fonts
+    Mode: rw
+Environment: ''
+GitHub: https://github.com/SiwatINC/unraid-ca-repository
+Icon: https://raw.githubusercontent.com/SiwatINC/unraid-ca-repository/master/icons/onlyoffice.png
+Name: OnlyOfficeDocumentServer
 Networking:
-  Mode: onlyoffice
-Overview: "Before you start this container you need to create the onlyoffice network.\
-  \ \r\n"
-PostArgs: ''
+  Mode: bridge
+  Publish:
+    Port:
+    - ContainerPort: '80'
+      HostPort: '8080'
+      Protocol: tcp
+    - ContainerPort: '443'
+      HostPort: '4430'
+      Protocol: tcp
+Official: true
+Overview: 'ONLYOFFICE Document Server is an online office suite comprising viewers
+  and editors for texts, spreadsheets and presentations, fully compatible with Office
+  Open XML formats: .docx, .xlsx, .pptx and enabling collaborative editing in real
+  time.
+
+  '
 Privileged: 'false'
 Project: https://www.onlyoffice.com/
-Registry: https://hub.docker.com/repository/docker/xternet/unraid-onlyoffice-document-server
-Repo: Jidovu Marius Adrian's Repository
-Repository: xternet/unraid-onlyoffice-document-server:b722d7ee269b89afabea70dce3acfdc8eca6d7e5
-TemplateURL: https://raw.githubusercontent.com/AMJidovu/unraid-repository/master/unraid-ca-repo/onlyoffice-document-server.xml
+Registry: https://hub.docker.com/r/onlyoffice/documentserver/
+Repository: onlyoffice/documentserver
+TemplateURL: https://raw.githubusercontent.com/SiwatINC/unraid-ca-repository/master/docker-template/onlyoffice_document_server.xml
 WebUI: http://[IP]:[PORT:80]
-topTrending: -2.5740000000000003
+topPerforming: 1.002
+topTrending: -1.603

@@ -1,5 +1,18 @@
 import json
 import yaml
+import os
+import string
+import shutil
+
+
+shutil.rmtree('./apps')
+
+os.mkdir("./apps")
+os.mkdir("./apps/yaml")
+os.mkdir("./apps/json")
+os.mkdir("./apps/req/")
+os.mkdir("./apps/req/yaml")
+os.mkdir("./apps/req/json")
 
 fileObject = open("af.json", "r")
 jsonContent = fileObject.read()
@@ -8,8 +21,17 @@ combined = {}
 combinedfree = {}
 combinedreq = {}
 
+paths1 = os.listdir("../website/apps/stable")
+paths2 = os.listdir("../website/apps/incubator")
+paths3 = os.listdir("../website/apps/core")
+paths4 = os.listdir("../website/apps/games")
+
+paths = paths1 + paths2 + paths3 + paths4
+for p in range(len(paths)):
+    paths[p] = paths[p].lower()
+
 for n in afList:
-  if "Name" in n.keys():
+  if "Name" in n.keys() and n["Name"].lower() not in paths:
     tmp = n["Name"]
     tmp = ''.join(filter(str.isalnum, tmp))
     print(tmp.encode("utf-8"))
@@ -31,6 +53,7 @@ for n in afList:
     n.pop("FirstSeen", "")
     n.pop("LastUpdate", "")
     n.pop("LastUpdateScan", "")
+    n.pop("Repo", "")
     
     if "Overview" in n.keys() and n["Overview"]:
       ovlist = n["Overview"].splitlines(keepends=True)
@@ -130,3 +153,4 @@ yamlString4 = yaml.dump(combined)
 yamlFile4 = open("apps.yaml", "w")
 yamlFile4.write(yamlString4)
 yamlFile4.close()
+
