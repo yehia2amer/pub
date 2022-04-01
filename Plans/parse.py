@@ -4,10 +4,18 @@ import os
 import string
 import shutil
 
-
-shutil.rmtree('./apps')
+try:
+  shutil.rmtree('./apps')
+except:
+  pass
+  
+try:
+  shutil.rmtree('./export')
+except:
+  pass
 
 os.mkdir("./apps")
+os.mkdir("./export")
 os.mkdir("./apps/yaml")
 os.mkdir("./apps/json")
 os.mkdir("./apps/req/")
@@ -154,3 +162,28 @@ yamlFile4 = open("apps.yaml", "w")
 yamlFile4.write(yamlString4)
 yamlFile4.close()
 
+chartsyaml = {}
+questionsyaml = {}
+valuesyaml = {}
+
+fileObject = open("example/Chart.json", "r")
+jsonContent = fileObject.read()
+chartsyaml = json.loads(jsonContent)
+
+fileObject = open("example/values.json", "r")
+jsonContent = fileObject.read()
+valuesyaml = json.loads(jsonContent)
+
+fileObject = open("example/questions.json", "r")
+jsonContent = fileObject.read()
+questionsyaml = json.loads(jsonContent)
+
+for name, app in combinedfree.items():
+  appchartyaml = chartsyaml
+  appchartyaml["name"] = app["Name"]
+  
+  os.mkdir("./export/"+app["Name"])
+  appyamlString = yaml.dump(appchartyaml)
+  appyamlFile = open("./export/"+app["Name"]+"/Chart.yaml", "w")
+  appyamlFile.write(appyamlString)
+  appyamlFile.close()
