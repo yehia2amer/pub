@@ -1,0 +1,125 @@
+Beta: 'true'
+CategoryList:
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: '5800'
+    Description: 'Container Port: 5800'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Web Port
+    Required: 'true'
+    Target: '5800'
+    Type: Port
+  value: '5800'
+- '@attributes':
+    Default: '5900'
+    Description: 'Container Port: 5900'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: VNC Port
+    Required: 'false'
+    Target: '5900'
+    Type: Port
+  value: '5900'
+- '@attributes':
+    Default: /mnt/user/appdata/P3R-OpenRGB/
+    Description: 'Container Path: /config/'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: AppData
+    Required: 'true'
+    Target: /config/
+    Type: Path
+  value: /mnt/user/appdata/P3R-OpenRGB/
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /sys/bus/i2c/devices/'
+    Display: always
+    Mask: 'false'
+    Mode: ro
+    Name: SYS I2C
+    Required: 'false'
+    Target: /sys/bus/i2c/devices/
+    Type: Path
+  value: /sys/bus/i2c/devices/
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /dev/i2c-0'
+    Display: always
+    Mask: 'false'
+    Mode: ro
+    Name: DEV I2C
+    Required: 'false'
+    Target: /dev/i2c-0
+    Type: Path
+  value: /dev/i2c-0
+- '@attributes':
+    Default: ''
+    Description: Set New VNC Password
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: VNC Password
+    Required: 'false'
+    Target: VNC_PASSWORD
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: default.orp
+    Description: Set Default Profile
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: Default Profile
+    Required: 'false'
+    Target: DEFAULT_PROFILE
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '6742'
+    Description: 'Container Port: 6742'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: tcp
+    Name: SDK Server Port
+    Required: 'false'
+    Target: '6742'
+    Type: Port
+  value: '6742'
+DonateLink: https://www.patreon.com/keepitPG
+DonateText: Please support me on Patreon
+ExtraParams: -e 'USER_ID'='0' -e 'GROUP_ID'='0'
+FirstSeen: 1588745378
+Icon: https://raw.githubusercontent.com/P3R-CO/unraid/master/OpenRGB-P3R-256px.png
+LastUpdate: 1643667451
+LastUpdateScan: 1648512201
+Name: P3R-OpenRGB
+Network: bridge
+Overview: "A simple container that opens OpenRGB in a browser so that you can control\
+  \ all of your System lighting while still running UnraidOS.\r\n\r\nOpenRGB is an\
+  \ Open source RGB lighting control that doesn't depend on manufacturer software.\
+  \ ASUS, ASRock, Corsair, G.Skill, Gigabyte, HyperX, MSI, Razer, ThermalTake, and\
+  \ more are currently supported.\r\n\r\nWARNING!\r\nThis project provides a tool\
+  \ to probe the SMBus.  This is a potentially dangerous operation if you don't know\
+  \ what you're doing.  Exercise caution when clicking the Detect Devices or Dump\
+  \ Device buttons.  There have been reports of Gigabyte motherboards having serious\
+  \ issues (bricking the RGB or bricking the entire board) when dumping certain devices.\
+  \  On the same lines, exercise the same caution when using the i2cdump and i2cdetect\
+  \ commands on Linux, as they perform the same functionality.  OpenRGB is not liable\
+  \ for damage caused by improper SMBus access.\r\nAs of now, only Gigabyte RGB Fusion\
+  \ 2.0 boards have been reported to have issues."
+Privileged: 'true'
+Project: https://github.com/P3R-CO/openrgb-container
+Registry: https://hub.docker.com/repository/docker/p3rco/openrgb
+Repo: capt.asic's Repository
+Repository: p3rco/openrgb:latest
+Support: https://discord.gg/uRhFDDK
+TemplateURL: https://raw.githubusercontent.com/P3R-CO/unraid/master/openrgb.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:5800]/
+topPerforming: 0.548
+topTrending: -8.372

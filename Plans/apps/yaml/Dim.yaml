@@ -1,0 +1,66 @@
+CategoryList:
+- MediaApp-Video
+Config:
+- '@attributes':
+    Default: '8000'
+    Description: Web UI Port
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Web UI Port
+    Required: 'true'
+    Target: '8000'
+    Type: Port
+  value: '8000'
+- '@attributes':
+    Default: ''
+    Description: Media Path
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Media Path
+    Required: 'false'
+    Target: /media
+    Type: Path
+  value: /mnt/user/media/
+- '@attributes':
+    Default: ''
+    Description: Graphics Card Path
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Graphics Card Path
+    Required: 'false'
+    Target: ''
+    Type: Device
+  value: /dev/dri
+- '@attributes':
+    Default: /mnt/user/appdata/dim
+    Description: Config Path
+    Display: advanced
+    Mask: 'false'
+    Mode: rw
+    Name: Config Path
+    Required: 'false'
+    Target: /opt/dim/config
+    Type: Path
+  value: /mnt/user/appdata/dim
+FirstSeen: 1644843495
+Icon: https://raw.githubusercontent.com/Dusk-Labs/dim/master/ui/public/static/textLogoBlack512.png
+LastUpdateScan: 1647439407
+Name: Dim
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: Dim is a self-hosted media manager. With minimal setup, Dim will organize
+  and beautify your media collections, letting you access and play them anytime from
+  anywhere
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/Dusk-Labs/dim
+Registry: https://github.com/Dusk-Labs/dim/pkgs/container/dim
+Repo: MyFaith's Repository
+Repository: ghcr.io/dusk-labs/dim:dev
+TemplateURL: https://raw.githubusercontent.com/MyFaith/unraid-templates/master/dim/dim.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8000]

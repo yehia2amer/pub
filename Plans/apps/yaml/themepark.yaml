@@ -1,0 +1,97 @@
+Branch:
+- ReadMe: https://docs.theme-park.dev/setup/#docker
+  Tag: latest
+  TagDescription: Based on latest release on the live branch
+- ReadMe: https://docs.theme-park.dev/setup/#docker
+  Tag: development
+  TagDescription: Based on latest commit on the develop branch
+CategoryList:
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: ''
+    Description: 'Container Port: 80'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI
+    Required: 'true'
+    Target: '80'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Appdata
+    Display: advanced
+    Mask: 'false'
+    Mode: rw
+    Name: Appdata
+    Required: 'true'
+    Target: /config
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: TP_DOMAIN'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Domain
+    Required: 'false'
+    Target: TP_DOMAIN
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: https
+    Description: Set to http for local use
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Uri scheme
+    Required: 'false'
+    Target: TP_SCHEME
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '99'
+    Description: 'Container Variable: PUID'
+    Display: advanced
+    Mask: 'false'
+    Name: PUID
+    Required: 'true'
+    Target: PUID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '100'
+    Description: 'Container Variable: PGID'
+    Display: advanced
+    Mask: 'false'
+    Name: PGID
+    Required: 'true'
+    Target: PGID
+    Type: Variable
+  value: ''
+FirstSeen: 1647993790
+Icon: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/themepark.png
+LastUpdateScan: 1647993790
+Name: theme-park
+Network: bridge
+Overview: "theme.park contains 48 themed applications, with css addons on certain\
+  \ themes.\n  [br][br]\n  Installation methods include custom docker mods for linuxserver.io\
+  \ containers,\n  custom scripts for select Hotio containers and multiple examples\
+  \ of subfiltering using webservers like Nginx and Apache\n  [br][br]\n  Choose between\
+  \ 10 official styles, and 22 community styles! With the possibility to easily create\
+  \ your own themes using the defined variables.\n  [br][br]\n  See https://theme-park.dev/\
+  \ and https://docs.theme-park.dev/setup/#docker for more information"
+Privileged: 'false'
+Project: https://theme-park.dev/
+ReadMe: https://docs.theme-park.dev/setup/
+Registry: https://github.com/GilbN/theme.park/pkgs/container/theme.park
+Repo: Selfhosters Unraid Discord Repository
+RepoShort: Selfhosters
+Repository: ghcr.io/gilbn/theme.park
+Support: https://docs.theme-park.dev/discord
+TemplateURL: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/themepark.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:80]

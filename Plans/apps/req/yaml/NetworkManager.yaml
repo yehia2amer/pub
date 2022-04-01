@@ -1,0 +1,116 @@
+Beta: 'true'
+CategoryList:
+- Productivity
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: '9000'
+    Description: The port used for the HTTP service
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Web Port
+    Required: 'true'
+    Target: '9000'
+    Type: Port
+  value: '9000'
+- '@attributes':
+    Default: ''
+    Description: The key used to secure data. (random string of 32 characters [a-zA-Z0-9])
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Application Key
+    Required: 'true'
+    Target: APP_KEY
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: 127.0.0.1
+    Description: 'Container Variable: DB_HOST'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Database Host
+    Required: 'false'
+    Target: DB_HOST
+    Type: Variable
+  value: 127.0.0.1
+- '@attributes':
+    Default: '3306'
+    Description: 'Container Variable: DB_PORT'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Database Port
+    Required: 'false'
+    Target: DB_PORT
+    Type: Variable
+  value: '3306'
+- '@attributes':
+    Default: root
+    Description: 'Container Variable: DB_USERNAME'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Database Username
+    Required: 'false'
+    Target: DB_USERNAME
+    Type: Variable
+  value: root
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: DB_PASSWORD'
+    Display: always
+    Mask: 'true'
+    Mode: ''
+    Name: Database Password
+    Required: 'false'
+    Target: DB_PASSWORD
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: network_manager
+    Description: 'Container Variable: DB_DATABASE'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Database Database
+    Required: 'false'
+    Target: DB_DATABASE
+    Type: Variable
+  value: network_manager
+- '@attributes':
+    Default: false|true
+    Description: Whether the webserver should generate HTTPS links instead of HTTP
+      links. (Set this to true when running behind a HTTPS proxy)
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: HTTPS
+    Required: 'false'
+    Target: OCTANE_HTTPS
+    Type: Variable
+  value: 'false'
+FirstSeen: 1640371140
+Icon: https://raw.githubusercontent.com/Sander0542/docker-templates/main/sander0542/icons/NetworkManager.png
+LastUpdate: 1647832251
+LastUpdateScan: 1648159403
+Name: NetworkManager
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: With this Docker you can manage the used hosts in your networks. It supports
+  multiple networks based on their subnet and size. Within each host you can specify
+  the ports that are used and the services that are running on them.
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/Sander0542/Network-Manager
+Registry: https://hub.docker.com/r/sander0542/network-manager
+Repo: Sander0542's Repository
+Repository: sander0542/network-manager
+Requires: MySQL
+Support: https://forums.unraid.net/topic/117642-support-sander0542-network-manager/
+TemplateURL: https://raw.githubusercontent.com/Sander0542/docker-templates/master/sander0542/NetworkManager.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:9000]

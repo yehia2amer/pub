@@ -1,0 +1,119 @@
+CategoryList:
+- HomeAutomation
+ChangeLogPresent: true
+Config:
+- '@attributes':
+    Default: /mnt/user/appdata/mosquitto
+    Description: 'Store &lt;code&gt;mosquitto.conf&lt;/code&gt; (or additional &lt;code&gt;*.conf&lt;/code&gt;
+      files). &lt;em&gt;Container Path: &lt;code&gt;/mosquitto/config&lt;/code&gt;&lt;/em&gt;'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Config Directory
+    Required: 'true'
+    Target: /mosquitto/config
+    Type: Path
+  value: /mnt/user/appdata/mosquitto
+- '@attributes':
+    Default: ''
+    Description: '&lt;em&gt;(Optional)&lt;/em&gt; Store persistent MQTT data. &lt;strong&gt;Note:&lt;/strong&gt;
+      Persistent data must be enabled in the &lt;code&gt;mosquitto.conf&lt;/code&gt;
+      config file. &lt;em&gt;Container Path: &lt;code&gt;/mosquitto/data&lt;/code&gt;&lt;/em&gt;'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Persistent Data Directory
+    Required: 'false'
+    Target: /mosquitto/data
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: '&lt;em&gt;(Optional)&lt;/em&gt; Store mosquitto logs. &lt;strong&gt;Note:&lt;/strong&gt;
+      Logs must be enabled in the &lt;code&gt;mosquitto.conf&lt;/code&gt; config file.
+      &lt;em&gt;Container Path: &lt;code&gt;/mosquitto/log&lt;/code&gt;&lt;/em&gt;'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Log Directory
+    Required: 'false'
+    Target: /mosquitto/log
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: '0'
+    Description: Set to &lt;code&gt;1&lt;/code&gt; to enable anonymous connections
+      on port 1883 as in Mosquitto 1.x
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Run Insecure MQTT Server
+    Required: 'true'
+    Target: RUN_INSECURE_MQTT_SERVER
+    Type: Variable
+  value: '0'
+- '@attributes':
+    Default: '1883'
+    Description: 'MQTT Server Port. &lt;em&gt;Container Port: &lt;code&gt;1883&lt;/code&gt;&lt;/em&gt;'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: 'Host Port: MQTT Server'
+    Required: 'true'
+    Target: '1883'
+    Type: Port
+  value: '1883'
+- '@attributes':
+    Default: ''
+    Description: '&lt;em&gt;(Optional)&lt;/em&gt; MQTT-TLS Server Port  &lt;strong&gt;Note:&lt;/strong&gt;
+      TLS must be configured in the &lt;code&gt;mosquitto.conf&lt;/code&gt; config
+      file. &lt;em&gt;Container Port: &lt;code&gt;8883&lt;/code&gt;&lt;/em&gt;'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: 'Host Port: MQTT TLS'
+    Required: 'false'
+    Target: '8883'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: '&lt;em&gt;(Optional)&lt;/em&gt; MQTT Websockets Server Port.  &lt;strong&gt;Note:&lt;/strong&gt;
+      Websockets must be enabled in the &lt;code&gt;mosquitto.conf&lt;/code&gt; config
+      file. &lt;em&gt;Container Port: &lt;code&gt;9001&lt;/code&gt;&lt;/em&gt;'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: 'Host Port: MQTT Websockets'
+    Required: 'false'
+    Target: '9001'
+    Type: Port
+  value: ''
+FirstSeen: 1577761662
+Icon: https://raw.githubusercontent.com/cmccambridge/mosquitto-unraid/master/media/eclipse-mosquitto.png
+LastUpdate: 1636483549
+LastUpdateScan: 1647921798
+Name: mosquitto
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "[p]This container is a minimal port of the official [a href='https://mosquitto.org/']Eclipse\
+  \ Mosquitto[/a] Docker container with minor tweaks to work more conveniently in\
+  \ unRAID.[/p]\r\n[h4]Configuration[/h4]\r\n[p]To set up paths and ports, see the\
+  \ descriptions in the unRAID docker settings page.[/p]\r\n[p]To further control\
+  \ mosquitto configuration, place a [code]mosquitto.conf[/code] file in the config\
+  \ path, or start the container one time and it will write a template [code]mosquitto.conf.example[/code]\
+  \ file to the config path for you to copy and edit. For further details, refer to\
+  \ the full README at [a href='https://github.com/cmccambridge/mosquitto-unraid/blob/master/README.md']https://github.com/cmccambridge/mosquitto-unraid/blob/master/README.md[/a][/p]"
+PostArgs: ''
+Privileged: 'false'
+Project: https://mosquitto.org
+Registry: https://hub.docker.com/r/cmccambridge/mosquitto-unraid/
+Repo: cmccambridge's Repository
+Repository: cmccambridge/mosquitto-unraid:latest
+Support: https://github.com/cmccambridge/mosquitto-unraid/issues
+TemplateURL: https://raw.githubusercontent.com/cmccambridge/unraid-templates/master/cmccambridge/mosquitto-unraid.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''
+topPerforming: 2.188
+topTrending: -4.850999999999999

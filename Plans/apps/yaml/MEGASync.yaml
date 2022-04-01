@@ -1,0 +1,136 @@
+CategoryList:
+- Network-Other
+- Productivity
+- Tools-Utilities
+- Backup
+Config:
+- '@attributes':
+    Default: ''
+    Description: Configuration directory
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Data Dir
+    Required: 'false'
+    Target: /megasync/.local/share/data/Mega Limited/MEGAsync
+    Type: Path
+  value: /mnt/cache/appdata/megasync
+- '@attributes':
+    Default: ''
+    Description: Read only (This container was mainly created to backup files to MEGA,
+      if you also want to sync files from and to MEGA please create a new path entry
+      to the preferred share on the server - it's strongly recommended to do that
+      in /mnt/... within the container)
+    Display: always
+    Mask: 'false'
+    Mode: ro
+    Name: Host Path
+    Required: 'false'
+    Target: /mnt/host
+    Type: Path
+  value: /mnt/user
+- '@attributes':
+    Default: ''
+    Description: WebGUI
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebGUI
+    Required: 'false'
+    Target: '8080'
+    Type: Port
+  value: '8080'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: UID'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: UID
+    Required: 'true'
+    Target: UID
+    Type: Variable
+  value: '99'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: GID'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: GID
+    Required: 'true'
+    Target: GID
+    Type: Variable
+  value: '100'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: UMASK'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: UMASK
+    Required: 'true'
+    Target: UMASK
+    Type: Variable
+  value: '000'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: UMASK'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Umask Value
+    Required: 'true'
+    Target: UMASK
+    Type: Variable
+  value: '000'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: CUSTOM_RES_W'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Custom Screen Width
+    Required: 'false'
+    Target: CUSTOM_RES_W
+    Type: Variable
+  value: '800'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: CUSTOM_RES_H'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Custom Screen Height
+    Required: 'false'
+    Target: CUSTOM_RES_H
+    Type: Variable
+  value: '600'
+DonateLink: https://www.paypal.me/chips777
+DonateText: 'If you like my work please '
+ExtraParams: --restart=unless-stopped
+FirstSeen: 1593108480
+Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/megasync.png
+LastUpdate: 1643019220
+LastUpdateScan: 1647662623
+Name: MEGASync
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "MEGAsync is an intuitive application that enables you to effortlessly synchronize\
+  \ folders on several computers. You simply need to upload data in the cloud and,\
+  \ within seconds, you can explore the same documents on your own PC.\r\n\r\nMEGAsync\
+  \ can synchronize all of your devices with your MEGA account. Access and work with\
+  \ your data securely across different locations and devices."
+PostArgs: ''
+Privileged: 'false'
+Project: https://hub.docker.com/r/ich777/doh-server
+Registry: https://hub.docker.com/r/ich777/megasync
+Repo: ich777's Repository
+Repository: ich777/megasync
+Support: https://forums.unraid.net/topic/83786-support-ich777-application-dockers/
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8080]/vnc.html?autoconnect=true
+caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/MEGASync.xml
+topPerforming: 3.281
+topTrending: -5.546999999999999

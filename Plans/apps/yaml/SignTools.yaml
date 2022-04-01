@@ -1,0 +1,80 @@
+CategoryList:
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /signer-cfg.yml'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: /signer-cfg.yml
+    Required: 'false'
+    Target: /signer-cfg.yml
+    Type: Path
+  value: /mnt/user/appdata/ios/config/signer-cfg.yml
+- '@attributes':
+    Default: ''
+    Description: 'Container Port: 8080'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Container Port
+    Required: 'false'
+    Target: '8080'
+    Type: Port
+  value: '3344'
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /data'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: /data
+    Required: 'false'
+    Target: /data
+    Type: Path
+  value: /mnt/user/appdata/ios/
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /data/profiles/'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: /data/profiles/
+    Required: 'false'
+    Target: /data/profiles/
+    Type: Path
+  value: /mnt/user/appdata/ios/profiles/
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: -log-level'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: -log-level
+    Required: 'false'
+    Target: -log-level
+    Type: Variable
+  value: '2'
+FirstSeen: 1635552196
+Icon: https://raw.githubusercontent.com/SignTools/SignTools/master/img/logo.png
+LastUpdate: 1642959110
+LastUpdateScan: 1648541011
+Name: SignTools
+Network: bridge
+Networking:
+  Mode: proxy
+Official: true
+Overview: "A self-hosted, cross-platform service to sign and install iOS apps, all\
+  \ without a computer.\r\n\r\nYou must have a reverse proxy to access the webUI.\
+  \ Configuration of the yml can be found on the github."
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/SignTools/SignTools
+Registry: https://hub.docker.com/r/signtools/signtools
+Repo: shaksiwnl's Repository
+Repository: signtools/signtools
+Support: https://discord.gg/4QnXCGA8yH
+TemplateURL: https://raw.githubusercontent.com/shaksiwnl/unraid-templates/master/ios-signer-service/ios-signer-service.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8080]

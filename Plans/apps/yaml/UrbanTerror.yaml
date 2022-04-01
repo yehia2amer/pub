@@ -1,0 +1,111 @@
+CategoryList:
+- GameServers
+Config:
+- '@attributes':
+    Default: ''
+    Description: Data Path
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Data Dir
+    Required: 'true'
+    Target: /urbanterror
+    Type: Path
+  value: /mnt/cache/appdata/urban-terror/
+- '@attributes':
+    Default: ''
+    Description: UDP Game Port
+    Display: always
+    Mask: 'false'
+    Mode: udp
+    Name: UDP - Game Port
+    Required: 'true'
+    Target: '27960'
+    Type: Port
+  value: '27960'
+- '@attributes':
+    Default: ''
+    Description: Enter you extra startup parameters if needed
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Extra Start Parameters
+    Required: 'false'
+    Target: START_PARAMS
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Set to 'true' (without quotes) to search for updates on every start/restart
+      otherwise leave empty
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Check for Updates
+    Required: 'false'
+    Target: CHECK_FOR_UPDATES
+    Type: Variable
+  value: 'true'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: UID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: UID
+    Required: 'true'
+    Target: UID
+    Type: Variable
+  value: '99'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: GID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: GID
+    Required: 'true'
+    Target: GID
+    Type: Variable
+  value: '100'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: UMASK'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Umask
+    Required: 'true'
+    Target: UMASK
+    Type: Variable
+  value: '000'
+DonateLink: https://www.paypal.me/chips777
+DonateText: 'If you like my work please '
+ExtraParams: --restart=unless-stopped
+FirstSeen: 1608073729
+Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/urbanterror.png
+LastUpdate: 1608063676
+LastUpdateScan: 1647054196
+Name: Urban-Terror
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "Urban Terror\u2122 is a free multiplayer first person shooter developed\
+  \ by FrozenSand, that will run on any Quake III Arena compatible engine. It is available\
+  \ for Windows, Linux and Macintosh.\r\n\r\nUrban Terror can be described as a Hollywood\
+  \ tactical shooter; somewhat realism based, but the motto is \"fun over realism\"\
+  . This results in a very unique, enjoyable and addictive game.\r\n\r\nATTENTION:\
+  \ The first startup can take very long since the container downloads the gamefiles,\
+  \ please wait patiently even if it seems to be stuck (this can take up to 30 minutes).\r\
+  \n\r\nUPDATE: The container will search for a new version of the game on every start/restart\
+  \ of the container if the variable 'CHECK_FOR_UPDATES' is set to 'true'."
+PostArgs: ''
+Privileged: 'false'
+Project: https://www.urbanterror.info/
+Registry: https://hub.docker.com/r/ich777/urbanterror/
+Repo: ich777's Repository
+Repository: ich777/urbanterror
+Support: https://forums.unraid.net/topic/79530-support-ich777-gameserver-dockers/
+TemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/Urban-Terror.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''

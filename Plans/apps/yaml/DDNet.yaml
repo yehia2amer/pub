@@ -1,0 +1,105 @@
+CategoryList:
+- GameServers
+Config:
+- '@attributes':
+    Default: ''
+    Description: Default path to the game files.
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: ServerFiles
+    Required: 'true'
+    Target: /serverdata/serverfiles/
+    Type: Path
+  value: /mnt/cache/appdata/ddnet/
+- '@attributes':
+    Default: ''
+    Description: UDP Gameport (delete this entry and create a new one if you change
+      the port in the config file with the corresponding port)
+    Display: always
+    Mask: 'false'
+    Mode: udp
+    Name: UDP
+    Required: 'true'
+    Target: '8303'
+    Type: Port
+  value: '8303'
+- '@attributes':
+    Default: ''
+    Description: Change only if you know what you are doing (default game config file
+      that will be executed on start of the container - located in the main directory
+      for DDNet)
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: ConfigFile
+    Required: 'true'
+    Target: GAME_CONFIG
+    Type: Variable
+  value: autoexec.cfg
+- '@attributes':
+    Default: ''
+    Description: TCP Gameport (delete this entry and create a new one if you change
+      the port in the config file with the corresponding port)
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: TCP
+    Required: 'true'
+    Target: '8303'
+    Type: Port
+  value: '8303'
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: UID
+    Required: 'true'
+    Target: UID
+    Type: Variable
+  value: '99'
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: GID
+    Required: 'true'
+    Target: GID
+    Type: Variable
+  value: '100'
+DonateImg: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/donate.png
+DonateLink: https://www.paypal.me/chips777
+DonateText: 'If you like my work please '
+ExtraParams: --restart=unless-stopped
+FirstSeen: 1627387414
+Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/ddnet.png
+LastUpdate: 1643887496
+LastUpdateScan: 1648159401
+Name: DDNet
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "This Docker will download and install a simple DDNet Dedicated server with\
+  \ a default autoexec.cfg preconfigured (the only thing that need to be changed is\
+  \ the Server Name and the RCON Password in the autoexec.cfg).\r\n\r\nDDNet is an\
+  \ actively maintained version of DDRace, a Teeworlds modification with a unique\
+  \ cooperative gameplay. Help each other play through custom maps with up to 64 players\
+  \ and much more...\r\n\r\nATTENTION: Please don't delete the file named \"installedv-...\"\
+  \ in the main directory!\r\n\r\nUpdate Notice: Simply restart the container if a\
+  \ newer version of the game is available and the container will download and install\
+  \ it."
+PostArgs: ''
+Privileged: 'false'
+Project: https://ddnet.tw/
+Registry: https://hub.docker.com/r/ich777/ddnetserver/
+Repo: ich777's Repository
+Repository: ich777/ddnetserver
+Requires: ''
+Support: https://forums.unraid.net/topic/79530-support-ich777-gameserver-dockers/
+TemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/DDNet.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''

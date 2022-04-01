@@ -1,0 +1,57 @@
+CategoryList:
+- Productivity
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI
+    Required: 'false'
+    Target: '8080'
+    Type: Port
+  value: '8585'
+- '@attributes':
+    Default: ''
+    Description: This is the location for the user's vaults.
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Storage (vaults)
+    Required: 'false'
+    Target: /vaults
+    Type: Path
+  value: /mnt/user/appdata/obsidian/vaults
+- '@attributes':
+    Default: ''
+    Description: This is the location for the internal data.
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Storage (config)
+    Required: 'false'
+    Target: /config/.config/obsidian
+    Type: Path
+  value: /mnt/user/appdata/obsidian/config
+FirstSeen: 1647259402
+Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/obsidian.png
+LastUpdateScan: 1647259402
+Name: Obsidian
+Network: bridge
+Overview: "DESCRIPTION\r\nObsidian is a powerful knowledge base on top of a local\
+  \ folder of plain text Markdown files.\r\n\r\nNOTES\r\n\u2022 When creating a vault,\
+  \ place it under '/vaults' dir, located in the root of the container (inside Obsidian).\r\
+  \n\r\nVERSION\r\n1.0 (2022-03-14)"
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/sytone/obsidian-remote
+Registry: https://github.com/sytone/obsidian-remote/pkgs/container/obsidian-remote
+Repo: SmartPhoneLover's Repository
+Repository: ghcr.io/sytone/obsidian-remote
+Requires: ''
+Support: https://forums.unraid.net/topic/121131-support-smartphonelover-obsidian/
+TemplateURL: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/master/templates/Obsidian.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8080]

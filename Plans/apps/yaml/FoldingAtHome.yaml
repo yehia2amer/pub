@@ -1,0 +1,92 @@
+CAComment: The webUI for this application does not work.  See <a href=https://forums.unraid.net/topic/36054-release-foldinghome-docker/page/5/?tab=comments#comment-828096
+  target=_blank>this post</a> for the fix
+CategoryList:
+- Other
+Config:
+- '@attributes':
+    Default: '36330'
+    Description: 'Container Port: 36330'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Host Port 1
+    Required: 'true'
+    Target: '36330'
+    Type: Port
+  value: '36330'
+- '@attributes':
+    Default: '7396'
+    Description: 'Container Port: 7396'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Host Port 2
+    Required: 'true'
+    Target: '7396'
+    Type: Port
+  value: '7396'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: NVIDIA_DRIVER_CAPABILITIES'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Host Key 1
+    Required: 'false'
+    Target: NVIDIA_DRIVER_CAPABILITIES
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: NVIDIA_VISIBLE_DEVICES'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Host Key 2
+    Required: 'false'
+    Target: NVIDIA_VISIBLE_DEVICES
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: /mnt/user/appdata/FoldingAtHome
+    Description: 'Container Path: /config'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: rw
+    Name: AppData Config Path
+    Required: 'true'
+    Target: /config
+    Type: Path
+  value: /mnt/user/appdata/FoldingAtHome
+FirstSeen: 1552656324
+Icon: https://i.imgur.com/AKptFCw.png
+LastUpdate: 1611922904
+LastUpdateScan: 1648804613
+Name: FoldingAtHome
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "FoldingAtHome is a project ran by Stanford University to network thousands\
+  \ of computers together, using them to work out the folding of proteins to aid in\
+  \ the research of Alzheimer's, Huntington's, Parkinson's, and many cancers.[br][br]\n\
+  \    [b][span style='color: #E80000;']WARNING: Using this container will increase\
+  \ CPU usage, continue @ own risk[/span][/b][br]\n    [b][span style='color: #E80000;']Directions:[/span][/b][br]\n\
+  \    [b]Edit the config.xml file with your preferences (Username/Team etc.)[br]\n\
+  \    [b]You might have to edit the config.xml in the FaH appdata folder to allow\
+  \ your specific subnet to use the WebUI[br]\n    [b]/mnt/user/appdata/FoldingAtHome[/b]\
+  \ : this path is used to store the config.xml file for FAHClient.[br]\n    [b]The\
+  \ program can be controlled by FAHControl App from http://folding.stanford.edu/.[br]\n\
+  \    [b]The FaHControl App is the preferred method of interfacing with the server\
+  \ as it provides more fine grained control vs the WebUI[br]\n    [b]The WebUI is\
+  \ accessible through  http://SERVER_IP:7396.[br]\n    [b]The extra Nvidia variables\
+  \ are for GPU passthrough. Information on that can be found here:[br]\n    [b]https://forums.unraid.net/topic/77813-plugin-linuxserverio-unraid-nvidia/"
+Privileged: 'false'
+Registry: https://registry.hub.docker.com/r/mobiusnine/foldingathome
+Repo: MobiusNine's Repository
+Repository: mobiusnine/foldingathome
+Support: https://forums.unraid.net/topic/36054-release-foldinghome-docker/page/4/?tab=comments#comment-730278
+TemplateURL: https://raw.githubusercontent.com/MobiusNine/docker-templates/master/MobiusNine/FoldingAtHome.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:7396]/
+topPerforming: 0.002
+topTrending: -2.0210000000000004

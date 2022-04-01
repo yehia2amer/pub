@@ -1,0 +1,82 @@
+CategoryList:
+- Network-Management
+- Productivity
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: POSTGRES_PASSWORD'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: POSTGRES_PASSWORD
+    Required: 'true'
+    Target: POSTGRES_PASSWORD
+    Type: Variable
+  value: dsmrreader
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: POSTGRES_USER'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: POSTGRES_USER
+    Required: 'true'
+    Target: POSTGRES_USER
+    Type: Variable
+  value: dsmrreader
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: POSTGRES_DB'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: POSTGRES_DB
+    Required: 'true'
+    Target: POSTGRES_DB
+    Type: Variable
+  value: dsmrdb
+- '@attributes':
+    Default: /mnt/cache/appdata/postgres
+    Description: This is where Postgres will store it's data.
+    Display: always
+    Mask: 'null'
+    Mode: rw
+    Name: Database Storage Path
+    Required: 'true'
+    Target: /var/lib/postgresql/data
+    Type: Path
+  value: /mnt/cache/appdata/dsmrdb/data/
+- '@attributes':
+    Default: '5432'
+    Description: This is Postgres TCP connection port.
+    Display: always-hide
+    Mask: '{8}'
+    Mode: tcp
+    Name: Web Interface Port
+    Required: 'true'
+    Target: '5432'
+    Type: Port
+  value: '5432'
+FirstSeen: 1619704958
+Icon: https://raw.githubusercontent.com/Flight777/unraid_justworks_templates/main/images/postgres/Postgresql_elephant.png
+LastUpdate: 1648138306
+LastUpdateScan: 1648281806
+Name: Postgres12.5
+Network: bridge
+Networking:
+  Mode: bridge
+Official: true
+Overview: "&lt;b&gt;Postgresql 12.5, alpine edition for less resource useage&lt;/b&gt;\r\
+  \n&lt;/br&gt;\r\n&lt;/br&gt;\r\nUNRAID template that JUST WORKS, brought to you\
+  \ by Flight777!"
+PostArgs: ''
+Privileged: 'false'
+Project: https://www.postgresql.org/
+Registry: https://registry.hub.docker.com/_/postgres/
+Repo: Flight777's Repository
+Repository: postgres:12.5-alpine
+Support: https://forums.unraid.net/topic/101905-support-flight777-just-works-container-repository/
+TemplateURL: https://raw.githubusercontent.com/Flight777/unraid_justworks_templates/master/jw_postgres12.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''

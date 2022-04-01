@@ -1,0 +1,120 @@
+CategoryList:
+- Tools-Utilities
+- Network-Web
+- Network-Management
+ChangeLogPresent: true
+Config:
+- '@attributes':
+    Default: '8888'
+    Description: the port for ldap auth daemon
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI
+    Required: 'true'
+    Target: '8888'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: '9000'
+    Description: the port for ldap login page
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: 'Port: 9000'
+    Required: 'true'
+    Target: '9000'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Optionally define a custom fernet key, has to be base64-encoded 32-byte
+      (only needed if container is frequently recreated, or if using multi-node setups,
+      invalidating previous authentications)
+    Display: always
+    Mask: 'true'
+    Name: FERNETKEY
+    Required: 'false'
+    Target: FERNETKEY
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Point this to a certificate file to enable HTTP over SSL (HTTPS)
+      for the ldap auth daemon
+    Display: always
+    Mask: 'false'
+    Name: CERTFILE
+    Required: 'false'
+    Target: CERTFILE
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Point this to the private key file, matching the certificate file
+      referred to in CERTFILE
+    Display: always
+    Mask: 'true'
+    Name: KEYFILE
+    Required: 'false'
+    Target: KEYFILE
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '99'
+    Description: 'Container Variable: PUID'
+    Display: advanced
+    Mask: 'false'
+    Name: PUID
+    Required: 'true'
+    Target: PUID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '100'
+    Description: 'Container Variable: PGID'
+    Display: advanced
+    Mask: 'false'
+    Name: PGID
+    Required: 'true'
+    Target: PGID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '022'
+    Description: 'Container Variable: UMASK'
+    Display: advanced
+    Mask: 'false'
+    Name: UMASK
+    Required: 'false'
+    Target: UMASK
+    Type: Variable
+  value: ''
+DonateImg: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/donate.png
+DonateLink: https://www.linuxserver.io/donate
+DonateText: Donations
+FirstSeen: 1560283785
+GitHub: https://github.com/linuxserver/docker-ldap-auth#application-setup
+Icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/ldap-auth-logo.png
+LastUpdate: 1647674303
+LastUpdateScan: 1647914730
+Name: ldap-auth
+Network: bridge
+Overview: "Ldap-auth(https://github.com/nginxinc/nginx-ldap-auth) software is for\
+  \ authenticating users who request protected resources from servers proxied by nginx.\
+  \ It includes a daemon (ldap-auth) that communicates with an authentication server,\
+  \ and a webserver daemon that generates an authentication cookie based on the user\u2019\
+  s credentials. The daemons are written in Python for use with a Lightweight Directory\
+  \ Access Protocol (LDAP) authentication server (OpenLDAP or Microsoft Windows Active\
+  \ Directory 2003 and 2012)."
+Privileged: 'false'
+Project: https://github.com/nginxinc/nginx-ldap-auth
+ReadMe: https://github.com/linuxserver/docker-ldap-auth#readme
+Registry: https://github.com/orgs/linuxserver/packages/container/package/ldap-auth
+Repo: linuxserver's Repository
+Repository: lscr.io/linuxserver/ldap-auth
+Support: https://github.com/linuxserver/docker-ldap-auth/issues/new/choose
+TemplateURL: https://raw.githubusercontent.com/linuxserver/templates/master/unraid/ldap-auth.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:9000]
+topTrending: -0.054000000000000006

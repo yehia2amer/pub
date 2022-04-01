@@ -1,0 +1,188 @@
+CategoryList:
+- MediaApp-Photos
+- MediaServer-Video
+- MediaServer-Photos
+Config:
+- '@attributes':
+    Default: ''
+    Description: Port to access the HTTP UI. Can be modified by setting the PS_HTTP_PORT
+      environment variable.
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Web UI
+    Required: 'true'
+    Target: '1787'
+    Type: Port
+  value: '1787'
+- '@attributes':
+    Default: /mnt/user/Photos
+    Description: This is where your PhotoStructure Library will be stored. It needs
+      to have sufficient free space to hold preview images, and transcoded videos.
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Library
+    Required: 'true'
+    Target: /ps/library
+    Type: Path
+  value: /mnt/user/Photos
+- '@attributes':
+    Default: ''
+    Description: "This is the userid that PhotoStructure will run under, instead of\
+      \ the default of root (userid 0).\r\n\r\nFiles copied into your library will\
+      \ be owned by this userid."
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: User ID
+    Required: 'false'
+    Target: PUID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'This is the groupid that PhotoStructure will run under. '
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Group ID
+    Required: 'false'
+    Target: PGID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: TZ
+    Description: "Setting the default timezone helps PhotoStructure infer captured-at\
+      \ time for assets that are missing timezone metadata.\r\n\r\n"
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: TZ
+    Required: 'false'
+    Target: TZ
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: error
+    Description: Valid values are debug, info, warn, and error. Default is error,
+      which (should be) quiet.
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Logging level
+    Required: 'false'
+    Target: PS_LOG_LEVEL
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: /mnt/cache/appdata/photostructure/tmp
+    Description: This needs to be fast, local disk.
+    Display: advanced
+    Mask: 'false'
+    Mode: rw
+    Name: Temp/Scratch disk
+    Required: 'true'
+    Target: /ps/tmp
+    Type: Path
+  value: /mnt/cache/appdata/photostructure/tmp
+- '@attributes':
+    Default: /mnt/user/appdata/photostructure/logs
+    Description: 'Logfiles will be written into this directory. Set environment variable '
+    Display: advanced
+    Mask: 'false'
+    Mode: rw
+    Name: Logs
+    Required: 'true'
+    Target: /ps/logs
+    Type: Path
+  value: /mnt/user/appdata/photostructure/logs
+- '@attributes':
+    Default: /mnt/user/appdata/photostructure/config
+    Description: System configuration is written into this directory.
+    Display: advanced
+    Mask: 'false'
+    Mode: rw
+    Name: System config
+    Required: 'true'
+    Target: /ps/config
+    Type: Path
+  value: /mnt/user/appdata/photostructure/config
+ExtraParams: --stop-timeout=120
+FirstSeen: 1630107985
+Icon: https://photostructure.com/img/logo-circle-gradient-256.png
+LastUpdate: 1648277512
+LastUpdateScan: 1648289006
+Name: PhotoStructure
+Network: bridge
+Networking:
+  Mode: bridge
+Official: true
+Overview: '[b]PhotoStructure is your new home for all your photos and videos.[/b]
+
+
+  [ul]
+
+  [li] Cross-platform libraries that you can move seamlessly across Docker, Windows,
+  macOS, and Linux [/li]
+
+  [li] Fast, fun mobile-friendly UI [/li]
+
+  [li] Support for very large (250k+) libraries [/li]
+
+  [li] Support for almost all RAW and video formats (thanks to LibRaw and FFmpeg)
+  [/li]
+
+  [li] Robust metadata support, including Google Takeouts, XMP sidecars, and sibling
+  inference [/li]
+
+  [li] Robust image and video deduplication [/li]
+
+  [/ul]
+
+
+  [p] PhotoStructure is extremely configurable. [b][a href="https://photostructure.com/faq/environment-variables/"]See
+  the documentation for details.[/a][/b]
+
+
+  [p] Be sure to visit [b][a href="https://forum.photostructure.com"]PhotoStructure''s
+  forum[/a][/b] for tips, support, and to vote on what features you want to see next.
+  We also have a [b][a href="https://discord.gg/gU9h8uQTYw"]discord[/a][/b]!
+
+
+  [p] [b]To import additional directories or volumes:[/b]
+
+
+  [ol]
+
+  [li] click "Add another Path" [/li]
+
+  [li] enter a Container path (like "/photos") [/li]
+
+  [li] click Host Path and pick the directory you want to import [/li]
+
+  [li] click "Add", then [/li]
+
+  [li] click "Apply". [/li]
+
+  [/ol]
+
+
+  [p] PhotoStructure will find the new directory automatically if you leave the "Where
+  else are your photos and videos?" section set to "Automatic", which is the default.
+
+
+  [p] Initial template by Spants (thanks!)'
+PostArgs: ''
+Privileged: 'false'
+Project: https://photostructure.com/
+Registry: https://hub.docker.com/r/photostructure/server/
+Repo: Official PhotoStructure Repository
+RepoShort: PhotoStructure
+Repository: photostructure/server:stable
+Support: https://forum.photostructure.com/
+TemplateURL: https://raw.githubusercontent.com/photostructure/unraid-template/master/photostructure/photostructure.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:1787]
+topPerforming: 1.591
+topTrending: -4.705

@@ -1,0 +1,151 @@
+CategoryList:
+- Backup
+- Downloaders
+- MediaApp-Video
+- MediaServer-Video
+Config:
+- '@attributes':
+    Default: ''
+    Description: 'Container Port: 8000'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Port
+    Required: 'false'
+    Target: '8000'
+    Type: Port
+  value: '8000'
+- '@attributes':
+    Default: /youtube
+    Description: 'Container Path: /youtube'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Youtube Media Path
+    Required: 'false'
+    Target: /youtube
+    Type: Path
+  value: /mnt/user/
+- '@attributes':
+    Default: /cache
+    Description: 'Container Path: /cache'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Appdata
+    Required: 'false'
+    Target: /cache
+    Type: Path
+  value: /mnt/user/appdata/TubeArchivist/
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: TA_USERNAME'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: TA Username
+    Required: 'false'
+    Target: TA_USERNAME
+    Type: Variable
+  value: tubearchivist
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: TA_PASSWORD'
+    Display: always
+    Mask: 'true'
+    Mode: ''
+    Name: TA Password
+    Required: 'false'
+    Target: TA_PASSWORD
+    Type: Variable
+  value: verysecret
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: REDIS_HOST'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Redis
+    Required: 'false'
+    Target: REDIS_HOST
+    Type: Variable
+  value: IP
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: ELASTIC_PASSWORD'
+    Display: always
+    Mask: 'true'
+    Mode: ''
+    Name: ElasticSearch Password
+    Required: 'false'
+    Target: ELASTIC_PASSWORD
+    Type: Variable
+  value: verysecret
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: ES_URL'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: ElasticSearch
+    Required: 'false'
+    Target: ES_URL
+    Type: Variable
+  value: http://IP:9200
+- '@attributes':
+    Default: America/New_York
+    Description: 'Container Variable: TZ'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Time Zone
+    Required: 'false'
+    Target: TZ
+    Type: Variable
+  value: America/New_York
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: HOST_GID'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: GID
+    Required: 'false'
+    Target: HOST_GID
+    Type: Variable
+  value: '1000'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: HOST_UID'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: UID
+    Required: 'false'
+    Target: HOST_UID
+    Type: Variable
+  value: '1000'
+DonateText: Buy the creator a beer!
+FirstSeen: 1632504610
+Icon: https://i.imgur.com/6n4ljjQ.png
+LastUpdate: 1647924731
+LastUpdateScan: 1648094607
+Name: TubeArchivist
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "Your self hosted YouTube media server.\r\n\r\nIMPORTANT: This container\
+  \ relies on ElasticSearch as well as RedisJson.\r\n\r\nInstall \"TubeArchivist-ES\"\
+  \ as well as \"TubeArchivist-RedisJSON\" BEFORE running \"TubeArchivist\".\r\n\r\
+  \nBoth can be found in the Community Applications."
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/bbilly1/tubearchivist
+Registry: https://hub.docker.com/r/bbilly1/tubearchivist/
+Repo: Croc's Repository
+Repository: bbilly1/tubearchivist
+Support: https://forums.unraid.net/topic/114073-support-crocs-tube-archivist/
+TemplateURL: https://raw.githubusercontent.com/pairofcrocs/unraid-templates/master/TubeArchivist.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8000]
+topTrending: -45.56

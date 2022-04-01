@@ -1,0 +1,124 @@
+CategoryList:
+- MediaServer-Video
+- MediaServer-Other
+- Other
+- Tools-Utilities
+ChangeLogPresent: true
+Config:
+- '@attributes':
+    Default: '8875'
+    Description: Status Page WebUI
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI
+    Required: 'true'
+    Target: '8875'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: '554'
+    Description: RTSP Port
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: 'Port: 554'
+    Required: 'true'
+    Target: '554'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: '1900'
+    Description: App Discovery
+    Display: always
+    Mask: 'false'
+    Mode: udp
+    Name: 'Port: 1900'
+    Required: 'true'
+    Target: '1900'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Configuration files and minisatip data
+    Display: advanced
+    Mask: 'false'
+    Mode: rw
+    Name: Appdata
+    Required: 'true'
+    Target: /config
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: parameter
+    Description: Specify specific run params for minisatip
+    Display: always
+    Mask: 'false'
+    Name: RUN_OPTS
+    Required: 'true'
+    Target: RUN_OPTS
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '99'
+    Description: 'Container Variable: PUID'
+    Display: advanced
+    Mask: 'false'
+    Name: PUID
+    Required: 'true'
+    Target: PUID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '100'
+    Description: 'Container Variable: PGID'
+    Display: advanced
+    Mask: 'false'
+    Name: PGID
+    Required: 'true'
+    Target: PGID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '022'
+    Description: 'Container Variable: UMASK'
+    Display: advanced
+    Mask: 'false'
+    Name: UMASK
+    Required: 'false'
+    Target: UMASK
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: /dev/dvb
+    Description: For passing through Tv-cards
+    Display: always
+    Mask: 'false'
+    Name: /dev/dvb
+    Required: 'true'
+    Type: Device
+  value: ''
+DonateImg: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/donate.png
+DonateLink: https://www.linuxserver.io/donate
+DonateText: Donations
+FirstSeen: 1471233600
+GitHub: https://github.com/linuxserver/docker-minisatip#application-setup
+Icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/minisatip-logo.png
+LastUpdate: 1647796185
+LastUpdateScan: 1647914769
+Name: minisatip
+Network: bridge
+Overview: Minisatip(https://github.com/catalinii/minisatip) is a multi-threaded satip
+  server version 1.2 that runs under Linux and it was tested with DVB-S, DVB-S2, DVB-T,
+  DVB-T2, DVB-C, DVB-C2, ATSC and ISDB-T cards.
+Privileged: 'false'
+Project: https://github.com/catalinii/minisatip
+ReadMe: https://github.com/linuxserver/docker-minisatip#readme
+Registry: https://github.com/orgs/linuxserver/packages/container/package/minisatip
+Repo: linuxserver's Repository
+Repository: lscr.io/linuxserver/minisatip
+Support: https://github.com/linuxserver/docker-minisatip/issues/new/choose
+TemplateURL: https://raw.githubusercontent.com/linuxserver/templates/master/unraid/minisatip.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8875]
+topTrending: 0.07699999999999999

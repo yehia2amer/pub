@@ -1,0 +1,49 @@
+CategoryList:
+- HomeAutomation
+- Productivity
+- Tools-Utilities
+- Network-Web
+Config:
+- '@attributes':
+    Default: '5004'
+    Description: 'Container Port: 5000'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Port
+    Required: 'false'
+    Target: '5000'
+    Type: Port
+  value: '5004'
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /data/'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Config Path
+    Required: 'false'
+    Target: /app/data/
+    Type: Path
+  value: /mnt/user/appdata/minimal-ics-hoster/
+ExtraParams: --restart=always
+FirstSeen: 1643425399
+Icon: https://github.com/patrickstigler/minimal-ics-host/raw/master/calendaricon.png
+LastUpdate: 1643420250
+LastUpdateScan: 1648620211
+Name: minimal-ics-hoster
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "minimal ics / iCal / Calendar hoster, \r\n\r\nis basically just a minimalistic\
+  \ webserver which will just publish the \"file.ics\" in the data directory.\r\n\
+  I use it to provide the Ical to Home Assistant for the garbage collection."
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/patrickstigler/minimal-ics-host/tree/master
+Registry: https://hub.docker.com/r/patrickstigler/minimal-ics-hoster
+Repo: patrickstigler's Repository
+Repository: patrickstigler/minimal-ics-hoster
+TemplateURL: https://raw.githubusercontent.com/patrickstigler/unraid_app_templates/master/minimal-ics-hoster/minimal-ics-hoster.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:5000]

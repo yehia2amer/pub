@@ -1,0 +1,94 @@
+CategoryList:
+- GameServers
+Config:
+- '@attributes':
+    Default: /mnt/user/appdata/enigmatica6/
+    Description: Path to store the installed server files.
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Installed Location
+    Required: 'true'
+    Target: /data
+    Type: Path
+  value: /mnt/user/appdata/enigmatica6/
+- '@attributes':
+    Default: 'false'
+    Description: By typing TRUE you are indicating your agreement to the EULA of Mojang.
+      Read it at https://account.mojang.com/documents/minecraft_eula before accepting
+      it.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: EULA
+    Required: 'true'
+    Target: EULA
+    Type: Variable
+  value: 'false'
+- '@attributes':
+    Default: 5G
+    Description: Maximum memory for the server. Must end in G for gigabytes.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: MAX_RAM
+    Required: 'true'
+    Target: MAX_RAM
+    Type: Variable
+  value: 5G
+- '@attributes':
+    Default: '25565'
+    Description: Port for the server. Ignored if using a dedicated IP for the container.
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Port
+    Required: 'true'
+    Target: '25565'
+    Type: Port
+  value: '25565'
+- '@attributes':
+    Default: ''
+    Description: Comma separated list of players to have op capability
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: OPS
+    Required: 'false'
+    Target: OPS
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Custom Message of the Day
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: MOTD
+    Required: 'false'
+    Target: MOTD
+    Type: Variable
+  value: ''
+FirstSeen: 1638500615
+Icon: https://raw.githubusercontent.com/Goobaroo/docker-enigmatica6/main/enigmatica6.png
+LastUpdate: 1643515916
+LastUpdateScan: 1646298213
+Name: Enigmatica6
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: 'Play with new mods and old favorites in Minecraft 1.16.5! Enigmatica 6
+  offers a boatload of custom content including quests![br][br]Setup:[br][li]You must
+  accept the EULA by setting the [b]EULA[/b] variable to [span style=''color: #00E800;'']true[/span]
+  or the install will fail.[br]Optional:[br][li]You can setup a comma separated list
+  of players who will have admin privileges in game by setting [b]OPS[/b]'
+PostArgs: ''
+Privileged: 'false'
+Project: https://www.curseforge.com/minecraft/modpacks/enigmatica6
+Registry: https://hub.docker.com/repository/docker/goobaroo/enigmatica6
+Repo: Goobaroo's Repository
+Repository: goobaroo/enigmatica6
+Support: https://forums.unraid.net/topic/115033-support-goobaroo-game-server-dockers/
+TemplateURL: https://raw.githubusercontent.com/Goobaroo/unraid-templates/master/enigmatica6_server.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''

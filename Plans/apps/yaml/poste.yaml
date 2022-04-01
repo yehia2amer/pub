@@ -1,0 +1,166 @@
+Beta: 'true'
+CategoryList:
+- Cloud
+- Productivity
+- Tools-Utilities
+- Network-Web
+- Network-Other
+- Network-Messenger
+Config:
+- '@attributes':
+    Default: '25'
+    Description: 'Container Port: '
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Port25
+    Required: 'true'
+    Target: '25'
+    Type: Port
+  value: '25'
+- '@attributes':
+    Default: '8280'
+    Description: web interface port
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Webui
+    Required: 'true'
+    Target: '80'
+    Type: Port
+  value: '8280'
+- '@attributes':
+    Default: '110'
+    Description: POP3
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: POP3 Port
+    Required: 'true'
+    Target: '110'
+    Type: Port
+  value: '110'
+- '@attributes':
+    Default: '143'
+    Description: IMAP
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: IMAP
+    Required: 'true'
+    Target: '143'
+    Type: Port
+  value: '143'
+- '@attributes':
+    Default: '43443'
+    Description: HTTPS
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Container HTTPS
+    Required: 'true'
+    Target: '443'
+    Type: Port
+  value: '443'
+- '@attributes':
+    Default: '465'
+    Description: SMTPS
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Container SMTPS
+    Required: 'true'
+    Target: '465'
+    Type: Port
+  value: '465'
+- '@attributes':
+    Default: '587'
+    Description: MSA
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Container MSA
+    Required: 'true'
+    Target: '587'
+    Type: Port
+  value: '587'
+- '@attributes':
+    Default: '993'
+    Description: IMAPS
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Container IMAPS
+    Required: 'true'
+    Target: '993'
+    Type: Port
+  value: '993'
+- '@attributes':
+    Default: '995'
+    Description: POP3S
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Container POP3S
+    Required: 'true'
+    Target: '995'
+    Type: Port
+  value: '995'
+- '@attributes':
+    Default: /mnt/user/poste
+    Description: poste data folder
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Data Folder
+    Required: 'true'
+    Target: /data
+    Type: Path
+  value: /mnt/user/poste
+- '@attributes':
+    Default: '4190'
+    Description: When you are going to use clients with ability to manage Sieve filters
+      externally, you need also publish port 4190
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: external Sieve filter manager
+    Required: 'false'
+    Target: '4190'
+    Type: Port
+  value: '4190'
+DonateImg: ''
+DonateText: '&quot;Coin! Coin!&quot; -- Scooby Doo'
+FirstSeen: '1519017501'
+Icon: https://icons.iconarchive.com/icons/paomedia/small-n-flat/96/envelope-icon.png
+LastUpdate: 1646645981
+LastUpdateScan: 1648368215
+MinVer: 6.4.1
+Name: poste
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "FREE version of Poste.io, full mail server solution. POP3, SMTP, IMAP,\
+  \ Spamassassin, WebMail, WebAdmin. \r\nINITIAL SETUP:\r\n------------------------\r\
+  \n      0.  Requires registered FQDN to send/receive external email.\r\n      1.\
+  \  Following ports are used by container for mail: 25, 110, 143, 443, 465, 587,\
+  \ 993, 995\r\n      2.  Following ports are used by container for webui: 443, 8280\
+  \    (These may conflict, check your ports)\r\n      3.  Make a user share for mail\
+  \ data, default is  /mnt/user/poste\r\n      4.  Some or all mail ports may need\
+  \ to be opened, forwarded, or dmz for  mail send/receive to work.\r\nOptional arguments\r\
+  \n-e \"HTTPS=OFF\" To disable all redirects to encrypted HTTP, its useful when you\
+  \ are using some kind of reverse proxy (place this argument before image name!)\r\
+  \n-------------------------\r\nNOTE: Marked as BETA, simply because author is not\
+  \ an expert in email exchange servers -- software itself looks pretty good."
+PostArgs: ''
+Privileged: 'false'
+Project: https://poste.io/
+Registry: https://hub.docker.com/r/analogic/poste.io/
+Repo: JCloud's Repository
+Repository: analogic/poste.io
+Support: https://lime-technology.com/forums/topic/69507-support-posteio-free-version/
+TemplateURL: https://raw.githubusercontent.com/Jcloud67/Docker-Templates/master/posteFree.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:80]/
+topPerforming: 0.598
+topTrending: -0.9900000000000001

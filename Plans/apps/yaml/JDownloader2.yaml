@@ -1,0 +1,123 @@
+CategoryList:
+- MediaApp-Photos
+- Productivity
+- Tools-Utilities
+- Backup
+Config:
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /jDownloader2'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Data Dir
+    Required: 'true'
+    Target: /jDownloader2
+    Type: Path
+  value: /mnt/cache/appdata/jdownloader2/
+- '@attributes':
+    Default: ''
+    Description: 'Container Port: 8080'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebGUI
+    Required: 'true'
+    Target: '8080'
+    Type: Port
+  value: '8080'
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /mnt/jDownloader'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Download Path
+    Required: 'true'
+    Target: /mnt/jDownloader
+    Type: Path
+  value: /mnt/user/jDownloader/
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: UMASK'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Umask Value
+    Required: 'true'
+    Target: UMASK
+    Type: Variable
+  value: '000'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: UID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: UID
+    Required: 'true'
+    Target: UID
+    Type: Variable
+  value: '99'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: GID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: GID
+    Required: 'true'
+    Target: GID
+    Type: Variable
+  value: '100'
+- '@attributes':
+    Default: ''
+    Description: Minimum screen width 1024 pixels
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Custom Screen Width
+    Required: 'true'
+    Target: CUSTOM_RES_W
+    Type: Variable
+  value: '1024'
+- '@attributes':
+    Default: ''
+    Description: Minimum screen hight 768 pixels
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Custom Screen Height
+    Required: 'true'
+    Target: CUSTOM_RES_H
+    Type: Variable
+  value: '768'
+DonateLink: https://www.paypal.me/chips777
+DonateText: 'If you like my work please '
+ExtraParams: --restart=unless-stopped
+FirstSeen: 1575104813
+Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/jdownloader.png
+LastUpdate: 1646226432
+LastUpdateScan: 1647849795
+Name: jDownloader2
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "This Docker will download and install jDownloader2.\r\n\r\nJDownloader\
+  \ 2 is a free, open-source download management tool with a huge community of developers\
+  \ that makes downloading as easy and fast as it should be. Users can start, stop\
+  \ or pause downloads, set bandwith limitations, auto-extract archives and much more...\r\
+  \n\r\nUpdate Notice: Updates will be handled through jDownloader2 directly, simply\
+  \ click the 'Check for Updates' in the WebGUI."
+PostArgs: ''
+Privileged: 'false'
+Project: http://jdownloader.org/
+Registry: https://hub.docker.com/r/ich777/jdownloader2/
+Repo: ich777's Repository
+Repository: ich777/jdownloader2
+Support: https://forums.unraid.net/topic/83786-support-ich777-application-dockers/
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8080]/vnc.html?autoconnect=true
+caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/jDownloader2.xml
+topPerforming: 1.977
+topTrending: -13.209999999999999

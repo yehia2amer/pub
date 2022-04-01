@@ -1,0 +1,120 @@
+CategoryList:
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: ''
+    Description: 'Container Port: 9617'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Port to expose metrics
+    Required: 'false'
+    Target: '9617'
+    Type: Port
+  value: '9617'
+- '@attributes':
+    Default: http
+    Description: 'Container Variable: adguard_protocol'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: adguard_protocol
+    Required: 'false'
+    Target: adguard_protocol
+    Type: Variable
+  value: http
+- '@attributes':
+    Default: AdGuard IP
+    Description: 'Container Variable: adguard_hostname'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: adguard_hostname
+    Required: 'false'
+    Target: adguard_hostname
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: AdGuard UserName
+    Description: 'Container Variable: adguard_username'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: adguard_username
+    Required: 'false'
+    Target: adguard_username
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: AdGuard Password
+    Description: 'Container Variable: adguard_password'
+    Display: always
+    Mask: 'true'
+    Mode: ''
+    Name: adguard_password
+    Required: 'false'
+    Target: adguard_password
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: optional if adguard is not using port 80 (http)/443 (https)
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: adguard_port
+    Required: 'false'
+    Target: adguard_port
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: 30s
+    Description: 'Container Variable: interval'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: interval
+    Required: 'false'
+    Target: interval
+    Type: Variable
+  value: 30s
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: log_limit'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: log_limit
+    Required: 'false'
+    Target: log_limit
+    Type: Variable
+  value: '10000'
+- '@attributes':
+    Default: '9617'
+    Description: 'Container Variable: server_port'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: server_port
+    Required: 'false'
+    Target: server_port
+    Type: Variable
+  value: '9617'
+FirstSeen: 1640821850
+Icon: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/prometheus.png
+LastUpdate: 1644656046
+LastUpdateScan: 1648613009
+Name: adguard-exporter
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: Docker AdGuard Exporter for Prometheus.
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/ebrianne/adguard-exporter
+Registry: https://hub.docker.com/r/ebrianne/adguard-exporter
+Repo: TQ's Repository
+Repository: ebrianne/adguard-exporter:latest
+TemplateURL: https://raw.githubusercontent.com/tquizzle/Docker-xml/master/docker-adguard-prom-exporter.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:9617]/metrics

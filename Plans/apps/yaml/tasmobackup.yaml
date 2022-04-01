@@ -1,0 +1,70 @@
+CategoryList:
+- HomeAutomation
+- Network-Management
+Config:
+- '@attributes':
+    Default: ''
+    Description: 'Container Port: 80'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Host Port 1
+    Required: 'true'
+    Target: '80'
+    Type: Port
+  value: '8259'
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /var/www/html/data'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Host Path 1
+    Required: 'true'
+    Target: /var/www/html/data
+    Type: Path
+  value: /mnt/user/appdata/tasmobackupv1
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: DBTYPE'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: DBTYPE
+    Required: 'false'
+    Target: DBTYPE
+    Type: Variable
+  value: sqlite
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: DBNAME'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: DBNAME
+    Required: 'false'
+    Target: DBNAME
+    Type: Variable
+  value: data/tasmobackup
+FirstSeen: 1580079983
+Icon: https://raw.githubusercontent.com/danmed/TasmoBackupV1/master/TasmoBackup.png
+LastUpdate: 1635642663
+LastUpdateScan: 1647662620
+Name: tasmobackup
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: Tasmota backup - TasmoBackup - Backup all your tasmota devices in one place.  Add/scan
+  for your Tasmota devices.  Use the backupall.php page to schedule automated backups
+  of all devices!
+PostArgs: ''
+Privileged: 'false'
+Registry: https://hub.docker.com/r/danmed/tasmobackupv1/
+Repo: digiblur's Repository
+Repository: danmed/tasmobackupv1
+Support: https://hub.docker.com/r/danmed/tasmobackupv1/
+TemplateURL: https://raw.githubusercontent.com/digiblur/unraid-docker-templates/master/tasmobackup.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:80]/
+topPerforming: 1.586
+topTrending: -1.2739999999999998

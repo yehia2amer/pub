@@ -1,0 +1,52 @@
+CategoryList:
+- Tools-Utilities
+- Network-Other
+Config:
+- '@attributes':
+    Default: '22'
+    Description: 'Container Port: 22'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: SSH Port
+    Required: 'false'
+    Target: '22'
+    Type: Port
+  value: '22'
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /config'
+    Display: advanced
+    Mask: 'false'
+    Mode: rw
+    Name: appdata
+    Required: 'false'
+    Target: /config
+    Type: Path
+  value: /mnt/cache/appdata/sftp/
+FirstSeen: 1
+Icon: https://raw.githubusercontent.com/MarkusMcNugen/docker-templates/master/sftp/SFTP.png
+LastUpdate: 1631832521
+LastUpdateScan: 1647214613
+Name: sftp
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "Easy to use SFTP (SSH File Transfer Protocol) server with OpenSSH and Fail2ban\
+  \ installed for extra hardening against brute force attacks. Forked from atmoz/sftp.\
+  \ Based on phusion/baseimage.\r\n\r\n* Shared Path is an example. You must replace\
+  \ host path with path to a folder to share AND change user in the container path\
+  \ to the name of a user account configured in users.conf. See dockerhub or github\
+  \ page for more info."
+PostArgs: ''
+Privileged: 'true'
+Project: https://github.com/MarkusMcNugen/docker-sftp
+Registry: https://hub.docker.com/r/markusmcnugen/sftp/
+Repo: MarkusMcNugen's Repository
+Repository: markusmcnugen/sftp:latest
+Support: https://lime-technology.com/forums/topic/69152-support-markusmcnugens-docker-repository/
+TemplateURL: https://raw.githubusercontent.com/MarkusMcNugen/docker-templates/master/sftp/sftp-template.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''
+topPerforming: 2.292
+topTrending: -1.3090000000000002

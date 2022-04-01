@@ -1,0 +1,90 @@
+CategoryList:
+- Tools-Utilities
+- MediaServer-Other
+Config:
+- '@attributes':
+    Default: ''
+    Description: 'Container Port: 9200'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: '9200'
+    Required: 'false'
+    Target: '9200'
+    Type: Port
+  value: '9200'
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /usr/share/elasticsearch/data'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: ElasticSearch Data
+    Required: 'false'
+    Target: /usr/share/elasticsearch/data
+    Type: Path
+  value: /mnt/user/appdata/TubeArchivist/es
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: ELASTIC_PASSWORD'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: ElasticSearch Password
+    Required: 'false'
+    Target: ELASTIC_PASSWORD
+    Type: Variable
+  value: verysecret
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: ES_JAVA_OPTS'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Java Options
+    Required: 'false'
+    Target: ES_JAVA_OPTS
+    Type: Variable
+  value: -Xms512m -Xmx512m
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: discovery.type'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Discovery Type
+    Required: 'false'
+    Target: discovery.type
+    Type: Variable
+  value: single-node
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: xpack.security.enabled'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Xpack Security
+    Required: 'false'
+    Target: xpack.security.enabled
+    Type: Variable
+  value: 'true'
+FirstSeen: 1648699420
+Icon: https://i.imgur.com/ftggG6O.jpg
+LastUpdate: 1648694517
+LastUpdateScan: 1648699420
+Name: TubeArchivist-ES
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "This is a dependancy container for the application \"TubeArchivist\"\r\n\
+  \r\nInstall this and \"TubeArchivist-RedisJSON\" before trying to run \"TubeArchivist\""
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/elastic/elasticsearch
+Registry: https://hub.docker.com/_/elasticsearch
+Repo: Croc's Repository
+Repository: bbilly1/tubearchivist-es:latest
+Support: https://forums.unraid.net/topic/114073-support-crocs-tube-archivist/
+TemplateURL: https://raw.githubusercontent.com/pairofcrocs/unraid-templates/master/TubeArchivist-ES.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''

@@ -1,0 +1,170 @@
+CategoryList:
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: yes|no
+    Description: select yes or no to download windows vm icons
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: windows icons
+    Required: 'false'
+    Target: windows
+    Type: Variable
+  value: 'yes'
+- '@attributes':
+    Default: yes|no
+    Description: select yes or no to download linux vm icons
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: linux icons
+    Required: 'false'
+    Target: linux
+    Type: Variable
+  value: 'yes'
+- '@attributes':
+    Default: yes|no
+    Description: select yes or no to download freebsd vm icons
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: freebsd icons
+    Required: 'false'
+    Target: freebsd
+    Type: Variable
+  value: 'yes'
+- '@attributes':
+    Default: yes|no
+    Description: select yes or no to download macos vm icons
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: macos vm icons
+    Required: 'false'
+    Target: macos
+    Type: Variable
+  value: 'yes'
+- '@attributes':
+    Default: yes|no
+    Description: select yes or no to download other vm icons
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: other os  icons
+    Required: 'false'
+    Target: other
+    Type: Variable
+  value: 'yes'
+- '@attributes':
+    Default: yes|no
+    Description: set to no to remove stock unraid vm icons
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Keep Stock VM Icons
+    Required: 'false'
+    Target: stock
+    Type: Variable
+  value: 'yes'
+- '@attributes':
+    Default: no|yes
+    Description: 'set to yes to delete all vm icons. and redownload the above from
+      github on every run of container '
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Clear all icons &amp; redownload above on each start
+    Required: 'false'
+    Target: delete
+    Type: Variable
+  value: 'no'
+- '@attributes':
+    Default: no|yes
+    Description: Enable tune on sucess. (you must have a beep speaker)
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Enable sucess tune on icon load
+    Required: 'false'
+    Target: tune
+    Type: Variable
+  value: 'no'
+- '@attributes':
+    Default: 30 seconds|1 minute|2 minutes|5 minutes|10 minutes
+    Description: 'Time to wait before stopping container after syncing icons '
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Time to wait before exit
+    Required: 'false'
+    Target: sleeptimehuman
+    Type: Variable
+  value: 30 seconds
+- '@attributes':
+    Default: ''
+    Description: location on server where Unraid stores vm icons (dont change this)
+    Display: advanced
+    Mask: 'false'
+    Mode: rw
+    Name: vm manager icon location
+    Required: 'false'
+    Target: /unraid_vm_icons
+    Type: Path
+  value: /usr/local/emhttp/plugins/dynamix.vm.manager/templates/images
+- '@attributes':
+    Default: ''
+    Description: appdata
+    Display: advanced
+    Mask: 'false'
+    Mode: rw
+    Name: appdata
+    Required: 'false'
+    Target: /config
+    Type: Path
+  value: /mnt/user/appdata/vm_custom_icons
+- '@attributes':
+    Default: ''
+    Description: 'Container Device: '
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: beep speaker
+    Required: 'false'
+    Target: ''
+    Type: Device
+  value: /dev/tty0
+DonateLink: https://www.paypal.com/paypalme/spaceinvader
+DonateText: If you like my work then please buy me a beer! :)
+FirstSeen: 1605532105
+Icon: https://raw.githubusercontent.com/SpaceinvaderOne/unraid_vm_icons/master/dockericon.png
+LastUpdate: 1645449092
+LastUpdateScan: 1647111801
+Name: vm_custom_icons
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "Downloads and installs additional custom VM icons to the Unraid VM Manager.\r\
+  \n\r\nAfter install Container should be set to auto start.\r\n\r\nUsage\r\n\r\n\
+  Basic settings\r\n1. Choose which custom icons you want to be installed from the\
+  \ drop downs.\r\n2. Choose wether you want to keep the existing stock vm icons (recommended\
+  \ to keep)\r\n3. Set wether all icons are redownloaded when container starts.\r\n\
+  \    Setting this as yes will clear all vm icons then redownload all choosen icons\
+  \ from github repo. \r\n    Setting to yes will on every start download any new\
+  \ icons in selected sections.\r\n    (This is also useful if you deceide you no\
+  \ longer want a choosen section of icons anymore)\r\n4. If your server has a beep\
+  \ speaker you can enable a tune to be played each time icons are synced!\r\n\r\n\
+  Advanced settings (under show more settings)\r\n1. You can set how long the container\
+  \ should wait before exiting after syncing icons (default 30 seconds)\r\nOther options\
+  \ dont change"
+PostArgs: ''
+Privileged: 'true'
+Project: https://github.com/SpaceinvaderOne/unraid_vm_icons
+Registry: https://hub.docker.com/r/spaceinvaderone/vm_custom_icons
+Repo: SpaceInvaderOne's Repository
+Repository: spaceinvaderone/vm_custom_icons
+TemplateURL: https://raw.githubusercontent.com/SpaceinvaderOne/Docker-Templates-Unraid/master/spaceinvaderone/vm_icon_downloader.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: https://github.com/SpaceinvaderOne/unraid_vm_icons
+topPerforming: 6.341
+topTrending: -9.843

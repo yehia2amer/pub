@@ -1,0 +1,50 @@
+CategoryList:
+- Network-Web
+Config:
+- '@attributes':
+    Default: /mnt/user/appdata/nitter/nitter.conf
+    Description: Nitter.conf location
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Nitter.conf
+    Required: 'false'
+    Target: /src/nitter.conf
+    Type: Path
+  value: /mnt/user/appdata/nitter/nitter.conf
+- '@attributes':
+    Default: '8080'
+    Description: 'Container Port: 8080'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Port
+    Required: 'false'
+    Target: '8080'
+    Type: Port
+  value: '8080'
+ExtraParams: --restart=always
+FirstSeen: 1627914738
+Icon: https://raw.githubusercontent.com/Joshndroid/joshndroid-unraid-docker-templates/main/icons/nitter.png
+LastUpdate: 1647866255
+LastUpdateScan: 1648692219
+Name: nitter
+Network: bridge
+Overview: "Alternative Twitter front-end\r\n  \r\n  This requires the addition of\
+  \ a nitter.conf file within the /mnt/user/appdata/nitter directory.\r\n  Before\
+  \ starting the container for the first time run these commands within the terminal\r\
+  \n  mkdir /mnt/user/appdata/nitter\r\n  cd /mnt/user/appdata/nitter\r\n  nano nitter.conf\r\
+  \n  \r\n  Copy in the nitter.conf contents located from \r\n  https://raw.githubusercontent.com/zedeus/nitter/master/nitter.example.conf\
+  \ \r\n  Save, close and run the container"
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/zedeus/nitter
+Registry: https://hub.docker.com/r/zedeus/nitter/
+Repo: Joshndroid's Repository
+Repository: zedeus/nitter
+Support: https://forums.unraid.net/topic/112086-support-joshndroids-docker-repo-support-thread/
+TemplateURL: https://raw.githubusercontent.com/Joshndroid/joshndroid-unraid-docker-templates/master/templates/nitter.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8080]/
+topPerforming: 0.659
+topTrending: -8.104

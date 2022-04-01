@@ -1,0 +1,151 @@
+Beta: 'true'
+CategoryList:
+- Tools-Utilities
+- Network-Other
+- Crypto
+Config:
+- '@attributes':
+    Default: /mnt/user/bitcoin/electrumx/
+    Description: Database Storage
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Data
+    Required: 'false'
+    Target: /data
+    Type: Path
+  value: /mnt/user/bitcoin/electrumx/
+- '@attributes':
+    Default: user:pass@host:8332
+    Description: Bitcoin RPC (Auth and Address)
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Core RPC
+    Required: 'false'
+    Target: DAEMON_URL
+    Type: Variable
+  value: user:pass@host:8332
+- '@attributes':
+    Default: BitcoinSegwit
+    Description: 'Container Variable: COIN'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Coin
+    Required: 'false'
+    Target: COIN
+    Type: Variable
+  value: BitcoinSegwit
+- '@attributes':
+    Default: '50001'
+    Description: Electrum TCP
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: TCP
+    Required: 'true'
+    Target: '50001'
+    Type: Port
+  value: '50001'
+- '@attributes':
+    Default: '50002'
+    Description: Electrum SSL
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: SSL
+    Required: 'true'
+    Target: '50002'
+    Type: Port
+  value: '50002'
+- '@attributes':
+    Default: '50004'
+    Description: Electrum WSS
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WSS
+    Required: 'true'
+    Target: '50004'
+    Type: Port
+  value: '50004'
+- '@attributes':
+    Default: '8000'
+    Description: ElectrumX RPC
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: RPC
+    Required: 'true'
+    Target: '8000'
+    Type: Port
+  value: '8000'
+- '@attributes':
+    Default: /data/banner.txt
+    Description: Place a text file to be displayed to clients in the data directory
+      above
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Banner File
+    Required: 'false'
+    Target: BANNER_FILE
+    Type: Variable
+  value: /data/banner.txt
+- '@attributes':
+    Default: bc1q5g4e6auucmwzj5cwfc7870yn4cg0dselhpn47p
+    Description: Your Bitcoin address to display to clients for donations
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Donation Address
+    Required: 'false'
+    Target: DONATION_ADDRESS
+    Type: Variable
+  value: bc1q5g4e6auucmwzj5cwfc7870yn4cg0dselhpn47p
+- '@attributes':
+    Default: tcp://:50001,ssl://:50002,wss://:50004,rpc://
+    Description: Services and ports to bind. Must match ports above.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Services
+    Required: 'true'
+    Target: SERVICES
+    Type: Variable
+  value: tcp://:50001,ssl://:50002,wss://:50004,rpc://0.0.0.0
+- '@attributes':
+    Default: ssl://my.electrum.duckdns.org:50002,wss://my.electrum.duckdns.org:50004
+    Description: Optionally advertise FQDNs where your ElectrumX is available
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Report Services
+    Required: 'false'
+    Target: REPORT_SERVICES
+    Type: Variable
+  value: ''
+FirstSeen: 1630757005
+Icon: https://github.com/ofawx/unraid-templates/raw/master/img/electrum.png
+LastUpdate: 1630747610
+LastUpdateScan: 1646348598
+Name: electrumx
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "Serve your Electrum clients from your own Bitcoin node! Avoid trusting\
+  \ public Electrum nodes, and maintain your own privacy. Expose ElectrumX to the\
+  \ public Internet to support other Electrum users who can't run their own nodes.\n\
+  \    [br][br]\n    See https://github.com/spesmilo/electrumx/blob/master/docs/environment.rst\
+  \ for full details on ElectrumX environment configuration."
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/spesmilo/electrumx/
+Registry: https://hub.docker.com/r/ofawx/electrumx/
+Repo: ofawx's Repository
+Repository: ofawx/electrumx
+Support: https://forums.unraid.net/topic/112959-support-ofawx-templates-repo/
+TemplateURL: https://raw.githubusercontent.com/ofawx/unraid-templates/master/electrumx.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''

@@ -1,0 +1,114 @@
+CategoryList:
+- GameServers
+- Network-Other
+Config:
+- '@attributes':
+    Default: /mnt/user/appdata/rtmp-server
+    Description: Directory where the containers config files and player pages will
+      be stored.
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Players &amp; Configs
+    Required: 'false'
+    Target: /assets
+    Type: Path
+  value: /mnt/user/appdata/rtmp-server
+- '@attributes':
+    Default: '1935'
+    Description: The port to accept an RTMP stream on.
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: RTMP Port
+    Required: 'false'
+    Target: '1935'
+    Type: Port
+  value: '1935'
+- '@attributes':
+    Default: '1936'
+    Description: The port to accept an RTMPS stream on.
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: RTMPS Port
+    Required: 'false'
+    Target: '1936'
+    Type: Port
+  value: '1936'
+- '@attributes':
+    Default: '8080'
+    Description: The port used to access the built in players and stats page.
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Players &amp; Stats Port
+    Required: 'false'
+    Target: '8080'
+    Type: Port
+  value: '8080'
+- '@attributes':
+    Default: rtmp-server.loc
+    Description: Defines the domain the default self sigend certificate will be valid
+      for.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: SSL Certificate Domain
+    Required: 'false'
+    Target: SSL_DOMAIN
+    Type: Variable
+  value: rtmp-server.loc
+- '@attributes':
+    Default: '99'
+    Description: Sets the User ID that will own the /assets directory
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: User ID
+    Required: 'true'
+    Target: PUID
+    Type: Variable
+  value: '99'
+- '@attributes':
+    Default: '100'
+    Description: Sets the Group ID that will own the /assets Directory
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Group ID
+    Required: 'true'
+    Target: PGID
+    Type: Variable
+  value: '100'
+FirstSeen: 1614730230
+Icon: https://intinor.com/wp-content/uploads/2017/01/RTMP.png
+LastUpdate: 1631383479
+LastUpdateScan: 1648512201
+Name: RTMPS-Server
+Network: bridge
+Overview: "This Docker image can be used to create a video streaming server that supports\
+  \ RTMP, RTMPS, HLS, DASH out of the box. It also allows adaptive streaming and custom\
+  \ transcoding of video streams. All modules are built from source on Debian and\
+  \ Alpine Linux base images.\r\n\r\nStream live RTMP content to:\r\nrtmp://&lt;server\
+  \ ip&gt;:1935/live/&lt;stream_key&gt; \r\nwhere &lt;stream_key&gt; is any stream\
+  \ key you specify.\r\n\r\nStream live RTMPS content to:\r\nrtmps://&lt;ssl_domain&gt;:1936/live/&lt;stream_key&gt;\r\
+  \nwhere &lt;stream_key&gt; is any stream key you specify.\r\n(Check the Github Wiki\
+  \ for information on setting up RTMPS support)\r\n\r\nView in VLC:\r\nrtmp://&lt;server\
+  \ ip&gt;:1935/live/&lt;stream-key&gt;\r\nhttp://&lt;server ip&gt;:8080/hls/&lt;stream-key&gt;.m3u8\
+  \ \r\nhttp://&lt;server ip&gt;:8080/dash/&lt;stream-key&gt;_src.mpd\r\n\r\nView\
+  \ in Browser (assumes &lt;stream-key&gt; is 'test', edit the html files from the\
+  \ mounted directory to change this):\r\nhttp://&lt;server ip&gt;:8080/players/hls.html\r\
+  \nhttp://&lt;server ip&gt;:8080/players/dash.html\r\nhttp://&lt;server ip&gt;:8080/players/rtmp.html"
+Privileged: 'false'
+Project: https://github.com/JamiePhonic/rtmps-hls-server
+Registry: https://hub.docker.com/r/jamiephonic/rtmps-hls-server
+Repo: Selfhosters Unraid Discord Repository
+RepoShort: Selfhosters
+Repository: jamiephonic/rtmps-hls-server
+Support: https://github.com/JamiePhonic/rtmps-hls-server/issues
+TemplateURL: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/rtmps-server.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8080]/stats
+topPerforming: 0.364
+topTrending: -14.937

@@ -1,0 +1,145 @@
+CategoryList:
+- MediaApp-Music
+- MediaServer-Music
+Config:
+- '@attributes':
+    Default: '4040'
+    Description: HTTP
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: HTTP
+    Required: 'true'
+    Target: '4040'
+    Type: Port
+  value: '4040'
+- '@attributes':
+    Default: '4041'
+    Description: UPNP_PORT
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: UPNP_PORT
+    Required: 'false'
+    Target: '4041'
+    Type: Port
+  value: '4041'
+- '@attributes':
+    Default: '1900'
+    Description: Default DLNA/UPnP ports
+    Display: always
+    Mask: 'false'
+    Mode: udp
+    Name: Default DLNA/UPnP ports
+    Required: 'false'
+    Target: '1900'
+    Type: Port
+  value: '1900'
+- '@attributes':
+    Default: /mnt/user/appdata/airsonic-advanced/
+    Description: Appdata
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Appdata
+    Required: 'true'
+    Target: /var/airsonic
+    Type: Path
+  value: /mnt/user/appdata/airsonic-advanced/
+- '@attributes':
+    Default: ''
+    Description: Music Path
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Music Path
+    Required: 'true'
+    Target: /var/music
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Podcast Path
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Podcast Path
+    Required: 'true'
+    Target: /var/podcast
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Playlist Path
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Playlist Path
+    Required: 'true'
+    Target: /var/playlists
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: /
+    Description: CONTEXT_PATH
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: CONTEXT_PATH
+    Required: 'true'
+    Target: CONTEXT_PATH
+    Type: Variable
+  value: /
+- '@attributes':
+    Default: -Xms256m -Xmx512m
+    Description: JAVA_OPTS
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: JAVA_OPTS
+    Required: 'true'
+    Target: JAVA_OPTS
+    Type: Variable
+  value: -Xms256m -Xmx512m
+- '@attributes':
+    Default: '99'
+    Description: PUID
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: PUID
+    Required: 'true'
+    Target: PUID
+    Type: Variable
+  value: '99'
+- '@attributes':
+    Default: '100'
+    Description: PGID
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: PGID
+    Required: 'true'
+    Target: PGID
+    Type: Variable
+  value: '100'
+FirstSeen: 1591452467
+Icon: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/airsonic-advanced.png
+LastUpdate: 1647766619
+LastUpdateScan: 1648627438
+Name: airsonic-advanced
+Network: bridge
+Overview: Airsonic-Advanced is a more modern implementation of the Airsonic fork with
+  several key performance and feature enhancements. It adds and supersedes several
+  features in Airsonic.
+Privileged: 'false'
+Project: https://github.com/airsonic-advanced/airsonic-advanced
+Registry: https://hub.docker.com/r/airsonicadvanced/airsonic-advanced/
+Repo: A75G's Repository
+Repository: airsonicadvanced/airsonic-advanced:latest
+Support: https://forums.unraid.net/topic/89502-support-a75g-repo/
+TemplateURL: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/airsonic-advanced.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:4040]/
+topPerforming: 2.026
+topTrending: -11.592

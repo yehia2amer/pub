@@ -1,0 +1,56 @@
+CategoryList:
+- HomeAutomation
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: /mnt/user/appdata/plateminder/data
+    Description: Path for data/image storage
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: appdata
+    Required: 'true'
+    Target: /app/data
+    Type: Path
+  value: /mnt/user/appdata/plateminder/data
+- '@attributes':
+    Default: /mnt/user/appdata/plateminder/config.yaml
+    Description: ''
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: config_yaml
+    Required: 'true'
+    Target: /app/config.yaml
+    Type: Path
+  value: /mnt/user/appdata/plateminder/config.yaml
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: restapi
+    Required: 'false'
+    Target: '2576'
+    Type: Port
+  value: '2576'
+ExtraParams: --restart unless-stopped
+FirstSeen: 1643490190
+Icon: https://raw.githubusercontent.com/digiblur/unraid-docker-templates/master/images/plate-minder.png
+LastUpdate: 1644965034
+LastUpdateScan: 1648685006
+Name: plate-minder
+Network: bridge
+Overview: 'Monitor an RTSP / MJPEG stream for license plates, record them, store them
+  in SQL, send alerts via MQTT with AutoDiscovery into Home Assistant. REQUIRED: open-alpr-http-wrapper
+  docker container and configuration YAML file (example config on the Plate-Minder
+  Github page'
+Privileged: 'false'
+Project: https://github.com/sclaflin/Plate-Minder
+Registry: https://hub.docker.com/r/sclaflin/plate-minder/
+Repo: digiblur's Repository
+Repository: sclaflin/plate-minder
+Support: https://forums.unraid.net/topic/72033-support-digiblurs-docker-template-repository/
+TemplateURL: https://raw.githubusercontent.com/digiblur/unraid-docker-templates/master/plate-minder.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg

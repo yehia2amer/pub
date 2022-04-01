@@ -1,0 +1,125 @@
+CategoryList:
+- Cloud
+Config:
+- '@attributes':
+    Default: /mnt/user/appdata/ff-syncserver/db/
+    Description: Location where durable sqllite db is stored for sync data.
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: sync db location
+    Required: 'true'
+    Target: /data
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: http://&lt;URL&gt;:5000
+    Description: 'Replace &lt;URL&gt; in SYNCSERVER_PUBLIC_URL with your URL (For
+      which the SSL certificate was also issued) '
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Syncserver Public URL
+    Required: 'true'
+    Target: SYNCSERVER_PUBLIC_URL
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '&lt;KEY&gt;'
+    Description: "Replace &lt;KEY&gt; with some random hex like the output of \r\n\
+      \r\nhead -c 20 /dev/urandom | sha1sum | awk '{print $1}'."
+    Display: always
+    Mask: 'true'
+    Mode: ''
+    Name: Syncserver secret
+    Required: 'true'
+    Target: SYNCSERVER_SECRET
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: sqlite:////data/syncserver.db
+    Description: Container path to where sqllite db lives
+    Display: always-hide
+    Mask: 'false'
+    Mode: ''
+    Name: SQLlite URI
+    Required: 'false'
+    Target: SYNCSERVER_SQLURI
+    Type: Variable
+  value: sqlite:////data/syncserver.db
+- '@attributes':
+    Default: 'true'
+    Description: 'Container Variable: SYNCSERVER_ALLOW_NEW_USERS'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Allow new users
+    Required: 'true'
+    Target: SYNCSERVER_ALLOW_NEW_USERS
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '5000'
+    Description: 'Container Variable: PORT'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Port
+    Required: 'false'
+    Target: PORT
+    Type: Variable
+  value: '5000'
+- '@attributes':
+    Default: '5000'
+    Description: 'Container Port: 5000'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Listening on
+    Required: 'true'
+    Target: '5000'
+    Type: Port
+  value: '5000'
+- '@attributes':
+    Default: 'true'
+    Description: 'Container Variable: SYNCSERVER_BATCH_UPLOAD_ENABLED'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Enable batch uploads
+    Required: 'false'
+    Target: SYNCSERVER_BATCH_UPLOAD_ENABLED
+    Type: Variable
+  value: 'true'
+- '@attributes':
+    Default: 'true'
+    Description: 'Container Variable: SYNCSERVER_FORCE_WSGI_ENVIRON'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Force WSGI
+    Required: 'false'
+    Target: SYNCSERVER_FORCE_WSGI_ENVIRON
+    Type: Variable
+  value: 'false'
+FirstSeen: 1614596548
+Icon: https://github.com/jflo/ffsync-unraid/raw/main/Firefox_Sync_logo.png
+LastUpdate: 1645057380
+LastUpdateScan: 1648375410
+Name: FirefoxSyncserver
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: Template for running Mozilla's official Syncserver image.
+PostArgs: ''
+Privileged: 'false'
+Project: https://mozilla-services.readthedocs.io/en/latest/howtos/run-sync-1.5.html
+Registry: https://hub.docker.com/r/mozilla/syncserver
+Repo: Jflo's Repository
+Repository: mozilla/syncserver:latest
+Support: https://forums.unraid.net/topic/103334-firefox-sync-server/
+TemplateURL: https://raw.githubusercontent.com/jflo/ffsync-unraid/master/ffsync-template.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''
+topPerforming: 0.19
+topTrending: -1.4080000000000001

@@ -1,0 +1,193 @@
+Beta: 'true'
+CategoryList:
+- GameServers
+- Network-Other
+- Productivity
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /csmm-7dtd'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: ServerFiles
+    Required: 'true'
+    Target: /csmm-7dtd
+    Type: Path
+  value: /mnt/cache/appdata/csmm-7dtd
+- '@attributes':
+    Default: ''
+    Description: 'Must be in this exact format: ''https://www.server.org'' (without
+      quotes, no path or locations allowed only subdomains and with no trailing ''/'').'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Hostname
+    Required: 'true'
+    Target: HOSTNAME
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Steam API Key goes here (you can get it from: https://steamcommunity.com/dev/apikey).'
+    Display: always
+    Mask: 'true'
+    Mode: ''
+    Name: Steam API Key
+    Required: 'true'
+    Target: STEAM_API_KEY
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Your Discord Bot Token (you can get it from here: https://discordapp.com/developers/applications)'
+    Display: always
+    Mask: 'true'
+    Mode: ''
+    Name: Dicord Bot Token
+    Required: 'false'
+    Target: BOTTOKEN
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Your Discord Client Secret (you can get it from here: https://discordapp.com/developers/applications)'
+    Display: always
+    Mask: 'true'
+    Mode: ''
+    Name: Discord Client Secret
+    Required: 'false'
+    Target: CLIENTSECRET
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Your Discord Client ID (you can get it from here: https://discordapp.com/developers/applications)'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Discord Client ID
+    Required: 'false'
+    Target: CLIENTID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Specify the database backup interval in seconds (saved to the ../Database/7dtd.sql).
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Database Backup Interval
+    Required: 'true'
+    Target: DB_BKP_INTERV
+    Type: Variable
+  value: '90'
+- '@attributes':
+    Default: ''
+    Description: Set to 'true' to force an update.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Force Update
+    Required: 'false'
+    Target: FORCE_UPDATE
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: "Log level (valid are: \u2018blank\u2019, \u2018error\u2019, \u2018\
+      warn\u2019, \u2018info\u2019, \u2018debug\u2019, \u2018verbose\u2019, \u2018\
+      silly\u2019)"
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Log Level
+    Required: 'false'
+    Target: CSMM_LOGLEVEL
+    Type: Variable
+  value: info
+- '@attributes':
+    Default: ''
+    Description: Please note that you should reverse proxy the server trough nginx,
+      apache or any other reverse proxy software to your Hostname as filled in above.
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Web Port
+    Required: 'true'
+    Target: '1337'
+    Type: Port
+  value: '1337'
+- '@attributes':
+    Default: ''
+    Description: Only needed if you want to connect to the database.
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Maria DB Port
+    Required: 'false'
+    Target: '3306'
+    Type: Port
+  value: '3306'
+- '@attributes':
+    Default: ''
+    Description: Only change if you are know what you are doing.
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: CSMM Download URL
+    Required: 'true'
+    Target: CSMM_DL_URL
+    Type: Variable
+  value: https://github.com/CatalysmsServerManager/7-days-to-die-server-manager/archive/master.zip
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: UID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: UID
+    Required: 'true'
+    Target: UID
+    Type: Variable
+  value: '99'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: GID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: GID
+    Required: 'true'
+    Target: GID
+    Type: Variable
+  value: '100'
+DonateLink: https://www.paypal.me/chips777
+DonateText: 'If you like my work please '
+ExtraParams: --restart=unless-stopped
+FirstSeen: 1570572336
+Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/csmm.png
+LastUpdate: 1643015086
+LastUpdateScan: 1646686999
+Name: CSMM-7DtD
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "This Docker will install and download CSMM for 7DtD (CatalysmsServerManager).\r\
+  \nIt's a powerfull Server Manager with Server automation, Discord notifications,\
+  \ High ping kicker, Country ban, Player tracking, Ingame commands, Economy system,\
+  \ Discord integration, Support ticket system, Server analytics,... for 7DtD.\r\n\
+  \r\nUPDATE NOTICE: Simply set the 'Force Update' to 'true' and restart the container\
+  \ (don't forget to turn it off after the update)."
+PostArgs: ''
+Privileged: 'false'
+Project: https://www.csmm.app/
+Registry: https://hub.docker.com/r/ich777/csmm-7dtd/
+Repo: ich777's Repository
+Repository: ich777/csmm-7dtd
+Support: https://forums.unraid.net/topic/79530-support-ich777-gameserver-dockers/
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:1337]/
+caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/CSMM-7DtD.xml
+topTrending: 0.026000000000000245

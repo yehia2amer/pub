@@ -1,0 +1,110 @@
+CategoryList:
+- Security
+- Network-DNS
+- Network-VPN
+Config:
+- '@attributes':
+    Default: username@mail.com
+    Description: Your nordvpn username (mail account)
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: NordVPN user
+    Required: 'true'
+    Target: USER
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: password
+    Description: Your nordvpn password
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: NordVPN passwd
+    Required: 'true'
+    Target: PASS
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: '[country]/[server]/[country_code]/[city]/[group] or [country] [city],
+      if none provide you will connect to the recommended server. '
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Location
+    Required: 'false'
+    Target: CONNECT
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: 1.1.1.1,1.0.0.1
+    Description: Can set up to 3 DNS servers. For example 1.1.1.1,8.8.8.8 or Disable,
+      Setting DNS disables CyberSec.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: DNS
+    Required: 'false'
+    Target: DNS
+    Type: Variable
+  value: 1.1.1.1,1.0.0.1
+- '@attributes':
+    Default: NordLynx|OpenVPN
+    Description: Specify Technology to use. NordLynx faster (but experimental).
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Technology
+    Required: 'false'
+    Target: TECHNOLOGY
+    Type: Variable
+  value: NordLynx
+- '@attributes':
+    Default: True|False
+    Description: When enabled, the CyberSec feature will automatically block suspicious
+      websites so that no malware or other cyber threats can infect your device.
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: CyberSEC
+    Required: 'false'
+    Target: CYBER_SEC
+    Type: Variable
+  value: 'False'
+- '@attributes':
+    Default: 192.168.0.0/24
+    Description: CIDR networks (IE 192.168.1.0/24), add a route to allows replies
+      once the VPN is up.
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: LAN net
+    Required: 'false'
+    Target: NETWORK
+    Type: Variable
+  value: ''
+ExtraParams: --device /dev/net/tun --cap-add=NET_ADMIN
+FirstSeen: 1622243977
+Icon: https://raw.githubusercontent.com/josopu/unraid-template/main/nordvpn.png
+LastUpdate: 1644855029
+LastUpdateScan: 1648260202
+Name: nordvpn
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "Official NordVPN client in a docker container; it makes routing traffic\
+  \ through the NordVPN network easy.\r\rSpaceInvaders One video-guide on how to route\
+  \ other dockers via another: https://www.youtube.com/watch?v=znSu_FuKFW0"
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/bubuntux/nordvpn
+Registry: https://hub.docker.com/r/bubuntux/nordvpn/
+Repo: Zotarios' Repository
+Repository: bubuntux/nordvpn
+Support: https://forums.unraid.net/topic/109421-nordvpn
+TemplateURL: https://raw.githubusercontent.com/josopu/unraid-template/master/nordvpn.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''
+topPerforming: 0.408
+topTrending: -3.2720000000000002

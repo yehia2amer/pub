@@ -1,0 +1,147 @@
+CategoryList:
+- Productivity
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: ''
+    Description: Data Path
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Data Dir
+    Required: 'true'
+    Target: /firefox
+    Type: Path
+  value: /mnt/cache/appdata/firefox/
+- '@attributes':
+    Default: ''
+    Description: TCP noVNC WebGUI
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: noVNC WebGUI
+    Required: 'true'
+    Target: '8080'
+    Type: Port
+  value: '8080'
+- '@attributes':
+    Default: ''
+    Description: Enter your preferred version or 'latest' (without quotes) to grab
+      the latest version.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Preferred Firefox Version
+    Required: 'true'
+    Target: FIREFOX_V
+    Type: Variable
+  value: latest
+- '@attributes':
+    Default: ''
+    Description: 'Enter your preferred language here (eg: ''en-US'', ''de'', ''fr'',
+      ''en-UK'',... you can get a full list here: https://ftp.mozilla.org/pub/firefox/releases/latest/README.txt)'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Preferred Firefox Language
+    Required: 'true'
+    Target: FIREFOX_LANG
+    Type: Variable
+  value: en-US
+- '@attributes':
+    Default: ''
+    Description: Minimum screen width 1000 pixels
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Custom Screen Width
+    Required: 'true'
+    Target: CUSTOM_RES_W
+    Type: Variable
+  value: '1280'
+- '@attributes':
+    Default: ''
+    Description: Minimum screen hight 880 pixels
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Custom Screen Height
+    Required: 'true'
+    Target: CUSTOM_RES_H
+    Type: Variable
+  value: '768'
+- '@attributes':
+    Default: ''
+    Description: If needed enter extra startup parameters here otherwise leave empty.
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Extra Parameters
+    Required: 'false'
+    Target: EXTRA_PARAMETERS
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: UID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: UID
+    Required: 'true'
+    Target: UID
+    Type: Variable
+  value: '99'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: GID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: GID
+    Required: 'true'
+    Target: GID
+    Type: Variable
+  value: '100'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: UMASK'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Umask
+    Required: 'true'
+    Target: UMASK
+    Type: Variable
+  value: '000'
+DonateLink: https://www.paypal.me/chips777
+DonateText: 'If you like my work please '
+ExtraParams: --restart=unless-stopped --shm-size=2G
+FirstSeen: 1599516677
+Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/firefox.png
+LastUpdate: 1645104399
+LastUpdateScan: 1646291003
+Name: Firefox
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "This container will download and install Firefox in the preferred version\
+  \ and language.\r\n\r\nUPDATE: The container will check on every restart if there\
+  \ is a newer version available.\r\n\r\nATTENTION: If you want to change the language,\
+  \ you have to delete every file in the 'firefox' directory except the 'profile'\
+  \ folder.\r\n\r\nRESOLUTION: You can also change the resolution from the WebGUI,\
+  \ to do that simply click on 'Show more settings...' (on a resolution change it\
+  \ can occour that the screen is not filled entirely with the Firefox window, simply\
+  \ restart the container and it will be fullscreen again)."
+PostArgs: ''
+Privileged: 'false'
+Project: https://www.mozilla.org/firefox/
+Registry: https://hub.docker.com/r/ich777/firefox/
+Repo: ich777's Repository
+Repository: ich777/firefox
+Support: https://forums.unraid.net/topic/83786-support-ich777-application-dockers/
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8080]/vnc.html?autoconnect=true
+caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/Firefox.xml
+topPerforming: 5.215
+topTrending: -8.049

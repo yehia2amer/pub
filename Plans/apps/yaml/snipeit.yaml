@@ -1,0 +1,274 @@
+CategoryList:
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: ''
+    Description: The name of your Snipe-IT database.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: MySQL Database Name
+    Required: 'true'
+    Target: MYSQL_DATABASE
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: The MySQL username you set up to access the database.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: MySQL Username
+    Required: 'true'
+    Target: MYSQL_USER
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Your database password for the userd
+    Display: always
+    Mask: 'true'
+    Mode: ''
+    Name: MySQL Password
+    Required: 'true'
+    Target: MYSQL_PASSWORD
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: The host for your database
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: MySQL Database Host
+    Required: 'true'
+    Target: MYSQL_PORT_3306_TCP_ADDR
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '3306'
+    Description: Port number of your MySQL Database.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: MySQL Database Port
+    Required: 'true'
+    Target: MYSQL_PORT_3306_TCP_PORT
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Specify the hostname for your outgoing mail server. Keep in mind
+      that this server must be accessible from the server you're running Snipe-IT
+      on.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: SMTP Address
+    Required: 'true'
+    Target: MAIL_PORT_587_TCP_ADDR
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Set the port number that your mail server expects to send from
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: SMTP Port
+    Required: 'true'
+    Target: MAIL_PORT_587_TCP_PORT
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Specify an email address that is used globally for all e-mails that
+      are sent by your application.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: SMTP From Address
+    Required: 'true'
+    Target: MAIL_ENV_FROM_ADDR
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Specify the name that should show up in the recipient's inbox when
+      they receive email from your Snipe-IT instance.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: SMTP From Name
+    Required: 'true'
+    Target: MAIL_ENV_FROM_NAME
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: "Here you may specify the encryption protocol that should be used\
+      \ when the application sends e-mail messages. \r\n\r\n'tls' for SMTP-over-SSL\
+      \ \r\n'tcp' for unencrypted"
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: SMTP Encryption
+    Required: 'true'
+    Target: MAIL_ENV_ENCRYPTION
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Set the username of the authenticated user you'll be sending email
+      as.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: SMTP Username
+    Required: 'true'
+    Target: MAIL_ENV_USERNAME
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Set the password for the authenticated user you'll be sending as.
+    Display: always
+    Mask: 'true'
+    Mode: ''
+    Name: SMTP Email Password
+    Required: 'true'
+    Target: MAIL_ENV_PASSWORD
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: "This is a randomly generated key that your system will use to store\
+      \ encrypted data. \r\n\r\nMake sure you keep a backup of this value somewhere\
+      \ safe (password manager, etc)."
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: App Key
+    Required: 'true'
+    Target: APP_KEY
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: This is the url to your application, beginning with http:// or https://
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: App URL
+    Required: 'true'
+    Target: APP_URL
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Set this to be the timezone you wish your Snipe-IT installation to
+      use. This should use a PHP-supported timezone.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: App Timezone
+    Required: 'true'
+    Target: APP_TIMEZONE
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: en
+    Description: Set this to reflect the two-letter or 5-letter abbreviation for the
+      language you'd like to use for Snipe-IT. The default language is US English
+      (en)
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: App Locale
+    Required: 'true'
+    Target: APP_LOCALE
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '8087'
+    Description: 'Container Port: 80'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Port
+    Required: 'true'
+    Target: '80'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: production
+    Description: This should always be set to production unless you are a developer
+      who is editing code within snipe-IT.
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: App Environment
+    Required: 'true'
+    Target: APP_ENV
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: 'false'
+    Description: Setting this to true will turn on debugging in your Snipe-IT installation.
+      This can be very useful for debugging, but should NEVER be left to true in a
+      production environment.
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: App Debug
+    Required: 'true'
+    Target: APP_DEBUG
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /config'
+    Display: advanced
+    Mask: 'false'
+    Mode: rw
+    Name: Appdata Config Path
+    Required: 'true'
+    Target: /config
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: /mnt/user/appdata/snipeit/data
+    Description: 'Container Path: /var/lib/snipeit'
+    Display: advanced
+    Mask: 'false'
+    Mode: rw
+    Name: Data
+    Required: 'true'
+    Target: /var/lib/snipeit
+    Type: Path
+  value: ''
+FirstSeen: 1599316700
+Icon: /plugins/dynamix.docker.manager/images/question.png
+LastUpdate: 1648592124
+LastUpdateScan: 1648692218
+Name: snipe-it
+Network: bridge
+Overview: "This is a FOSS project for asset management in IT Operations. Knowing who\
+  \ has which laptop, when it was purchased in order to depreciate it correctly, handling\
+  \ software licenses, etc.\r\n\r\nIt is built on Laravel 5.5.\r\n\r\nSnipe-IT is\
+  \ actively developed and we release quite frequently. (Check out the live demo here.)\r\
+  \n\r\nThis is web-based software. This means there is no executable file (aka no\
+  \ .exe files), and it must be run on a web server and accessed through a web browser.\
+  \ It runs on any Mac OSX, flavor of Linux, as well as Windows, and we have a Docker\
+  \ image available if that's what you're into."
+Privileged: 'false'
+Project: https://github.com/snipe/snipe-it
+Registry: https://hub.docker.com/r/snipe/snipe-it/
+Repo: Progeny42's Repository
+Repository: snipe/snipe-it
+Support: https://forums.unraid.net/topic/96573-guide-setting-up-snipe-it-on-unraid/
+TemplateURL: https://raw.githubusercontent.com/Progeny42/unRAID-CA-Templates/master/snipe-it.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:80]
+topPerforming: 0.678
+topTrending: -1.142

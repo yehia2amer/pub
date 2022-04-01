@@ -1,0 +1,103 @@
+CategoryList:
+- Downloaders
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: ''
+    Description: /mnt/user/appdata/xteve/_config/
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: /config
+    Required: 'true'
+    Target: /config
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /root/.xteve'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: /root/.xteve
+    Required: 'true'
+    Target: /root/.xteve
+    Type: Path
+  value: /mnt/user/appdata/xteve/
+- '@attributes':
+    Default: ''
+    Description: /mnt/user/appdata/xteve/_guide2go/
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: /guide2go
+    Required: 'true'
+    Target: /guide2go
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: /mnt/user/appdata/xteve/_owi2plex/
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: /owi2plex
+    Required: 'true'
+    Target: /owi2plex
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: /tmp/xteve
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: /tmp/xteve
+    Required: 'false'
+    Target: /tmp/xteve
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: /mnt/user/appdata/tvheadend/data/
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: /TVH
+    Required: 'false'
+    Target: /TVH
+    Type: Path
+  value: ''
+FirstSeen: 1564596493
+Icon: https://avatars0.githubusercontent.com/u/53275662?s=460&amp;v=4
+LastUpdate: 1604248212
+LastUpdateScan: 1647748995
+Name: xteve_g2g_owi
+Network: host
+Networking:
+  Mode: host
+Overview: "xteve, guide2go, owi2plex in one docker with cron\r\n\r\naccess xteve webui\
+  \ ip:34400/web/\r\n\r\nafter docker start check your config folder and do your setups,\
+  \ setup is persistent, start from scratch by delete them\r\n\r\ncron and xteve start\
+  \ options are updated on docker restart.\r\n\r\nsetup guide2go SD subscrition as\
+  \ follows or copy your existing .yaml files into your mounted /guide2go folder \r\
+  \ndocker exec -it \"dockername\" guide2go -configure /guide2go/\"your_epg_name\"\
+  .yaml\r\n\r\nto test the cronjob functions \r\ndocker exec -it \"dockername\" ./config/cronjob.sh\r\
+  \n\r\nincluded functions are (all can be individual turned on / off)\r\n\r\nxteve\
+  \ - iptv and epg proxy server for plex, emby, etc ... thanks to @marmei \r\nguide2go\
+  \ - xmltv epg grabber for schedules direct, thanks to @marmei \r\nowi2plex - xmltv\
+  \ epg grabber for enigma receivers using open web, thanks to @cvarelaruiz \r\nsome\
+  \ small script lines cause i personally use tvheadend and get playlist for xteve\
+  \ and cp xml data to tvheadend"
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/alturismo/xteve_g2g_owi/
+Registry: https://hub.docker.com/r/alturismo/xteve_g2g_owi
+Repo: alturismo's Repository
+Repository: alturismo/xteve_g2g_owi
+Support: https://forums.unraid.net/topic/81786-support-alturismo-repos/
+TemplateURL: https://raw.githubusercontent.com/alturismo/unraid_templates/master/my-xteve_g2g_owi.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:34400]/web/
+topPerforming: 4.326
+topTrending: 2.4859999999999998

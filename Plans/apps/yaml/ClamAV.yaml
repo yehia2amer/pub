@@ -1,0 +1,79 @@
+CategoryList:
+- Tools-Utilities
+- Security
+Config:
+- '@attributes':
+    Default: /path/to/scan
+    Description: 'Container Path: /scan'
+    Display: always
+    Mask: 'false'
+    Mode: ro
+    Name: Folder to Scan
+    Required: 'true'
+    Target: /scan
+    Type: Path
+  value: /mnt/user
+- '@attributes':
+    Default: /mnt/cache/appdata/clamav
+    Description: Storage for freshclam updates
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: ClamAV Signatures
+    Required: 'false'
+    Target: /var/lib/clamav
+    Type: Path
+  value: /mnt/cache/appdata/clamav
+- '@attributes':
+    Default: '99'
+    Description: ID of the user the application runs as.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: User ID
+    Required: 'true'
+    Target: USER_ID
+    Type: Variable
+  value: '99'
+- '@attributes':
+    Default: '100'
+    Description: ID of the group the application runs as.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Group ID
+    Required: 'true'
+    Target: GROUP_ID
+    Type: Variable
+  value: '100'
+DonateLink: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=KK2S75LBHM6QC&amp;source=url_id=JTSH886FD9UM6
+DonateText: Buy me a coffee
+FirstSeen: 1562256489
+Icon: https://its.ucsc.edu/software/images/clam.png
+LastUpdate: 1640405262
+LastUpdateScan: 1648332199
+Name: ClamAV
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: This template is for scanning your unRAID server with clamav and clamscan.
+  To scan your server, check the environment variable to set the scanned folder and
+  just start the container. When it is finished, the container will stop and you can
+  view the logs to see the results.
+PostArgs: -i
+Privileged: 'false'
+Project: https://github.com/tquizzle/clamav-alpine
+RecommendedDate: 1561953600
+RecommendedRaw: 7/1/2019
+RecommendedReason:
+  en_US: A nice virus checker for all the files on your server
+RecommendedWho: Andrew
+Registry: https://hub.docker.com/r/tquinnelly/clamav-alpine
+Repo: TQ's Repository
+Repository: tquinnelly/clamav-alpine
+Support: https://forums.unraid.net/topic/80868-support-clamav/
+TemplateURL: https://raw.githubusercontent.com/tquizzle/Docker-xml/master/docker-clamav-alpine.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''
+topPerforming: 1.053
+topTrending: -5.734

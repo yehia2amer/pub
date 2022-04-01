@@ -1,0 +1,101 @@
+CAComment: This template is set up to use a custom network. You may have to adjust
+  the network or IP address etc to match your system
+CategoryList:
+- Network-Proxy
+- Network-VPN
+Config:
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /config'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: /config
+    Required: 'false'
+    Target: /config
+    Type: Path
+  value: /mnt/user/appdata/wg_hideme_privoxy/
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: HIDEME_FILE'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: HIDEME_FILE
+    Required: 'false'
+    Target: HIDEME_FILE
+    Type: Variable
+  value: hideme.yaml
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: HIDEME_USER'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: HIDEME_USER
+    Required: 'false'
+    Target: HIDEME_USER
+    Type: Variable
+  value: username
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: HIDEME_PASS'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: HIDEME_PASS
+    Required: 'false'
+    Target: HIDEME_PASS
+    Type: Variable
+  value: password
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: HIDEME_SERVER'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: HIDEME_SERVER
+    Required: 'false'
+    Target: HIDEME_SERVER
+    Type: Variable
+  value: cz.hideservers.net
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: LOCAL_NET'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: LOCAL_NET
+    Required: 'false'
+    Target: LOCAL_NET
+    Type: Variable
+  value: 192.168.1.0/24
+ExtraParams: --cap-add=NET_ADMIN --device /dev/net/tun --sysctl net.ipv6.conf.all.disable_ipv6=0
+  --dns=8.8.8.8
+FirstSeen: 1609657706
+Icon: https://raw.githubusercontent.com/alturismo/wg_hideme_privoxy/main/hide-me-icon.png
+LastUpdate: 1609615569
+LastUpdateScan: 1648627438
+Name: hideme_privoxy
+Network: br0
+Networking:
+  Mode: br0
+Overview: "wireguard vpn client with privoxy and microsocks in docker\r\n\r\nits a\
+  \ hideme vpn client ONLY\r\n\r\nLOCAL_NET - CIDR mask of the local IP addresses\
+  \ which will acess the proxy and bypass it, comma seperated\r\nHIDEME_SERVER - HideMe\
+  \ Server to use\r\nHIDEME_FILE - configuration file, only edit when you know what\
+  \ you do\r\nHIDEME_USER - your HideMe username for your vpn\r\nHIDEME_PASS - your\
+  \ HideMe password for your vpn\r\nTZ - Timezone, not relevant for function\r\n\r\
+  \nIMPORTANT, if ipv6 is active in your network, set in extra parameters ...disable_ipv6=1\r\
+  \n\r\nport 8080 privoxy - edit in bridge mode to fit your needs\r\nport 1080 socks\
+  \ proxy - edit in bridge mode to fit your needs"
+PostArgs: ''
+Privileged: 'true'
+Project: https://github.com/alturismo/wg_hideme_privoxy
+Registry: https://hub.docker.com/r/alturismo/wg_hideme_privoxy
+Repo: alturismo's Repository
+Repository: alturismo/wg_hideme_privoxy
+Support: https://forums.unraid.net/topic/81786-support-alturismo-repos/
+TemplateURL: https://raw.githubusercontent.com/alturismo/unraid_templates/master/my-hideme_privoxy.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''

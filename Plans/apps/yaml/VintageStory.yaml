@@ -1,0 +1,88 @@
+CategoryList:
+- GameServers
+Config:
+- '@attributes':
+    Default: ''
+    Description: Data Path
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: ServerFiles
+    Required: 'true'
+    Target: /vintagestory
+    Type: Path
+  value: /mnt/cache/appdata/vintagestory
+- '@attributes':
+    Default: ''
+    Description: Extra startup parameters (leave empty if you don't need it).
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Extra Startup Parameters
+    Required: 'false'
+    Target: GAME_PARAMS
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: TCP GamePort (if you need another port, please delete this entry
+      and create a new TCP Port with the required port number, also don't forget to
+      change it in your configuration).
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: TCP - GamePort
+    Required: 'true'
+    Target: '42420'
+    Type: Port
+  value: '42420'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: UID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: UID
+    Required: 'true'
+    Target: UID
+    Type: Variable
+  value: '99'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: GID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: GID
+    Required: 'true'
+    Target: GID
+    Type: Variable
+  value: '100'
+DonateLink: https://www.paypal.me/chips777
+DonateText: 'If you like my work please '
+ExtraParams: --restart=unless-stopped
+FirstSeen: 1590156471
+Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/vintagestory.png
+LastUpdate: 1600434152
+LastUpdateScan: 1647317002
+Name: Vintage-Story
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "This is a Basic Vintage Story Server it will download and install Vintage\
+  \ Story Server and run it.\r\n\r\nUPDATE NOTICE: The container will check on every\
+  \ start/restart if there is a newer version available.\r\n\r\nCONSOLE: To connect\
+  \ to the console open up the terminal on the host machine and type in: 'docker exec\
+  \ -u vintagestory -ti NAMEOFYOURCONTAINER screen -xS VintageStory' (without quotes)\
+  \ to exit the screen session press CTRL+A and then CTRL+D or simply close the terminal\
+  \ window in the first place."
+PostArgs: ''
+Privileged: 'false'
+Project: https://www.vintagestory.at/
+Registry: https://hub.docker.com/r/ich777/vintagestory/
+Repo: ich777's Repository
+Repository: ich777/vintagestory
+Support: https://forums.unraid.net/topic/79530-support-ich777-gameserver-dockers/
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''
+caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/Vintage-Story.xml

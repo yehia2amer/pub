@@ -1,0 +1,83 @@
+CategoryList:
+- HomeAutomation
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /data'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Host Path 1
+    Required: 'false'
+    Target: /data
+    Type: Path
+  value: /mnt/user/appdata/blynk-server/data
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /config'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Host Path 2
+    Required: 'false'
+    Target: /config
+    Type: Path
+  value: /mnt/user/appdata/blynk-server/config
+- '@attributes':
+    Default: ''
+    Description: 'Container Port: 8080'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Host Port 1
+    Required: 'false'
+    Target: '8080'
+    Type: Port
+  value: '8080'
+- '@attributes':
+    Default: ''
+    Description: 'Container Port: 9443'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Host Port 2
+    Required: 'false'
+    Target: '9443'
+    Type: Port
+  value: '9443'
+- '@attributes':
+    Default: ''
+    Description: 'Container Port: 8440'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Host Port 3
+    Required: 'false'
+    Target: '8440'
+    Type: Port
+  value: '8440'
+FirstSeen: 1589018878
+Icon: https://lh3.googleusercontent.com/rTRWfl713otPTrmafsJ3OLb7I30XS1iBSZyP1WXYXKAlwkTMhihdMw_gDv5ogjEtQ1P6
+LastUpdate: 1567179096
+LastUpdateScan: 1648804645
+Name: blynk-server
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "Template to setup a Blynk server on Unraid\n\n    There is an issue where\
+  \ this Docker doesn't seem to create the server.properties file\n    in the config\
+  \ directory, located at appdata/blynk-server/config by default. You will\n    need\
+  \ manually create this file before the server will start. Just create a blank file\n\
+  \    at that location called server.properties and your server will start."
+PostArgs: ''
+Privileged: 'false'
+Registry: https://hub.docker.com/r/mpherg/blynk-server/
+Repo: bluegizmo83's Repository
+Repository: mpherg/blynk-server:latest
+Support: https://community.blynk.cc/
+TemplateURL: https://raw.githubusercontent.com/bluegizmo83/DockerXMLs/master/blynk-server.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: https://[IP]:[PORT:9443]/admin
+topPerforming: 0.041
+topTrending: -1.236

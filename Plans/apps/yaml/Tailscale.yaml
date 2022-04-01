@@ -1,0 +1,61 @@
+CategoryList:
+- Network-VPN
+Config:
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /state'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Appdata path
+    Required: 'false'
+    Target: /state
+    Type: Path
+  value: /mnt/user/appdata/tailscale
+- '@attributes':
+    Default: ''
+    Description: Additional flags to pass to tailscale on startup
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: UP_FLAGS
+    Required: 'false'
+    Target: UP_FLAGS
+    Type: Variable
+  value: ''
+ExtraParams: --cap-add=NET_ADMIN --hostname=unraid
+FirstSeen: 1586269763
+Icon: https://raw.githubusercontent.com/deasmi/unraid-tailscale/master/logo.png
+LastUpdate: 1647103713
+LastUpdateScan: 1647338599
+Name: Tailscale
+Network: host
+Networking:
+  Mode: host
+Overview: "Private networks made easy\r\n\r\nConnect all your devices using WireGuard,\xAE\
+  \ without the hassle.\r\nTailscale makes it as easy as installing an app and signing\
+  \ in.\r\n\r\nThis container sets up tailscale for unraid.\r\n\r\nIt will register\
+  \ as hostname unraid, if you want to change that see 'Extra Parameters' below and\
+  \ change to the hostname you would like.\r\n\r\n** IMPORTANT When you first start\
+  \ this container you must check the log file for the logon URL and then enter it\
+  \ into a browser and logon to tail scale. I would then also advise setting the keys\
+  \ to not expire for your unraid host **\r\n\r\n** Note that this will expose your\
+  \ whole server into your tailscale VPN network ** \r\nDo not do this if you do not\
+  \ understand what that means."
+PostArgs: ''
+Privileged: 'true'
+Project: https://github.com/deasmi/unraid-tailscale
+RecommendedDate: 1635739200
+RecommendedRaw: 11/1/2021
+RecommendedReason:
+  en_US: With over 335K downloads to date, Tailscale is this month's CA Spotlight
+    container
+Registry: https://hub.docker.com/repository/docker/deasmi/unraid-tailscale
+Repo: dsmith44's Repository
+Repository: deasmi/unraid-tailscale:latest
+Support: https://forums.unraid.net/topic/90719-will-move-to-ca-tailscale-support-thread/
+TemplateURL: https://raw.githubusercontent.com/deasmi/unraid-ca/master/unraid-tailscale.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''
+topPerforming: 7.888
+topTrending: -11.882

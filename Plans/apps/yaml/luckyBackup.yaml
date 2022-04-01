@@ -1,0 +1,146 @@
+CategoryList:
+- Backup
+Config:
+- '@attributes':
+    Default: ''
+    Description: Config path
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Data Dir
+    Required: 'true'
+    Target: /luckybackup
+    Type: Path
+  value: /mnt/cache/appdata/luckybackup/
+- '@attributes':
+    Default: ''
+    Description: WebGUI http Port
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebGUI
+    Required: 'true'
+    Target: '8080'
+    Type: Port
+  value: '8080'
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /mnt/user'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Shares
+    Required: 'true'
+    Target: /mnt/user
+    Type: Path
+  value: /mnt/user/
+- '@attributes':
+    Default: false|true
+    Description: This is only needed if you want to create backups from your /boot
+      drive or other directories that require root privileges (please don't forget
+      to change the Shares Host path to / otherwise you can't see it in /mnt in the
+      container).
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Run as root user
+    Required: 'true'
+    Target: ROOT
+    Type: Variable
+  value: 'false'
+- '@attributes':
+    Default: ''
+    Description: Data Permissions for config directory
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Data Permissions
+    Required: 'true'
+    Target: DATA_PERM
+    Type: Variable
+  value: '770'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: UMASK'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Umask Value
+    Required: 'true'
+    Target: UMASK
+    Type: Variable
+  value: '0000'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: UID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: UID
+    Required: 'true'
+    Target: UID
+    Type: Variable
+  value: '99'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: GID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: GID
+    Required: 'true'
+    Target: GID
+    Type: Variable
+  value: '100'
+- '@attributes':
+    Default: ''
+    Description: Minimum screen width 1024 pixels
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Custom Screen Width
+    Required: 'true'
+    Target: CUSTOM_RES_W
+    Type: Variable
+  value: '1024'
+- '@attributes':
+    Default: ''
+    Description: Minimum screen hight 768 pixels
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Custom Screen Height
+    Required: 'true'
+    Target: CUSTOM_RES_H
+    Type: Variable
+  value: '768'
+DonateLink: https://www.paypal.me/chips777
+DonateText: 'If you like my work please '
+ExtraParams: --restart=unless-stopped
+FirstSeen: 1601849439
+Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/luckybackup.png
+LastUpdate: 1647329569
+LastUpdateScan: 1648627437
+Name: luckyBackup
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "LuckyBackup is a very user-friendly GUI backup program. It uses rsync as\
+  \ a backend and transfers over only changes made rather than all data.\r\n\r\nUpdate:\
+  \ The container will check on every start/restart if there is a newer version available\r\
+  \n\r\nCron: If you create a cron job please be sure to tick the \"Console Mode\"\
+  \ checkbox, otherwise the cron jobs will not work.\r\n\r\nLanguage: If you want\
+  \ to change the language make sure to exit luckyBackup from within the WebGUI by\
+  \ clicking 'Profile -&gt; Quit' or CTRL +X otherwise the language change isn't saved."
+PostArgs: ''
+Privileged: 'false'
+Project: https://sourceforge.net/projects/luckybackup/
+Registry: https://hub.docker.com/r/ich777/luckybackup/
+Repo: ich777's Repository
+Repository: ich777/luckybackup
+Support: https://forums.unraid.net/topic/83786-support-ich777-application-dockers/
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8080]/vnc.html?autoconnect=true
+caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/luckyBackup.xml
+topPerforming: 1.019
+topTrending: -16.705000000000002

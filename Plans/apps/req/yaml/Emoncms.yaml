@@ -1,0 +1,76 @@
+BindTime: 'true'
+CategoryList:
+- Productivity
+Data:
+  Volume:
+  - ContainerDir: /var/opt/emoncms/phpfina/
+    HostDir: /mnt/user/appdata/emoncms/phpfina
+    Mode: rw
+  - ContainerDir: /var/opt/emoncms/phptimeseries/
+    HostDir: /mnt/user/appdata/emoncms/phptimeseries/phpfina
+    Mode: rw
+DonateImg: https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif
+DonateLink: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=FDMP56NCG5A26&source=url
+DonateText: Buy me a beer.
+Environment:
+  Variable:
+  - Name: MYSQL_HOST
+    Value: ''
+  - Name: MYSQL_PORT
+    Value: '3306'
+  - Name: MYSQL_USER
+    Value: emoncms
+  - Name: MYSQL_PASSWORD
+    Value: ''
+  - Name: MYSQL_DATABASE
+    Value: emoncms
+  - Name: MYSQL_RANDOM_ROOT_PASSWORD
+    Value: 'yes'
+  - Name: REDIS_ENABLED
+    Value: 'false'
+  - Name: REDIS_HOST
+    Value: 127.0.0.1
+  - Name: REDIS_PORT
+    Value: '6379'
+  - Name: REDIS_PREFIX
+    Value: '''emoncms'''
+  - Name: MQTT_ENABLED
+    Value: 'false'
+  - Name: MQTT_HOST
+    Value: 127.0.0.1
+  - Name: MQTT_USER
+    Value: mqtt
+  - Name: MQTT_PASSWORD
+    Value: mqtt
+  - Name: MQTT_BASETOPIC
+    Value: emon
+  - Name: PHPFINA_DIR
+    Value: /var/opt/emoncms/phpfina/
+  - Name: PHPTIMESERIES_DIR
+    Value: /var/opt/emoncms/phptimeseries/
+FirstSeen: 1585066252
+Icon: https://emoncms.org/Modules/site/emoncms_front.png
+LastUpdate: 1603351833
+LastUpdateScan: 1647425004
+Name: Emoncms
+Networking:
+  Mode: bridge
+  Publish:
+    Port:
+    - ContainerPort: '80'
+      HostPort: '8998'
+      Protocol: tcp
+    - ContainerPort: '1883'
+      HostPort: '1883'
+      Protocol: tcp
+Overview: Energy monitor
+Privileged: 'false'
+Registry: https://registry.hub.docker.com/r/snoopy86/emoncms-docker
+Repo: snoopy86's Repository
+Repository: snoopy86/emoncms-docker
+Requires: MySQL / Redis Installed
+Support: http://lime-technology.com/forum/index.php?topic=43610.0
+TemplateURL: https://raw.githubusercontent.com/snoopy86/docker-repo/master/snoopy/emoncms.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:80]/
+topTrending: -2.0519999999999996

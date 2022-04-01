@@ -1,0 +1,108 @@
+CategoryList:
+- Tools-Utilities
+- Crypto
+Config:
+- '@attributes':
+    Default: ''
+    Description: 'Container Port: 4067'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI
+    Required: 'false'
+    Target: '4067'
+    Type: Port
+  value: '4067'
+- '@attributes':
+    Default: ''
+    Description: Username/Wallet address
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Wallet address
+    Required: 'true'
+    Target: WALLET
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: URL of the mining pool
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Server
+    Required: 'true'
+    Target: SERVER
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Worker name
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Worker Name
+    Required: 'false'
+    Target: WORKER
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ethash
+    Description: Specify the hash algorithm
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: algorithm
+    Required: 'true'
+    Target: ALGO
+    Type: Variable
+  value: ethash
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /config'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Config
+    Required: 'false'
+    Target: /config
+    Type: Path
+  value: /mnt/user/appdata/trex
+- '@attributes':
+    Default: ''
+    Description: Must be 8-64 characters long, without spaces, and must contain at
+      least one digit, lowercase, and uppercase letters.
+    Display: always
+    Mask: 'true'
+    Mode: ''
+    Name: webUI Password
+    Required: 'true'
+    Target: API_PASSWORD
+    Type: Variable
+  value: ''
+DonateLink: https://www.paypal.me/ptrfrll
+DonateText: Buy me a beer
+ExtraParams: --runtime=nvidia
+FirstSeen: 1611782547
+Icon: https://raw.githubusercontent.com/PTRFRLL/unraid-templates/master/trex-miner/trex.png
+LastUpdate: 1647820779
+LastUpdateScan: 1648173798
+Name: trex-miner
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "T-Rex is a versatile cryptocurrency mining software. It supports a variety\
+  \ of algorithms and we, as developers, are trying to do our best to make it as fast\
+  \ and as convenient to use as possible.\r\n\r\nRequires nvidia-driver plugin (6.9+)"
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/trexminer/T-Rex
+Registry: https://registry.hub.docker.com/r/ptrfrll/nv-docker-trex
+Repo: PTRFRLL's Repository
+Repository: ptrfrll/nv-docker-trex
+Support: https://forums.unraid.net/topic/101947-support-ptrfrll-docker-images
+TemplateURL: https://raw.githubusercontent.com/PTRFRLL/unraid-templates/master/trex-miner/trex.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:4067]
+topPerforming: 1.343
+topTrending: -13.396

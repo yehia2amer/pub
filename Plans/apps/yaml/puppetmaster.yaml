@@ -1,0 +1,86 @@
+CategoryList:
+- Tools-Utilities
+- Network-Management
+Config:
+- '@attributes':
+    Default: ''
+    Description: 'Container Port: 8140'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Host Port 1
+    Required: 'false'
+    Target: '8140'
+    Type: Port
+  value: '8140'
+- '@attributes':
+    Default: ''
+    Description: 'Container Port: 8081'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Host Port 2
+    Required: 'false'
+    Target: '8081'
+    Type: Port
+  value: '8081'
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /etc/puppetlabs/puppet'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: confdir
+    Required: 'false'
+    Target: /etc/puppetlabs/puppet
+    Type: Path
+  value: /yourpuppet/conf
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /etc/puppetlabs/puppet/ssl'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: ssldir
+    Required: 'false'
+    Target: /etc/puppetlabs/puppet/ssl
+    Type: Path
+  value: /yourpuppet/ssl/
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /etc/puppetlabs/code'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: coded
+    Required: 'false'
+    Target: /etc/puppetlabs/code
+    Type: Path
+  value: /yourpuppet/conf/code
+FirstSeen: '1499079848'
+Icon: https://raw.githubusercontent.com/deasmi/docker-puppetmaster/master/logo.png
+LastUpdate: 1603795458
+LastUpdateScan: 1646521382
+Name: puppetmaster
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "Simple puppet master docker based on Centos7\n  # docker-puppetmaster\n\
+  \  Docker image for puppet server v5 designed to run on unraid\n  If you want the\
+  \ 3.5 version please use docker-puppetmaster:v3 which is currently using puppet\
+  \ 3.5.7\n\n  This is super basic, you have to map /etc/puppet and /etc/puppet/ssl\
+  \ as the confdir and ssl dir\n\n  You must have the conf directory setup, it will\
+  \ not be populated - map to /etc/puppetlabs/puppet\n  You must have the code directory\
+  \ setup, it will not be created - map to /etc/puppetlabs/code\n  However an empty\
+  \ SSL directory is fine, puppet will set this up.\n\n  Also include puppet-lint\
+  \ in case you want to check in the docker container.\n  Also includes perl for a\
+  \ script I run on puppetmaster for staggering puppet run times."
+Privileged: 'false'
+Project: http://www.puppet.com/
+Registry: https://hub.docker.com/r/deasmi/docker-puppetmaster/
+Repo: dsmith44's Repository
+Repository: deasmi/docker-puppetmaster
+Support: https://forums.lime-technology.com/topic/58535-puppetmaster-docker-container/
+TemplateURL: https://raw.githubusercontent.com/deasmi/unraid-ca/master/puppetmaster.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''

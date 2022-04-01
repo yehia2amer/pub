@@ -1,0 +1,110 @@
+Branch:
+- Tag: latest
+  TagDescription: Stable Heimdall releases.
+- GitHub: https://github.com/linuxserver/docker-heimdall/tree/development#application-setup
+  ReadMe: https://github.com/linuxserver/docker-heimdall/tree/development#readme
+  Tag: development
+  TagDescription: Latest commit from the github master branch.
+CategoryList:
+- Tools-Utilities
+- Network-Web
+- Network-Other
+ChangeLogPresent: true
+Config:
+- '@attributes':
+    Default: '80'
+    Description: http gui
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI
+    Required: 'true'
+    Target: '80'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: '443'
+    Description: https gui
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: 'Port: 443'
+    Required: 'true'
+    Target: '443'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Contains all relevant configuration files.
+    Display: advanced
+    Mask: 'false'
+    Mode: rw
+    Name: Appdata
+    Required: 'true'
+    Target: /config
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: '99'
+    Description: 'Container Variable: PUID'
+    Display: advanced
+    Mask: 'false'
+    Name: PUID
+    Required: 'true'
+    Target: PUID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '100'
+    Description: 'Container Variable: PGID'
+    Display: advanced
+    Mask: 'false'
+    Name: PGID
+    Required: 'true'
+    Target: PGID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '022'
+    Description: 'Container Variable: UMASK'
+    Display: advanced
+    Mask: 'false'
+    Name: UMASK
+    Required: 'false'
+    Target: UMASK
+    Type: Variable
+  value: ''
+DonateImg: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/donate.png
+DonateLink: https://www.linuxserver.io/donate
+DonateText: Donations
+FirstSeen: 1518411600
+GitHub: https://github.com/linuxserver/docker-heimdall#application-setup
+Icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/heimdall-logo.png
+LastUpdate: 1647902893
+LastUpdateScan: 1647914708
+Name: heimdall
+Network: bridge
+Overview: 'Heimdall(https://heimdall.site) is a way to organise all those links to
+  your most used web sites and web applications in a simple way.
+
+  Simplicity is the key to Heimdall.
+
+  Why not use it as your browser start page? It even has the ability to include a
+  search bar using either Google, Bing or DuckDuckGo.'
+Privileged: 'false'
+Project: https://heimdall.site
+ReadMe: https://github.com/linuxserver/docker-heimdall#readme
+RecommendedDate: 1548997200
+RecommendedRaw: 2/1/2019
+RecommendedReason:
+  en_US: A great customizable landing page for all your websites, docker containers
+    etc
+RecommendedWho: Andrew
+Registry: https://github.com/orgs/linuxserver/packages/container/package/heimdall
+Repo: linuxserver's Repository
+Repository: lscr.io/linuxserver/heimdall
+Support: https://github.com/linuxserver/docker-heimdall/issues/new/choose
+TemplateURL: https://raw.githubusercontent.com/linuxserver/templates/master/unraid/heimdall.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:80]
+topTrending: -1.074

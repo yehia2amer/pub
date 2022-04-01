@@ -1,0 +1,35 @@
+CAComment: This template is set up to use a custom network. You may have to adjust
+  the network or IP address etc to match your system
+Config:
+  '@attributes':
+    Default: ''
+    Description: 'Container Path: /data/'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Host Path 1
+    Required: 'false'
+    Target: /data/
+    Type: Path
+  value: /mnt/user/appdata/mopidy/tmp/
+FirstSeen: 1587715626
+Icon: https://icons.iconarchive.com/icons/alecive/flatwoken/512/Apps-Player-Audio-icon.png
+LastUpdate: 1522305496
+LastUpdateScan: 1647482607
+Name: Snapcast
+Network: br0
+Networking:
+  Mode: br0
+Overview: "use this Audio option in  mopidy.conf in mopidy docker to use Snapcast:\r\
+  \n\r\n[audio]\r\noutput = audioresample ! audio/x-raw,rate=48000,channels=2,format=S16LE\
+  \ ! audioconvert ! wavenc ! filesink location=/tmp/snapfifo"
+PostArgs: snapserver -s pipe:///data/snapfifo?name=Example&amp;sampleformat=44100:16:2
+Privileged: 'false'
+Project: https://hub.docker.com/r/kevineye/snapcast
+Registry: https://hub.docker.com/r/kevineye/snapcast
+Repo: knex666's Repository
+Repository: kevineye/snapcast
+TemplateURL: https://raw.githubusercontent.com/maschhoff/docker/master/unraid%20xml/my-Snapcast.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''
+topTrending: -1.5080000000000002

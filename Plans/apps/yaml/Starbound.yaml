@@ -1,0 +1,174 @@
+CategoryList:
+- GameServers
+Config:
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /serverdata/steamcmd'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: SteamCMD
+    Required: 'true'
+    Target: /serverdata/steamcmd
+    Type: Path
+  value: /mnt/user/appdata/steamcmd
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /serverdata/serverfiles'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: ServerFiles
+    Required: 'true'
+    Target: /serverdata/serverfiles
+    Type: Path
+  value: /mnt/cache/appdata/starbound
+- '@attributes':
+    Default: ''
+    Description: "The GAME_ID that the container download at startup.\r\n(https://developer.valvesoftware.com/wiki/Dedicated_Servers_List)"
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: GAME_ID
+    Required: 'true'
+    Target: GAME_ID
+    Type: Variable
+  value: '533830'
+- '@attributes':
+    Default: ''
+    Description: Enter your start up commands for the server.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: GAME_PARAMS
+    Required: 'false'
+    Target: GAME_PARAMS
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'ATTENTION: For this Docker you have to specify a valid Steam user
+      with Steam Guard disabled and the game purchased otherwise you will get a no
+      subscription error and the gamefiles won''t download!'
+    Display: always-hide
+    Mask: 'false'
+    Mode: ''
+    Name: Steam-Username
+    Required: 'false'
+    Target: USERNAME
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'ATTENTION: For this Docker you have to specify a valid Steam user
+      with Steam Guard disabled and the game purchased otherwise you will get a no
+      subscription error and the gamefiles won''t download!'
+    Display: always-hide
+    Mask: 'true'
+    Mode: ''
+    Name: Steam-Password
+    Required: 'false'
+    Target: PASSWRD
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Set the Variable to 'true' if you want to validate the installation
+      otherwise leave it blank.
+    Display: always-hide
+    Mask: 'false'
+    Mode: ''
+    Name: Validate Installation
+    Required: 'false'
+    Target: VALIDATE
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Container Port: 21025'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: TCP - GamePort
+    Required: 'true'
+    Target: '21025'
+    Type: Port
+  value: '21025'
+- '@attributes':
+    Default: ''
+    Description: 'Container Port: 21025'
+    Display: always
+    Mask: 'false'
+    Mode: udp
+    Name: UDP - GamePort
+    Required: 'true'
+    Target: '21025'
+    Type: Port
+  value: '21025'
+- '@attributes':
+    Default: ''
+    Description: Only if needed, else delete this entry
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: TCP - RCON Port
+    Required: 'false'
+    Target: '21026'
+    Type: Port
+  value: '21026'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: UID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: UID
+    Required: 'true'
+    Target: UID
+    Type: Variable
+  value: '99'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: GID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: GID
+    Required: 'true'
+    Target: GID
+    Type: Variable
+  value: '100'
+DonateLink: https://www.paypal.me/chips777
+DonateText: 'If you like my work please '
+ExtraParams: --restart=unless-stopped
+FirstSeen: 1571350044
+Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/starbound.png
+LastUpdate: 1648284772
+LastUpdateScan: 1648396992
+Name: Starbound
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "This Docker will download and install SteamCMD. It will also install Starbound\
+  \ (Valid Steam useraccount with the game purchased and Steam Guard disabled required)\
+  \ and run it.\r\n\r\nATTENTION: For this Docker you have to specify a valid Steam\
+  \ user with Steam Guard disabled and the game purchased otherwise you will get a\
+  \ no subscription error and the gamefiles won't download!\r\nIf you don't want to\
+  \ disable Steam Guard you can install the Docker as normal, click on it and open\
+  \ a console window and type in: '${STEAMCMD_DIR}/steamcmd.sh +login USERNAME PASSWORD\
+  \ +force_install_dir ${SERVER_DIR} +app_update ${GAME_ID} +quit' (without quotes\
+  \ and replace 'USERNAME' and 'PASSWORD' with your credentials), then enter the Steam\
+  \ Guard key and after the command finishes just restart the Docker.\r\n\r\nFirst\
+  \ Startup can take very long since it downloads the gameserver files!\r\n\r\nUpdate\
+  \ Notice: Simply restart the container if a newer version of the game is available.\r\
+  \n\r\nYou can also run multiple servers with only one SteamCMD directory!"
+PostArgs: ''
+Privileged: 'false'
+Project: https://www.steampowered.com/
+Registry: https://hub.docker.com/r/ich777/steamcmd/
+Repo: ich777's Repository
+Repository: ich777/steamcmd:starbound
+Support: https://forums.unraid.net/topic/79530-support-ich777-gameserver-dockers/
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''
+caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/Starbound.xml

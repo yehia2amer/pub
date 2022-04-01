@@ -1,0 +1,74 @@
+BindTime: 'true'
+CategoryList:
+- Cloud
+ChangeLogPresent: true
+Config:
+- '@attributes':
+    Default: '8888'
+    Description: This is Sync's Web UI port you can access via a web browser.
+    Display: always-hide
+    Mode: tcp
+    Name: Web Interface Port
+    Required: 'true'
+    Target: '8888'
+    Type: Port
+  value: '8888'
+- '@attributes':
+    Default: '5555'
+    Description: This is Sync's TCP port for data transfers.
+    Display: advanced-hide
+    Mode: tcp
+    Name: TCP Data Transfer Port
+    Required: 'true'
+    Target: '5555'
+    Type: Port
+  value: '5555'
+- '@attributes':
+    Default: '3838'
+    Description: This is Sync's UDP port for data transfers.
+    Display: advanced-hide
+    Mode: udp
+    Name: UDP Data Transfer Port
+    Required: 'true'
+    Target: '3838'
+    Type: Port
+  value: '3838'
+- '@attributes':
+    Default: /mnt/user/appdata/Sync
+    Description: This is where Sync will store its databases and configuration.
+    Display: advanced-hide
+    Mode: rw
+    Name: Config Storage Path
+    Required: 'true'
+    Target: /config
+    Type: Path
+  value: /mnt/user/appdata/Sync
+Deprecated: true
+FirstSeen: 1528776000
+GitHub: https://github.com/limetech/dockerapp-sync
+Icon: https://d2631fvi2jdnb6.cloudfront.net/docker/limetech/sync.png
+LastUpdate: 1566156342
+LastUpdateScan: 1647921798
+ModeratorComment: Suggested to switch to Resilio Sync
+Name: Sync
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: BitTorrent Sync, or simply - Sync - is an application for data synchronization.
+  Its primary goal is to keep designated folder content same on 2 or more devices
+  / computers. As soon as something changes on one computer, change (would it be changed
+  content of a file, file renaming or deletion, etc.) should be propagated to all
+  other computer(s) that want to keep the folder synchronized. Sync is available for
+  a bunch of platforms, both desktop and mobile, which gives a good usage flexibility.
+Privileged: 'false'
+Project: https://www.resilio.com/
+Registry: https://registry.hub.docker.com/r/limetech/sync/
+Repo: Official Unraid Repository
+RepoShort: Unraid
+Repository: limetech/sync
+Support: https://forums.unraid.net/topic/38974-support-limetechs-docker-repository/
+TemplateURL: https://raw.githubusercontent.com/limetech/docker-templates/master/limetech/Sync.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8888]/
+topPerforming: 0.167
+topTrending: -0.591

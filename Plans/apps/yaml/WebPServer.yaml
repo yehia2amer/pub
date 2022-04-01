@@ -1,0 +1,102 @@
+CategoryList:
+- Cloud
+- Productivity
+- Tools-Utilities
+- MediaServer-Photos
+- Network-Web
+- Network-FTP
+Config:
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Port
+    Required: 'false'
+    Target: '3333'
+    Type: Port
+  value: '3333'
+- '@attributes':
+    Default: ''
+    Description: This is the location for your pics.
+    Display: always
+    Mask: 'false'
+    Mode: ro
+    Name: Storage (pics)
+    Required: 'false'
+    Target: /opt/pics
+    Type: Path
+  value: /mnt/user/appdata/webp-server/pics/
+- '@attributes':
+    Default: ''
+    Description: Location for generated WEBP images to serve them later faster.
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Storage (cache)
+    Required: 'false'
+    Target: /opt/exhaust
+    Type: Path
+  value: /mnt/user/appdata/webp-server/cache/
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: ALLOWED_TYPES
+    Required: 'false'
+    Target: ALLOWED_TYPES
+    Type: Variable
+  value: jpg,png,jpeg,bmp,gif
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: QUALITY
+    Required: 'false'
+    Target: QUALITY
+    Type: Variable
+  value: '80'
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: ENABLE_AVIF
+    Required: 'false'
+    Target: ENABLE_AVIF
+    Type: Variable
+  value: 'false'
+FirstSeen: 1643291868
+Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/webpserver.png
+LastUpdate: 1648129183
+LastUpdateScan: 1648483403
+Name: WebP-Server
+Network: bridge
+Overview: "DESCRIPTION\r\nGo version of WebP Server. A tool that will serve your JPG/PNGs\
+  \ as WebP format with compression, on-the-fly.\r\n\r\nFeatures:\r\n\u2022 Single\
+  \ binary\r\n\u2022 Blazing fast\r\n\u2022 Convert images on the fly (jpeg,jpg,png,bmp,gif)\r\
+  \n\r\nHow to call an image from the server?\r\nIf you have the pic 'IMAGE.png' inside\
+  \ of '/.../webp-server/pics', call it as: 'HOST_IP:PORT/IMAGE.png'.\r\nIf you have\
+  \ the pic 'IMAGE.png' inside of '/.../webp-server/pics/subdir', call it as: 'HOST_IP:PORT/subdir/IMAGE.png'.\r\
+  \n\r\nNOTES\r\n\u2022 I have added all the variables available from the 'config.json'\
+  \ file here in this template, so it won't be necessary.\r\n\u2022 If requesting\
+  \ a GIF image from the server, it will only be served as a static image.\r\n\u2022\
+  \ You can also create subdirectories under '/.../webp-server/pics' to best organize\
+  \ your images.\r\n\r\nVERSION\r\n1.0 (2022-01-27)"
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/webp-sh/webp_server_go
+Registry: https://hub.docker.com/r/webpsh/webps
+Repo: SmartPhoneLover's Repository
+Repository: webpsh/webps
+Requires: ''
+Support: https://forums.unraid.net/topic/119178-support-smartphonelover-webp-server/
+TemplateURL: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/master/templates/WebP-Server.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''

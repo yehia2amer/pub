@@ -1,0 +1,101 @@
+CategoryList:
+- Productivity
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: '8000'
+    Description: 'WebUI Port: 8000'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI
+    Required: 'true'
+    Target: '8000'
+    Type: Port
+  value: '8000'
+- '@attributes':
+    Default: /mnt/user/appdata/yacht
+    Description: 'To store Yacht configuration. Default: /appdata'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Appdata
+    Required: 'true'
+    Target: /config
+    Type: Path
+  value: /mnt/user/appdata/yacht
+- '@attributes':
+    Default: admin@yacht.local
+    Description: Administrator email address. Default = admin@yacht.local
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: ADMIN_EMAIL
+    Required: 'false'
+    Target: ADMIN_EMAIL
+    Type: Variable
+  value: admin@yacht.local
+- '@attributes':
+    Default: '99'
+    Description: 'Container Variable: PUID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: PUID
+    Required: 'true'
+    Target: PUID
+    Type: Variable
+  value: '99'
+- '@attributes':
+    Default: '100'
+    Description: 'Container Variable: PGID'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: PGID
+    Required: 'true'
+    Target: PGID
+    Type: Variable
+  value: '100'
+- '@attributes':
+    Default: /var/run/docker.sock
+    Description: Needed to connect Yacht to Docker.
+    Display: advanced
+    Mask: 'false'
+    Mode: rw
+    Name: Docker Socket
+    Required: 'true'
+    Target: /var/run/docker.sock
+    Type: Path
+  value: /var/run/docker.sock
+DonateLink: https://paypal.me/ramteksolutions
+DonateText: Help support my work by buying me a beer
+FirstSeen: 1628561005
+Icon: https://raw.githubusercontent.com/ibracorp/app-logos/main/yacht/yacht_logo_dark.png
+LastUpdate: 1638585162
+LastUpdateScan: 1646739560
+Name: yacht
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "A web interface for managing docker containers with an emphasis on templating\
+  \ to provide one-click deployments of dockerized applications. Think of it as a\
+  \ decentralized app store for servers that anyone can make packages for.\r\n\r\n\
+  The default login is \"admin@yacht.local\" and \"pass\". \r\nYou should change this\
+  \ immediately by clicking on admin in the top right and then \"User\" then select\
+  \ \"Change Password\" in the top menu. You can also change your username using this\
+  \ field.\r\n\r\nIf you need to reset your password/username to the included defaults,\
+  \ please delete your yacht volume and create a new one (you will lose all of your\
+  \ configurations so be sure to backup when you make changes).\r\n\r\nAll credits\
+  \ to the developers. This is only a template for the community."
+Privileged: 'false'
+Project: https://github.com/SelfhostedPro/Yacht
+Registry: https://hub.docker.com/r/selfhostedpro/yacht
+Repo: Sycotix' Repository
+Repository: selfhostedpro/yacht
+Support: https://discord.gg/VWAG7rZ
+TemplateURL: https://raw.githubusercontent.com/ibracorp/unraid-templates/master/yacht/yacht.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8000]/
+topPerforming: 5.691
+topTrending: -3.926000000000001

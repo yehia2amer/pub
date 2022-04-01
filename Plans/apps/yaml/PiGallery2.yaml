@@ -1,0 +1,96 @@
+Branch:
+  Tag: nightly-debian-buster
+  TagDescription: The BetaVersion, more options but less stability.
+CategoryList:
+- Cloud
+- MediaApp-Video
+- MediaApp-Music
+- MediaApp-Photos
+- MediaServer-Video
+- MediaServer-Music
+- MediaServer-Photos
+Config:
+- '@attributes':
+    Default: '80'
+    Description: ''
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Port
+    Required: 'true'
+    Target: '80'
+    Type: Port
+  value: '80'
+- '@attributes':
+    Default: /mnt/user/appdata/PiGalery/config
+    Description: "Stock the config set in the AdminPanel.\r\n(Can be change with file.)"
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Config
+    Required: 'true'
+    Target: /app/data/config
+    Type: Path
+  value: /mnt/user/appdata/PiGallery2/config
+- '@attributes':
+    Default: ''
+    Description: Where is stock in the docker all the image.
+    Display: always
+    Mask: 'false'
+    Mode: ro
+    Name: Image
+    Required: 'true'
+    Target: /app/data/images/
+    Type: Path
+  value: /mnt/user/PiGallery2Data/
+- '@attributes':
+    Default: /mnt/user/appdata/PiGalery/tmp
+    Description: "Where is stock all the temporaru file.\r\nSuch has thumbnails and\
+      \ other."
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Tmp
+    Required: 'true'
+    Target: /app/data/tmp
+    Type: Path
+  value: /mnt/user/appdata/PiGallery2/tpm
+- '@attributes':
+    Default: /mnt/user/appdata/PiGalery/db
+    Description: "The dataBase if set to sql and not using mysql.\r\n(Keep it even\
+      \ if you use the mysql.)"
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: db
+    Required: 'true'
+    Target: /app/data/db
+    Type: Path
+  value: /mnt/user/appdata/PiGallery2/db
+FirstSeen: 1647820996
+Icon: https://bpatrik.github.io/pigallery2/assets/icon_inv.png
+LastUpdate: 1647775972
+LastUpdateScan: 1647820996
+Name: PiGallery2
+Network: bridge
+Official: true
+Overview: "Homepage: http://bpatrik.github.io/pigallery2/\r\nThis is a fast (like\
+  \ faster than your PC fast) directory-first photo gallery website, optimised for\
+  \ running on low resource servers (especially on raspberry pi).\r\n\r\n\u2714\uFE0F\
+  \ Strenghts:\r\n\u26A1 Fast, like for real\r\n\u2714\uFE0F Simple. Point to your\
+  \ photos folder and a temp folder and you are good to go\r\n\r\n\u26D4 Weakness:\r\
+  \n\U0001F625 Its simple. Shows what you have that's it. No gallery changes (photo\
+  \ delete, rotate, enhance, tag, organize, etc), your gallery folder is read-only.\r\
+  \n\r\nLive Demo @ heroku: https://pigallery2.herokuapp.com/\r\nBasicLogin.\r\nUser:\
+  \ Admin\r\nPassword: Admin"
+PostArgs: ''
+Privileged: 'true'
+Project: https://github.com/bpatrik/pigallery2
+Registry: https://hub.docker.com/r/bpatrik/pigallery2
+Repo: Fantucie's Repository
+Repository: bpatrik/pigallery2
+Requires: ''
+Support: https://forums.unraid.net/topic/120473-support-fantucie-apps/
+TemplateURL: https://raw.githubusercontent.com/ItJustFox/unraidtemplate/master/PiGallery2/XMLPiGallery2.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:80]/

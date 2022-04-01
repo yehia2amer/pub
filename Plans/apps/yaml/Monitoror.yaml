@@ -1,0 +1,64 @@
+CategoryList:
+- Productivity
+- Tools-Utilities
+- Network-Management
+- Network-Other
+Config:
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI
+    Required: 'false'
+    Target: '8080'
+    Type: Port
+  value: '8080'
+- '@attributes':
+    Default: ''
+    Description: Use this path (host) to pass the config.json to the container.
+    Display: always
+    Mask: 'false'
+    Mode: ro
+    Name: Directory (config)
+    Required: 'true'
+    Target: /configs
+    Type: Path
+  value: /mnt/user/appdata/monitoror/
+- '@attributes':
+    Default: ''
+    Description: It can be a path or URL.
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: MO_CONFIG
+    Required: 'false'
+    Target: MO_CONFIG
+    Type: Variable
+  value: /configs/config.json
+FirstSeen: 1638637421
+Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/monitoror_200x200.png
+LastUpdate: 1595757441
+LastUpdateScan: 1646442221
+Name: Monitoror
+Network: bridge
+Official: true
+Overview: "DESCRIPTION\r\nMonitoror is a wallboard monitoring app to monitor server\
+  \ status; monitor CI builds progress or even display critical values.\r\n\r\nHere\
+  \ you can see a live demo:\r\nhttps://demo.monitoror.com/\r\n\r\nNOTES\r\n\u2022\
+  \ Use the 'Directory (config)' path to store the 'config.json' file, so Monitoror\
+  \ can read it directly from the host. You can also use an URL (i.e.: NextCloud)\
+  \ to pass the JSON, using the 'MO_CONFIG' variable.\r\n\r\nVERSION\r\n1.0 (2021-12-04)"
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/monitoror/monitoror
+Registry: https://hub.docker.com/r/monitoror/monitoror
+Repo: SmartPhoneLover's Repository
+Repository: monitoror/monitoror
+Requires: ''
+Support: https://forums.unraid.net/topic/116799-support-smartphonelover-monitoror/
+TemplateURL: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/master/templates/Monitoror.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8080]
+topTrending: 3.7249999999999996

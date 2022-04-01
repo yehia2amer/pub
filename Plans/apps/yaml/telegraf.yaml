@@ -1,0 +1,177 @@
+CategoryList:
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: /var/run/utmp
+    Description: 'Container Path: /var/run/utmp'
+    Display: always
+    Mask: 'false'
+    Mode: ro
+    Name: Host Path 1
+    Required: 'true'
+    Target: /var/run/utmp
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: /var/run/docker.sock
+    Description: 'Container Path: /var/run/docker.sock'
+    Display: always
+    Mask: 'false'
+    Mode: ro
+    Name: Host Path 2
+    Required: 'true'
+    Target: /var/run/docker.sock
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: /
+    Description: 'Container Path: /rootfs'
+    Display: always
+    Mask: 'false'
+    Mode: ro
+    Name: Host Path 3
+    Required: 'true'
+    Target: /rootfs
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: /sys
+    Description: 'Container Path: /rootfs/sys'
+    Display: always
+    Mask: 'false'
+    Mode: ro
+    Name: Host Path 4
+    Required: 'true'
+    Target: /rootfs/sys
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: /etc
+    Description: 'Container Path: /rootfs/etc'
+    Display: always
+    Mask: 'false'
+    Mode: ro
+    Name: Host Path 5
+    Required: 'true'
+    Target: /rootfs/etc
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: /proc
+    Description: 'Container Path: /rootfs/proc'
+    Display: always
+    Mask: 'false'
+    Mode: ro
+    Name: Host Path 6
+    Required: 'true'
+    Target: /rootfs/proc
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: /mnt/user/appdata/telegraf/telegraf.conf
+    Description: 'Container Path: /etc/telegraf/telegraf.conf'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Host Path 7
+    Required: 'true'
+    Target: /etc/telegraf/telegraf.conf
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: /run/udev
+    Description: 'Container Path: /run/udev'
+    Display: always
+    Mask: 'false'
+    Mode: ro
+    Name: Host Path 8
+    Required: 'false'
+    Target: /run/udev
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: /rootfs/proc
+    Description: 'Container Variable: HOST_PROC'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Key 1
+    Required: 'false'
+    Target: HOST_PROC
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: /rootfs/sys
+    Description: 'Container Variable: HOST_SYS'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Key 2
+    Required: 'false'
+    Target: HOST_SYS
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: /rootfs/etc
+    Description: 'Container Variable: HOST_ETC'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Key 3
+    Required: 'false'
+    Target: HOST_ETC
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: /rootfs
+    Description: 'Container Variable: HOST_MOUNT_PREFIX'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Key 4
+    Required: 'false'
+    Target: HOST_MOUNT_PREFIX
+    Type: Variable
+  value: ''
+FirstSeen: 1607655445
+Icon: https://github.com/atribe/unRAID-docker/raw/master/icons/telegraf.png
+LastUpdate: 1646267076
+LastUpdateScan: 1646622209
+Name: telegraf
+Network: host
+Official: true
+Overview: "Telegraf gathers metrics from your system and sends them to an InfluxDB\
+  \ server for storage. From InfluxDB you would typically use something like Grafana\
+  \ to plot the data.[br]\r\n    Both Grafana and Influxdb are available through Community\
+  \ Apps[br]\r\n    [br]\r\n    [b][span style='color: #E80000;']This version of telegraf\
+  \ requires you to manually place a config file at /mnt/user/appdata/telegraf/telegraf.conf[/span][/b]\
+  \ The container will not start without it.[br]\r\n    [br]\r\n    The default telegraf.conf\
+  \ file can be downloaded at [u]https://github.com/influxdata/telegraf/blob/master/etc/telegraf.conf[/u].\
+  \ If you would prefer not to use a config file you can search for untelegraf in\
+  \ community apps for a version that only uses environment variables.[br]\r\n   \
+  \ [br]\r\n    [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]\r\
+  \n    [b]Container Volumes:[/b][br]\r\n    [b]/var/run/docker.sock[/b] Read Only.\
+  \ Location of your docker socket.[br]\r\n    [b]/var/run/utmp[/b] Read Only. Location\
+  \ of your utmp file.[br]\r\n    [b]/run/udev[/b] Read Only. Allows you to identify\
+  \ devices based on their properties, like vendor ID and device ID[br]\n    [b]/rootfs[/b]\
+  \ Read Only. To be mapped to the root of the host file system. This is so the disk\
+  \ usage reported will be that of the host system.[br]\r\n    [b]/rootfs/etc[/b]\
+  \ Read Only. To be mapped to the etc of the host file system. This is so the disk\
+  \ usage reported will be that of the host system.[br]\r\n    [b]/rootfs/proc[/b]\
+  \ Read Only. To be mapped to the proc of the host file system. This is so the disk\
+  \ usage reported will be that of the host system.[br]\r\n    [b]/rootfs/sys[/b]\
+  \ Read Only. To be mapped to the sys of the host file system. This is so the disk\
+  \ usage reported will be that of the host system.[br]\r\n    [br]\r\n    [b]Environment\
+  \ Variables:[/b][br]\r\n    [b]HOST_MOUNT_PREFIX[/b] Name of container volume mapping\
+  \ of the root file system.[br]\r\n    [b]HOST_ETC[/b] Name of the etc volume mapping\
+  \ of the root file system.[br]\r\n    [b]HOST_PROC[/b] Name of the proc volume mapping\
+  \ of the root file system.[br]\r\n    [b]HOST_SYS[/b] Name of the sys volume mapping\
+  \ of the root file sytem.[br]"
+Privileged: 'true'
+Project: https://github.com/influxdata/telegraf
+Registry: https://hub.docker.com/_/telegraf/
+Repo: atribe's Repository
+Repository: telegraf:latest
+Support: https://lime-technology.com/forum/index.php?topic=51498.0
+TemplateURL: https://raw.githubusercontent.com/atribe/unRAID-docker/master/telegraf.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg

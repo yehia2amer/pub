@@ -1,0 +1,140 @@
+CategoryList:
+- Cloud
+ChangeLogPresent: true
+Config:
+- '@attributes':
+    Default: /mnt/user/appdata/dropbox
+    Description: Configuration files and updated dropbox binaries are stored here.
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Config folder
+    Required: 'true'
+    Target: /dropbox
+    Type: Path
+  value: /mnt/user/appdata/dropbox
+- '@attributes':
+    Default: /mnt/cache/Dropbox
+    Description: 'This directory will contain the files sync''d into your Dropbox
+      account. Use only a share where the cache setting is Only or No. '
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Data files
+    Required: 'true'
+    Target: /dropbox/Dropbox
+    Type: Path
+  value: /mnt/cache/Dropbox
+- '@attributes':
+    Default: nobody
+    Description: User to run dropbox as.
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: User
+    Required: 'false'
+    Target: DROPBOX_USER
+    Type: Variable
+  value: nobody
+- '@attributes':
+    Default: '99'
+    Description: uid to run dropbox as.
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: User ID
+    Required: 'false'
+    Target: DROPBOX_USERID
+    Type: Variable
+  value: '99'
+- '@attributes':
+    Default: users
+    Description: Group to run dropbox as.
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Group
+    Required: 'false'
+    Target: DROPBOX_GROUP
+    Type: Variable
+  value: users
+- '@attributes':
+    Default: '100'
+    Description: gid to run dropbox as.
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Group ID
+    Required: 'false'
+    Target: DROPBOX_GROUPID
+    Type: Variable
+  value: '100'
+- '@attributes':
+    Default: '17500'
+    Description: Port for Lan Sync
+    Display: advanced
+    Mask: 'false'
+    Mode: tcp
+    Name: Lan Sync Port (TCP)
+    Required: 'true'
+    Target: '17500'
+    Type: Port
+  value: '17500'
+- '@attributes':
+    Default: '17500'
+    Description: Port for Lan Sync
+    Display: advanced
+    Mask: 'false'
+    Mode: udp
+    Name: Lan Sync Port (UDP)
+    Required: 'true'
+    Target: '17500'
+    Type: Port
+  value: '17500'
+- '@attributes':
+    Default: /etc/localtime
+    Description: Timezone file
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ro
+    Name: Timezone file
+    Required: 'true'
+    Target: /etc/localtime
+    Type: Path
+  value: /etc/localtime
+FirstSeen: 1481691600
+Icon: https://cf.dropboxstatic.com/static/images/icons/blue_dropbox_glyph-vflJ8-C5d.png
+LastUpdate: 1637673423
+LastUpdateScan: 1647039797
+Name: Dropbox
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "[b]What is Dropbox?[/b][br/]\r\n\"One place for all your stuff, wherever\
+  \ you are.\"[br/]\r\n[br/]\r\nDropbox is a home for all your photos, docs, videos,\
+  \ and files. Anything you add to Dropbox will automatically show up on all your\
+  \ computers, phones and even the Dropbox website... so you can access your stuff\
+  \ from anywhere.[br/]\r\n[br/]\r\nDropbox also makes it super easy to share with\
+  \ others, whether you're a student or professional, parent or grandparent. Even\
+  \ if you accidentally spill a latte on your laptop, have no fear! Relax knowing\
+  \ that your stuff is safe in Dropbox and will never be lost.[br/]\r\n[br/]\r\n[b]Container\
+  \ Mountpoints:[/b][br/]\r\n* /dropbox : Dropbox home folder. The dropbox app needs\
+  \ to be able to change the folders out to upgrade itself.[br/]\r\n* /dropbox/Dropbox\
+  \ : Dropbox user files. This is your sync'd data folder. It can be share or just\
+  \ a plain folder under appdata. Do not use a cache + array folder as the Mover will\
+  \ break your files[br/]\r\n[br/]\r\n[b]Network Ports:[/b][br/]\r\n* 17500 : Dropbox\
+  \ LAN sync[br/]\r\n* 17500/udp : Dropbox LAN sync[br/]\r\n[br/]\r\n[b]Environment\
+  \ Variables:[/b][br/]\r\n* DROPBOX_USER: Dropbox user (default: nobody)[br/]\r\n\
+  * DROPBOX_USERID: Dropbox user id (default: 99)[br/]\r\n* DROPBOX_GROUP: Dropbox\
+  \ user group (default: users)[br/]\r\n* DROPBOX_GROUPID: Dropbox user group id (default:\
+  \ 100)[br/]\r\n[br/]"
+Privileged: 'false'
+Registry: https://hub.docker.com/r/roninkenji/dropbox-docker/
+Repo: ken-ji's Repository
+Repository: roninkenji/dropbox-docker
+Support: http://lime-technology.com/forum/index.php?topic=46401.0
+TemplateURL: https://raw.githubusercontent.com/roninkenji/unraid-docker-templates/master/roninkenji/Dropbox.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''
+topPerforming: 0.589
+topTrending: -1.077

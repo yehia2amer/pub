@@ -1,0 +1,76 @@
+CategoryList:
+- Network-Web
+Config:
+- '@attributes':
+    Default: '8080'
+    Description: Port
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Port
+    Required: 'false'
+    Target: '8080'
+    Type: Port
+  value: '3460'
+- '@attributes':
+    Default: /mnt/user/appdata/dashboard/
+    Description: AppData
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: AppData
+    Required: 'false'
+    Target: /app/data
+    Type: Path
+  value: /mnt/user/appdata/dashboard/
+- '@attributes':
+    Default: ''
+    Description: functionality to purge the Cloudflare cache every time the container
+      restarts (though this functionality is entirely optional).
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Cloudflare Zone ID (Optional)
+    Required: 'false'
+    Target: CLOUDFLARE_ZONE_ID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: functionality to purge the Cloudflare cache every time the container
+      restarts (though this functionality is entirely optional).
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Cloudflare Purge Token (Optional)
+    Required: 'false'
+    Target: CLOUDFLARE_PURGE_TOKEN
+    Type: Variable
+  value: ''
+FirstSeen: 1627315412
+Icon: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/dashboard.png
+LastUpdate: 1646769877
+LastUpdateScan: 1648109017
+Name: dashboard
+Network: bridge
+Overview: "&lt;p&gt;Dashboard is just that - a dashboard. It's inspired by SUI and\
+  \ has all the same features as SUI, such as simple customization through JSON-files\
+  \ and a handy search bar to search the internet more efficiently.\r\n&lt;/p&gt;\r\
+  \n&lt;p&gt;-&lt;span style=\"color: rgb(184, 49, 47);\"&gt;Before you start CLI\
+  \ unraid&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;em&gt;mkdir /mnt/user/appdata/dashboard/&lt;/em&gt;&lt;br&gt;&lt;em&gt;wget\
+  \ -P /mnt/user/appdata/dashboard/ https://raw.githubusercontent.com/phntxx/dashboard/master/data/apps.json\
+  \ https://raw.githubusercontent.com/phntxx/dashboard/master/data/bookmarks.json\
+  \ https://raw.githubusercontent.com/phntxx/dashboard/master/data/greeter.json https://raw.githubusercontent.com/phntxx/dashboard/master/data/imprint.json\
+  \ https://raw.githubusercontent.com/phntxx/dashboard/master/data/search.json https://raw.githubusercontent.com/phntxx/dashboard/master/data/themes.json\r\
+  \n&lt;/em&gt;&lt;br&gt;&lt;br&gt;-Edit &lt;em&gt;.json&lt;/em&gt; &lt;/p&gt;"
+Privileged: 'false'
+Project: https://github.com/phntxx/dashboard
+Registry: https://hub.docker.com/r/phntxx/dashboard/
+Repo: A75G's Repository
+Repository: phntxx/dashboard:latest
+Support: https://forums.unraid.net/topic/89502-support-a75g-repo/
+TemplateURL: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/dashboard.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8080]/
+topPerforming: 1.275
+topTrending: -11.764

@@ -1,0 +1,87 @@
+Branch:
+- Registry: https://hub.docker.com/r/hotio/jackett
+  Repository: cr.hotio.dev/hotio/jackett:release
+  Tag: release
+  TagDescription: Releases
+- Registry: https://hub.docker.com/r/hotio/jackett
+  Repository: cr.hotio.dev/hotio/jackett:testing
+  Tag: testing
+  TagDescription: Pre-releases
+CategoryList:
+- Downloaders
+- MediaApp-Other
+Config:
+- '@attributes':
+    Default: '9117'
+    Description: 'Container Port: 9117'
+    Display: always-hide
+    Mask: 'false'
+    Mode: tcp
+    Name: Host Port for 9117
+    Required: 'true'
+    Target: '9117'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /config'
+    Display: always-hide
+    Mask: 'false'
+    Mode: rw
+    Name: Host Path for /config
+    Required: 'true'
+    Target: /config
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: '99'
+    Description: 'Container Variable: PUID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: PUID
+    Required: 'false'
+    Target: PUID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '100'
+    Description: 'Container Variable: PGID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: PGID
+    Required: 'false'
+    Target: PGID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '002'
+    Description: 'Container Variable: UMASK'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: UMASK
+    Required: 'false'
+    Target: UMASK
+    Type: Variable
+  value: ''
+FirstSeen: 1604308112
+Icon: https://hotio.dev/webhook-avatars/jackett.png
+LastUpdate: 1647407363
+LastUpdateScan: 1647446606
+Name: jackett
+Network: bridge
+Overview: 'Jackett works as a proxy server: it translates queries from apps into tracker-site-specific
+  http queries, parses the html response, then sends results back to the requesting
+  software.'
+PostArgs: ''
+Privileged: 'false'
+Project: https://hotio.dev/containers/jackett
+Registry: https://hub.docker.com/r/hotio/jackett
+Repo: hotio's Repository
+Repository: cr.hotio.dev/hotio/jackett
+Support: https://hotio.dev/discord
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:9117]
+caTemplateURL: https://raw.githubusercontent.com/hotio/unraid-templates/master/hotio/jackett.xml

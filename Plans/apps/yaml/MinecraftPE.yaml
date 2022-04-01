@@ -1,0 +1,81 @@
+CategoryList:
+- MediaServer-Other
+Config:
+- '@attributes':
+    Default: /mnt/user/appdata/minecraftpe
+    Description: 'Container Path: /srv/nukkit/'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Host Path 1
+    Required: 'true'
+    Target: /srv/nukkit/
+    Type: Path
+  value: /mnt/user/appdata/minecraftpe
+- '@attributes':
+    Default: '19132'
+    Description: 'Container Port: 19132'
+    Display: always
+    Mask: 'false'
+    Mode: udp
+    Name: Host Port 1
+    Required: 'true'
+    Target: '19132'
+    Type: Port
+  value: '19132'
+- '@attributes':
+    Default: en_US.UTF-8
+    Description: 'Container Variable: LANGUAGE'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Language
+    Required: 'true'
+    Target: LANGUAGE
+    Type: Variable
+  value: en_US.UTF-8
+- '@attributes':
+    Default: en_US.UTF-8
+    Description: 'Container Variable: LC_ALL'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: LC_ALL
+    Required: 'true'
+    Target: LC_ALL
+    Type: Variable
+  value: en_US.UTF-8
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: TZ'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Time Zone
+    Required: 'false'
+    Target: TZ
+    Type: Variable
+  value: America/Denver
+ExtraParams: -ti
+FirstSeen: '1489080522'
+Icon: https://i.imgur.com/zn0eOhH.png
+LastUpdate: 1647238945
+LastUpdateScan: 1647972205
+Name: MinecraftPE
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "Nukkit is a Nuclear-Powered Server Software For Minecraft Pocket Edition[br][br]\n\
+  \nVERY IMPORTANT:[br]\n First run use Screen on Uraid[br]\n docker exec -ti MinecraftPE\
+  \ /bin/bash[br][br]\n \n Run command :[br]\n java -jar /nukkit-1.0-SNAPSHOT.jar[br]\n\
+  \ select language[br][br]\n \n after the first run everything should work fine[br][br]\n\
+  \n To Interact with Server / adminstration,[br]\n use \"docker attach MinecraftPE\"\
+  \ at command promt[br]\n Press ctrl-p-ctrl-q to exit without shutting down the server"
+Privileged: 'false'
+Registry: https://hub.docker.com/r/ixilon/nukkit/
+Repo: clowrym's Repository
+Repository: ixilon/nukkit
+Support: https://forums.lime-technology.com/topic/60143-support-clowryms-docker-repository/?tab=comments#comment-591570
+TemplateURL: https://raw.githubusercontent.com/clowrym/docker-templates/master/MinecraftPE-Nukkit.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''

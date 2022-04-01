@@ -1,0 +1,83 @@
+CAComment: This template is set up to use a custom network. You may have to adjust
+  the network or IP address etc to match your system
+Config:
+- '@attributes':
+    Default: myhostname
+    Description: 'Container Variable: This will set the hostname variable in telegraf.conf'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: telegraf_hostname
+    Required: 'true'
+    Target: telegraf_hostname
+    Type: Variable
+  value: myhostname
+- '@attributes':
+    Default: http://localhost:8086
+    Description: 'Container Variable: This will set the outputs.influxdb URL variable
+      in telegraf.conf'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: influx_url
+    Required: 'true'
+    Target: influx_url
+    Type: Variable
+  value: http://localhost:8086
+- '@attributes':
+    Default: telegraf
+    Description: 'Container Variable: This will set the database variable in telegraf.conf'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: influx_db
+    Required: 'true'
+    Target: influx_db
+    Type: Variable
+  value: telegraf
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: This will set the database password variable
+      in telegraf.conf'
+    Display: always
+    Mask: 'true'
+    Mode: ''
+    Name: influx_password
+    Required: 'false'
+    Target: influx_password
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: 'false'
+    Description: 'Container Variable: This will set the skip_database_creation variable
+      in telegraf.conf'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: influx_skip_db_creation
+    Required: 'true'
+    Target: influx_skip_db_creation
+    Type: Variable
+  value: 'false'
+DonateImg: ''
+ExtraParams: --device=/dev/dri
+FirstSeen: 1591272457
+Icon: https://github.com/brianmiller/docker-templates/raw/master/intel-gpu-telegraf/intel_telegraf.png
+LastUpdate: 1591224245
+LastUpdateScan: 1648433001
+MinVer: '6.0'
+Name: intel-gpu-telegraf
+Network: br0
+Networking:
+  Mode: br0
+Overview: Docker container running telegraf and polling Intel GPU stats.
+PostArgs: ''
+Privileged: 'true'
+Registry: https://hub.docker.com/r/theoriginalbrian/intel-gpu-telegraf
+Repo: TheBrian's Repository
+Repository: theoriginalbrian/intel-gpu-telegraf
+Support: https://forums.unraid.net/topic/93302-support-intel-igpu-utilization-stats-into-influxdb-for-use-with-grafana-intel-gpu-telegfraf/
+TemplateURL: https://raw.githubusercontent.com/brianmiller/docker-templates/master/intel-gpu-telegraf/intel-gpu-telegraf.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''
+topTrending: -8.271

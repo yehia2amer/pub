@@ -1,0 +1,115 @@
+CategoryList:
+- Cloud
+- Tools-Utilities
+- Network-Web
+- Network-FTP
+Config:
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI
+    Required: 'false'
+    Target: '53842'
+    Type: Port
+  value: '53842'
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Directory (config)
+    Required: 'false'
+    Target: /app/config
+    Type: Path
+  value: /mnt/user/appdata/gokapi/config
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Directory (data)
+    Required: 'false'
+    Target: /app/data
+    Type: Path
+  value: /mnt/user/appdata/gokapi/data
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: GOKAPI_USERNAME
+    Required: 'false'
+    Target: GOKAPI_USERNAME
+    Type: Variable
+  value: unraid
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: GOKAPI_PASSWORD
+    Required: 'false'
+    Target: GOKAPI_PASSWORD
+    Type: Variable
+  value: unraid
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: GOKAPI_LENGTH_ID
+    Required: 'false'
+    Target: GOKAPI_LENGTH_ID
+    Type: Variable
+  value: '10'
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: GOKAPI_MAX_FILESIZE
+    Required: 'false'
+    Target: GOKAPI_MAX_FILESIZE
+    Type: Variable
+  value: '5'
+FirstSeen: 1639263809
+Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/gokapi_200x200.png
+LastUpdate: 1646927988
+LastUpdateScan: 1647061393
+Name: Gokapi
+Network: bridge
+Overview: "DESCRIPTION\r\nGokapi is a lightweight server to share files, which expire\
+  \ after a set amount of downloads or days. It is similar to the discontinued Firefox\
+  \ Send, with the difference that only the admin is allowed to upload files.\r\n\r\
+  \nThis enables companies or individuals to share their files very easily and having\
+  \ them removed afterwards, therefore saving disk space and having control over who\
+  \ downloads the file from the server.\r\n\r\nIdentical files will be deduplicated.\
+  \ An API is available to interact with Gokapi. AWS S3 and Backblaze B2 can be used\
+  \ instead of local storage. Customization is very easy with HTML/CSS knowledge.\r\
+  \n\r\nNOTES\r\n\u2022 Default credentials: unraid/unraid (user/pass).\r\n\u2022\
+  \ After building the container, check logs for details about how to log-in.\r\n\u2022\
+  \ To know more about the available variables that you can use, check the documentation.\r\
+  \n\u2022 If you want to update the container settings (variables) after creation,\
+  \ you will need to edit the config file manually. (only applicable for persistent\
+  \ variables)\r\n\r\nVERSION\r\n1.0 (2021-12-11)"
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/Forceu/gokapi
+Registry: https://hub.docker.com/r/f0rc3/gokapi
+Repo: SmartPhoneLover's Repository
+Repository: f0rc3/gokapi
+Requires: ''
+Support: https://forums.unraid.net/topic/117122-support-smartphonelover-gokapi/
+TemplateURL: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/master/templates/Gokapi.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:53842]
+topTrending: 22.436

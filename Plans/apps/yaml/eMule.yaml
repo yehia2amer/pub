@@ -1,0 +1,178 @@
+CAComment: This project appears to have been abandoned
+CategoryList:
+- Downloaders
+- Productivity
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI
+    Required: 'false'
+    Target: '4711'
+    Type: Port
+  value: '4711'
+- '@attributes':
+    Default: ''
+    Description: Edonkey network
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Port (TCP)
+    Required: 'false'
+    Target: '23732'
+    Type: Port
+  value: '23732'
+- '@attributes':
+    Default: ''
+    Description: Kad network
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Port (UDP)
+    Required: 'false'
+    Target: '23733'
+    Type: Port
+  value: '23733'
+- '@attributes':
+    Default: ''
+    Description: 'This is the location for torrent files: complete (download), incomplete
+      (tmp).'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Storage (downloads)
+    Required: 'true'
+    Target: /data
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: UNIX user ID used to create files.
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: UID
+    Required: 'false'
+    Target: UID
+    Type: Variable
+  value: root
+- '@attributes':
+    Default: ''
+    Description: UNIX group ID used to create files.
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: GID
+    Required: 'false'
+    Target: GID
+    Type: Variable
+  value: root
+- '@attributes':
+    Default: ''
+    Description: User nickname.
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: EMULE_NICK
+    Required: 'false'
+    Target: EMULE_NICK
+    Type: Variable
+  value: eMule_DOCKER
+- '@attributes':
+    Default: ''
+    Description: Max upload speed, in KB format.
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: EMULE_MAX_UPLOAD
+    Required: 'false'
+    Target: EMULE_MAX_UPLOAD
+    Type: Variable
+  value: '100000'
+- '@attributes':
+    Default: ''
+    Description: WebUI languange code. Visit 'https://www.science.co.il/language/Locale-codes.php'
+      for your language.
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: EMULE_LANGUAGE
+    Required: 'false'
+    Target: EMULE_LANGUAGE
+    Type: Variable
+  value: '1033'
+- '@attributes':
+    Default: ''
+    Description: Upload capacity, in KB format.
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: EMULE_CAP_UPLOAD
+    Required: 'false'
+    Target: EMULE_CAP_UPLOAD
+    Type: Variable
+  value: '1000000'
+- '@attributes':
+    Default: ''
+    Description: Download capacity, in KB format.
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: EMULE_CAP_DOWNLOAD
+    Required: 'false'
+    Target: EMULE_CAP_DOWNLOAD
+    Type: Variable
+  value: '1000000'
+- '@attributes':
+    Default: 1|0
+    Description: Automatic reconnect.
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: EMULE_RECONNECT
+    Required: 'false'
+    Target: EMULE_RECONNECT
+    Type: Variable
+  value: '1'
+- '@attributes':
+    Default: 1|0
+    Description: Update server list from other servers.
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: EMULE_UPDATE_FROM_SERVER
+    Required: 'false'
+    Target: EMULE_UPDATE_FROM_SERVER
+    Type: Variable
+  value: '1'
+FirstSeen: 1645614216
+Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/emule.png
+LastUpdate: 1583099032
+LastUpdateScan: 1648209799
+Name: eMule
+Network: bridge
+Overview: "DESCRIPTION\r\neMule is a free and open-source peer-to-peer file sharing\
+  \ client, allowing you to connect to millions of users to download and share files\
+  \ with them. By using the ED2K and Kademlia Network it supports semi-centralized\
+  \ as well as decentralized searches and operations.\r\n\r\nNOTES\r\n\u2022 The default\
+  \ credentials: admin (pass).\r\n\u2022 This docker image is based on eMule v0.51d.\r\
+  \n\u2022 There's also an optional VNC port available, if needed: 8080:8080 (TCP).\r\
+  \n\u2022 Do not set any value from within the web interface (preferences), as them\
+  \ won't survive after container restart. Use the variables from this template instead.\r\
+  \n\r\nVERSION\r\n1.0 (2022-02-23)\r\n\r\nPROJECT MARKED AS READ-ONLY (GITHUB), SO\
+  \ IT IS NO LONGER MAINTAINED"
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/tokkenno/emule-docker
+Registry: https://hub.docker.com/r/reimashi/emule
+Repo: SmartPhoneLover's Repository
+Repository: reimashi/emule
+Requires: ''
+Support: https://forums.unraid.net/topic/120390-support-smartphonelover-emule-torrent-client/
+TemplateURL: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/master/templates/eMule.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:4711]

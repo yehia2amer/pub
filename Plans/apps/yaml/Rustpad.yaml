@@ -1,0 +1,101 @@
+CategoryList:
+- Cloud
+- Productivity
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI
+    Required: 'false'
+    Target: '3030'
+    Type: Port
+  value: '3030'
+- '@attributes':
+    Default: ''
+    Description: This is the location for the SQLite DB file.
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Storage (database)
+    Required: 'false'
+    Target: /persist
+    Type: Path
+  value: /mnt/user/appdata/rustpad
+- '@attributes':
+    Default: ''
+    Description: The number of days that inactive documents are kept in memory before
+      being garbage collected by the server (default 1).
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: EXPIRY_DAYS
+    Required: 'false'
+    Target: EXPIRY_DAYS
+    Type: Variable
+  value: '1'
+- '@attributes':
+    Default: ''
+    Description: Directives that control application logging. (error/warn/info/debug/trace)
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: RUST_LOG
+    Required: 'false'
+    Target: RUST_LOG
+    Type: Variable
+  value: info
+- '@attributes':
+    Default: ''
+    Description: A SQLite connection string used for persistence.
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: SQLITE_URI
+    Required: 'false'
+    Target: SQLITE_URI
+    Type: Variable
+  value: sqlite:///persist/rustpad_db.db
+FirstSeen: 1643490193
+Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/rustpad.png
+LastUpdate: 1645292137
+LastUpdateScan: 1648685009
+Name: Rustpad
+Network: bridge
+Overview: "DESCRIPTION\r\nRustpad is an efficient and minimal open-source collaborative\
+  \ text editor based on the operational transformation algorithm. It lets users collaborate\
+  \ in real time while writing code in their browser. Rustpad is completely self-hosted\
+  \ and no database is required.\r\n\r\nThe server is written in Rust using the warp\
+  \ web server framework and the operational-transform library. We use wasm-bindgen\
+  \ to compile text operation logic to WebAssembly code, which runs in the browser.\
+  \ The frontend is written in TypeScript using React and interfaces with Monaco,\
+  \ the text editor that powers VS Code.\r\n\r\nArchitecturally, client-side code\
+  \ communicates via WebSocket with a central server that stores in-memory data structures.\
+  \ This makes the editor very fast, allows us to avoid provisioning a database, and\
+  \ makes testing much easier. The tradeoff is that documents are transient and lost\
+  \ between server restarts, after 24 hours of inactivity or any other given time\
+  \ in days.\r\n\r\nLive demo:\r\nhttps://rustpad.io/\r\n\r\nNOTES\r\n\u2022 If you\
+  \ want the data to be persistent in case of service restart, create the '/.../appdata/rustpad'\
+  \ dir, and place the DB file located on my GitHub repo: 'https://github.com/SmartPhoneLover/unraid-docker-templates/raw/main/templates/dependencies/rustpad/rustpad_db.zip',\
+  \ before building the container. Or, you can create your own SQLite DB file if you\
+  \ prefer (empty, no tables nor columns).\r\n\u2022 If you don't want the data to\
+  \ be persistent in case of service restart, just delete 'SQLITE_URI' and 'Storage\
+  \ (database)' settings from this template.\r\n\u2022 The container was and stills\
+  \ being originally designed to be non-persistent (data) after service restart or\
+  \ after a given time, so all information that the user could enter through its interface\
+  \ will be treated as volatile. But, it supports the use of SQLite DB to allow it\
+  \ to retain data in case of service restart (only).\r\n\r\nVERSION\r\n1.0 (2022-01-29)"
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/ekzhang/rustpad
+Registry: https://hub.docker.com/r/ekzhang/rustpad
+Repo: SmartPhoneLover's Repository
+Repository: ekzhang/rustpad
+Requires: ''
+Support: https://forums.unraid.net/topic/119282-support-smartphonelover-rustpad/
+TemplateURL: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/master/templates/Rustpad.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:3030]

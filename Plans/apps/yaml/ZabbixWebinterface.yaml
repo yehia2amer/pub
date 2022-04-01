@@ -1,0 +1,151 @@
+CAComment: This template is set up to use a custom network. You may have to adjust
+  the network or IP address etc to match your system
+CategoryList:
+- Network-Other
+- Productivity
+- Tools-System
+Config:
+- '@attributes':
+    Default: ''
+    Description: Your Database Host IP goes here. (I recommend you to install MariaDB
+      from Linuxserver.io but you can use any MySQL compatible database server).
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Database IP
+    Required: 'true'
+    Target: DB_SERVER_HOST
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Your Database Host Port goes here.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Database Port
+    Required: 'true'
+    Target: DB_SERVER_PORT
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Database username goes here (You have to create it first inside your
+      database).
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Database Username
+    Required: 'true'
+    Target: MYSQL_USER
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Database password goes here (You have to create it first inside your
+      database).
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Database Password
+    Required: 'true'
+    Target: MYSQL_PASSWORD
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Databasename goes here (You have to create it first inside your database).
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Database Name
+    Required: 'true'
+    Target: MYSQL_DATABASE
+    Type: Variable
+  value: zabbix
+- '@attributes':
+    Default: ''
+    Description: Your Zabbix Server IP goes here.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Zabbix Server IP
+    Required: 'true'
+    Target: ZBX_SERVER_HOST
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Your Zabbix Server Port goes here.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Zabbix Server Port
+    Required: 'true'
+    Target: ZBX_SERVER_PORT
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Your timezone goes here (you can find a list of timezones at: https://www.php.net/manual/en/timezones.php
+      )'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: PHP Timezone
+    Required: 'true'
+    Target: PHP_TZ
+    Type: Variable
+  value: Europe/London
+- '@attributes':
+    Default: ''
+    Description: The name of the server that will show up in the webgui.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Name of the Zabbix Server
+    Required: 'true'
+    Target: ZBX_SERVER_NAME
+    Type: Variable
+  value: ZabbixServer
+- '@attributes':
+    Default: ''
+    Description: "The volume allows to enable HTTPS for the Zabbix web interface.\
+      \ The volume must contains two files ssl.crt, ssl.key and dhparam.pem prepared\
+      \ for Nginx SSL connections.\r\nPlease follow official Nginx documentation to\
+      \ get more details about how to create certificate files.\r\n(If you allready\
+      \ got a webserver you also can reverse proxy this container)"
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: SSL Certificate
+    Required: 'true'
+    Target: /etc/ssl/nginx
+    Type: Path
+  value: /mnt/cache/appdata/zabbix-web
+DonateLink: https://www.paypal.me/chips777
+DonateText: 'If you like my work please '
+FirstSeen: 1580029565
+Icon: https://github.com/Conmyster/unraid-docker-templates/raw/master/zabbix-agent/images/Zabbix-Logo.png
+LastUpdate: 1647579433
+LastUpdateScan: 1647597799
+Name: Zabbix-Webinterface
+Network: br0
+Networking:
+  Mode: br0
+Official: true
+Overview: "Zabbix web interface is a part of Zabbix software. It is used to manage\
+  \ resources under monitoring and view monitoring statistics.\r\n\r\nVARIABLES: If\
+  \ you need other variables here is a complete list of all variables: https://hub.docker.com/r/zabbix/zabbix-web-nginx-mysql/"
+PostArgs: ''
+Privileged: 'false'
+Project: https://www.zabbix.com/
+Registry: https://hub.docker.com/r/zabbix/zabbix-web-nginx-mysql/
+Repo: ich777's Repository
+Repository: zabbix/zabbix-web-nginx-mysql
+Support: https://forums.unraid.net/topic/83786-support-ich777-application-dockers/
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''
+caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/Zabbix-Webinterface.xml
+topPerforming: 0.744
+topTrending: -1.8909999999999998

@@ -1,0 +1,58 @@
+CategoryList:
+- HomeAutomation
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: /mnt/user/appdata/neolink/config.toml
+    Description: See the Neolink Github for camera setup examples required in this
+      file.
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: neolink_config
+    Required: 'true'
+    Target: /etc/neolink.toml
+    Type: Path
+  value: /mnt/user/appdata/neolink/config.toml
+- '@attributes':
+    Default: '8554'
+    Description: 'Container Port: 8554'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: neolink
+    Required: 'true'
+    Target: '8554'
+    Type: Port
+  value: '8554'
+ExtraParams: --restart=on-failure
+FirstSeen: 1598328526
+Icon: https://raw.githubusercontent.com/digiblur/unraid-docker-templates/master/images/letter_n_blue.png
+LastUpdate: 1646192926
+LastUpdateScan: 1647698590
+Name: neolink
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "Neolink is a small program that acts as a proxy between Reolink IP cameras\
+  \ and normal RTSP clients. Certain cameras, such as the Reolink B800, do not implement\
+  \ ONVIF or RTSP, but instead use a proprietary \"Baichuan\" protocol only compatible\
+  \ with their apps and NVRs (any camera that uses \"port 9000\" will likely be using\
+  \ this protocol).\r\n\r\nNOTE: See the GitHub Repo for examples for setting up your\
+  \ appdata/neolink/config.toml file for each camera.  https://github.com/thirtythreeforty/neolink\r\
+  \n\r\nNeolink allows you to use NVR software such as Shinobi or Blue Iris to receive\
+  \ video from these cameras instead. The Reolink NVR is not required, and the cameras\
+  \ are unmodified. Your NVR software connects to Neolink, which forwards the video\
+  \ stream from the camera.\r\n\r\nThe Neolink project is not affiliated with Reolink\
+  \ in any way; everything it does has been reverse engineered."
+PostArgs: ''
+Privileged: 'false'
+Registry: https://hub.docker.com/r/thirtythreeforty/neolink/
+Repo: digiblur's Repository
+Repository: thirtythreeforty/neolink
+Support: https://github.com/thirtythreeforty/neolink
+TemplateURL: https://raw.githubusercontent.com/digiblur/unraid-docker-templates/master/neolink.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''
+topPerforming: 0.47
+topTrending: -3.2990000000000004

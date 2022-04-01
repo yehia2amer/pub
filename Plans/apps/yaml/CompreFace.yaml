@@ -1,0 +1,104 @@
+CategoryList:
+- HomeAutomation
+- Productivity
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: '8000'
+    Description: 'Container Port: 8000'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI HTTP Port
+    Required: 'true'
+    Target: '80'
+    Type: Port
+  value: '8800'
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /var/lib/postgresql/data'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Data Folder
+    Required: 'true'
+    Target: /var/lib/postgresql/data
+    Type: Path
+  value: /mnt/user/appdata/compreface
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: EXTERNAL_DB'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: EXTERNAL_DB
+    Required: 'false'
+    Target: EXTERNAL_DB
+    Type: Variable
+  value: 'false'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: POSTGRES_URL'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: POSTGRES_URL
+    Required: 'false'
+    Target: POSTGRES_URL
+    Type: Variable
+  value: jdbc:postgresql://192.168.2.254:5432/compreface
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: POSTGRES_PASSWORD'
+    Display: advanced-hide
+    Mask: 'true'
+    Mode: ''
+    Name: POSTGRES_PASSWORD
+    Required: 'false'
+    Target: POSTGRES_PASSWORD
+    Type: Variable
+  value: corgan80982
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: POSTGRES_USER'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: POSTGRES_USER
+    Required: 'false'
+    Target: POSTGRES_USER
+    Type: Variable
+  value: compreface
+FirstSeen: 1637384599
+Icon: https://raw.githubusercontent.com/corgan2222/unraid-templates/main/img/compreface.png
+LastUpdate: 1639518929
+LastUpdateScan: 1647775684
+Name: CompreFace
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "[b]CompreFace (CPU) is a leading free and open-source face recognition\
+  \ system [/b]  [br] \r\n  You can choose between different Builds [br] \r [br] \r\
+  \n  [b]FaceNet(default)[/b], (compreface:0.6.1)  - For general purposes. Support\
+  \ CPU without AVX2 [br] \r\n  [b]Arcface-R100[/b], (compreface:0.6.1-arcface-r100)\
+  \ - The most accurate model, but the most slowest [br] \r\n  [b]MobileNet[/b], (compreface:0.6.1-mobilenet)\
+  \ - The fastest model among CPU only models [br] \r\n   [br] \r More Infos: https://github.com/exadel-inc/CompreFace/blob/master/custom-builds/README.md\n\
+  \r\n  [b]Database[/b][br][br]\r\n  by default this App install a PostgresSQL Server.\
+  \ The Data are stored in the given Appdata Folder.[br]\r\n  If you allready have\
+  \ your own Postgres Server running, you can setup a external Server. [br]\r\n  1.\
+  \ Click on \"Show more settings\" [br]\r\n  2. Enter the Username and URL of your\
+  \ PostgresSQL Server. Note: The User has to be SuperUser Rights [br]\r\n  3. Set\
+  \ the Variable EXTERNAL_DB to \"True\" [br]\r\n  The URL should look like this:\
+  \ [br][br]\r\n  \r\n  jdbc:postgresql://IP:PORT/DATABASENAME[br]\r\n  like:[br]\r\
+  \n  jdbc:postgresql://192.168.1.254:5432/compreface[br]\r\n  \r\n  [br]"
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/exadel-inc/CompreFace
+Registry: https://hub.docker.com/r/exadel/compreface/
+Repo: corgan's Repository
+Repository: exadel/compreface:0.6.1
+Support: https://forums.unraid.net/topic/114590-support-corgans-docker-repository/
+TemplateURL: https://raw.githubusercontent.com/corgan2222/unraid-templates/master/CompreFace/CompreFace.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:80]
+topTrending: -24.132000000000005

@@ -1,0 +1,97 @@
+CategoryList:
+- Other
+- Network-Web
+Config:
+- '@attributes':
+    Default: ''
+    Description: Connects to internal port 80 (Ex. 8080:80)
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Container port
+    Required: 'false'
+    Target: '80'
+    Type: Port
+  value: '8080'
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /var/www/html'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: www
+    Required: 'false'
+    Target: /var/www/html
+    Type: Path
+  value: /mnt/user/appdata/wordpress
+- '@attributes':
+    Default: ''
+    Description: "External database container hostname and port \r\n&lt;br&gt;ex.\
+      \ 192.168.1.100:8080"
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: WORDPRESS_DB_HOST
+    Required: 'false'
+    Target: WORDPRESS_DB_HOST
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: External database user
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: WORDPRESS_DB_USER
+    Required: 'false'
+    Target: WORDPRESS_DB_USER
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: External database password
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: WORDPRESS_DB_PASSWORD
+    Required: 'false'
+    Target: WORDPRESS_DB_PASSWORD
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: The WORDPRESS_DB_NAME needs to already exist on the given DB server;
+      it will not be created by the wordpress container.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: WORDPRESS_DB_NAME
+    Required: 'false'
+    Target: WORDPRESS_DB_NAME
+    Type: Variable
+  value: ''
+DonateLink: https://www.savethekoala.com/donate
+DonateText: Better spent on them, then me :-)
+FirstSeen: 1581023199
+Icon: https://s.w.org/style/images/about/WordPress-logotype-wmark.png
+LastUpdate: 1648624419
+LastUpdateScan: 1648627433
+Name: WordPress
+Network: bridge
+Networking:
+  Mode: bridge
+Official: true
+Overview: "WordPress is a free and open source blogging tool and a content management\
+  \ system (CMS) based on PHP and MySQL, which runs on a web hosting service.\r\n\
+  Use MariaDB (recommended) or Mysql as the external database."
+PostArgs: ''
+Privileged: 'false'
+Project: https://wordpress.org/
+Registry: https://hub.docker.com/_/wordpress/
+Repo: Kru-X's Repository
+Repository: wordpress
+Requires: MariaDB / MySQL database installed
+Support: https://forums.unraid.net/topic/88258-support-kru-x-wordpress/
+TemplateURL: https://raw.githubusercontent.com/Kru-x/unraid-docker-templates/master/Kru-x/wordpress.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8080]/

@@ -1,0 +1,112 @@
+CategoryList:
+- GameServers
+Config:
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /acc'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: ServerFiles
+    Required: 'true'
+    Target: /acc
+    Type: Path
+  value: /mnt/cache/appdata/assettocorsacompetizione
+- '@attributes':
+    Default: ''
+    Description: TCP Gameport (if you need another port, please delete this entry
+      and create a new TCP Port with the required port number, also don't forget to
+      change your 'configuration.json' file with the corresponding port number)
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: TCP
+    Required: 'true'
+    Target: '9201'
+    Type: Port
+  value: '9201'
+- '@attributes':
+    Default: ''
+    Description: UDP Gameport (if you need another port, please delete this entry
+      and create a new UDP Port with the required port number, also don't forget to
+      change your 'configuration.json' file with the corresponding port number)
+    Display: always
+    Mask: 'false'
+    Mode: udp
+    Name: UDP
+    Required: 'true'
+    Target: '9201'
+    Type: Port
+  value: '9201'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: UMASK'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: UMASK
+    Required: 'true'
+    Target: UMASK
+    Type: Variable
+  value: '000'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: DATA_PERM'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: DATA_PERM
+    Required: 'true'
+    Target: DATA_PERM
+    Type: Variable
+  value: '770'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: UID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: UID
+    Required: 'true'
+    Target: UID
+    Type: Variable
+  value: '99'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: GID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: GID
+    Required: 'true'
+    Target: GID
+    Type: Variable
+  value: '100'
+DonateLink: https://www.paypal.me/chips777
+DonateText: 'If you like my work please '
+ExtraParams: --restart=unless-stopped
+FirstSeen: 1586888345
+Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/acc.png
+LastUpdate: 1643885880
+LastUpdateScan: 1646658214
+Name: AssettoCorsaCompetizione
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "This Docker will run the AssettoCorsa Competizione Server.\r\n\r\nATTENTION:\
+  \ You have to copy over the 'accServer.exe' in your server directory, you can find\
+  \ it in your GAMEDIRECTORY/accServer.exe\r\nLet the container start up for the first\
+  \ time copy over the file and then restart the container.\r\n\r\nNotice: The initial\
+  \ servername and credentials are: 'ACC Docker Server' Password: 'Docker' AdminPassword:\
+  \ 'adminDocker' (all config files are located in the '/cfg' directory in your serverfolder)."
+PostArgs: ''
+Privileged: 'false'
+Project: https://www.assettocorsa.net/
+Registry: https://hub.docker.com/r/ich777/steamcmd/
+Repo: ich777's Repository
+Repository: ich777/accompetizione-server
+Support: https://forums.unraid.net/topic/79530-support-ich777-gameserver-dockers/
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''
+caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/AssettoCorsaCompetizione.xml
+topTrending: -0.5169999999999995

@@ -1,0 +1,197 @@
+CategoryList:
+- Security
+- Network-Web
+- Network-DNS
+- Network-Proxy
+- Network-VPN
+- Network-Other
+Config:
+- '@attributes':
+    Default: /mnt/user/appdata/openvpn-aio-client
+    Description: 'Container Path: /etc/openvpn'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: OpenVPN Config
+    Required: 'false'
+    Target: /etc/openvpn
+    Type: Path
+  value: /mnt/user/appdata/openvpn-aio-client
+- '@attributes':
+    Default: '8153'
+    Description: 'Container Port: 53'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: DNS Server TCP
+    Required: 'false'
+    Target: '53'
+    Type: Port
+  value: '8153'
+- '@attributes':
+    Default: '8153'
+    Description: 'Container Port: 53'
+    Display: always
+    Mask: 'false'
+    Mode: udp
+    Name: DNS Server UDP
+    Required: 'false'
+    Target: '53'
+    Type: Port
+  value: '8153'
+- '@attributes':
+    Default: '9118'
+    Description: 'Container Port: 9118'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Socks5 proxy to VPN
+    Required: 'false'
+    Target: '9118'
+    Type: Port
+  value: '9118'
+- '@attributes':
+    Default: '8118'
+    Description: 'Container Port: 8118'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: HTTP Proxy to VPN
+    Required: 'false'
+    Target: '8118'
+    Type: Port
+  value: '8118'
+- '@attributes':
+    Default: '9119'
+    Description: 'Container Port: 9119'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Socks5 proxy to TOR
+    Required: 'false'
+    Target: '9119'
+    Type: Port
+  value: '9119'
+- '@attributes':
+    Default: '8119'
+    Description: 'Container Port: 8119'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: HTTP Proxy to TOR
+    Required: 'false'
+    Target: '8119'
+    Type: Port
+  value: '8119'
+- '@attributes':
+    Default: 127.2.2.2
+    Description: 'Container Variable: DNS_SERVERS'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: DNS_SERVERS
+    Required: 'false'
+    Target: DNS_SERVERS
+    Type: Variable
+  value: 127.2.2.2
+- '@attributes':
+    Default: 192.168.1.0/24
+    Description: 'Container Variable: HOST_NETWORK'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: HOST_NETWORK
+    Required: 'false'
+    Target: HOST_NETWORK
+    Type: Variable
+  value: 192.168.1.0/24
+- '@attributes':
+    Default: '53'
+    Description: 'Container Variable: DNS_SERVER_PORT'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: DNS_SERVER_PORT
+    Required: 'false'
+    Target: DNS_SERVER_PORT
+    Type: Variable
+  value: '53'
+- '@attributes':
+    Default: '9118'
+    Description: 'Container Variable: SOCKS_PROXY_PORT'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: SOCKS_PROXY_PORT
+    Required: 'false'
+    Target: SOCKS_PROXY_PORT
+    Type: Variable
+  value: '9118'
+- '@attributes':
+    Default: '8118'
+    Description: 'Container Variable: HTTP_PROXY_PORT'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: HTTP_PROXY_PORT
+    Required: 'false'
+    Target: HTTP_PROXY_PORT
+    Type: Variable
+  value: '8118'
+- '@attributes':
+    Default: '9119'
+    Description: 'Container Variable: TOR_SOCKS_PORT'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: TOR_SOCKS_PORT
+    Required: 'false'
+    Target: TOR_SOCKS_PORT
+    Type: Variable
+  value: '9119'
+- '@attributes':
+    Default: '8119'
+    Description: 'Container Variable: TOR_HTTP_PORT'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: TOR_HTTP_PORT
+    Required: 'false'
+    Target: TOR_HTTP_PORT
+    Type: Variable
+  value: '8119'
+DonateLink: https://paypal.me/mersenne
+DonateText: If you like my work, a donation to my burger fund is very much appreciated.
+ExtraParams: --cap-add=NET_ADMIN
+FirstSeen: 1618099361
+Icon: https://raw.githubusercontent.com/testdasi/openvpn-client-aio-base/master/openvpn-simple.png
+LastUpdate: 1645959204
+LastUpdateScan: 1646686999
+Name: OpenVPN-AIO-Client
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "An \"all-in-one\" docker for all your private browsing needs (including\
+  \ OpenVPN client with nftables kill switch ; Socks5 + HTTP proxy to both VPN and\
+  \ TOR (the onion router) ; DNS server to DoT (DNS-over-TLS) services). \r\n\r\n\
+  NOTE: you must place your own OpenVPN configuration to the host path that is mapped\
+  \ to /etc/openvpn (The ovpn file must be named openvpn.ovpn. Credentials + certs\
+  \ can be in the same file or split out into multiple files - the flexibility is\
+  \ yours.) \r\n\r\nSet DNS_SERVERS to 127.2.2.2 to use DNS-over-TLS (use google and\
+  \ cloudflare services by default). Your DNS query out of the VPN exit will also\
+  \ be encrypted for even more security. Set it to other services IP's will use normal\
+  \ unencrypted services. \r\n\r\nSet HOST_NETWORK to your Unraid server network in\
+  \ CIDR format e.g. 192.168.1.0/24.\r\n\r\nFor more detailed instructions, refer\
+  \ to the support thread (https://forums.unraid.net/topic/96233-support-testdasi-repo/)\
+  \ or project page (https://github.com/testdasi/openvpn-client-aio)."
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/testdasi/openvpn-client-aio
+Registry: https://registry.hub.docker.com/r/testdasi/openvpn-client-aio/
+Repo: testdasi's Repository
+Repository: testdasi/openvpn-client-aio:latest
+Support: https://forums.unraid.net/topic/96233-support-testdasi-repo/
+TemplateURL: https://raw.githubusercontent.com/testdasi/testdasi-unraid-repo/master/openvpn-aio-client.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''
+topTrending: -1.7459999999999996

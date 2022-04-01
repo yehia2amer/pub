@@ -1,0 +1,148 @@
+CategoryList:
+- GameServers
+Config:
+- '@attributes':
+    Default: '80'
+    Description: Port Http for the web serveur
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebHttp
+    Required: 'true'
+    Target: '80'
+    Type: Port
+  value: '80'
+- '@attributes':
+    Default: '443'
+    Description: 'Port Https for the web serveur '
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebHttps
+    Required: 'true'
+    Target: '443'
+    Type: Port
+  value: '443'
+- '@attributes':
+    Default: /mnt/user/appdata/pteropanel/var
+    Description: ''
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: PteroVar
+    Required: 'true'
+    Target: /app/var
+    Type: Path
+  value: /mnt/user/appdata/pteropanel/var
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: PteroNginx
+    Required: 'true'
+    Target: /app/nginx/http.d/
+    Type: Path
+  value: /mnt/user/appdata/pteropanel/nginx
+- '@attributes':
+    Default: ''
+    Description: "Mount your SSL key.\r\nIf nginx mount your config.\r\nif reverseproxy,\
+      \ mount the key."
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: PteroLetsenscrypt
+    Required: 'false'
+    Target: /etc/letsencrypt/
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: /mnt/user/appdata/pteropanel/logs
+    Description: All the logs of pterodactyl panel.
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: PteroLogs
+    Required: 'true'
+    Target: /app/storage/logs
+    Type: Path
+  value: /mnt/user/appdata/pteropanel/logs
+- '@attributes':
+    Default: ''
+    Description: Ip of your database
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: DatabaseHost
+    Required: 'true'
+    Target: DB_HOST
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '3306'
+    Description: The port of your database
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: DatabasePort
+    Required: 'true'
+    Target: DB_PORT
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: pterodb
+    Description: The name of your database.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: DatabaseName
+    Required: 'true'
+    Target: DB_DATABASE
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: PteroUser
+    Description: The name of the database user
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: DatabaseUser
+    Required: 'true'
+    Target: DB_USERNAME
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: changeme
+    Description: The database password for the user.
+    Display: always
+    Mask: 'true'
+    Mode: ''
+    Name: DatabasePassword
+    Required: 'true'
+    Target: DB_PASSWORD
+    Type: Variable
+  value: ''
+FirstSeen: 1645808752
+Icon: https://avatars.githubusercontent.com/u/16179146?s=200&amp;v=4
+LastUpdateScan: 1648404195
+Name: Pterodactyl-Panel
+Network: bridge
+Official: true
+Overview: "Pterodactyl\xAE is a free, open-source game server management panel built\
+  \ with PHP, React, and Go. Designed with security in mind, Pterodactyl runs all\
+  \ game servers in isolated Docker containers while exposing a beautiful and intuitive\
+  \ UI to end users.\r\n\r\nStop settling for less. Make game servers a first class\
+  \ citizen on your platform.\r\n\r\nAll the setups requiried is on the support area\
+  \ (Discord or Forum)"
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/pterodactyl
+Registry: https://ghcr.io/pterodactyl/panel
+Repo: Fantucie's Repository
+Repository: ghcr.io/pterodactyl/panel:latest
+Requires: Pterodactyl-Deamons.
+Support: https://forums.unraid.net/topic/120473-support-fantucie-apps/
+TemplateURL: https://raw.githubusercontent.com/ItJustFox/unraidtemplate/master/Pterodactyl/ptreodactylpanel.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:80]/

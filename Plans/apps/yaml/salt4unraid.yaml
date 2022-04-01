@@ -1,0 +1,133 @@
+CategoryList:
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /srv'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Salt data directory
+    Required: 'false'
+    Target: /srv
+    Type: Path
+  value: /mnt/user/appdata/salt4unraid/srv
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /etc/salt/'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Salt config directory
+    Required: 'false'
+    Target: /etc/salt/
+    Type: Path
+  value: /mnt/user/appdata/salt4unraid/etc
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: SALT_PASSWORD'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: API password
+    Required: 'false'
+    Target: SALT_PASSWORD
+    Type: Variable
+  value: salty
+- '@attributes':
+    Default: '3333'
+    Description: 'Container Port: 3333'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Saltgui web/api port
+    Required: 'false'
+    Target: '3333'
+    Type: Port
+  value: '3333'
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /mnt/user/domains'
+    Display: always
+    Mask: 'false'
+    Mode: ro
+    Name: Path to qemu images
+    Required: 'false'
+    Target: /mnt/user/domains
+    Type: Path
+  value: /mnt/user/domains
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /var/run/libvirt/libvirt-sock'
+    Display: advanced
+    Mask: 'false'
+    Mode: rw
+    Name: Virtualisation passthrough
+    Required: 'false'
+    Target: /var/run/libvirt/libvirt-sock
+    Type: Path
+  value: /var/run/libvirt/libvirt-sock
+- '@attributes':
+    Default: ''
+    Description: 'Container Port: 4505'
+    Display: advanced
+    Mask: 'false'
+    Mode: tcp
+    Name: Salt publish port
+    Required: 'false'
+    Target: '4505'
+    Type: Port
+  value: '4505'
+- '@attributes':
+    Default: ''
+    Description: 'Container Port: 4506'
+    Display: advanced
+    Mask: 'false'
+    Mode: tcp
+    Name: Salt request server port
+    Required: 'false'
+    Target: '4506'
+    Type: Port
+  value: '4506'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: SALT_LOGLEVEL'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Salt loglevel
+    Required: 'false'
+    Target: SALT_LOGLEVEL
+    Type: Variable
+  value: warning
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /var/run/docker.sock'
+    Display: advanced
+    Mask: 'false'
+    Mode: rw
+    Name: Docker socket
+    Required: 'false'
+    Target: /var/run/docker.sock
+    Type: Path
+  value: /var/run/docker.sock
+FirstSeen: 1628359396
+Icon: https://www.mirantis.com/wp-content/uploads/2017/02/image01.png
+LastUpdate: 1630836399
+LastUpdateScan: 1646550184
+Name: salt4unraid
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: Salt is an orchestration and remote execution tool for linux, MacOs and
+  Windows systems.
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/lubeda/salt4gui
+Registry: https://hub.docker.com/repository/docker/lubeda/salt4unraid
+Repo: LuBeDa's Repository
+Repository: lubeda/salt4unraid
+Support: https://forums.unraid.net/topic/112221-support-lubeda-application-dockers/
+TemplateURL: https://raw.githubusercontent.com/lubeda/unraid-templates/master/salt4unraid/template.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:3333]

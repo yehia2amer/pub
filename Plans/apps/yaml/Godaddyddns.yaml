@@ -1,0 +1,61 @@
+CategoryList:
+- Network-Web
+Config:
+- '@attributes':
+    Default: Use the 'key' from your godaddy account
+    Description: Use the 'key' from your godaddy account
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Godaddy's API Key
+    Required: 'false'
+    Target: GODADDY_API_KEY
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: 'Use the ''secret'' from your godaddy account '
+    Description: 'Use the ''secret'' from your godaddy account '
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Godaddy's API Secret
+    Required: 'false'
+    Target: GODADDY_API_SECRET
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: Domain Name
+    Description: 'A comma-separated list of domains that you''d like to update. For
+      example: mydomain.com or mydomain.com,anotherdomain.com'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Domain Name
+    Required: 'false'
+    Target: GODADDY_DOMAINS
+    Type: Variable
+  value: ''
+ExtraParams: --restart=always
+FirstSeen: 1577941580
+Icon: https://rawgit.com/Kru-x/unraid-docker-templates/master/Kru-x/img/GoDaddy.png
+LastUpdate: 1588104614
+LastUpdateScan: 1648094606
+Name: Godaddy-ddns
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: Docker image to provide a DDNS service for godaddy domains. Uses the GoDaddy
+  REST API to update the given domain's DNS IP address to the public IP address of
+  the host it is executing on. Performs a check every 10 minutes, but you can alter
+  this if you like by modifying /etc/cron.d/godaddy-ddns inside the container.
+PostArgs: ''
+Privileged: 'false'
+Registry: https://hub.docker.com/r/jwater7/godaddy-publicip-updater/
+Repo: Kru-X's Repository
+Repository: jwater7/godaddy-publicip-updater
+Support: https://forums.unraid.net/topic/86922-support-kru-x-godaddy-ddns/
+TemplateURL: https://raw.githubusercontent.com/Kru-x/unraid-docker-templates/master/Kru-x/Godaddy-ddns.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''
+topPerforming: 0.778
+topTrending: -2.346

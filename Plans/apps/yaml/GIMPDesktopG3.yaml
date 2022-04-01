@@ -1,0 +1,90 @@
+CategoryList:
+- Productivity
+- Tools-Utilities
+- MediaApp-Photos
+Config:
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI (VNC)
+    Required: 'false'
+    Target: '5901'
+    Type: Port
+  value: '5901'
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI (noVNC)
+    Required: 'false'
+    Target: '6901'
+    Type: Port
+  value: '6901'
+- '@attributes':
+    Default: ''
+    Description: Path to a share from your host to be able to work within the container.
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Internal Share
+    Required: 'true'
+    Target: /UNRAID_SHARE
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: The VNC/noVNC password.
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: VNC_PW
+    Required: 'false'
+    Target: VNC_PW
+    Type: Variable
+  value: unraid
+- '@attributes':
+    Default: ''
+    Description: The VNC/noVNC resolution.
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: VNC_RESOLUTION
+    Required: 'false'
+    Target: VNC_RESOLUTION
+    Type: Variable
+  value: 1360x768
+FirstSeen: 1639479828
+Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/gimp_200x200.png
+LastUpdate: 1647109872
+LastUpdateScan: 1647273806
+Name: GIMP-Desktop-G3
+Network: bridge
+Overview: "DESCRIPTION\r\nHeadless Ubuntu/Xfce container with VNC/noVNC and GIMP.\r\
+  \nThis is a docker template based on latest Ubuntu LTS with Xfce desktop environment,\
+  \ VNC/noVNC servers for headless use and the free open-source bitmap image editor\
+  \ gimp.\r\n\r\nNOTES\r\n\u2022 The default credentials are: no_user/unraid (user/pass).\
+  \ These credentials are also used for the root user within the container (OS).\r\
+  \n\u2022 To be able to work with files located on your host, and viceversa, configure\
+  \ the 'Internal Share' path on this template. You can also map internal '/home/user/*'\
+  \ directories to your host.\r\n\u2022 The are two noVNC clients - lite client and\
+  \ full client. Because the connection URL differs slightly in both cases, the container\
+  \ provides a simple startup page.\r\n\u2022 If you want to try the apps based on\
+  \ other OS versions (olders), check the Gen 1 and Gen 2 GitHub repos, so you can\
+  \ build the docker templates for the version you want.\r\n\r\nVERSION\r\n1.0 (2021-12-14)"
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/accetto/headless-drawing-g3/
+Registry: https://hub.docker.com/r/accetto/ubuntu-vnc-xfce-gimp-g3
+Repo: SmartPhoneLover's Repository
+Repository: accetto/ubuntu-vnc-xfce-gimp-g3
+Requires: ''
+Support: https://forums.unraid.net/topic/117223-support-smartphonelover-xfce-headless-containerized-apps-collection/
+TemplateURL: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/master/templates/GIMP-Desktop-G3.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:6901]
+topTrending: -2.41

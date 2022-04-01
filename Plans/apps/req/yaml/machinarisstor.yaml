@@ -1,0 +1,206 @@
+CategoryList:
+- Crypto
+Config:
+- '@attributes':
+    Default: /mnt/user/appdata/machinaris-stor
+    Description: Holds app data for the container. Not for temp plotting or final
+      plot storage.
+    Display: always-hide
+    Mask: 'false'
+    Mode: rw
+    Name: appdata
+    Required: 'false'
+    Target: /root/.chia
+    Type: Path
+  value: /mnt/user/appdata/machinaris-stor
+- '@attributes':
+    Default: /mnt/user/appdata/machinaris/mnemonic.txt
+    Description: Read-only access to the mnemonic from the main Machinaris container,
+      allowing this fork to farm the same plots.
+    Display: always-hide
+    Mask: 'false'
+    Mode: ro
+    Name: mnemonic_path
+    Required: 'false'
+    Target: /root/.chia/mnemonic.txt
+    Type: Path
+  value: /mnt/user/appdata/machinaris/mnemonic.txt
+- '@attributes':
+    Default: ''
+    Description: 'Holds completed plots for farming. Create more Paths for additional
+      folders like plots1,plots2,etc... '
+    Display: always-hide
+    Mask: 'false'
+    Mode: rw
+    Name: plots1
+    Required: 'false'
+    Target: /plots1
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Your fast temp space for plotting, ideally a cache pool or unassigned
+      SSD.
+    Display: always-hide
+    Mask: 'false'
+    Mode: rw
+    Name: plotting
+    Required: 'false'
+    Target: /plotting
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: /plots1
+    Description: 'A colon-separated list of all in-container paths (defined above)
+      holding your completed plots.  Example: /plots1:/plots2:/plots3'
+    Display: always-hide
+    Mask: 'false'
+    Mode: ''
+    Name: plots_dir
+    Required: 'false'
+    Target: plots_dir
+    Type: Variable
+  value: /plots1
+- '@attributes':
+    Default: ''
+    Description: The IP address of your Unraid server on your LAN for controller/worker
+      communication.
+    Display: always-hide
+    Mask: 'false'
+    Mode: ''
+    Name: controller_host
+    Required: 'true'
+    Target: controller_host
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Again, the IP address of your Unraid server on your LAN for controller/worker
+      communication.
+    Display: always-hide
+    Mask: 'false'
+    Mode: ''
+    Name: worker_address
+    Required: 'true'
+    Target: worker_address
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: The TCP port of the Machinaris worker for controller/worker communication.
+    Display: always-hide
+    Mask: 'false'
+    Mode: ''
+    Name: worker_api_port
+    Required: 'true'
+    Target: worker_api_port
+    Type: Variable
+  value: '8935'
+- '@attributes':
+    Default: '8935'
+    Description: The TCP port to reach this worker at.  Leave at 8935 for Stor blockchain.
+    Display: always-hide
+    Mask: 'false'
+    Mode: tcp
+    Name: worker_port
+    Required: 'true'
+    Target: '8935'
+    Type: Port
+  value: '8935'
+- '@attributes':
+    Default: '8668'
+    Description: The TCP port for connecting to peers.  Port forward at your router.
+    Display: always-hide
+    Mask: 'false'
+    Mode: tcp
+    Name: protocol_port
+    Required: 'true'
+    Target: '8668'
+    Type: Port
+  value: '8668'
+- '@attributes':
+    Default: '8337'
+    Description: The TCP port allowing harvesters to connect with on your LAN.  DO
+      NOT port forward at your router.
+    Display: always-hide
+    Mask: 'false'
+    Mode: tcp
+    Name: farmer_port
+    Required: 'true'
+    Target: '8337'
+    Type: Port
+  value: '8337'
+- '@attributes':
+    Default: fullnode
+    Description: Determines which services Machinaris starts.  Default is everything
+      (aka fullnode).
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: mode
+    Required: 'true'
+    Target: mode
+    Type: Variable
+  value: fullnode
+- '@attributes':
+    Default: stor
+    Description: The blockchain to farm.  Leave set to 'stor'.
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: blockchains
+    Required: 'false'
+    Target: blockchains
+    Type: Variable
+  value: stor
+- '@attributes':
+    Default: 'false'
+    Description: 'On first launch, whether to download a fully synced copy of the
+      blockchain database, avoidng hours/days of syncing.  Off by default due to inherent
+      risks.  More at: https://github.com/guydavis/machinaris/wiki/Blockchains'
+    Display: always-hide
+    Mask: 'false'
+    Mode: ''
+    Name: blockchain_db_download
+    Required: 'false'
+    Target: blockchain_db_download
+    Type: Variable
+  value: 'false'
+ExtraParams: -h $HOSTNAME
+FirstSeen: 1636700604
+Icon: https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/logos/stor.png
+LastUpdate: 1647060903
+LastUpdateScan: 1647091177
+Name: machinaris-stor
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "Adds on farming of the Stor blockchain to the main Machinaris application,\
+  \ alongside Chia. \r\n  \r\n  PREREQUISITE: Machinaris application, containing Chia\
+  \ blockchain, which this Stor container will register with. \r\n  \r\n  INSTALL:\
+  \ Set the host path to first directory containing plots using '/plots1' Path. Add\
+  \ more Paths for additional host directories. Also be sure to set the LAN IP address\
+  \ of your Unraid server in the controller_host and worker_address variables. \r\
+  \  \n  \r\n  SETUP: The Stor blockchain will be accessible within the Machinaris\
+  \ WebUI.  Don't forget to port-forward tcp/8668 at your router.\r\n  \r\n  SUPPORT:\
+  \ Join the Discord server for fastest response: https://discord.gg/mX4AtMTt87 Ask\
+  \ a question or start a discussion on Github: https://github.com/guydavis/machinaris/discussions\
+  \ \r\n  \r\n  DISCLAIMER OF WARRANTY. Unless required by applicable law or agreed\
+  \ to in writing, Licensor provides the Work (and each Contributor provides its Contributions)\
+  \ on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express\
+  \ or implied, including, without limitation, any warranties or conditions of TITLE,\
+  \ NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE. You are\
+  \ solely responsible for determining the appropriateness of using or redistributing\
+  \ the Work and assume any risks associated with Your exercise of permissions under\
+  \ this License."
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/guydavis/machinaris
+Registry: https://hub.docker.com/repository/docker/guydavis/machinaris-stor
+Repo: guy.davis' Repository
+Repository: ghcr.io/guydavis/machinaris-stor
+Requires: Machinaris.  See the description for full details
+Support: https://forums.unraid.net/topic/108896-support-machinaris-chia-crptocurrency-farming-plotman-plotting-unraid-webui/
+TemplateURL: https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/machinaris-stor.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8926]/

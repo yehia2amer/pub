@@ -1,0 +1,181 @@
+CategoryList:
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: /var/run/docker.sock
+    Description: 'Container Path: /var/run/docker.sock'
+    Display: always
+    Mask: 'false'
+    Mode: ro
+    Name: Host Path 1
+    Required: 'true'
+    Target: /var/run/docker.sock
+    Type: Path
+  value: /var/run/docker.sock
+- '@attributes':
+    Default: /proc
+    Description: 'Container Path: /rootfs/proc'
+    Display: always
+    Mask: 'false'
+    Mode: ro
+    Name: Host Path 2
+    Required: 'true'
+    Target: /rootfs/proc
+    Type: Path
+  value: /proc
+- '@attributes':
+    Default: /etc
+    Description: 'Container Path: /rootfs/etc'
+    Display: always
+    Mask: 'false'
+    Mode: ro
+    Name: Host Path 3
+    Required: 'true'
+    Target: /rootfs/etc
+    Type: Path
+  value: /etc
+- '@attributes':
+    Default: /sys
+    Description: 'Container Path: /rootfs/sys'
+    Display: always
+    Mask: 'false'
+    Mode: ro
+    Name: Host Path 4
+    Required: 'true'
+    Target: /rootfs/sys
+    Type: Path
+  value: /sys
+- '@attributes':
+    Default: /
+    Description: 'Container Path: /rootfs'
+    Display: always
+    Mask: 'false'
+    Mode: ro
+    Name: Host Path 5
+    Required: 'true'
+    Target: /rootfs
+    Type: Path
+  value: /
+- '@attributes':
+    Default: /var/run/utmp
+    Description: 'Container Path: /var/run/utmp'
+    Display: always
+    Mask: 'false'
+    Mode: ro
+    Name: Host Path 6
+    Required: 'true'
+    Target: /var/run/utmp
+    Type: Path
+  value: /var/run/utmp
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: INFLUXDB_RETENTION_POLICY'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Key 1
+    Required: 'false'
+    Target: INFLUXDB_RETENTION_POLICY
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: /rootfs
+    Description: 'Container Variable: HOST_MOUNT_PREFIX'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Key 2
+    Required: 'false'
+    Target: HOST_MOUNT_PREFIX
+    Type: Variable
+  value: /rootfs
+- '@attributes':
+    Default: /rootfs/etc
+    Description: 'Container Variable: HOST_ETC'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Key 3
+    Required: 'false'
+    Target: HOST_ETC
+    Type: Variable
+  value: /rootfs/etc
+- '@attributes':
+    Default: /rootfs/proc
+    Description: 'Container Variable: HOST_PROC'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Key 4
+    Required: 'false'
+    Target: HOST_PROC
+    Type: Variable
+  value: /rootfs/proc
+- '@attributes':
+    Default: /rootfs/sys
+    Description: 'Container Variable: HOST_SYS'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Key 5
+    Required: 'false'
+    Target: HOST_SYS
+    Type: Variable
+  value: /rootfs/sys
+- '@attributes':
+    Default: http://10.13.14.200:8086
+    Description: 'Container Variable: INFLUXDB_URL'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Key 6
+    Required: 'false'
+    Target: INFLUXDB_URL
+    Type: Variable
+  value: http://10.13.14.200:8086
+Deprecated: true
+FirstSeen: '1488244832'
+Icon: https://github.com/atribe/unRAID-docker/raw/master/icons/telegraf.png
+LastUpdate: 1498014900
+LastUpdateScan: 1647381813
+ModeratorComment: This app has been abandonded.  Advised to use the official release
+  with Apps instead
+Name: untelegraf
+Network: host
+Networking:
+  Mode: host
+Overview: "Telegraf gathers metrics from your system and sends them to an InfluxDB\
+  \ server for storage. From InfluxDB you would typically use something like Grafana\
+  \ to plot the data.[br]\r\n    Both Grafana and Influxdb are available through Community\
+  \ Apps[br]\r\n    [br]\r\n    [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]\r\
+  \n    [b]Container Volumes:[/b][br]\r\n    [b]/var/run/docker.sock[/b] Read Only.\
+  \ Location of your docker socket.[br]\r\n    [b]/var/run/utmp[/b] Read Only. Location\
+  \ of your utmp file.[br]\r\n    [b]/rootfs[/b] Read Only. To be mapped to the root\
+  \ of the host file system. This is so the disk usage reported will be that of the\
+  \ host system.[br]\r\n    [b]/rootfs/etc[/b] Read Only. To be mapped to the etc\
+  \ of the host file system. This is so the disk usage reported will be that of the\
+  \ host system.[br]\r\n    [b]/rootfs/proc[/b] Read Only. To be mapped to the proc\
+  \ of the host file system. This is so the disk usage reported will be that of the\
+  \ host system.[br]\r\n    [b]/rootfs/sys[/b] Read Only. To be mapped to the sys\
+  \ of the host file system. This is so the disk usage reported will be that of the\
+  \ host system.[br]\r\n    [br]\r\n    [b]Environment Variables:[/b][br]\r\n    [b]INFLUXDB_RETENTION_POLICY[/b]\
+  \ Name of the retention policy. This should be present, but with no value assigned,\
+  \ as that is the default for InfluxDB 1.0.0\r\n    [b]HOST_MOUNT_PREFIX[/b] Name\
+  \ of container volume mapping of the root file system.[br]\r\n    [b]HOST_ETC[/b]\
+  \ Name of the etc volume mapping of the root file system.[br]\r\n    [b]HOST_PROC[/b]\
+  \ Name of the proc volume mapping of the root file system.[br]\r\n    [b]HOST_SYS[/b]\
+  \ Name of the sys volume mapping of the root file sytem.[br]\r\n    [b]INFLUXDB_URL[/b]\
+  \ The url of the influxdb api, example: http://192.168.1.10:8086[br]\r\n    [b][u][span\
+  \ style='color: #E80000;']CLICK ADVANCED VIEW AND SET THE ENVIRONMENT VARIABLES[/span][/u][/b][br]\r\
+  \n    [br]\r\n    [b][u][span style='color: #E80000;']More environtment variables\
+  \ are available and covered on the docker hub page: https://hub.docker.com/r/appcelerator/telegraf/.[/span][/u][/b]"
+Privileged: 'true'
+Registry: https://hub.docker.com/r/appcelerator/telegraf/
+Repo: atribe's Repository
+Repository: appcelerator/telegraf:latest
+Support: https://lime-technology.com/forum/index.php?topic=51498.0
+TemplateURL: https://raw.githubusercontent.com/atribe/unRAID-docker/master/untelegraf.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''
+topPerforming: 0.095
+topTrending: -0.6930000000000001

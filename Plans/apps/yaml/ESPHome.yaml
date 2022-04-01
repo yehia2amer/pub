@@ -1,0 +1,71 @@
+CategoryList:
+- HomeAutomation
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: /mnt/user/appdata/esphome
+    Description: 'Container Path: /config'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Config Folder
+    Required: 'true'
+    Target: /config
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: '6123'
+    Description: Communication Port
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Communication
+    Required: 'false'
+    Target: '6123'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: '6052'
+    Description: WebUI Port
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI
+    Required: 'true'
+    Target: '6052'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: 'false'
+    Description: Set this to true if the devices are showing offline
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Dashboard Use Ping
+    Required: 'true'
+    Target: ESPHOME_DASHBOARD_USE_PING
+    Type: Variable
+  value: ''
+ExtraParams: --restart unless-stopped
+FirstSeen: 1551315760
+Icon: https://raw.githubusercontent.com/digiblur/unraid-docker-templates/master/images/esphome.png
+LastUpdate: 1647428178
+LastUpdateScan: 1647446605
+Name: ESPHome
+Network: bridge
+Official: true
+Overview: The official ESPHome Container. ESPHome is the perfect solution for creating
+  custom firmwares for your ESP8266/ESP32 boards. Its primary focus is making the
+  process to get your ESP running as simple as possible, with many helper tools to
+  ensure you will have the best user experience.
+Privileged: 'false'
+Project: https://esphome.io/
+Registry: https://hub.docker.com/r/esphome/esphome
+Repo: digiblur's Repository
+Repository: esphome/esphome
+Support: https://forums.unraid.net/topic/72033-support-digiblurs-docker-template-repository/
+TemplateURL: https://raw.githubusercontent.com/digiblur/unraid-docker-templates/master/esphome.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:6052]/
+topPerforming: 2.298
+topTrending: -0.8540000000000001

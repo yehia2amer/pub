@@ -1,0 +1,101 @@
+CategoryList:
+- Network-Proxy
+Config:
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /vpn'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Location Config
+    Required: 'true'
+    Target: /vpn
+    Type: Path
+  value: /mnt/user/appdata/openvpn-antizapret/
+- '@attributes':
+    Default: ''
+    Description: 'Contaner Variable: DNS'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: DNS
+    Required: 'true'
+    Target: DNS
+    Type: Variable
+  value: 192.168.104.1
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: Firewall'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Firewall
+    Required: 'true'
+    Target: Firewall
+    Type: Variable
+  value: 'true'
+- '@attributes':
+    Default: ''
+    Description: 'Contaner Variable: DEFAULT_GATEWAY'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: DEFAULT_GATEWAY
+    Required: 'true'
+    Target: DEFAULT_GATEWAY
+    Type: Variable
+  value: 'false'
+- '@attributes':
+    Default: ''
+    Description: 'Container Device:'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Location tun
+    Required: 'true'
+    Target: ''
+    Type: Device
+  value: /dev/net/tun
+- '@attributes':
+    Default: ''
+    Description: 'Container Port: 9117'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Jackett port
+    Required: 'false'
+    Target: '9117'
+    Type: Port
+  value: '9117'
+FirstSeen: 1604689907
+Icon: https://raw.githubusercontent.com/Muwahhidun/logo/main/openvpn-antizapret.png
+LastUpdate: 1627667638
+LastUpdateScan: 1646269413
+Name: openvpn-antizapret
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "Proxy and VPN for Russia.\r\nOnly blocked sites from the unified register\
+  \ of the Russian Federation are proxied through Anti-Ban.\r\nAll other sites will\
+  \ work directly, the speed of the Internet connection will not decrease.\r\nThe\
+  \ service does not log user actions, does not change traffic and does not insert\
+  \ ads on pages.\r\nProject page: https://antizapret.prostovpn.org\r\n\r\n[b][span\
+  \ style='color: #E80000;']Installation instructions:[/span][/b][br]\r\nThis is a\
+  \ template to customize with container \"Jackett\".\r\n1) - Download a ZIP archive\
+  \ with a configuration file and keys here: \"https://antizapret.prostovpn.org/antizapret-tcp.zip\"\
+  .\r\n2) - Extract four files along the path: \"/mnt/user/appdata/openvpn-antizapret/\"\
+  .\r\n3) - Start installing, click to \"Apply\".\r\n4) - After installation, we create\
+  \ a network, enter in the terminal: \"docker network create container:openvpn-antizapret\"\
+  \r\n5) - And in the Settings of the \"Jackett\" container, we install this network."
+PostArgs: ''
+Privileged: 'true'
+Project: https://antizapret.prostovpn.org
+Registry: https://hub.docker.com/r/dperson/openvpn-client
+Repo: Muwahhidun's Repository
+Repository: dperson/openvpn-client
+Support: https://myunraid.ru/
+TemplateURL: https://raw.githubusercontent.com/Muwahhidun/unraid-docker-templates/master/my-openvpn-antizapret.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''
+topPerforming: 2.747
+topTrending: -1.5490000000000004

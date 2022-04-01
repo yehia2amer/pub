@@ -1,0 +1,111 @@
+CategoryList:
+- GameServers
+Config:
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /windward'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: ServerFiles
+    Required: 'true'
+    Target: /windward
+    Type: Path
+  value: /mnt/cache/appdata/windward
+- '@attributes':
+    Default: ''
+    Description: Enter your start up commands for the server.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Game Parameters
+    Required: 'true'
+    Target: GAME_PARAMS
+    Type: Variable
+  value: -name "Docker Windward" -world "World" -tcp 5127 -public
+- '@attributes':
+    Default: ''
+    Description: TCP Game Port (If you need another port delete this entry and create
+      a new one with the required TCP port - also don't forget to change the port
+      at the variable GAME_PARAMS)
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: TCP - Game Port
+    Required: 'true'
+    Target: '5127'
+    Type: Port
+  value: '5127'
+- '@attributes':
+    Default: ''
+    Description: Admin SteamID (leave empty if you don't know your SteamID yet, connect
+      to the server once and the ID will show up in the log enter it here and restart
+      the container)
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: SteamID
+    Required: 'false'
+    Target: ADMIN
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Set to 'true' (without quotes) to force a update of WWServer.exe
+      otherwise leave empty.
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Force Update
+    Required: 'false'
+    Target: FORCE_UPDATE
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: UID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: UID
+    Required: 'true'
+    Target: UID
+    Type: Variable
+  value: '99'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: GID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: GID
+    Required: 'true'
+    Target: GID
+    Type: Variable
+  value: '100'
+DonateLink: https://www.paypal.me/chips777
+DonateText: 'If you like my work please '
+ExtraParams: --restart=unless-stopped
+FirstSeen: 1598472561
+Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/windward.png
+LastUpdate: 1600435194
+LastUpdateScan: 1647835404
+Name: Windward
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "This Docker will download and install Windwardand run it.\r\n\r\nCONSOLE:\
+  \ To connect to the console open up the terminal on the host machine and type in:\
+  \ 'docker exec -u windward -ti NAMEOFYOURCONTAINER screen -xS Windward' (without\
+  \ quotes) to exit the screen session press CTRL+A and then CTRL+D or simply close\
+  \ the terminal window in the first place."
+PostArgs: ''
+Privileged: 'false'
+Project: https://www.steampowered.com/
+Registry: https://hub.docker.com/r/ich777/windward/
+Repo: ich777's Repository
+Repository: ich777/windward
+Support: https://forums.unraid.net/topic/79530-support-ich777-gameserver-dockers/
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''
+caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/Windward.xml

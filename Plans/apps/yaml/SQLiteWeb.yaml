@@ -1,0 +1,57 @@
+CategoryList:
+- Productivity
+- Tools-Utilities
+- Network-Other
+Config:
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI
+    Required: 'false'
+    Target: '8080'
+    Type: Port
+  value: '8080'
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Storage (data)
+    Required: 'false'
+    Target: /data
+    Type: Path
+  value: /mnt/user/appdata/sqlite-web
+- '@attributes':
+    Default: ''
+    Description: This is the database file that will be loaded in the web browser.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: SQLITE_DATABASE
+    Required: 'true'
+    Target: SQLITE_DATABASE
+    Type: Variable
+  value: db_name.db
+FirstSeen: 1643490194
+Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/sqlite3.png
+LastUpdate: 1595945182
+LastUpdateScan: 1648685009
+Name: SQLite-Web
+Network: bridge
+Overview: "DESCRIPTION\r\nSQLite-Web is a web-based SQLite database browser written\
+  \ in Python.\r\n\r\nVERSION\r\n1.0 (2022-01-29)"
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/coleifer/sqlite-web
+Registry: https://hub.docker.com/r/coleifer/sqlite-web
+Repo: SmartPhoneLover's Repository
+Repository: coleifer/sqlite-web
+Requires: ''
+Support: https://forums.unraid.net/topic/119274-support-smartphonelover-sqlite-web-sqlite-browser/
+TemplateURL: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/master/templates/SQLite-Web.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8080]

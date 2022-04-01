@@ -1,0 +1,170 @@
+CategoryList:
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: unraid
+    Description: host you want the measurements to show up as in InfluxDB
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: HOSTNAME
+    Required: 'true'
+    Target: HOSTNAME
+    Type: Variable
+  value: unraid-ups
+- '@attributes':
+    Default: ''
+    Description: If your UPS doesn't have the nominal power metric then specify the
+      rated watts so that the load percentage can be used to calculate the current
+      watts
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: WATTS
+    Required: 'false'
+    Target: WATTS
+    Type: Variable
+  value: '1500'
+- '@attributes':
+    Default: localhost
+    Description: IP address of influxdb
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: INFLUXDB_HOST
+    Required: 'true'
+    Target: INFLUXDB_HOST
+    Type: Variable
+  value: 127.0.0.1
+- '@attributes':
+    Default: '8086'
+    Description: 'Container Variable: INFLUXDB_PORT'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: INFLUXDB_PORT
+    Required: 'true'
+    Target: INFLUXDB_PORT
+    Type: Variable
+  value: '8086'
+- '@attributes':
+    Default: nut
+    Description: InfluxDB database name to store the values
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: INFLUXDB_DATABASE
+    Required: 'true'
+    Target: INFLUXDB_DATABASE
+    Type: Variable
+  value: nut
+- '@attributes':
+    Default: ''
+    Description: User name for Influxdb
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: INFLUXDB_USER
+    Required: 'false'
+    Target: INFLUXDB_USER
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Password for Influxdb
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: INFLUXDB_PASSWORD
+    Required: 'false'
+    Target: INFLUXDB_PASSWORD
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: 127.0.0.1
+    Description: NUT hostname
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: NUT_HOST
+    Required: 'true'
+    Target: NUT_HOST
+    Type: Variable
+  value: 127.0.0.1
+- '@attributes':
+    Default: ''
+    Description: NUT Port
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: NUT_PORT
+    Required: 'false'
+    Target: NUT_PORT
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ups
+    Description: NUT UPS name
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: UPS_NAME
+    Required: 'false'
+    Target: UPS_NAME
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Username for NUT
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: NUT_USERNAME
+    Required: 'false'
+    Target: NUT_USERNAME
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Password for NUT
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: NUT_PASSWORD
+    Required: 'false'
+    Target: NUT_PASSWORD
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: 'false'
+    Description: Set this variable to true to see the output in the docker log.
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Debugging Output
+    Required: 'false'
+    Target: VERBOSE
+    Type: Variable
+  value: 'false'
+FirstSeen: 1569432308
+Icon: https://raw.githubusercontent.com/kiwimato/nut-influxdb-exporter/master/assets/nut.png
+LastUpdate: 1623105075
+LastUpdateScan: 1647425009
+Name: nut-influxdb-exporter
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: Docker wrapper for a Python script to query NUT - Network UPS Tools via
+  a Python script and then send the results to InfluxDB for storage.
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/kiwimato/nut-influxdb-exporter
+Registry: https://hub.docker.com/r/maihai/nut-influxdb-exporter
+Repo: Mihai's Repository
+Repository: maihai/nut-influxdb-exporter
+Support: https://forums.unraid.net/topic/49775-support-for-atribes-repo-docker-images/
+TemplateURL: https://raw.githubusercontent.com/kiwimato/nut-influxdb-exporter/master/nut-influxdb-exporter.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''
+topPerforming: 1.832
+topTrending: -1.26

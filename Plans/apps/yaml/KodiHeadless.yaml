@@ -1,0 +1,105 @@
+CategoryList:
+- MediaApp-Video
+- MediaApp-Music
+- MediaServer-Video
+- MediaServer-Music
+Config:
+- '@attributes':
+    Default: /mnt/user/appdata/kodi-headless
+    Description: 'Container Path: /config/.kodi'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Config path
+    Required: 'true'
+    Target: /config/.kodi
+    Type: Path
+  value: /mnt/user/appdata/kodi-headless
+- '@attributes':
+    Default: '100'
+    Description: 'Container Variable: PGID'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: PGID
+    Required: 'false'
+    Target: PGID
+    Type: Variable
+  value: '100'
+- '@attributes':
+    Default: '1000'
+    Description: 'Container Variable: PUID'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: PUID
+    Required: 'false'
+    Target: PUID
+    Type: Variable
+  value: '1000'
+- '@attributes':
+    Default: Asia/Bahrain
+    Description: 'Container Variable: TZ'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Timezone
+    Required: 'false'
+    Target: TZ
+    Type: Variable
+  value: Asia/Bahrain
+- '@attributes':
+    Default: '8080'
+    Description: 'Container Port: 8080'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI - TCP
+    Required: 'true'
+    Target: '8080'
+    Type: Port
+  value: '8080'
+- '@attributes':
+    Default: '9090'
+    Description: 'Container Port: 9090'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: JSON-RPC API - TCP
+    Required: 'true'
+    Target: '9090'
+    Type: Port
+  value: '9090'
+- '@attributes':
+    Default: '9777'
+    Description: 'Container Port: 9777'
+    Display: always
+    Mask: 'false'
+    Mode: udp
+    Name: EventServer - UDP
+    Required: 'true'
+    Target: '9777'
+    Type: Port
+  value: '9777'
+ExtraParams: --restart unless-stopped
+FirstSeen: 1636455802
+Icon: https://github.com/xbmc/xbmc/raw/master/media/icon80x80.png
+LastUpdate: 1646823258
+LastUpdateScan: 1646852604
+Name: Kodi-Headless
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: A headless install of kodi in a docker container. Commonly used with MySQL
+  Kodi setup to allow library updates via web interface.
+PostArgs: ''
+Privileged: 'false'
+Project: https://kodi.tv/
+Registry: https://hub.docker.com/r/matthuisman/kodi-headless
+Repo: hussainalhaddad's Repository
+Repository: matthuisman/kodi-headless:Matrix
+Support: https://github.com/matthuisman/docker-kodi-headless/issues
+TemplateURL: https://raw.githubusercontent.com/hussainalhaddad/docker-templates/master/kodi-headless/kodi-headless.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8080]
+topTrending: -11.531000000000002

@@ -1,0 +1,74 @@
+BindTime: 'true'
+CategoryList:
+- Downloaders
+Data:
+  Volume:
+  - ContainerDir: /config
+    HostDir: path to config
+    Mode: rw
+  - ContainerDir: /data
+    HostDir: path for downloads
+    Mode: rw
+Deprecated: true
+Environment:
+  Variable:
+  - Name: VPN_ENABLED
+    Value: 'yes'
+  - Name: VPN_USER
+    Value: vpn username
+  - Name: VPN_PASS
+    Value: vpn password
+  - Name: VPN_REMOTE
+    Value: nl.privateinternetaccess.com
+  - Name: VPN_PORT
+    Value: '1194'
+  - Name: VPN_PROTOCOL
+    Value: udp
+  - Name: VPN_PROV
+    Value: pia|airvpn|custom
+  - Name: ENABLE_PRIVOXY
+    Value: 'no'
+  - Name: LAN_NETWORK
+    Value: 192.168.1.0/24
+  - Name: WHITELIST
+    Value: 192.168.*.*
+  - Name: DEBUG
+    Value: 'false'
+  - Name: PUID
+    Value: '99'
+  - Name: PGID
+    Value: '100'
+FirstSeen: 1
+GitHub: https://github.com/activ/arch-transmissionvpn
+Icon: https://raw.githubusercontent.com/activ/docker-templates/master/activ/images/transmission-icon.png
+LastUpdate: 1487742849
+LastUpdateScan: 1648418601
+ModeratorComment: This container is no longer being maintained.  Suggested to switch
+  to a different transmission app
+Name: activ-transmissionvpn
+Networking:
+  Mode: bridge
+  Publish:
+    Port:
+    - ContainerPort: '9091'
+      HostPort: '9091'
+      Protocol: tcp
+    - ContainerPort: '8118'
+      HostPort: '8118'
+      Protocol: tcp
+Overview: "Transmission is a full-featured \u200BBitTorrent client for Linux, OS X,\
+  \ Unix and Windows. [br]\n    This Docker includes OpenVPN to ensure a secure and\
+  \ private connection to the Internet, including use of iptables to prevent IP leakage\
+  \ when the tunnel is down. It also includes Privoxy to allow unfiltered access to\
+  \ index sites, to use Privoxy please point your application at \"host ip:8118\""
+Privileged: 'true'
+Registry: https://registry.hub.docker.com/r/activ/arch-transmissionvpn/
+Repo: activ's Repository
+Repository: activ/arch-transmissionvpn
+Support: http://lime-technology.com/forum/index.php?topic=48899.0
+TemplateURL: https://raw.githubusercontent.com/activ/docker-templates/master/activ/transmissionvpn.xml
+Version: 05616fd2
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:9091]/
+topPerforming: 0.298
+topTrending: -1.275

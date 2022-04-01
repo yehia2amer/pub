@@ -1,0 +1,127 @@
+CAComment: This template is set up to use a custom network. You may have to adjust
+  the network or IP address etc to match your system
+CategoryList:
+- Network-Other
+- Productivity
+- Tools-System
+Config:
+- '@attributes':
+    Default: ''
+    Description: Your Database Host IP goes here. (I recommend you to install MariaDB
+      from Linuxserver.io but you can use any MySQL compatible database server).
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Database IP
+    Required: 'true'
+    Target: DB_SERVER_HOST
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Your Database Host Port goes here.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Database Port
+    Required: 'true'
+    Target: DB_SERVER_PORT
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Database username goes here (You have to create it first inside your
+      database).
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Database Username
+    Required: 'true'
+    Target: MYSQL_USER
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Database password goes here (You have to create it first inside your
+      database).
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Database Password
+    Required: 'true'
+    Target: MYSQL_PASSWORD
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Databasename goes here (You have to create it first inside your database).
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Database Name
+    Required: 'true'
+    Target: MYSQL_DATABASE
+    Type: Variable
+  value: zabbix
+- '@attributes':
+    Default: ''
+    Description: The variable is a list of comma separated loadable Zabbix modules.
+      It works with volume /var/lib/zabbix/modules. The syntax of the variable is
+      dummy1.so, dummy2.so
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Zabbix Modules
+    Required: 'false'
+    Target: ZBX_LOADMODULE
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: "The variable is used to specify debug level. By default, value is\
+      \ 3. It is DebugLevel parameter in zabbix_server.conf. Allowed values are listed\
+      \ below:\r\n0 - basic information about starting and stopping of Zabbix processes;\r\
+      \n1 - critical information\r\n2 - error information\r\n3 - warnings\r\n4 - for\
+      \ debugging (produces lots of information)\r\n5 - extended debugging (produces\
+      \ even more information)"
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Debuglevel
+    Required: 'true'
+    Target: ZBX_DEBUGLEVEL
+    Type: Variable
+  value: '3'
+DonateLink: https://www.paypal.me/chips777
+DonateText: 'If you like my work please '
+FirstSeen: 1580029565
+Icon: https://github.com/Conmyster/unraid-docker-templates/raw/master/zabbix-agent/images/Zabbix-Logo.png
+LastUpdate: 1647578471
+LastUpdateScan: 1647597799
+Name: Zabbix-Server
+Network: br0
+Networking:
+  Mode: br0
+Official: true
+Overview: "Zabbix server is the central process of Zabbix software.\r\nThe server\
+  \ performs the polling and trapping of data, it calculates triggers, sends notifications\
+  \ to users. It is the central component to which Zabbix agents and proxies report\
+  \ data on availability and integrity of systems. The server can itself remotely\
+  \ check networked services (such as web servers and mail servers) using simple service\
+  \ checks.\r\nATTENTION: If you want to reload the configuration please type in your\
+  \ unRAID terminal: 'docker exec -ti NAME_OF_YOUR_ZABBIXSERVERCONTAINTER zabbix_server\
+  \ -R config_cache_reload' (without quotes eg: docker exec -ti Zabbix-Server zabbix_server\
+  \ -R config_cache_reload).\r\nVARIABLES: If you need other variables here is a complete\
+  \ list of all variables: https://hub.docker.com/r/zabbix/zabbix-server-mysql"
+PostArgs: ''
+Privileged: 'true'
+Project: https://www.zabbix.com/
+Registry: https://hub.docker.com/r/zabbix/zabbix-server-mysql/
+Repo: ich777's Repository
+Repository: zabbix/zabbix-server-mysql
+Support: https://forums.unraid.net/topic/83786-support-ich777-application-dockers/
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''
+caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/Zabbix-Server.xml
+topPerforming: 1.325
+topTrending: -3.4029999999999996

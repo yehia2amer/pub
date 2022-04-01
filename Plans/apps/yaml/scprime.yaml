@@ -1,0 +1,104 @@
+CategoryList:
+- Cloud
+- Crypto
+Config:
+- '@attributes':
+    Default: /mnt/user/appdata/scprime
+    Description: 'Location where metadata is stored including consensus, wallets and
+      file contracts. 100Gb of free space is recommended, SSD preferred.&lt;br&gt;Container
+      Path: /scp-data'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Metadata
+    Required: 'true'
+    Target: /scp-data
+    Type: Path
+  value: /mnt/user/appdata/scprime
+- '@attributes':
+    Default: '4282'
+    Description: Open this port in your firewall and forward to your server.
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Port 1
+    Required: 'true'
+    Target: '4282'
+    Type: Port
+  value: '4282'
+- '@attributes':
+    Default: '4283'
+    Description: Open this port in your firewall and forward to your server.
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Port 2
+    Required: 'true'
+    Target: '4283'
+    Type: Port
+  value: '4283'
+- '@attributes':
+    Default: '4285'
+    Description: Open this port in your firewall and forward to your server.
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Port 3
+    Required: 'true'
+    Target: '4285'
+    Type: Port
+  value: '4285'
+- '@attributes':
+    Default: ''
+    Description: Enter your password to automatically unlock your wallet when the
+      docker starts.&lt;br&gt;&lt;b&gt;NOTE:&lt;/b&gt; Your default password is your
+      seed phrase unless changed.
+    Display: always
+    Mask: 'true'
+    Mode: ''
+    Name: Wallet Password
+    Required: 'false'
+    Target: SCPRIME_WALLET_PASSWORD
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Path where shared folders are located.&lt;br&gt;Container Path:
+      /storage'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Storage
+    Required: 'false'
+    Target: /storage
+    Type: Path
+  value: ''
+ExtraParams: --restart unless-stopped
+FirstSeen: 1639501424
+Icon: https://raw.githubusercontent.com/rythmik/docker-templates/main/rythmik/images/scprime-icon.png
+LastUpdate: 1637746171
+LastUpdateScan: 1647295405
+Name: scprime
+Network: bridge
+Networking:
+  Mode: bridge
+Official: true
+Overview: "ScPrime is a cryptocurrency project targeting public cloud services with\
+  \ a blockchain based ecosystem to pay individuals to store data around the globe\
+  \ using smart contracts and cryptographic proofs to ensure accuracy, security and\
+  \ redundancy.\r\n\r\n**Setup:**\r\nCommand-line is required to configure your storage\
+  \ provider instance.\r\n\r\nOpen the Unraid terminal and enter: **docker exec -it\
+  \ scprime sh**\r\n\r\n**Documentation:**\r\nhttps://docs.scpri.me/storageproviderindex\r\
+  \n\r\n**Storage Network Status:**\r\nhttps://scpri.me/network\r\n\r\n**Join the\
+  \ Discord for Help:**\r\nhttps://discord.gg/W5ePbSd\r\n\r\nDocker specific help\
+  \ can be found in the Discord: **#support-other**"
+PostArgs: -M gctwh
+Privileged: 'false'
+Project: https://scpri.me
+Registry: https://hub.docker.com/r/scprime/scprime
+Repo: a_n_d_y's Repository
+Repository: scprime/scprime
+Support: https://discord.gg/W5ePbSd
+TemplateURL: https://raw.githubusercontent.com/rythmik/docker-templates/master/rythmik/scprime/scprime.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''

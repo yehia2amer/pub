@@ -1,0 +1,183 @@
+CategoryList:
+- Backup
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /var/opt/pgbackups'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: /var/opt/pgbackups
+    Required: 'false'
+    Target: /var/opt/pgbackups
+    Type: Path
+  value: /mnt/user/appdata/pgbackups
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /var/lib/postgresql/data'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: /var/lib/postgresql/data
+    Required: 'false'
+    Target: /var/lib/postgresql/data
+    Type: Path
+  value: /mnt/user/appdata/pgbackups/data
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /backups'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: /backups
+    Required: 'false'
+    Target: /backups
+    Type: Path
+  value: /mnt/user/Backups
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: POSTGRES_HOST'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: POSTGRES_HOST
+    Required: 'false'
+    Target: POSTGRES_HOST
+    Type: Variable
+  value: 192.168.1.7
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: POSTGRES_PORT'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: POSTGRES_PORT
+    Required: 'false'
+    Target: POSTGRES_PORT
+    Type: Variable
+  value: '5432'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: POSTGRES_DB'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: POSTGRES_DB
+    Required: 'false'
+    Target: POSTGRES_DB
+    Type: Variable
+  value: postgres, nextcloud, traccar, joplin, wikijs, authelia
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: POSTGRES_USER'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: POSTGRES_USER
+    Required: 'false'
+    Target: POSTGRES_USER
+    Type: Variable
+  value: postgres_root_user
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: POSTGRES_PASSWORD'
+    Display: always
+    Mask: 'true'
+    Mode: ''
+    Name: POSTGRES_PASSWORD
+    Required: 'false'
+    Target: POSTGRES_PASSWORD
+    Type: Variable
+  value: postgres_root_password
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: POSTGRES_EXTRA_OPTS'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: POSTGRES_EXTRA_OPTS
+    Required: 'false'
+    Target: POSTGRES_EXTRA_OPTS
+    Type: Variable
+  value: -Z9 --schema=public --blobs
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: SCHEDULE'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: SCHEDULE
+    Required: 'false'
+    Target: SCHEDULE
+    Type: Variable
+  value: '@hourly'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: BACKUP_KEEP_DAYS'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: BACKUP_KEEP_DAYS
+    Required: 'false'
+    Target: BACKUP_KEEP_DAYS
+    Type: Variable
+  value: '7'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: BACKUP_KEEP_WEEKS'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: BACKUP_KEEP_WEEKS
+    Required: 'false'
+    Target: BACKUP_KEEP_WEEKS
+    Type: Variable
+  value: '4'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: BACKUP_KEEP_MONTHS'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: BACKUP_KEEP_MONTHS
+    Required: 'false'
+    Target: BACKUP_KEEP_MONTHS
+    Type: Variable
+  value: '6'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: HEALTHCHECK_PORT'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: HEALTHCHECK_PORT
+    Required: 'false'
+    Target: HEALTHCHECK_PORT
+    Type: Variable
+  value: '9080'
+FirstSeen: 1613689351
+Icon: https://github.com/Muwahhidun/logo/blob/main/logo%20backup.png?raw=true
+LastUpdate: 1646405965
+LastUpdateScan: 1647468212
+Name: postgres-backup-local
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "Backup PostgresSQL to the local filesystem with periodic rotating backups,\
+  \ based on schickling/postgres-backup-s3. Backup multiple databases from the same\
+  \ host by setting the database names in POSTGRES_DB separated by commas or spaces.\n\
+  \  Restore examples:\n  DB: nextcloud\n  USER: muwahhid\n  zcat /mnt/user/Backups/Postgres/Backups/daily/nextcloud-20210218-235636.sql.gz\
+  \ | docker exec -i testsql psql --username=muwahhid --dbname=nextcloud -W"
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/prodrigestivill/docker-postgres-backup-local
+Registry: https://hub.docker.com/r/prodrigestivill/postgres-backup-local
+Repo: Muwahhidun's Repository
+Repository: prodrigestivill/postgres-backup-local
+Support: https://wiki.muwahhid.ru/
+TemplateURL: https://raw.githubusercontent.com/Muwahhidun/unraid-docker-templates/master/my-postgres-backup-local.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''
+topPerforming: 2.507
+topTrending: -3.4810000000000003

@@ -1,0 +1,118 @@
+CategoryList:
+- HomeAutomation
+ChangeLogPresent: true
+Config:
+- '@attributes':
+    Default: '8080'
+    Description: WebUI
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI
+    Required: 'true'
+    Target: '8080'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: '50000'
+    Description: HABridge communication port.
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: 'Port: 50000'
+    Required: 'true'
+    Target: '50000'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Where HABridge stores config files and data.
+    Display: advanced
+    Mask: 'false'
+    Mode: rw
+    Name: Appdata
+    Required: 'true'
+    Target: /config
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: Your Key To Encrypt Security Data
+    Description: Key used to secure communication.
+    Display: always
+    Mask: 'true'
+    Name: SEC_KEY
+    Required: 'true'
+    Target: SEC_KEY
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '99'
+    Description: 'Container Variable: PUID'
+    Display: advanced
+    Mask: 'false'
+    Name: PUID
+    Required: 'true'
+    Target: PUID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '100'
+    Description: 'Container Variable: PGID'
+    Display: advanced
+    Mask: 'false'
+    Name: PGID
+    Required: 'true'
+    Target: PGID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '022'
+    Description: 'Container Variable: UMASK'
+    Display: advanced
+    Mask: 'false'
+    Name: UMASK
+    Required: 'false'
+    Target: UMASK
+    Type: Variable
+  value: ''
+DonateImg: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/donate.png
+DonateLink: https://www.linuxserver.io/donate
+DonateText: Donations
+FirstSeen: 1560283785
+GitHub: https://github.com/linuxserver/docker-habridge#application-setup
+Icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/habridge-logo.png
+LastUpdate: 1644224383
+LastUpdateScan: 1647914699
+Name: habridge
+Network: bridge
+Overview: 'Habridge(http://bwssystems.com/#/habridge) emulates Philips Hue API to
+  other home automation gateways such as an Amazon Echo/Dot Gen 1 (gen 2 has issues
+  discovering ha-bridge) or other systems that support Philips Hue. The Bridge handles
+  basic commands such as "On", "Off" and "brightness" commands of the hue protocol.
+  This bridge can control most devices that have a distinct API.
+
+
+  In the cases of systems that require authorization and/or have APIs that cannot
+  be handled in the current method, a module may need to be built. The Harmony Hub
+  is such a module and so is the Nest module. The Bridge has helpers to build devices
+  for the gateway for the Logitech Harmony Hub, Vera, Vera Lite or Vera Edge, Nest,
+  Somfy Tahoma, Home Assistant, Domoticz, MQTT, HAL, Fibaro, HomeWizard, LIFX, OpenHAB,
+  FHEM, Broadlink and the ability to proxy all of your real Hue bridges behind this
+  bridge.
+
+
+  This bridge was built to help put the Internet of Things together.
+
+
+  For more information about how to use this software have a look at their Wiki https://github.com/bwssytems/ha-bridge/wiki(https://github.com/bwssytems/ha-bridge/wiki)'
+Privileged: 'false'
+Project: http://bwssystems.com/#/habridge
+ReadMe: https://github.com/linuxserver/docker-habridge#readme
+Registry: https://github.com/orgs/linuxserver/packages/container/package/habridge
+Repo: linuxserver's Repository
+Repository: lscr.io/linuxserver/habridge
+Support: https://github.com/linuxserver/docker-habridge/issues/new/choose
+TemplateURL: https://raw.githubusercontent.com/linuxserver/templates/master/unraid/habridge.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8080]
+topTrending: -0.07500000000000001

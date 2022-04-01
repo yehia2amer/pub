@@ -1,0 +1,79 @@
+CategoryList:
+- Backup
+- Network-Web
+Config:
+- '@attributes':
+    Default: '8000'
+    Description: 'Port '
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: 'Port '
+    Required: 'true'
+    Target: '80'
+    Type: Port
+  value: '8000'
+- '@attributes':
+    Default: /mnt/user/backuppc/
+    Description: Backup Location
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Backup Location
+    Required: 'true'
+    Target: /var/lib/backuppc
+    Type: Path
+  value: /mnt/user/backuppc/
+- '@attributes':
+    Default: /mnt/user/appdata/backuppc/config/
+    Description: Configuration Files
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Configuration Files
+    Required: 'true'
+    Target: /etc/backuppc
+    Type: Path
+  value: /mnt/user/appdata/backuppc/config/
+- '@attributes':
+    Default: /mnt/user/appdata/backuppc/ssh/
+    Description: Home Directory for Backuppc (SSH Keys)
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: 'Home Directory '
+    Required: 'true'
+    Target: /home/backuppc
+    Type: Path
+  value: /mnt/user/appdata/backuppc/ssh/
+- '@attributes':
+    Default: /mnt/user/appdata/backuppc/logs/
+    Description: Logs
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Logs
+    Required: 'true'
+    Target: /www/logs
+    Type: Path
+  value: /mnt/user/appdata/backuppc/logs/
+FirstSeen: 1589227646
+Icon: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/backuppc.png
+LastUpdate: 1644895031
+LastUpdateScan: 1646413404
+Name: backuppc
+Network: bridge
+Overview: BackupPC is a high-performance, enterprise-grade system for backing up Linux,
+  Windows and macOS PCs and laptops to a server's disk.
+PostArgs: ''
+Privileged: 'false'
+Project: https://backuppc.github.io/backuppc/index.html
+Registry: https://hub.docker.com/r/tiredofit/backuppc/
+Repo: A75G's Repository
+Repository: tiredofit/backuppc:latest
+Support: https://forums.unraid.net/topic/89502-support-a75g-repo/
+TemplateURL: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/backuppc.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:80]/
+topPerforming: 5.446
+topTrending: -3.7970000000000006

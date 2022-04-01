@@ -1,0 +1,144 @@
+CategoryList:
+- Network-Other
+- Productivity
+- Tools-Utilities
+- Drivers
+Config:
+- '@attributes':
+    Default: ''
+    Description: 'Keep in mind that the mirror can consume very much space (stable
+      main contrib non-free: Will need about 200GB of hard drive space!) - you can
+      also put the data directory somewhere on a disk outside the Array or Cache for
+      example with Unassigned Devices.'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Main Data Path
+    Required: 'true'
+    Target: /debian-mirror/data
+    Type: Path
+  value: /mnt/user/appdata/debian-apt-mirror/data
+- '@attributes':
+    Default: ''
+    Description: Configuration directory
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Main Configuration Path
+    Required: 'true'
+    Target: /debian-mirror/config
+    Type: Path
+  value: /mnt/user/appdata/debian-apt-mirror/config
+- '@attributes':
+    Default: ''
+    Description: Main http port
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Mirror http port
+    Required: 'true'
+    Target: '980'
+    Type: Port
+  value: '980'
+- '@attributes':
+    Default: false|true
+    Description: Force update from the packages on every start/restart of the container.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Force update on start
+    Required: 'true'
+    Target: FORCE_UPDATE
+    Type: Variable
+  value: 'false'
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: DATA_PERM
+    Required: 'true'
+    Target: DATA_PERM
+    Type: Variable
+  value: '770'
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: UID
+    Required: 'true'
+    Target: UID
+    Type: Variable
+  value: '99'
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: GID
+    Required: 'true'
+    Target: GID
+    Type: Variable
+  value: '100'
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: UMASK
+    Required: 'true'
+    Target: UMASK
+    Type: Variable
+  value: '0000'
+- '@attributes':
+    Default: ''
+    Description: If you change this value you also have to delete the old port mapping
+      and create a new one with the appropriate port mapping.
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Apache2 Port in Container
+    Required: 'true'
+    Target: APACHE2_PORT
+    Type: Variable
+  value: '980'
+DonateLink: https://www.paypal.me/chips777
+DonateText: 'If you like my work please '
+ExtraParams: --restart=unless-stopped
+FirstSeen: 1628251406
+Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/debianpackage.png
+LastUpdate: 1643016756
+LastUpdateScan: 1646442219
+Name: Debian-APT-Mirror
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "This container will run apt-mirror and Apache2. This allows you to create\
+  \ a local apt mirror for Debian packages.\r\n\r\nOn the first run you will have\
+  \ to edit the mirror.list that lives in your CONFIG_DIR which repositories you want\
+  \ to sync and eventually other settings like the threads to use for downloading,...\
+  \ and restart the container (keep an eye on the logs the container will tell you\
+  \ what to do).\r\n\r\n**ATTENTION/WARNING:** Keep in mind that the first sync can\
+  \ take very long depending on how much repositories you've selected to sync (stable\
+  \ main contrib non-free: Will need about 200GB of hard drive space!).\r\n\r\n**Update\
+  \ from the mirror files:** By default a cron job will run every day at 1am that\
+  \ will run apt-mirror and update your mirror.\r\n\r\n**Mirror address:** The default\
+  \ address for the mirror is 'http://ipFROMtheCONTAINER:980'\r\nAdd something like\
+  \ this to your '/etc/apt/sources.list': 'deb http://ipFROMtheCONTAINER:980/debian\
+  \ stable main contrib non-free'"
+PostArgs: ''
+Privileged: 'false'
+Project: https://www.debian.org/
+Registry: https://hub.docker.com/r/ich777/debian-mirror
+Repo: ich777's Repository
+Repository: ich777/debian-mirror
+Requires: ''
+Support: https://forums.unraid.net/topic/83786-support-ich777-application-dockers/
+TemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/Debian-APT-Mirror.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:980]/

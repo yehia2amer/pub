@@ -1,0 +1,116 @@
+CategoryList:
+- Network-Voip
+Config:
+- '@attributes':
+    Default: '3478'
+    Description: 'Container Port: 3478'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: TURN over TCP
+    Required: 'true'
+    Target: '3478'
+    Type: Port
+  value: '3478'
+- '@attributes':
+    Default: '3478'
+    Description: 'Container Port: 3478'
+    Display: always
+    Mask: 'false'
+    Mode: udp
+    Name: TURN over UDP
+    Required: 'true'
+    Target: '3478'
+    Type: Port
+  value: '3478'
+- '@attributes':
+    Default: '5349'
+    Description: 'Container Port: 5349'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: TURN over TCP - TLS
+    Required: 'true'
+    Target: '5349'
+    Type: Port
+  value: '5349'
+- '@attributes':
+    Default: '5349'
+    Description: 'Container Port: 5349'
+    Display: always
+    Mask: 'false'
+    Mode: udp
+    Name: TURN over UDP - TLS
+    Required: 'true'
+    Target: '5349'
+    Type: Port
+  value: '5349'
+- '@attributes':
+    Default: 49152:49172
+    Description: 'Container Port: 49152:49172'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: TURN over UDP
+    Required: 'true'
+    Target: 49152:49172
+    Type: Port
+  value: 49152:49172
+- '@attributes':
+    Default: /mnt/cache/appdata/coturn/turnserver.conf
+    Description: 'Container Path: /coturn/turnserver.conf'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Config
+    Required: 'true'
+    Target: /coturn/turnserver.conf
+    Type: Path
+  value: /mnt/cache/appdata/coturn/turnserver.conf
+- '@attributes':
+    Default: /mnt/cache/appdata/coturn/keys
+    Description: 'Container Path: /etc/ssl/'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Keys
+    Required: 'false'
+    Target: /etc/ssl/
+    Type: Path
+  value: /mnt/cache/appdata/coturn/keys
+- '@attributes':
+    Default: 49152:65535
+    Description: 'Container Path: 49152:65535'
+    Display: always
+    Mask: 'false'
+    Mode: udp
+    Name: TURN over UDP
+    Required: 'true'
+    Target: 49152:65535
+    Type: Port
+  value: 49152:65535
+DonateLink: https://www.buymeacoffee.com/xthursdayx
+DonateText: "\u200B If you appreciate my work please consider buying me a coffee,\
+  \ cheers!\_\U0001F601"
+FirstSeen: 1573333674
+Icon: https://raw.githubusercontent.com/xthursdayx/docker-templates/master/xthursdayx/images/webrtc-icon.png
+LastUpdate: 1610619263
+LastUpdateScan: 1648692216
+Name: coturn
+Network: host
+Networking:
+  Mode: host
+Overview: Coturn TURN Server is a VoIP media traffic NAT traversal server and gateway.
+  It can be used as a general-purpose network traffic TURN server and gateway, too.
+PostArgs: -c /coturn/turnserver.conf
+Privileged: 'false'
+Project: https://github.com/coturn/coturn
+Registry: https://hub.docker.com/r/instrumentisto/coturn/
+Repo: xthursdayx's Repository
+Repository: instrumentisto/coturn
+Support: https://forums.unraid.net/topic/88410-support-xthursdayx-unraid-docker-templates/
+TemplateURL: https://raw.githubusercontent.com/xthursdayx/docker-templates/master/xthursdayx/coturn.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''
+topPerforming: 0.181
+topTrending: -3.725

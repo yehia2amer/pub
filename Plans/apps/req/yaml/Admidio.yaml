@@ -1,0 +1,87 @@
+CategoryList:
+- Productivity
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI
+    Required: 'false'
+    Target: '8080'
+    Type: Port
+  value: '8044'
+- '@attributes':
+    Default: ''
+    Description: This is the location for the config files and data uploads.
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Storage (config)
+    Required: 'false'
+    Target: /opt/app-root/src/adm_my_files
+    Type: Path
+  value: /mnt/user/appdata/admidio/config
+- '@attributes':
+    Default: ''
+    Description: This is the location for the themes.
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Storage (themes)
+    Required: 'false'
+    Target: /opt/app-root/src/adm_themes
+    Type: Path
+  value: /mnt/user/appdata/admidio/themes
+- '@attributes':
+    Default: ''
+    Description: This is the location for the plugins.
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Storage (plugins)
+    Required: 'false'
+    Target: /opt/app-root/src/adm_plugins
+    Type: Path
+  value: /mnt/user/appdata/admidio/plugins
+- '@attributes':
+    Default: 1|0
+    Description: Ensures that a database update can only be carried out on a new Admidio
+      version, if an administrator has given his credentials in the update script.
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: ADMIDIO_LOGIN_FOR_UPDATE
+    Required: 'false'
+    Target: ADMIDIO_LOGIN_FOR_UPDATE
+    Type: Variable
+  value: '1'
+FirstSeen: 1645729411
+Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/admidio2.png
+LastUpdate: 1648162953
+LastUpdateScan: 1648325004
+Name: Admidio
+Network: bridge
+Official: true
+Overview: "DESCRIPTION\r\nAdmidio is a free open source user management system for\
+  \ websites of organizations and groups. The system has a flexible role model so\
+  \ that it\u2019s possible to reflect the structure and permissions of your organization.\
+  \ You can create an individual profile for your members by adding or removing fields.\
+  \ Additional to these functions the system contains several modules like member\
+  \ lists, event manager, guestbook, photo album or a documents &amp; files area.\r\
+  \n\r\nLive demo:\r\nhttps://www.admidio.org/demo_en/adm_program/modules/announcements/announcements.php\r\
+  \n\r\nNOTES\r\n\u2022 MySQL or PostgreSQL database is required.\r\n\r\nVERSION\r\
+  \n1.0 (2022-02-24)"
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/Admidio/admidio
+Registry: https://hub.docker.com/r/admidio/admidio
+Repo: SmartPhoneLover's Repository
+Repository: admidio/admidio
+Requires: MySQL, PostgreSQL
+Support: https://forums.unraid.net/topic/120458-support-smartphonelover-admidio-free-online-membership-management/
+TemplateURL: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/master/templates/Admidio.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8080]

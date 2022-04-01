@@ -1,0 +1,167 @@
+CategoryList:
+- MediaApp-Video
+- MediaApp-Music
+Config:
+- '@attributes':
+    Default: ''
+    Description: Main data path
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Data Path
+    Required: 'true'
+    Target: /config
+    Type: Path
+  value: /mnt/user/appdata/Jellyfin-AMD-Intel-Nvidia
+- '@attributes':
+    Default: ''
+    Description: Path to your Movie library.
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Movies
+    Required: 'false'
+    Target: /movies
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Path to your TV-Shows library.
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: TV Shows
+    Required: 'false'
+    Target: /tv
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Path to your Music library.
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Music
+    Required: 'false'
+    Target: /music
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Cache path (strongly recommended to use).
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Cache
+    Required: 'false'
+    Target: /cache
+    Type: Path
+  value: /mnt/user/appdata/Jellyfin-AMD-Intel-Nvidia/cache
+- '@attributes':
+    Default: ''
+    Description: 'Path to AMD or Intel device - fill in with ''/dev/dri'' if you want
+      to use AMD or Intel hardware transcoding (ATTENTION: Delete this entire entry
+      with the Remove button if you don''t want to use Intel or AMD hardware transcoding
+      otherwise the container won''t start).'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: AMD or Intel Device
+    Required: 'true'
+    Target: ''
+    Type: Device
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Nvidia Visible Devices - enter your GPU UUID here (only required
+      if you plan to use Nvidia hardware transcoding otherwise leave empty, don't
+      forget to add '--runtime=nvidia' to your 'Extra Parameters' in the template).
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Nvidia Visible Devices
+    Required: 'false'
+    Target: NVIDIA_VISIBLE_DEVICES
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: WebGUI Port http.
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: http - WebGUI
+    Required: 'false'
+    Target: '8096'
+    Type: Port
+  value: '8096'
+- '@attributes':
+    Default: ''
+    Description: WebGUI Port https.
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: https - WebGUI
+    Required: 'false'
+    Target: '8920'
+    Type: Port
+  value: '8920'
+- '@attributes':
+    Default: ''
+    Description: Nvidia Driver Capabilities (This value can be left in the template
+      even if you don't want to use Nvidia hardware transcoding).
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Nvidia Driver Capabilities
+    Required: 'false'
+    Target: NVIDIA_DRIVER_CAPABILITIES
+    Type: Variable
+  value: all
+DonateLink: https://opencollective.com/jellyfin
+DonateText: Please Donate to the developers of Jellyfin
+ExtraParams: --restart=unless-stopped
+FirstSeen: 1613488286
+Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/jellyfin.png
+LastUpdate: 1646896091
+LastUpdateScan: 1647266605
+Name: Jellyfin-AMD-Intel-Nvidia
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "Jellyfin is a Free Software Media System that puts you in control of managing\
+  \ and streaming your media. It is an alternative to the proprietary Emby and Plex,\
+  \ to provide media from a dedicated server to end-user devices via multiple apps..\r\
+  \n\r\nThis version of Jellyfin is optimized for hardware transcoding on AMD Ryzen\
+  \ APU Platforms and also for Nvidia hardware transcoding - Nvidia-Driver Plugin\
+  \ needed (Intel hardware transcoding is only supported up to Coffe Lake 9th gen.\
+  \ for now).\r\n\r\n\r\nAMD Hardware transcoding (Please note that you have to be\
+  \ on Unraid 6.9.0beta35 to enable the moduel for AMD):\r\n- Open up a Terminal from\
+  \ Unraid and type in: 'modprobe amdgpu' (without quotes or you edit your 'go' file\
+  \ to load it on every restart of Unraid - refer to the support thread)\r\n- At 'Device'\
+  \ at the bottom here in the template add '/dev/dri'\r\n- In Jellyfin select the\
+  \ VA-API Transcoder at 'Playback' in the Admin section and enable: 'h264', 'HEVC',\
+  \ 'VC1', 'VP9', 'VP8', at the bottom 'Throttle Transcoding' and click 'Save'.\r\n\
+  \r\nIntel Hardware transcoding:\r\n- Download and install the Intel-GPU-TOP Plugin\
+  \ from the CA App\r\n- At 'Device' at the bottom here in the template add '/dev/dri'\r\
+  \n- In Jellyfin select the Intel Quick Sync Transcoder at 'Playback' in the Admin\
+  \ section and enable: 'h264', 'MPEG2', 'HEVC', 'VC1', 'VP9', 'VP8', at the bottom\
+  \ 'Throttle Transcoding' and click 'Save'.\r\n\r\nNvidia Hardware transcoding:\r\
+  \n- Download and install the Nvidia-Driver Plugin from the CA App\r\n- Turn on the\
+  \ 'Advanced View' here in the template and at 'Extra Parameters' add: '--runtime=nvidia'.\r\
+  \n- At 'Nvidia Visible Devices' at the bottom here in the template add your GPU\
+  \ UUID.\r\n- In Jellyfin select the NVENC Transcoder at 'Playback' in the Admin\
+  \ section and enable: 'h264', 'HEVC', 'VC1', 'VP9', 'VP8' (depending on the capabilities\
+  \ of your card), at the bottom 'Throttle Transcoding' and click 'Save'."
+PostArgs: ''
+Privileged: 'false'
+Project: https://jellyfin.org/
+Registry: https://hub.docker.com/r/ich777/jellyfin
+Repo: ich777's Repository
+Repository: ich777/jellyfin
+Support: https://forums.unraid.net/topic/102787-support-ich777-jellyfin-amdintelnvidia/
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8096]/
+caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/Jellyfin-AMD-Intel-Nvidia.xml
+topPerforming: 12.542
+topTrending: -13.383000000000001

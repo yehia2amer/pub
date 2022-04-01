@@ -1,0 +1,119 @@
+CategoryList:
+- Tools-Utilities
+- Network-Management
+Config:
+- '@attributes':
+    Default: '8000'
+    Description: HTTP Web UI
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Web
+    Required: 'true'
+    Target: '8000'
+    Type: Port
+  value: '8000'
+- '@attributes':
+    Default: /mnt/user/appdata/splunkenterprise/splunkdata
+    Description: For indexed data persistence
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: DataPersist
+    Required: 'true'
+    Target: /splunkdata
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: /mnt/user/appdata/splunkenterprise/etc/apps
+    Description: For config and app data persistence
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: ConfigPersist
+    Required: 'true'
+    Target: /opt/splunk/etc/apps
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: /mnt/user/appdata/splunkenterprise/etc/auth
+    Description: For password/encryption persistence
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: AppCredsPersist
+    Required: 'true'
+    Target: /opt/splunk/etc/auth
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: --accept-license --no-prompt
+    Description: 'Arguments to start Splunk with. '
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Splunk start args
+    Required: 'true'
+    Target: SPLUNK_CLI_ARGS
+    Type: Variable
+  value: --accept-license --no-prompt
+- '@attributes':
+    Default: changeme2019
+    Description: Splunk Web UI admin password.
+    Display: advanced
+    Mask: 'true'
+    Mode: ''
+    Name: Admin Password
+    Required: 'true'
+    Target: ADMIN_PASSWORD
+    Type: Variable
+  value: changeme2019
+- '@attributes':
+    Default: '8089'
+    Description: HTTPS API
+    Display: advanced
+    Mask: 'false'
+    Mode: tcp
+    Name: Management
+    Required: 'false'
+    Target: '8089'
+    Type: Port
+  value: '8089'
+- '@attributes':
+    Default: '9997'
+    Description: SplunkTCP input
+    Display: advanced
+    Mask: 'false'
+    Mode: tcp
+    Name: Data Ingest
+    Required: 'false'
+    Target: '9997'
+    Type: Port
+  value: '9997'
+DonateLink: https://paypal.me/atunnecliffe
+DonateText: Donate to Dockerfile author via PayPal
+FirstSeen: 1560968951
+Icon: https://secure.gravatar.com/avatar/c4cadc82a16e67018f57f1fc2547caa4.jpg
+LastUpdate: 1625102501
+LastUpdateScan: 1646739559
+Name: splunk
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "This is a Dockerfile for Splunk designed for OpenShift and unRAID based\
+  \ on Alpine Linux - https://www.splunk.com\r\n\r\nIf you run the Dockerfile with\
+  \ no arguments you will get a single instance of Splunk 8.2.1 with the user admin:changeme2019.\r\
+  \n\r\nThe web interface is exposed on port HTTP/8000, data ingest on TCP/9997, and\
+  \ API on HTTPS/8089.\r\n\r\nCompatible with Splunk 7.1.0 and newer."
+PostArgs: ''
+Privileged: 'false'
+Project: https://www.splunk.com/
+Registry: https://hub.docker.com/r/atunnecliffe/splunk
+Repo: Andrew207's Repository
+Repository: atunnecliffe/splunk
+Support: https://forums.unraid.net/topic/80995-support-atunnecliffe-splunk/
+TemplateURL: https://raw.githubusercontent.com/andrew207/splunk/master/splunkunraid.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8000}
+topPerforming: 2.043
+topTrending: -0.7389999999999999

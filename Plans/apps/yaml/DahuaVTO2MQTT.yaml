@@ -1,0 +1,112 @@
+CategoryList:
+- HomeAutomation
+Config:
+- '@attributes':
+    Default: 192.168.1.210
+    Description: The IP address of your VTO host
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: DAHUA_VTO_HOST
+    Required: 'false'
+    Target: DAHUA_VTO_HOST
+    Type: Variable
+  value: 192.168.1.210
+- '@attributes':
+    Default: admin
+    Description: VTO web username
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: DAHUA_VTO_USERNAME
+    Required: 'true'
+    Target: DAHUA_VTO_USERNAME
+    Type: Variable
+  value: admin
+- '@attributes':
+    Default: ''
+    Description: VTO web password
+    Display: always
+    Mask: 'true'
+    Mode: ''
+    Name: DAHUA_VTO_PASSWORD
+    Required: 'true'
+    Target: DAHUA_VTO_PASSWORD
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: 192.168.1.2
+    Description: MQTT broker address
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: MQTT_BROKER_HOST
+    Required: 'true'
+    Target: MQTT_BROKER_HOST
+    Type: Variable
+  value: 192.168.1.2
+- '@attributes':
+    Default: '1883'
+    Description: MQTT broker port
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: MQTT_BROKER_PORT
+    Required: 'true'
+    Target: MQTT_BROKER_PORT
+    Type: Variable
+  value: '1883'
+- '@attributes':
+    Default: ''
+    Description: MQTT optional username
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: MQTT_BROKER_USERNAME
+    Required: 'false'
+    Target: MQTT_BROKER_USERNAME
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: MQTT optional password
+    Display: always
+    Mask: 'true'
+    Mode: ''
+    Name: MQTT_BROKER_PASSWORD
+    Required: 'false'
+    Target: MQTT_BROKER_PASSWORD
+    Type: Variable
+  value: MQTT optional password
+- '@attributes':
+    Default: DahuaVTO
+    Description: The MQTT topic prefix
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: MQTT_BROKER_TOPIC_PREFIX
+    Required: 'false'
+    Target: MQTT_BROKER_TOPIC_PREFIX
+    Type: Variable
+  value: DahuaVTO
+FirstSeen: 1604862492
+Icon: https://i.imgur.com/OAg2gT1.png
+LastUpdate: 1615659051
+LastUpdateScan: 1646442218
+Name: DahuaVTO2MQTT
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "Listens to events from Dahua VTO unit and publishes them via MQTT Message\r\
+  \n\r\n\r\nFor integration with Home Assistant see https://community.home-assistant.io/t/dahua-vto-to-mqtt-broker/169781\r\
+  \n\r\nSource: https://github.com/elad-bar/DahuaVTO2MQTT"
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/elad-bar/DahuaVTO2MQTT
+Registry: https://hub.docker.com/r/ronnieroller/dahuavto2mqtt
+Repo: runraid's Repository
+Repository: ronnieroller/dahuavto2mqtt:latest
+Support: https://github.com/elad-bar/DahuaVTO2MQTT
+TemplateURL: https://raw.githubusercontent.com/rroller/unraid-templates/master/ronnieroller.com/dahuavto2mqtt.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''

@@ -1,0 +1,80 @@
+CategoryList:
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: ''
+    Description: 'Container Port: 80'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Web UI
+    Required: 'false'
+    Target: '80'
+    Type: Port
+  value: '8792'
+- '@attributes':
+    Default: ''
+    Description: Must provide if not using an existing configuration
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Default Email
+    Required: 'false'
+    Target: PGADMIN_DEFAULT_EMAIL
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Must provide if not using an existing configuration
+    Display: always
+    Mask: 'true'
+    Mode: ''
+    Name: Default Password
+    Required: 'false'
+    Target: PGADMIN_DEFAULT_PASSWORD
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /lib/var/pgadmin'
+    Display: advanced
+    Mask: 'false'
+    Mode: rw
+    Name: Config
+    Required: 'false'
+    Target: /var/lib/pgadmin
+    Type: Path
+  value: /mnt/user/appdata/pgadmin4
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: PGADMIN_LISTEN_ADDRESS'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Listen Address
+    Required: 'false'
+    Target: PGADMIN_LISTEN_ADDRESS
+    Type: Variable
+  value: 0.0.0.0
+FirstSeen: 1591042693
+Icon: https://github.com/FoxxMD/unraid-docker-templates/raw/master/icons/pgadmin4.png
+LastUpdate: 1648171145
+LastUpdateScan: 1648195441
+Name: pgadmin4
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: pgAdmin 4 is a web based administration tool for the PostgreSQL database.
+  This is the official image provided by pgadmin.
+PostArgs: ''
+Privileged: 'false'
+Project: https://www.pgadmin.org/
+Registry: https://hub.docker.com/r/dpage/pgadmin4/
+Repo: FoxxMD's Repository
+Repository: dpage/pgadmin4
+Support: https://forums.unraid.net/topic/93179-support-foxxmd-pgadmin4/
+TemplateURL: https://raw.githubusercontent.com/FoxxMD/unraid-docker-templates/master/foxxmd/pgadmin4.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:80]/
+topPerforming: 1.92
+topTrending: -4.758

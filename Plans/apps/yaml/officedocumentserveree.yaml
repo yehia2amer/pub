@@ -1,0 +1,160 @@
+CategoryList:
+- Productivity
+- Tools
+Config:
+- '@attributes':
+    Default: '8082'
+    Description: 'Container Port: 80'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: HTTP Port
+    Required: 'false'
+    Target: '80'
+    Type: Port
+  value: '8082'
+- '@attributes':
+    Default: '4432'
+    Description: 'Container Port: 443'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: HTTPS Port
+    Required: 'false'
+    Target: '443'
+    Type: Port
+  value: '4432'
+- '@attributes':
+    Default: /mnt/user/appdata/onlyoffice/DocumentServer/logs
+    Description: 'Container Path: /var/log/onlyoffice'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Mounted folder for logs
+    Required: 'false'
+    Target: /var/log/onlyoffice
+    Type: Path
+  value: /mnt/user/appdata/onlyoffice/DocumentServer/logs
+- '@attributes':
+    Default: /mnt/user/appdata/onlyoffice/DocumentServer/data
+    Description: 'Container Path: /var/www/onlyoffice/Data'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Mounted folder for data files ( SSL certificates can be added in the /cert
+      subfolder )
+    Required: 'false'
+    Target: /var/www/onlyoffice/Data
+    Type: Path
+  value: /mnt/user/appdata/onlyoffice/DocumentServer/data
+- '@attributes':
+    Default: /mnt/user/appdata/onlyoffice/DocumentServer/lib
+    Description: 'Container Path: /var/lib/onlyoffice'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Mounted folder for file cache
+    Required: 'false'
+    Target: /var/lib/onlyoffice
+    Type: Path
+  value: /mnt/user/appdata/onlyoffice/DocumentServer/lib
+- '@attributes':
+    Default: /mnt/user/appdata/onlyoffice/DocumentServer/db
+    Description: 'Container Path: /var/lib/postgresql'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Mounted folder for database
+    Required: 'false'
+    Target: /var/lib/postgresql
+    Type: Path
+  value: /mnt/user/appdata/onlyoffice/DocumentServer/db
+- '@attributes':
+    Default: /mnt/user/appdata/onlyoffice/DocumentServer/fonts
+    Description: 'Container Path: /usr/share/fonts/truetype/custom'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Mounted folder where you can add your custom fonts
+    Required: 'false'
+    Target: /usr/share/fonts/truetype/custom
+    Type: Path
+  value: /mnt/user/appdata/onlyoffice/DocumentServer/fonts
+- '@attributes':
+    Default: /mnt/user/appdata/onlyoffice/DocumentServer/forgotten
+    Description: 'Container Path: /var/lib/onlyoffice/documentserver/App_Data/cache/files/forgotten'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Mounted folder for unsaved files
+    Required: 'false'
+    Target: /var/lib/onlyoffice/documentserver/App_Data/cache/files/forgotten
+    Type: Path
+  value: /mnt/user/appdata/onlyoffice/DocumentServer/forgotten
+- '@attributes':
+    Default: ''
+    Description: 'Secret on/off: ON'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Secret true/false
+    Required: 'false'
+    Target: JWT_ENABLED
+    Type: Variable
+  value: 'true'
+- '@attributes':
+    Default: ''
+    Description: 'Secret name: *****'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Secret name
+    Required: 'false'
+    Target: JWT_SECRET
+    Type: Variable
+  value: mySecret
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /var/lib/rabbitmq'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: /var/lib/rabbitmq
+    Required: 'false'
+    Target: /var/lib/rabbitmq
+    Type: Path
+  value: /mnt/user/appdata/onlyoffice/DocumentServer/rabbitmq
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /var/lib/redis'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: /var/lib/redis
+    Required: 'false'
+    Target: /var/lib/redis
+    Type: Path
+  value: /mnt/user/appdata/onlyoffice/DocumentServer/redis
+FirstSeen: 1613603170
+Icon: https://github.com/Muwahhidun/logo/blob/main/oo-logo.png?raw=true
+LastUpdate: 1645527882
+LastUpdateScan: 1647381815
+Name: office-document-server-ee
+Network: bridge
+Networking:
+  Mode: bridge
+Official: true
+Overview: "Enterprise Edition Onlyoffice Document Server.\r\n\r\nScript does, endless\
+  \ trial version, no functionality limit:\r\nhttps://wiki.muwahhid.ru/ru/Unraid/Docker/Onlyoffice-Document-Server"
+PostArgs: ''
+Privileged: 'false'
+Project: https://www.onlyoffice.com/
+Registry: https://hub.docker.com/r/onlyoffice/documentserver-ee
+Repo: Muwahhidun's Repository
+Repository: onlyoffice/documentserver-ee
+Support: https://wiki.muwahhid.ru/
+TemplateURL: https://raw.githubusercontent.com/Muwahhidun/unraid-docker-templates/master/my-office-document-server-ee.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:80]
+topPerforming: 3.535
+topTrending: -10.118

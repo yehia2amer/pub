@@ -1,0 +1,119 @@
+CategoryList:
+- GameServers
+Config:
+- '@attributes':
+    Default: '8080'
+    Description: Web Interface Port
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Port
+    Required: 'false'
+    Target: '8080'
+    Type: Port
+  value: '8080'
+- '@attributes':
+    Default: ''
+    Description: Your AMP or McMyAdmin license.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: AMP License
+    Required: 'true'
+    Target: LICENCE
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ADS
+    Description: Which Module to use for the main instance created by this image.
+      ADS allows you to create multiple modules.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Module
+    Required: 'true'
+    Target: MODULE
+    Type: Variable
+  value: ADS
+- '@attributes':
+    Default: admin
+    Description: The username of the admin user created on first boot.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Username
+    Required: 'true'
+    Target: USERNAME
+    Type: Variable
+  value: admin
+- '@attributes':
+    Default: password
+    Description: The password of the admin user. This value is only used when creating
+      the new user. If you use the default value, please change it after first sign-in.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Password
+    Required: 'true'
+    Target: PASSWORD
+    Type: Variable
+  value: password
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /home/amp/.ampdata'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Appdata
+    Required: 'true'
+    Target: /home/amp/.ampdata
+    Type: Path
+  value: /mnt/user/appdata/amp
+- '@attributes':
+    Default: America/Detroit
+    Description: 'Container Variable: TZ'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Timezone
+    Required: 'false'
+    Target: TZ
+    Type: Variable
+  value: America/Detroit
+- '@attributes':
+    Default: ''
+    Description: Set to ANY value here to enable nightly builds. Unset this variable
+      to go back to stable releases.
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Nightly Builds
+    Required: 'false'
+    Target: NIGHTLY
+    Type: Variable
+  value: ''
+DonateLink: http://paypal.me/corneliousjd
+DonateText: Donate
+FirstSeen: 1603735753
+Icon: https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/icons/amp.png
+LastUpdate: 1645528815
+LastUpdateScan: 1647900200
+Name: AMP
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: CubeCoders AMP. Manage servers like Minecraft (McMyAdmin3, replaces McMyAdmin2),
+  TF2, and more. PLEASE READ SUPPORT THREAD ABOUT MAC ADDRESSES! More info on usage
+  in support thread.
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/MitchTalmadge/AMP-dockerized
+Registry: https://hub.docker.com/r/mitchtalmadge/amp-dockerized/
+Repo: CorneliousJD's Repository
+Repository: mitchtalmadge/amp-dockerized
+Support: https://forums.unraid.net/topic/98290-support-amp-application-management-panel-corneliousjd-repo/
+TemplateURL: https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/amp.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8080]/
+topPerforming: 2.138
+topTrending: -7.052

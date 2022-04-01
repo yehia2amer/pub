@@ -1,0 +1,134 @@
+CategoryList:
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: '8080'
+    Description: Port
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Port
+    Required: 'false'
+    Target: '8080'
+    Type: Port
+  value: '8080'
+- '@attributes':
+    Default: doma.in
+    Description: The custom short domain used for this shlink instance. For example
+      doma.in.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Short Domain Host
+    Required: 'false'
+    Target: SHORT_DOMAIN_HOST
+    Type: Variable
+  value: doma.in
+- '@attributes':
+    Default: https|http
+    Description: Either http or https.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Short Domain Schema
+    Required: 'false'
+    Target: SHORT_DOMAIN_SCHEMA
+    Type: Variable
+  value: https
+- '@attributes':
+    Default: ''
+    Description: https://dev.maxmind.com/geoip/geoip2/geolite2/
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Geolite License Key
+    Required: 'false'
+    Target: GEOLITE_LICENSE_KEY
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: maria|mysql|postgres|mssql
+    Description: Database Driver
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Database Driver
+    Required: 'false'
+    Target: DB_DRIVER
+    Type: Variable
+  value: maria
+- '@attributes':
+    Default: shlink
+    Description: The database name to be used. Defaults to shlink.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Database Name
+    Required: 'false'
+    Target: DB_NAME
+    Type: Variable
+  value: shlink
+- '@attributes':
+    Default: root
+    Description: The username credential for the database server.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Database User
+    Required: 'false'
+    Target: DB_USER
+    Type: Variable
+  value: root
+- '@attributes':
+    Default: password
+    Description: The password credential for the database server.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Database Password
+    Required: 'false'
+    Target: DB_PASSWORD
+    Type: Variable
+  value: password
+- '@attributes':
+    Default: 192.168.0.100
+    Description: The host name of the server running the database engine.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Database Host
+    Required: 'false'
+    Target: DB_HOST
+    Type: Variable
+  value: 192.168.0.100
+- '@attributes':
+    Default: 3306|5432|1433
+    Description: "mysql or maria -&gt; 3306 - \r\npostgres -&gt; 5432 - \r\nmssql\
+      \ -&gt; 1433"
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Database Port
+    Required: 'false'
+    Target: DB_PORT
+    Type: Variable
+  value: '3306'
+FirstSeen: 1597090092
+Icon: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/shlink.png
+LastUpdate: 1645373870
+LastUpdateScan: 1646471018
+Name: shlink
+Network: bridge
+Overview: "A self-hosted and PHP-based URL shortener application with CLI and REST\
+  \ interfaces.\r\nMore Variables: https://shlink.io/documentation/install-docker-image/#supported-env-vars"
+Privileged: 'false'
+Project: https://shlink.io/
+Registry: https://hub.docker.com/r/shlinkio/shlink/
+Repo: A75G's Repository
+Repository: shlinkio/shlink:latest
+Support: https://forums.unraid.net/topic/89502-support-a75g-repo/
+TemplateURL: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/shlink.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8080]/
+topPerforming: 10.546
+topTrending: 2.2379999999999995

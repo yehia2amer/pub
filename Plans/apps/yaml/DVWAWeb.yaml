@@ -1,0 +1,80 @@
+Beta: 'true'
+CategoryList:
+- Other
+Config:
+- '@attributes':
+    Default: '8088'
+    Description: 'Container Port: 80'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Host Port 1
+    Required: 'false'
+    Target: '80'
+    Type: Port
+  value: '8088'
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /var/www/html/config/'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: config
+    Required: 'false'
+    Target: /var/www/html/config/
+    Type: Path
+  value: /mnt/user/appdata/DVWA/config
+- '@attributes':
+    Default: ''
+    Description: 'Container Port: 5432'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: db
+    Required: 'false'
+    Target: '5432'
+    Type: Port
+  value: '5432'
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /var/www/html/php.ini'
+    Display: always
+    Mask: 'false'
+    Mode: ro
+    Name: Host Path 2
+    Required: 'false'
+    Target: /var/www/html/php.ini
+    Type: Path
+  value: /mnt/user/appdata/DVWA/php.ini
+FirstSeen: 1621929780
+Icon: https://github.com/natcoso9955/unRAID-docker/raw/master/icons/dvwa-logo-2.png
+LastUpdate: 1539366646
+LastUpdateScan: 1647914938
+Name: DVWA-Web
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "Damn Vulnerable Web Application (DVWA) is a PHP/MySQL web application that\
+  \ is damn vulnerable. Its main goal is to be an aid for security professionals to\
+  \ test their skills and tools in a legal environment, help web developers better\
+  \ understand the processes of securing web applications and to aid both students\
+  \ &amp; teachers to learn about web application security in a controlled class room\
+  \ environment.\r\n\r\nThe aim of DVWA is to practice some of the most common web\
+  \ vulnerabilities, with various levels of difficulty, with a simple straightforward\
+  \ interface. Please note, there are both documented and undocumented vulnerabilities\
+  \ with this software. This is intentional. You are encouraged to try and discover\
+  \ as many issues as possible.\r\n\r\nNOTE: Download the config.inc.php file from\
+  \ https://github.com/natcoso9955/unRAID-docker/blob/master/configs/DVWA/config.inc.php\
+  \ before you start the container.\r\nWill need to be placed into your config path.\r\
+  \n\r\nYou will also need to place https://github.com/natcoso9955/unRAID-docker/blob/master/configs/DVWA/php.ini\
+  \ in the root of your appdata path."
+PostArgs: ''
+Privileged: 'false'
+Project: https://dvwa.co.uk/
+Registry: https://hub.docker.com/r/vulnerables/web-dvwa/
+Repo: Natcoso9955's Repository
+Repository: vulnerables/web-dvwa
+Support: https://hub.docker.com/r/vulnerables/web-dvwa/
+TemplateURL: https://raw.githubusercontent.com/natcoso9955/unRAID-docker/master/dvwa_unraid.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:80]/

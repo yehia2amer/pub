@@ -1,0 +1,82 @@
+Beta: 'true'
+Branch:
+  Tag: canary
+  TagDescription: Most recent Android Studio Canary (currently only Canary works since
+    Projector relies on JDK 11)
+CategoryList:
+- Productivity
+Config:
+- '@attributes':
+    Default: ''
+    Description: 'Container Port: 8887'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Host Port 1
+    Required: 'false'
+    Target: '8887'
+    Type: Port
+  value: '8887'
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /home/projector-user'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Host Path 1
+    Required: 'false'
+    Target: /home/projector-user
+    Type: Path
+  value: /mnt/user/appdata/android-studio
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: UMASK'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Host Key 1
+    Required: 'false'
+    Target: UMASK
+    Type: Variable
+  value: '000'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: PUID'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Host Key 2
+    Required: 'false'
+    Target: PUID
+    Type: Variable
+  value: '99'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: PGID'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Host Key 3
+    Required: 'false'
+    Target: PGID
+    Type: Variable
+  value: '100'
+FirstSeen: 1605454081
+Icon: https://raw.githubusercontent.com/JetBrains/projector-docker/master/static/projector-user/DemoProject/src/pj.png
+LastUpdate: 1605778600
+LastUpdateScan: 1647032602
+Name: AndroidStudio
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: JetBrain's Projector running Android Studio without any windowing system
+PostArgs: bash -c "./run.sh"
+Privileged: 'false'
+Registry: https://hub.docker.com/repository/docker/jassycliq/android-studio-projector
+Repo: jassycliq's Repository
+Repository: jassycliq/android-studio-projector
+Support: https://forums.unraid.net/topic/99122-support-jassycliq-android-studio-projector
+TemplateURL: https://raw.githubusercontent.com/jassycliq/Unraid-AndroidStudio-Projector/master/AndroidStudioProjector.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8887]/?notSecureWarning=false
+topTrending: -3.914999999999999

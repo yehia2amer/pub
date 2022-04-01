@@ -1,0 +1,95 @@
+CategoryList:
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: ''
+    Description: 'Container Port: 8010'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Host Port 1
+    Required: 'false'
+    Target: '8010'
+    Type: Port
+  value: '8010'
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /ngrams'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Host Path 1
+    Required: 'false'
+    Target: /ngrams
+    Type: Path
+  value: /mnt/user/appdata/languagetool
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: langtool_languageModel'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: langtool ngrams
+    Required: 'false'
+    Target: langtool_languageModel
+    Type: Variable
+  value: /ngrams
+- '@attributes':
+    Default: 256m
+    Description: 'Container Variable: Java_Xms'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Java heap size Min
+    Required: 'false'
+    Target: Java_Xms
+    Type: Variable
+  value: 256m
+- '@attributes':
+    Default: 512m
+    Description: 'Container Variable: Java_Xmx'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Java heap size Max
+    Required: 'false'
+    Target: Java_Xmx
+    Type: Variable
+  value: 512m
+ExtraParams: --restart unless-stopped
+FirstSeen: 1610737854
+Icon: https://raw.githubusercontent.com/ArieDed/unraid-template/master/img/languagetool_icon.png
+LastUpdate: 1644430992
+LastUpdateScan: 1647111801
+Name: languagetool
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "LanguageTool is an Open Source proofreading software for English, French,\
+  \ German, Polish, Russian, and more than 20 other languages. It finds many errors\
+  \ that a simple spell checker cannot detect.\r\n\r\nLanguageTool can make use of\
+  \ large n-gram data sets to detect errors with words that are often confused. To\
+  \ add the ngram data to the docker, download the languages you want from here: https://languagetool.org/download/ngram-data/,\
+  \ move it to your server and link the location in the container path /ngrams. By\
+  \ default, this is set to the appdata folder. More information on ngram data can\
+  \ be found here: https://dev.languagetool.org/finding-errors-using-n-gram-data"
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/languagetool-org/languagetool
+RecommendedDate: 1625112000
+RecommendedRaw: 7/1/2021
+RecommendedReason:
+  de_DE: "Mit \xFCber 214.000 Downloads in diesem Monat, languagetool kann gro\xDF\
+    e n-gram Datens\xE4tze nutzen, um Fehler mit W\xF6rtern zu erkennen, die in \xFC\
+    ber 20 Sprachen oft verwechselt werden!"
+  en_US: With over 214k downloads this month, languagetool can make use of large n-gram
+    data sets to detect errors with words that are often confused in over 20 languages!
+Registry: https://hub.docker.com/r/erikvl87/languagetool/
+Repo: ArieDed's Repository
+Repository: erikvl87/languagetool
+Support: https://forums.unraid.net/topic/101425-support-languagetool-docker/
+TemplateURL: https://raw.githubusercontent.com/ArieDed/unraid-template/master/languagetool.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''
+topPerforming: 2.059
+topTrending: -3.8359999999999994

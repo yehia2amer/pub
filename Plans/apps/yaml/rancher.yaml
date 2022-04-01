@@ -1,0 +1,62 @@
+CategoryList:
+- Network-Management
+Config:
+- '@attributes':
+    Default: '80'
+    Description: 'Container Port: 80'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Web UI
+    Required: 'true'
+    Target: '80'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: '443'
+    Description: 'Container Port: 443'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Secure Web UI
+    Required: 'true'
+    Target: '443'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: /mnt/user/appdata/rancher/
+    Description: 'Container Path: /var/lib/rancher'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Datastore
+    Required: 'true'
+    Target: /var/lib/rancher
+    Type: Path
+  value: ''
+FirstSeen: 1591481245
+Icon: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/rancher.png
+LastUpdate: 1648672557
+LastUpdateScan: 1648685008
+Name: rancher
+Network: bridge
+Official: true
+Overview: A container management platform built for organizations that deploy containers
+  in production. The docker version of Rancher cannot be made HA (Highly Available),
+  however the clusters it creates can be. It is also possible to connect to and use
+  clusters created by rancher when it is down. Useful as a management interface for
+  deploying, scaling, and editting apps on other systems. (in the cloud, a raspberry
+  pi cluster, vms running k3os, etc.) Perfect for running and managing the apps that
+  you'd rather not go down while maintaining your server.
+Privileged: 'false'
+Project: https://github.com/rancher/rancher
+Registry: https://hub.docker.com/r/rancher/rancher
+Repo: Selfhosters Unraid Discord Repository
+RepoShort: Selfhosters
+Repository: rancher/rancher:latest
+Support: https://rancher.com/docs/rancher/v2.x/en/installation/other-installation-methods/single-node-docker/
+TemplateURL: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/rancher.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: https://[IP]:[PORT:443]
+topPerforming: 2.439
+topTrending: -5.026

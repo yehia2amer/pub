@@ -1,0 +1,203 @@
+CategoryList:
+- GameServers
+Config:
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /serverdata/serverfiles'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: ServerFiles
+    Required: 'true'
+    Target: /serverdata/serverfiles
+    Type: Path
+  value: /mnt/cache/appdata/planetaryannihilation
+- '@attributes':
+    Default: ''
+    Description: 'Your PA account name goes here, if you don''t have one got to this
+      link: https://service.planetaryannihilation.net/user/LinkSteam?TitleId=4 create
+      an account and link your Steam account to it.'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Your PA Account name
+    Required: 'true'
+    Target: PA_ACC_NAME
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Your PA password goes here
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Your PA Account Password
+    Required: 'true'
+    Target: PA_ACC_PWD
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Choose between 'stable' and 'PTE' (without quotes)
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Game Stream
+    Required: 'true'
+    Target: GAME_STREAM
+    Type: Variable
+  value: stable
+- '@attributes':
+    Default: ''
+    Description: Extra startup parameters, if not needed leave it blank.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Extra Startup Parameters
+    Required: 'false'
+    Target: GAME_PARAMS
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Here goes the name of you PA Server
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Server Name
+    Required: 'true'
+    Target: SERVER_NAME
+    Type: Variable
+  value: DockerServer
+- '@attributes':
+    Default: ''
+    Description: Here goes the Password of the Server
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Server Password
+    Required: 'true'
+    Target: SERVER_PWD
+    Type: Variable
+  value: Docker
+- '@attributes':
+    Default: ''
+    Description: Enter the maximum players on the server.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Maximum Players
+    Required: 'true'
+    Target: MAX_PLAYERS
+    Type: Variable
+  value: '12'
+- '@attributes':
+    Default: ''
+    Description: Set to 'true' (withoute quotes) if you want to check for updates,
+      otherwise leave it blank.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Update on start
+    Required: 'false'
+    Target: UPDATE_ON_START
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: For the standard Planetary Annihilation fill in 'lobby', for the
+      extension Planetary Annihilation Titans fill in 'PAExpansion1:lobby' (without
+      quotes).
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Game Mode
+    Required: 'true'
+    Target: GAME_MODE
+    Type: Variable
+  value: lobby
+- '@attributes':
+    Default: ''
+    Description: TCP Serverport (if you need another port, please delete this entry
+      and create a new TCP Port with the required port number, also don't forget to
+      click an 'Show more settings ...' and change the port number
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: TCP - Server Port
+    Required: 'true'
+    Target: '20545'
+    Type: Port
+  value: '20545'
+- '@attributes':
+    Default: ''
+    Description: 'Container Port: 8192'
+    Display: always
+    Mask: 'false'
+    Mode: udp
+    Name: UDP - LAN Beacon
+    Required: 'true'
+    Target: '8192'
+    Type: Port
+  value: '8192'
+- '@attributes':
+    Default: '20545'
+    Description: 'Container Variable: GAME_PORT'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: GAME_PORT
+    Required: 'false'
+    Target: GAME_PORT
+    Type: Variable
+  value: '20545'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: UID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: UID
+    Required: 'true'
+    Target: UID
+    Type: Variable
+  value: '99'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: GID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: GID
+    Required: 'true'
+    Target: GID
+    Type: Variable
+  value: '100'
+DonateImg: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/donate.png
+DonateLink: https://www.paypal.me/chips777
+DonateText: 'If you like my work please '
+ExtraParams: --restart=unless-stopped
+FirstSeen: 1559124485
+Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/pa.png
+LastUpdate: 1643896405
+LastUpdateScan: 1647468210
+Name: PlanetaryAnnihilation
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "This Docker will download and install Planetary Annihilation.\r\n\r\nATTENTION:\
+  \ First Startup can take very long since it downloads the gameserver files!\r\n\r\
+  \nThis Docker supports the original version of Planetary Annihilation and the expansion\
+  \ Planetary Annihilation Titans.\r\n\r\nUpdate Notice: Set the Variable 'Update\
+  \ on Start' to 'true' (without quotes) then the docker will check every restart\
+  \ if there is a newer version available otherwise leave it blank."
+PostArgs: ''
+Privileged: 'false'
+Project: https://www.steampowered.com/
+Registry: https://hub.docker.com/r/ich777/planetaryannihilationserver
+Repo: ich777's Repository
+Repository: ich777/planetaryannihilationserver
+Support: https://forums.unraid.net/topic/79530-support-ich777-gameserver-dockers/
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''
+caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/PlanetaryAnnihilation.xml

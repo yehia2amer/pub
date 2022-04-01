@@ -1,0 +1,79 @@
+Branch:
+- Tag: 5.0-alpine-latest
+  TagDescription: version 5.0
+- Tag: alpine-4.4-latest
+  TagDescription: version 4.4
+CategoryList:
+- Network-Management
+Config:
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: ZBX_HOSTNAME'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: ZBX_HOSTNAME
+    Required: 'false'
+    Target: ZBX_HOSTNAME
+    Type: Variable
+  value: ZABBIX_SERVER_HOSTNAME
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: ZBX_SERVER_HOST'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: ZBX_SERVER_HOST
+    Required: 'false'
+    Target: ZBX_SERVER_HOST
+    Type: Variable
+  value: ZABBIX_SERVER_IP
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /mnt/cache'
+    Display: always
+    Mask: 'false'
+    Mode: ro
+    Name: cache disks
+    Required: 'false'
+    Target: /mnt/cache
+    Type: Path
+  value: /mnt/cache
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /mnt/array'
+    Display: always
+    Mask: 'false'
+    Mode: ro
+    Name: array disk
+    Required: 'false'
+    Target: /mnt/array
+    Type: Path
+  value: /mnt/user
+FirstSeen: 1627479970
+Icon: https://raw.githubusercontent.com/vrx-666/unraid-xml/master/img/zabbix.jpg
+LastUpdate: 1648182986
+LastUpdateScan: 1648260202
+Name: zabbix-agent2
+Network: host
+Networking:
+  Mode: host
+Official: true
+Overview: "This container is just official Zabbix Agent image. Any Zabbix Server configuration/setup\
+  \ will need to be completed by yourself.   \nTo set this container up just edit\
+  \ the following:   \n*\t\"ZABBIX_SERVER_HOSTNAME\" to your unraid server hostname\
+  \   \n*\t\"ZABBIX_SERVER_IP\" to the IP address of your Zabbix Server or Proxy \
+  \  \n   \nIf you would like Zabbix to monitor disks as well as system resources\
+  \ you will need to add each one as a path manually.   \nPlease view the guide available\
+  \ on the forums."
+PostArgs: ''
+Privileged: 'true'
+Registry: https://hub.docker.com/r/zabbix/zabbix-agent
+Repo: vrx's Repository
+Repository: zabbix/zabbix-agent2:latest
+Support: https://forums.unraid.net/topic/111880-support-zabbix-agent/
+TemplateURL: https://raw.githubusercontent.com/vrx-666/unraid-xml/master/my-zabbix-agent2.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''
+topPerforming: 2.058
+topTrending: -10.835

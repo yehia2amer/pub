@@ -1,0 +1,162 @@
+CategoryList:
+- MediaApp-Video
+Config:
+- '@attributes':
+    Default: /mnt/user/appdata/post-recording
+    Description: Configuration folder /config
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: CONFIG FOLDER
+    Required: 'true'
+    Target: /config
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: This location contains .ts files that need converting /watch
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: WATCH FOLDER
+    Required: 'false'
+    Target: /watch
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Optional, only used if DELETE_TS is set to 2  /backup
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: BACKUP FOLDER
+    Required: 'false'
+    Target: /backup
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: '1'
+    Description: Remove the original .ts recording file. 0 = Yes, 1 = No, 2 = Move
+      to backup directory
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: DELETE_TS
+    Required: 'false'
+    Target: DELETE_TS
+    Type: Variable
+  value: '1'
+- '@attributes':
+    Default: '0'
+    Description: Extract subtitles to .srt. 0= Yes, 1 = No
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: SUBTITLES
+    Required: 'false'
+    Target: SUBTITLES
+    Type: Variable
+  value: '0'
+- '@attributes':
+    Default: mkv
+    Description: mkv or mp4
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: CONVERSION_FORMAT
+    Required: 'false'
+    Target: CONVERSION_FORMAT
+    Type: Variable
+  value: mkv
+- '@attributes':
+    Default: ts
+    Description: Source file extension, default .ts
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: SOURCE_EXT
+    Required: 'false'
+    Target: SOURCE_EXT
+    Type: Variable
+  value: ts
+- '@attributes':
+    Default: comchap
+    Description: "comchap or comcut\r\ndefault: comchap"
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: POST_PROCESS
+    Required: 'false'
+    Target: POST_PROCESS
+    Type: Variable
+  value: comchap
+- '@attributes':
+    Default: ''
+    Description: "GPU UUID retrieved from Nvidia plugin settings\r\n"
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: NVIDIA_VISIBLE_DEVICES
+    Required: 'false'
+    Target: NVIDIA_VISIBLE_DEVICES
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: PUID'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: PUID
+    Required: 'false'
+    Target: PUID
+    Type: Variable
+  value: '99'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: PGID'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: PGID
+    Required: 'false'
+    Target: PGID
+    Type: Variable
+  value: '100'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: UMASK'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: UMASK
+    Required: 'false'
+    Target: UMASK
+    Type: Variable
+  value: '000'
+FirstSeen: 1598303903
+Icon: https://raw.githubusercontent.com/chacawaca/docker-post-recording/master/Icon.png
+LastUpdate: 1642017448
+LastUpdateScan: 1647662624
+Name: post-recording
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "Watches for .ts files made by Live TV recordings, convert them to a friendly\
+  \ format, extract .srt file, add chapters with comchap or remove them with comcut.\
+  \ Tested with Emby recordings.\r\n\r\nNvidia GPU Use\r\nUsing the Unraid Nvidia\
+  \ Plugin to install a version of Unraid with the Nvidia Drivers installed and\r\n\
+  add --runtime=nvidia to \"extra parameters\" (switch on advanced view) and\r\ncopy\
+  \ your GPU UUID to NVIDIA_VISIBLE_DEVICES\r\n  \r\n  --------New Variable added\
+  \ --- verify your old custom.sh--------"
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/chacawaca/docker-post-recording
+Registry: https://hub.docker.com/r/chacawaca/post-recording
+Repo: Chacawaca's Repository
+Repository: chacawaca/post-recording
+Support: https://forums.unraid.net/topic/96179-support-chacawaca-post-recording
+TemplateURL: https://raw.githubusercontent.com/chacawaca/post-recording-xml/master/post-recording.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''
+topTrending: -6.311

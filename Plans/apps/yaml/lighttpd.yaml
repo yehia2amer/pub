@@ -1,0 +1,68 @@
+BindTime: 'true'
+CategoryList:
+- Network-Web
+Config:
+- '@attributes':
+    Default: '8081'
+    Description: 'Container Port: 80'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: http
+    Required: 'true'
+    Target: '80'
+    Type: Port
+  value: '8081'
+- '@attributes':
+    Default: /mnt/user/appdata/lighttpd/www
+    Description: Directory you want to serve content from.
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: www directory
+    Required: 'true'
+    Target: /var/www/localhost/htdocs
+    Type: Path
+  value: /mnt/user/appdata/lighttpd/www
+- '@attributes':
+    Default: /mnt/user/appdata/lighttpd/config
+    Description: Directory containing lighttpd configuration files that you want to
+      use instead of the default ones.
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: config directory
+    Required: 'false'
+    Target: /etc/lighttpd
+    Type: Path
+  value: /mnt/user/appdata/lighttpd/config
+- '@attributes':
+    Default: ''
+    Description: 'Container Port: 443'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: https
+    Required: 'false'
+    Target: '443'
+    Type: Port
+  value: ''
+ExtraParams: -t
+FirstSeen: 1633896213
+GitHub: https://github.com/llalon/docker-templates
+Icon: https://raw.githubusercontent.com/llalon/unraid-templates/main/llalon/images/lighttpd.png
+LastUpdateScan: 1646888595
+Name: lighttpd
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: Web server optimized for speed-critical environments while remaining standards-compliant,
+  secure and flexible.
+Privileged: 'false'
+Project: https://www.lighttpd.net/
+Registry: https://hub.docker.com/r/sebp/lighttpd
+Repo: llalon's Repository
+Repository: docker.io/sebp/lighttpd
+TemplateURL: https://raw.githubusercontent.com/llalon/unraid-templates/master/llalon/lighttpd.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:80]/

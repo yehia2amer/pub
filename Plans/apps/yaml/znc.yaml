@@ -1,0 +1,80 @@
+CategoryList:
+- Network-Messenger
+ChangeLogPresent: true
+Config:
+- '@attributes':
+    Default: '6501'
+    Description: Port ZNC listens on.
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI
+    Required: 'true'
+    Target: '6501'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Where local ZNC data is stored.
+    Display: advanced
+    Mask: 'false'
+    Mode: rw
+    Name: Appdata
+    Required: 'true'
+    Target: /config
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: '99'
+    Description: 'Container Variable: PUID'
+    Display: advanced
+    Mask: 'false'
+    Name: PUID
+    Required: 'true'
+    Target: PUID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '100'
+    Description: 'Container Variable: PGID'
+    Display: advanced
+    Mask: 'false'
+    Name: PGID
+    Required: 'true'
+    Target: PGID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '022'
+    Description: 'Container Variable: UMASK'
+    Display: advanced
+    Mask: 'false'
+    Name: UMASK
+    Required: 'false'
+    Target: UMASK
+    Type: Variable
+  value: ''
+DonateImg: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/donate.png
+DonateLink: https://www.linuxserver.io/donate
+DonateText: Donations
+FirstSeen: 1484802000
+GitHub: https://github.com/linuxserver/docker-znc#application-setup
+Icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/znc-logo.png
+LastUpdate: 1646046080
+LastUpdateScan: 1647914933
+Name: znc
+Network: bridge
+Overview: Znc(http://wiki.znc.in/ZNC) is an IRC network bouncer or BNC. It can detach
+  the client from the actual IRC server, and also from selected channels. Multiple
+  clients from different locations can connect to a single ZNC account simultaneously
+  and therefore appear under the same nickname on IRC.
+Privileged: 'false'
+Project: http://wiki.znc.in/ZNC
+ReadMe: https://github.com/linuxserver/docker-znc#readme
+Registry: https://github.com/orgs/linuxserver/packages/container/package/znc
+Repo: linuxserver's Repository
+Repository: lscr.io/linuxserver/znc
+Support: https://github.com/linuxserver/docker-znc/issues/new/choose
+TemplateURL: https://raw.githubusercontent.com/linuxserver/templates/master/unraid/znc.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:6501]

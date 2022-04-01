@@ -1,0 +1,131 @@
+CategoryList:
+- Tools-Utilities
+ChangeLogPresent: true
+Config:
+- '@attributes':
+    Default: '80'
+    Description: diskover Web UI
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI
+    Required: 'true'
+    Target: '80'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Persistent config files
+    Display: advanced
+    Mask: 'false'
+    Mode: rw
+    Name: Appdata
+    Required: 'true'
+    Target: /config
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Default mount point to crawl
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: 'Path: /data'
+    Required: 'true'
+    Target: /data
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: elasticsearch
+    Description: ElasticSearch host (optional)
+    Display: always
+    Mask: 'false'
+    Name: ES_HOST
+    Required: 'true'
+    Target: ES_HOST
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '9200'
+    Description: ElasticSearch port (optional)
+    Display: always
+    Mask: 'false'
+    Name: ES_PORT
+    Required: 'true'
+    Target: ES_PORT
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: elastic
+    Description: ElasticSearch username (optional)
+    Display: always
+    Mask: 'false'
+    Name: ES_USER
+    Required: 'true'
+    Target: ES_USER
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: changeme
+    Description: ElasticSearch password (optional)
+    Display: always
+    Mask: 'true'
+    Name: ES_PASS
+    Required: 'true'
+    Target: ES_PASS
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '99'
+    Description: 'Container Variable: PUID'
+    Display: advanced
+    Mask: 'false'
+    Name: PUID
+    Required: 'true'
+    Target: PUID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '100'
+    Description: 'Container Variable: PGID'
+    Display: advanced
+    Mask: 'false'
+    Name: PGID
+    Required: 'true'
+    Target: PGID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '022'
+    Description: 'Container Variable: UMASK'
+    Display: advanced
+    Mask: 'false'
+    Name: UMASK
+    Required: 'false'
+    Target: UMASK
+    Type: Variable
+  value: ''
+DonateImg: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/donate.png
+DonateLink: https://www.linuxserver.io/donate
+DonateText: Donations
+FirstSeen: 1542661270
+GitHub: https://github.com/linuxserver/docker-diskover#application-setup
+Icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/linuxserver-ls-logo.png
+LastUpdate: 1647811157
+LastUpdateScan: 1647914659
+Name: diskover
+Network: bridge
+Overview: diskover(https://github.com/diskoverdata/diskover-community) is an open
+  source file system indexer that uses Elasticsearch to index and manage data across
+  heterogeneous storage systems.
+Privileged: 'false'
+Project: https://github.com/diskoverdata/diskover-community
+ReadMe: https://github.com/linuxserver/docker-diskover#readme
+Registry: https://github.com/orgs/linuxserver/packages/container/package/diskover
+Repo: linuxserver's Repository
+Repository: lscr.io/linuxserver/diskover
+Support: https://github.com/linuxserver/docker-diskover/issues/new/choose
+TemplateURL: https://raw.githubusercontent.com/linuxserver/templates/master/unraid/diskover.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:80]
+topTrending: -1.0510000000000002

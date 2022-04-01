@@ -1,0 +1,78 @@
+CategoryList:
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: ''
+    Description: 'Container Port: 80'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Port
+    Required: 'false'
+    Target: '80'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: '99'
+    Description: 'Container Variable: PUID'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: PUID
+    Required: 'false'
+    Target: PUID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '100'
+    Description: 'Container Variable: PGID'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: PGID
+    Required: 'false'
+    Target: PGID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /data'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Mapping for the Postgres DB data
+    Required: 'false'
+    Target: /data
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /config'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Mapping the config files for Lemur and CFSSL
+    Required: 'false'
+    Target: /config
+    Type: Path
+  value: ''
+FirstSeen: 1587838044
+Icon: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/lemur-cfssl.png
+LastUpdate: 1580790166
+LastUpdateScan: 1647597799
+Name: lemur-cfssl
+Network: bridge
+Overview: "Lemur manages TLS certificate creation. While not able to issue certificates\
+  \ itself, Lemur acts as a broker between CAs and environments providing a central\
+  \ portal for developers to issue TLS certificates with 'sane' defaults.\r\n\r\n\
+  CFSSL is CloudFlare's PKI/TLS swiss army knife. It is both a command line tool and\
+  \ an HTTP API server for signing, verifying, and bundling TLS certificates."
+Project: https://github.com/Netflix/lemur
+Registry: https://hub.docker.com/r/halianelf/lemur/
+Repo: Selfhosters Unraid Discord Repository
+RepoShort: Selfhosters
+Repository: halianelf/lemur
+Support: https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/
+TemplateURL: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/lemur-cfssl.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:80]

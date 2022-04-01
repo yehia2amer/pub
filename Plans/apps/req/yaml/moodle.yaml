@@ -1,0 +1,222 @@
+CategoryList:
+- Productivity
+- Network-Web
+Config:
+- '@attributes':
+    Default: '8080'
+    Description: HTTP
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: HTTP
+    Required: 'true'
+    Target: '8080'
+    Type: Port
+  value: '8080'
+- '@attributes':
+    Default: '8443'
+    Description: HTTPs (Not needed if you use reverse proxy)
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: HTTPs
+    Required: 'false'
+    Target: '8443'
+    Type: Port
+  value: '8443'
+- '@attributes':
+    Default: /mnt/user/appdata/moodle/
+    Description: MoodlePath
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: MoodlePath
+    Required: 'true'
+    Target: /bitnami/moodle
+    Type: Path
+  value: /mnt/user/appdata/moodle/
+- '@attributes':
+    Default: /mnt/user/appdata/moodle/data/
+    Description: Moodledata
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Moodledata
+    Required: 'true'
+    Target: /bitnami/moodledata
+    Type: Path
+  value: /mnt/user/appdata/moodle/data/
+- '@attributes':
+    Default: mariadb
+    Description: MariaDB Hostname or IP
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: MariaDB Hostname or IP
+    Required: 'true'
+    Target: MOODLE_DATABASE_HOST
+    Type: Variable
+  value: mariadb
+- '@attributes':
+    Default: '3306'
+    Description: MariaDB Database Port
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: MariaDB Database Port
+    Required: 'true'
+    Target: MOODLE_DATABASE_PORT_NUMBER
+    Type: Variable
+  value: '3306'
+- '@attributes':
+    Default: bitnami_moodle
+    Description: Database Name
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Database Name
+    Required: 'true'
+    Target: MOODLE_DATABASE_NAME
+    Type: Variable
+  value: bitnami_moodle
+- '@attributes':
+    Default: bn_moodle
+    Description: Database User
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Database User
+    Required: 'true'
+    Target: MOODLE_DATABASE_USER
+    Type: Variable
+  value: bn_moodle
+- '@attributes':
+    Default: ''
+    Description: Database Password
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Database Password
+    Required: 'true'
+    Target: MOODLE_DATABASE_PASSWORD
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: user
+    Description: Default Moodle Username
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Moodle Username
+    Required: 'false'
+    Target: MOODLE_USERNAME
+    Type: Variable
+  value: user
+- '@attributes':
+    Default: bitnami
+    Description: Default Moodle Password
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Moodle Password
+    Required: 'false'
+    Target: MOODLE_PASSWORD
+    Type: Variable
+  value: bitnami
+- '@attributes':
+    Default: 256M
+    Description: PHP_MEMORY_LIMIT
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: PHP_MEMORY_LIMIT
+    Required: 'false'
+    Target: PHP_MEMORY_LIMIT
+    Type: Variable
+  value: 256M
+- '@attributes':
+    Default: ''
+    Description: SMTP host
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: SMTP_HOST
+    Required: 'false'
+    Target: SMTP_HOST
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: SMTP port
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: SMTP_PORT
+    Required: 'false'
+    Target: SMTP_PORT
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: SMTP account user
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: SMTP_USER
+    Required: 'false'
+    Target: SMTP_USER
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: SMTP account password
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: SMTP_PASSWORD
+    Required: 'false'
+    Target: SMTP_PASSWORD
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: SMTP protocol
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: SMTP_PROTOCOL
+    Required: 'false'
+    Target: SMTP_PROTOCOL
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: no|yes
+    Description: It can be used to allow blank passwords.
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: ALLOW_EMPTY_PASSWORD
+    Required: 'true'
+    Target: ALLOW_EMPTY_PASSWORD
+    Type: Variable
+  value: 'no'
+FirstSeen: 1589926063
+Icon: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/moodle.png
+LastUpdate: 1647087018
+LastUpdateScan: 1647091176
+Name: moodle
+Network: bridge
+Overview: Moodle is a very popular open source learning management solution (LMS)
+  for the delivery of elearning courses and programs.
+Privileged: 'false'
+Project: https://moodle.org
+Registry: https://hub.docker.com/r/bitnami/moodle/
+Repo: A75G's Repository
+Repository: bitnami/moodle:latest
+Requires: MariaDB / MySQL installed
+Support: https://forums.unraid.net/topic/89502-support-a75g-repo/
+TemplateURL: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/moodle.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8080]/
+topPerforming: 2.189
+topTrending: -6.698

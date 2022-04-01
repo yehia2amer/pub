@@ -1,0 +1,54 @@
+Beta: 'true'
+CategoryList:
+- HomeAutomation
+- Productivity
+- Tools-Utilities
+- Other
+- Network-Management
+Config:
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /usr/src/app/config'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Config Path
+    Required: 'false'
+    Target: /usr/src/app/config
+    Type: Path
+  value: /mnt/user/appdata/breitbandmessung-de/config/
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /export/'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Messurement Logs
+    Required: 'false'
+    Target: /export/
+    Type: Path
+  value: /mnt/user/appdata/breitbandmessung-de/logs/
+ExtraParams: --restart=always
+FirstSeen: 1644354199
+Icon: https://www.bundesnetzagentur.de/SiteGlobals/StyleBundles2/Bilder/auto/logo.svg?__blob=normal&amp;v=5
+LastUpdate: 1645752932
+LastUpdateScan: 1646953397
+Name: breitbandmessung-de
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "A script to enable customers of lazy ISPs to perform measurement campaigns\
+  \ of the connection speed as described here in an automated way.\r\n\r\nhttps://www.bundesnetzagentur.de/DE/Sachgebiete/Telekommunikation/Unternehmen_Institutionen/Breitband/Breitbandmessung/start.html\r\
+  \n\r\nGo to the Config directory and create a file called \"config.cfg\" with the\
+  \ content:\r\n\r\ntimezone=Europe/Berlin\r\ncrontab=* */2 * * *\r\nrun_once=true\r\
+  \nrun_on_startup=true\r\n\r\nFor a hourly cronjob to check your connection."
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/shneezin/breitbandmessung-node
+Registry: https://hub.docker.com/r/shneezin/breitbandmessung-node
+Repo: patrickstigler's Repository
+Repository: shneezin/breitbandmessung-node
+Support: https://github.com/shneezin/breitbandmessung-node
+TemplateURL: https://raw.githubusercontent.com/patrickstigler/unraid_app_templates/master/breitbandmessung-de/breitbandmessung-de.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''

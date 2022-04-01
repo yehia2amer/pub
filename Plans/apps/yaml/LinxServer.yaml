@@ -1,0 +1,83 @@
+CategoryList:
+- Cloud
+- Productivity
+- Tools-Utilities
+- Network-Web
+- Network-FTP
+Config:
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUi
+    Required: 'false'
+    Target: '8080'
+    Type: Port
+  value: '8080'
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Storage (files)
+    Required: 'false'
+    Target: /data/files
+    Type: Path
+  value: /mnt/user/appdata/linx-server/files
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Storage (meta)
+    Required: 'false'
+    Target: /data/meta
+    Type: Path
+  value: /mnt/user/appdata/linx-server/meta
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: always
+    Mask: 'false'
+    Mode: ro
+    Name: Storage (config file)
+    Required: 'false'
+    Target: /data/linx-server.conf
+    Type: Path
+  value: /mnt/user/appdata/linx-server/linx-server.conf
+FirstSeen: 1643720604
+Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/linx-server.png
+LastUpdate: 1597392029
+LastUpdateScan: 1646313561
+Name: Linx-Server
+Network: bridge
+Overview: "DESCRIPTION\r\nSelf-hosted file/media sharing website.\r\n\r\nFeatures:\r\
+  \n\u2022 Display common filetypes (image, video, audio, markdown, pdf)\r\n\u2022\
+  \ Display syntax-highlighted code with in-place editing\r\n\u2022 Documented API\
+  \ with keys for restricting uploads\r\n\u2022 Torrent download of files using web\
+  \ seeding\r\n\u2022 File expiry, deletion key, file access key, and random filename\
+  \ options\r\n\r\nLive demo:\r\nhttps://put.icu/\r\n\r\nNOTES\r\n\u2022 Run the following\
+  \ cmds before building the container: 'mkdir -m755 /mnt/user/appdata/linx-server'\
+  \ and 'curl https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/dependencies/linx-server/linx-server.conf\
+  \ --output /mnt/user/appdata/linx-server/linx-server.conf'.\r\n\u2022 I have omitted\
+  \ some of the variables available on the 'linx-server.conf' file, as them were not\
+  \ much significant for me when building this template. To add/remove the ones that\
+  \ best suits you, check the GitHub to know more.\r\n\u2022 Linx-Server supports\
+  \ the use of API to upload files remotly. Check the GitHub repo to know more.\r\n\
+  \u2022 There are some clients available (CLI, Android) to interact with Linx-Server.\
+  \ Check the GitHub repo to know more.\r\n\r\nVERSION\r\nv1.0 (2022-02-01)"
+PostArgs: -config /data/linx-server.conf
+Privileged: 'false'
+Project: https://github.com/ZizzyDizzyMC/linx-server
+Registry: https://hub.docker.com/r/andreimarcu/linx-server
+Repo: SmartPhoneLover's Repository
+Repository: andreimarcu/linx-server
+Requires: ''
+Support: https://forums.unraid.net/topic/119421-support-smartphonelover-linx-server/
+TemplateURL: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/master/templates/Linx-Server.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8080]

@@ -1,0 +1,126 @@
+CategoryList:
+- Backup
+- Productivity
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: ''
+    Description: Port for noVNC.
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI (1)
+    Required: 'false'
+    Target: '5800'
+    Type: Port
+  value: '5800'
+- '@attributes':
+    Default: ''
+    Description: Port for VNC.
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI (2)
+    Required: 'false'
+    Target: '5900'
+    Type: Port
+  value: '5900'
+- '@attributes':
+    Default: ''
+    Description: This is where the application stores its configuration, log and any
+      files needing persistency.
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Storage (config)
+    Required: 'false'
+    Target: /config
+    Type: Path
+  value: /mnt/user/appdata/rclone-browser/config
+- '@attributes':
+    Default: ''
+    Description: This is where downloaded files are stored, or where you put files
+      in your host for uploading.
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Storage (media)
+    Required: 'true'
+    Target: /media
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: USER_ID
+    Required: 'false'
+    Target: USER_ID
+    Type: Variable
+  value: '1000'
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: GROUP_ID
+    Required: 'false'
+    Target: GROUP_ID
+    Type: Variable
+  value: '1000'
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: TZ
+    Required: 'false'
+    Target: TZ
+    Type: Variable
+  value: Europe/Madrid
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: KEEP_APP_RUNNING
+    Required: 'false'
+    Target: KEEP_APP_RUNNING
+    Type: Variable
+  value: '1'
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: CLEAN_TMP_DIR
+    Required: 'false'
+    Target: CLEAN_TMP_DIR
+    Type: Variable
+  value: '1'
+FirstSeen: 1644678198
+Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/rclone_browser.png
+LastUpdate: 1599634411
+LastUpdateScan: 1647273807
+Name: Rclone-Browser
+Network: bridge
+Overview: "DESCRIPTION\r\nSimple cross platform GUI for rclone command line tool.\r\
+  \n\r\nNOTES\r\n\u2022 You have other variables to use, if needed. Check the GitHub\
+  \ repo to know more.\r\n\r\nVERSION\r\n1.0 (2022-02-12)"
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/romancin/rclonebrowser-docker
+Registry: https://hub.docker.com/r/romancin/rclonebrowser
+Repo: SmartPhoneLover's Repository
+Repository: romancin/rclonebrowser
+Requires: ''
+Support: https://forums.unraid.net/topic/119959-support-smartphonelover-rclone-browser-gui-for-rclone/
+TemplateURL: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/master/templates/Rclone-Browser.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:5800]

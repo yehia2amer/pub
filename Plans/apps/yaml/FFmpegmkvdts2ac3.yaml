@@ -1,0 +1,110 @@
+CategoryList:
+- Productivity
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: /mnt/user/appdata/ffmpeg
+    Description: Config
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Config
+    Required: 'true'
+    Target: /config
+    Type: Path
+  value: /mnt/user/appdata/ffmpeg
+- '@attributes':
+    Default: ''
+    Description: Watch
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Watch
+    Required: 'true'
+    Target: /watch
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Output
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Output
+    Required: 'true'
+    Target: /output
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Copy
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Copy
+    Required: 'false'
+    Target: /copy
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: encode.sh
+    Description: encode.sh or mkvdts2ac3.sh
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Script to be executed
+    Required: 'true'
+    Target: script
+    Type: Variable
+  value: encode.sh
+- '@attributes':
+    Default: -map 0;-vcodec copy;-scodec copy;-acodec ac3;-b:a 640k
+    Description: Parameters for FFmpeg
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Parameters
+    Required: 'false'
+    Target: parameters
+    Type: Variable
+  value: -map 0;-vcodec copy;-scodec copy;-acodec ac3;-b:a 640k
+- '@attributes':
+    Default: mkv
+    Description: Format of output file.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Output format
+    Required: 'false'
+    Target: output_format
+    Type: Variable
+  value: mkv
+- '@attributes':
+    Default: --compress none;-d;-n;-w /output;--new
+    Description: Parameters for mkvdts2ac3
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: mkvdts2ac3 parameters
+    Required: 'false'
+    Target: mkvdts2ac3_params
+    Type: Variable
+  value: --compress none;-d;-n;-w /output;--new
+DonateImg: https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif
+DonateLink: https://www.paypal.com/donate?hosted_button_id=4SCY7WSZPA6UQ
+DonateText: For my retirement
+FirstSeen: 1603138190
+Icon: https://ih1.redbubble.net/image.998316046.6121/pp,840x830-pad,1000x1000,f8f8f8.jpg
+LastUpdate: 1608462569
+LastUpdateScan: 1647317001
+Name: FFmpeg-mkvdts2ac3
+Network: bridge
+Overview: A Docker container designed to watch a directory and encode media files.
+Privileged: 'false'
+Registry: https://registry.hub.docker.com/r/snoopy86/ffmpeg/
+Repo: snoopy86's Repository
+Repository: snoopy86/ffmpeg
+Support: https://lime-technology.com/forum/index.php?topic=43610.0
+TemplateURL: https://raw.githubusercontent.com/snoopy86/docker-repo/master/snoopy/ffmpeg-mkvdts2ac3.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+topTrending: -8.654

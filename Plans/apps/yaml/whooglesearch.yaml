@@ -1,0 +1,76 @@
+Beta: 'true'
+CAComment: 'It appears that after installation you have to run a command to get this
+  application to work:  See <a href=https://forums.unraid.net/topic/92360-support-foxxmd-whoogle-search/page/2/?tab=comments#comment-1103804
+  target=_blank>here</a>'
+CategoryList:
+- Cloud
+- Network-Web
+Config:
+- '@attributes':
+    Default: ''
+    Description: Container port to start whoogle on. Default is 5000
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Web UI
+    Required: 'true'
+    Target: '5000'
+    Type: Port
+  value: '8798'
+- '@attributes':
+    Default: ''
+    Description: persistent application data/configuration
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Config
+    Required: 'false'
+    Target: /config
+    Type: Path
+  value: /mnt/user/appdata/whoogle
+- '@attributes':
+    Default: ''
+    Description: Set whether whoogle should enforce HTTPS inside container. Default
+      is false
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Application HTTPS Only
+    Required: 'false'
+    Target: HTTPS_ONLY
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Container Port to start whoogle on. Default is 5000
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Container Port
+    Required: 'false'
+    Target: EXPOSE_PORT
+    Type: Variable
+  value: ''
+FirstSeen: 1589292467
+Icon: https://github.com/benbusby/whoogle-search/blob/main/app/static/img/favicon/favicon-96x96.png?raw=true
+LastUpdate: 1646165743
+LastUpdateScan: 1646471017
+Name: whoogle-search
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "Get Google search results, but without any ads, javascript, AMP links,\
+  \ cookies, or IP address tracking. Also includes a dark mode.\r\n        \r\n  \
+  \      Refer to the project page for additional configuration and usage https://github.com/benbusby/whoogle-search"
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/benbusby/whoogle-search
+Registry: https://hub.docker.com/r/benbusby/whoogle-search/
+Repo: FoxxMD's Repository
+Repository: benbusby/whoogle-search
+Support: https://forums.unraid.net/topic/92360-support-foxxmd-whoogle-search/
+TemplateURL: https://raw.githubusercontent.com/FoxxMD/unraid-docker-templates/master/foxxmd/whoogle-search.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:5000]/
+topPerforming: 6.248
+topTrending: -5.777

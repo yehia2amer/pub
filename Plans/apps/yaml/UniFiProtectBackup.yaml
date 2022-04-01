@@ -1,0 +1,178 @@
+CategoryList:
+- Backup
+Config:
+- '@attributes':
+    Default: UTC
+    Description: TimeZone for the container refer to https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+      for a list of possible timezones
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: TimeZone
+    Required: 'true'
+    Target: TZ
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Username to login to Unifi Protect instance
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: UniFi Protect username
+    Required: 'true'
+    Target: UFP_USERNAME
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Password for Unifi Protect user
+    Display: always
+    Mask: 'true'
+    Mode: ''
+    Name: UniFi Protect password
+    Required: 'true'
+    Target: UFP_PASSWORD
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Address of Unifi Protect instance
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: UniFi Protect address
+    Required: 'true'
+    Target: UFP_ADDRESS
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '443'
+    Description: Port of Unifi Protect instance
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: UniFi Protect port
+    Required: 'true'
+    Target: UFP_PORT
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: 'false'
+    Description: Set to false if your UniFi protect instances doesn't have a valid
+      SSL certificate
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Verify SSL certificate
+    Required: 'true'
+    Target: UFP_SSL_VERIFY
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: 7d
+    Description: How long should event clips be backed up for. Format as per the `--max-age`
+      argument of `rclone` (https://rclone.org/filtering/#max-age-don-t-transfer-any-file-older-than-this)
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Clip retention period
+    Required: 'true'
+    Target: RCLONE_RETENTION
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: '`rclone` destination path in the format {rclone remote}:{path on
+      remote}. E.g.`gdrive:/backups/unifi_protect`'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: rclone destination
+    Required: 'true'
+    Target: RCLONE_DESTINATION
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: IDs of the cameras you want unifi-protect-backup to ignore. A list
+      of camera IDs will be appear at the start of the log
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Ignore Cameras
+    Required: 'false'
+    Target: IGNORE_CAMERAS
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: v
+    Description: More `v`s = more verbost logging
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Logging Verbosity
+    Required: 'false'
+    Target: VERBOSITY
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Optional arguments which are directly passed to `rclone rcat`. See
+      the `rclone` documentation for the full set of arguments it supports (https://rclone.org/docs/)
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: rclone args
+    Required: 'false'
+    Target: RCLONE_ARGS
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: /mnt/user/appdata/unifi-protect-backup
+    Description: Location of rclone configuration files
+    Display: always
+    Mask: 'false'
+    Mode: r
+    Name: Config
+    Required: 'true'
+    Target: /config
+    Type: Path
+  value: /mnt/user/appdata/unifi-protect-backup
+- '@attributes':
+    Default: /mnt/user/appdata/unifi-protect-backup/clips
+    Description: ONLY USED WITH LOCAL RCLONE REMOTE
+    Display: always
+    Mask: 'false'
+    Mode: r
+    Name: Clip directory
+    Required: 'false'
+    Target: /data
+    Type: Path
+  value: /mnt/user/appdata/unifi-protect-backup/clips
+DonateLink: https://www.buymeacoffee.com/ep1cman
+FirstSeen: 1645692491
+LastUpdateScan: 1648289007
+Name: UniFi-Protect-Backup
+Network: bridge
+Overview: "A Python based tool for backing up UniFi Protect event clips as they occur\
+  \ to cloud storage.\n\n  By default it will backup clips locally to `/data` inside\
+  \ the container. However you can create an `rclone` config file to backup to\n \
+  \ dozens of cloud providers. You can do this by running the following commands:\n\
+  \n  ```\n  $ mkdir /mnt/user/appdata/unifi-protect-backup\n  $ docker run -it --rm\
+  \ -v /mnt/user/appdata/unifi-protect-backup:/root/.config/rclone rclone/rclone config\n\
+  \  ```\n  \n  Use the interactive configuration tool to setup your desired backup\
+  \ destination. Once complete you can start the container ensuring\n  that the `RCLONE_DESTINATION`\
+  \ uses the name of your rclone remote e.g `MyDropbox:/path/on/dropbx`\n\n  NOTE:\
+  \ If you are using the `local` remote type, the path set in `RCLONE_DESTINATION`\
+  \ will be inside the container so please use \n        `/data`. You then need to\
+  \ set the optional \"Clip directory\" below to where you actually want the data\
+  \ to be stored."
+Privileged: 'false'
+Project: https://github.com/ep1cman/unifi-protect-backup
+Registry: https://github.com/ep1cman/unifi-protect-backup/pkgs/container/unifi-protect-backup
+Repo: ep1cman's Repository
+Repository: ghcr.io/ep1cman/unifi-protect-backup:latest
+Support: https://github.com/ep1cman/unifi-protect-backup/discussions
+TemplateURL: https://raw.githubusercontent.com/ep1cman/unraid-templates/master/unifi-protect-backup.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg

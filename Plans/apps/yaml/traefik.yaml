@@ -1,0 +1,140 @@
+CategoryList:
+- Productivity
+- Security
+- Tools-Utilities
+- Network-Proxy
+Config:
+- '@attributes':
+    Default: /mnt/user/appdata/traefik
+    Description: Appdata Location
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Config Folder
+    Required: 'false'
+    Target: /etc/traefik
+    Type: Path
+  value: /mnt/user/appdata/traefik
+- '@attributes':
+    Default: /var/run/docker.sock
+    Description: "The default is /var/run/docker.sock\r\n"
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Docker Socket
+    Required: 'false'
+    Target: /var/run/docker.sock
+    Type: Path
+  value: /var/run/docker.sock
+- '@attributes':
+    Default: '44301'
+    Description: HTTPS Port
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: https Port
+    Required: 'false'
+    Target: '443'
+    Type: Port
+  value: '44301'
+- '@attributes':
+    Default: '8001'
+    Description: HTTP Port
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: http Port
+    Required: 'false'
+    Target: '80'
+    Type: Port
+  value: '8001'
+- '@attributes':
+    Default: '8183'
+    Description: Dashboard WebUI Port
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Web UI Port
+    Required: 'false'
+    Target: '8080'
+    Type: Port
+  value: '8183'
+- '@attributes':
+    Default: YOUR_SUPER_SECURE_CLOUDFLARE_API_TOKEN
+    Description: Cloudflare DNS API Token
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Cloudflare API Token
+    Required: 'false'
+    Target: CF_DNS_API_TOKEN
+    Type: Variable
+  value: YOUR_SUPER_SECURE_CLOUDFLARE_API_TOKEN
+- '@attributes':
+    Default: Host(`traefik.YOURDOMAIN.COM`)
+    Description: Traefik dashboard URL
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Traefik Dashboard Subdomain
+    Required: 'false'
+    Target: traefik.http.routers.api.rule
+    Type: Label
+  value: Host(`traefik.DOMAIN.COM`)
+- '@attributes':
+    Default: https
+    Description: Traefik Dashboard Entrypoint
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: 'Traefik Entrypoint '
+    Required: 'false'
+    Target: traefik.http.routers.api.entryPoints
+    Type: Label
+  value: https
+- '@attributes':
+    Default: 'api@internal '
+    Description: Routing Traefik to its API Dashboard
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Traefik API
+    Required: 'false'
+    Target: traefik.http.routers.api.service
+    Type: Label
+  value: api@internal
+- '@attributes':
+    Default: 'true'
+    Description: Enable/Disable Traefik Dashboard
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Enable Traefik (Dashboard)
+    Required: 'false'
+    Target: traefik.enable
+    Type: Label
+  value: 'true'
+FirstSeen: 1643187800
+Icon: https://raw.githubusercontent.com/ibracorp/unraid-templates/master/icons/traefik.png
+LastUpdate: 1648176247
+LastUpdateScan: 1648382594
+Name: traefik
+Network: bridge
+Networking:
+  Mode: bridge
+Official: true
+Overview: "The world\u2019s most popular cloud-native application proxy that helps\
+  \ developers and operations teams build, deploy and run modern microservices applications\
+  \ quickly and easily.\r\n\r\nFor a guide on how to install this reverse proxy, head\
+  \ over to our documentation website.\r\n\r\nhttps://docs.ibracorp.io\r\n\r\nCome\
+  \ join in on the community fun and get support by joining our discord!\r\n\r\nhttps://discord.gg/VWAG7rZ"
+PostArgs: ''
+Privileged: 'false'
+Project: https://traefik.io/
+Registry: https://hub.docker.com/_/traefik
+Repo: Sycotix' Repository
+Repository: traefik:2.6
+Support: https://discord.gg/VWAG7rZ
+TemplateURL: https://raw.githubusercontent.com/ibracorp/unraid-templates/master/traefik/traefik.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8080]/

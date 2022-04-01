@@ -1,0 +1,101 @@
+CategoryList:
+- MediaServer-Photos
+ChangeLogPresent: true
+Config:
+- '@attributes':
+    Default: '80'
+    Description: WebUI
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI
+    Required: 'true'
+    Target: '80'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Stores config and logs for nginx base.
+    Display: advanced
+    Mask: 'false'
+    Mode: rw
+    Name: Appdata
+    Required: 'true'
+    Target: /config
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Your local folder of photos you wish to share.
+    Display: always
+    Mask: 'false'
+    Mode: ro
+    Name: 'Path: /Pictures'
+    Required: 'true'
+    Target: /Pictures
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Local folder to store thumbnails of your images.
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: 'Path: /Thumbs'
+    Required: 'true'
+    Target: /Thumbs
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: '99'
+    Description: 'Container Variable: PUID'
+    Display: advanced
+    Mask: 'false'
+    Name: PUID
+    Required: 'true'
+    Target: PUID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '100'
+    Description: 'Container Variable: PGID'
+    Display: advanced
+    Mask: 'false'
+    Name: PGID
+    Required: 'true'
+    Target: PGID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '022'
+    Description: 'Container Variable: UMASK'
+    Display: advanced
+    Mask: 'false'
+    Name: UMASK
+    Required: 'false'
+    Target: UMASK
+    Type: Variable
+  value: ''
+DonateImg: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/donate.png
+DonateLink: https://www.linuxserver.io/donate
+DonateText: Donations
+FirstSeen: 1475208000
+GitHub: https://github.com/linuxserver/docker-photoshow#application-setup
+Icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/photoshow-logo.png
+LastUpdate: 1647592818
+LastUpdateScan: 1647914819
+Name: photoshow
+Network: bridge
+Overview: Photoshow(https://github.com/thibaud-rohmer/PhotoShow) is gallery software
+  at its easiest, it doesn't even require a database.
+Privileged: 'false'
+Project: https://github.com/thibaud-rohmer/PhotoShow
+ReadMe: https://github.com/linuxserver/docker-photoshow#readme
+Registry: https://github.com/orgs/linuxserver/packages/container/package/photoshow
+Repo: linuxserver's Repository
+Repository: lscr.io/linuxserver/photoshow
+Support: https://github.com/linuxserver/docker-photoshow/issues/new/choose
+TemplateURL: https://raw.githubusercontent.com/linuxserver/templates/master/unraid/photoshow.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:80]
+topTrending: -0.114

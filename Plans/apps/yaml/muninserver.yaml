@@ -1,0 +1,56 @@
+BindTime: 'true'
+CategoryList:
+- Network-Management
+- Tools-Utilities
+ChangeLogPresent: true
+Data:
+  Volume:
+  - ContainerDir: /etc/munin/munin-conf.d
+    HostDir: /mnt/user/appdata/munin-server/conf
+    Mode: rw
+  - ContainerDir: /var/cache/munin/www
+    HostDir: /mnt/user/appdata/munin-server/www
+    Mode: rw
+  - ContainerDir: /var/lib/munin
+    HostDir: /mnt/user/appdata/munin-server/rrd
+    Mode: rw
+  - ContainerDir: /rootfs
+    HostDir: /
+    Mode: ro
+  - ContainerDir: /sys
+    HostDir: /sys
+    Mode: ro
+Environment:
+  Variable:
+  - Name: ALLOWED_HOSTS
+    Value: 127.0.0.1/32
+  - Name: HOSTNAME
+    Value: unRAID
+FirstSeen: 1470110400
+Icon: https://raw.githubusercontent.com/shaf/unraid-docker-templates/master/shaf/images/munin-icon.png
+LastUpdate: 1508611752
+LastUpdateScan: 1646823802
+Name: munin-server
+Networking:
+  Mode: bridge
+  Publish:
+    Port:
+    - ContainerPort: '80'
+      HostPort: '8888'
+      Protocol: tcp
+    - ContainerPort: '4949'
+      HostPort: '4949'
+      Protocol: tcp
+Overview: Primarily provides server stats for your unRAID instance in addition to
+  monitoring other servers
+Privileged: 'false'
+Project: http://munin-monitoring.org/
+Registry: https://registry.hub.docker.com/r/shaf/munin-server/
+Repo: JugniJi's Repository
+Repository: shaf/munin-server
+Support: http://lime-technology.com/forum/index.php?topic=50678.0
+TemplateURL: https://raw.githubusercontent.com/shaf/unraid-docker-templates/master/shaf/munin-server.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:80]/
+topPerforming: 1.645
+topTrending: 0.3760000000000001

@@ -1,0 +1,49 @@
+CategoryList:
+- Network-Management
+Data:
+  Volume:
+  - ContainerDir: /config
+    HostDir: /mnt/user/appdata/observium/config
+    Mode: rw
+  - ContainerDir: /opt/observium/logs
+    HostDir: /mnt/user/appdata/observium/logs
+    Mode: rw
+  - ContainerDir: /opt/observium/rrd
+    HostDir: /mnt/user/appdata/observium/rrd
+    Mode: rw
+DonateLink: https://www.ottawafoodbank.ca/donate/
+DonateText: If you like using this image and would like to make a donation, please
+  send your donation to a food bank in the city where I live in.
+FirstSeen: 1540139741
+Icon: https://i.imgur.com/CGrAh79.png
+LastUpdate: 1640314444
+LastUpdateScan: 1646658215
+Name: observium
+Networking:
+  Mode: bridge
+  Publish:
+    Port:
+    - ContainerPort: '8668'
+      HostPort: '8668'
+      Protocol: tcp
+    - ContainerPort: '514'
+      HostPort: '8514'
+      Protocol: udp
+Overview: "Observium is an autodiscovering network monitoring platform supporting\
+  \ a wide range of hardware platforms and operating systems.[br][br]\r\n[b][span\
+  \ style='color: #E80000;']Directions:[/span][/b][br]\r\n[b]/config[/b] : this path\
+  \ is where Observium will store its PHP config file and the database which contains\
+  \ data for users, devices, and data.[br]\r\n[b]/opt/observium/logs[/b] : this path\
+  \ is where Observium will store its logs.[br]\r\n[b]/opt/observium/rrd[/b] : this\
+  \ path is where Observium will store its Round-Robin Database (RRD) data.[br]"
+Privileged: 'false'
+Project: https://www.observium.org/
+Registry: https://hub.docker.com/r/uberchuckie/observium/
+Repo: uberchuckie's Repository
+Repository: uberchuckie/observium
+Support: https://forums.unraid.net/topic/75153-support-uberchuckie-observium/
+TemplateURL: https://raw.githubusercontent.com/charlescng/docker-containers/master/unraid-templates/uberchuckie/observium.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8668]/
+topPerforming: 1.88
+topTrending: -0.31499999999999995

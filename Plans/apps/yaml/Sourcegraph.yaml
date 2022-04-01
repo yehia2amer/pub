@@ -1,0 +1,86 @@
+BindTime: 'true'
+CategoryList:
+- Backup
+- Cloud
+- Network-Web
+- Productivity
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: '7080'
+    Description: This is SourceGraph's Web UI port you can access via a web browser.
+    Display: always-hide
+    Mask: '{8}'
+    Mode: tcp
+    Name: Web Interface Port (HTTP)
+    Required: 'true'
+    Target: '7080'
+    Type: Port
+  value: '7080'
+- '@attributes':
+    Default: '2633'
+    Description: This is SourceGraph's Admin Console WebUI port you can access via
+      a web browser
+    Display: always-hide
+    Mask: '{8}'
+    Mode: tcp
+    Name: Admin Console Port
+    Required: 'true'
+    Target: '2633'
+    Type: Port
+  value: '2633'
+- '@attributes':
+    Default: '3370'
+    Description: This is SourceGraph's Grafana Port you can access via a web browser
+    Display: always-hide
+    Mask: '{8}'
+    Mode: tcp
+    Name: Grafana Port
+    Required: 'true'
+    Target: '3370'
+    Type: Port
+  value: '3370'
+- '@attributes':
+    Default: /mnt/cache/appdata/sourcegraph/config
+    Description: This is where Sourcegraph will store its configuration files (use
+      cache drive).
+    Display: advanced-hide
+    Mode: rw
+    Name: Config Storage Path
+    Required: 'true'
+    Target: /etc/sourcegraph
+    Type: Path
+  value: /mnt/cache/appdata/sourcegraph/config
+- '@attributes':
+    Default: /mnt/cache/appdata/sourcegraph/data
+    Description: This is where Sourcegraph will store its application data (use cache
+      drive).
+    Display: advanced-hide
+    Mode: rw
+    Name: Application Data Storage Path
+    Required: 'true'
+    Target: /var/opt/sourcegraph
+    Type: Path
+  value: /mnt/cache/appdata/sourcegraph/data
+ExtraParams: -d --rm
+FirstSeen: 1576347544
+GitHub: https://github.com/sourcegraph/sourcegraph
+Icon: https://github.com/sourcegraph/themes/raw/master/icon.png
+LastUpdate: 1646457806
+LastUpdateScan: 1646506994
+Name: Sourcegraph
+Network: bridge
+Networking:
+  Mode: bridge
+Official: true
+Overview: Sourcegraph docker image.
+Privileged: 'false'
+Registry: https://hub.docker.com/r/sourcegraph/server/
+Repo: frakman1's Repository
+Repository: sourcegraph/server:3.10.0
+Support: http://lime-technology.com/forum/index.php
+TemplateURL: https://raw.githubusercontent.com/frakman1/docker-templates/master/tynor88/sourcegraph.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:7080]
+topPerforming: 0.876
+topTrending: -2.1790000000000003

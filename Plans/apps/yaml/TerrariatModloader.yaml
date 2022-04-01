@@ -1,0 +1,113 @@
+CategoryList:
+- GameServers
+Config:
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /serverdata/serverfiles'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: ServerFiles
+    Required: 'true'
+    Target: /serverdata/serverfiles
+    Type: Path
+  value: /mnt/cache/appdata/terraria-tmodloader
+- '@attributes':
+    Default: ''
+    Description: 'Enter your prefered Terraria version (you can get the latest version
+      number for example here: https://terraria.fandom.com/wiki/Server#Downloads)'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Preferred Terraria version
+    Required: 'true'
+    Target: TERRARIA_SRV_V
+    Type: Variable
+  value: 1.4.3.6
+- '@attributes':
+    Default: ''
+    Description: Enter your start up commands for the server.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: GAME_PARAMS
+    Required: 'false'
+    Target: GAME_PARAMS
+    Type: Variable
+  value: -config serverconfig.txt
+- '@attributes':
+    Default: ''
+    Description: 'Container Port: 7777'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: TCP
+    Required: 'true'
+    Target: '7777'
+    Type: Port
+  value: '7777'
+- '@attributes':
+    Default: ''
+    Description: 'WebConsole (by default, you can connect to the Terraria console
+      by opening your browser and go to HOSTIP:9013 - eg: 192.168.1.1:9013 - or click
+      on WebUI on the Docker page within Unraid).'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: TCP - WebConsole
+    Required: 'false'
+    Target: '8080'
+    Type: Port
+  value: '9013'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: UID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: UID
+    Required: 'true'
+    Target: UID
+    Type: Variable
+  value: '99'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: GID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: GID
+    Required: 'true'
+    Target: GID
+    Type: Variable
+  value: '100'
+DonateLink: https://www.paypal.me/chips777
+DonateText: 'If you like my work please '
+ExtraParams: --restart=unless-stopped
+FirstSeen: 1577455427
+Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/terraria-tmodloader.png
+LastUpdate: 1643018984
+LastUpdateScan: 1647612211
+Name: Terraria-tModloader
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "This Docker will download and install Terraria and the tModloader and run\
+  \ it. SERVER PASSWORD: Docker\r\n\r\nATTENTION: The Container will check on every\
+  \ start/restart if there is a newer version of the game available and install it\
+  \ if so.\r\n\r\nUpdate Notice: Change the game version to whatever version do you\
+  \ want and restart the container.\r\n\r\nWEB CONSOLE: You can connect to the Terraria\
+  \ console by opening your browser and go to HOSTIP:9013 (eg: 192.168.1.1:9013) or\
+  \ click on WebUI on the Docker page within Unraid."
+PostArgs: ''
+Privileged: 'false'
+Project: https://tmodloader.net//
+Registry: https://hub.docker.com/r/ich777/terrariaserver
+Repo: ich777's Repository
+Repository: ich777/terrariaserver:tmodloader
+Support: https://forums.unraid.net/topic/79530-support-ich777-gameserver-dockers/
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8080]/
+caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/Terraria-tModloader.xml
+topPerforming: 1.873
+topTrending: -2.699

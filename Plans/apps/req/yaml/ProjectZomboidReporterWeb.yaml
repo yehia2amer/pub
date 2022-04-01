@@ -1,0 +1,51 @@
+CategoryList:
+- GameServers
+Config:
+- '@attributes':
+    Default: '3050'
+    Description: 'Container Port: 3050'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: webUI
+    Required: 'true'
+    Target: '80'
+    Type: Port
+  value: '3050'
+- '@attributes':
+    Default: /mnt/user/appdata/ProjectZomboidReporter-nginx
+    Description: 'Container Path: /etc/nginx/conf.d'
+    Display: always
+    Mask: 'false'
+    Mode: ro
+    Name: conf
+    Required: 'false'
+    Target: /etc/nginx/conf.d
+    Type: Path
+  value: /mnt/user/appdata/ProjectZomboidReporter-nginx
+ExtraParams: --restart=always
+FirstSeen: 1646377405
+Icon: https://github.com/natcoso9955/unRAID-docker/raw/master/icons/projectzomboid-web.png
+LastUpdate: 1643076441
+LastUpdateScan: 1646377405
+Name: ProjectZomboidReporter-Web
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "This is an nginx server with a custom conf applied. It will grab combined\
+  \ API calls to the api endpoint, and also components from the frontend template.\r\
+  \n\r\nYou will need to download the conf file from the below and modify the below\
+  \ lines to match your server ip, then place in the appdata folder.\r\n\r\nhttps://raw.githubusercontent.com/natcoso9955/Zomboid-Server-Stats-Reporter/main/nginx/default.conf\r\
+  \n\r\nupstream client {\r\n  server YOURSERVERIPHERE:3000;\r\n}\r\n\r\nupstream\
+  \ api {\r\n  server YOURSERVERIPHERE:3001;\r\n}"
+PostArgs: ''
+Privileged: 'true'
+Project: https://github.com/ChrisAshtear/Zomboid-Server-Stats-Reporter/
+Registry: https://hub.docker.com/r/chrisashtear/zomboid-reporter-nginx/
+Repo: Natcoso9955's Repository
+Repository: chrisashtear/zomboid-reporter-nginx
+Requires: ProjectZomboidReporter-API<br>  ProjectZomboidReporter-Frontend
+Support: https://github.com/ChrisAshtear/Zomboid-Server-Stats-Reporter/
+TemplateURL: https://raw.githubusercontent.com/natcoso9955/unRAID-docker/master/ProjectZomboidReporter-Web_unraid.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:80]/

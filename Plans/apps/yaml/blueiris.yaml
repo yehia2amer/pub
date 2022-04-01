@@ -1,0 +1,69 @@
+CategoryList:
+- Security
+Config:
+- '@attributes':
+    Default: '8080'
+    Description: VNC Web Server Port
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: VNC Web Server Port
+    Required: 'false'
+    Target: '8080'
+    Type: Port
+  value: '8080'
+- '@attributes':
+    Default: '5950'
+    Description: VNC Server Port
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: VNC Server Port
+    Required: 'false'
+    Target: '5900'
+    Type: Port
+  value: '5950'
+- '@attributes':
+    Default: '8181'
+    Description: Web Server Port
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Web Server Port
+    Required: 'false'
+    Target: '81'
+    Type: Port
+  value: '8181'
+- '@attributes':
+    Default: /mnt/user/appdata/blueiris
+    Description: Data Path
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Data Path
+    Required: 'false'
+    Target: /home/wineuser/prefix
+    Type: Path
+  value: /mnt/user/appdata/blueiris
+ExtraParams: --init --log-opt max-size=5m --log-opt max-file=2
+FirstSeen: 1610133117
+Icon: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/blueiris.png
+LastUpdate: 1613192794
+LastUpdateScan: 1646506995
+Name: blueiris
+Network: bridge
+Overview: Blue Iris video security software runs on a PC and can provide recording
+  and playback for up to 64 IP network cameras or webcams. Blue Iris is affordable
+  and powerful enough to safeguard your family, property and valuables at home or
+  work.
+Privileged: 'true'
+Project: https://hub.docker.com/r/jshridha/blueiris/
+Registry: https://hub.docker.com/r/jshridha/blueiris/
+Repo: A75G's Repository
+Repository: jshridha/blueiris:gpu
+Support: https://forums.unraid.net/topic/100915-support-a75g-blueiris/
+TemplateURL: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/blueiris.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8080]/
+topPerforming: 2.018
+topTrending: -1.443

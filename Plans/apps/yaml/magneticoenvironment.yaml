@@ -1,0 +1,176 @@
+CategoryList:
+- Downloaders
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: magnetico
+    Description: Username used to access the magneticow web interface
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: MAGNETICOW_USERNAME
+    Required: 'false'
+    Target: MAGNETICOW_USERNAME
+    Type: Variable
+  value: magnetico
+- '@attributes':
+    Default: magnetico
+    Description: Password used to access the magneticow web interface
+    Display: always
+    Mask: 'true'
+    Mode: ''
+    Name: MAGNETICOW_PASSWORD
+    Required: 'false'
+    Target: MAGNETICOW_PASSWORD
+    Type: Variable
+  value: magnetico
+- '@attributes':
+    Default: '8556'
+    Description: The port that you will access magneticow on
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: MAGNETICOW_PORT_MAPPING
+    Required: 'false'
+    Target: '8080'
+    Type: Port
+  value: '8556'
+- '@attributes':
+    Default: '1000'
+    Description: The maximum numbers of neighbors of an indexer
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: MAGNETICOD_NEIGHBORS
+    Required: 'false'
+    Target: MAGNETICOD_NEIGHBORS
+    Type: Variable
+  value: '1000'
+- '@attributes':
+    Default: '50'
+    Description: The maximum numbers of leeches
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: MAGNETICOD_LEECHES
+    Required: 'false'
+    Target: MAGNETICOD_LEECHES
+    Type: Variable
+  value: '50'
+- '@attributes':
+    Default: '99'
+    Description: PUID that will be set on the magneticod database folder
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: PUID
+    Required: 'true'
+    Target: PUID
+    Type: Variable
+  value: '99'
+- '@attributes':
+    Default: '100'
+    Description: PGID that will be set on the magneticod database folder
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: PGID
+    Required: 'true'
+    Target: PGID
+    Type: Variable
+  value: '100'
+- '@attributes':
+    Default: 0.0.0.0
+    Description: Host address of magneticow
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: MAGNETICOW_ADDRESS
+    Required: 'false'
+    Target: MAGNETICOW_ADDRESS
+    Type: Variable
+  value: 0.0.0.0
+- '@attributes':
+    Default: 0.0.0.0
+    Description: IP-address used by magneticod for indexing on the DHT network
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: MAGNETICOD_ADDRESS
+    Required: 'false'
+    Target: MAGNETICOD_ADDRESS
+    Type: Variable
+  value: 0.0.0.0
+- '@attributes':
+    Default: '`1'
+    Description: The indexing interval used by magneticod in seconds
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: MAGNETICOD_INTERVAL
+    Required: 'false'
+    Target: MAGNETICOD_INTERVAL
+    Type: Variable
+  value: '1'
+- '@attributes':
+    Default: '0'
+    Description: Port used by magneticod for indexing on the DHT network
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: MAGNETICOD_PORT
+    Required: 'false'
+    Target: MAGNETICOD_PORT
+    Type: Variable
+  value: '0'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: MAGNETICOW_VERBOSE'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: MAGNETICOW_VERBOSE
+    Required: 'false'
+    Target: MAGNETICOW_VERBOSE
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: MAGNETICOD_VERBOSE'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: MAGNETICOD_VERBOSE
+    Required: 'false'
+    Target: MAGNETICOD_VERBOSE
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: /mnt/user/appdata/magnetico
+    Description: The path where magneticod will store its database
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Database Location
+    Required: 'true'
+    Target: /root/.local/share/magneticod
+    Type: Path
+  value: /mnt/user/appdata/magnetico
+FirstSeen: 1595211335
+Icon: https://raw.githubusercontent.com/DyonR/docker-templates/master/Icons/magnetico-environment/magnetico-environment-icon.png
+LastUpdate: 1613167508
+LastUpdateScan: 1647214613
+Name: magnetico-environment
+Network: bridge
+Overview: magnetico is an autonomous (self-hosted) BitTorrent DHT indexer / crawler
+  / search engine suite.
+Privileged: 'false'
+Project: https://github.com/boramalper/magnetico
+Registry: https://hub.docker.com/r/dyonr/magnetico-environment
+Repo: Dyon's Repository
+Repository: dyonr/magnetico-environment
+Support: https://forums.unraid.net/topic/94901-support-dyonr-magnetico-environment/
+TemplateURL: https://raw.githubusercontent.com/DyonR/docker-templates/master/Templates/magnetico-environment/magnetico-environment-template.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8080]/
+topTrending: -4.305

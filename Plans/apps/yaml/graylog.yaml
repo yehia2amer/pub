@@ -1,0 +1,149 @@
+CategoryList:
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: ''
+    Description: CHANGE ME (must be at least 16 characters)!
+    Display: always
+    Mask: 'true'
+    Mode: ''
+    Name: GRAYLOG_PASSWORD_SECRET
+    Required: 'true'
+    Target: GRAYLOG_PASSWORD_SECRET
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: GRAYLOG_ROOT_PASSWORD_SHA2'
+    Display: always
+    Mask: 'true'
+    Mode: ''
+    Name: GRAYLOG_ROOT_PASSWORD_SHA2
+    Required: 'true'
+    Target: GRAYLOG_ROOT_PASSWORD_SHA2
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: http://unraidIP:9000/
+    Description: 'Container Variable: GRAYLOG_HTTP_EXTERNAL_URI'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: GRAYLOG_HTTP_EXTERNAL_URI
+    Required: 'true'
+    Target: GRAYLOG_HTTP_EXTERNAL_URI
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '9000'
+    Description: 'Container Port: 9000'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Graylog web interface and REST API
+    Required: 'false'
+    Target: '9000'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: '1514'
+    Description: 'Container Port: 1514'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Syslog TCP
+    Required: 'false'
+    Target: '1514'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: '1514'
+    Description: 'Container Port: 1514'
+    Display: always
+    Mask: 'false'
+    Mode: udp
+    Name: Syslog UDP
+    Required: 'false'
+    Target: '1514'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: '12201'
+    Description: 'Container Port: 12201'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: GELF TCP
+    Required: 'false'
+    Target: '12201'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: '12201'
+    Description: 'Container Port: 12201'
+    Display: always
+    Mask: 'false'
+    Mode: udp
+    Name: GELF UDP
+    Required: 'false'
+    Target: '12201'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: mongodb://unraidIP:27017/graylog
+    Description: 'Container Variable: GRAYLOG_MONGODB_URI'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: MongoDB connection string
+    Required: 'true'
+    Target: GRAYLOG_MONGODB_URI
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: http://unraidIP:9200
+    Description: Need to be specified as a comma-separated list of valid URIs for
+      the http ports of your elasticsearch nodes
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: List of Elasticsearch hosts Graylog should connect to
+    Required: 'true'
+    Target: GRAYLOG_ELASTICSEARCH_HOSTS
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: /mnt/user/appdata/greylog
+    Description: 'Container Path: /usr/share/graylog/data/journal'
+    Display: advanced
+    Mask: 'false'
+    Mode: rw
+    Name: Appdata
+    Required: 'false'
+    Target: /usr/share/graylog/data/journal
+    Type: Path
+  value: ''
+FirstSeen: 1575119227
+Icon: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/graylog.png
+LastUpdate: 1647454705
+LastUpdateScan: 1647864216
+Name: graylog
+Network: bridge
+Official: true
+Overview: "Official Graylog Docker image.\r\n[br][br]\r\nFor more variables see the\
+  \ Graylog configuration file: https://github.com/Graylog2/graylog2-server/blob/3.1/misc/graylog.conf\
+  \ and http://docs.graylog.org/en/stable/pages/configuration/server.conf.html\r\n\
+  [br][br]\r\nThe default root user is named 'admin'\r\n[br][br]\r\n[b]To create the\
+  \ SHA256 string run 'echo -n YOUR16CHARACTERPASSWORD | sha256sum'"
+Privileged: 'false'
+Project: https://www.graylog.org/
+Registry: https://hub.docker.com/r/graylog/graylog/
+Repo: Selfhosters Unraid Discord Repository
+RepoShort: Selfhosters
+Repository: graylog/graylog:3.1
+Support: https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/
+TemplateURL: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/graylog.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:9000]
+topPerforming: 1.155
+topTrending: -2.8280000000000003

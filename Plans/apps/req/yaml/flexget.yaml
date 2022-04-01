@@ -1,0 +1,95 @@
+CAComment: This template is set up to use a custom network. You may have to adjust
+  the network or IP address etc to match your system
+CategoryList:
+- Downloaders
+Config:
+- '@attributes':
+    Default: /mnt/user/Media
+    Description: 'Container Path: /data'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Host Path 2
+    Required: 'true'
+    Target: /data
+    Type: Path
+  value: /mnt/user/Media
+- '@attributes':
+    Default: 16 charactor password
+    Description: 'Container Variable: FG_WEBUI_PASSWD'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Key 1
+    Required: 'false'
+    Target: FG_WEBUI_PASSWD
+    Type: Variable
+  value: 16 charactor password
+- '@attributes':
+    Default: '000'
+    Description: 'Container Variable: UMASK'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Key 2
+    Required: 'false'
+    Target: UMASK
+    Type: Variable
+  value: '000'
+- '@attributes':
+    Default: '99'
+    Description: 'Container Variable: PUID'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Key 3
+    Required: 'false'
+    Target: PUID
+    Type: Variable
+  value: '99'
+- '@attributes':
+    Default: '100'
+    Description: 'Container Variable: PGID'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Key 4
+    Required: 'false'
+    Target: PGID
+    Type: Variable
+  value: '100'
+- '@attributes':
+    Default: /mnt/user/appdata/flexget
+    Description: 'Container Path: /config'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: rw
+    Name: AppData Config Path
+    Required: 'true'
+    Target: /config
+    Type: Path
+  value: /mnt/user/appdata/flexget
+ExtraParams: --net=container:binhex-delugevpn
+FirstSeen: 1633831416
+Icon: https://github.com/paulpoco/docker-templates/raw/master/paulpoco/images/Deluge-Flexget-icon-small.png
+LastUpdate: 1646749388
+LastUpdateScan: 1646823802
+Name: flexget
+Network: none
+Networking:
+  Mode: none
+Overview: FlexGet is a multipurpose automation tool for all of your media.  REQUIRES
+  binhex-delugevpn to be installed 1st.  Then follow instructions at Binhex's VPN
+  FAQ Q24.
+PostArgs: ''
+Privileged: 'true'
+Project: http://flexget.com/
+Registry: https://hub.docker.com/r/wiserain/flexget:latest
+Repo: Paul_Ber's Repository
+Repository: wiserain/flexget:latest
+Requires: binhex-delugevpn
+Support: https://forums.unraid.net/topic/114713-support-paulpoco-flexget-template/
+TemplateURL: https://raw.githubusercontent.com/paulpoco/docker-templates/master/paulpoco/flexget.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''
+topTrending: 0.133

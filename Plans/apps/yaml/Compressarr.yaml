@@ -1,0 +1,125 @@
+Branch:
+- TagDescription: This is the Standard build, limited QSV hardware support, built
+    to be small and light
+- Config:
+  - '@attributes':
+      Default: '8800'
+      Description: 'Container Port: 80'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Host Port 1
+      Required: 'true'
+      Target: '80'
+      Type: Port
+    value: '8800'
+  - '@attributes':
+      Default: ''
+      Description: Nvidia Visible Devices (Optional - Requires Nvidia GPU and Unraid
+        Nvidia build)
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Nvidia Visible Devices
+      Required: 'false'
+      Target: NVIDIA_VISIBLE_DEVICES
+      Type: Variable
+    value: ''
+  - '@attributes':
+      Default: ''
+      Description: This is where Compressarr will store it's configuration.
+      Mode: rw
+      Name: Config directory
+      Required: 'true'
+      Target: /config
+      Type: Path
+    value: ''
+  - '@attributes':
+      Default: /mnt/user/Media
+      Description: This needs to be the same as the root for Radarr/Sonarr. Create
+        more as required
+      Mode: rw
+      Name: Media directory
+      Required: 'false'
+      Target: /media
+      Type: Path
+    value: /mnt/user/Media
+  - '@attributes':
+      Default: /mnt/user/Media/Compressarr
+      Description: This is an output directory, Radarr/Sonarr needs to see this for
+        importing to work
+      Mode: rw
+      Name: Output directory
+      Required: 'false'
+      Target: /output
+      Type: Path
+    value: /mnt/user/Media/Compressarr
+  ExtraParams: --runtime=nvidia
+  Tag: nvidia
+  TagDescription: This is the NVidia Ubuntu build, full Cuda support, built with the
+    nightly FFmpeg and weighs in at 1.4GB
+CategoryList:
+- MediaApp-Other
+Config:
+- '@attributes':
+    Default: '8800'
+    Description: 'Container Port: 80'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Host Port 1
+    Required: 'true'
+    Target: '80'
+    Type: Port
+  value: '8800'
+- '@attributes':
+    Default: ''
+    Description: This is where Compressarr will store it's configuration.
+    Mode: rw
+    Name: Config directory
+    Required: 'true'
+    Target: /config
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: /mnt/user/Media
+    Description: This needs to be the same as the root for Radarr/Sonarr. Create more
+      as required
+    Mode: rw
+    Name: Media directory
+    Required: 'false'
+    Target: /media
+    Type: Path
+  value: /mnt/user/Media
+- '@attributes':
+    Default: /mnt/user/Media/Compressarr
+    Description: This is an output directory, Radarr/Sonarr needs to see this for
+      importing to work
+    Mode: rw
+    Name: Output directory
+    Required: 'false'
+    Target: /output
+    Type: Path
+  value: /mnt/user/Media/Compressarr
+FirstSeen: 1622217151
+Icon: https://github.com/OFark/Compressarr/raw/master/Compressarr/wwwroot/android-chrome-192x192.png
+LastUpdate: 1648036768
+LastUpdateScan: 1648195444
+Name: Compressarr
+Networking:
+  Mode: bridge
+Overview: "Compressarr is an application to take a filtered set of media from Radarr\
+  \ or (eventually) Sonarr and process it with customisable FFmpeg presets. It will\
+  \ even attempt to find the best settings for each video.\n\tThe default version\
+  \ is the Alpine version supporting limited Intel hardware support. For Nvidia Cuda\
+  \ encoding use the Nvidia (tag) version which is 1.4GB using the Ubuntu Core."
+Privileged: 'false'
+Project: https://github.com/OFark/Compressarr
+Registry: https://registry.hub.docker.com/r/ofark/compressarr/
+Repo: OFark's Repository
+Repository: ofark/compressarr
+Support: https://forums.unraid.net/topic/109411-support-compressarr/
+TemplateURL: https://raw.githubusercontent.com/OFark/docker-templates/master/OFark/Compressarr.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:80]/
+topTrending: -21.240000000000002

@@ -1,0 +1,110 @@
+CategoryList:
+- Backup
+- Cloud
+- Network-Other
+- Productivity
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: ''
+    Description: Path to the unraid folder in which to sync the files, it also will
+      contain .grive config file
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: UNRAID_FOLDER
+    Required: 'true'
+    Target: /drive
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Your Client ID obtained by doing the procedure in the description
+    Display: always
+    Mask: 'true'
+    Mode: ''
+    Name: CLIENT_ID
+    Required: 'false'
+    Target: ID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Your Client Secret obtained by doing the procedure in the description
+    Display: always
+    Mask: 'true'
+    Mode: ''
+    Name: SECRET
+    Required: 'false'
+    Target: SECRET
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: "Your client secret obtained from the URL in the description\r\n\
+      Delete me after the setup is complete"
+    Display: always
+    Mask: 'true'
+    Mode: ''
+    Name: CODE
+    Required: 'false'
+    Target: CODE
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Passes parameters to grive2. For example -s my_drive_folder. See
+      https://github.com/agusalex/grive2docker#grive-settings '
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: GRIVE_PARAMS
+    Required: 'false'
+    Target: PARAMS
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Crontab schedule to run this container, use this to generate it:
+      https://crontab.guru/'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: CRON
+    Required: 'false'
+    Target: CRON
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: The UNIX permissions to apply to all files in the folder after sync.
+      This will override any permissions you already have.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: PERMISSIONS
+    Required: 'false'
+    Target: PERM
+    Type: Variable
+  value: ''
+FirstSeen: 1601034298
+Icon: https://github.com/agusalex/docker-templates/raw/master/agusalex/images/Grive2.png
+LastUpdate: 1646098582
+LastUpdateScan: 1647792190
+Name: Grive2
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "Backup your files to Google Drive using Grive2 client in a docker container\r\
+  \n-\r\n-\r\nBefore you Start this Container:\r\nGo to https://github.com/agusalex/grive2Docker/wiki/Setup\
+  \ and follow the setup guide"
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/agusalex/grive2docker
+Registry: https://hub.docker.com/r/agusalex/grive2
+Repo: agusalex' Repository
+Repository: agusalex/grive2
+Support: https://forums.unraid.net/topic/97185-support-agusalex-grive2/
+TemplateURL: https://raw.githubusercontent.com/agusalex/docker-templates/master/agusalex/Grive2.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+topTrending: -7.478999999999999

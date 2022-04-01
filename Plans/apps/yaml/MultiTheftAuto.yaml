@@ -1,0 +1,155 @@
+CategoryList:
+- GameServers
+Config:
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /serverdata/serverfiles'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: ServerFiles
+    Required: 'true'
+    Target: /serverdata/serverfiles
+    Type: Path
+  value: /mnt/cache/appdata/multitheftauto
+- '@attributes':
+    Default: ''
+    Description: Enter your extra startup parameters otherwise leave blank!
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Extra Game Parameters
+    Required: 'false'
+    Target: GAME_PARAMS
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Container Port: 22003'
+    Display: always
+    Mask: 'false'
+    Mode: udp
+    Name: UDP1 - Game Port
+    Required: 'true'
+    Target: '22003'
+    Type: Port
+  value: '22003'
+- '@attributes':
+    Default: ''
+    Description: Game Port +123
+    Display: always
+    Mask: 'false'
+    Mode: udp
+    Name: UDP2 - ASE Port
+    Required: 'false'
+    Target: '22126'
+    Type: Port
+  value: '22126'
+- '@attributes':
+    Default: ''
+    Description: 'Container Port: 22005'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: TCP - http Port
+    Required: 'true'
+    Target: '22005'
+    Type: Port
+  value: '22005'
+- '@attributes':
+    Default: ''
+    Description: Set to 'true' (without quotes) to skip the download of the Basic
+      Configuration files.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Skip Baseconfig
+    Required: 'false'
+    Target: SKIP_BASECONFIG_CHK
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Set to 'true' (without quotes) to download the resources, otherwise
+      leave blank.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Download Resources
+    Required: 'false'
+    Target: DOWNLOAD_RESOURCES
+    Type: Variable
+  value: 'true'
+- '@attributes':
+    Default: ''
+    Description: 'Set to ''true'' (without quotes) to redownload the whole server
+      (please note that you have to set Download Resources to ''true'' and leave Skip
+      Basicconfiguration blank to download everything new). '
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Force Update
+    Required: 'false'
+    Target: FORCE_UPDATE
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Change only if you know what you are doing.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Logfile
+    Required: 'false'
+    Target: LOGFILE_DIR
+    Type: Variable
+  value: multitheftauto_linux_x64/mods/deathmatch/logs/server.log
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: UID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: UID
+    Required: 'true'
+    Target: UID
+    Type: Variable
+  value: '99'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: GID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: GID
+    Required: 'true'
+    Target: GID
+    Type: Variable
+  value: '100'
+DonateLink: https://www.paypal.me/chips777
+DonateText: 'If you like my work please '
+ExtraParams: --restart=unless-stopped
+FirstSeen: 1559513226
+Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/mta.png
+LastUpdate: 1643889323
+LastUpdateScan: 1647849795
+Name: MultiTheftAuto
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "This Docker will download and install Multi Theft Auto SERVERNAME: Docker\
+  \ MTA Server SERVERPASSWORD: Docker.\r\n\r\nIf you want to connect to the console\
+  \ open a terminal and enter 'docker exec -u mta -ti NAMEOFYOURCONTAINER screen -xS\
+  \ MTA' (without quotes), to disconnect close the window.\r\n\r\nUPDATE NOTICE: You\
+  \ can Force Update this Container (please note that you have to set Download Resources\
+  \ to 'true' and leave Skip Basicconfiguration blank to download everything new)."
+PostArgs: ''
+Privileged: 'false'
+Project: https://www.minecraft.net/
+Registry: https://hub.docker.com/r/ich777/mtaserver/
+Repo: ich777's Repository
+Repository: ich777/mtaserver
+Support: https://forums.unraid.net/topic/79530-support-ich777-gameserver-dockers/
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:22005]/
+caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/MultiTheftAuto.xml

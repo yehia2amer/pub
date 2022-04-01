@@ -1,0 +1,79 @@
+CategoryList:
+- Downloaders
+- MediaApp-Other
+- MediaServer-Other
+- Productivity
+Config:
+- '@attributes':
+    Default: '8080'
+    Description: 'Container Port: 8080'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI Port
+    Required: 'true'
+    Target: '8080'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: '240'
+    Description: 'Container Variable: CHECK_FREQUENCY'
+    Display: always
+    Mask: 'false'
+    Name: Check Frequency
+    Required: 'true'
+    Target: CHECK_FREQUENCY
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: When set, the default password is `podgrab`
+    Display: always
+    Mask: 'true'
+    Name: Password
+    Required: 'false'
+    Target: PASSWORD
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /config'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Appdata
+    Required: 'false'
+    Target: /config
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Location for the podcasts
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Assets
+    Required: 'false'
+    Target: /assets
+    Type: Path
+  value: ''
+ExtraParams: --user 99:100
+FirstSeen: 1618012970
+LastUpdate: 1638522135
+LastUpdateScan: 1646600940
+Name: podgrab
+Network: bridge
+Overview: A self-hosted podcast manager to download episodes as soon as they become
+  live
+Privileged: 'false'
+Project: https://github.com/akhilrex/podgrab
+Registry: http://hub.docker.com/akhilrex/podgrab/
+Repo: Selfhosters Unraid Discord Repository
+RepoShort: Selfhosters
+Repository: akhilrex/podgrab
+Support: https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/
+TemplateURL: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/podgrab.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8080]
+topPerforming: 9.028
+topTrending: -14.559

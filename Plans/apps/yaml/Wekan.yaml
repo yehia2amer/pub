@@ -1,0 +1,94 @@
+CategoryList:
+- Productivity
+Config:
+- '@attributes':
+    Default: ''
+    Description: "Ipadress and port chosen for the Wekan site/server, change to your\
+      \ setup. It is for the internal working of the board. \r\nex. http://192.168.1.100:5555"
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Varible ROOT_URL
+    Required: 'false'
+    Target: ROOT_URL
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: "Set your smtp server ex. (If using Gmail)\r\nsmtp://address@gmail.com:pwd@smtp.gmail.com:465/"
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Variable MAIL_URL
+    Required: 'false'
+    Target: MAIL_URL
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Who to send the mail from ex. wekan address@gmail.com
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Variable MAIL_FROM
+    Required: 'false'
+    Target: MAIL_FROM
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: /mnt/user
+    Description: ''
+    Display: hidden
+    Mask: 'false'
+    Mode: rw
+    Name: unRAID Share Path
+    Required: 'false'
+    Target: /unraid
+    Type: Path
+  value: /mnt/user
+- '@attributes':
+    Default: '5555'
+    Description: 'Container Port: 8080'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Container port
+    Required: 'true'
+    Target: '8080'
+    Type: Port
+  value: '5555'
+- '@attributes':
+    Default: mongodb://db
+    Description: 'Container Variable: MONGO_URL'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: Varible MONGO_URL
+    Required: 'false'
+    Target: MONGO_URL
+    Type: Variable
+  value: mongodb://db
+ExtraParams: --link "MongoDB:db"
+FirstSeen: 1554796899
+Icon: https://rawgit.com/Kru-x/unraid-docker-templates/master/Kru-x/img/wekan.png
+LastUpdate: 1646260708
+LastUpdateScan: 1646578444
+Name: Wekan
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: Wekan is an open-source and collaborative kanban board application https://wekan.io/
+  . This template has to be used with a MongoDB container one is in Taddeusz' Repository
+  and can be found in Community Applications, if renaming the database change the
+  --link "MongoDB:db" in Extra Parameters in Advanced View
+PostArgs: ''
+Privileged: 'false'
+Registry: https://hub.docker.com/r/wekanteam/wekan/
+Repo: Kru-X's Repository
+Repository: wekanteam/wekan
+Support: http://lime-technology.com/forum/index.php?topic=52687.0
+TemplateURL: https://raw.githubusercontent.com/Kru-x/unraid-docker-templates/master/Kru-x/wekan.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8080]/
+topPerforming: 0.776
+topTrending: 0.038000000000000034

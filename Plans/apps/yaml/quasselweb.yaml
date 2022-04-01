@@ -1,0 +1,110 @@
+CategoryList:
+- Network-Messenger
+ChangeLogPresent: true
+Config:
+- '@attributes':
+    Default: '64443'
+    Description: Quassel-web https webui
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI
+    Required: 'true'
+    Target: '64443'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: this will store config on the docker host
+    Display: advanced
+    Mask: 'false'
+    Mode: rw
+    Name: Appdata
+    Required: 'true'
+    Target: /config
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: 192.168.1.10
+    Description: specify the URL or IP address of your Quassel Core instance
+    Display: always
+    Mask: 'false'
+    Name: QUASSEL_CORE
+    Required: 'true'
+    Target: QUASSEL_CORE
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '4242'
+    Description: specify the port of your Quassel Core instance
+    Display: always
+    Mask: 'false'
+    Name: QUASSEL_PORT
+    Required: 'true'
+    Target: QUASSEL_PORT
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: /quassel
+    Description: Specify a url-base in reverse proxy setups ie. `/quassel`
+    Display: always
+    Mask: 'false'
+    Name: URL_BASE
+    Required: 'false'
+    Target: URL_BASE
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '99'
+    Description: 'Container Variable: PUID'
+    Display: advanced
+    Mask: 'false'
+    Name: PUID
+    Required: 'true'
+    Target: PUID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '100'
+    Description: 'Container Variable: PGID'
+    Display: advanced
+    Mask: 'false'
+    Name: PGID
+    Required: 'true'
+    Target: PGID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '022'
+    Description: 'Container Variable: UMASK'
+    Display: advanced
+    Mask: 'false'
+    Name: UMASK
+    Required: 'false'
+    Target: UMASK
+    Type: Variable
+  value: ''
+DonateImg: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/donate.png
+DonateLink: https://www.linuxserver.io/donate
+DonateText: Donations
+FirstSeen: 1558476425
+GitHub: https://github.com/linuxserver/docker-quassel-web#application-setup
+Icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/quassel-web-logo.png
+LastUpdate: 1647518911
+LastUpdateScan: 1647914850
+Name: quassel-web
+Network: bridge
+Overview: Quassel-web(https://github.com/magne4000/quassel-webserver) is a web client
+  for Quassel.  Note that a Quassel-Core instance is required, we have a container
+  available here.(https://hub.docker.com/r/linuxserver/quassel-core/)
+Privileged: 'false'
+Project: https://github.com/magne4000/quassel-webserver
+ReadMe: https://github.com/linuxserver/docker-quassel-web#readme
+Registry: https://github.com/orgs/linuxserver/packages/container/package/quassel-web
+Repo: linuxserver's Repository
+Repository: lscr.io/linuxserver/quassel-web
+Support: https://github.com/linuxserver/docker-quassel-web/issues/new/choose
+TemplateURL: https://raw.githubusercontent.com/linuxserver/templates/master/unraid/quassel-web.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: https://[IP]:[PORT:64443]
+topTrending: 2.77

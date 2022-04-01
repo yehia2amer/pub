@@ -1,0 +1,76 @@
+CategoryList:
+- Productivity
+- Network-Proxy
+Config:
+- '@attributes':
+    Default: /mnt/user/appdata/ContainerNursery/config
+    Description: Where the config.yml file should be stored.
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Config directory
+    Required: 'false'
+    Target: /usr/src/app/config
+    Type: Path
+  value: /mnt/user/appdata/ContainerNursery/config
+- '@attributes':
+    Default: /var/run/docker.sock
+    Description: Should point to /var/run/docker.sock to be able to control the docker
+      instance.
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Docker Socket
+    Required: 'false'
+    Target: /var/run/docker.sock
+    Type: Path
+  value: /var/run/docker.sock
+- '@attributes':
+    Default: info
+    Description: "Sets the minimum log level. Log entries below this importance level\
+      \ won't be printed to the console. Defaults to info.\r\nAvailable values: debug\
+      \ / info / warn / error"
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: CN_LOG_LEVEL
+    Required: 'false'
+    Target: CN_LOG_LEVEL
+    Type: Variable
+  value: info
+- '@attributes':
+    Default: 'false'
+    Description: "If set to true all logging is done in a machine readable format\
+      \ (JSON). Defaults to false.\r\nAvailable values: true / false"
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: CN_LOG_JSON
+    Required: 'false'
+    Target: CN_LOG_JSON
+    Type: Variable
+  value: 'false'
+FirstSeen: 1631135564
+Icon: https://raw.githubusercontent.com/ItsEcholot/ContainerNursery/main/logo512.png
+LastUpdateScan: 1646739561
+Name: ContainerNursery
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "Puts Docker Containers to sleep and wakes them back up when they're needed.\r\
+  \n\r\nWritten in Node.js, this application acts as a HTTP reverse proxy and stops\
+  \ Docker containers which haven't been accessed recently and starts them again when\
+  \ a new request comes in. ContainerNursery also makes sure there are no more active\
+  \ WebSocket connections before stopping the container.\r\n\r\nTo improve the user\
+  \ experience a loading page is presented, which automatically reloads when the containers\
+  \ webserver is ready."
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/ItsEcholot/ContainerNursery
+Registry: https://github.com/ItsEcholot/ContainerNursery/pkgs/container/containernursery
+Repo: Echolot's Repository
+Repository: ghcr.io/itsecholot/containernursery:latest
+Support: https://forums.unraid.net/topic/113506-support-alpha-containernursery/
+TemplateURL: https://raw.githubusercontent.com/ItsEcholot/unraid-templates/master/ContainerNursery.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''

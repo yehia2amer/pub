@@ -1,0 +1,49 @@
+CategoryList:
+- Network-Other
+Config:
+- '@attributes':
+    Default: /mnt/user/appdata/unifiprotect/data
+    Description: 'Container Path: /srv/unifi-protect'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: AppData
+    Required: 'false'
+    Target: /srv/unifi-protect
+    Type: Path
+  value: /mnt/user/appdata/unifiprotect/data
+- '@attributes':
+    Default: /mnt/user/appdata/unifiprotect/database
+    Description: 'Container Path: /var/lib/postgresql/10/main'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Database
+    Required: 'false'
+    Target: /var/lib/postgresql/10/main
+    Type: Path
+  value: /mnt/user/appdata/unifiprotect/database
+ExtraParams: --tmpfs /srv/unifi-protect/temp -m 2048m
+FirstSeen: 1641611113
+Icon: https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/icons/unifiprotect.png
+LastUpdate: 1628106005
+LastUpdateScan: 1646809393
+Name: UniFiProtect
+Network: host
+Networking:
+  Mode: host
+Overview: "Run UniFi Protect in Docker on x86 hardware. \r\nUniFi stopped supporting\
+  \ x86 at 1.13.3, so there will be no more updates. \r\nMust use Protect mobile app\
+  \ 1.3.8 to connect to this via UniFi Cloud on your phone. \r\nRun either as host\
+  \ networking mode, or custom br0 if you have other conflicting ports in use already\
+  \ via host mode - bridge mode does not work."
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/markdegrootnl/unifi-protect-x86
+Registry: https://hub.docker.com/r/markdegroot/unifi-protect-x86/
+Repo: CorneliousJD's Repository
+Repository: markdegroot/unifi-protect-x86
+Support: https://github.com/markdegrootnl/unifi-protect-x86/issues
+TemplateURL: https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/unifiprotect.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:7080]

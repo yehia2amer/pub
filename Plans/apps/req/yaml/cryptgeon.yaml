@@ -1,0 +1,67 @@
+CategoryList:
+- Cloud
+- Productivity
+- Security
+- Tools-Utilities
+- Network-Web
+- Network-Messenger
+Config:
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI
+    Required: 'false'
+    Target: '5000'
+    Type: Port
+  value: '5000'
+- '@attributes':
+    Default: ''
+    Description: Memcached connection (ip_server:port)
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: MEMCACHE
+    Required: 'true'
+    Target: MEMCACHE
+    Type: Variable
+  value: ip_server:11211
+- '@attributes':
+    Default: ''
+    Description: 'Max size body (default: 1kiB)'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: SIZE_LIMIT
+    Required: 'false'
+    Target: SIZE_LIMIT
+    Type: Variable
+  value: 1KiB
+FirstSeen: 1640351013
+Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/cryptgeon.png
+LastUpdate: 1646484346
+LastUpdateScan: 1648145004
+Name: cryptgeon
+Network: bridge
+Overview: "DESCRIPTION\r\ncryptgeon is a secure, open source sharing note or file\
+  \ service inspired by PrivNote.\r\n\r\nFeatures:\r\n\u2022 Server cannot decrypt\
+  \ contents due to client side encryption\r\n\u2022 View or time constraints\r\n\u2022\
+  \ In memory, no persistence\r\n\u2022 Obligatory dark mode support\r\n\r\nLive demo:\r\
+  \nhttps://cryptgeon.nicco.io/\r\n\r\nNOTES\r\n\u2022 HTTPS certificate (NPM/Nginx)\
+  \ is required to use this service, otherwise browsers will not support the cryptographic\
+  \ functions.\r\n\u2022 Memcached is required to be already running as a separate\
+  \ container, as it is used for caching the information in memory (nothing is saved\
+  \ locally).\r\n\r\nVERSION\r\n1.0 (2021-12-24)"
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/cupcakearmy/cryptgeon
+Registry: https://hub.docker.com/r/cupcakearmy/cryptgeon
+Repo: SmartPhoneLover's Repository
+Repository: cupcakearmy/cryptgeon
+Requires: "\u2022 Memcached \r<br>\u2022 HTTPS certificate (NPM/Nginx)"
+Support: https://forums.unraid.net/topic/117634-support-smartphonelover-cryptgeon/
+TemplateURL: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/master/templates/cryptgeon.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:5000]

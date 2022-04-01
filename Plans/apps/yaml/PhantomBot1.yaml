@@ -1,0 +1,129 @@
+CAComment: This template is set up to use a custom network. You may have to adjust
+  the network or IP address etc to match your system
+CategoryList:
+- GameServers
+Config:
+- '@attributes':
+    Default: '2500'
+    Description: Basique Port for PhantomBot
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: ports
+    Required: 'true'
+    Target: '25000'
+    Type: Port
+  value: '25000'
+- '@attributes':
+    Default: ''
+    Description: Configuration path of phantombot
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Host Path 1
+    Required: 'true'
+    Target: /opt/PhantomBot/config
+    Type: Path
+  value: /mnt/user/appdata/phantomboto/
+- '@attributes':
+    Default: Admin
+    Description: The user for the webpanel
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: UserPanel
+    Required: 'true'
+    Target: PHANTOMBOT_PANELUSER
+    Type: Variable
+  value: Admin
+- '@attributes':
+    Default: changeme
+    Description: password for the User in the Panel
+    Display: always
+    Mask: 'true'
+    Mode: ''
+    Name: UserPassword
+    Required: 'true'
+    Target: PHANTOMBOT_PANELPASSWORD
+    Type: Variable
+  value: changeme
+- '@attributes':
+    Default: true|false
+    Description: Did you use HTTPS for connect in the panel ?
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: HTTPS
+    Required: 'true'
+    Target: PHANTOMBOT_USEHTTPS
+    Type: Variable
+  value: 'false'
+- '@attributes':
+    Default: ''
+    Description: The name of your bot on twitch
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: BotName
+    Required: 'true'
+    Target: PHANTOMBOT_USER
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: The keyAPI of the bot grab it here https://phantombot.github.io/PhantomBot/oauth/
+    Display: always
+    Mask: 'true'
+    Mode: ''
+    Name: BotKey
+    Required: 'true'
+    Target: PHANTOMBOT_OAUTH
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: ChannelName
+    Required: 'true'
+    Target: PHANTOMBOT_CHANNEL
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Take your aouth key at https://twitchapps.com/tmi/ and past only
+      the part after the :'
+    Display: always
+    Mask: 'true'
+    Mode: ''
+    Name: ChannelAPI
+    Required: 'true'
+    Target: PHANTOMBOT_APIOAUTH
+    Type: Variable
+  value: ''
+FirstSeen: 1646075005
+Icon: https://phantombot.github.io/PhantomBot/common/images/logo.png
+LastUpdateScan: 1648670618
+Name: PhantomBot-1
+Network: br0
+Overview: "PhantomBot is a Twitch chat bot powered by Java. PhantomBot has many modern\
+  \ features out of the box such as a built-in webpanel, enhanced moderation, games,\
+  \ a point system, raffles, custom commands, a music player, and more. PhantomBot\
+  \ can also be integrated with many services such as Discord, Twitter, TipeeeStream,\
+  \ StreamLabs and StreamElements!\r\n\r\nAdditional functionality is enabled through\
+  \ the use of third-party modules.\r\n\r\nAFTER First launch go to your /mnt/user/appdata/phantomboto/\
+  \ create a files named botlogin.txt relaunch the docker and after that remove everything\
+  \ under HTTPS"
+PostArgs: ''
+Privileged: 'true'
+Project: https://github.com/phantombot/PhantomBot
+Registry: https://hub.docker.com/r/gmt2001/phantombot-stable
+Repo: Fantucie's Repository
+Repository: ghcr.io/phantombot/phantombot:latest
+Requires: ''
+Support: https://forums.unraid.net/topic/120473-support-fantucie-apps/
+TemplateURL: https://raw.githubusercontent.com/ItJustFox/unraidtemplate/master/PhantomBot/phantombot.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:25000]/

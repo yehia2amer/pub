@@ -1,0 +1,70 @@
+CategoryList:
+- Downloaders
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: /mnt/user/appdata/alpaca-to-influxdb
+    Description: 'Container Path: /config'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Config
+    Required: 'false'
+    Target: /config
+    Type: Path
+  value: /mnt/user/appdata/alpaca-to-influxdb
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: ALPACA_ID'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Alpaca API Key ID
+    Required: 'true'
+    Target: ALPACA_ID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: ALPACA_KEY'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Alpaca API Key Secret
+    Required: 'true'
+    Target: ALPACA_KEY
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: INFLUX_TOKEN'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: InfluxDB Token
+    Required: 'true'
+    Target: INFLUX_TOKEN
+    Type: Variable
+  value: ''
+FirstSeen: 1617799653
+Icon: ''
+LastUpdate: 1617753797
+LastUpdateScan: 1646391799
+Name: alpaca-to-influxdb
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "Alpaca to Influx is a container designed to be run on an [Unraid](https://www.unraid.net/)\
+  \ server via Docker. The purpose of the container is to simplify the ingestion of\
+  \ stock market data, provided by the [Alpaca API](https://alpaca.markets/), into\
+  \ your own [Influx database](https://www.influxdata.com/).  \r\nThe container collects\
+  \ the 1m candles (klines) for each of the configured market tickers."
+PostArgs: ''
+Privileged: 'false'
+Registry: https://hub.docker.com/r/nixoninnes/binance-to-influxdb
+Repo: NixonInnes' Repository
+Repository: nixoninnes/alpaca-to-influxdb:latest
+Support: https://forums.unraid.net/topic/105293-support-nixoninnes-unraid-builds/
+TemplateURL: https://raw.githubusercontent.com/NixonInnes/unraid-builds-xml/master/alpaca-to-influxdb.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''

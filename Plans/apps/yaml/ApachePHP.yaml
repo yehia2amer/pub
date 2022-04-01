@@ -1,0 +1,55 @@
+BindTime: 'true'
+CategoryList:
+- Network-Web
+Data:
+  Volume:
+  - ContainerDir: /config
+    HostDir: /mnt/disks/SSD/appdata/apache-php/
+    Mode: rw
+  - ContainerDir: /web
+    HostDir: /mnt/disks/SSD/www/
+    Mode: rw
+  - ContainerDir: /logs
+    HostDir: /mnt/disks/SSD/appdata/apache-php/logs/
+    Mode: rw
+  - ContainerDir: /etc/localtime
+    HostDir: /etc/localtime
+    Mode: ro
+Environment:
+  Variable:
+    Name: ''
+    Value: ''
+FirstSeen: 1
+Icon: https://raw.githubusercontent.com/chvb/docker-templates/master/chvb/img/apache-php.png
+LastUpdate: 1453646083
+LastUpdateScan: 1648058620
+Name: Apache-PHP
+Networking:
+  Mode: bridge
+  Publish:
+    Port:
+    - ContainerPort: '80'
+      HostPort: '8005'
+      Protocol: tcp
+    - ContainerPort: '443'
+      HostPort: '8443'
+      Protocol: tcp
+Overview: "Apache based web server with basic PHP web server capabilities with the\
+  \ addition of php5-gd, php5-sqlite, php5-intl[br][br]\n    [b][span style='color:\
+  \ #E80000;']Directions:[/span][/b][br]\n    [b]/config[/b] : this path is used to\
+  \ store the configuration and the SSL certs files of the reverse proxy.[br]\n  \
+  \  [b]/web[/b] : this path is the web directory[br]\n    [b]/web/adminer[/b] : adminer\
+  \ path inside the web directory[br]\n    [b]/logs[/b] : this path is the logs directory[br][br]\n\
+  \nI have added custom [b]Crontab[/b] functionality.To enable Cron jobs, edit the\
+  \ file [b]crons.conf[/b] in folder [/b]/config[/b]. [br]\nAdd as many tasks as you\
+  \ need, save the file, and [b]restart[/b] the container.[br][br]"
+Privileged: 'false'
+Registry: https://hub.docker.com/r/chvb/docker-apache-php/
+Repo: chvb's Repository
+Repository: chvb/docker-apache-php
+Support: http://lime-technology.com/forum/index.php?topic=49578.0
+TemplateURL: https://raw.githubusercontent.com/chvb/docker-templates/master/chvb/apache-php.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:80]/
+topPerforming: 1.1
+topTrending: -2.84

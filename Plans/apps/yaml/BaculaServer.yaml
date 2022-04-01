@@ -1,0 +1,813 @@
+Branch:
+- Config:
+  - '@attributes':
+      Default: Europe/Warsaw
+      Description: Set Your Timezone
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: TimeZone
+      Required: 'false'
+      Target: TZ
+      Type: Variable
+    value: Europe/Warsaw
+  - '@attributes':
+      Default: ''
+      Description: If You set bridge network, You should type in Unraid Host IP Address.
+        This IP is sending to clients, which could connect to storage server using
+        this IP
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: IP Address
+      Required: 'true'
+      Target: SD_Host
+      Type: Variable
+    value: ''
+  - '@attributes':
+      Default: ''
+      Description: PostgreSQL Server IP
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Database IP Address
+      Required: 'true'
+      Target: DB_Host
+      Type: Variable
+    value: ''
+  - '@attributes':
+      Default: ''
+      Description: Database Username
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Database User
+      Required: 'true'
+      Target: DB_User
+      Type: Variable
+    value: ''
+  - '@attributes':
+      Default: ''
+      Description: Database Password
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Database User's Password
+      Required: 'true'
+      Target: DB_Password
+      Type: Variable
+    value: ''
+  - '@attributes':
+      Default: ''
+      Description: Path where backups will be stored on Host disk
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Bacula storage path
+      Required: 'true'
+      Target: /mnt/bacula
+      Type: Path
+    value: ''
+  - '@attributes':
+      Default: admin
+      Description: WebUI Username
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: WEB Username
+      Required: 'false'
+      Target: WEB_User
+      Type: Variable
+    value: admin
+  - '@attributes':
+      Default: difficult
+      Description: WebUI Password
+      Display: always
+      Mask: 'true'
+      Mode: ''
+      Name: WEB User Password
+      Required: 'false'
+      Target: WEB_Password
+      Type: Variable
+    value: difficult
+  - '@attributes':
+      Default: '9103'
+      Description: Clients connects to sending backups
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Bacula Storage Port
+      Required: 'true'
+      Target: '9103'
+      Type: Port
+    value: '9103'
+  - '@attributes':
+      Default: '9095'
+      Description: Bacula WEB Port
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Bacula WEB Port
+      Required: 'true'
+      Target: '9095'
+      Type: Port
+    value: '9095'
+  - '@attributes':
+      Default: /mnt/user/appdata/bacula-server/working
+      Description: Path where bacula could write some data
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Bacula working directory
+      Required: 'true'
+      Target: /opt/bacula/working
+      Type: Path
+    value: ''
+  - '@attributes':
+      Default: /mnt/user/appdata/bacula-server/etc
+      Description: Bacula Configuration path
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Bacula config path
+      Required: 'true'
+      Target: /opt/bacula/etc
+      Type: Path
+    value: ''
+  - '@attributes':
+      Default: /mnt/user/appdata/bacula-server/log/bacula
+      Description: Path where bacula's logs will be stored on Host disk
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Bacula log path
+      Required: 'false'
+      Target: /opt/bacula/log
+      Type: Path
+    value: ''
+  - '@attributes':
+      Default: /mnt/user/appdata/bacula-server/log/apache2
+      Description: Path where webserver logs will be stored
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Apache log path
+      Required: 'false'
+      Target: /var/log/apache2
+      Type: Path
+    value: ''
+  - '@attributes':
+      Default: /mnt/user/appdata/bacula-server/baculum
+      Description: Path where WEB Interface configuration will be stored
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Baculum config
+      Required: 'true'
+      Target: /etc/baculum
+      Type: Path
+    value: ''
+  Requires: PostgreSQL
+  Tag: 11-postgresql-latest
+  TagDescription: version 11 with postgreSQL connector
+- Config:
+  - '@attributes':
+      Default: Europe/Warsaw
+      Description: Set Your Timezone
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: TimeZone
+      Required: 'false'
+      Target: TZ
+      Type: Variable
+    value: Europe/Warsaw
+  - '@attributes':
+      Default: ''
+      Description: If You set bridge network, You should type in Unraid Host IP Address.
+        This IP is sending to clients, which could connect to storage server using
+        this IP
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: IP Address
+      Required: 'true'
+      Target: SD_Host
+      Type: Variable
+    value: ''
+  - '@attributes':
+      Default: ''
+      Description: PostgreSQL Server IP
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Database IP Address
+      Required: 'true'
+      Target: DB_Host
+      Type: Variable
+    value: ''
+  - '@attributes':
+      Default: ''
+      Description: Database Username
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Database User
+      Required: 'true'
+      Target: DB_User
+      Type: Variable
+    value: ''
+  - '@attributes':
+      Default: ''
+      Description: Database Password
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Database User's Password
+      Required: 'true'
+      Target: DB_Password
+      Type: Variable
+    value: ''
+  - '@attributes':
+      Default: ''
+      Description: Path where backups will be stored on Host disk
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Bacula storage path
+      Required: 'true'
+      Target: /mnt/bacula
+      Type: Path
+    value: ''
+  - '@attributes':
+      Default: admin
+      Description: WebUI Username
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: WEB Username
+      Required: 'false'
+      Target: WEB_User
+      Type: Variable
+    value: admin
+  - '@attributes':
+      Default: difficult
+      Description: WebUI Password
+      Display: always
+      Mask: 'true'
+      Mode: ''
+      Name: WEB User Password
+      Required: 'false'
+      Target: WEB_Password
+      Type: Variable
+    value: difficult
+  - '@attributes':
+      Default: '9103'
+      Description: Clients connects to sending backups
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Bacula Storage Port
+      Required: 'true'
+      Target: '9103'
+      Type: Port
+    value: '9103'
+  - '@attributes':
+      Default: '9095'
+      Description: Bacula WEB Port
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Bacula WEB Port
+      Required: 'true'
+      Target: '9095'
+      Type: Port
+    value: '9095'
+  - '@attributes':
+      Default: /mnt/user/appdata/bacula-server/working
+      Description: Path where bacula could write some data
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Bacula working directory
+      Required: 'true'
+      Target: /var/lib/bacula
+      Type: Path
+    value: ''
+  - '@attributes':
+      Default: /mnt/user/appdata/bacula-server/etc
+      Description: Bacula Configuration
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Bacula config path
+      Required: 'true'
+      Target: /etc/bacula
+      Type: Path
+    value: ''
+  - '@attributes':
+      Default: /mnt/user/appdata/bacula-server/log/bacula
+      Description: Path where bacula's logs will be stored on Host disk
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Bacula log path
+      Required: 'false'
+      Target: /var/log/bacula
+      Type: Path
+    value: ''
+  - '@attributes':
+      Default: /mnt/user/appdata/bacula-server/log/apache2
+      Description: Path where webserver logs will be stored on Host disk
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Apache log path
+      Required: 'false'
+      Target: /var/log/apache2
+      Type: Path
+    value: ''
+  - '@attributes':
+      Default: /mnt/user/appdata/bacula-server/baculum
+      Description: Path where WEB Interface configuration will be stored on Host disk
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Baculum config
+      Required: 'true'
+      Target: /etc/baculum
+      Type: Path
+    value: ''
+  Requires: PostgreSQL
+  Tag: 9.6-pgsql-latest
+  TagDescription: version 9.6 with postgreSQL connector
+- Config:
+  - '@attributes':
+      Default: Europe/Warsaw
+      Description: Set Your Timezone
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: TimeZone
+      Required: 'false'
+      Target: TZ
+      Type: Variable
+    value: Europe/Warsaw
+  - '@attributes':
+      Default: ''
+      Description: If You set bridge network, You should type in Unraid Host IP Address.
+        This IP is sending to clients, which could connect to storage server using
+        this IP
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: IP Address
+      Required: 'true'
+      Target: SD_Host
+      Type: Variable
+    value: ''
+  - '@attributes':
+      Default: ''
+      Description: MySQL Server IP
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Database IP Address
+      Required: 'true'
+      Target: DB_Host
+      Type: Variable
+    value: ''
+  - '@attributes':
+      Default: ''
+      Description: Database Username
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Database User
+      Required: 'true'
+      Target: DB_User
+      Type: Variable
+    value: ''
+  - '@attributes':
+      Default: ''
+      Description: Database Password
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Database User's Password
+      Required: 'true'
+      Target: DB_Password
+      Type: Variable
+    value: ''
+  - '@attributes':
+      Default: ''
+      Description: Path where backups will be stored on Host disk
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Bacula storage path
+      Required: 'true'
+      Target: /mnt/bacula
+      Type: Path
+    value: ''
+  - '@attributes':
+      Default: admin
+      Description: WebUI Username
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: WEB Username
+      Required: 'false'
+      Target: WEB_User
+      Type: Variable
+    value: admin
+  - '@attributes':
+      Default: difficult
+      Description: WebUI Password
+      Display: always
+      Mask: 'true'
+      Mode: ''
+      Name: WEB User Password
+      Required: 'false'
+      Target: WEB_Password
+      Type: Variable
+    value: difficult
+  - '@attributes':
+      Default: '9103'
+      Description: Clients connects to sending backups
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Bacula Storage Port
+      Required: 'true'
+      Target: '9103'
+      Type: Port
+    value: '9103'
+  - '@attributes':
+      Default: '9095'
+      Description: Bacula WEB Port
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Bacula WEB Port
+      Required: 'true'
+      Target: '9095'
+      Type: Port
+    value: '9095'
+  - '@attributes':
+      Default: /mnt/user/appdata/bacula-server/working
+      Description: Path where bacula could write some data
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Bacula working directory
+      Required: 'true'
+      Target: /var/lib/bacula
+      Type: Path
+    value: ''
+  - '@attributes':
+      Default: /mnt/user/appdata/bacula-server/etc
+      Description: Bacula Configuration
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Bacula config path
+      Required: 'true'
+      Target: /etc/bacula
+      Type: Path
+    value: ''
+  - '@attributes':
+      Default: /mnt/user/appdata/bacula-server/log/bacula
+      Description: Path where bacula's logs will be stored on Host disk
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Bacula log path
+      Required: 'false'
+      Target: /var/log/bacula
+      Type: Path
+    value: ''
+  - '@attributes':
+      Default: /mnt/user/appdata/bacula-server/log/apache2
+      Description: Path where webserver logs will be stored on Host disk
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Apache log path
+      Required: 'false'
+      Target: /var/log/apache2
+      Type: Path
+    value: ''
+  - '@attributes':
+      Default: /mnt/user/appdata/bacula-server/baculum
+      Description: Path where WEB Interface configuration will be stored on Host disk
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Baculum config
+      Required: 'true'
+      Target: /etc/baculum
+      Type: Path
+    value: ''
+  Requires: mySQL
+  Tag: 9.6-mysql-latest
+  TagDescription: version 9.6with mySQL connector
+- Config:
+  - '@attributes':
+      Default: Europe/Warsaw
+      Description: Set Your Timezone
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: TimeZone
+      Required: 'false'
+      Target: TZ
+      Type: Variable
+    value: Europe/Warsaw
+  - '@attributes':
+      Default: ''
+      Description: If You set bridge network, You should type in Unraid Host IP Address.
+        This IP is sending to clients, which could connect to storage server using
+        this IP
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: IP Address
+      Required: 'true'
+      Target: SD_Host
+      Type: Variable
+    value: ''
+  - '@attributes':
+      Default: ''
+      Description: Path where backups will be stored on Host disk
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Bacula storage path
+      Required: 'true'
+      Target: /mnt/bacula
+      Type: Path
+    value: ''
+  - '@attributes':
+      Default: admin
+      Description: WebUI Username
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: WEB Username
+      Required: 'false'
+      Target: WEB_User
+      Type: Variable
+    value: admin
+  - '@attributes':
+      Default: difficult
+      Description: WebUI Password
+      Display: always
+      Mask: 'true'
+      Mode: ''
+      Name: WEB User Password
+      Required: 'false'
+      Target: WEB_Password
+      Type: Variable
+    value: difficult
+  - '@attributes':
+      Default: '9103'
+      Description: Clients connects to sending backups
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Bacula Storage Port
+      Required: 'true'
+      Target: '9103'
+      Type: Port
+    value: '9103'
+  - '@attributes':
+      Default: '9095'
+      Description: Bacula WEB Port
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Bacula WEB Port
+      Required: 'true'
+      Target: '9095'
+      Type: Port
+    value: '9095'
+  - '@attributes':
+      Default: /mnt/user/appdata/bacula-server/working
+      Description: Path where sqlite3 db will be stored
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Bacula working directory
+      Required: 'true'
+      Target: /var/lib/bacula
+      Type: Path
+    value: ''
+  - '@attributes':
+      Default: /mnt/user/appdata/bacula-server/etc
+      Description: Bacula Configuration
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Bacula config path
+      Required: 'true'
+      Target: /etc/bacula
+      Type: Path
+    value: ''
+  - '@attributes':
+      Default: /mnt/user/appdata/bacula-server/log/bacula
+      Description: Path where bacula's logs will be stored on Host disk
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Bacula log path
+      Required: 'false'
+      Target: /var/log/bacula
+      Type: Path
+    value: ''
+  - '@attributes':
+      Default: /mnt/user/appdata/bacula-server/log/apache2
+      Description: Path where webserver logs will be stored on Host disk
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Apache log path
+      Required: 'false'
+      Target: /var/log/apache2
+      Type: Path
+    value: ''
+  - '@attributes':
+      Default: /mnt/user/appdata/bacula-server/baculum
+      Description: Path where WEB Interface configuration will be stored on Host disk
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Baculum config
+      Required: 'true'
+      Target: /etc/baculum
+      Type: Path
+    value: ''
+  Tag: 9.6-sqlite3-latest
+  TagDescription: version 9.6 with sqlite3
+CategoryList:
+- Backup
+ChangeLogPresent: true
+Config:
+- '@attributes':
+    Default: Europe/Warsaw
+    Description: Set Your Timezone
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: TimeZone
+    Required: 'false'
+    Target: TZ
+    Type: Variable
+  value: Europe/Warsaw
+- '@attributes':
+    Default: ''
+    Description: If You set bridge network, You should type in Unraid Host IP Address.
+      This IP is sending to clients, which could connect to storage server using this
+      IP
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: IP Address
+    Required: 'true'
+    Target: SD_Host
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Path where backups will be stored on Host disk
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Bacula storage path
+    Required: 'true'
+    Target: /mnt/bacula
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: admin
+    Description: WebUI Username
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: WEB Username
+    Required: 'false'
+    Target: WEB_User
+    Type: Variable
+  value: admin
+- '@attributes':
+    Default: difficult
+    Description: WebUI Password
+    Display: always
+    Mask: 'true'
+    Mode: ''
+    Name: WEB User Password
+    Required: 'false'
+    Target: WEB_Password
+    Type: Variable
+  value: difficult
+- '@attributes':
+    Default: '9103'
+    Description: Clients connects to sending backups
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Bacula Storage Port
+    Required: 'true'
+    Target: '9103'
+    Type: Port
+  value: '9103'
+- '@attributes':
+    Default: '9095'
+    Description: Bacula WEB Port
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Bacula WEB Port
+    Required: 'true'
+    Target: '9095'
+    Type: Port
+  value: '9095'
+- '@attributes':
+    Default: /mnt/user/appdata/bacula-server/working
+    Description: Path where sqlite3 db will be stored
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Bacula working directory
+    Required: 'true'
+    Target: /opt/bacula/working
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: /mnt/user/appdata/bacula-server/etc
+    Description: Bacula Configuration path
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Bacula config path
+    Required: 'true'
+    Target: /opt/bacula/etc
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: /mnt/user/appdata/bacula-server/log/bacula
+    Description: Path where bacula's logs will be stored on Host disk
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Bacula log path
+    Required: 'false'
+    Target: /opt/bacula/log
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: /mnt/user/appdata/bacula-server/log/apache2
+    Description: Path where webserver logs will be stored
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Apache log path
+    Required: 'false'
+    Target: /var/log/apache2
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: /mnt/user/appdata/bacula-server/baculum
+    Description: Path where WEB Interface configuration will be stored
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Baculum config
+    Required: 'true'
+    Target: /etc/baculum
+    Type: Path
+  value: ''
+FirstSeen: 1636065289
+Icon: https://raw.githubusercontent.com/vrx-666/unraid-xml/master/img/bacula.png
+LastUpdate: 1646248178
+LastUpdateScan: 1646442652
+MinVer: '6.8'
+Name: Bacula-Server
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "Bacula is a network Client/Server based backup program. This app contains\
+  \ also Baculum, web environment to easy manage with the Bacula programs. Here is\
+  \ 2 major versions of bacula: 9.6, 11, with multiple database engines supported.\n\
+  \t  If You do not havy any mysql or postgresql server, You could chose sqlite3 versions,\
+  \ but this version is not recomended. Please check ReadMe before You start. Default\
+  \ Tag is 11 sqlite3 version."
+PostArgs: ''
+ReadMe: https://forums.unraid.net/topic/115560-support-bacula-server/
+Registry: https://hub.docker.com/r/pwa666/bacula-server
+Repo: vrx's Repository
+Repository: pwa666/bacula-server:11-sqlite3-latest
+Support: https://forums.unraid.net/topic/115560-support-bacula-server/
+TemplateURL: https://raw.githubusercontent.com/vrx-666/unraid-xml/master/my-bacula-server.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:9095]/

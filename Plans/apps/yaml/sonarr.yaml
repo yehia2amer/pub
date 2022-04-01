@@ -1,0 +1,87 @@
+Branch:
+- Registry: https://hub.docker.com/r/hotio/sonarr
+  Repository: cr.hotio.dev/hotio/sonarr:release
+  Tag: release
+  TagDescription: main branch
+- Registry: https://hub.docker.com/r/hotio/sonarr
+  Repository: cr.hotio.dev/hotio/sonarr:nightly
+  Tag: nightly
+  TagDescription: develop branch
+CategoryList:
+- Downloaders
+- MediaApp-Video
+Config:
+- '@attributes':
+    Default: '8989'
+    Description: 'Container Port: 8989'
+    Display: always-hide
+    Mask: 'false'
+    Mode: tcp
+    Name: Host Port for 8989
+    Required: 'true'
+    Target: '8989'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /config'
+    Display: always-hide
+    Mask: 'false'
+    Mode: rw
+    Name: Host Path for /config
+    Required: 'true'
+    Target: /config
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: '99'
+    Description: 'Container Variable: PUID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: PUID
+    Required: 'false'
+    Target: PUID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '100'
+    Description: 'Container Variable: PGID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: PGID
+    Required: 'false'
+    Target: PGID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '002'
+    Description: 'Container Variable: UMASK'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: UMASK
+    Required: 'false'
+    Target: UMASK
+    Type: Variable
+  value: ''
+FirstSeen: 1604308114
+Icon: https://hotio.dev/webhook-avatars/sonarr.png
+LastUpdate: 1646634975
+LastUpdateScan: 1647446609
+Name: sonarr
+Network: bridge
+Overview: Sonarr is a PVR for Usenet and BitTorrent users. It can monitor multiple
+  RSS feeds for new episodes of your favorite shows and will grab, sort and rename
+  them.
+PostArgs: ''
+Privileged: 'false'
+Project: https://hotio.dev/containers/sonarr
+Registry: https://hub.docker.com/r/hotio/sonarr
+Repo: hotio's Repository
+Repository: cr.hotio.dev/hotio/sonarr
+Support: https://hotio.dev/discord
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8989]
+caTemplateURL: https://raw.githubusercontent.com/hotio/unraid-templates/master/hotio/sonarr.xml

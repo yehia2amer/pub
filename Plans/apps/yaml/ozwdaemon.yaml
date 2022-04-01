@@ -1,0 +1,145 @@
+CategoryList:
+- HomeAutomation
+- Network-Other
+ChangeLogPresent: true
+Config:
+- '@attributes':
+    Default: ''
+    Description: IP Address of the MQTT Host
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: MQTT Host
+    Required: 'true'
+    Target: MQTT_SERVER
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Path to the USB stick/serial device for your z-wave controller in
+      the container. This should be the same value as USB Z-Wave Device.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: USB Path
+    Required: 'true'
+    Target: USB_PATH
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '7800'
+    Description: Port used to access the web-based ozw-admin instance in the container
+      (when using allinone image)
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Web UI Port
+    Required: 'false'
+    Target: '7800'
+    Type: Port
+  value: '7800'
+- '@attributes':
+    Default: ''
+    Description: USB stick/serial device passthrough (your z-wave controller)
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: USB Z-Wave Device
+    Required: 'true'
+    Target: ''
+    Type: Device
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /opt/ozw/config'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Config
+    Required: 'false'
+    Target: /opt/ozw/config
+    Type: Path
+  value: /mnt/user/appdata/ozw
+- '@attributes':
+    Default: '1883'
+    Description: The port to access the MQTT Host on. Defaults to 1883
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: MQTT Port
+    Required: 'false'
+    Target: MQTT_PORT
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Username to (optionally) authenticate with MQTT
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: MQTT User
+    Required: 'false'
+    Target: MQTT_USERNAME
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Password to (optionally) authenticate with MQTT
+    Display: advanced
+    Mask: 'true'
+    Mode: ''
+    Name: MQTT Password
+    Required: 'false'
+    Target: MQTT_PASSWORD
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Network key for the Z-Wave network. Not required if no devices are
+      securely included.
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Zwave Network Key
+    Required: 'false'
+    Target: OZW_NETWORK_KEY
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Port used by ozw-admin GUI to access the instance
+    Display: advanced
+    Mask: 'false'
+    Mode: tcp
+    Name: ozw-admin Port
+    Required: 'false'
+    Target: '1983'
+    Type: Port
+  value: ''
+FirstSeen: 1599746886
+Icon: https://github.com/FoxxMD/unraid-docker-templates/raw/master/icons/zwave.png
+LastUpdate: 1622304937
+LastUpdateScan: 1646514183
+Name: ozwdaemon
+Network: bridge
+Networking:
+  Mode: bridge
+Official: true
+Overview: "Container for running the OpenZWave MQTT Adapter (for Home Assistant via\
+  \ the new Z-Wave Integration)\r\n        \r\n        You will need a running MQTT\
+  \ instance and a z-wave controller in order to use this container.\r\n        \r\
+  \n        For more information see:\r\n        https://github.com/OpenZWave/qt-openzwave\r\
+  \n        https://www.home-assistant.io/integrations/ozw/\r\n        \r\n      \
+  \  Or visit the unraid forum support thread for more configuration/info"
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/OpenZWave/qt-openzwave
+Registry: https://hub.docker.com/r/openzwave/ozwdaemon/
+Repo: FoxxMD's Repository
+Repository: openzwave/ozwdaemon:allinone-latest
+Support: https://forums.unraid.net/topic/96976-support-foxxmd-ozwdaemon/
+TemplateURL: https://raw.githubusercontent.com/FoxxMD/unraid-docker-templates/master/foxxmd/ozwdaemon.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:7800]/vnc.html
+topPerforming: 0.11
+topTrending: -27.73

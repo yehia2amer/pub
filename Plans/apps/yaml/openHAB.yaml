@@ -1,0 +1,64 @@
+CAComment: This template is set up to use a custom network. You may have to adjust
+  the network or IP address etc to match your system
+CategoryList:
+- HomeAutomation
+Config:
+- '@attributes':
+    Default: /etc/localtime
+    Description: 'Container Path: /etc/localtime'
+    Display: always
+    Mask: 'false'
+    Mode: ro
+    Name: Host Path 1
+    Required: 'true'
+    Target: /etc/localtime
+    Type: Path
+  value: /etc/localtime
+- '@attributes':
+    Default: /mnt/user/appdata/openhab/conf/
+    Description: 'Container Path: /openhab/conf'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Host Path 2
+    Required: 'true'
+    Target: /openhab/conf
+    Type: Path
+  value: /mnt/user/appdata/openhab2/conf/
+- '@attributes':
+    Default: /mnt/user/appdata/openhab/userdata/
+    Description: 'Container Path: /openhab/userdata'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Host Path 3
+    Required: 'true'
+    Target: /openhab/userdata
+    Type: Path
+  value: /mnt/user/appdata/openhab2/userdata/
+DonateLink: https://www.buymeacoffee.com/maschhoff
+DonateText: Please buy me a Pizza
+ExtraParams: --tty --shm-size 2g
+FirstSeen: 1609067254
+Icon: https://raw.githubusercontent.com/tinglis1/docker-containers/master/openhab/openhab-logo-square.png
+LastUpdate: 1648012582
+LastUpdateScan: 1648044215
+Name: openHAB
+Network: br0
+Networking:
+  Mode: br0
+Official: true
+Overview: "openHAB - a vendor and technology agnostic open source automation software\
+  \ for your home.\r\n\r\nFor sample rules etc. have a look at https://github.com/maschhoff/OpenHAB"
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/maschhoff/docker/tree/master/openhab
+Registry: https://hub.docker.com/r/openhab/openhab/
+Repo: knex666's Repository
+Repository: openhab/openhab:latest-debian
+Support: https://forums.unraid.net/topic/78482-support-knex666-openhab/
+TemplateURL: https://raw.githubusercontent.com/maschhoff/docker/master/unraid%20xml/my-openhab.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8080]/
+topPerforming: 0.43
+topTrending: -0.685

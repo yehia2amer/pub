@@ -1,0 +1,68 @@
+CategoryList:
+- Network-Web
+- MediaServer-Books
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: '8080'
+    Description: 'Container Port: 8080'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI
+    Required: 'true'
+    Target: '8080'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: '#recycle,@eaDir'
+    Description: 'Container Variable: KOMGA_LIBRARIES_SCAN_DIRECTORY_EXCLUSIONS'
+    Display: advanced
+    Mask: 'false'
+    Name: Exclusions
+    Required: 'true'
+    Target: KOMGA_LIBRARIES_SCAN_DIRECTORY_EXCLUSIONS
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: /mnt/user/appdata/komga/
+    Description: 'Container Path: /config'
+    Display: advanced
+    Mask: 'false'
+    Mode: rw
+    Name: Config
+    Required: 'true'
+    Target: /config
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: /mnt/user/Media/books
+    Description: 'Container Path: /books'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Books
+    Required: 'true'
+    Target: /books
+    Type: Path
+  value: ''
+FirstSeen: 1574572046
+Icon: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/komga.png
+LastUpdate: 1647240005
+LastUpdateScan: 1647317014
+Name: Komga
+Network: bridge
+Overview: "A Media server for comics/mangas/BDs with API and OPDS support.\r\nCheck\
+  \ logs for auto-generated username/password."
+Privileged: 'false'
+Project: https://github.com/gotson/komga/
+Registry: https://hub.docker.com/r/gotson/komga/
+Repo: Selfhosters Unraid Discord Repository
+RepoShort: Selfhosters
+Repository: gotson/komga
+Support: https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/
+TemplateURL: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/komga.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8080]
+topPerforming: 5.259
+topTrending: -2.191

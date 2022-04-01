@@ -1,0 +1,59 @@
+CategoryList:
+- Cloud
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: '8080'
+    Description: 'Container Port: 8080'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI
+    Required: 'true'
+    Target: '8080'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /var/atlassian/application-data/jira'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Appdata
+    Required: 'true'
+    Target: /var/atlassian/application-data/jira
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: The reverse proxy's fully qualified hostname. CATALINA_CONNECTOR_PROXYNAME
+      is also supported for backwards compatability.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Reverse Proxy
+    Required: 'false'
+    Target: ATL_PROXY_NAME
+    Type: Variable
+  value: ''
+FirstSeen: 1603757310
+Icon: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/jira-software.png
+LastUpdate: 1647735017
+LastUpdateScan: 1647921799
+Name: jira-software
+Network: bridge
+Official: true
+Overview: "Jira Software is a software development tool used by agile teams.\r\n\r\
+  \nFor more information on different variables you can add, see: [b]https://hub.docker.com/r/atlassian/jira-software/[/b]"
+Privileged: 'false'
+Project: https://www.atlassian.com/software/jira
+Registry: https://hub.docker.com/r/atlassian/jira-software/
+Repo: Selfhosters Unraid Discord Repository
+RepoShort: Selfhosters
+Repository: atlassian/jira-software
+Support: https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/
+TemplateURL: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/jira-software.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8080]/
+topPerforming: 0.906
+topTrending: -5.968

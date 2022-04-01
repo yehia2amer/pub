@@ -1,0 +1,98 @@
+CategoryList:
+- Network-Other
+Config:
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /DoH'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Container Path
+    Required: 'false'
+    Target: /DoH
+    Type: Path
+  value: /mnt/cache/appdata/doh-client
+- '@attributes':
+    Default: ''
+    Description: 'Find the versions here: https://github.com/m13253/dns-over-https/releases
+      or set to ''latest'' without quotes to download the latest version'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: DoH Version
+    Required: 'true'
+    Target: DoH_V
+    Type: Variable
+  value: latest
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: GO_DL_URL'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Golang Download URL
+    Required: 'true'
+    Target: GO_DL_URL
+    Type: Variable
+  value: https://dl.google.com/go/go1.13.1.linux-amd64.tar.gz
+- '@attributes':
+    Default: ''
+    Description: UDP DNS Query Port
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: udp
+    Name: UDP DNS Query Port
+    Required: 'true'
+    Target: '53'
+    Type: Port
+  value: '53'
+- '@attributes':
+    Default: ''
+    Description: TCP DNS Query Port
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: tcp
+    Name: TCP DNS Query Port
+    Required: 'true'
+    Target: '53'
+    Type: Port
+  value: '53'
+DonateImg: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/donate.png
+DonateLink: https://www.paypal.me/chips777
+DonateText: 'If you like my work please '
+ExtraParams: --restart=unless-stopped --cap-add=NET_ADMIN --sysctl net.ipv4.ip_unprivileged_port_start=0
+FirstSeen: 1573859228
+Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/DoH-Client.png
+LastUpdate: 1643014400
+LastUpdateScan: 1646636591
+Name: DoH-Client
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "This Container will create a DNS Server wich connects by default to Goole's\
+  \ &amp; DNS.SB's DoH resolver with ECS disabled (you can change that simply by editing\
+  \ the 'doh-client.conf' in your root directory of the container)\r\n\r\nYou easily\
+  \ can now hide your DNS querys from your ISP with this docker for your whole internal\
+  \ network, you can use it in combination with DoH-Server to protect even your mobile\
+  \ devices and encrypt all your querys.\r\n\r\nYou can also use this infront of your\
+  \ PiHole to also block Ad's and with DoH-Server to secure your mobile devices.\r\
+  \n\r\nIf you got any questions please post it in the support thread on the Unraid\
+  \ forums.\r\n\r\nI strongly recommend you to run the container in custom mode and\
+  \ give it a static IP address so that you expose all ports from the container and\
+  \ to avoid any network problems.\r\n\r\nUpdate Notice: If you want to upgrade to\
+  \ a newer version of the DoH-Server just enter the preferred version number (eg.\
+  \ '2.1.2' without quotes, get them from here: https://github.com/m13253/dns-over-https/releases\
+  \ or set to 'latest' without quotes to check on each container start if there is\
+  \ a new version available)\r\n\r\nThe Docker needs to be run in bridge mode and\
+  \ a Fixed IP address.\r\n\r\nThis Docker is based on the DoH Client component from:\
+  \ https://github.com/m13253/dns-over-https"
+PostArgs: ''
+Privileged: 'false'
+Registry: https://hub.docker.com/r/ich777/doh-client
+Repo: ich777's Repository
+Repository: ich777/doh-client
+Support: https://forums.unraid.net/topic/83786-support-ich777-application-dockers/
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''
+caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/DoH-Client.xml
+topTrending: 5.758

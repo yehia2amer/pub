@@ -1,0 +1,131 @@
+CategoryList:
+- GameServers
+Config:
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /mindustry'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: ServerFiles
+    Required: 'true'
+    Target: /mindustry
+    Type: Path
+  value: /mnt/cache/appdata/mindustry
+- '@attributes':
+    Default: ''
+    Description: 'Container Port: 6567'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: TCP - Gameport
+    Required: 'true'
+    Target: '6567'
+    Type: Port
+  value: '6567'
+- '@attributes':
+    Default: ''
+    Description: 'Container Port: 6567'
+    Display: always
+    Mask: 'false'
+    Mode: udp
+    Name: UDP - Gameport
+    Required: 'true'
+    Target: '6567'
+    Type: Port
+  value: '6567'
+- '@attributes':
+    Default: ''
+    Description: "Preferred game version goes here (set to \u2018latest\u2019 to download\
+      \ the latest and check on every startup if there is a newer version available)"
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Game Version
+    Required: 'true'
+    Target: GAME_V
+    Type: Variable
+  value: latest
+- '@attributes':
+    Default: ''
+    Description: Servername goes here
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Server Name
+    Required: 'true'
+    Target: SRV_NAME
+    Type: Variable
+  value: DockerMindustry
+- '@attributes':
+    Default: ''
+    Description: Extra startup Parameters if needed (leave empty if not needed)
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Extra Game Parameters
+    Required: 'false'
+    Target: GAME_PARAMS
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: "Permissions for newly created files. Don\u2019t change unless you\
+      \ are knowing what you are doing!"
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: UMASK
+    Required: 'true'
+    Target: UMASK
+    Type: Variable
+  value: '000'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: UID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: UID
+    Required: 'true'
+    Target: UID
+    Type: Variable
+  value: '99'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: GID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: GID
+    Required: 'true'
+    Target: GID
+    Type: Variable
+  value: '100'
+ExtraParams: --restart=unless-stopped
+FirstSeen: 1574521673
+Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/mindustry.png
+LastUpdate: 1643889211
+LastUpdateScan: 1647288205
+Name: Mindustry
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "This is a Basic Mindustry Server. It will download the preferred version\
+  \ of Mindustry and run it.\r\n\r\nUPDATE NOTICE: If you set the GAME_V to 'latest'\
+  \ the container will always check on startup for a new version or you can set it\
+  \ to whatever version you preferr eg: '100', '90',... (without quotes, upgrading\
+  \ and downgrading also possible).\r\n\r\nCONSOLE: To connect to the console open\
+  \ up the terminal for this docker and type in: 'docker exec -u mindustry -ti NAMEOFYOURCONTAINER\
+  \ screen -xS Mindustry' (without quotes)."
+PostArgs: ''
+Privileged: 'false'
+Project: https://anuke.itch.io/mindustry
+Registry: https://hub.docker.com/r/ich777/mindustry-server/
+Repo: ich777's Repository
+Repository: ich777/mindustry-server
+Support: https://forums.unraid.net/topic/79530-support-ich777-gameserver-dockers/
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''
+caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/Mindustry.xml
+topTrending: -4.0009999999999994

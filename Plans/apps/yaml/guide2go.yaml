@@ -1,0 +1,66 @@
+CategoryList:
+- Downloaders
+Config:
+- '@attributes':
+    Default: ''
+    Description: "/mnt/user/appdata/guide2go/_config/\r\nconfig and cron setting\r\
+      \n"
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: /config
+    Required: 'true'
+    Target: /config
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: "/mnt/user/appdata/guide2go/\r\noutput folder or where u can place\
+      \ your existing .json files\r\n"
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: /guide2go
+    Required: 'true'
+    Target: /guide2go
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: "/mnt/user/appdata/tvheadend/data/\r\nin case move to TVHeadend is\
+      \ enabled u need to mount this.\r\n"
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: /TVH
+    Required: 'false'
+    Target: /TVH
+    Type: Path
+  value: ''
+FirstSeen: 1563401306
+Icon: https://raw.githubusercontent.com/alturismo/guide2go/master/g2g.png
+LastUpdate: 1601116264
+LastUpdateScan: 1646521384
+Name: guide2go
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "a xml grabber from schedule direct service\r\n\r\nafter docker start check\
+  \ your config folder and do your setups, setup is persistent, start from scratch\
+  \ by delete them\r\n\r\ncron options are updated on docker restart.\r\ncronjob changes\
+  \ doesnt require a restart.\r\n\r\nsetup guide2go SD subscrition as follows or copy\
+  \ your existing .yaml files into your mounted /guide2go folder \r\ndocker exec -it\
+  \ &lt;dockername&gt; guide2go -configure /guide2go/&lt;your_epg_name&gt;.yaml\r\n\
+  \r\nto test the cronjob functions \r\ndocker exec -it &lt;dockername&gt; ./config/cronjob.sh"
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/alturismo/guide2go
+Registry: https://hub.docker.com/r/alturismo/guide2go
+Repo: alturismo's Repository
+Repository: alturismo/guide2go
+Support: https://forums.unraid.net/topic/81786-support-alturismo-repos/
+TemplateURL: https://raw.githubusercontent.com/alturismo/unraid_templates/master/my-guide2go.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''
+topPerforming: 0.198
+topTrending: 0.014000000000000012

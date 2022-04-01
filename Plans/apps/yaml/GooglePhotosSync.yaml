@@ -1,0 +1,55 @@
+Config:
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /storage'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Host Path 1
+    Required: 'false'
+    Target: /storage
+    Type: Path
+  value: /mnt/user/Google Photos
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /config'
+    Display: advanced
+    Mask: 'false'
+    Mode: rw
+    Name: Host Path 2
+    Required: 'false'
+    Target: /config
+    Type: Path
+  value: /mnt/user/appdata/gphotos-sync
+DonateLink: https://github.com/sponsors/rix1337
+DonateText: Sponsor me!
+FirstSeen: 1588716439
+Icon: https://i.imgur.com/uNmkYOq.png
+LastUpdate: 1645391189
+LastUpdateScan: 1648476205
+Name: GooglePhotosSync
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "Google Photos Sync downloads your Google Photos to the local file system.\
+  \ It will backup all the photos the user uploaded to Google Photos, but also the\
+  \ album information and additional Google Photos 'Creations' (animations, panoramas,\
+  \ movies, effects and collages).\r\n\r\nHow to set this up:\r\n1. Place your client_secret.json\
+  \ at /config\r\n    How to get it is best described at Logix's Article at Linux\
+  \ Uprising\r\n2. Afterwards you need to sign into the application once which cannot\
+  \ be done headlessly (using the \"Syncing\" command)\r\n3. Afterwards you can call\
+  \ the \"Syncing\" command any time you wish, as long as the container is running\
+  \ (e.g. by using cron).\r\n\r\nSyncing:\r\n[i]docker exec -it GooglePhotosSync gphotos-sync\
+  \ /storage[/i]\r\nBy itself this container will do nothing. A sync will only occur\
+  \ when you call the above command on a running container."
+PostArgs: ''
+Privileged: 'false'
+Registry: https://hub.docker.com/r/rix1337/docker-gphotos-sync
+Repo: rix's Repository
+Repository: rix1337/docker-gphotos-sync
+Support: https://github.com/rix1337/docker-gphotos-sync/issues/new
+TemplateURL: https://raw.githubusercontent.com/rix1337/docker-templates/master/rix1337/gphotos-sync.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''
+topPerforming: 1.474
+topTrending: -11.124

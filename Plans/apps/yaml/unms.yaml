@@ -1,0 +1,64 @@
+CategoryList:
+- Network-Management
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: '6080'
+    Description: 'Container Port: 80'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Host Port 1
+    Required: 'true'
+    Target: '80'
+    Type: Port
+  value: '6080'
+- '@attributes':
+    Default: '6443'
+    Description: 'Container Port: 443'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Host Port 2
+    Required: 'true'
+    Target: '443'
+    Type: Port
+  value: '6443'
+- '@attributes':
+    Default: /mnt/user/appdata/unms
+    Description: 'Container Path: /config'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: rw
+    Name: AppData Config Path
+    Required: 'true'
+    Target: /config
+    Type: Path
+  value: /mnt/user/appdata/unms
+DonateImg: ''
+FirstSeen: 1565319116
+Icon: https://raw.githubusercontent.com/digiblur/unraid-docker-templates/master/images/unms_icon.png
+LastUpdate: 1645937816
+LastUpdateScan: 1648476205
+MinVer: ''
+Name: unms
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "This is an all-in-one Alpine Linux based Docker image for running the Ubiquiti\
+  \ Network Management System. This image contains all the components required to\
+  \ run UNMS in a single container and uses the s6-overlay for process management.\r\
+  \n\r\nThe container can be accessed via HTTP with port 6080 or HTTPS 6443.  \r\n\
+  \r\nUNMS Setup:\r\nAccess the container and walk through the initial setup wizard\
+  \ of adding the username/passwords and devices to be monitored."
+PostArgs: ''
+Privileged: 'false'
+Registry: https://hub.docker.com/r/nico640/docker-unms
+Repo: digiblur's Repository
+Repository: nico640/docker-unms
+Support: https://forums.unraid.net/topic/72033-support-digiblurs-docker-template-repository/
+TemplateURL: https://raw.githubusercontent.com/digiblur/unraid-docker-templates/master/unms.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: https://[IP]:[PORT:443]
+topPerforming: 0.365
+topTrending: -2.8810000000000002

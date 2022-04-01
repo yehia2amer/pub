@@ -1,0 +1,89 @@
+CAComment: This template is set up to use a custom network. You may have to adjust
+  the network or IP address etc to match your system
+CategoryList:
+- GameServers
+- Productivity
+- MediaApp-Video
+- MediaServer-Video
+Config:
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /config/obs-studio'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Config Path
+    Required: 'false'
+    Target: /config/obs-studio
+    Type: Path
+  value: /mnt/user/appdata/obs
+- '@attributes':
+    Default: ''
+    Description: 'Container Port: 5901'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Port
+    Required: 'false'
+    Target: '5901'
+    Type: Port
+  value: '5901'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: NVIDIA_DRIVER_CAPABILITIES'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: NVIDIA_DRIVER_CAPABILITIES
+    Required: 'false'
+    Target: NVIDIA_DRIVER_CAPABILITIES
+    Type: Variable
+  value: all
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: NVIDIA_VISIBLE_DEVICES'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: NVIDIA_VISIBLE_DEVICES
+    Required: 'false'
+    Target: NVIDIA_VISIBLE_DEVICES
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '123456'
+    Description: 'Container Variable: VNC_PASSWD'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: VNC_PASSWD
+    Required: 'false'
+    Target: VNC_PASSWD
+    Type: Variable
+  value: '123456'
+ExtraParams: --runtime=nvidia
+FirstSeen: 1634479403
+Icon: https://obsproject.com/assets/images/new_icon_small-r.png
+LastUpdate: 1643674377
+LastUpdateScan: 1647468213
+Name: obs-ndi
+Network: br0
+Networking:
+  Mode: br0
+Overview: "This container is based on bb12489/gui-docker &amp;amp;amp; bb12489/docker-obs.\
+  \ The OBS with NDI is incorporated into the container and can be used to stream\
+  \ your desktop. The main reason for this fork is to update the container and add\
+  \ it to the unraid app store.&amp;#xD;\r\n&amp;#xD;\r\nYou can change the default\
+  \ VNC password of '123456' on the docker run command to whatever you wish.&amp;#xD;\r\
+  \n&amp;#xD;\r\nYou can connect with your own VNC client at 5900 or use the webclient\
+  \ at 5901"
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/patrickstigler/docker-obs-ndi
+Registry: https://hub.docker.com/r/patrickstigler/obs-ndi
+Repo: patrickstigler's Repository
+Repository: patrickstigler/obs-ndi
+Support: https://forums.unraid.net/topic/114911-support-obs-ndi/
+TemplateURL: https://raw.githubusercontent.com/patrickstigler/unraid_app_templates/master/obs-ndi/obs-ndi.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:5901]/

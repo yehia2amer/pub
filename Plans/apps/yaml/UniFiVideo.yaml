@@ -1,0 +1,180 @@
+CategoryList:
+- Network
+- MediaServer
+Config:
+- '@attributes':
+    Default: /mnt/cache/appdata/UniFi-Video/datapath
+    Description: 'Container Path: /var/lib/unifi-video'
+    Display: always-hide
+    Mask: 'false'
+    Mode: rw
+    Name: Data Path
+    Required: 'true'
+    Target: /var/lib/unifi-video
+    Type: Path
+  value: /mnt/cache/appdata/UniFi-Video/datapath
+- '@attributes':
+    Default: /mnt/cache/appdata/UniFi-Video/logpath
+    Description: 'Container Path: /var/log/unifi-video'
+    Display: always-hide
+    Mask: 'false'
+    Mode: rw
+    Name: Log Path
+    Required: 'true'
+    Target: /var/log/unifi-video
+    Type: Path
+  value: /mnt/cache/appdata/UniFi-Video/logpath
+- '@attributes':
+    Default: '7022'
+    Description: 'Container Port: 22'
+    Display: always-hide
+    Mask: 'false'
+    Mode: tcp
+    Name: SSH
+    Required: 'true'
+    Target: '22'
+    Type: Port
+  value: '7022'
+- '@attributes':
+    Default: '6666'
+    Description: 'Container Port: 6666'
+    Display: always-hide
+    Mask: 'false'
+    Mode: tcp
+    Name: Inbound Camera Streams (NVR Side)
+    Required: 'true'
+    Target: '6666'
+    Type: Port
+  value: '6666'
+- '@attributes':
+    Default: '7080'
+    Description: 'Container Port: 7080'
+    Display: always-hide
+    Mask: 'false'
+    Mode: tcp
+    Name: HTTP Web UI &amp; API (NVR Side)
+    Required: 'true'
+    Target: '7080'
+    Type: Port
+  value: '7080'
+- '@attributes':
+    Default: '7442'
+    Description: 'Container Port: 7442'
+    Display: always-hide
+    Mask: 'false'
+    Mode: tcp
+    Name: Camera Management (NVR Side)
+    Required: 'true'
+    Target: '7442'
+    Type: Port
+  value: '7442'
+- '@attributes':
+    Default: '7004'
+    Description: 'Container Port: 7004'
+    Display: always-hide
+    Mask: 'false'
+    Mode: udp
+    Name: UVC-Micro Talkback (Camera Side)
+    Required: 'true'
+    Target: '7004'
+    Type: Port
+  value: '7004'
+- '@attributes':
+    Default: '7443'
+    Description: 'Container Port: 7443'
+    Display: always-hide
+    Mask: 'false'
+    Mode: tcp
+    Name: HTTPS Web UI &amp; API (NVR Side)
+    Required: 'true'
+    Target: '7443'
+    Type: Port
+  value: '7443'
+- '@attributes':
+    Default: '7445'
+    Description: 'Container Port: 7445'
+    Display: always-hide
+    Mask: 'false'
+    Mode: tcp
+    Name: Video over HTTP
+    Required: 'true'
+    Target: '7445'
+    Type: Port
+  value: '7445'
+- '@attributes':
+    Default: '7447'
+    Description: 'Container Port: 7447'
+    Display: always-hide
+    Mask: 'false'
+    Mode: tcp
+    Name: RTSP via the controller
+    Required: 'true'
+    Target: '7447'
+    Type: Port
+  value: '7447'
+- '@attributes':
+    Default: '7446'
+    Description: 'Container Port: 7446'
+    Display: always-hide
+    Mask: 'false'
+    Mode: tcp
+    Name: Video over HTTPS
+    Required: 'true'
+    Target: '7446'
+    Type: Port
+  value: '7446'
+- '@attributes':
+    Default: '99'
+    Description: 'Container Variable: PUID'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Key 1
+    Required: 'false'
+    Target: PUID
+    Type: Variable
+  value: '99'
+- '@attributes':
+    Default: '100'
+    Description: 'Container Variable: PGID'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Key 2
+    Required: 'false'
+    Target: PGID
+    Type: Variable
+  value: '100'
+Deprecated: true
+DonateImg: ''
+ExtraParams: --cap-add=DAC_READ_SEARCH  --cap-add=NET_BIND_SERVICE --cap-add=SETGID
+  --cap-add=SETUID --cap-add=SYS_ADMIN --cap-add=SYS_PTRACE
+FirstSeen: '1519444165'
+Icon: https://raw.githubusercontent.com/malvarez00/unRAID-Docker-Templates/master/malvarez00/icons/unifi_96x96.png
+LastUpdate: 1542862837
+LastUpdateScan: 1648411397
+MinVer: ''
+ModeratorComment: Appears to have been abandoned, with no updates in 3 years.  If
+  this app works for you properly, there is no reason to switch
+Name: UniFi-Video
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "&lt;b&gt;Docker-UniFi-Video&lt;/b&gt;&lt;br /&gt;\r\n&lt;br /&gt;\r\n \
+  \   Port - Type (TCP/UDP) - Purpose&lt;br /&gt;\r\n     7022 - TCP - SSH (NVR Side)&lt;br\
+  \ /&gt;\r\n     6666 - TCP - Inbound Camera Streams (NVR Side)&lt;br /&gt;\r\n \
+  \    7004 - UDP - UVC-Micro Talkback (Camera Side)&lt;br /&gt;\r\n     7080 - TCP\
+  \ - HTTP Web UI &amp; API (NVR Side)&lt;br /&gt;\r\n     7442 - TCP - Camera Management\
+  \ (NVR Side)&lt;br /&gt;\r\n     7443 - TCP - HTTPS Web UI &amp; API (NVR Side)&lt;br\
+  \ /&gt;\r\n     7445 - TCP - Video over HTTP&lt;br /&gt;\r\n     7446 - TCP - Video\
+  \ over HTTPS&lt;br /&gt;\r\n     7447 - TCP - RTSP via the controller&lt;br /&gt;"
+PostArgs: ''
+Privileged: 'true'
+Registry: https://hub.docker.com/r/malvarez00/docker-unifi-video
+Repo: malvarez00's Repository
+Repository: malvarez00/docker-unifi-video
+Support: https://forums.lime-technology.com/topic/61187-support-malvarez00-unifi-video/
+TemplateURL: https://raw.githubusercontent.com/malvarez00/unRAID-Docker-Templates/master/malvarez00/UniFi-Video.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: https://[IP]:[PORT:7443]
+topTrending: -1.1740000000000002

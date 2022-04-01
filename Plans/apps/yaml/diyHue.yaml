@@ -1,0 +1,110 @@
+CAComment: This template is set up to use a custom network. You may have to adjust
+  the network or IP address etc to match your system
+CategoryList:
+- HomeAutomation
+Config:
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /opt/hue-emulator/export/'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: App Data
+    Required: 'true'
+    Target: /opt/hue-emulator/export/
+    Type: Path
+  value: /mnt/user/appdata/diyHue
+- '@attributes':
+    Default: '80'
+    Description: 'Container Port: 80'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: '80'
+    Required: 'true'
+    Target: '80'
+    Type: Port
+  value: '80'
+- '@attributes':
+    Default: '443'
+    Description: 'Container Port: 443'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: '443'
+    Required: 'true'
+    Target: '443'
+    Type: Port
+  value: '443'
+- '@attributes':
+    Default: '1900'
+    Description: 'Container Port: 1900'
+    Display: always
+    Mask: 'false'
+    Mode: udp
+    Name: '1900'
+    Required: 'true'
+    Target: '1900'
+    Type: Port
+  value: '1900'
+- '@attributes':
+    Default: '2100'
+    Description: 'Container Port: 2100'
+    Display: always
+    Mask: 'false'
+    Mode: udp
+    Name: '2100'
+    Required: 'true'
+    Target: '2100'
+    Type: Port
+  value: '2100'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: MAC'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: MAC
+    Required: 'true'
+    Target: MAC
+    Type: Variable
+  value: bc:5f:f4:cd:c6:19
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: IP'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: IP
+    Required: 'true'
+    Target: IP
+    Type: Variable
+  value: 192.168.1.4
+DonateImg: https://az743702.vo.msecnd.net/cdn/kofi2.png
+DonateLink: https://ko-fi.com/I2I0CW9G
+DonateText: Buy me a coffee
+FirstSeen: 1538357652
+GitHub: https://github.com/mariusmotea/diyHue
+Icon: https://raw.githubusercontent.com/cheesemarathon/docker-templates/master/images/diyhue.png
+LastUpdate: 1648738158
+LastUpdateScan: 1648804611
+Name: diyHue
+Network: br0
+Networking:
+  Mode: br0
+Official: true
+Overview: "diyHue emulates a Phillips Hue bridge allowing you to controll other smart\
+  \ lights and bulbs with the Hue ecosystem.\n    Find more info at the diyHue GitHub\
+  \ wiki: https://github.com/mariusmotea/diyHue/wiki\n    To setup just set an IP\
+  \ address in the network settings, along with setting the MAC and IP variabales\
+  \ with the values for the br0 network"
+Privileged: 'false'
+Registry: https://hub.docker.com/r/diyhue/core/
+Repo: cheesemarathon's Repository
+Repository: diyhue/core:latest
+Support: https://lime-technology.com/forums/topic/54183-support-cheesemarathons-repo/
+TemplateURL: https://raw.githubusercontent.com/cheesemarathon/docker-templates/master/cheesemarathon/diyhue.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:80]
+topPerforming: 0.042
+topTrending: -0.307

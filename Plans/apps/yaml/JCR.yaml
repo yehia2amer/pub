@@ -1,0 +1,80 @@
+CategoryList:
+- Productivity
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: -Xmx512m
+    Description: 'Container Variable: EXTRA_JAVA_OPTIONS'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: EXTRA_JAVA_OPTIONS
+    Required: 'false'
+    Target: EXTRA_JAVA_OPTIONS
+    Type: Variable
+  value: -Xms512m -Xmx2g -Xss256k -XX:+UseG1GC
+- '@attributes':
+    Default: ''
+    Description: 'Container Port: 8082'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Port 8082
+    Required: 'false'
+    Target: '8082'
+    Type: Port
+  value: '6182'
+- '@attributes':
+    Default: ''
+    Description: 'Container Port: 8081'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Port 8081
+    Required: 'false'
+    Target: '8081'
+    Type: Port
+  value: '6181'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: --user'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: --user
+    Required: 'false'
+    Target: --user
+    Type: Variable
+  value: ${UID}:${GID}
+- '@attributes':
+    Default: ''
+    Description: /var/opt/jfrog/artifactory
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: /var/opt/jfrog/artifactory
+    Required: 'false'
+    Target: /var/opt/jfrog/artifactory
+    Type: Path
+  value: /mnt/user/appdata/jcr
+FirstSeen: 1612465837
+Icon: https://i.imgur.com/sC4b5wD.png
+LastUpdateScan: 1646247826
+Name: JCR
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: The JFrog Container Registry is a repository manager, which supports Docker
+  and Helm registries and Generic repositories, allowing you to build, deploy and
+  manage your container images while providing powerful features with fine-grained
+  permission control behind a sleek and easy-to-use UI.
+PostArgs: ''
+Privileged: 'true'
+Project: https://jfrog.com/
+Registry: https://registry.hub.docker.com/r/releases-docker.jfrog.io/jfrog/artifactory-jcr
+Repo: frakman1's Repository
+Repository: releases-docker.jfrog.io/jfrog/artifactory-jcr:latest
+Support: https://forums.unraid.net/topic/102294-support-frakman-jcr/
+TemplateURL: https://raw.githubusercontent.com/frakman1/docker-templates/master/tynor88/jcr.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:6182]/

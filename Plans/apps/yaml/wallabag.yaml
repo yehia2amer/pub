@@ -1,0 +1,92 @@
+CategoryList:
+- Productivity
+Config:
+- '@attributes':
+    Default: '6500'
+    Description: Port
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Port
+    Required: 'true'
+    Target: '80'
+    Type: Port
+  value: '6500'
+- '@attributes':
+    Default: /mnt/user/appdata/wallabag/
+    Description: Appdata
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Appdata
+    Required: 'true'
+    Target: /var/www/wallabag/data
+    Type: Path
+  value: /mnt/user/appdata/wallabag/
+- '@attributes':
+    Default: /mnt/user/appdata/wallabag/images/
+    Description: Images
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Images
+    Required: 'true'
+    Target: /var/www/wallabag/web/assets/images
+    Type: Path
+  value: /mnt/user/appdata/wallabag/images/
+- '@attributes':
+    Default: ''
+    Description: Domain
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Domain
+    Required: 'true'
+    Target: SYMFONY__ENV__DOMAIN_NAME
+    Type: Variable
+  value: http://<IP>:6500
+- '@attributes':
+    Default: LongRandomSecretHere
+    Description: Randomly generated secret here
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Secret
+    Required: 'false'
+    Target: SYMFONY__ENV__SECRET
+    Type: Variable
+  value: LongRandomSecretHere
+- '@attributes':
+    Default: 'false'
+    Description: Public User Registration
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Public User Registration
+    Required: 'false'
+    Target: SYMFONY__ENV__FOSUSER_REGISTRATION
+    Type: Variable
+  value: 'false'
+FirstSeen: 1586225327
+Icon: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/wallabag.png
+LastUpdate: 1644865088
+LastUpdateScan: 1648627440
+Name: wallabag
+Network: bridge
+Official: true
+Overview: 'Wallabag is a self hostable application for saving web pages. Unlike other
+  services, wallabag is free (as in freedom) and open source. [br][br][b][u][span
+  style=''color: #ff9900;'']Default user/password[/span][/u][/b][br]User: [B][u]wallabag[/B][/u][br]Password:
+  [B][u]wallabag[/B][/u][/b]'
+PostArgs: ''
+Privileged: 'false'
+Project: https://www.wallabag.org
+Registry: https://hub.docker.com/r/wallabag/wallabag/
+Repo: A75G's Repository
+Repository: wallabag/wallabag:latest
+Support: https://forums.unraid.net/topic/89502-support-a75g-repo/
+TemplateURL: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/wallabag.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:80]/
+topPerforming: 0.148
+topTrending: -2.972

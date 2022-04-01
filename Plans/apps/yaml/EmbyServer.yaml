@@ -1,0 +1,50 @@
+BindTime: 'true'
+CategoryList:
+- MediaServer-Video
+- MediaServer-Music
+- MediaServer-Photos
+Data:
+  Volume:
+  - ContainerDir: /config
+    HostDir: /mnt/cache/appdata/emby/
+    Mode: rw
+  - ContainerDir: /mnt
+    HostDir: /mnt
+    Mode: rw
+Environment:
+  Variable:
+  - Name: UID
+    Value: '2'
+  - Name: GID
+    Value: '2'
+  - Name: GIDLIST
+    Value: '2'
+FirstSeen: 1
+Icon: https://raw.githubusercontent.com/MediaBrowser/Emby.Resources/master/images/Logos/logoicon.png
+LastUpdate: 1648002601
+LastUpdateScan: 1648627432
+Name: EmbyServer
+Networking:
+  Mode: host
+  Publish:
+    Port:
+      ContainerPort: '8096'
+      HostPort: '8096'
+      Protocol: tcp
+Official: true
+Overview: "Emby Server is a home media server built on top of other popular open source\
+  \ technologies such as Service Stack, jQuery, jQuery mobile, and Mono. Bringing\
+  \ together movies, music, television and more in one dazzling interface.[br][br]\n\
+  \    [b][span style='color: #E80000;']Directories:[/span][/b][br]\n    [b]/config[/b]\
+  \ : this path is used to store Emby's configuration.[br]\n    [b]/mnt[/b] : this\
+  \ path is used to add library locations to Emby.[br]"
+Privileged: 'false'
+Registry: https://registry.hub.docker.com/r/emby/embyserver/
+Repo: Emby Repository
+Repository: emby/embyserver:latest
+Support: https://lime-technology.com/forum/index.php?topic=45444.0
+TemplateURL: https://raw.githubusercontent.com/MediaBrowser/Emby.Build/master/unraid-templates/emby/EmbyServer.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8096]/
+topPerforming: 0.283
+topTrending: -3.243

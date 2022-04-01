@@ -1,0 +1,222 @@
+CategoryList:
+- Network
+- Network-Web
+Config:
+- '@attributes':
+    Default: ''
+    Description: 'Container Port: 80'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Host Port 1
+    Required: 'false'
+    Target: '80'
+    Type: Port
+  value: '1154'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: ROUNDCUBEMAIL_DB_TYPE'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: ROUNDCUBEMAIL_DB_TYPE
+    Required: 'false'
+    Target: ROUNDCUBEMAIL_DB_TYPE
+    Type: Variable
+  value: mysql
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: ROUNDCUBEMAIL_DB_HOST'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: ROUNDCUBEMAIL_DB_HOST
+    Required: 'false'
+    Target: ROUNDCUBEMAIL_DB_HOST
+    Type: Variable
+  value: 192.168.1.1
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: ROUNDCUBEMAIL_DB_PORT'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: ROUNDCUBEMAIL_DB_PORT
+    Required: 'false'
+    Target: ROUNDCUBEMAIL_DB_PORT
+    Type: Variable
+  value: '3306'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: ROUNDCUBEMAIL_DB_USER'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: ROUNDCUBEMAIL_DB_USER
+    Required: 'false'
+    Target: ROUNDCUBEMAIL_DB_USER
+    Type: Variable
+  value: rc_user
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: ROUNDCUBEMAIL_DB_PASSWORD'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: ROUNDCUBEMAIL_DB_PASSWORD
+    Required: 'false'
+    Target: ROUNDCUBEMAIL_DB_PASSWORD
+    Type: Variable
+  value: rc_password
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: ROUNDCUBEMAIL_DB_NAME'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: ROUNDCUBEMAIL_DB_NAME
+    Required: 'false'
+    Target: ROUNDCUBEMAIL_DB_NAME
+    Type: Variable
+  value: rc_db
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: ROUNDCUBEMAIL_DEFAULT_HOST'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: ROUNDCUBEMAIL_DEFAULT_HOST
+    Required: 'false'
+    Target: ROUNDCUBEMAIL_DEFAULT_HOST
+    Type: Variable
+  value: tls://imap.mailserver.com
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: ROUNDCUBEMAIL_DEFAULT_PORT'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: ROUNDCUBEMAIL_DEFAULT_PORT
+    Required: 'false'
+    Target: ROUNDCUBEMAIL_DEFAULT_PORT
+    Type: Variable
+  value: '143'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: ROUNDCUBEMAIL_SMTP_SERVER'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: ROUNDCUBEMAIL_SMTP_SERVER
+    Required: 'false'
+    Target: ROUNDCUBEMAIL_SMTP_SERVER
+    Type: Variable
+  value: tls://smtp.mailserver.com
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: ROUNDCUBEMAIL_SMTP_PORT'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: ROUNDCUBEMAIL_SMTP_PORT
+    Required: 'false'
+    Target: ROUNDCUBEMAIL_SMTP_PORT
+    Type: Variable
+  value: '587'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: ROUNDCUBEMAIL_PLUGINS'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: ROUNDCUBEMAIL_PLUGINS
+    Required: 'false'
+    Target: ROUNDCUBEMAIL_PLUGINS
+    Type: Variable
+  value: archive,zipdownload
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: ROUNDCUBEMAIL_SKIN'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: ROUNDCUBEMAIL_SKIN
+    Required: 'false'
+    Target: ROUNDCUBEMAIL_SKIN
+    Type: Variable
+  value: elastic
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /tmp/roundcube-temp'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: roundcube-temp location
+    Required: 'false'
+    Target: /tmp/roundcube-temp
+    Type: Path
+  value: /mnt/user/appdata/roundcube/roundcube-temp
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /var/www/html'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: html location
+    Required: 'false'
+    Target: /var/www/html
+    Type: Path
+  value: /mnt/user/appdata/roundcube/html
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /var/roundcube/db'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: db location
+    Required: 'false'
+    Target: /var/roundcube/db
+    Type: Path
+  value: /mnt/user/appdata/roundcube/db
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /var/roundcube/config'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: config location
+    Required: 'false'
+    Target: /var/roundcube/config
+    Type: Path
+  value: /mnt/user/appdata/roundcube/config
+FirstSeen: 1610816844
+Icon: https://raw.githubusercontent.com/Muwahhidun/logo/main/roundcube.png
+LastUpdate: 1644184926
+LastUpdateScan: 1647214620
+Name: roundcube-ver-mariadb
+Network: bridge
+Networking:
+  Mode: bridge
+Official: true
+Overview: "Roundcube Webmail is a browser-based multilingual IMAP client with an application-like\
+  \ user interface. It provides full functionality you expect from an email client,\
+  \ including MIME support, address book, folder management, message searching and\
+  \ spell checking. Roundcube Webmail is written in PHP and requires the MySQL, PostgreSQL\
+  \ or SQLite database. With its plugin API it is easily extendable and the user interface\
+  \ is fully customizable using skins. \n    [b][span style='color: #E80000;']This\
+  \ container template for use with mySQL/mariaDB.[/span][/b][br]\r\n    [b][span\
+  \ style='color: #E80000;']Before starting the container, please make sure that the\
+  \ supplied database exists and the given database user has privileges to create\
+  \ tables.[/span][/b][br]"
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/roundcube/roundcubemail
+Registry: https://hub.docker.com/r/roundcube/roundcubemail
+Repo: Muwahhidun's Repository
+Repository: roundcube/roundcubemail
+Support: https://myunraid.ru/
+TemplateURL: https://raw.githubusercontent.com/Muwahhidun/unraid-docker-templates/master/my-roundcube-ver-mysql.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:1154]/
+topPerforming: 1.878
+topTrending: -0.7380000000000002

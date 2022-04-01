@@ -1,0 +1,62 @@
+CategoryList:
+- HomeAutomation
+- Network-Management
+Config:
+- '@attributes':
+    Default: /var/run/docker.sock
+    Description: 'Container Path: /var/run/docker.sock'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: dockersock
+    Required: 'true'
+    Target: /var/run/docker.sock
+    Type: Path
+  value: /var/run/docker.sock
+- '@attributes':
+    Default: /mnt/user/appdata/ha-dockermon/
+    Description: 'Container Path: /config'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: configpath
+    Required: 'true'
+    Target: /config
+    Type: Path
+  value: /mnt/user/appdata/ha-dockermon/
+- '@attributes':
+    Default: '8126'
+    Description: 'Container Port: 8126'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: API port
+    Required: 'true'
+    Target: '8126'
+    Type: Port
+  value: '8126'
+DonateImg: ''
+FirstSeen: '1528170332'
+Icon: https://raw.githubusercontent.com/digiblur/unraid-docker-templates/master/images/ha-dockermon_icon.png
+LastUpdate: 1602118280
+LastUpdateScan: 1648804612
+MinVer: ''
+Name: ha-dockermon
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "A NodeJS RESTful API which can be used with Home Assistant to report the\
+  \ state of Docker Containers [br][br]Custom Component to automatically add all your\
+  \ docker switches to home assistant.  https://gitlab.com/custom_components/hadockermon\
+  \ [br][br]Additional info including the API can be found here:[br][br]\r\nhttps://github.com/philhawthorne/ha-dockermon"
+PostArgs: ''
+Privileged: 'false'
+Registry: https://hub.docker.com/r/philhawthorne/ha-dockermon/
+Repo: digiblur's Repository
+Repository: philhawthorne/ha-dockermon
+Support: https://forums.unraid.net/topic/72033-support-digiblurs-docker-template-repository/
+TemplateURL: https://raw.githubusercontent.com/digiblur/unraid-docker-templates/master/ha-dockermon.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''
+topPerforming: 0.016
+topTrending: -0.544

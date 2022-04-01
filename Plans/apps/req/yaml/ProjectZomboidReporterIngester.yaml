@@ -1,0 +1,106 @@
+CategoryList:
+- GameServers
+Config:
+- '@attributes':
+    Default: servertest
+    Description: 'Container Variable: ZOMBOID_SERVER_NAME'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: ZOMBOID_SERVER_NAME
+    Required: 'true'
+    Target: ZOMBOID_SERVER_NAME
+    Type: Variable
+  value: Iopy_Server
+- '@attributes':
+    Default: /mnt/user/appdata/ProjectZomboid/Zomboid/
+    Description: 'Container Path: /var/www/html/sv'
+    Display: always
+    Mask: 'false'
+    Mode: ro
+    Name: Project Zomboid Server Files
+    Required: 'true'
+    Target: /var/www/html/sv
+    Type: Path
+  value: /mnt/user/appdata/ProjectZomboid/Zomboid/
+- '@attributes':
+    Default: serverip:port
+    Description: 'Container Variable: SQL_HOST'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: SQL_HOST
+    Required: 'true'
+    Target: SQL_HOST
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: Zombo
+    Description: 'Container Variable:  SQL_DATABASE'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: ' SQL_DATABASE'
+    Required: 'true'
+    Target: ' SQL_DATABASE'
+    Type: Variable
+  value: Zombo
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: SQL_USER'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: SQL_USER
+    Required: 'true'
+    Target: SQL_USER
+    Type: Variable
+  value: SQL_USER
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: SQL_PASSWORD'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: SQL_PASS
+    Required: 'true'
+    Target: SQL_PASS
+    Type: Variable
+  value: SQL_PASS
+ExtraParams: --restart=always
+FirstSeen: 1646377405
+Icon: https://github.com/natcoso9955/unRAID-docker/raw/master/icons/projectzomboid-ingest.png
+LastUpdate: 1643593672
+LastUpdateScan: 1646377405
+Name: ProjectZomboidReporter-Ingester
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "This is the ingester which grabs statiscs from your Project Zomboid server\
+  \ files and uploads them to the SQL database for the API to access.\r\n\r\nNOTE:\
+  \ if you havnt had a player connect to your server yet, you will get an error.\r\
+  \n\r\nIf you are having issues with the database tables not being autocreated, connect\
+  \ to the database with adminer (or another program of your choice) and create the\
+  \ tables and structure with the following:\r\n\r\nUSE `Zombo`;\r\n\r\nSET NAMES\
+  \ utf8mb4;\r\n\r\nCREATE TABLE `Game` (\r\n  `id` int NOT NULL AUTO_INCREMENT,\r\
+  \n  `dayofmonth` int NOT NULL,\r\n  `month` int NOT NULL,\r\n  `daysSinceStart`\
+  \ int NOT NULL,\r\n  `name` text NOT NULL,\r\n  `maxPlayers` int NOT NULL,\r\n \
+  \ `startDay` int NOT NULL,\r\n  `startMonth` int NOT NULL,\r\n  `startYear` int\
+  \ NOT NULL,\r\n  `year` int NOT NULL,\r\n  PRIMARY KEY (`id`)\r\n) ENGINE=InnoDB\
+  \ DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;\r\n\r\n\r\nCREATE TABLE `Players`\
+  \ (\r\n  `id` int NOT NULL AUTO_INCREMENT,\r\n  `username` text NOT NULL,\r\n  `charname`\
+  \ text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,\r\n  `x` float\
+  \ NOT NULL,\r\n  `y` float NOT NULL,\r\n  `data` blob NOT NULL,\r\n  `lastOnline`\
+  \ text NOT NULL,\r\n  PRIMARY KEY (`id`)\r\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4\
+  \ COLLATE=utf8mb4_0900_ai_ci;"
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/ChrisAshtear/Zomboid-Server-Stats-Reporter/
+Registry: https://hub.docker.com/r/chrisashtear/zomboid-reporter/
+Repo: Natcoso9955's Repository
+Repository: chrisashtear/zomboid-reporter
+Requires: Project Zomboid
+Support: https://github.com/ChrisAshtear/Zomboid-Server-Stats-Reporter/
+TemplateURL: https://raw.githubusercontent.com/natcoso9955/unRAID-docker/master/ProjectZomboidReporter-Ingester_unraid.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''

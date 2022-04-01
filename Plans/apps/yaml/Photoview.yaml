@@ -1,0 +1,104 @@
+CategoryList:
+- MediaApp-Photos
+Config:
+- '@attributes':
+    Default: '8694'
+    Description: 'Container Port: 80'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Web Interface
+    Required: 'false'
+    Target: '80'
+    Type: Port
+  value: '8694'
+- '@attributes':
+    Default: /mnt/user/cache/photoview
+    Description: 'Container Path: /app/cache'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: AppData
+    Required: 'true'
+    Target: /app/cache
+    Type: Path
+  value: /mnt/user/appdata/photoview
+- '@attributes':
+    Default: /mnt/user/photos/
+    Description: 'Container Path: /photos'
+    Display: always
+    Mask: 'false'
+    Mode: ro
+    Name: Photos Share
+    Required: 'true'
+    Target: /photos
+    Type: Path
+  value: /mnt/user/photos/
+- '@attributes':
+    Default: uiser:pass@tcp(IP:PORT)/database
+    Description: 'Example: photouser:photopass@tcp(192.168.1.100:3306)/photoview'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: PHOTOVIEW_MYSQL_URL
+    Required: 'true'
+    Target: PHOTOVIEW_MYSQL_URL
+    Type: Variable
+  value: user:pass@tcp(IP:PORT)/database
+- '@attributes':
+    Default: https://photos.domain.com/
+    Description: Public URL for generating sharable links.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: PHOTOVIEW_PUBLIC_ENDPOINT
+    Required: 'false'
+    Target: PHOTOVIEW_PUBLIC_ENDPOINT
+    Type: Variable
+  value: https://photos.domain.com/
+- '@attributes':
+    Default: ''
+    Description: To enable map features, a token can be generated for free here https://account.mapbox.com/access-tokens/
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: MAPBOX_TOKEN
+    Required: 'false'
+    Target: MAPBOX_TOKEN
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: /app/cache
+    Description: 'Container Variable: PHOTOVIEW_MEDIA_CACHE'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: PHOTOVIEW_MEDIA_CACHE
+    Required: 'false'
+    Target: PHOTOVIEW_MEDIA_CACHE
+    Type: Variable
+  value: /app/cache
+DonateText: Donate
+FirstSeen: 1613941347
+Icon: https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/icons/photoview.png
+LastUpdate: 1646645635
+LastUpdateScan: 1647717972
+Name: Photoview
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: Photoview is a simple and user-friendly photo gallery that can easily be
+  installed on personal servers. It's made for photographers and aims to provide an
+  easy and fast way to navigate directories, with thousands of high resolution photos.
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/photoview/photoview
+Registry: https://hub.docker.com/r/viktorstrate/photoview
+Repo: CorneliousJD's Repository
+Repository: viktorstrate/photoview
+Support: https://forums.unraid.net/topic/103028-support-photoview-corneliousjd-repo/
+TemplateURL: https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/photoview.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:80]/
+topPerforming: 7.28
+topTrending: -4.664000000000001

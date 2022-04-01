@@ -1,0 +1,118 @@
+CategoryList:
+- HomeAutomation
+- MediaApp-Video
+- MediaServer-Video
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: '8443'
+    Description: ''
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI Port
+    Required: 'true'
+    Target: '443'
+    Type: Port
+  value: '8443'
+- '@attributes':
+    Default: '9000'
+    Description: ''
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: zmNinja Event Notification Server Port
+    Required: 'true'
+    Target: '9000'
+    Type: Port
+  value: '9000'
+- '@attributes':
+    Default: '99'
+    Description: ''
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: PUID
+    Required: 'false'
+    Target: PUID
+    Type: Variable
+  value: '99'
+- '@attributes':
+    Default: '100'
+    Description: ''
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: PGID
+    Required: 'false'
+    Target: PGID
+    Type: Variable
+  value: '100'
+- '@attributes':
+    Default: /mnt/cache/appdata/Zoneminder
+    Description: ''
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: rw
+    Name: Appdata Config Path
+    Required: 'true'
+    Target: /config
+    Type: Path
+  value: /mnt/cache/appdata/Zoneminder
+- '@attributes':
+    Default: /mnt/user/zoneminder_data
+    Description: ''
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: rw
+    Name: Data Path
+    Required: 'true'
+    Target: /var/cache/zoneminder
+    Type: Path
+  value: /mnt/user/appdata/Zoneminder/data
+DonateImage: https://www.paypalobjects.com/webstatic/en_US/btn/btn_donate_74x21.png
+DonateLink: https://www.paypal.com/us/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=EJGPC7B5CS66E
+DonateText: For my retirement.
+ExtraParams: --shm-size="5G"
+FirstSeen: 1610125666
+Icon: https://github.com/dlandon/docker.templates/raw/master/zoneminder.png
+LastUpdate: 1635505563
+LastUpdateScan: 1646506993
+Name: Zoneminder
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "Zoneminder is the top Linux video camera security and surveillance solution.\
+  \ ZoneMinder is intended for use in single or multi-camera video security applications,\
+  \ including commercial or home CCTV, theft prevention and child, family member or\
+  \ home monitoring and other domestic care scenarios such as nanny cam installations.\
+  \ It supports capture, analysis, recording, and monitoring of video data coming\
+  \ from one or more video or network cameras attached to a Linux system. ZoneMinder\
+  \ also support web and semi-automatic control of Pan/Tilt/Zoom cameras using a variety\
+  \ of protocols. It is suitable for use as a DIY home video security system and for\
+  \ commercial or professional video security and surveillance. It can also be integrated\
+  \ into a home automation system via X.10 or other protocols. If you're looking for\
+  \ a low cost CCTV system or a more flexible alternative to cheap DVR systems then\
+  \ give ZoneMinder a try.[br]\n  Configuration:\n  **Appdata Config Path** - This\
+  \ is where the configuration and library files will reside\n  **Data Path** - This\
+  \ is where events images/videos will reside\n  **WebUI Port** - Port used to access\
+  \ Zoneminder using ssl security.  Change the desired port for access to the Zoneminder\
+  \ WebUI if necessary.  The default port of 8443 might not be appropriate for your\
+  \ system.\n  **Shared Memory** - Turn on the advanced view and adjust the '--shm-size'\
+  \ in the Extra Parameters to half of your installed memory.\n  **zmNinja Event Notification\
+  \ Server Port** - Port used for zmNinja events to iOS and Android devices.  Change\
+  \ the desired port for the zmNinja Event Notification Server if necessary.  The\
+  \ default port of 9000 might not be appropriate for your system.[br]\n  Click on\
+  \ \"Show Docker Allocations\" and confirm you do not have a port conflict with other\
+  \ Docker ports."
+Privileged: 'false'
+Project: https://zoneminder.com/
+Registry: https://hub.docker.com/r/dlandon/zoneminder.unraid/
+Repo: dlandon's Repository
+Repository: dlandon/zoneminder.unraid
+Support: https://forums.lime-technology.com/topic/56632-support-dlandon-zoneminder-134/
+TemplateURL: https://raw.githubusercontent.com/dlandon/docker.templates/master/Zoneminder.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: https://[IP]:[PORT:443]/zm
+topPerforming: 9.109
+topTrending: -9.615

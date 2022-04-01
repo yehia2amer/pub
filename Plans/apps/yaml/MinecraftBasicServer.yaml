@@ -1,0 +1,213 @@
+CategoryList:
+- GameServers
+Config:
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /serverdata/serverfiles'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: ServerFiles
+    Required: 'true'
+    Target: /serverdata/serverfiles
+    Type: Path
+  value: /mnt/cache/appdata/minecraft
+- '@attributes':
+    Default: ''
+    Description: Enter your executable jar file (Minecraft Serverfile) withouat the
+      .jar extension.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Serverfile name
+    Required: 'true'
+    Target: JAR_NAME
+    Type: Variable
+  value: server
+- '@attributes':
+    Default: ''
+    Description: If you set the variable GAME_V to 'latest' the container will check
+      on every restart if there is a newer version available (if set to 'latest' the
+      variable JAR_NAME has to be 'server' - available options are 'latest', 'custom'
+      or simply leave empty).
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Game version
+    Required: 'false'
+    Target: GAME_V
+    Type: Variable
+  value: latest
+- '@attributes':
+    Default: ''
+    Description: Enter your extra startup parameters otherwise leave blank!
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Extra Game Parameters
+    Required: 'false'
+    Target: GAME_PARAMS
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Enter your extra startup parameters for the JVM otherwise leave blank!
+      (Only change if you know what you are doing!!!)
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Extra JVM Parameters
+    Required: 'false'
+    Target: EXTRA_JVM_PARAMS
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Enter your XMS size in MB (XMS=The initial and minimum heap size.
+      It is recommended to set the minimum heap size equivalent to the maximum heap
+      size in order to minimize the garbage collection.)
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: XMS Size
+    Required: 'true'
+    Target: XMS_SIZE
+    Type: Variable
+  value: '1024'
+- '@attributes':
+    Default: ''
+    Description: Enter your XMX size in MB (XMX=The maximum heap size. The performance
+      will decrease if the max heap value is set lower than the amount of live data.
+      It will force frequent garbage collections in order to free up space.)
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: XMX Size
+    Required: 'true'
+    Target: XMX_SIZE
+    Type: Variable
+  value: '1024'
+- '@attributes':
+    Default: ''
+    Description: 'Container Port: 25565'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: TCP - Game Port
+    Required: 'true'
+    Target: '25565'
+    Type: Port
+  value: '25565'
+- '@attributes':
+    Default: ''
+    Description: Not required if not needed
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: TCP2 - RCON
+    Required: 'false'
+    Target: '25575'
+    Type: Port
+  value: '25575'
+- '@attributes':
+    Default: ''
+    Description: 'WebConsole (by default, you can connect to the Minecraft console
+      by opening your browser and go to HOSTIP:9011 - eg: 192.168.1.1:9011 - or click
+      on WebUI on the Docker page within Unraid).'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: TCP - WebConsole
+    Required: 'false'
+    Target: '8080'
+    Type: Port
+  value: '9011'
+- '@attributes':
+    Default: 'false'
+    Description: 'Head over to: https://account.mojang.com/documents/minecraft_eula
+      to read the EULA. (If you accept the EULA change the value to ''true'' without
+      quotes).'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Accept EULA
+    Required: 'true'
+    Target: ACCEPT_EULA
+    Type: Variable
+  value: 'false'
+- '@attributes':
+    Default: ''
+    Description: 'Enter your prefered Runtime: ''basicjre''=jre8, ''jre11''=jre11,
+      ''jre15''=jre15, ''jre16''=jre16, ''jre17''=jre17 Don''t change unless you are
+      knowing what you are doing! Please keep in mind if you change the runtime you
+      have to delete the old runtime before!'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Runtime Name
+    Required: 'true'
+    Target: RUNTIME_NAME
+    Type: Variable
+  value: jre17
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: UID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: UID
+    Required: 'true'
+    Target: UID
+    Type: Variable
+  value: '99'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: GID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: GID
+    Required: 'true'
+    Target: GID
+    Type: Variable
+  value: '100'
+DonateImg: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/donate.png
+DonateLink: https://www.paypal.me/chips777
+DonateText: 'If you like my work please '
+ExtraParams: --restart=unless-stopped
+FirstSeen: 1558800510
+Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/mc.png
+LastUpdate: 1643622004
+LastUpdateScan: 1647214614
+Name: MinecraftBasicServer
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "This is a Basic Minecraft Server, with the basic configuration it will\
+  \ download and install a Vanilla Minecraft.\r\n\r\nYou can also install a FTB (FeedTheBeast),\
+  \ Bukkit, Spigot,... server.\r\n\r\nStart the container for the first time let it\
+  \ do it's work and shut it down.\r\nAfter that copy over your favorite server executable\
+  \ (don't forget to set the Serverfile name to the same as you copied over) and start\
+  \ the container again.\r\n\r\nJAVA RUNTIME: Enter your prefered Runtime 'basicjre'=jre8,\
+  \ 'jre11'=jre11, 'jre15'=jre15 Don't change unless you are knowing what you are\
+  \ doing! Please keep in mind if you change the runtime you have to delete the old\
+  \ runtime before\r\n\r\nUPDATE: If you set the variable GAME_V to 'latest' the container\
+  \ will check on every restart if there is a newer version available (if set to 'latest'\
+  \ the variable JAR_NAME has to be 'server').\n\r\nATTENTION: Don't forget to accept\
+  \ the EULA down below and don't forget to edit the 'server.properties' file the\
+  \ server is by default configured to be a LAN server and to be not snooped.\r\n\r\
+  \nWEB CONSOLE: You can connect to the Minecraft console by opening your browser\
+  \ and go to HOSTIP:9011 (eg: 192.168.1.1:9011) or click on WebUI on the Docker page\
+  \ within Unraid."
+PostArgs: ''
+Privileged: 'false'
+Project: https://www.minecraft.net/
+Registry: https://hub.docker.com/r/ich777/minecraftbasicserver/
+Repo: ich777's Repository
+Repository: ich777/minecraftbasicserver
+Support: https://forums.unraid.net/topic/79530-support-ich777-gameserver-dockers/
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8080]/
+caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/MinecraftBasicServer.xml
+topPerforming: 3.408
+topTrending: -1.7390000000000003

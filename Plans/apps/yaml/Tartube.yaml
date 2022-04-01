@@ -1,0 +1,122 @@
+Beta: 'true'
+CategoryList:
+- Productivity
+- Tools-Utilities
+- MediaApp-Video
+- MediaApp-Music
+Config:
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI
+    Required: 'false'
+    Target: '8080'
+    Type: Port
+  value: '5001'
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Storage (data)
+    Required: 'false'
+    Target: /debian
+    Type: Path
+  value: /mnt/user/appdata/tartube
+- '@attributes':
+    Default: ''
+    Description: This is the external mounting point to allow read/write data between
+      the container and the host.
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Storage (bridge)
+    Required: 'true'
+    Target: /unraid_mnt
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: UID
+    Required: 'false'
+    Target: UID
+    Type: Variable
+  value: '99'
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: GID
+    Required: 'false'
+    Target: GID
+    Type: Variable
+  value: '100'
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: UMASK
+    Required: 'false'
+    Target: UMASK
+    Type: Variable
+  value: '000'
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: USER
+    Required: 'false'
+    Target: USER
+    Type: Variable
+  value: Debian
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: ROOT_PWD
+    Required: 'false'
+    Target: ROOT_PWD
+    Type: Variable
+  value: Docker!
+FirstSeen: 1643807013
+Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/tartube.png
+LastUpdate: 1627406852
+LastUpdateScan: 1646406208
+Name: Tartube
+Network: bridge
+Overview: "DESCRIPTION\r\nTartube is a GUI front-end for youtube-dl, yt-dlp and other\
+  \ compatible video downloaders.\r\nIt is partly based on youtube-dl-gui and is written\
+  \ in Python 3 / Gtk 3. Tartube runs on MS Windows, Linux, BSD and MacOS.\r\n\r\n\
+  NOTES\r\n\u2022 To connect to the noVNC interface, click on 'Connect' manually.\r\
+  \n\u2022 You will need to install 'ffmpeg' (apt install ffmpeg) separately.\r\n\u2022\
+  \ Seems that the ROOT_PWD variable that handles the Debian root password is not\
+  \ working properly. (ffmpeg installation: waiting to be solved)\r\n\r\nVERSION\r\
+  \n1.0 (2022-02-02)\r\n\r\nIMAGE NOT OFFICIAL AND WAITING FOR DEBIAN ROOT CREDENTIALS\
+  \ FIX"
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/axcore/tartube
+Registry: https://hub.docker.com/r/468654/tartube
+Repo: SmartPhoneLover's Repository
+Repository: 468654/tartube
+Requires: ''
+Support: https://forums.unraid.net/topic/119482-support-smartphonelover-tartube/
+TemplateURL: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/master/templates/Tartube.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8080]/vnc.html

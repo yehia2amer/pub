@@ -1,0 +1,77 @@
+BaseImage: alpine:3.5
+BindTime: 'true'
+CategoryList:
+- MediaApp-Video
+- MediaServer-Video
+ChangeLogPresent: true
+Config:
+- '@attributes':
+    Default: '6878'
+    Description: 'Container Port: 6878'
+    Display: always-hide
+    Mask: 'false'
+    Mode: tcp
+    Name: Host Port
+    Required: 'true'
+    Target: '6878'
+    Type: Port
+  value: '6878'
+- '@attributes':
+    Default: /mnt/user/cache/appdata/NowShowingv2
+    Description: 'Container Path: /config'
+    Display: always-hide
+    Mask: 'false'
+    Mode: rw
+    Name: AppData Config Path
+    Required: 'true'
+    Target: /config
+    Type: Path
+  value: /mnt/user/cache/appdata/NowShowing
+- '@attributes':
+    Default: '99'
+    Description: Optional PUID - Usually do not change this. See instructions
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: PUID
+    Required: 'false'
+    Target: PUID
+    Type: Variable
+  value: '99'
+- '@attributes':
+    Default: '100'
+    Description: Optional PGID - Usually do not change this. See instructions
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: PGID
+    Required: 'false'
+    Target: PGID
+    Type: Variable
+  value: '100'
+Deprecated: true
+FirstSeen: 1520913600
+Icon: https://raw.githubusercontent.com/ninthwalker/NowShowing/master/images/nowshowing-icon.png
+LastUpdate: 1548123841
+LastUpdateScan: 1646269410
+ModeratorComment: Deprecated in favour of Tautulli / Ombi / etc
+Name: NowShowing-v2
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "Sends an email and creates a website of recently added media to your Plex\
+  \ Server.[br]\n    Access the admin web interface by going to http://ip:port/admin.[br]\n\
+  \    To enable fail2ban, please add \"--cap-add=NET_ADMIN\" to the Docker settings\
+  \ 'Extra Parameters:' field.[br]\n    This field can be shown by enabling Advanced\
+  \ View by clicking the 'basic' toggle switch in unRAID."
+Privileged: 'false'
+Project: https://github.com/ninthwalker/NowShowing
+Registry: https://registry.hub.docker.com/r/ninthwalker/nowshowing/
+Repo: ninthwalker's Repository
+Repository: ninthwalker/nowshowing:v2
+Support: https://forums.lime-technology.com/topic/56483-support-ninthwalker-nowshowing/
+TemplateURL: https://raw.githubusercontent.com/ninthwalker/docker-templates/master/Ninthwalker/NowShowing%20v2.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:6878]
+topPerforming: 0.169
+topTrending: -0.31499999999999995

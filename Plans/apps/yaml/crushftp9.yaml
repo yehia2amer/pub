@@ -1,0 +1,146 @@
+CategoryList:
+- Network-FTP
+- Network-Other
+- Network-Web
+Config:
+- '@attributes':
+    Default: /mnt/user/appdata/crushftp9/
+    Description: CrushFTP Home/Installation Directory
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: CrushFTP9 config files
+    Required: 'true'
+    Target: /var/opt/CrushFTP9_PC
+    Type: Path
+  value: /mnt/user/appdata/crushftp9
+- '@attributes':
+    Default: /mnt/user/
+    Description: 'Container Path: /unraid'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: unRAID Share Path
+    Required: 'false'
+    Target: /unraid
+    Type: Path
+  value: /mnt/user/
+- '@attributes':
+    Default: '8080'
+    Description: Crush HTTP Port 8080
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: HTTP Port
+    Required: 'true'
+    Target: '8080'
+    Type: Port
+  value: '8080'
+- '@attributes':
+    Default: '9443'
+    Description: 'Crush HTTPS Port '
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: HTTPS Port
+    Required: 'false'
+    Target: '9443'
+    Type: Port
+  value: '9443'
+- '@attributes':
+    Default: '9921'
+    Description: Crush FTP Port
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: FTP Port
+    Required: 'false'
+    Target: '9921'
+    Type: Port
+  value: '9921'
+- '@attributes':
+    Default: '9090'
+    Description: 'Crush port 9090 '
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: HTTP port 9090
+    Required: 'false'
+    Target: '9090'
+    Type: Port
+  value: '9090'
+- '@attributes':
+    Default: '2222'
+    Description: 'Crush port 2222 '
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: HTTP port 2222
+    Required: 'false'
+    Target: '2222'
+    Type: Port
+  value: '2222'
+- '@attributes':
+    Default: crushadmin
+    Description: 'Admin user for Crushftp '
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Crushftp admin user
+    Required: 'true'
+    Target: CRUSHADMIN
+    Type: Variable
+  value: crushadmin
+- '@attributes':
+    Default: crush9password
+    Description: 'Password for Admin user '
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Crushftp admin user password
+    Required: 'true'
+    Target: CRUSHPASSWORD
+    Type: Variable
+  value: crush9password
+- '@attributes':
+    Default: '99'
+    Description: UID for permissions.  Do not change unless you know what you're doing.
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: PUID
+    Required: 'true'
+    Target: PUID
+    Type: Variable
+  value: '99'
+- '@attributes':
+    Default: '100'
+    Description: GID for permissions.  Do not change unless you know what you're doing.
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: PGID
+    Required: 'true'
+    Target: PGID
+    Type: Variable
+  value: '100'
+FirstSeen: 1586450111
+Icon: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/crushftp.png
+LastUpdate: 1586375308
+LastUpdateScan: 1648804644
+Name: crushftp9
+Network: bridge
+Overview: CrushFTP9 is an extremely powerful, easy to use FTP solution that can use
+  sftp, ftp, webDav, and http.
+Privileged: 'true'
+Project: https://github.com/mikeylikesrocks/unraid-crushftp9
+Registry: https://hub.docker.com/repository/docker/mdschaefer/crushftp9
+Repo: Selfhosters Unraid Discord Repository
+RepoShort: Selfhosters
+Repository: mdschaefer/crushftp9
+Support: https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository
+TemplateURL: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/crushftp9.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8080]/
+topPerforming: 0.052
+topTrending: -4.928000000000001

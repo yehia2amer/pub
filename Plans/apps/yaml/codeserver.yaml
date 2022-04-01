@@ -1,0 +1,172 @@
+Branch:
+- Tag: latest
+  TagDescription: Stable releases
+- GitHub: https://github.com/linuxserver/docker-code-server/tree/focal#application-setup
+  ReadMe: https://github.com/linuxserver/docker-code-server/tree/focal#readme
+  Tag: focal
+  TagDescription: DEPRECATED (no longer updated, `latest` is rebased on focal) - Stable
+    releases, based on Ubuntu Focal
+- GitHub: https://github.com/linuxserver/docker-code-server/tree/development#application-setup
+  ReadMe: https://github.com/linuxserver/docker-code-server/tree/development#readme
+  Tag: development
+  TagDescription: DEPRECATED (no longer updated) - Prereleases from their GitHub
+CategoryList:
+- Cloud
+- Productivity
+- Tools-Utilities
+ChangeLogPresent: true
+Config:
+- '@attributes':
+    Default: '8443'
+    Description: web gui
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI
+    Required: 'true'
+    Target: '8443'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Contains all relevant configuration files.
+    Display: advanced
+    Mask: 'false'
+    Mode: rw
+    Name: Appdata
+    Required: 'true'
+    Target: /config
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: password
+    Description: Optional web gui password, if `PASSWORD` or `HASHED_PASSWORD` is
+      not provided, there will be no auth.
+    Display: always
+    Mask: 'true'
+    Name: PASSWORD
+    Required: 'false'
+    Target: PASSWORD
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Optional web gui password, overrides `PASSWORD`, instructions on
+      how to create it is below.
+    Display: always
+    Mask: 'true'
+    Name: HASHED_PASSWORD
+    Required: 'false'
+    Target: HASHED_PASSWORD
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: password
+    Description: If this optional variable is set, user will have sudo access in the
+      code-server terminal with the specified password.
+    Display: always
+    Mask: 'true'
+    Name: SUDO_PASSWORD
+    Required: 'false'
+    Target: SUDO_PASSWORD
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Optionally set sudo password via hash (takes priority over `SUDO_PASSWORD`
+      var). Format is `$type$salt$hashed`.
+    Display: always
+    Mask: 'true'
+    Name: SUDO_PASSWORD_HASH
+    Required: 'false'
+    Target: SUDO_PASSWORD_HASH
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: code-server.my.domain
+    Description: If this optional variable is set, this domain will be proxied for
+      subdomain proxying. See Documentation(https://github.com/cdr/code-server/blob/master/docs/FAQ.md#sub-domains)
+    Display: always
+    Mask: 'false'
+    Name: PROXY_DOMAIN
+    Required: 'false'
+    Target: PROXY_DOMAIN
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: /config/workspace
+    Description: If this optional variable is set, code-server will open this directory
+      by default
+    Display: always
+    Mask: 'false'
+    Name: DEFAULT_WORKSPACE
+    Required: 'false'
+    Target: DEFAULT_WORKSPACE
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '99'
+    Description: 'Container Variable: PUID'
+    Display: advanced
+    Mask: 'false'
+    Name: PUID
+    Required: 'true'
+    Target: PUID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '100'
+    Description: 'Container Variable: PGID'
+    Display: advanced
+    Mask: 'false'
+    Name: PGID
+    Required: 'true'
+    Target: PGID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '022'
+    Description: 'Container Variable: UMASK'
+    Display: advanced
+    Mask: 'false'
+    Name: UMASK
+    Required: 'false'
+    Target: UMASK
+    Type: Variable
+  value: ''
+DonateImg: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/donate.png
+DonateLink: https://www.linuxserver.io/donate
+DonateText: Donations
+FirstSeen: 1561673274
+GitHub: https://github.com/linuxserver/docker-code-server#application-setup
+Icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/code-server-logo.png
+LastUpdate: 1647522977
+LastUpdateScan: 1647914635
+Name: code-server
+Network: bridge
+Overview: 'Code-server(https://coder.com) is VS Code running on a remote server, accessible
+  through the browser.
+
+  - Code on your Chromebook, tablet, and laptop with a consistent dev environment.
+
+  - If you have a Windows or Mac workstation, more easily develop for Linux.
+
+  - Take advantage of large cloud servers to speed up tests, compilations, downloads,
+  and more.
+
+  - Preserve battery life when you''re on the go.
+
+  - All intensive computation runs on your server.
+
+  - You''re no longer running excess instances of Chrome.'
+Privileged: 'false'
+Project: https://coder.com
+ReadMe: https://github.com/linuxserver/docker-code-server#readme
+Registry: https://github.com/orgs/linuxserver/packages/container/package/code-server
+Repo: linuxserver's Repository
+Repository: lscr.io/linuxserver/code-server
+Support: https://github.com/linuxserver/docker-code-server/issues/new/choose
+TemplateURL: https://raw.githubusercontent.com/linuxserver/templates/master/unraid/code-server.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8443]
+topTrending: -1.158

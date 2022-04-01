@@ -1,0 +1,61 @@
+CategoryList:
+- Cloud
+- Productivity
+- Tools-Utilities
+- Network-Web
+Config:
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI
+    Required: 'false'
+    Target: '8080'
+    Type: Port
+  value: '3300'
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Storage (data)
+    Required: 'false'
+    Target: /app/data
+    Type: Path
+  value: /mnt/user/appdata/mojopaste
+- '@attributes':
+    Default: ''
+    Description: The application can make charts from the input data. (1/0)
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: PASTE_ENABLE_CHARTS
+    Required: 'false'
+    Target: PASTE_ENABLE_CHARTS
+    Type: Variable
+  value: '0'
+FirstSeen: 1643403816
+Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/mojopaste.png
+LastUpdate: 1642234160
+LastUpdateScan: 1648598613
+Name: Mojopaste
+Network: bridge
+Overview: "DESCRIPTION\r\nMojopaste is a pastebin application. There's about one million\
+  \ of these out there, but if you have the need to run something internally at work\
+  \ or you just fancy having your own pastebin, this is your application.\r\n\r\n\
+  Live demo:\r\nhttp://p.thorsen.pm/\r\nhttps://thorsen.pm/paste\r\n\r\nVERSION\r\n\
+  1.0 (2022-01-28)"
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/jhthorsen/app-mojopaste
+Registry: https://hub.docker.com/r/jhthorsen/mojopaste
+Repo: SmartPhoneLover's Repository
+Repository: jhthorsen/mojopaste
+Requires: ''
+Support: https://forums.unraid.net/topic/119237-support-smartphonelover-mojopaste/
+TemplateURL: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/master/templates/Mojopaste.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8080]

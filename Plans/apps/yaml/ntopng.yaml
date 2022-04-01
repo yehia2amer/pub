@@ -1,0 +1,45 @@
+CategoryList:
+- Security
+- Network-Management
+Config:
+  '@attributes':
+    Default: ''
+    Description: Container path to /var/lib/redis to persist data
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: rw
+    Name: AppData Config Path
+    Required: 'true'
+    Target: /var/lib/redis
+    Type: Path
+  value: /mnt/user/appdata/ntopng
+FirstSeen: 1618005568
+Icon: https://raw.githubusercontent.com/cschanot/docker-templates/main/images/ntopng-icon-150x150.png
+LastUpdate: 1645533116
+LastUpdateScan: 1646586190
+Name: ntopng
+Network: host
+Networking:
+  Mode: host
+Overview: "High-Speed Web-based Traffic Analysis and Flow Collection \r\n\r\n\r\n\r\
+  \nClick advanced view and in post arguments change eth0 to the network interface\
+  \ you want to monitor.\r\nSince this is running host mode you can change the default\
+  \ port of 3000 to whatever you need by by\r\nchanging the --http-port in post arguments\
+  \ to the port you would like to use. Don't forget to change\r\nWebUI to match.\r\
+  \n\r\nThis image runs a redis server so if you are already hosting one you will\
+  \ need to add \r\n-r YOUR_REDIST_SERVER:YOUR_REDIS_PORT at the very least to post\
+  \ arguments. The\r\nformat that -r takes is the following: [h[:port[:pwd]]][@db-id]\
+  \ \r\nYou will also want this container to start after your redis container so it\
+  \ doesn't conflict."
+PostArgs: -i eth0 --http-port 0.0.0.0:3000
+Privileged: 'false'
+Project: https://www.ntop.org/
+Registry: https://hub.docker.com/r/ntop/ntopng/
+Repo: cschanot's Repository
+Repository: ntop/ntopng:stable
+Support: https://forums.unraid.net/topic/105443-support-cschanot-docker-templates/
+TemplateURL: https://raw.githubusercontent.com/cschanot/docker-templates/master/ntopng.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:3000]/
+topPerforming: 3.594
+topTrending: 1.0999999999999996

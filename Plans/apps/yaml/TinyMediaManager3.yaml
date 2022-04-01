@@ -1,0 +1,128 @@
+CategoryList:
+- MediaApp-Video
+- MediaApp-Other
+- MediaServer-Video
+- MediaServer-Other
+Config:
+- '@attributes':
+    Default: /mnt/user/appdata/tmm
+    Description: 'Container Path: /config'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: rw
+    Name: ConfigDir
+    Required: 'true'
+    Target: /config
+    Type: Path
+  value: /mnt/user/appdata/tmm
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /media'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: MediaDir
+    Required: 'true'
+    Target: /media
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: GROUP_ID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: GROUP_ID
+    Required: 'false'
+    Target: GROUP_ID
+    Type: Variable
+  value: '100'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: USER_ID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: USER_ID
+    Required: 'false'
+    Target: USER_ID
+    Type: Variable
+  value: '1000'
+- '@attributes':
+    Default: Asia/Bahrain
+    Description: "Full list:\r\n\r\nhttps://en.wikipedia.org/wiki/List_of_tz_database_time_zones"
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Timezone
+    Required: 'false'
+    Target: TZ
+    Type: Variable
+  value: Asia/Bahrain
+- '@attributes':
+    Default: '5800'
+    Description: 'Container Port: 5800'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI port
+    Required: 'true'
+    Target: '5800'
+    Type: Port
+  value: '5800'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: KEEP_APP_RUNNING'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: KEEP_APP_RUNNING
+    Required: 'false'
+    Target: KEEP_APP_RUNNING
+    Type: Variable
+  value: '1'
+- '@attributes':
+    Default: '1280'
+    Description: 'Container Variable: DISPLAY_WIDTH'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: DISPLAY_WIDTH
+    Required: 'true'
+    Target: DISPLAY_WIDTH
+    Type: Variable
+  value: '1280'
+- '@attributes':
+    Default: '768'
+    Description: "Container Variable: DISPLAY_HEIGHT\t"
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: "DISPLAY_HEIGHT\t"
+    Required: 'true'
+    Target: "DISPLAY_HEIGHT\t"
+    Type: Variable
+  value: '768'
+FirstSeen: 1593662911
+Icon: https://github.com/hussainalhaddad/docker-templates/raw/master/tinymediamanager/icon.png
+LastUpdate: 1645183243
+LastUpdateScan: 1648231405
+Name: TinyMediaManager3
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: tinyMediaManager is a media management tool written in Java/Swing. It is
+  written to provide metadata for the Kodi Media Center (formerly known as XBMC),
+  MediaPortal and Plex media server. Due to the fact that it is written in Java, tinyMediaManager
+  will run on Windows, Linux and macOS (and possible more OS).
+PostArgs: ''
+Privileged: 'false'
+Project: https://www.tinymediamanager.org/
+Registry: https://hub.docker.com/r/coolasice1999/tmm
+Repo: hussainalhaddad's Repository
+Repository: romancin/tinymediamanager:latest
+Support: https://github.com/hussainalhaddad/docker-templates
+TemplateURL: https://raw.githubusercontent.com/hussainalhaddad/docker-templates/master/tinymediamanager/tinymediamanager.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:5800]
+topTrending: -65.3

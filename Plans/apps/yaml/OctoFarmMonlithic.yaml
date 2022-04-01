@@ -1,0 +1,92 @@
+Branch:
+- Tag: monolithic-latest
+  TagDescription: Latest stable release of OctoFarm, including a built-in MongoDB
+    instance.
+- Tag: monolithic-dev
+  TagDescription: Latest semi-stable development release of OctoFarm, including a
+    built-in MongoDB instance. Use with caution!
+CategoryList:
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /data/db'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: database
+    Required: 'true'
+    Target: /data/db
+    Type: Path
+  value: /mnt/user/appdata/octofarm/db
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /data/logs'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: logs
+    Required: 'false'
+    Target: /data/logs
+    Type: Path
+  value: /mnt/user/appdata/octofarm/logs
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /scripts'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: scripts
+    Required: 'false'
+    Target: /scripts
+    Type: Path
+  value: /mnt/user/appdata/octofarm/scripts
+- '@attributes':
+    Default: ''
+    Description: Thumbnail store for history
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: images
+    Required: 'false'
+    Target: /app/images
+    Type: Path
+  value: /mnt/user/appdata/octofarm/images
+- '@attributes':
+    Default: '4000'
+    Description: 'Container Port: 4000'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Web UI
+    Required: 'true'
+    Target: '4000'
+    Type: Port
+  value: '4000'
+DonateLink: https://www.patreon.com/NotExpectedYet
+DonateText: 'Support the development on Patreon:'
+FirstSeen: 1592071652
+Icon: https://github.com/NotExpectedYet/OctoFarm/raw/master/views/android-chrome-512x512.png
+LastUpdate: 1645932384
+LastUpdateScan: 1646636592
+Name: OctoFarm-Monlithic
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "OctoFarm is a web server and client combination for unifying multiple instances\
+  \ of Octoprint.\n\tThis image also includes a built-in self-contained MongoDB instance.\n\
+  \tYou can manage and monitor as many instances as you want from a single interface\
+  \ giving you full control over your 3D printer farm. This image also includes a\
+  \ built-in self-contained MongoDB instance."
+PostArgs: ''
+Privileged: 'false'
+Project: https://octofarm.net/
+Registry: https://hub.docker.com/r/octofarm/octofarm/
+Repo: mearman's Repository
+Repository: octofarm/octofarm:monolithic-latest
+Support: https://github.com/NotExpectedYet/OctoFarm/issues
+TemplateURL: https://raw.githubusercontent.com/NotExpectedYet/OctoFarm-UnRaid-Template/master/octofarm/octofarm-monolithic.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:4000]
+topPerforming: 3.698
+topTrending: -14.044999999999998

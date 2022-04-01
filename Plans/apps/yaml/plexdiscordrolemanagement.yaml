@@ -1,0 +1,238 @@
+CategoryList:
+- Tools-Utilities
+- Other
+- MediaApp-Other
+- Network-Messenger
+Config:
+- '@attributes':
+    Default: ''
+    Description: Discord Bot Token
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Discord Bot Token
+    Required: 'true'
+    Target: botToken
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '!'
+    Description: Default Discord Bot Prefix
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Default Discord Bot Prefix
+    Required: 'true'
+    Target: defaultPrefix
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Host Machine IP - The IP Address of this machine, needed to send
+      to Tautulli for webhook creation
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Host Machine IP
+    Required: 'true'
+    Target: node_hook_ip
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '3000'
+    Description: Enter the same value as you enter for the port below.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Webhook Port Override
+    Required: 'true'
+    Target: node_hook_port
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '3000'
+    Description: Webhook Port - Make sure the override port matches this one
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Webhook Port
+    Required: 'true'
+    Target: '3000'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Tautulli IP Address (Probably your Host IP)
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Tautulli IP Address
+    Required: 'false'
+    Target: tautulli_ip
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Tautulli Port Number
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Tautulli Port
+    Required: 'false'
+    Target: tautulli_port
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Tautulli API Key
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Tautulli API Key
+    Required: 'false'
+    Target: tautulli_api_key
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Sonarr IP Address (Probably your Host IP)
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Sonarr IP Address
+    Required: 'false'
+    Target: sonarr_ip
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Sonarr Port Number
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Sonarr Port
+    Required: 'false'
+    Target: sonarr_port
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Sonarr API Key
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Sonarr API Key
+    Required: 'false'
+    Target: sonarr_api_key
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /app/config'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Appdata
+    Required: 'true'
+    Target: /app/config
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Optional Second Sonarr - IP Address (Probably your Host IP)
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: Second Sonarr IP Address
+    Required: 'false'
+    Target: sonarr_ip_2
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Optional Second Sonarr - Port Number
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: Second Sonarr Port
+    Required: 'false'
+    Target: sonarr_port_2
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Optional Second Sonarr - API Key
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: Second Sonarr API Key
+    Required: 'false'
+    Target: sonarr_api_key_2
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Optional Third Sonarr - IP Address (Probably your Host IP)
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: Third Sonarr IP Address
+    Required: 'false'
+    Target: sonarr_ip_3
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Optional Third Sonarr - Port Number
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: Third Sonarr Port
+    Required: 'false'
+    Target: sonarr_port_3
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Optional Third Sonarr - API Key
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: Third Sonarr API Key
+    Required: 'false'
+    Target: sonarr_api_key_3
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '0'
+    Description: 'Container Variable: DEBUG_MODE'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: DEBUG_MODE
+    Required: 'false'
+    Target: DEBUG_MODE
+    Type: Variable
+  value: ''
+FirstSeen: 1579059023
+Icon: https://user-images.githubusercontent.com/22354631/72322110-80e74300-3673-11ea-8c38-32b85c1c36b4.png
+LastUpdate: 1604776762
+LastUpdateScan: 1646636591
+Name: plex_discord_role_management
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "A discord bot that synchronizes with Tautulli and Sonarr to deliver tailored\
+  \ notifications.\r\n\r\nVisit https://discordapp.com/developers/applications/me\
+  \ for Bot Token."
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/CyaOnDaNet/plex_discord_role_management
+Registry: https://hub.docker.com/r/cyaondanet/plex_discord_role_management
+Repo: CyaOnDaNet's Repository
+Repository: cyaondanet/plex_discord_role_management:latest
+Support: https://forums.unraid.net/topic/87382-plex-discord-role-management-docker-support-thread/
+TemplateURL: https://raw.githubusercontent.com/CyaOnDaNet/unraid-templates/master/CyaOnDaNet/plex_discord_role_management.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''
+topTrending: 14.240999999999998

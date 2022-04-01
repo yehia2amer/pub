@@ -1,0 +1,123 @@
+CategoryList:
+- Productivity
+Config:
+- '@attributes':
+    Default: guest
+    Description: User for login, default is set to guest
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: USER
+    Required: 'true'
+    Target: USER
+    Type: Variable
+  value: guest
+- '@attributes':
+    Default: password
+    Description: Password for login, default is set to password
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: SECRET
+    Required: 'true'
+    Target: SECRET
+    Type: Variable
+  value: password
+- '@attributes':
+    Default: Asia/Shanghai
+    Description: Default TZ is set to Asia/Shanghai
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: TZ
+    Required: 'false'
+    Target: TZ
+    Type: Variable
+  value: Asia/Shanghai
+- '@attributes':
+    Default: '6080'
+    Description: Port for accessing the Web UI
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WEB UI
+    Required: 'false'
+    Target: '3000'
+    Type: Port
+  value: '6080'
+- '@attributes':
+    Default: /mnt/user/appdata/nvim-server
+    Description: 'Container Path: /config'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: CONFIG
+    Required: 'true'
+    Target: /config
+    Type: Path
+  value: /mnt/user/appdata/nvim-server
+- '@attributes':
+    Default: /mnt/user/appdata/nvim-server-workspace
+    Description: 'Container Path: /workspace'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: WORKSPACE
+    Required: 'true'
+    Target: /workspace
+    Type: Path
+  value: /mnt/user/appdata/nvim-server-workspace
+- '@attributes':
+    Default: $UID
+    Description: 'Container Variable: UID'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: UID
+    Required: 'false'
+    Target: ''
+    Type: Variable
+  value: $UID
+- '@attributes':
+    Default: '8090'
+    Description: Port for the Instant Markdown Preview Server
+    Display: advanced
+    Mask: 'false'
+    Mode: tcp
+    Name: Markdown Preview
+    Required: 'false'
+    Target: '8090'
+    Type: Port
+  value: '8090'
+- '@attributes':
+    Default: $GID
+    Description: 'Container Variable: GID'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: GID
+    Required: 'false'
+    Target: ''
+    Type: Variable
+  value: $GID
+FirstSeen: 1612919463
+Icon: https://raw.githubusercontent.com/yqlbu/unraid-templates/main/nvim-server/icon.png
+LastUpdate: 1643849312
+LastUpdateScan: 1646687001
+Name: nvim-server
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "A containerized IDE-like text editor that runs on a web server. This tool\
+  \ is for running NeoVim remotely and continuing the development process at \U0001F680\
+  \ speed."
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/yqlbu/neovim-server
+Registry: https://hub.docker.com/r/hikariai/nvim-server
+Repo: kevin yu's Repository
+Repository: hikariai/nvim-server:latest
+TemplateURL: https://raw.githubusercontent.com/yqlbu/unraid-templates/master/nvim-server/nvim-server.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:3000]/wetty
+topTrending: -2.353

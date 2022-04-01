@@ -1,0 +1,64 @@
+CategoryList:
+- Cloud
+- Productivity
+- Tools-Utilities
+- Network-FTP
+Config:
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI
+    Required: 'false'
+    Target: '8080'
+    Type: Port
+  value: '8080'
+- '@attributes':
+    Default: ''
+    Description: This is the configuration file.
+    Display: always
+    Mask: 'false'
+    Mode: ro
+    Name: Storage (config file)
+    Required: 'false'
+    Target: /home/plik/server/plikd.cfg
+    Type: Path
+  value: /mnt/user/appdata/plik/plikd.cfg
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Storage (data)
+    Required: 'false'
+    Target: /data
+    Type: Path
+  value: /mnt/user/appdata/plik/data
+FirstSeen: 1643807012
+Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/plik.png
+LastUpdate: 1645085924
+LastUpdateScan: 1646406208
+Name: Plik
+Network: bridge
+Overview: "DESCRIPTION\r\nPlik is a scalable &amp; friendly temporary file upload\
+  \ system (Wetransfer like) in golang.\r\n\r\nLive demo:\r\nhttps://plik.root.gg/\r\
+  \n\r\nNOTES\r\n\u2022 Run the following cmds before building the container: 'mkdir\
+  \ -m777 /mnt/user/appdata/plik', 'curl https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/dependencies/plik/plikd.cfg'.\r\
+  \n\u2022 Plik uses an embbeded database (SQLite) by default, but you can use an\
+  \ external database (MySQL, PostgreSQL) if decided. Check the 'plikd.cfg' file to\
+  \ know more.\r\n\u2022 Plik has an HTTP API to manage the upload and get files.\
+  \ Check the GitHub repo to know more.\r\n\r\nVERSION\r\n1.0 (2022-02-01)"
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/root-gg/plik
+Registry: https://hub.docker.com/r/rootgg/plik
+Repo: SmartPhoneLover's Repository
+Repository: rootgg/plik
+Requires: ''
+Support: https://forums.unraid.net/topic/119480-support-smartphonelover-plik/
+TemplateURL: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/master/templates/Pelik.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8080]

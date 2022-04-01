@@ -1,0 +1,438 @@
+CAComment: This template is set up to use a custom network. You may have to adjust
+  the network or IP address etc to match your system
+CategoryList:
+- Backup
+- GameServers
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: ''
+    Description: IP Address of cache container. (Has to be the same as the HOST's
+      IP. If you set the container's IP to 192.168.1.202 this has to be the same.
+      If you use bridge it has to be the same as unRAID's IP.)
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: LANCACHE_IP
+    Required: 'true'
+    Target: LANCACHE_IP
+    Type: Variable
+  value: 192.168.1.202
+- '@attributes':
+    Default: ''
+    Description: IP Address of cache container. (Has to be the same as the HOST's
+      IP. If you set the container's IP to 192.168.1.202 this has to be the same.
+      If you use bridge it has to be the same as unRAID's IP.)
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: DNS_BIND_IP
+    Required: 'true'
+    Target: DNS_BIND_IP
+    Type: Variable
+  value: 192.168.1.202
+- '@attributes':
+    Default: ''
+    Description: Location to store the cached files
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: data
+    Required: 'false'
+    Target: /data/cache
+    Type: Path
+  value: /mnt/user/lancache
+- '@attributes':
+    Default: ''
+    Description: Location to store the DNS logs
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: DNS Logs
+    Required: 'false'
+    Target: /var/log/named
+    Type: Path
+  value: /mnt/user/appdata/lancache-bundle/log/named
+- '@attributes':
+    Default: ''
+    Description: Location to store the Nginx logs
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Nginx Logs
+    Required: 'false'
+    Target: /var/log/nginx
+    Type: Path
+  value: /mnt/user/appdata/lancache-bundle/log/nginx
+- '@attributes':
+    Default: ''
+    Description: Memory size for the cache
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: CACHE_MEM_SIZE
+    Required: 'false'
+    Target: CACHE_MEM_SIZE
+    Type: Variable
+  value: 500m
+- '@attributes':
+    Default: ''
+    Description: Max size for the cache
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: CACHE_DISK_SIZE
+    Required: 'false'
+    Target: CACHE_DISK_SIZE
+    Type: Variable
+  value: 2000g
+- '@attributes':
+    Default: ''
+    Description: Max age for files in the cache
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: CACHE_MAX_AGE
+    Required: 'false'
+    Target: CACHE_MAX_AGE
+    Type: Variable
+  value: 150d
+- '@attributes':
+    Default: '53'
+    Description: DNS port, don't change!
+    Display: advanced
+    Mask: 'false'
+    Mode: udp
+    Name: DNS UDP Port
+    Required: 'true'
+    Target: '53'
+    Type: Port
+  value: '53'
+- '@attributes':
+    Default: ''
+    Description: "Container Port: 80\r\nDon't change!"
+    Display: advanced
+    Mask: 'false'
+    Mode: tcp
+    Name: HTTP Port
+    Required: 'false'
+    Target: '80'
+    Type: Port
+  value: '80'
+- '@attributes':
+    Default: ''
+    Description: "Container Port: 443\r\nSNIProxy port, don't change!"
+    Display: advanced
+    Mask: 'false'
+    Mode: tcp
+    Name: HTTPS Port
+    Required: 'false'
+    Target: '443'
+    Type: Port
+  value: '443'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: UPSTREAM_DNS'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: UPSTREAM_DNS
+    Required: 'true'
+    Target: UPSTREAM_DNS
+    Type: Variable
+  value: 1.1.1.1
+- '@attributes':
+    Default: ''
+    Description: Must be set to true to use generic cache
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: USE_GENERIC_CACHE
+    Required: 'true'
+    Target: USE_GENERIC_CACHE
+    Type: Variable
+  value: 'true'
+- '@attributes':
+    Default: ''
+    Description: Set to true to disable arenanet caching
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: DISABLE_ARENANET
+    Required: 'false'
+    Target: DISABLE_ARENANET
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Set to true to disable blizzard caching
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: DISABLE_BLIZZARD
+    Required: 'false'
+    Target: DISABLE_BLIZZARD
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Set to true to disable cityofheroes caching
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: DISABLE_CITYOFHEROES
+    Required: 'false'
+    Target: DISABLE_CITYOFHEROES
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Set to true to disable daybreak caching
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: DISABLE_DAYBREAK
+    Required: 'false'
+    Target: DISABLE_DAYBREAK
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Set to true to disable epicgames caching
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: DISABLE_EPICGAMES
+    Required: 'false'
+    Target: DISABLE_EPICGAMES
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Set to true to disable frontier caching
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: DISABLE_FRONTIER
+    Required: 'false'
+    Target: DISABLE_FRONTIER
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Set to true to disable hirez caching
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: DISABLE_HIREZ
+    Required: 'false'
+    Target: DISABLE_HIREZ
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Set to true to disable neverwinter caching
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: DISABLE_NEVERWINTER
+    Required: 'false'
+    Target: DISABLE_NEVERWINTER
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Set to true to disable nexusmods caching
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: DISABLE_NEXUSMODS
+    Required: 'false'
+    Target: DISABLE_NEXUSMODS
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Set to true to disable nintendo caching
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: DISABLE_NINTENDO
+    Required: 'false'
+    Target: DISABLE_NINTENDO
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Set to true to disable origin caching
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: DISABLE_ORIGIN
+    Required: 'false'
+    Target: DISABLE_ORIGIN
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Set to true to disable renegadex caching
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: DISABLE_RENEGADEX
+    Required: 'false'
+    Target: DISABLE_RENEGADEX
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Set to true to disable riot caching
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: DISABLE_RIOT
+    Required: 'false'
+    Target: DISABLE_RIOT
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Set to true to disable rockstar caching
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: DISABLE_ROCKSTAR
+    Required: 'false'
+    Target: DISABLE_ROCKSTAR
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Set to true to disable sony caching
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: DISABLE_SONY
+    Required: 'false'
+    Target: DISABLE_SONY
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Set to true to disable steam caching
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: DISABLE_STEAM
+    Required: 'false'
+    Target: DISABLE_STEAM
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Set to true to disable teso caching
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: DISABLE_TESO
+    Required: 'false'
+    Target: DISABLE_TESO
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Set to true to disable twitch caching
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: DISABLE_TWITCH
+    Required: 'false'
+    Target: DISABLE_TWITCH
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Set to true to disable uplay caching
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: DISABLE_UPLAY
+    Required: 'false'
+    Target: DISABLE_UPLAY
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Set to true to disable warframe caching
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: DISABLE_WARFRAME
+    Required: 'false'
+    Target: DISABLE_WARFRAME
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Set to true to disable wargaming caching
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: DISABLE_WARGAMING
+    Required: 'false'
+    Target: DISABLE_WARGAMING
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Set to true to disable windowsupdates caching
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: DISABLE_WSUS
+    Required: 'false'
+    Target: DISABLE_WSUS
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Set to true to disable xboxlive caching
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: DISABLE_XBOXLIVE
+    Required: 'false'
+    Target: DISABLE_XBOXLIVE
+    Type: Variable
+  value: ''
+DonateLink: https://www.patreon.com/josh5
+DonateText: Support me on Patreon
+FirstSeen: 1581506354
+Icon: https://github.com/Josh5/lancache-bundle/raw/master/lancache-bundle-logo.png
+LastUpdate: 1627777518
+LastUpdateScan: 1646471017
+Name: lancache-bundle
+Network: br0
+Networking:
+  Mode: br0
+Overview: "An all in one lancache docker providing a combination of the following\
+  \ three projects:\r\nhttps://github.com/lancachenet/lancache-dns\r\nhttps://github.com/lancachenet/monolithic\r\
+  \nhttps://github.com/lancachenet/sniproxy\r\n\r\nThanks to cheesemarathon for their\
+  \ work on the SteamCacheBundle that inspired this and provided the grounding for\
+  \ the template. Note, however, that this Docker image does not run at all the same\
+  \ way and is strictly based on the original upstream logcache project.\r\n\r\nOn\
+  \ start, this image will download the latest domain list from https://github.com/uklans/cache-domains.\
+  \ This means no constant upgrading of the docker image is necessary in order to\
+  \ guarantee continued usability"
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/Josh5/lancache-bundle
+Registry: https://hub.docker.com/repository/docker/josh5/lancache-bundle
+Repo: Josh.5's Repository
+Repository: josh5/lancache-bundle:latest
+Support: https://forums.unraid.net/topic/79858-support-josh5-docker-templates/
+TemplateURL: https://raw.githubusercontent.com/Josh5/unraid-docker-templates/master/josh5/lancache-bundle.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''
+topPerforming: 3.928
+topTrending: -3.742

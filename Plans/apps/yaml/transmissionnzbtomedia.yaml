@@ -1,0 +1,55 @@
+BaseImage: lsiobase/alpine.python
+Beta: 'true'
+BindTime: 'true'
+CategoryList:
+- Downloaders
+ChangeLogPresent: true
+Data:
+  Volume:
+  - ContainerDir: /config
+    HostDir: ''
+    Mode: rw
+  - ContainerDir: /downloads
+    HostDir: ''
+    Mode: rw
+  - ContainerDir: /watch
+    HostDir: ''
+    Mode: rw
+Environment:
+  Variable:
+  - Name: PUID
+    Value: '99'
+  - Name: PGID
+    Value: '100'
+FirstSeen: 1484974800
+Icon: https://raw.githubusercontent.com/thraxis/docker-templates/master/thraxis/img/transmission-nzbtomedia-icon.png
+LastUpdate: 1579392342
+LastUpdateScan: 1646341402
+Name: transmission-nzbtomedia
+Networking:
+  Mode: bridge
+  Publish:
+    Port:
+    - ContainerPort: '9091'
+      HostPort: '9091'
+      Protocol: tcp
+    - ContainerPort: '51413'
+      HostPort: '51413'
+      Protocol: tcp
+Overview: "Transmission is designed for easy, powerful use. Transmission has the features\
+  \ you want from a BitTorrent client: encryption, a web interface, peer exchange,\
+  \ magnet links, DHT, \xB5TP, UPnP and NAT-PMP port forwarding, webseed support,\
+  \ watch directories, tracker editing, global and per-torrent speed limits, and more.[br]\n\
+  \  nzbToMedia provides NZB and Torrent postprocessing To CouchPotatoServer, SickBeard/SickRage,\
+  \ HeadPhones, Mylar and Gamez"
+Privileged: 'false'
+Project: http://www.transmissionbt.com/
+Registry: https://hub.docker.com/r/thraxis/transmission-nzbtomedia/
+Repo: Thraxis' Repository
+Repository: thraxis/transmission-nzbtomedia
+Support: http://lime-technology.com/forum/index.php?topic=55835.0
+TemplateURL: https://raw.githubusercontent.com/Thraxis/docker-templates/master/thraxis/transmission-nzbtomedia.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:9091]/
+topPerforming: 0.786
+topTrending: 0.22599999999999998

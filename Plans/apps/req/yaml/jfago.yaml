@@ -1,0 +1,70 @@
+CategoryList:
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: '8056'
+    Description: Port to use to access jfa-go webui.
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI
+    Required: 'true'
+    Target: '8056'
+    Type: Port
+  value: '8056'
+- '@attributes':
+    Default: /mnt/user/appdata/jfa-go
+    Description: Path to wherever you want to store the config file and other data.
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Config
+    Required: 'true'
+    Target: /data
+    Type: Path
+  value: /mnt/user/appdata/jfa-go
+- '@attributes':
+    Default: /mnt/user/appdata/jellyfin/
+    Description: Path to Jellyfin config directory, ignore if using Emby.
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Jellfyfin Config Directory
+    Required: 'false'
+    Target: /jf
+    Type: Path
+  value: /mnt/user/appdata/jellyfin/
+- '@attributes':
+    Default: /etc/localtime
+    Description: ''
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ro
+    Name: Time
+    Required: 'true'
+    Target: /etc/localtime
+    Type: Path
+  value: /etc/localtime
+FirstSeen: 1633371356
+Icon: https://raw.githubusercontent.com/hrfee/jfa-go/main/images/jfa-go-icon.png
+LastUpdate: 1643916625
+LastUpdateScan: 1646363024
+Name: jfa-go
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "jfa-go is a user management app for Jellyfin (and now Emby) that provides\
+  \ invite-based account creation as well as other features that make one's instance\
+  \ much easier to manage.\r\n\r\n*I am not the creator or maintainer of this container\
+  \ I am merely providing the Unraid template."
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/hrfee/jfa-go
+Registry: https://hub.docker.com/r/hrfee/jfa-go/
+Repo: ndetar's Repository
+Repository: hrfee/jfa-go
+Requires: Jellyfin or Emby
+TemplateURL: https://raw.githubusercontent.com/n8detar/docker-templates/master/n8detar/jfa-go.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8056]/
+topTrending: -12.544

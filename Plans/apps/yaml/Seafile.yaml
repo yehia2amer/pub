@@ -1,0 +1,92 @@
+CategoryList:
+- Cloud
+- MediaApp-Video
+- MediaApp-Music
+- MediaApp-Photos
+- MediaApp-Other
+- MediaServer-Video
+- MediaServer-Music
+- MediaServer-Photos
+- MediaServer-Other
+- Network-Web
+Config:
+- '@attributes':
+    Default: '80'
+    Description: ''
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Port
+    Required: 'true'
+    Target: '80'
+    Type: Port
+  value: '98'
+- '@attributes':
+    Default: ''
+    Description: Set the IP of your unraid. Please
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: UnraidIP
+    Required: 'true'
+    Target: SEAFILE_SERVER_HOSTNAME
+    Type: Variable
+  value: 192.168.0.59
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: DataPath
+    Required: 'true'
+    Target: /shared
+    Type: Path
+  value: /mnt/user/appdata/seafiles
+- '@attributes':
+    Default: admin@test.fr
+    Description: Specifies Seafile admin user, default is 'admin@test.fr'.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: AdminEmail
+    Required: 'true'
+    Target: SEAFILE_ADMIN_EMAIL
+    Type: Variable
+  value: admin@test.fr
+- '@attributes':
+    Default: changeme
+    Description: Specifies Seafile admin password, default is 'changeme'.
+    Display: always
+    Mask: 'true'
+    Mode: ''
+    Name: AdminPassword
+    Required: 'true'
+    Target: SEAFILE_ADMIN_PASSWORD
+    Type: Variable
+  value: changeme
+FirstSeen: 1545575241
+Icon: https://raw.githubusercontent.com/ItJustFox/unraidtemplate/main/seafiles/t%C3%A9l%C3%A9chargement.png
+LastUpdate: 1550561141
+LastUpdateScan: 1646910212
+Name: SeaFile
+Network: bridge
+Overview: Seafile is an open source enterprise file sync and share platform with high
+  reliability and performance. Seafile provides similar feature set to Dropbox, Google
+  Drive and Office 365, while it allows users to host the server on their own hardware.
+  The core feature of Seafile is file sync and share. It provides client apps for
+  most operating systems like Windows, Mac OS, Linux, iOS and Android. It also provides
+  a user-friendly web interface for accessing files in a web browser.
+PostArgs: ''
+Privileged: 'false'
+Project: https://www.seafile.com
+Registry: https://hub.docker.com/r/seafileltd/seafile
+Repo: Fantucie's Repository
+Repository: seafileltd/seafile
+Requires: ''
+Support: https://forums.unraid.net/topic/120473-support-fantucie-apps/
+TemplateURL: https://raw.githubusercontent.com/ItJustFox/unraidtemplate/master/seafiles/seafiles.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:80]
+topPerforming: 0.553
+topTrending: -0.1409999999999999

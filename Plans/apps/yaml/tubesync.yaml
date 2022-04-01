@@ -1,0 +1,152 @@
+CategoryList:
+- Downloaders
+- MediaApp-Video
+- MediaServer-Video
+Config:
+- '@attributes':
+    Default: /mnt/user/appdata/tubesync
+    Description: Config storage path. Default is /mnt/user/appdata/tubesync.
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: AppData Config
+    Required: 'false'
+    Target: /config
+    Type: Path
+  value: /mnt/user/appdata/tubesync
+- '@attributes':
+    Default: ''
+    Description: Path to store downloaded content. Default is none.
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Downloads
+    Required: 'false'
+    Target: /downloads
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'TubeSync WebUI port. Default is 4848. '
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: TubeSync WebUI
+    Required: 'false'
+    Target: '4848'
+    Type: Port
+  value: '4848'
+- '@attributes':
+    Default: '2'
+    Description: If you add a significant amount of work due to adding many large
+      channels you may need to increase the number of background workers. Try around
+      ~4 at most, although the absolute maximum allowed is 8. Default is 2.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: TubeSync Workers
+    Required: 'false'
+    Target: TUBESYNC_WORKERS
+    Type: Variable
+  value: '2'
+- '@attributes':
+    Default: ''
+    Description: Sets the username for HTTP basic authentication. Default is none.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: TubeSync WebUI Username
+    Required: 'false'
+    Target: HTTP_USER
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Sets the password for HTTP basic authentication. Default is none.
+    Display: always
+    Mask: 'true'
+    Mode: ''
+    Name: TubeSync WebUI Password
+    Required: 'false'
+    Target: HTTP_PASS
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Optional external database connection details. Ex: mysql://user:pass@host:port/database.
+      Default is none.'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Database
+    Required: 'false'
+    Target: DATABASE_CONNECTION
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Django''s ALLOWED_HOSTS. Ex: tubesync.example.com,otherhost.com.
+      Default is none.'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Hosts
+    Required: 'false'
+    Target: TUBESYNC_HOSTS
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: False|True
+    Description: 'Enable debugging. Default is False. '
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: TubeSync Debugging
+    Required: 'false'
+    Target: TUBESYNC_DEBUG
+    Type: Variable
+  value: 'False'
+- '@attributes':
+    Default: ''
+    Description: UID for permissions. Do not change unless you know what you're doing.
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: PUID
+    Required: 'true'
+    Target: PUID
+    Type: Variable
+  value: '99'
+- '@attributes':
+    Default: ''
+    Description: GID for permissions. Do not change unless you know what you're doing.
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: PGID
+    Required: 'true'
+    Target: PGID
+    Type: Variable
+  value: '100'
+FirstSeen: 1631469813
+Icon: https://raw.githubusercontent.com/meeb/tubesync/main/tubesync/common/static/images/tubesync.png
+LastUpdateScan: 1647061392
+Name: tubesync
+Network: bridge
+Overview: "TubeSync is a PVR (personal video recorder) for YouTube. Or, like Sonarr\
+  \ but for YouTube (with a built-in download client). It is designed to synchronize\
+  \ channels and playlists from YouTube to local directories and update your media\
+  \ server once media is downloaded.\r\n\r\n_This is a preview release of TubeSync,\
+  \ it may contain bugs but should be usable._\r\n\r\n*I am not the creator or maintainer\
+  \ of this container I am merely providing the Unraid template."
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/meeb/tubesync
+Registry: https://registry.hub.docker.com/r/ghcr.io/meeb/tubesync
+Repo: ndetar's Repository
+Repository: ghcr.io/meeb/tubesync:latest
+Requires: ''
+Support: https://forums.unraid.net/topic/101947-support-ptrfrll-docker-images/
+TemplateURL: https://raw.githubusercontent.com/n8detar/docker-templates/master/n8detar/tubesync.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:4848]/

@@ -1,0 +1,51 @@
+CategoryList:
+- Network-Web
+- Network-Management
+Config:
+- '@attributes':
+    Default: /mnt/user/appdata/statping
+    Description: 'Container Path: /app'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Config
+    Required: 'true'
+    Target: /app
+    Type: Path
+  value: /mnt/user/appdata/statping-ng
+- '@attributes':
+    Default: '8366'
+    Description: 'Container Port: 8080'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Web
+    Required: 'true'
+    Target: '8080'
+    Type: Port
+  value: '8366'
+ExtraParams: --user 99:100
+FirstSeen: 1638075817
+Icon: https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/icons/statping.png
+LastUpdate: 1643232020
+LastUpdateScan: 1648468999
+Name: Statping-ng
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "Statping-ng aims to be an updated drop-in replacement of statping after\
+  \ development stopped on the original fork.\r\n \r\nAn easy to use Status Page for\
+  \ your websites and applications. Statping will automatically fetch the application\
+  \ and render a beautiful status page with tons of features for you to build an even\
+  \ better status page."
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/statping-ng/statping-ng
+Registry: https://hub.docker.com/r/adamboutcher/statping-ng
+Repo: CorneliousJD's Repository
+Repository: adamboutcher/statping-ng
+Support: https://github.com/statping-ng/statping-ng/issues
+TemplateURL: https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/statping-ng.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8080]/
+topTrending: -2.4799999999999995

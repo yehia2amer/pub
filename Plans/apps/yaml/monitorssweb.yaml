@@ -1,0 +1,112 @@
+CategoryList:
+- Network-Messenger
+Config:
+- '@attributes':
+    Default: '1111111111111'
+    Description: Information here https://docs.monitorss.xyz/configuration/web-interface#bot
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: CLIENTID
+    Required: 'true'
+    Target: DRSSWEB_BOT_CLIENTID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '1111111111111'
+    Description: Information here https://docs.monitorss.xyz/configuration/web-interface#bot
+    Display: always
+    Mask: 'true'
+    Mode: ''
+    Name: CLIENTSECRET
+    Required: 'true'
+    Target: DRSSWEB_BOT_CLIENTSECRET
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: https://domain.com/authorize
+    Description: Does not have to be a public domain. Information here https://docs.monitorss.xyz/configuration/web-interface#bot
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: REDIRECTURI
+    Required: 'true'
+    Target: DRSSWEB_BOT_REDIRECTURI
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '22222222222'
+    Description: Information here https://docs.monitorss.xyz/configuration/web-interface#bot
+    Display: always
+    Mask: 'true'
+    Mode: ''
+    Name: TOKEN
+    Required: 'true'
+    Target: DRSSWEB_BOT_TOKEN
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: redis://[REPLACE-WITH-IP]:6379
+    Description: Information here https://docs.monitorss.xyz/configuration/web-interface#database
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: DATABASE_REDIS
+    Required: 'true'
+    Target: DRSSWEB_DATABASE_REDIS
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: mongodb://[REPLACE-WITH-IP]:27017/drss
+    Description: Information here https://docs.monitorss.xyz/configuration/web-interface#database
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: DATABASE_URI
+    Required: 'true'
+    Target: DRSSWEB_DATABASE_URI
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '8081'
+    Description: 'Container Port: 8081'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI
+    Required: 'true'
+    Target: '8081'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: web
+    Description: Do not change
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: Component
+    Required: 'true'
+    Target: DRSS_START
+    Type: Variable
+  value: ''
+FirstSeen: 1613243438
+Icon: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/monitorss.png
+LastUpdate: 1644634037
+LastUpdateScan: 1647011000
+Name: monitorss-web
+Network: bridge
+Overview: "WebUI for the Discord RSS bot (formerly known as Discord.RSS) with customizable\
+  \ feeds.\n\n  Requires a separate container for the bot, as well as redis and MongoDB\n\
+  \n  More configuration options available on [monitorss.xyz](https://docs.monitorss.xyz/configuration/web-interface)"
+Privileged: 'false'
+Project: https://github.com/synzen/MonitoRSS
+Registry: https://hub.docker.com/r/synzen/monitorss
+Repo: Selfhosters Unraid Discord Repository
+RepoShort: Selfhosters
+Repository: synzen/monitorss
+Support: https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/
+TemplateURL: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/monitorss-web.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8081]
+topPerforming: 1.02
+topTrending: -0.69

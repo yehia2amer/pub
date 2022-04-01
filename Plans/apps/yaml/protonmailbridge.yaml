@@ -1,0 +1,76 @@
+Config:
+- '@attributes':
+    Default: ''
+    Description: 'Container Port: 25'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Host Port 1
+    Required: 'false'
+    Target: '25'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Container Port: 143'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Host Port 2
+    Required: 'false'
+    Target: '143'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: /mnt/user/appdata/protonmail-bridge/
+    Description: 'Container Path: /root'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: appdata
+    Required: 'true'
+    Target: /root
+    Type: Path
+  value: ''
+FirstSeen: 1609715259
+Icon: https://github.com/protonmail.png
+LastUpdate: 1648686345
+LastUpdateScan: 1648692216
+Name: protonmail-bridge
+Network: bridge
+Overview: 'ProtonMail Bridge for e-mail clients.
+
+
+  After the container has started you will need to access the CLI to do the initial
+  setup.
+
+  From unraid terminal and run the following:
+
+  ```bash
+
+  docker exec -it protonmail-bridge /bin/bash
+
+  chmod +x entrypoint.sh
+
+  ./entrypoint.sh init
+
+  ```
+
+  Wait for the bridge to startup, use `login` command and follow the instructions
+  to add your account into the bridge. Then use  `info` to see the configuration information
+  (username and password). After that, use `exit` to exit the bridge.
+
+
+  You may need CTRL+C to exit the docker entirely.
+
+  Then restart the container.'
+Privileged: 'false'
+Project: https://github.com/shenxn/protonmail-bridge-docker
+Registry: https://hub.docker.com/r/shenxn/protonmail-bridge
+Repo: Selfhosters Unraid Discord Repository
+RepoShort: Selfhosters
+Repository: shenxn/protonmail-bridge
+TemplateURL: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/protonmail-bridge.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+topPerforming: 0.531
+topTrending: -4.605

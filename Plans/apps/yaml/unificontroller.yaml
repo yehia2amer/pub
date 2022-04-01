@@ -1,0 +1,190 @@
+CategoryList:
+- Tools-Utilities
+- Network-Management
+ChangeLogPresent: true
+Config:
+- '@attributes':
+    Default: '8443'
+    Description: Unifi web admin port
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI
+    Required: 'true'
+    Target: '8443'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: '3478'
+    Description: Unifi STUN port
+    Display: always
+    Mask: 'false'
+    Mode: udp
+    Name: 'Port: 3478'
+    Required: 'true'
+    Target: '3478'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: '10001'
+    Description: Required for AP discovery
+    Display: always
+    Mask: 'false'
+    Mode: udp
+    Name: 'Port: 10001'
+    Required: 'true'
+    Target: '10001'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: '8080'
+    Description: Required for device communication
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: 'Port: 8080'
+    Required: 'true'
+    Target: '8080'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: '1900'
+    Description: Required for `Make controller discoverable on L2 network` option
+    Display: always
+    Mask: 'false'
+    Mode: udp
+    Name: 'Port: 1900'
+    Required: 'false'
+    Target: '1900'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: '8843'
+    Description: Unifi guest portal HTTPS redirect port
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: 'Port: 8843'
+    Required: 'false'
+    Target: '8843'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: '8880'
+    Description: Unifi guest portal HTTP redirect port
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: 'Port: 8880'
+    Required: 'false'
+    Target: '8880'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: '6789'
+    Description: For mobile throughput test
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: 'Port: 6789'
+    Required: 'false'
+    Target: '6789'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: '5514'
+    Description: Remote syslog port
+    Display: always
+    Mask: 'false'
+    Mode: udp
+    Name: 'Port: 5514'
+    Required: 'false'
+    Target: '5514'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: All Unifi data stored here
+    Display: advanced
+    Mask: 'false'
+    Mode: rw
+    Name: Appdata
+    Required: 'true'
+    Target: /config
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: '1024'
+    Description: Optionally change the Java memory limit. Set to `default` to reset
+      to default
+    Display: always
+    Mask: 'false'
+    Name: MEM_LIMIT
+    Required: 'false'
+    Target: MEM_LIMIT
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '1024'
+    Description: Optionally change the Java initial/minimum memory. Set to `default`
+      to reset to default
+    Display: always
+    Mask: 'false'
+    Name: MEM_STARTUP
+    Required: 'false'
+    Target: MEM_STARTUP
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '99'
+    Description: 'Container Variable: PUID'
+    Display: advanced
+    Mask: 'false'
+    Name: PUID
+    Required: 'true'
+    Target: PUID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '100'
+    Description: 'Container Variable: PGID'
+    Display: advanced
+    Mask: 'false'
+    Name: PGID
+    Required: 'true'
+    Target: PGID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '022'
+    Description: 'Container Variable: UMASK'
+    Display: advanced
+    Mask: 'false'
+    Name: UMASK
+    Required: 'false'
+    Target: UMASK
+    Type: Variable
+  value: ''
+DonateImg: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/donate.png
+DonateLink: https://www.linuxserver.io/donate
+DonateText: Donations
+FirstSeen: 1550448205
+GitHub: https://github.com/linuxserver/docker-unifi-controller#application-setup
+Icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/unifi-controller-logo.png
+LastUpdate: 1647317480
+LastUpdateScan: 1647914916
+Name: unifi-controller
+Network: bridge
+Overview: The Unifi-controller(https://www.ubnt.com/enterprise/#unifi) software is
+  a powerful, enterprise wireless software engine ideal for high-density client deployments
+  requiring low latency and high uptime performance.
+Privileged: 'false'
+Project: https://www.ubnt.com/enterprise/#unifi
+ReadMe: https://github.com/linuxserver/docker-unifi-controller#readme
+Registry: https://github.com/orgs/linuxserver/packages/container/package/unifi-controller
+Repo: linuxserver's Repository
+Repository: lscr.io/linuxserver/unifi-controller
+Support: https://github.com/linuxserver/docker-unifi-controller/issues/new/choose
+TemplateURL: https://raw.githubusercontent.com/linuxserver/templates/master/unraid/unifi-controller.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: https://[IP]:[PORT:8443]

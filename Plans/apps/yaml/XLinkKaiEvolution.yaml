@@ -1,0 +1,119 @@
+CategoryList:
+- GameServers
+Config:
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /xlinkkaievolution'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: ServerFiles
+    Required: 'true'
+    Target: /xlinkkaievolution
+    Type: Path
+  value: /mnt/cache/appdata/xlinkkaievolution/
+- '@attributes':
+    Default: ''
+    Description: Only change if you know what you are doing!
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Interface Name
+    Required: 'true'
+    Target: INTERFACE_NAME
+    Type: Variable
+  value: eth0
+- '@attributes':
+    Default: ''
+    Description: Enter extra startup parameters here if needed.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Extra Parameters
+    Required: 'false'
+    Target: EXTRA_PARAMS
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: UID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: UID
+    Required: 'true'
+    Target: UID
+    Type: Variable
+  value: '99'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: GID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: GID
+    Required: 'true'
+    Target: GID
+    Type: Variable
+  value: '100'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: UMASK'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: UMASK
+    Required: 'true'
+    Target: UMASK
+    Type: Variable
+  value: '000'
+- '@attributes':
+    Default: ''
+    Description: This port must be forwarded in your router so that the XLinkKai Orbs
+      can communicate with the container.
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: UDP - Connection to the Orbs
+    Required: 'true'
+    Target: UDP_PORT
+    Type: Variable
+  value: '30000'
+DonateLink: https://www.paypal.me/chips777
+DonateText: 'If you like my work please '
+ExtraParams: --cap-add=NET_ADMIN --restart=unless-stopped
+FirstSeen: 1587449252
+Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/xlinkkai.png
+LastUpdate: 1643018612
+LastUpdateScan: 1647237797
+Name: XLink-Kai-Evolution
+Network: host
+Networking:
+  Mode: host
+Overview: "This Docker will download and install XLink Kai: Evolution.\r\n\r\nXLink\
+  \ Kai: Evolution VII lets you connect with other console users around the world,\
+  \ and play online games for free. XLink Kai: Evo VII tricks your console into thinking\
+  \ that the other users it is connecting to over the Internet, are actually part\
+  \ of a Local Area Network. This is the basis of system-link gaming, where friends\
+  \ would gather around in the same house and play over 2 or more consoles. With XLink\
+  \ Kai: Evo VII, you now have the option to test your skills out with anybody in\
+  \ the world. As for the technical aspects of tunnelling network packets, we won't\
+  \ bore you with that...\r\n\r\nPlease note that you need an XLink Kai: Evolution\
+  \ XTag (XLink Kai Gamertag) you can register it here: https://www.teamxlink.co.uk/?go=register\r\
+  \n\r\nUPDATE NOTICE: The container will check on every start/restart if there is\
+  \ a newer version of XLink Kai: Evolution and update it.\r\n\r\nATTENTION: This\
+  \ container must be run with the network set to 'Host' mode!\r\nBy default you must\
+  \ open the port 30000 UDP to enable communications with the Orbs to play online.\r\
+  \n\r\nPlease also check out the website of XLink Kai Evolution: https://www.teamxlink.co.uk/\
+  \ huge thanks go to CrunchBite!"
+PostArgs: ''
+Privileged: 'false'
+Project: https://www.teamxlink.co.uk/
+Registry: https://hub.docker.com/r/ich777/xlinkkaievolution/
+Repo: ich777's Repository
+Repository: ich777/xlinkkaievolution
+Support: https://forums.unraid.net/topic/83786-support-ich777-application-dockers/
+TemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/XLink-Kai-Evolution.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:34522]
+topTrending: -2.717

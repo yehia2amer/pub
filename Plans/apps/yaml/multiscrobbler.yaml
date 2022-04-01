@@ -1,0 +1,62 @@
+Beta: 'true'
+CategoryList:
+- Network-Web
+- MediaServer-Music
+ChangeLogPresent: true
+Config:
+- '@attributes':
+    Default: ''
+    Description: 'Container Port: 9078'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Web Port
+    Required: 'false'
+    Target: '9078'
+    Type: Port
+  value: '9078'
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /home/node/config'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Config
+    Required: 'false'
+    Target: /home/node/config
+    Type: Path
+  value: /mnt/user/appdata/spotify-scrobbler/config
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /home/node/app/logs'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Logs
+    Required: 'false'
+    Target: /home/node/app/logs
+    Type: Path
+  value: /mnt/user/appdata/spotify-scrobbler/logs
+FirstSeen: 1605805861
+Icon: https://github.com/FoxxMD/unraid-docker-templates/raw/master/icons/multi-scrobbler.png
+LastUpdate: 1639756939
+LastUpdateScan: 1647425007
+Name: multi-scrobbler
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "Track your music listening history from many sources and record to many\
+  \ scrobble clients.\r\n        \r\n        Track history from api-based sources\
+  \ like Spotify, Plex (Tautulli), Subsonic (Airsonic), Jellyfin and record to Last.fm\
+  \ and Maloja (with more to come!)\r\n        \r\n        This app is in active development!\
+  \ Refer to the support thread for configuration, help, and feature requests."
+PostArgs: ''
+Privileged: 'false'
+Registry: https://hub.docker.com/repository/docker/foxxmd/multi-scrobbler
+Repo: FoxxMD's Repository
+Repository: foxxmd/multi-scrobbler:latest
+Support: https://forums.unraid.net/topic/99133-support-foxxmd-multi-scrobbler/
+TemplateURL: https://raw.githubusercontent.com/FoxxMD/unraid-docker-templates/master/foxxmd/multi-scrobbler.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:9078]/
+topTrending: -1.041

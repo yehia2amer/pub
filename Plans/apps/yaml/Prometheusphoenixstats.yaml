@@ -1,0 +1,70 @@
+CategoryList:
+- Cloud
+- Productivity
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: '9192'
+    Description: 'Container Port: 80'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Apache
+    Required: 'false'
+    Target: '80'
+    Type: Port
+  value: '9192'
+- '@attributes':
+    Default: Unraid
+    Description: Server name for miner (Can be set to anything)
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Server Name
+    Required: 'false'
+    Target: S_NAME
+    Type: Variable
+  value: Unraid
+- '@attributes':
+    Default: unraid.local
+    Description: Host for miner (usually an IP)
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Miner Host
+    Required: 'false'
+    Target: S_HOST
+    Type: Variable
+  value: 192.168.2.254
+- '@attributes':
+    Default: '5450'
+    Description: Port shared by miner over http (usually 5450)
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Miner Port
+    Required: 'false'
+    Target: S_PORT
+    Type: Variable
+  value: '5450'
+ExtraParams: ' '
+FirstSeen: 1634969005
+Icon: https://raw.githubusercontent.com/corgan2222/Prometheus-phoenixstats-Exporter/master/phoenixstats-logo.png
+LastUpdate: 1634967485
+LastUpdateScan: 1647957807
+Name: Prometheus-phoenixstats
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: Simple container for displaying stats from any PhoenixMiner instance. Made
+  to go with PhoenixMiner-AMD.
+PostArgs: ' '
+Privileged: 'false'
+Project: https://github.com/corgan2222/Prometheus-phoenixstats-Exporter
+Registry: https://hub.docker.com/r/stefanknaak/prometheus-phoenixstats
+Repo: corgan's Repository
+Repository: stefanknaak/prometheus-phoenixstats:latest
+Support: https://forums.unraid.net/topic/114590-support-corgans-docker-repository-double-take-facebox-tagbox-videobox/
+TemplateURL: https://raw.githubusercontent.com/corgan2222/unraid-templates/master/prometheus-phoenixstats/prometheus-phoenixstats.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:80]/metrics

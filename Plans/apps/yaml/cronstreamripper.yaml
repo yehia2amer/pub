@@ -1,0 +1,64 @@
+CategoryList:
+- Other
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: /mnt/user/appdata/cron-streamripper/cron
+    Description: Directory where cron files are stored
+    Display: always
+    Mask: 'false'
+    Mode: ro
+    Name: Cron Dir
+    Required: 'true'
+    Target: /etc/cron.d
+    Type: Path
+  value: /mnt/user/appdata/cron-streamripper/cron
+- '@attributes':
+    Default: /mnt/user/appdata/cron-streamripper/streams
+    Description: Directory where saved streams are stored
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Streams Dir
+    Required: 'true'
+    Target: /home/streamripper/streams
+    Type: Path
+  value: /mnt/user/appdata/cron-streamripper/streams
+- '@attributes':
+    Default: /mnt/user/appdata/cron-streamripper/programs
+    Description: Directory where executable files, run from the station-cron file,
+      are stored
+    Display: always
+    Mask: 'false'
+    Mode: ro
+    Name: Programs Dir
+    Required: 'true'
+    Target: /home/streamripper/programs
+    Type: Path
+  value: /mnt/user/appdata/cron-streamripper/programs
+Deprecated: true
+FirstSeen: 1554246997
+Icon: https://github.com/FoxxMD/unraid-docker-templates/raw/master/antenna.png
+LastUpdate: 1473816382
+LastUpdateScan: 1647792189
+ModeratorComment: This project has been abandonded, with no updates since 2009
+Name: cron-streamripper
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "Streamripper that runs on a cron schedule[br][br]\r\n        [b]Directions:[/b][br]\r\
+  \n        1. Create an executable file (sh script) that runs streamripper and store\
+  \ it in the Programs Dir directory[br]\r\n        2. Create a valid cron file named\
+  \ [b]station-cron[/b] in the Cron Dir directory (must be done for the container\
+  \ to run) that runs the file created in 1."
+PostArgs: ''
+Privileged: 'false'
+Project: http://streamripper.sourceforge.net/
+Registry: https://registry.hub.docker.com/r/dax333/cron-streamripper/
+Repo: FoxxMD's Repository
+Repository: dax333/cron-streamripper
+Support: https://forums.unraid.net/topic/79122-support-foxxmd-cron-streamripper
+TemplateURL: https://raw.githubusercontent.com/FoxxMD/unraid-docker-templates/master/foxxmd/cron-streamripper.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''
+topTrending: -1.0339999999999998

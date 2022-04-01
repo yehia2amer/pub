@@ -1,0 +1,334 @@
+CategoryList:
+- Productivity
+- Network-Voip
+- Network-Messenger
+Config:
+- '@attributes':
+    Default: '80'
+    Description: HTTP
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: HTTP
+    Required: 'false'
+    Target: '80'
+    Type: Port
+  value: '8000'
+- '@attributes':
+    Default: '443'
+    Description: HTTPS
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: HTTPS
+    Required: 'false'
+    Target: '443'
+    Type: Port
+  value: '4443'
+- '@attributes':
+    Default: /mnt/user/appdata/jitsi/web/
+    Description: IMPORTENT Change to /mnt/user/appdata/jitsi/web/
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: AppData Config Path
+    Required: 'true'
+    Target: /config
+    Type: Path
+  value: /mnt/user/appdata/jitsi/web/
+- '@attributes':
+    Default: /mnt/user/appdata/jitsi/web/letsencrypt/
+    Description: 'Container Path: /etc/letsencrypt'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: LetsEncrypt
+    Required: 'false'
+    Target: /etc/letsencrypt
+    Type: Path
+  value: /mnt/user/appdata/jitsi/web/letsencrypt/
+- '@attributes':
+    Default: /mnt/user/appdata/jitsi/transcripts/
+    Description: 'Container Path: /usr/share/jitsi-meet/transcripts'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Transcripts
+    Required: 'false'
+    Target: /usr/share/jitsi-meet/transcripts
+    Type: Path
+  value: /mnt/user/appdata/jitsi/transcripts/
+- '@attributes':
+    Default: '1'
+    Description: 'Enable authentication: 0 OR 1'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: ENABLE_AUTH
+    Required: 'false'
+    Target: ENABLE_AUTH
+    Type: Variable
+  value: '1'
+- '@attributes':
+    Default: '1'
+    Description: 'Enable guest access: 0 OR 1'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: ENABLE_GUESTS
+    Required: 'false'
+    Target: ENABLE_GUESTS
+    Type: Variable
+  value: '1'
+- '@attributes':
+    Default: '0'
+    Description: 'Enable Let''s Encrypt certificate generation: 0 OR 1'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: ENABLE_LETSENCRYPT
+    Required: 'false'
+    Target: ENABLE_LETSENCRYPT
+    Type: Variable
+  value: '1'
+- '@attributes':
+    Default: '0'
+    Description: 'Redirect HTTP traffic to HTTPS (necessary for Let''s Encrypt): 0
+      OR 1'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: ENABLE_HTTP_REDIRECT
+    Required: 'false'
+    Target: ENABLE_HTTP_REDIRECT
+    Type: Variable
+  value: '1'
+- '@attributes':
+    Default: '1'
+    Description: Enable Jigasi transcription in a conference
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: ENABLE_TRANSCRIPTIONS
+    Required: 'false'
+    Target: ENABLE_TRANSCRIPTIONS
+    Type: Variable
+  value: '1'
+- '@attributes':
+    Default: '1'
+    Description: Handle TLS connections outside of this setup
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: DISABLE_HTTPS
+    Required: 'false'
+    Target: DISABLE_HTTPS
+    Type: Variable
+  value: '1'
+- '@attributes':
+    Default: focus
+    Description: XMPP user for Jicofo client connections
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: JICOFO_AUTH_USER
+    Required: 'false'
+    Target: JICOFO_AUTH_USER
+    Type: Variable
+  value: focus
+- '@attributes':
+    Default: meet.example.com
+    Description: Domain for which to generate the certificate
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: LETSENCRYPT_DOMAIN
+    Required: 'false'
+    Target: LETSENCRYPT_DOMAIN
+    Type: Variable
+  value: meet.example.com
+- '@attributes':
+    Default: alice@atlanta.net
+    Description: "E-Mail for receiving important account notifications (mandatory)\
+      \ \t"
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: LETSENCRYPT_EMAIL
+    Required: 'false'
+    Target: LETSENCRYPT_EMAIL
+    Type: Variable
+  value: user@example.com
+- '@attributes':
+    Default: https://meet.example.com
+    Description: Public URL for the web service
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: PUBLIC_URL
+    Required: 'false'
+    Target: PUBLIC_URL
+    Type: Variable
+  value: https://meet.example.com
+- '@attributes':
+    Default: meet.jitsi
+    Description: Internal XMPP domain
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: XMPP_DOMAIN
+    Required: 'false'
+    Target: XMPP_DOMAIN
+    Type: Variable
+  value: meet.jitsi
+- '@attributes':
+    Default: http://xmpp.meet.jitsi:5280
+    Description: Internal XMPP server URL for BOSH module
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: XMPP_BOSH_URL_BASE
+    Required: 'false'
+    Target: XMPP_BOSH_URL_BASE
+    Type: Variable
+  value: http://xmpp.meet.jitsi:5280
+- '@attributes':
+    Default: guest.meet.jitsi
+    Description: XMPP domain for unauthenticated users
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: XMPP_GUEST_DOMAIN
+    Required: 'false'
+    Target: XMPP_GUEST_DOMAIN
+    Type: Variable
+  value: guest.meet.jitsi
+- '@attributes':
+    Default: muc.meet.jitsi
+    Description: XMPP domain for the MUC
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: XMPP_MUC_DOMAIN
+    Required: 'false'
+    Target: XMPP_MUC_DOMAIN
+    Type: Variable
+  value: muc.meet.jitsi
+- '@attributes':
+    Default: recorder.meet.jitsi
+    Description: Domain for the jibri recorder
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: XMPP_RECORDER_DOMAIN
+    Required: 'false'
+    Target: XMPP_RECORDER_DOMAIN
+    Type: Variable
+  value: recorder.meet.jitsi
+- '@attributes':
+    Default: http://etherpad.meet.jitsi:9001
+    Description: Set etherpad-lite URL
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: ETHERPAD_URL_BASE
+    Required: 'false'
+    Target: ETHERPAD_URL_BASE
+    Type: Variable
+  value: http://etherpad.meet.jitsi:9001
+- '@attributes':
+    Default: jibribrewery
+    Description: MUC name for the Jibri pool
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: JIBRI_BREWERY_MUC
+    Required: 'false'
+    Target: JIBRI_BREWERY_MUC
+    Type: Variable
+  value: jibribrewery
+- '@attributes':
+    Default: '90'
+    Description: MUC connection timeout
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: JIBRI_PENDING_TIMEOUT
+    Required: 'false'
+    Target: JIBRI_PENDING_TIMEOUT
+    Type: Variable
+  value: '90'
+- '@attributes':
+    Default: jibri
+    Description: Internal user for Jibri client connections.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: JIBRI_XMPP_USER
+    Required: 'false'
+    Target: JIBRI_XMPP_USER
+    Type: Variable
+  value: jibri
+- '@attributes':
+    Default: passw0rd
+    Description: Internal password for Jibri client connections.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: JIBRI_XMPP_PASSWORD
+    Required: 'false'
+    Target: JIBRI_XMPP_PASSWORD
+    Type: Variable
+  value: passw0rd
+- '@attributes':
+    Default: recorder
+    Description: Internal recorder user for Jibri client connections
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: JIBRI_RECORDER_USER
+    Required: 'false'
+    Target: JIBRI_RECORDER_USER
+    Type: Variable
+  value: recorder
+- '@attributes':
+    Default: passw0rd
+    Description: Internal recorder password for Jibri client connections
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: JIBRI_RECORDER_PASSWORD
+    Required: 'false'
+    Target: JIBRI_RECORDER_PASSWORD
+    Type: Variable
+  value: passw0rd
+- '@attributes':
+    Default: '1'
+    Description: Enable recording conference to local disk
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: ENABLE_RECORDING
+    Required: 'false'
+    Target: ENABLE_RECORDING
+    Type: Variable
+  value: '1'
+FirstSeen: 1586362160
+Icon: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/jitsi.png
+LastUpdate: 1648707496
+LastUpdateScan: 1648735420
+Name: jitsi-web
+Network: bridge
+Overview: Jitsi Meet's web interface image
+PostArgs: ''
+Privileged: 'false'
+Project: https://jitsi.org/
+Registry: https://hub.docker.com/r/jitsi/web/
+Repo: A75G's Repository
+Repository: jitsi/web:latest
+Support: https://forums.unraid.net/topic/89502-support-a75g-repo/
+TemplateURL: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/jitsi-web.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:80]/
+topPerforming: 0.124
+topTrending: -4.872000000000001

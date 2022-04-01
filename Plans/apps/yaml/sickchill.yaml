@@ -1,0 +1,102 @@
+CategoryList:
+- Downloaders
+- MediaApp-Video
+ChangeLogPresent: true
+Config:
+- '@attributes':
+    Default: '8081'
+    Description: will map the container's port 8081 to port 8081 on the host
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI
+    Required: 'true'
+    Target: '8081'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: this will store config on the docker host
+    Display: advanced
+    Mask: 'false'
+    Mode: rw
+    Name: Appdata
+    Required: 'true'
+    Target: /config
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: this will store any downloaded data on the docker host
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: 'Path: /downloads'
+    Required: 'true'
+    Target: /downloads
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: this will allow sickchill to view what you already have
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: 'Path: /tv'
+    Required: 'true'
+    Target: /tv
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: '99'
+    Description: 'Container Variable: PUID'
+    Display: advanced
+    Mask: 'false'
+    Name: PUID
+    Required: 'true'
+    Target: PUID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '100'
+    Description: 'Container Variable: PGID'
+    Display: advanced
+    Mask: 'false'
+    Name: PGID
+    Required: 'true'
+    Target: PGID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '022'
+    Description: 'Container Variable: UMASK'
+    Display: advanced
+    Mask: 'false'
+    Name: UMASK
+    Required: 'false'
+    Target: UMASK
+    Type: Variable
+  value: ''
+DonateImg: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/donate.png
+DonateLink: https://www.linuxserver.io/donate
+DonateText: Donations
+FirstSeen: 1554681697
+GitHub: https://github.com/linuxserver/docker-sickchill#application-setup
+Icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/sickchill-logo.png
+LastUpdate: 1647495754
+LastUpdateScan: 1647914873
+Name: sickchill
+Network: bridge
+Overview: Sickchill(https://github.com/SickChill/SickChill) is an Automatic Video
+  Library Manager for TV Shows. It watches for new episodes of your favorite shows,
+  and when they are posted it does its magic.
+Privileged: 'false'
+Project: https://github.com/SickChill/SickChill
+ReadMe: https://github.com/linuxserver/docker-sickchill#readme
+Registry: https://github.com/orgs/linuxserver/packages/container/package/sickchill
+Repo: linuxserver's Repository
+Repository: lscr.io/linuxserver/sickchill
+Support: https://github.com/linuxserver/docker-sickchill/issues/new/choose
+TemplateURL: https://raw.githubusercontent.com/linuxserver/templates/master/unraid/sickchill.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8081]

@@ -1,0 +1,168 @@
+CategoryList:
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: mastercontname'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Master Container Name
+    Required: 'true'
+    Target: mastercontname
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: 'yes'
+    Description: 'Container Variable: mastercontconcheck (yes/no)'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Master Container Connection Check
+    Required: 'false'
+    Target: mastercontconcheck
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: 1.1.1.1
+    Description: 'Container Variable: ping_ip'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Ping IP
+    Required: 'false'
+    Target: ping_ip
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: 8.8.8.8
+    Description: 'Container Variable: ping_ip_alt'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Ping IP Alt
+    Required: 'false'
+    Target: ping_ip_alt
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '4'
+    Description: 'Container Variable: ping_count'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Ping Count
+    Required: 'false'
+    Target: ping_count
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '10'
+    Description: 'Container Variable: sleep_secs'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Sleep Secs
+    Required: 'false'
+    Target: sleep_secs
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: yes|no
+    Description: 'Container Variable: run_startup (yes/no)'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Run on Startup
+    Required: 'false'
+    Target: run_startup
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: 'no'
+    Description: 'Container Variable: discord_notifications (yes/no)'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Enable Discord Notifications
+    Required: 'false'
+    Target: discord_notifications
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: discord_url'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Discord Webhook URL
+    Required: 'false'
+    Target: discord_url
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: /var/run/docker.sock
+    Description: 'Container Path: /var/run/docker.sock'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: rw
+    Name: Docker Sock
+    Required: 'true'
+    Target: /var/run/docker.sock
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: '*/5 * * * *'
+    Description: 'Container Variable: cron'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: CRON Schedule
+    Required: 'false'
+    Target: cron
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: /boot/config/plugins/dockerMan/templates-user
+    Description: 'Container Path: /config/docker-templates'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ro
+    Name: Docker Template Location
+    Required: 'true'
+    Target: /config/docker-templates
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: /mnt/user/appdata/rebuild-dndc
+    Description: 'Container Path: /config/rebuild-dndc'
+    Display: advanced
+    Mask: 'false'
+    Mode: rw
+    Name: Config
+    Required: 'false'
+    Target: /config/rebuild-dndc
+    Type: Path
+  value: ''
+FirstSeen: 1572851494
+Icon: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/rdndc.png
+LastUpdate: 1630285192
+LastUpdateScan: 1648195444
+Name: Rebuild-DNDC
+Network: bridge
+Overview: "- Rebuild Docker Network Dependent Containers, e.g. Monitor a VPN or any\
+  \ container and rebuild dependent containers using the VPN container network stack\
+  \ --net=container:vpn_cotnainer_name. [br]\n  - RDNDC will monitor the master/vpn\
+  \ container during updates, restarts and after server boot. [br]\n  - Please refer\
+  \ to the readme before deploying this container: https://github.com/elmerfdz/unRAIDscripts"
+Privileged: 'false'
+Project: https://github.com/elmerfdz/unRAIDscripts
+Registry: https://hub.docker.com/r/eafxx/rebuild-dndc
+Repo: Selfhosters Unraid Discord Repository
+RepoShort: Selfhosters
+Repository: eafxx/rebuild-dndc:unraid-m
+Support: https://hub.docker.com/r/eafxx/rebuild-dndc
+TemplateURL: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/rebuild-dndc.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+topPerforming: 1.825
+topTrending: -4.7219999999999995

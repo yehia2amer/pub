@@ -1,0 +1,99 @@
+CategoryList:
+- Backup
+- MediaApp-Video
+- MediaApp-Music
+- MediaApp-Other
+- Productivity
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: ''
+    Description: Output files are stored here
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Output Dir
+    Required: 'true'
+    Target: /out
+    Type: Path
+  value: /mnt/user/Downloads/
+- '@attributes':
+    Default: /mnt/user/appdata/ripper
+    Description: Configuration files are stored here
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: rw
+    Name: Config Dir
+    Required: 'true'
+    Target: /config/
+    Type: Path
+  value: /mnt/user/appdata/ripper
+- '@attributes':
+    Default: ''
+    Description: 'Web UI Port to view the Ripper log: 9090'
+    Display: always-hide
+    Mask: 'false'
+    Mode: tcp
+    Name: Webserver
+    Required: 'true'
+    Target: '9090'
+    Type: Port
+  value: '9090'
+- '@attributes':
+    Default: ''
+    Description: 'Optional: can be used to set a path prefix (e.g. /ripper-ui). This
+      is useful when you are running multiple services at one domain.'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Web Path Prefix
+    Required: 'false'
+    Target: OPTIONAL_WEB_UI_PATH_PREFIX
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Optional: Requires OPTIONAL_WEB_UI_PASSWORD, enables http-Auth in
+      Web UI'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Web UI Username
+    Required: 'false'
+    Target: 'OPTIONAL_WEB_UI_USERNAME '
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Optional: Requires OPTIONAL_WEB_UI_USERNAME, enables http-Auth in
+      Web UI'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Web UI Password
+    Required: 'false'
+    Target: 'OPTIONAL_WEB_UI_PASSWORD '
+    Type: Variable
+  value: ''
+DonateLink: https://github.com/sponsors/rix1337
+DonateText: Sponsor me!
+ExtraParams: --device=/dev/sr0:/dev/sr0
+FirstSeen: 1636542205
+Icon: https://raw.githubusercontent.com/rix1337/docker-templates/master/rix1337/ripper.png
+LastUpdate: 1646525977
+LastUpdateScan: 1646931799
+Name: Ripper
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: This container will detect optical disks by their type and rip them automatically.
+Privileged: 'true'
+ReadMe: https://github.com/rix1337/docker-ripper#readme
+Registry: https://registry.hub.docker.com/r/rix1337/docker-ripper
+Repo: rix's Repository
+Repository: rix1337/docker-ripper:manual-latest
+Support: https://github.com/rix1337/docker-ripper#do-you-offer-support
+TemplateURL: https://raw.githubusercontent.com/rix1337/docker-templates/master/rix1337/ripper.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''
+topTrending: -0.121

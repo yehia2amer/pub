@@ -1,0 +1,132 @@
+CategoryList:
+- Downloaders
+ChangeLogPresent: true
+Config:
+- '@attributes':
+    Default: '8112'
+    Description: Port for webui
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI
+    Required: 'true'
+    Target: '8112'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: '6881'
+    Description: Inbound torrent traffic (See App Setup)
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: 'Port: 6881'
+    Required: 'true'
+    Target: '6881'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: '6881'
+    Description: Inbound torrent traffic (See App Setup)
+    Display: always
+    Mask: 'false'
+    Mode: udp
+    Name: 'Port: 6881'
+    Required: 'true'
+    Target: '6881'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: deluge configs
+    Display: advanced
+    Mask: 'false'
+    Mode: rw
+    Name: Appdata
+    Required: 'true'
+    Target: /config
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: torrent download directory
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: 'Path: /downloads'
+    Required: 'true'
+    Target: /downloads
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: error
+    Description: set the loglevel output when running Deluge, default is info for
+      deluged and warning for delgued-web
+    Display: always
+    Mask: 'false'
+    Name: DELUGE_LOGLEVEL
+    Required: 'false'
+    Target: DELUGE_LOGLEVEL
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '99'
+    Description: 'Container Variable: PUID'
+    Display: advanced
+    Mask: 'false'
+    Name: PUID
+    Required: 'true'
+    Target: PUID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '100'
+    Description: 'Container Variable: PGID'
+    Display: advanced
+    Mask: 'false'
+    Name: PGID
+    Required: 'true'
+    Target: PGID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '022'
+    Description: 'Container Variable: UMASK'
+    Display: advanced
+    Mask: 'false'
+    Name: UMASK
+    Required: 'false'
+    Target: UMASK
+    Type: Variable
+  value: ''
+DonateImg: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/donate.png
+DonateLink: https://www.linuxserver.io/donate
+DonateText: Donations
+FirstSeen: 1
+GitHub: https://github.com/linuxserver/docker-deluge#application-setup
+Icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/deluge-logo.png
+LastUpdate: 1647399637
+LastUpdateScan: 1647914652
+Name: deluge
+Network: bridge
+Overview: 'Deluge(http://deluge-torrent.org/) is a lightweight, Free Software, cross-platform
+  BitTorrent client.
+
+
+  * Full Encryption
+
+  * WebUI
+
+  * Plugin System
+
+  * Much more...'
+Privileged: 'false'
+Project: http://deluge-torrent.org/
+ReadMe: https://github.com/linuxserver/docker-deluge#readme
+Registry: https://github.com/orgs/linuxserver/packages/container/package/deluge
+Repo: linuxserver's Repository
+Repository: lscr.io/linuxserver/deluge
+Support: https://github.com/linuxserver/docker-deluge/issues/new/choose
+TemplateURL: https://raw.githubusercontent.com/linuxserver/templates/master/unraid/deluge.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8112]
+topTrending: -0.5990000000000001

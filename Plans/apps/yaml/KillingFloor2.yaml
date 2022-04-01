@@ -1,0 +1,178 @@
+CategoryList:
+- GameServers
+Config:
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /serverdata/steamcmd'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: SteamCMD
+    Required: 'true'
+    Target: /serverdata/steamcmd
+    Type: Path
+  value: /mnt/user/appdata/steamcmd
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /serverdata/serverfiles'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: ServerFiles
+    Required: 'true'
+    Target: /serverdata/serverfiles
+    Type: Path
+  value: /mnt/cache/appdata/killingfloor2
+- '@attributes':
+    Default: ''
+    Description: "The GAME_ID that the container download at startup.\r\n(https://developer.valvesoftware.com/wiki/Dedicated_Servers_List)"
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: GAME_ID
+    Required: 'true'
+    Target: GAME_ID
+    Type: Variable
+  value: '232130'
+- '@attributes':
+    Default: ''
+    Description: Enter your start up commands for the server.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: GAME_PARAMS
+    Required: 'true'
+    Target: GAME_PARAMS
+    Type: Variable
+  value: kf-bioticslab
+- '@attributes':
+    Default: ''
+    Description: 'Your Steam username goes here if you want to install a game that
+      needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
+      Steam Guard).'
+    Display: always-hide
+    Mask: 'false'
+    Mode: ''
+    Name: Steam-Username
+    Required: 'false'
+    Target: USERNAME
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Set the Variable to 'true' if you want to validate the installation
+      otherwise leave it blank.
+    Display: always-hide
+    Mask: 'false'
+    Mode: ''
+    Name: Validate Installation
+    Required: 'false'
+    Target: VALIDATE
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Your Steam password goes here if you want to install a game that
+      needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
+      Steam Guard).'
+    Display: always-hide
+    Mask: 'true'
+    Mode: ''
+    Name: Steam-Password
+    Required: 'false'
+    Target: PASSWRD
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Container Port: 7777'
+    Display: always
+    Mask: 'false'
+    Mode: udp
+    Name: UDP1 - Game
+    Required: 'true'
+    Target: '7777'
+    Type: Port
+  value: '7777'
+- '@attributes':
+    Default: ''
+    Description: 'Container Port: 27015'
+    Display: always
+    Mask: 'false'
+    Mode: udp
+    Name: UDP2 - Query
+    Required: 'true'
+    Target: '27015'
+    Type: Port
+  value: '27015'
+- '@attributes':
+    Default: ''
+    Description: 'Container Port: 8080'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: TCP - Web Admin
+    Required: 'false'
+    Target: '8080'
+    Type: Port
+  value: '8080'
+- '@attributes':
+    Default: ''
+    Description: 'Container Port: 20560'
+    Display: always
+    Mask: 'false'
+    Mode: udp
+    Name: UDP3 - Steam
+    Required: 'true'
+    Target: '20560'
+    Type: Port
+  value: '20560'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: UID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: UID
+    Required: 'true'
+    Target: UID
+    Type: Variable
+  value: '99'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: GID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: GID
+    Required: 'true'
+    Target: GID
+    Type: Variable
+  value: '100'
+DonateImg: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/donate.png
+DonateLink: https://www.paypal.me/chips777
+DonateText: 'If you like my work please '
+ExtraParams: --restart=unless-stopped
+FirstSeen: 1557252433
+Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/killingfloor2.png
+LastUpdate: 1647185847
+LastUpdateScan: 1648195443
+Name: KillingFloor2
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "This Docker will download and install SteamCMD. It will also install KillingFloor\
+  \ 2 and run it.\r\n\r\nATTENTION: First Startup can take very long since it downloads\
+  \ the gameserver files!\r\n\r\nUpdate Notice: Simply restart the container if a\
+  \ newer version of the game is available.\r\n\r\nYou can also run multiple servers\
+  \ with only one SteamCMD directory!"
+PostArgs: ''
+Privileged: 'false'
+Project: https://www.killingfloor2.com/
+Registry: https://hub.docker.com/r/ich777/steamcmd/
+Repo: ich777's Repository
+Repository: ich777/steamcmd:killingfloor2
+Support: https://forums.unraid.net/topic/79530-support-ich777-gameserver-dockers/
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''
+caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/KillingFloor2.xml

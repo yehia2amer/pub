@@ -1,0 +1,65 @@
+CategoryList:
+- Cloud
+- Productivity
+- Tools-Utilities
+- MediaApp-Video
+- MediaServer-Video
+- Network-Web
+Config:
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI
+    Required: 'false'
+    Target: '4200'
+    Type: Port
+  value: '4200'
+- '@attributes':
+    Default: ''
+    Description: This is the location for the config file.
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Storage (config)
+    Required: 'false'
+    Target: /usr/src/app/user
+    Type: Path
+  value: /mnt/user/appdata/synctube/
+FirstSeen: 1643900608
+Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/synctube.png
+LastUpdate: 1638588857
+LastUpdateScan: 1646499795
+Name: SyncTube
+Network: bridge
+Overview: "DESCRIPTION\r\nSynchronized video viewing with chat and other features.\
+  \ Lightweight modern implementation and very easy way to run locally.\r\n\r\nSupported\
+  \ players:\r\n\u2022 Youtube (videos, streams and playlists)\r\n\u2022 RAW MP4 videos\
+  \ and M3U8 playlists (or any other media format supported in browser)\r\n\u2022\
+  \ Iframes (without sync)\r\n\r\nHow to use?\r\n1. Login with any nickname.\r\n2.\
+  \ Add your video url with \"plus\" button below (youtube or direct link to mp4 for\
+  \ example).\r\n3. Now it plays and syncs for all page users.\r\n4. You can click\
+  \ \"leader\" button to get access to global video controls (play/pause, time setting,\
+  \ playback speed).\r\n5. If you want to restrict permissions or add admins/emotes,\
+  \ see Configuration section.\r\n\r\nLive demo:\r\nhttps://synctube-example.herokuapp.com/\r\
+  \n\r\nNOTES\r\n\u2022 Run the following cmds before building the container: 'mkdir\
+  \ -m755 /mnt/user/appdata/synctube' and 'curl https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/dependencies/synctube/config.json\
+  \ --output /mnt/user/appdata/synctube/config.json'.\r\n\u2022 There's a Android\
+  \ client to connect to the server: 'https://github.com/RblSb/SyncTubeApp', but you\
+  \ will have to compile it yourself.\r\n\u2022 Extra files (state.json, users.json)\
+  \ and directories (/crashes, /logs) will be generated inside '/../appdata/synctube/\
+  \ dir, once launched. If you don't want them to be publicly available, change the\
+  \ Path settings from RW (read-write) to RO (read-only).\r\n\r\nVERSION\r\n1.0 (2022-02-03)"
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/RblSb/SyncTube
+Registry: https://hub.docker.com/r/littlestache/synctube
+Repo: SmartPhoneLover's Repository
+Repository: littlestache/synctube
+Requires: ''
+Support: https://forums.unraid.net/topic/119533-support-smartphonelover-synctube/
+TemplateURL: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/master/templates/SyncTube.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:4200]

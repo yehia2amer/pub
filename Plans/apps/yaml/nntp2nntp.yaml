@@ -1,0 +1,94 @@
+CategoryList:
+- Downloaders
+- Network-Proxy
+ChangeLogPresent: true
+Config:
+- '@attributes':
+    Default: '1563'
+    Description: will map the container's port 1563 to port 1563 on the host
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI
+    Required: 'true'
+    Target: '1563'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: this will store config on the docker host
+    Display: advanced
+    Mask: 'false'
+    Mode: rw
+    Name: Appdata
+    Required: 'true'
+    Target: /config
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: '99'
+    Description: 'Container Variable: PUID'
+    Display: advanced
+    Mask: 'false'
+    Name: PUID
+    Required: 'true'
+    Target: PUID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '100'
+    Description: 'Container Variable: PGID'
+    Display: advanced
+    Mask: 'false'
+    Name: PGID
+    Required: 'true'
+    Target: PGID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '022'
+    Description: 'Container Variable: UMASK'
+    Display: advanced
+    Mask: 'false'
+    Name: UMASK
+    Required: 'false'
+    Target: UMASK
+    Type: Variable
+  value: ''
+DonateImg: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/donate.png
+DonateLink: https://www.linuxserver.io/donate
+DonateText: Donations
+FirstSeen: 1556568467
+GitHub: https://github.com/linuxserver/docker-nntp2nntp#application-setup
+Icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/nntp2nntp-logo.png
+LastUpdate: 1640084578
+LastUpdateScan: 1647914797
+Name: nntp2nntp
+Network: bridge
+Overview: 'Nntp2nntp(https://github.com/linuxserver/nntp2nntp) proxy allow you to
+  use your NNTP Account from multiple systems, each with own user name and password.
+  It fully supports SSL and you can also limit the access to proxy with SSL certificates.
+  nntp2nntp proxy is very simple and pretty fast.
+
+  ## Warning
+
+
+  Whilst we know of no nntp2nntp security issues the upstream code(https://github.com/linuxserver/nntp2nntp)
+  for this project has received no changes since 06.08.15 and is likely abandoned
+  permanently.  For this reason we strongly recommend you do not make this application
+  public facing and if you must do so other layers of security and SSL should be considered
+  an absolute bare minimum requirement.  We see this proxy being used primarily on
+  a LAN so that all the users NNTP applications can share a common set of internal
+  credentials allowing for central managment of the upstream account e.g change provider,
+  server, thread limits for all applications with one global config change.'
+Privileged: 'false'
+Project: https://github.com/linuxserver/nntp2nntp
+ReadMe: https://github.com/linuxserver/docker-nntp2nntp#readme
+Registry: https://github.com/orgs/linuxserver/packages/container/package/nntp2nntp
+Repo: linuxserver's Repository
+Repository: lscr.io/linuxserver/nntp2nntp
+Support: https://github.com/linuxserver/docker-nntp2nntp/issues/new/choose
+TemplateURL: https://raw.githubusercontent.com/linuxserver/templates/master/unraid/nntp2nntp.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:1563]
+topTrending: 0.194

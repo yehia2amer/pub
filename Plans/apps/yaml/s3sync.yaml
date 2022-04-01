@@ -1,0 +1,106 @@
+Beta: 'true'
+CategoryList:
+- Backup
+- Cloud
+Config:
+- '@attributes':
+    Default: ''
+    Description: Your AWS Access Key.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: ACCESS_KEY
+    Required: 'true'
+    Target: ACCESS_KEY
+    Type: Variable
+  value: your_access_key_here
+- '@attributes':
+    Default: ''
+    Description: Your AWS Secret Key.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: SECRET_KEY
+    Required: 'true'
+    Target: SECRET_KEY
+    Type: Variable
+  value: your_secret_key_here
+- '@attributes':
+    Default: ''
+    Description: The region of your bucket.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Region
+    Required: 'true'
+    Target: REGION
+    Type: Variable
+  value: bucket_region_here
+- '@attributes':
+    Default: ''
+    Description: (Optional) Extra parameters for the s3 sync command.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: S3 Sync Parameters
+    Required: 'false'
+    Target: S3SYNCPARAMS
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: The target bucket path with optional prefix.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: S3 Path
+    Required: 'true'
+    Target: S3PATH
+    Type: Variable
+  value: s3://your_bucket_name
+- '@attributes':
+    Default: ''
+    Description: Cron schedule of backup.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Cron Schedule
+    Required: 'true'
+    Target: CRON_SCHEDULE
+    Type: Variable
+  value: 0 * * * *
+- '@attributes':
+    Default: ''
+    Description: This folder will be backed up.
+    Display: always
+    Mask: 'false'
+    Mode: ro
+    Name: Backup Source Example
+    Required: 'false'
+    Target: /data/example
+    Type: Path
+  value: /mnt/user/example
+FirstSeen: 1618747359
+Icon: https://raw.githubusercontent.com/what-name/unraid-templates/main/static/s3-icon.png
+LastUpdate: 1620909219
+LastUpdateScan: 1647338602
+Name: s3sync
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "This application backs up every folder mounted at `/data/` to a given AWS\
+  \ S3 path using the `aws s3 sync` command. It requires a pair of (IAM) Access and\
+  \ Secret Keys.\r\n\r\nYou can supply the usual s3 sync parameters such as `--delete`\
+  \ and everything else. The cron schedule defines how often the sync command is executed,\
+  \ and it uses a lockfile to avoid parallel executions."
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/what-name/docker-s3sync
+Registry: https://hub.docker.com/repository/docker/whatname/docker-s3sync
+Repo: Jacob Bolooni's Repository
+Repository: whatname/docker-s3sync
+Support: https://forums.unraid.net/topic/106320-support-what-name-s3sync/
+TemplateURL: https://raw.githubusercontent.com/what-name/unraid-templates/master/s3sync.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''
+topTrending: -21.524

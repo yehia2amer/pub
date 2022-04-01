@@ -1,0 +1,190 @@
+CategoryList:
+- Productivity
+- Tools-Utilities
+- Other
+Config:
+- '@attributes':
+    Default: '8760'
+    Description: 'Container Port: 80'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: HTTP Port
+    Required: 'true'
+    Target: '80'
+    Type: Port
+  value: '8760'
+- '@attributes':
+    Default: /mnt/user/appdata/openeats/
+    Description: 'Container Path: /code/site-media/'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Appdata
+    Required: 'true'
+    Target: /code/site-media/
+    Type: Path
+  value: /mnt/user/appdata/openeats/
+- '@attributes':
+    Default: master
+    Description: Version of OpenEats to pull
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: OPENEATS_VERSION
+    Required: 'true'
+    Target: OPENEATS_VERSION
+    Type: Variable
+  value: master
+- '@attributes':
+    Default: '*'
+    Description: Either * (all) or local IP, openeatas.domain.com
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: ALLOWED_HOST
+    Required: 'true'
+    Target: ALLOWED_HOST
+    Type: Variable
+  value: '*'
+- '@attributes':
+    Default: openeats
+    Description: Initial superuser account name
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: SUPERUSER_NAME
+    Required: 'true'
+    Target: SUPERUSER_NAME
+    Type: Variable
+  value: openeats
+- '@attributes':
+    Default: password
+    Description: Initial superuser account password
+    Display: always
+    Mask: 'true'
+    Mode: ''
+    Name: SUPERUSER_PASSWORD
+    Required: 'true'
+    Target: SUPERUSER_PASSWORD
+    Type: Variable
+  value: password
+- '@attributes':
+    Default: ''
+    Description: SQL server host address
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: MYSQL_HOST
+    Required: 'true'
+    Target: MYSQL_HOST
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '3306'
+    Description: SQL server port number
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: MYSQL_PORT
+    Required: 'true'
+    Target: MYSQL_PORT
+    Type: Variable
+  value: '3306'
+- '@attributes':
+    Default: openeats
+    Description: SQL server database to connect to
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: MYSQL_DATABASE
+    Required: 'true'
+    Target: MYSQL_DATABASE
+    Type: Variable
+  value: openeats
+- '@attributes':
+    Default: ''
+    Description: SQL server user
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: MYSQL_USER
+    Required: 'true'
+    Target: MYSQL_USER
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: SQL server password
+    Display: always
+    Mask: 'true'
+    Mode: ''
+    Name: MYSQL_ROOT_PASSWORD
+    Required: 'true'
+    Target: MYSQL_ROOT_PASSWORD
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Enter a randomized set of 32 characters here
+    Display: always
+    Mask: 'true'
+    Mode: ''
+    Name: DJANGO_SECRET_KEY
+    Required: 'true'
+    Target: DJANGO_SECRET_KEY
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: 'False'
+    Description: Set debug mode
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: DJANGO_DEBUG
+    Required: 'true'
+    Target: DJANGO_DEBUG
+    Type: Variable
+  value: 'False'
+- '@attributes':
+    Default: en
+    Description: "English: en\r\nGerman: de\r\nSpanish: es\r\nFrench: fr"
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: NODE_LOCALE
+    Required: 'true'
+    Target: NODE_LOCALE
+    Type: Variable
+  value: en
+DonateLink: http://paypal.me/corneliousjd
+DonateText: Donate
+FirstSeen: 1598393322
+Icon: https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/icons/openeats.png
+LastUpdate: 1598532260
+LastUpdateScan: 1647763391
+Name: OpenEats
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "OpenEats is a recipe management site that allows users to create, share,\
+  \ and store their personal collection of recipes.\r\nRequires MariaDB container\
+  \ (I recommend LinuxServer's container)\r\n\r\nFIRST RUN: Please wait while the\
+  \ container creats all the necessary tables in the SQL database.\r\nThis can take\
+  \ 5-10 minutes or so and the container will have NO log output when it does this.\r\
+  \nPlease be patient, if you interrupt this by stopping the container it will leave\
+  \ you with a broken database!\r\n\r\nPlease use support link for more information\
+  \ about this container."
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/open-eats/OpenEats
+Registry: https://hub.docker.com/r/bramblegb/openeats/
+Repo: CorneliousJD's Repository
+Repository: bramblegb/openeats
+Requires: MySQL / MariaDB installed
+Support: https://forums.unraid.net/topic/92752-support-openeats-corneliousjd-repo/
+TemplateURL: https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/openeats.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:80]
+topPerforming: 2.714
+topTrending: -9.727

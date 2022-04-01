@@ -1,0 +1,410 @@
+CategoryList:
+- Cloud
+- Tools-Utilities
+- Network-Web
+Config:
+- '@attributes':
+    Default: '8080'
+    Description: 'Container Port: 3000'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI Port
+    Required: 'true'
+    Target: '3000'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: IP of your Postgres instance
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Database host
+    Required: 'true'
+    Target: DB_HOST
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '5432'
+    Description: Port of your postgres instance
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Database port
+    Required: 'true'
+    Target: DB_PORT
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: kutt
+    Description: Name of your database. Make sure the database is already created
+      and your user has the needed permissions!
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Database name
+    Required: 'true'
+    Target: DB_NAME
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: kutt
+    Description: Name of your database user
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Database user
+    Required: 'true'
+    Target: DB_USER
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Password of your database user
+    Display: always
+    Mask: 'true'
+    Mode: ''
+    Name: Database password
+    Required: 'true'
+    Target: DB_PASSWORD
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: 'false'
+    Description: Use SSL for database connection
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Database SSL
+    Required: 'true'
+    Target: DB_SSL
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: IP of your Redis instance
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Redis host
+    Required: 'true'
+    Target: REDIS_HOST
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '6379'
+    Description: Port of your Redis instance
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Redis
+    Required: 'true'
+    Target: REDIS_PORT
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Password for your Redis instance. Leave blank if you didn't set one!
+    Display: always
+    Mask: 'true'
+    Mode: ''
+    Name: Redis password
+    Required: 'false'
+    Target: REDIS_PASSWORD
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Hostname (FQDN or IP) of your mail provider. Used to send verification
+      emails
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Mail host
+    Required: 'false'
+    Target: MAIL_HOST
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Port of your mail provider. 25 (unencrypted), 587 (TLS), 465 (SMTPS)
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Mail port
+    Required: 'false'
+    Target: MAIL_PORT
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: 'false'
+    Description: Set to true if using port 465
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Mail secure
+    Required: 'false'
+    Target: MAIL_SECURE
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Your email username. Most likely your email address
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Mail user
+    Required: 'false'
+    Target: MAIL_USER
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Password of your email user
+    Display: always
+    Mask: 'true'
+    Mode: ''
+    Name: Mail password
+    Required: 'false'
+    Target: MAIL_PASSWORD
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Sender address
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Mail from
+    Required: 'false'
+    Target: MAIL_FROM
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Comma seperated list of admin email adresses
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Admin emails
+    Required: 'true'
+    Target: ADMIN_EMAILS
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: The email address that will receive submitted reports
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Report email
+    Required: 'false'
+    Target: REPORT_EMAIL
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Support email to show on the app
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Contact email
+    Required: 'false'
+    Target: CONTACT_EMAIL
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: The domain that this website is on
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Domain
+    Required: 'true'
+    Target: DEFAULT_DOMAIN
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: Kutt
+    Description: The name of the site where Kutt is hosted
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: Site name
+    Required: 'true'
+    Target: SITE_NAME
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '6'
+    Description: Generated link length
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: Link length
+    Required: 'true'
+    Target: LINK_LENGTH
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: 'false'
+    Description: Disable registration
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: Disable registration
+    Required: 'true'
+    Target: DISALLOW_REGISTRATION
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: 'false'
+    Description: Disable anonymous link creation
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: Disable anonymous link creation
+    Required: 'true'
+    Target: DISALLOW_ANONYMOUS_LINKS
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '50'
+    Description: Default limit for how many links a user can create per day
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: Daily link limit
+    Required: 'true'
+    Target: USER_LIMIT_PER_DAY
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '0'
+    Description: Number of links anonymous users can create per minute. Ignored if
+      anonymous link creation is disabled
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: Anonymous links cooldown
+    Required: 'true'
+    Target: NON_USER_COOLDOWN
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '5000'
+    Description: Max number of visits for each link to have detailed stats
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: Max number of stats per link
+    Required: 'true'
+    Target: DEFAULT_MAX_STATS_PER_LINK
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: securekey
+    Description: A passphrase to encrypt JWT. Use a long and secure key.
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: JSON Web Token key
+    Required: 'true'
+    Target: JWT_SECRET
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Invisible reCaptcha key. Create one here https://www.google.com/recaptcha/intro/
+    Display: advanced-hide
+    Mask: 'true'
+    Mode: ''
+    Name: reCaptcha site key
+    Required: 'false'
+    Target: RECAPTCHA_SITE_KEY
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: RECAPTCHA_SECRET_KEY'
+    Display: advanced-hide
+    Mask: 'true'
+    Mode: ''
+    Name: reCaptcha secret key
+    Required: 'false'
+    Target: RECAPTCHA_SECRET_KEY
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Google Cloud API to prevent from users from submitting malware URLs.
+      Get one from https://developers.google.com/safe-browsing/v4/get-started
+    Display: advanced-hide
+    Mask: 'true'
+    Mode: ''
+    Name: Google safe browsing key
+    Required: 'false'
+    Target: GOOGLE_SAFE_BROWSING_KEY
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: your GA key
+    Display: advanced-hide
+    Mask: 'true'
+    Mode: ''
+    Name: Google Analytics key
+    Required: 'false'
+    Target: GOOGLE_ANALYTICS
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Your universal GA key
+    Display: advanced-hide
+    Mask: 'true'
+    Mode: ''
+    Name: Google Analytics universal key
+    Required: 'false'
+    Target: GOOGLE_ANALYTICS_UNIVERSAL
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '3000'
+    Description: Internal application port. Do not change this!
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: Internal port
+    Required: 'true'
+    Target: PORT
+    Type: Variable
+  value: ''
+FirstSeen: 1613574154
+Icon: https://raw.githubusercontent.com/C4ArtZ/Unraid-Templates/master/templates/icons/kutt.png
+LastUpdate: 1645472253
+LastUpdateScan: 1647338602
+Name: kutt
+Network: bridge
+Official: true
+Overview: "Kutt is a modern URL shortener with support for custom domains. Shorten\
+  \ URLs, manage your links and view the click rate statistics.\r\r[b]This container\
+  \ requires Redis a Postgres database and a functioning FQDN![b]\r\rSetup:\r1. Install\
+  \ the Postgres container from your Apps tab.\r2. Create a database an user.\r3.\
+  \ Give the user permissions on the created database.\r4. Install the Redis container\
+  \ from your Apps tab.\r5. Setup an email account which Kutt can use. (technically\
+  \ optional but highly recommended!)\r6. Setup an your preferred method of exposing\
+  \ Kutt to the outside world.\r7. Fill out this template.\r\rOptional:\r1. Setup\
+  \ Google Safe Browsing\r2. Setup Google Analytics"
+Privileged: 'false'
+Project: https://kutt.it/
+Registry: https://hub.docker.com/r/kutt/kutt/
+Repo: c4artz' Repository
+Repository: kutt/kutt
+Support: https://forums.unraid.net/topic/102829-support-c4artz-templates/
+TemplateURL: https://raw.githubusercontent.com/C4ArtZ/Unraid-Templates/master/templates/kutt.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:3000]
+topPerforming: 7.165
+topTrending: -7.549

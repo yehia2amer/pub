@@ -1,0 +1,94 @@
+Beta: 'true'
+CategoryList:
+- Tools-Utilities
+- Network-Other
+- Crypto
+Config:
+- '@attributes':
+    Default: '50001'
+    Description: Port to listen for incoming client connections
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Electrum TCP
+    Required: 'true'
+    Target: '50001'
+    Type: Port
+  value: '50001'
+- '@attributes':
+    Default: 0.0.0.0:50001
+    Description: Subnet to accept connections from, and port to listen on. Port must
+      match above.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: TCP Bind
+    Required: 'false'
+    Target: ELECTRS_ELECTRUM_RPC_ADDR
+    Type: Variable
+  value: 0.0.0.0:50001
+- '@attributes':
+    Default: 192.168.1.1:8332
+    Description: Address for Bitcoin Core RPC.
+    Display: always
+    Mask: 'false'
+    Name: Core RPC Address
+    Required: 'true'
+    Target: ELECTRS_DAEMON_RPC_ADDR
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: /mnt/user/bitcoin/electrs
+    Description: Database storage. Requires at least 50 GiB free disk.
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Data
+    Required: 'true'
+    Target: /data/
+    Type: Path
+  value: /mnt/user/bitcoin/electrs/
+- '@attributes':
+    Default: /mnt/user/bitcoin/core
+    Description: Bitcoin Core data directory. Read only.
+    Display: always
+    Mask: 'false'
+    Mode: ro
+    Name: Bitcoin Data
+    Required: 'true'
+    Target: /data/.bitcoin/
+    Type: Path
+  value: /mnt/user/bitcoin/core/
+FirstSeen: 1630663411
+Icon: ''
+LastUpdate: 1634194931
+LastUpdateScan: 1646247827
+Name: electrs
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "Serve your Electrum clients from your own Bitcoin node! Avoid trusting\
+  \ public Electrum nodes, and maintain your own privacy.\n    [br][br]\n    Electrs\
+  \ does not support encrypted (SSL) communication, so avoid connecting directly to\
+  \ the TCP port over public networks (eg the Internet). Note that some clients, including\
+  \ Electrum, do not support connections without SSL. Consider using nginx as an SSL\
+  \ proxy (see link below for sample configuration). Electrs is designed for personal\
+  \ use only, and is not appropriate for serving a large number of clients.\n    [br]\n\
+  \    If you have RPC enabled in Bitcoin Core without manually specifying an RPC\
+  \ user and password, Electrs can use Bitcoin's cookie file to auth automatically.\
+  \ If you have manually configured user and password in Bitcoin, these must also\
+  \ be set in Electrs manually. To do so, create a file called electrs.toml in the\
+  \ Electrs Data directory configured below. In this file, include the following data,\
+  \ substituting your own values for USER and PASSWORD: auth = \"USER:PASSWORD\"\n\
+  \    [br]\n    See https://github.com/romanz/electrs/blob/master/doc/usage.md for\
+  \ full details on Electrs configuration."
+PostArgs: -vvvv
+Privileged: 'false'
+Project: https://github.com/romanz/electrs
+Registry: https://hub.docker.com/r/ofawx/electrs/
+Repo: ofawx's Repository
+Repository: ofawx/electrs
+Support: https://forums.unraid.net/topic/112959-support-ofawx-templates-repo/
+TemplateURL: https://raw.githubusercontent.com/ofawx/unraid-templates/master/electrs.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''

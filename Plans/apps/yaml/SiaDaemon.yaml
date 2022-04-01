@@ -1,0 +1,90 @@
+CategoryList:
+- Cloud
+- Other
+Config:
+- '@attributes':
+    Default: '9981'
+    Description: 'Container Port: 9981'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Gateway Port
+    Required: 'true'
+    Target: '9981'
+    Type: Port
+  value: '9981'
+- '@attributes':
+    Default: '9982'
+    Description: 'Container Port: 9982'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Host RHP2 Port
+    Required: 'true'
+    Target: '9982'
+    Type: Port
+  value: '9982'
+- '@attributes':
+    Default: '9983'
+    Description: 'Container Port: 9983'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Host RHP3 Port
+    Required: 'true'
+    Target: '9983'
+    Type: Port
+  value: '9983'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: SIA_WALLET_PASSWORD'
+    Display: always
+    Mask: 'true'
+    Mode: ''
+    Name: Wallet Password
+    Required: 'true'
+    Target: SIA_WALLET_PASSWORD
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: SIA_API_PASSWORD'
+    Display: always
+    Mask: 'true'
+    Mode: ''
+    Name: API Password
+    Required: 'true'
+    Target: SIA_API_PASSWORD
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: /mnt/user/appdata/sia
+    Description: 'Container Path: /sia-data'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Data Directory
+    Required: 'true'
+    Target: /sia-data
+    Type: Path
+  value: ''
+FirstSeen: 1639249405
+Icon: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/sia.png
+LastUpdateScan: 1647039800
+Name: Sia-Daemon
+Network: bridge
+Overview: Sia is a decentralized cloud storage platform that radically alters the
+  landscape of cloud storage. By leveraging smart contracts, client-side encryption,
+  and sophisticated redundancy (via Reed-Solomon codes), Sia allows users to safely
+  store their data with hosts that they do not know or trust. The result is a cloud
+  storage marketplace where hosts compete to offer the best service at the lowest
+  price. And since there is no barrier to entry for hosts, anyone with spare storage
+  capacity can join the network and start making money.
+Privileged: 'false'
+Project: https://github.com/siafoundation/siad
+Registry: https://github.com/SiaFoundation/siad/pkgs/container/siad
+Repo: Selfhosters Unraid Discord Repository
+RepoShort: Selfhosters
+Repository: ghcr.io/siafoundation/siad:master
+TemplateURL: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/siad.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg

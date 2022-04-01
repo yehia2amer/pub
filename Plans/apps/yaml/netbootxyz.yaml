@@ -1,0 +1,155 @@
+Branch:
+- Tag: latest
+  TagDescription: Web application for full self hosting
+- GitHub: https://github.com/linuxserver/docker-netbootxyz/tree/tftp#application-setup
+  ReadMe: https://github.com/linuxserver/docker-netbootxyz/tree/tftp#readme
+  Tag: tftp
+  TagDescription: TFTP server only with NETBOOT.XYZ boot files
+CategoryList:
+- Productivity
+- Tools-Utilities
+- Network-Management
+ChangeLogPresent: true
+Config:
+- '@attributes':
+    Default: '3000'
+    Description: Web configuration interface.
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI
+    Required: 'true'
+    Target: '3000'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: '69'
+    Description: TFTP Port.
+    Display: always
+    Mask: 'false'
+    Mode: udp
+    Name: 'Port: 69'
+    Required: 'true'
+    Target: '69'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: '8080'
+    Description: NGINX server for hosting assets.
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: 'Port: 80'
+    Required: 'false'
+    Target: '80'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Storage for boot menu files and web application config
+    Display: advanced
+    Mask: 'false'
+    Mode: rw
+    Name: Appdata
+    Required: 'true'
+    Target: /config
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Storage for NETBOOT.XYZ bootable assets (live CDs and other files)
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: 'Path: /assets'
+    Required: 'false'
+    Target: /assets
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: 1.9.9
+    Description: Specify a specific version of boot files you want to use from NETBOOT.XYZ
+      (unset pulls latest)
+    Display: always
+    Mask: 'false'
+    Name: MENU_VERSION
+    Required: 'false'
+    Target: MENU_VERSION
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: 30000:30010
+    Description: Specify the port range tftp will use for data transfers (see Wikipedia)(https://en.wikipedia.org/wiki/Trivial_File_Transfer_Protocol#Details)
+    Display: always
+    Mask: 'false'
+    Name: PORT_RANGE
+    Required: 'false'
+    Target: PORT_RANGE
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: /
+    Description: Specify a sobfolder if running this behind a reverse proxy (IE /proxy/)
+    Display: always
+    Mask: 'false'
+    Name: SUBFOLDER
+    Required: 'false'
+    Target: SUBFOLDER
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '99'
+    Description: 'Container Variable: PUID'
+    Display: advanced
+    Mask: 'false'
+    Name: PUID
+    Required: 'true'
+    Target: PUID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '100'
+    Description: 'Container Variable: PGID'
+    Display: advanced
+    Mask: 'false'
+    Name: PGID
+    Required: 'true'
+    Target: PGID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '022'
+    Description: 'Container Variable: UMASK'
+    Display: advanced
+    Mask: 'false'
+    Name: UMASK
+    Required: 'false'
+    Target: UMASK
+    Type: Variable
+  value: ''
+DonateImg: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/donate.png
+DonateLink: https://www.linuxserver.io/donate
+DonateText: Donations
+FirstSeen: 1572466179
+GitHub: https://github.com/linuxserver/docker-netbootxyz#application-setup
+Icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/netbootxyz-logo.png
+LastUpdate: 1647902320
+LastUpdateScan: 1647914784
+Name: netbootxyz
+Network: bridge
+Overview: Netbootxyz(https://netboot.xyz) is a way to PXE boot various operating system
+  installers or utilities from one place within the BIOS without the need of having
+  to go retrieve the media to run the tool. iPXE is used to provide a user friendly
+  menu from within the BIOS that lets you easily choose the operating system you want
+  along with any specific types of versions or bootable flags.
+Privileged: 'false'
+Project: https://netboot.xyz
+ReadMe: https://github.com/linuxserver/docker-netbootxyz#readme
+Registry: https://github.com/orgs/linuxserver/packages/container/package/netbootxyz
+Repo: linuxserver's Repository
+Repository: lscr.io/linuxserver/netbootxyz
+Support: https://github.com/linuxserver/docker-netbootxyz/issues/new/choose
+TemplateURL: https://raw.githubusercontent.com/linuxserver/templates/master/unraid/netbootxyz.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:3000]
+topTrending: -1.929

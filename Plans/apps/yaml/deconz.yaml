@@ -1,0 +1,198 @@
+CAComment: This template is set up to use a custom network. You may have to adjust
+  the network or IP address etc to match your system
+CategoryList:
+- HomeAutomation
+Config:
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /root/.local/share/dresden-elektronik/deCONZ'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: appdata
+    Required: 'false'
+    Target: /root/.local/share/dresden-elektronik/deCONZ
+    Type: Path
+  value: /mnt/user/appdata/deconz
+- '@attributes':
+    Default: ''
+    Description: usb conbee
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: usb conbee
+    Required: 'false'
+    Target: ''
+    Type: Device
+  value: /dev/ttyACM0
+- '@attributes':
+    Default: ''
+    Description: set same as device
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: usb device name
+    Required: 'false'
+    Target: ' DECONZ_DEVICE'
+    Type: Variable
+  value: /dev/ttyACM0
+- '@attributes':
+    Default: ''
+    Description: Time zone
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Time zoze
+    Required: 'false'
+    Target: TZ
+    Type: Variable
+  value: Europe/London
+- '@attributes':
+    Default: 0|1
+    Description: vnc mode  1 on  0 off
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: VNC Mode
+    Required: 'false'
+    Target: DECONZ_VNC_MODE
+    Type: Variable
+  value: '1'
+- '@attributes':
+    Default: ''
+    Description: vnc port number
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: VNC port no.
+    Required: 'false'
+    Target: DECONZ_VNC_PORT
+    Type: Variable
+  value: '5900'
+- '@attributes':
+    Default: ''
+    Description: vnc password
+    Display: always
+    Mask: 'true'
+    Mode: ''
+    Name: vnc password
+    Required: 'false'
+    Target: DECONZ_VNC_PASSWORD
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: not needed to be changed unless on 'host' network
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Web port
+    Required: 'false'
+    Target: DECONZ_WEB_PORT
+    Type: Variable
+  value: '80'
+- '@attributes':
+    Default: ''
+    Description: websockets service
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: websockets service
+    Required: 'false'
+    Target: DECONZ_WS_PORT
+    Type: Variable
+  value: '443'
+- '@attributes':
+    Default: '1'
+    Description: DEBUG_INFO
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: DEBUG INFO
+    Required: 'false'
+    Target: DEBUG_INFO
+    Type: Variable
+  value: '1'
+- '@attributes':
+    Default: '0'
+    Description: DEBUG APS
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: DEBUG APS
+    Required: 'false'
+    Target: DEBUG_APS
+    Type: Variable
+  value: '0'
+- '@attributes':
+    Default: '0'
+    Description: DEBUG ZCL
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: DEBUG ZCL
+    Required: 'false'
+    Target: DEBUG_ZCL
+    Type: Variable
+  value: '0'
+- '@attributes':
+    Default: ' 0'
+    Description: DEBUG ZDP
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: DEBUG ZDP
+    Required: 'false'
+    Target: DEBUG_ZDP
+    Type: Variable
+  value: '0'
+- '@attributes':
+    Default: '0'
+    Description: DEBUG OTAU
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: DEBUG OTAU
+    Required: 'false'
+    Target: DEBUG_OTAU
+    Type: Variable
+  value: '0'
+- '@attributes':
+    Default: 1|0
+    Description: UPNP on 1 off 0
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: UPNP on off
+    Required: 'false'
+    Target: DECONZ_UPNP
+    Type: Variable
+  value: '1'
+FirstSeen: 1590595926
+Icon: https://raw.githubusercontent.com/SpaceinvaderOne/Docker-Templates-Unraid/master/spaceinvaderone/docker_icons/deconz.png
+LastUpdate: 1643814499
+LastUpdateScan: 1647763392
+Name: deconz
+Network: br0
+Networking:
+  Mode: br0
+Overview: "This Docker image containerizes the deCONZ software from Dresden Elektronik,\
+  \ which controls a ZigBee network using a Conbee USB or RaspBee GPIO serial interface.\
+  \ This image runs deCONZ in \"minimal\" mode, for control of the ZigBee network\
+  \ via the WebUIs (\"Wireless Light Control\" and \"Phoscon\") and over the REST\
+  \ API and Websockets, and optionally runs a VNC server for viewing and interacting\
+  \ with the ZigBee mesh through the deCONZ UI.\r\n\r\nYou must use a custom ip -\
+  \ network type custom br:0 - (alternatively use host and change webport)\r\n\r\n\
+  Advanced option clcik on show more settings"
+PostArgs: ''
+Privileged: 'false'
+Project: https://www.phoscon.de/en/conbee2/
+Registry: https://registry.hub.docker.com/r/spaceinvaderone/deconz
+Repo: SpaceInvaderOne's Repository
+Repository: spaceinvaderone/deconz
+Support: https://forums.unraid.net/topic/92946-support-spaceinvaderone-deconz/
+TemplateURL: https://raw.githubusercontent.com/SpaceinvaderOne/Docker-Templates-Unraid/master/spaceinvaderone/deconz.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:80]/
+topPerforming: 2.339
+topTrending: -3.6170000000000004

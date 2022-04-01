@@ -1,0 +1,104 @@
+CategoryList:
+- MediaApp-Video
+- Tools-Utilities
+ChangeLogPresent: true
+Config:
+- '@attributes':
+    Default: '8088'
+    Description: Web app and server port
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI
+    Required: 'true'
+    Target: '8088'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: plexuser1,plexuser2,email1,machineid1
+    Description: If set, only the users defined here and the users of the plex servers
+      defined here will be able to access the server. Use e-mails, plex usernames
+      and/or plex server machine ids, comma separated, no spaces.
+    Display: always
+    Mask: 'false'
+    Name: AUTH_LIST
+    Required: 'false'
+    Target: AUTH_LIST
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: 'false'
+    Description: DEPRECATED - (Still works but will be removed in the future in favor
+      of the built-in var `autojoin__room`) - Set to `true` to let users autojoin
+      the server and a room (specified by the `AUTOJOIN_ROOM` var).
+    Display: always
+    Mask: 'false'
+    Name: AUTOJOIN_ENABLED
+    Required: 'false'
+    Target: AUTOJOIN_ENABLED
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: roomname
+    Description: DEPRECATED - (Still works but will be removed in the future in favor
+      of the built-in var `autojoin__room`) - Set the room name for auto joining (requires
+      `AUTOJOIN_ENABLED` set to `true`).
+    Display: always
+    Mask: 'false'
+    Name: AUTOJOIN_ROOM
+    Required: 'false'
+    Target: AUTOJOIN_ROOM
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '99'
+    Description: 'Container Variable: PUID'
+    Display: advanced
+    Mask: 'false'
+    Name: PUID
+    Required: 'true'
+    Target: PUID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '100'
+    Description: 'Container Variable: PGID'
+    Display: advanced
+    Mask: 'false'
+    Name: PGID
+    Required: 'true'
+    Target: PGID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '022'
+    Description: 'Container Variable: UMASK'
+    Display: advanced
+    Mask: 'false'
+    Name: UMASK
+    Required: 'false'
+    Target: UMASK
+    Type: Variable
+  value: ''
+DonateImg: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/donate.png
+DonateLink: https://www.linuxserver.io/donate
+DonateText: Donations
+FirstSeen: 1601214935
+GitHub: https://github.com/linuxserver/docker-synclounge#application-setup
+Icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/synclounge-logo.png
+LastUpdate: 1644381822
+LastUpdateScan: 1647914897
+Name: synclounge
+Network: bridge
+Overview: Synclounge(https://github.com/samcm/synclounge) is a third party tool that
+  allows you to watch Plex in sync with your friends/family, wherever you are.
+Privileged: 'false'
+Project: https://github.com/samcm/synclounge
+ReadMe: https://github.com/linuxserver/docker-synclounge#readme
+Registry: https://github.com/orgs/linuxserver/packages/container/package/synclounge
+Repo: linuxserver's Repository
+Repository: lscr.io/linuxserver/synclounge
+Support: https://github.com/linuxserver/docker-synclounge/issues/new/choose
+TemplateURL: https://raw.githubusercontent.com/linuxserver/templates/master/unraid/synclounge.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8088]

@@ -1,0 +1,105 @@
+CategoryList:
+- Productivity
+- Tools-Utilities
+- MediaApp-Photos
+- MediaServer-Photos
+Config:
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI
+    Required: 'false'
+    Target: '4000'
+    Type: Port
+  value: '4000'
+- '@attributes':
+    Default: ''
+    Description: Location for original files (photos).
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Storage (images)
+    Required: 'true'
+    Target: /photo-stream/photos/original
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: TITLE
+    Required: 'false'
+    Target: TITLE
+    Type: Variable
+  value: Photo Stream for unRAID
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: AUTHOR_NAME
+    Required: 'false'
+    Target: AUTHOR_NAME
+    Type: Variable
+  value: unRAID
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: DESCRIPTION
+    Required: 'false'
+    Target: DESCRIPTION
+    Type: Variable
+  value: My unRAID Photo Stream collection.
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: SHOW_OFFICIAL_GITHUB
+    Required: 'false'
+    Target: SHOW_OFFICIAL_GITHUB
+    Type: Variable
+  value: '0'
+FirstSeen: 1642357556
+Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/photo-stream.png
+LastUpdate: 1645980074
+LastUpdateScan: 1647547395
+Name: Photo-Stream
+Network: bridge
+Overview: "DESCRIPTION\r\nPhoto Stream is a simpler home for your photos initially\
+  \ created by @maxvoltar and now maintained by @waschinski and friends. Easy to use,\
+  \ self hosted, no tracking, just photos.\r\n\r\nSome of the features:\r\n- Lazy\
+  \ loading\r\n- Only load larger resolutions when needed (to save on bandwidth)\r\
+  \n- Photo tints\r\n- Keyboard shortcuts\r\n- Unique URL's for photos\r\n- RSS feed\
+  \ (Which you can plug into IFTTT and set up auto-posting to most social networks,\
+  \ like @maxvoltar has done here. Make sure you select \"Post a tweet with image\"\
+  \ when setting it up to embed the photo.)\r\n- Drag, drop, commit workflow (learn\
+  \ more about how to add photos to your stream)\r\n- Optimized light and dark themes\
+  \ (auto-enabled depending on your OS preferences)\r\n- Optional: Links to your social\
+  \ networks\r\n\r\nLive demo:\r\nhttps://floremotion.de/\r\nhttps://joeyabanks.photo/\r\
+  \nhttps://photos.alexbaldwin.com/\r\nhttps://jad.photos/\r\nhttps://photo.silvandaehn.com/\r\
+  \nhttps://chriszeta.it/\r\nhttps://rafa.photo/\r\n\r\nNOTES\r\n\u2022 To customize\
+  \ its variables go to here: https://github.com/waschinski/photo-stream#customize.\r\
+  \n\u2022 Try not to add pictures (files) with very long filenames (i.e.: 10312670_1437325909908866_8181083286325937099.jpg),\
+  \ because it was causing problems with some users.\r\n\r\nVERSION\r\n1.0 (2022-01-16)"
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/waschinski/photo-stream
+Registry: https://hub.docker.com/r/waschinski/photo-stream
+Repo: SmartPhoneLover's Repository
+Repository: waschinski/photo-stream
+Requires: ''
+Support: https://forums.unraid.net/topic/118671-support-smartphonelover-photo-stream/
+TemplateURL: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/master/templates/Photo-Stream.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:4000]

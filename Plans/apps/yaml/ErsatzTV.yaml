@@ -1,0 +1,77 @@
+Beta: 'true'
+Branch:
+- Tag: latest
+  TagDescription: latest release
+- Tag: latest-vaapi
+  TagDescription: latest release + vaapi
+- Tag: latest-nvidia
+  TagDescription: latest release + nvidia
+- Tag: develop-vaapi
+  TagDescription: develop release + vaapi
+- Tag: develop-nvidia
+  TagDescription: develop release + nvidia
+CategoryList:
+- MediaApp-Video
+Config:
+- '@attributes':
+    Default: '8409'
+    Description: 'Container Port: 8409'
+    Display: always-hide
+    Mask: 'false'
+    Mode: tcp
+    Name: Host Port for 8409
+    Required: 'true'
+    Target: '8409'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: /mnt/user/appdata/ErsatzTV
+    Description: 'Container Path: /root/.local/share/ersatztv'
+    Display: always-hide
+    Mask: 'false'
+    Mode: rw
+    Name: Host Path for /root/.local/share/ersatztv
+    Required: 'true'
+    Target: /root/.local/share/ersatztv
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Nvidia Visible Devices (Optional - Requires Nvidia GPU and Unraid
+      Nvidia build)
+    Display: always-hide
+    Mask: 'false'
+    Mode: ''
+    Name: Nvidia Visible Devices
+    Required: 'false'
+    Target: NVIDIA_VISIBLE_DEVICES
+    Type: Variable
+  value: ''
+DonateImg: ''
+DonateLink: https://github.com/sponsors/jasongdove
+FirstSeen: 1616025779
+Icon: https://raw.githubusercontent.com/RandomNinjaAtk/unraid-templates/master/randomninjaatk/img/ersatztv.png
+LastUpdate: 1647194162
+LastUpdateScan: 1647214617
+Name: ErsatzTV
+Network: host
+Overview: "Stream custom live channels using your own media.\n    [br][br][b][u][span\
+  \ style='color: #E80000;']Nvidia GPU Use[/span][/u][/b][br]Using the Unraid Nvidia\
+  \ Plugin to install a version of Unraid with the Nvidia Drivers installed and[br]\
+  \ add [b]--runtime=nvidia[/b] to [b]\"extra parameters\"[/b] (switch on advanced\
+  \ view) and[br]copy your [b]GPU UUID[/b] to [b]NVIDIA_VISIBLE_DEVICES.[/b][br][br][b][u][span\
+  \ style='color: #E80000;']Intel GPU Use[/span][/u][/b][br]Edit your [b]go[/b] file\
+  \ to include:[br][b]modprobe i915[br][/b], save and reboot, then [br]add [b]--device=/dev/dri[/b]\
+  \ to [b]\"extra parameters\"[/b] (switch on advanced view)"
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/jasongdove/ErsatzTV
+Registry: https://hub.docker.com/r/jasongdove/ersatztv
+Repo: randomninjaatk's Repository
+Repository: jasongdove/ersatztv
+Support: https://discord.gg/hHaJm3yGy6
+TemplateURL: https://raw.githubusercontent.com/RandomNinjaAtk/unraid-templates/master/randomninjaatk/ersatztv.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8409]
+topPerforming: 7.886
+topTrending: -0.7079999999999993

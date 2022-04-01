@@ -1,0 +1,72 @@
+CategoryList:
+- Backup
+Config:
+- '@attributes':
+    Default: 1a2b3c4d5e6f71a2b3c4d5e6f71a2b3c4d5e6f7b
+    Description: Get your token from https://github.com/settings/tokens, see the support
+      page for more details.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Token
+    Required: 'false'
+    Target: TOKEN
+    Type: Variable
+  value: 1a2b3c4d5e6f71a2b3c4d5e6f71a2b3c4d5e6f7b
+- '@attributes':
+    Default: '3600'
+    Description: How often to sync in seconds (eg. 3600 for 1h, 21600 for 6h, 43200
+      for 12h, 86400 for 24h)
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Schedule
+    Required: 'false'
+    Target: SCHEDULE
+    Type: Variable
+  value: '3600'
+- '@attributes':
+    Default: /mnt/user/backup/github
+    Description: Set the location of your github backups. Please note that the default
+      will create a backup share if it does not exist and you don't change it.
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Backup location
+    Required: 'false'
+    Target: /home/docker/backups
+    Type: Path
+  value: /mnt/user/backup/github
+- '@attributes':
+    Default: ''
+    Description: Persistent storage for config.json
+    Display: advanced
+    Mask: 'false'
+    Mode: rw
+    Name: Config location
+    Required: 'false'
+    Target: /home/docker/github-backup/config/
+    Type: Path
+  value: /mnt/user/appdata/github-backup/
+DonateLink: https://github.com/lnxd
+DonateText: If you like my work please consider donating.
+FirstSeen: 1616680982
+Icon: https://raw.githubusercontent.com/lnxd/docker-github-backup/master/github-backup-logo.png
+LastUpdate: 1647683834
+LastUpdateScan: 1647864217
+Name: github-backup
+Network: bridge
+Overview: Like to maintain your own data? Automatically backup your github account
+  to your Unraid server on a schedule.
+Privileged: 'false'
+RecommendedDate: 1643691600
+RecommendedRaw: 2/1/2022
+RecommendedReason:
+  en_US: Easily and automatically backup your GitHub account to your Unraid server
+Registry: https://hub.docker.com/r/lnxd/github-backup
+Repo: lnxd's Repository
+Repository: lnxd/github-backup
+Support: https://forums.unraid.net/topic/104738-support-lnxd-github-backup/
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+caTemplateURL: https://raw.githubusercontent.com/lnxd/unraid-templates/master/lnxd/github-backup.xml
+topTrending: -5.772000000000002

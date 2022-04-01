@@ -1,0 +1,136 @@
+CategoryList:
+- GameServers
+Config:
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /serverdata/serverfiles'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: ServerFiles
+    Required: 'true'
+    Target: /serverdata/serverfiles
+    Type: Path
+  value: /mnt/cache/appdata/openttd
+- '@attributes':
+    Default: ''
+    Description: 'To load the last autosavegame you MUST specifie the following in
+      the GAME_PARAMETERS variable: ''-g /serverdata/serverfiles/.local/share/openttd/save/autosave/autosave0.sav'''
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: GAME_PARAMS
+    Required: 'false'
+    Target: GAME_PARAMS
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Container Port: 3979'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: TCP - Game Port
+    Required: 'true'
+    Target: '3979'
+    Type: Port
+  value: '3979'
+- '@attributes':
+    Default: ''
+    Description: 'Container Port: 3979'
+    Display: always
+    Mask: 'false'
+    Mode: udp
+    Name: UDP - Game Port
+    Required: 'true'
+    Target: '3979'
+    Type: Port
+  value: '3979'
+- '@attributes':
+    Default: ''
+    Description: 'WebConsole (by default, you can connect to the OpenTTD console by
+      opening your browser and go to HOSTIP:9015 - eg: 192.168.1.1:9015 - or click
+      on WebUI on the Docker page within Unraid).'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: TCP - WebConsole
+    Required: 'false'
+    Target: '8080'
+    Type: Port
+  value: '9015'
+- '@attributes':
+    Default: ''
+    Description: 'Define the prefered game version (eg: ''1.10.3'' without quotes)
+      or set to ''latest'' (without quotes) to pull the newest build.'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Game Version to Install
+    Required: 'true'
+    Target: GAME_VERSION
+    Type: Variable
+  value: latest
+- '@attributes':
+    Default: ''
+    Description: 'Define the prefered OpenGFX version (eg: ''0.6.0'' without quotes)
+      or set to ''latest'' (without quotes) to pull the newest build.'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: OpenGFX Version
+    Required: 'true'
+    Target: GFX_PK_V
+    Type: Variable
+  value: latest
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: UID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: UID
+    Required: 'true'
+    Target: UID
+    Type: Variable
+  value: '99'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: GID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: GID
+    Required: 'true'
+    Target: GID
+    Type: Variable
+  value: '100'
+DonateImg: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/donate.png
+DonateLink: https://www.paypal.me/chips777
+DonateText: 'If you like my work please '
+ExtraParams: --restart=unless-stopped
+FirstSeen: 1559592440
+Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/openttd.png
+LastUpdate: 1643018717
+LastUpdateScan: 1647943400
+Name: OpenTTD
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "This Docker will download and install the version of OpenTTD that you enter\
+  \ in the variable 'GAME_VERSION' (if you define 'latest' it will always pull the\
+  \ latest build, if you define 'testing' it will always pull down the latest testing\
+  \ build).\r\n\r\nWEB CONSOLE: You can connect to the OpenTTD console by opening\
+  \ your browser and go to HOSTIP:9015 (eg: 192.168.1.1:9015) or click on WebUI on\
+  \ the Docker page within Unraid.\r\n\r\nUpdate Notice: If there is a newer version\
+  \ simply restart the container to update it to the latest version."
+PostArgs: ''
+Privileged: 'false'
+Project: https://www.openttd.org/
+Registry: https://hub.docker.com/r/ich777/openttdserver
+Repo: ich777's Repository
+Repository: ich777/openttdserver
+Support: https://forums.unraid.net/topic/79530-support-ich777-gameserver-dockers/
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8080]/
+caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/OpenTTD.xml

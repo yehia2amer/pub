@@ -1,0 +1,67 @@
+CategoryList:
+- Tools-Utilities
+- Network-Other
+Config:
+- '@attributes':
+    Default: ''
+    Description: 'Container Port: 9080'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Host Port 1
+    Required: 'false'
+    Target: '9080'
+    Type: Port
+  value: '9080'
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /etc/promtail'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Host Path 1
+    Required: 'false'
+    Target: /etc/promtail
+    Type: Path
+  value: /mnt/user/appdata/promtail
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /positions'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Positions
+    Required: 'false'
+    Target: /positions
+    Type: Path
+  value: /mnt/user/appdata/promtail/positions
+FirstSeen: 1593808588
+Icon: https://github.com/natcoso9955/unRAID-docker/raw/master/icons/loki.png
+LastUpdate: 1648217516
+LastUpdateScan: 1648396997
+Name: GrafanaPromtail
+Network: bridge
+Networking:
+  Mode: bridge
+Official: true
+Overview: "Promtail is an agent which ships the contents of local logs to a private\
+  \ Loki instance or Grafana Cloud. It is usually deployed to every machine that has\
+  \ applications needed to be monitored.\r\n\r\nIt primarily:\r\n\r\nDiscovers targets\r\
+  \nAttaches labels to log streams\r\nPushes them to the Loki instance.\r\nCurrently,\
+  \ Promtail can tail logs from two sources: local log files and the systemd journal\
+  \ (on AMD64 machines only).\r\nPromtail supports receiving IETF Syslog (RFC5424)\
+  \ messages from a tcp stream: (https://github.com/grafana/loki/blob/v1.5.0/docs/clients/promtail/scraping.md#syslog-receiver)\r\
+  \n\r\nNOTE: Download the config.yml file from https://github.com/natcoso9955/unRAID-docker/blob/master/configs/promtail/config.yml\
+  \ before you start the container.\r\nWill need to be placed into your Host Path\
+  \ 1.\r\nMore info: \r\n https://github.com/grafana/loki/blob/master/docs/clients/promtail/configuration.md"
+PostArgs: ''
+Privileged: 'false'
+Registry: https://hub.docker.com/r/grafana/promtail/
+Repo: Natcoso9955's Repository
+Repository: grafana/promtail
+Support: https://forums.unraid.net/topic/94021-support-natcoso9955-loki/
+TemplateURL: https://raw.githubusercontent.com/natcoso9955/unRAID-docker/master/grafana_loki_promtail_unraid.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:9080]
+topPerforming: 3.165
+topTrending: -1.205

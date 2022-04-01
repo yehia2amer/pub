@@ -1,0 +1,112 @@
+CategoryList:
+- Productivity
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: ''
+    Description: 'Container Port: 80'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI
+    Required: 'true'
+    Target: '80'
+    Type: Port
+  value: '6100'
+- '@attributes':
+    Default: mysql
+    Description: mysql or sqlite
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Database Provider
+    Required: 'true'
+    Target: Connection:Provider
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: IP address of database server (mysql only)
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Database Server
+    Required: 'false'
+    Target: Connection:Server
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Port of database server (mysql only)
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Database Port
+    Required: 'false'
+    Target: Connection:Port
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Name of the database (mysql only)
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Database Name
+    Required: 'false'
+    Target: Connection:Database
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Database user (mysql only)
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Database User
+    Required: 'false'
+    Target: Connection:User
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Password of database user (mysql only)
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Database Password
+    Required: 'false'
+    Target: Connection:Password
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Path of local sqlite database (sqlite only)
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Sqlite Databse Path
+    Required: 'false'
+    Target: /app/database
+    Type: Path
+  value: ''
+FirstSeen: 1608045586
+Icon: https://raw.githubusercontent.com/TheAxelander/OpenBudgeteer/master/assets/icon.png
+LastUpdate: 1646229982
+LastUpdateScan: 1647011017
+Name: OpenBudgeteer
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: OpenBudgeteer is a budgeting app based on the Bucket Budgeting Principle
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/TheAxelander/OpenBudgeteer
+Registry: https://hub.docker.com/r/axelander/openbudgeteer
+Repo: Axelander's Repository
+Repository: axelander/openbudgeteer
+Support: https://forums.unraid.net/topic/100181-support-axelander-openbudgeteer
+TemplateURL: https://raw.githubusercontent.com/TheAxelander/unraid_ca/master/OpenBudgeteer.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:80]
+topTrending: 8.258999999999999

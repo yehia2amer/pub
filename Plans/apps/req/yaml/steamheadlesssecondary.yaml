@@ -1,0 +1,151 @@
+CAComment: This template is set up to use a custom network. You may have to adjust
+  the network or IP address etc to match your system
+CategoryList:
+- GameServers
+Config:
+- '@attributes':
+    Default: /mnt/user/appdata/steam-headless-secondary
+    Description: "Default user home directory.\r\nAll application software and configuration\
+      \ will be saved into this directory.\r\nAny files saved outside of this path\
+      \ will be cleared if the container image this templated is updated."
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Appdata
+    Required: 'false'
+    Target: /home/default
+    Type: Path
+  value: /mnt/user/appdata/steam-headless-secondary
+- '@attributes':
+    Default: /mnt/user/Games
+    Description: "Option path to your games.\r\nThis path will need to also be configured\
+      \ in Steam after the first boot."
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Games
+    Required: 'false'
+    Target: /mnt/games
+    Type: Path
+  value: /mnt/user/Games
+- '@attributes':
+    Default: password
+    Description: "The password for this container.\r\nNote: This password will also\
+      \ be used for the root user. However, the default user has sudo access."
+    Display: always
+    Mask: 'true'
+    Mode: ''
+    Name: User password
+    Required: 'false'
+    Target: USER_PASSWORD
+    Type: Variable
+  value: password
+- '@attributes':
+    Default: Pacific/Auckland
+    Description: "Enter your local timezone.\r\nYou can find a full list of supported\
+      \ timezones \r\nin: '/usr/share/zoneinfo' (eg: 'Etc/UTC' or 'Australia/Melbourne',...)"
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Timezone
+    Required: 'false'
+    Target: TZ
+    Type: Variable
+  value: Pacific/Auckland
+- '@attributes':
+    Default: en_US.UTF-8 UTF-8
+    Description: "Enter your prefered locales.\r\nYou can find a full list of supported\
+      \ languages \r\nin: '/usr/share/i18n/SUPPORTED' (eg: 'en_US.UTF-8 UTF8' or 'de_DE.UTF-8\
+      \ UTF-8',...)"
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Locales
+    Required: 'false'
+    Target: USER_LOCALES
+    Type: Variable
+  value: en_US.UTF-8 UTF-8
+- '@attributes':
+    Default: all
+    Description: 'For users with multiple GPUs, add the ID found under the '
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Nvidia GPU UUID
+    Required: 'false'
+    Target: NVIDIA_VISIBLE_DEVICES
+    Type: Variable
+  value: all
+- '@attributes':
+    Default: all
+    Description: ''
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Driver Capabilities
+    Required: 'false'
+    Target: NVIDIA_DRIVER_CAPABILITIES
+    Type: Variable
+  value: all
+- '@attributes':
+    Default: :55
+    Description: Set the X display. To use the host X server, set this to :0 (or whatever
+      your host is currently running in /tmp/.X11-unix/X*)
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Display ID
+    Required: 'false'
+    Target: DISPLAY
+    Type: Variable
+  value: :55
+- '@attributes':
+    Default: secondary
+    Description: 'Options: [''primary'', ''framebuffer'', ''secondary''].'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Mode
+    Required: 'false'
+    Target: MODE
+    Type: Variable
+  value: secondary
+DonateLink: https://www.patreon.com/josh5
+DonateText: Support me on Patreon
+ExtraParams: --hostname='SteamHeadlessSecondary' --add-host='SteamHeadlessSecondary:127.0.0.1'
+  --restart=unless-stopped --shm-size=2G -v '/tmp/.X11-unix':'/tmp/.X11-unix':'rw'
+  -v '/dev/input':'/dev/input':'ro'
+FirstSeen: 1641820164
+Icon: https://raw.githubusercontent.com/Josh5/docker-steam-headless/master/images/steam-icon.png
+LastUpdate: 1645247644
+LastUpdateScan: 1647011000
+Name: steam-headless-secondary
+Network: br0
+Overview: "Headless Steam Service (Secondary)\r\nThis container relies on an existing\
+  \ working SteamHeadless running.\r\n\r\n## Features:\r\n- Run a second (or third\
+  \ or fourth) instance of steam on the Steam Headless desktop.\r\n- All the same\
+  \ features as Steam Headless accessed through an existing Steam Headless container\r\
+  \n\r\n\r\n---\r\n## Notes:\r\n\r\n### NETWORK TYPE:\r\nEach instance of this container\
+  \ should be run on a \"**Custom: br0**\" network and should be configured with a\
+  \ unique \"**Fixed IP address**\".\r\n\r\n### RUNNING MULTIPLE INSTANCES:\r\nOnly\
+  \ one instance of Steam Headless can play a game at any time. If you start a second\
+  \ Remote Play link, it wil hijack the virtual monitor, and all input devices from\
+  \ the first one.\r\n\r\n### STORAGE PATHS:\r\nEverything that you wish to save in\
+  \ this container should be stored in the home directory or a docker container mount\
+  \ that you have specified. All files that are store outside your home directory\
+  \ are not persistent and will be wiped if there is an update of the container or\
+  \ you change something in the template.\r\n\r\n### GAMES LIBRARY:\r\nIt is recommended\
+  \ that you mount your games library to `/mnt/games` and configure Steam to add that\
+  \ path.\r\n\r\n### NVIDIA GPU:\r\nTo enable NVIDIA GPU support, ensure that you\
+  \ have the *\"--runtime=nvidia\"* parameter added to **\"Extra Parameters:\"**"
+PostArgs: ''
+Privileged: 'true'
+Project: https://store.steampowered.com/
+Registry: https://hub.docker.com/r/josh5/steam-headless
+Repo: Josh.5's Repository
+Repository: josh5/steam-headless:latest
+Requires: '**Steam Headless**'
+Support: https://forums.unraid.net/topic/118390-support-josh5-steam-headless/
+TemplateURL: https://raw.githubusercontent.com/Josh5/unraid-docker-templates/master/josh5/steam-headless-secondary.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''

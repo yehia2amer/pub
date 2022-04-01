@@ -1,0 +1,102 @@
+CAComment: This template is set up to use a custom network. You may have to adjust
+  the network or IP address etc to match your system
+CategoryList:
+- Network-Other
+Config:
+- '@attributes':
+    Default: '9030'
+    Description: 'Container Port: '
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: '9030'
+    Required: 'false'
+    Target: '9030'
+    Type: Port
+  value: '9030'
+- '@attributes':
+    Default: '9001'
+    Description: 'Container Port: '
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: '9001'
+    Required: 'false'
+    Target: '9001'
+    Type: Port
+  value: '9001'
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /etc/localtime'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: /etc/localtime
+    Required: 'false'
+    Target: /etc/localtime
+    Type: Path
+  value: /etc/localtime
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: NICKNAME'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: TOR_NICKNAME
+    Required: 'false'
+    Target: TOR_NICKNAME
+    Type: Variable
+  value: myRelay
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: CONTACTINFO'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: CONTACT_EMAIL
+    Required: 'false'
+    Target: CONTACT_EMAIL
+    Type: Variable
+  value: mail@domain.com
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /etc/tor/'
+    Display: always
+    Mask: 'false'
+    Mode: ro
+    Name: /etc/tor/
+    Required: 'false'
+    Target: /etc/tor/
+    Type: Path
+  value: /mnt/user/appdata/tor-data/config/
+ExtraParams: --init
+FirstSeen: 1581081332
+Icon: https://clipartart.com/images/tor-browser-icon-clipart-9.png
+LastUpdate: 1637138447
+LastUpdateScan: 1648685007
+Name: tor-relay
+Network: br0
+Networking:
+  Mode: br0
+Overview: "This docker image will install the latest current stable version of Tor\
+  \ server. It will run Tor as an unprivileged regular user, as recommended by torproject.org.\n\
+  \nIt includes the latest Tor Debian package from torproject.org which is installed\
+  \ and configured according the Tor project recommendations. Additionally it can\
+  \ be run as a hidden bridge using obfs4proy as well as meek.\n\nThe Tor network\
+  \ relies on volunteers to donate bandwidth. The more people who run relays, the\
+  \ faster the Tor network will be. If you have at least 2 megabits/s for both upload\
+  \ and download, please help out Tor by configuring your server to be a Tor relay\
+  \ too.\n\nINSTALLATION:\nCreate a folder appdata/tor-data/config\nDownload sample\
+  \ Config: https://github.com/maschhoff/docker/tree/master/tor-relay\nEdit the config\
+  \ at least NICKNAME and CONTACTINFO in the config file\nPut this into the config\
+  \ folder.\nEdit the docker parameters and run it.\n     \nhttps://github.com/chriswayg/tor-server"
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/maschhoff/docker/tree/master/tor-relay
+Registry: https://registry.hub.docker.com/r/doudou34/tor-server
+Repo: knex666's Repository
+Repository: doudou34/tor-server
+TemplateURL: https://raw.githubusercontent.com/maschhoff/docker/master/unraid%20xml/my-tor-relay.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''
+topTrending: -5.776

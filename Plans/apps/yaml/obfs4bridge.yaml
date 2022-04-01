@@ -1,0 +1,132 @@
+BindTime: 'true'
+CategoryList:
+- Network-Other
+Config:
+- '@attributes':
+    Default: '9393'
+    Description: 'Container Port: 9393'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: OR_PORT
+    Required: 'true'
+    Target: '9393'
+    Type: Port
+  value: '9393'
+- '@attributes':
+    Default: '9393'
+    Description: 'Container Variable: OR_PORT'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: OR_PORT
+    Required: 'true'
+    Target: OR_PORT
+    Type: Variable
+  value: '9393'
+- '@attributes':
+    Default: '9292'
+    Description: 'Container Port: 9292'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: PT_PORT
+    Required: 'true'
+    Target: '9292'
+    Type: Port
+  value: '9292'
+- '@attributes':
+    Default: '9292'
+    Description: 'Container Variable: PT_PORT'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: PT_PORT
+    Required: 'true'
+    Target: PT_PORT
+    Type: Variable
+  value: '9292'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: EMAIL'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: EMAIL
+    Required: 'true'
+    Target: EMAIL
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '0'
+    Description: 'Container Variable: OBFS4_ENABLE_ADDITIONAL_VARIABLES'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Enable additional variables
+    Required: 'false'
+    Target: OBFS4_ENABLE_ADDITIONAL_VARIABLES
+    Type: Variable
+  value: '0'
+- '@attributes':
+    Default: '0'
+    Description: 'Container Variable: OBFS4V_AddressDisableIPv6'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Disable IPv6
+    Required: 'false'
+    Target: OBFS4V_AddressDisableIPv6
+    Type: Variable
+  value: '0'
+- '@attributes':
+    Default: /mnt/user/appdata/tor
+    Description: 'Container Path: /var/lib/tor'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: rw
+    Name: DATA_DIR
+    Required: 'true'
+    Target: /var/lib/tor
+    Type: Path
+  value: ''
+FirstSeen: 1622478285
+GitHub: https://gitlab.torproject.org/tpo/anti-censorship/docker-obfs4-bridge/
+Icon: https://raw.githubusercontent.com/sgraaf/Unraid-Docker-Templates/main/obfs4-bridge/icon.png
+LastUpdate: 1647880382
+LastUpdateScan: 1648461803
+Name: obfs4-bridge
+Networking:
+  Mode: bridge
+Overview: 'Description:
+
+  obfs4-bridge is a container that allows you to run a Tor Bridge relay to help censored
+  users connect to the Tor network.
+
+
+  Configuration:
+
+  - OR_PORT: Your bridge''s onion routing (Tor) port.
+
+  - PT_PORT: Your bridge''s obfs4 port.
+
+  - EMAIL: Your email address.
+
+
+  Note:
+
+  - Make sure that both ports are forwarded in your firewall.
+
+  - Make sure that you create the DATA_DIR and change its owner before running the
+  container: `mkdir /mnt/user/appdata/tor && chown 101:101 /mnt/user/appdata/tor`.'
+Privileged: 'false'
+Project: https://community.torproject.org/relay/setup/bridge/docker/
+Registry: https://hub.docker.com/r/thetorproject/obfs4-bridge/
+Repo: sgraaf's Repository
+Repository: thetorproject/obfs4-bridge
+Support: https://forums.unraid.net/topic/109506-support-sgraaf-obfs4-bridge/
+TemplateURL: https://raw.githubusercontent.com/sgraaf/Unraid-Docker-Templates/master/obfs4-bridge/template.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''
+topPerforming: 10.195
+topTrending: 4.618

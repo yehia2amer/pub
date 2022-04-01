@@ -1,0 +1,63 @@
+CategoryList:
+- Security
+Config:
+- '@attributes':
+    Default: /mnt/user/appdata/shapeshifter-obfuscator
+    Description: ''
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Config
+    Required: 'true'
+    Target: /state
+    Type: Path
+  value: /mnt/user/appdata/shapeshifter-obfuscator
+- '@attributes':
+    Default: -transparent -server -state state -orport 127.0.0.1:3333 -transports
+      obfs4 -bindaddr obfs4-0.0.0.0:2222 -logLevel DEBUG -enableLogging
+    Description: Shapeshifter-Obfuscator start-up argument. Change 127.0.0.1:3333
+      to an IP on your subnet.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Command
+    Required: 'true'
+    Target: ARGS
+    Type: Variable
+  value: -transparent -server -state state -orport 127.0.0.1:3333 -transports obfs4
+    -bindaddr obfs4-0.0.0.0:2222 -logLevel DEBUG -enableLogging
+- '@attributes':
+    Default: '2222'
+    Description: Port that Shapeshifter-Obfuscator will listen on. Change it as necessary.
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Listen Port
+    Required: 'true'
+    Target: '2222'
+    Type: Port
+  value: '2222'
+FirstSeen: 1646313561
+Icon: https://github.com/juchong/shapeshifter-docker-unraid/raw/main/icon.png
+LastUpdate: 1646293339
+LastUpdateScan: 1646313561
+Name: Shapeshifter-Obfuscator
+Network: bridge
+Overview: "Shapeshifter-Obfuscator is a dockerized implementation of shapeshifter-dispatcher\
+  \ provided by The Operator Foundation. The shapeshifter suite provides command-line\
+  \ proxy and obfuscation tools that effectively modify packets to evade advanced\
+  \ IDS systems. \r\n\r\nThis container is targeted at advanced users and provides\
+  \ no graphical user interface. Refer to the shapeshifter-dispatcher documentation\
+  \ on GitHub to learn more about the different proxy modes and transports supported\
+  \ by this tool. \r\n\r\nhttps://github.com/OperatorFoundation/shapeshifter-dispatcher"
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/juchong/shapeshifter-docker
+Registry: https://hub.docker.com/r/juchong/shapeshifter-docker
+Repo: juchong's Repository
+Repository: juchong/shapeshifter-docker
+Requires: ''
+Support: https://forums.unraid.net/topic/120689-shapeshifter-obfuscator-support-thread/
+TemplateURL: https://raw.githubusercontent.com/juchong/shapeshifter-docker-unraid/master/shapeshifter-docker.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''

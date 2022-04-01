@@ -1,0 +1,159 @@
+CategoryList:
+- Backup
+Config:
+- '@attributes':
+    Default: /mnt/user
+    Description: 'Container Path: /mnt/user'
+    Display: always
+    Mask: 'false'
+    Mode: ro
+    Name: User Shares (Read-only Backup Source)
+    Required: 'true'
+    Target: /mnt/user
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: /boot
+    Description: 'Container Path: /boot'
+    Display: always
+    Mask: 'false'
+    Mode: ro
+    Name: Flash Drive (Read-only Backup Source)
+    Required: 'false'
+    Target: /boot
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: /mnt/disks/borg_backup/repo
+    Description: 'Container Path: /mnt/borg-repository'
+    Display: always
+    Mask: 'false'
+    Mode: rw,slave
+    Name: Borg Repo (Backup Destination)
+    Required: 'true'
+    Target: /mnt/borg-repository
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: /mnt/disks/borg_backup/cache
+    Description: 'Container Path: /root/.cache/borg'
+    Display: always
+    Mask: 'false'
+    Mode: rw,slave
+    Name: Borg Cache
+    Required: 'true'
+    Target: /root/.cache/borg
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: /mnt/user/appdata/borgmatic/config
+    Description: 'Container Path: /etc/borgmatic.d'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Borgmatic Config
+    Required: 'true'
+    Target: /etc/borgmatic.d
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: /mnt/user/appdata/borgmatic/borg_keys
+    Description: 'Container Path: /root/.config/borg'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Borg Keys
+    Required: 'true'
+    Target: /root/.config/borg
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: /mnt/user/appdata/borgmatic/ssh_keys
+    Description: 'Container Path: /root/.ssh'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: SSH Keys
+    Required: 'false'
+    Target: /root/.ssh
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: /mnt/borg
+    Description: 'Container Path: /mnt/fuse'
+    Display: always
+    Mask: 'false'
+    Mode: rw,shared
+    Name: Fuse mount point
+    Required: 'false'
+    Target: /mnt/fuse
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: America/New_York
+    Description: 'Container Variable: TZ'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: TZ
+    Required: 'false'
+    Target: TZ
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: /dev/fuse
+    Description: 'Container Device: '
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: /dev/fuse
+    Required: 'false'
+    Target: ''
+    Type: Device
+  value: ''
+- '@attributes':
+    Default: '99'
+    Description: UID for permissions.  Do not change unless you know what you're doing.
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: PUID
+    Required: 'true'
+    Target: PUID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '100'
+    Description: GID for permissions.  Do not change unless you know what you're doing.
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: PGID
+    Required: 'true'
+    Target: PGID
+    Type: Variable
+  value: ''
+ExtraParams: --cap-add SYS_ADMIN
+FirstSeen: 1606005862
+Icon: https://github.com/witten/borgmatic/raw/master/docs/static/borgmatic.png
+LastUpdate: 1646217919
+LastUpdateScan: 1647576196
+Name: borgmatic
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: borgmatic is simple, configuration-driven backup software for servers and
+  workstations. Protect your files with client-side encryption. Backup your databases
+  too. Monitor it all with integrated third-party services.
+PostArgs: ''
+Privileged: 'false'
+Project: https://hub.docker.com/r/b3vis/borgmatic/
+Registry: https://hub.docker.com/r/b3vis/borgmatic/
+Repo: sdub's Repository
+Repository: b3vis/borgmatic
+Support: https://forums.unraid.net/topic/99218-support-borgmatic/
+TemplateURL: https://raw.githubusercontent.com/Sdub76/unraid_docker_templates/master/borgmatic.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''
+topPerforming: 0.479
+topTrending: -1.964

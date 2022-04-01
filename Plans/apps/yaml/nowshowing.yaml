@@ -1,0 +1,162 @@
+BaseImage: alpine:3.5
+BindTime: 'true'
+CategoryList:
+- MediaApp-Video
+- MediaServer-Video
+ChangeLogPresent: true
+Config:
+- '@attributes':
+    Default: ''
+    Description: PLEX_SERVER_IP
+    Display: always-hide
+    Mask: 'false'
+    Mode: ''
+    Name: PLEX SERVER IP
+    Required: 'true'
+    Target: PLEX_SERVER_IP
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: PLEX_USERNAME
+    Display: always-hide
+    Mask: 'false'
+    Mode: ''
+    Name: PLEX USERNAME
+    Required: 'false'
+    Target: PLEX_USERNAME
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: PLEX_PASSWORD
+    Display: always-hide
+    Mask: 'true'
+    Mode: ''
+    Name: PLEX PASSWORD
+    Required: 'false'
+    Target: PLEX_PASSWORD
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: SMTP_SERVER
+    Display: always-hide
+    Mask: 'false'
+    Mode: ''
+    Name: SMTP SERVER
+    Required: 'true'
+    Target: SMTP_SERVER
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: SMTP_PORT (Use 587 for Gmail)
+    Display: always-hide
+    Mask: 'false'
+    Mode: ''
+    Name: SMTP PORT
+    Required: 'true'
+    Target: SMTP_PORT
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: EMAIL_USERNAME
+    Display: always-hide
+    Mask: 'false'
+    Mode: ''
+    Name: EMAIL USERNAME
+    Required: 'true'
+    Target: EMAIL_USERNAME
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: EMAIL_PASSWORD
+    Display: always-hide
+    Mask: 'true'
+    Mode: ''
+    Name: EMAIL PASSWORD
+    Required: 'true'
+    Target: EMAIL_PASSWORD
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '6878'
+    Description: 'Container Port: 6878'
+    Display: always-hide
+    Mask: 'false'
+    Mode: tcp
+    Name: Host Port
+    Required: 'true'
+    Target: '6878'
+    Type: Port
+  value: '6878'
+- '@attributes':
+    Default: /mnt/user/cache/appdata/NowShowing
+    Description: 'Container Path: /config'
+    Display: always-hide
+    Mask: 'false'
+    Mode: rw
+    Name: AppData Config Path
+    Required: 'true'
+    Target: /config
+    Type: Path
+  value: /mnt/user/cache/appdata/NowShowing
+- '@attributes':
+    Default: ''
+    Description: PLEX_TOKEN (Optional - use if you don't want to enter Plex username/password)
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: PLEX TOKEN
+    Required: 'false'
+    Target: PLEX_TOKEN
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '99'
+    Description: Optional PUID - Usually do not change this. See instructions
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: PUID
+    Required: 'false'
+    Target: PUID
+    Type: Variable
+  value: '99'
+- '@attributes':
+    Default: '100'
+    Description: Optional PGID - Usually do not change this. See instructions
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: PGID
+    Required: 'false'
+    Target: PGID
+    Type: Variable
+  value: '100'
+Deprecated: true
+FirstSeen: 1491796800
+Icon: https://raw.githubusercontent.com/ninthwalker/NowShowing/master/images/nowshowing-icon.png
+LastUpdate: 1548123841
+LastUpdateScan: 1648627432
+ModeratorComment: Deprecated in favour of Now Showing V2
+Name: nowshowing
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "Please use the new NowShowing v2 app (also found here in Community Apps).[br]\n\
+  \   This version is no longer being updated or supported. Thanks!"
+Privileged: 'false'
+Project: https://github.com/ninthwalker/NowShowing
+Registry: https://registry.hub.docker.com/r/ninthwalker/nowshowing/
+Repo: ninthwalker's Repository
+Repository: ninthwalker/nowshowing
+Support: https://forums.lime-technology.com/topic/56483-support-ninthwalker-nowshowing/
+TemplateURL: https://raw.githubusercontent.com/ninthwalker/docker-templates/master/Ninthwalker/NowShowing.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:6878]
+topPerforming: 0.082
+topTrending: -0.358

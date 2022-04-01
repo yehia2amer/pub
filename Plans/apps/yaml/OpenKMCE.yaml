@@ -1,0 +1,104 @@
+CategoryList:
+- Productivity
+Config:
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI
+    Required: 'false'
+    Target: '8080'
+    Type: Port
+  value: '8990'
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Config File (1)
+    Required: 'false'
+    Target: /opt/tomcat/conf/server.xml
+    Type: Path
+  value: /mnt/user/appdata/openkm-ce/server.xml
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Config File (2)
+    Required: 'false'
+    Target: /opt/tomcat/OpenKM.cfg
+    Type: Path
+  value: /mnt/user/appdata/openkm-ce/OpenKM.cfg
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Repository (data)
+    Required: 'false'
+    Target: /opt/tomcat/repository
+    Type: Path
+  value: /mnt/user/appdata/openkm-ce/repository
+- '@attributes':
+    Default: ''
+    Description: Use this directory (HOST_SWAP) to allow communication between OpenKM
+      container and the host.
+    Display: advanced
+    Mask: 'false'
+    Mode: rw
+    Name: Swap Space
+    Required: 'false'
+    Target: /HOST_SWAP
+    Type: Path
+  value: ''
+FirstSeen: 1638291832
+Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/openkm-ce_200x200.png
+LastUpdate: 1625224531
+LastUpdateScan: 1648685009
+Name: OpenKM-CE
+Network: bridge
+Overview: "DESCRIPTION\r\nThis is a docker template for OpenKM Community Edition,\
+  \ an Open Source Document Management System (DMS). It provides a web interface for\
+  \ managing nonspecific files.\r\n\r\nOpenKM is a management solution that allows\
+  \ businesses to control the production, storage, management and distribution of\
+  \ electronic documents, yielding greater effectiveness and the ability to reuse\
+  \ information and to control the flow of the documents.\r\n\r\nThe CE version of\
+  \ OpenKM doesn't have any trial period or something similar. It's the Open Source\
+  \ version (free) developed and maintained by the public community, but with the\
+  \ lack of some of the features that are only available in the Cloud or Professional\
+  \ editions (paid). But, with some little tricks and programming skills, the user\
+  \ can modify its source code (public).\r\n\r\nNOTES\r\n\u2022 The program has a\
+  \ built-in SQLite DB (embedded), but if you're going to use it for production it's\
+  \ highly recommended to connect it to an external DB, such as: MariaDB, MySQL, PostgreSQL\
+  \ (and others). By default, if no database is configured to connect to the OpenKM\
+  \ instance, it will use the integrated one.\r\n\u2022 Both, 'OpenKM.cfg' and 'server.xml'\
+  \ files, MUST be present and properly configured before creating the container.\r\
+  \n\u2022 The 'Repository (data)' is the storage location for all the data (docs)\
+  \ uploaded through the platform.\r\n\u2022 If there is a new image version and you\
+  \ want to update it to the latest (tag), you will need to backup all the data (repo,\
+  \ metadata, DB...) before proceeding with the process. DO NOT update if you didn't\
+  \ back up previous installation.\r\n\u2022 The default credentials are: okmAdmin/admin\
+  \ (Administrator).\r\n\u2022 The '/HOST_SWAP' directory is mapped to the internal\
+  \ storage of the container to allow communication between the container and the\
+  \ host. It will be usefull in case of exporting repo (zip) or any file from within\
+  \ the platform, to the host. (optional field)\r\n\r\nVERSION\r\n1.0 (2021-11-30)\r\
+  \n\r\nIMAGE TAG TEMPORARILY LOCKED AT 6.3.8 UNTIL FIXING SOME BUILDING ERRORS FOR\
+  \ 6.3.11"
+PostArgs: ''
+Privileged: 'false'
+Project: https://www.openkm.com/es/
+Registry: https://hub.docker.com/r/openkm/openkm-ce
+Repo: SmartPhoneLover's Repository
+Repository: openkm/openkm-ce:6.3.8
+Requires: ''
+Support: https://forums.unraid.net/topic/116642-support-smartphonelover-openkm-ce-dms/
+TemplateURL: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/master/templates/OpenKM-CE.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8080]
+topTrending: -0.5940000000000001

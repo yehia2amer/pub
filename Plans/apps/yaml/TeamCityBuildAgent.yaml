@@ -1,0 +1,111 @@
+CategoryList:
+- Productivity
+- Other
+Config:
+- '@attributes':
+    Default: ''
+    Description: URL to TeamCity server
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: SERVER_URL
+    Required: 'true'
+    Target: SERVER_URL
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: Nick Fury
+    Description: Name of this TeamCity Build Agent
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: AGENT_NAME
+    Required: 'true'
+    Target: AGENT_NAME
+    Type: Variable
+  value: Phil Coulson
+- '@attributes':
+    Default: /mnt/user/appdata/teamcity-buildagent
+    Description: 'Container Path: /data/teamcity_agent/conf'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Config
+    Required: 'true'
+    Target: /data/teamcity_agent/conf
+    Type: Path
+  value: /mnt/user/appdata/teamcity-buildagent
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /opt/buildagent/work'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Work
+    Required: 'true'
+    Target: /opt/buildagent/work
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /opt/buildagent/temp'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Temp
+    Required: 'true'
+    Target: /opt/buildagent/temp
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: buildagent_volumes
+    Description: 'Container Path: /var/lib/docker'
+    Display: advanced
+    Mask: 'false'
+    Mode: rw
+    Name: Docker Volumes
+    Required: 'true'
+    Target: /var/lib/docker
+    Type: Path
+  value: buildagent_volumes
+- '@attributes':
+    Default: start
+    Description: "Run Docker daemon within your container (note that in this case\
+      \ the container should be run with \u2014privileged flag)"
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: DOCKER_IN_DOCKER
+    Required: 'true'
+    Target: DOCKER_IN_DOCKER
+    Type: Variable
+  value: start
+DonateLink: https://www.patreon.com/josh5
+DonateText: Support me on Patreon
+FirstSeen: 1557069695
+Icon: https://seeklogo.com/images/T/team-city-logo-8FEEB62EC1-seeklogo.com.png
+LastUpdate: 1645015672
+LastUpdateScan: 1647986618
+Name: TeamCity-BuildAgent
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "This is an official JetBrains TeamCity build agent image.\r\n\r\nThe TeamCity\
+  \ build agent connects to the TeamCity server and spawns the actual build processes.\
+  \ You can use the jetbrains/teamcity-server image to run a TeamCity server.\r\n\r\
+  \nThis image adds a TeamCity agent suitable for Java development. It is based on\
+  \ jetbrains/teamcity-minimal-agent but gives you more benefits, e.g.\r\n\r\nclient-side\
+  \ checkout if you use 'git' or 'mercurial'\r\nmore bundled build tools\r\n'docker-in-docker'\
+  \ on Linux"
+PostArgs: ''
+Privileged: 'true'
+Project: https://hub.docker.com/r/jetbrains/teamcity-agent/
+Registry: https://hub.docker.com/r/jetbrains/teamcity-agent/
+Repo: Josh.5's Repository
+Repository: jetbrains/teamcity-agent
+Support: https://forums.unraid.net/topic/79858-support-josh5-docker-templates/
+TemplateURL: https://raw.githubusercontent.com/Josh5/unraid-docker-templates/master/josh5/teamcity-agent.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''
+topPerforming: 0.937
+topTrending: -5.245

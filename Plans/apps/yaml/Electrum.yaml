@@ -1,0 +1,126 @@
+CategoryList:
+- Network-Other
+- Productivity
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: ''
+    Description: Please keep in mind that your wallet is stored there and I strongly
+      recommend you to backup that path (the wallet is stored in your Electron appdata
+      directory/.electrum/wallets/YOURWALLETNAME).
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Data Path
+    Required: 'true'
+    Target: /electrum
+    Type: Path
+  value: /mnt/cache/appdata/electrum
+- '@attributes':
+    Default: ''
+    Description: TCP noVNC WebGUI Port
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebGUI
+    Required: 'true'
+    Target: '8080'
+    Type: Port
+  value: '8080'
+- '@attributes':
+    Default: ''
+    Description: Minimum screen hight 768 pixels
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Custom Screen Height
+    Required: 'true'
+    Target: CUSTOM_RES_H
+    Type: Variable
+  value: '768'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: UMASK'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: UMASK
+    Required: 'true'
+    Target: UMASK
+    Type: Variable
+  value: '000'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: UID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: UID
+    Required: 'true'
+    Target: UID
+    Type: Variable
+  value: '99'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: GID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: GID
+    Required: 'true'
+    Target: GID
+    Type: Variable
+  value: '100'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: DATA_PERM'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: DATA_PERM
+    Required: 'true'
+    Target: DATA_PERM
+    Type: Variable
+  value: '770'
+- '@attributes':
+    Default: ''
+    Description: Minimum screen width 1024 pixels
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Custom Screen Width
+    Required: 'true'
+    Target: CUSTOM_RES_W
+    Type: Variable
+  value: '1024'
+DonateLink: https://www.paypal.me/chips777
+DonateText: 'If you like my work please '
+ExtraParams: --restart=unless-stopped
+FirstSeen: 1598911811
+Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/electrum.png
+LastUpdate: 1647367025
+LastUpdateScan: 1648289004
+Name: Electrum
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "Electrum is a Bitcoin wallet focused on speed and simplicity, with low\
+  \ resource usage. It uses remote servers that handle the most complicated parts\
+  \ of the Bitcoin system, and it allows you to recover your wallet from a secret\
+  \ phrase.\r\n\r\nATTENTION: Please keep in mind that your wallet is stored in the\
+  \ created folder in your appdata directory/.electrum/wallets/YOURWALLETNAME - I\
+  \ strongly recommend you to backup this file on a regular basis!\r\n\r\nIMPORT:\
+  \ If you are already using Electrum you can import your existing wallet by placing\
+  \ the WALLETFILE in the appdata directory for electrum/.electrum/wallets and then\
+  \ choose to use a existing wallet."
+PostArgs: ''
+Privileged: 'false'
+Project: https://electrum.org/
+Registry: https://hub.docker.com/r/ich777/electrum
+Repo: ich777's Repository
+Repository: ich777/electrum
+Support: https://forums.unraid.net/topic/83786-support-ich777-application-dockers/
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8080]/vnc.html?autoconnect=true
+caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/Electrum.xml
+topTrending: -8.405

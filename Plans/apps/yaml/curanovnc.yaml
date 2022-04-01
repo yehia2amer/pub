@@ -1,0 +1,59 @@
+CategoryList:
+- HomeAutomation
+- Productivity
+Config:
+- '@attributes':
+    Default: /mnt/user/appdata/cura
+    Description: 'Container Path: /home/cura/'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Home folder
+    Required: 'true'
+    Target: /home/cura/
+    Type: Path
+  value: /mnt/user/appdata/cura
+- '@attributes':
+    Default: '6080'
+    Description: 'Container Port: 8080'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: VNC Interface
+    Required: 'true'
+    Target: '8080'
+    Type: Port
+  value: '6080'
+- '@attributes':
+    Default: /mnt/user/3D Printing/
+    Description: 3D Printing Folder
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Prints
+    Required: 'false'
+    Target: /prints/
+    Type: Path
+  value: /mnt/user/3D Printing/
+FirstSeen: 1644627799
+Icon: https://upload.wikimedia.org/wikipedia/en/9/9b/Logo_for_Cura_Software.png
+LastUpdate: 1646960888
+LastUpdateScan: 1647223399
+Name: cura-novnc
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "Enjoy Cura directly in your browser with this easy to use Docker container.\r\
+  \n\r\nThis template has the minimum variables defined, but you can find additional\
+  \ details on the template at the URLs listed below.\r\n\r\nhttps://github.com/helfrichmichael/cura-novnc\r\
+  \nhttps://hub.docker.com/r/mikeah/cura-novnc"
+PostArgs: ''
+Privileged: 'false'
+Project: https://ultimaker.com/software/ultimaker-cura
+Registry: https://hub.docker.com/r/mikeah/cura-novnc
+Repo: MikeAH's Repository
+Repository: mikeah/cura-novnc
+Support: https://hub.docker.com/r/mikeah/cura-novnc
+TemplateURL: https://raw.githubusercontent.com/helfrichmichael/unraid-templates/master/cura/cura.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8080]

@@ -1,0 +1,170 @@
+Beta: 'true'
+CategoryList:
+- GameServers
+Config:
+- '@attributes':
+    Default: ''
+    Description: Server Files
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: ServerFiles
+    Required: 'true'
+    Target: /iw4x
+    Type: Path
+  value: /mnt/cache/appdata/iw4x
+- '@attributes':
+    Default: ''
+    Description: TCP Game Port same as UDP (if you need another port, please delete
+      this entry and create a new TCP Port with the corresponding port number, also
+      don't forget to click an 'Show more settings ...' and change the port number)
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: TCP - Game Port
+    Required: 'false'
+    Target: '28960'
+    Type: Port
+  value: '28960'
+- '@attributes':
+    Default: ''
+    Description: UDP Game Port same as TCP (if you need another port, please delete
+      this entry and create a new UDP Port with the corresponding port number, also
+      don't forget to click an 'Show more settings ...' and change the port number)
+    Display: always
+    Mask: 'false'
+    Mode: udp
+    Name: UDP - Game Port
+    Required: 'false'
+    Target: '28960'
+    Type: Port
+  value: '28960'
+- '@attributes':
+    Default: ''
+    Description: Specify your Startup Parameters here.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Startup Parameters
+    Required: 'true'
+    Target: GAME_PARAMS
+    Type: Variable
+  value: +exec server.cfg +sv_maxclients 12 +set fs_game mods/bots +set playlistFilename
+    playlists.info
+- '@attributes':
+    Default: ''
+    Description: Set to 'true' (without quotes) to force an update.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Force Update
+    Required: 'false'
+    Target: FORCE_UPDATE
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Main IW4x Download URL (only change if you know what you are doing)
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Main IW4x Download URL
+    Required: 'true'
+    Target: IW4X_DL_URL
+    Type: Variable
+  value: https://dss0.cc/updater/iw4x_files.zip
+- '@attributes':
+    Default: ''
+    Description: IW4x DLC Download URL (only change if you know what you are doing)
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: IW4x DLC Download URL
+    Required: 'true'
+    Target: IW4X_DLC_URL
+    Type: Variable
+  value: https://iw4x-my.sharepoint.com/:u:/g/personal/emosewaj_iw4x_onmicrosoft_com/EYnWYmCXExpEvn-bL2262Q0BSy0jVZF0FXslvpJEDPE5Fw?e=gPx8RF&download=1
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: UMASK'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: UMASK
+    Required: 'true'
+    Target: UMASK
+    Type: Variable
+  value: '000'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: DATA_PERM'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: DATA_PERM
+    Required: 'true'
+    Target: DATA_PERM
+    Type: Variable
+  value: '770'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: UID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: UID
+    Required: 'true'
+    Target: UID
+    Type: Variable
+  value: '99'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: GID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: GID
+    Required: 'true'
+    Target: GID
+    Type: Variable
+  value: '100'
+- '@attributes':
+    Default: ''
+    Description: Change if you need another Game Port (please create a new TCP and
+      UDP Port with the corresponding port number)
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: GAME_PORT
+    Required: 'true'
+    Target: GAME_PORT
+    Type: Variable
+  value: '28960'
+DonateLink: https://www.paypal.me/chips777
+DonateText: 'If you like my work please '
+ExtraParams: --restart=unless-stopped
+FirstSeen: 1584828598
+Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/iw4x.png
+LastUpdate: 1643888696
+LastUpdateScan: 1647214613
+Name: IW4x-Server
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "This Docker will download and install a simple IW4x Server.\r\n\r\nATTENTION:\
+  \ You need to copy over the files from your CoD:MW2 folder to the server directory\
+  \ otherwise the server will not start.\r\n\r\nDOWNLOAD NOTICE: If a download fails\
+  \ or is not available you can simply put the .zip files in the server directory\
+  \ and the container will extract the files and start the server.\r\n\r\nWINE NOTICE:\
+  \ Since this container runs with WINE i can't garantee that it will not crash or\
+  \ other weird behavoir."
+PostArgs: ''
+Privileged: 'false'
+Project: https://iw4x.org/
+Registry: https://hub.docker.com/r/ich777/iw4x-server/
+Repo: ich777's Repository
+Repository: ich777/iw4x-server
+Support: https://forums.unraid.net/topic/79530-support-ich777-gameserver-dockers/
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''
+caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/IW4x-Server.xml

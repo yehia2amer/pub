@@ -1,0 +1,107 @@
+CategoryList:
+- Downloaders
+- MediaApp-Other
+Config:
+- '@attributes':
+    Default: America/New_York
+    Description: ''
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Time Zone
+    Required: 'false'
+    Target: TZ
+    Type: Variable
+  value: America/New_York
+- '@attributes':
+    Default: ''
+    Description: Optional - password for Guacamole's web interface
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: PASSWORD
+    Required: 'false'
+    Target: PASSWORD
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '3000'
+    Description: ''
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Port
+    Required: 'true'
+    Target: '3000'
+    Type: Port
+  value: '3000'
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Downloads Path
+    Required: 'true'
+    Target: /downloads
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: '99'
+    Description: ''
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: PUID
+    Required: 'true'
+    Target: PUID
+    Type: Variable
+  value: '99'
+- '@attributes':
+    Default: '100'
+    Description: ''
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: PGID
+    Required: 'true'
+    Target: PGID
+    Type: Variable
+  value: '100'
+- '@attributes':
+    Default: /mnt/cache/appdata/gpodder
+    Description: ''
+    Display: advanced
+    Mask: 'false'
+    Mode: rw
+    Name: Config Path
+    Required: 'true'
+    Target: /config
+    Type: Path
+  value: /mnt/cache/appdata/gPodder
+ExtraParams: --restart=unless-stopped
+FirstSeen: 1637183020
+Icon: https://raw.githubusercontent.com/xthursdayx/docker-templates/master/xthursdayx/images/gpodder-icon.png
+LastUpdate: 1638266740
+LastUpdateScan: 1647576195
+Name: gPodder
+Network: bridge
+Overview: "gPodder is a simple, open source podcast client written in Python using\
+  \ GTK+. In development since 2005 with a proven, mature codebase.&amp;#xD;\r\n&amp;#xD;\r\
+  \n\r\nConfiguration:\r\n&amp;#xD;\r\n  /config - Location of gPodder persistent\
+  \ config.\r\n&amp;#xD;\r\n  /downloads - Location of downloads.\r\n&amp;#xD;\r\n\
+  \  PUID - set UserID\r\n&amp;#xD;\r\n  PGID - set GroupID\r\n&amp;#xD;\r\n 3000\
+  \ - WebUI access\r\n&amp;#xD;\r\n  PASSWORD for setting a password for the gPodder\
+  \ WebUI #optional\r\n&amp;#xD;"
+PostArgs: ''
+Privileged: 'false'
+Project: https://gpodder.github.io/
+Registry: https://hub.docker.com/r/xthursdayx/gpodder-docker/
+Repo: xthursdayx's Repository
+Repository: xthursdayx/gpodder-docker:latest
+Requires: ''
+Support: https://forums.unraid.net/topic/83812-support-xthursdayx-gpodder/
+TemplateURL: https://raw.githubusercontent.com/xthursdayx/docker-templates/master/xthursdayx/gpodder.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:3000]
+topTrending: -4.12

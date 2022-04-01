@@ -1,0 +1,190 @@
+Beta: 'true'
+CategoryList:
+- Productivity
+- MediaApp-Video
+Config:
+- '@attributes':
+    Default: 0.0.0.0
+    Description: Server IP. Required if using Tdarr Nodes on your local network
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Server IP
+    Required: 'false'
+    Target: serverIP
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '8266'
+    Description: Server Port
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Server Port
+    Required: 'false'
+    Target: '8266'
+    Type: Port
+  value: '8266'
+- '@attributes':
+    Default: '8265'
+    Description: WebUI Port
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI Port
+    Required: 'false'
+    Target: '8265'
+    Type: Port
+  value: '8265'
+- '@attributes':
+    Default: 'false'
+    Description: Enable/disable the Node within the server container by setting true/false
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Internal Node
+    Required: 'false'
+    Target: internalNode
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: 0.0.0.0
+    Description: Node IP
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Node IP
+    Required: 'false'
+    Target: nodeIP
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: MyInternalNode
+    Description: Node ID Name
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Node ID
+    Required: 'false'
+    Target: nodeID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '8264'
+    Description: Node Port
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Node Port
+    Required: 'false'
+    Target: '8264'
+    Type: Port
+  value: '8264'
+- '@attributes':
+    Default: '99'
+    Description: 'Container Variable: PUID'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: PUID
+    Required: 'false'
+    Target: PUID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '100'
+    Description: 'Container Variable: PGID'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: PGID
+    Required: 'false'
+    Target: PGID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: /mnt/user/appdata/tdarr/server
+    Description: 'Container Path: /app/server'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Appdata
+    Required: 'false'
+    Target: /app/server
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: /mnt/user/appdata/tdarr/configs
+    Description: 'Container Path: /app/configs'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Configs
+    Required: 'false'
+    Target: /app/configs
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: /mnt/user/appdata/tdarr/logs
+    Description: 'Container Path: /app/logs'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Logs
+    Required: 'false'
+    Target: /app/logs
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /mnt/media'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Media Library
+    Required: 'false'
+    Target: /mnt/media
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /temp'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Transcode Cache
+    Required: 'false'
+    Target: /temp
+    Type: Path
+  value: ''
+DonateLink: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=L5MWTNDLLB6AC&amp;source=url
+DonateText: If you appreciate my work, then please consider buying me a beer :D
+FirstSeen: 1647453806
+Icon: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/tdarr.png
+LastUpdate: 1647434746
+LastUpdateScan: 1647453806
+Name: tdarr
+Network: bridge
+Overview: "(Tdarr_Node included) Tdarr V2 is a distributed transcoding system for\
+  \ automating media library transcode/remux management and making sure your files\
+  \ are exactly how you need them to be in terms of codecs/streams/containers and\
+  \ so on. Put your spare hardware to use with Tdarr Nodes for Windows, Linux (including\
+  \ Linux arm) and macOS. \r\n[br][br]\r\nDesigned to work alongside applications\
+  \ like Sonarr/Radarr and built with the aim of modularisation, parallelisation and\
+  \ scalability, each library you add has its own transcode settings, filters and\
+  \ schedule. Workers can be fired up and closed down as necessary, and are split\
+  \ into 4 types - Transcode CPU/GPU and Health Check CPU/GPU. Worker limits can be\
+  \ managed by the scheduler as well as manually. \r\n[br][br]\r\nFor a desktop application\
+  \ with similar functionality please see HBBatchBeast.\r\n[br][br]\r\nDocs here:\
+  \ https://tdarr.io/docs/\r\n[br][br]\r\nPlugins here: https://github.com/HaveAGitGat/Tdarr_Plugins\r\
+  \n[br][br]"
+Privileged: 'false'
+Project: https://github.com/HaveAGitGat/Tdarr
+Registry: https://hub.docker.com/r/haveagitgat/tdarr/
+Repo: Selfhosters Unraid Discord Repository
+RepoShort: Selfhosters
+Repository: ghcr.io/haveagitgat/tdarr
+Support: https://forums.unraid.net/topic/84070-support-haveagitgat-tdarr-audiovideo-library-analytics-transcode-automation/
+TemplateURL: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/tdarr.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8265]

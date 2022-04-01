@@ -1,0 +1,157 @@
+CategoryList:
+- GameServers
+Config:
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: ServerFiles
+    Required: 'true'
+    Target: /ioquake3
+    Type: Path
+  value: /mnt/cache/appdata/ioquake3
+- '@attributes':
+    Default: ''
+    Description: The startup parameters for the server (only change if you know what
+      you are doing!)
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: GAME_PARAMS
+    Required: 'true'
+    Target: GAME_PARAMS
+    Type: Variable
+  value: +set dedicated 2 +set sv_allowDownload 1 +set com_hunkmegs 64
+- '@attributes':
+    Default: ''
+    Description: The initial map wich the server would start.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Q3_MAP
+    Required: 'true'
+    Target: Q3_MAP
+    Type: Variable
+  value: q3dm1
+- '@attributes':
+    Default: ''
+    Description: Game Port (If you want to change the game port please click on more
+      settings here in the template, change the port, then delete this entry and create
+      a new one with the corresponding port number and UDP only!).
+    Display: always
+    Mask: 'false'
+    Mode: udp
+    Name: UDP - Game Port
+    Required: 'false'
+    Target: '27960'
+    Type: Port
+  value: '27960'
+- '@attributes':
+    Default: ''
+    Description: 'WebConsole (by default, you can connect to the ioquake3 console
+      by opening your browser and go to HOSTIP:9021 - eg: 192.168.1.1:9029 - or click
+      on WebUI on the Docker page within Unraid).'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: TCP - WebConsole
+    Required: 'false'
+    Target: '8080'
+    Type: Port
+  value: '9029'
+- '@attributes':
+    Default: ''
+    Description: Base Port
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: ioquake 3 Base Port
+    Required: 'true'
+    Target: IOQ3_PORT
+    Type: Variable
+  value: '27960'
+- '@attributes':
+    Default: ''
+    Description: Only change if you know what you're doing!
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: ioquake3 Download URL
+    Required: 'true'
+    Target: DL_URL
+    Type: Variable
+  value: https://files.ioquake3.org/Linux.zip
+- '@attributes':
+    Default: ''
+    Description: Only change if you know what you're doing!
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Patch URL
+    Required: 'true'
+    Target: DL_URL_PATCH
+    Type: Variable
+  value: https://files.ioquake3.org/quake3-latest-pk3s.zip
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: UMASK
+    Required: 'true'
+    Target: UMASK
+    Type: Variable
+  value: '000'
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: UID
+    Required: 'true'
+    Target: UID
+    Type: Variable
+  value: '99'
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: GID
+    Required: 'true'
+    Target: GID
+    Type: Variable
+  value: '100'
+DonateLink: https://www.paypal.me/chips777
+DonateText: If you like my work please consider donating
+ExtraParams: --restart=unless-stopped
+FirstSeen: 1647525816
+Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/ioquake3.png
+LastUpdate: 1647520303
+LastUpdateScan: 1647525816
+Name: ioquake3
+Network: bridge
+Overview: "This Docker will download and install ioquake3 Server (You have to copy\
+  \ your pak0.pk3 file from your game directory to your server).\r\n\r\nPK3 Files:\
+  \ After the container started the first time you have to copy your pak0.pk3 file\
+  \ from your Quake III Arena directory into your server directory: .../.q3a/baseq3/\
+  \ (i strongly recommend you to place all your pak*.pk3 files into it) after that\
+  \ simply restart the container to start the server.\r\n\r\nWEB CONSOLE: You can\
+  \ connect to the ioquake3 console by opening your browser and go to HOSTIP:9029\
+  \ (eg: 192.168.1.1:9029) or click on WebUI on the Docker page within Unraid."
+PostArgs: ''
+Privileged: 'false'
+Project: https://ioquake3.org/
+Registry: https://hub.docker.com/r/ich777/ioquake3
+Repo: ich777's Repository
+Repository: ich777/ioquake3
+Requires: ''
+Support: https://forums.unraid.net/topic/79530-support-ich777-gameserver-dockers/
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8080]/
+caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/ioquake3.xml

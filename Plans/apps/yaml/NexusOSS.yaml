@@ -1,0 +1,65 @@
+CategoryList:
+- Cloud
+- Tools-Utilities
+- Network-Proxy
+- Network-Management
+Config:
+- '@attributes':
+    Default: /mnt/user/appdata/nexus-data
+    Description: Presistent Data for Nexus OSS
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Nexus Data
+    Required: 'true'
+    Target: /nexus-data
+    Type: Path
+  value: /mnt/user/appdata/nexus-data
+- '@attributes':
+    Default: '8081'
+    Description: Web GUI Port
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Web GUI
+    Required: 'true'
+    Target: '8081'
+    Type: Port
+  value: '8081'
+- '@attributes':
+    Default: ''
+    Description: "Port for Docker Registry (if any), usually 5000\r\n\r\nSee README\
+      \ for setup."
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Docker Registry
+    Required: 'false'
+    Target: '5000'
+    Type: Port
+  value: ''
+ExtraParams: --restart=unless-stopped --ulimit nofile=65536:65536
+FirstSeen: 1622206062
+Icon: https://github.com/jslay88/unraid_apps/raw/master/templates/icons/NexusOSS.png
+LastUpdate: 1646265584
+LastUpdateScan: 1648195444
+Name: NexusOSS
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "Nexus Repository OSS\r\n\r\nFirst run may take some time while DB is provisioned.\r\
+  \n\r\nInitial admin password is stored in nexus-data/admin.password\r\nThe default\
+  \ path for this is /mnt/user/appdata/nexus-data/admin.password\r\n\r\nTo add a hosted\
+  \ Docker Registry, see Nexus Documentation or the README here\r\nhttps://github.com/jslay88/unraid_apps/blob/master/templates/README/NexusOSS.md"
+PostArgs: ''
+Privileged: 'false'
+Project: https://www.sonatype.com/products/repository-oss
+Registry: https://hub.docker.com/r/sonatype/nexus3
+Repo: jslay's Repository
+Repository: sonatype/nexus3
+Support: https://forums.unraid.net/topic/109392-support-nexusoss/
+TemplateURL: https://raw.githubusercontent.com/jslay88/unraid_apps/master/templates/NexusOSS.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8081]/
+topPerforming: 1.109
+topTrending: -2.208

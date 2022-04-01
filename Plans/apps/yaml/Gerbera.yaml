@@ -1,0 +1,76 @@
+CategoryList:
+- Tools-Utilities
+- MediaServer-Video
+- MediaServer-Music
+- MediaServer-Other
+Config:
+- '@attributes':
+    Default: '49494'
+    Description: ''
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Port (WebUI)
+    Required: 'false'
+    Target: '49494'
+    Type: Port
+  value: '49494'
+- '@attributes':
+    Default: '1900'
+    Description: ''
+    Display: always
+    Mask: 'false'
+    Mode: udp
+    Name: Port (SSDP Multicast)
+    Required: 'false'
+    Target: '1900'
+    Type: Port
+  value: '1900'
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: always
+    Mask: 'false'
+    Mode: ro
+    Name: Storage (media)
+    Required: 'true'
+    Target: /content
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: advanced
+    Mask: 'false'
+    Mode: rw
+    Name: App's Data
+    Required: 'false'
+    Target: /var/run/gerbera
+    Type: Path
+  value: /mnt/user/appdata/gerbera
+FirstSeen: 1639393416
+Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/gerbera_200x200.png
+LastUpdate: 1647113222
+LastUpdateScan: 1647187401
+Name: Gerbera
+Network: host
+Official: true
+Overview: "DESCRIPTION\r\nGerbera is a UPnP media server which allows you to stream\
+  \ your digital media through your home network and consume it on a variety of UPnP\
+  \ compatible devices.\r\n\r\nNOTES\r\n\u2022 You can provide your own configuration\
+  \ file (config.xml), by creating an extra Path variable as: '/var/run/gerbera/config.xml'\
+  \ (container) and '/mnt/user/appdata/gerbera/config.xml' (host).\r\n\u2022 The container\
+  \ is configured to use Host as the network type to bypass issues with broadcast\
+  \ accross docker bridges.\r\n\r\nVERSION\r\n1.0 (2021-12-13)"
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/gerbera/gerbera
+Registry: https://hub.docker.com/r/gerbera/gerbera
+Repo: SmartPhoneLover's Repository
+Repository: gerbera/gerbera
+Requires: ''
+Support: https://forums.unraid.net/topic/117192-support-smartphonelover-gerbera-upnp-media-server/
+TemplateURL: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/master/templates/Gerbera.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:49494]
+topTrending: -0.419

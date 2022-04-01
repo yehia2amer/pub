@@ -1,0 +1,87 @@
+CategoryList:
+- Network
+Config:
+- '@attributes':
+    Default: '8765'
+    Description: 'Container Port: 8765'
+    Display: always-hide
+    Mask: 'false'
+    Mode: tcp
+    Name: WEB UI
+    Required: 'false'
+    Target: '8765'
+    Type: Port
+  value: '8765'
+- '@attributes':
+    Default: /mnt/cache/appdata/MotionEye/config
+    Description: 'Container Path: /etc/motioneye'
+    Display: always-hide
+    Mask: 'false'
+    Mode: rw
+    Name: Configuration Path
+    Required: 'true'
+    Target: /etc/motioneye
+    Type: Path
+  value: /mnt/cache/appdata/MotionEye/config
+- '@attributes':
+    Default: /mnt/user/appdata/MotionEye/media
+    Description: 'Container Path: /var/lib/motioneye'
+    Display: always-hide
+    Mask: 'false'
+    Mode: rw
+    Name: Media Files Path
+    Required: 'true'
+    Target: /var/lib/motioneye
+    Type: Path
+  value: /mnt/user/data/MotionEye
+- '@attributes':
+    Default: '99'
+    Description: 'Container Variable: PUID'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Key 1
+    Required: 'true'
+    Target: PUID
+    Type: Variable
+  value: '99'
+- '@attributes':
+    Default: '100'
+    Description: 'Container Variable: PGID'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Key 2
+    Required: 'true'
+    Target: PGID
+    Type: Variable
+  value: '100'
+DonateImg: ''
+FirstSeen: '1519440420'
+Icon: https://raw.githubusercontent.com/malvarez00/unRAID-Docker-Templates/master/malvarez00/icons/motioneye_96x96.png
+LastUpdate: 1583381054
+LastUpdateScan: 1647068593
+MinVer: ''
+Name: MotionEye
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "MotionEye Docker&lt;br /&gt;\r\nA surveillance solution base on: MotionEye,\
+  \ Motion and Docker.&lt;br /&gt;\r\n&lt;br /&gt;\r\nIt's easy and ready to use.\
+  \ Just configure a camera and run this docker, then videos and images will be saved\
+  \ once a motion is detected while a notification e-mail including the recorded video\
+  \ and a preview image will be sent. On top of that, the webcam can be accessed anytime\
+  \ via HTTP live streaming.&lt;br /&gt;\r\n&lt;br /&gt;\r\nDefault Username: admin&lt;br\
+  \ /&gt;\r\nDefault Password: BLANK&lt;br /&gt;\r\n&lt;br/&gt;\r\nRoot Directory\
+  \ \"/var/lib/motioneye/"
+PostArgs: ''
+Privileged: 'false'
+Registry: https://hub.docker.com/r/malvarez00/docker-motioneye
+Repo: malvarez00's Repository
+Repository: malvarez00/docker-motioneye
+Support: https://forums.lime-technology.com/topic/61014-support-malvarez00-motioneye/
+TemplateURL: https://raw.githubusercontent.com/malvarez00/unRAID-Docker-Templates/master/malvarez00/MotionEye.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8765]
+topPerforming: 2.492
+topTrending: 0.359

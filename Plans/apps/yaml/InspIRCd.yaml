@@ -1,0 +1,442 @@
+CategoryList:
+- Network-Other
+- Productivity
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: ''
+    Description: TCP Clients Connection Port (Unencrypted)
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: TCP1 - Clients, Plaintext
+    Required: 'true'
+    Target: '6667'
+    Type: Port
+  value: '6667'
+- '@attributes':
+    Default: ''
+    Description: TCP Clients Connection Port (Encrypted)
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: TCP2 - Clients, TLS
+    Required: 'true'
+    Target: '6697'
+    Type: Port
+  value: '6697'
+- '@attributes':
+    Default: ''
+    Description: TCP Server Port (Unencrypted - You don't have to forward this port
+      if you use this as a standalone IRC Server)
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: TCP3 - Server, Plaintext
+    Required: 'true'
+    Target: '7000'
+    Type: Port
+  value: '7000'
+- '@attributes':
+    Default: ''
+    Description: TCP Server Port (Encrypted - You don't have to forward this port
+      if you use this as a standalone IRC Server)
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: TCP4 - Server, TLS
+    Required: 'false'
+    Target: '7001'
+    Type: Port
+  value: '7001'
+- '@attributes':
+    Default: ''
+    Description: 'Your configuration is located in ''.../conf/'' (WARNING: change
+      the main configurations via the variables here and not the files which say that
+      you should don''t edit them)'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Data Path
+    Required: 'true'
+    Target: /inspircd
+    Type: Path
+  value: /mnt/cache/appdata/inspircd
+- '@attributes':
+    Default: ''
+    Description: Suffix used behind the server name (in this format '.example.com')
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Domainname
+    Required: 'true'
+    Target: INSP_NET_SUFFIX
+    Type: Variable
+  value: .example.com
+- '@attributes':
+    Default: ''
+    Description: Name advertised as network name
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: IRC Network Name
+    Required: 'true'
+    Target: INSP_NET_NAME
+    Type: Variable
+  value: InspIRCD
+- '@attributes':
+    Default: ''
+    Description: Name showed by the /admin command
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Admin Name
+    Required: 'true'
+    Target: INSP_ADMIN_NAME
+    Type: Variable
+  value: Jonny English
+- '@attributes':
+    Default: ''
+    Description: Nick showed by the /admin command
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Admin Nick
+    Required: 'true'
+    Target: INSP_ADMIN_NICK
+    Type: Variable
+  value: MI5
+- '@attributes':
+    Default: ''
+    Description: E-mail shown by the /admin command
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Admin Email
+    Required: 'true'
+    Target: INSP_ADMIN_EMAIL
+    Type: Variable
+  value: jonny.english@example.com
+- '@attributes':
+    Default: ''
+    Description: Set to no to disable DNSBLs (DNS-based block list - set to 'yes'
+      or 'no')
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: DNSBLs
+    Required: 'true'
+    Target: INSP_ENABLE_DNSBL
+    Type: Variable
+  value: 'yes'
+- '@attributes':
+    Default: ''
+    Description: "Password either as plaintext, or hash value - if you don't want\
+      \ a password leave this variable empty\r\n(Make sure you escape special chars\
+      \ like $ or &amp; if needed)"
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Connection Password
+    Required: 'false'
+    Target: INSP_CONNECT_PASSWORD
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Hashing algorithm for the Connection Password  - if you don't entered
+      a password leave this variable empty (e.g. hmac-sha256, hmac-md5, hmac-ripemd160,
+      md5, ripemd160, sha256)
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Connection Password Hashing algorithm
+    Required: 'false'
+    Target: INSP_CONNECT_HASH
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Oper name
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Operator Name
+    Required: 'true'
+    Target: INSP_OPER_NAME
+    Type: Variable
+  value: oper
+- '@attributes':
+    Default: ''
+    Description: Hosts allowed to oper up (If you don't want to connect OP's from
+      outside change for example to '*@localhost' or what your hostname matches that
+      the OP should connect)
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Operator Host
+    Required: 'true'
+    Target: INSP_OPER_HOST
+    Type: Variable
+  value: '*@*'
+- '@attributes':
+    Default: ''
+    Description: 'Hash value for your oper password hash (to generate a password hash
+      create the server without the hash, connect to the InspIRCd and type in: ''/mkpasswd
+      HASHMALGORITHM PASSORD'' eg: ''/mkpasswd hmac-sha256 superstronpassword'')'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Operator Password Hash
+    Required: 'false'
+    Target: INSP_OPER_PASSWORD_HASH
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Hashing algorithm for the Operator Password - if you don't entered
+      a password leave this variable empty (e.g. hmac-sha256, hmac-md5, hmac-ripemd160,
+      md5, ripemd160, sha256)
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Operator Password Hashing algorithm
+    Required: 'true'
+    Target: INSP_OPER_HASH
+    Type: Variable
+  value: hmac-sha256
+- '@attributes':
+    Default: ''
+    Description: Allow oper up only while using TLS (set to 'yes' or 'no')
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Operator SSL Only
+    Required: 'true'
+    Target: INSP_OPER_SSLONLY
+    Type: Variable
+  value: 'yes'
+- '@attributes':
+    Default: ''
+    Description: Common name of the certificate
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Certificate - Name
+    Required: 'true'
+    Target: INSP_TLS_CN
+    Type: Variable
+  value: irc.example.com
+- '@attributes':
+    Default: ''
+    Description: Mail address represented in the certificate
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Certificate - Mail Adress
+    Required: 'true'
+    Target: INSP_TLS_MAIL
+    Type: Variable
+  value: nomail@example.com
+- '@attributes':
+    Default: ''
+    Description: Unit responsible for the service
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Certificate - Unit Responsible
+    Required: 'true'
+    Target: INSP_TLS_UNIT
+    Type: Variable
+  value: Server Admins
+- '@attributes':
+    Default: ''
+    Description: Organisation name
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Certificate - Organisation
+    Required: 'true'
+    Target: INSP_TLS_ORG
+    Type: Variable
+  value: Example IRC Network
+- '@attributes':
+    Default: ''
+    Description: City name
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Certificate - City Name
+    Required: 'true'
+    Target: INSP_TLS_LOC
+    Type: Variable
+  value: Example City
+- '@attributes':
+    Default: ''
+    Description: State name
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Certificate - State
+    Required: 'true'
+    Target: INSP_TLS_STATE
+    Type: Variable
+  value: Example State
+- '@attributes':
+    Default: ''
+    Description: 'Country Code by ISO 3166-1 (to get the country code visit: https://en.wikipedia.org/wiki/ISO_3166-1)'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Certificate - Contry
+    Required: 'true'
+    Target: INSP_TLS_COUNTRY
+    Type: Variable
+  value: XZ
+- '@attributes':
+    Default: ''
+    Description: Duration until the certificate expires
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Certificate - Certificate Expiration
+    Required: 'true'
+    Target: INSP_TLS_DURATION
+    Type: Variable
+  value: '365'
+- '@attributes':
+    Default: ''
+    Description: Specify the IP Address from where the Services are connecting (if
+      you run Anope on the same Unraid machine it is usually the IP address of Unraid)
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Services - Connection Address
+    Required: 'false'
+    Target: INSP_SERVICES_IPADDR
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: CIDR of services source IP (If you run your Services on the same
+      Network as your IRCd you don't have to fill in this value)
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Services - CIDR Allow Mask
+    Required: 'false'
+    Target: INSP_SERVICES_ALLOWMASK
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Hide services from /MAP and /LINKS (valid options are: ''yes'' or
+      ''no'', change only if you know what you are doing!)'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Services - Hidden
+    Required: 'false'
+    Target: INSP_SERVICES_HIDDEN
+    Type: Variable
+  value: 'no'
+- '@attributes':
+    Default: ''
+    Description: Turn on TLS encryption for the Services link (this is be no proble
+      if you connect it to your internal network since it only talks internally to
+      your Services).
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Services - TLS
+    Required: 'false'
+    Target: INSP_SERVICES_TLS_ON
+    Type: Variable
+  value: 'no'
+- '@attributes':
+    Default: ''
+    Description: Password send by this server and send by the services
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Services - Password
+    Required: 'false'
+    Target: INSP_SERVICES_PASSWORD
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: UMASK'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: UMASK
+    Required: 'true'
+    Target: UMASK
+    Type: Variable
+  value: '000'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: UID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: UID
+    Required: 'true'
+    Target: UID
+    Type: Variable
+  value: '99'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: GID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: GID
+    Required: 'true'
+    Target: GID
+    Type: Variable
+  value: '100'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: DATA_PERM'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: DATA_PERM
+    Required: 'true'
+    Target: DATA_PERM
+    Type: Variable
+  value: '770'
+DonateLink: https://www.paypal.me/chips777
+DonateText: 'If you like my work please '
+ExtraParams: --hostname=irc --restart=unless-stopped
+FirstSeen: 1597694915
+Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/inspircd.png
+LastUpdate: 1643014469
+LastUpdateScan: 1647068594
+Name: InspIRCd
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "InspIRCd is a modular Internet Relay Chat (IRC) server written in C++\r\
+  \n\r\nIt was created from scratch to be stable, modern and lightweight. It provides\
+  \ a tunable number of features through the use of an advanced but well documented\
+  \ module system. By keeping core functionality to a minimum we hope to increase\
+  \ the stability, security and speed of InspIRCd while also making it customisable\
+  \ to the needs of many different users.\r\n\r\nNOTE: If you want to change the hostname\
+  \ turn on 'Advanced View' and at the 'Extra-Parameters' change '--hostname=YOURPREFERREDHOSTNAME'\r\
+  \n\r\nThe container will create a TLS certificate at first start or if the certificate\
+  \ isn't found in the 'conf/' directory, after it is created you can import your\
+  \ own certificate.\r\n\r\nHASH CREATION NOTICE: Read the discription from the variable\
+  \ 'Operator Password Hash' how to create the hash from your password."
+PostArgs: ''
+Privileged: 'false'
+Project: https://www.inspircd.org/
+Registry: https://hub.docker.com/r/ich777/inspircd
+Repo: ich777's Repository
+Repository: ich777/inspircd
+Support: https://forums.unraid.net/topic/83786-support-ich777-application-dockers/
+TemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/InspIRCD.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''

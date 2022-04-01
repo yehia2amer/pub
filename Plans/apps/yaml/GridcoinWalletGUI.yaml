@@ -1,0 +1,91 @@
+CategoryList:
+- Crypto
+ChangeLogPresent: true
+Config:
+- '@attributes':
+    Default: ''
+    Description: /mnt/user/appdata/gridcoinresearch/
+    Display: always
+    Mask: 'false'
+    Mode: rw,slave
+    Name: AppData Config Path
+    Required: 'true'
+    Target: /headless/.GridcoinResearch/
+    Type: Path
+  value: /mnt/user/appdata/gridcoinresearch/
+- '@attributes':
+    Default: ''
+    Description: 'default: 6901'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: NOVNC PORT
+    Required: 'false'
+    Target: '6901'
+    Type: Port
+  value: '6901'
+- '@attributes':
+    Default: ''
+    Description: 'default: vncpassword'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: VNC PASSWORD
+    Required: 'false'
+    Target: VNC_PW
+    Type: Variable
+  value: vncpassword
+- '@attributes':
+    Default: 1920x1080
+    Description: 'default: 1920x1080'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: VNC RESOLUTION
+    Required: 'false'
+    Target: VNC_RESOLUTION
+    Type: Variable
+  value: 1920x1080
+- '@attributes':
+    Default: ''
+    Description: 'default: 5901'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: VNC PORT
+    Required: 'false'
+    Target: '5901'
+    Type: Port
+  value: '5901'
+- '@attributes':
+    Default: ''
+    Description: 'BOINC data location if solo crunching (not needed if pool crunching):
+      /mnt/user/appdata/boinc/'
+    Display: always
+    Mask: 'false'
+    Mode: rw,slave
+    Name: BOINC DATA DIR
+    Required: 'false'
+    Target: /var/lib/boinc-client/
+    Type: Path
+  value: ''
+FirstSeen: 1612041486
+Icon: https://raw.githubusercontent.com/gridcoin-community/Gridcoin-Site/master/assets/img/favicons/favicon-196x196.png
+LastUpdate: 1646038206
+LastUpdateScan: 1648418608
+Name: GridcoinWalletGUI
+Network: bridge
+Overview: "Running Boinc? Get some Gridcoins from your Boinc work!\r\nThis docker\
+  \ contains Gridcoin Wallet with GUI running on Ubuntu. You can access the wallet\
+  \ via VNC and NoVNC.\r\nRemember to backup your wallet.dat and gridcoinresearch.conf\
+  \ regularly to a safe place.\r\nCheck the project page for more info about Gridcoin\
+  \ and how to setup crunching."
+Privileged: 'false'
+Project: https://gridcoin.us/
+Registry: https://hub.docker.com/repository/docker/sublivion/gridcoinwalletgui
+Repo: sublivion's Repository
+Repository: sublivion/gridcoinwalletgui:latest
+Support: https://forums.unraid.net/topic/102050-support-gridcoinwalletgui/
+TemplateURL: https://raw.githubusercontent.com/Sabreu/unraid_templates/master/Gridcoin/Gridcoin.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:6901]

@@ -1,0 +1,111 @@
+BindTime: 'true'
+CategoryList:
+- Tools
+Config:
+- '@attributes':
+    Default: /mnt
+    Description: 'This is the mnt directory of your unraid server&lt;br&gt;Container
+      path: /mnt'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: rw
+    Name: temp Directory
+    Required: 'true'
+    Target: /mnt
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: /mnt/user/h265ize/temp
+    Description: 'This is the temp storage directory to store your current conversion&lt;br&gt;Container
+      path: /tmp'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: rw
+    Name: mnt Directory
+    Required: 'true'
+    Target: /tmp
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: /mnt/user/h265ize/output
+    Description: The destination folder where you want your re-encoded video to be
+      (recomended to be the parent directory of your input if you are planning to
+      replace your source)
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Output Directory
+    Required: 'true'
+    Target: output
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: /mnt/user/h265ize/input
+    Description: The source folder that contain video files you want to re-encode
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Input Directory
+    Required: 'true'
+    Target: input
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '19'
+    Description: Quantization Parameter, read the h265 docs for more info
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Quantization Parameter
+    Required: 'true'
+    Target: qp
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: mp4
+    Description: mp4,mkv or m4v
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Output Format
+    Required: 'true'
+    Target: format
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: fast
+    Description: ultrafast, superfast, veryfast, faster, fast, medium, slow, slower,
+      veryslow, placebo | https://x265.readthedocs.io/en/default/presets.html for
+      more info
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Quality Preset
+    Required: 'true'
+    Target: preset
+    Type: Variable
+  value: ''
+DonateImg: https://www.paypal.com/en_US/i/btn/btn_donate_SM.gif
+DonateLink: https://www.paypal.me/siwatsirichai
+DonateText: If you like it, then consider buying me a soda as I don&#39;t like beer
+  :P
+FirstSeen: 1629777801
+GitHub: https://github.com/SiwatINC/unraid-ca-repository
+Icon: https://raw.githubusercontent.com/SiwatINC/unraid-ca-repository/master/icons/h265ize.png
+LastUpdateScan: 1647965001
+Name: H265ize
+Networking:
+  Mode: host
+Overview: "h265ize is a fire and forget weapon. A nodejs utility utilizing ffmpeg\
+  \ to encode large quantities of videos with the hevc codec. For more information\
+  \ visit ayrton.sparling.us.\n   [br][br]\n   if you want to create the hvec file\
+  \ alongside your input file, put in the parent directory of your input For example:\
+  \ if your input is in /mnt/user/cache/medialib/mymedia/ set your output to /mnt/user/cache/medialib/"
+Privileged: 'true'
+Project: https://github.com/FallingSnow/h265ize
+Registry: https://github.com/SiwatINC/h265ize_unraid/pkgs/container/h265ize
+Repo: Siwat2545's Repository
+Repository: ghcr.io/siwatinc/h265ize
+Support: https://forums.unraid.net/topic/75588-support-siwats-docker-repository/
+TemplateURL: https://raw.githubusercontent.com/SiwatINC/unraid-ca-repository/master/docker-template/h265ize.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg

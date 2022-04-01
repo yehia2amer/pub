@@ -1,0 +1,149 @@
+CategoryList:
+- GameServers
+Config:
+- '@attributes':
+    Default: '8080'
+    Description: The port of the deamons.
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: DeamonsPort
+    Required: 'true'
+    Target: '8080'
+    Type: Port
+  value: '8080'
+- '@attributes':
+    Default: '2022'
+    Description: ''
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: DeamonsSFTPPort
+    Required: 'true'
+    Target: '2022'
+    Type: Port
+  value: '2022'
+- '@attributes':
+    Default: '988'
+    Description: ''
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: WingsUID
+    Required: 'true'
+    Target: WINGS_UID
+    Type: Variable
+  value: '988'
+- '@attributes':
+    Default: '988'
+    Description: ''
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: WingsGID
+    Required: 'true'
+    Target: WINGS_GID
+    Type: Variable
+  value: '988'
+- '@attributes':
+    Default: pterodactyl
+    Description: ''
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: WingsUsername
+    Required: 'true'
+    Target: WINGS_USERNAME
+    Type: Variable
+  value: pterodactyl
+- '@attributes':
+    Default: /mnt/user/appdata/pterodactyldeamons/lib
+    Description: ''
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: DeamonsLib
+    Required: 'true'
+    Target: /mnt/user/appdata/pterodactyldeamons/lib
+    Type: Path
+  value: /mnt/user/appdata/pterodactyldeamons/lib
+- '@attributes':
+    Default: /mnt/user/appdata/pterodactyldeamons/logs
+    Description: ''
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: DeamonsLogs
+    Required: 'true'
+    Target: /var/log/pterodactyl/
+    Type: Path
+  value: /mnt/user/appdata/pterodactyldeamons/logs
+- '@attributes':
+    Default: /mnt/user/appdata/pterodactyldeamons/etc
+    Description: ''
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: DeamonsEtc
+    Required: 'true'
+    Target: /etc/pterodactyl/
+    Type: Path
+  value: /mnt/user/appdata/pterodactyldeamons/etc
+- '@attributes':
+    Default: ''
+    Description: "Mount your SSL key.\r\nIf nginx mount your config.\r\nif reverseproxy,\
+      \ mount the key."
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: DeamonsLetsenscrypt
+    Required: 'false'
+    Target: /etc/letsencrypt/
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: /tmp/pterodactyl
+    Description: The TMP directory for pterodactyl. DO NOT CHANGE THAT
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: rw
+    Name: DeamonsTmp
+    Required: 'true'
+    Target: /tmp/pterodactyl/
+    Type: Path
+  value: /tmp/pterodactyl
+- '@attributes':
+    Default: /var/run/docker.sock
+    Description: DO NOT CHANGE THAT !!!!
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: rw
+    Name: DeamonsDockerLink
+    Required: 'true'
+    Target: /var/run/docker.sock
+    Type: Path
+  value: /var/run/docker.sock
+ExtraParams: --privileged=true --restart=unless-stopped
+FirstSeen: 1645808752
+Icon: https://avatars.githubusercontent.com/u/16179146?s=200&amp;v=4
+LastUpdateScan: 1648404195
+Name: Pterodactyl-Deamons
+Network: bridge
+Official: true
+Overview: "Pterodactyl\xAE is a free, open-source game server management panel built\
+  \ with PHP, React, and Go. Designed with security in mind, Pterodactyl runs all\
+  \ game servers in isolated Docker containers while exposing a beautiful and intuitive\
+  \ UI to end users.\r\n\r\nStop settling for less. Make game servers a first class\
+  \ citizen on your platform.\r\n\r\nAll the setups requiried is on the support area\
+  \ (Discord or Forum)"
+PostArgs: ''
+Privileged: 'true'
+Project: https://github.com/pterodactyl
+Registry: https://ghcr.io/pterodactyl/wings
+Repo: Fantucie's Repository
+Repository: ghcr.io/pterodactyl/wings:latest
+Requires: Pterodactyl-Panel.
+Support: https://forums.unraid.net/topic/120473-support-fantucie-apps/
+TemplateURL: https://raw.githubusercontent.com/ItJustFox/unraidtemplate/master/Pterodactyl/ptreodactyldeamons.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''

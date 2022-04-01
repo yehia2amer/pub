@@ -1,0 +1,83 @@
+CategoryList:
+- Network-Other
+- MediaApp-Video
+- Productivity
+Config:
+- '@attributes':
+    Default: ''
+    Description: Main data path
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Data Path
+    Required: 'true'
+    Target: /restreamer/db
+    Type: Path
+  value: /mnt/cache/appdata/restreamer
+- '@attributes':
+    Default: ''
+    Description: Backend login username
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Backend Username
+    Required: 'true'
+    Target: RS_USERNAME
+    Type: Variable
+  value: admin
+- '@attributes':
+    Default: ''
+    Description: Backend login password
+    Display: always
+    Mask: 'true'
+    Mode: ''
+    Name: Backend Password
+    Required: 'true'
+    Target: RS_PASSWORD
+    Type: Variable
+  value: Password
+- '@attributes':
+    Default: ''
+    Description: WebGUI Port
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebGUI
+    Required: 'true'
+    Target: '8080'
+    Type: Port
+  value: '8080'
+DonateLink: https://www.patreon.com/datarhei
+DonateText: 'Please consider donating to Datarhei '
+ExtraParams: --restart=unless-stopped
+FirstSeen: 1614776556
+Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/restreamer.png
+LastUpdate: 1600689007
+LastUpdateScan: 1648555400
+Name: Restreamer
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "Datarhei/Restreamer allows smart free video streaming in real time. Stream\
+  \ H.264 video of IP cameras live to your website. Pump your live video to YouTube-Live,\
+  \ Ustream, Twitch, Livestream.com or any other streaming-solutions e.g. Wowza-Streaming-Engine.\
+  \ Our Docker-Image is easy to install and runs on Linux, MacOS and Windows. Datarhei/Restreamer\
+  \ can be perfectly combined with single-board computers like Raspberry Pi and Odroid.\r\
+  \n\r\nFeatures:\r\n- User-Interface incl. Basic-Auth\r\n- JSON / HTTP-API\r\n- FFmpeg\
+  \ streamig/encoding the video/camera-stream, creating snapshots or pushing to a\
+  \ external streaming-endpoint\r\n- NGINX incl. RTMP-Module as streaming-backend\
+  \ and hls server\r\n- Clappr-Player to embed your stream on your website\r\n- Docker\
+  \ and Kitematic optimizations and very easy installation\r\n\r\nTo get a full list\
+  \ of available Variables for the container refert to this page: https://datarhei.github.io/restreamer/docs/references-environment-vars.html"
+PostArgs: ''
+Privileged: 'false'
+Project: https://datarhei.github.io/restreamer/
+Registry: https://hub.docker.com/r/datarhei/restreamer
+Repo: ich777's Repository
+Repository: datarhei/restreamer
+Support: https://forums.unraid.net/topic/83786-support-ich777-application-dockers/
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8080]
+caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/Restreamer.xml
+topPerforming: 1.365
+topTrending: 0.15399999999999991

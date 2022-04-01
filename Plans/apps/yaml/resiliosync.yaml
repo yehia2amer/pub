@@ -1,0 +1,117 @@
+CategoryList:
+- Backup
+- Cloud
+- Network-Other
+- Tools-Utilities
+ChangeLogPresent: true
+Config:
+- '@attributes':
+    Default: '8888'
+    Description: WebUI
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI
+    Required: 'true'
+    Target: '8888'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: '55555'
+    Description: Sync Port.
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: 'Port: 55555'
+    Required: 'true'
+    Target: '55555'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Where resilio-sync should store its config file.
+    Display: advanced
+    Mask: 'false'
+    Mode: rw
+    Name: Appdata
+    Required: 'true'
+    Target: /config
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Folder for downloads/cache.
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: 'Path: /downloads'
+    Required: 'true'
+    Target: /downloads
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Sync folders root.
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: 'Path: /sync'
+    Required: 'true'
+    Target: /sync
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: '99'
+    Description: 'Container Variable: PUID'
+    Display: advanced
+    Mask: 'false'
+    Name: PUID
+    Required: 'true'
+    Target: PUID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '100'
+    Description: 'Container Variable: PGID'
+    Display: advanced
+    Mask: 'false'
+    Name: PGID
+    Required: 'true'
+    Target: PGID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '022'
+    Description: 'Container Variable: UMASK'
+    Display: advanced
+    Mask: 'false'
+    Name: UMASK
+    Required: 'false'
+    Target: UMASK
+    Type: Variable
+  value: ''
+DonateImg: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/donate.png
+DonateLink: https://www.linuxserver.io/donate
+DonateText: Donations
+FirstSeen: 1496376000
+GitHub: https://github.com/linuxserver/docker-resilio-sync#application-setup
+Icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/resilio-sync-logo.png
+LastUpdate: 1647137051
+LastUpdateScan: 1647914864
+Name: resilio-sync
+Network: bridge
+Overview: Resilio-sync(https://www.resilio.com/individuals/) (formerly BitTorrent
+  Sync) uses the BitTorrent protocol to sync files and folders between all of your
+  devices. There are both free and paid versions, this container supports both. There
+  is an official sync image but we created this one as it supports user mapping to
+  simplify permissions for volumes.
+Privileged: 'false'
+Project: https://www.resilio.com/individuals/
+ReadMe: https://github.com/linuxserver/docker-resilio-sync#readme
+Registry: https://github.com/orgs/linuxserver/packages/container/package/resilio-sync
+Repo: linuxserver's Repository
+Repository: lscr.io/linuxserver/resilio-sync
+Support: https://github.com/linuxserver/docker-resilio-sync/issues/new/choose
+TemplateURL: https://raw.githubusercontent.com/linuxserver/templates/master/unraid/resilio-sync.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8888]

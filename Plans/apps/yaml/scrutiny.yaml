@@ -1,0 +1,119 @@
+Branch:
+- Registry: https://hub.docker.com/r/hotio/scrutiny
+  Repository: cr.hotio.dev/hotio/scrutiny:release
+  Tag: release
+  TagDescription: Releases
+- Registry: https://hub.docker.com/r/hotio/scrutiny
+  Repository: cr.hotio.dev/hotio/scrutiny:nightly
+  Tag: nightly
+  TagDescription: Every commit to master branch
+CategoryList:
+- Other
+Config:
+- '@attributes':
+    Default: '8080'
+    Description: 'Container Port: 8080'
+    Display: always-hide
+    Mask: 'false'
+    Mode: tcp
+    Name: Host Port for 8080
+    Required: 'true'
+    Target: '8080'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /config'
+    Display: always-hide
+    Mask: 'false'
+    Mode: rw
+    Name: Host Path for /config
+    Required: 'true'
+    Target: /config
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: '86400'
+    Description: 'Container Variable: INTERVAL'
+    Display: always-hide
+    Mask: 'false'
+    Mode: ''
+    Name: INTERVAL
+    Required: 'false'
+    Target: INTERVAL
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: http://localhost:8080
+    Description: 'Container Variable: API_ENDPOINT'
+    Display: always-hide
+    Mask: 'false'
+    Mode: ''
+    Name: API_ENDPOINT
+    Required: 'false'
+    Target: API_ENDPOINT
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: both|web|collector
+    Description: 'Container Variable: MODE'
+    Display: always-hide
+    Mask: 'false'
+    Mode: ''
+    Name: MODE
+    Required: 'false'
+    Target: MODE
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '99'
+    Description: 'Container Variable: PUID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: PUID
+    Required: 'false'
+    Target: PUID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '100'
+    Description: 'Container Variable: PGID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: PGID
+    Required: 'false'
+    Target: PGID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '002'
+    Description: 'Container Variable: UMASK'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: UMASK
+    Required: 'false'
+    Target: UMASK
+    Type: Variable
+  value: ''
+ExtraParams: -v /run/udev:/run/udev:ro -v /dev/disk:/dev/disk:ro
+FirstSeen: 1604308114
+Icon: https://hotio.dev/webhook-avatars/scrutiny.png
+LastUpdate: 1639670672
+LastUpdateScan: 1647446609
+Name: scrutiny
+Network: bridge
+Overview: Hard Drive S.M.A.R.T Monitoring, Historical Trends and Real World Failure
+  Thresholds
+PostArgs: ''
+Privileged: 'true'
+Project: https://hotio.dev/containers/scrutiny
+Registry: https://hub.docker.com/r/hotio/scrutiny
+Repo: hotio's Repository
+Repository: cr.hotio.dev/hotio/scrutiny
+Support: https://hotio.dev/discord
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8080]
+caTemplateURL: https://raw.githubusercontent.com/hotio/unraid-templates/master/hotio/scrutiny.xml

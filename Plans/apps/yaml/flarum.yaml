@@ -1,0 +1,180 @@
+CategoryList:
+- Network-Web
+Config:
+- '@attributes':
+    Default: '8000'
+    Description: Port
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Port
+    Required: 'false'
+    Target: '8000'
+    Type: Port
+  value: '8000'
+- '@attributes':
+    Default: /mnt/user/appdata/flarum/
+    Description: Contains assets, extensions and storage
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Appdata
+    Required: 'false'
+    Target: /data
+    Type: Path
+  value: /mnt/user/appdata/flarum/
+- '@attributes':
+    Default: http://&lt;IP&gt;:8000
+    Description: Make Sure the base url is right if it local use only use http://ip:8000
+      and if you are hosting it on your domain it should be http://example.com or
+      https://example.com.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: FLARUM_BASE_URL
+    Required: 'false'
+    Target: FLARUM_BASE_URL
+    Type: Variable
+  value: http://<IP>:8000
+- '@attributes':
+    Default: Flarum Dockerized
+    Description: Flarum forum title, only used during first installation
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: FLARUM_FORUM_TITLE
+    Required: 'false'
+    Target: FLARUM_FORUM_TITLE
+    Type: Variable
+  value: Flarum Dockerized
+- '@attributes':
+    Default: ''
+    Description: MySQL database hostname / IP address required
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: DB_HOST
+    Required: 'false'
+    Target: DB_HOST
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '3306'
+    Description: MySQL database port
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: DB_PORT
+    Required: 'false'
+    Target: DB_PORT
+    Type: Variable
+  value: '3306'
+- '@attributes':
+    Default: flarum
+    Description: MySQL database name
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: DB_NAME
+    Required: 'false'
+    Target: DB_NAME
+    Type: Variable
+  value: flarum
+- '@attributes':
+    Default: flarum
+    Description: MySQL user
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: DB_USER
+    Required: 'false'
+    Target: DB_USER
+    Type: Variable
+  value: flarum
+- '@attributes':
+    Default: ''
+    Description: MySQL password
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: DB_PASSWORD
+    Required: 'false'
+    Target: DB_PASSWORD
+    Type: Variable
+  value: password
+- '@attributes':
+    Default: 256M
+    Description: PHP memory limit
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: MEMORY_LIMIT
+    Required: 'false'
+    Target: MEMORY_LIMIT
+    Type: Variable
+  value: 256M
+- '@attributes':
+    Default: 16M
+    Description: Upload max size
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: UPLOAD_MAX_SIZE
+    Required: 'false'
+    Target: UPLOAD_MAX_SIZE
+    Type: Variable
+  value: 16M
+- '@attributes':
+    Default: '128'
+    Description: PHP OpCache memory consumption
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: OPCACHE_MEM_SIZE
+    Required: 'false'
+    Target: OPCACHE_MEM_SIZE
+    Type: Variable
+  value: '128'
+- '@attributes':
+    Default: '99'
+    Description: PUID
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: PUID
+    Required: 'false'
+    Target: PUID
+    Type: Variable
+  value: '99'
+- '@attributes':
+    Default: '100'
+    Description: PGID
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: PGID
+    Required: 'false'
+    Target: PGID
+    Type: Variable
+  value: '100'
+FirstSeen: 1586450112
+Icon: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/flarum.png
+LastUpdate: 1648313777
+LastUpdateScan: 1648804645
+Name: flarum
+Network: bridge
+Overview: 'Flarum is the next-generation forum software that makes online discussion
+  fun. It''s simple, fast, and free. [br][br][b][u][span style=''color: #ff9900;'']Default
+  user/password[/span][/u][/b][br]User: [B][u]flarum[/B][/u][br]Password: [B][u]flarum[/B][/u][/b]'
+PostArgs: ''
+Privileged: 'false'
+Project: https://flarum.org/
+Registry: https://hub.docker.com/r/crazymax/flarum/
+Repo: A75G's Repository
+Repository: crazymax/flarum:latest
+Support: https://forums.unraid.net/topic/89502-support-a75g-repo/
+TemplateURL: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/flarum.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8000]/
+topPerforming: 0.039
+topTrending: -0.699

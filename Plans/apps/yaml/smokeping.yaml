@@ -1,0 +1,89 @@
+CategoryList:
+- Network-Management
+ChangeLogPresent: true
+Config:
+- '@attributes':
+    Default: '80'
+    Description: Allows HTTP access to the internal webserver.
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI
+    Required: 'true'
+    Target: '80'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Configure the `Targets` file here
+    Display: advanced
+    Mask: 'false'
+    Mode: rw
+    Name: Appdata
+    Required: 'true'
+    Target: /config
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Storage location for db and application data (graphs etc)
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: 'Path: /data'
+    Required: 'true'
+    Target: /data
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: '99'
+    Description: 'Container Variable: PUID'
+    Display: advanced
+    Mask: 'false'
+    Name: PUID
+    Required: 'true'
+    Target: PUID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '100'
+    Description: 'Container Variable: PGID'
+    Display: advanced
+    Mask: 'false'
+    Name: PGID
+    Required: 'true'
+    Target: PGID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '022'
+    Description: 'Container Variable: UMASK'
+    Display: advanced
+    Mask: 'false'
+    Name: UMASK
+    Required: 'false'
+    Target: UMASK
+    Type: Variable
+  value: ''
+DonateImg: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/donate.png
+DonateLink: https://www.linuxserver.io/donate
+DonateText: Donations
+FirstSeen: 1501214400
+GitHub: https://github.com/linuxserver/docker-smokeping#application-setup
+Icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/smokeping-logo.png
+LastUpdate: 1647763327
+LastUpdateScan: 1647914878
+Name: smokeping
+Network: bridge
+Overview: Smokeping(https://oss.oetiker.ch/smokeping/) keeps track of your network
+  latency. For a full example of what this application is capable of visit UCDavis(http://smokeping.ucdavis.edu/cgi-bin/smokeping.fcgi).
+Privileged: 'false'
+Project: https://oss.oetiker.ch/smokeping/
+ReadMe: https://github.com/linuxserver/docker-smokeping#readme
+Registry: https://github.com/orgs/linuxserver/packages/container/package/smokeping
+Repo: linuxserver's Repository
+Repository: lscr.io/linuxserver/smokeping
+Support: https://github.com/linuxserver/docker-smokeping/issues/new/choose
+TemplateURL: https://raw.githubusercontent.com/linuxserver/templates/master/unraid/smokeping.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:80]

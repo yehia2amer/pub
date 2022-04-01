@@ -1,0 +1,181 @@
+CAComment: This template is set up to use a custom network. You may have to adjust
+  the network or IP address etc to match your system
+CategoryList:
+- Network-Management
+Config:
+- '@attributes':
+    Default: 127.0.0.1
+    Description: 'MySQL database host (Default: 127.0.0.1)'
+    Display: always-hide
+    Mask: 'false'
+    Mode: ''
+    Name: IPAM_DATABASE_HOST
+    Required: 'true'
+    Target: IPAM_DATABASE_HOST
+    Type: Variable
+  value: 127.0.0.1
+- '@attributes':
+    Default: '3306'
+    Description: 'MySQL database port (Default: 3306)'
+    Display: always-hide
+    Mask: 'false'
+    Mode: ''
+    Name: IPAM_DATABASE_PORT
+    Required: 'true'
+    Target: IPAM_DATABASE_PORT
+    Type: Variable
+  value: '3306'
+- '@attributes':
+    Default: phpipam
+    Description: 'MySQL database name (Default: phpipam)'
+    Display: always-hide
+    Mask: 'false'
+    Mode: ''
+    Name: IPAM_DATABASE_NAME
+    Required: 'true'
+    Target: IPAM_DATABASE_NAME
+    Type: Variable
+  value: phpipam
+- '@attributes':
+    Default: phpipam
+    Description: 'MySQL database user (Default: phpipam)'
+    Display: always-hide
+    Mask: 'false'
+    Mode: ''
+    Name: IPAM_DATABASE_USER
+    Required: 'true'
+    Target: IPAM_DATABASE_USER
+    Type: Variable
+  value: phpipam
+- '@attributes':
+    Default: phpipamadmin
+    Description: 'MySQL database password (Default: phpipamadmin)'
+    Display: always-hide
+    Mask: 'true'
+    Mode: ''
+    Name: IPAM_DATABASE_PASS
+    Required: 'true'
+    Target: IPAM_DATABASE_PASS
+    Type: Variable
+  value: phpipamadmin
+- '@attributes':
+    Default: 1h
+    Description: 'Network discovery job interval = 5m,10m,15m,30m,1h,2h,4h,6h,12h
+      (default: 1h) [CRON Container only]'
+    Display: always-hide
+    Mask: 'false'
+    Mode: ''
+    Name: SCAN_INTERVAL
+    Required: 'true'
+    Target: SCAN_INTERVAL
+    Type: Variable
+  value: 1h
+- '@attributes':
+    Default: localhost
+    Description: 'MySQL allowed hosts (Default: localhost)'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: IPAM_DATABASE_WEBHOST
+    Required: 'false'
+    Target: IPAM_DATABASE_WEBHOST
+    Type: Variable
+  value: localhost
+- '@attributes':
+    Default: ''
+    Description: Google Maps and Geocode API Key
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: IPAM_GMAPS_API_KEY
+    Required: 'false'
+    Target: IPAM_GMAPS_API_KEY
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: 'false'
+    Description: 'Use proxy (Default: false)'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: PROXY_ENABLED
+    Required: 'false'
+    Target: PROXY_ENABLED
+    Type: Variable
+  value: 'false'
+- '@attributes':
+    Default: myproxy.something.com
+    Description: 'Proxy server (Default: myproxy.something.com)'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: PROXY_SERVER
+    Required: 'false'
+    Target: PROXY_SERVER
+    Type: Variable
+  value: myproxy.something.com
+- '@attributes':
+    Default: '8080'
+    Description: 'Proxy port (Default: 8080)'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: PROXY_PORT
+    Required: 'false'
+    Target: PROXY_PORT
+    Type: Variable
+  value: '8080'
+- '@attributes':
+    Default: 'false'
+    Description: 'Proxy authentication (Default: false)'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: PROXY_USE_AUTH
+    Required: 'false'
+    Target: PROXY_USE_AUTH
+    Type: Variable
+  value: 'false'
+- '@attributes':
+    Default: USERNAME
+    Description: Proxy username
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: PROXY_USER
+    Required: 'false'
+    Target: PROXY_USER
+    Type: Variable
+  value: USERNAME
+- '@attributes':
+    Default: PASSWORD
+    Description: Proxy password
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: PROXY_PASS
+    Required: 'false'
+    Target: PROXY_PASS
+    Type: Variable
+  value: PASSWORD
+FirstSeen: 1590506426
+Icon: https://phpipam.net/css/images/logo_icon.png
+LastUpdate: 1647654602
+LastUpdateScan: 1647662623
+Name: phpIPAM-cron
+Network: br0
+Networking:
+  Mode: br0
+Overview: phpIPAM - Open source IP address management.
+PostArgs: ''
+Privileged: 'false'
+Project: https://phpipam.net/
+Registry: https://hub.docker.com/r/phpipam/phpipam-cron
+Repo: SAL-e's Repository
+Repository: phpipam/phpipam-cron
+Support: https://forums.unraid.net/topic/92885-support-sal-e-phpipam/
+TemplateURL: https://raw.githubusercontent.com/SAL-e/docker-templates/master/sal-e/phpipam-cron.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''
+topPerforming: 1.904
+topTrending: -3.2990000000000004

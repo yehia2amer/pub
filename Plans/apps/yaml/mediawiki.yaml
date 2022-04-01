@@ -1,0 +1,101 @@
+CategoryList:
+- Cloud
+- Productivity
+- Tools-Utilities
+- Network-Web
+Config:
+- '@attributes':
+    Default: '80'
+    Description: 'Container Port: 80'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Host Port 1
+    Required: 'true'
+    Target: '80'
+    Type: Port
+  value: '9090'
+- '@attributes':
+    Default: '99'
+    Description: 'Container Variable: PUID'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Key 1
+    Required: 'false'
+    Target: PUID
+    Type: Variable
+  value: '99'
+- '@attributes':
+    Default: '100'
+    Description: 'Container Variable: PGID'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Key 2
+    Required: 'false'
+    Target: PGID
+    Type: Variable
+  value: '100'
+- '@attributes':
+    Default: ''
+    Description: "OPTIONAL: Set a host path to use an alternate location for file\
+      \ uploads. Default container path: /config/www/mediawiki/images&lt;/br&gt;\r\
+      \nContainer Path: /data"
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: File Uploads
+    Required: 'false'
+    Target: /assets
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: disable
+    Description: "Allow MediaWiki to automatically be upgraded with new docker images.&lt;/br&gt;\r\
+      \nSet 'enable' to allow upgrades."
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Allow Mediawiki Upgrades
+    Required: 'false'
+    Target: UPGRADE_MEDIAWIKI
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: /mnt/user/appdata/mediawiki
+    Description: 'Container Path: /config'
+    Display: always-hide
+    Mask: 'false'
+    Mode: rw
+    Name: Config
+    Required: 'true'
+    Target: /config
+    Type: Path
+  value: ''
+DonateImg: https://raw.githubusercontent.com/d8sychain/docker-mediawiki/master/assets/donate.png
+DonateText:
+- Donations
+- Donations
+FirstSeen: 1571159988
+Icon: https://raw.githubusercontent.com/d8sychain/unraid-ca-templates/master/images/mediawiki.png
+LastUpdate: 1627538745
+LastUpdateScan: 1646514184
+Name: mediawiki
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: MediaWiki with WYSIWYG VisualEditor extension and Parsoid service. Built
+  with Alpine, S6-overlay, NGINX, PHP-FPM with PHP 7.3, NodeJS, along with other extensions.
+PostArgs: ''
+Privileged: 'false'
+Project: https://www.mediawiki.org
+Registry: https://hub.docker.com/r/d8sychain/mediawiki/
+Repo: d8sychain's Repository
+Repository: d8sychain/mediawiki
+Support: https://forums.unraid.net/topic/84304-support-d8sychain-mediawiki/
+TemplateURL: https://raw.githubusercontent.com/d8sychain/unraid-ca-templates/master/templates/mediawiki.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:80]
+topPerforming: 3.832
+topTrending: 1.8849999999999998

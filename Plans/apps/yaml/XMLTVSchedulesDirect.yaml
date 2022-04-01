@@ -1,0 +1,112 @@
+BindTime: 'true'
+CAComment: This project appears to have been abandoned and is now deprecated
+CategoryList:
+- Downloaders
+ChangeLogPresent: true
+Config:
+- '@attributes':
+    Default: /mnt/user/appdata/XMLTVSchedulesDirect
+    Description: XMLTV configuration, including caches and cronjobs.
+    Display: always
+    Mode: rw
+    Name: Config Directory
+    Required: 'true'
+    Target: /config
+    Type: Path
+  value: /mnt/user/appdata/XMLTVSchedulesDirect
+- '@attributes':
+    Default: /mnt/user/appdata/TVGuideXML
+    Description: EPG export destination.
+    Display: always
+    Mode: rw
+    Name: EPG Data Directory
+    Required: 'true'
+    Target: /data
+    Type: Path
+  value: /mnt/user/appdata/TVGuideXML
+- '@attributes':
+    Default: /mnt/user
+    Description: 'Container Path: /unraid'
+    Display: hidden
+    Mode: rw
+    Name: unRAID Share Path
+    Required: 'false'
+    Target: /unraid
+    Type: Path
+  value: /unraid
+- '@attributes':
+    Default: guide.xml
+    Description: XML destination filename.
+    Display: always
+    Mask: 'false'
+    Name: Output File
+    Required: 'true'
+    Target: FILENAME
+    Type: Variable
+  value: guide.xml
+- '@attributes':
+    Default: tv_grab_sd_json
+    Description: XMLTV Grabber to run.
+    Display: advanced
+    Mask: 'false'
+    Name: Grabber
+    Required: 'false'
+    Target: GRABBER
+    Type: Variable
+  value: tv_grab_sd_json
+- '@attributes':
+    Default: ''
+    Description: Number of days to grab when script runs.
+    Display: advanced
+    Mask: 'false'
+    Name: Days To Grab
+    Required: 'false'
+    Target: DAYS
+    Type: Variable
+  value: '1'
+- '@attributes':
+    Default: '0'
+    Description: Offset to apply when script runs.
+    Display: advanced
+    Mask: 'false'
+    Name: Grabber Offset
+    Required: 'false'
+    Target: OFFSET
+    Type: Variable
+  value: '0'
+- '@attributes':
+    Default: '1'
+    Description: Number of days to grab when docker starts.
+    Display: advanced
+    Mask: 'false'
+    Name: Days To Grab at Startup
+    Required: 'false'
+    Target: STARTUPDAYS
+    Type: Variable
+  value: '1'
+Deprecated: true
+FirstSeen: 1
+Icon: https://raw.githubusercontent.com/HuxyUK/docker-containers/master/xmltv-sd-json/xmltv-sd-json-icon.png
+LastUpdate: 1466169655
+LastUpdateScan: 1648505004
+Name: XMLTV-Schedules-Direct
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "An XMLTV installation based on Debian (including cron) with a JSON added\
+  \ grabber for Schedules Direct. [br]This allows use of Schedules Direct for all\
+  \ supported countries.\n    For those not in the know; XMLTV is a set of programs\
+  \ to process TV (tvguide) listings and manage your TV viewing, storing listings\
+  \ in an XML format.[br][br]\n    The JSON grabber currently provided with this docker\
+  \ is tv_grab_sd_json. Recently, it has been officially accepted into the XMLTV project.[br]"
+Privileged: 'false'
+Project: https://sourceforge.net/projects/xmltv/
+Registry: https://hub.docker.com/r/huxy/xmltv-sd-json/
+Repo: Huxy's Repository
+Repository: huxy/xmltv-sd-json
+Support: https://lime-technology.com/forum/index.php?topic=49457.0
+TemplateURL: https://raw.githubusercontent.com/HuxyUK/docker-containers/master/xmltv-sd-json/xmltv-sd-json.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''
+license: MIT
+topTrending: -1.135

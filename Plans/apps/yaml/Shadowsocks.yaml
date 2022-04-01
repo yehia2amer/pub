@@ -1,0 +1,102 @@
+CategoryList:
+- Security
+- Network-Proxy
+- Network-VPN
+Config:
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: PASSWORD'
+    Display: always
+    Mask: 'true'
+    Mode: ''
+    Name: Shadowsocks Password (for connecting later)
+    Required: 'true'
+    Target: PASSWORD
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: rc4-md5|aes-128-gcm|aes-192-gcm|aes-256-gcm|aes-128-cfb|aes-192-cfb|aes-256-cfb|aes-128-ctr|aes-192-ctr|aes-256-ctr|camellia-128-cfb|camellia-192-cfb|camellia-256-cfb|bf-cfb|chacha20-ietf-poly1305|xchacha20-ietf-poly1305
+    Description: 'Container Variable: METHOD'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Encryption Method
+    Required: 'true'
+    Target: METHOD
+    Type: Variable
+  value: chacha20-ietf-poly1305
+- '@attributes':
+    Default: 8.8.8.8,8.8.4.4
+    Description: 'Container Variable: DNS_ADDRS'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: 'DNS Addresses (comma seperated, default: google)'
+    Required: 'true'
+    Target: DNS_ADDRS
+    Type: Variable
+  value: 8.8.8.8,8.8.4.4
+- '@attributes':
+    Default: '8388'
+    Description: 'Container Port: 8388'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Port TCP
+    Required: 'true'
+    Target: '8388'
+    Type: Port
+  value: '8388'
+- '@attributes':
+    Default: '8388'
+    Description: 'Container Port: 8388'
+    Display: always
+    Mask: 'false'
+    Mode: udp
+    Name: Port UDP
+    Required: 'true'
+    Target: '8388'
+    Type: Port
+  value: '8388'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: TIMEOUT'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Connection Timeout (seconds)
+    Required: 'true'
+    Target: TIMEOUT
+    Type: Variable
+  value: '300'
+DonateLink: https://www.paypal.me/robvermeij
+FirstSeen: 1611745663
+Icon: https://github.com/Flight777/unraid_justworks_templates/blob/main/images/shadowsocks/1200px-Shadowsocks-Logo.svg.png?raw=true
+LastUpdate: 1644897896
+LastUpdateScan: 1648116204
+Name: Shadowsocks
+Network: bridge
+Networking:
+  Mode: bridge
+Official: true
+Overview: "A secure SOCKS5 proxy. Shadowsocks is a free and open-source encryption\
+  \ protocol project, widely used in China to circumvent Internet censorship. It was\
+  \ created in 2012 by a Chinese programmer named \"clowwindy\", and multiple implementations\
+  \ of the protocol have been made available since. Can be used with any SOCKS or\
+  \ Shadowsocks client.\r\n[br]\r\nCan be seen as a alternative, hard to detect, VPN\
+  \ as well.\r\n[br][br]\r\nUNRAID template that JUST WORKS, brought to you by Flight777!\r\
+  \n[br][br]\r\n[b][span style='color: #E80000;']Container does not have a WEBUI,\
+  \ as it's very lightweight and all settings are set by the variables. Check the\
+  \ logs to verify it is running correctly![/span][/b]"
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/shadowsocks/shadowsocks-libev/blob/master/docker/alpine/README.md
+Registry: https://hub.docker.com/r/shadowsocks/shadowsocks-libev
+Repo: Flight777's Repository
+Repository: shadowsocks/shadowsocks-libev
+Support: https://forums.unraid.net/topic/101905-support-flight777-just-works-container-repository/
+TemplateURL: https://raw.githubusercontent.com/Flight777/unraid_justworks_templates/master/jw_shadowsocks.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''
+topPerforming: 0.408
+topTrending: -13.605

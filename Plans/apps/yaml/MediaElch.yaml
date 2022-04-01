@@ -1,0 +1,48 @@
+BindTime: 'true'
+CategoryList:
+- Tools
+- MediaApp-Video
+Data:
+  Volume:
+  - ContainerDir: /config/xdg/config/kvibes
+    HostDir: /mnt/cache/appdata/config
+    Mode: rw
+  - ContainerDir: /movies
+    HostDir: /mnt/user/
+    Mode: rw
+  - ContainerDir: /shows
+    HostDir: /mnt/user
+    Mode: rw
+Environment:
+  Variable:
+  - Name: UMASK
+    Value: '000'
+  - Name: PUID
+    Value: '99'
+  - Name: PGID
+    Value: '100'
+FirstSeen: 1596730127
+Icon: https://www.kvibes.de/img/mediaelch/icon.png
+LastUpdate: 1647185983
+LastUpdateScan: 1648692217
+Name: MediaElch
+Networking:
+  Mode: bridge
+  Publish:
+    Port:
+      ContainerPort: '5800'
+      HostPort: '5800'
+      Protocol: tcp
+Overview: Mediaelch is a Tool to manage your movie and show libary regarding the metadata
+  and artwork.
+Privileged: 'false'
+Project: https://github.com/Komet/MediaElch
+Registry: https://hub.docker.com/repository/docker/masonxx/mediaelch
+Repo: mason's Repository
+Repository: masonxx/mediaelch
+Support: https://forums.unraid.net/topic/95577-support-mason-xx-mediaelch/
+TemplateURL: https://raw.githubusercontent.com/mason-xx/unraid-templates/master/mediaelch.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:5800]/
+topPerforming: 0.177
+topTrending: -12.574

@@ -1,0 +1,98 @@
+CategoryList:
+- GameServers
+Config:
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /serverdata/serverfiles'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: ServerFiles
+    Required: 'true'
+    Target: /serverdata/serverfiles/
+    Type: Path
+  value: /mnt/cache/appdata/teeworlds/
+- '@attributes':
+    Default: ''
+    Description: 'Container Port: 8303'
+    Display: always
+    Mask: 'false'
+    Mode: udp
+    Name: UDP
+    Required: 'true'
+    Target: '8303'
+    Type: Port
+  value: '8303'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: GAME_CONFIG'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: ConfigFile
+    Required: 'false'
+    Target: GAME_CONFIG
+    Type: Variable
+  value: dm.cfg
+- '@attributes':
+    Default: ''
+    Description: 'Container Port: 8303'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: TCP
+    Required: 'false'
+    Target: '8303'
+    Type: Port
+  value: '8303'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: UID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: UID
+    Required: 'true'
+    Target: UID
+    Type: Variable
+  value: '99'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: GID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: GID
+    Required: 'true'
+    Target: GID
+    Type: Variable
+  value: '100'
+DonateImg: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/donate.png
+DonateLink: https://www.paypal.me/chips777
+DonateText: 'If you like my work please '
+ExtraParams: --restart=unless-stopped
+FirstSeen: 1556229863
+Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/teeworlds.png
+LastUpdate: 1582658494
+LastUpdateScan: 1647214616
+Name: Teeworlds
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "This Docker will download and install a simple Teeworlds Dedicated server\
+  \ with a autoexec.cfg, dm.cfg, tdm.cfg &amp; ctf.cfg preconfigured (the only thing\
+  \ that need to be changed is the Server Name and the RCON Password in the autoexec.cfg).\r\
+  \n\r\nATTENTION: Please don't delete the tar.gz file in the main directory!\r\n\r\
+  \nUpdate Notice: Simply restart the container if a newer version of the game is\
+  \ available and the container will download and install it."
+PostArgs: ''
+Privileged: 'false'
+Project: https://www.teeworlds.com/
+Registry: https://hub.docker.com/r/ich777/teeworldsserver/
+Repo: ich777's Repository
+Repository: ich777/teeworldsserver
+Support: https://forums.unraid.net/topic/79530-support-ich777-gameserver-dockers/
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''
+caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/Teeworlds.xml
+topTrending: -4.3389999999999995

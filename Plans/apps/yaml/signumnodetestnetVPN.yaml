@@ -1,0 +1,48 @@
+Beta: 'true'
+BindTime: 'true'
+CAComment: This app is setup by default to communicate to a VPN via the binhex-delugevpn
+  container
+CategoryList:
+- Crypto
+ChangeLogPresent: true
+Data:
+  Volume:
+  - ContainerDir: /conf
+    HostDir: /mnt/user/appdata/signum-node-testnet-VPN/conf
+    Mode: rw
+  - ContainerDir: /db
+    HostDir: /mnt/user/appdata/signum-node-testnet-VPN/db
+    Mode: rw
+ExtraParams: --memory=2g --net=container:binhex-delugevpn --init
+FirstSeen: 1645952596
+GitHub: https://github.com/signum-network/signum-node
+Icon: https://raw.githubusercontent.com/signum-network/signum-node/main/resources/images/signum_overlay_logo.ico
+LastUpdate: 1645943369
+LastUpdateScan: 1648548203
+Name: signum-node-testnet-VPN
+Networking:
+  Mode: none
+  Publish:
+    Port:
+    - ContainerPort: '7123'
+      HostPort: '7123'
+      Protocol: tcp
+    - ContainerPort: '7124'
+      HostPort: '7124'
+      Protocol: tcp
+    - ContainerPort: '6876'
+      HostPort: '6876'
+      Protocol: tcp
+Overview: "Proof of Commitment - ASIC proof / Energy efficient and sustainable mining\n\
+  \    No ICO/Airdrops/Premine\n    Turing-complete smart contracts, via Signum SmartJ\n\
+  \    Asset Exchange; Digital Goods Store; Crowdfunds, NFTs, games, and more (via\
+  \ smart contracts); and Alias system"
+Privileged: 'false'
+Project: https://github.com/signum-network/signum-node/
+Registry: https://hub.docker.com/r/signumnetwork/node
+Repo: Paul_Ber's Repository
+Repository: paulpoco/node:v3.4.0-alpha2
+Support: https://github.com/signum-network/signum-node
+TemplateURL: https://raw.githubusercontent.com/paulpoco/docker-templates/master/paulpoco/signum-node-testnet-VPN.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:6876]

@@ -1,0 +1,166 @@
+Beta: 'true'
+CategoryList:
+- Productivity
+- Tools-System
+Config:
+- '@attributes':
+    Default: ''
+    Description: All things that are saved in the container should be in the this
+      or a subdirectory in of this folder, all files that are store outside this folder
+      are not persistant and will be wiped if there is an update of the container
+      or you change something in the template.
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Home Directory
+    Required: 'true'
+    Target: /debian
+    Type: Path
+  value: /mnt/cache/appdata/debian-bullseye/
+- '@attributes':
+    Default: ''
+    Description: noVNC Port
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: TCP - VNC Port
+    Required: 'false'
+    Target: '8080'
+    Type: Port
+  value: '8080'
+- '@attributes':
+    Default: ''
+    Description: Enter the preferred resolution width
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Custom Resolution Width
+    Required: 'true'
+    Target: CUSTOM_RES_W
+    Type: Variable
+  value: '1800'
+- '@attributes':
+    Default: ''
+    Description: Enter the preferred resolution height
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Custom Resolution Height
+    Required: 'true'
+    Target: CUSTOM_RES_H
+    Type: Variable
+  value: '1000'
+- '@attributes':
+    Default: ''
+    Description: Please choose a strong password for your root account!
+    Display: always
+    Mask: 'true'
+    Mode: ''
+    Name: Root Password
+    Required: 'true'
+    Target: ROOT_PWD
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: DATA_PERM'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: DATA_PERM
+    Required: 'true'
+    Target: DATA_PERM
+    Type: Variable
+  value: '770'
+- '@attributes':
+    Default: ''
+    Description: 'Enter your prefered locales, you can find a full list of supported
+      languages in: ''/usr/share/i18n/SUPPORTED'' (eg: ''en_US.UTF-8 UTF8'' or ''de_DE.UTF-8
+      UTF-8'',...)'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Locales
+    Required: 'true'
+    Target: USER_LOCALES
+    Type: Variable
+  value: en_US.UTF-8 UTF-8
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: DEV'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: DEV_LOG_OUTPUT
+    Required: 'false'
+    Target: DEV
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: UID'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: UID
+    Required: 'true'
+    Target: UID
+    Type: Variable
+  value: '99'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: GID'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: GID
+    Required: 'true'
+    Target: GID
+    Type: Variable
+  value: '100'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: UMASK'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: UMASK
+    Required: 'true'
+    Target: UMASK
+    Type: Variable
+  value: '0000'
+DonateLink: https://www.paypal.me/chips777
+DonateText: 'If you like my work please '
+ExtraParams: --restart=unless-stopped --shm-size=2G
+FirstSeen: 1611602281
+Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/debian-bullseye.png
+LastUpdate: 1647077800
+LastUpdateScan: 1647979404
+Name: Debian-Bullseye
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "This Container is a full Debian Bullseye Xfce4 Desktop environment with\
+  \ a noVNC webGUI and all the basic tools pre-installed.\r\n\r\nROOT ACCESS: 1. Open\
+  \ up your WebGUI 2. Open up a terminal 3. Type in 'su' 4. Type in your password\
+  \ that you've set (no screenoutput is shown if you type in passwords in Linux) 5.\
+  \ Press Enter 6. You should now be root.\r\n\r\nIf you want to install some other\
+  \ application you can do that by creating a user.sh and mounting it to the container\
+  \ to /opt/scripts/user.sh (a standard bash script should do the trick).\r\n\r\n\
+  You also can reverse proxy this container with nginx or apache (for more info see\
+  \ the Github/Dockerhub page).\r\n\r\nStorage Note: All things that are saved in\
+  \ the container should be in the home or a subdirectory in your homefolder, all\
+  \ files that are store outside your homefolder are not persistant and will be wiped\
+  \ if there is an update of the container or you change something in the template.\r\
+  \n\r\nBETA Warning: Debian Bullseye is currently in the \"testing\" branch."
+PostArgs: ''
+Privileged: 'false'
+Project: https://www.debian.org/
+Registry: https://hub.docker.com/r/ich777/debian-bullseye
+Repo: ich777's Repository
+Repository: ich777/debian-bullseye
+Support: https://forums.unraid.net/topic/83786-support-ich777-application-dockers/
+TemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/Debian-Bullseye.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8080]/vnc.html?autoconnect=true
+topTrending: -12.695

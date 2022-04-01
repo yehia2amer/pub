@@ -1,0 +1,48 @@
+Beta: 'true'
+Config:
+- '@attributes':
+    Default: mypassword
+    Description: Please chose a strong password
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: VNC Password
+    Required: 'true'
+    Target: VNC_PASSWORD
+    Type: Variable
+  value: mypassword
+- '@attributes':
+    Default: '6900'
+    Description: 'Container Port: 8080'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: TCP - VNC Port
+    Required: 'true'
+    Target: '8080'
+    Type: Port
+  value: '6900'
+ExtraParams: --restart=unless-stopped --memory=2G
+FirstSeen: 1635725013
+Icon: https://github.com/knilix/ubuntu-focal_fossa-xfce-vnc-novnc/blob/main/opt/xfce_logo.png?raw=true
+LastUpdate: 1634839282
+LastUpdateScan: 1648713823
+Name: ubuntu-xfce
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "Ubuntu 20.04 (LTS), XFCE-Desktop, noVNC, LibreOffice, Firefox\r\nLanguage:\
+  \ Predominantly German\r\nUser: ubuntu | Password: ubuntu\r\nTo change the user\
+  \ password, enter the following in the Docker terminal: sudo passwd ubuntu\r\nnoVNC:\
+  \ Port: 6900 (changeable)\r\nStart in Browser: IP-Adress:6900/vnc.html\r\nOnly one\
+  \ instance of noVNC can be active at a time. This image is for testing purposes.\
+  \ All changes in Docker will be lost if it is deleted/destroyed or an update appears.\r\
+  \nThis docker is for informational purposes about this guide series: https://knilixdock.wordpress.com/ubuntu-xfce-vnc-novnc/"
+PostArgs: ''
+Privileged: 'false'
+Registry: https://hub.docker.com/r/knilix/ubuntu-xfce-vnc-novnc
+Repo: da do ron's Repository
+Repository: knilix/ubuntu-xfce-vnc-novnc
+TemplateURL: https://raw.githubusercontent.com/knilix/unraid-templates/master/ubuntu-xfce/ubuntu-xfce.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''

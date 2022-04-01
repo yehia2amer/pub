@@ -1,0 +1,91 @@
+CategoryList:
+- Productivity
+Config:
+- '@attributes':
+    Default: /mnt/user/appdata/darktable
+    Description: 'Container path: /config '
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Darktable config and library folder
+    Required: 'true'
+    Target: /config
+    Type: Path
+  value: /mnt/user/appdata/darktable
+- '@attributes':
+    Default: /mnt/user/
+    Description: 'Container path: /images'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: unRAID Share Path
+    Required: 'false'
+    Target: /images
+    Type: Path
+  value: /mnt/user/
+- '@attributes':
+    Default: '8080'
+    Description: HTTP Port 8080
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: HTTP Port
+    Required: 'true'
+    Target: '8080'
+    Type: Port
+  value: '8080'
+- '@attributes':
+    Default: '3389'
+    Description: RDP Port
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: RDP Port
+    Required: 'false'
+    Target: '3389'
+    Type: Port
+  value: '3389'
+- '@attributes':
+    Default: '99'
+    Description: UID for permissions.  Do not change unless you know what you're doing.
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: PUID
+    Required: 'true'
+    Target: PUID
+    Type: Variable
+  value: '99'
+- '@attributes':
+    Default: '100'
+    Description: GID for permissions.  Do not change unless you know what you're doing.
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: PGID
+    Required: 'true'
+    Target: PGID
+    Type: Variable
+  value: '100'
+FirstSeen: 1588262837
+Icon: https://raw.githubusercontent.com/mikeylikesrocks/unraid-docker-templates/master/darktable-icon.png
+LastUpdate: 1588209939
+LastUpdateScan: 1648029802
+Name: darktable
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: Darktable is an open source photography workflow application and raw developer.
+  A virtual lighttable and darkroom for photographers. It manages your digital negatives
+  in a database, lets you view them through a zoomable lighttable and enables you
+  to develop raw images and enhance them.
+Privileged: 'false'
+Project: https://github.com/mikeylikesrocks/darktable
+Registry: https://hub.docker.com/repository/docker/mdschaefer/darktable
+Repo: mikeylikesrocks' Repository
+Repository: mdschaefer/darktable
+Support: https://www.darktable.org/
+TemplateURL: https://raw.githubusercontent.com/mikeylikesrocks/unraid-docker-templates/master/darktable.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8080]/
+topTrending: -5.511

@@ -1,0 +1,105 @@
+CategoryList:
+- Network-FTP
+- Network-Other
+- Productivity
+- Network-Web
+Config:
+- '@attributes':
+    Default: '9090'
+    Description: Crush HTTP Port
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: tcp
+    Name: HTTP Port
+    Required: 'true'
+    Target: '9090'
+    Type: Port
+  value: '9090'
+- '@attributes':
+    Default: '9443'
+    Description: 'Crush HTTPS Port '
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: tcp
+    Name: HTTPS Port
+    Required: 'true'
+    Target: '9443'
+    Type: Port
+  value: '9443'
+- '@attributes':
+    Default: '9021'
+    Description: Crush FTP Port
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: tcp
+    Name: FTP Port
+    Required: 'true'
+    Target: '9021'
+    Type: Port
+  value: '9021'
+- '@attributes':
+    Default: /mnt/user/appdata/crushftp/
+    Description: CrushFTP Home/Installation Directory
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: CrushFTP Home
+    Required: 'true'
+    Target: /var/opt/CrushFTP8_PC
+    Type: Path
+  value: /mnt/user/appdata/crushftp/
+- '@attributes':
+    Default: /mnt/user/ftpfiles/
+    Description: FTP Files
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: FTP Files
+    Required: 'true'
+    Target: /files
+    Type: Path
+  value: /mnt/user/ftpfiles/
+- '@attributes':
+    Default: /mnt/user
+    Description: 'Container Path: /unraid'
+    Display: hidden
+    Mask: 'false'
+    Mode: rw
+    Name: unRAID Share Path
+    Required: 'false'
+    Target: /unraid
+    Type: Path
+  value: /mnt/user
+- '@attributes':
+    Default: crush8password$
+    Description: Default CrushFTP Admin Password
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: Crush Admin Password
+    Required: 'false'
+    Target: CRUSHPASSWORD
+    Type: Variable
+  value: crush8password$
+Deprecated: true
+FirstSeen: 1
+GitHub: https://github.com/stuckless/unRAID-crushftp/
+LastUpdate: 1538833230
+LastUpdateScan: 1648627432
+ModeratorComment: Appears to be abandoned.  Other CrushFTP apps are within the Apps
+  Tab
+Name: crushftp
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: CrushFTP is an extremely powerful, easy to use FTP solution.
+Privileged: 'false'
+Registry: https://hub.docker.com/r/stuckless/crushftp/
+Repo: stuckless' Repository
+Repository: stuckless/crushftp
+Support: http://www.crushftp.com/support.html
+TemplateURL: https://raw.githubusercontent.com/stuckless/unRAID/master/crushftp.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:9090]/
+topPerforming: 0.056
+topTrending: -2.3649999999999998

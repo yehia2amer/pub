@@ -1,0 +1,124 @@
+CategoryList:
+- GameServers
+Config:
+- '@attributes':
+    Default: ''
+    Description: Main Data Path
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: ServerFiles
+    Required: 'true'
+    Target: /openmw
+    Type: Path
+  value: /mnt/cache/appdata/openmw-tes3mp
+- '@attributes':
+    Default: ''
+    Description: "Preferred game version goes here (set to \u2018latest\u2019 to download\
+      \ the latest and check on every startup if there is a newer version available)"
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Game Version
+    Required: 'true'
+    Target: GAME_V
+    Type: Variable
+  value: latest
+- '@attributes':
+    Default: ''
+    Description: Extra startup Parameters if needed (leave empty if not needed)
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Extra Game Parameters
+    Required: 'false'
+    Target: GAME_PARAMS
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: TCP Gameport (if you need another port, please delete this entry
+      and create a new TCP Port with the required port number, also don't forget to
+      change the port number in the config!)
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: TCP - GamePort
+    Required: 'true'
+    Target: '25565'
+    Type: Port
+  value: '25565'
+- '@attributes':
+    Default: ''
+    Description: UDP Gameport (if you need another port, please delete this entry
+      and create a new UDP Port with the required port number, also don't forget to
+      change the port number in the config!)
+    Display: always
+    Mask: 'false'
+    Mode: udp
+    Name: UDP - GamePort
+    Required: 'true'
+    Target: '25565'
+    Type: Port
+  value: '25565'
+- '@attributes':
+    Default: ''
+    Description: "Permissions for newly created files. Don\u2019t change unless you\
+      \ are knowing what you are doing!"
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: UMASK
+    Required: 'true'
+    Target: UMASK
+    Type: Variable
+  value: '0000'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: UID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: UID
+    Required: 'true'
+    Target: UID
+    Type: Variable
+  value: '99'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: GID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: GID
+    Required: 'true'
+    Target: GID
+    Type: Variable
+  value: '100'
+ExtraParams: --restart=unless-stopped
+FirstSeen: 1617631359
+Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/openmwtes3mp.png
+LastUpdate: 1643895462
+LastUpdateScan: 1648804643
+Name: OpenMW-TES3MP
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "TES3MP is a project adding multiplayer functionality to OpenMW, a free\
+  \ and open source engine recreation of the popular Bethesda Softworks game \"The\
+  \ Elder Scrolls III: Morrowind\".\r\n\r\nAs of version 0.7.0, TES3MP is fully playable,\
+  \ providing very extensive player, NPC, world and quest synchronization, as well\
+  \ as state saving and loading, all of which are highly customizable via serverside\
+  \ Lua scripts.\r\n\r\nRemaining gameplay problems mostly relate to AI and the synchronization\
+  \ of clientside script variables.\r\n\r\nUpdate Notice: Simply restart the container\
+  \ if a newer version of the game is available."
+PostArgs: ''
+Privileged: 'false'
+Project: https://tes3mp.com/
+Registry: https://hub.docker.com/r/ich777/docker-openmw-tes3mp/
+Repo: ich777's Repository
+Repository: ich777/docker-openmw-tes3mp
+Support: https://forums.unraid.net/topic/79530-support-ich777-gameserver-dockers/
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''
+caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/OpenMW-TES3MP.xml

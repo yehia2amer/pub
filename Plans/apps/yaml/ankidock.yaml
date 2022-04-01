@@ -1,0 +1,42 @@
+CategoryList:
+- Backup
+- Cloud
+- Tools-Utilities
+- Other
+- MediaServer-Other
+Config:
+  '@attributes':
+    Default: '27701'
+    Description: 'Container Port: 27701'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Container Port
+    Required: 'true'
+    Target: '27701'
+    Type: Port
+  value: '27701'
+DonateLink: https://www.paypal.com/paypalme/lawryder
+DonateText: I love Ankidock! Go, buy yourself a beer for me!
+ExtraParams: --mount type=volume,dst=/anki-sync-server,volume-driver=local,volume-opt=type=none,volume-opt=o=bind,volume-opt=device=/mnt/user/appdata/ankidock/anki-server
+  --mount type=volume,dst=/etc/nginx,volume-driver=local,volume-opt=type=none,volume-opt=o=bind,volume-opt=device=/mnt/user/appdata/ankidock/nginx
+  -it
+FirstSeen: 1616637766
+Icon: /plugins/dynamix.docker.manager/images/question.png
+LastUpdate: 1622986624
+LastUpdateScan: 1647820995
+Name: ankidock
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "My Docker of ankicommunity/anki-sync-server. \r\nFurther info on https://github.com/lawryder/ankidock"
+PostArgs: bash
+Privileged: 'false'
+Project: http://apps.ankiweb.de
+Registry: https://hub.docker.com/r/lawryder/ankidock/
+Repo: LawRyder's Repository
+Repository: lawryder/ankidock:latest_stable
+Support: https://hub.docker.com/r/lawryder/ankidock/
+TemplateURL: https://raw.githubusercontent.com/lawryder/unraid_docker_reps/master/Ankidock.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT]

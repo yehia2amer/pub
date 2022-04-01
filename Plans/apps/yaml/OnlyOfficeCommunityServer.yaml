@@ -1,0 +1,256 @@
+CAComment: This template is set up to use a custom network. You may have to adjust
+  the network or IP address etc to match your system
+CategoryList:
+- Productivity
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: '8080'
+    Description: 'Container Port: 80'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: HTTP Port
+    Required: 'true'
+    Target: '80'
+    Type: Port
+  value: '8080'
+- '@attributes':
+    Default: '4431'
+    Description: 'Container Port: 443'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: HTTPS Port
+    Required: 'true'
+    Target: '443'
+    Type: Port
+  value: '4431'
+- '@attributes':
+    Default: '5222'
+    Description: 'Container Path: 5222'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Port for XMPP-compatible instant messaging client (for ONLYOFFICE Talk correct
+      work)
+    Required: 'true'
+    Target: '5222'
+    Type: Port
+  value: '5222'
+- '@attributes':
+    Default: my-secret-pw
+    Description: 'Container Variable: MYSQL_SERVER_ROOT_PASSWORD'
+    Display: always
+    Mask: 'true'
+    Mode: ''
+    Name: Root Password for MySQL ( Default password is 'my-secret-pw' )
+    Required: 'false'
+    Target: MYSQL_SERVER_ROOT_PASSWORD
+    Type: Variable
+  value: my-secret-pw
+- '@attributes':
+    Default: onlyoffice
+    Description: 'Container Variable: MYSQL_SERVER_DB_NAME'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Default Database Name
+    Required: 'false'
+    Target: MYSQL_SERVER_DB_NAME
+    Type: Variable
+  value: onlyoffice
+- '@attributes':
+    Default: localhost
+    Description: 'Container Variable: MYSQL_SERVER_HOST  &lt;----&gt; ''localhost''
+      is used when we do not make use of the mail server docker or we do not want
+      external database at all &lt;----&gt; for external local database use '' onlyoffice-mysql-server
+      '' ( name of the docker that is hosting the mysql database, also without the
+      '' '' ) as long is on the ''onlyoffice'' network we created before starting
+      the docker/s or you can use unraid IP you see in the up right corner, but it
+      will be better to just use the name of the docker hosting mysql if your unraid
+      IP is not static. &lt;----&gt; For database hosted on another server use the
+      external IP ( internet IP ).'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: 'MySQL Host - Read Description for Changes ----&gt; '
+    Required: 'false'
+    Target: MYSQL_SERVER_HOST
+    Type: Variable
+  value: localhost
+- '@attributes':
+    Default: onlyoffice_user
+    Description: 'Container Variable: MYSQL_SERVER_USER'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Default OnlyOffice Database Username
+    Required: 'false'
+    Target: MYSQL_SERVER_USER
+    Type: Variable
+  value: onlyoffice_user
+- '@attributes':
+    Default: onlyoffice_pass
+    Description: 'Container Variable: MYSQL_SERVER_PASS'
+    Display: always
+    Mask: 'true'
+    Mode: ''
+    Name: Default OnlyOffice Database Password
+    Required: 'false'
+    Target: MYSQL_SERVER_PASS
+    Type: Variable
+  value: onlyoffice_pass
+- '@attributes':
+    Default: /mnt/user/appdata/onlyoffice/CommunityServer/data
+    Description: 'Container Path: /var/www/onlyoffice/Data'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Community Server Data
+    Required: 'false'
+    Target: /var/www/onlyoffice/Data
+    Type: Path
+  value: /mnt/user/appdata/onlyoffice/CommunityServer/data
+- '@attributes':
+    Default: /mnt/user/appdata/onlyoffice/CommunityServer/logs
+    Description: 'Container Path: /var/log/onlyoffice'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Community Server Logs
+    Required: 'false'
+    Target: /var/log/onlyoffice
+    Type: Path
+  value: /mnt/user/appdata/onlyoffice/CommunityServer/logs
+- '@attributes':
+    Default: ''
+    Description: "Container Variable: MAIL_SERVER_API_HOST \r\nFor external mysql\
+      \ server add the values bellow back to value and default value.\r\nValue: onlyoffice-mail-server\r\
+      \nDefault Value: onlyoffice-mail-server \r\nIf you installed them on another\
+      \ server add the IP instead.\r\n( For Mail Server Container with External Database\
+      \ )"
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: 'Mail Server API Host - Read Description for Changes ----&gt; '
+    Required: 'false'
+    Target: MAIL_SERVER_API_HOST
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '8081'
+    Description: 'Container Variable: MAIL_SERVER_API_PORT'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Mail Server API Port ( For Mail Server Container with External Database
+      )
+    Required: 'false'
+    Target: MAIL_SERVER_API_PORT
+    Type: Variable
+  value: '8081'
+- '@attributes':
+    Default: ''
+    Description: " Container Variable: MAIL_SERVER_DB_HOST \r\nFor external mysql\
+      \ server add the values bellow back to value and default value.\r\nValue: onlyoffice-mysql-server\r\
+      \nDefault Value: onlyoffice-mysql-server\r\nIf you installed them on another\
+      \ server add the IP instead.\r\n( For Mail Server Container with External Database\
+      \ )"
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: 'Mail Server Database Host - Read Description for Changes ----&gt; '
+    Required: 'false'
+    Target: MAIL_SERVER_DB_HOST
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: onlyoffice_mailserver
+    Description: 'Container Variable: MAIL_SERVER_DB_NAME'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Mail Server Database Name ( For Mail Server Container with External Database
+      )
+    Required: 'false'
+    Target: MAIL_SERVER_DB_NAME
+    Type: Variable
+  value: onlyoffice_mailserver
+- '@attributes':
+    Default: '3306'
+    Description: 'Container Variable: MAIL_SERVER_DB_PORT'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Mail Server External MySQL Port ( For Mail Server Container with External
+      Database )
+    Required: 'false'
+    Target: MAIL_SERVER_DB_PORT
+    Type: Variable
+  value: '3306'
+- '@attributes':
+    Default: mail_admin
+    Description: "Container Variable: MAIL_SERVER_DB_USER\r\n"
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Default Mail Server Database User ( For Mail Server Container with External
+      Database )
+    Required: 'false'
+    Target: MAIL_SERVER_DB_USER
+    Type: Variable
+  value: mail_admin
+- '@attributes':
+    Default: Isadmin123
+    Description: 'Container Variable: MAIL_SERVER_DB_PASS'
+    Display: always
+    Mask: 'true'
+    Mode: ''
+    Name: Default Mail Server Database Password ( For Mail Server Container with External
+      Database )
+    Required: 'false'
+    Target: MAIL_SERVER_DB_PASS
+    Type: Variable
+  value: Isadmin123
+- '@attributes':
+    Default: ''
+    Description: "Container Variable: DOCUMENT_SERVER_PORT_80_TCP_ADDR \r\nIf you\
+      \ install onlyoffice-document-server container ( and you should, also start\
+      \ onlyoffice-document-server first ) add the values bellow back to value and\
+      \ default value. \r\nValue: onlyoffice-document-server\r\nDefault Value: onlyoffice-document-server"
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: 'Onlyoffice Document Server - Read Description for Changes ----&gt; '
+    Required: 'false'
+    Target: DOCUMENT_SERVER_PORT_80_TCP_ADDR
+    Type: Variable
+  value: ''
+DonateLink: https://www.paypal.me/xternet
+DonateText: Donate me a coffee or a beer if you like my work :)
+FirstSeen: 1575400069
+Icon: https://raw.githubusercontent.com/AMJidovu/unraid-repository/master/img/onlyoffice-ce-ds.jpg
+LastUpdate: 1632540402
+LastUpdateScan: 1648418607
+Name: onlyoffice-community-server
+Network: onlyoffice
+Networking:
+  Mode: onlyoffice
+Overview: "Before you start this container you need to create the onlyoffice network.\
+  \ \r\n\t  Open Unraid terminal and paste this command in there: \r\n\t ' sudo docker\
+  \ network create --driver bridge onlyoffice ' -- without ' '\r\n\t  HTTPS Support\
+  \ can be enable creating a \"certs\" folder in the data directory and placing onlyoffice.crt\
+  \ and onlyoffice.key in it\r\nFor more information visit the support thread \r\n\
+  https://forums.unraid.net/topic/85643-support-amjidovu-onlyoffice-community-server/"
+PostArgs: ''
+Privileged: 'false'
+Project: https://www.onlyoffice.com/
+Registry: https://hub.docker.com/repository/docker/xternet/unraid-onlyoffice-community-server
+Repo: Jidovu Marius Adrian's Repository
+Repository: xternet/unraid-onlyoffice-community-server
+Support: https://forums.unraid.net/topic/85643-support-amjidovu-onlyoffice-community-server/
+TemplateURL: https://raw.githubusercontent.com/AMJidovu/unraid-repository/master/unraid-ca-repo/onlyoffice-community-server.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:80]
+topTrending: -4.165

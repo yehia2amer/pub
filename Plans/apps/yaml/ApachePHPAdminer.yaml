@@ -1,0 +1,71 @@
+BindTime: 'true'
+CategoryList:
+- Network-Web
+Data:
+  Volume:
+  - ContainerDir: /config
+    HostDir: /mnt/user/appdata/apache/config/
+    Mode: rw
+  - ContainerDir: /web
+    HostDir: /mnt/user/appdata/apache/www/
+    Mode: rw
+  - ContainerDir: /web/adminer
+    HostDir: /mnt/user/appdata/apache/www/adminer/
+    Mode: rw
+  - ContainerDir: /logs
+    HostDir: /mnt/user/appdata/apache/logs/
+    Mode: rw
+  - ContainerDir: /etc/localtime
+    HostDir: /etc/localtime
+    Mode: ro
+Deprecated: true
+Environment:
+  Variable:
+    Name: ''
+    Value: ''
+FirstSeen: 1
+Icon: https://i.imgur.com/A1AQVll.png
+LastUpdate: 1447501008
+LastUpdateScan: 1648044215
+ModeratorComment: Deprecated in favour of the application available from LinuxServer
+Name: Apache-PHP-Adminer
+Networking:
+  Mode: bridge
+  Publish:
+    Port:
+    - ContainerPort: '80'
+      HostPort: '81'
+      Protocol: tcp
+    - ContainerPort: '443'
+      HostPort: '444'
+      Protocol: tcp
+Overview: "Modification of CHMB and smbion by Hernando, which is a Apache based web\
+  \ server set up to act as a proxy with Adminer (PHPMyAdmin type databse manager)\
+  \ and with basic PHP web server capabilities, modifications are simply the addition\
+  \ of php5-gd, php5-sqlite, php5-intl, addition of a books volume to enable Calibre\
+  \ OPDS PHP Server support, which will allow you to access your Ebook library from\
+  \ Calibre over the web, and automatically email books to your Kindle.  http://blog.slucas.fr/en/oss/calibre-opds-php-server[br][br]\n\
+  \    [b][span style='color: #E80000;']Directions:[/span][/b][br]\n    [b]/config[/b]\
+  \ : this path is used to store the configuration and the SSL certs files of the\
+  \ reverse proxy.[br]\n    [b]/web[/b] : this path is the web directory[br]\n   \
+  \ [b]/web/adminer[/b] : adminer path inside the web directory[br]\n    [b]/logs[/b]\
+  \ : this path is the logs directory[br][br]\n\nI have added custom [b]Crontab[/b]\
+  \ functionality.To enable Cron jobs, edit the file [b]crons.conf[/b] in folder [/b]/config[/b].\
+  \ [br]\nAdd as many tasks as you need, save the file, and [b]restart[/b] the container.[br][br]\n\
+  \nThis Docker includes [b]Adminer[/b] for MyariaDB database management. Adminer\
+  \ is currently password protected.[br]\nUsername and password are [b]admin:admin[/b].\
+  \ To change this, please go to [b]http://www.htaccesstools.com/htpasswd-generator/[b][br]\n\
+  Type the desired username and password and click \"Create .htpassword File\". Copy\
+  \ the resulting code to your clipboard.[br]\nGo to the /web/adminer folder from\
+  \ above, and edit the .htaccess file in there. Eliminate the top line and paste\
+  \ your new code.[br]\nSave the file, and [b]restart[/b] the container.[br][br]\n\
+  \nTo access the Adminer web interface, go to: [b]your-server-ip:port/adminer [br]"
+Privileged: 'false'
+Registry: https://registry.hub.docker.com/r/hernandito/docker-apache-php-adminer/
+Repo: hernandito's Repository
+Repository: hernandito/docker-apache-php-adminer
+Support: http://lime-technology.com/forum/index.php?topic=39623.0
+TemplateURL: https://raw.githubusercontent.com/hernandito/docker-templates/master/hernando/apache-php-adminer.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:80]/
+topTrending: -0.328

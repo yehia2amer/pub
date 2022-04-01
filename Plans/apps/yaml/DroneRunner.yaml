@@ -1,0 +1,67 @@
+CategoryList:
+- Productivity
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: drone.example.com
+    Description: 'Container Variable: DRONE_RPC_HOST'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Host
+    Required: 'true'
+    Target: DRONE_RPC_HOST
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: https
+    Description: 'Container Variable: DRONE_RPC_PROTO'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Protocol
+    Required: 'true'
+    Target: DRONE_RPC_PROTO
+    Type: Variable
+  value: https
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: DRONE_RPC_SECRET'
+    Display: always
+    Mask: 'true'
+    Mode: ''
+    Name: Shared Secret
+    Required: 'true'
+    Target: DRONE_RPC_SECRET
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '3000'
+    Description: 'Container Port: 3000'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Port
+    Required: 'false'
+    Target: '3000'
+    Type: Port
+  value: '3000'
+ExtraParams: --volume=/var/run/docker.sock:/var/run/docker.sock --restart=always
+FirstSeen: 1639242205
+Icon: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/drone.png
+LastUpdate: 1646326919
+LastUpdateScan: 1647039799
+Name: Drone-Runner
+Network: bridge
+Official: true
+Overview: Drone is a Continuous Integration platform built on Docker
+Privileged: 'false'
+Project: https://github.com/drone-runners/drone-runner-docker
+Registry: https://hub.docker.com/r/drone/drone-runner-docker
+Repo: Selfhosters Unraid Discord Repository
+RepoShort: Selfhosters
+Repository: drone/drone-runner-docker
+Support: https://docs.drone.io/
+TemplateURL: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/drone-runner-docker.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+topTrending: -0.9700000000000002

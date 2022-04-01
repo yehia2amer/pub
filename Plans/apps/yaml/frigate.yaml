@@ -1,0 +1,145 @@
+CategoryList:
+- HomeAutomation
+- Security
+Config:
+- '@attributes':
+    Default: /mnt/user/appdata/frigate
+    Description: /mnt/user/appdata/frigate
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Config Path
+    Required: 'true'
+    Target: /config
+    Type: Path
+  value: /mnt/user/appdata/frigate
+- '@attributes':
+    Default: /mnt/user/Media/frigate
+    Description: 'Container Path: /media/frigate'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Media path
+    Required: 'true'
+    Target: /media/frigate
+    Type: Path
+  value: /mnt/user/Media/frigate
+- '@attributes':
+    Default: ''
+    Description: 'Container Port: 5000'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: HTTP port
+    Required: 'true'
+    Target: '5000'
+    Type: Port
+  value: '5000'
+- '@attributes':
+    Default: ''
+    Description: 'Container Port: 1935'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: RTMP port
+    Required: 'true'
+    Target: '1935'
+    Type: Port
+  value: '1935'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: FRIGATE_RTSP_PASSWORD'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Frigate RTSP Password
+    Required: 'true'
+    Target: FRIGATE_RTSP_PASSWORD
+    Type: Variable
+  value: enterpassword
+- '@attributes':
+    Default: ''
+    Description: Use /dev/bus/usb for USB devices and /dev/apex_0 for PCIe devices
+      (you must install the drivers first for PCIe devices)
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: TPU Mapping
+    Required: 'false'
+    Target: /dev/bus/usb
+    Type: Device
+  value: /dev/bus/usb
+- '@attributes':
+    Default: ''
+    Description: 'Container Device: /dev/dri/renderD128'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Intel/AMD GPU mapping
+    Required: 'false'
+    Target: ''
+    Type: Device
+  value: /dev/dri/renderD128
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /tmp/cache'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: rw
+    Name: Cache to RAM
+    Required: 'true'
+    Target: /tmp/cache
+    Type: Path
+  value: /tmp/frigate
+- '@attributes':
+    Default: ''
+    Description: /etc/localtime
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: rw
+    Name: Localtime
+    Required: 'true'
+    Target: /etc/localtime
+    Type: Path
+  value: /etc/localtime
+ExtraParams: --shm-size=5G
+FirstSeen: 1603287783
+Icon: https://raw.githubusercontent.com/yayitazale/unraid-templates/main/frigate.png
+LastUpdate: 1646972004
+LastUpdateScan: 1647453806
+Name: frigate
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "[b]NVR With Realtime Object Detection for IP Cameras[/b]\r\n[br][br]\r\n\
+  Uses OpenCV and Tensorflow to perform realtime object detection locally for IP cameras.\
+  \ Designed for integration with HomeAssistant or others via MQTT. Use of a Google\
+  \ Coral Accelerator is optional, but highly recommended. On my Intel i7 processor,\
+  \ I can process 2-3 FPS with the CPU. The Coral can process 100+ FPS with very low\
+  \ CPU load.\r\n[br][br]\r\n- Leverages multiprocessing heavily with an emphasis\
+  \ on realtime over processing every frame\r\n[br]\r\n- Uses a very low overhead\
+  \ motion detection to determine where to run object detection\r\n[br]\r\n- Object\
+  \ detection with Tensorflow runs in a separate process\r\n[br]\r\n- Object info\
+  \ is published over MQTT for integration into HomeAssistant as a binary sensor\r\
+  \n[br]\r\n- An endpoint is available to view an MJPEG stream for debugging, but\
+  \ should not be used continuously\r\n[br][br]\r\n[span style='color: red;'][b]Note:[/b][/span]\
+  \ A config.yml file [b]must exist[/b] in the config directory. See example [a href=\"\
+  https://docs.frigate.video/configuration/index\"]here[/a]. See the [a href=\"https://docs.frigate.video/\"\
+  ]documentation[/a] for more details.\r\n[br]\r\n[span style='color: red;'][b]Note:[/b][/span]\
+  \ If you want add a Nvidia GPU to use hardware accel. on ffmpeg image encode/decode\
+  \ use the correspondig app.\r\n[br]\r\n[span style='color: red;'][b]Note:[/b][/span]\
+  \ If you are using a PCI Coral instead of a USB one, upgrade your Unraid system\
+  \ to stable 6.9.0 and then install first the needed drivers going to the CA APP\
+  \ and searching for [b]Coral-Driver[/b] (thanks to ich777)"
+PostArgs: ''
+Privileged: 'true'
+Project: https://docs.frigate.video/
+Registry: https://hub.docker.com/r/blakeblackshear/frigate/
+Repo: yayitazale's Repository
+Repository: blakeblackshear/frigate:stable-amd64
+Support: https://forums.unraid.net/topic/98064-support-blakeblackshear-frigate/
+TemplateURL: https://raw.githubusercontent.com/yayitazale/unraid-templates/master/yayitazale/frigate-amd64.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:5000]
+topPerforming: 7.691
+topTrending: -6.47

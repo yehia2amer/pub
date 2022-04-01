@@ -1,0 +1,87 @@
+CategoryList:
+- Network-Other
+- Tools-Utilities
+ChangeLogPresent: true
+Config:
+- '@attributes':
+    Default: '3000'
+    Description: WireShark desktop gui, only use this if you are not using host mode
+      and sniffing Docker network traffic.
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: 'Port: 3000'
+    Required: 'false'
+    Target: '3000'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Users home directory in the container, stores program settings and
+      potentially dump files.
+    Display: advanced
+    Mask: 'false'
+    Mode: rw
+    Name: Appdata
+    Required: 'true'
+    Target: /config
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: '99'
+    Description: 'Container Variable: PUID'
+    Display: advanced
+    Mask: 'false'
+    Name: PUID
+    Required: 'true'
+    Target: PUID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '100'
+    Description: 'Container Variable: PGID'
+    Display: advanced
+    Mask: 'false'
+    Name: PGID
+    Required: 'true'
+    Target: PGID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '022'
+    Description: 'Container Variable: UMASK'
+    Display: advanced
+    Mask: 'false'
+    Name: UMASK
+    Required: 'false'
+    Target: UMASK
+    Type: Variable
+  value: ''
+DonateImg: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/donate.png
+DonateLink: https://www.linuxserver.io/donate
+DonateText: Donations
+ExtraParams: --cap-add=NET_ADMIN
+FirstSeen: 1601214935
+GitHub: https://github.com/linuxserver/docker-wireshark#application-setup
+Icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/wireshark-logo.png
+LastUpdate: 1647313327
+LastUpdateScan: 1647914928
+Name: wireshark
+Network: host
+Overview: "Wireshark(https://www.wireshark.org/) is the world\u2019s foremost and\
+  \ widely-used network protocol analyzer. It lets you see what\u2019s happening on\
+  \ your network at a microscopic level and is the de facto (and often de jure) standard\
+  \ across many commercial and non-profit enterprises, government agencies, and educational\
+  \ institutions. Wireshark development thrives thanks to the volunteer contributions\
+  \ of networking experts around the globe and is the continuation of a project started\
+  \ by Gerald Combs in 1998."
+Privileged: 'false'
+Project: https://www.wireshark.org/
+ReadMe: https://github.com/linuxserver/docker-wireshark#readme
+Registry: https://github.com/orgs/linuxserver/packages/container/package/wireshark
+Repo: linuxserver's Repository
+Repository: lscr.io/linuxserver/wireshark
+Support: https://github.com/linuxserver/docker-wireshark/issues/new/choose
+TemplateURL: https://raw.githubusercontent.com/linuxserver/templates/master/unraid/wireshark.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:3000]

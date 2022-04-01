@@ -1,0 +1,110 @@
+CategoryList:
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: /proc
+    Description: 'Container Path: /host/proc'
+    Display: always
+    Mask: 'false'
+    Mode: ro
+    Name: proc
+    Required: 'false'
+    Target: /host/proc
+    Type: Path
+  value: /proc
+- '@attributes':
+    Default: /host/sys
+    Description: 'Container Path: /host/sys'
+    Display: always
+    Mask: 'false'
+    Mode: ro
+    Name: sys
+    Required: 'false'
+    Target: /host/sys
+    Type: Path
+  value: /sys
+- '@attributes':
+    Default: /var/run/docker.sock
+    Description: 'Container Path: /var/run/docker.sock'
+    Display: always
+    Mask: 'false'
+    Mode: ro
+    Name: doker.sock
+    Required: 'false'
+    Target: /var/run/docker.sock
+    Type: Path
+  value: /var/run/docker.sock
+- '@attributes':
+    Default: '281'
+    Description: "If you want to have your container names resolved by netdata it\
+      \ needs to have access to docker group. To achive that just add environment\
+      \ variable PGID=999 to netdata container, where 999 is a docker group id from\
+      \ your host. This number can be found by running:\r\n\r\ngrep docker /etc/group\
+      \ | cut -d ':' -f 3"
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: PGID
+    Required: 'false'
+    Target: PGID
+    Type: Variable
+  value: '281'
+- '@attributes':
+    Default: '0'
+    Description: "Set to 1 to stop anonymous tracking\r\n( https://docs.netdata.cloud/docs/anonymous-statistics/#opt-out\
+      \ )"
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Do Not Track
+    Required: 'false'
+    Target: DO_NOT_TRACK
+    Type: Variable
+  value: '0'
+DonateLink: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=MDUDJ3BAXMJ4C&amp;item_name=thanks+for+the+coffee%21&amp;currency_code=AUD&amp;source=url
+DonateText: Thanks for the coffee
+ExtraParams: --cap-add SYS_PTRACE --security-opt apparmor=unconfined --log-opt max-size=200m
+  --log-opt max-file=1
+FirstSeen: 1465185600
+Icon: https://raw.githubusercontent.com/Data-Monkey/docker-templates/master/Data-Monkey/img/netdata.png
+LastUpdate: 1648429846
+LastUpdateScan: 1648505004
+Name: netdata
+Network: host
+Networking:
+  Mode: host
+Official: true
+Overview: "[b]Real-time performance monitoring, done right! [/b][br]&amp;#xD;\r\n\
+  - real-time, per second updates, snappy refreshes![br]&amp;#xD;\r\n- 300+ charts\
+  \ out of the box, 2000+ metrics monitored![br]&amp;#xD;\r\n- zero configuration,\
+  \ zero maintenance, zero dependencies![br]&amp;#xD;\r\nLive demo: [a href]http://netdata.firehol.org[/a][br]"
+PostArgs: ''
+Privileged: 'false'
+Project: https://docs.netdata.cloud/
+RecommendedDate: 1614574800
+RecommendedRaw: 3/1/2021
+RecommendedReason:
+  en_US: A great system wide dashboard with no setup required
+RecommendedWho: Andrew
+Registry: https://hub.docker.com/r/netdata/netdata
+Repo: Roland's Repository
+Repository: netdata/netdata
+Support: https://forums.unraid.net/topic/47828-support-data-monkey-netdata/
+TemplateURL: https://raw.githubusercontent.com/Data-Monkey/docker-templates/master/Data-Monkey/netdata.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:19999]
+changes: "\n[center] [b]Data-Monkey:[/b] Netdata [/center]\n    \n[center][font size=4]Change\
+  \ Log[/font][/center]\n[font size=3]2020.05.02[/font]    \n- removed config dir.\
+  \ See support forum for example of configuring netdata\n    \n[center][font size=4]Change\
+  \ Log[/font][/center]\n[font size=3]2020.03.07[/font]    \n- change to official\
+  \ docker repo \n- added variable to opt out of anonymous tracking\n- added group\
+  \ id to get access to doker stats \n- fixed some links\n- updated logo again\n\n\
+  [font size=3]2019.05.05[/font]    \n- change volume mapping from /mnt/cache/netdata\
+  \ to /mnt/user/netdata\n- change to new logo\n- updated some links to the new urls\
+  \    \n\n[font size=3]2018.05.07[/font]    \n- change volume mapping from /etc/netdata\
+  \ to /etc/netdata/override\n\n[font size=3]2018.03.18[/font]    \n- added /var/run/docker.sock\
+  \ to transalate docker IDs to names\n    \n[font size=3]2016.06.06[/font]\n- added\
+  \ config mapping\n- added \"log rotation\" for 6.2\n\n[font size=3]2016.06.03[/font]\n\
+  - Initial release of the netdata template\n    \n    \n  "
+topPerforming: 0.49
+topTrending: -1.204

@@ -1,0 +1,127 @@
+CategoryList:
+- Productivity
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: '8383'
+    Description: 'Container Port: 8080'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI
+    Required: 'true'
+    Target: '80'
+    Type: Port
+  value: '8383'
+- '@attributes':
+    Default: /mnt/user/appdata/matomo
+    Description: 'Container Path: /var/www/html'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Appdata
+    Required: 'true'
+    Target: /var/www/html
+    Type: Path
+  value: /mnt/user/appdata/matomo
+- '@attributes':
+    Default: 192.168.1.100
+    Description: IP or hostname of the database server
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: MATOMO_DATABASE_HOST
+    Required: 'true'
+    Target: MATOMO_DATABASE_HOST
+    Type: Variable
+  value: 192.168.1.100
+- '@attributes':
+    Default: '3306'
+    Description: Port of the database server
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: MATOMO_DATABASE_PORT
+    Required: 'true'
+    Target: MATOMO_DATABASE_PORT
+    Type: Variable
+  value: '3306'
+- '@attributes':
+    Default: matomo
+    Description: Username of the database user
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: MATOMO_DATABASE_USERNAME
+    Required: 'true'
+    Target: MATOMO_DATABASE_USERNAME
+    Type: Variable
+  value: matomo
+- '@attributes':
+    Default: password
+    Description: Password of the database user
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: MATOMO_DATABASE_PASSWORD
+    Required: 'true'
+    Target: MATOMO_DATABASE_PASSWORD
+    Type: Variable
+  value: password
+- '@attributes':
+    Default: matomo
+    Description: Database name
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: MATOMO_DATABASE_DBNAME
+    Required: 'true'
+    Target: MATOMO_DATABASE_DBNAME
+    Type: Variable
+  value: matomo
+- '@attributes':
+    Default: 192.168.1.100
+    Description: 'Container Variable: MATOMO_SERVER_NAME'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: MATOMO_SERVER_NAME
+    Required: 'true'
+    Target: MATOMO_SERVER_NAME
+    Type: Variable
+  value: 192.168.1.100
+- '@attributes':
+    Default: MYSQL
+    Description: 'Container Variable: MATOMO_DATABASE_ADAPTER'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: MATOMO_DATABASE_ADAPTER
+    Required: 'true'
+    Target: MATOMO_DATABASE_ADAPTER
+    Type: Variable
+  value: MYSQL
+DonateLink: https://paypal.me/ramteksolutions
+DonateText: Help support my work by buying me a beer
+FirstSeen: 1615194175
+Icon: https://i.imgur.com/mRIhLHE.png
+LastUpdate: 1646344940
+LastUpdateScan: 1646377403
+Name: Matomo
+Network: bridge
+Networking:
+  Mode: bridge
+Official: true
+Overview: Matomo, formerly Piwik, is a free and open-source web analytics application
+  developed by a team of international developers, that runs on a PHP/MySQL webserver.
+  It tracks online visits to one or more websites and displays reports on these visits
+  for analysis.
+Privileged: 'false'
+Project: https://github.com/matomo-org/matomo
+Registry: https://hub.docker.com/_/matomo
+Repo: Sycotix' Repository
+Repository: matomo
+Support: https://discord.gg/VWAG7rZ
+TemplateURL: https://raw.githubusercontent.com/ibracorp/unraid-templates/master/matomo/matomo.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:80]

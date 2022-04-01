@@ -1,0 +1,126 @@
+CategoryList:
+- Network-Other
+- Tools-Utilities
+ChangeLogPresent: true
+Config:
+- '@attributes':
+    Default: '80'
+    Description: The port for the IPFS web UI
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI
+    Required: 'true'
+    Target: '80'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: '4001'
+    Description: Peering port, this is the only port you should expose to the internet
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: 'Port: 4001'
+    Required: 'true'
+    Target: '4001'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: '5001'
+    Description: API port, the clientside webUI needs to be able to talk to this from
+      whatever machine your web browser is on
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: 'Port: 5001'
+    Required: 'true'
+    Target: '5001'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: '8080'
+    Description: Gateway Port, actually serves IPFS content
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: 'Port: 8080'
+    Required: 'true'
+    Target: '8080'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: '443'
+    Description: HTTPS port for web UI
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: 'Port: 443'
+    Required: 'false'
+    Target: '443'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: IPFS storage and config files/logs
+    Display: advanced
+    Mask: 'false'
+    Mode: rw
+    Name: Appdata
+    Required: 'true'
+    Target: /config
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: '99'
+    Description: 'Container Variable: PUID'
+    Display: advanced
+    Mask: 'false'
+    Name: PUID
+    Required: 'true'
+    Target: PUID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '100'
+    Description: 'Container Variable: PGID'
+    Display: advanced
+    Mask: 'false'
+    Name: PGID
+    Required: 'true'
+    Target: PGID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '022'
+    Description: 'Container Variable: UMASK'
+    Display: advanced
+    Mask: 'false'
+    Name: UMASK
+    Required: 'false'
+    Target: UMASK
+    Type: Variable
+  value: ''
+Deprecated: true
+DonateImg: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/donate.png
+DonateLink: https://www.linuxserver.io/donate
+DonateText: Donations
+FirstSeen: 1600978119
+GitHub: https://github.com/linuxserver/docker-ipfs#application-setup
+Icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/ipfs-logo.png
+LastUpdate: 1643920579
+LastUpdateScan: 1647914715
+Name: ipfs
+Network: bridge
+Overview: Ipfs(https://ipfs.io/) - A peer-to-peer hypermedia protocol designed to
+  make the web faster, safer, and more open.
+Privileged: 'false'
+Project: https://ipfs.io/
+ReadMe: https://github.com/linuxserver/docker-ipfs#readme
+Registry: https://github.com/orgs/linuxserver/packages/container/package/ipfs
+Repo: linuxserver's Repository
+Repository: lscr.io/linuxserver/ipfs
+Support: https://github.com/linuxserver/docker-ipfs/issues/new/choose
+TemplateURL: https://raw.githubusercontent.com/linuxserver/templates/master/unraid/deprecated/ipfs.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:80]
+topTrending: -0.30599999999999994

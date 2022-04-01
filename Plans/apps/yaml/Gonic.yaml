@@ -1,0 +1,85 @@
+CategoryList:
+- Productivity
+- Tools-Utilities
+- MediaApp-Music
+- MediaServer-Music
+Config:
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI
+    Required: 'false'
+    Target: '80'
+    Type: Port
+  value: '8059'
+- '@attributes':
+    Default: ''
+    Description: This is the location of the internal data from Gonic.
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Storage (data)
+    Required: 'false'
+    Target: /data
+    Type: Path
+  value: /mnt/user/appdata/gonic/data
+- '@attributes':
+    Default: ''
+    Description: 'This the location the temporal files, like: transcodes, covers,
+      etc.'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Storage (cache)
+    Required: 'false'
+    Target: /cache
+    Type: Path
+  value: /mnt/user/appdata/gonic/cache
+- '@attributes':
+    Default: ''
+    Description: This is your media library for your music.
+    Display: always
+    Mask: 'false'
+    Mode: ro
+    Name: Storage (music)
+    Required: 'true'
+    Target: /music
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: This is your media library for your podcasts.
+    Display: always
+    Mask: 'false'
+    Mode: ro
+    Name: Storage (podcasts)
+    Required: 'true'
+    Target: /podcasts
+    Type: Path
+  value: ''
+FirstSeen: 1644426209
+Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/gonic.png
+LastUpdate: 1646958041
+LastUpdateScan: 1647025402
+Name: Gonic
+Network: bridge
+Overview: "DESCRIPTION\r\nFLOSS alternative to subsonic, supporting its many clients.\r\
+  \n\r\nNOTES\r\n\u2022 The default credentials: admin/admin (user/pass).\r\n\u2022\
+  \ You have other variables that you can use to fully customize the service. Check\
+  \ 'https://github.com/sentriz/gonic#configuration-options' to know more.\r\n\u2022\
+  \ To configure 'jukebox' checl the GitHub repo: 'https://github.com/sentriz/gonic#with-docker'.\r\
+  \n\r\nVERSION\r\n1.0 (2022-02-09)"
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/sentriz/gonic
+Registry: https://hub.docker.com/r/sentriz/gonic
+Repo: SmartPhoneLover's Repository
+Repository: sentriz/gonic
+Requires: ''
+Support: https://forums.unraid.net/topic/119824-support-smartphonelover-gonic/
+TemplateURL: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/master/templates/Gonic.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:80]

@@ -1,0 +1,51 @@
+CategoryList:
+- Downloaders
+- Tools-Utilities
+- MediaApp-Books
+- MediaServer-Books
+Config:
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI
+    Required: 'false'
+    Target: '80'
+    Type: Port
+  value: '8035'
+- '@attributes':
+    Default: ''
+    Description: Location for downloaded books.
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Storage (books)
+    Required: 'false'
+    Target: /books
+    Type: Path
+  value: /mnt/user/appdata/openbooks/
+FirstSeen: 1641078217
+Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/openbooks.png
+LastUpdate: 1644977881
+LastUpdateScan: 1646269413
+Name: OpenBooks
+Network: bridge
+Overview: "DESCRIPTION\r\nOpenbooks allows you to download ebooks from irc.irchighway.net\
+  \ quickly and easily.\r\n\r\nNOTES\r\n\u2022 If you want to set a custom name when\
+  \ connecting to irchighway (recommended), add the following into the 'Post Arguments'\
+  \ field: --name user_name.\r\n\u2022 The minimum limit is 1 search per 10 seconds\
+  \ but this can be configured for a higher value via the '--rate-limit' flag within\
+  \ 'Post Arguments' field.\r\n\r\nVERSION\r\n1.0 (2022-01-01)"
+PostArgs: --persist
+Privileged: 'false'
+Project: https://github.com/evan-buss/openbooks
+Registry: https://hub.docker.com/r/evanbuss/openbooks
+Repo: SmartPhoneLover's Repository
+Repository: evanbuss/openbooks
+Requires: ''
+Support: https://forums.unraid.net/topic/117928-support-smartphonelover-openbooks/
+TemplateURL: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/master/templates/OpenBooks.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:80]

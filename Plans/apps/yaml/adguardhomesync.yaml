@@ -1,0 +1,90 @@
+Branch:
+  Tag: latest
+  TagDescription: Stable releases from GitHub
+ChangeLogPresent: true
+Config:
+- '@attributes':
+    Default: '8080'
+    Description: Port for AdGuardHome Sync's web API.
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI
+    Required: 'true'
+    Target: '8080'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Contains all relevant configuration files.
+    Display: advanced
+    Mask: 'false'
+    Mode: rw
+    Name: Appdata
+    Required: 'true'
+    Target: /config
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: /config/adguardhome-sync.yaml
+    Description: Set a custom config file.
+    Display: always
+    Mask: 'false'
+    Name: CONFIGFILE
+    Required: 'false'
+    Target: CONFIGFILE
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '99'
+    Description: 'Container Variable: PUID'
+    Display: advanced
+    Mask: 'false'
+    Name: PUID
+    Required: 'true'
+    Target: PUID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '100'
+    Description: 'Container Variable: PGID'
+    Display: advanced
+    Mask: 'false'
+    Name: PGID
+    Required: 'true'
+    Target: PGID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '022'
+    Description: 'Container Variable: UMASK'
+    Display: advanced
+    Mask: 'false'
+    Name: UMASK
+    Required: 'false'
+    Target: UMASK
+    Type: Variable
+  value: ''
+DonateImg: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/donate.png
+DonateLink: https://www.linuxserver.io/donate
+DonateText: Donations
+FirstSeen: 1618711438
+GitHub: https://github.com/linuxserver/docker-adguardhome-sync#application-setup
+Icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/linuxserver-ls-logo.png
+LastUpdate: 1645702876
+LastUpdateScan: 1647914601
+Name: adguardhome-sync
+Network: bridge
+Overview: Adguardhome-sync(https://github.com/bakito/adguardhome-sync/) is a tool
+  to synchronize AdGuardHome config to replica instances.
+Privileged: 'false'
+Project: https://github.com/bakito/adguardhome-sync/
+ReadMe: https://github.com/linuxserver/docker-adguardhome-sync#readme
+Registry: https://github.com/orgs/linuxserver/packages/container/package/adguardhome-sync
+Repo: linuxserver's Repository
+Repository: lscr.io/linuxserver/adguardhome-sync
+Support: https://github.com/linuxserver/docker-adguardhome-sync/issues/new/choose
+TemplateURL: https://raw.githubusercontent.com/linuxserver/templates/master/unraid/adguardhome-sync.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8080]
+topTrending: -14.007

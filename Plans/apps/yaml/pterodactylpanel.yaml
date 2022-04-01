@@ -1,0 +1,151 @@
+CategoryList:
+- GameServers
+- Network-Management
+Config:
+- '@attributes':
+    Default: '8000'
+    Description: Port
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Port
+    Required: 'true'
+    Target: '80'
+    Type: Port
+  value: '8001'
+- '@attributes':
+    Default: /mnt/user/pterodactyl-node/data
+    Description: 'Container Path: /mnt/user/pterodactyl-node/data'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Shared data
+    Required: 'true'
+    Target: /mnt/user/pterodactyl-node/data
+    Type: Path
+  value: /mnt/user/pterodactyl-node/data
+- '@attributes':
+    Default: /mnt/user/pterodactyl-node/
+    Description: 'Container Path: /etc/pterodactyl'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Game Data
+    Required: 'false'
+    Target: /etc/pterodactyl
+    Type: Path
+  value: /mnt/user/pterodactyl-node/
+- '@attributes':
+    Default: /mnt/user/appdata/pterodactyl/
+    Description: Appdata
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Appdata
+    Required: 'true'
+    Target: /data
+    Type: Path
+  value: /mnt/user/appdata/pterodactyl/
+- '@attributes':
+    Default: UTC
+    Description: Timezone
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Timezone
+    Required: 'true'
+    Target: APP_TIMEZONE
+    Type: Variable
+  value: Europe/London
+- '@attributes':
+    Default: mariadb
+    Description: Database Hostname or IP.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Database Hostname or IP
+    Required: 'true'
+    Target: DB_HOST
+    Type: Variable
+  value: mariadb
+- '@attributes':
+    Default: '3306'
+    Description: Database Port
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Database Port
+    Required: 'true'
+    Target: DB_PORT
+    Type: Variable
+  value: '3306'
+- '@attributes':
+    Default: pterodactyl
+    Description: Database Name
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Database Name
+    Required: 'true'
+    Target: DB_DATABASE
+    Type: Variable
+  value: pterodactyl
+- '@attributes':
+    Default: pterodactyl
+    Description: Database Username
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Database Username
+    Required: 'true'
+    Target: DB_USERNAME
+    Type: Variable
+  value: pterodactyl
+- '@attributes':
+    Default: password
+    Description: Database Password
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Database Password
+    Required: 'true'
+    Target: DB_PASSWORD
+    Type: Variable
+  value: pterodactyl
+- '@attributes':
+    Default: false|true
+    Description: APP_DEBUG
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: DEBUG
+    Required: 'false'
+    Target: APP_DEBUG
+    Type: Variable
+  value: 'false'
+DonateLink: https://paypal.me/ramteksolutions
+DonateText: Help support my work by buying me a beer
+FirstSeen: 1589227646
+Icon: https://raw.githubusercontent.com/ibracorp/unraid-templates/master/icons/pterodactyl-panel.png
+LastUpdate: 1644092049
+LastUpdateScan: 1646413405
+Name: pterodactyl-panel
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "Pterodactyl is an open-source game server management panel built with PHP\
+  \ 7, React, and Go. Designed with security in mind, Pterodactyl runs all game servers\
+  \ in isolated Docker containers while exposing a beautiful and intuitive UI to end\
+  \ users.\r\n\r\nFind a guide on how to get this up and running at https://docs.ibracorp.io"
+PostArgs: ''
+Privileged: 'false'
+Project: https://pterodactyl.io/
+Registry: https://hub.docker.com/r/ccarney16/pterodactyl-panel/
+Repo: Sycotix' Repository
+Repository: ccarney16/pterodactyl-panel:latest
+Support: https://discord.gg/VWAG7rZ
+TemplateURL: https://raw.githubusercontent.com/ibracorp/unraid-templates/master/pterodactyl-panel/pterodactyl-panel.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:80]/
+topPerforming: 2.956
+topTrending: 1.837

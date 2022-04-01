@@ -1,0 +1,84 @@
+CategoryList:
+- MediaApp-Other
+Config:
+- '@attributes':
+    Default: '8082'
+    Description: 'Container Port: 8082'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI
+    Required: 'false'
+    Target: '8082'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: 5000-5150
+    Description: 'Container Port: 5000-5150'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Host port 1
+    Required: 'false'
+    Target: 5000-5150
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: 5000-5150
+    Description: 'Container Port: 5000-5150'
+    Display: always
+    Mask: 'false'
+    Mode: udp
+    Name: Host port 2
+    Required: 'false'
+    Target: 5000-5150
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: /mnt/user/appdata/traccar/logs
+    Description: 'Container Path: /opt/traccar/logs'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Logs
+    Required: 'false'
+    Target: /opt/traccar/logs
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: /mnt/user/appdata/traccar/traccar.xml
+    Description: 'Container Path: /opt/traccar/conf/traccar.xml'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: traccar.xml host path
+    Required: 'false'
+    Target: /opt/traccar/conf/traccar.xml
+    Type: Path
+  value: ''
+ExtraParams: --restart always --hostname traccar
+FirstSeen: 1570896419
+Icon: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/traccar.png
+LastUpdate: 1642492022
+LastUpdateScan: 1646269412
+Name: traccar
+Network: bridge
+Official: true
+Overview: "Traccar is an open source GPS tracking system. This repository contains\
+  \ Java-based back-end service. It supports more than 170 GPS protocols and more\
+  \ than 1500 models of GPS tracking devices. Traccar can be used with any major SQL\
+  \ database system. It also provides easy to use REST API.\r\n[br][br]\r\nLink to\
+  \ traccar.xml: https://raw.githubusercontent.com/traccar/traccar/master/setup/traccar.xml\r\
+  \n[br][br]\r\n[b]Add it to your host path before starting the container. [b]"
+Privileged: 'false'
+Project: https://github.com/traccar/traccar
+Registry: https://hub.docker.com/r/traccar/traccar/
+Repo: Selfhosters Unraid Discord Repository
+RepoShort: Selfhosters
+Repository: traccar/traccar
+Support: https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/
+TemplateURL: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/traccar.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8082]
+topPerforming: 2.232
+topTrending: -8.303

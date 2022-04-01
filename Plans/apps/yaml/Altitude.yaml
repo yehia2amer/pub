@@ -1,0 +1,97 @@
+CategoryList:
+- GameServers
+Config:
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /altitude'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: ServerFiles
+    Required: 'true'
+    Target: /altitude
+    Type: Path
+  value: /mnt/cache/appdata/altitude
+- '@attributes':
+    Default: ''
+    Description: Enter your start up commands for the server.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: GAME_PARAMS
+    Required: 'false'
+    Target: GAME_PARAMS
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: UDP Game Port (if you need another port, please delete this entry
+      and create a new UDP Port with the required port number, don't forget to change
+      it also in your launcher_config.xml)
+    Display: always
+    Mask: 'false'
+    Mode: udp
+    Name: UDP - Server Port
+    Required: 'true'
+    Target: '27276'
+    Type: Port
+  value: '27276'
+- '@attributes':
+    Default: ''
+    Description: Don't change unless you know what you are doing.
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Download URL
+    Required: 'true'
+    Target: DL_URL
+    Type: Variable
+  value: http://installer.altitudegame.com/0.0.1/altitude.sh
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: UID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: UID
+    Required: 'true'
+    Target: UID
+    Type: Variable
+  value: '99'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: GID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: GID
+    Required: 'true'
+    Target: GID
+    Type: Variable
+  value: '100'
+DonateLink: https://www.paypal.me/chips777
+DonateText: 'If you like my work please '
+ExtraParams: --restart=unless-stopped
+FirstSeen: 1571782214
+Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/altitude.png
+LastUpdate: 1643018625
+LastUpdateScan: 1647214613
+Name: Altitude
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "This Docker will download and install Altitude and run it.\r\n\r\nDefault\
+  \ Servername: Docker Altitude Server | Default Password: Docker | Default Admin\
+  \ Password: adminDocker\r\n\r\nATTENTION: First Startup can take very long since\
+  \ it downloads the gameserver files!\r\n\r\nUpdate Notice: Simply restart the container\
+  \ if a newer version of the game is available."
+PostArgs: ''
+Privileged: 'false'
+Project: https://www.steampowered.com/
+Registry: https://hub.docker.com/r/ich777/altitude/
+Repo: ich777's Repository
+Repository: ich777/altitude
+Support: https://forums.unraid.net/topic/79530-support-ich777-gameserver-dockers/
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''
+caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/Altitude.xml

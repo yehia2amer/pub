@@ -1,0 +1,103 @@
+CategoryList:
+- MediaApp-Video
+Config:
+- '@attributes':
+    Default: '6530'
+    Description: 'Container Port: 8080'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Web UI
+    Required: 'true'
+    Target: '8080'
+    Type: Port
+  value: '6530'
+- '@attributes':
+    Default: ChangeMePls-&lt;3
+    Description: 'Container Variable: NEKO_PASSWORD'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: NEKO_PASSWORD
+    Required: 'true'
+    Target: NEKO_PASSWORD
+    Type: Variable
+  value: ChangeMePls-<3
+- '@attributes':
+    Default: ChangeMeAlsoPls_:)
+    Description: 'Container Variable: NEKO_PASSWORD_ADMIN'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: NEKO_PASSWORD_ADMIN
+    Required: 'true'
+    Target: NEKO_PASSWORD_ADMIN
+    Type: Variable
+  value: ChangeMeAlsoPls_:)
+- '@attributes':
+    Default: ''
+    Description: Enter the IP of your Unraid-Server
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: NEKO_NAT1TO1
+    Required: 'true'
+    Target: NEKO_NAT1TO1
+    Type: Variable
+  value: 192.168.1.x
+- '@attributes':
+    Default: 52000-52100
+    Description: 'Container Variable: NEKO_EPR'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: NEKO_EPR
+    Required: 'false'
+    Target: NEKO_EPR
+    Type: Variable
+  value: 52000-52100
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: NEKO_SCREEN'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: NEKO_SCREEN
+    Required: 'true'
+    Target: NEKO_SCREEN
+    Type: Variable
+  value: 1920x1080@30
+- '@attributes':
+    Default: 52000-52100
+    Description: Needed for Webrtc Communication
+    Display: advanced
+    Mask: 'false'
+    Mode: udp
+    Name: Port 52000-52100
+    Required: 'false'
+    Target: 52000-52100
+    Type: Port
+  value: 52000-52100
+ExtraParams: --shm-size="2gb"
+FirstSeen: 1622304177
+Icon: https://raw.githubusercontent.com/Kippenhof/docker-templates/main/pictures/neko-logo.svg
+LastUpdate: 1648155448
+LastUpdateScan: 1648281817
+Name: neko
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "Neko is an Open-Source self-hosted Alternative to rabb.it(deprecated).\r\
+  \nIt Provide an Web-UI which is Secured by an Password.\r\n\r\nYou can Easily Host\
+  \ it behind an Reverse-Proxy\r\n\r\nFor Install-Docs &amp; Sample Confs visit:\r\
+  \nhttps://github.com/Kippenhof/docker-templates/wiki/Neko"
+PostArgs: ''
+Privileged: 'false'
+Registry: https://hub.docker.com/r/m1k1o/neko/
+Repo: Kippenhof's Repository
+Repository: m1k1o/neko:latest
+TemplateURL: https://raw.githubusercontent.com/Kippenhof/docker-templates/master/neko.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8080]
+topPerforming: 10.431
+topTrending: -9.477000000000002

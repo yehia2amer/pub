@@ -1,0 +1,351 @@
+CategoryList:
+- Network
+Config:
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /stun-turn'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Container Path
+    Required: 'true'
+    Target: /stun-turn
+    Type: Path
+  value: /mnt/cache/appdata/stun-turn-server
+- '@attributes':
+    Default: ''
+    Description: TCP Port
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: TCP Port
+    Required: 'true'
+    Target: '5349'
+    Type: Port
+  value: '5349'
+- '@attributes':
+    Default: ''
+    Description: UDP Port
+    Display: always
+    Mask: 'false'
+    Mode: udp
+    Name: UDP Ports
+    Required: 'true'
+    Target: '5349'
+    Type: Port
+  value: '5349'
+- '@attributes':
+    Default: ''
+    Description: If you change this variable you have to create two new port forwardings
+      with the corresponding ports one for TCP and one for UDP.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Port Variable
+    Required: 'true'
+    Target: PORT
+    Type: Variable
+  value: '5349'
+- '@attributes':
+    Default: ''
+    Description: Create your own secret and enter it here or leave empty and the server
+      creats a secret that is stored into 'secret.txt' in the main directory of the
+      container (generate it for example in a linux terminal with the command 'openssl
+      rand -hex 32' without quotes).
+    Display: always
+    Mask: 'true'
+    Mode: ''
+    Name: Static Secret
+    Required: 'false'
+    Target: SECRET
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Your hostname (eg: ''example.org'' without quotes).'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Realm
+    Required: 'true'
+    Target: REALM
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Name of the certification file (leave empty if the server should
+      create one or replace it with your own).
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Certificate File Name
+    Required: 'true'
+    Target: CERT_FILE
+    Type: Variable
+  value: cert.pem
+- '@attributes':
+    Default: ''
+    Description: Name of the private key file (leave empty if the server should create
+      one or replace it with your own).
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Private Key File Name
+    Required: 'true'
+    Target: PRIVKEY_FILE
+    Type: Variable
+  value: privkey.pem
+- '@attributes':
+    Default: ''
+    Description: "Name of the Diffie\u2013Hellman key file (leave empty if the server\
+      \ should create one or replace it with your own - also plase look under the\
+      \ 'Show more settings' tab if you want to generate a bigger or smaller key default\
+      \ is: 2048)."
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Diffie-Hellman Key File Name
+    Required: 'true'
+    Target: DH_FILE
+    Type: Variable
+  value: dhparam.pem
+- '@attributes':
+    Default: ''
+    Description: Display your secrets in the log (set to 'true' or leave empty to
+      disable it).
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Display Secrets in log
+    Required: 'false'
+    Target: DISPLAY_SECRETS
+    Type: Variable
+  value: 'true'
+- '@attributes':
+    Default: ''
+    Description: 'Country code for your certificate if the server should create one
+      (two letters eg: ''US'' without quotes - also plase look under the ''Show more
+      settings'' tab there are more settings for generating your certificate).'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Certificate Generation - Country
+    Required: 'true'
+    Target: CA_COUNTRY
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Here you can enter your Extra Startup Parameters if needed (you
+      can get a full list of commands from here: https://github.com/coturn/coturn/wiki/turnserver)'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Extra Startup Parameters
+    Required: 'false'
+    Target: EXTRA_PARAMS
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Total allocations quota: global limit on concurrent allocations
+      (only change if you know what you are doing).'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Total Quota
+    Required: 'true'
+    Target: TOTAL_QUOTA
+    Type: Variable
+  value: '100'
+- '@attributes':
+    Default: ''
+    Description: Max bytes-per-second bandwidth a TURN session is allowed to handle
+      (input and output network streams are treated separately). Anything above that
+      limit will be dropped or temporary suppressed - within the available buffer
+      limits (only change if you know what you are doing).
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Maximum bps
+    Required: 'true'
+    Target: MAX_BPS
+    Type: Variable
+  value: '0'
+- '@attributes':
+    Default: ''
+    Description: Allowed OpenSSL cipher list for TLS/DTLS connections (only change
+      if you know what you are doing).
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Cipher List
+    Required: 'true'
+    Target: CIPHER_LIST
+    Type: Variable
+  value: ECDHE-RSA-AES256-GCM-SHA512:DHE-RSA-AES256-GCM-SHA512:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-SHA384
+- '@attributes':
+    Default: ''
+    Description: Enter your preferred key length (the higher the value the longer
+      it takes to generate the certificate).
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Certificate Generation - Key Length
+    Required: 'true'
+    Target: CERT_LENGTH
+    Type: Variable
+  value: '2048'
+- '@attributes':
+    Default: ''
+    Description: Specify how long that the certificate should be valid in days.
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Certificate Generation - Valid Days
+    Required: 'true'
+    Target: CERT_VALID_DAYS
+    Type: Variable
+  value: '3650'
+- '@attributes':
+    Default: ''
+    Description: Specify your state or province.
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Certificate Generation - State or Province
+    Required: 'true'
+    Target: CA_STATE_PROV
+    Type: Variable
+  value: None
+- '@attributes':
+    Default: ''
+    Description: Specify your locality.
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Certificate Generation - Locality
+    Required: 'true'
+    Target: CA_LOCALITY
+    Type: Variable
+  value: None
+- '@attributes':
+    Default: ''
+    Description: Specify your organiszation.
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Certificate Generation - Organization
+    Required: 'true'
+    Target: CA_ORGANIZATION
+    Type: Variable
+  value: None
+- '@attributes':
+    Default: ''
+    Description: Enter your preferred key length (the higher the value the longer
+      it takes to generate the key).
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: "Diffie\u2013Hellman Key Length"
+    Required: 'true'
+    Target: DH_LENGTH
+    Type: Variable
+  value: '2048'
+- '@attributes':
+    Default: ''
+    Description: Enter your CLI password or leave empty if you want that the server
+      creates a random one (please note that you have to manually enable the console
+      with the '--cli-port PORT' - PORT stands for your preferred port - in the Extra
+      Startup Parameters and create the corresponding port).
+    Display: advanced
+    Mask: 'true'
+    Mode: ''
+    Name: Command Line Password
+    Required: 'false'
+    Target: CLI_PASSWORD
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Specify the listening port (only change if you know what you are
+      doing).
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Listening IP
+    Required: 'true'
+    Target: LISTENING_IP
+    Type: Variable
+  value: 0.0.0.0
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: 000'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: UMASK
+    Required: 'true'
+    Target: UMASK
+    Type: Variable
+  value: '000'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: UID'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: UID
+    Required: 'true'
+    Target: UID
+    Type: Variable
+  value: '99'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: GID'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: GID
+    Required: 'true'
+    Target: GID
+    Type: Variable
+  value: '100'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: DATA_PERM'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: DATA_PERM
+    Required: 'true'
+    Target: DATA_PERM
+    Type: Variable
+  value: '770'
+DonateLink: https://www.paypal.me/chips777
+DonateText: 'If you like my work please '
+ExtraParams: --restart=unless-stopped
+FirstSeen: 1584792544
+Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/stun-turn.png
+LastUpdate: 1643018412
+LastUpdateScan: 1647214615
+Name: Stun-Turn-Server
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "This is a Basic STUN &amp; TURN server that was mainly created for Nextcloud\
+  \ Talk.\r\n\r\nIt is fully automated and will create all the necessary files and\
+  \ passwords so that the server can sucessfully start and run.\r\n\r\nPlease read\
+  \ all the discriptions from the Variables carefully and also look at the 'Show more\
+  \ settings' tab.\r\n\r\nATTENTION: Please ignore the socket errors after the server\
+  \ startup if you don't have IPv6 enabled on your server."
+PostArgs: ''
+Privileged: 'false'
+Registry: https://hub.docker.com/r/ich777/stun-turn-server
+Repo: ich777's Repository
+Repository: ich777/stun-turn-server
+Support: https://forums.unraid.net/topic/83786-support-ich777-application-dockers/
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''
+caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/Stun-Turn-Server.xml
+topTrending: -3.5770000000000004

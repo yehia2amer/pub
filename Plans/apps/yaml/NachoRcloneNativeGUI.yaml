@@ -1,0 +1,83 @@
+CategoryList:
+- Backup
+- Cloud
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: '5572'
+    Description: 'Container Port: 5572'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI
+    Required: 'true'
+    Target: '5572'
+    Type: Port
+  value: '5572'
+- '@attributes':
+    Default: America/New_York
+    Description: 'Container Variable: PHP_TZ'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: PHP_TZ
+    Required: 'true'
+    Target: America/New_York
+    Type: Variable
+  value: America/New_York
+- '@attributes':
+    Default: '100'
+    Description: 'Container Variable: PGID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: PGID
+    Required: 'true'
+    Target: PGID
+    Type: Variable
+  value: '100'
+- '@attributes':
+    Default: '99'
+    Description: 'Container Variable: PUID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: PUID
+    Required: 'true'
+    Target: PUID
+    Type: Variable
+  value: '99'
+- '@attributes':
+    Default: /mnt/user/appdata/rclone
+    Description: 'Container Path: /config/rclone'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: rw
+    Name: AppData Config Path
+    Required: 'true'
+    Target: /config/rclone
+    Type: Path
+  value: /mnt/user/appdata/rclone
+FirstSeen: 1647641004
+Icon: https://raw.githubusercontent.com/rclone/rclone/master/graphics/logo/logo_symbol/logo_symbol_color_256px.png
+LastUpdate: 1647616440
+LastUpdateScan: 1647641004
+Name: Nacho-Rclone-Native-GUI
+Network: bridge
+Networking:
+  Mode: bridge
+Official: true
+Overview: "This unRAID application is a Docker container running rclone's built-in\
+  \ GUI (https://rclone.org/gui/).\r\n\r\nThe default username and password is rclone/rclone.\
+  \ To change it, modify the `--rc-user` and `--rc-pass` values for `Post Arguments`\
+  \ in unRAID's container configuration."
+PostArgs: rcd --rc-web-gui --rc-web-gui-update --rc-web-gui-force-update --rc-web-gui-no-open-browser
+  --rc-addr :5572 --rc-user rclone --rc-pass rclone
+Privileged: 'false'
+Registry: https://hub.docker.com/r/rclone/rclone/
+Repo: IMTheNachoMan's Repository
+Repository: rclone/rclone
+Support: https://github.com/imthenachoman/unraid-templates/issues
+TemplateURL: https://raw.githubusercontent.com/imthenachoman/unraid-templates/master/Nacho-Rclone-Native-GUI.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:5572]/

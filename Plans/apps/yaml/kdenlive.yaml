@@ -1,0 +1,105 @@
+ChangeLogPresent: true
+Config:
+- '@attributes':
+    Default: '3000'
+    Description: Kdenlive desktop gui
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI
+    Required: 'true'
+    Target: '3000'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Users home directory in the container, stores local files and settings
+    Display: advanced
+    Mask: 'false'
+    Mode: rw
+    Name: Appdata
+    Required: 'true'
+    Target: /config
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: /
+    Description: Specify a subfolder to use with reverse proxies, IE `/subfolder/`
+    Display: always
+    Mask: 'false'
+    Name: SUBFOLDER
+    Required: 'false'
+    Target: SUBFOLDER
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: en-us-qwerty
+    Description: See the keyboard layouts section for more information and options.
+    Display: always
+    Mask: 'true'
+    Name: KEYBOARD
+    Required: 'false'
+    Target: KEYBOARD
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '99'
+    Description: 'Container Variable: PUID'
+    Display: advanced
+    Mask: 'false'
+    Name: PUID
+    Required: 'true'
+    Target: PUID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '100'
+    Description: 'Container Variable: PGID'
+    Display: advanced
+    Mask: 'false'
+    Name: PGID
+    Required: 'true'
+    Target: PGID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '022'
+    Description: 'Container Variable: UMASK'
+    Display: advanced
+    Mask: 'false'
+    Name: UMASK
+    Required: 'false'
+    Target: UMASK
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: /dev/dri
+    Description: Add this for hardware acceleration (Linux hosts only)
+    Display: always
+    Mask: 'false'
+    Name: /dev/dri
+    Required: 'false'
+    Type: Device
+  value: ''
+DonateImg: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/donate.png
+DonateLink: https://www.linuxserver.io/donate
+DonateText: Donations
+FirstSeen: 1646759016
+GitHub: https://github.com/linuxserver/docker-kdenlive#application-setup
+Icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/kdenlive-logo.png
+LastUpdate: 1646757551
+LastUpdateScan: 1646759016
+Name: kdenlive
+Network: bridge
+Overview: Kdenlive(https://kdenlive.org/) is a powerful free and open source cross-platform
+  video editing program made by the KDE community. Feature rich and production ready.
+Privileged: 'false'
+Project: https://kdenlive.org/
+ReadMe: https://github.com/linuxserver/docker-kdenlive#readme
+Registry: https://github.com/orgs/linuxserver/packages/container/package/kdenlive
+Repo: linuxserver's Repository
+Repository: lscr.io/linuxserver/kdenlive
+Support: https://github.com/linuxserver/docker-kdenlive/issues/new/choose
+TemplateURL: https://raw.githubusercontent.com/linuxserver/templates/master/unraid/kdenlive.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:3000]

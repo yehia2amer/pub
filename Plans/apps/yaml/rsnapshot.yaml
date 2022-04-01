@@ -1,0 +1,92 @@
+CategoryList:
+- Backup
+- Tools-Utilities
+ChangeLogPresent: true
+Config:
+- '@attributes':
+    Default: ''
+    Description: Contains all relevant configuration files.
+    Display: advanced
+    Mask: 'false'
+    Mode: rw
+    Name: Appdata
+    Required: 'true'
+    Target: /config
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Storage location for all snapshots.
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: 'Path: /.snapshots'
+    Required: 'false'
+    Target: /.snapshots
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Storage location for data to be backed up.
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: 'Path: /data'
+    Required: 'false'
+    Target: /data
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: '99'
+    Description: 'Container Variable: PUID'
+    Display: advanced
+    Mask: 'false'
+    Name: PUID
+    Required: 'true'
+    Target: PUID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '100'
+    Description: 'Container Variable: PGID'
+    Display: advanced
+    Mask: 'false'
+    Name: PGID
+    Required: 'true'
+    Target: PGID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '022'
+    Description: 'Container Variable: UMASK'
+    Display: advanced
+    Mask: 'false'
+    Name: UMASK
+    Required: 'false'
+    Target: UMASK
+    Type: Variable
+  value: ''
+DonateImg: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/donate.png
+DonateLink: https://www.linuxserver.io/donate
+DonateText: Donations
+FirstSeen: 1601214934
+GitHub: https://github.com/linuxserver/docker-rsnapshot#application-setup
+Icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/linuxserver-ls-logo.png
+LastUpdate: 1643538639
+LastUpdateScan: 1647914866
+Name: rsnapshot
+Network: bridge
+Overview: Rsnapshot(http://www.rsnapshot.org/) is a filesystem snapshot utility based
+  on rsync. rsnapshot makes it easy to make periodic snapshots of local machines,
+  and remote machines over ssh. The code makes extensive use of hard links whenever
+  possible, to greatly reduce the disk space required."
+Privileged: 'false'
+Project: http://www.rsnapshot.org/
+ReadMe: https://github.com/linuxserver/docker-rsnapshot#readme
+Registry: https://github.com/orgs/linuxserver/packages/container/package/rsnapshot
+Repo: linuxserver's Repository
+Repository: lscr.io/linuxserver/rsnapshot
+Support: https://github.com/linuxserver/docker-rsnapshot/issues/new/choose
+TemplateURL: https://raw.githubusercontent.com/linuxserver/templates/master/unraid/rsnapshot.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''

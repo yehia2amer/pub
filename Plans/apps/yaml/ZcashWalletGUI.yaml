@@ -1,0 +1,90 @@
+CategoryList:
+- Other
+Config:
+- '@attributes':
+    Default: ''
+    Description: 'Container Port: 5901'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: VNC port
+    Required: 'false'
+    Target: '5901'
+    Type: Port
+  value: '5901'
+- '@attributes':
+    Default: ''
+    Description: 'Container Port: 6901'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: noVNC port
+    Required: 'false'
+    Target: '6901'
+    Type: Port
+  value: '6901'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable:  VNC_PW'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: VNC password
+    Required: 'false'
+    Target: VNC_PW
+    Type: Variable
+  value: vncpassword
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: VNC_RESOLUTION'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: VNC resolution
+    Required: 'false'
+    Target: VNC_RESOLUTION
+    Type: Variable
+  value: 1280x1024
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: VNC_VIEW_ONLY'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: VNC only
+    Required: 'false'
+    Target: VNC_VIEW_ONLY
+    Type: Variable
+  value: 'false'
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /headless/.zcash/'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Zcash Config Path
+    Required: 'false'
+    Target: /headless/.zcash/
+    Type: Path
+  value: /mnt/user/appdata/Zcashwallet/
+DonateLink: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=PJNVJNW2CPE3G&amp;source=url
+DonateText: Hey buy me some coffee
+FirstSeen: 1553559504
+Icon: https://z.cash/wp-content/uploads/2018/09/zcash-icon-fullcolor.png
+LastUpdate: 1614969916
+LastUpdateScan: 1647111800
+Name: ZcashWalletGUI
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: 'You need to run ZcashSwingWallet on the desktop to open the wallet&#xD;
+
+  VNC default password: vncpassword'
+PostArgs: ''
+Privileged: 'false'
+Registry: https://hub.docker.com/r/ulisses1478/zcashwallet
+Repo: ulisses1478's Repository
+Repository: ulisses1478/zcashwallet
+TemplateURL: https://raw.githubusercontent.com/Ulisses1478/templates-unraid/master/Zcash-wallet.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:6901]

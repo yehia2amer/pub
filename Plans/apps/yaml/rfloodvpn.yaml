@@ -1,0 +1,150 @@
+Branch:
+  Registry: https://hub.docker.com/r/hotio/rflood
+  Repository: cr.hotio.dev/hotio/rflood:release
+  Tag: release
+  TagDescription: Releases
+CategoryList:
+- Downloaders
+Config:
+- '@attributes':
+    Default: '3000'
+    Description: 'Container Port: 3000'
+    Display: always-hide
+    Mask: 'false'
+    Mode: tcp
+    Name: Host Port for 3000
+    Required: 'true'
+    Target: '3000'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /config'
+    Display: always-hide
+    Mask: 'false'
+    Mode: rw
+    Name: Host Path for /config
+    Required: 'true'
+    Target: /config
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: true|false
+    Description: 'Container Variable: VPN_ENABLED'
+    Display: always-hide
+    Mask: 'false'
+    Mode: ''
+    Name: VPN_ENABLED
+    Required: 'false'
+    Target: VPN_ENABLED
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: VPN_LAN_NETWORK'
+    Display: always-hide
+    Mask: 'false'
+    Mode: ''
+    Name: VPN_LAN_NETWORK
+    Required: 'false'
+    Target: VPN_LAN_NETWORK
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: wg0
+    Description: 'Container Variable: VPN_CONF'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: VPN_CONF
+    Required: 'false'
+    Target: VPN_CONF
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: VPN_ADDITIONAL_PORTS'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: VPN_ADDITIONAL_PORTS
+    Required: 'false'
+    Target: VPN_ADDITIONAL_PORTS
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '5'
+    Description: 'Container Variable: VPN_IP_CHECK_DELAY'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: VPN_IP_CHECK_DELAY
+    Required: 'false'
+    Target: VPN_IP_CHECK_DELAY
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: false|true
+    Description: 'Container Variable: FLOOD_AUTH'
+    Display: always-hide
+    Mask: 'false'
+    Mode: ''
+    Name: FLOOD_AUTH
+    Required: 'false'
+    Target: FLOOD_AUTH
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '99'
+    Description: 'Container Variable: PUID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: PUID
+    Required: 'false'
+    Target: PUID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '100'
+    Description: 'Container Variable: PGID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: PGID
+    Required: 'false'
+    Target: PGID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '002'
+    Description: 'Container Variable: UMASK'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: UMASK
+    Required: 'false'
+    Target: UMASK
+    Type: Variable
+  value: ''
+ExtraParams: --cap-add=NET_ADMIN --sysctl="net.ipv4.conf.all.src_valid_mark=1" --sysctl="net.ipv6.conf.all.disable_ipv6=1"
+FirstSeen: 1613250648
+Icon: https://hotio.dev/webhook-avatars/flood.png
+LastUpdate: 1642159783
+LastUpdateScan: 1647032601
+Name: rflood-vpn
+Network: bridge
+Overview: Docker image with rTorrent and the Flood UI, with pre-configured VPN template
+  settings.
+PostArgs: ''
+Privileged: 'false'
+Project: https://hotio.dev/containers/rflood
+Registry: https://hub.docker.com/r/hotio/rflood
+Repo: hotio's Repository
+Repository: cr.hotio.dev/hotio/rflood
+Support: https://hotio.dev/discord
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:3000]
+caTemplateURL: https://raw.githubusercontent.com/hotio/unraid-templates/master/hotio/rfloodvpn.xml
+topPerforming: 22.516
+topTrending: 4.902999999999999

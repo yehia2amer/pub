@@ -1,0 +1,104 @@
+CategoryList:
+- Backup
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: /mnt/user/appdata/gen-cache/data
+    Description: Location to store the cached files
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: data
+    Required: 'true'
+    Target: /data/cache
+    Type: Path
+  value: /mnt/user/appdata/gen-cache/data
+- '@attributes':
+    Default: /mnt/user/appdata/gen-cache/logs
+    Description: Location to store the cache logs
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Logs
+    Required: 'true'
+    Target: /data/logs
+    Type: Path
+  value: /mnt/user/appdata/gen-cache/logs
+- '@attributes':
+    Default: '80'
+    Description: 'Container Port: Must be 80!'
+    Display: advanced
+    Mask: 'false'
+    Mode: tcp
+    Name: Default Port
+    Required: 'true'
+    Target: '80'
+    Type: Port
+  value: '80'
+- '@attributes':
+    Default: 500m
+    Description: Memory size for the cache
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: CACHE_MEM_SIZE
+    Required: 'true'
+    Target: CACHE_MEM_SIZE
+    Type: Variable
+  value: 500m
+- '@attributes':
+    Default: 500g
+    Description: Max size for the cache
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: CACHE_DISK_SIZE
+    Required: 'true'
+    Target: CACHE_DISK_SIZE
+    Type: Variable
+  value: 500g
+- '@attributes':
+    Default: 3650d
+    Description: Max age for files in the cache
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: CACHE_MAX_AGE
+    Required: 'true'
+    Target: CACHE_MAX_AGE
+    Type: Variable
+  value: 3650d
+Deprecated: true
+DonateImg: https://az743702.vo.msecnd.net/cdn/kofi4.png?v=0
+DonateLink: https://ko-fi.com/I2I0CW9G
+DonateText: Buy Me a Coffee
+FirstSeen: 1
+GitHub: https://steamcache.github.io/
+Icon: https://raw.githubusercontent.com/cheesemarathon/docker-templates/master/images/steamcache.png
+LastUpdate: 1582991810
+LastUpdateScan: 1646487428
+ModeratorComment: Deprecated in favour of Lan Cache from Josh.5
+Name: GenericCache
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "This docker container provides a caching proxy server for game download\
+  \ content. For any network with more than one PC gamer connected, this will drastically\
+  \ reduce internet bandwidth consumption.\n\tThis container is designed to support\
+  \ any game that uses HTTP and also supports HTTP range requests (used by Origin).\
+  \ This should make it suitable for:\n\tSteam (Valve)\n\tOrigin (EA Games)\n\tRiot\
+  \ Games (League of Legends)\n\tBattle.net (Hearthstone, Starcraft 2, Overwatch)\n\
+  \tFrontier Launchpad (Elite Dangerous, Planet Coaster)\n\tUplay (Ubisoft)\n\tWindows\
+  \ Updates\n\tPlease see https://squishedmooo.com/?p=1 for install instructions!\
+  \ You will need them!\n\tThis container should be used in conjunction with SteamcacheDNS\
+  \ and SNIProxy."
+Privileged: 'false'
+Registry: https://hub.docker.com/r/steamcache/generic/
+Repo: cheesemarathon's Repository
+Repository: steamcache/generic:latest
+Support: http://lime-technology.com/forum/index.php?topic=55931.0
+TemplateURL: https://raw.githubusercontent.com/cheesemarathon/docker-templates/master/cheesemarathon/generic-cache.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''
+topPerforming: 0.008
+topTrending: 0.001

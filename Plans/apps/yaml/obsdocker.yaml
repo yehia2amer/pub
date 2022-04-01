@@ -1,0 +1,56 @@
+CategoryList:
+- Productivity
+Config:
+- '@attributes':
+    Default: /mnt/user/appdata/obs/
+    Description: 'Container Path: /config'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Config
+    Required: 'true'
+    Target: /config
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Container Port: 5901'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: VNC Port
+    Required: 'true'
+    Target: '5901'
+    Type: Port
+  value: '5901'
+- '@attributes':
+    Default: '123456'
+    Description: 'Container Variable: VNC_PASSWD'
+    Display: always
+    Mask: 'true'
+    Mode: ''
+    Name: Password
+    Required: 'true'
+    Target: VNC_PASSWD
+    Type: Variable
+  value: ''
+FirstSeen: 1642981925
+Icon: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/OBS_Studio_Logo.svg/96px-OBS_Studio_Logo.svg.png
+LastUpdate: 1642978332
+LastUpdateScan: 1648173798
+Name: obs-docker
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: This is a container for running OBS applications completely inside a Docker
+  container. You do not need to forward your running XAuth or allow Docker to draw
+  onto your display. Nor do you need to use SSH to forward X11. This container exposes
+  a VNC webclient to the host and therefore everything is contained within the container.
+PostArgs: ''
+Privileged: 'false'
+Registry: https://hub.docker.com/repository/docker/cieg/obs-docker
+Repo: cieg's Repository
+Repository: cieg/obs-docker
+TemplateURL: https://raw.githubusercontent.com/ciegg/unraid-templates/master/obs-docker/obs-docker.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:5901]

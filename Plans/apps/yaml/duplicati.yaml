@@ -1,0 +1,124 @@
+Branch:
+- Tag: latest
+  TagDescription: Beta releases of Duplicati
+- GitHub: https://github.com/linuxserver/docker-duplicati/tree/development#application-setup
+  ReadMe: https://github.com/linuxserver/docker-duplicati/tree/development#readme
+  Tag: development
+  TagDescription: Canary releases of Duplicati
+CategoryList:
+- Backup
+- Cloud
+- Network-Other
+- Productivity
+- Tools-Utilities
+ChangeLogPresent: true
+Config:
+- '@attributes':
+    Default: '8200'
+    Description: http gui
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI
+    Required: 'true'
+    Target: '8200'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Contains all relevant configuration files.
+    Display: advanced
+    Mask: 'false'
+    Mode: rw
+    Name: Appdata
+    Required: 'true'
+    Target: /config
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Path to store local backups.
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: 'Path: /backups'
+    Required: 'true'
+    Target: /backups
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Path to source for files to backup.
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: 'Path: /source'
+    Required: 'true'
+    Target: /source
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Optionally specify any CLI variables(https://duplicati.readthedocs.io/en/latest/07-other-command-line-utilities/)
+      you want to launch the app with
+    Display: always
+    Mask: 'false'
+    Name: CLI_ARGS
+    Required: 'false'
+    Target: CLI_ARGS
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '99'
+    Description: 'Container Variable: PUID'
+    Display: advanced
+    Mask: 'false'
+    Name: PUID
+    Required: 'true'
+    Target: PUID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '100'
+    Description: 'Container Variable: PGID'
+    Display: advanced
+    Mask: 'false'
+    Name: PGID
+    Required: 'true'
+    Target: PGID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '022'
+    Description: 'Container Variable: UMASK'
+    Display: advanced
+    Mask: 'false'
+    Name: UMASK
+    Required: 'false'
+    Target: UMASK
+    Type: Variable
+  value: ''
+DonateImg: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/donate.png
+DonateLink: https://www.linuxserver.io/donate
+DonateText: Donations
+FirstSeen: 1492228800
+GitHub: https://github.com/linuxserver/docker-duplicati#application-setup
+Icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/duplicati-logo.png
+LastUpdate: 1647598236
+LastUpdateScan: 1647914676
+Name: duplicati
+Network: bridge
+Overview: Duplicati(https://www.duplicati.com/) works with standard protocols like
+  FTP, SSH, WebDAV as well as popular services like Microsoft OneDrive, Amazon Cloud
+  Drive and S3, Google Drive, box.com, Mega, hubiC and many others.
+Privileged: 'false'
+Project: https://www.duplicati.com/
+ReadMe: https://github.com/linuxserver/docker-duplicati#readme
+Registry: https://github.com/orgs/linuxserver/packages/container/package/duplicati
+Repo: linuxserver's Repository
+Repository: lscr.io/linuxserver/duplicati
+Support: https://github.com/linuxserver/docker-duplicati/issues/new/choose
+TemplateURL: https://raw.githubusercontent.com/linuxserver/templates/master/unraid/duplicati.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8200]
+topTrending: -1.198

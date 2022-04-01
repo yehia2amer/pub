@@ -1,0 +1,355 @@
+CategoryList:
+- Productivity
+- MediaApp-Photos
+Config:
+- '@attributes':
+    Default: ''
+    Description: Storage PATH for generated files like cache and index (Keep cache,
+      settings and database)
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Data Dir
+    Required: 'true'
+    Target: /photoprism/storage
+    Type: Path
+  value: /mnt/cache/appdata/photoprism
+- '@attributes':
+    Default: ''
+    Description: Path to your images and storage folder
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Storage Path
+    Required: 'true'
+    Target: /photoprism/originals
+    Type: Path
+  value: /mnt/user/Pictures
+- '@attributes':
+    Default: ''
+    Description: 'Only if you want to use the Import function of PhotoPrism (ATTENTION:
+      Don''t put the import folder in a subdirectory of the storage folder for your
+      images!)'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Photo Import Folder
+    Required: 'false'
+    Target: /photoprism/import
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Allow uploads that MAY be offensive (Valid options: ''true'' or
+      ''false'')'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Offensive Uploads
+    Required: 'false'
+    Target: PHOTOPRISM_UPLOAD_NSFW
+    Type: Variable
+  value: 'true'
+- '@attributes':
+    Default: ''
+    Description: 'Flag photos as private that MAY be offensive (Valid options: ''true''
+      or ''false'')'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Flag Offensive Photos
+    Required: 'false'
+    Target: PHOTOPRISM_DETECT_NSFW
+    Type: Variable
+  value: 'false'
+- '@attributes':
+    Default: ''
+    Description: Website Title
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Website Tile
+    Required: 'false'
+    Target: PHOTOPRISM_SITE_TITLE
+    Type: Variable
+  value: PhotoPrism
+- '@attributes':
+    Default: ''
+    Description: Website Caption
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Website Caption
+    Required: 'false'
+    Target: PHOTOPRISM_SITE_CAPTION
+    Type: Variable
+  value: Browse Your Life
+- '@attributes':
+    Default: ''
+    Description: Website Description
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Website Description
+    Required: 'false'
+    Target: PHOTOPRISM_SITE_DESCRIPTION
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Website Author
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Website Author
+    Required: 'false'
+    Target: PHOTOPRISM_SITE_AUTHOR
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Initial Admin Password - you can change the password on the settings
+      page (If you don''t want to use a password delete this entry and create another
+      variable with the Key: ''PHOTOPRISM_PUBLIC'' and the Value: ''true'')'
+    Display: always
+    Mask: 'true'
+    Mode: ''
+    Name: Initial Admin Password
+    Required: 'true'
+    Target: PHOTOPRISM_ADMIN_PASSWORD
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: WebGUI Port
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebGUI Port
+    Required: 'false'
+    Target: '2342'
+    Type: Port
+  value: '2342'
+- '@attributes':
+    Default: ''
+    Description: Choose if you want to use the builtin 'sqlite' database or a 'mysql'
+      based database (If you got problems where the database lockes up you should
+      switch to mysql but you have to also setup a dedicated database for that for
+      example 'MariaDB' from Linuxserver.io)
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Photoprims Database Type
+    Required: 'true'
+    Target: PHOTOPRISM_DATABASE_DRIVER
+    Type: Variable
+  value: sqlite
+- '@attributes':
+    Default: ''
+    Description: 'Needs to be filled out if you are using a ''mysql'' based databyse
+      type (it has to be filled in exact this format: ''DBUSER:DBPASSWORD@tcp(DBIP:DBPORT)/photoprism?parseTime=true''
+      all values in CAPS have to be replaced with your credentials and without quotes)'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: MySQL Database Connection
+    Required: 'false'
+    Target: PHOTOPRISM_DATABASE_DSN
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Set the safety delay for the Webdav Autoindexing in seconds (set
+      to '-1' to disable set to '0' to enable the default value of 15 minutes or your
+      preferred value in seconds)
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Webdav Autoindex - Safety Delay
+    Required: 'false'
+    Target: PHOTOPRISM_AUTO_INDEX
+    Type: Variable
+  value: '180'
+- '@attributes':
+    Default: ''
+    Description: Set the safety delay for the Webdav Autoimport in seconds (set to
+      '-1' to disable set to '0' to enable the default value of 15 minutes or your
+      preferred value in seconds)
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Webdav Autoimport- Safety Delay
+    Required: 'false'
+    Target: PHOTOPRISM_AUTO_IMPORT
+    Type: Variable
+  value: '180'
+- '@attributes':
+    Default: ''
+    Description: 'Users can not view or change settings (Valid options: ''true'' or
+      ''false'')'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Settings Hidden
+    Required: 'false'
+    Target: PHOTOPRISM_SETTINGS_HIDDEN
+    Type: Variable
+  value: 'false'
+- '@attributes':
+    Default: ''
+    Description: 'Enable on-demand thumbnail rendering (high memory and cpu usage
+      - Valid options: ''true'' or ''false'')'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: On-Demand Rendering
+    Required: 'false'
+    Target: PHOTOPRISM_THUMB_UNCACHED
+    Type: Variable
+  value: 'false'
+- '@attributes':
+    Default: ''
+    Description: Pre-rendered thumbnail size limit (default 2048, min 720, max 7680)
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Tumbnail Size Limit
+    Required: 'false'
+    Target: PHOTOPRISM_THUMB_SIZE
+    Type: Variable
+  value: '2048'
+- '@attributes':
+    Default: ''
+    Description: On-demand rendering size limit (default 7680, min 720, max 7680)
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: On-demand Size Limit
+    Required: 'false'
+    Target: PHOTOPRISM_THUMB_SIZE_UNCACHED
+    Type: Variable
+  value: '7680'
+- '@attributes':
+    Default: ''
+    Description: Size limit for converted image files in pixels (720-30000)
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Converted Image Size Limit
+    Required: 'false'
+    Target: PHOTOPRISM_JPEG_SIZE
+    Type: Variable
+  value: '7680'
+- '@attributes':
+    Default: ''
+    Description: Set to 95 for high-quality thumbnails (requires more storage)
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Thumbnail Quality
+    Required: 'false'
+    Target: PHOTOPRISM_JPEG_QUALITY
+    Type: Variable
+  value: '90'
+- '@attributes':
+    Default: ''
+    Description: 'Use darktable presets (disables concurrent raw to jpeg conversion
+      - Valid options: ''true'' or ''false'')'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Darktable Presets
+    Required: 'false'
+    Target: PHOTOPRISM_DARKTABLE_PRESETS
+    Type: Variable
+  value: 'false'
+- '@attributes':
+    Default: ''
+    Description: 'Resample filter, best to worst: blackman, lanczos, cubic, linear'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Resample Filter
+    Required: 'false'
+    Target: PHOTOPRISM_THUMB_FILTER
+    Type: Variable
+  value: lanczos
+- '@attributes':
+    Default: ''
+    Description: 'Enable experimental features (Valid options: ''true'' or ''false'')'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Enable Experimental Features
+    Required: 'false'
+    Target: PHOTOPRISM_EXPERIMENTAL
+    Type: Variable
+  value: 'false'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: PHOTOPRISM_UID'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: UID
+    Required: 'true'
+    Target: PHOTOPRISM_UID
+    Type: Variable
+  value: '99'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: PHOTOPRISM_GID'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: GID
+    Required: 'true'
+    Target: PHOTOPRISM_GID
+    Type: Variable
+  value: '100'
+- '@attributes':
+    Default: ''
+    Description: Change only if you know what you are doing! (delete this value if
+      you want to store your database and generated thumnails in the main directory)
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Storage Path
+    Required: 'false'
+    Target: PHOTOPRISM_STORAGE_PATH
+    Type: Variable
+  value: /photoprism/storage
+DonateLink: https://www.paypal.me/photoprism
+DonateText: 'If you like my work please '
+ExtraParams: --restart=unless-stopped
+FirstSeen: 1595297280
+Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/photoprism.png
+LastUpdate: 1647015342
+LastUpdateScan: 1647288205
+Name: PhotoPrism
+Network: bridge
+Networking:
+  Mode: bridge
+Official: true
+Overview: "PhotoPrism\u2122 is a server-based application for browsing, organizing\
+  \ and sharing your personal photo collection. It makes use of the latest technologies\
+  \ to automatically tag and find pictures without getting in your way. Say goodbye\
+  \ to solutions that force you to upload your visual memories to the cloud.\r\n\r\
+  \nPlease also support the developer of this superior project through a PayPal donation\
+  \ or on Patreon.\r\n\r\nDatabase lockups: If you got problems where the database\
+  \ lockes up you should switch to a mysql based database but you have to also setup\
+  \ a dedicated database for that, for example 'MariaDB' from Linuxserver.io - if\
+  \ you need help please visit the support thread of this container and/or the MariaDB\
+  \ thread."
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/photoprism/photoprism
+Registry: https://hub.docker.com/r/photoprism/photoprism
+Repo: ich777's Repository
+Repository: photoprism/photoprism
+Support: https://forums.unraid.net/topic/83786-support-ich777-application-dockers/
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:2342]/
+caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/PhotoPrism.xml
+topPerforming: 5.623
+topTrending: -5.697

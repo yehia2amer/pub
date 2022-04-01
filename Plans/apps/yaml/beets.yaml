@@ -1,0 +1,52 @@
+BaseImage: library/alpine:3.8
+BindTime: 'true'
+CategoryList:
+- MediaApp-Music
+ChangeLogPresent: true
+Data:
+  Volume:
+  - ContainerDir: /config
+    HostDir: ''
+    Mode: rw
+  - ContainerDir: /import
+    HostDir: ''
+    Mode: rw
+  - ContainerDir: /music
+    HostDir: ''
+    Mode: rw
+Environment:
+  Variable:
+  - Name: PUID
+    Value: '99'
+  - Name: PGID
+    Value: '100'
+FirstSeen: 1534219200
+Icon: https://raw.githubusercontent.com/thetarkus/docker-templates/master/images/beets-logo.png
+LastUpdate: 1561223673
+LastUpdateScan: 1647662621
+Name: beets
+Networking:
+  Mode: bridge
+  Publish:
+    Port:
+    - ContainerPort: '8337'
+      HostPort: '8337'
+      Protocol: tcp
+    - ContainerPort: '6600'
+      HostPort: '6600'
+      Protocol: tcp
+Overview: "Beets is the media library management system for obsessive-compulsive music\n\
+  \    geeks. Its purpose is to get your music collection right once and for\n   \
+  \ all. It catalogs your collection, automatically improving its metadata as\n  \
+  \  it goes using the MusicBrainz database. Then it provides a bouquet of tools\n\
+  \    for manipulating and accessing your music."
+Privileged: 'false'
+Project: http://beets.io/
+Registry: https://hub.docker.com/r/thetarkus/beets/
+Repo: thetarkus' Repository
+Repository: thetarkus/beets
+Support: https://github.com/thetarkus/docker-beets
+TemplateURL: https://raw.githubusercontent.com/thetarkus/docker-templates/master/beets.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8337]/
+topTrending: -2.2750000000000004

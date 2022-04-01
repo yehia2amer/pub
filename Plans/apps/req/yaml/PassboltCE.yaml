@@ -1,0 +1,140 @@
+CategoryList:
+- Productivity
+- Security
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI
+    Required: 'false'
+    Target: '443'
+    Type: Port
+  value: '8080'
+- '@attributes':
+    Default: ''
+    Description: This is the database host ip.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: DATASOURCES_DEFAULT_HOST
+    Required: 'true'
+    Target: DATASOURCES_DEFAULT_HOST
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: This is the database port.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: DATASOURCES_DEFAULT_PORT
+    Required: 'true'
+    Target: DATASOURCES_DEFAULT_PORT
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: This is the database name.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: DATASOURCES_DEFAULT_DATABASE
+    Required: 'true'
+    Target: DATASOURCES_DEFAULT_DATABASE
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: This is the database password.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: DATASOURCES_DEFAULT_PASSWORD
+    Required: 'true'
+    Target: DATASOURCES_DEFAULT_PASSWORD
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: This is the database username.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: DATASOURCES_DEFAULT_USERNAME
+    Required: 'true'
+    Target: DATASOURCES_DEFAULT_USERNAME
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Storage (data) [1]
+    Required: 'false'
+    Target: /etc/passbolt/gpg
+    Type: Path
+  value: /mnt/user/appdata/passbolt-ce/gpg
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Storage (data) [2]
+    Required: 'false'
+    Target: /etc/passbolt/jwt
+    Type: Path
+  value: /mnt/user/appdata/passbolt-ce/jwt
+- '@attributes':
+    Default: ''
+    Description: This is the base URL used when creating new user on first launch
+      (terminal). Make sure it matches with your container (ip and port).
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: APP_FULL_BASE_URL
+    Required: 'true'
+    Target: APP_FULL_BASE_URL
+    Type: Variable
+  value: https://HOST_IP:PORT
+FirstSeen: 1643935757
+Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/passbolt.png
+LastUpdate: 1642524945
+LastUpdateScan: 1646528587
+Name: Passbolt-CE
+Network: bridge
+Overview: "DESCRIPTION\r\nThis is the template for Passbolt CE (Community Edition),\
+  \ a free and open source password manager that allows team members to store and\
+  \ share credentials securely.\r\n\r\nComparison chart:\r\nhttps://signup.passbolt.com/pricing/pro#features\r\
+  \n\r\nHow to proceed after first launch?\r\n1. Register new user at first launch...\r\
+  \nOpen unRAID Terminal (not from container), and enter the following cmd (your details):\
+  \ 'docker exec CONTAINER_NAME su -m -c \"bin/cake passbolt register_user -u USER@EMAIL.COM\
+  \ -f USER_NAME -l USER_SURNAME -r admin\" -s /bin/sh www-data'.\r\n2. Generating\
+  \ registration link...\r\nOnce the previous cmd finishes, it will generate a registration\
+  \ link based on your data entered before. The URL will be something like: 'https://HOST_IP:PORT/setup/install/5426733-63k6...'.\
+  \ Now, copy/paste (or just click) the address and open it with your favourite web\
+  \ browser.\r\n3. Finishing registration process...\r\nYou will be asked to create\
+  \ a passphrase to protect your account, and after entering it a recovery kit file\
+  \ (passbolt-recovery-kit.asc) will be generated and downloaded locally. Now, continue\
+  \ with the rest of the steps. Done!\r\n\r\nNOTES\r\n\u2022 It requires an external\
+  \ database. (MariaDB, MySQL)\r\n\u2022 It may asks you to install the browser's\
+  \ extension (Chrome, Mozilla...).\r\n\u2022 You have many other variables to use\
+  \ on this template if you need them. Check the GitHub repo to know more.\r\n\r\n\
+  VERSION\r\n1.0 (2022-02-03)"
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/passbolt/passbolt_docker
+Registry: https://hub.docker.com/r/passbolt/passbolt/
+Repo: SmartPhoneLover's Repository
+Repository: passbolt/passbolt:latest-ce
+Requires: Database (MariaDB, MySQL)
+Support: https://forums.unraid.net/topic/119569-support-smartphonelover-passbolt/
+TemplateURL: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/master/templates/Passbolt-CE.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: https://[IP]:[PORT:443]

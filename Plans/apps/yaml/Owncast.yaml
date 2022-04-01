@@ -1,0 +1,163 @@
+CategoryList:
+- Productivity
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: ''
+    Description: Data Path
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Data Dir
+    Required: 'true'
+    Target: /owncast
+    Type: Path
+  value: /mnt/cache/appdata/owncast/
+- '@attributes':
+    Default: ''
+    Description: "Preferred Owncast version goes here (set to \u2018latest\u2019 to\
+      \ download the latest and check on every startup if there is a newer version\
+      \ available)"
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Preferred Version
+    Required: 'true'
+    Target: OWNCAST_V
+    Type: Variable
+  value: latest
+- '@attributes':
+    Default: ''
+    Description: TCP Port - WebInterface
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: TCP1 - WebInterface
+    Required: 'true'
+    Target: '8080'
+    Type: Port
+  value: '8080'
+- '@attributes':
+    Default: ''
+    Description: TCP Port - RTMP Streaming port
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: TCP2 - RTMP
+    Required: 'true'
+    Target: '1935'
+    Type: Port
+  value: '1935'
+- '@attributes':
+    Default: ''
+    Description: Enter extra startup parameters if needed here (leave empty if not
+      needed)
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Extra Startup Parameters
+    Required: 'false'
+    Target: START_PARAMS
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Nvidia Visible Devices - enter your GPU UUID here (only required
+      if you plan to use Nvidia hardware transcoding otherwise leave empty, don't
+      forget to add '--runtime=nvidia' to your 'Extra Parameters' in the template).
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Nvidia Visible Devices
+    Required: 'false'
+    Target: NVIDIA_VISIBLE_DEVICES
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Nvidia Driver Capabilities (This value can be left in the template
+      even if you don't want to use Nvidia hardware transcoding).
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Nvidia Driver Capabilities
+    Required: 'false'
+    Target: NVIDIA_DRIVER_CAPABILITIES
+    Type: Variable
+  value: all
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: UID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: UID
+    Required: 'true'
+    Target: UID
+    Type: Variable
+  value: '99'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: GID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: GID
+    Required: 'true'
+    Target: GID
+    Type: Variable
+  value: '100'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: UMASK'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Umask
+    Required: 'true'
+    Target: UMASK
+    Type: Variable
+  value: '0000'
+ExtraParams: --restart=unless-stopped
+FirstSeen: 1617969765
+Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/owncast.png
+LastUpdate: 1643018251
+LastUpdateScan: 1646557379
+Name: Owncast
+Network: bridge
+Overview: "Owncast is a self-hosted live video and web chat server for use with existing\
+  \ popular broadcasting software.  \r\n  \r\nAdmin login: The credentials for the\
+  \ admin site: 'http://SERVERIP:PORT/admin' are Username: 'admin' and Password: 'abc123'\
+  \ (please note that the password is also your streaming key and should be changed\
+  \ to something very strong).  \r\n  \r\nUpdate Notice: Simply restart the container\
+  \ if a newer version from Owncast is available.  \r\n\r\nAMD Hardware transcoding\
+  \ (Please note that you have to be on Unraid 6.9.0beta35 to enable the moduel for\
+  \ AMD):\r\n - Open up a Terminal from Unraid and type in: 'modprobe amdgpu' (without\
+  \ quotes or you edit your 'go' file to load it on every restart of Unraid - refer\
+  \ to the support thread)\r\n - At 'Device' at the bottom here in the template add\
+  \ '/dev/dri'\r\n - In Owncast open the admin page and go to 'Configuration' -&gt;\
+  \ 'Video Configuration' -&gt; 'Advanced Settins', select 'VA-API hardware encoding'\
+  \ from the dropdown and click 'Yes'\r\n\r\nIntel Hardware transcoding:\r\n- Download\
+  \ and install the Intel-GPU-TOP Plugin from the CA App\r\n- At 'Device' at the bottom\
+  \ here in the template add '/dev/dri'\r\n- In Owncast open the admin page and go\
+  \ to 'Configuration' -&gt; 'Video Configuration' -&gt; 'Advanced Settins', select\
+  \ 'VA-API hardware encoding' from the dropdown and click 'Yes'\r\n\r\nNvidia Hardware\
+  \ transcoding:\r\n- Download and install the Nvidia-Driver Plugin from the CA App\r\
+  \n- Turn on the 'Advanced View' here in the template and at 'Extra Parameters' add:\
+  \ '--runtime=nvidia'.\r\n- At 'Nvidia Visible Devices' at the bottom here in the\
+  \ template add your GPU UUID.\r\n- In Owncast open the admin page and go to 'Configuration'\
+  \ -&gt; 'Video Configuration' -&gt; 'Advanced Settins', select 'NVIDIA GPU acceleration'\
+  \ from the dropdown and click 'Yes'\r\n  \r\nAlso visit the Homepage of the creator\
+  \ and consider Donating: https://owncast.online/"
+PostArgs: ''
+Privileged: 'false'
+Project: https://owncast.online/
+Registry: https://hub.docker.com/r/ich777/owncast/
+Repo: ich777's Repository
+Repository: ich777/owncast
+Requires: ''
+Support: https://forums.unraid.net/topic/83786-support-ich777-application-dockers/
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8080]
+caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/Owncast.xml
+topTrending: -17.412

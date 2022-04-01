@@ -1,0 +1,146 @@
+CAComment: This template is set up to use a custom network. You may have to adjust
+  the network or IP address etc to match your system
+CategoryList:
+- MediaServer-Video
+- MediaServer-Music
+- MediaServer-Books
+- MediaServer-Photos
+- MediaServer-Other
+Config:
+- '@attributes':
+    Default: /mnt/user/
+    Description: Path (root) to media content. ADD the container path (/media/serviio)
+      into Library &gt; Shared Folder in Serviio GUI
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Host Path 5
+    Required: 'true'
+    Target: /media/serviio
+    Type: Path
+  value: /mnt/user/TV/
+- '@attributes':
+    Default: '23423'
+    Description: "WEBUI PORT\r\nAccess by going to http://IP:23423/console"
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WEBUI
+    Required: 'true'
+    Target: '23423'
+    Type: Port
+  value: '23423'
+- '@attributes':
+    Default: '1900'
+    Description: 'Container Port: 1900'
+    Display: advanced
+    Mask: 'false'
+    Mode: tcp
+    Name: Host Port 2
+    Required: 'true'
+    Target: '1900'
+    Type: Port
+  value: '1900'
+- '@attributes':
+    Default: '23523'
+    Description: 'Container Port: 23523'
+    Display: advanced
+    Mask: 'false'
+    Mode: tcp
+    Name: Host Port 3
+    Required: 'true'
+    Target: '23523'
+    Type: Port
+  value: '23523'
+- '@attributes':
+    Default: '23424'
+    Description: 'Container Port: 23424'
+    Display: advanced
+    Mask: 'false'
+    Mode: tcp
+    Name: Host Port 5
+    Required: 'true'
+    Target: '23424'
+    Type: Port
+  value: '23424'
+- '@attributes':
+    Default: '23524'
+    Description: 'Container Port: 23524'
+    Display: advanced
+    Mask: 'false'
+    Mode: tcp
+    Name: Host Port 6
+    Required: 'true'
+    Target: '23524'
+    Type: Port
+  value: '23524'
+- '@attributes':
+    Default: '8895'
+    Description: 'Container Port: 8895'
+    Display: advanced
+    Mask: 'false'
+    Mode: tcp
+    Name: Host Port 2
+    Required: 'true'
+    Target: '8895'
+    Type: Port
+  value: '8895'
+- '@attributes':
+    Default: /mnt/user/appdata/serviio/library
+    Description: 'Container Path: /opt/serviio/library'
+    Display: advanced
+    Mask: 'false'
+    Mode: rw
+    Name: Host Path 2
+    Required: 'true'
+    Target: /opt/serviio/library
+    Type: Path
+  value: /mnt/user/appdata/serviio/library
+- '@attributes':
+    Default: /mnt/user/appdata/serviio/plugins
+    Description: 'Container Path: /opt/serviio/plugins'
+    Display: advanced
+    Mask: 'false'
+    Mode: rw
+    Name: Host Path 3
+    Required: 'true'
+    Target: /opt/serviio/plugins
+    Type: Path
+  value: /mnt/user/appdata/serviio/plugins
+- '@attributes':
+    Default: /mnt/user/appdata/serviio/log
+    Description: 'Container Path: /opt/serviio/log'
+    Display: advanced
+    Mask: 'false'
+    Mode: rw
+    Name: Host Path 4
+    Required: 'true'
+    Target: /opt/serviio/log
+    Type: Path
+  value: /mnt/user/appdata/serviio/log
+DonateLink: https://paypal.me/ramteksolutions
+DonateText: Help support my work by buying me a beer
+FirstSeen: 1611645014
+Icon: https://i.imgur.com/Pcals31.png
+LastUpdate: 1607308874
+LastUpdateScan: 1648029802
+Name: Serviio
+Network: ibraproxy
+Networking:
+  Mode: ibraproxy
+Overview: "Serviio is a freeware media server designed to let users stream music,\
+  \ video, or image files to DLNA compliant televisions, Blu-ray players, game consoles,\
+  \ and Android or Windows Mobile devices on a home network.\r\nMake be sure to give\
+  \ it some then restart the container at least once. If you want to use a custom\
+  \ config you need to map the path: /opt/serviio/config to your AppData install directory."
+Privileged: 'false'
+Project: https://serviio.org/
+Registry: https://hub.docker.com/r/riftbit/serviio
+Repo: Sycotix' Repository
+Repository: riftbit/serviio
+Support: https://discord.gg/VWAG7rZ
+TemplateURL: https://raw.githubusercontent.com/ibracorp/unraid-templates/master/serviio/serviio.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:23423]/console
+topPerforming: 0.279
+topTrending: -0.8330000000000001

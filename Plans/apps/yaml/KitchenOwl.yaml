@@ -1,0 +1,54 @@
+Beta: 'true'
+CategoryList:
+- Productivity
+ChangeLogPresent: true
+Config:
+- '@attributes':
+    Default: /mnt/user/appdata/kitchenowl
+    Description: This is where the KitchenOwl Database is stored.
+    Mode: rw
+    Name: Path /data
+    Required: 'true'
+    Target: /data
+    Type: Path
+  value: /mnt/user/appdata/kitchenowl
+- '@attributes':
+    Default: '5000'
+    Description: KitchenOwl Service Port
+    Display: always
+    Mode: tcp
+    Name: KitchenOwl Service
+    Required: 'true'
+    Target: '5000'
+    Type: Port
+  value: '5000'
+- '@attributes':
+    Default: http://localhost:8123
+    Description: Url for the Web Frontend (needs additional kitchenowl-web container)
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Url for the Web Frontend (needs kitchenowl-web container)
+    Required: 'false'
+    Target: FRONT_URL
+    Type: Variable
+  value: http://localhost:8123
+FirstSeen: 1642868734
+Icon: https://raw.githubusercontent.com/TomBursch/kitchenowl/main/assets/icon/icon.png
+LastUpdate: 1648046533
+LastUpdateScan: 1648058623
+Name: KitchenOwl
+Network: bridge
+Overview: KitchenOwl Backend Server for use with the Mobile App. If you want a WebUI,
+  you should also Install the KitchenOwl-Web Container. KitchenOwl is a self-hosted
+  grocery list and recipe manager. The backend is made with Flask and the frontend
+  with Flutter. Easily add items to your shopping list before you go shopping. You
+  can also create recipes and add items based on what you want to cook.
+Privileged: 'false'
+Project: https://tombursch.github.io/kitchenowl/
+Registry: https://hub.docker.com/r/tombursch/kitchenowl
+Repo: HanSolo97's Repository
+Repository: tombursch/kitchenowl
+Support: https://codeberg.org/HanSolo97/unraid-template-kitchenowl/
+TemplateURL: https://raw.githubusercontent.com/UnknownHiker/unraid-template-kitchenowl/master/kitchenowl.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg

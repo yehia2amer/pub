@@ -1,0 +1,71 @@
+CategoryList:
+- Productivity
+- Network-Voip
+- Network-Messenger
+Config:
+- '@attributes':
+    Default: '64738'
+    Description: 64738 TCP
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Port TCP
+    Required: 'true'
+    Target: '64738'
+    Type: Port
+  value: '64738'
+- '@attributes':
+    Default: '64738'
+    Description: 64738 UDP
+    Display: always
+    Mask: 'false'
+    Mode: udp
+    Name: Port UDP
+    Required: 'true'
+    Target: '64738'
+    Type: Port
+  value: '64738'
+- '@attributes':
+    Default: /mnt/user/appdata/mumble/
+    Description: Appdata
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Appdata
+    Required: 'true'
+    Target: /etc/mumble
+    Type: Path
+  value: /mnt/user/appdata/mumble/
+- '@attributes':
+    Default: Password
+    Description: SUPERUSER_PASSWORD
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: SUPERUSER_PASSWORD
+    Required: 'false'
+    Target: SUPERUSER_PASSWORD
+    Type: Variable
+  value: Password
+FirstSeen: 1588616386
+Icon: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/mumble.png
+LastUpdate: 1638376281
+LastUpdateScan: 1648396996
+Name: mumble
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: Mumble is an open source voice communication application[br]Download config.ini[/br]wget
+  -O /mnt/user/appdata/mumble/config.ini https://raw.githubusercontent.com/PHLAK/docker-mumble/master/files/config.ini
+PostArgs: ''
+Privileged: 'false'
+Project: https://www.mumble.info/
+Registry: https://hub.docker.com/r/phlak/mumble/
+Repo: A75G's Repository
+Repository: phlak/mumble:latest
+Support: https://forums.unraid.net/topic/89502-support-a75g-repo/
+TemplateURL: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/mumble.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''
+topPerforming: 0.289
+topTrending: -3.006

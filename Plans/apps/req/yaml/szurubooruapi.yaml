@@ -1,0 +1,93 @@
+CategoryList:
+- MediaServer-Photos
+ChangeLogPresent: true
+Config:
+- '@attributes':
+    Default: ''
+    Description: IP address of Postgres instance
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Postgres Host
+    Required: 'true'
+    Target: POSTGRES_HOST
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Name of the database on Postgres instance to use
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Postgres DB
+    Required: 'true'
+    Target: POSTGRES_DB
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Username of Postgres user
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Postgres User
+    Required: 'true'
+    Target: POSTGRES_USER
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Password of Postgres user
+    Display: always
+    Mask: 'true'
+    Mode: ''
+    Name: Postgres Password
+    Required: 'true'
+    Target: POSTGRES_PASSWORD
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: /mnt/user/appdata/szurubooru/data
+    Description: Directory on host to store image data
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Image Data
+    Required: 'true'
+    Target: /data
+    Type: Path
+  value: /mnt/user/appdata/szurubooru/data
+- '@attributes':
+    Default: '6666'
+    Description: Port to expose API interface on. This is accessed by the frontend.
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Api Port
+    Required: 'true'
+    Target: '6666'
+    Type: Port
+  value: '6666'
+FirstSeen: 1576508766
+Icon: https://github.com/FoxxMD/unraid-docker-templates/raw/master/szurubooru.png
+LastUpdate: 1645020922
+LastUpdateScan: 1646658214
+Name: szurubooru-api
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: Backend API container for Szurubooru, an image board engine for small and
+  medium communities
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/rr-/szurubooru
+Registry: https://hub.docker.com/r/szurubooru/server
+Repo: FoxxMD's Repository
+Repository: szurubooru/server:latest
+Requires: Postgres 11 installed
+Support: https://forums.unraid.net/topic/79126-support-foxxmd-szurubooru/
+TemplateURL: https://raw.githubusercontent.com/FoxxMD/unraid-docker-templates/master/foxxmd/szurubooru-api.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''
+topPerforming: 0.776
+topTrending: -26.067

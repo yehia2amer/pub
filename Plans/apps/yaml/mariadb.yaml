@@ -1,0 +1,135 @@
+CategoryList:
+- Network-Other
+- MediaApp-Other
+- Other
+- Tools-Utilities
+ChangeLogPresent: true
+Config:
+- '@attributes':
+    Default: '3306'
+    Description: Mariadb listens on this port.
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI
+    Required: 'true'
+    Target: '3306'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Contains the db itself and all assorted settings.
+    Display: advanced
+    Mask: 'false'
+    Mode: rw
+    Name: Appdata
+    Required: 'true'
+    Target: /config
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ROOT_ACCESS_PASSWORD
+    Description: Set this to root password for installation (minimum 4 characters).
+    Display: always
+    Mask: 'true'
+    Name: MYSQL_ROOT_PASSWORD
+    Required: 'true'
+    Target: MYSQL_ROOT_PASSWORD
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: USER_DB_NAME
+    Description: Specify the name of a database to be created on image startup.
+    Display: always
+    Mask: 'false'
+    Name: MYSQL_DATABASE
+    Required: 'false'
+    Target: MYSQL_DATABASE
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: MYSQL_USER
+    Description: This user will have superuser access to the database specified by
+      MYSQL_DATABASE (do not use root here).
+    Display: always
+    Mask: 'false'
+    Name: MYSQL_USER
+    Required: 'false'
+    Target: MYSQL_USER
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: DATABASE_PASSWORD
+    Description: Set this to the password you want to use for you MYSQL_USER (minimum
+      4 characters).
+    Display: always
+    Mask: 'true'
+    Name: MYSQL_PASSWORD
+    Required: 'false'
+    Target: MYSQL_PASSWORD
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: http://URL1/your.sql,https://URL2/your.sql
+    Description: Set this to ingest sql files from an http/https endpoint (comma seperated
+      array).
+    Display: always
+    Mask: 'false'
+    Name: REMOTE_SQL
+    Required: 'false'
+    Target: REMOTE_SQL
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '99'
+    Description: 'Container Variable: PUID'
+    Display: advanced
+    Mask: 'false'
+    Name: PUID
+    Required: 'true'
+    Target: PUID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '100'
+    Description: 'Container Variable: PGID'
+    Display: advanced
+    Mask: 'false'
+    Name: PGID
+    Required: 'true'
+    Target: PGID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '022'
+    Description: 'Container Variable: UMASK'
+    Display: advanced
+    Mask: 'false'
+    Name: UMASK
+    Required: 'false'
+    Target: UMASK
+    Type: Variable
+  value: ''
+DonateImg: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/donate.png
+DonateLink: https://www.linuxserver.io/donate
+DonateText: Donations
+FirstSeen: 1476158400
+GitHub: https://github.com/linuxserver/docker-mariadb#application-setup
+Icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/mariadb-logo.png
+LastUpdate: 1647611540
+LastUpdateScan: 1647914760
+Name: mariadb
+Network: bridge
+Overview: Mariadb(https://mariadb.org/) is one of the most popular database servers.
+  Made by the original developers of MySQL.
+Privileged: 'false'
+Project: https://mariadb.org/
+ReadMe: https://github.com/linuxserver/docker-mariadb#readme
+Registry: https://github.com/orgs/linuxserver/packages/container/package/mariadb
+Repo: linuxserver's Repository
+Repository: lscr.io/linuxserver/mariadb
+Support: https://github.com/linuxserver/docker-mariadb/issues/new/choose
+TemplateURL: https://raw.githubusercontent.com/linuxserver/templates/master/unraid/mariadb.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:3306]
+topTrending: -1.0899999999999999

@@ -1,0 +1,76 @@
+CategoryList:
+- Cloud
+- Tools-Utilities
+- MediaServer-Music
+- MediaServer-Photos
+Config:
+- '@attributes':
+    Default: /mnt/user/appdata/nextcloudpi
+    Description: The folder to store all data related to the container
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Nextcloud data folder
+    Required: 'false'
+    Target: /data
+    Type: Path
+  value: /mnt/user/appdata/nextcloudpi
+- '@attributes':
+    Default: '80'
+    Description: Non secure web port
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: HTTP web port
+    Required: 'false'
+    Target: '80'
+    Type: Port
+  value: '80'
+- '@attributes':
+    Default: '443'
+    Description: Secure web port
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: HTTPS web port
+    Required: 'false'
+    Target: '443'
+    Type: Port
+  value: '443'
+- '@attributes':
+    Default: '4443'
+    Description: Port to serve the Nextcloudpi management panel on.
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Panel web port
+    Required: 'false'
+    Target: '4443'
+    Type: Port
+  value: '4443'
+FirstSeen: 1571956300
+Icon: https://github.com/Dimtar/unraidtemplates/raw/master/nextcloudpi/logo.jpg
+LastUpdate: 1646683850
+LastUpdateScan: 1647317015
+Name: nextcloudpi
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "This is a template for the Nextcloudpi docker container, this is an all\
+  \ in one solution for someone wanting to run Nextcloud on their unRaid server. More\
+  \ information can be found here:\r\nhttps://ownyourbits.com/\r\nhttps://hub.docker.com/r/ownyourbits/nextcloudpi\r\
+  \n\r\nBefore hitting start, select advanced view in the top right corner, add your\
+  \ servers IP address e.g. 192.168.1.5 or the IP of the container if you specify\
+  \ a unique one."
+PostArgs: Enter server or container IP here e.g. 192.168.1.5
+Privileged: 'true'
+Project: https://ownyourbits.com/
+Registry: https://hub.docker.com/r/ownyourbits/nextcloudpi
+Repo: dimtar's Repository
+Repository: ownyourbits/nextcloudpi
+Support: https://forums.unraid.net/topic/84549-support-nextcloudpi/
+TemplateURL: https://raw.githubusercontent.com/Dimtar/unraidtemplates/master/nextcloudpi/nextcloudpi.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: https://[IP]:[PORT:443]/
+topPerforming: 1.939
+topTrending: 0.8130000000000002

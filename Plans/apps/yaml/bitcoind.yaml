@@ -1,0 +1,62 @@
+CategoryList:
+- Tools-Utilities
+- Network-Other
+- Crypto
+Config:
+- '@attributes':
+    Default: '8333'
+    Description: Port to listen for incoming node connections
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: P2P TCP
+    Required: 'true'
+    Target: '8333'
+    Type: Port
+  value: '8333'
+- '@attributes':
+    Default: '8332'
+    Description: Port to listen for RPC connections (Optional)
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Local RPC
+    Required: 'false'
+    Target: '8332'
+    Type: Port
+  value: '8332'
+- '@attributes':
+    Default: /mnt/user/bitcoin/
+    Description: Blockchain and database storage. Requires at least 500 GiB free disk.
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Data
+    Required: 'true'
+    Target: /root/.bitcoin/
+    Type: Path
+  value: /mnt/user/bitcoin/core/
+FirstSeen: 1630073021
+Icon: https://github.com/ofawx/unraid-templates/raw/master/img/bitcoin.png
+LastUpdate: 1631714776
+LastUpdateScan: 1648260203
+Name: bitcoind
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "Support the Bitcoin network by hosting your own node! This template provides\
+  \ a full Bitcoin Core node, built in a verifiably trustless way.\n    [br][br]\n\
+  \    To let other nodes in the network find your node, ensure port 8333 is forwarded\
+  \ from your router to the P2P port set below.\n    [br][br]\n    To customize all\
+  \ settings, create a file called bitcoin.conf in the data directory. Refer to https://github.com/bitcoin/bitcoin/blob/master/share/examples/bitcoin.conf\
+  \ for examples of settings you may apply."
+PostArgs: ''
+Privileged: 'false'
+Project: https://bitcoin.org/
+Registry: https://hub.docker.com/r/ofawx/bitcoind/
+Repo: ofawx's Repository
+Repository: ofawx/bitcoind
+Support: https://forums.unraid.net/topic/112959-support-ofawx-templates-repo/
+TemplateURL: https://raw.githubusercontent.com/ofawx/unraid-templates/master/bitcoind.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''

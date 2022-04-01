@@ -1,0 +1,143 @@
+Branch:
+- Tag: latest
+  TagDescription: Docker and Compose environment pre-installed
+- GitHub: https://github.com/linuxserver/docker-cloud9/tree/go#application-setup
+  ReadMe: https://github.com/linuxserver/docker-cloud9/tree/go#readme
+  Tag: go
+  TagDescription: Basic Golang environment pre-installed
+- GitHub: https://github.com/linuxserver/docker-cloud9/tree/nodejs#application-setup
+  ReadMe: https://github.com/linuxserver/docker-cloud9/tree/nodejs#readme
+  Tag: nodejs
+  TagDescription: Current stable NodeJS/NPM environment pre-installed
+- GitHub: https://github.com/linuxserver/docker-cloud9/tree/python#application-setup
+  ReadMe: https://github.com/linuxserver/docker-cloud9/tree/python#readme
+  Tag: python
+  TagDescription: Current Python3 environment pre-installed
+- GitHub: https://github.com/linuxserver/docker-cloud9/tree/ruby#application-setup
+  ReadMe: https://github.com/linuxserver/docker-cloud9/tree/ruby#readme
+  Tag: ruby
+  TagDescription: Current Ruby environment pre-installed
+CategoryList:
+- Productivity
+- Tools-Utilities
+ChangeLogPresent: true
+Config:
+- '@attributes':
+    Default: '8000'
+    Description: The port for the Cloud9 web interface
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI
+    Required: 'true'
+    Target: '8000'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Optionally if you want to mount up a local folder of code instead
+      of checking out
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: 'Path: /code'
+    Required: 'false'
+    Target: /code
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Needed if you plan to use Docker or compose commands
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: 'Path: /var/run/docker.sock'
+    Required: 'false'
+    Target: /var/run/docker.sock
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: https://github.com/linuxserver/docker-cloud9.git
+    Description: Specify a git repo to checkout on first startup
+    Display: always
+    Mask: 'false'
+    Name: GITURL
+    Required: 'false'
+    Target: GITURL
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Optionally specify a username for http auth
+    Display: always
+    Mask: 'false'
+    Name: USERNAME
+    Required: 'false'
+    Target: USERNAME
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Optionally specify a password for http auth (if USERNAME and PASSWORD
+      are not set, there will be no http auth)
+    Display: always
+    Mask: 'true'
+    Name: PASSWORD
+    Required: 'false'
+    Target: PASSWORD
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '99'
+    Description: 'Container Variable: PUID'
+    Display: advanced
+    Mask: 'false'
+    Name: PUID
+    Required: 'true'
+    Target: PUID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '100'
+    Description: 'Container Variable: PGID'
+    Display: advanced
+    Mask: 'false'
+    Name: PGID
+    Required: 'true'
+    Target: PGID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '022'
+    Description: 'Container Variable: UMASK'
+    Display: advanced
+    Mask: 'false'
+    Name: UMASK
+    Required: 'false'
+    Target: UMASK
+    Type: Variable
+  value: ''
+DonateImg: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/donate.png
+DonateLink: https://www.linuxserver.io/donate
+DonateText: Donations
+FirstSeen: 1560204470
+GitHub: https://github.com/linuxserver/docker-cloud9#application-setup
+Icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/cloud9-logo.png
+LastUpdate: 1647572084
+LastUpdateScan: 1647914632
+Name: cloud9
+Network: bridge
+Overview: Cloud9(https://github.com/c9/core) Cloud9 is a complete web based IDE with
+  terminal access. This container is for running their core SDK locally and developing
+  plugins.
+Privileged: 'false'
+Project: https://github.com/c9/core
+ReadMe: https://github.com/linuxserver/docker-cloud9#readme
+Registry: https://github.com/orgs/linuxserver/packages/container/package/cloud9
+Repo: linuxserver's Repository
+Repository: lscr.io/linuxserver/cloud9
+Support: https://github.com/linuxserver/docker-cloud9/issues/new/choose
+TemplateURL: https://raw.githubusercontent.com/linuxserver/templates/master/unraid/cloud9.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8000]
+topTrending: -1.242

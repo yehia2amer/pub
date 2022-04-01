@@ -1,0 +1,74 @@
+CAComment: This template is set up to use a custom network. You may have to adjust
+  the network or IP address etc to match your system
+CategoryList:
+- Downloaders
+- Other
+Config:
+- '@attributes':
+    Default: '80'
+    Description: 'Container Port: 80'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: HTTP-Port
+    Required: 'false'
+    Target: '80'
+    Type: Port
+  value: '80'
+- '@attributes':
+    Default: '443'
+    Description: 'Container Port: 443'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: HTTPS-Port
+    Required: 'false'
+    Target: '443'
+    Type: Port
+  value: '443'
+- '@attributes':
+    Default: /mnt/user/appdata/lancache/logs
+    Description: 'Container Path: /data/logs'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Logs-Folder
+    Required: 'true'
+    Target: /data/logs
+    Type: Path
+  value: /mnt/user/appdata/lancache/logs
+- '@attributes':
+    Default: /mnt/user/appdata/lancache/cache
+    Description: 'Container Path: /data/cache/'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Cache-Folder
+    Required: 'false'
+    Target: /data/cache/
+    Type: Path
+  value: /mnt/user/appdata/lancache/cache
+DonateLink: https://paypal.me/RedVex2460Gaming
+FirstSeen: 1632175428
+Icon: https://raw.githubusercontent.com/redvex2460/docker-templates/master/redvex2460/images/lancache.png
+LastUpdate: 1646643038
+LastUpdateScan: 1647763392
+Name: Lancache
+Network: br0
+Networking:
+  Mode: br0
+Official: true
+Overview: This docker container provides a caching proxy server for game download
+  content. For any network with more than one PC gamer in connected this will drastically
+  reduce internet bandwidth consumption.
+PostArgs: ''
+Privileged: 'false'
+Project: http://lancache.net
+Registry: https://github.com/lancachenet/monolithic
+Repo: RedVex's Repository
+Repository: lancachenet/monolithic:latest
+TemplateURL: https://raw.githubusercontent.com/redvex2460/docker-templates/master/redvex2460/lancache.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''
+topPerforming: 2.629
+topTrending: -3.8080000000000003

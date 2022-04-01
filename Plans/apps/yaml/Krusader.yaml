@@ -1,0 +1,136 @@
+CategoryList:
+- Productivity
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /krusader'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Container Path
+    Required: 'true'
+    Target: /krusader
+    Type: Path
+  value: /mnt/cache/appdata/krusader
+- '@attributes':
+    Default: ''
+    Description: Main data path to your unRAID shares (if you want to get access to
+      a disk mounted through UnassignedDevices change the Host Path to '/mnt', if
+      you want to get system level access change the Host Path to '/', you will then
+      find the mounted path in Kruser in '/mnt/user').
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Data Path
+    Required: 'true'
+    Target: /mnt/user
+    Type: Path
+  value: /mnt/user
+- '@attributes':
+    Default: ''
+    Description: noVNC Port
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: TCP - VNC Port
+    Required: 'true'
+    Target: '8080'
+    Type: Port
+  value: '8080'
+- '@attributes':
+    Default: ''
+    Description: 'Enter your prefered locales, you can find a full list of supported
+      languages in: ''/usr/share/i18n/SUPPORTED'' simply open up a console from the
+      Container and type in ''cat /usr/share/i18n/SUPPORTED'' (eg: ''en_US.UTF-8 UTF8''
+      or ''de_DE.UTF-8 UTF-8'', ''fr_FR.UTF-8 UTF-8''...)'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Locales - Language
+    Required: 'true'
+    Target: USER_LOCALES
+    Type: Variable
+  value: en_US.UTF-8 UTF-8
+- '@attributes':
+    Default: false|true
+    Description: Set this variable to 'true' if you want to run Krusader as root to
+      edit system files (please remember you have to also change the Data Path to
+      edit system level files)
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Run as root
+    Required: 'false'
+    Target: RUNASROOT
+    Type: Variable
+  value: 'false'
+- '@attributes':
+    Default: ''
+    Description: Delete this value if you don't want local scaling.
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Local Scaling
+    Required: 'true'
+    Target: NOVNC_RESIZE
+    Type: Variable
+  value: remote
+- '@attributes':
+    Default: ''
+    Description: Enter the preferred resolution width
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Custom Resolution Width
+    Required: 'true'
+    Target: CUSTOM_RES_W
+    Type: Variable
+  value: '1280'
+- '@attributes':
+    Default: ''
+    Description: Enter the preferred resolution height
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Custom Resolution Height
+    Required: 'true'
+    Target: CUSTOM_RES_H
+    Type: Variable
+  value: '768'
+DonateLink: https://www.paypal.me/chips777
+DonateText: 'If you like my work please '
+ExtraParams: --restart=unless-stopped
+FirstSeen: 1612782440
+Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/krusader.png
+LastUpdate: 1643735489
+LastUpdateScan: 1646564589
+Name: Krusader
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "Krusader is an advanced orthodox file manager for KDE and other desktops\
+  \ in the Unix world. It is similar to the console-based GNU Midnight Commander,\
+  \ GNOME Commander for the GNOME desktop environment, or Total Commander for Windows,\
+  \ all of which can trace their paradigmatic features to the original Norton Commander\
+  \ for DOS. It supports extensive archive handling, mounted filesystem support, FTP,\
+  \ advanced search, viewer/editor, directory synchronisation, file content comparisons,\
+  \ batch renaming, etc.\r\n\r\nLanguage Notice: Enter your prefered locales, you\
+  \ can find a full list of supported languages in: '/usr/share/i18n/SUPPORTED' simply\
+  \ open up a console from the Container and type in 'cat /usr/share/i18n/SUPPORTED'\
+  \ (eg: 'en_US.UTF-8 UTF8' or 'de_DE.UTF-8 UTF-8', 'fr_FR.UTF-8 UTF-8'...)\r\n\r\n\
+  ATTENTION: Wronge usage of this tool can lead to data loss, be carefull when using\
+  \ Krusader with Unraid.\r\nYou can delete your whole Array with a single button\
+  \ press if you don't be carefull!!!"
+PostArgs: ''
+Privileged: 'false'
+Project: https://krusader.org/
+Registry: https://hub.docker.com/r/ich777/krusader
+Repo: ich777's Repository
+Repository: ich777/krusader
+Support: https://forums.unraid.net/topic/83786-support-ich777-application-dockers/
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8080]/vnc.html?autoconnect=true
+caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/Krusader.xml
+topPerforming: 13.665
+topTrending: -6.204000000000001

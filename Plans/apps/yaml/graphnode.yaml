@@ -1,0 +1,150 @@
+CategoryList:
+- Other
+- Crypto
+Config:
+- '@attributes':
+    Default: ''
+    Description: ' GraphQL interface'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: ' GraphQL interface'
+    Required: 'true'
+    Target: '8000'
+    Type: Port
+  value: '8000'
+- '@attributes':
+    Default: ''
+    Description: JSON-RPC admin server.
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: JSON-RPC
+    Required: 'true'
+    Target: '8020'
+    Type: Port
+  value: '8020'
+- '@attributes':
+    Default: ''
+    Description: GraphQL WebSocket server
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: GraphQL WebSocket
+    Required: 'true'
+    Target: '8001'
+    Type: Port
+  value: '8001'
+- '@attributes':
+    Default: localhost
+    Description: postgres_host
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: postgres host
+    Required: 'true'
+    Target: postgres_host
+    Type: Variable
+  value: localhost
+- '@attributes':
+    Default: USERNAME
+    Description: postgre user
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: postgres user
+    Required: 'true'
+    Target: postgres_user
+    Type: Variable
+  value: dsmrreader
+- '@attributes':
+    Default: PASSWORD
+    Description: postgres password
+    Display: always
+    Mask: 'true'
+    Mode: ''
+    Name: postgres password
+    Required: 'true'
+    Target: postgres_pass
+    Type: Variable
+  value: dsmrreader
+- '@attributes':
+    Default: graph-node
+    Description: postgres db name
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: postgres_db
+    Required: 'true'
+    Target: postgres_db
+    Type: Variable
+  value: graph-node
+- '@attributes':
+    Default: ipfs:5001
+    Description: 'Container Variable: ipfs'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: ipfs url
+    Required: 'true'
+    Target: ipfs
+    Type: Variable
+  value: localhost:5001
+- '@attributes':
+    Default: mainnet:http://localhost:8545
+    Description: ethereum node url
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: ethereum node url
+    Required: 'true'
+    Target: ethereum
+    Type: Variable
+  value: mainnet:http://localhost:8545
+- '@attributes':
+    Default: '5732'
+    Description: postgres port
+    Display: always-hide
+    Mask: 'false'
+    Mode: ''
+    Name: postgres port
+    Required: 'true'
+    Target: postgres_port
+    Type: Variable
+  value: '5732'
+- '@attributes':
+    Default: info
+    Description: log level
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: GRAPH_LOG
+    Required: 'false'
+    Target: GRAPH_LOG
+    Type: Variable
+  value: info
+FirstSeen: 1632765817
+Icon: https://storage.googleapis.com/graph-web/favicon.png
+LastUpdate: 1648255592
+LastUpdateScan: 1648353788
+Name: graph-node
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "The Graph is a protocol for building decentralized applications (dApps)\
+  \ quickly on Ethereum and IPFS using GraphQL.\r\nGraph Node is an open source Rust\
+  \ implementation that event sources the Ethereum blockchain to deterministically\
+  \ update a data store that can be queried via the GraphQL endpoint.\r\nFor detailed\
+  \ instructions and more context, check out the Getting Started Guide."
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/graphprotocol/graph-node
+Registry: https://hub.docker.com/r/graphprotocol/graph-node/
+Repo: zgo's Repository
+Repository: graphprotocol/graph-node
+Support: https://github.com/graphprotocol/graph-node
+TemplateURL: https://raw.githubusercontent.com/zgorizzo69/unraid-templates/master/graph-node/graph-node.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8000]/
+topPerforming: 1.338
+topTrending: -1.58

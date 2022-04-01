@@ -1,0 +1,100 @@
+BindTime: 'true'
+CategoryList:
+- Downloaders
+Data:
+  Volume:
+  - ContainerDir: /config
+    HostDir: /mnt/user/appdata/config
+    Mode: rw
+  - ContainerDir: /data
+    HostDir: /mnt/user/appdata/data
+    Mode: rw
+DonateImg: https://www.paypal.com/en_US/i/btn/btn_donate_SM.gif
+DonateLink: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=MM5E27UX6AUU4
+DonateText: If you appreciate my work, then please consider buying me a beer :D
+Environment:
+  Variable:
+  - Name: VPN_ENABLED
+    Value: yes|no
+  - Name: VPN_USER
+    Value: vpn username
+  - Name: VPN_PASS
+    Value: vpn password
+  - Name: VPN_PROV
+    Value: pia|airvpn|custom
+  - Name: VPN_CLIENT
+    Value: openvpn|wireguard
+  - Name: VPN_OPTIONS
+    Value: ''
+  - Name: STRICT_PORT_FORWARD
+    Value: 'yes'
+  - Name: ENABLE_PRIVOXY
+    Value: no|yes
+  - Name: LAN_NETWORK
+    Value: 192.168.1.0/24
+  - Name: NAME_SERVERS
+    Value: 84.200.69.80,37.235.1.174,1.1.1.1,37.235.1.177,84.200.70.40,1.0.0.1
+  - Name: DELUGE_DAEMON_LOG_LEVEL
+    Value: info
+  - Name: DELUGE_WEB_LOG_LEVEL
+    Value: info
+  - Name: VPN_INPUT_PORTS
+    Value: ''
+  - Name: VPN_OUTPUT_PORTS
+    Value: ''
+  - Name: DEBUG
+    Value: false|true
+  - Name: UMASK
+    Value: '000'
+  - Name: PUID
+    Value: '99'
+  - Name: PGID
+    Value: '100'
+ExtraParams: --sysctl="net.ipv4.conf.all.src_valid_mark=1"
+FirstSeen: 1
+GitHub: https://github.com/binhex/arch-delugevpn
+Icon: https://raw.githubusercontent.com/binhex/docker-templates/master/binhex/images/deluge-icon.png
+LastUpdate: 1641162179
+LastUpdateScan: 1647763390
+Name: binhex-delugevpn
+Networking:
+  Mode: bridge
+  Publish:
+    Port:
+    - ContainerPort: '8112'
+      HostPort: '8112'
+      Protocol: tcp
+    - ContainerPort: '58846'
+      HostPort: '58846'
+      Protocol: tcp
+    - ContainerPort: '58946'
+      HostPort: '58946'
+      Protocol: tcp
+    - ContainerPort: '58946'
+      HostPort: '58946'
+      Protocol: udp
+    - ContainerPort: '8118'
+      HostPort: '8118'
+      Protocol: tcp
+Overview: "Deluge is a full-featured \u200BBitTorrent client for Linux, OS X, Unix\
+  \ and Windows. It uses \u200Blibtorrent in its backend and features multiple user-interfaces\
+  \ including: GTK+, web and console. It has been designed using the client server\
+  \ model with a daemon process that handles all the bittorrent activity. The Deluge\
+  \ daemon is able to run on headless machines with the user-interfaces being able\
+  \ to connect remotely from any platform.\n    This Docker includes OpenVPN and WireGuard\
+  \ to ensure a secure and private connection to the Internet, including use of iptables\
+  \ to prevent IP leakage when the tunnel is down. It also includes Privoxy to allow\
+  \ unfiltered access to index sites, to use Privoxy please point your application\
+  \ at \"http://host ip:8118\"."
+Privileged: 'true'
+Project: http://deluge-torrent.org/
+ReadMe: https://github.com/binhex/documentation
+Registry: https://registry.hub.docker.com/r/binhex/arch-delugevpn/
+Repo: Binhex's Repository
+Repository: binhex/arch-delugevpn
+Support: http://lime-technology.com/forum/index.php?topic=45812.0
+TemplateURL: https://raw.githubusercontent.com/binhex/docker-templates/master/binhex/delugevpn.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8112]/
+topPerforming: 0.829
+topTrending: -0.722

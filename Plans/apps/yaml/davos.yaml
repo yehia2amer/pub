@@ -1,0 +1,96 @@
+CategoryList:
+- Network-FTP
+- Network-Other
+- Tools-Utilities
+ChangeLogPresent: true
+Config:
+- '@attributes':
+    Default: '8080'
+    Description: This is the default port that davos runs under
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI
+    Required: 'true'
+    Target: '8080'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: davos's config location. This is where it stores its database file
+      and logs.
+    Display: advanced
+    Mask: 'false'
+    Mode: rw
+    Name: Appdata
+    Required: 'true'
+    Target: /config
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: davos's file download location
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: 'Path: /download'
+    Required: 'true'
+    Target: /download
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: '99'
+    Description: 'Container Variable: PUID'
+    Display: advanced
+    Mask: 'false'
+    Name: PUID
+    Required: 'true'
+    Target: PUID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '100'
+    Description: 'Container Variable: PGID'
+    Display: advanced
+    Mask: 'false'
+    Name: PGID
+    Required: 'true'
+    Target: PGID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '022'
+    Description: 'Container Variable: UMASK'
+    Display: advanced
+    Mask: 'false'
+    Name: UMASK
+    Required: 'false'
+    Target: UMASK
+    Type: Variable
+  value: ''
+DonateImg: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/donate.png
+DonateLink: https://www.linuxserver.io/donate
+DonateText: Donations
+FirstSeen: 1479445200
+GitHub: https://github.com/linuxserver/docker-davos#application-setup
+Icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/davos-logo.png
+LastUpdate: 1646839261
+LastUpdateScan: 1647914648
+Name: davos
+Network: bridge
+Overview: Davos(https://github.com/linuxserver/davos) is an FTP automation tool that
+  periodically scans given host locations for new files. It can be configured for
+  various purposes, including listening for specific files to appear in the host location,
+  ready for it to download and then move, if required. It also supports completion
+  notifications as well as downstream API calls, to further the workflow.
+Privileged: 'false'
+Project: https://github.com/linuxserver/davos
+ReadMe: https://github.com/linuxserver/docker-davos#readme
+Registry: https://github.com/orgs/linuxserver/packages/container/package/davos
+Repo: linuxserver's Repository
+Repository: lscr.io/linuxserver/davos
+Support: https://github.com/linuxserver/docker-davos/issues/new/choose
+TemplateURL: https://raw.githubusercontent.com/linuxserver/templates/master/unraid/davos.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8080]
+topTrending: -0.09799999999999999

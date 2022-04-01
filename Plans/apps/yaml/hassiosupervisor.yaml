@@ -1,0 +1,98 @@
+CategoryList:
+- HomeAutomation
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: /mnt/user/appdata/hassio/
+    Description: 'Container Path: /data'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: hassio_data
+    Required: 'true'
+    Target: /data
+    Type: Path
+  value: /mnt/user/appdata/hassio/
+- '@attributes':
+    Default: /mnt/user/appdata/hassio/
+    Description: 'Container Variable: SUPERVISOR_SHARE'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: SUPERVISOR_SHARE
+    Required: 'true'
+    Target: SUPERVISOR_SHARE
+    Type: Variable
+  value: /mnt/user/appdata/hassio/
+- '@attributes':
+    Default: /var/run/docker.sock
+    Description: 'Container Path: /var/run/docker.sock'
+    Display: advanced
+    Mask: 'false'
+    Mode: rw
+    Name: dockersock
+    Required: 'true'
+    Target: /var/run/docker.sock
+    Type: Path
+  value: /var/run/docker.sock
+- '@attributes':
+    Default: hassio_supervisor
+    Description: 'Container Variable: SUPERVISOR_NAME'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: SUPERVISOR_NAME
+    Required: 'true'
+    Target: SUPERVISOR_NAME
+    Type: Variable
+  value: hassio_supervisor
+- '@attributes':
+    Default: homeassistant/intel-nuc-homeassistant
+    Description: 'Container Variable: HOMEASSISTANT_REPOSITORY'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: HOMEASSISTANT_REPOSITORY
+    Required: 'true'
+    Target: HOMEASSISTANT_REPOSITORY
+    Type: Variable
+  value: homeassistant/intel-nuc-homeassistant
+- '@attributes':
+    Default: /var/run/dbus
+    Description: 'Container Path: /var/run/dbus'
+    Display: advanced
+    Mask: 'false'
+    Mode: rw
+    Name: dbus
+    Required: 'true'
+    Target: /var/run/dbus
+    Type: Path
+  value: /var/run/dbus
+Deprecated: true
+ExtraParams: --security-opt apparmor:unconfined --security-opt seccomp=unconfined
+FirstSeen: 1558195615
+Icon: https://raw.githubusercontent.com/digiblur/unraid-docker-templates/master/images/ha_round2.png
+LastUpdate: 1646328298
+LastUpdateScan: 1646521382
+Name: hassio_supervisor
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "Testing Purposes Only - This install method is NOT a supported method of\
+  \ HA Install!  The WebUI will be provided by the homeassistant docker container\
+  \ on port 8123 of this server.\r\n\r\nHass.io Supervisor Docker Container - Hass.io\
+  \ is a Docker-based system for managing your Home Assistant installation and related\
+  \ applications. The system is controlled via Home Assistant which communicates with\
+  \ the Supervisor. The Supervisor provides an API to manage the installation. This\
+  \ includes changing network settings or installing and updating software."
+PostArgs: ''
+Privileged: 'true'
+Registry: https://hub.docker.com/r/homeassistant/amd64-hassio-supervisor
+Repo: digiblur's Repository
+Repository: homeassistant/amd64-hassio-supervisor
+Support: https://forums.unraid.net/topic/72033-support-digiblurs-docker-template-repository/
+TemplateURL: https://raw.githubusercontent.com/digiblur/unraid-docker-templates/master/deprecated/hassio_supervisor.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8123]
+topPerforming: 0.644
+topTrending: -0.11399999999999999

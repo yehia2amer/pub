@@ -1,0 +1,102 @@
+CategoryList:
+- Cloud
+- Productivity
+- Tools-Utilities
+- Network-Other
+Config:
+- '@attributes':
+    Default: ''
+    Description: 'Container Port: 1433'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Port
+    Required: 'false'
+    Target: '1433'
+    Type: Port
+  value: '1433'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: ACCEPT_EULA'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: ACCEPT_EULA
+    Required: 'true'
+    Target: ACCEPT_EULA
+    Type: Variable
+  value: Y
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: SA_PASSWORD'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: SA_PASSWORD
+    Required: 'true'
+    Target: SA_PASSWORD
+    Type: Variable
+  value: P@$$W0rd2021!.
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: MSSQL_PID'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: MSSQL_PID
+    Required: 'false'
+    Target: MSSQL_PID
+    Type: Variable
+  value: Express
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /var/opt/mssql/data'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Data path
+    Required: 'false'
+    Target: /var/opt/mssql/data
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /var/opt/mssql/log'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Log path
+    Required: 'false'
+    Target: /var/opt/mssql/log
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /var/opt/mssql/secrets'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Secrets path
+    Required: 'false'
+    Target: /var/opt/mssql/secrets
+    Type: Path
+  value: ''
+ExtraParams: --restart=always
+FirstSeen: 1612631216
+Icon: https://img.icons8.com/color/96/000000/microsoft-sql-server.png
+LastUpdateScan: 1646413404
+Name: MS-SQL-Server
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: You have to accept the EULA with "Y" as parameter.
+PostArgs: ''
+Privileged: 'false'
+Project: https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-setup?view=sql-server-ver15
+Registry: https://hub.docker.com/_/microsoft-mssql-server
+Repo: patrickstigler's Repository
+Repository: mcr.microsoft.com/mssql/server:2019-latest
+Support: https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-setup?view=sql-server-ver15
+TemplateURL: https://raw.githubusercontent.com/patrickstigler/unraid_app_templates/master/mssql-server/mssql-server.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''

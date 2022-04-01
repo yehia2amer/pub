@@ -1,0 +1,177 @@
+ChangeLogPresent: true
+Config:
+- '@attributes':
+    Default: '3000'
+    Description: Web gui port (internal port also needs to be changed if accessing
+      at port other than 80, 443 and 3000).
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI
+    Required: 'true'
+    Target: '3000'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: HedgeDoc config and configurable files
+    Display: advanced
+    Mask: 'false'
+    Mode: rw
+    Name: Appdata
+    Required: 'true'
+    Target: /config
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: hostname or ip
+    Description: Host address of mysql database
+    Display: always
+    Mask: 'false'
+    Name: DB_HOST
+    Required: 'true'
+    Target: DB_HOST
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '3306'
+    Description: Port to access mysql database default is 3306
+    Display: always
+    Mask: 'false'
+    Name: DB_PORT
+    Required: 'true'
+    Target: DB_PORT
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: hedgedoc
+    Description: Database user
+    Display: always
+    Mask: 'false'
+    Name: DB_USER
+    Required: 'true'
+    Target: DB_USER
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: secret password
+    Description: Database password
+    Display: always
+    Mask: 'true'
+    Name: DB_PASS
+    Required: 'true'
+    Target: DB_PASS
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: hedgedoc
+    Description: Database name
+    Display: always
+    Mask: 'false'
+    Name: DB_NAME
+    Required: 'true'
+    Target: DB_NAME
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: localhost
+    Description: The address the gui will be accessed at (ie. `192.168.1.1` or `hedgedoc.domain.com`).
+    Display: always
+    Mask: 'false'
+    Name: CMD_DOMAIN
+    Required: 'true'
+    Target: CMD_DOMAIN
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: 'true'
+    Description: Set to `false` if accessing at port `80` or `443`.
+    Display: always
+    Mask: 'false'
+    Name: CMD_URL_ADDPORT
+    Required: 'false'
+    Target: CMD_URL_ADDPORT
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: 'false'
+    Description: Set to `true` if accessing over https via reverse proxy.
+    Display: always
+    Mask: 'false'
+    Name: CMD_PROTOCOL_USESSL
+    Required: 'false'
+    Target: CMD_PROTOCOL_USESSL
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '3000'
+    Description: If you wish to access hedgedoc at a port different than 80, 443 or
+      3000, you need to set this to that port (ie. `CMD_PORT=5000`) and change the
+      port mapping accordingly (5000:5000).
+    Display: always
+    Mask: 'false'
+    Name: CMD_PORT
+    Required: 'false'
+    Target: CMD_PORT
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '99'
+    Description: 'Container Variable: PUID'
+    Display: advanced
+    Mask: 'false'
+    Name: PUID
+    Required: 'true'
+    Target: PUID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '100'
+    Description: 'Container Variable: PGID'
+    Display: advanced
+    Mask: 'false'
+    Name: PGID
+    Required: 'true'
+    Target: PGID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '022'
+    Description: 'Container Variable: UMASK'
+    Display: advanced
+    Mask: 'false'
+    Name: UMASK
+    Required: 'false'
+    Target: UMASK
+    Type: Variable
+  value: ''
+DonateImg: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/donate.png
+DonateLink: https://www.linuxserver.io/donate
+DonateText: Donations
+FirstSeen: 1615662177
+GitHub: https://github.com/linuxserver/docker-hedgedoc#application-setup
+Icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/hedgedoc-logo.png
+LastUpdate: 1647673608
+LastUpdateScan: 1647914706
+Name: hedgedoc
+Network: bridge
+Overview: 'HedgeDoc(https://hedgedoc.org/) gives you access to all your files wherever
+  you are.
+
+
+  HedgeDoc is a real-time, multi-platform collaborative markdown note editor.  This
+  means that you can write notes with other people on your desktop, tablet or even
+  on the phone.  You can sign-in via multiple auth providers like Facebook, Twitter,
+  GitHub and many more on the homepage.'
+Privileged: 'false'
+Project: https://hedgedoc.org/
+ReadMe: https://github.com/linuxserver/docker-hedgedoc#readme
+Registry: https://github.com/orgs/linuxserver/packages/container/package/hedgedoc
+Repo: linuxserver's Repository
+Repository: lscr.io/linuxserver/hedgedoc
+Requires: MySQL or MariaDB installed
+Support: https://github.com/linuxserver/docker-hedgedoc/issues/new/choose
+TemplateURL: https://raw.githubusercontent.com/linuxserver/templates/master/unraid/hedgedoc.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:3000]
+topTrending: -26.502000000000002

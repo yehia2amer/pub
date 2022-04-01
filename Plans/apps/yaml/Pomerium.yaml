@@ -1,0 +1,100 @@
+CategoryList:
+- Productivity
+- Security
+Config:
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: COOKIE_SECRET'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Cookie Secret
+    Required: 'true'
+    Target: COOKIE_SECRET
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '443'
+    Description: 'Container Port: 443'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: HTTPS
+    Required: 'true'
+    Target: '443'
+    Type: Port
+  value: '1443'
+- '@attributes':
+    Default: '80'
+    Description: 'Container Port: 80'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: HTTP
+    Required: 'true'
+    Target: '80'
+    Type: Port
+  value: '180'
+- '@attributes':
+    Default: /mnt/user/appdata/pomerium
+    Description: 'Container Path: /data'
+    Display: advanced
+    Mask: 'false'
+    Mode: rw
+    Name: Appdata
+    Required: 'true'
+    Target: /data
+    Type: Path
+  value: /mnt/user/appdata/pomerium
+- '@attributes':
+    Default: /mnt/user/appdata/pomerium/pomerium
+    Description: 'Container Path: /pomerium/'
+    Display: advanced
+    Mask: 'false'
+    Mode: rw
+    Name: Pomerium
+    Required: 'true'
+    Target: /pomerium/
+    Type: Path
+  value: /mnt/user/appdata/pomerium/pomerium
+- '@attributes':
+    Default: ''
+    Description: 'Container Port: 5443'
+    Display: advanced
+    Mask: 'false'
+    Mode: tcp
+    Name: '5443'
+    Required: 'true'
+    Target: '5443'
+    Type: Port
+  value: '5443'
+DonateLink: https://paypal.me/ramteksolutions
+DonateText: Help support my work by buying me a beer
+FirstSeen: 1612667216
+Icon: https://i.imgur.com/oF39h9B.png
+LastUpdate: 1646430810
+LastUpdateScan: 1646442220
+Name: Pomerium
+Network: bridge
+Networking:
+  Mode: bridge
+Official: true
+Overview: 'Pomerium is an identity-aware proxy that enables secure access to internal
+  applications. Pomerium provides a standardized interface to add access control to
+  applications regardless of whether the application itself has authorization or authentication
+  baked-in. Pomerium gateways both internal and external requests, and can be used
+  in situations where you''d typically reach for a VPN. Check ports to ensure you
+  do not have conflicts. **NOTE** You MUST: 1.Create a config.yaml file in appdata/pomerium/pomerium.
+  The parameters for the file can be found here: https://www.pomerium.io/reference/
+  2. Match your cookie secret in both the file and the variable below.'
+Privileged: 'false'
+Project: https://github.com/pomerium/pomerium
+Registry: https://hub.docker.com/r/pomerium/pomerium
+Repo: Sycotix' Repository
+Repository: pomerium/pomerium
+Support: https://discord.gg/VWAG7rZ
+TemplateURL: https://raw.githubusercontent.com/ibracorp/unraid-templates/master/pomerium/pomerium.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:180]
+topPerforming: 9.483
+topTrending: 0.6189999999999998

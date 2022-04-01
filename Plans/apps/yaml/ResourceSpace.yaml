@@ -1,0 +1,62 @@
+BindTime: 'true'
+CategoryList:
+- Network-Web
+- MediaServer-Photos
+Data:
+  Volume:
+  - ContainerDir: /config
+    HostDir: /mnt/user/appdata/resourcespace/config/
+    Mode: rw
+  - ContainerDir: /web
+    HostDir: /mnt/user/appdata/resourcespace/www/
+    Mode: rw
+  - ContainerDir: /logs
+    HostDir: /mnt/user/appdata/resourcespace/logs/
+    Mode: rw
+  - ContainerDir: /etc/localtime
+    HostDir: /etc/localtime
+    Mode: ro
+Deprecated: true
+Environment:
+  Variable:
+    Name: ''
+    Value: ''
+FirstSeen: 1434513600
+Icon: https://i.imgur.com/4o1lc5Q.png
+LastUpdate: 1434627702
+LastUpdateScan: 1648627431
+ModeratorComment: This container appears to be hopelessly out of date, and is now
+  deprecated
+Name: ResourceSpace
+Networking:
+  Mode: bridge
+  Publish:
+    Port:
+    - ContainerPort: '80'
+      HostPort: '8112'
+      Protocol: tcp
+    - ContainerPort: '443'
+      HostPort: '444'
+      Protocol: tcp
+Overview: "ResopurceSpace DAM server software. This is a modification of CHBMB and\
+  \ smdion by Hernando[br][br]\n    [b][span style='color: #E80000;']Directions:[/span][/b][br]\n\
+  \    [b]/config[/b] : this path is used to store the configuration and the SSL certs\
+  \ files of the reverse proxy.[br]\n    [b]/web[/b] : this path is the web directory[br]\n\
+  \    [b]/logs[/b] : this path is the logs directory[br][br]\n\n\nUsername and password\
+  \ are [b]admin:admin[/b]. [br][br]\nOnce you launch for first time, it will take\
+  \ you to a Configuration page:[br][br]\nYou must have an existing MySQL database\
+  \ available. I recommend the MariaDB docker. This must be already setup. Enter appropiate\
+  \ values on config page.[br]\nDo NOT put port number on MySQL server address box.\n\
+  [br][br]\n [b]YOU MUST ALSO HAVE A DATABASE TABLE IN YOUR DATABSE CALLED \"resourcespace\"\
+  \ [/b]. Create this manually prior to saving your configuration.[br]\n[br][br]\n\
+  \nIn config page, leave \"MySQL binary path\" empty. [br][br]\n\nFor all the PATHS\
+  \ for ImageMagick, Ghoscript, etc, enter \"/usr/bin\" and nothing else... without\
+  \ the quotes."
+Privileged: 'false'
+Registry: https://registry.hub.docker.com/r/hernandito/docker-resourcespace/
+Repo: hernandito's Repository
+Repository: hernandito/docker-resourcespace
+Support: http://lime-technology.com/forum/index.php?topic=39623.0
+TemplateURL: https://raw.githubusercontent.com/hernandito/docker-templates/master/hernando/ResourceSpace.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:80]/

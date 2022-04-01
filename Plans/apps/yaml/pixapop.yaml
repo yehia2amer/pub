@@ -1,0 +1,107 @@
+ChangeLogPresent: true
+Config:
+- '@attributes':
+    Default: '80'
+    Description: WebUI
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI
+    Required: 'true'
+    Target: '80'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Stores config and logs for nginx base.
+    Display: advanced
+    Mask: 'false'
+    Mode: rw
+    Name: Appdata
+    Required: 'true'
+    Target: /config
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Your local folder of photos.
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: 'Path: /photos'
+    Required: 'true'
+    Target: /photos
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: admin
+    Description: Specify a username to enable authentication.
+    Display: always
+    Mask: 'false'
+    Name: APP_USERNAME
+    Required: 'false'
+    Target: APP_USERNAME
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: admin
+    Description: Specify a password to enable authentication.
+    Display: always
+    Mask: 'true'
+    Name: APP_PASSWORD
+    Required: 'false'
+    Target: APP_PASSWORD
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '99'
+    Description: 'Container Variable: PUID'
+    Display: advanced
+    Mask: 'false'
+    Name: PUID
+    Required: 'true'
+    Target: PUID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '100'
+    Description: 'Container Variable: PGID'
+    Display: advanced
+    Mask: 'false'
+    Name: PGID
+    Required: 'true'
+    Target: PGID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '022'
+    Description: 'Container Variable: UMASK'
+    Display: advanced
+    Mask: 'false'
+    Name: UMASK
+    Required: 'false'
+    Target: UMASK
+    Type: Variable
+  value: ''
+DonateImg: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/donate.png
+DonateLink: https://www.linuxserver.io/donate
+DonateText: Donations
+FirstSeen: 1634990599
+GitHub: https://github.com/linuxserver/docker-pixapop#application-setup
+Icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/pixapop-logo.png
+LastUpdate: 1647328403
+LastUpdateScan: 1647914829
+Name: pixapop
+Network: bridge
+Overview: Pixapop(https://github.com/bierdok/pixapop) is an open-source single page
+  application to view your photos in the easiest way possible.
+Privileged: 'false'
+Project: https://github.com/bierdok/pixapop
+ReadMe: https://github.com/linuxserver/docker-pixapop#readme
+Registry: https://github.com/orgs/linuxserver/packages/container/package/pixapop
+Repo: linuxserver's Repository
+Repository: lscr.io/linuxserver/pixapop
+Support: https://github.com/linuxserver/docker-pixapop/issues/new/choose
+TemplateURL: https://raw.githubusercontent.com/linuxserver/templates/master/unraid/pixapop.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:80]

@@ -1,0 +1,96 @@
+CategoryList:
+- Drivers
+- Tools-Utilities
+- Other
+- Network-Other
+Config:
+- '@attributes':
+    Default: /mnt/user/appdata/gluster-server/metadata
+    Description: 'Container Path: /var/lib/glusterd'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Metadata
+    Required: 'false'
+    Target: /var/lib/glusterd
+    Type: Path
+  value: /mnt/user/appdata/gluster-server/metadata
+- '@attributes':
+    Default: /mnt/user/appdata/gluster-server/config
+    Description: 'Container Path: /etc/glusterfs'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Config
+    Required: 'false'
+    Target: /etc/glusterfs
+    Type: Path
+  value: /mnt/user/appdata/gluster-server/config
+- '@attributes':
+    Default: /mnt/user/appdata/gluster-server/log
+    Description: 'Container Path: /var/log/glusterfs'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Log
+    Required: 'false'
+    Target: /var/log/glusterfs
+    Type: Path
+  value: /mnt/user/appdata/gluster-server/log
+- '@attributes':
+    Default: /mnt/user/appdata/gluster-server/data
+    Description: 'Container Path: /gluster'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Data
+    Required: 'false'
+    Target: /gluster
+    Type: Path
+  value: /mnt/user/appdata/gluster-server/data
+- '@attributes':
+    Default: /mnt/user/appdata/gluster-server/hosts
+    Description: 'Container Path: /etc/hosts'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Host file (remove if not required)
+    Required: 'false'
+    Target: /etc/hosts
+    Type: Path
+  value: /mnt/user/appdata/gluster-server/hosts
+- '@attributes':
+    Default: 49152-49162
+    Description: 'Container Variable: BRICK_PORT_RANGE'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: BRICK_PORT_RANGE
+    Required: 'false'
+    Target: BRICK_PORT_RANGE
+    Type: Variable
+  value: 49152-49162
+DonateLink: https://paypal.me/mersenne
+DonateText: If you like my work, a donation to my burger fund is very much appreciated.
+FirstSeen: 1618408974
+Icon: https://github.com/testdasi/gluster-server/raw/main/gluster.png
+LastUpdate: 1646958163
+LastUpdateScan: 1646996595
+Name: Gluster-Server
+Network: host
+Networking:
+  Mode: host
+Overview: "A docker running gluster server. This allows me to use a folder in the\
+  \ Unraid cache pool as persistent storage for Kubernetes / Docker Swarm through\
+  \ glusterfs. It works way better than NFS, especially for high-availability applications.\r\
+  \n\r\nFor more detail readme, please refer to https://github.com/testdasi/gluster-server"
+PostArgs: ''
+Privileged: 'true'
+Project: https://github.com/testdasi/gluster-server
+Registry: https://registry.hub.docker.com/r/testdasi/gluster-server/
+Repo: testdasi's Repository
+Repository: testdasi/gluster-server:latest
+Support: https://forums.unraid.net/topic/96233-support-testdasi-repo/
+TemplateURL: https://raw.githubusercontent.com/testdasi/testdasi-unraid-repo/master/gluster-server.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''

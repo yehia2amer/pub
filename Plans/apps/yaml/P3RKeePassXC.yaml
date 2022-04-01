@@ -1,0 +1,70 @@
+CategoryList:
+- Security
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: '5800'
+    Description: 'Container Port: 5800'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Web Port
+    Required: 'true'
+    Target: '5800'
+    Type: Port
+  value: '5800'
+- '@attributes':
+    Default: '5900'
+    Description: 'Container Port: 5900'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: VNC Port
+    Required: 'false'
+    Target: '5900'
+    Type: Port
+  value: '5900'
+- '@attributes':
+    Default: /mnt/user/appdata/P3R-KeePassXC/
+    Description: 'Container Path: /config/'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: AppData
+    Required: 'true'
+    Target: /config/
+    Type: Path
+  value: /mnt/user/appdata/P3R-KeePassXC/
+- '@attributes':
+    Default: ''
+    Description: Set New VNC Password
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: VNC Password
+    Required: 'false'
+    Target: VNC_PASSWORD
+    Type: Variable
+  value: ''
+DonateLink: https://www.patreon.com/keepitPG
+DonateText: Please support me on Patreon
+FirstSeen: 1589155728
+Icon: https://raw.githubusercontent.com/P3R-CO/unraid/master/KeePassXC-P3R-256px.png
+LastUpdate: 1600503062
+LastUpdateScan: 1646321106
+Name: P3R-KeePassXC
+Network: bridge
+Overview: "KeePassXC in a container.  Keep your passwords safe!\r\nI highly recommend\
+  \ also downloading the KeePassXC browser extension for easy input of passwords on\
+  \ webpages.\r\r\nSave your database in the /config folder for persistence after\
+  \ updates/reboots and backups with your AppData."
+Privileged: 'false'
+Project: https://github.com/P3R-CO/keepassxc-container
+Registry: https://hub.docker.com/repository/docker/p3rco/keepassxc
+Repo: capt.asic's Repository
+Repository: p3rco/keepassxc:latest
+Support: https://discord.gg/uRhFDDK
+TemplateURL: https://raw.githubusercontent.com/P3R-CO/unraid/master/keepassxc.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:5800]/
+topTrending: -1.9559999999999995

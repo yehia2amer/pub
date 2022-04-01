@@ -1,0 +1,97 @@
+CategoryList:
+- GameServers
+- Network-Management
+Config:
+- '@attributes':
+    Default: '2022'
+    Description: 'Container Port: 2022'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Host Port 1
+    Required: 'true'
+    Target: '2022'
+    Type: Port
+  value: '2022'
+- '@attributes':
+    Default: '8080'
+    Description: 'Container Port: 8080'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Host Port 2
+    Required: 'true'
+    Target: '8080'
+    Type: Port
+  value: '8181'
+- '@attributes':
+    Default: /mnt/user/pterodactyl-node/
+    Description: 'Container Path: /etc/pterodactyl'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: appdata
+    Required: 'true'
+    Target: /etc/pterodactyl
+    Type: Path
+  value: /mnt/user/pterodactyl-node/
+- '@attributes':
+    Default: /var/run/docker.sock
+    Description: 'Container Path: /var/run/docker.sock'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: docker.sock
+    Required: 'true'
+    Target: /var/run/docker.sock
+    Type: Path
+  value: /var/run/docker.sock
+- '@attributes':
+    Default: /mnt/user/pterodactyl-node/data
+    Description: 'Container Path: /mnt/user/pterodactyl-node/data'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: data
+    Required: 'false'
+    Target: /mnt/user/pterodactyl-node/data
+    Type: Path
+  value: /mnt/user/pterodactyl-node/data
+- '@attributes':
+    Default: /tmp/pterodactyl
+    Description: 'Container Path: /tmp/pterodactyl'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: tmp
+    Required: 'false'
+    Target: /tmp/pterodactyl
+    Type: Path
+  value: /tmp/pterodactyl
+DonateLink: https://paypal.me/ramteksolutions
+DonateText: Help support my work by buying me a beer
+ExtraParams: --privileged=true --restart=unless-stopped
+FirstSeen: 1591121810
+Icon: https://raw.githubusercontent.com/ibracorp/unraid-templates/master/icons/pterodactyl-panel.png
+LastUpdate: 1644091442
+LastUpdateScan: 1647633802
+Name: pterodactyl-daemon
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "Pterodactyl is an open-source game server management panel built with PHP\
+  \ 7, React, and Go. Designed with security in mind, Pterodactyl runs all game servers\
+  \ in isolated Docker containers while exposing a beautiful and intuitive UI to end\
+  \ users.\r\n\r\nFind a guide on how to get this up and running at https://docs.ibracorp.io"
+PostArgs: ''
+Privileged: 'false'
+Project: https://pterodactyl.io/
+Registry: https://hub.docker.com/r/ccarney16/pterodactyl-daemon
+Repo: Sycotix' Repository
+Repository: ccarney16/pterodactyl-daemon:latest
+Support: https://discord.gg/VWAG7rZ
+TemplateURL: https://raw.githubusercontent.com/ibracorp/unraid-templates/master/pterodactyl-daemon/pterodactyl-daemon.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''
+topPerforming: 1.008
+topTrending: -0.22599999999999998

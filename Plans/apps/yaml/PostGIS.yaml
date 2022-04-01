@@ -1,0 +1,57 @@
+CategoryList:
+- Productivity
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: postgres
+    Description: 'Container Variable: POSTGRES_PASSWORD'
+    Display: always
+    Mask: 'true'
+    Mode: ''
+    Name: Password for postgres role
+    Required: 'true'
+    Target: POSTGRES_PASSWORD
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: /mnt/user/appdata/postgis
+    Description: 'Container Path: /var/lib/postgresql/data'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Data directory
+    Required: 'true'
+    Target: /var/lib/postgresql/data
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: '5432'
+    Description: 'Container Port: 5432'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Database port
+    Required: 'true'
+    Target: '5432'
+    Type: Port
+  value: ''
+FirstSeen: 1639055016
+Icon: https://postgis.net/images/postgis-logo.png
+LastUpdate: 1646636916
+LastUpdateScan: 1646852603
+Name: PostGIS
+Network: bridge
+Official: true
+Overview: PostGIS is a spatial database extender for PostgreSQL object-relational
+  database. The postgis/postgis image provides tags for running Postgres with PostGIS
+  extensions installed.
+Privileged: 'false'
+Project: http://postgis.net/
+Registry: https://hub.docker.com/r/postgis/postgis/
+Repo: Selfhosters Unraid Discord Repository
+RepoShort: Selfhosters
+Repository: postgis/postgis
+Support: http://postgis.net/support/
+TemplateURL: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/postgis.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+topTrending: -1.7590000000000003

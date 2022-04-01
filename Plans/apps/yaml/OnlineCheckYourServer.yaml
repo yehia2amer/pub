@@ -1,0 +1,131 @@
+CategoryList:
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: ''
+    Description: IP or Domainname to ping goes here.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Host
+    Required: 'true'
+    Target: HOST
+    Type: Variable
+  value: google.com
+- '@attributes':
+    Default: ''
+    Description: Interval in wich the Host is pinged (in seconds).
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Ping Interval
+    Required: 'true'
+    Target: PING_INTERVAL
+    Type: Variable
+  value: '300'
+- '@attributes':
+    Default: ''
+    Description: Time that the Host has to answer the ping request (in seconds).
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Ping Timeout
+    Required: 'true'
+    Target: PING_TIMEOUT
+    Type: Variable
+  value: '10'
+- '@attributes':
+    Default: ''
+    Description: Time to wait to retry it after the ping fails (in seconds).
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Retry after Fail
+    Required: 'true'
+    Target: PING_RETRY
+    Type: Variable
+  value: '3600'
+- '@attributes':
+    Default: ''
+    Description: Pushover APP Token goes here.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Pushover APP Token
+    Required: 'true'
+    Target: PUSHOVER_APP_TOKEN
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Pushover User Token goes here.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Pushover User Token
+    Required: 'true'
+    Target: PUSHOVER_USER_TOKEN
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Customized Pushover Message Title here.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Pushover Message Title
+    Required: 'true'
+    Target: PUSHOVER_TITLE
+    Type: Variable
+  value: Online Check
+- '@attributes':
+    Default: ''
+    Description: Customized Pushover Message here.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Pushover Message
+    Required: 'true'
+    Target: PUSHOVER_MESSAGE
+    Type: Variable
+  value: google.com is offline!
+- '@attributes':
+    Default: ''
+    Description: 'Customize the Pushover Priority (''-2'': Lowest priority | ''-1'':
+      Low Priority | ''0'': Normal Priority | ''1'': High Priority | ''2'': Emergency
+      Priority - without quotes)'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Pushover Priority
+    Required: 'true'
+    Target: PUSHOVER_PRIORITY
+    Type: Variable
+  value: '0'
+DonateLink: https://www.paypal.me/chips777
+DonateText: 'If you like my work please '
+ExtraParams: --restart=unless-stopped
+FirstSeen: 1581966414
+Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/pushover.png
+LastUpdate: 1643018093
+LastUpdateScan: 1646924601
+Name: OnlineCheckYourServer
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "This is a simple container that will check if a domain name or IP address\
+  \ is pingable and send you a message with Pushover if it goes offline.\r\n\r\nYou\
+  \ can install it on your machine to get notified with Pushover if a site goes down,\
+  \ or you can install it on a remote machine to ping your server and get a notification\
+  \ if it's not reachable."
+PostArgs: ''
+Privileged: 'false'
+Project: https://hub.docker.com/r/ich777/online-check-pushover
+Registry: https://hub.docker.com/r/ich777/online-check-pushover
+Repo: ich777's Repository
+Repository: ich777/online-check-pushover
+Support: https://forums.unraid.net/topic/83786-support-ich777-application-dockers/
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''
+caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/OnlineCheckYourServer.xml
+topTrending: -3.804

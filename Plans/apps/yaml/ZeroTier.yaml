@@ -1,0 +1,60 @@
+BaseImage: frolvlad/alpine-glibc:alpine-3.12_glibc-2.32
+BindTime: 'true'
+CategoryList:
+- Network-DNS
+- Network-Management
+- Network-VPN
+ChangeLogPresent: true
+Config:
+- '@attributes':
+    Default: ''
+    Description: 'Network ID of ZeroTier network to join, could be find on page: https://my.zerotier.com/network'
+    Display: always-hide
+    Mask: 'false'
+    Mode: ''
+    Name: Network ID
+    Required: 'true'
+    Target: NETWORK_ID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: /mnt/user/appdata/zerotier/zerotier-one
+    Description: Path to persist ZeroTier state across restarts of the container.
+      If you don't bind this ZeroTier will generate a new identity every time.
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: rw
+    Name: Config Directory
+    Required: 'true'
+    Target: /var/lib/zerotier-one
+    Type: Path
+  value: ''
+ExtraParams: --device=/dev/net/tun --cap-add=NET_ADMIN --cap-add=SYS_ADMIN
+FirstSeen: 1527825600
+GitHub: https://github.com/Spikhalskiy/zerotier-unraid-docker.git
+Icon: https://raw.githubusercontent.com/Spikhalskiy/docker-templates/master/images/zerotier_ico.png
+LastUpdate: 1636907531
+LastUpdateScan: 1648476204
+Name: ZeroTier
+Networking:
+  Mode: host
+Overview: "Zerotier is an open source, cross-platform\_virtual LAN / VPN.\n    It\
+  \ allows remote access to devices\_as if they all reside in the same local network.\n\
+  \    All traffic is encrypted end-to-end and takes the most direct path available\
+  \ for minimum latency and maximum performance, using\_VPN-like connections.\n  \
+  \  After installing up Zerotier on unRaid and any other devices - a VPN connection\
+  \ will be set up and all connected devices will be available to each other like\
+  \ they are in the same network.\n    SMB shares, TimeMachine will be autodetected\
+  \ and UIs will be accessible on regular hostnames and ports."
+Privileged: 'true'
+Project: https://www.zerotier.com/
+Registry: https://registry.hub.docker.com/r/spikhalskiy/zerotier/
+Repo: Spikhalskiy's Repository
+Repository: spikhalskiy/zerotier
+Support: https://lime-technology.com/forums/topic/72030-support-spikhalskiy-zerotier/
+TemplateURL: https://raw.githubusercontent.com/Spikhalskiy/docker-templates/master/zerotier.xml
+Version: 1.6.2
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''
+topPerforming: 0.424
+topTrending: -3.7129999999999996

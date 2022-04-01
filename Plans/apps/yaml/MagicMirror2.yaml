@@ -1,0 +1,85 @@
+CategoryList:
+- HomeAutomation
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: ''
+    Description: Data Path
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Data Path
+    Required: 'true'
+    Target: /magicmirror2
+    Type: Path
+  value: /mnt/user/appdata/magicmirror2
+- '@attributes':
+    Default: ''
+    Description: TCP - Webinterface
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Webinterface
+    Required: 'true'
+    Target: '8080'
+    Type: Port
+  value: '8080'
+- '@attributes':
+    Default: ''
+    Description: Set to 'true' (without quotes) to force an update - please don't
+      forget to disable this afterwards since it will pull it every time you restart
+      or start the container!
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Force Update
+    Required: 'false'
+    Target: FORCE_UPDATE
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Set to 'true' (without quotes) to force an update on every restart
+      of the container.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Force Modules Update
+    Required: 'false'
+    Target: FORCE_UPDATE_MODULES
+    Type: Variable
+  value: ''
+DonateLink: https://www.paypal.me/chips777
+DonateText: 'If you like my work please '
+ExtraParams: --restart=unless-stopped
+FirstSeen: 1589306853
+Icon: https://github.com/ich777/docker-templates/raw/master/ich777/images/magicmirror2.png
+LastUpdate: 1643017927
+LastUpdateScan: 1646480536
+Name: MagicMirror-2
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "This Container will download and install MagicMirror\xB2.\r\n\r\n**MODULE\
+  \ INSTALLATION:** This container can pull modules from Github automatically, simply\
+  \ go to your server directory and in the 'modules' folder after the first startup,\
+  \ there you will find a file named 'modules.txt'.\r\nSimply drop your links from\
+  \ Gitbub into the file (place a 'Y' in front of the link to run a automatic 'npm\
+  \ install' after the download, not every module will work with this automatic module\
+  \ installer) or simply delete the '#' in front of the premade modules in the file\
+  \ and then restart the container to download the modules.\r\nPlease don't forget\
+  \ to also to edit your config.js!\r\n\r\n**Update Notice:** This container will\
+  \ check on every restart if there is a newer version of MagicMirror\xB2 available\
+  \ and will download and install it if so."
+PostArgs: ''
+Privileged: 'false'
+Project: https://magicmirror.builders/
+Registry: https://hub.docker.com/r/ich777/magic-mirror2
+Repo: ich777's Repository
+Repository: ich777/magic-mirror2
+Support: https://forums.unraid.net/topic/83786-support-ich777-application-dockers/
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8080]/
+caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/MagicMirror-2.xml
+topPerforming: 7.569
+topTrending: -6.566999999999999

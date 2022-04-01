@@ -1,0 +1,95 @@
+Branch:
+- Registry: https://hub.docker.com/r/justarchi/archisteamfarm
+  Repository: justarchi/archisteamfarm:latest
+  Tag: latest
+  TagDescription: Recommended, self updating, stable
+- Registry: https://hub.docker.com/r/justarchi/archisteamfarm
+  Repository: justarchi/archisteamfarm:main
+  Tag: main
+  TagDescription: Not recommended, every commit will be applied
+- Registry: https://hub.docker.com/r/justarchi/archisteamfarm
+  Repository: justarchi/archisteamfarm:released
+  Tag: released
+  TagDescription: Not recommended, every release including pre releases
+CategoryList:
+- Other
+Config:
+- '@attributes':
+    Default: '1242'
+    Description: By default IPC uses 1242
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI
+    Required: 'true'
+    Target: '1242'
+    Type: Port
+  value: '1242'
+- '@attributes':
+    Default: ''
+    Description: Place the ASF.json and other files here
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Appdata
+    Required: 'true'
+    Target: /app/config
+    Type: Path
+  value: /mnt/user/appdata/ASF/config
+- '@attributes':
+    Default: /mnt/user/appdata/ASF/plugins
+    Description: Place your plugin files here, it is safe to remove
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Plugins
+    Required: 'false'
+    Target: /app/plugins
+    Type: Path
+  value: /mnt/user/appdata/ASF/plugins
+- '@attributes':
+    Default: /mnt/user/appdata/ASF/logs
+    Description: Logs will be stored here, it is safe to remove
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Logs
+    Required: 'false'
+    Target: /app/logs
+    Type: Path
+  value: /mnt/user/appdata/ASF/logs
+FirstSeen: 1639249407
+Icon: https://raw.githubusercontent.com/JustArchiNET/ArchiSteamFarm/5.2.0.10/resources/ASF_512x512.png
+LastUpdate: 1647021558
+LastUpdateScan: 1647039803
+Name: ArchiSteamFarm
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "Check out the wiki for making config files for your steam account.\r\n\
+  https://github.com/JustArchiNET/ArchiSteamFarm/wiki\r\n\r\nASF is a C# application\
+  \ with primary purpose of idling Steam cards from multiple accounts simultaneously.\
+  \ Unlike Idle Master which works only for one account at given time, while requiring\
+  \ Steam client running in the background and launching additional processes imitating\
+  \ \"game playing\" status, ASF doesn't require any Steam client running in the background,\
+  \ doesn't launch any additional processes and is made to handle unlimited Steam\
+  \ accounts at once. In addition to that, it's meant to be run on servers or other\
+  \ desktop-less machines, and features full cross-OS support, which makes it possible\
+  \ to launch on any operating system with .NET Core runtime, such as Windows, Linux\
+  \ and OS X. ASF is possible thanks to gigantic amount of work done in marvelous\
+  \ SteamKit2 library.\r\n\r\nToday, ASF is one of the most versatile Steam power\
+  \ tools, allowing you to make use of many features that were implemented over time.\
+  \ Apart from idling Steam cards, which remains the primary focus, ASF includes bunch\
+  \ of features on its own, such as a possibility to use it as Steam authenticator\
+  \ or chat logger. In addition to that, ASF includes plugin system, thanks to which\
+  \ anybody can further extend it to his/her needs."
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/JustArchiNET/ArchiSteamFarm
+Registry: https://hub.docker.com/r/justarchi/archisteamfarm
+Repo: L4stIdi0t's Repository
+Repository: justarchi/archisteamfarm
+TemplateURL: https://raw.githubusercontent.com/L4stIdi0t/Unraid-template/master/ASF/ArchiSteamFarm.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:1242]/
+topTrending: -0.236

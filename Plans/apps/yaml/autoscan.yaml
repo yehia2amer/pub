@@ -1,0 +1,97 @@
+Branch:
+- Registry: https://hub.docker.com/r/hotio/autoscan
+  Repository: cr.hotio.dev/hotio/autoscan:release
+  Tag: release
+  TagDescription: Releases
+- Registry: https://hub.docker.com/r/hotio/autoscan
+  Repository: cr.hotio.dev/hotio/autoscan:nightly
+  Tag: nightly
+  TagDescription: Every commit to master branch
+CategoryList:
+- Other
+Config:
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /config'
+    Display: always-hide
+    Mask: 'false'
+    Mode: rw
+    Name: Host Path for /config
+    Required: 'true'
+    Target: /config
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: PLEX_LOGIN'
+    Display: always-hide
+    Mask: 'false'
+    Mode: ''
+    Name: PLEX_LOGIN
+    Required: 'false'
+    Target: PLEX_LOGIN
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: PLEX_PASSWORD'
+    Display: always-hide
+    Mask: 'true'
+    Mode: ''
+    Name: PLEX_PASSWORD
+    Required: 'false'
+    Target: PLEX_PASSWORD
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '99'
+    Description: 'Container Variable: PUID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: PUID
+    Required: 'false'
+    Target: PUID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '100'
+    Description: 'Container Variable: PGID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: PGID
+    Required: 'false'
+    Target: PGID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '002'
+    Description: 'Container Variable: UMASK'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: UMASK
+    Required: 'false'
+    Target: UMASK
+    Type: Variable
+  value: ''
+FirstSeen: 1604308112
+Icon: https://hotio.dev/webhook-avatars/pullio.png
+LastUpdate: 1646220945
+LastUpdateScan: 1647446605
+Name: autoscan
+Network: bridge
+Overview: Autoscan replaces the default Plex and Emby behaviour for picking up file
+  changes on the file system. Autoscan integrates with Sonarr, Radarr and Lidarr to
+  fetch changes in near real-time without relying on the file system.
+PostArgs: ''
+Privileged: 'false'
+Project: https://hotio.dev/containers/autoscan
+Registry: https://hub.docker.com/r/hotio/autoscan
+Repo: hotio's Repository
+Repository: cr.hotio.dev/hotio/autoscan
+Support: https://hotio.dev/discord
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''
+caTemplateURL: https://raw.githubusercontent.com/hotio/unraid-templates/master/hotio/autoscan.xml

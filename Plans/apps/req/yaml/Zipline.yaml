@@ -1,0 +1,197 @@
+CategoryList:
+- Cloud
+- Productivity
+- Tools-Utilities
+- Network-FTP
+Config:
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI
+    Required: 'false'
+    Target: '3000'
+    Type: Port
+  value: '8095'
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Storage (uploads)
+    Required: 'false'
+    Target: /zipline/uploads
+    Type: Path
+  value: /mnt/user/appdata/zipline/uploads
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Storage (public)
+    Required: 'false'
+    Target: /zipline/public
+    Type: Path
+  value: /mnt/user/appdata/zipline/public
+- '@attributes':
+    Default: false|true
+    Description: Whether or not to use https or not.
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: SECURE
+    Required: 'false'
+    Target: SECURE
+    Type: Variable
+  value: 'false'
+- '@attributes':
+    Default: ''
+    Description: Key string used for securing HTTPs connection. Generate your own
+      string.
+    Display: advanced
+    Mask: 'true'
+    Mode: ''
+    Name: SECRET
+    Required: 'true'
+    Target: SECRET
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Database URL.
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: DATABASE_URL
+    Required: 'true'
+    Target: DATABASE_URL
+    Type: Variable
+  value: postgresql://USER:PASS@HOST_IP:PORT/DB_NAME
+- '@attributes':
+    Default: ''
+    Description: Which route uploads should be served on.
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: UPLOADER_ROUTE
+    Required: 'false'
+    Target: UPLOADER_ROUTE
+    Type: Variable
+  value: /u
+- '@attributes':
+    Default: ''
+    Description: Which route embed routes should be accessed via.
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: UPLOADER_EMBED_ROUTE
+    Required: 'false'
+    Target: UPLOADER_EMBED_ROUTE
+    Type: Variable
+  value: /a
+- '@attributes':
+    Default: ''
+    Description: Length of randomly generated characters for uploads.
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: UPLOADER_LENGTH
+    Required: 'false'
+    Target: UPLOADER_LENGTH
+    Type: Variable
+  value: '6'
+- '@attributes':
+    Default: ''
+    Description: Which directory uploads should be stored to. (container's path)
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: UPLOADER_DIRECTORY
+    Required: 'false'
+    Target: UPLOADER_DIRECTORY
+    Type: Variable
+  value: ./uploads
+- '@attributes':
+    Default: ''
+    Description: File size limit for administrators. (bytes)
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: UPLOADER_ADMIN_LIMIT
+    Required: 'false'
+    Target: UPLOADER_ADMIN_LIMIT
+    Type: Variable
+  value: '104900000'
+- '@attributes':
+    Default: ''
+    Description: File size limit for normal users. (bytes)
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: UPLOADER_USER_LIMIT
+    Required: 'false'
+    Target: UPLOADER_USER_LIMIT
+    Type: Variable
+  value: '104900000'
+- '@attributes':
+    Default: ''
+    Description: An array of disabled extensions to be blocked when uploading files.
+      (comma separated)
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: UPLOADER_DISABLED_EXTS
+    Required: 'false'
+    Target: UPLOADER_DISABLED_EXTS
+    Type: Variable
+  value: rar,zip
+- '@attributes':
+    Default: ''
+    Description: Which route urls should be served on.
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: URLS_ROUTE
+    Required: 'false'
+    Target: URLS_ROUTE
+    Type: Variable
+  value: /go
+- '@attributes':
+    Default: ''
+    Description: Length of randomly generated characters for urls.
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: URLS_LENGTH
+    Required: 'false'
+    Target: URLS_LENGTH
+    Type: Variable
+  value: '6'
+FirstSeen: 1644778996
+Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/zipline.png
+LastUpdate: 1647225594
+LastUpdateScan: 1647381816
+Name: Zipline
+Network: bridge
+Overview: "DESCRIPTION\r\nZipline is a ShareX/file upload server that is easy to use,\
+  \ packed with features and can be setup in one command!\r\n\r\nNOTES\r\n\u2022 An\
+  \ external PostgreSQL database is required.\r\n\u2022 Default credentials: administrator/password\
+  \ (user/pass). If, for whatever reason, you can't access with default credentials,\
+  \ run the cmd 'yarn prisma migrate deploy' from container's terminal. Then, try\
+  \ again.\r\n\u2022 Zipline supports the use of an API to interact with. Check the\
+  \ documentation to know more.\r\n\r\nVERSION\r\n1.0 (2022-02-13)"
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/diced/zipline
+Registry: https://hub.docker.com/r/diced/zipline
+Repo: SmartPhoneLover's Repository
+Repository: diced/zipline:trunk
+Requires: PostgreSQL (database)
+Support: https://forums.unraid.net/topic/119995-support-smartphonelover-zipline/
+TemplateURL: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/master/templates/Zipline.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:3000]

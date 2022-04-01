@@ -1,0 +1,60 @@
+Beta: 'true'
+CategoryList:
+- Network-DNS
+Config:
+- '@attributes':
+    Default: ''
+    Description: 'Container Port: 53'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: TCP DNS Port
+    Required: 'true'
+    Target: '53'
+    Type: Port
+  value: '5335'
+- '@attributes':
+    Default: ''
+    Description: 'Container Port: 53'
+    Display: always
+    Mask: 'false'
+    Mode: udp
+    Name: UDP DNS Port
+    Required: 'true'
+    Target: '53'
+    Type: Port
+  value: '5335'
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /opt/unbound/etc/unbound/'
+    Display: advanced
+    Mask: 'false'
+    Mode: rw
+    Name: Config Path
+    Required: 'false'
+    Target: /opt/unbound/etc/unbound/
+    Type: Path
+  value: ''
+FirstSeen: 1627385442
+Icon: https://raw.githubusercontent.com/kutzilla/unraid-templates/master/images/unbound.png
+LastUpdate: 1627306991
+LastUpdateScan: 1648159402
+Name: unbound
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: 'Unbound is a validating, recursive, and caching DNS resolver.  It can be
+  used to create your own recursive DNS-Server at home. You can use Unbound for services
+  such as Pi-Hole (Here is a tutorial how to configure Pi-Hole with Unbound: https://www.youtube.com/watch?v=FnFtWsZ8IP0&amp;t=695s)
+  or you can create custom DNS Records for your local network.'
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/kutzilla/unbound-docker
+Registry: https://hub.docker.com/r/kutzilla/unbound
+Repo: kutzilla's Repository
+Repository: kutzilla/unbound:latest
+Support: https://forums.unraid.net/topic/111818-support-unbound/
+TemplateURL: https://raw.githubusercontent.com/kutzilla/unraid-templates/master/apps/unbound.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''
+topTrending: -34.997

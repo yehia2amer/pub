@@ -1,0 +1,60 @@
+CategoryList:
+- Tools-Utilities
+- Network-Web
+Config:
+- '@attributes':
+    Default: ''
+    Description: 'Container Port: 5005'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Host Port 1
+    Required: 'false'
+    Target: '5005'
+    Type: Port
+  value: '5030'
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /app/data'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Host Path 1
+    Required: 'false'
+    Target: /app/data
+    Type: Path
+  value: /mnt/user/appdata/flame
+- '@attributes':
+    Default: flame_password
+    Description: 'Container Variable: PASSWORD'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: User password
+    Required: 'false'
+    Target: PASSWORD
+    Type: Variable
+  value: flame_password
+ExtraParams: --init
+FirstSeen: 1623157932
+Icon: https://raw.githubusercontent.com/pawelmalak/unraid-templates/master/templates/icons/flame.png
+LastUpdate: 1641649578
+LastUpdateScan: 1646521386
+Name: flame
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: Flame is self-hosted startpage for your server. Easily manage your apps
+  and bookmarks with built-in editors.
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/pawelmalak/flame
+Registry: https://hub.docker.com/r/pawelmalak/flame
+Repo: paululibro's Repository
+Repository: pawelmalak/flame
+Support: https://forums.unraid.net/topic/109945-support-flame/
+TemplateURL: https://raw.githubusercontent.com/pawelmalak/unraid-templates/master/templates/flame.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:5005]
+topPerforming: 21.501
+topTrending: -30.578999999999997

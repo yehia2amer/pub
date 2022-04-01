@@ -1,0 +1,91 @@
+CategoryList:
+- Productivity
+Config:
+- '@attributes':
+    Default: Pacific/Auckland
+    Description: TimeZone for the container refer to https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+      for a list of possible timezones
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: TimeZone
+    Required: 'true'
+    Target: TZ
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '99'
+    Description: 'Container Variable: PUID'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: PUID
+    Required: 'false'
+    Target: PUID
+    Type: Variable
+  value: '99'
+- '@attributes':
+    Default: '100'
+    Description: 'Container Variable: PGID'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: PGID
+    Required: 'false'
+    Target: PGID
+    Type: Variable
+  value: '100'
+- '@attributes':
+    Default: '3000'
+    Description: Port used to access the WebUI.  The container uses port 5000 this
+      can forward any port to that in the container.
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI
+    Required: 'false'
+    Target: '3000'
+    Type: Port
+  value: '3000'
+- '@attributes':
+    Default: /mnt/user/appdata/fenrus/data
+    Description: Location of user configuration files
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Data
+    Required: 'true'
+    Target: /app/data
+    Type: Path
+  value: /mnt/user/appdata/fenrus/data
+- '@attributes':
+    Default: /mnt/user/appdata/fenrus/images
+    Description: Location to store user images
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Images
+    Required: 'true'
+    Target: /app/wwwroot/images
+    Type: Path
+  value: /mnt/user/appdata/fenrus/images
+DonateLink: https://www.patreon.com/revenz
+FirstSeen: 1645340597
+Icon: https://raw.githubusercontent.com/revenz/Fenrus/master/icon_128.png?raw=true
+LastUpdate: 1647749031
+LastUpdateScan: 1647936198
+Name: Fenrus
+Network: bridge
+Overview: "Fenrus is a home page / personal dashboard with smart apps.   \n  This\
+  \ helps you manage your personal network and services.  \n  It is intended to replace\
+  \ your new tab start page in your browser, \n  as such being fast is a key criterion\
+  \ of this application."
+Privileged: 'false'
+Project: http://fenrus.io
+Registry: https://hub.docker.com/r/revenz/fenrus/
+Repo: reven's Repository
+Repository: revenz/fenrus
+Support: https://discord.com/invite/xbYK8wFMeU
+TemplateURL: https://raw.githubusercontent.com/revenz/FileFlowsUnraid/master/fenrus-unraid-docker.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:3000]

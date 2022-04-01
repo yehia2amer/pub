@@ -1,0 +1,199 @@
+Beta: 'true'
+CategoryList:
+- GameServers
+Config:
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /serverdata/steamcmd'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: SteamCMD
+    Required: 'true'
+    Target: /serverdata/steamcmd
+    Type: Path
+  value: /mnt/user/appdata/steamcmd
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /serverdata/serverfiles'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Server Files
+    Required: 'true'
+    Target: /serverdata/serverfiles
+    Type: Path
+  value: /mnt/cache/appdata/conanexiles/
+- '@attributes':
+    Default: ''
+    Description: "The GAME_ID that the container download at startup.\r\n(https://developer.valvesoftware.com/wiki/Dedicated_Servers_List)"
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: GAME_ID
+    Required: 'true'
+    Target: GAME_ID
+    Type: Variable
+  value: '443030'
+- '@attributes':
+    Default: ''
+    Description: Enter your start up commands for the server.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: GAME_PARAMS
+    Required: 'false'
+    Target: GAME_PARAMS
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Your Steam username goes here if you want to install a game that
+      needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
+      Steam Guard).'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: Steam-Username
+    Required: 'false'
+    Target: USERNAME
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Set the Variable to 'true' if you want to validate the installation
+      otherwise leave it blank.
+    Display: always-hide
+    Mask: 'false'
+    Mode: ''
+    Name: Validate Installation
+    Required: 'false'
+    Target: VALIDATE
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Your Steam password goes here if you want to install a game that
+      needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
+      Steam Guard).'
+    Display: advanced-hide
+    Mask: 'true'
+    Mode: ''
+    Name: Steam-Password
+    Required: 'false'
+    Target: PASSWRD
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Enter you Workshopcontent here, you can also enter multiple WS Content
+      ID's sperated by SPACE
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Workshop Content
+    Required: 'false'
+    Target: WS_CONTENT
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: TCP Game Port (if you need another port, please delete this entry
+      and create a new TCP Port with the required port number, also don't forget to
+      change your server settings)
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: TCP1 - Game Port
+    Required: 'true'
+    Target: '7777'
+    Type: Port
+  value: '7777'
+- '@attributes':
+    Default: ''
+    Description: UDP Game Port (if you need another port, please delete this entry
+      and create a new UDP Port with the required port number, also don't forget to
+      change your server settings)
+    Display: always
+    Mask: 'false'
+    Mode: udp
+    Name: UDP1 - Game Port
+    Required: 'true'
+    Target: '7777'
+    Type: Port
+  value: '7777'
+- '@attributes':
+    Default: ''
+    Description: UDP Game Port +1 (if you need another port, please delete this entry
+      and create a new UDP Port with the required port number, also don't forget to
+      change your server settings)
+    Display: always
+    Mask: 'false'
+    Mode: udp
+    Name: UDP2 - Game Port +1
+    Required: 'true'
+    Target: '7778'
+    Type: Port
+  value: '7778'
+- '@attributes':
+    Default: ''
+    Description: UDP Steam Port (if you need another port, please delete this entry
+      and create a new UDP Port with the required port number, also don't forget to
+      change your server settings)
+    Display: always
+    Mask: 'false'
+    Mode: udp
+    Name: UDP3 - Steam Port
+    Required: 'true'
+    Target: '27015'
+    Type: Port
+  value: '27015'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: UID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: UID
+    Required: 'true'
+    Target: UID
+    Type: Variable
+  value: '99'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: GID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: GID
+    Required: 'true'
+    Target: GID
+    Type: Variable
+  value: '100'
+DonateLink: https://www.paypal.me/chips777
+DonateText: 'If you like my work please '
+ExtraParams: --restart=unless-stopped
+FirstSeen: 1576695956
+Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/conanexiles.png
+LastUpdate: 1648284772
+LastUpdateScan: 1648396990
+Name: ConanExiles
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "This Docker will download and install SteamCMD. It will also install Conan\
+  \ Exiles and run it.\r\n\r\nServername: 'Docker ConanExiles' Password: 'Docker'\
+  \ rconPassword: 'adminDocker'\r\n\r\nATTENTION: First Startup can take very long\
+  \ since it downloads the gameserver files!\r\n\r\nUpdate Notice: Simply restart\
+  \ the container if a newer version of the game is available.\r\n\r\nYou can also\
+  \ run multiple servers with only one SteamCMD directory!"
+PostArgs: ''
+Privileged: 'false'
+Project: https://www.steampowered.com/
+Registry: https://hub.docker.com/r/ich777/steamcmd/
+Repo: ich777's Repository
+Repository: ich777/steamcmd:conanexiles
+Support: https://forums.unraid.net/topic/79530-support-ich777-gameserver-dockers/
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''
+caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/ConanExiles.xml

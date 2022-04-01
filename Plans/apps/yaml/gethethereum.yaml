@@ -1,0 +1,79 @@
+CategoryList:
+- Other
+- Crypto
+Config:
+- '@attributes':
+    Default: ''
+    Description: JSON-RPC HTTP server supports a number of APIs.
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: JSON-RPC HTTP
+    Required: 'true'
+    Target: '8545'
+    Type: Port
+  value: '8545'
+- '@attributes':
+    Default: ''
+    Description: Web-Sockets server supports a number of APIs.
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: JSON-RPC Web-Socket
+    Required: 'true'
+    Target: '8546'
+    Type: Port
+  value: '8546'
+- '@attributes':
+    Default: ''
+    Description: listener (TCP) port
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: listener
+    Required: 'true'
+    Target: '30303'
+    Type: Port
+  value: '30303'
+- '@attributes':
+    Default: ''
+    Description: discovery (UDP) port
+    Display: always
+    Mask: 'false'
+    Mode: udp
+    Name: discovery
+    Required: 'true'
+    Target: '30303'
+    Type: Port
+  value: '30303'
+- '@attributes':
+    Default: /mnt/user/appdata/ethereum
+    Description: Persistent data directory for blockchain files, keys
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: data-path
+    Required: 'true'
+    Target: /root/.ethereum
+    Type: Path
+  value: /mnt/user/blockchain/ethereum/
+FirstSeen: 1630425809
+Icon: https://geth.ethereum.org/static/images/favicon.png
+LastUpdate: 1648591299
+LastUpdateScan: 1648613010
+Name: geth-ethereum
+Network: bridge
+Networking:
+  Mode: bridge
+Official: true
+Overview: Official golang implementation of the Ethereum protocol.
+PostArgs: --http --http.corsdomain localhost --ws --ws.origins localhost --ipcdisable
+Privileged: 'false'
+Project: https://github.com/ethereum/go-ethereum
+Registry: https://hub.docker.com/r/ethereum/client-go/
+Repo: zgo's Repository
+Repository: ethereum/client-go
+Support: https://github.com/ethereum/go-ethereum
+TemplateURL: https://raw.githubusercontent.com/zgorizzo69/unraid-templates/master/geth-ethereum/geth-ethereum.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''

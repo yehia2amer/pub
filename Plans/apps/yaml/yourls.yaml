@@ -1,0 +1,125 @@
+CategoryList:
+- Cloud
+- Tools-Utilities
+- Network-Web
+- Network-Other
+Config:
+- '@attributes':
+    Default: '8086'
+    Description: 'Container Port: 80'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Container Port
+    Required: 'true'
+    Target: '80'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: yourdbhost:3306
+    Description: 'Container Variable: YOURLS_DB_HOST'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: MariaDB Host and Port
+    Required: 'true'
+    Target: YOURLS_DB_HOST
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: YOURLS_DB_PASS'
+    Display: always
+    Mask: 'true'
+    Mode: ''
+    Name: MariaDB Password
+    Required: 'true'
+    Target: YOURLS_DB_PASS
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: https://yourdomainname.something
+    Description: Use a reverse proxy to point to the container host
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: url
+    Required: 'true'
+    Target: YOURLS_SITE
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: yourls
+    Description: yourls database name. default is 'yourls'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: MariaDB Database Name
+    Required: 'true'
+    Target: YOURLS_DB_NAME
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '0'
+    Description: set your timezone ( GMT )
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: YOURLS_HOURS_OFFSET
+    Required: 'true'
+    Target: YOURLS_HOURS_OFFSET
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: 'true'
+    Description: false will set yourls to public. Reccomended value is true ( to be
+      private )
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: YOURLS_PRIVATE
+    Required: 'true'
+    Target: YOURLS_PRIVATE
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: admin
+    Description: Yourls admin interface username
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: YOURLS_USER
+    Required: 'true'
+    Target: YOURLS_USER
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: strongpass
+    Description: Yourls admin interface password
+    Display: always
+    Mask: 'true'
+    Mode: ''
+    Name: YOURLS_PASS
+    Required: 'true'
+    Target: YOURLS_PASS
+    Type: Variable
+  value: ''
+FirstSeen: 1550431854
+Icon: https://github.com/YOURLS/YOURLS/raw/master/images/yourls-logo.png
+LastUpdate: 1646489547
+LastUpdateScan: 1646578444
+Name: yourls
+Network: bridge
+Networking:
+  Mode: bridge
+Official: true
+Overview: YOURLS is a set of PHP scripts that will allow you to run Your Own URL Shortener.
+PostArgs: ''
+Privileged: 'false'
+Registry: https://hub.docker.com/_/yourls/
+Repo: raz's Repository
+Repository: yourls
+Support: https://hub.docker.com/_/yourls/
+TemplateURL: https://raw.githubusercontent.com/RazorSiM/docker-templates/master/yourls.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:80]/admin

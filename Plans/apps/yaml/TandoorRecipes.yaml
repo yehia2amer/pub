@@ -1,0 +1,205 @@
+CategoryList:
+- Productivity
+Config:
+- '@attributes':
+    Default: '8154'
+    Description: 'Container Port: 8080'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Port
+    Required: 'true'
+    Target: '8080'
+    Type: Port
+  value: '8154'
+- '@attributes':
+    Default: America/New_York
+    Description: 'Timezone in TZ format. See here: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Timezone
+    Required: 'false'
+    Target: TIMEZONE
+    Type: Variable
+  value: America/New_York
+- '@attributes':
+    Default: django.db.backends.sqlite3
+    Description: 'Either SQLite (default for unRAID) or PostgreSQL with: django.db.backends.postgresql'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Database Engine
+    Required: 'true'
+    Target: DB_ENGINE
+    Type: Variable
+  value: django.db.backends.sqlite3
+- '@attributes':
+    Default: /mnt/user/appdata/recipes/data
+    Description: 'Container Path: /data'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Database Location
+    Required: 'true'
+    Target: /data
+    Type: Path
+  value: /mnt/user/appdata/recipes/data
+- '@attributes':
+    Default: /mnt/user/appdata/recipes/media
+    Description: 'Container Path: /opt/recipes/mediafiles/'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Media Location
+    Required: 'true'
+    Target: /opt/recipes/mediafiles/
+    Type: Path
+  value: /mnt/user/appdata/recipes/media
+- '@attributes':
+    Default: ''
+    Description: Randomly generate a secret key please.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Secret Key
+    Required: 'true'
+    Target: SECRET_KEY
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '*'
+    Description: Either * for all, or specific domains/subdomains, etc.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Allowed Hosts
+    Required: 'false'
+    Target: ALLOWED_HOSTS
+    Type: Variable
+  value: '*'
+- '@attributes':
+    Default: '1'
+    Description: Enables or disables the comment system.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Comment System
+    Required: 'true'
+    Target: COMMENT_PREF_DEFAULT
+    Type: Variable
+  value: '1'
+- '@attributes':
+    Default: '5'
+    Description: Minimum shopping list refresh interval.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Shopping List Min Refresh
+    Required: 'false'
+    Target: SHOPPING_MIN_AUTOSYNC_INTERVAL
+    Type: Variable
+  value: '5'
+- '@attributes':
+    Default: '0'
+    Description: Debug mode disabled (default) or enabled.
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Debug Mode
+    Required: 'true'
+    Target: DEBUG
+    Type: Variable
+  value: '0'
+- '@attributes':
+    Default: '1'
+    Description: Enables serving media files directly from Gunicorn.
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Serve Gunicorn Meida
+    Required: 'true'
+    Target: GUNICORN_MEDIA
+    Type: Variable
+  value: '1'
+- '@attributes':
+    Default: ''
+    Description: Host for PostgreSQL, should you choose to use it.
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: PostgreSQL Host
+    Required: 'false'
+    Target: POSTGRES_HOST
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '5432'
+    Description: Port for PostgreSQL server shouldy you choose to use it.
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: PostgreSQL Port
+    Required: 'false'
+    Target: POSTGRES_PORT
+    Type: Variable
+  value: '5432'
+- '@attributes':
+    Default: ''
+    Description: User for PostgreSQL should you choose to use it.
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: PostgreSQL User
+    Required: 'false'
+    Target: POSTGRES_USER
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Password for PostgreSQL should you choose to use it.
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: PostgreSQL Password
+    Required: 'false'
+    Target: POSTGRES_PASSWORD
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: /data/recipes.db
+    Description: Name of SQLite database, or the name of your PostgreSQL database
+      if you are using that.
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Database
+    Required: 'false'
+    Target: POSTGRES_DB
+    Type: Variable
+  value: /data/recipes.db
+DonateLink: http://paypal.me/corneliousjd
+DonateText: Donate
+FirstSeen: 1603512480
+Icon: https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/icons/recipes.png
+LastUpdate: 1647621387
+LastUpdateScan: 1647691386
+Name: TandoorRecipes
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: Tandoor Recipes is a Django application to manage, tag and search recipes
+  using either built in models or external storage providers hosting PDF's, Images
+  or other files.
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/vabene1111/recipes
+Registry: https://hub.docker.com/r/vabene1111/recipes/
+Repo: CorneliousJD's Repository
+Repository: vabene1111/recipes
+Support: https://forums.unraid.net/topic/98179-support-recipes-corneliousjd-repo/
+TemplateURL: https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/recipes.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8080]
+topPerforming: 4.578
+topTrending: -6.854

@@ -1,0 +1,145 @@
+CategoryList:
+- MediaApp-Photos
+- Productivity
+- Tools-Utilities
+- Backup
+Config:
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /rapidphotodownloader'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Data Dir
+    Required: 'true'
+    Target: /rapidphotodownloader
+    Type: Path
+  value: /mnt/cache/appdata/rapidphotodownloader/
+- '@attributes':
+    Default: ''
+    Description: 'Container Port: 8080'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebGUI
+    Required: 'true'
+    Target: '8080'
+    Type: Port
+  value: '8080'
+- '@attributes':
+    Default: ''
+    Description: If you want to force an update of the container set the value to
+      'true' (without quotes) otherwise leave blank.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Force Update
+    Required: 'false'
+    Target: FORCE_UPDATE
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /media/source'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Source Folder
+    Required: 'true'
+    Target: /media/source
+    Type: Path
+  value: /mnt/user/rpd-source-folder
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /media/destination'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Destinantion Folder
+    Required: 'true'
+    Target: /media/destination
+    Type: Path
+  value: /mnt/user/rpd-destination-folder
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: UID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: UID
+    Required: 'true'
+    Target: UID
+    Type: Variable
+  value: '99'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: GID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: GID
+    Required: 'true'
+    Target: GID
+    Type: Variable
+  value: '100'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: DL_URL'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Download URL
+    Required: 'true'
+    Target: DL_URL
+    Type: Variable
+  value: https://launchpad.net/rapid/pyqt/0.9.17/+download/install.py
+- '@attributes':
+    Default: ''
+    Description: Minimum screen width 1000 pixels
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Custom Screen Width
+    Required: 'true'
+    Target: CUSTOM_RES_W
+    Type: Variable
+  value: '1024'
+- '@attributes':
+    Default: ''
+    Description: Minimum screen hight 880 pixels
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Custom Screen Height
+    Required: 'true'
+    Target: CUSTOM_RES_H
+    Type: Variable
+  value: '881'
+DonateLink: https://www.paypal.me/chips777
+DonateText: 'If you like my work please '
+ExtraParams: --restart=unless-stopped
+FirstSeen: 1569888435
+Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/rapidphotodownloader.png
+LastUpdate: 1643019373
+LastUpdateScan: 1647835402
+Name: RapidPhotoDownloader
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "This Docker will download and install Rapid Photo Downloader.\r\n\r\nATTENTION:\
+  \ Please be sure to set the right source and destination folder on the server, otherwise\
+  \ the template creates automaticaly two new folders to your shares if not changed\
+  \ ('rpd-source-folder' &amp; 'rpd-destiantion-folder').\r\n\r\nUpdate Notice: Go\
+  \ to the Rapid Photo Downloader homepage (https://www.damonlynch.net/rapid/) and\
+  \ got to the download selection, rightclick on \"Install script\" and select \"\
+  Copy Link Location\" then paste the copied link into the \"Download URL\" variable."
+PostArgs: ''
+Privileged: 'false'
+Project: https://www.damonlynch.net/rapid/
+Registry: https://hub.docker.com/r/ich777/rapidphotodownloader/
+Repo: ich777's Repository
+Repository: ich777/rapidphotodownloader
+Support: ttps://forums.unraid.net/topic/83786-support-ich777-application-dockers/
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8080]/vnc.html?autoconnect=true
+caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/RapidPhotoDownloader.xml

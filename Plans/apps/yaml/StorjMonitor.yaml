@@ -1,0 +1,157 @@
+CategoryList:
+- Cloud
+- Tools-Utilities
+- Other
+- Network-Other
+Config:
+- '@attributes':
+    Default: ''
+    Description: 'Enter location of your storj share folder on unRAID host. '
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Path of Storj share on array
+    Required: 'true'
+    Target: /storj
+    Type: Path
+  value: /mnt/user/storj
+- '@attributes':
+    Default: ''
+    Description: Value should be changed to your Wallet address you use for payout.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Wallet Address
+    Required: 'true'
+    Target: WALLET_ADDRESS
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: 100GB
+    Description: 'Example: 500GB, 1TB, 8TB, for each node you start. MAX SIZE=8TB
+      per node.'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: SHARE_SIZE
+    Required: 'true'
+    Target: SHARE_SIZE
+    Type: Variable
+  value: 100GB
+- '@attributes':
+    Default: 0.0.0.0
+    Description: 'Your DynamicDNS or external DNS address here. If you need a DDNS
+      service, a free one: is duckdns.org'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: RPCADDRESS
+    Required: 'false'
+    Target: RPCADDRESS
+    Type: Variable
+  value: 0.0.0.0
+- '@attributes':
+    Default: ''
+    Description: API-Key for Storjstat.com.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Storjstat.com API-Key
+    Required: 'false'
+    Target: STORJ_MONITOR_API_KEY
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '0'
+    Description: 'Storj daemon can run multiple farming nodes at once. The maximum
+      number of nodes per container is number of threads the CPU has. '
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Number of extra nodes
+    Required: 'false'
+    Target: NODE_COUNT
+    Type: Variable
+  value: '0'
+- '@attributes':
+    Default: Node_
+    Description: "For multiple nodes this builds your directory, example /storj/thisNameHere#/\r\
+      \n\r\n\r\n\r\n"
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Custom node-directory name
+    Required: 'false'
+    Target: NODE_DIR
+    Type: Variable
+  value: Node_
+- '@attributes':
+    Default: 'TRUE'
+    Description: TCP NAT tunnel on/off switch
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Tunneling Required
+    Required: 'false'
+    Target: TUNNELING_REQUIRED
+    Type: Variable
+  value: 'FALSE'
+- '@attributes':
+    Default: 'FALSE'
+    Description: "Delete Storj logs on/off switch.\r\nEnable == 'TRUE'"
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Delete log files
+    Required: 'false'
+    Target: DEL_LOGS
+    Type: Variable
+  value: 'FALSE'
+- '@attributes':
+    Default: '7'
+    Description: How many days worth of logs to keep. Deletes everything greater than.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Number of log files to keep (days)
+    Required: 'false'
+    Target: DEL_LOGS_DAYS
+    Type: Variable
+  value: '7'
+DonateImg: ''
+DonateText: 'Etherium wallet address for the generous '
+FirstSeen: '1525159259'
+Icon: https://i.imgur.com/hfyAiA4.png
+LastUpdate: 1525505774
+LastUpdateScan: 1648627434
+MinVer: 6.4.1
+Name: StorjMonitor
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "Storj daemon + CLI; multiple-node in template support; Storjstat.com monitor\
+  \ installed.\r\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\r\
+  \n\r\n   Storj is a Crypto-asset and P2P cloud storage service. This Docker runs\
+  \ the back-end client for Storj allowing internet users to rent their disk space\
+  \ and earn STORJ an Ethereum asset.  **The template author makes no guarantee that\
+  \ STORJ or ETH will retain, or increase in fiat value.**\r\n\r\nSETUP REQUIREMENTS:\r\
+  \n-------------------------------------\r\n    1.   TCP port 4000 open on host.\r\
+  \n    2.   Path on host for Storj data to sit.  IE: make a user share,  /mnt/user/storj\
+  \ \r\n    3.   Your Ethereum-based wallet address.\r\n    4.   The max allowed space\
+  \ STORJ can take up on the host; remember to make it less \r\n    5.   DDNS or DNS\
+  \ address.\r\nOPTIONAL REQUIREMENTS:\r\n    1.   Storjstat.com API-Key\r\n    2.\
+  \   Additional network ports, if running multiple nodes. By default it increments\
+  \ from 4000. IE 4001, 4002, 4003++, and so on.\r\n\r\nSTORJ DAEMON STATUS:  (In\
+  \ your command line)\r\n--------------------------------------------------\r\ndocker\
+  \ exec StorjMonitor storjshare status\r\n--------------------------------------------------"
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/Jcloud67/docker-storjshare-cli
+Registry: https://hub.docker.com/r/zugz/r8mystorj
+Repo: JCloud's Repository
+Repository: zugz/r8mystorj:latest
+Support: https://lime-technology.com/forums/topic/69422-support-qdirstat-jcloud-cryptocoin-templates/
+TemplateURL: https://raw.githubusercontent.com/Jcloud67/Docker-Templates/master/r8mystorj.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''
+topTrending: -0.11000000000000001

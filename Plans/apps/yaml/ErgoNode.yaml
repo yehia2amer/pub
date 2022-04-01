@@ -1,0 +1,76 @@
+CategoryList:
+- Other
+Config:
+- '@attributes':
+    Default: /mnt/user/appdata/ergo/data
+    Description: "Path should point to the location you want your &lt;br/&gt; node's\
+      \ data to be (large file 10-20g)\r\n&lt;br/&gt; Ex: /mnt/user/appdata/ergo/data\r\
+      \n&lt;br/&gt; Container Path: /home/ergo/.ergo"
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Node data
+    Required: 'true'
+    Target: /home/ergo/.ergo
+    Type: Path
+  value: /mnt/user/appdata/ergo2/data
+- '@attributes':
+    Default: ''
+    Description: "**IT MUST ALREADY EXIST. Path should point to the config file named\
+      \ ergo.conf &lt;br/&gt; Ex: /mnt/user/appdata/ergo/ergo.conf \r\n&lt;br/&gt;\
+      \ Container Path: /etc/myergo.conf "
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Node conf
+    Required: 'true'
+    Target: /etc/myergo.conf
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: '9030'
+    Description: 'Container Port: 9030'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Peer port
+    Required: 'true'
+    Target: '9030'
+    Type: Port
+  value: '9030'
+- '@attributes':
+    Default: ''
+    Description: 'Container Port: 9053'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Node swagger/panel
+    Required: 'true'
+    Target: '9053'
+    Type: Port
+  value: '9053'
+ExtraParams: ' -e MAX_HEAP=3G  --restart unless-stopped'
+FirstSeen: 1647214623
+Icon: https://ergoplatform.org/img/uploads/1762.png
+LastUpdate: 1644225773
+LastUpdateScan: 1647214623
+Name: ErgoNode
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "Allows you to run a ERGO node on your unRAID server using the\r\nOFFICIAL\
+  \ DOCKER.\r\n\r\n**INSTALLATION GUIDE : https://github.com/Mrlafontaine/Unraid-ErgoNode\r\
+  \n\r\nWhile syncing to the current height, your docker might crash \r\nand it might\
+  \ take a wile (few hours to a day at most) depending \r\non your cpu and ram. \r\
+  \n\r\nOnce the sync is done you can setup your wallet following\r\nthe blog: https://ergoplatform.org/en/blog/2019_12_02_how_to_setup\r\
+  \n- UI for the wallet can be found at [IP]:[PORT:9053]/panel\r\n- For the swagger\
+  \ [IP]:[PORT:9053]/swagger"
+PostArgs: ' --mainnet -c /etc/myergo.conf'
+Privileged: 'false'
+Project: https://github.com/Mrlafontaine/Unraid-ErgoNode
+Registry: https://hub.docker.com/r/ergoplatform/ergo
+Repo: mrlafontaine's Repository
+Repository: ergoplatform/ergo
+TemplateURL: https://raw.githubusercontent.com/Mrlafontaine/Unraid-ErgoNode/master/ergonode.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:9053]/panel

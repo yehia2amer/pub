@@ -1,0 +1,92 @@
+CategoryList:
+- MediaApp-Books
+- MediaServer-Books
+Config:
+- '@attributes':
+    Default: '8083'
+    Description: 'Container Port: '
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebFrontend
+    Required: 'true'
+    Target: '8083'
+    Type: Port
+  value: '8083'
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /books'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Calibre library path
+    Required: 'true'
+    Target: /books
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: PGID'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: GroupID
+    Required: 'true'
+    Target: PGID
+    Type: Variable
+  value: '100'
+- '@attributes':
+    Default: '99'
+    Description: 'Container Variable: PUID'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: UserID
+    Required: 'true'
+    Target: PUID
+    Type: Variable
+  value: '99'
+- '@attributes':
+    Default: true|false
+    Description: 'Container Variable: SET_CONTAINER_TIMEZONE'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: SET_CONTAINER_TIMEZONE
+    Required: 'true'
+    Target: SET_CONTAINER_TIMEZONE
+    Type: Variable
+  value: 'true'
+- '@attributes':
+    Default: UTC
+    Description: "The possible container timezones can be found under the directory\
+      \ /usr/share/zoneinfo/.\r\nUTC, Europe/Berlin, Europe/Vienna\r\n, ..."
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: CONTAINER_TIMEZONE
+    Required: 'true'
+    Target: CONTAINER_TIMEZONE
+    Type: Variable
+  value: UTC
+FirstSeen: 1
+Icon: https://raw.githubusercontent.com/fanningert/unraid-docker-templates/master/fanningert/icons/calibreweb.png
+LastUpdate: 1634922361
+LastUpdateScan: 1646269411
+Name: CalibreWeb
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: Calibre Web is a web app providing a clean interface for browsing, reading
+  and downloading eBooks using an &lt;b&gt;existing Calibre database&lt;/b&gt;.
+PostArgs: ''
+Privileged: 'false'
+Registry: https://registry.hub.docker.com/r/technosoft2000/calibre-web/
+Repo: fanningert's Repository
+Repository: technosoft2000/calibre-web
+Support: https://forums.lime-technology.com/topic/61046-support-calibre-web/
+TemplateURL: https://raw.githubusercontent.com/fanningert/unraid-docker-templates/master/fanningert/CalibreWeb.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8083]
+topPerforming: 1.863
+topTrending: -0.7869999999999999

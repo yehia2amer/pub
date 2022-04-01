@@ -1,0 +1,104 @@
+CategoryList:
+- Productivity
+Config:
+- '@attributes':
+    Default: '5800'
+    Description: 'Container Port: 5800'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Web Port
+    Required: 'true'
+    Target: '5800'
+    Type: Port
+  value: '5800'
+- '@attributes':
+    Default: '5900'
+    Description: 'Container Port: 5900'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: VNC Port
+    Required: 'false'
+    Target: '5900'
+    Type: Port
+  value: '5900'
+- '@attributes':
+    Default: /mnt/user/appdata/P3R-Brave-Browser/
+    Description: 'Container Path: /config/'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: AppData
+    Required: 'true'
+    Target: /config/
+    Type: Path
+  value: /mnt/user/appdata/P3R-Brave-Browser/
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /Downloads'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Browser Downloads Folder
+    Required: 'true'
+    Target: /Downloads/
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: '1920'
+    Description: Display Width in Pixels
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: Browser Display Width
+    Required: 'true'
+    Target: DISPLAY_WIDTH
+    Type: Variable
+  value: '1920'
+- '@attributes':
+    Default: '1080'
+    Description: Display Height in Pixels
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: Browser Display Height
+    Required: 'true'
+    Target: DISPLAY_HEIGHT
+    Type: Variable
+  value: '1080'
+- '@attributes':
+    Default: ''
+    Description: Set New VNC Password
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: VNC Password
+    Required: 'false'
+    Target: VNC_PASSWORD
+    Type: Variable
+  value: ''
+DonateLink: https://www.patreon.com/keepitPG
+DonateText: Please support me on Patreon
+ExtraParams: --shm-size=2g
+FirstSeen: 1588990079
+Icon: https://raw.githubusercontent.com/P3R-CO/unraid/master/Brave-P3R-256px.png
+LastUpdate: 1629422815
+LastUpdateScan: 1648756998
+Name: P3R-Brave-Browser
+Network: bridge
+Overview: "Brave Browser in a forwarded X11 container.\r\nBrave is a free and open-source\
+  \ web browser developed by Brave Software, Inc. based on the Chromium web browser.\
+  \ It blocks ads and website trackers, and provides a way for users to send cryptocurrency\
+  \ contributions in the form of Basic Attention Tokens to websites and content creators."
+Privileged: 'true'
+Project: https://github.com/P3R-CO/brave-container
+Registry: https://hub.docker.com/repository/docker/p3rco/brave
+Repo: capt.asic's Repository
+Repository: p3rco/brave:latest
+Support: https://discord.gg/uRhFDDK
+TemplateURL: https://raw.githubusercontent.com/P3R-CO/unraid/master/brave-browser.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:5800]/
+topPerforming: 0.05
+topTrending: -9.549999999999999

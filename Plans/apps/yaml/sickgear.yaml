@@ -1,0 +1,102 @@
+ChangeLogPresent: true
+Config:
+- '@attributes':
+    Default: '8081'
+    Description: will map the container's port 8081 to port 8081 on the host
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI
+    Required: 'true'
+    Target: '8081'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: this will store any uploaded data on the docker host
+    Display: advanced
+    Mask: 'false'
+    Mode: rw
+    Name: Appdata
+    Required: 'true'
+    Target: /config
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: where you store your tv shows
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: 'Path: /tv'
+    Required: 'true'
+    Target: /tv
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: your downloads folder for post processing (must not be download in
+      progress)
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: 'Path: /downloads'
+    Required: 'true'
+    Target: /downloads
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: '99'
+    Description: 'Container Variable: PUID'
+    Display: advanced
+    Mask: 'false'
+    Name: PUID
+    Required: 'true'
+    Target: PUID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '100'
+    Description: 'Container Variable: PGID'
+    Display: advanced
+    Mask: 'false'
+    Name: PGID
+    Required: 'true'
+    Target: PGID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '022'
+    Description: 'Container Variable: UMASK'
+    Display: advanced
+    Mask: 'false'
+    Name: UMASK
+    Required: 'false'
+    Target: UMASK
+    Type: Variable
+  value: ''
+DonateImg: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/donate.png
+DonateLink: https://www.linuxserver.io/donate
+DonateText: Donations
+FirstSeen: 1560283786
+GitHub: https://github.com/linuxserver/docker-sickgear#application-setup
+Icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/sickgear-logo.png
+LastUpdate: 1647768592
+LastUpdateScan: 1647914875
+Name: sickgear
+Network: bridge
+Overview: 'SickGear(https://github.com/sickgear/sickgear) provides management of TV
+  shows and/or Anime, it detects new episodes, links downloader apps, and more..
+
+
+  For more information on SickGear visit their website and check it out: https://github.com/SickGear/SickGear'
+Privileged: 'false'
+Project: https://github.com/sickgear/sickgear
+ReadMe: https://github.com/linuxserver/docker-sickgear#readme
+Registry: https://github.com/orgs/linuxserver/packages/container/package/sickgear
+Repo: linuxserver's Repository
+Repository: lscr.io/linuxserver/sickgear
+Support: https://github.com/linuxserver/docker-sickgear/issues/new/choose
+TemplateURL: https://raw.githubusercontent.com/linuxserver/templates/master/unraid/sickgear.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8081]

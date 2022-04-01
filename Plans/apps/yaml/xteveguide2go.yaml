@@ -1,0 +1,92 @@
+CategoryList:
+- Downloaders
+- Network-Proxy
+Config:
+- '@attributes':
+    Default: ''
+    Description: "/mnt/user/appdata/xteve/_config/\r\nas suggestion as subfolder"
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: /config
+    Required: 'true'
+    Target: /config
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: where all data will be, when changing startup options with custom
+      location u have to adjust here too
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: /xteve
+    Required: 'true'
+    Target: /root/.xteve/
+    Type: Path
+  value: /mnt/user/appdata/xteve/
+- '@attributes':
+    Default: ''
+    Description: guide2go data and .json dir
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: /guide2go
+    Required: 'true'
+    Target: /guide2go
+    Type: Path
+  value: /mnt/user/appdata/xteve/guide2go/
+- '@attributes':
+    Default: ''
+    Description: "/tmp/xteve/\r\nin case u want buffering etc in RAMDISK"
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: /tmp
+    Required: 'false'
+    Target: /tmp/xteve
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: "/mnt/user/appdata/tvheadend/data/\r\nin case TVH move functions\
+      \ are enabled u need to mount this"
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: /TVH
+    Required: 'false'
+    Target: /TVH
+    Type: Path
+  value: ''
+FirstSeen: 1564142900
+Icon: https://avatars0.githubusercontent.com/u/53275662?s=460&amp;v=4
+LastUpdate: 1628051657
+LastUpdateScan: 1647288205
+Name: xteve_guide2go
+Network: host
+Networking:
+  Mode: host
+Overview: "xteve, guide2go in one docker with cron\r\n\r\nsetup guide2go SD subscrition\
+  \ as follows or copy your existing .json files into your mounted /guide2go folder\
+  \ \r\ndocker exec -it \"dockername\" guide2go -configure /guide2go/\"your_epg_name\"\
+  .yaml\r\n\r\nto test the cronjob functions \r\ndocker exec -it &lt;dockername&gt;\
+  \ ./config/cronjob.sh\r\n\r\nincluded functions are (all can be individual turned\
+  \ on / off)\r\n\r\nxteve - iptv and epg proxy server for plex, emby, etc ... thanks\
+  \ to @marmei \r\nwebsite: http://xteve.de \r\nDiscord: https://discordapp.com/channels/465222357754314767/465222357754314773\r\
+  \n\r\nguide2go - xmltv epg grabber for schedules direct, thanks to @marmei \r\n\
+  github: https://github.com/mar-mei/guide2go \r\nSchedules Direct web: http://www.schedulesdirect.org/\r\
+  \n\r\nsome small script lines cause i personally use tvheadend and get playlist\
+  \ for xteve and cp xml data to tvheadend"
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/alturismo/xteve_guide2go
+Registry: https://hub.docker.com/r/alturismo/xteve_guide2go
+Repo: alturismo's Repository
+Repository: alturismo/xteve_guide2go
+Support: https://forums.unraid.net/topic/81786-support-alturismo-repos/
+TemplateURL: https://raw.githubusercontent.com/alturismo/unraid_templates/master/my-xteve_guide2go.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:34400]/web/
+topPerforming: 1.821
+topTrending: -0.9469999999999998

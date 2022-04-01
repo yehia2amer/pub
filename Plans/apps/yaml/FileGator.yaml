@@ -1,0 +1,123 @@
+CategoryList:
+- Cloud
+- Productivity
+- Tools-Utilities
+- Network-FTP
+Config:
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI (HTTP)
+    Required: 'false'
+    Target: '80'
+    Type: Port
+  value: '8048'
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI (HTTPS)
+    Required: 'false'
+    Target: '443'
+    Type: Port
+  value: '8049'
+- '@attributes':
+    Default: ''
+    Description: This is the location for all the personal information.
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Storage (data)
+    Required: 'false'
+    Target: /data
+    Type: Path
+  value: /mnt/user/appdata/filegator/data
+- '@attributes':
+    Default: ''
+    Description: This is the location for the configuration files.
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Storage (config)
+    Required: 'false'
+    Target: /config
+    Type: Path
+  value: /mnt/user/appdata/filegator/config
+- '@attributes':
+    Default: ''
+    Description: This is the configuration file.
+    Display: always
+    Mask: 'false'
+    Mode: ro
+    Name: Storage (config file)
+    Required: 'false'
+    Target: /var/www/localhost/filegator/configuration.php
+    Type: Path
+  value: /mnt/user/appdata/filegator/config_file/configuration.php
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: TZ
+    Required: 'false'
+    Target: TZ
+    Type: Variable
+  value: Europe/Madrid
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: PUID
+    Required: 'false'
+    Target: PUID
+    Type: Variable
+  value: '1000'
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: PGID
+    Required: 'false'
+    Target: PGID
+    Type: Variable
+  value: '1000'
+DonateLink: https://github.com/SmartPhoneLover/unraid-docker-templates/blob/main/DONATION.md
+DonateText: If you like my work, please consider making a little donation.
+FirstSeen: 1644440623
+Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/filegator.png
+LastUpdate: 1637025937
+LastUpdateScan: 1647039803
+Name: FileGator
+Network: bridge
+Overview: "DESCRIPTION\r\nFileGator is a free, open-source, self-hosted web application\
+  \ for managing files and folders.\r\n\r\nLive demo:\r\nhttps://github.com/filegator/filegator#demo\r\
+  \n\r\nNOTES\r\n\u2022 The default credentials: admin/admin123 (user/pass).\r\n\u2022\
+  \ This image was based on Linuxserver.io's alpine nginx.\r\n\u2022 Run the following\
+  \ cmds before building the container: 'mkdir -m755 -p /mnt/user/appdata/filegator/config_file'\
+  \ and 'curl https://raw.githubusercontent.com/filegator/filegator/master/configuration_sample.php\
+  \ --output /mnt/user/appdata/filegator/config_file/configuration.php'.\r\n\u2022\
+  \ You can customize the interface and how FileGator works even deeper, by editing\
+  \ its 'configuration.php' file. Check 'https://docs.filegator.io/configuration/basic.html'\
+  \ to know more.\r\n\r\nVERSION\r\n1.1 (2022-02-11)"
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/filegator/filegator
+Registry: https://hub.docker.com/r/maxime1907/filegator
+Repo: SmartPhoneLover's Repository
+Repository: maxime1907/filegator
+Requires: ''
+Support: https://forums.unraid.net/topic/119834-support-smartphonelover-filegator/
+TemplateURL: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/master/templates/FileGator.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:80]

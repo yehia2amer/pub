@@ -1,0 +1,124 @@
+CAComment: This template is set up to use a custom network. You may have to adjust
+  the network or IP address etc to match your system
+CategoryList:
+- Productivity
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: '8082'
+    Description: 'Container Port: 80'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: HTTP Port
+    Required: 'false'
+    Target: '80'
+    Type: Port
+  value: '8082'
+- '@attributes':
+    Default: '4432'
+    Description: 'Container Port: 443'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: HTTPS Port
+    Required: 'false'
+    Target: '443'
+    Type: Port
+  value: '4432'
+- '@attributes':
+    Default: /mnt/user/appdata/onlyoffice/DocumentServer/logs
+    Description: 'Container Path: /var/log/onlyoffice'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Mounted folder for logs
+    Required: 'false'
+    Target: /var/log/onlyoffice
+    Type: Path
+  value: /mnt/user/appdata/onlyoffice/DocumentServer/logs
+- '@attributes':
+    Default: /mnt/user/appdata/onlyoffice/DocumentServer/data
+    Description: 'Container Path: /var/www/onlyoffice/Data'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Mounted folder for data files ( SSL certificates can be added in the /cert
+      subfolder )
+    Required: 'false'
+    Target: /var/www/onlyoffice/Data
+    Type: Path
+  value: /mnt/user/appdata/onlyoffice/DocumentServer/data
+- '@attributes':
+    Default: /mnt/user/appdata/onlyoffice/DocumentServer/lib
+    Description: 'Container Path: /var/lib/onlyoffice'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Mounted folder for file cache
+    Required: 'false'
+    Target: /var/lib/onlyoffice
+    Type: Path
+  value: /mnt/user/appdata/onlyoffice/DocumentServer/lib
+- '@attributes':
+    Default: /mnt/user/appdata/onlyoffice/DocumentServer/db
+    Description: 'Container Path: /var/lib/postgresql'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Mounted folder for database
+    Required: 'false'
+    Target: /var/lib/postgresql
+    Type: Path
+  value: /mnt/user/appdata/onlyoffice/DocumentServer/db
+- '@attributes':
+    Default: /mnt/user/appdata/onlyoffice/DocumentServer/fonts
+    Description: 'Container Path: /usr/share/fonts/truetype/custom'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Mounted folder where you can add your custom fonts
+    Required: 'false'
+    Target: /usr/share/fonts/truetype/custom
+    Type: Path
+  value: /mnt/user/appdata/onlyoffice/DocumentServer/fonts
+- '@attributes':
+    Default: /mnt/user/appdata/onlyoffice/DocumentServer/forgotten
+    Description: 'Container Path: /var/lib/onlyoffice/documentserver/App_Data/cache/files/forgotten'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Mounted folder for unsaved files
+    Required: 'false'
+    Target: /var/lib/onlyoffice/documentserver/App_Data/cache/files/forgotten
+    Type: Path
+  value: /mnt/user/appdata/onlyoffice/DocumentServer/forgotten
+DonateLink: https://www.paypal.me/xternet
+DonateText: Donate me a coffee or a beer if you like my work :)
+FirstSeen: 1636412600
+Icon: https://raw.githubusercontent.com/AMJidovu/unraid-repository/d5a562fa4a7b73065dd022e585d80d4b77d0abfa/img/onlyoffice-ce-ds.jpg
+LastUpdate: 1636407636
+LastUpdateScan: 1646809393
+Name: onlyoffice-document-server
+Network: onlyoffice
+Networking:
+  Mode: onlyoffice
+Overview: "Before you start this container you need to create the onlyoffice network.\
+  \ \r\n\t  Open Unraid terminal and paste this command in there: \r\n\t  \" sudo\
+  \ docker network create --driver bridge onlyoffice \" -- withouth the \" \"\r\n\
+  \          If you pair this container with onlyoffice-community-server then this\
+  \ container needs to start first. \r\n\tHTTPS Support can be enable creating a \"\
+  certs\" folder in the data directory and placing onlyoffice.crt and onlyoffice.key\
+  \ in it. Add fonts by placing .ttf in the font folder and force updating the container.\r\
+  \nFor more information visit the support thread \r\nhttps://forums.unraid.net/topic/85643-support-amjidovu-onlyoffice-community-server/"
+PostArgs: ''
+Privileged: 'false'
+Project: https://www.onlyoffice.com/
+Registry: https://hub.docker.com/repository/docker/xternet/unraid-onlyoffice-document-server
+Repo: Jidovu Marius Adrian's Repository
+Repository: xternet/unraid-onlyoffice-document-server:b722d7ee269b89afabea70dce3acfdc8eca6d7e5
+Support: https://forums.unraid.net/topic/85643-support-amjidovu-onlyoffice-community-server/
+TemplateURL: https://raw.githubusercontent.com/AMJidovu/unraid-repository/master/unraid-ca-repo/onlyoffice-document-server.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:80]
+topTrending: -2.5740000000000003

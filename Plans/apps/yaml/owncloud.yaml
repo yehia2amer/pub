@@ -1,0 +1,113 @@
+BaseImage: phusion/baseimage:0.11
+CategoryList:
+- Cloud
+- Network-Other
+- Productivity
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: '443'
+    Description: 'Container Port: 443'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI Port
+    Required: 'true'
+    Target: '443'
+    Type: Port
+  value: '8443'
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /data'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Data Path
+    Required: 'true'
+    Target: /data
+    Type: Path
+  value: /mnt/user/appdata/ownCloud/data
+- '@attributes':
+    Default: '99'
+    Description: 'Container Variable: PUID'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: PUID
+    Required: 'false'
+    Target: PUID
+    Type: Variable
+  value: '99'
+- '@attributes':
+    Default: '100'
+    Description: 'Container Variable: PGID'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: PGID
+    Required: 'false'
+    Target: PGID
+    Type: Variable
+  value: '100'
+- '@attributes':
+    Default: '7.2'
+    Description: Set the version of PHP to use (7.2, 7.3 or 7.4)
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: PHP Version
+    Required: 'false'
+    Target: PHP_VERS
+    Type: Variable
+  value: '7.2'
+- '@attributes':
+    Default: owncloud
+    Description: 'Container Variable: DB_PASS'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: MySQL Password
+    Required: 'false'
+    Target: DB_PASS
+    Type: Variable
+  value: owncloud
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /config'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: rw
+    Name: AppData Config Path
+    Required: 'true'
+    Target: /config
+    Type: Path
+  value: /mnt/user/appdata/ownCloud
+DonateImage: https://www.paypalobjects.com/webstatic/en_US/btn/btn_donate_74x21.png
+DonateLink: https://www.paypal.com/us/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=EJGPC7B5CS66E
+DonateText: For my retirement.
+ExtraParams: --log-opt max-size=50m --log-opt max-file=1 --sysctl=net.core.somaxconn=511
+FirstSeen: 1533960000
+Icon: https://github.com/dlandon/docker.templates/raw/master/owncloud.png
+LastUpdate: 1647727108
+LastUpdateScan: 1648145002
+Name: ownCloud
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "OwnCloud provides universal access to your files via the web, your computer\
+  \ or your mobile devices \u2014 wherever you are. Mariadb is built into the image.\
+  \ Built with php 7.3, 7.4, and 7.5 (selectable), mariadb 10.3 and nginx 1.18[br]\n\
+  \  Configuration\n  **/config** - Where ownCloud should store its config files.\n\
+  \  **/data** - Where ownCloud should store its data files.[br]\n  **Note:** Set\
+  \ Network to br0 and assign a static IP address."
+Privileged: 'true'
+Project: https://owncloud.org/
+Registry: https://registry.hub.docker.com/r/dlandon//owncloud/
+Repo: dlandon's Repository
+Repository: dlandon/owncloud
+Support: https://forums.lime-technology.com/topic/57801-support-dlandon-owncloud/#comment-566487
+TemplateURL: https://raw.githubusercontent.com/dlandon/docker.templates/master/ownCloud.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: https://[IP]:[PORT:443]/
+topPerforming: 0.966
+topTrending: -1.2830000000000001

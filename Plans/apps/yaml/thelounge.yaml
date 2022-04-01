@@ -1,0 +1,139 @@
+CategoryList:
+- Network-Other
+- Productivity
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: ''
+    Description: Path where the configuration, users, logs are located.
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Data Path
+    Required: 'true'
+    Target: /thelounge
+    Type: Path
+  value: /mnt/cache/appdata/thelounge
+- '@attributes':
+    Default: ''
+    Description: 'Username (this field creates the user, if you want to create another
+      user just change this field and it creates a new user - don''t forget to change
+      the password). NOTE: This field can''t be empty, it should always have a user
+      in it that is available for login. No spaces or special characters allowed!'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Username
+    Required: 'true'
+    Target: USERNAME
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: User Password (the initial password of the user, a change of the
+      password in this variable will not change the password if it was already changed
+      through the WebUI).
+    Display: always
+    Mask: 'true'
+    Mode: ''
+    Name: Password
+    Required: 'true'
+    Target: USERPASSWORD
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Choose if the log should be saved to disk or not (valid options
+      are: ''yes'' or ''no'')'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Save Log to Disk
+    Required: 'true'
+    Target: SAVELOG
+    Type: Variable
+  value: 'yes'
+- '@attributes':
+    Default: ''
+    Description: TCP WebUI Port
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Web UI
+    Required: 'true'
+    Target: '9000'
+    Type: Port
+  value: '9000'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: UMASK'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: UMASK
+    Required: 'true'
+    Target: UMASK
+    Type: Variable
+  value: '000'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: UID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: UID
+    Required: 'true'
+    Target: UID
+    Type: Variable
+  value: '99'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: GID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: GID
+    Required: 'true'
+    Target: GID
+    Type: Variable
+  value: '100'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: DATA_PERM'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: DATA_PERM
+    Required: 'true'
+    Target: DATA_PERM
+    Type: Variable
+  value: '770'
+DonateLink: https://www.paypal.me/chips777
+DonateText: 'If you like my work please '
+ExtraParams: --restart=unless-stopped
+FirstSeen: 1597766917
+Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/thelounge.png
+LastUpdate: 1643018524
+LastUpdateScan: 1647214616
+Name: TheLounge
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "TheLonge is the self-hosted web IRC client.\r\nModern features brought\
+  \ to IRC, Always connected, Responsive interface, Synchronized experience\r\nThe\
+  \ Lounge is the official and community-managed fork of Shout, by Mattias Erming.\r\
+  \n\r\nMultiple Users: If you want to create a new user simply change the name in\
+  \ the 'Username' variable and also the 'Password' variable, this will have no impact\
+  \ to existing users (the 'Username' variable can't be empty and should always have\
+  \ a username in it that is available on the server)."
+PostArgs: ''
+Privileged: 'false'
+Project: https://thelounge.chat/
+Registry: https://hub.docker.com/r/ich777/thelounge
+Repo: ich777's Repository
+Repository: ich777/thelounge
+Support: https://forums.unraid.net/topic/83786-support-ich777-application-dockers/
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:9000]
+caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/TheLounge.xml
+topTrending: -0.984

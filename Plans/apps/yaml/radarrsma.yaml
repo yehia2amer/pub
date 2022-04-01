@@ -1,0 +1,118 @@
+Beta: 'true'
+Branch:
+- Tag: latest
+  TagDescription: Radarr (latest) + SMA + FFMPEG
+- Tag: develop
+  TagDescription: Radarr (develop) + SMA + FFMPEG
+- Tag: nightly
+  TagDescription: Radarr (nightly) + SMA + FFMPEG
+CategoryList:
+- Downloaders
+- MediaApp-Video
+Config:
+- '@attributes':
+    Default: '7878'
+    Description: 'Container Port: 7878'
+    Display: always-hide
+    Mask: 'false'
+    Mode: tcp
+    Name: Host Port for 7878
+    Required: 'true'
+    Target: '7878'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /config'
+    Display: always-hide
+    Mask: 'false'
+    Mode: rw
+    Name: Host Path for /config
+    Required: 'true'
+    Target: /config
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: /mnt/user
+    Description: 'Container Path: /storage'
+    Display: always-hide
+    Mask: 'false'
+    Mode: rw
+    Name: Host Path for /storage
+    Required: 'true'
+    Target: /storage
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: NVIDIA_VISIBLE_DEVICES
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: NVIDIA_VISIBLE_DEVICES
+    Required: 'false'
+    Target: NVIDIA_VISIBLE_DEVICES
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: all
+    Description: NVIDIA_DRIVER_CAPABILITIES
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: NVIDIA_DRIVER_CAPABILITIES
+    Required: 'false'
+    Target: NVIDIA_DRIVER_CAPABILITIES
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '99'
+    Description: 'Container Variable: PUID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: PUID
+    Required: 'false'
+    Target: PUID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '100'
+    Description: 'Container Variable: PGID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: PGID
+    Required: 'false'
+    Target: PGID
+    Type: Variable
+  value: ''
+DonateImg: ''
+DonateLink: https://github.com/sponsors/RandomNinjaAtk
+FirstSeen: 1584050818
+Icon: https://raw.githubusercontent.com/RandomNinjaAtk/unraid-templates/master/randomninjaatk/img/radarr.png
+LastUpdate: 1645462944
+LastUpdateScan: 1646413405
+Name: radarr-sma
+Network: bridge
+Overview: "Radarr - A fork of Sonarr to work with movies \xE0 la Couchpotato. This\
+  \ comes bundled with sickbeard_mp4_automator script, that can be found here: https://github.com/mdhiggins/sickbeard_mp4_automator[br][br][b][u][span\
+  \ style='color: #E80000;']Nvidia GPU Use[/span][/u][/b][br]Using the Unraid Nvidia\
+  \ Plugin to install a version of Unraid with the Nvidia Drivers installed and[br]\
+  \ add [b]--runtime=nvidia[/b] to [b]\"extra parameters\"[/b] (switch on advanced\
+  \ view) and[br]copy your [b]GPU UUID[/b] to [b]NVIDIA_VISIBLE_DEVICES.[/b][br][br][b][u][span\
+  \ style='color: #E80000;']Intel GPU Use[/span][/u][/b][br]Edit your [b]go[/b] file\
+  \ to include:[br][b]modprobe i915[br][/b], save and reboot, then [br]add [b]--device=/dev/dri[/b]\
+  \ to [b]\"extra parameters\"[/b] (switch on advanced view)"
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/RandomNinjaAtk/docker-radarr-sma
+Registry: https://hub.docker.com/r/randomninjaatk/radarr-sma
+Repo: randomninjaatk's Repository
+Repository: randomninjaatk/radarr-sma
+Support: https://discord.gg/JumQXDc
+TemplateURL: https://raw.githubusercontent.com/RandomNinjaAtk/unraid-templates/master/randomninjaatk/radarr-sma.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:7878]
+topPerforming: 7.496
+topTrending: -0.4949999999999992

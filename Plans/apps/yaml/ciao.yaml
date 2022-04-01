@@ -1,0 +1,161 @@
+CategoryList:
+- Network-Other
+- Productivity
+- Tools-System
+Config:
+- '@attributes':
+    Default: ''
+    Description: 'Container Port: 3000'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Host Port 1
+    Required: 'true'
+    Target: '3000'
+    Type: Port
+  value: '8090'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: SECRET_KEY_BASE'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: SECRET_KEY_BASE
+    Required: 'false'
+    Target: SECRET_KEY_BASE
+    Type: Variable
+  value: sensitive_secret_key_base
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: SMTP_ADDRESS'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: SMTP_ADDRESS
+    Required: 'false'
+    Target: SMTP_ADDRESS
+    Type: Variable
+  value: smtp.yourhost.com
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: SMTP_EMAIL_FROM'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: SMTP_EMAIL_FROM
+    Required: 'false'
+    Target: SMTP_EMAIL_FROM
+    Type: Variable
+  value: ciao@yourhost.com
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: SMTP_EMAIL_TO'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: SMTP_EMAIL_TO
+    Required: 'false'
+    Target: SMTP_EMAIL_TO
+    Type: Variable
+  value: you@yourhost.com
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: SMTP_PORT'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: SMTP_PORT
+    Required: 'false'
+    Target: SMTP_PORT
+    Type: Variable
+  value: '587'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: SMTP_DOMAIN'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: SMTP_DOMAIN
+    Required: 'false'
+    Target: SMTP_DOMAIN
+    Type: Variable
+  value: smtp.yourhost.com
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: SMTP_AUTHENTICATION'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: SMTP_AUTHENTICATION
+    Required: 'false'
+    Target: SMTP_AUTHENTICATION
+    Type: Variable
+  value: plain
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: SMTP_ENABLE_STARTTLS_AUTO'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: SMTP_ENABLE_STARTTLS_AUTO
+    Required: 'false'
+    Target: SMTP_ENABLE_STARTTLS_AUTO
+    Type: Variable
+  value: 'true'
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: SMTP_USERNAME'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: SMTP_USERNAME
+    Required: 'false'
+    Target: SMTP_USERNAME
+    Type: Variable
+  value: ciao
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: SMTP_PASSWORD'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: SMTP_PASSWORD
+    Required: 'false'
+    Target: SMTP_PASSWORD
+    Type: Variable
+  value: sensitive_password
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /app/db/sqlite'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Database location
+    Required: 'false'
+    Target: /app/db/sqlite
+    Type: Path
+  value: /mnt/user/appdata/ciao
+FirstSeen: 1611083913
+Icon: https://github.com/Muwahhidun/logo/blob/main/logo%20check.png?raw=true
+LastUpdate: 1639355042
+LastUpdateScan: 1647453807
+Name: ciao
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "ciao checks HTTP(S) URL endpoints for a HTTP status code (or errors on\
+  \ the lower TCP stack) and sends a notification on status change via E-Mail or Webhooks.\r\
+  \n\r\nIt uses Cron syntax to schedule the checks and comes along with a Web UI and\
+  \ a RESTfull JSON API.\r\nhttps://brotandgames.com/ciao/"
+PostArgs: ''
+Privileged: 'false'
+Project: https://brotandgames.com/ciao/
+Registry: https://hub.docker.com/r/brotandgames/ciao
+Repo: Muwahhidun's Repository
+Repository: brotandgames/ciao
+Support: https://myunraid.ru/
+TemplateURL: https://raw.githubusercontent.com/Muwahhidun/unraid-docker-templates/master/my-ciao.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8090]
+topPerforming: 0.351
+topTrending: -0.5820000000000001

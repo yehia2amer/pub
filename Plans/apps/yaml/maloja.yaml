@@ -1,0 +1,79 @@
+Beta: 'true'
+CategoryList:
+- MediaServer-Music
+ChangeLogPresent: true
+Config:
+- '@attributes':
+    Default: '42010'
+    Description: Port for accessing web ui and api
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Web Port
+    Required: 'true'
+    Target: '42010'
+    Type: Port
+  value: '42010'
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /config'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: User Data
+    Required: 'false'
+    Target: /config
+    Type: Path
+  value: /mnt/user/appdata/maloja
+- '@attributes':
+    Default: 0.0.0.0
+    Description: Specifies to Maloja what address to listen on (should not change)
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Container Host
+    Required: 'true'
+    Target: MALOJA_HOST
+    Type: Variable
+  value: 0.0.0.0
+- '@attributes':
+    Default: ''
+    Description: Specifies to Maloja which directory to use for data/configuration
+      files
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Data Directory
+    Required: 'false'
+    Target: MALOJA_DATA_DIRECTORY
+    Type: Variable
+  value: /config
+FirstSeen: 1639753431
+Icon: https://github.com/FoxxMD/unraid-docker-templates/raw/master/icons/maloja.png
+LastUpdate: 1641016244
+LastUpdateScan: 1647547394
+Name: maloja
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "Self-hosted music scrobble database to create personal listening statistics\
+  \ and charts as a substitute for Last.fm / Libre.fm / GNU FM.\r\n        \r\n  \
+  \      Features include:\r\n        *  Easy import of existing scrobble data in\
+  \ CSV format (from last.fm, etc.)\r\n        * Custom rules for importing/scrobbling\r\
+  \n        * Custom and 3rd party integrations for album/artist artwork\r\n     \
+  \   * Insightful charting to display time-sliced \"top charts\" for tracks and artists\r\
+  \n        * Full listening history and track lookup using multiple sources (youtube,\
+  \ gmusic, spotify..)\r\n        *  A first-party chrome extension for scrobbling\
+  \ from the web as well as third-party scrobble-compliant endpoints for use with\
+  \ other extensions and applications\r\n        \r\n        See the project, https://github.com/krateng/maloja,\
+  \ for more information or the support thread for recommended setup."
+PostArgs: ''
+Privileged: 'false'
+Project: https://maloja.krateng.ch/
+Registry: https://hub.docker.com/r/krateng/maloja
+Repo: FoxxMD's Repository
+Repository: krateng/maloja:latest
+Support: https://forums.unraid.net/topic/92611-support-foxxmd-maloja/
+TemplateURL: https://raw.githubusercontent.com/FoxxMD/unraid-docker-templates/master/foxxmd/maloja.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:42010]/

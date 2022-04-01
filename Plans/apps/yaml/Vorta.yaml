@@ -1,0 +1,105 @@
+CategoryList:
+- Backup
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI
+    Required: 'false'
+    Target: '5800'
+    Type: Port
+  value: '5800'
+- '@attributes':
+    Default: ''
+    Description: Specify the location for backups (destination).
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Backups (to)
+    Required: 'true'
+    Target: /destination
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Specify the location for backups (source).
+    Display: always
+    Mask: 'false'
+    Mode: ro
+    Name: Backups (from)
+    Required: 'true'
+    Target: /data
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: This is the location for the internal data.
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Storage (config)
+    Required: 'false'
+    Target: /config
+    Type: Path
+  value: /mnt/user/appdata/vorta
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Timezone
+    Required: 'false'
+    Target: TZ
+    Type: Variable
+  value: Europe/Madrid
+- '@attributes':
+    Default: ''
+    Description: 'Default: 1028'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: USER_ID
+    Required: 'false'
+    Target: USER_ID
+    Type: Variable
+  value: '99'
+- '@attributes':
+    Default: ''
+    Description: 'Default: 100'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: GROUP_ID
+    Required: 'false'
+    Target: GROUP_ID
+    Type: Variable
+  value: '100'
+DonateLink: https://github.com/SmartPhoneLover/unraid-docker-templates/blob/main/DONATION.md
+DonateText: If you like my work, please consider making a little donation.
+FirstSeen: 1646046195
+Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/vorta_200x200.png
+LastUpdateScan: 1648641823
+Name: Vorta
+Network: bridge
+Overview: "DESCRIPTION\r\nThis is a docker template for Vorta (GUI for Borg Backup),\
+  \ a backup client for macOS and Linux desktops. It integrates the mighty BorgBackup\
+  \ with your desktop environment to protect your data from disk failure, ransomware\
+  \ and theft.\r\n\r\nNOTES\r\n\u2022 Thank you very much 'marklambert (Ranbato)'\
+  \ and 'scumbug' for contributing on creating the Vorta docker image. Now, being\
+  \ in the official borgbase repo.\r\n\r\nVERSION\r\n1.3 (2022-02-28)"
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/borgbase/vorta-docker
+Registry: https://ghcr.io/borgbase/vorta-docker
+Repo: SmartPhoneLover's Repository
+Repository: ghcr.io/borgbase/vorta-docker
+Requires: ''
+Support: https://forums.unraid.net/topic/117021-support-smartphonelover-vorta-gui-for-borg-backup/
+TemplateURL: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/master/templates/Vorta.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:5800]

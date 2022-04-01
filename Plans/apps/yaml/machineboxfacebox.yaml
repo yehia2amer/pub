@@ -1,0 +1,214 @@
+Beta: 'true'
+CategoryList:
+- HomeAutomation
+- Security
+- Tools-Utilities
+Config:
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: MB_KEY'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: API_KEY
+    Required: 'true'
+    Target: MB_KEY
+    Type: Variable
+  value: OTRmNWYwN2Q0M2Q4MGM3ZDY4NzJlYTIyODFhYjA5NTU.OxrrQ_6G4gvArMZ2KPz0mtUsDjjgy44Uy83QW_ajLaP52Ts6Z85PR8i8WuG2ywqebBPNm7cHu8P3tlWGHXGAwA
+- '@attributes':
+    Default: '8080'
+    Description: ' (string) Defaults to 8080 - Port where the service will listen. '
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: MB_PORT
+    Required: 'true'
+    Target: '8080'
+    Type: Port
+  value: '8085'
+- '@attributes':
+    Default: 0.0.0.1
+    Description: '- (string) Defaults to 0.0.0.0 - Address where the service will
+      listen. '
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: MB_ADDRESS
+    Required: 'true'
+    Target: MB_ADDRESS
+    Type: Variable
+  value: 0.0.0.0
+- '@attributes':
+    Default: ''
+    Description: 'Redis DB - (string) Optional Redis database to connect to. '
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: MB_FACEBOX_REDIS_DB
+    Required: 'false'
+    Target: MB_FACEBOX_REDIS_DB
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '60'
+    Description: '(integer) Default to 60. Timeout in seconds that Facebox will use
+      when it downloads files, for example to download the state file. '
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: MB_DOWNLOAD_TIMEOUT_SECONDS
+    Required: 'false'
+    Target: MB_DOWNLOAD_TIMEOUT_SECONDS
+    Type: Variable
+  value: '60'
+- '@attributes':
+    Default: 'false'
+    Description: '(bool) Defaults to false - If true Facebox will be read only. Teaching
+      and updating state will be disabled. Be sure to provide MB_FACEBOX_STATE_URL
+      to set the initial state, otherwise the box will be useless. '
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: MB_FACEBOX_READ_ONLY
+    Required: 'false'
+    Target: MB_FACEBOX_READ_ONLY
+    Type: Variable
+  value: 'false'
+- '@attributes':
+    Default: '2'
+    Description: '(integer) Defaults to 2 - Number of seconds that Facebox will wait
+      to update the index for new data, or changes in the data. Facebox will accumulate
+      changes to perform an update on the search index, because changes are an expensive
+      operation, with this variable you can adjust the time interval for that operation. '
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: MB_FACEBOX_INDEX_REFRESH_SECONDS
+    Required: 'false'
+    Target: MB_FACEBOX_INDEX_REFRESH_SECONDS
+    Type: Variable
+  value: '2'
+- '@attributes':
+    Default: ' false'
+    Description: '(bool) Defaults to false - If you only need face detection, the
+      recognition algorithms can be disabled by setting this variable to true, saving
+      resources. If you disable recognition, the teaching endpoinds will be disabled
+      as well. '
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: MB_FACEBOX_DISABLE_RECOGNITION
+    Required: 'false'
+    Target: MB_FACEBOX_DISABLE_RECOGNITION
+    Type: Variable
+  value: ' false'
+- '@attributes':
+    Default: ''
+    Description: (string) The Basic Authentication username and password that every
+      request must use. Recommended for sitautions where the boxes are publicly accessible.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: MB_BASICAUTH_USER
+    Required: 'false'
+    Target: MB_BASICAUTH_USER
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: (string) The Basic Authentication username and password that every
+      request must use. Recommended for sitautions where the boxes are publicly accessible
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: MB_BASICAUTH_PASS
+    Required: 'false'
+    Target: MB_BASICAUTH_PASS
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: '- (string) Redis host and port for example my_redis:6379. If this
+      option is present Facebox state will be synced by Redis,'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: MB_FACEBOX_REDIS
+    Required: 'false'
+    Target: MB_FACEBOX_REDIS
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Redis Password - (string) Optional Redis password. '
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: MB_FACEBOX_REDIS_PASSWORD
+    Required: 'false'
+    Target: MB_FACEBOX_REDIS_PASSWORD
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: '(string) URL to a .facebox state file to initialize the box with.
+      Useful for spinning up many instances of Facebox with the same state. '
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: MB_FACEBOX_STATE_URL
+    Required: 'false'
+    Target: 'MB_FACEBOX_STATE_URL '
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '0'
+    Description: '(integer) Default to 0 (No polling). If this variable is set, Facebox
+      would poll the MB_FACEBOX_STATE_URL for changes on the file, based on the ETag
+      or Last-Modified http headers. If the file changes Facebox will download the
+      new file and update the state of the teaching. This variable is useful for updating
+      multiple running instances of Facebox. '
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: MB_FACEBOX_STATE_POLL_SECONDS
+    Required: 'false'
+    Target: 'MB_FACEBOX_STATE_POLL_SECONDS '
+    Type: Variable
+  value: '0'
+- '@attributes':
+    Default: 'false'
+    Description: '(bool) Defaults to false - If true will turn off CORS support for
+      the box. '
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: MB_DISABLE_CORS
+    Required: 'false'
+    Target: MB_DISABLE_CORS
+    Type: Variable
+  value: 'false'
+FirstSeen: 1633812264
+Icon: https://raw.githubusercontent.com/corgan2222/unraid-templates/main/img/facebox.jpg
+LastUpdate: 1606852678
+LastUpdateScan: 1648555400
+Name: machinebox-facebox
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "With this container you have all possible settings available[br]\r\n Facebox\
+  \ detects and identifies faces in photos. You can teach facebox with as little as\
+  \ one sample image.\r\n Facebox required that you have an API Key which you can\
+  \ obtain for free by going to https://machinebox.io/login?return_url=%2Faccount"
+PostArgs: ''
+Privileged: 'false'
+Project: https://machinebox.io/docs/facebox
+Registry: https://hub.docker.com/r/machinebox/facebox/
+Repo: corgan's Repository
+Repository: machinebox/facebox
+Support: https://forums.unraid.net/topic/114590-support-corgans-docker-repository/
+TemplateURL: https://raw.githubusercontent.com/corgan2222/unraid-templates/master/machinebox-facebox/machinebox-facebox.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8081]
+topPerforming: 0.049
+topTrending: -0.874

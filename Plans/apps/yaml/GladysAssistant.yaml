@@ -1,0 +1,117 @@
+CategoryList:
+- HomeAutomation
+Config:
+- '@attributes':
+    Default: Europe/Paris
+    Description: Visit https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+      to get the right one
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Time Zone
+    Required: 'true'
+    Target: TZ
+    Type: Variable
+  value: Europe/Paris
+- '@attributes':
+    Default: '80'
+    Description: 'Container Variable: SERVER_PORT'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: server-port
+    Required: 'true'
+    Target: SERVER_PORT
+    Type: Variable
+  value: '8006'
+- '@attributes':
+    Default: /mnt/user/appdata/Gladys
+    Description: 'Container Path: /var/lib/gladysassistant'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: rw
+    Name: Gladys lib folder
+    Required: 'true'
+    Target: /var/lib/gladysassistant
+    Type: Path
+  value: /mnt/user/appdata/Gladys
+- '@attributes':
+    Default: /dev
+    Description: 'Container Path: /dev'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: rw
+    Name: Gladys Dev Folder
+    Required: 'true'
+    Target: /dev
+    Type: Path
+  value: /dev
+- '@attributes':
+    Default: /run/udev
+    Description: 'Container Path: /run/udev'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ro
+    Name: Gladys uDev Folder
+    Required: 'true'
+    Target: /run/udev
+    Type: Path
+  value: /run/udev
+- '@attributes':
+    Default: /var/lib/gladysassistant/gladys-production.db
+    Description: 'Container Variable: SQLITE_FILE_PATH'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: DB File path
+    Required: 'true'
+    Target: SQLITE_FILE_PATH
+    Type: Variable
+  value: /var/lib/gladysassistant/gladys-production.db
+- '@attributes':
+    Default: production
+    Description: 'Container Variable: NODE_ENV'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: Environement
+    Required: 'true'
+    Target: NODE_ENV
+    Type: Variable
+  value: production
+- '@attributes':
+    Default: /var/run/docker.sock
+    Description: 'Container Path: /var/run/docker.sock'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: rw
+    Name: Gladys Docker Folder
+    Required: 'true'
+    Target: /var/run/docker.sock
+    Type: Path
+  value: /var/run/docker.sock
+DonateLink: https://www.buymeacoffee.com/gladysassistant
+ExtraParams: --restart=always --log-opt max-size=10m
+FirstSeen: 1648140267
+Icon: https://gladysassistant.com/en/img/external/github-gladys-logo.png
+LastUpdate: 1647867021
+LastUpdateScan: 1648140267
+Name: Gladys-Assistant
+Network: host
+Networking:
+  Mode: host
+Official: true
+Overview: "Gladys Assistant (https://gladysassistant.com) is a privacy-first, open-source\
+  \ home assistant. Gladys helps you centralize your connected devices, visualize\
+  \ data on your dashboards and build automations to make your daily life easier.\r\
+  \n\r\nYou can support the project here : https://www.buymeacoffee.com/gladysassistant"
+PostArgs: ''
+Privileged: 'true'
+Project: https://gladysassistant.com/
+Registry: https://hub.docker.com/r/gladysassistant/gladys/
+Repo: jgcb00's Repository
+Repository: gladysassistant/gladys:v4
+Support: https://forums.unraid.net/topic/121498-support-gladys-privacy-first-open-source-home-assistant/
+TemplateURL: https://raw.githubusercontent.com/GladysAssistant/unraid-gladys-templates/master/Gladys/Gladys.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8006]

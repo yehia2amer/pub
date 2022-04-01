@@ -1,0 +1,90 @@
+BindTime: 'true'
+CategoryList:
+- Network-Web
+- Network-Other
+ChangeLogPresent: true
+Data:
+  Volume:
+  - ContainerDir: /opt/kerio
+    HostDir: /mnt/user/appdata/KerioConnect
+    Mode: rw
+  - ContainerDir: /kerio_store
+    HostDir: /mnt/user/KerioConnect/mailstore
+    Mode: rw
+  - ContainerDir: /backup
+    HostDir: /mnt/user/Backup/KerioConnect
+    Mode: rw
+Environment: "\n  "
+FirstSeen: 1496894400
+Icon: https://raw.githubusercontent.com/chvb/docker-templates/master/chvb/img/kerioconnect.png
+LastUpdate: 1559642998
+LastUpdateScan: 1646924600
+Name: Kerio-Connect
+Networking:
+  Mode: bridge
+  Publish:
+    Port:
+    - ContainerPort: '4040'
+      HostPort: '4040'
+      Protocol: tcp
+    - ContainerPort: '22'
+      HostPort: '222'
+      Protocol: tcp
+    - ContainerPort: '25'
+      HostPort: '25'
+      Protocol: tcp
+    - ContainerPort: '465'
+      HostPort: '465'
+      Protocol: tcp
+    - ContainerPort: '587'
+      HostPort: '587'
+      Protocol: tcp
+    - ContainerPort: '110'
+      HostPort: '110'
+      Protocol: tcp
+    - ContainerPort: '995'
+      HostPort: '995'
+      Protocol: tcp
+    - ContainerPort: '143'
+      HostPort: '143'
+      Protocol: tcp
+    - ContainerPort: '993'
+      HostPort: '993'
+      Protocol: tcp
+    - ContainerPort: '119'
+      HostPort: '119'
+      Protocol: tcp
+    - ContainerPort: '563'
+      HostPort: '563'
+      Protocol: tcp
+    - ContainerPort: '389'
+      HostPort: '389'
+      Protocol: tcp
+    - ContainerPort: '636'
+      HostPort: '636'
+      Protocol: tcp
+    - ContainerPort: '80'
+      HostPort: '8001'
+      Protocol: tcp
+    - ContainerPort: '443'
+      HostPort: '4443'
+      Protocol: tcp
+    - ContainerPort: '5222'
+      HostPort: '5222'
+      Protocol: tcp
+    - ContainerPort: '5223'
+      HostPort: '5223'
+      Protocol: tcp
+Overview: Kerio Connect is Mail/Groupware like Microsoft Exchange, but running on
+  Linux. More Informations under www.kerio.com/connect
+Privileged: 'false'
+Project: http://kerio.com
+Registry: https://hub.docker.com/r/chvb/docker-kerio-connect/
+Repo: chvb's Repository
+Repository: chvb/docker-kerio-connect
+Support: http://lime-technology.com/forum/index.php?topic=49578.0
+TemplateURL: https://raw.githubusercontent.com/chvb/docker-templates/master/chvb/kerio-connect.xml
+Version: '1.0'
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: https://[IP]:[PORT:4040]/
+topTrending: -0.44000000000000006

@@ -1,0 +1,51 @@
+CategoryList:
+- Network-Other
+- Crypto
+Config:
+- '@attributes':
+    Default: /mnt/user/appdata/doge-node/
+    Description: Blockchain storage. As of 08/21 requires 50GB free space. (Cache
+      recommended)
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Appdata
+    Required: 'true'
+    Target: /etc/doge/
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: '22556'
+    Description: Port to liston on for incoming connections. (Port forward required)
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: P2P TCP
+    Required: 'true'
+    Target: '22556'
+    Type: Port
+  value: '22556'
+FirstSeen: 1630429175
+Icon: https://raw.githubusercontent.com/BigManDave/dogecoin-docker/main/icon.png
+LastUpdate: 1636447761
+LastUpdateScan: 1648613010
+Name: Doge-Node
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "Support the Dogecoin network by hosting your own node! This template provides\
+  \ a full Dogecoin Core node based on Ubuntu.\r\n    [br][br]\r\n    To let other\
+  \ nodes in the network find your node, ensure port 22556 is forwarded from your\
+  \ router to the P2P port set below.\r\n    [br][br]\r\n    You must create file\
+  \ called dogecoin.conf in the Appdata directory. Refer to https://raw.githubusercontent.com/BigManDave/dogecoin-docker/main/dogecoin.conf\
+  \ for an example file."
+PostArgs: ''
+Privileged: 'false'
+Project: https://dogecoin.com/
+Registry: https://hub.docker.com/r/bigmandave/doge-node
+Repo: BigManDave's Repository
+Repository: bigmandave/doge-node
+Support: https://forums.unraid.net/topic/113208-support-bigmandaves-docker-templates/
+TemplateURL: https://raw.githubusercontent.com/BigManDave/unraid-templates/master/doge-node.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''

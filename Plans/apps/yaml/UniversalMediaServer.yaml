@@ -1,0 +1,88 @@
+CategoryList:
+- MediaServer-Video
+- MediaServer-Music
+- MediaServer-Photos
+Config:
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /media'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Media
+    Required: 'true'
+    Target: /media
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Container Port: 9001'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI
+    Required: 'true'
+    Target: '9001'
+    Type: Port
+  value: '9001'
+- '@attributes':
+    Default: ''
+    Description: 'Container Port: 5002'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Port 5002
+    Required: 'true'
+    Target: '5002'
+    Type: Port
+  value: '5002'
+- '@attributes':
+    Default: ''
+    Description: 'Container Port: 1044'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Port 1044
+    Required: 'true'
+    Target: '1044'
+    Type: Port
+  value: '1044'
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /root/.config/UMS/'
+    Display: advanced
+    Mask: 'false'
+    Mode: rw
+    Name: Config
+    Required: 'true'
+    Target: /root/.config/UMS/
+    Type: Path
+  value: /mnt/user/appdata/ums
+FirstSeen: 1637492599
+Icon: https://www.universalmediaserver.com/assets/img/logo.png
+LastUpdate: 1647313942
+LastUpdateScan: 1647878612
+Name: Universal-Media-Server
+Network: bridge
+Networking:
+  Mode: bridge
+Official: true
+Overview: "Universal Media Server is a DLNA-compliant UPnP Media Server. It is capable\
+  \ of sharing video, audio and images between most modern devices. It was originally\
+  \ based on PS3 Media Server by shagrath, in order to ensure greater stability and\
+  \ file-compatibility.\r\n\r\nThis is a headless install, you need to edit the file\
+  \ UMS.conf in oder to configure it.\r\n\r\nRefer to the default file below\r\n\r\
+  \nhttps://raw.githubusercontent.com/UniversalMediaServer/UniversalMediaServer/master/src/main/external-resources/UMS.conf\r\
+  \n\r\nNote: you may need to stop the container before editing the config file, otherwise\
+  \ your changes might not get saved."
+PostArgs: ''
+Privileged: 'false'
+Project: https://www.universalmediaserver.com/
+Registry: https://hub.docker.com/r/universalmediaserver/ums
+Repo: hussainalhaddad's Repository
+Repository: universalmediaserver/ums
+Support: https://github.com/hussainalhaddad/docker-templates
+TemplateURL: https://raw.githubusercontent.com/hussainalhaddad/docker-templates/master/Universal-Media-Server/Universal-Media-Server.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:9001]
+topTrending: -1.261

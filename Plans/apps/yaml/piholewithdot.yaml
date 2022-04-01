@@ -1,0 +1,213 @@
+CategoryList:
+- Security
+- Other
+- Network-DNS
+Config:
+- '@attributes':
+    Default: '53'
+    Description: 'Container Port: 53'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: DNS Port TCP
+    Required: 'true'
+    Target: '53'
+    Type: Port
+  value: '53'
+- '@attributes':
+    Default: '53'
+    Description: 'Container Port: 53'
+    Display: always
+    Mask: 'false'
+    Mode: udp
+    Name: DNS Port UDP
+    Required: 'true'
+    Target: '53'
+    Type: Port
+  value: '53'
+- '@attributes':
+    Default: '67'
+    Description: 'Container Port: 67'
+    Display: always
+    Mask: 'false'
+    Mode: udp
+    Name: DHCP Port
+    Required: 'true'
+    Target: '67'
+    Type: Port
+  value: '67'
+- '@attributes':
+    Default: '80'
+    Description: 'Container Port: 80'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: HTTP Port
+    Required: 'true'
+    Target: '80'
+    Type: Port
+  value: '80'
+- '@attributes':
+    Default: '443'
+    Description: 'Container Port: 443'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: HTTPS Port
+    Required: 'true'
+    Target: '443'
+    Type: Port
+  value: '443'
+- '@attributes':
+    Default: /mnt/user/appdata/pihole-dot/pihole/
+    Description: 'Container Path: /etc/pihole/'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: pihole config
+    Required: 'true'
+    Target: /etc/pihole/
+    Type: Path
+  value: /mnt/user/appdata/pihole-dot/pihole/
+- '@attributes':
+    Default: /mnt/user/appdata/pihole-dot/dnsmasq.d/
+    Description: 'Container Path: /etc/dnsmasq.d/'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: dnsmasq config
+    Required: 'true'
+    Target: /etc/dnsmasq.d/
+    Type: Path
+  value: /mnt/user/appdata/pihole-dot/dnsmasq.d/
+- '@attributes':
+    Default: 127.2.2.2#5253
+    Description: 'Container Variable: DNS1'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: ENV 1
+    Required: 'false'
+    Target: DNS1
+    Type: Variable
+  value: 127.2.2.2#5253
+- '@attributes':
+    Default: 127.2.2.2#5253
+    Description: 'Container Variable: DNS2'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: ENV 2
+    Required: 'false'
+    Target: DNS2
+    Type: Variable
+  value: 127.2.2.2#5253
+- '@attributes':
+    Default: Europe/London
+    Description: 'Container Variable: TZ'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: ENV 3
+    Required: 'false'
+    Target: TZ
+    Type: Variable
+  value: Europe/London
+- '@attributes':
+    Default: password
+    Description: 'Container Variable: WEBPASSWORD'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: ENV 4
+    Required: 'false'
+    Target: WEBPASSWORD
+    Type: Variable
+  value: password
+- '@attributes':
+    Default: br0
+    Description: 'Container Variable: INTERFACE'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: ENV 5
+    Required: 'false'
+    Target: INTERFACE
+    Type: Variable
+  value: br0
+- '@attributes':
+    Default: 192.168.1.24
+    Description: 'Container Variable: ServerIP'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: ENV 6
+    Required: 'false'
+    Target: ServerIP
+    Type: Variable
+  value: 192.168.1.24
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: ServerIPv6'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: ENV 7
+    Required: 'false'
+    Target: ServerIPv6
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: 'False'
+    Description: 'Container Variable: IPv6'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: ENV 8
+    Required: 'false'
+    Target: IPv6
+    Type: Variable
+  value: 'False'
+- '@attributes':
+    Default: all
+    Description: 'Container Variable: DNSMASQ_LISTENING'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: ENV 9
+    Required: 'false'
+    Target: DNSMASQ_LISTENING
+    Type: Variable
+  value: all
+Deprecated: true
+DonateLink: https://paypal.me/mersenne
+DonateText: If you like my work, a donation to my burger fund is very much appreciated.
+ExtraParams: --cap-add=NET_ADMIN --restart=unless-stopped
+FirstSeen: 1618099362
+Icon: https://raw.githubusercontent.com/testdasi/pihole-base-buster-plus/master/pi_hole_bw.png
+LastUpdate: 1644695222
+LastUpdateScan: 1646687000
+ModeratorComment: This application has been deprecated in favour of pihole-dot-doh.
+Name: pihole-with-dot
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "Pi-Hole - let's block those pesky ads! Now with DNS-over-TLS!\r\n    You\
+  \ have already browsed the web securely with https, don't send your DNS queries\
+  \ in plain text.\r\n    \r\n    This docker uses the official Pi-Hole template with\
+  \ added stubby to enable DoT (DNS-over-TLS).\r\n    \r\n    Your DNS queries are\
+  \ now encrypted.\n    \r\n    \r\n    Set both DNS1 and DNS2 to 127.2.2.2#5253 will\
+  \ exclusively use DoT. These are default values.\r\n    \r\n    Otherwise, same\
+  \ instructions as official Pi-Hole.\r\n    \r\n        NOTE 1: Port 53 can only\
+  \ be used with custom br0/br1 network and a unique IP address.\r\n    \r\n     \
+  \   NOTE 2: UnRaid network settings DNS server cannot point to a docker IP."
+PostArgs: ''
+Privileged: 'false'
+Project: https://docs.pi-hole.net/guides/dns-over-https/
+Registry: https://hub.docker.com/r/testdasi/pihole-with-dot/
+Repo: testdasi's Repository
+Repository: testdasi/pihole-with-dot:latest
+Support: https://forums.unraid.net/topic/96233-support-testdasi-repo/
+TemplateURL: https://raw.githubusercontent.com/testdasi/testdasi-unraid-repo/master/pihole-with-dot.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:80]/admin

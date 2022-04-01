@@ -1,0 +1,108 @@
+CategoryList:
+- Backup
+- Cloud
+Config:
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: KOPIA_PASSWORD'
+    Display: always
+    Mask: 'true'
+    Mode: ''
+    Name: Repository password
+    Required: 'true'
+    Target: KOPIA_PASSWORD
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '51515'
+    Description: 'Container Port: 51515'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Port
+    Required: 'true'
+    Target: '51515'
+    Type: Port
+  value: '51515'
+- '@attributes':
+    Default: /mnt/user/appdata/kopia/config
+    Description: 'Container Path: /app/config'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Config path
+    Required: 'true'
+    Target: /app/config
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: /mnt/user/appdata/kopia/cache
+    Description: 'Container Path: /app/cache'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Cache path
+    Required: 'true'
+    Target: /app/cache
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: /mnt/user/appdata/kopia/logs
+    Description: 'Container Path: /app/logs'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Log path
+    Required: 'false'
+    Target: /app/logs
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: /mnt/user/media/kopia
+    Description: Enter the Container Path (/app/data) as the Directory Path if creating
+      a Filesystem repository.
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Data path
+    Required: 'false'
+    Target: /app/data
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: America/Los_Angeles
+    Description: 'Container Variable: TZ'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Timezone
+    Required: 'false'
+    Target: TZ
+    Type: Variable
+  value: ''
+FirstSeen: 1639170214
+Icon: https://raw.githubusercontent.com/kopia/kopia/master/icons/kopia.svg
+LastUpdate: 1646805175
+LastUpdateScan: 1646967793
+Name: Kopia
+Network: bridge
+Official: true
+Overview: "Kopia is a simple, cross-platform tool for managing encrypted backups in\
+  \ the cloud. It provides fast, incremental backups, secure, client-side end-to-end\
+  \ encryption, compression and data deduplication.\r\n\r\nTo run this container,\
+  \ you must create a htpasswd file (either via command line or using a tool such\
+  \ as https://hostingcanada.org/htpasswd-generator/) and place it in the /mnt/user/appdata/kopia/config\
+  \ directory, then adjust the Post Arguments accordingly."
+PostArgs: server --insecure --htpasswd-file /app/config/htpasswd --address 0.0.0.0:51515
+  --server-username=YOUR-USERNAME
+Privileged: 'false'
+Project: https://github.com/kopia/kopia/
+Registry: https://hub.docker.com/r/kopia/kopia/
+Repo: Selfhosters Unraid Discord Repository
+RepoShort: Selfhosters
+Repository: kopia/kopia
+Support: https://kopia.io/docs/
+TemplateURL: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/kopia.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:51515]
+topTrending: 0.504

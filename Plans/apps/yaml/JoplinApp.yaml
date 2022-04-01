@@ -1,0 +1,93 @@
+CategoryList:
+- Productivity
+Config:
+- '@attributes':
+    Default: ''
+    Description: 'Container Port: 5800'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Web Port
+    Required: 'false'
+    Target: '5800'
+    Type: Port
+  value: '5800'
+- '@attributes':
+    Default: /mnt/user/appdata/joplinweb
+    Description: 'Container Path: /app/.config'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: AppData
+    Required: 'false'
+    Target: /app/.config
+    Type: Path
+  value: /mnt/user/appdata/joplinapp
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: VNC_PASSWORD'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: VNC_PASSWORD
+    Required: 'false'
+    Target: VNC_PASSWORD
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '1280'
+    Description: 'Container Variable: DISPLAY_WIDTH'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: DISPLAY_WIDTH
+    Required: 'false'
+    Target: DISPLAY_WIDTH
+    Type: Variable
+  value: '1280'
+- '@attributes':
+    Default: '768'
+    Description: 'Container Variable: DISPLAY_HEIGHT'
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: DISPLAY_HEIGHT
+    Required: 'false'
+    Target: DISPLAY_HEIGHT
+    Type: Variable
+  value: '768'
+- '@attributes':
+    Default: '41184'
+    Description: Likely can't be used unless you have an advanced use case.
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Web Clipper Port
+    Required: 'false'
+    Target: '41184'
+    Type: Port
+  value: '41184'
+DonateText: Donate
+FirstSeen: 1613934149
+Icon: https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/icons/joplin.png
+LastUpdate: 1647133364
+LastUpdateScan: 1647717971
+Name: JoplinApp
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "This container allows you to have a working Joplin desktop app, reachable\
+  \ via a http noVNC that can be placed behind a reverse proxy.\r\n\r\nCan also be\
+  \ used with the Joplin server container to have a full Joplin stack on unRAID!\r\
+  \n\r\nMore info about Joplin : https://joplinapp.org/"
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/acaranta/docker-joplin
+Registry: https://hub.docker.com/r/acaranta/docker-joplin/
+Repo: CorneliousJD's Repository
+Repository: acaranta/docker-joplin
+Support: https://forums.unraid.net/topic/103022-support-joplinapp-corneliousjd-repo/
+TemplateURL: https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/joplinapp.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:5800]
+topTrending: -10.747

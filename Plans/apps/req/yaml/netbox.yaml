@@ -1,0 +1,103 @@
+CategoryList:
+- Tools-Utilities
+- Network-Management
+Config:
+- '@attributes':
+    Default: '8000'
+    Description: Port
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Port
+    Required: 'true'
+    Target: '8000'
+    Type: Port
+  value: '8000'
+- '@attributes':
+    Default: netbox
+    Description: DB Hostname or IP Postgres
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: DB_HOST
+    Required: 'true'
+    Target: DB_HOST
+    Type: Variable
+  value: postgres
+- '@attributes':
+    Default: netbox
+    Description: DB NAME Postgres
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: DB_NAME
+    Required: 'true'
+    Target: DB_NAME
+    Type: Variable
+  value: netbox
+- '@attributes':
+    Default: netbox
+    Description: DB USER Postgres
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: DB_USER
+    Required: 'true'
+    Target: DB_USER
+    Type: Variable
+  value: netbox
+- '@attributes':
+    Default: netbox
+    Description: DB PASS Postgres
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: DB_PASS
+    Required: 'true'
+    Target: DB_PASS
+    Type: Variable
+  value: netbox
+- '@attributes':
+    Default: ChangeMe
+    Description: SECRET_KEY
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: SECRET_KEY
+    Required: 'true'
+    Target: SECRET_KEY
+    Type: Variable
+  value: ChangeMe
+- '@attributes':
+    Default: 0.0.0.0
+    Description: ALLOWED_HOSTS
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: ALLOWED_HOSTS
+    Required: 'true'
+    Target: ALLOWED_HOSTS
+    Type: Variable
+  value: '*'
+FirstSeen: 1587470864
+Icon: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/netbox.png
+LastUpdate: 1638586601
+LastUpdateScan: 1647237797
+Name: netbox
+Network: bridge
+Overview: IP address management (IPAM) and data center infrastructure management (DCIM)
+  tool. [br] To create User cli to the docker then "./manage.py createsuperuser" [br]
+  Postgres required
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/netbox-community/netbox
+Registry: https://hub.docker.com/r/pitkley/netbox
+Repo: A75G's Repository
+Repository: pitkley/netbox:latest
+Requires: Postgres container installed
+Support: https://forums.unraid.net/topic/89502-support-a75g-repo/
+TemplateURL: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/netbox.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8000]/
+topPerforming: 0.158
+topTrending: -0.252

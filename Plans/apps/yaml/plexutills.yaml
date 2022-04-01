@@ -1,0 +1,96 @@
+Beta: 'true'
+CategoryList:
+- Tools-Utilities
+- MediaApp-Other
+Config:
+- '@attributes':
+    Default: /mnt/user/plex-media
+    Description: "Location of your Plex media files.\r\n\r\nNeeded if you want to\
+      \ create backup posters"
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Plex Library
+    Required: 'false'
+    Target: /films
+    Type: Path
+  value: /mnt/user/Plex/
+- '@attributes':
+    Default: /mnt/user/appdata/plex-utills
+    Description: Location of your config file
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Config File
+    Required: 'false'
+    Target: /config
+    Type: Path
+  value: /mnt/user/appdata/plex-utills/
+- '@attributes':
+    Default: '80'
+    Description: 'Container Port: 80'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Webui Port
+    Required: 'true'
+    Target: '80'
+    Type: Port
+  value: '80'
+- '@attributes':
+    Default: /mnt/appdata/plex-utills/logs
+    Description: 'Container Path: /logs'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Logs
+    Required: 'false'
+    Target: /logs
+    Type: Path
+  value: /mnt/disks/Docker_SSD/plex-utills/logs
+- '@attributes':
+    Default: '99'
+    Description: 'Container Variable: PUID'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: PUID
+    Required: 'true'
+    Target: PUID
+    Type: Variable
+  value: '99'
+- '@attributes':
+    Default: '100'
+    Description: 'Container Variable: PGID'
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: PGID
+    Required: 'true'
+    Target: PGID
+    Type: Variable
+  value: '100'
+FirstSeen: 1627509804
+Icon: https://raw.githubusercontent.com/jkirkcaldy/plex-utills/master/app/img/logo.png
+LastUpdate: 1643128909
+LastUpdateScan: 1648289006
+Name: plex-utills
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: A utility to help manage your library. Options include adding 4k banners
+  and HDR banners to your poster art automactically, auto collections for Disney and
+  Pixar Studios and hiding/auto optimising media files where there is only a 4k version
+  available.
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/jkirkcaldy/plex-utills
+Registry: https://hub.docker.com/r/jkirkcaldy/plex-utills/
+Repo: jkirkcaldy's Repository
+Repository: jkirkcaldy/plex-utills
+Support: https://forums.unraid.net/topic/114817-support-plex-utills/
+TemplateURL: https://raw.githubusercontent.com/jkirkcaldy/unraid-CA-templates/master/Plex-utills.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:80]
+topPerforming: 3.554
+topTrending: -48.838

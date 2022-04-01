@@ -1,0 +1,139 @@
+Branch:
+  Registry: https://hub.docker.com/r/hotio/plex
+  Repository: cr.hotio.dev/hotio/plex:release
+  Tag: release
+  TagDescription: Releases
+CategoryList:
+- MediaServer-Video
+- MediaServer-Music
+- MediaServer-Photos
+Config:
+- '@attributes':
+    Default: '32400'
+    Description: 'Container Port: 32400'
+    Display: always-hide
+    Mask: 'false'
+    Mode: tcp
+    Name: Host Port for 32400
+    Required: 'true'
+    Target: '32400'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /config'
+    Display: always-hide
+    Mask: 'false'
+    Mode: rw
+    Name: Host Path for /config
+    Required: 'true'
+    Target: /config
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Container Path: /transcode'
+    Display: always-hide
+    Mask: 'false'
+    Mode: rw
+    Name: Host Path for /transcode
+    Required: 'true'
+    Target: /transcode
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: PLEX_CLAIM&lt;br&gt;Example: claim-xxxxxxxxxxxxxxxxxxxx&lt;br&gt;Visit
+      plex.tv/claim in your browser to get your claim code.'
+    Display: always-hide
+    Mask: 'false'
+    Mode: ''
+    Name: PLEX_CLAIM
+    Required: 'false'
+    Target: PLEX_CLAIM
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: ADVERTISE_IP'
+    Display: always-hide
+    Mask: 'false'
+    Mode: ''
+    Name: ADVERTISE_IP
+    Required: 'false'
+    Target: ADVERTISE_IP
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: 'Container Variable: ALLOWED_NETWORKS'
+    Display: always-hide
+    Mask: 'false'
+    Mode: ''
+    Name: ALLOWED_NETWORKS
+    Required: 'false'
+    Target: ALLOWED_NETWORKS
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: no|yes
+    Description: 'Container Variable: PLEX_PASS'
+    Display: always-hide
+    Mask: 'false'
+    Mode: ''
+    Name: PLEX_PASS
+    Required: 'false'
+    Target: PLEX_PASS
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '99'
+    Description: 'Container Variable: PUID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: PUID
+    Required: 'false'
+    Target: PUID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '100'
+    Description: 'Container Variable: PGID'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: PGID
+    Required: 'false'
+    Target: PGID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '002'
+    Description: 'Container Variable: UMASK'
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: UMASK
+    Required: 'false'
+    Target: UMASK
+    Type: Variable
+  value: ''
+FirstSeen: 1604308113
+Icon: https://hotio.dev/webhook-avatars/plex.png
+LastUpdate: 1647399323
+LastUpdateScan: 1647446608
+Name: plex
+Network: bridge
+Overview: Plex Media Server docker image with support for Plex Claim, Plex Pass and
+  fast updates.
+PostArgs: ''
+Privileged: 'false'
+Project: https://hotio.dev/containers/plex
+Registry: https://hub.docker.com/r/hotio/plex
+Repo: hotio's Repository
+Repository: cr.hotio.dev/hotio/plex
+Support: https://hotio.dev/discord
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:32400]/web
+caTemplateURL: https://raw.githubusercontent.com/hotio/unraid-templates/master/hotio/plex.xml

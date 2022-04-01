@@ -1,0 +1,134 @@
+CategoryList:
+- Backup
+Config:
+- '@attributes':
+    Default: ''
+    Description: Can be deleted if you don't need a VNC password
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Data Dir
+    Required: 'false'
+    Target: /jdupes
+    Type: Path
+  value: /mnt/cache/appdata/jdupes/
+- '@attributes':
+    Default: ''
+    Description: WebGUI http Port
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebGUI
+    Required: 'true'
+    Target: '8080'
+    Type: Port
+  value: '8080'
+- '@attributes':
+    Default: ''
+    Description: "Data Path for your files (ATTENTION: Please always double check\
+      \ what you are deleting in the containers since this affects the files on your\
+      \ Server and you won't be able to recover them!!!\r\nThe recommended default\
+      \ path is /mnt/user)"
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Path to files
+    Required: 'true'
+    Target: /mnt/user
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Data Permissions for config directory
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Data Permissions
+    Required: 'true'
+    Target: DATA_PERM
+    Type: Variable
+  value: '770'
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Umask Value
+    Required: 'true'
+    Target: UMASK
+    Type: Variable
+  value: '0000'
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: UID
+    Required: 'true'
+    Target: UID
+    Type: Variable
+  value: '99'
+- '@attributes':
+    Default: ''
+    Description: ''
+    Display: advanced-hide
+    Mask: 'false'
+    Mode: ''
+    Name: GID
+    Required: 'true'
+    Target: GID
+    Type: Variable
+  value: '100'
+- '@attributes':
+    Default: ''
+    Description: Minimum screen width 1280 pixels
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Custom Screen Width
+    Required: 'true'
+    Target: CUSTOM_RES_W
+    Type: Variable
+  value: '1280'
+- '@attributes':
+    Default: ''
+    Description: Minimum screen hight 850 pixels
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Custom Screen Height
+    Required: 'true'
+    Target: CUSTOM_RES_H
+    Type: Variable
+  value: '850'
+DonateLink: https://www.jodybruchon.com/
+DonateText: 'If you like my work please '
+ExtraParams: --restart=unless-stopped
+FirstSeen: 1648029801
+Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/jdupes.png
+LastUpdate: 1648027785
+LastUpdateScan: 1648029801
+Name: jdupes-gui
+Network: bridge
+Overview: "jdupes is a command line program for identifying and taking actions upon\
+  \ duplicate files combined with jdupes-gui it becomes a usefull tool for identifying\
+  \ duplicated files on your server.\r\n\r\n**A WORD OF WARNING:** jdupes IS NOT a\
+  \ drop-in compatible replacement for fdupes!\r\n\r\n**ATTENTION:** A minor inconvenience\
+  \ is caused by the fact that the jdupes-gui script is single-threaded. This causes\
+  \ the application to seemingly hang when running long jobs like searching through\
+  \ large folders or deleting large batches of files. Please be patient, it is still\
+  \ working.\r\n\r\nSee the official GitHub repository for jdupes here: https://github.com/jbruchon/jdupes\
+  \ and jdupes-gui here: https://github.com/Pesc0/jdupes-gui"
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/jbruchon/jdupes
+Registry: https://hub.docker.com/r/ich777/jdupes-gui/
+Repo: ich777's Repository
+Repository: ich777/jdupes-gui
+Requires: ''
+Support: https://forums.unraid.net/topic/83786-support-ich777-application-dockers/
+TemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/jdupes-gui.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8080]/vnc.html?autoconnect=true

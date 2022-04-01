@@ -1,0 +1,103 @@
+CategoryList:
+- MediaServer-Music
+ChangeLogPresent: true
+Config:
+- '@attributes':
+    Default: '8181'
+    Description: Application WebUI
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI
+    Required: 'true'
+    Target: '8181'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Configuration files.
+    Display: advanced
+    Mask: 'false'
+    Mode: rw
+    Name: Appdata
+    Required: 'true'
+    Target: /config
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: ISOs.
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: 'Path: /downloads'
+    Required: 'true'
+    Target: /downloads
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Your music directory.
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: 'Path: /music'
+    Required: 'true'
+    Target: /music
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: '99'
+    Description: 'Container Variable: PUID'
+    Display: advanced
+    Mask: 'false'
+    Name: PUID
+    Required: 'true'
+    Target: PUID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '100'
+    Description: 'Container Variable: PGID'
+    Display: advanced
+    Mask: 'false'
+    Name: PGID
+    Required: 'true'
+    Target: PGID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '022'
+    Description: 'Container Variable: UMASK'
+    Display: advanced
+    Mask: 'false'
+    Name: UMASK
+    Required: 'false'
+    Target: UMASK
+    Type: Variable
+  value: ''
+DonateImg: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/donate.png
+DonateLink: https://www.linuxserver.io/donate
+DonateText: Donations
+ExtraParams: --cap-add=NET_ADMIN
+FirstSeen: 1470628800
+GitHub: https://github.com/linuxserver/docker-headphones
+Icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/headphones-logo.png
+LastUpdate: 1646923972
+LastUpdateScan: 1647914701
+Name: headphones
+Network: bridge
+Overview: "Headphones(https://github.com/rembo10/headphones) is an automated music\
+  \ downloader for NZB and Torrent, written in Python. It supports SABnzbd, NZBget,\
+  \ Transmission, \xB5Torrent and Blackhole."
+Privileged: 'false'
+Project: https://github.com/rembo10/headphones
+ReadMe: https://github.com/linuxserver/docker-headphones#readme
+Registry: https://github.com/orgs/linuxserver/packages/container/package/headphones
+Repo: linuxserver's Repository
+Repository: lscr.io/linuxserver/headphones
+Support: https://github.com/linuxserver/docker-headphones/issues/new/choose
+TemplateURL: https://raw.githubusercontent.com/linuxserver/templates/master/unraid/headphones.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8181]
+topTrending: -0.127

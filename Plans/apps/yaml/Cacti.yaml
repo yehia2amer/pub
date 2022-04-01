@@ -1,0 +1,81 @@
+CategoryList:
+- Productivity
+- Tools-Utilities
+- Other
+- Network-Management
+- Network-Other
+Config:
+- '@attributes':
+    Default: '161'
+    Description: SNMP scan, port 161 UDP
+    Display: always
+    Mask: 'false'
+    Mode: udp
+    Name: SNMP Scan port
+    Required: 'true'
+    Target: '161'
+    Type: Port
+  value: '161'
+- '@attributes':
+    Default: '8180'
+    Description: 'Container Port: 80'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: webui
+    Required: 'true'
+    Target: '80'
+    Type: Port
+  value: '8180'
+- '@attributes':
+    Default: /mnt/user/appdata/Cacti
+    Description: Docker configuration files folder
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: configs
+    Required: 'true'
+    Target: /config
+    Type: Path
+  value: /mnt/user/appdata/Cacti
+DonateImg: ''
+DonateText: '&quot;Coin! Coin!&quot; -- Scooby Doo'
+FirstSeen: '1518928050'
+Icon: https://www.cacti.net/images/cacti.png
+LastUpdate: 1612132639
+LastUpdateScan: 1646917409
+MinVer: 6.4.1
+Name: Cacti
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "Cacti is a complete network graphing solution designed to harness the power\
+  \ of RRDTool's data storage and graphing functionality.  For full details go to:\
+  \ www.cacti.net.  The stated minium unRAID version of 6.4.1 is simply because that\
+  \ is the version I run and can test.\r\n\r\nSETUP AND CONFIGURATION:\r\n---------------------------------------------\r\
+  \n     0.  SNMP poller default port is 161UDP. \r\n     1.  If you have an SNMP\
+  \ poller plug-in already installed on your unRAID host, you'll find it will conflict\
+  \ with this Docker. Either uninstall the SNMP plugin you are using, or make the\
+  \ changes to have both work (author assumes you know what you're doing).\r\n   \
+  \  2.  Has a webui, default set at 8180, adapt as needed to work on your host.\r\
+  \n     3.  During initial setup the path to SPINE is incorrect. Change it to:\r\n\
+  \          /usr/local/spine/bin/spine\r\n     4. First login  --  userid: admin\
+  \    \r\n                         password: admin\r\n\r\nFIRST RUN (Recommendation):\r\
+  \n---------------------------------------------\r\n   On left hand menu, Under \"\
+  Automation\" click on, \"Networks\"  THEN \"Test Network\" on right-side main frame.\
+  \  In Subnet Range change this to fit your network. Click \"Save\" THEN \"Return\"\
+  \ at the bottom.\r\n   Next click on the checkbox for \"Test Network\" THEN in \"\
+  Choose an action\" box click ENABLE --&gt; GO \r\n  Check the checkbox for \"test\
+  \ Network\" again THEN choose \"Discover now\""
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/QuantumObject/docker-cacti
+Registry: https://hub.docker.com/r/quantumobject/docker-cacti/
+Repo: JCloud's Repository
+Repository: quantumobject/docker-cacti
+Support: https://lime-technology.com/forums/topic/69470-support-cacti/
+TemplateURL: https://raw.githubusercontent.com/Jcloud67/Docker-Templates/master/Cacti.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:80]/cacti
+topPerforming: 1.827
+topTrending: -1.919

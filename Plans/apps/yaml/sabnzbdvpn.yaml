@@ -1,0 +1,209 @@
+CategoryList:
+- Downloaders
+Config:
+- '@attributes':
+    Default: 'yes'
+    Description: Enable VPN? yes/no
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: VPN_ENABLED
+    Required: 'false'
+    Target: VPN_ENABLED
+    Type: Variable
+  value: 'yes'
+- '@attributes':
+    Default: openvpn
+    Description: openvpn / wireguard?
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: VPN_TYPE
+    Required: 'true'
+    Target: VPN_TYPE
+    Type: Variable
+  value: openvpn
+- '@attributes':
+    Default: ''
+    Description: Username used to authenticate to the VPN (OpenVPN only)
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: VPN_USERNAME
+    Required: 'false'
+    Target: VPN_USERNAME
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Password used to authenticate to the VPN (OpenVPN only)
+    Display: always
+    Mask: 'true'
+    Mode: ''
+    Name: VPN_PASSWORD
+    Required: 'false'
+    Target: VPN_PASSWORD
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: 192.168.0.0/24
+    Description: Your local network address in CIDR notation
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: LAN_NETWORK
+    Required: 'true'
+    Target: LAN_NETWORK
+    Type: Variable
+  value: 192.168.0.0/24
+- '@attributes':
+    Default: ''
+    Description: Path for /downloads
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Downloads Path
+    Required: 'true'
+    Target: /downloads
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: '8080'
+    Description: Port used to access SABnzbd (HTTP) remotely
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WEBUI_PORT_HTTP
+    Required: 'true'
+    Target: '8080'
+    Type: Port
+  value: '8080'
+- '@attributes':
+    Default: '8443'
+    Description: Port used to access SABnzbd (HTTPS) remotely
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WEBUI_PORT_HTTPS
+    Required: 'true'
+    Target: '8443'
+    Type: Port
+  value: '8443'
+- '@attributes':
+    Default: '99'
+    Description: The UID applied to the /config and /downloads
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: PUID
+    Required: 'false'
+    Target: PUID
+    Type: Variable
+  value: '99'
+- '@attributes':
+    Default: '100'
+    Description: The GID applied to the /config and /downloads
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: PGID
+    Required: 'false'
+    Target: PGID
+    Type: Variable
+  value: '100'
+- '@attributes':
+    Default: 1.1.1.1,1.0.0.1
+    Description: DNS used by the container
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: NAME_SERVERS
+    Required: 'false'
+    Target: NAME_SERVERS
+    Type: Variable
+  value: 1.1.1.1,1.0.0.1
+- '@attributes':
+    Default: '002'
+    Description: umask used by the container
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: UMASK
+    Required: 'false'
+    Target: UMASK
+    Type: Variable
+  value: '002'
+- '@attributes':
+    Default: one.one.one.one
+    Description: Host used to check if connection is up
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: HEALTH_CHECK_HOST
+    Required: 'false'
+    Target: HEALTH_CHECK_HOST
+    Type: Variable
+  value: one.one.one.one
+- '@attributes':
+    Default: '300'
+    Description: Interval in seconds between connection check
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: HEALTH_CHECK_INTERVAL
+    Required: 'false'
+    Target: HEALTH_CHECK_INTERVAL
+    Type: Variable
+  value: '300'
+- '@attributes':
+    Default: '1'
+    Description: 1 supresses the 'Network is up' message
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: HEALTH_CHECK_SILENT
+    Required: 'false'
+    Target: HEALTH_CHECK_SILENT
+    Type: Variable
+  value: '1'
+- '@attributes':
+    Default: ''
+    Description: Additional ports for routing other containers through this one
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: ADDITIONAL_PORTS
+    Required: 'false'
+    Target: ADDITIONAL_PORTS
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: /mnt/user/appdata/sabnzbdvpn/
+    Description: config path of sabnzbdvpn
+    Display: advanced
+    Mask: 'false'
+    Mode: rw
+    Name: config
+    Required: 'true'
+    Target: /config
+    Type: Path
+  value: /mnt/user/appdata/sabnzbdvpn/
+ExtraParams: --restart unless-stopped
+FirstSeen: 1597939843
+Icon: https://raw.githubusercontent.com/DyonR/docker-templates/master/Icons/sabnzbdvpn/sabnzbdvpn-icon-256.png
+LastUpdate: 1645588056
+LastUpdateScan: 1647317002
+Name: sabnzbdvpn
+Network: bridge
+Overview: Docker container which runs the SABnzbd while connecting to WireGuard or
+  OpenVPN with iptables killswitch to prevent IP leakage when the tunnel goes down.
+Privileged: 'true'
+Project: https://github.com/sabnzbd/sabnzbd
+Registry: https://hub.docker.com/r/dyonr/sabnzbdvpn
+Repo: Dyon's Repository
+Repository: dyonr/sabnzbdvpn
+Support: https://forums.unraid.net/topic/95998-support-dyonr-sabnzbdvpn/
+TemplateURL: https://raw.githubusercontent.com/DyonR/docker-templates/master/Templates/sabnzbdvpn/sabnzbdvpn-template.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: https://[IP]:[PORT:8443]/
+topTrending: -13.796000000000001

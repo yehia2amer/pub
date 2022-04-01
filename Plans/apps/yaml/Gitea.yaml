@@ -1,0 +1,66 @@
+Beta: 'true'
+CategoryList:
+- Backup
+- Cloud
+- Productivity
+- Tools-Utilities
+ChangeLogPresent: true
+Config:
+- '@attributes':
+    Default: '22'
+    Description: 'Container Port: 22'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Git over SSH
+    Required: 'true'
+    Target: '22'
+    Type: Port
+  value: '22'
+- '@attributes':
+    Default: '3000'
+    Description: 'Container Port: 3000'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI and Git over HTTP
+    Required: 'true'
+    Target: '3000'
+    Type: Port
+  value: '3000'
+- '@attributes':
+    Default: /mnt/user/appdata/gitea
+    Description: 'Container Path: /data'
+    Display: advanced
+    Mask: 'false'
+    Mode: rw
+    Name: Data Storage Path
+    Required: 'true'
+    Target: /data
+    Type: Path
+  value: /mnt/user/appdata/gitea
+FirstSeen: 1505620800
+Icon: https://raw.githubusercontent.com/fanningert/unraid-docker-templates/master/fanningert/icons/gitea.png
+LastUpdate: 1648671426
+LastUpdateScan: 1648692215
+Name: Gitea
+Network: bridge
+Networking:
+  Mode: bridge
+Official: true
+Overview: 'Gitea: Git with a cup of tea - The goal of this project is to make the
+  easiest, fastest, and most painless way of setting up a self-hosted Git service.
+  Using Go, this can be done with an independent binary distribution across all platforms
+  which Go supports, including Linux, macOS, and Windows on x86, amd64, ARM and PowerPC
+  architectures. Want to try it before doing anything else? Do it with the online
+  demo! This project has been forked from Gogs.'
+Privileged: 'false'
+Registry: https://registry.hub.docker.com/r/gitea/gitea/
+Repo: fanningert's Repository
+Repository: gitea/gitea
+Support: https://forums.lime-technology.com/topic/60168-support-gitea/
+TemplateURL: https://raw.githubusercontent.com/fanningert/unraid-docker-templates/master/fanningert/Gitea.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:3000]
+topPerforming: 0.279
+topTrending: -1.286

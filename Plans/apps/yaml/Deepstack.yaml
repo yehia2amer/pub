@@ -1,0 +1,194 @@
+CategoryList:
+- HomeAutomation
+- Security
+- Tools-Utilities
+- Other
+Config:
+- '@attributes':
+    Default: '5000'
+    Description: 'For access to the Web UI and API. Default is 5000. '
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI
+    Required: 'true'
+    Target: '5000'
+    Type: Port
+  value: '5000'
+- '@attributes':
+    Default: /mnt/user/appdata/deepstack
+    Description: Config storage path. Default is /mnt/user/appdata/deepstack.
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: AppData
+    Required: 'true'
+    Target: /datastore
+    Type: Path
+  value: /mnt/user/appdata/deepstack
+- '@attributes':
+    Default: /mnt/user/appdata/deepstack/custom_models
+    Description: This specifies the local directory where you stored your custom models.
+      Default is /mnt/user/appdata/deepstack/custom_models.
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Custom Model Store
+    Required: 'false'
+    Target: /modelstore/detection
+    Type: Path
+  value: /mnt/user/appdata/deepstack/custom_models
+- '@attributes':
+    Default: False|True
+    Description: This enables the object detection API. Default is False.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Object Detection
+    Required: 'false'
+    Target: VISION-DETECTION
+    Type: Variable
+  value: 'False'
+- '@attributes':
+    Default: False|True
+    Description: This enables the face recognition APIs. Default is False.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Face Detection
+    Required: 'false'
+    Target: VISION-FACE
+    Type: Variable
+  value: 'False'
+- '@attributes':
+    Default: False|True
+    Description: This enables the scene recognition API. Default is False.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Scene Detection
+    Required: 'false'
+    Target: VISION-SCENE
+    Type: Variable
+  value: 'False'
+- '@attributes':
+    Default: False|True
+    Description: This enables the image enhance API. Default is False.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Image Enhance
+    Required: 'false'
+    Target: VISION-ENHANCE
+    Type: Variable
+  value: 'False'
+- '@attributes':
+    Default: High|Medium|Low
+    Description: Deepstack offers three modes allowing you to trade off speed for
+      performance. You can specify performance mode to be High, Medium, and Low. Default
+      is Medium.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Performance Mode
+    Required: 'false'
+    Target: MODE
+    Type: Variable
+  value: Medium
+- '@attributes':
+    Default: '5'
+    Description: This allows you to specify the number of threads each endpoint will
+      run with. This provides singificant performance boost, especially when running
+      multiple requests often. The default value is 5.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Multithreading
+    Required: 'false'
+    Target: THREADCOUNT
+    Type: Variable
+  value: '5'
+- '@attributes':
+    Default: ''
+    Description: Requires Nvidia GPU and Unraid Nvidia drivers. Default is none
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Nvidia Visible Devices
+    Required: 'false'
+    Target: NVIDIA_VISIBLE_DEVICES
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: API Key is used to protect your API endpoint to prevent unauthorized
+      access. Default is none.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: API Key
+    Required: 'false'
+    Target: API-KEY
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: The Admin Key protects admin APIs such as adding models, deleting
+      models, list models, backup, and restore. Default is none.
+    Display: always
+    Mask: 'true'
+    Mode: ''
+    Name: Admin Key
+    Required: 'false'
+    Target: ADMIN-KEY
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: 'all '
+    Description: Requires Nvidia GPU and Unraid Nvidia drivers. Default is all.
+    Display: advanced
+    Mask: 'false'
+    Mode: ''
+    Name: Nvidia Driver Capabilities
+    Required: 'false'
+    Target: NVIDIA_DRIVER_CAPABILITIES
+    Type: Variable
+  value: all
+FirstSeen: 1605820582
+Icon: https://raw.githubusercontent.com/n8detar/docker-templates/master/n8detar/images/deepstack.png
+LastUpdate: 1642369804
+LastUpdateScan: 1647425006
+Name: deepstack
+Network: bridge
+Overview: "Deepstack is an AI server that empowers every developer in the world to\
+  \ easily build state-of-the-art AI systems both on-premise and in the cloud. The\
+  \ promises of Artificial Intelligence are huge but becoming a machine learning engineer\
+  \ is hard. Build and deploy AI-powered applications with in-built and custom AI\
+  \ APIs, all offline and self-hosted. See https://deepstack.cc and https://docs.deepstack.cc/faq/index.html\r\
+  \n\r\nTo use with home assistant see: https://github.com/robmarkcole/HASS-Deepstack-object\
+  \ and https://docs.deepstack.cc/faq/index.html\r\n\r\n---\r\n**_Old CPUs without\
+  \ AVX:_** If you are using an older CPU that doesn't support AVX  _(Warning: This\
+  \ version hasn't been updated in some time)_:\r\n1.  Add **`:noavx`** to the end\
+  \ of the **_`Repository:`_** field. \r\n2. Should look like this: **`deepquestai/deepstack:noavx`**\r\
+  \n---\r\n**_GPU:_** If you wish to use a NVIDIA GPU instead of your CPU:\r\n1. Install\
+  \ Unraid Nvidia Plugin (available in the community apps store): https://forums.unraid.net/topic/98978-plugin-nvidia-driver/\r\
+  \n2. Add **`:gpu`** to the end of the **_`Repository:`_** field. Should look like\
+  \ this: **`deepquestai/deepstack:gpu`**\r\n3. Add **`--runtime=nvidia`** to the\
+  \ **_`Extra Parameters:`_** field (to view this field switch to advanced view by\
+  \ clicking the toggle in the top right next to **`Basic View`**) .\r\n4. Copy your\
+  \ GPU UUID to **_`Nvidia Visible Devices:`_**. (Can be found in the Nvidia Driver\
+  \ settings page under **`nVidia Info:`**). Should look something like this: **`GPU-1a2b3456-7890-1cd2-ea34-56b7c8de90a1`**\r\
+  \n---\r\n*I am not the creator or maintainer of this container I am merely providing\
+  \ the Unraid template."
+PostArgs: ''
+Privileged: 'false'
+Project: https://deepstack.cc
+Registry: https://hub.docker.com/r/deepquestai/deepstack
+Repo: ndetar's Repository
+Repository: deepquestai/deepstack
+Requires: ''
+TemplateURL: https://raw.githubusercontent.com/n8detar/docker-templates/master/n8detar/deepstack.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:5000]
+topPerforming: 1.245
+topTrending: -2.364

@@ -1,0 +1,108 @@
+CategoryList:
+- HomeAutomation
+- Tools-Utilities
+- Other
+Config:
+- '@attributes':
+    Default: '8501'
+    Description: For access to the Web UI. Default is 8501.
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI
+    Required: 'true'
+    Target: '8501'
+    Type: Port
+  value: '8501'
+- '@attributes':
+    Default: localhost
+    Description: The IP address of your Deepstack instance. Default is localhost.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Deepstack IP
+    Required: 'true'
+    Target: DEEPSTACK_IP
+    Type: Variable
+  value: localhost
+- '@attributes':
+    Default: '80'
+    Description: 'The PORT of your Deepstack instance. Default is 80. '
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Deepstack Port
+    Required: 'true'
+    Target: DEEPSTACK_PORT
+    Type: Variable
+  value: '80'
+- '@attributes':
+    Default: ''
+    Description: The API key of your Deepstack instance, if you have set one.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Deepstack API Key
+    Required: 'false'
+    Target: DEEPSTACK_API_KEY
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '10'
+    Description: The timeout to wait for Deepstack. Default is 10 seconds.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Deepstack Timeout
+    Required: 'false'
+    Target: DEEPSTACK_TIMEOUT
+    Type: Variable
+  value: '10'
+- '@attributes':
+    Default: ''
+    Description: The name of a custom model, if you wish to use one.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Deepstack Custom Model
+    Required: 'false'
+    Target: DEEPSTACK_CUSTOM_MODEL
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: False|True
+    Description: Lowers the minimum confidence threshold to 1%. Default is False.
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: Deepstack UI Debug Mode
+    Required: 'false'
+    Target: DEEPSTACK_UI_DEBUG_MODE
+    Type: Variable
+  value: 'False'
+FirstSeen: 1609376858
+Icon: https://raw.githubusercontent.com/n8detar/docker-templates/master/n8detar/images/deepstack-ui.png
+LastUpdate: 1630651317
+LastUpdateScan: 1648353788
+Name: deepstack-ui
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "UI for working with Deepstack. Allows uploading an image and performing\
+  \ object detection or face recognition with Deepstack. Also faces can be registered\
+  \ with Deepstack. The effect of various parameters can be explored, including filtering\
+  \ objects by confidence, type and location in the image. Created by robmarkcole.\r\
+  \n\r\n*I am not the creator or maintainer of this container I am merely providing\
+  \ the Unraid template."
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/robmarkcole/deepstack-ui
+Registry: https://hub.docker.com/r/robmarkcole/deepstack-ui
+Repo: ndetar's Repository
+Repository: robmarkcole/deepstack-ui
+Requires: Deepstack
+TemplateURL: https://raw.githubusercontent.com/n8detar/docker-templates/master/n8detar/deepstack-ui.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8501]
+topPerforming: 1.32
+topTrending: -3.8889999999999993

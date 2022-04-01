@@ -1,0 +1,58 @@
+CategoryList:
+- Backup
+Config:
+- '@attributes':
+    Default: ''
+    Description: The directory for the program to dedupe.
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Scan Directory
+    Required: 'true'
+    Target: /scan
+    Type: Path
+  value: /mnt/user/Media/
+- '@attributes':
+    Default: '5800'
+    Description: The port of the WebUI
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI
+    Required: 'true'
+    Target: '5800'
+    Type: Port
+  value: '5800'
+- '@attributes':
+    Default: /mnt/user/appdata/deduper
+    Description: For the apps app data (hashes.json)
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: Appdata
+    Required: 'true'
+    Target: /appdata
+    Type: Path
+  value: /mnt/user/appdata/deduper
+FirstSeen: 1624536589
+Icon: https://raw.githubusercontent.com/daman20/deduper/master/Deduper%20Logo.png
+LastUpdate: 1630374024
+LastUpdateScan: 1647921800
+Name: Deduper
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: Deduper is a Python script bundled into a Docker container that automatically
+  deletes any files with the same content, regardless of name. This is done based
+  off of the SHA512 hash.
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/daman20/deduper
+Registry: https://hub.docker.com/repository/docker/daman20/deduper
+Repo: daman12's Repository
+Repository: daman20/deduper
+Support: https://forums.unraid.net/topic/110500-support-daman20-deduper/
+TemplateURL: https://raw.githubusercontent.com/daman20/ca-xmls/master/deduper.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:5800]
+topTrending: -18.467000000000002

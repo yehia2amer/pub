@@ -1,0 +1,179 @@
+Branch:
+- Tag: latest
+  TagDescription: Stable emby releases
+- GitHub: https://github.com/linuxserver/docker-emby/tree/beta#application-setup
+  ReadMe: https://github.com/linuxserver/docker-emby/tree/beta#readme
+  Tag: beta
+  TagDescription: Beta emby releases
+ChangeLogPresent: true
+Config:
+- '@attributes':
+    Default: '8096'
+    Description: Http webUI.
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: WebUI
+    Required: 'true'
+    Target: '8096'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: '8920'
+    Description: Https webUI (you need to setup your own certificate).
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: 'Port: 8920'
+    Required: 'false'
+    Target: '8920'
+    Type: Port
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Emby data storage location. *This can grow very large, 50gb+ is likely
+      for a large collection.*
+    Display: advanced
+    Mask: 'false'
+    Mode: rw
+    Name: Appdata
+    Required: 'true'
+    Target: /config
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Media goes here. Add as many as needed e.g. `/data/movies`, `/data/tv`,
+      etc.
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: 'Path: /data/tvshows'
+    Required: 'true'
+    Target: /data/tvshows
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Media goes here. Add as many as needed e.g. `/data/movies`, `/data/tv`,
+      etc.
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: 'Path: /data/movies'
+    Required: 'true'
+    Target: /data/movies
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: ''
+    Description: Path for Raspberry Pi OpenMAX libs *optional*.
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: 'Path: /opt/vc/lib'
+    Required: 'false'
+    Target: /opt/vc/lib
+    Type: Path
+  value: ''
+- '@attributes':
+    Default: '99'
+    Description: 'Container Variable: PUID'
+    Display: advanced
+    Mask: 'false'
+    Name: PUID
+    Required: 'true'
+    Target: PUID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '100'
+    Description: 'Container Variable: PGID'
+    Display: advanced
+    Mask: 'false'
+    Name: PGID
+    Required: 'true'
+    Target: PGID
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '022'
+    Description: 'Container Variable: UMASK'
+    Display: advanced
+    Mask: 'false'
+    Name: UMASK
+    Required: 'false'
+    Target: UMASK
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: /dev/dri
+    Description: Only needed if you want to use your Intel or AMD GPU for hardware
+      accelerated video encoding (vaapi).
+    Display: always
+    Mask: 'false'
+    Name: /dev/dri
+    Required: 'false'
+    Type: Device
+  value: ''
+- '@attributes':
+    Default: /dev/vchiq
+    Description: Only needed if you want to use your Raspberry Pi OpenMax video encoding
+      (Bellagio).
+    Display: always
+    Mask: 'false'
+    Name: /dev/vchiq
+    Required: 'false'
+    Type: Device
+  value: ''
+- '@attributes':
+    Default: /dev/video10
+    Description: Only needed if you want to use your Raspberry Pi V4L2 video encoding.
+    Display: always
+    Mask: 'false'
+    Name: /dev/video10
+    Required: 'false'
+    Type: Device
+  value: ''
+- '@attributes':
+    Default: /dev/video11
+    Description: Only needed if you want to use your Raspberry Pi V4L2 video encoding.
+    Display: always
+    Mask: 'false'
+    Name: /dev/video11
+    Required: 'false'
+    Type: Device
+  value: ''
+- '@attributes':
+    Default: /dev/video12
+    Description: Only needed if you want to use your Raspberry Pi V4L2 video encoding.
+    Display: always
+    Mask: 'false'
+    Name: /dev/video12
+    Required: 'false'
+    Type: Device
+  value: ''
+DonateImg: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/donate.png
+DonateLink: https://www.linuxserver.io/donate
+DonateText: Donations
+FirstSeen: 1560247648
+GitHub: https://github.com/linuxserver/docker-emby#application-setup
+Icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/emby-logo.png
+LastUpdate: 1647463202
+LastUpdateScan: 1647914679
+Name: emby
+Network: bridge
+Overview: Emby(https://emby.media/) organizes video, music, live TV, and photos from
+  personal media libraries and streams them to smart TVs, streaming boxes and mobile
+  devices. This container is packaged as a standalone emby Media Server.
+Privileged: 'false'
+Project: https://emby.media/
+ReadMe: https://github.com/linuxserver/docker-emby#readme
+Registry: https://github.com/orgs/linuxserver/packages/container/package/emby
+Repo: linuxserver's Repository
+Repository: lscr.io/linuxserver/emby
+Support: https://github.com/linuxserver/docker-emby/issues/new/choose
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:8096]
+caTemplateURL: https://raw.githubusercontent.com/linuxserver/templates/master/unraid/emby.xml
+topTrending: -1.672

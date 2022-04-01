@@ -1,0 +1,50 @@
+CategoryList:
+- HomeAutomation
+- Network-Management
+Config:
+- '@attributes':
+    Default: '8080'
+    Description: 'Container Port: 8080'
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: BridgePort
+    Required: 'true'
+    Target: '8080'
+    Type: Port
+  value: '8080'
+- '@attributes':
+    Default: /mnt/user/appdata/smartthings-mqtt-bridge
+    Description: 'Container Path: /config'
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: BridgeDataPath
+    Required: 'true'
+    Target: /config
+    Type: Path
+  value: /mnt/user/appdata/smartthings-mqtt-bridge
+Deprecated: true
+FirstSeen: '1530060995'
+Icon: https://raw.githubusercontent.com/digiblur/unraid-docker-templates/master/images/smartthings-mqtt-bridge_icon.png
+LastUpdate: 1543814847
+LastUpdateScan: 1648368215
+Name: smartthings-mqtt-bridge
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "A bridge between SmartThings and MQTT (there is NO webconsole!)\r\n\r\n\
+  This project was spawned by the desire to control SmartThings from within Home Assistant.\
+  \ Since Home Assistant already supports MQTT, we chose to go and build a bridge\
+  \ between SmartThings and MQTT.\r\n\r\nSetup info available at: https://github.com/stjohnjohnson/smartthings-mqtt-bridge"
+PostArgs: ''
+Privileged: 'false'
+Registry: https://hub.docker.com/r/stjohnjohnson/smartthings-mqtt-bridge/~/dockerfile/
+Repo: digiblur's Repository
+Repository: stjohnjohnson/smartthings-mqtt-bridge
+Support: https://forums.unraid.net/topic/72033-support-digiblurs-docker-template-repository/
+TemplateURL: https://raw.githubusercontent.com/digiblur/unraid-docker-templates/master/deprecated/smartthings-mqtt-bridge.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: ''
+topPerforming: 0.07
+topTrending: -0.5900000000000001

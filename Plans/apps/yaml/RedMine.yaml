@@ -1,0 +1,117 @@
+CategoryList:
+- Cloud
+- Network-Web
+Config:
+- '@attributes':
+    Default: '3000'
+    Description: ''
+    Display: always
+    Mask: 'false'
+    Mode: tcp
+    Name: Port
+    Required: 'true'
+    Target: '3000'
+    Type: Port
+  value: '3000'
+- '@attributes':
+    Default: ''
+    Description: The IP of your database
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: DatabaseHost
+    Required: 'true'
+    Target: REDMINE_DB_MYSQL
+    Type: Variable
+  value: ''
+- '@attributes':
+    Default: '3306'
+    Description: The port of your database
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: DatabasePort
+    Required: 'true'
+    Target: REDMINE_DB_PORT
+    Type: Variable
+  value: '3306'
+- '@attributes':
+    Default: RedMine
+    Description: The name of the database you will use
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: DatabaseName
+    Required: 'true'
+    Target: REDMINE_DB_DATABASE
+    Type: Variable
+  value: RedMine
+- '@attributes':
+    Default: RedmineUser
+    Description: ''
+    Display: always
+    Mask: 'false'
+    Mode: ''
+    Name: DatabaseUser
+    Required: 'true'
+    Target: REDMINE_DB_USERNAME
+    Type: Variable
+  value: RedmineUser
+- '@attributes':
+    Default: changeme
+    Description: ''
+    Display: always
+    Mask: 'true'
+    Mode: ''
+    Name: DatabaseUserPassword
+    Required: 'true'
+    Target: REDMINE_DB_PASSWORD
+    Type: Variable
+  value: test1234
+- '@attributes':
+    Default: /mnt/user/appdata/redmine/plugins
+    Description: Plugins path for redmine
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: RedMinePlugin
+    Required: 'true'
+    Target: /usr/src/redmine/files
+    Type: Path
+  value: /mnt/user/appdata/redmine/plugins
+- '@attributes':
+    Default: /mnt/user/appdata/redmine/themes
+    Description: Themes path for RedMine
+    Display: always
+    Mask: 'false'
+    Mode: rw
+    Name: RedMineThemes
+    Required: 'true'
+    Target: /usr/src/redmine/public/themes
+    Type: Path
+  value: /mnt/user/appdata/redmine/themes
+FirstSeen: 1646111000
+Icon: https://avatars.githubusercontent.com/u/93662?s=200&amp;v=4
+LastUpdate: 1648691050
+LastUpdateScan: 1648706609
+Name: RedMine
+Network: bridge
+Official: true
+Overview: "Redmine is a free and open source, web-based project management and issue\
+  \ tracking tool. It allows users to manage multiple projects and associated subprojects.\
+  \ It features per project wikis and forums, time tracking, and flexible role based\
+  \ access control. It includes a calendar and Gantt charts to aid visual representation\
+  \ of projects and their deadlines. Redmine integrates with various version control\
+  \ systems and includes a repository browser and diff viewer.\r\n\r\nThe basic user\
+  \ is \r\nuser: admin\r\npassword: admin"
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/redmine/redmine
+Registry: https://hub.docker.com/_/redmine
+Repo: Fantucie's Repository
+Repository: redmine
+Requires: ''
+Support: https://forums.unraid.net/topic/120473-support-fantucie-apps/
+TemplateURL: https://raw.githubusercontent.com/ItJustFox/unraidtemplate/master/RedMine/redmine.xml
+Video: https://www.youtube.com/watch?v=1y06G853Udg
+WebUI: http://[IP]:[PORT:3000]/
