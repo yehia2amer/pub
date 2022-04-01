@@ -4,83 +4,88 @@ CategoryList:
 - Network-Web
 - Network-FTP
 Config:
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'false'
-    Target: '53842'
-    Type: Port
-  value: '53842'
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Directory (config)
-    Required: 'false'
-    Target: /app/config
-    Type: Path
-  value: /mnt/user/appdata/gokapi/config
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Directory (data)
-    Required: 'false'
-    Target: /app/data
-    Type: Path
-  value: /mnt/user/appdata/gokapi/data
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: GOKAPI_USERNAME
-    Required: 'false'
-    Target: GOKAPI_USERNAME
-    Type: Variable
-  value: unraid
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: GOKAPI_PASSWORD
-    Required: 'false'
-    Target: GOKAPI_PASSWORD
-    Type: Variable
-  value: unraid
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: GOKAPI_LENGTH_ID
-    Required: 'false'
-    Target: GOKAPI_LENGTH_ID
-    Type: Variable
-  value: '10'
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: GOKAPI_MAX_FILESIZE
-    Required: 'false'
-    Target: GOKAPI_MAX_FILESIZE
-    Type: Variable
-  value: '5'
+  Device: {}
+  Label: {}
+  Path:
+    Directory (config):
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Directory (config)
+      Required: 'false'
+      Target: /app/config
+      Type: Path
+      value: /mnt/user/appdata/gokapi/config
+    Directory (data):
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Directory (data)
+      Required: 'false'
+      Target: /app/data
+      Type: Path
+      value: /mnt/user/appdata/gokapi/data
+  Port:
+    WebUI:
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'false'
+      Target: '53842'
+      Type: Port
+      value: '53842'
+  Variable:
+    GOKAPI_LENGTH_ID:
+      Default: ''
+      Description: ''
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: GOKAPI_LENGTH_ID
+      Required: 'false'
+      Target: GOKAPI_LENGTH_ID
+      Type: Variable
+      value: '10'
+    GOKAPI_MAX_FILESIZE:
+      Default: ''
+      Description: ''
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: GOKAPI_MAX_FILESIZE
+      Required: 'false'
+      Target: GOKAPI_MAX_FILESIZE
+      Type: Variable
+      value: '5'
+    GOKAPI_PASSWORD:
+      Default: ''
+      Description: ''
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: GOKAPI_PASSWORD
+      Required: 'false'
+      Target: GOKAPI_PASSWORD
+      Type: Variable
+      value: unraid
+    GOKAPI_USERNAME:
+      Default: ''
+      Description: ''
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: GOKAPI_USERNAME
+      Required: 'false'
+      Target: GOKAPI_USERNAME
+      Type: Variable
+      value: unraid
 FirstSeen: 1639263809
 Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/gokapi_200x200.png
 LastUpdate: 1646927988

@@ -1,128 +1,133 @@
 CategoryList:
 - GameServers
 Config:
-- '@attributes':
-    Default: '80'
-    Description: Port Http for the web serveur
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebHttp
-    Required: 'true'
-    Target: '80'
-    Type: Port
-  value: '80'
-- '@attributes':
-    Default: '443'
-    Description: 'Port Https for the web serveur '
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebHttps
-    Required: 'true'
-    Target: '443'
-    Type: Port
-  value: '443'
-- '@attributes':
-    Default: /mnt/user/appdata/pteropanel/var
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: PteroVar
-    Required: 'true'
-    Target: /app/var
-    Type: Path
-  value: /mnt/user/appdata/pteropanel/var
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: PteroNginx
-    Required: 'true'
-    Target: /app/nginx/http.d/
-    Type: Path
-  value: /mnt/user/appdata/pteropanel/nginx
-- '@attributes':
-    Default: ''
-    Description: "Mount your SSL key.\r\nIf nginx mount your config.\r\nif reverseproxy,\
-      \ mount the key."
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: PteroLetsenscrypt
-    Required: 'false'
-    Target: /etc/letsencrypt/
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: /mnt/user/appdata/pteropanel/logs
-    Description: All the logs of pterodactyl panel.
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: PteroLogs
-    Required: 'true'
-    Target: /app/storage/logs
-    Type: Path
-  value: /mnt/user/appdata/pteropanel/logs
-- '@attributes':
-    Default: ''
-    Description: Ip of your database
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DatabaseHost
-    Required: 'true'
-    Target: DB_HOST
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '3306'
-    Description: The port of your database
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DatabasePort
-    Required: 'true'
-    Target: DB_PORT
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: pterodb
-    Description: The name of your database.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DatabaseName
-    Required: 'true'
-    Target: DB_DATABASE
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: PteroUser
-    Description: The name of the database user
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DatabaseUser
-    Required: 'true'
-    Target: DB_USERNAME
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: changeme
-    Description: The database password for the user.
-    Display: always
-    Mask: 'true'
-    Mode: ''
-    Name: DatabasePassword
-    Required: 'true'
-    Target: DB_PASSWORD
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    PteroLetsenscrypt:
+      Default: ''
+      Description: "Mount your SSL key.\r\nIf nginx mount your config.\r\nif reverseproxy,\
+        \ mount the key."
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: PteroLetsenscrypt
+      Required: 'false'
+      Target: /etc/letsencrypt/
+      Type: Path
+      value: ''
+    PteroLogs:
+      Default: /mnt/user/appdata/pteropanel/logs
+      Description: All the logs of pterodactyl panel.
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: PteroLogs
+      Required: 'true'
+      Target: /app/storage/logs
+      Type: Path
+      value: /mnt/user/appdata/pteropanel/logs
+    PteroNginx:
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: PteroNginx
+      Required: 'true'
+      Target: /app/nginx/http.d/
+      Type: Path
+      value: /mnt/user/appdata/pteropanel/nginx
+    PteroVar:
+      Default: /mnt/user/appdata/pteropanel/var
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: PteroVar
+      Required: 'true'
+      Target: /app/var
+      Type: Path
+      value: /mnt/user/appdata/pteropanel/var
+  Port:
+    WebHttp:
+      Default: '80'
+      Description: Port Http for the web serveur
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebHttp
+      Required: 'true'
+      Target: '80'
+      Type: Port
+      value: '80'
+    WebHttps:
+      Default: '443'
+      Description: 'Port Https for the web serveur '
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebHttps
+      Required: 'true'
+      Target: '443'
+      Type: Port
+      value: '443'
+  Variable:
+    DatabaseHost:
+      Default: ''
+      Description: Ip of your database
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DatabaseHost
+      Required: 'true'
+      Target: DB_HOST
+      Type: Variable
+      value: ''
+    DatabaseName:
+      Default: pterodb
+      Description: The name of your database.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DatabaseName
+      Required: 'true'
+      Target: DB_DATABASE
+      Type: Variable
+      value: ''
+    DatabasePassword:
+      Default: changeme
+      Description: The database password for the user.
+      Display: always
+      Mask: 'true'
+      Mode: ''
+      Name: DatabasePassword
+      Required: 'true'
+      Target: DB_PASSWORD
+      Type: Variable
+      value: ''
+    DatabasePort:
+      Default: '3306'
+      Description: The port of your database
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DatabasePort
+      Required: 'true'
+      Target: DB_PORT
+      Type: Variable
+      value: ''
+    DatabaseUser:
+      Default: PteroUser
+      Description: The name of the database user
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DatabaseUser
+      Required: 'true'
+      Target: DB_USERNAME
+      Type: Variable
+      value: ''
 FirstSeen: 1645808752
 Icon: https://avatars.githubusercontent.com/u/16179146?s=200&amp;v=4
 LastUpdateScan: 1648404195

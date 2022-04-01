@@ -3,50 +3,55 @@ CategoryList:
 - Tools-Utilities
 ChangeLogPresent: true
 Config:
-- '@attributes':
-    Default: /mnt/user/appdata/jupyterlab/notebooks
-    Description: 'Container Path: /opt/app/data'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Notebooks
-    Required: 'true'
-    Target: /opt/app/data
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Install Arch Packages to add functionalities.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Packages
-    Required: 'false'
-    Target: PACKAGES
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 8888'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'true'
-    Target: '8888'
-    Type: Port
-  value: '9999'
-- '@attributes':
-    Default: /mnt/user/appdata/jupyterlab/config
-    Description: 'Container Path: /appdata'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: rw
-    Name: Appdata
-    Required: 'true'
-    Target: /appdata
-    Type: Path
-  value: /mnt/user/appdata/jupyterlab/config
+  Device: {}
+  Label: {}
+  Path:
+    Appdata:
+      Default: /mnt/user/appdata/jupyterlab/config
+      Description: 'Container Path: /appdata'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: rw
+      Name: Appdata
+      Required: 'true'
+      Target: /appdata
+      Type: Path
+      value: /mnt/user/appdata/jupyterlab/config
+    Notebooks:
+      Default: /mnt/user/appdata/jupyterlab/notebooks
+      Description: 'Container Path: /opt/app/data'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Notebooks
+      Required: 'true'
+      Target: /opt/app/data
+      Type: Path
+      value: ''
+  Port:
+    WebUI:
+      Default: ''
+      Description: 'Container Port: 8888'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'true'
+      Target: '8888'
+      Type: Port
+      value: '9999'
+  Variable:
+    Packages:
+      Default: ''
+      Description: Install Arch Packages to add functionalities.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Packages
+      Required: 'false'
+      Target: PACKAGES
+      Type: Variable
+      value: ''
 DonateLink: https://bgameiro.me/page/donate
 FirstSeen: 1597694916
 Icon: https://raw.githubusercontent.com/BGameiro2000/unraid-ca/master/jupyterlab/icon.png

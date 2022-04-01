@@ -1,144 +1,149 @@
 CategoryList:
 - GameServers
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /starmade'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: ServerFiles
-    Required: 'true'
-    Target: /starmade
-    Type: Path
-  value: /mnt/cache/appdata/starmade
-- '@attributes':
-    Default: ''
-    Description: Enter your extra startup parameters otherwise leave blank!
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Extra Game Parameters
-    Required: 'false'
-    Target: GAME_PARAMS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Enter your XMS size in MB (XMS=The initial and minimum heap size.
-      It is recommended to set the minimum heap size equivalent to the maximum heap
-      size in order to minimize the garbage collection.)
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: XMS Size
-    Required: 'true'
-    Target: XMS_SIZE
-    Type: Variable
-  value: '1024'
-- '@attributes':
-    Default: ''
-    Description: Enter your XMX size in MB (XMX=The maximum heap size. The performance
-      will decrease if the max heap value is set lower than the amount of live data.
-      It will force frequent garbage collections in order to free up space.)
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: XMX Size
-    Required: 'true'
-    Target: XMX_SIZE
-    Type: Variable
-  value: '1024'
-- '@attributes':
-    Default: ''
-    Description: TCP - Game Port (If you need another port delete this entry and create
-      a new Port with the corresponding port numbers).
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: TCP - Game Port
-    Required: 'true'
-    Target: '4242'
-    Type: Port
-  value: '4242'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: UMASK'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: UMASK
-    Required: 'true'
-    Target: UMASK
-    Type: Variable
-  value: '000'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: DATA_PERM'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: DATA_PERM
-    Required: 'true'
-    Target: DATA_PERM
-    Type: Variable
-  value: '770'
-- '@attributes':
-    Default: ''
-    Description: "Enter your extracted Runtime folder name.\r\nDon't change unless\
-      \ you are knowing what you are doing!"
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Runtime Name
-    Required: 'true'
-    Target: RUNTIME_NAME
-    Type: Variable
-  value: basicjre
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: UID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: UID
-    Required: 'true'
-    Target: UID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: GID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: GID
-    Required: 'true'
-    Target: GID
-    Type: Variable
-  value: '100'
-- '@attributes':
-    Default: ''
-    Description: Only change if you know what you are doing!
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Starter Parameters
-    Required: 'true'
-    Target: STARTER_PARAMS
-    Type: Variable
-  value: -nogui
-- '@attributes':
-    Default: ''
-    Description: Only change if you know what you are doing!
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Download URL
-    Required: 'true'
-    Target: DL_URL
-    Type: Variable
-  value: http://files.star-made.org/StarMade-Starter.jar
+  Device: {}
+  Label: {}
+  Path:
+    ServerFiles:
+      Default: ''
+      Description: 'Container Path: /starmade'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: ServerFiles
+      Required: 'true'
+      Target: /starmade
+      Type: Path
+      value: /mnt/cache/appdata/starmade
+  Port:
+    TCP - Game Port:
+      Default: ''
+      Description: TCP - Game Port (If you need another port delete this entry and
+        create a new Port with the corresponding port numbers).
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: TCP - Game Port
+      Required: 'true'
+      Target: '4242'
+      Type: Port
+      value: '4242'
+  Variable:
+    DATA_PERM:
+      Default: ''
+      Description: 'Container Variable: DATA_PERM'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: DATA_PERM
+      Required: 'true'
+      Target: DATA_PERM
+      Type: Variable
+      value: '770'
+    Download URL:
+      Default: ''
+      Description: Only change if you know what you are doing!
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Download URL
+      Required: 'true'
+      Target: DL_URL
+      Type: Variable
+      value: http://files.star-made.org/StarMade-Starter.jar
+    Extra Game Parameters:
+      Default: ''
+      Description: Enter your extra startup parameters otherwise leave blank!
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Extra Game Parameters
+      Required: 'false'
+      Target: GAME_PARAMS
+      Type: Variable
+      value: ''
+    GID:
+      Default: ''
+      Description: 'Container Variable: GID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: GID
+      Required: 'true'
+      Target: GID
+      Type: Variable
+      value: '100'
+    Runtime Name:
+      Default: ''
+      Description: "Enter your extracted Runtime folder name.\r\nDon't change unless\
+        \ you are knowing what you are doing!"
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Runtime Name
+      Required: 'true'
+      Target: RUNTIME_NAME
+      Type: Variable
+      value: basicjre
+    Starter Parameters:
+      Default: ''
+      Description: Only change if you know what you are doing!
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Starter Parameters
+      Required: 'true'
+      Target: STARTER_PARAMS
+      Type: Variable
+      value: -nogui
+    UID:
+      Default: ''
+      Description: 'Container Variable: UID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: UID
+      Required: 'true'
+      Target: UID
+      Type: Variable
+      value: '99'
+    UMASK:
+      Default: ''
+      Description: 'Container Variable: UMASK'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: UMASK
+      Required: 'true'
+      Target: UMASK
+      Type: Variable
+      value: '000'
+    XMS Size:
+      Default: ''
+      Description: Enter your XMS size in MB (XMS=The initial and minimum heap size.
+        It is recommended to set the minimum heap size equivalent to the maximum heap
+        size in order to minimize the garbage collection.)
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: XMS Size
+      Required: 'true'
+      Target: XMS_SIZE
+      Type: Variable
+      value: '1024'
+    XMX Size:
+      Default: ''
+      Description: Enter your XMX size in MB (XMX=The maximum heap size. The performance
+        will decrease if the max heap value is set lower than the amount of live data.
+        It will force frequent garbage collections in order to free up space.)
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: XMX Size
+      Required: 'true'
+      Target: XMX_SIZE
+      Type: Variable
+      value: '1024'
 DonateLink: https://www.paypal.me/chips777
 DonateText: 'If you like my work please '
 ExtraParams: --restart=unless-stopped

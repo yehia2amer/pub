@@ -2,89 +2,94 @@ BindTime: 'true'
 CategoryList:
 - Tools
 Config:
-- '@attributes':
-    Default: /mnt
-    Description: 'This is the mnt directory of your unraid server&lt;br&gt;Container
-      path: /mnt'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: rw
-    Name: temp Directory
-    Required: 'true'
-    Target: /mnt
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: /mnt/user/h265ize/temp
-    Description: 'This is the temp storage directory to store your current conversion&lt;br&gt;Container
-      path: /tmp'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: rw
-    Name: mnt Directory
-    Required: 'true'
-    Target: /tmp
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: /mnt/user/h265ize/output
-    Description: The destination folder where you want your re-encoded video to be
-      (recomended to be the parent directory of your input if you are planning to
-      replace your source)
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Output Directory
-    Required: 'true'
-    Target: output
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: /mnt/user/h265ize/input
-    Description: The source folder that contain video files you want to re-encode
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Input Directory
-    Required: 'true'
-    Target: input
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '19'
-    Description: Quantization Parameter, read the h265 docs for more info
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Quantization Parameter
-    Required: 'true'
-    Target: qp
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: mp4
-    Description: mp4,mkv or m4v
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Output Format
-    Required: 'true'
-    Target: format
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: fast
-    Description: ultrafast, superfast, veryfast, faster, fast, medium, slow, slower,
-      veryslow, placebo | https://x265.readthedocs.io/en/default/presets.html for
-      more info
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Quality Preset
-    Required: 'true'
-    Target: preset
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    mnt Directory:
+      Default: /mnt/user/h265ize/temp
+      Description: 'This is the temp storage directory to store your current conversion&lt;br&gt;Container
+        path: /tmp'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: rw
+      Name: mnt Directory
+      Required: 'true'
+      Target: /tmp
+      Type: Path
+      value: ''
+    temp Directory:
+      Default: /mnt
+      Description: 'This is the mnt directory of your unraid server&lt;br&gt;Container
+        path: /mnt'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: rw
+      Name: temp Directory
+      Required: 'true'
+      Target: /mnt
+      Type: Path
+      value: ''
+  Port: {}
+  Variable:
+    Input Directory:
+      Default: /mnt/user/h265ize/input
+      Description: The source folder that contain video files you want to re-encode
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Input Directory
+      Required: 'true'
+      Target: input
+      Type: Variable
+      value: ''
+    Output Directory:
+      Default: /mnt/user/h265ize/output
+      Description: The destination folder where you want your re-encoded video to
+        be (recomended to be the parent directory of your input if you are planning
+        to replace your source)
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Output Directory
+      Required: 'true'
+      Target: output
+      Type: Variable
+      value: ''
+    Output Format:
+      Default: mp4
+      Description: mp4,mkv or m4v
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Output Format
+      Required: 'true'
+      Target: format
+      Type: Variable
+      value: ''
+    Quality Preset:
+      Default: fast
+      Description: ultrafast, superfast, veryfast, faster, fast, medium, slow, slower,
+        veryslow, placebo | https://x265.readthedocs.io/en/default/presets.html for
+        more info
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Quality Preset
+      Required: 'true'
+      Target: preset
+      Type: Variable
+      value: ''
+    Quantization Parameter:
+      Default: '19'
+      Description: Quantization Parameter, read the h265 docs for more info
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Quantization Parameter
+      Required: 'true'
+      Target: qp
+      Type: Variable
+      value: ''
 DonateImg: https://www.paypal.com/en_US/i/btn/btn_donate_SM.gif
 DonateLink: https://www.paypal.me/siwatsirichai
 DonateText: If you like it, then consider buying me a soda as I don&#39;t like beer

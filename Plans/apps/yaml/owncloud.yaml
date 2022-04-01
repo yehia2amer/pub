@@ -5,83 +5,88 @@ CategoryList:
 - Productivity
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: '443'
-    Description: 'Container Port: 443'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI Port
-    Required: 'true'
-    Target: '443'
-    Type: Port
-  value: '8443'
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /data'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Data Path
-    Required: 'true'
-    Target: /data
-    Type: Path
-  value: /mnt/user/appdata/ownCloud/data
-- '@attributes':
-    Default: '99'
-    Description: 'Container Variable: PUID'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: PUID
-    Required: 'false'
-    Target: PUID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: '100'
-    Description: 'Container Variable: PGID'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: PGID
-    Required: 'false'
-    Target: PGID
-    Type: Variable
-  value: '100'
-- '@attributes':
-    Default: '7.2'
-    Description: Set the version of PHP to use (7.2, 7.3 or 7.4)
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: PHP Version
-    Required: 'false'
-    Target: PHP_VERS
-    Type: Variable
-  value: '7.2'
-- '@attributes':
-    Default: owncloud
-    Description: 'Container Variable: DB_PASS'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: MySQL Password
-    Required: 'false'
-    Target: DB_PASS
-    Type: Variable
-  value: owncloud
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /config'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: rw
-    Name: AppData Config Path
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: /mnt/user/appdata/ownCloud
+  Device: {}
+  Label: {}
+  Path:
+    AppData Config Path:
+      Default: ''
+      Description: 'Container Path: /config'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: rw
+      Name: AppData Config Path
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: /mnt/user/appdata/ownCloud
+    Data Path:
+      Default: ''
+      Description: 'Container Path: /data'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Data Path
+      Required: 'true'
+      Target: /data
+      Type: Path
+      value: /mnt/user/appdata/ownCloud/data
+  Port:
+    WebUI Port:
+      Default: '443'
+      Description: 'Container Port: 443'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI Port
+      Required: 'true'
+      Target: '443'
+      Type: Port
+      value: '8443'
+  Variable:
+    MySQL Password:
+      Default: owncloud
+      Description: 'Container Variable: DB_PASS'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: MySQL Password
+      Required: 'false'
+      Target: DB_PASS
+      Type: Variable
+      value: owncloud
+    PGID:
+      Default: '100'
+      Description: 'Container Variable: PGID'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: PGID
+      Required: 'false'
+      Target: PGID
+      Type: Variable
+      value: '100'
+    PHP Version:
+      Default: '7.2'
+      Description: Set the version of PHP to use (7.2, 7.3 or 7.4)
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: PHP Version
+      Required: 'false'
+      Target: PHP_VERS
+      Type: Variable
+      value: '7.2'
+    PUID:
+      Default: '99'
+      Description: 'Container Variable: PUID'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: PUID
+      Required: 'false'
+      Target: PUID
+      Type: Variable
+      value: '99'
 DonateImage: https://www.paypalobjects.com/webstatic/en_US/btn/btn_donate_74x21.png
 DonateLink: https://www.paypal.com/us/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=EJGPC7B5CS66E
 DonateText: For my retirement.

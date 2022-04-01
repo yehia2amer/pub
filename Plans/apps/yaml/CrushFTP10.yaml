@@ -4,138 +4,132 @@ CategoryList:
 - Network-Web
 - Network-FTP
 Config:
-- '@attributes':
-    Default: '2121'
-    Description: 'Container Port: 2121'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: FTP Port
-    Required: 'true'
-    Target: '21'
-    Type: Port
-  value: '21'
-- '@attributes':
-    Default: '443'
-    Description: 'Container Port: 443'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: HTTPS Port
-    Required: 'true'
-    Target: '443'
-    Type: Port
-  value: '443'
-- '@attributes':
-    Default: 2000-2100
-    Description: 'Container Port: 2000-2100'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: FTP Passive Ports
-    Required: 'true'
-    Target: 2000-2100
-    Type: Port
-  value: 2000-2100
-- '@attributes':
-    Default: '2222'
-    Description: 'Container Port: 2222'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: SFTP Port
-    Required: 'true'
-    Target: '2222'
-    Type: Port
-  value: '2222'
-- '@attributes':
-    Default: '8080'
-    Description: 'Container Port: 8080'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: HTTP Port
-    Required: 'true'
-    Target: '8080'
-    Type: Port
-  value: '8080'
-- '@attributes':
-    Default: '9090'
-    Description: 'Container Port: 9090'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: HTTP Port
-    Required: 'true'
-    Target: '9090'
-    Type: Port
-  value: '9090'
-- '@attributes':
-    Default: crushadmin
-    Description: Default admin user for CrushFTP administration
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: CrushFTP Admin User
-    Required: 'true'
-    Target: CRUSH_ADMIN_USER
-    Type: Variable
-  value: crushadmin
-- '@attributes':
-    Default: crushadmin
-    Description: Default admin password for CrushFTP administration
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: CrushFTP Admin Password
-    Required: 'true'
-    Target: CRUSH_ADMIN_PASSWORD
-    Type: Variable
-  value: crushadmin
-- '@attributes':
-    Default: http
-    Description: Protocol for health cecks
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Healthcheck Protocol
-    Required: 'true'
-    Target: CRUSH_ADMIN_PROTOCOL
-    Type: Variable
-  value: http
-- '@attributes':
-    Default: '8080'
-    Description: Port for health cecks
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Healthceck Port
-    Required: 'true'
-    Target: CRUSH_ADMIN_PORT
-    Type: Variable
-  value: '8080'
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /mnt/FTP/Shared'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: FTP Folder 1
-    Required: 'false'
-    Target: /mnt/FTP/Shared
-    Type: Path
-  value: /mnt/user/
-- '@attributes':
-    Default: /mnt/cache/appdata/crushftp
-    Description: 'Container Path: /var/opt/CrushFTP10'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: rw
-    Name: Config Volume
-    Required: 'true'
-    Target: /var/opt/CrushFTP10
-    Type: Path
-  value: /mnt/cache/appdata/crushftp
+  Device: {}
+  Label: {}
+  Path:
+    Config Volume:
+      Default: /mnt/cache/appdata/crushftp
+      Description: 'Container Path: /var/opt/CrushFTP10'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: rw
+      Name: Config Volume
+      Required: 'true'
+      Target: /var/opt/CrushFTP10
+      Type: Path
+      value: /mnt/cache/appdata/crushftp
+    FTP Folder 1:
+      Default: ''
+      Description: 'Container Path: /mnt/FTP/Shared'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: FTP Folder 1
+      Required: 'false'
+      Target: /mnt/FTP/Shared
+      Type: Path
+      value: /mnt/user/
+  Port:
+    FTP Passive Ports:
+      Default: 2000-2100
+      Description: 'Container Port: 2000-2100'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: FTP Passive Ports
+      Required: 'true'
+      Target: 2000-2100
+      Type: Port
+      value: 2000-2100
+    FTP Port:
+      Default: '2121'
+      Description: 'Container Port: 2121'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: FTP Port
+      Required: 'true'
+      Target: '21'
+      Type: Port
+      value: '21'
+    HTTP Port:
+      Default: '9090'
+      Description: 'Container Port: 9090'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: HTTP Port
+      Required: 'true'
+      Target: '9090'
+      Type: Port
+      value: '9090'
+    HTTPS Port:
+      Default: '443'
+      Description: 'Container Port: 443'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: HTTPS Port
+      Required: 'true'
+      Target: '443'
+      Type: Port
+      value: '443'
+    SFTP Port:
+      Default: '2222'
+      Description: 'Container Port: 2222'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: SFTP Port
+      Required: 'true'
+      Target: '2222'
+      Type: Port
+      value: '2222'
+  Variable:
+    CrushFTP Admin Password:
+      Default: crushadmin
+      Description: Default admin password for CrushFTP administration
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: CrushFTP Admin Password
+      Required: 'true'
+      Target: CRUSH_ADMIN_PASSWORD
+      Type: Variable
+      value: crushadmin
+    CrushFTP Admin User:
+      Default: crushadmin
+      Description: Default admin user for CrushFTP administration
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: CrushFTP Admin User
+      Required: 'true'
+      Target: CRUSH_ADMIN_USER
+      Type: Variable
+      value: crushadmin
+    Healthceck Port:
+      Default: '8080'
+      Description: Port for health cecks
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Healthceck Port
+      Required: 'true'
+      Target: CRUSH_ADMIN_PORT
+      Type: Variable
+      value: '8080'
+    Healthcheck Protocol:
+      Default: http
+      Description: Protocol for health cecks
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Healthcheck Protocol
+      Required: 'true'
+      Target: CRUSH_ADMIN_PROTOCOL
+      Type: Variable
+      value: http
 FirstSeen: 1616450563
 Icon: https://raw.githubusercontent.com/MarkusMcNugen/docker-templates/master/crushftp10/crushftp.png
 LastUpdate: 1616455353

@@ -5,50 +5,55 @@ CategoryList:
 - Network-Web
 - Network-FTP
 Config:
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUi
-    Required: 'false'
-    Target: '8080'
-    Type: Port
-  value: '8080'
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Storage (files)
-    Required: 'false'
-    Target: /data/files
-    Type: Path
-  value: /mnt/user/appdata/linx-server/files
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Storage (meta)
-    Required: 'false'
-    Target: /data/meta
-    Type: Path
-  value: /mnt/user/appdata/linx-server/meta
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: ro
-    Name: Storage (config file)
-    Required: 'false'
-    Target: /data/linx-server.conf
-    Type: Path
-  value: /mnt/user/appdata/linx-server/linx-server.conf
+  Device: {}
+  Label: {}
+  Path:
+    Storage (config file):
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: ro
+      Name: Storage (config file)
+      Required: 'false'
+      Target: /data/linx-server.conf
+      Type: Path
+      value: /mnt/user/appdata/linx-server/linx-server.conf
+    Storage (files):
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Storage (files)
+      Required: 'false'
+      Target: /data/files
+      Type: Path
+      value: /mnt/user/appdata/linx-server/files
+    Storage (meta):
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Storage (meta)
+      Required: 'false'
+      Target: /data/meta
+      Type: Path
+      value: /mnt/user/appdata/linx-server/meta
+  Port:
+    WebUi:
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUi
+      Required: 'false'
+      Target: '8080'
+      Type: Port
+      value: '8080'
+  Variable: {}
 FirstSeen: 1643720604
 Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/linx-server.png
 LastUpdate: 1597392029

@@ -2,61 +2,66 @@ CategoryList:
 - Tools-Utilities
 ChangeLogPresent: true
 Config:
-- '@attributes':
-    Default: '8080'
-    Description: 'Container Port: 8080'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Port
-    Required: 'false'
-    Target: '8080'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: /
-    Description: 'Container Path: /rootfs'
-    Display: always
-    Mask: 'false'
-    Mode: ro
-    Name: Root Filesystem
-    Required: 'true'
-    Target: /rootfs
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: /var/run
-    Description: 'Container Path: /var/run'
-    Display: always
-    Mask: 'false'
-    Mode: ro
-    Name: Runtime Variable Data
-    Required: 'true'
-    Target: /var/run
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: /sys
-    Description: 'Container Path: /sys'
-    Display: always
-    Mask: 'false'
-    Mode: ro
-    Name: Sys Filesystem
-    Required: 'true'
-    Target: /sys
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: /var/lib/docker
-    Description: 'Container Path: /var/lib/docker/'
-    Display: always
-    Mask: 'false'
-    Mode: ro
-    Name: Docker Storage Filesystem
-    Required: 'true'
-    Target: /var/lib/docker/
-    Type: Path
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Docker Storage Filesystem:
+      Default: /var/lib/docker
+      Description: 'Container Path: /var/lib/docker/'
+      Display: always
+      Mask: 'false'
+      Mode: ro
+      Name: Docker Storage Filesystem
+      Required: 'true'
+      Target: /var/lib/docker/
+      Type: Path
+      value: ''
+    Root Filesystem:
+      Default: /
+      Description: 'Container Path: /rootfs'
+      Display: always
+      Mask: 'false'
+      Mode: ro
+      Name: Root Filesystem
+      Required: 'true'
+      Target: /rootfs
+      Type: Path
+      value: ''
+    Runtime Variable Data:
+      Default: /var/run
+      Description: 'Container Path: /var/run'
+      Display: always
+      Mask: 'false'
+      Mode: ro
+      Name: Runtime Variable Data
+      Required: 'true'
+      Target: /var/run
+      Type: Path
+      value: ''
+    Sys Filesystem:
+      Default: /sys
+      Description: 'Container Path: /sys'
+      Display: always
+      Mask: 'false'
+      Mode: ro
+      Name: Sys Filesystem
+      Required: 'true'
+      Target: /sys
+      Type: Path
+      value: ''
+  Port:
+    Port:
+      Default: '8080'
+      Description: 'Container Port: 8080'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Port
+      Required: 'false'
+      Target: '8080'
+      Type: Port
+      value: ''
+  Variable: {}
 ExtraSearchTerms: monitoring prometheus
 FirstSeen: 1639314209
 Icon: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/cadvisor.png

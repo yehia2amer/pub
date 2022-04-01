@@ -3,61 +3,66 @@ CategoryList:
 - Tools-Utilities
 - Other
 Config:
-- '@attributes':
-    Default: '2376'
-    Description: 'Container Port: 2376'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: TLS TCP Port
-    Required: 'false'
-    Target: '2376'
-    Type: Port
-  value: '2376'
-- '@attributes':
-    Default: '2375'
-    Description: 'Container Port: 2375'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Non-TLS TCP Port
-    Required: 'false'
-    Target: '2375'
-    Type: Port
-  value: '2375'
-- '@attributes':
-    Default: /mnt/cache/appdata/dind/certs
-    Description: 'Container Path: /certs'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Certificate
-    Required: 'false'
-    Target: /certs
-    Type: Path
-  value: /mnt/cache/appdata/dind/certs
-- '@attributes':
-    Default: /mnt/cache/appdata/dind/docker
-    Description: 'Container Path: /var/lib/docker'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Docker storage
-    Required: 'false'
-    Target: /var/lib/docker
-    Type: Path
-  value: /mnt/cache/appdata/dind/docker
-- '@attributes':
-    Default: /certs
-    Description: 'Container Variable: DOCKER_TLS_CERTDIR'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DOCKER_TLS_CERTDIR
-    Required: 'false'
-    Target: DOCKER_TLS_CERTDIR
-    Type: Variable
-  value: /certs
+  Device: {}
+  Label: {}
+  Path:
+    Certificate:
+      Default: /mnt/cache/appdata/dind/certs
+      Description: 'Container Path: /certs'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Certificate
+      Required: 'false'
+      Target: /certs
+      Type: Path
+      value: /mnt/cache/appdata/dind/certs
+    Docker storage:
+      Default: /mnt/cache/appdata/dind/docker
+      Description: 'Container Path: /var/lib/docker'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Docker storage
+      Required: 'false'
+      Target: /var/lib/docker
+      Type: Path
+      value: /mnt/cache/appdata/dind/docker
+  Port:
+    Non-TLS TCP Port:
+      Default: '2375'
+      Description: 'Container Port: 2375'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Non-TLS TCP Port
+      Required: 'false'
+      Target: '2375'
+      Type: Port
+      value: '2375'
+    TLS TCP Port:
+      Default: '2376'
+      Description: 'Container Port: 2376'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: TLS TCP Port
+      Required: 'false'
+      Target: '2376'
+      Type: Port
+      value: '2376'
+  Variable:
+    DOCKER_TLS_CERTDIR:
+      Default: /certs
+      Description: 'Container Variable: DOCKER_TLS_CERTDIR'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DOCKER_TLS_CERTDIR
+      Required: 'false'
+      Target: DOCKER_TLS_CERTDIR
+      Type: Variable
+      value: /certs
 FirstSeen: 1648404194
 Icon: https://avatars.githubusercontent.com/u/11618900?s=120&amp;v=4
 LastUpdate: 1648099586

@@ -2,39 +2,44 @@ CategoryList:
 - Tools-Utilities
 - Other
 Config:
-- '@attributes':
-    Default: '10000'
-    Description: 'Container Port: 10000'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI Port
-    Required: 'true'
-    Target: '10000'
-    Type: Port
-  value: '10000'
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /home/user'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Config Folder
-    Required: 'true'
-    Target: /home/user
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: /mnt/user
-    Description: 'Container Path: /data'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Folder to Mount
-    Required: 'true'
-    Target: /data
-    Type: Path
-  value: /mnt/user
+  Device: {}
+  Label: {}
+  Path:
+    Config Folder:
+      Default: ''
+      Description: 'Container Path: /home/user'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Config Folder
+      Required: 'true'
+      Target: /home/user
+      Type: Path
+      value: ''
+    Folder to Mount:
+      Default: /mnt/user
+      Description: 'Container Path: /data'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Folder to Mount
+      Required: 'true'
+      Target: /data
+      Type: Path
+      value: /mnt/user
+  Port:
+    WebUI Port:
+      Default: '10000'
+      Description: 'Container Port: 10000'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI Port
+      Required: 'true'
+      Target: '10000'
+      Type: Port
+      value: '10000'
+  Variable: {}
 DonateLink: https://www.paypal.me/husainalhadad
 DonateText: If you like my work please consider donating.
 FirstSeen: 1615230168

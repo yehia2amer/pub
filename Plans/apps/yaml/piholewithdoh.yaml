@@ -3,182 +3,187 @@ CategoryList:
 - Other
 - Network-DNS
 Config:
-- '@attributes':
-    Default: '53'
-    Description: 'Container Port: 53'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: DNS Port TCP
-    Required: 'true'
-    Target: '53'
-    Type: Port
-  value: '53'
-- '@attributes':
-    Default: '53'
-    Description: 'Container Port: 53'
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: DNS Port UDP
-    Required: 'true'
-    Target: '53'
-    Type: Port
-  value: '53'
-- '@attributes':
-    Default: '67'
-    Description: 'Container Port: 67'
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: DHCP Port
-    Required: 'true'
-    Target: '67'
-    Type: Port
-  value: '67'
-- '@attributes':
-    Default: '80'
-    Description: 'Container Port: 80'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: HTTP Port
-    Required: 'true'
-    Target: '80'
-    Type: Port
-  value: '80'
-- '@attributes':
-    Default: '443'
-    Description: 'Container Port: 443'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: HTTPS Port
-    Required: 'true'
-    Target: '443'
-    Type: Port
-  value: '443'
-- '@attributes':
-    Default: /mnt/user/appdata/pihole-doh/pihole/
-    Description: 'Container Path: /etc/pihole/'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: pihole config
-    Required: 'true'
-    Target: /etc/pihole/
-    Type: Path
-  value: /mnt/user/appdata/pihole-doh/pihole/
-- '@attributes':
-    Default: /mnt/user/appdata/pihole-doh/dnsmasq.d/
-    Description: 'Container Path: /etc/dnsmasq.d/'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: dnsmasq config
-    Required: 'true'
-    Target: /etc/dnsmasq.d/
-    Type: Path
-  value: /mnt/user/appdata/pihole-doh/dnsmasq.d/
-- '@attributes':
-    Default: 127.1.1.1#5153
-    Description: 'Container Variable: DNS1'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: ENV 1
-    Required: 'false'
-    Target: DNS1
-    Type: Variable
-  value: 127.1.1.1#5153
-- '@attributes':
-    Default: 127.1.1.1#5153
-    Description: 'Container Variable: DNS2'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: ENV 2
-    Required: 'false'
-    Target: DNS2
-    Type: Variable
-  value: 127.1.1.1#5153
-- '@attributes':
-    Default: Europe/London
-    Description: 'Container Variable: TZ'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: ENV 3
-    Required: 'false'
-    Target: TZ
-    Type: Variable
-  value: Europe/London
-- '@attributes':
-    Default: password
-    Description: 'Container Variable: WEBPASSWORD'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: ENV 4
-    Required: 'false'
-    Target: WEBPASSWORD
-    Type: Variable
-  value: password
-- '@attributes':
-    Default: br0
-    Description: 'Container Variable: INTERFACE'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: ENV 5
-    Required: 'false'
-    Target: INTERFACE
-    Type: Variable
-  value: br0
-- '@attributes':
-    Default: 192.168.1.24
-    Description: 'Container Variable: ServerIP'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: ENV 6
-    Required: 'false'
-    Target: ServerIP
-    Type: Variable
-  value: 192.168.1.24
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: ServerIPv6'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: ENV 7
-    Required: 'false'
-    Target: ServerIPv6
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 'False'
-    Description: 'Container Variable: IPv6'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: ENV 8
-    Required: 'false'
-    Target: IPv6
-    Type: Variable
-  value: 'False'
-- '@attributes':
-    Default: all
-    Description: 'Container Variable: DNSMASQ_LISTENING'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: ENV 9
-    Required: 'false'
-    Target: DNSMASQ_LISTENING
-    Type: Variable
-  value: all
+  Device: {}
+  Label: {}
+  Path:
+    dnsmasq config:
+      Default: /mnt/user/appdata/pihole-doh/dnsmasq.d/
+      Description: 'Container Path: /etc/dnsmasq.d/'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: dnsmasq config
+      Required: 'true'
+      Target: /etc/dnsmasq.d/
+      Type: Path
+      value: /mnt/user/appdata/pihole-doh/dnsmasq.d/
+    pihole config:
+      Default: /mnt/user/appdata/pihole-doh/pihole/
+      Description: 'Container Path: /etc/pihole/'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: pihole config
+      Required: 'true'
+      Target: /etc/pihole/
+      Type: Path
+      value: /mnt/user/appdata/pihole-doh/pihole/
+  Port:
+    DHCP Port:
+      Default: '67'
+      Description: 'Container Port: 67'
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: DHCP Port
+      Required: 'true'
+      Target: '67'
+      Type: Port
+      value: '67'
+    DNS Port TCP:
+      Default: '53'
+      Description: 'Container Port: 53'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: DNS Port TCP
+      Required: 'true'
+      Target: '53'
+      Type: Port
+      value: '53'
+    DNS Port UDP:
+      Default: '53'
+      Description: 'Container Port: 53'
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: DNS Port UDP
+      Required: 'true'
+      Target: '53'
+      Type: Port
+      value: '53'
+    HTTP Port:
+      Default: '80'
+      Description: 'Container Port: 80'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: HTTP Port
+      Required: 'true'
+      Target: '80'
+      Type: Port
+      value: '80'
+    HTTPS Port:
+      Default: '443'
+      Description: 'Container Port: 443'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: HTTPS Port
+      Required: 'true'
+      Target: '443'
+      Type: Port
+      value: '443'
+  Variable:
+    ENV 1:
+      Default: 127.1.1.1#5153
+      Description: 'Container Variable: DNS1'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: ENV 1
+      Required: 'false'
+      Target: DNS1
+      Type: Variable
+      value: 127.1.1.1#5153
+    ENV 2:
+      Default: 127.1.1.1#5153
+      Description: 'Container Variable: DNS2'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: ENV 2
+      Required: 'false'
+      Target: DNS2
+      Type: Variable
+      value: 127.1.1.1#5153
+    ENV 3:
+      Default: Europe/London
+      Description: 'Container Variable: TZ'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: ENV 3
+      Required: 'false'
+      Target: TZ
+      Type: Variable
+      value: Europe/London
+    ENV 4:
+      Default: password
+      Description: 'Container Variable: WEBPASSWORD'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: ENV 4
+      Required: 'false'
+      Target: WEBPASSWORD
+      Type: Variable
+      value: password
+    ENV 5:
+      Default: br0
+      Description: 'Container Variable: INTERFACE'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: ENV 5
+      Required: 'false'
+      Target: INTERFACE
+      Type: Variable
+      value: br0
+    ENV 6:
+      Default: 192.168.1.24
+      Description: 'Container Variable: ServerIP'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: ENV 6
+      Required: 'false'
+      Target: ServerIP
+      Type: Variable
+      value: 192.168.1.24
+    ENV 7:
+      Default: ''
+      Description: 'Container Variable: ServerIPv6'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: ENV 7
+      Required: 'false'
+      Target: ServerIPv6
+      Type: Variable
+      value: ''
+    ENV 8:
+      Default: 'False'
+      Description: 'Container Variable: IPv6'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: ENV 8
+      Required: 'false'
+      Target: IPv6
+      Type: Variable
+      value: 'False'
+    ENV 9:
+      Default: all
+      Description: 'Container Variable: DNSMASQ_LISTENING'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: ENV 9
+      Required: 'false'
+      Target: DNSMASQ_LISTENING
+      Type: Variable
+      value: all
 Deprecated: true
 DonateLink: https://paypal.me/mersenne
 DonateText: If you like my work, a donation to my burger fund is very much appreciated.

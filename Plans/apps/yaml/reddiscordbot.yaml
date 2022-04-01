@@ -1,61 +1,66 @@
 CategoryList:
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: '99'
-    Description: 'Container Variable: PUID'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: PUID
-    Required: 'false'
-    Target: PUID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '100'
-    Description: 'Container Variable: PGID'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: PGID
-    Required: 'false'
-    Target: PGID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: /mnt/user/appdata/redbot
-    Description: "Container Path: /data\r\nFolder to persist Red-DiscordBot data."
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: Data
-    Required: 'false'
-    Target: /data
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: The prefix you want Red-DiscordBot to use.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Prefix
-    Required: 'true'
-    Target: PREFIX
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: The bot token you want Red-DiscordBot to use.
-    Display: always
-    Mask: 'true'
-    Mode: ''
-    Name: Token
-    Required: 'true'
-    Target: TOKEN
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Data:
+      Default: /mnt/user/appdata/redbot
+      Description: "Container Path: /data\r\nFolder to persist Red-DiscordBot data."
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: Data
+      Required: 'false'
+      Target: /data
+      Type: Path
+      value: ''
+  Port: {}
+  Variable:
+    PGID:
+      Default: '100'
+      Description: 'Container Variable: PGID'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PGID
+      Required: 'false'
+      Target: PGID
+      Type: Variable
+      value: ''
+    PUID:
+      Default: '99'
+      Description: 'Container Variable: PUID'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PUID
+      Required: 'false'
+      Target: PUID
+      Type: Variable
+      value: ''
+    Prefix:
+      Default: ''
+      Description: The prefix you want Red-DiscordBot to use.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Prefix
+      Required: 'true'
+      Target: PREFIX
+      Type: Variable
+      value: ''
+    Token:
+      Default: ''
+      Description: The bot token you want Red-DiscordBot to use.
+      Display: always
+      Mask: 'true'
+      Mode: ''
+      Name: Token
+      Required: 'true'
+      Target: TOKEN
+      Type: Variable
+      value: ''
 FirstSeen: 1565107710
 Icon: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/red-discordbot.png
 LastUpdate: 1648245428

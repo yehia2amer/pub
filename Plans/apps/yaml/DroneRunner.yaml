@@ -2,50 +2,55 @@ CategoryList:
 - Productivity
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: drone.example.com
-    Description: 'Container Variable: DRONE_RPC_HOST'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Host
-    Required: 'true'
-    Target: DRONE_RPC_HOST
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: https
-    Description: 'Container Variable: DRONE_RPC_PROTO'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Protocol
-    Required: 'true'
-    Target: DRONE_RPC_PROTO
-    Type: Variable
-  value: https
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: DRONE_RPC_SECRET'
-    Display: always
-    Mask: 'true'
-    Mode: ''
-    Name: Shared Secret
-    Required: 'true'
-    Target: DRONE_RPC_SECRET
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '3000'
-    Description: 'Container Port: 3000'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Port
-    Required: 'false'
-    Target: '3000'
-    Type: Port
-  value: '3000'
+  Device: {}
+  Label: {}
+  Path: {}
+  Port:
+    Port:
+      Default: '3000'
+      Description: 'Container Port: 3000'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Port
+      Required: 'false'
+      Target: '3000'
+      Type: Port
+      value: '3000'
+  Variable:
+    Host:
+      Default: drone.example.com
+      Description: 'Container Variable: DRONE_RPC_HOST'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Host
+      Required: 'true'
+      Target: DRONE_RPC_HOST
+      Type: Variable
+      value: ''
+    Protocol:
+      Default: https
+      Description: 'Container Variable: DRONE_RPC_PROTO'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Protocol
+      Required: 'true'
+      Target: DRONE_RPC_PROTO
+      Type: Variable
+      value: https
+    Shared Secret:
+      Default: ''
+      Description: 'Container Variable: DRONE_RPC_SECRET'
+      Display: always
+      Mask: 'true'
+      Mode: ''
+      Name: Shared Secret
+      Required: 'true'
+      Target: DRONE_RPC_SECRET
+      Type: Variable
+      value: ''
 ExtraParams: --volume=/var/run/docker.sock:/var/run/docker.sock --restart=always
 FirstSeen: 1639242205
 Icon: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/drone.png

@@ -3,830 +3,835 @@ CategoryList:
 - Network-VPN
 ChangeLogPresent: true
 Config:
-- '@attributes':
-    Default: ''
-    Description: Specify a timezone to use to have correct log times. i.e. Europe/London
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: TIMEZONE
-    Required: 'true'
-    Target: TZ
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: /mnt/user/appdata/gluetun
-    Description: 'Container Path: /gluetun'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: config
-    Required: 'false'
-    Target: /gluetun
-    Type: Path
-  value: /mnt/user/appdata/gluetun
-- '@attributes':
-    Default: private internet access|cyberghost|expressvpn|fastestvpn|hidemyass|ipvanish|ivpn|mullvad|nordvpn|perfect
-      privacy|privado|privatevpn|protonvpn|purevpn|surfshark|torguard|vpn unlimited|vyprvpn|wevpn|windscribe|custom
-    Description: VPN Service Provider
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: VPN_SERVICE_PROVIDER
-    Required: 'true'
-    Target: VPNSP
-    Type: Variable
-  value: private internet access
-- '@attributes':
-    Default: openvpn|wireguard
-    Description: VPN Type. Default is OpenVPN. Note not all providers support Wireguard.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: VPN_TYPE
-    Required: 'true'
-    Target: VPN_TYPE
-    Type: Variable
-  value: openvpn
-- '@attributes':
-    Default: udp|tcp
-    Description: 'OPTIONAL: Container Variable: OPENVPN_PROTOCOL'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: OPENVPN_PROTOCOL
-    Required: 'false'
-    Target: OPENVPN_PROTOCOL
-    Type: Variable
-  value: udp
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: OPENVPN_USER'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: OPENVPN_USER
-    Required: 'true'
-    Target: OPENVPN_USER
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: OPENVPN_PASSWORD (Optional for Mullvad)'
-    Display: always
-    Mask: 'true'
-    Mode: ''
-    Name: OPENVPN_PASSWORD
-    Required: 'true'
-    Target: OPENVPN_PASSWORD
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 2.5|2.4
-    Description: 'OPTIONAL: Set the OpenVPN version to run'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: OPENVPN_VERSION
-    Required: 'false'
-    Target: OPENVPN_VERSION
-    Type: Variable
-  value: '2.5'
-- '@attributes':
-    Default: 0|1|2|3|4|5|6
-    Description: 'OPTIONAL: OpenVPN verbosity level'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: OPENVPN_VERBOSITY
-    Required: 'false'
-    Target: OPENVPN_VERBOSITY
-    Type: Variable
-  value: '1'
-- '@attributes':
-    Default: ''
-    Description: 'OPTIONAL: Space delimited OpenVPN flags to pass to openvpn'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: OPENVPN_FLAGS
-    Required: 'false'
-    Target: OPENVPN_FLAGS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'OPTIONAL: Specify one or more custom ciphers to use'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: OPENVPN_CIPHER
-    Required: 'false'
-    Target: OPENVPN_CIPHER
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'OPTIONAL: Specify a custom auth algorithm to use. i.e. sha256'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: OPENVPN_AUTH
-    Required: 'false'
-    Target: OPENVPN_AUTH
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: no|yes
-    Description: 'OPTIONAL: Run OpenVPN as root'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: OPENVPN_ROOT
-    Required: 'false'
-    Target: OPENVPN_ROOT
-    Type: Variable
-  value: 'no'
-- '@attributes':
-    Default: ''
-    Description: 'OPTIONAL: Specify a target VPN IP address to use'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: OPENVPN_TARGET_IP
-    Required: 'false'
-    Target: OPENVPN_TARGET_IP
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: off|on
-    Description: 'OPTIONAL: Enable tunneling of IPv6 (only for Mullvad)'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: OPENVPN_IPV6
-    Required: 'false'
-    Target: OPENVPN_IPV6
-    Type: Variable
-  value: 'off'
-- '@attributes':
-    Default: ''
-    Description: 'OPTIONAL: The path to your OpenVPN configuration file. This implies
-      VPN_SERVICE_PROVIDER=custom'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: OPENVPN_CUSTOM_CONFIG
-    Required: 'false'
-    Target: OPENVPN_CUSTOM_CONFIG
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: tun0
-    Description: 'OPTIONAL: Specify a custom network interface name to use'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: OPENVPN_INTERFACE
-    Required: 'false'
-    Target: OPENVPN_INTERFACE
-    Type: Variable
-  value: tun0
-- '@attributes':
-    Default: ''
-    Description: 'OPTIONAL: Custom OpenVPN server endpoint port to use'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: OPENVPN_PORT
-    Required: 'false'
-    Target: OPENVPN_PORT
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'OPTINAL: 32 bytes private key in base64 format'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: WIREGUARD_PRIVATE_KEY
-    Required: 'false'
-    Target: WIREGUARD_PRIVATE_KEY
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'OPTINAL: 32 bytes pre-shared key in base64 format'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: WIREGUARD_PRESHARED_KEY
-    Required: 'false'
-    Target: WIREGUARD_PRESHARED_KEY
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Only for VPN_SERVICE_PROVIDER=custom and VPN_TYPE=wireguard: Wireguard
-      server public key'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: WIREGUARD_PUBLIC_KEY
-    Required: 'false'
-    Target: WIREGUARD_PUBLIC_KEY
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Wireguard IP network in the format xx.xx.xx.xx/xx. Wireguard interface
-      address, only required if VPN_TYPE=wireguard. Note this is usually specific
-      by user and the same for all servers.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: WIREGUARD_ADDRESS
-    Required: 'false'
-    Target: WIREGUARD_ADDRESS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Only for VPN_SERVICE_PROVIDER=custom and VPN_TYPE=wireguard: Wireguard
-      server endpoint IP address'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: WIREGUARD_ENDPOINT_IP
-    Required: 'false'
-    Target: WIREGUARD_ENDPOINT_IP
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '51820'
-    Description: 'OPTIONAL (required for VPN_SERVICE_PROVIDER=custom): Wireguard custom
-      server endpoint port to use'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: WIREGUARD_ENDPOINT_PORT
-    Required: 'false'
-    Target: WIREGUARD_ENDPOINT_PORT
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: wg0
-    Description: 'OPTIONAL: Specify a custom network interface name to use'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: WIREGUARD_INTERFACE
-    Required: 'false'
-    Target: WIREGUARD_INTERFACE
-    Type: Variable
-  value: wg0
-- '@attributes':
-    Default: ''
-    Description: 'OPTIONAL: Comma separated list of VPN regions. https://github.com/qdm12/gluetun/wiki'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: REGION
-    Required: 'false'
-    Target: REGION
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'OPTIONAL: Comma separated list of VPN countries. https://github.com/qdm12/gluetun/wiki'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: COUNTRY
-    Required: 'false'
-    Target: COUNTRY
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'OPTIONAL: Comma separated list of VPN cities. https://github.com/qdm12/gluetun/wiki'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: CITY
-    Required: 'false'
-    Target: CITY
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'OPTIONAL: Comma separated list of server hostnames. https://github.com/qdm12/gluetun/wiki'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: SERVER_HOSTNAME
-    Required: 'false'
-    Target: SERVER_HOSTNAME
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: on|off
-    Description: Turn on or off the container built-in firewall. You should turn off
-      for debugging purposes only.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: FIREWALL
-    Required: 'false'
-    Target: FIREWALL
-    Type: Variable
-  value: 'on'
-- '@attributes':
-    Default: ''
-    Description: 'OPTIONAL: Comma separated list of ports to allow from the VPN server
-      side (useful for vyprvpn port forwarding)'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: FIREWALL_VPN_INPUT_PORTS
-    Required: 'false'
-    Target: FIREWALL_VPN_INPUT_PORTS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'OPTIONAL: Comma separated list of ports to allow through the default
-      interface. This seems needed for Unraid containers and Kubernetes sidecars.'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: FIREWALL_INPUT_PORTS
-    Required: 'false'
-    Target: FIREWALL_INPUT_PORTS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'OPTIONAL: You first need to set your LAN CIDR in FIREWALL_OUTBOUND_SUBNETS.
-      For example with FIREWALL_OUTBOUND_SUBNETS=192.168.1.0/24'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: FIREWALL_OUTBOUND_SUBNETS
-    Required: 'false'
-    Target: FIREWALL_OUTBOUND_SUBNETS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: off|on
-    Description: 'OPTIONAL: Prints every firewall related command. You should use
-      it for debugging purposes only.'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: FIREWALL_DEBUG
-    Required: 'false'
-    Target: FIREWALL_DEBUG
-    Type: Variable
-  value: 'off'
-- '@attributes':
-    Default: info
-    Description: 'OPTIONAL: Container Variable: LOG_LEVEL'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: LOG_LEVEL
-    Required: 'false'
-    Target: LOG_LEVEL
-    Type: Variable
-  value: info
-- '@attributes':
-    Default: 127.0.0.1:9999
-    Description: 'OPTIONAL: Internal Health Server Listening Addroess'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: HEALTH_SERVER_ADDRESS
-    Required: 'false'
-    Target: HEALTH_SERVER_ADDRESS
-    Type: Variable
-  value: 127.0.0.1:9999
-- '@attributes':
-    Default: github.com
-    Description: 'OPTIONAL: Address used to check tunnel health'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: HEALTH_ADDRESS_TO_PING
-    Required: 'false'
-    Target: HEALTH_ADDRESS_TO_PING
-    Type: Variable
-  value: github.com
-- '@attributes':
-    Default: 6s
-    Description: 'OPTIONAL: Initial health check duration in seconds.'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: HEALTH_VPN_DURATION_INITIAL
-    Required: 'false'
-    Target: HEALTH_VPN_DURATION_INITIAL
-    Type: Variable
-  value: 6s
-- '@attributes':
-    Default: 5s
-    Description: 'OPTIONAL: Subsequent health check duration in seconds.'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: HEALTH_VPN_DURATION_ADDITION
-    Required: 'false'
-    Target: HEALTH_VPN_DURATION_ADDITION
-    Type: Variable
-  value: 5s
-- '@attributes':
-    Default: on|off
-    Description: '(Recommended: on) Activate DNS over TLS with Unbound'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DOT
-    Required: 'false'
-    Target: DOT
-    Type: Variable
-  value: 'on'
-- '@attributes':
-    Default: cloudflare|google|quad9|quadrant|cleanbrowsing
-    Description: Comma delimited list of DNS over TLS providers
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DOT_PROVIDERS
-    Required: 'false'
-    Target: DOT_PROVIDERS
-    Type: Variable
-  value: cloudflare
-- '@attributes':
-    Default: 127.0.0.1/8,10.0.0.0/8,172.16.0.0/12,192.168.0.0/16,169.254.0.0/16,::1/128,fc00::/7,fe80::/10,::ffff:7f00:1/104,::ffff:a00:0/104,::ffff:a9fe:0/112,::ffff:ac10:0/108,::ffff:c0a8:0/112
-    Description: All private CIDRs ranges. Comma separated list of CIDRs or single
-      IP addresses Unbound won't resolve to. Note that the default setting prevents
-      DNS rebinding
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DOT_PRIVATE_ADDRESS
-    Required: 'false'
-    Target: DOT_PRIVATE_ADDRESS
-    Type: Variable
-  value: 127.0.0.1/8,10.0.0.0/8,172.16.0.0/12,192.168.0.0/16,169.254.0.0/16,::1/128,fc00::/7,fe80::/10,::ffff:7f00:1/104,::ffff:a00:0/104,::ffff:a9fe:0/112,::ffff:ac10:0/108,::ffff:c0a8:0/112
-- '@attributes':
-    Default: 0|1|2|3|4|5
-    Description: 'OPTIONAL: Unbound verbosity level'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DOT_VERBOSITY
-    Required: 'false'
-    Target: DOT_VERBOSITY
-    Type: Variable
-  value: '1'
-- '@attributes':
-    Default: 0|1|2|3|4
-    Description: 'OPTIONAL: Unbound details verbosity level'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DOT_VERBOSITY_DETAILS
-    Required: 'false'
-    Target: DOT_VERBOSITY_DETAILS
-    Type: Variable
-  value: '0'
-- '@attributes':
-    Default: 0|1|2
-    Description: 'OPTIONAL: Unbound validation log level'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DOT_VALIDATION_LOGLEVEL
-    Required: 'false'
-    Target: DOT_VALIDATION_LOGLEVEL
-    Type: Variable
-  value: '0'
-- '@attributes':
-    Default: on|off
-    Description: 'OPTIONAL: Unbound caching'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DOT_CACHING
-    Required: 'false'
-    Target: DOT_CACHING
-    Type: Variable
-  value: 'on'
-- '@attributes':
-    Default: on|off
-    Description: 'OPTIONAL: DNS IPv6 resolution'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DOT_IPV6
-    Required: 'false'
-    Target: DOT_IPV6
-    Type: Variable
-  value: 'off'
-- '@attributes':
-    Default: on|off
-    Description: 'OPTIONAL: Block malicious hostnames and IPs with Unbound'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: BLOCK_MALICIOUS
-    Required: 'false'
-    Target: BLOCK_MALICIOUS
-    Type: Variable
-  value: 'on'
-- '@attributes':
-    Default: on|off
-    Description: 'OPTIONAL: Block surveillance hostnames and IPs with Unbound'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: BLOCK_SURVEILLANCE
-    Required: 'false'
-    Target: BLOCK_SURVEILLANCE
-    Type: Variable
-  value: 'off'
-- '@attributes':
-    Default: on|off
-    Description: 'OPTIONAL: Block ads hostnames and IPs with Unbound'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: BLOCK_ADS
-    Required: 'false'
-    Target: BLOCK_ADS
-    Type: Variable
-  value: 'off'
-- '@attributes':
-    Default: ''
-    Description: 'OPTIONAL: Comma separated list of domain names to leave unblocked
-      with Unbound. i.e. domain1.com,x.domain2.co.uk'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: UNBLOCK
-    Required: 'false'
-    Target: UNBLOCK
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 24h
-    Description: 'OPTIONAL: Period to update block lists and cryptographic files and
-      restart Unbound. Set to 0 to deactivate updates. i.e. 0, 30s, 5m, 24h'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DNS_UPDATE_PERIOD
-    Required: 'false'
-    Target: DNS_UPDATE_PERIOD
-    Type: Variable
-  value: 24h
-- '@attributes':
-    Default: ''
-    Description: 'OPTIONAL: IP address to use as DNS resolver if DOT is off'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DNS_PLAINTEXT_ADDRESS
-    Required: 'false'
-    Target: DNS_PLAINTEXT_ADDRESS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: on|off
-    Description: 'OPTIONAL: Keep the nameservers in /etc/resolv.conf untouched, but
-      disabled DNS blocking features'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DNS_KEEP_NAMESERVER
-    Required: 'false'
-    Target: DNS_KEEP_NAMESERVER
-    Type: Variable
-  value: 'on'
-- '@attributes':
-    Default: off|on
-    Description: 'OPTIONAL: Enable the internal HTTP proxy'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: HTTPPROXY
-    Required: 'false'
-    Target: HTTPPROXY
-    Type: Variable
-  value: 'off'
-- '@attributes':
-    Default: off|on
-    Description: 'OPTIONAL: Logs every tunnel requests'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: HTTPPROXY_LOG
-    Required: 'false'
-    Target: HTTPPROXY_LOG
-    Type: Variable
-  value: 'off'
-- '@attributes':
-    Default: '8888'
-    Description: Internal port number for the HTTP proxy to listen on
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: HTTPPROXY_PORT
-    Required: 'true'
-    Target: '8888'
-    Type: Port
-  value: '8888'
-- '@attributes':
-    Default: ''
-    Description: 'OPTIONAL: Username to use to connect to the HTTP proxy'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: HTTPPROXY_USER
-    Required: 'false'
-    Target: HTTPPROXY_USER
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'OPTIONAL: Password to use to connect to the HTTP proxy'
-    Display: always
-    Mask: 'true'
-    Mode: ''
-    Name: HTTPPROXY_PASSWORD
-    Required: 'false'
-    Target: HTTPPROXY_PASSWORD
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: off|on
-    Description: 'OPTIONAL: Stealth mode means HTTP proxy headers are not added to
-      your requests'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: ENABLE_HTTPPROXY_STEALTH
-    Required: 'false'
-    Target: HTTPPROXY_STEALTH
-    Type: Variable
-  value: 'off'
-- '@attributes':
-    Default: off|on
-    Description: 'OPTIONAL: Enable the internal Shadowsocks proxy'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: SHADOWSOCKS
-    Required: 'false'
-    Target: SHADOWSOCKS
-    Type: Variable
-  value: 'off'
-- '@attributes':
-    Default: off|on
-    Description: 'OPTIONAL: Enable Shadowsocks logging'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: SHADOWSOCKS_LOG
-    Required: 'false'
-    Target: SHADOWSOCKS_LOG
-    Type: Variable
-  value: 'off'
-- '@attributes':
-    Default: :8388
-    Description: 'OPTIONAL: Port number for the HTTP proxy to listen on'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: SHADOWSOCKS_LISTENING_ADDRESS
-    Required: 'true'
-    Target: :8388
-    Type: Variable
-  value: :8388
-- '@attributes':
-    Default: ''
-    Description: 'OPTIONAL: Password to use to connect to Shadowsocks'
-    Display: always
-    Mask: 'true'
-    Mode: ''
-    Name: SHADOWSOCKS_PASSWORD
-    Required: 'false'
-    Target: SHADOWSOCKS_PASSWORD
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: chacha20-ietf-poly1305|aes-128-gcm|aes-256-gcm
-    Description: 'OPTIONAL: Cipher to use for Shadowsocks'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: SHADOWSOCKS_CIPHER
-    Required: 'false'
-    Target: SHADOWSOCKS_CIPHER
-    Type: Variable
-  value: chacha20-ietf-poly1305
-- '@attributes':
-    Default: '0'
-    Description: 'OPTIONAL: Period to update all VPN servers information in memory
-      and to /gluetun/servers.json. Set to 0 to disable. This does a burst of DNS
-      over TLS requests, which may be blocked if you set BLOCK_MALICIOUS=on for example.
-      Valid duration string such as 24h.'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: UPDATER_PERIOD
-    Required: 'false'
-    Target: UPDATER_PERIOD
-    Type: Variable
-  value: '0'
-- '@attributes':
-    Default: /gluetun/ip
-    Description: 'OPTIONAL: Filepath to store the public IP address assigned'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: PUBLICIP_FILE
-    Required: 'false'
-    Target: PUBLICIP_FILE
-    Type: Variable
-  value: /gluetun/ip
-- '@attributes':
-    Default: 12h
-    Description: 'OPTIONAL: Period to check for public IP address. Set to 0 to disable.'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: PUBLICIP_PERIOD
-    Required: 'false'
-    Target: PUBLICIP_PERIOD
-    Type: Variable
-  value: 12h
-- '@attributes':
-    Default: on|off
-    Description: 'OPTIONAL: Filepath to store the public IP address assigned'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: VERSION_INFORMATION
-    Required: 'false'
-    Target: VERSION_INFORMATION
-    Type: Variable
-  value: 'on'
-- '@attributes':
-    Default: '8000'
-    Description: 'Container Port: 8000'
-    Display: advanced
-    Mask: 'false'
-    Mode: tcp
-    Name: HTTP_CONTROL_SERVER_PORT
-    Required: 'true'
-    Target: '8000'
-    Type: Port
-  value: '8000'
-- '@attributes':
-    Default: on|off
-    Description: 'OPTIONAL: Enable logging of HTTP requests'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: HTTP_CONTROL_SERVER_LOG
-    Required: 'false'
-    Target: HTTP_CONTROL_SERVER_LOG
-    Type: Variable
-  value: 'on'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: PUID'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: PUID
-    Required: 'false'
-    Target: PUID
-    Type: Variable
-  value: '1000'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: PGID'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: PGID
-    Required: 'false'
-    Target: PGID
-    Type: Variable
-  value: '1000'
+  Device: {}
+  Label: {}
+  Path:
+    config:
+      Default: /mnt/user/appdata/gluetun
+      Description: 'Container Path: /gluetun'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: config
+      Required: 'false'
+      Target: /gluetun
+      Type: Path
+      value: /mnt/user/appdata/gluetun
+  Port:
+    HTTPPROXY_PORT:
+      Default: '8888'
+      Description: Internal port number for the HTTP proxy to listen on
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: HTTPPROXY_PORT
+      Required: 'true'
+      Target: '8888'
+      Type: Port
+      value: '8888'
+    HTTP_CONTROL_SERVER_PORT:
+      Default: '8000'
+      Description: 'Container Port: 8000'
+      Display: advanced
+      Mask: 'false'
+      Mode: tcp
+      Name: HTTP_CONTROL_SERVER_PORT
+      Required: 'true'
+      Target: '8000'
+      Type: Port
+      value: '8000'
+  Variable:
+    BLOCK_ADS:
+      Default: on|off
+      Description: 'OPTIONAL: Block ads hostnames and IPs with Unbound'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: BLOCK_ADS
+      Required: 'false'
+      Target: BLOCK_ADS
+      Type: Variable
+      value: 'off'
+    BLOCK_MALICIOUS:
+      Default: on|off
+      Description: 'OPTIONAL: Block malicious hostnames and IPs with Unbound'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: BLOCK_MALICIOUS
+      Required: 'false'
+      Target: BLOCK_MALICIOUS
+      Type: Variable
+      value: 'on'
+    BLOCK_SURVEILLANCE:
+      Default: on|off
+      Description: 'OPTIONAL: Block surveillance hostnames and IPs with Unbound'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: BLOCK_SURVEILLANCE
+      Required: 'false'
+      Target: BLOCK_SURVEILLANCE
+      Type: Variable
+      value: 'off'
+    CITY:
+      Default: ''
+      Description: 'OPTIONAL: Comma separated list of VPN cities. https://github.com/qdm12/gluetun/wiki'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: CITY
+      Required: 'false'
+      Target: CITY
+      Type: Variable
+      value: ''
+    COUNTRY:
+      Default: ''
+      Description: 'OPTIONAL: Comma separated list of VPN countries. https://github.com/qdm12/gluetun/wiki'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: COUNTRY
+      Required: 'false'
+      Target: COUNTRY
+      Type: Variable
+      value: ''
+    DNS_KEEP_NAMESERVER:
+      Default: on|off
+      Description: 'OPTIONAL: Keep the nameservers in /etc/resolv.conf untouched,
+        but disabled DNS blocking features'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DNS_KEEP_NAMESERVER
+      Required: 'false'
+      Target: DNS_KEEP_NAMESERVER
+      Type: Variable
+      value: 'on'
+    DNS_PLAINTEXT_ADDRESS:
+      Default: ''
+      Description: 'OPTIONAL: IP address to use as DNS resolver if DOT is off'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DNS_PLAINTEXT_ADDRESS
+      Required: 'false'
+      Target: DNS_PLAINTEXT_ADDRESS
+      Type: Variable
+      value: ''
+    DNS_UPDATE_PERIOD:
+      Default: 24h
+      Description: 'OPTIONAL: Period to update block lists and cryptographic files
+        and restart Unbound. Set to 0 to deactivate updates. i.e. 0, 30s, 5m, 24h'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DNS_UPDATE_PERIOD
+      Required: 'false'
+      Target: DNS_UPDATE_PERIOD
+      Type: Variable
+      value: 24h
+    DOT:
+      Default: on|off
+      Description: '(Recommended: on) Activate DNS over TLS with Unbound'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DOT
+      Required: 'false'
+      Target: DOT
+      Type: Variable
+      value: 'on'
+    DOT_CACHING:
+      Default: on|off
+      Description: 'OPTIONAL: Unbound caching'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DOT_CACHING
+      Required: 'false'
+      Target: DOT_CACHING
+      Type: Variable
+      value: 'on'
+    DOT_IPV6:
+      Default: on|off
+      Description: 'OPTIONAL: DNS IPv6 resolution'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DOT_IPV6
+      Required: 'false'
+      Target: DOT_IPV6
+      Type: Variable
+      value: 'off'
+    DOT_PRIVATE_ADDRESS:
+      Default: 127.0.0.1/8,10.0.0.0/8,172.16.0.0/12,192.168.0.0/16,169.254.0.0/16,::1/128,fc00::/7,fe80::/10,::ffff:7f00:1/104,::ffff:a00:0/104,::ffff:a9fe:0/112,::ffff:ac10:0/108,::ffff:c0a8:0/112
+      Description: All private CIDRs ranges. Comma separated list of CIDRs or single
+        IP addresses Unbound won't resolve to. Note that the default setting prevents
+        DNS rebinding
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DOT_PRIVATE_ADDRESS
+      Required: 'false'
+      Target: DOT_PRIVATE_ADDRESS
+      Type: Variable
+      value: 127.0.0.1/8,10.0.0.0/8,172.16.0.0/12,192.168.0.0/16,169.254.0.0/16,::1/128,fc00::/7,fe80::/10,::ffff:7f00:1/104,::ffff:a00:0/104,::ffff:a9fe:0/112,::ffff:ac10:0/108,::ffff:c0a8:0/112
+    DOT_PROVIDERS:
+      Default: cloudflare|google|quad9|quadrant|cleanbrowsing
+      Description: Comma delimited list of DNS over TLS providers
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DOT_PROVIDERS
+      Required: 'false'
+      Target: DOT_PROVIDERS
+      Type: Variable
+      value: cloudflare
+    DOT_VALIDATION_LOGLEVEL:
+      Default: 0|1|2
+      Description: 'OPTIONAL: Unbound validation log level'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DOT_VALIDATION_LOGLEVEL
+      Required: 'false'
+      Target: DOT_VALIDATION_LOGLEVEL
+      Type: Variable
+      value: '0'
+    DOT_VERBOSITY:
+      Default: 0|1|2|3|4|5
+      Description: 'OPTIONAL: Unbound verbosity level'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DOT_VERBOSITY
+      Required: 'false'
+      Target: DOT_VERBOSITY
+      Type: Variable
+      value: '1'
+    DOT_VERBOSITY_DETAILS:
+      Default: 0|1|2|3|4
+      Description: 'OPTIONAL: Unbound details verbosity level'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DOT_VERBOSITY_DETAILS
+      Required: 'false'
+      Target: DOT_VERBOSITY_DETAILS
+      Type: Variable
+      value: '0'
+    ENABLE_HTTPPROXY_STEALTH:
+      Default: off|on
+      Description: 'OPTIONAL: Stealth mode means HTTP proxy headers are not added
+        to your requests'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: ENABLE_HTTPPROXY_STEALTH
+      Required: 'false'
+      Target: HTTPPROXY_STEALTH
+      Type: Variable
+      value: 'off'
+    FIREWALL:
+      Default: on|off
+      Description: Turn on or off the container built-in firewall. You should turn
+        off for debugging purposes only.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: FIREWALL
+      Required: 'false'
+      Target: FIREWALL
+      Type: Variable
+      value: 'on'
+    FIREWALL_DEBUG:
+      Default: off|on
+      Description: 'OPTIONAL: Prints every firewall related command. You should use
+        it for debugging purposes only.'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: FIREWALL_DEBUG
+      Required: 'false'
+      Target: FIREWALL_DEBUG
+      Type: Variable
+      value: 'off'
+    FIREWALL_INPUT_PORTS:
+      Default: ''
+      Description: 'OPTIONAL: Comma separated list of ports to allow through the default
+        interface. This seems needed for Unraid containers and Kubernetes sidecars.'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: FIREWALL_INPUT_PORTS
+      Required: 'false'
+      Target: FIREWALL_INPUT_PORTS
+      Type: Variable
+      value: ''
+    FIREWALL_OUTBOUND_SUBNETS:
+      Default: ''
+      Description: 'OPTIONAL: You first need to set your LAN CIDR in FIREWALL_OUTBOUND_SUBNETS.
+        For example with FIREWALL_OUTBOUND_SUBNETS=192.168.1.0/24'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: FIREWALL_OUTBOUND_SUBNETS
+      Required: 'false'
+      Target: FIREWALL_OUTBOUND_SUBNETS
+      Type: Variable
+      value: ''
+    FIREWALL_VPN_INPUT_PORTS:
+      Default: ''
+      Description: 'OPTIONAL: Comma separated list of ports to allow from the VPN
+        server side (useful for vyprvpn port forwarding)'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: FIREWALL_VPN_INPUT_PORTS
+      Required: 'false'
+      Target: FIREWALL_VPN_INPUT_PORTS
+      Type: Variable
+      value: ''
+    HEALTH_ADDRESS_TO_PING:
+      Default: github.com
+      Description: 'OPTIONAL: Address used to check tunnel health'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: HEALTH_ADDRESS_TO_PING
+      Required: 'false'
+      Target: HEALTH_ADDRESS_TO_PING
+      Type: Variable
+      value: github.com
+    HEALTH_SERVER_ADDRESS:
+      Default: 127.0.0.1:9999
+      Description: 'OPTIONAL: Internal Health Server Listening Addroess'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: HEALTH_SERVER_ADDRESS
+      Required: 'false'
+      Target: HEALTH_SERVER_ADDRESS
+      Type: Variable
+      value: 127.0.0.1:9999
+    HEALTH_VPN_DURATION_ADDITION:
+      Default: 5s
+      Description: 'OPTIONAL: Subsequent health check duration in seconds.'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: HEALTH_VPN_DURATION_ADDITION
+      Required: 'false'
+      Target: HEALTH_VPN_DURATION_ADDITION
+      Type: Variable
+      value: 5s
+    HEALTH_VPN_DURATION_INITIAL:
+      Default: 6s
+      Description: 'OPTIONAL: Initial health check duration in seconds.'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: HEALTH_VPN_DURATION_INITIAL
+      Required: 'false'
+      Target: HEALTH_VPN_DURATION_INITIAL
+      Type: Variable
+      value: 6s
+    HTTPPROXY:
+      Default: off|on
+      Description: 'OPTIONAL: Enable the internal HTTP proxy'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: HTTPPROXY
+      Required: 'false'
+      Target: HTTPPROXY
+      Type: Variable
+      value: 'off'
+    HTTPPROXY_LOG:
+      Default: off|on
+      Description: 'OPTIONAL: Logs every tunnel requests'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: HTTPPROXY_LOG
+      Required: 'false'
+      Target: HTTPPROXY_LOG
+      Type: Variable
+      value: 'off'
+    HTTPPROXY_PASSWORD:
+      Default: ''
+      Description: 'OPTIONAL: Password to use to connect to the HTTP proxy'
+      Display: always
+      Mask: 'true'
+      Mode: ''
+      Name: HTTPPROXY_PASSWORD
+      Required: 'false'
+      Target: HTTPPROXY_PASSWORD
+      Type: Variable
+      value: ''
+    HTTPPROXY_USER:
+      Default: ''
+      Description: 'OPTIONAL: Username to use to connect to the HTTP proxy'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: HTTPPROXY_USER
+      Required: 'false'
+      Target: HTTPPROXY_USER
+      Type: Variable
+      value: ''
+    HTTP_CONTROL_SERVER_LOG:
+      Default: on|off
+      Description: 'OPTIONAL: Enable logging of HTTP requests'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: HTTP_CONTROL_SERVER_LOG
+      Required: 'false'
+      Target: HTTP_CONTROL_SERVER_LOG
+      Type: Variable
+      value: 'on'
+    LOG_LEVEL:
+      Default: info
+      Description: 'OPTIONAL: Container Variable: LOG_LEVEL'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: LOG_LEVEL
+      Required: 'false'
+      Target: LOG_LEVEL
+      Type: Variable
+      value: info
+    OPENVPN_AUTH:
+      Default: ''
+      Description: 'OPTIONAL: Specify a custom auth algorithm to use. i.e. sha256'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: OPENVPN_AUTH
+      Required: 'false'
+      Target: OPENVPN_AUTH
+      Type: Variable
+      value: ''
+    OPENVPN_CIPHER:
+      Default: ''
+      Description: 'OPTIONAL: Specify one or more custom ciphers to use'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: OPENVPN_CIPHER
+      Required: 'false'
+      Target: OPENVPN_CIPHER
+      Type: Variable
+      value: ''
+    OPENVPN_CUSTOM_CONFIG:
+      Default: ''
+      Description: 'OPTIONAL: The path to your OpenVPN configuration file. This implies
+        VPN_SERVICE_PROVIDER=custom'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: OPENVPN_CUSTOM_CONFIG
+      Required: 'false'
+      Target: OPENVPN_CUSTOM_CONFIG
+      Type: Variable
+      value: ''
+    OPENVPN_FLAGS:
+      Default: ''
+      Description: 'OPTIONAL: Space delimited OpenVPN flags to pass to openvpn'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: OPENVPN_FLAGS
+      Required: 'false'
+      Target: OPENVPN_FLAGS
+      Type: Variable
+      value: ''
+    OPENVPN_INTERFACE:
+      Default: tun0
+      Description: 'OPTIONAL: Specify a custom network interface name to use'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: OPENVPN_INTERFACE
+      Required: 'false'
+      Target: OPENVPN_INTERFACE
+      Type: Variable
+      value: tun0
+    OPENVPN_IPV6:
+      Default: off|on
+      Description: 'OPTIONAL: Enable tunneling of IPv6 (only for Mullvad)'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: OPENVPN_IPV6
+      Required: 'false'
+      Target: OPENVPN_IPV6
+      Type: Variable
+      value: 'off'
+    OPENVPN_PASSWORD:
+      Default: ''
+      Description: 'Container Variable: OPENVPN_PASSWORD (Optional for Mullvad)'
+      Display: always
+      Mask: 'true'
+      Mode: ''
+      Name: OPENVPN_PASSWORD
+      Required: 'true'
+      Target: OPENVPN_PASSWORD
+      Type: Variable
+      value: ''
+    OPENVPN_PORT:
+      Default: ''
+      Description: 'OPTIONAL: Custom OpenVPN server endpoint port to use'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: OPENVPN_PORT
+      Required: 'false'
+      Target: OPENVPN_PORT
+      Type: Variable
+      value: ''
+    OPENVPN_PROTOCOL:
+      Default: udp|tcp
+      Description: 'OPTIONAL: Container Variable: OPENVPN_PROTOCOL'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: OPENVPN_PROTOCOL
+      Required: 'false'
+      Target: OPENVPN_PROTOCOL
+      Type: Variable
+      value: udp
+    OPENVPN_ROOT:
+      Default: no|yes
+      Description: 'OPTIONAL: Run OpenVPN as root'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: OPENVPN_ROOT
+      Required: 'false'
+      Target: OPENVPN_ROOT
+      Type: Variable
+      value: 'no'
+    OPENVPN_TARGET_IP:
+      Default: ''
+      Description: 'OPTIONAL: Specify a target VPN IP address to use'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: OPENVPN_TARGET_IP
+      Required: 'false'
+      Target: OPENVPN_TARGET_IP
+      Type: Variable
+      value: ''
+    OPENVPN_USER:
+      Default: ''
+      Description: 'Container Variable: OPENVPN_USER'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: OPENVPN_USER
+      Required: 'true'
+      Target: OPENVPN_USER
+      Type: Variable
+      value: ''
+    OPENVPN_VERBOSITY:
+      Default: 0|1|2|3|4|5|6
+      Description: 'OPTIONAL: OpenVPN verbosity level'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: OPENVPN_VERBOSITY
+      Required: 'false'
+      Target: OPENVPN_VERBOSITY
+      Type: Variable
+      value: '1'
+    OPENVPN_VERSION:
+      Default: 2.5|2.4
+      Description: 'OPTIONAL: Set the OpenVPN version to run'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: OPENVPN_VERSION
+      Required: 'false'
+      Target: OPENVPN_VERSION
+      Type: Variable
+      value: '2.5'
+    PGID:
+      Default: ''
+      Description: 'Container Variable: PGID'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PGID
+      Required: 'false'
+      Target: PGID
+      Type: Variable
+      value: '1000'
+    PUBLICIP_FILE:
+      Default: /gluetun/ip
+      Description: 'OPTIONAL: Filepath to store the public IP address assigned'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PUBLICIP_FILE
+      Required: 'false'
+      Target: PUBLICIP_FILE
+      Type: Variable
+      value: /gluetun/ip
+    PUBLICIP_PERIOD:
+      Default: 12h
+      Description: 'OPTIONAL: Period to check for public IP address. Set to 0 to disable.'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PUBLICIP_PERIOD
+      Required: 'false'
+      Target: PUBLICIP_PERIOD
+      Type: Variable
+      value: 12h
+    PUID:
+      Default: ''
+      Description: 'Container Variable: PUID'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PUID
+      Required: 'false'
+      Target: PUID
+      Type: Variable
+      value: '1000'
+    REGION:
+      Default: ''
+      Description: 'OPTIONAL: Comma separated list of VPN regions. https://github.com/qdm12/gluetun/wiki'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: REGION
+      Required: 'false'
+      Target: REGION
+      Type: Variable
+      value: ''
+    SERVER_HOSTNAME:
+      Default: ''
+      Description: 'OPTIONAL: Comma separated list of server hostnames. https://github.com/qdm12/gluetun/wiki'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: SERVER_HOSTNAME
+      Required: 'false'
+      Target: SERVER_HOSTNAME
+      Type: Variable
+      value: ''
+    SHADOWSOCKS:
+      Default: off|on
+      Description: 'OPTIONAL: Enable the internal Shadowsocks proxy'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: SHADOWSOCKS
+      Required: 'false'
+      Target: SHADOWSOCKS
+      Type: Variable
+      value: 'off'
+    SHADOWSOCKS_CIPHER:
+      Default: chacha20-ietf-poly1305|aes-128-gcm|aes-256-gcm
+      Description: 'OPTIONAL: Cipher to use for Shadowsocks'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: SHADOWSOCKS_CIPHER
+      Required: 'false'
+      Target: SHADOWSOCKS_CIPHER
+      Type: Variable
+      value: chacha20-ietf-poly1305
+    SHADOWSOCKS_LISTENING_ADDRESS:
+      Default: :8388
+      Description: 'OPTIONAL: Port number for the HTTP proxy to listen on'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: SHADOWSOCKS_LISTENING_ADDRESS
+      Required: 'true'
+      Target: :8388
+      Type: Variable
+      value: :8388
+    SHADOWSOCKS_LOG:
+      Default: off|on
+      Description: 'OPTIONAL: Enable Shadowsocks logging'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: SHADOWSOCKS_LOG
+      Required: 'false'
+      Target: SHADOWSOCKS_LOG
+      Type: Variable
+      value: 'off'
+    SHADOWSOCKS_PASSWORD:
+      Default: ''
+      Description: 'OPTIONAL: Password to use to connect to Shadowsocks'
+      Display: always
+      Mask: 'true'
+      Mode: ''
+      Name: SHADOWSOCKS_PASSWORD
+      Required: 'false'
+      Target: SHADOWSOCKS_PASSWORD
+      Type: Variable
+      value: ''
+    TIMEZONE:
+      Default: ''
+      Description: Specify a timezone to use to have correct log times. i.e. Europe/London
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: TIMEZONE
+      Required: 'true'
+      Target: TZ
+      Type: Variable
+      value: ''
+    UNBLOCK:
+      Default: ''
+      Description: 'OPTIONAL: Comma separated list of domain names to leave unblocked
+        with Unbound. i.e. domain1.com,x.domain2.co.uk'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: UNBLOCK
+      Required: 'false'
+      Target: UNBLOCK
+      Type: Variable
+      value: ''
+    UPDATER_PERIOD:
+      Default: '0'
+      Description: 'OPTIONAL: Period to update all VPN servers information in memory
+        and to /gluetun/servers.json. Set to 0 to disable. This does a burst of DNS
+        over TLS requests, which may be blocked if you set BLOCK_MALICIOUS=on for
+        example. Valid duration string such as 24h.'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: UPDATER_PERIOD
+      Required: 'false'
+      Target: UPDATER_PERIOD
+      Type: Variable
+      value: '0'
+    VERSION_INFORMATION:
+      Default: on|off
+      Description: 'OPTIONAL: Filepath to store the public IP address assigned'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: VERSION_INFORMATION
+      Required: 'false'
+      Target: VERSION_INFORMATION
+      Type: Variable
+      value: 'on'
+    VPN_SERVICE_PROVIDER:
+      Default: private internet access|cyberghost|expressvpn|fastestvpn|hidemyass|ipvanish|ivpn|mullvad|nordvpn|perfect
+        privacy|privado|privatevpn|protonvpn|purevpn|surfshark|torguard|vpn unlimited|vyprvpn|wevpn|windscribe|custom
+      Description: VPN Service Provider
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: VPN_SERVICE_PROVIDER
+      Required: 'true'
+      Target: VPNSP
+      Type: Variable
+      value: private internet access
+    VPN_TYPE:
+      Default: openvpn|wireguard
+      Description: VPN Type. Default is OpenVPN. Note not all providers support Wireguard.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: VPN_TYPE
+      Required: 'true'
+      Target: VPN_TYPE
+      Type: Variable
+      value: openvpn
+    WIREGUARD_ADDRESS:
+      Default: ''
+      Description: Wireguard IP network in the format xx.xx.xx.xx/xx. Wireguard interface
+        address, only required if VPN_TYPE=wireguard. Note this is usually specific
+        by user and the same for all servers.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: WIREGUARD_ADDRESS
+      Required: 'false'
+      Target: WIREGUARD_ADDRESS
+      Type: Variable
+      value: ''
+    WIREGUARD_ENDPOINT_IP:
+      Default: ''
+      Description: 'Only for VPN_SERVICE_PROVIDER=custom and VPN_TYPE=wireguard: Wireguard
+        server endpoint IP address'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: WIREGUARD_ENDPOINT_IP
+      Required: 'false'
+      Target: WIREGUARD_ENDPOINT_IP
+      Type: Variable
+      value: ''
+    WIREGUARD_ENDPOINT_PORT:
+      Default: '51820'
+      Description: 'OPTIONAL (required for VPN_SERVICE_PROVIDER=custom): Wireguard
+        custom server endpoint port to use'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: WIREGUARD_ENDPOINT_PORT
+      Required: 'false'
+      Target: WIREGUARD_ENDPOINT_PORT
+      Type: Variable
+      value: ''
+    WIREGUARD_INTERFACE:
+      Default: wg0
+      Description: 'OPTIONAL: Specify a custom network interface name to use'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: WIREGUARD_INTERFACE
+      Required: 'false'
+      Target: WIREGUARD_INTERFACE
+      Type: Variable
+      value: wg0
+    WIREGUARD_PRESHARED_KEY:
+      Default: ''
+      Description: 'OPTINAL: 32 bytes pre-shared key in base64 format'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: WIREGUARD_PRESHARED_KEY
+      Required: 'false'
+      Target: WIREGUARD_PRESHARED_KEY
+      Type: Variable
+      value: ''
+    WIREGUARD_PRIVATE_KEY:
+      Default: ''
+      Description: 'OPTINAL: 32 bytes private key in base64 format'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: WIREGUARD_PRIVATE_KEY
+      Required: 'false'
+      Target: WIREGUARD_PRIVATE_KEY
+      Type: Variable
+      value: ''
+    WIREGUARD_PUBLIC_KEY:
+      Default: ''
+      Description: 'Only for VPN_SERVICE_PROVIDER=custom and VPN_TYPE=wireguard: Wireguard
+        server public key'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: WIREGUARD_PUBLIC_KEY
+      Required: 'false'
+      Target: WIREGUARD_PUBLIC_KEY
+      Type: Variable
+      value: ''
 DonateLink: https://www.paypal.me/qmcgaw
 DonateText: This app and docker were generously made by qmcgaw. If you like the project
   please consider making a donation toward his efforts and check out the MANY other

@@ -2,40 +2,45 @@ CategoryList:
 - Cloud
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: '8080'
-    Description: 'Container Port: 8080'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'true'
-    Target: '8080'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /var/atlassian/application-data/jira'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Appdata
-    Required: 'true'
-    Target: /var/atlassian/application-data/jira
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: The reverse proxy's fully qualified hostname. CATALINA_CONNECTOR_PROXYNAME
-      is also supported for backwards compatability.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Reverse Proxy
-    Required: 'false'
-    Target: ATL_PROXY_NAME
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Appdata:
+      Default: ''
+      Description: 'Container Path: /var/atlassian/application-data/jira'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Appdata
+      Required: 'true'
+      Target: /var/atlassian/application-data/jira
+      Type: Path
+      value: ''
+  Port:
+    WebUI:
+      Default: '8080'
+      Description: 'Container Port: 8080'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'true'
+      Target: '8080'
+      Type: Port
+      value: ''
+  Variable:
+    Reverse Proxy:
+      Default: ''
+      Description: The reverse proxy's fully qualified hostname. CATALINA_CONNECTOR_PROXYNAME
+        is also supported for backwards compatability.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Reverse Proxy
+      Required: 'false'
+      Target: ATL_PROXY_NAME
+      Type: Variable
+      value: ''
 FirstSeen: 1603757310
 Icon: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/jira-software.png
 LastUpdate: 1647735017

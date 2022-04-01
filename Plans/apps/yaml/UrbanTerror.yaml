@@ -1,84 +1,89 @@
 CategoryList:
 - GameServers
 Config:
-- '@attributes':
-    Default: ''
-    Description: Data Path
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Data Dir
-    Required: 'true'
-    Target: /urbanterror
-    Type: Path
-  value: /mnt/cache/appdata/urban-terror/
-- '@attributes':
-    Default: ''
-    Description: UDP Game Port
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: UDP - Game Port
-    Required: 'true'
-    Target: '27960'
-    Type: Port
-  value: '27960'
-- '@attributes':
-    Default: ''
-    Description: Enter you extra startup parameters if needed
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Extra Start Parameters
-    Required: 'false'
-    Target: START_PARAMS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Set to 'true' (without quotes) to search for updates on every start/restart
-      otherwise leave empty
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Check for Updates
-    Required: 'false'
-    Target: CHECK_FOR_UPDATES
-    Type: Variable
-  value: 'true'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: UID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: UID
-    Required: 'true'
-    Target: UID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: GID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: GID
-    Required: 'true'
-    Target: GID
-    Type: Variable
-  value: '100'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: UMASK'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Umask
-    Required: 'true'
-    Target: UMASK
-    Type: Variable
-  value: '000'
+  Device: {}
+  Label: {}
+  Path:
+    Data Dir:
+      Default: ''
+      Description: Data Path
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Data Dir
+      Required: 'true'
+      Target: /urbanterror
+      Type: Path
+      value: /mnt/cache/appdata/urban-terror/
+  Port:
+    UDP - Game Port:
+      Default: ''
+      Description: UDP Game Port
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: UDP - Game Port
+      Required: 'true'
+      Target: '27960'
+      Type: Port
+      value: '27960'
+  Variable:
+    Check for Updates:
+      Default: ''
+      Description: Set to 'true' (without quotes) to search for updates on every start/restart
+        otherwise leave empty
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Check for Updates
+      Required: 'false'
+      Target: CHECK_FOR_UPDATES
+      Type: Variable
+      value: 'true'
+    Extra Start Parameters:
+      Default: ''
+      Description: Enter you extra startup parameters if needed
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Extra Start Parameters
+      Required: 'false'
+      Target: START_PARAMS
+      Type: Variable
+      value: ''
+    GID:
+      Default: ''
+      Description: 'Container Variable: GID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: GID
+      Required: 'true'
+      Target: GID
+      Type: Variable
+      value: '100'
+    UID:
+      Default: ''
+      Description: 'Container Variable: UID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: UID
+      Required: 'true'
+      Target: UID
+      Type: Variable
+      value: '99'
+    Umask:
+      Default: ''
+      Description: 'Container Variable: UMASK'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Umask
+      Required: 'true'
+      Target: UMASK
+      Type: Variable
+      value: '000'
 DonateLink: https://www.paypal.me/chips777
 DonateText: 'If you like my work please '
 ExtraParams: --restart=unless-stopped

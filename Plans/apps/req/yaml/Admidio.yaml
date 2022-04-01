@@ -2,62 +2,68 @@ CategoryList:
 - Productivity
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'false'
-    Target: '8080'
-    Type: Port
-  value: '8044'
-- '@attributes':
-    Default: ''
-    Description: This is the location for the config files and data uploads.
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Storage (config)
-    Required: 'false'
-    Target: /opt/app-root/src/adm_my_files
-    Type: Path
-  value: /mnt/user/appdata/admidio/config
-- '@attributes':
-    Default: ''
-    Description: This is the location for the themes.
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Storage (themes)
-    Required: 'false'
-    Target: /opt/app-root/src/adm_themes
-    Type: Path
-  value: /mnt/user/appdata/admidio/themes
-- '@attributes':
-    Default: ''
-    Description: This is the location for the plugins.
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Storage (plugins)
-    Required: 'false'
-    Target: /opt/app-root/src/adm_plugins
-    Type: Path
-  value: /mnt/user/appdata/admidio/plugins
-- '@attributes':
-    Default: 1|0
-    Description: Ensures that a database update can only be carried out on a new Admidio
-      version, if an administrator has given his credentials in the update script.
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: ADMIDIO_LOGIN_FOR_UPDATE
-    Required: 'false'
-    Target: ADMIDIO_LOGIN_FOR_UPDATE
-    Type: Variable
-  value: '1'
+  Device: {}
+  Label: {}
+  Path:
+    Storage (config):
+      Default: ''
+      Description: This is the location for the config files and data uploads.
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Storage (config)
+      Required: 'false'
+      Target: /opt/app-root/src/adm_my_files
+      Type: Path
+      value: /mnt/user/appdata/admidio/config
+    Storage (plugins):
+      Default: ''
+      Description: This is the location for the plugins.
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Storage (plugins)
+      Required: 'false'
+      Target: /opt/app-root/src/adm_plugins
+      Type: Path
+      value: /mnt/user/appdata/admidio/plugins
+    Storage (themes):
+      Default: ''
+      Description: This is the location for the themes.
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Storage (themes)
+      Required: 'false'
+      Target: /opt/app-root/src/adm_themes
+      Type: Path
+      value: /mnt/user/appdata/admidio/themes
+  Port:
+    WebUI:
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'false'
+      Target: '8080'
+      Type: Port
+      value: '8044'
+  Variable:
+    ADMIDIO_LOGIN_FOR_UPDATE:
+      Default: 1|0
+      Description: Ensures that a database update can only be carried out on a new
+        Admidio version, if an administrator has given his credentials in the update
+        script.
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: ADMIDIO_LOGIN_FOR_UPDATE
+      Required: 'false'
+      Target: ADMIDIO_LOGIN_FOR_UPDATE
+      Type: Variable
+      value: '1'
 FirstSeen: 1645729411
 Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/admidio2.png
 LastUpdate: 1648162953

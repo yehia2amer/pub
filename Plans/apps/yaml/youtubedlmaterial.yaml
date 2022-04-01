@@ -4,83 +4,88 @@ CategoryList:
 - MediaApp-Video
 - MediaApp-Music
 Config:
-- '@attributes':
-    Default: '17442'
-    Description: WebUI Port
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'true'
-    Target: '17442'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Audio Downloads
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Audio Downloads
-    Required: 'true'
-    Target: /app/audio/
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Video Downloads
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Video Downloads
-    Required: 'true'
-    Target: /app/video/
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Subscription Downloads
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Subscription Downloads
-    Required: 'true'
-    Target: /app/subscriptions/
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: YoutubeDL Material
-    Description: 'Container Variable: ytdl_title_top'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: WebUI Title
-    Required: 'false'
-    Target: ytdl_title_top
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: /mnt/user/appdata/youtubedl-material
-    Description: 'Container Path: /app/appdata'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: rw
-    Name: AppData
-    Required: 'true'
-    Target: /app/appdata
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: true|false
-    Description: Allow advanced configuration (true/false)
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Advanced Configuration Mode
-    Required: 'false'
-    Target: ytdl_allow_advanced_download
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    AppData:
+      Default: /mnt/user/appdata/youtubedl-material
+      Description: 'Container Path: /app/appdata'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: rw
+      Name: AppData
+      Required: 'true'
+      Target: /app/appdata
+      Type: Path
+      value: ''
+    Audio Downloads:
+      Default: ''
+      Description: Audio Downloads
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Audio Downloads
+      Required: 'true'
+      Target: /app/audio/
+      Type: Path
+      value: ''
+    Subscription Downloads:
+      Default: ''
+      Description: Subscription Downloads
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Subscription Downloads
+      Required: 'true'
+      Target: /app/subscriptions/
+      Type: Path
+      value: ''
+    Video Downloads:
+      Default: ''
+      Description: Video Downloads
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Video Downloads
+      Required: 'true'
+      Target: /app/video/
+      Type: Path
+      value: ''
+  Port:
+    WebUI:
+      Default: '17442'
+      Description: WebUI Port
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'true'
+      Target: '17442'
+      Type: Port
+      value: ''
+  Variable:
+    Advanced Configuration Mode:
+      Default: true|false
+      Description: Allow advanced configuration (true/false)
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Advanced Configuration Mode
+      Required: 'false'
+      Target: ytdl_allow_advanced_download
+      Type: Variable
+      value: ''
+    WebUI Title:
+      Default: YoutubeDL Material
+      Description: 'Container Variable: ytdl_title_top'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: WebUI Title
+      Required: 'false'
+      Target: ytdl_title_top
+      Type: Variable
+      value: ''
 FirstSeen: 1587653576
 Icon: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/youtubedl-material.png
 LastUpdate: 1633080519

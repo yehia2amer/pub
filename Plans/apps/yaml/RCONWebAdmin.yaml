@@ -2,83 +2,88 @@ CategoryList:
 - GameServers
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 4326'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: webUI
-    Required: 'false'
-    Target: '4326'
-    Type: Port
-  value: '4326'
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 4327'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: websocket access from UI
-    Required: 'false'
-    Target: '4327'
-    Type: Port
-  value: '4327'
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /opt/rcon-web-admin/db'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: db
-    Required: 'false'
-    Target: /opt/rcon-web-admin/db
-    Type: Path
-  value: /mnt/user/appdata/rcon-web-admin/db/
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: RWA_ADMIN'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: RWA_ADMIN
-    Required: 'false'
-    Target: RWA_ADMIN
-    Type: Variable
-  value: 'TRUE'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: RWA_USERNAME'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: RWA_USERNAME
-    Required: 'false'
-    Target: RWA_USERNAME
-    Type: Variable
-  value: admin
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: RWA_PASSWORD'
-    Display: always
-    Mask: 'true'
-    Mode: ''
-    Name: RWA_PASSWORD
-    Required: 'false'
-    Target: RWA_PASSWORD
-    Type: Variable
-  value: admin
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: RWA_ENV'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: RWA_ENV
-    Required: 'false'
-    Target: RWA_ENV
-    Type: Variable
-  value: 'False'
+  Device: {}
+  Label: {}
+  Path:
+    db:
+      Default: ''
+      Description: 'Container Path: /opt/rcon-web-admin/db'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: db
+      Required: 'false'
+      Target: /opt/rcon-web-admin/db
+      Type: Path
+      value: /mnt/user/appdata/rcon-web-admin/db/
+  Port:
+    webUI:
+      Default: ''
+      Description: 'Container Port: 4326'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: webUI
+      Required: 'false'
+      Target: '4326'
+      Type: Port
+      value: '4326'
+    websocket access from UI:
+      Default: ''
+      Description: 'Container Port: 4327'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: websocket access from UI
+      Required: 'false'
+      Target: '4327'
+      Type: Port
+      value: '4327'
+  Variable:
+    RWA_ADMIN:
+      Default: ''
+      Description: 'Container Variable: RWA_ADMIN'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: RWA_ADMIN
+      Required: 'false'
+      Target: RWA_ADMIN
+      Type: Variable
+      value: 'TRUE'
+    RWA_ENV:
+      Default: ''
+      Description: 'Container Variable: RWA_ENV'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: RWA_ENV
+      Required: 'false'
+      Target: RWA_ENV
+      Type: Variable
+      value: 'False'
+    RWA_PASSWORD:
+      Default: ''
+      Description: 'Container Variable: RWA_PASSWORD'
+      Display: always
+      Mask: 'true'
+      Mode: ''
+      Name: RWA_PASSWORD
+      Required: 'false'
+      Target: RWA_PASSWORD
+      Type: Variable
+      value: admin
+    RWA_USERNAME:
+      Default: ''
+      Description: 'Container Variable: RWA_USERNAME'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: RWA_USERNAME
+      Required: 'false'
+      Target: RWA_USERNAME
+      Type: Variable
+      value: admin
 FirstSeen: 1644368597
 Icon: https://github.com/natcoso9955/unRAID-docker/raw/master/icons/rcon-webadmin.png
 LastUpdate: 1618630723

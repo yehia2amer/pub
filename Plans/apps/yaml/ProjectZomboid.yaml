@@ -1,161 +1,166 @@
 CategoryList:
 - GameServers
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /serverdata/steamcmd'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: SteamCMD
-    Required: 'true'
-    Target: /serverdata/steamcmd
-    Type: Path
-  value: /mnt/user/appdata/steamcmd
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /serverdata/serverfiles'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: ServerFiles
-    Required: 'true'
-    Target: /serverdata/serverfiles
-    Type: Path
-  value: /mnt/cache/appdata/projectzomboid
-- '@attributes':
-    Default: ''
-    Description: "The GAME_ID that the container download at startup.\r\nIf you want\
-      \ to install a static or beta version of the game change the value to: '380870\
-      \ -beta YOURBRANCH' (without quotes, replace YOURBRANCH with the branch or version\
-      \ you want to install)."
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: GAME_ID
-    Required: 'true'
-    Target: GAME_ID
-    Type: Variable
-  value: '380870'
-- '@attributes':
-    Default: ''
-    Description: Enter your extra start up commands for the server if needed.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: GAME_PARAMS
-    Required: 'false'
-    Target: GAME_PARAMS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Your Steam username goes here if you want to install a game that
-      needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
-      Steam Guard).'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: Steam-Username
-    Required: 'false'
-    Target: USERNAME
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Set the Variable to 'true' if you want to validate the installation
-      otherwise leave it blank.
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: Validate Installation
-    Required: 'false'
-    Target: VALIDATE
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Your Steam password goes here if you want to install a game that
-      needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
-      Steam Guard).'
-    Display: advanced-hide
-    Mask: 'true'
-    Mode: ''
-    Name: Steam-Password
-    Required: 'false'
-    Target: PASSWRD
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: UDP Gameport (if you need another port, please delete this entry
-      and create a new UDP Port with the required port number, also don't forget to
-      change your server settings)
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: UDP - Game Port
-    Required: 'true'
-    Target: '16261'
-    Type: Port
-  value: '16261'
-- '@attributes':
-    Default: ''
-    Description: 'Every player that connects to your server need''s it''s own port
-      (if you don''t need that many ports you can also delete this entry and create
-      a new Port for TCP eg: 16 players 16262-16278)'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: TCP - Player Ports
-    Required: 'true'
-    Target: 16262-16326
-    Type: Port
-  value: 16262-16326
-- '@attributes':
-    Default: ''
-    Description: Not required
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: TCP - RCON Port
-    Required: 'false'
-    Target: '27015'
-    Type: Port
-  value: '27015'
-- '@attributes':
-    Default: ''
-    Description: Initial Admin password, change bevor the first start!
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Admin Password
-    Required: 'true'
-    Target: ADMIN_PWD
-    Type: Variable
-  value: adminDocker
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: UID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: UID
-    Required: 'true'
-    Target: UID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: GID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: GID
-    Required: 'true'
-    Target: GID
-    Type: Variable
-  value: '100'
+  Device: {}
+  Label: {}
+  Path:
+    ServerFiles:
+      Default: ''
+      Description: 'Container Path: /serverdata/serverfiles'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: ServerFiles
+      Required: 'true'
+      Target: /serverdata/serverfiles
+      Type: Path
+      value: /mnt/cache/appdata/projectzomboid
+    SteamCMD:
+      Default: ''
+      Description: 'Container Path: /serverdata/steamcmd'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: SteamCMD
+      Required: 'true'
+      Target: /serverdata/steamcmd
+      Type: Path
+      value: /mnt/user/appdata/steamcmd
+  Port:
+    TCP - Player Ports:
+      Default: ''
+      Description: 'Every player that connects to your server need''s it''s own port
+        (if you don''t need that many ports you can also delete this entry and create
+        a new Port for TCP eg: 16 players 16262-16278)'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: TCP - Player Ports
+      Required: 'true'
+      Target: 16262-16326
+      Type: Port
+      value: 16262-16326
+    TCP - RCON Port:
+      Default: ''
+      Description: Not required
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: TCP - RCON Port
+      Required: 'false'
+      Target: '27015'
+      Type: Port
+      value: '27015'
+    UDP - Game Port:
+      Default: ''
+      Description: UDP Gameport (if you need another port, please delete this entry
+        and create a new UDP Port with the required port number, also don't forget
+        to change your server settings)
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: UDP - Game Port
+      Required: 'true'
+      Target: '16261'
+      Type: Port
+      value: '16261'
+  Variable:
+    Admin Password:
+      Default: ''
+      Description: Initial Admin password, change bevor the first start!
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Admin Password
+      Required: 'true'
+      Target: ADMIN_PWD
+      Type: Variable
+      value: adminDocker
+    GAME_ID:
+      Default: ''
+      Description: "The GAME_ID that the container download at startup.\r\nIf you\
+        \ want to install a static or beta version of the game change the value to:\
+        \ '380870 -beta YOURBRANCH' (without quotes, replace YOURBRANCH with the branch\
+        \ or version you want to install)."
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: GAME_ID
+      Required: 'true'
+      Target: GAME_ID
+      Type: Variable
+      value: '380870'
+    GAME_PARAMS:
+      Default: ''
+      Description: Enter your extra start up commands for the server if needed.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: GAME_PARAMS
+      Required: 'false'
+      Target: GAME_PARAMS
+      Type: Variable
+      value: ''
+    GID:
+      Default: ''
+      Description: 'Container Variable: GID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: GID
+      Required: 'true'
+      Target: GID
+      Type: Variable
+      value: '100'
+    Steam-Password:
+      Default: ''
+      Description: 'Your Steam password goes here if you want to install a game that
+        needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
+        Steam Guard).'
+      Display: advanced-hide
+      Mask: 'true'
+      Mode: ''
+      Name: Steam-Password
+      Required: 'false'
+      Target: PASSWRD
+      Type: Variable
+      value: ''
+    Steam-Username:
+      Default: ''
+      Description: 'Your Steam username goes here if you want to install a game that
+        needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
+        Steam Guard).'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: Steam-Username
+      Required: 'false'
+      Target: USERNAME
+      Type: Variable
+      value: ''
+    UID:
+      Default: ''
+      Description: 'Container Variable: UID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: UID
+      Required: 'true'
+      Target: UID
+      Type: Variable
+      value: '99'
+    Validate Installation:
+      Default: ''
+      Description: Set the Variable to 'true' if you want to validate the installation
+        otherwise leave it blank.
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: Validate Installation
+      Required: 'false'
+      Target: VALIDATE
+      Type: Variable
+      value: ''
 DonateLink: https://www.paypal.me/chips777
 DonateText: 'If you like my work please '
 ExtraParams: --restart=unless-stopped

@@ -5,39 +5,44 @@ CategoryList:
 - Network-Web
 - Network-FTP
 Config:
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'false'
-    Target: '5000'
-    Type: Port
-  value: '5000'
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Storage (images)
-    Required: 'false'
-    Target: /images
-    Type: Path
-  value: /mnt/user/appdata/imgpush/images
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Storage (cache)
-    Required: 'false'
-    Target: /cache
-    Type: Path
-  value: /mnt/user/appdata/imgpush/cache
+  Device: {}
+  Label: {}
+  Path:
+    Storage (cache):
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Storage (cache)
+      Required: 'false'
+      Target: /cache
+      Type: Path
+      value: /mnt/user/appdata/imgpush/cache
+    Storage (images):
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Storage (images)
+      Required: 'false'
+      Target: /images
+      Type: Path
+      value: /mnt/user/appdata/imgpush/images
+  Port:
+    WebUI:
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'false'
+      Target: '5000'
+      Type: Port
+      value: '5000'
+  Variable: {}
 FirstSeen: 1639271009
 Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/imgpush_200x200.png
 LastUpdate: 1636645536

@@ -1,26 +1,31 @@
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /var/lib/cassandra'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Database storage location
-    Required: 'false'
-    Target: /var/lib/cassandra
-    Type: Path
-  value: /mnt/user/appdata/cassandra
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 9042'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Port
-    Required: 'false'
-    Target: '9042'
-    Type: Port
-  value: '9042'
+  Device: {}
+  Label: {}
+  Path:
+    Database storage location:
+      Default: ''
+      Description: 'Container Path: /var/lib/cassandra'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Database storage location
+      Required: 'false'
+      Target: /var/lib/cassandra
+      Type: Path
+      value: /mnt/user/appdata/cassandra
+  Port:
+    Port:
+      Default: ''
+      Description: 'Container Port: 9042'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Port
+      Required: 'false'
+      Target: '9042'
+      Type: Port
+      value: '9042'
+  Variable: {}
 ExtraParams: --cap-add sys_nice
 FirstSeen: 1608332935
 Icon: https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Cassandra_logo.svg/279px-Cassandra_logo.svg.png

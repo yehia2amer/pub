@@ -1,81 +1,86 @@
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 8000'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: HTTP Port
-    Required: 'true'
-    Target: '8000'
-    Type: Port
-  value: '8000'
-- '@attributes':
-    Default: /mnt/user/appdata/eplustv
-    Description: 'Container Path: /app/config'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: App Config
-    Required: 'true'
-    Target: /app/config
-    Type: Path
-  value: /mnt/user/appdata/eplustv
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /app/tmp'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Temp Directory
-    Required: 'false'
-    Target: /app/tmp
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: ESPN_USER'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: ESPN+ Username
-    Required: 'true'
-    Target: ESPN_USER
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: ESPN_PASS'
-    Display: always
-    Mask: 'true'
-    Mode: ''
-    Name: ESPN+ Password
-    Required: 'true'
-    Target: ESPN_PASS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: URL that other sites can access this container at.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: URL
-    Required: 'true'
-    Target: ACCESS_URI
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: If nothing is input, it will default to Channel 1.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Start Channel
-    Required: 'false'
-    Target: START_CHANNEL
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    App Config:
+      Default: /mnt/user/appdata/eplustv
+      Description: 'Container Path: /app/config'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: App Config
+      Required: 'true'
+      Target: /app/config
+      Type: Path
+      value: /mnt/user/appdata/eplustv
+    Temp Directory:
+      Default: ''
+      Description: 'Container Path: /app/tmp'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Temp Directory
+      Required: 'false'
+      Target: /app/tmp
+      Type: Path
+      value: ''
+  Port:
+    HTTP Port:
+      Default: ''
+      Description: 'Container Port: 8000'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: HTTP Port
+      Required: 'true'
+      Target: '8000'
+      Type: Port
+      value: '8000'
+  Variable:
+    ESPN+ Password:
+      Default: ''
+      Description: 'Container Variable: ESPN_PASS'
+      Display: always
+      Mask: 'true'
+      Mode: ''
+      Name: ESPN+ Password
+      Required: 'true'
+      Target: ESPN_PASS
+      Type: Variable
+      value: ''
+    ESPN+ Username:
+      Default: ''
+      Description: 'Container Variable: ESPN_USER'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: ESPN+ Username
+      Required: 'true'
+      Target: ESPN_USER
+      Type: Variable
+      value: ''
+    Start Channel:
+      Default: ''
+      Description: If nothing is input, it will default to Channel 1.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Start Channel
+      Required: 'false'
+      Target: START_CHANNEL
+      Type: Variable
+      value: ''
+    URL:
+      Default: ''
+      Description: URL that other sites can access this container at.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: URL
+      Required: 'true'
+      Target: ACCESS_URI
+      Type: Variable
+      value: ''
 ExtraParams: --ipc=host
 FirstSeen: 1633542497
 Icon: https://i.imgur.com/LrdVje2.png

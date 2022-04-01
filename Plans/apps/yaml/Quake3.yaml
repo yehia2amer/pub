@@ -1,119 +1,124 @@
 CategoryList:
 - GameServers
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /quake3'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: ServerFiles
-    Required: 'true'
-    Target: /quake3
-    Type: Path
-  value: /mnt/cache/appdata/quake3
-- '@attributes':
-    Default: ''
-    Description: The startup parameters for the server (only change if you know what
-      you are doing!)
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: GAME_PARAMS
-    Required: 'true'
-    Target: GAME_PARAMS
-    Type: Variable
-  value: +set sv_punkbuster 0 +set fs_game osp +set com_hunkMegs 32
-- '@attributes':
-    Default: ''
-    Description: The initial map wich the server would start.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Q3_MAP
-    Required: 'true'
-    Target: Q3_MAP
-    Type: Variable
-  value: q3dm1
-- '@attributes':
-    Default: ''
-    Description: The standard Game Port +2 (If you want to change the standard game
-      port please click on more settings and change the start port and then delete
-      this entry and create a new one with the preferred ports).
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: UDP - Gameports
-    Required: 'true'
-    Target: 27960-27963
-    Type: Port
-  value: 27960-27963
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: UMASK'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: UMASK
-    Required: 'true'
-    Target: UMASK
-    Type: Variable
-  value: '000'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: UID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: UID
-    Required: 'true'
-    Target: UID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: GID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: GID
-    Required: 'true'
-    Target: GID
-    Type: Variable
-  value: '100'
-- '@attributes':
-    Default: ''
-    Description: Base Port
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Quake III Base Port
-    Required: 'true'
-    Target: Q3_PORT
-    Type: Variable
-  value: '27960'
-- '@attributes':
-    Default: ''
-    Description: Only change if you know what you're doing!
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Pointrelease Download URL
-    Required: 'true'
-    Target: DL_URL_PR
-    Type: Variable
-  value: https://ftp.gwdg.de/pub/misc/ftp.idsoftware.com/idstuff/quake3/linux/linuxq3apoint-1.32b-3.x86.run
-- '@attributes':
-    Default: ''
-    Description: Only change if you know what you're doing!
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Patch URL
-    Required: 'true'
-    Target: DL_URL_PATCH
-    Type: Variable
-  value: https://ftp.gwdg.de/pub/misc/ftp.idsoftware.com/idstuff/quake3/quake3-1.32c.zip
+  Device: {}
+  Label: {}
+  Path:
+    ServerFiles:
+      Default: ''
+      Description: 'Container Path: /quake3'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: ServerFiles
+      Required: 'true'
+      Target: /quake3
+      Type: Path
+      value: /mnt/cache/appdata/quake3
+  Port:
+    UDP - Gameports:
+      Default: ''
+      Description: The standard Game Port +2 (If you want to change the standard game
+        port please click on more settings and change the start port and then delete
+        this entry and create a new one with the preferred ports).
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: UDP - Gameports
+      Required: 'true'
+      Target: 27960-27963
+      Type: Port
+      value: 27960-27963
+  Variable:
+    GAME_PARAMS:
+      Default: ''
+      Description: The startup parameters for the server (only change if you know
+        what you are doing!)
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: GAME_PARAMS
+      Required: 'true'
+      Target: GAME_PARAMS
+      Type: Variable
+      value: +set sv_punkbuster 0 +set fs_game osp +set com_hunkMegs 32
+    GID:
+      Default: ''
+      Description: 'Container Variable: GID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: GID
+      Required: 'true'
+      Target: GID
+      Type: Variable
+      value: '100'
+    Patch URL:
+      Default: ''
+      Description: Only change if you know what you're doing!
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Patch URL
+      Required: 'true'
+      Target: DL_URL_PATCH
+      Type: Variable
+      value: https://ftp.gwdg.de/pub/misc/ftp.idsoftware.com/idstuff/quake3/quake3-1.32c.zip
+    Pointrelease Download URL:
+      Default: ''
+      Description: Only change if you know what you're doing!
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Pointrelease Download URL
+      Required: 'true'
+      Target: DL_URL_PR
+      Type: Variable
+      value: https://ftp.gwdg.de/pub/misc/ftp.idsoftware.com/idstuff/quake3/linux/linuxq3apoint-1.32b-3.x86.run
+    Q3_MAP:
+      Default: ''
+      Description: The initial map wich the server would start.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Q3_MAP
+      Required: 'true'
+      Target: Q3_MAP
+      Type: Variable
+      value: q3dm1
+    Quake III Base Port:
+      Default: ''
+      Description: Base Port
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Quake III Base Port
+      Required: 'true'
+      Target: Q3_PORT
+      Type: Variable
+      value: '27960'
+    UID:
+      Default: ''
+      Description: 'Container Variable: UID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: UID
+      Required: 'true'
+      Target: UID
+      Type: Variable
+      value: '99'
+    UMASK:
+      Default: ''
+      Description: 'Container Variable: UMASK'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: UMASK
+      Required: 'true'
+      Target: UMASK
+      Type: Variable
+      value: '000'
 DonateLink: https://www.paypal.me/chips777
 DonateText: 'If you like my work please '
 ExtraParams: --restart=unless-stopped

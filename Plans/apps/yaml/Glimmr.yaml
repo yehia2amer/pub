@@ -2,87 +2,92 @@ BindTime: 'true'
 CategoryList:
 - Tools
 Config:
-- '@attributes':
-    Default: ''
-    Description: Where to store HueData config.
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: UserData Location
-    Required: 'false'
-    Target: /etc/glimmr
-    Type: Path
-  value: /mnt/user/appdata/glimmr/
-- '@attributes':
-    Default: '80'
-    Description: Web UI port.
-    Display: always
-    Mode: tcp
-    Name: Web UI
-    Required: 'true'
-    Target: '80'
-    Type: Port
-  value: '80'
-- '@attributes':
-    Default: '1900'
-    Description: Hue Bridge discovery port.
-    Display: always
-    Mode: udp
-    Name: Hue SSDP Discovery
-    Required: 'true'
-    Target: '1900'
-    Type: Port
-  value: '1900'
-- '@attributes':
-    Default: '5353'
-    Description: MDNS Discovery Port
-    Display: always
-    Mode: udp
-    Name: Hue/Nanoleaf MDNS Discovery
-    Required: 'true'
-    Target: '5353'
-    Type: Port
-  value: '5353'
-- '@attributes':
-    Default: '2100'
-    Description: Hue Bridge streaming port.
-    Display: always
-    Mode: udp
-    Name: Hue Streaming
-    Required: 'true'
-    Target: '2100'
-    Type: Port
-  value: '2100'
-- '@attributes':
-    Default: '8888'
-    Description: DreamScreen emulation port.
-    Display: always
-    Mode: udp
-    Name: DreamScreen Communication
-    Required: 'true'
-    Target: '8888'
-    Type: Port
-  value: '8888'
-- '@attributes':
-    Default: '60222'
-    Description: DreamScreen emulation port.
-    Display: always
-    Mode: udp
-    Name: NanoLeaf Communication
-    Required: 'true'
-    Target: '60222'
-    Type: Port
-  value: '60222'
-- '@attributes':
-    Default: '56700'
-    Description: Port used for Lifx communication.
-    Display: always
-    Mode: udp
-    Name: Lifx Communication
-    Required: 'true'
-    Target: '56700'
-    Type: Port
-  value: '56700'
+  Device: {}
+  Label: {}
+  Path:
+    UserData Location:
+      Default: ''
+      Description: Where to store HueData config.
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: UserData Location
+      Required: 'false'
+      Target: /etc/glimmr
+      Type: Path
+      value: /mnt/user/appdata/glimmr/
+  Port:
+    DreamScreen Communication:
+      Default: '8888'
+      Description: DreamScreen emulation port.
+      Display: always
+      Mode: udp
+      Name: DreamScreen Communication
+      Required: 'true'
+      Target: '8888'
+      Type: Port
+      value: '8888'
+    Hue SSDP Discovery:
+      Default: '1900'
+      Description: Hue Bridge discovery port.
+      Display: always
+      Mode: udp
+      Name: Hue SSDP Discovery
+      Required: 'true'
+      Target: '1900'
+      Type: Port
+      value: '1900'
+    Hue Streaming:
+      Default: '2100'
+      Description: Hue Bridge streaming port.
+      Display: always
+      Mode: udp
+      Name: Hue Streaming
+      Required: 'true'
+      Target: '2100'
+      Type: Port
+      value: '2100'
+    Hue/Nanoleaf MDNS Discovery:
+      Default: '5353'
+      Description: MDNS Discovery Port
+      Display: always
+      Mode: udp
+      Name: Hue/Nanoleaf MDNS Discovery
+      Required: 'true'
+      Target: '5353'
+      Type: Port
+      value: '5353'
+    Lifx Communication:
+      Default: '56700'
+      Description: Port used for Lifx communication.
+      Display: always
+      Mode: udp
+      Name: Lifx Communication
+      Required: 'true'
+      Target: '56700'
+      Type: Port
+      value: '56700'
+    NanoLeaf Communication:
+      Default: '60222'
+      Description: DreamScreen emulation port.
+      Display: always
+      Mode: udp
+      Name: NanoLeaf Communication
+      Required: 'true'
+      Target: '60222'
+      Type: Port
+      value: '60222'
+    Web UI:
+      Default: '80'
+      Description: Web UI port.
+      Display: always
+      Mode: tcp
+      Name: Web UI
+      Required: 'true'
+      Target: '80'
+      Type: Port
+      value: '80'
+  Variable: {}
 DonateImg: https://www.paypal.com/en_US/i/btn/btn_donate_SM.gif
 DonateLink: https://www.paypal.me/donate.to.digitalhigh
 DonateText: If you like it, consider buying me a beer.

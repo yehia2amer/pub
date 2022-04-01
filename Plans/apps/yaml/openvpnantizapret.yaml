@@ -1,72 +1,77 @@
 CategoryList:
 - Network-Proxy
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /vpn'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Location Config
-    Required: 'true'
-    Target: /vpn
-    Type: Path
-  value: /mnt/user/appdata/openvpn-antizapret/
-- '@attributes':
-    Default: ''
-    Description: 'Contaner Variable: DNS'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DNS
-    Required: 'true'
-    Target: DNS
-    Type: Variable
-  value: 192.168.104.1
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: Firewall'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Firewall
-    Required: 'true'
-    Target: Firewall
-    Type: Variable
-  value: 'true'
-- '@attributes':
-    Default: ''
-    Description: 'Contaner Variable: DEFAULT_GATEWAY'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DEFAULT_GATEWAY
-    Required: 'true'
-    Target: DEFAULT_GATEWAY
-    Type: Variable
-  value: 'false'
-- '@attributes':
-    Default: ''
-    Description: 'Container Device:'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Location tun
-    Required: 'true'
-    Target: ''
-    Type: Device
-  value: /dev/net/tun
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 9117'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Jackett port
-    Required: 'false'
-    Target: '9117'
-    Type: Port
-  value: '9117'
+  Device:
+    Location tun:
+      Default: ''
+      Description: 'Container Device:'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Location tun
+      Required: 'true'
+      Target: ''
+      Type: Device
+      value: /dev/net/tun
+  Label: {}
+  Path:
+    Location Config:
+      Default: ''
+      Description: 'Container Path: /vpn'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Location Config
+      Required: 'true'
+      Target: /vpn
+      Type: Path
+      value: /mnt/user/appdata/openvpn-antizapret/
+  Port:
+    Jackett port:
+      Default: ''
+      Description: 'Container Port: 9117'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Jackett port
+      Required: 'false'
+      Target: '9117'
+      Type: Port
+      value: '9117'
+  Variable:
+    DEFAULT_GATEWAY:
+      Default: ''
+      Description: 'Contaner Variable: DEFAULT_GATEWAY'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DEFAULT_GATEWAY
+      Required: 'true'
+      Target: DEFAULT_GATEWAY
+      Type: Variable
+      value: 'false'
+    DNS:
+      Default: ''
+      Description: 'Contaner Variable: DNS'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DNS
+      Required: 'true'
+      Target: DNS
+      Type: Variable
+      value: 192.168.104.1
+    Firewall:
+      Default: ''
+      Description: 'Container Variable: Firewall'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Firewall
+      Required: 'true'
+      Target: Firewall
+      Type: Variable
+      value: 'true'
 FirstSeen: 1604689907
 Icon: https://raw.githubusercontent.com/Muwahhidun/logo/main/openvpn-antizapret.png
 LastUpdate: 1627667638

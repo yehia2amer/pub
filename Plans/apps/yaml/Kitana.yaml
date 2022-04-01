@@ -3,28 +3,33 @@ CategoryList:
 - Tools-Utilities
 - MediaApp-Other
 Config:
-- '@attributes':
-    Default: '31337'
-    Description: 'Container Port: 31337'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'false'
-    Target: '31337'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: /mnt/user/appdata/kitana
-    Description: 'Container Path: /app/data'
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: Application Data
-    Required: 'true'
-    Target: /app/data
-    Type: Path
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Application Data:
+      Default: /mnt/user/appdata/kitana
+      Description: 'Container Path: /app/data'
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: Application Data
+      Required: 'true'
+      Target: /app/data
+      Type: Path
+      value: ''
+  Port:
+    WebUI:
+      Default: '31337'
+      Description: 'Container Port: 31337'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'false'
+      Target: '31337'
+      Type: Port
+      value: ''
+  Variable: {}
 DonateLink: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=G9VKR2B8PMNKG
 DonateText: If you like this, buy me a beer
 FirstSeen: 1570090019

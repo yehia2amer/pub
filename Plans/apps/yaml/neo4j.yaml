@@ -1,50 +1,55 @@
 CategoryList:
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /data'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: data
-    Required: 'false'
-    Target: /data
-    Type: Path
-  value: /mnt/user/appdata/neo4j/data/
-- '@attributes':
-    Default: '7474'
-    Description: WebUI HTTP Port
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'false'
-    Target: '7474'
-    Type: Port
-  value: '7474'
-- '@attributes':
-    Default: '7687'
-    Description: Bolt access to the Neo4j API
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Bolt
-    Required: 'false'
-    Target: '7687'
-    Type: Port
-  value: '7687'
-- '@attributes':
-    Default: none
-    Description: 'Container Variable: NEO4J_AUTH'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: NEO4J_AUTH
-    Required: 'false'
-    Target: NEO4J_AUTH
-    Type: Variable
-  value: none
+  Device: {}
+  Label: {}
+  Path:
+    data:
+      Default: ''
+      Description: 'Container Path: /data'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: data
+      Required: 'false'
+      Target: /data
+      Type: Path
+      value: /mnt/user/appdata/neo4j/data/
+  Port:
+    Bolt:
+      Default: '7687'
+      Description: Bolt access to the Neo4j API
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Bolt
+      Required: 'false'
+      Target: '7687'
+      Type: Port
+      value: '7687'
+    WebUI:
+      Default: '7474'
+      Description: WebUI HTTP Port
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'false'
+      Target: '7474'
+      Type: Port
+      value: '7474'
+  Variable:
+    NEO4J_AUTH:
+      Default: none
+      Description: 'Container Variable: NEO4J_AUTH'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: NEO4J_AUTH
+      Required: 'false'
+      Target: NEO4J_AUTH
+      Type: Variable
+      value: none
 DonateLink: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;amp;amp;business=MDUDJ3BAXMJ4C&amp;amp;amp;item_name=thanks+for+the+coffee%21&amp;amp;amp;currency_code=AUD&amp;amp;amp;source=url
 DonateText: Thanks for the coffee
 FirstSeen: 1521950400

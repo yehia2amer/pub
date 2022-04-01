@@ -8,94 +8,99 @@ CategoryList:
 - Network-Management
 - Network-Other
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 81'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'false'
-    Target: '81'
-    Type: Port
-  value: '81'
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 80'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: HTTP Port
-    Required: 'false'
-    Target: '80'
-    Type: Port
-  value: '80'
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 443'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: HTTPS Port
-    Required: 'false'
-    Target: '443'
-    Type: Port
-  value: '443'
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /data'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Data
-    Required: 'false'
-    Target: /data
-    Type: Path
-  value: /mnt/user/appdata/Nginx-Proxy-Manager-Official/data
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /etc/letsencrypt'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Certificates
-    Required: 'false'
-    Target: /etc/letsencrypt
-    Type: Path
-  value: /mnt/user/appdata/Nginx-Proxy-Manager-Official/letsencrypt
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /var/log'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Error Logs
-    Required: 'false'
-    Target: /var/log
-    Type: Path
-  value: /tmp/Nginx-Proxy-Manager-Official/var/log
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: DB_SQLITE_FILE'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Database
-    Required: 'false'
-    Target: DB_SQLITE_FILE
-    Type: Variable
-  value: /data/database.sqlite
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 3000'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: tcp
-    Name: API Port
-    Required: 'false'
-    Target: '3000'
-    Type: Port
-  value: '3000'
+  Device: {}
+  Label: {}
+  Path:
+    Certificates:
+      Default: ''
+      Description: 'Container Path: /etc/letsencrypt'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Certificates
+      Required: 'false'
+      Target: /etc/letsencrypt
+      Type: Path
+      value: /mnt/user/appdata/Nginx-Proxy-Manager-Official/letsencrypt
+    Data:
+      Default: ''
+      Description: 'Container Path: /data'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Data
+      Required: 'false'
+      Target: /data
+      Type: Path
+      value: /mnt/user/appdata/Nginx-Proxy-Manager-Official/data
+    Error Logs:
+      Default: ''
+      Description: 'Container Path: /var/log'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Error Logs
+      Required: 'false'
+      Target: /var/log
+      Type: Path
+      value: /tmp/Nginx-Proxy-Manager-Official/var/log
+  Port:
+    API Port:
+      Default: ''
+      Description: 'Container Port: 3000'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: tcp
+      Name: API Port
+      Required: 'false'
+      Target: '3000'
+      Type: Port
+      value: '3000'
+    HTTP Port:
+      Default: ''
+      Description: 'Container Port: 80'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: HTTP Port
+      Required: 'false'
+      Target: '80'
+      Type: Port
+      value: '80'
+    HTTPS Port:
+      Default: ''
+      Description: 'Container Port: 443'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: HTTPS Port
+      Required: 'false'
+      Target: '443'
+      Type: Port
+      value: '443'
+    WebUI:
+      Default: ''
+      Description: 'Container Port: 81'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'false'
+      Target: '81'
+      Type: Port
+      value: '81'
+  Variable:
+    Database:
+      Default: ''
+      Description: 'Container Variable: DB_SQLITE_FILE'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Database
+      Required: 'false'
+      Target: DB_SQLITE_FILE
+      Type: Variable
+      value: /data/database.sqlite
 ExtraParams: --memory=1G --no-healthcheck
 FirstSeen: 1625241803
 Icon: https://nginxproxymanager.com/icon.png

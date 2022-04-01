@@ -2,28 +2,33 @@ CategoryList:
 - Productivity
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 8888'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'true'
-    Target: '8888'
-    Type: Port
-  value: '9999'
-- '@attributes':
-    Default: /mnt/user/appdata/cern-root/config
-    Description: 'Container Path: /appdata'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: rw
-    Name: Appdata
-    Required: 'true'
-    Target: /appdata
-    Type: Path
-  value: /mnt/user/appdata/cern-root/config
+  Device: {}
+  Label: {}
+  Path:
+    Appdata:
+      Default: /mnt/user/appdata/cern-root/config
+      Description: 'Container Path: /appdata'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: rw
+      Name: Appdata
+      Required: 'true'
+      Target: /appdata
+      Type: Path
+      value: /mnt/user/appdata/cern-root/config
+  Port:
+    WebUI:
+      Default: ''
+      Description: 'Container Port: 8888'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'true'
+      Target: '8888'
+      Type: Port
+      value: '9999'
+  Variable: {}
 DonateLink: https://bgameiro.me/page/donate
 FirstSeen: 1611782547
 Icon: https://raw.githubusercontent.com/BGameiro2000/unraid-ca/master/root/logo.png

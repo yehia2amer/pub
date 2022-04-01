@@ -2,73 +2,78 @@ CategoryList:
 - Crypto
 ChangeLogPresent: true
 Config:
-- '@attributes':
-    Default: ''
-    Description: /mnt/user/appdata/gridcoinresearch/
-    Display: always
-    Mask: 'false'
-    Mode: rw,slave
-    Name: AppData Config Path
-    Required: 'true'
-    Target: /headless/.GridcoinResearch/
-    Type: Path
-  value: /mnt/user/appdata/gridcoinresearch/
-- '@attributes':
-    Default: ''
-    Description: 'default: 6901'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: NOVNC PORT
-    Required: 'false'
-    Target: '6901'
-    Type: Port
-  value: '6901'
-- '@attributes':
-    Default: ''
-    Description: 'default: vncpassword'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: VNC PASSWORD
-    Required: 'false'
-    Target: VNC_PW
-    Type: Variable
-  value: vncpassword
-- '@attributes':
-    Default: 1920x1080
-    Description: 'default: 1920x1080'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: VNC RESOLUTION
-    Required: 'false'
-    Target: VNC_RESOLUTION
-    Type: Variable
-  value: 1920x1080
-- '@attributes':
-    Default: ''
-    Description: 'default: 5901'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: VNC PORT
-    Required: 'false'
-    Target: '5901'
-    Type: Port
-  value: '5901'
-- '@attributes':
-    Default: ''
-    Description: 'BOINC data location if solo crunching (not needed if pool crunching):
-      /mnt/user/appdata/boinc/'
-    Display: always
-    Mask: 'false'
-    Mode: rw,slave
-    Name: BOINC DATA DIR
-    Required: 'false'
-    Target: /var/lib/boinc-client/
-    Type: Path
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    AppData Config Path:
+      Default: ''
+      Description: /mnt/user/appdata/gridcoinresearch/
+      Display: always
+      Mask: 'false'
+      Mode: rw,slave
+      Name: AppData Config Path
+      Required: 'true'
+      Target: /headless/.GridcoinResearch/
+      Type: Path
+      value: /mnt/user/appdata/gridcoinresearch/
+    BOINC DATA DIR:
+      Default: ''
+      Description: 'BOINC data location if solo crunching (not needed if pool crunching):
+        /mnt/user/appdata/boinc/'
+      Display: always
+      Mask: 'false'
+      Mode: rw,slave
+      Name: BOINC DATA DIR
+      Required: 'false'
+      Target: /var/lib/boinc-client/
+      Type: Path
+      value: ''
+  Port:
+    NOVNC PORT:
+      Default: ''
+      Description: 'default: 6901'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: NOVNC PORT
+      Required: 'false'
+      Target: '6901'
+      Type: Port
+      value: '6901'
+    VNC PORT:
+      Default: ''
+      Description: 'default: 5901'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: VNC PORT
+      Required: 'false'
+      Target: '5901'
+      Type: Port
+      value: '5901'
+  Variable:
+    VNC PASSWORD:
+      Default: ''
+      Description: 'default: vncpassword'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: VNC PASSWORD
+      Required: 'false'
+      Target: VNC_PW
+      Type: Variable
+      value: vncpassword
+    VNC RESOLUTION:
+      Default: 1920x1080
+      Description: 'default: 1920x1080'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: VNC RESOLUTION
+      Required: 'false'
+      Target: VNC_RESOLUTION
+      Type: Variable
+      value: 1920x1080
 FirstSeen: 1612041486
 Icon: https://raw.githubusercontent.com/gridcoin-community/Gridcoin-Site/master/assets/img/favicons/favicon-196x196.png
 LastUpdate: 1646038206

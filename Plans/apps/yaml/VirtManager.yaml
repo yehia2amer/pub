@@ -1,72 +1,77 @@
 CategoryList:
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /var/run/libvirt/libvirt-sock'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: libvirt-sock
-    Required: 'false'
-    Target: /var/run/libvirt/libvirt-sock
-    Type: Path
-  value: /var/run/libvirt/libvirt-sock
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /var/lib/libvirt/images'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: images
-    Required: 'false'
-    Target: /var/lib/libvirt/images
-    Type: Path
-  value: /var/lib/libvirt/images
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /dev/kvm'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: /dev/kvm
-    Required: 'false'
-    Target: /dev/kvm
-    Type: Path
-  value: /dev/kvm
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: HOSTS'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: HOSTS
-    Required: 'false'
-    Target: HOSTS
-    Type: Variable
-  value: '[''qemu:///system'']'
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /root'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: RootFolder
-    Required: 'false'
-    Target: /root
-    Type: Path
-  value: /mnt/user/appdata/vman/root
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 80'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WEBGUI
-    Required: 'false'
-    Target: '80'
-    Type: Port
-  value: '8185'
+  Device: {}
+  Label: {}
+  Path:
+    /dev/kvm:
+      Default: ''
+      Description: 'Container Path: /dev/kvm'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: /dev/kvm
+      Required: 'false'
+      Target: /dev/kvm
+      Type: Path
+      value: /dev/kvm
+    RootFolder:
+      Default: ''
+      Description: 'Container Path: /root'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: RootFolder
+      Required: 'false'
+      Target: /root
+      Type: Path
+      value: /mnt/user/appdata/vman/root
+    images:
+      Default: ''
+      Description: 'Container Path: /var/lib/libvirt/images'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: images
+      Required: 'false'
+      Target: /var/lib/libvirt/images
+      Type: Path
+      value: /var/lib/libvirt/images
+    libvirt-sock:
+      Default: ''
+      Description: 'Container Path: /var/run/libvirt/libvirt-sock'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: libvirt-sock
+      Required: 'false'
+      Target: /var/run/libvirt/libvirt-sock
+      Type: Path
+      value: /var/run/libvirt/libvirt-sock
+  Port:
+    WEBGUI:
+      Default: ''
+      Description: 'Container Port: 80'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WEBGUI
+      Required: 'false'
+      Target: '80'
+      Type: Port
+      value: '8185'
+  Variable:
+    HOSTS:
+      Default: ''
+      Description: 'Container Variable: HOSTS'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: HOSTS
+      Required: 'false'
+      Target: HOSTS
+      Type: Variable
+      value: '[''qemu:///system'']'
 FirstSeen: 1632161024
 Icon: https://raw.githubusercontent.com/redvex2460/docker-templates/master/redvex2460/images/vman.png
 LastUpdate: 1647736266

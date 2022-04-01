@@ -1,61 +1,66 @@
 CategoryList:
 - MediaServer-Other
 Config:
-- '@attributes':
-    Default: ''
-    Description: appdata for Posterr config files
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: config
-    Required: 'false'
-    Target: /usr/src/app/config
-    Type: Path
-  value: /mnt/user/appdata/posterr
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 3000'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: port
-    Required: 'false'
-    Target: '3000'
-    Type: Port
-  value: '9876'
-- '@attributes':
-    Default: ''
-    Description: Your local timezone
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: TZ
-    Required: 'false'
-    Target: TZ
-    Type: Variable
-  value: AU
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: BASEPATH
-    Required: 'false'
-    Target: BASEPATH
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /usr/src/app/public/custom'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Custom
-    Required: 'false'
-    Target: /usr/src/app/public/custom
-    Type: Path
-  value: /mnt/user/appdata/posterr/custom
+  Device: {}
+  Label: {}
+  Path:
+    Custom:
+      Default: ''
+      Description: 'Container Path: /usr/src/app/public/custom'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Custom
+      Required: 'false'
+      Target: /usr/src/app/public/custom
+      Type: Path
+      value: /mnt/user/appdata/posterr/custom
+    config:
+      Default: ''
+      Description: appdata for Posterr config files
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: config
+      Required: 'false'
+      Target: /usr/src/app/config
+      Type: Path
+      value: /mnt/user/appdata/posterr
+  Port:
+    port:
+      Default: ''
+      Description: 'Container Port: 3000'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: port
+      Required: 'false'
+      Target: '3000'
+      Type: Port
+      value: '9876'
+  Variable:
+    BASEPATH:
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: BASEPATH
+      Required: 'false'
+      Target: BASEPATH
+      Type: Variable
+      value: ''
+    TZ:
+      Default: ''
+      Description: Your local timezone
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: TZ
+      Required: 'false'
+      Target: TZ
+      Type: Variable
+      value: AU
 FirstSeen: 1621766923
 Icon: https://github.com/petersem/posterr/blob/master/public/favicons/android-chrome-512x512.png?raw=true
 LastUpdate: 1636068103

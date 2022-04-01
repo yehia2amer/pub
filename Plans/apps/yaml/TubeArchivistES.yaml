@@ -2,72 +2,77 @@ CategoryList:
 - Tools-Utilities
 - MediaServer-Other
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 9200'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: '9200'
-    Required: 'false'
-    Target: '9200'
-    Type: Port
-  value: '9200'
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /usr/share/elasticsearch/data'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: ElasticSearch Data
-    Required: 'false'
-    Target: /usr/share/elasticsearch/data
-    Type: Path
-  value: /mnt/user/appdata/TubeArchivist/es
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: ELASTIC_PASSWORD'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: ElasticSearch Password
-    Required: 'false'
-    Target: ELASTIC_PASSWORD
-    Type: Variable
-  value: verysecret
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: ES_JAVA_OPTS'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Java Options
-    Required: 'false'
-    Target: ES_JAVA_OPTS
-    Type: Variable
-  value: -Xms512m -Xmx512m
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: discovery.type'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Discovery Type
-    Required: 'false'
-    Target: discovery.type
-    Type: Variable
-  value: single-node
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: xpack.security.enabled'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Xpack Security
-    Required: 'false'
-    Target: xpack.security.enabled
-    Type: Variable
-  value: 'true'
+  Device: {}
+  Label: {}
+  Path:
+    ElasticSearch Data:
+      Default: ''
+      Description: 'Container Path: /usr/share/elasticsearch/data'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: ElasticSearch Data
+      Required: 'false'
+      Target: /usr/share/elasticsearch/data
+      Type: Path
+      value: /mnt/user/appdata/TubeArchivist/es
+  Port:
+    '9200':
+      Default: ''
+      Description: 'Container Port: 9200'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: '9200'
+      Required: 'false'
+      Target: '9200'
+      Type: Port
+      value: '9200'
+  Variable:
+    Discovery Type:
+      Default: ''
+      Description: 'Container Variable: discovery.type'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Discovery Type
+      Required: 'false'
+      Target: discovery.type
+      Type: Variable
+      value: single-node
+    ElasticSearch Password:
+      Default: ''
+      Description: 'Container Variable: ELASTIC_PASSWORD'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: ElasticSearch Password
+      Required: 'false'
+      Target: ELASTIC_PASSWORD
+      Type: Variable
+      value: verysecret
+    Java Options:
+      Default: ''
+      Description: 'Container Variable: ES_JAVA_OPTS'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Java Options
+      Required: 'false'
+      Target: ES_JAVA_OPTS
+      Type: Variable
+      value: -Xms512m -Xmx512m
+    Xpack Security:
+      Default: ''
+      Description: 'Container Variable: xpack.security.enabled'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Xpack Security
+      Required: 'false'
+      Target: xpack.security.enabled
+      Type: Variable
+      value: 'true'
 FirstSeen: 1648699420
 Icon: https://i.imgur.com/ftggG6O.jpg
 LastUpdate: 1648694517

@@ -1,298 +1,303 @@
 CategoryList:
 - GameServers
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /serverdata/steamcmd'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: SteamCMD
-    Required: 'true'
-    Target: /serverdata/steamcmd
-    Type: Path
-  value: /mnt/user/appdata/steamcmd
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /serverdata/serverfiles'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: ServerFiles
-    Required: 'true'
-    Target: /serverdata/serverfiles
-    Type: Path
-  value: /mnt/cache/appdata/wurmunlimited
-- '@attributes':
-    Default: ''
-    Description: "The GAME_ID that the container download at startup.\r\n(https://developer.valvesoftware.com/wiki/Dedicated_Servers_List)"
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: GAME_ID
-    Required: 'true'
-    Target: GAME_ID
-    Type: Variable
-  value: '402370'
-- '@attributes':
-    Default: ''
-    Description: 'Your Steam username goes here if you want to install a game that
-      needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
-      Steam Guard).'
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: Steam-Username
-    Required: 'false'
-    Target: USERNAME
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Set the Variable to 'true' if you want to validate the installation
-      otherwise leave it blank.
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: Validate Installation
-    Required: 'false'
-    Target: VALIDATE
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Your Steam password goes here if you want to install a game that
-      needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
-      Steam Guard).'
-    Display: always-hide
-    Mask: 'true'
-    Mode: ''
-    Name: Steam-Password
-    Required: 'false'
-    Target: PASSWRD
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 8766'
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: UPD1
-    Required: 'true'
-    Target: '8766'
-    Type: Port
-  value: '8766'
-- '@attributes':
-    Default: ''
-    Description: UDP Queryport (if you need another port, please delete this entry
-      and create a new UDP Port with the required port number, also don't forget to
-      click an 'Show more settings ...
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: UDP2
-    Required: 'true'
-    Target: '27020'
-    Type: Port
-  value: '27020'
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 8766'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: TCP1
-    Required: 'true'
-    Target: '8766'
-    Type: Port
-  value: '8766'
-- '@attributes':
-    Default: ''
-    Description: TCP Gameport (if you need another port, please delete this entry
-      and create a new TCP Port with the required port number, also don't forget to
-      click an 'Show more settings ...
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: TCP2
-    Required: 'true'
-    Target: '3724'
-    Type: Port
-  value: '3724'
-- '@attributes':
-    Default: ''
-    Description: To enable the Server-ModLauncher set it to 'true' (without quotes)
-      otherwise leave it blank.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Enable Mod Launcher
-    Required: 'false'
-    Target: MOD_LAUNCHER
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Name of the Server
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Servrname
-    Required: 'true'
-    Target: WU_SERVERNAME
-    Type: Variable
-  value: DockerServer
-- '@attributes':
-    Default: ''
-    Description: Server Password to join
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Server Password
-    Required: 'false'
-    Target: WU_PWD
-    Type: Variable
-  value: Docker
-- '@attributes':
-    Default: ''
-    Description: Your Admin Password
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Admin Password
-    Required: 'true'
-    Target: WU_ADMINPWD
-    Type: Variable
-  value: adminDocker
-- '@attributes':
-    Default: ''
-    Description: Define the maximum players on the server
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Max Players
-    Required: 'true'
-    Target: WU_MAXPLAYERS
-    Type: Variable
-  value: '150'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: GAME_PORT'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: GAME_PORT
-    Required: 'true'
-    Target: GAME_PORT
-    Type: Variable
-  value: '3724'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: WU_QUERYPORT'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: QUERYPORT
-    Required: 'true'
-    Target: WU_QUERYPORT
-    Type: Variable
-  value: '27020'
-- '@attributes':
-    Default: ''
-    Description: If set to 'true' (without quotes) Server is a homeserver and belongs
-      to a single kingdom.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Homeserver
-    Required: 'true'
-    Target: WU_HOMESERVER
-    Type: Variable
-  value: 'true'
-- '@attributes':
-    Default: ''
-    Description: 'If you''re using the Adventure base, use 1, 2, or 3. || If you''re
-      using Creative, use 4. || Kingdom numbers: 0 - No kingdom | 1 - Jen-Kellon |
-      2 - Mol-Rehan | 3 - Horde of the Summoned | 4 - Freedom'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: HOMEKINGDOM
-    Required: 'true'
-    Target: WU_HOMEKINGDOM
-    Type: Variable
-  value: '4'
-- '@attributes':
-    Default: ''
-    Description: Choose between 'Adventure' and 'Creative' (without quotes) or copy
-      your own map to the root of the serverfolder and define the name of the mapfolder
-      here
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: GAME_MODE
-    Required: 'true'
-    Target: GAME_MODE
-    Type: Variable
-  value: Creative
-- '@attributes':
-    Default: ''
-    Description: If set to 'false' the server is intended to connect to another server
-      who is the loginserver.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: LOGINSERVER
-    Required: 'true'
-    Target: WU_LOGINSERVER
-    Type: Variable
-  value: 'true'
-- '@attributes':
-    Default: ''
-    Description: If set to true the server will follow the rules of the Epic servers
-      in Wurm Online
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: EPICSETTINGS
-    Required: 'true'
-    Target: WU_EPICSERVERS
-    Type: Variable
-  value: 'false'
-- '@attributes':
-    Default: ''
-    Description: Enter your extra start up commands for the server if needed.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Extra Startup Parmeters
-    Required: 'false'
-    Target: GAME_PARAMS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: UID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: UID
-    Required: 'true'
-    Target: UID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: GID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: GID
-    Required: 'true'
-    Target: GID
-    Type: Variable
-  value: '100'
+  Device: {}
+  Label: {}
+  Path:
+    ServerFiles:
+      Default: ''
+      Description: 'Container Path: /serverdata/serverfiles'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: ServerFiles
+      Required: 'true'
+      Target: /serverdata/serverfiles
+      Type: Path
+      value: /mnt/cache/appdata/wurmunlimited
+    SteamCMD:
+      Default: ''
+      Description: 'Container Path: /serverdata/steamcmd'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: SteamCMD
+      Required: 'true'
+      Target: /serverdata/steamcmd
+      Type: Path
+      value: /mnt/user/appdata/steamcmd
+  Port:
+    TCP1:
+      Default: ''
+      Description: 'Container Port: 8766'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: TCP1
+      Required: 'true'
+      Target: '8766'
+      Type: Port
+      value: '8766'
+    TCP2:
+      Default: ''
+      Description: TCP Gameport (if you need another port, please delete this entry
+        and create a new TCP Port with the required port number, also don't forget
+        to click an 'Show more settings ...
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: TCP2
+      Required: 'true'
+      Target: '3724'
+      Type: Port
+      value: '3724'
+    UDP2:
+      Default: ''
+      Description: UDP Queryport (if you need another port, please delete this entry
+        and create a new UDP Port with the required port number, also don't forget
+        to click an 'Show more settings ...
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: UDP2
+      Required: 'true'
+      Target: '27020'
+      Type: Port
+      value: '27020'
+    UPD1:
+      Default: ''
+      Description: 'Container Port: 8766'
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: UPD1
+      Required: 'true'
+      Target: '8766'
+      Type: Port
+      value: '8766'
+  Variable:
+    Admin Password:
+      Default: ''
+      Description: Your Admin Password
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Admin Password
+      Required: 'true'
+      Target: WU_ADMINPWD
+      Type: Variable
+      value: adminDocker
+    EPICSETTINGS:
+      Default: ''
+      Description: If set to true the server will follow the rules of the Epic servers
+        in Wurm Online
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: EPICSETTINGS
+      Required: 'true'
+      Target: WU_EPICSERVERS
+      Type: Variable
+      value: 'false'
+    Enable Mod Launcher:
+      Default: ''
+      Description: To enable the Server-ModLauncher set it to 'true' (without quotes)
+        otherwise leave it blank.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Enable Mod Launcher
+      Required: 'false'
+      Target: MOD_LAUNCHER
+      Type: Variable
+      value: ''
+    Extra Startup Parmeters:
+      Default: ''
+      Description: Enter your extra start up commands for the server if needed.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Extra Startup Parmeters
+      Required: 'false'
+      Target: GAME_PARAMS
+      Type: Variable
+      value: ''
+    GAME_ID:
+      Default: ''
+      Description: "The GAME_ID that the container download at startup.\r\n(https://developer.valvesoftware.com/wiki/Dedicated_Servers_List)"
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: GAME_ID
+      Required: 'true'
+      Target: GAME_ID
+      Type: Variable
+      value: '402370'
+    GAME_MODE:
+      Default: ''
+      Description: Choose between 'Adventure' and 'Creative' (without quotes) or copy
+        your own map to the root of the serverfolder and define the name of the mapfolder
+        here
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: GAME_MODE
+      Required: 'true'
+      Target: GAME_MODE
+      Type: Variable
+      value: Creative
+    GAME_PORT:
+      Default: ''
+      Description: 'Container Variable: GAME_PORT'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: GAME_PORT
+      Required: 'true'
+      Target: GAME_PORT
+      Type: Variable
+      value: '3724'
+    GID:
+      Default: ''
+      Description: 'Container Variable: GID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: GID
+      Required: 'true'
+      Target: GID
+      Type: Variable
+      value: '100'
+    HOMEKINGDOM:
+      Default: ''
+      Description: 'If you''re using the Adventure base, use 1, 2, or 3. || If you''re
+        using Creative, use 4. || Kingdom numbers: 0 - No kingdom | 1 - Jen-Kellon
+        | 2 - Mol-Rehan | 3 - Horde of the Summoned | 4 - Freedom'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: HOMEKINGDOM
+      Required: 'true'
+      Target: WU_HOMEKINGDOM
+      Type: Variable
+      value: '4'
+    Homeserver:
+      Default: ''
+      Description: If set to 'true' (without quotes) Server is a homeserver and belongs
+        to a single kingdom.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Homeserver
+      Required: 'true'
+      Target: WU_HOMESERVER
+      Type: Variable
+      value: 'true'
+    LOGINSERVER:
+      Default: ''
+      Description: If set to 'false' the server is intended to connect to another
+        server who is the loginserver.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: LOGINSERVER
+      Required: 'true'
+      Target: WU_LOGINSERVER
+      Type: Variable
+      value: 'true'
+    Max Players:
+      Default: ''
+      Description: Define the maximum players on the server
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Max Players
+      Required: 'true'
+      Target: WU_MAXPLAYERS
+      Type: Variable
+      value: '150'
+    QUERYPORT:
+      Default: ''
+      Description: 'Container Variable: WU_QUERYPORT'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: QUERYPORT
+      Required: 'true'
+      Target: WU_QUERYPORT
+      Type: Variable
+      value: '27020'
+    Server Password:
+      Default: ''
+      Description: Server Password to join
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Server Password
+      Required: 'false'
+      Target: WU_PWD
+      Type: Variable
+      value: Docker
+    Servrname:
+      Default: ''
+      Description: Name of the Server
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Servrname
+      Required: 'true'
+      Target: WU_SERVERNAME
+      Type: Variable
+      value: DockerServer
+    Steam-Password:
+      Default: ''
+      Description: 'Your Steam password goes here if you want to install a game that
+        needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
+        Steam Guard).'
+      Display: always-hide
+      Mask: 'true'
+      Mode: ''
+      Name: Steam-Password
+      Required: 'false'
+      Target: PASSWRD
+      Type: Variable
+      value: ''
+    Steam-Username:
+      Default: ''
+      Description: 'Your Steam username goes here if you want to install a game that
+        needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
+        Steam Guard).'
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: Steam-Username
+      Required: 'false'
+      Target: USERNAME
+      Type: Variable
+      value: ''
+    UID:
+      Default: ''
+      Description: 'Container Variable: UID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: UID
+      Required: 'true'
+      Target: UID
+      Type: Variable
+      value: '99'
+    Validate Installation:
+      Default: ''
+      Description: Set the Variable to 'true' if you want to validate the installation
+        otherwise leave it blank.
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: Validate Installation
+      Required: 'false'
+      Target: VALIDATE
+      Type: Variable
+      value: ''
 DonateImg: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/donate.png
 DonateLink: https://www.paypal.me/chips777
 DonateText: 'If you like my work please '

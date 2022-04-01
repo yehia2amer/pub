@@ -3,106 +3,111 @@ CAComment: This template is set up to use a custom network. You may have to adju
 CategoryList:
 - GameServers
 Config:
-- '@attributes':
-    Default: '2500'
-    Description: Basique Port for PhantomBot
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: ports
-    Required: 'true'
-    Target: '25000'
-    Type: Port
-  value: '25000'
-- '@attributes':
-    Default: ''
-    Description: Configuration path of phantombot
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Host Path 1
-    Required: 'true'
-    Target: /opt/PhantomBot/config
-    Type: Path
-  value: /mnt/user/appdata/phantomboto/
-- '@attributes':
-    Default: Admin
-    Description: The user for the webpanel
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: UserPanel
-    Required: 'true'
-    Target: PHANTOMBOT_PANELUSER
-    Type: Variable
-  value: Admin
-- '@attributes':
-    Default: changeme
-    Description: password for the User in the Panel
-    Display: always
-    Mask: 'true'
-    Mode: ''
-    Name: UserPassword
-    Required: 'true'
-    Target: PHANTOMBOT_PANELPASSWORD
-    Type: Variable
-  value: changeme
-- '@attributes':
-    Default: true|false
-    Description: Did you use HTTPS for connect in the panel ?
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: HTTPS
-    Required: 'true'
-    Target: PHANTOMBOT_USEHTTPS
-    Type: Variable
-  value: 'false'
-- '@attributes':
-    Default: ''
-    Description: The name of your bot on twitch
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: BotName
-    Required: 'true'
-    Target: PHANTOMBOT_USER
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: The keyAPI of the bot grab it here https://phantombot.github.io/PhantomBot/oauth/
-    Display: always
-    Mask: 'true'
-    Mode: ''
-    Name: BotKey
-    Required: 'true'
-    Target: PHANTOMBOT_OAUTH
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: ChannelName
-    Required: 'true'
-    Target: PHANTOMBOT_CHANNEL
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Take your aouth key at https://twitchapps.com/tmi/ and past only
-      the part after the :'
-    Display: always
-    Mask: 'true'
-    Mode: ''
-    Name: ChannelAPI
-    Required: 'true'
-    Target: PHANTOMBOT_APIOAUTH
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Host Path 1:
+      Default: ''
+      Description: Configuration path of phantombot
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Host Path 1
+      Required: 'true'
+      Target: /opt/PhantomBot/config
+      Type: Path
+      value: /mnt/user/appdata/phantomboto/
+  Port:
+    ports:
+      Default: '2500'
+      Description: Basique Port for PhantomBot
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: ports
+      Required: 'true'
+      Target: '25000'
+      Type: Port
+      value: '25000'
+  Variable:
+    BotKey:
+      Default: ''
+      Description: The keyAPI of the bot grab it here https://phantombot.github.io/PhantomBot/oauth/
+      Display: always
+      Mask: 'true'
+      Mode: ''
+      Name: BotKey
+      Required: 'true'
+      Target: PHANTOMBOT_OAUTH
+      Type: Variable
+      value: ''
+    BotName:
+      Default: ''
+      Description: The name of your bot on twitch
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: BotName
+      Required: 'true'
+      Target: PHANTOMBOT_USER
+      Type: Variable
+      value: ''
+    ChannelAPI:
+      Default: ''
+      Description: 'Take your aouth key at https://twitchapps.com/tmi/ and past only
+        the part after the :'
+      Display: always
+      Mask: 'true'
+      Mode: ''
+      Name: ChannelAPI
+      Required: 'true'
+      Target: PHANTOMBOT_APIOAUTH
+      Type: Variable
+      value: ''
+    ChannelName:
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: ChannelName
+      Required: 'true'
+      Target: PHANTOMBOT_CHANNEL
+      Type: Variable
+      value: ''
+    HTTPS:
+      Default: true|false
+      Description: Did you use HTTPS for connect in the panel ?
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: HTTPS
+      Required: 'true'
+      Target: PHANTOMBOT_USEHTTPS
+      Type: Variable
+      value: 'false'
+    UserPanel:
+      Default: Admin
+      Description: The user for the webpanel
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: UserPanel
+      Required: 'true'
+      Target: PHANTOMBOT_PANELUSER
+      Type: Variable
+      value: Admin
+    UserPassword:
+      Default: changeme
+      Description: password for the User in the Panel
+      Display: always
+      Mask: 'true'
+      Mode: ''
+      Name: UserPassword
+      Required: 'true'
+      Target: PHANTOMBOT_PANELPASSWORD
+      Type: Variable
+      value: changeme
 FirstSeen: 1646075005
 Icon: https://phantombot.github.io/PhantomBot/common/images/logo.png
 LastUpdateScan: 1648670618

@@ -1,94 +1,99 @@
 CategoryList:
 - Network-Messenger
 Config:
-- '@attributes':
-    Default: '1111111111111'
-    Description: Information here https://docs.monitorss.xyz/configuration/web-interface#bot
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: CLIENTID
-    Required: 'true'
-    Target: DRSSWEB_BOT_CLIENTID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '1111111111111'
-    Description: Information here https://docs.monitorss.xyz/configuration/web-interface#bot
-    Display: always
-    Mask: 'true'
-    Mode: ''
-    Name: CLIENTSECRET
-    Required: 'true'
-    Target: DRSSWEB_BOT_CLIENTSECRET
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: https://domain.com/authorize
-    Description: Does not have to be a public domain. Information here https://docs.monitorss.xyz/configuration/web-interface#bot
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: REDIRECTURI
-    Required: 'true'
-    Target: DRSSWEB_BOT_REDIRECTURI
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '22222222222'
-    Description: Information here https://docs.monitorss.xyz/configuration/web-interface#bot
-    Display: always
-    Mask: 'true'
-    Mode: ''
-    Name: TOKEN
-    Required: 'true'
-    Target: DRSSWEB_BOT_TOKEN
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: redis://[REPLACE-WITH-IP]:6379
-    Description: Information here https://docs.monitorss.xyz/configuration/web-interface#database
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DATABASE_REDIS
-    Required: 'true'
-    Target: DRSSWEB_DATABASE_REDIS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: mongodb://[REPLACE-WITH-IP]:27017/drss
-    Description: Information here https://docs.monitorss.xyz/configuration/web-interface#database
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DATABASE_URI
-    Required: 'true'
-    Target: DRSSWEB_DATABASE_URI
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '8081'
-    Description: 'Container Port: 8081'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'true'
-    Target: '8081'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: web
-    Description: Do not change
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: Component
-    Required: 'true'
-    Target: DRSS_START
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path: {}
+  Port:
+    WebUI:
+      Default: '8081'
+      Description: 'Container Port: 8081'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'true'
+      Target: '8081'
+      Type: Port
+      value: ''
+  Variable:
+    CLIENTID:
+      Default: '1111111111111'
+      Description: Information here https://docs.monitorss.xyz/configuration/web-interface#bot
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: CLIENTID
+      Required: 'true'
+      Target: DRSSWEB_BOT_CLIENTID
+      Type: Variable
+      value: ''
+    CLIENTSECRET:
+      Default: '1111111111111'
+      Description: Information here https://docs.monitorss.xyz/configuration/web-interface#bot
+      Display: always
+      Mask: 'true'
+      Mode: ''
+      Name: CLIENTSECRET
+      Required: 'true'
+      Target: DRSSWEB_BOT_CLIENTSECRET
+      Type: Variable
+      value: ''
+    Component:
+      Default: web
+      Description: Do not change
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: Component
+      Required: 'true'
+      Target: DRSS_START
+      Type: Variable
+      value: ''
+    DATABASE_REDIS:
+      Default: redis://[REPLACE-WITH-IP]:6379
+      Description: Information here https://docs.monitorss.xyz/configuration/web-interface#database
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DATABASE_REDIS
+      Required: 'true'
+      Target: DRSSWEB_DATABASE_REDIS
+      Type: Variable
+      value: ''
+    DATABASE_URI:
+      Default: mongodb://[REPLACE-WITH-IP]:27017/drss
+      Description: Information here https://docs.monitorss.xyz/configuration/web-interface#database
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DATABASE_URI
+      Required: 'true'
+      Target: DRSSWEB_DATABASE_URI
+      Type: Variable
+      value: ''
+    REDIRECTURI:
+      Default: https://domain.com/authorize
+      Description: Does not have to be a public domain. Information here https://docs.monitorss.xyz/configuration/web-interface#bot
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: REDIRECTURI
+      Required: 'true'
+      Target: DRSSWEB_BOT_REDIRECTURI
+      Type: Variable
+      value: ''
+    TOKEN:
+      Default: '22222222222'
+      Description: Information here https://docs.monitorss.xyz/configuration/web-interface#bot
+      Display: always
+      Mask: 'true'
+      Mode: ''
+      Name: TOKEN
+      Required: 'true'
+      Target: DRSSWEB_BOT_TOKEN
+      Type: Variable
+      value: ''
 FirstSeen: 1613243438
 Icon: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/monitorss.png
 LastUpdate: 1644634037

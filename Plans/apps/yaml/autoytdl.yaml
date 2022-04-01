@@ -1,39 +1,44 @@
 CategoryList:
 - Downloaders
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 5000'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Host Port 1
-    Required: 'false'
-    Target: '5000'
-    Type: Port
-  value: '5000'
-- '@attributes':
-    Default: ''
-    Description: This is the destination of the downloaded videos.
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Host Path 1
-    Required: 'false'
-    Target: /app/Downloads
-    Type: Path
-  value: /mnt/user/unRaidLars/downloads/k/
-- '@attributes':
-    Default: /mnt/user/appdata/auto-yt-dl
-    Description: Used to store data (ex. monitored Channels)
-    Display: always-hide
-    Mask: 'false'
-    Mode: rw
-    Name: AppData
-    Required: 'false'
-    Target: /app/data
-    Type: Path
-  value: /mnt/user/appdata/auto-yt-dl
+  Device: {}
+  Label: {}
+  Path:
+    AppData:
+      Default: /mnt/user/appdata/auto-yt-dl
+      Description: Used to store data (ex. monitored Channels)
+      Display: always-hide
+      Mask: 'false'
+      Mode: rw
+      Name: AppData
+      Required: 'false'
+      Target: /app/data
+      Type: Path
+      value: /mnt/user/appdata/auto-yt-dl
+    Host Path 1:
+      Default: ''
+      Description: This is the destination of the downloaded videos.
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Host Path 1
+      Required: 'false'
+      Target: /app/Downloads
+      Type: Path
+      value: /mnt/user/unRaidLars/downloads/k/
+  Port:
+    Host Port 1:
+      Default: ''
+      Description: 'Container Port: 5000'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Host Port 1
+      Required: 'false'
+      Target: '5000'
+      Type: Port
+      value: '5000'
+  Variable: {}
 FirstSeen: 1631054720
 Icon: https://raw.githubusercontent.com/xXGuhuXx/unraid-templates/main/auto-yt-dl.jpg
 LastUpdate: 1645055468

@@ -1,83 +1,88 @@
 CategoryList:
 - GameServers
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: SQL_HOST'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: SQL_HOST
-    Required: 'true'
-    Target: SQL_HOST
-    Type: Variable
-  value: 192.168.1.129
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: SQL_DATABASE'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: SQL_DATABASE
-    Required: 'true'
-    Target: SQL_DATABASE
-    Type: Variable
-  value: Zombo
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: SQL_USER'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: SQL_USER
-    Required: 'true'
-    Target: SQL_USER
-    Type: Variable
-  value: SQL_USER
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: SQL_PASSWORD'
-    Display: always
-    Mask: 'true'
-    Mode: ''
-    Name: SQL_PASS
-    Required: 'true'
-    Target: SQL_PASS
-    Type: Variable
-  value: SQL_PASS
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: SQL_PORT'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: SQL_PORT
-    Required: 'false'
-    Target: SQL_PORT
-    Type: Variable
-  value: '3307'
-- '@attributes':
-    Default: /mnt/user/appdata/ProjectZomboidReporter/index.js
-    Description: 'Container Path: /usr/src/app/index.js'
-    Display: always
-    Mask: 'false'
-    Mode: ro
-    Name: index.js_fix
-    Required: 'false'
-    Target: /usr/src/app/index.js
-    Type: Path
-  value: /mnt/user/appdata/zb-reporter-backend/index.js
-- '@attributes':
-    Default: '3001'
-    Description: 'Container Port: 3001'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: API port
-    Required: 'true'
-    Target: '3001'
-    Type: Port
-  value: '3001'
+  Device: {}
+  Label: {}
+  Path:
+    index.js_fix:
+      Default: /mnt/user/appdata/ProjectZomboidReporter/index.js
+      Description: 'Container Path: /usr/src/app/index.js'
+      Display: always
+      Mask: 'false'
+      Mode: ro
+      Name: index.js_fix
+      Required: 'false'
+      Target: /usr/src/app/index.js
+      Type: Path
+      value: /mnt/user/appdata/zb-reporter-backend/index.js
+  Port:
+    API port:
+      Default: '3001'
+      Description: 'Container Port: 3001'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: API port
+      Required: 'true'
+      Target: '3001'
+      Type: Port
+      value: '3001'
+  Variable:
+    SQL_DATABASE:
+      Default: ''
+      Description: 'Container Variable: SQL_DATABASE'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: SQL_DATABASE
+      Required: 'true'
+      Target: SQL_DATABASE
+      Type: Variable
+      value: Zombo
+    SQL_HOST:
+      Default: ''
+      Description: 'Container Variable: SQL_HOST'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: SQL_HOST
+      Required: 'true'
+      Target: SQL_HOST
+      Type: Variable
+      value: 192.168.1.129
+    SQL_PASS:
+      Default: ''
+      Description: 'Container Variable: SQL_PASSWORD'
+      Display: always
+      Mask: 'true'
+      Mode: ''
+      Name: SQL_PASS
+      Required: 'true'
+      Target: SQL_PASS
+      Type: Variable
+      value: SQL_PASS
+    SQL_PORT:
+      Default: ''
+      Description: 'Container Variable: SQL_PORT'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: SQL_PORT
+      Required: 'false'
+      Target: SQL_PORT
+      Type: Variable
+      value: '3307'
+    SQL_USER:
+      Default: ''
+      Description: 'Container Variable: SQL_USER'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: SQL_USER
+      Required: 'true'
+      Target: SQL_USER
+      Type: Variable
+      value: SQL_USER
 ExtraParams: --restart=always
 FirstSeen: 1646377404
 Icon: https://github.com/natcoso9955/unRAID-docker/raw/master/icons/projectzomboid-api.png

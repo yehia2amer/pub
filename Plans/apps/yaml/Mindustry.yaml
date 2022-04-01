@@ -1,107 +1,113 @@
 CategoryList:
 - GameServers
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /mindustry'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: ServerFiles
-    Required: 'true'
-    Target: /mindustry
-    Type: Path
-  value: /mnt/cache/appdata/mindustry
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 6567'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: TCP - Gameport
-    Required: 'true'
-    Target: '6567'
-    Type: Port
-  value: '6567'
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 6567'
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: UDP - Gameport
-    Required: 'true'
-    Target: '6567'
-    Type: Port
-  value: '6567'
-- '@attributes':
-    Default: ''
-    Description: "Preferred game version goes here (set to \u2018latest\u2019 to download\
-      \ the latest and check on every startup if there is a newer version available)"
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Game Version
-    Required: 'true'
-    Target: GAME_V
-    Type: Variable
-  value: latest
-- '@attributes':
-    Default: ''
-    Description: Servername goes here
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Server Name
-    Required: 'true'
-    Target: SRV_NAME
-    Type: Variable
-  value: DockerMindustry
-- '@attributes':
-    Default: ''
-    Description: Extra startup Parameters if needed (leave empty if not needed)
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Extra Game Parameters
-    Required: 'false'
-    Target: GAME_PARAMS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: "Permissions for newly created files. Don\u2019t change unless you\
-      \ are knowing what you are doing!"
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: UMASK
-    Required: 'true'
-    Target: UMASK
-    Type: Variable
-  value: '000'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: UID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: UID
-    Required: 'true'
-    Target: UID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: GID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: GID
-    Required: 'true'
-    Target: GID
-    Type: Variable
-  value: '100'
+  Device: {}
+  Label: {}
+  Path:
+    ServerFiles:
+      Default: ''
+      Description: 'Container Path: /mindustry'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: ServerFiles
+      Required: 'true'
+      Target: /mindustry
+      Type: Path
+      value: /mnt/cache/appdata/mindustry
+  Port:
+    TCP - Gameport:
+      Default: ''
+      Description: 'Container Port: 6567'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: TCP - Gameport
+      Required: 'true'
+      Target: '6567'
+      Type: Port
+      value: '6567'
+    UDP - Gameport:
+      Default: ''
+      Description: 'Container Port: 6567'
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: UDP - Gameport
+      Required: 'true'
+      Target: '6567'
+      Type: Port
+      value: '6567'
+  Variable:
+    Extra Game Parameters:
+      Default: ''
+      Description: Extra startup Parameters if needed (leave empty if not needed)
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Extra Game Parameters
+      Required: 'false'
+      Target: GAME_PARAMS
+      Type: Variable
+      value: ''
+    GID:
+      Default: ''
+      Description: 'Container Variable: GID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: GID
+      Required: 'true'
+      Target: GID
+      Type: Variable
+      value: '100'
+    Game Version:
+      Default: ''
+      Description: "Preferred game version goes here (set to \u2018latest\u2019 to\
+        \ download the latest and check on every startup if there is a newer version\
+        \ available)"
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Game Version
+      Required: 'true'
+      Target: GAME_V
+      Type: Variable
+      value: latest
+    Server Name:
+      Default: ''
+      Description: Servername goes here
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Server Name
+      Required: 'true'
+      Target: SRV_NAME
+      Type: Variable
+      value: DockerMindustry
+    UID:
+      Default: ''
+      Description: 'Container Variable: UID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: UID
+      Required: 'true'
+      Target: UID
+      Type: Variable
+      value: '99'
+    UMASK:
+      Default: ''
+      Description: "Permissions for newly created files. Don\u2019t change unless\
+        \ you are knowing what you are doing!"
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: UMASK
+      Required: 'true'
+      Target: UMASK
+      Type: Variable
+      value: '000'
 ExtraParams: --restart=unless-stopped
 FirstSeen: 1574521673
 Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/mindustry.png

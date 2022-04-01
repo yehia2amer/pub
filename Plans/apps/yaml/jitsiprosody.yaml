@@ -3,572 +3,578 @@ CategoryList:
 - Network-Voip
 - Network-Messenger
 Config:
-- '@attributes':
-    Default: '5222'
-    Description: 'Container Port: 5222'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Port 1
-    Required: 'false'
-    Target: '5222'
-    Type: Port
-  value: '5222'
-- '@attributes':
-    Default: '5347'
-    Description: 'Container Port: 5347'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Port 2
-    Required: 'false'
-    Target: '5347'
-    Type: Port
-  value: '5347'
-- '@attributes':
-    Default: '5280'
-    Description: 'Container Port: 5280'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Port 3
-    Required: 'false'
-    Target: '5280'
-    Type: Port
-  value: '5280'
-- '@attributes':
-    Default: /mnt/user/appdata/jitsi/prosody/
-    Description: IMPORTENT Change to /mnt/user/appdata/jitsi/prosody/
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: AppData Config Path
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: /mnt/user/appdata/jitsi/prosody/
-- '@attributes':
-    Default: internal
-    Description: Select authentication type (internal, jwt or ldap)
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: AUTH_TYPE
-    Required: 'false'
-    Target: AUTH_TYPE
-    Type: Variable
-  value: internal
-- '@attributes':
-    Default: '1'
-    Description: Enable authentication
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: ENABLE_AUTH
-    Required: 'false'
-    Target: ENABLE_AUTH
-    Type: Variable
-  value: '1'
-- '@attributes':
-    Default: '1'
-    Description: Enable guest access
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: ENABLE_GUESTS
-    Required: 'false'
-    Target: ENABLE_GUESTS
-    Type: Variable
-  value: '1'
-- '@attributes':
-    Default: statistics,alert
-    Description: Custom prosody modules to load in global configuration (comma separated)
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: GLOBAL_MODULES
-    Required: 'false'
-    Target: GLOBAL_MODULES
-    Type: Variable
-  value: statistics,alert
-- '@attributes':
-    Default: foo = bar;\nkey = val;
-    Description: Custom configuration string with escaped newlines
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: GLOBAL_CONFIG
-    Required: 'false'
-    Target: GLOBAL_CONFIG
-    Type: Variable
-  value: foo = bar;\nkey = val;
-- '@attributes':
-    Default: meet.jitsi
-    Description: Internal XMPP domain
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: XMPP_DOMAIN
-    Required: 'false'
-    Target: XMPP_DOMAIN
-    Type: Variable
-  value: meet.jitsi
-- '@attributes':
-    Default: auth.meet.jitsi
-    Description: Internal XMPP domain for authenticated services
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: XMPP_AUTH_DOMAIN
-    Required: 'false'
-    Target: XMPP_AUTH_DOMAIN
-    Type: Variable
-  value: auth.meet.jitsi
-- '@attributes':
-    Default: guest.meet.jitsi
-    Description: XMPP domain for unauthenticated users
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: XMPP_GUEST_DOMAIN
-    Required: 'false'
-    Target: XMPP_GUEST_DOMAIN
-    Type: Variable
-  value: guest.meet.jitsi
-- '@attributes':
-    Default: muc.meet.jitsi
-    Description: XMPP domain for the MUC
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: XMPP_MUC_DOMAIN
-    Required: 'false'
-    Target: XMPP_MUC_DOMAIN
-    Type: Variable
-  value: muc.meet.jitsi
-- '@attributes':
-    Default: internal-muc.meet.jitsi
-    Description: XMPP domain for the internal MUC
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: XMPP_INTERNAL_MUC_DOMAIN
-    Required: 'false'
-    Target: XMPP_INTERNAL_MUC_DOMAIN
-    Type: Variable
-  value: internal-muc.meet.jitsi
-- '@attributes':
-    Default: info,alert
-    Description: Custom Prosody modules for XMPP_DOMAIN (comma separated)
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: XMPP_MODULES
-    Required: 'false'
-    Target: XMPP_MODULES
-    Type: Variable
-  value: info,alert
-- '@attributes':
-    Default: info,alert
-    Description: Custom Prosody modules for MUC component (comma separated)
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: XMPP_MUC_MODULES
-    Required: 'false'
-    Target: XMPP_MUC_MODULES
-    Type: Variable
-  value: info,alert
-- '@attributes':
-    Default: info,alert
-    Description: Custom Prosody modules for internal MUC component (comma separated)
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: XMPP_INTERNAL_MUC_MODULES
-    Required: 'false'
-    Target: XMPP_INTERNAL_MUC_MODULES
-    Type: Variable
-  value: info,alert
-- '@attributes':
-    Default: recorder.meet.jitsi
-    Description: Domain for the jibri recorder
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: XMPP_RECORDER_DOMAIN
-    Required: 'false'
-    Target: XMPP_RECORDER_DOMAIN
-    Type: Variable
-  value: recorder.meet.jitsi
-- '@attributes':
-    Default: s3cr37
-    Description: XMPP component password for Jicofo
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: JICOFO_COMPONENT_SECRET
-    Required: 'false'
-    Target: JICOFO_COMPONENT_SECRET
-    Type: Variable
-  value: s3cr37
-- '@attributes':
-    Default: focus
-    Description: XMPP user for Jicofo client connections
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: JICOFO_AUTH_USER
-    Required: 'false'
-    Target: JICOFO_AUTH_USER
-    Type: Variable
-  value: focus
-- '@attributes':
-    Default: passw0rd
-    Description: XMPP password for Jicofo client connections
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: JICOFO_AUTH_PASSWORD
-    Required: 'false'
-    Target: JICOFO_AUTH_PASSWORD
-    Type: Variable
-  value: passw0rd
-- '@attributes':
-    Default: jvb
-    Description: XMPP user for JVB MUC client connections
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: JVB_AUTH_USER
-    Required: 'false'
-    Target: JVB_AUTH_USER
-    Type: Variable
-  value: jvb
-- '@attributes':
-    Default: passw0rd
-    Description: XMPP password for JVB MUC client connections
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: JVB_AUTH_PASSWORD
-    Required: 'false'
-    Target: JVB_AUTH_PASSWORD
-    Type: Variable
-  value: passw0rd
-- '@attributes':
-    Default: jigasi
-    Description: XMPP user for Jigasi MUC client connections
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: JIGASI_XMPP_USER
-    Required: 'false'
-    Target: JIGASI_XMPP_USER
-    Type: Variable
-  value: jigasi
-- '@attributes':
-    Default: passw0rd
-    Description: XMPP password for Jigasi MUC client connections
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: JIGASI_XMPP_PASSWORD
-    Required: 'false'
-    Target: JIGASI_XMPP_PASSWORD
-    Type: Variable
-  value: passw0rd
-- '@attributes':
-    Default: jibri
-    Description: Internal user for Jibri client connections.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: JIBRI_XMPP_USER
-    Required: 'false'
-    Target: JIBRI_XMPP_USER
-    Type: Variable
-  value: jibri
-- '@attributes':
-    Default: passw0rd
-    Description: Internal password for Jibri client connections.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: JIBRI_XMPP_PASSWORD
-    Required: 'false'
-    Target: JIBRI_XMPP_PASSWORD
-    Type: Variable
-  value: passw0rd
-- '@attributes':
-    Default: recorder
-    Description: Internal recorder user for Jibri client connections
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: JIBRI_RECORDER_USER
-    Required: 'false'
-    Target: JIBRI_RECORDER_USER
-    Type: Variable
-  value: recorder
-- '@attributes':
-    Default: passw0rd
-    Description: Internal recorder password for Jibri client connections
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: JIBRI_RECORDER_PASSWORD
-    Required: 'false'
-    Target: JIBRI_RECORDER_PASSWORD
-    Type: Variable
-  value: passw0rd
-- '@attributes':
-    Default: my_jitsi_app_id
-    Description: Application identifier
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: JWT_APP_ID
-    Required: 'false'
-    Target: JWT_APP_ID
-    Type: Variable
-  value: my_jitsi_app_id
-- '@attributes':
-    Default: my_jitsi_app_secret
-    Description: Application secret known only to your token
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: JWT_APP_SECRET
-    Required: 'false'
-    Target: JWT_APP_SECRET
-    Type: Variable
-  value: my_jitsi_app_secret
-- '@attributes':
-    Default: my_web_client,my_app_client
-    Description: (Optional) Set asap_accepted_issuers as a comma separated list
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: JWT_ACCEPTED_ISSUERS
-    Required: 'false'
-    Target: JWT_ACCEPTED_ISSUERS
-    Type: Variable
-  value: my_web_client,my_app_client
-- '@attributes':
-    Default: my_server1,my_server2
-    Description: (Optional) Set asap_accepted_audiences as a comma separated list
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: JWT_ACCEPTED_AUDIENCES
-    Required: 'false'
-    Target: JWT_ACCEPTED_AUDIENCES
-    Type: Variable
-  value: my_server1,my_server2
-- '@attributes':
-    Default: https://example.com/asap
-    Description: (Optional) Set asap_keyserver to a url where public keys can be found
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: JWT_ASAP_KEYSERVER
-    Required: 'false'
-    Target: JWT_ASAP_KEYSERVER
-    Type: Variable
-  value: https://example.com/asap
-- '@attributes':
-    Default: '0'
-    Description: (Optional) Allow anonymous users with no JWT while validating JWTs
-      when provided
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: JWT_ALLOW_EMPTY
-    Required: 'false'
-    Target: JWT_ALLOW_EMPTY
-    Type: Variable
-  value: '0'
-- '@attributes':
-    Default: token
-    Description: (Optional) Controls which module is used for processing incoming
-      JWTs
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: JWT_AUTH_TYPE
-    Required: 'false'
-    Target: JWT_AUTH_TYPE
-    Type: Variable
-  value: token
-- '@attributes':
-    Default: token_verification
-    Description: (Optional) Controls which module is used for validating JWTs
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: JWT_TOKEN_AUTH_MODULE
-    Required: 'false'
-    Target: JWT_TOKEN_AUTH_MODULE
-    Type: Variable
-  value: token_verification
-- '@attributes':
-    Default: info
-    Description: Controls which logs are output from prosody and associated modules
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: LOG_LEVEL
-    Required: 'false'
-    Target: LOG_LEVEL
-    Type: Variable
-  value: info
-- '@attributes':
-    Default: ldaps://ldap.domain.com/
-    Description: URL for ldap connection
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: LDAP_URL
-    Required: 'false'
-    Target: LDAP_URL
-    Type: Variable
-  value: ldaps://ldap.domain.com/
-- '@attributes':
-    Default: DC=example,DC=domain,DC=com
-    Description: LDAP base DN. Can be empty.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: LDAP_BASE
-    Required: 'false'
-    Target: LDAP_BASE
-    Type: Variable
-  value: DC=example,DC=domain,DC=com
-- '@attributes':
-    Default: CN=binduser,OU=users,DC=example,DC=domain,DC=com
-    Description: LDAP user DN. Do not specify this parameter for the anonymous bind.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: LDAP_BINDDN
-    Required: 'false'
-    Target: LDAP_BINDDN
-    Type: Variable
-  value: CN=binduser,OU=users,DC=example,DC=domain,DC=com
-- '@attributes':
-    Default: LdapUserPassw0rd
-    Description: LDAP user password. Do not specify this parameter for the anonymous
-      bind.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: LDAP_BINDPW
-    Required: 'false'
-    Target: LDAP_BINDPW
-    Type: Variable
-  value: LdapUserPassw0rd
-- '@attributes':
-    Default: (sAMAccountName=%u)
-    Description: LDAP filter.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: LDAP_FILTER
-    Required: 'false'
-    Target: LDAP_FILTER
-    Type: Variable
-  value: (sAMAccountName=%u)
-- '@attributes':
-    Default: bind
-    Description: LDAP authentication method.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: LDAP_AUTH_METHOD
-    Required: 'false'
-    Target: LDAP_AUTH_METHOD
-    Type: Variable
-  value: bind
-- '@attributes':
-    Default: '3'
-    Description: LDAP protocol version
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: LDAP_VERSION
-    Required: 'false'
-    Target: LDAP_VERSION
-    Type: Variable
-  value: '3'
-- '@attributes':
-    Default: '1'
-    Description: Enable LDAP TLS
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: LDAP_USE_TLS
-    Required: 'false'
-    Target: LDAP_USE_TLS
-    Type: Variable
-  value: '1'
-- '@attributes':
-    Default: SECURE256:SECURE128
-    Description: Set TLS ciphers list to allow
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: LDAP_TLS_CIPHERS
-    Required: 'false'
-    Target: LDAP_TLS_CIPHERS
-    Type: Variable
-  value: SECURE256:SECURE128
-- '@attributes':
-    Default: '1'
-    Description: Require and verify LDAP server certificate
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: LDAP_TLS_CHECK_PEER
-    Required: 'false'
-    Target: LDAP_TLS_CHECK_PEER
-    Type: Variable
-  value: '1'
-- '@attributes':
-    Default: /etc/ssl/certs/ca-certificates.crt
-    Description: Path to CA cert file. Used when server certificate verification is
-      enabled
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: LDAP_TLS_CACERT_FILE
-    Required: 'false'
-    Target: LDAP_TLS_CACERT_FILE
-    Type: Variable
-  value: /etc/ssl/certs/ca-certificates.crt
-- '@attributes':
-    Default: /etc/ssl/certs
-    Description: Path to CA certs directory. Used when server certificate verification
-      is enabled.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: LDAP_TLS_CACERT_DIR
-    Required: 'false'
-    Target: LDAP_TLS_CACERT_DIR
-    Type: Variable
-  value: /etc/ssl/certs
-- '@attributes':
-    Default: '0'
-    Description: Enable START_TLS, requires LDAPv3, URL must be ldap:// not ldaps://
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: LDAP_START_TLS
-    Required: 'false'
-    Target: LDAP_START_TLS
-    Type: Variable
-  value: '0'
+  Device: {}
+  Label: {}
+  Path:
+    AppData Config Path:
+      Default: /mnt/user/appdata/jitsi/prosody/
+      Description: IMPORTENT Change to /mnt/user/appdata/jitsi/prosody/
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: AppData Config Path
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: /mnt/user/appdata/jitsi/prosody/
+  Port:
+    Port 1:
+      Default: '5222'
+      Description: 'Container Port: 5222'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Port 1
+      Required: 'false'
+      Target: '5222'
+      Type: Port
+      value: '5222'
+    Port 2:
+      Default: '5347'
+      Description: 'Container Port: 5347'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Port 2
+      Required: 'false'
+      Target: '5347'
+      Type: Port
+      value: '5347'
+    Port 3:
+      Default: '5280'
+      Description: 'Container Port: 5280'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Port 3
+      Required: 'false'
+      Target: '5280'
+      Type: Port
+      value: '5280'
+  Variable:
+    AUTH_TYPE:
+      Default: internal
+      Description: Select authentication type (internal, jwt or ldap)
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: AUTH_TYPE
+      Required: 'false'
+      Target: AUTH_TYPE
+      Type: Variable
+      value: internal
+    ENABLE_AUTH:
+      Default: '1'
+      Description: Enable authentication
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: ENABLE_AUTH
+      Required: 'false'
+      Target: ENABLE_AUTH
+      Type: Variable
+      value: '1'
+    ENABLE_GUESTS:
+      Default: '1'
+      Description: Enable guest access
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: ENABLE_GUESTS
+      Required: 'false'
+      Target: ENABLE_GUESTS
+      Type: Variable
+      value: '1'
+    GLOBAL_CONFIG:
+      Default: foo = bar;\nkey = val;
+      Description: Custom configuration string with escaped newlines
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: GLOBAL_CONFIG
+      Required: 'false'
+      Target: GLOBAL_CONFIG
+      Type: Variable
+      value: foo = bar;\nkey = val;
+    GLOBAL_MODULES:
+      Default: statistics,alert
+      Description: Custom prosody modules to load in global configuration (comma separated)
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: GLOBAL_MODULES
+      Required: 'false'
+      Target: GLOBAL_MODULES
+      Type: Variable
+      value: statistics,alert
+    JIBRI_RECORDER_PASSWORD:
+      Default: passw0rd
+      Description: Internal recorder password for Jibri client connections
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: JIBRI_RECORDER_PASSWORD
+      Required: 'false'
+      Target: JIBRI_RECORDER_PASSWORD
+      Type: Variable
+      value: passw0rd
+    JIBRI_RECORDER_USER:
+      Default: recorder
+      Description: Internal recorder user for Jibri client connections
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: JIBRI_RECORDER_USER
+      Required: 'false'
+      Target: JIBRI_RECORDER_USER
+      Type: Variable
+      value: recorder
+    JIBRI_XMPP_PASSWORD:
+      Default: passw0rd
+      Description: Internal password for Jibri client connections.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: JIBRI_XMPP_PASSWORD
+      Required: 'false'
+      Target: JIBRI_XMPP_PASSWORD
+      Type: Variable
+      value: passw0rd
+    JIBRI_XMPP_USER:
+      Default: jibri
+      Description: Internal user for Jibri client connections.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: JIBRI_XMPP_USER
+      Required: 'false'
+      Target: JIBRI_XMPP_USER
+      Type: Variable
+      value: jibri
+    JICOFO_AUTH_PASSWORD:
+      Default: passw0rd
+      Description: XMPP password for Jicofo client connections
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: JICOFO_AUTH_PASSWORD
+      Required: 'false'
+      Target: JICOFO_AUTH_PASSWORD
+      Type: Variable
+      value: passw0rd
+    JICOFO_AUTH_USER:
+      Default: focus
+      Description: XMPP user for Jicofo client connections
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: JICOFO_AUTH_USER
+      Required: 'false'
+      Target: JICOFO_AUTH_USER
+      Type: Variable
+      value: focus
+    JICOFO_COMPONENT_SECRET:
+      Default: s3cr37
+      Description: XMPP component password for Jicofo
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: JICOFO_COMPONENT_SECRET
+      Required: 'false'
+      Target: JICOFO_COMPONENT_SECRET
+      Type: Variable
+      value: s3cr37
+    JIGASI_XMPP_PASSWORD:
+      Default: passw0rd
+      Description: XMPP password for Jigasi MUC client connections
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: JIGASI_XMPP_PASSWORD
+      Required: 'false'
+      Target: JIGASI_XMPP_PASSWORD
+      Type: Variable
+      value: passw0rd
+    JIGASI_XMPP_USER:
+      Default: jigasi
+      Description: XMPP user for Jigasi MUC client connections
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: JIGASI_XMPP_USER
+      Required: 'false'
+      Target: JIGASI_XMPP_USER
+      Type: Variable
+      value: jigasi
+    JVB_AUTH_PASSWORD:
+      Default: passw0rd
+      Description: XMPP password for JVB MUC client connections
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: JVB_AUTH_PASSWORD
+      Required: 'false'
+      Target: JVB_AUTH_PASSWORD
+      Type: Variable
+      value: passw0rd
+    JVB_AUTH_USER:
+      Default: jvb
+      Description: XMPP user for JVB MUC client connections
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: JVB_AUTH_USER
+      Required: 'false'
+      Target: JVB_AUTH_USER
+      Type: Variable
+      value: jvb
+    JWT_ACCEPTED_AUDIENCES:
+      Default: my_server1,my_server2
+      Description: (Optional) Set asap_accepted_audiences as a comma separated list
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: JWT_ACCEPTED_AUDIENCES
+      Required: 'false'
+      Target: JWT_ACCEPTED_AUDIENCES
+      Type: Variable
+      value: my_server1,my_server2
+    JWT_ACCEPTED_ISSUERS:
+      Default: my_web_client,my_app_client
+      Description: (Optional) Set asap_accepted_issuers as a comma separated list
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: JWT_ACCEPTED_ISSUERS
+      Required: 'false'
+      Target: JWT_ACCEPTED_ISSUERS
+      Type: Variable
+      value: my_web_client,my_app_client
+    JWT_ALLOW_EMPTY:
+      Default: '0'
+      Description: (Optional) Allow anonymous users with no JWT while validating JWTs
+        when provided
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: JWT_ALLOW_EMPTY
+      Required: 'false'
+      Target: JWT_ALLOW_EMPTY
+      Type: Variable
+      value: '0'
+    JWT_APP_ID:
+      Default: my_jitsi_app_id
+      Description: Application identifier
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: JWT_APP_ID
+      Required: 'false'
+      Target: JWT_APP_ID
+      Type: Variable
+      value: my_jitsi_app_id
+    JWT_APP_SECRET:
+      Default: my_jitsi_app_secret
+      Description: Application secret known only to your token
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: JWT_APP_SECRET
+      Required: 'false'
+      Target: JWT_APP_SECRET
+      Type: Variable
+      value: my_jitsi_app_secret
+    JWT_ASAP_KEYSERVER:
+      Default: https://example.com/asap
+      Description: (Optional) Set asap_keyserver to a url where public keys can be
+        found
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: JWT_ASAP_KEYSERVER
+      Required: 'false'
+      Target: JWT_ASAP_KEYSERVER
+      Type: Variable
+      value: https://example.com/asap
+    JWT_AUTH_TYPE:
+      Default: token
+      Description: (Optional) Controls which module is used for processing incoming
+        JWTs
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: JWT_AUTH_TYPE
+      Required: 'false'
+      Target: JWT_AUTH_TYPE
+      Type: Variable
+      value: token
+    JWT_TOKEN_AUTH_MODULE:
+      Default: token_verification
+      Description: (Optional) Controls which module is used for validating JWTs
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: JWT_TOKEN_AUTH_MODULE
+      Required: 'false'
+      Target: JWT_TOKEN_AUTH_MODULE
+      Type: Variable
+      value: token_verification
+    LDAP_AUTH_METHOD:
+      Default: bind
+      Description: LDAP authentication method.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: LDAP_AUTH_METHOD
+      Required: 'false'
+      Target: LDAP_AUTH_METHOD
+      Type: Variable
+      value: bind
+    LDAP_BASE:
+      Default: DC=example,DC=domain,DC=com
+      Description: LDAP base DN. Can be empty.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: LDAP_BASE
+      Required: 'false'
+      Target: LDAP_BASE
+      Type: Variable
+      value: DC=example,DC=domain,DC=com
+    LDAP_BINDDN:
+      Default: CN=binduser,OU=users,DC=example,DC=domain,DC=com
+      Description: LDAP user DN. Do not specify this parameter for the anonymous bind.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: LDAP_BINDDN
+      Required: 'false'
+      Target: LDAP_BINDDN
+      Type: Variable
+      value: CN=binduser,OU=users,DC=example,DC=domain,DC=com
+    LDAP_BINDPW:
+      Default: LdapUserPassw0rd
+      Description: LDAP user password. Do not specify this parameter for the anonymous
+        bind.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: LDAP_BINDPW
+      Required: 'false'
+      Target: LDAP_BINDPW
+      Type: Variable
+      value: LdapUserPassw0rd
+    LDAP_FILTER:
+      Default: (sAMAccountName=%u)
+      Description: LDAP filter.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: LDAP_FILTER
+      Required: 'false'
+      Target: LDAP_FILTER
+      Type: Variable
+      value: (sAMAccountName=%u)
+    LDAP_START_TLS:
+      Default: '0'
+      Description: Enable START_TLS, requires LDAPv3, URL must be ldap:// not ldaps://
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: LDAP_START_TLS
+      Required: 'false'
+      Target: LDAP_START_TLS
+      Type: Variable
+      value: '0'
+    LDAP_TLS_CACERT_DIR:
+      Default: /etc/ssl/certs
+      Description: Path to CA certs directory. Used when server certificate verification
+        is enabled.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: LDAP_TLS_CACERT_DIR
+      Required: 'false'
+      Target: LDAP_TLS_CACERT_DIR
+      Type: Variable
+      value: /etc/ssl/certs
+    LDAP_TLS_CACERT_FILE:
+      Default: /etc/ssl/certs/ca-certificates.crt
+      Description: Path to CA cert file. Used when server certificate verification
+        is enabled
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: LDAP_TLS_CACERT_FILE
+      Required: 'false'
+      Target: LDAP_TLS_CACERT_FILE
+      Type: Variable
+      value: /etc/ssl/certs/ca-certificates.crt
+    LDAP_TLS_CHECK_PEER:
+      Default: '1'
+      Description: Require and verify LDAP server certificate
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: LDAP_TLS_CHECK_PEER
+      Required: 'false'
+      Target: LDAP_TLS_CHECK_PEER
+      Type: Variable
+      value: '1'
+    LDAP_TLS_CIPHERS:
+      Default: SECURE256:SECURE128
+      Description: Set TLS ciphers list to allow
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: LDAP_TLS_CIPHERS
+      Required: 'false'
+      Target: LDAP_TLS_CIPHERS
+      Type: Variable
+      value: SECURE256:SECURE128
+    LDAP_URL:
+      Default: ldaps://ldap.domain.com/
+      Description: URL for ldap connection
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: LDAP_URL
+      Required: 'false'
+      Target: LDAP_URL
+      Type: Variable
+      value: ldaps://ldap.domain.com/
+    LDAP_USE_TLS:
+      Default: '1'
+      Description: Enable LDAP TLS
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: LDAP_USE_TLS
+      Required: 'false'
+      Target: LDAP_USE_TLS
+      Type: Variable
+      value: '1'
+    LDAP_VERSION:
+      Default: '3'
+      Description: LDAP protocol version
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: LDAP_VERSION
+      Required: 'false'
+      Target: LDAP_VERSION
+      Type: Variable
+      value: '3'
+    LOG_LEVEL:
+      Default: info
+      Description: Controls which logs are output from prosody and associated modules
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: LOG_LEVEL
+      Required: 'false'
+      Target: LOG_LEVEL
+      Type: Variable
+      value: info
+    XMPP_AUTH_DOMAIN:
+      Default: auth.meet.jitsi
+      Description: Internal XMPP domain for authenticated services
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: XMPP_AUTH_DOMAIN
+      Required: 'false'
+      Target: XMPP_AUTH_DOMAIN
+      Type: Variable
+      value: auth.meet.jitsi
+    XMPP_DOMAIN:
+      Default: meet.jitsi
+      Description: Internal XMPP domain
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: XMPP_DOMAIN
+      Required: 'false'
+      Target: XMPP_DOMAIN
+      Type: Variable
+      value: meet.jitsi
+    XMPP_GUEST_DOMAIN:
+      Default: guest.meet.jitsi
+      Description: XMPP domain for unauthenticated users
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: XMPP_GUEST_DOMAIN
+      Required: 'false'
+      Target: XMPP_GUEST_DOMAIN
+      Type: Variable
+      value: guest.meet.jitsi
+    XMPP_INTERNAL_MUC_DOMAIN:
+      Default: internal-muc.meet.jitsi
+      Description: XMPP domain for the internal MUC
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: XMPP_INTERNAL_MUC_DOMAIN
+      Required: 'false'
+      Target: XMPP_INTERNAL_MUC_DOMAIN
+      Type: Variable
+      value: internal-muc.meet.jitsi
+    XMPP_INTERNAL_MUC_MODULES:
+      Default: info,alert
+      Description: Custom Prosody modules for internal MUC component (comma separated)
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: XMPP_INTERNAL_MUC_MODULES
+      Required: 'false'
+      Target: XMPP_INTERNAL_MUC_MODULES
+      Type: Variable
+      value: info,alert
+    XMPP_MODULES:
+      Default: info,alert
+      Description: Custom Prosody modules for XMPP_DOMAIN (comma separated)
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: XMPP_MODULES
+      Required: 'false'
+      Target: XMPP_MODULES
+      Type: Variable
+      value: info,alert
+    XMPP_MUC_DOMAIN:
+      Default: muc.meet.jitsi
+      Description: XMPP domain for the MUC
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: XMPP_MUC_DOMAIN
+      Required: 'false'
+      Target: XMPP_MUC_DOMAIN
+      Type: Variable
+      value: muc.meet.jitsi
+    XMPP_MUC_MODULES:
+      Default: info,alert
+      Description: Custom Prosody modules for MUC component (comma separated)
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: XMPP_MUC_MODULES
+      Required: 'false'
+      Target: XMPP_MUC_MODULES
+      Type: Variable
+      value: info,alert
+    XMPP_RECORDER_DOMAIN:
+      Default: recorder.meet.jitsi
+      Description: Domain for the jibri recorder
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: XMPP_RECORDER_DOMAIN
+      Required: 'false'
+      Target: XMPP_RECORDER_DOMAIN
+      Type: Variable
+      value: recorder.meet.jitsi
 FirstSeen: 1586362160
 Icon: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/jitsi.png
 LastUpdate: 1648707497

@@ -3,61 +3,66 @@ CategoryList:
 - Cloud
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: '8080'
-    Description: 'Container Port: 8080'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Host Port 1
-    Required: 'true'
-    Target: '8080'
-    Type: Port
-  value: '8585'
-- '@attributes':
-    Default: ''
-    Description: If behind a reverse proxy, what's the root address. i.e. jira.example.com
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: ATL_PROXY_NAME
-    Required: 'false'
-    Target: ATL_PROXY_NAME
-    Type: Variable
-  value: support.ibracorp.io
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: ATL_PROXY_PORT'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: ATL_PROXY_PORT
-    Required: 'false'
-    Target: ATL_PROXY_PORT
-    Type: Variable
-  value: '443'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: ATL_TOMCAT_SCHEME'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: ATL_TOMCAT_SCHEME
-    Required: 'false'
-    Target: ATL_TOMCAT_SCHEME
-    Type: Variable
-  value: https
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /var/atlassian/application-data/jira'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: rw
-    Name: Host Path 1
-    Required: 'true'
-    Target: /var/atlassian/application-data/jira
-    Type: Path
-  value: /mnt/user/appdata/JiraServiceDesk
+  Device: {}
+  Label: {}
+  Path:
+    Host Path 1:
+      Default: ''
+      Description: 'Container Path: /var/atlassian/application-data/jira'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: rw
+      Name: Host Path 1
+      Required: 'true'
+      Target: /var/atlassian/application-data/jira
+      Type: Path
+      value: /mnt/user/appdata/JiraServiceDesk
+  Port:
+    Host Port 1:
+      Default: '8080'
+      Description: 'Container Port: 8080'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Host Port 1
+      Required: 'true'
+      Target: '8080'
+      Type: Port
+      value: '8585'
+  Variable:
+    ATL_PROXY_NAME:
+      Default: ''
+      Description: If behind a reverse proxy, what's the root address. i.e. jira.example.com
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: ATL_PROXY_NAME
+      Required: 'false'
+      Target: ATL_PROXY_NAME
+      Type: Variable
+      value: support.ibracorp.io
+    ATL_PROXY_PORT:
+      Default: ''
+      Description: 'Container Variable: ATL_PROXY_PORT'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: ATL_PROXY_PORT
+      Required: 'false'
+      Target: ATL_PROXY_PORT
+      Type: Variable
+      value: '443'
+    ATL_TOMCAT_SCHEME:
+      Default: ''
+      Description: 'Container Variable: ATL_TOMCAT_SCHEME'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: ATL_TOMCAT_SCHEME
+      Required: 'false'
+      Target: ATL_TOMCAT_SCHEME
+      Type: Variable
+      value: https
 DonateImg: https://i.imgur.com/VHSkew7.png
 DonateText:
 - Help support my work by buying me a beer

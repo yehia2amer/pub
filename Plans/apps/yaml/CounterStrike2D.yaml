@@ -1,73 +1,78 @@
 CategoryList:
 - GameServers
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /serverdata/serverfiles'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: ServerFiles
-    Required: 'true'
-    Target: /serverdata/serverfiles
-    Type: Path
-  value: /mnt/cache/appdata/cs2d
-- '@attributes':
-    Default: ''
-    Description: Enter your extra startup parameters otherwise leave blank!
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Extra Game Parameters
-    Required: 'false'
-    Target: GAME_PARAMS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 36963'
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: UDP - Game Port
-    Required: 'true'
-    Target: '36963'
-    Type: Port
-  value: '36963'
-- '@attributes':
-    Default: ''
-    Description: Put in the value 'true' (without quotes) to Force Update the game
-      otherwise leave blank. Don't forget to delete the value after updating.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Force Update
-    Required: 'false'
-    Target: FORCE_UPDATE
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: UID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: UID
-    Required: 'true'
-    Target: UID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: GID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: GID
-    Required: 'true'
-    Target: GID
-    Type: Variable
-  value: '100'
+  Device: {}
+  Label: {}
+  Path:
+    ServerFiles:
+      Default: ''
+      Description: 'Container Path: /serverdata/serverfiles'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: ServerFiles
+      Required: 'true'
+      Target: /serverdata/serverfiles
+      Type: Path
+      value: /mnt/cache/appdata/cs2d
+  Port:
+    UDP - Game Port:
+      Default: ''
+      Description: 'Container Port: 36963'
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: UDP - Game Port
+      Required: 'true'
+      Target: '36963'
+      Type: Port
+      value: '36963'
+  Variable:
+    Extra Game Parameters:
+      Default: ''
+      Description: Enter your extra startup parameters otherwise leave blank!
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Extra Game Parameters
+      Required: 'false'
+      Target: GAME_PARAMS
+      Type: Variable
+      value: ''
+    Force Update:
+      Default: ''
+      Description: Put in the value 'true' (without quotes) to Force Update the game
+        otherwise leave blank. Don't forget to delete the value after updating.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Force Update
+      Required: 'false'
+      Target: FORCE_UPDATE
+      Type: Variable
+      value: ''
+    GID:
+      Default: ''
+      Description: 'Container Variable: GID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: GID
+      Required: 'true'
+      Target: GID
+      Type: Variable
+      value: '100'
+    UID:
+      Default: ''
+      Description: 'Container Variable: UID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: UID
+      Required: 'true'
+      Target: UID
+      Type: Variable
+      value: '99'
 DonateImg: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/donate.png
 DonateLink: https://www.paypal.me/chips777
 DonateText: 'If you like my work please '

@@ -2,61 +2,66 @@ CategoryList:
 - Productivity
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: -Xmx512m
-    Description: 'Container Variable: EXTRA_JAVA_OPTIONS'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: EXTRA_JAVA_OPTIONS
-    Required: 'false'
-    Target: EXTRA_JAVA_OPTIONS
-    Type: Variable
-  value: -Xms512m -Xmx2g -Xss256k -XX:+UseG1GC
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 8082'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Port 8082
-    Required: 'false'
-    Target: '8082'
-    Type: Port
-  value: '6182'
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 8081'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Port 8081
-    Required: 'false'
-    Target: '8081'
-    Type: Port
-  value: '6181'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: --user'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: --user
-    Required: 'false'
-    Target: --user
-    Type: Variable
-  value: ${UID}:${GID}
-- '@attributes':
-    Default: ''
-    Description: /var/opt/jfrog/artifactory
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: /var/opt/jfrog/artifactory
-    Required: 'false'
-    Target: /var/opt/jfrog/artifactory
-    Type: Path
-  value: /mnt/user/appdata/jcr
+  Device: {}
+  Label: {}
+  Path:
+    /var/opt/jfrog/artifactory:
+      Default: ''
+      Description: /var/opt/jfrog/artifactory
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: /var/opt/jfrog/artifactory
+      Required: 'false'
+      Target: /var/opt/jfrog/artifactory
+      Type: Path
+      value: /mnt/user/appdata/jcr
+  Port:
+    Port 8081:
+      Default: ''
+      Description: 'Container Port: 8081'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Port 8081
+      Required: 'false'
+      Target: '8081'
+      Type: Port
+      value: '6181'
+    Port 8082:
+      Default: ''
+      Description: 'Container Port: 8082'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Port 8082
+      Required: 'false'
+      Target: '8082'
+      Type: Port
+      value: '6182'
+  Variable:
+    --user:
+      Default: ''
+      Description: 'Container Variable: --user'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: --user
+      Required: 'false'
+      Target: --user
+      Type: Variable
+      value: ${UID}:${GID}
+    EXTRA_JAVA_OPTIONS:
+      Default: -Xmx512m
+      Description: 'Container Variable: EXTRA_JAVA_OPTIONS'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: EXTRA_JAVA_OPTIONS
+      Required: 'false'
+      Target: EXTRA_JAVA_OPTIONS
+      Type: Variable
+      value: -Xms512m -Xmx2g -Xss256k -XX:+UseG1GC
 FirstSeen: 1612465837
 Icon: https://i.imgur.com/sC4b5wD.png
 LastUpdateScan: 1646247826

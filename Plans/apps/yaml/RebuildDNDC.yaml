@@ -1,149 +1,154 @@
 CategoryList:
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: mastercontname'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Master Container Name
-    Required: 'true'
-    Target: mastercontname
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 'yes'
-    Description: 'Container Variable: mastercontconcheck (yes/no)'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Master Container Connection Check
-    Required: 'false'
-    Target: mastercontconcheck
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 1.1.1.1
-    Description: 'Container Variable: ping_ip'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Ping IP
-    Required: 'false'
-    Target: ping_ip
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 8.8.8.8
-    Description: 'Container Variable: ping_ip_alt'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Ping IP Alt
-    Required: 'false'
-    Target: ping_ip_alt
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '4'
-    Description: 'Container Variable: ping_count'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Ping Count
-    Required: 'false'
-    Target: ping_count
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '10'
-    Description: 'Container Variable: sleep_secs'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Sleep Secs
-    Required: 'false'
-    Target: sleep_secs
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: yes|no
-    Description: 'Container Variable: run_startup (yes/no)'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Run on Startup
-    Required: 'false'
-    Target: run_startup
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 'no'
-    Description: 'Container Variable: discord_notifications (yes/no)'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Enable Discord Notifications
-    Required: 'false'
-    Target: discord_notifications
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: discord_url'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Discord Webhook URL
-    Required: 'false'
-    Target: discord_url
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: /var/run/docker.sock
-    Description: 'Container Path: /var/run/docker.sock'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: rw
-    Name: Docker Sock
-    Required: 'true'
-    Target: /var/run/docker.sock
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: '*/5 * * * *'
-    Description: 'Container Variable: cron'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: CRON Schedule
-    Required: 'false'
-    Target: cron
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: /boot/config/plugins/dockerMan/templates-user
-    Description: 'Container Path: /config/docker-templates'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ro
-    Name: Docker Template Location
-    Required: 'true'
-    Target: /config/docker-templates
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: /mnt/user/appdata/rebuild-dndc
-    Description: 'Container Path: /config/rebuild-dndc'
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: Config
-    Required: 'false'
-    Target: /config/rebuild-dndc
-    Type: Path
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Config:
+      Default: /mnt/user/appdata/rebuild-dndc
+      Description: 'Container Path: /config/rebuild-dndc'
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: Config
+      Required: 'false'
+      Target: /config/rebuild-dndc
+      Type: Path
+      value: ''
+    Docker Sock:
+      Default: /var/run/docker.sock
+      Description: 'Container Path: /var/run/docker.sock'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: rw
+      Name: Docker Sock
+      Required: 'true'
+      Target: /var/run/docker.sock
+      Type: Path
+      value: ''
+    Docker Template Location:
+      Default: /boot/config/plugins/dockerMan/templates-user
+      Description: 'Container Path: /config/docker-templates'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ro
+      Name: Docker Template Location
+      Required: 'true'
+      Target: /config/docker-templates
+      Type: Path
+      value: ''
+  Port: {}
+  Variable:
+    CRON Schedule:
+      Default: '*/5 * * * *'
+      Description: 'Container Variable: cron'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: CRON Schedule
+      Required: 'false'
+      Target: cron
+      Type: Variable
+      value: ''
+    Discord Webhook URL:
+      Default: ''
+      Description: 'Container Variable: discord_url'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Discord Webhook URL
+      Required: 'false'
+      Target: discord_url
+      Type: Variable
+      value: ''
+    Enable Discord Notifications:
+      Default: 'no'
+      Description: 'Container Variable: discord_notifications (yes/no)'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Enable Discord Notifications
+      Required: 'false'
+      Target: discord_notifications
+      Type: Variable
+      value: ''
+    Master Container Connection Check:
+      Default: 'yes'
+      Description: 'Container Variable: mastercontconcheck (yes/no)'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Master Container Connection Check
+      Required: 'false'
+      Target: mastercontconcheck
+      Type: Variable
+      value: ''
+    Master Container Name:
+      Default: ''
+      Description: 'Container Variable: mastercontname'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Master Container Name
+      Required: 'true'
+      Target: mastercontname
+      Type: Variable
+      value: ''
+    Ping Count:
+      Default: '4'
+      Description: 'Container Variable: ping_count'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Ping Count
+      Required: 'false'
+      Target: ping_count
+      Type: Variable
+      value: ''
+    Ping IP:
+      Default: 1.1.1.1
+      Description: 'Container Variable: ping_ip'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Ping IP
+      Required: 'false'
+      Target: ping_ip
+      Type: Variable
+      value: ''
+    Ping IP Alt:
+      Default: 8.8.8.8
+      Description: 'Container Variable: ping_ip_alt'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Ping IP Alt
+      Required: 'false'
+      Target: ping_ip_alt
+      Type: Variable
+      value: ''
+    Run on Startup:
+      Default: yes|no
+      Description: 'Container Variable: run_startup (yes/no)'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Run on Startup
+      Required: 'false'
+      Target: run_startup
+      Type: Variable
+      value: ''
+    Sleep Secs:
+      Default: '10'
+      Description: 'Container Variable: sleep_secs'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Sleep Secs
+      Required: 'false'
+      Target: sleep_secs
+      Type: Variable
+      value: ''
 FirstSeen: 1572851494
 Icon: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/rdndc.png
 LastUpdate: 1630285192

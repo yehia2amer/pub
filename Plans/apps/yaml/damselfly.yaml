@@ -1,51 +1,56 @@
 CategoryList:
 - MediaApp-Photos
 Config:
-- '@attributes':
-    Default: ''
-    Description: "Container Path: /config\r\n\r\nStandard location for docker configs."
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Damselfly config
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: /mnt/user/appdata/damselfly/
-- '@attributes':
-    Default: ''
-    Description: "Container Path: /pictures\r\n\r\nLocation of your pictures."
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Pictures
-    Required: 'true'
-    Target: /pictures
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: "Container Path: /thumbs\r\n\r\nLocation for Damselfly to store thumbs\
-      \ of your pictures."
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Thumbs
-    Required: 'true'
-    Target: /thumbs
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: '6363'
-    Description: 'Container port: 6363'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Damselfly port
-    Required: 'true'
-    Target: '6363'
-    Type: Port
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Damselfly config:
+      Default: ''
+      Description: "Container Path: /config\r\n\r\nStandard location for docker configs."
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Damselfly config
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: /mnt/user/appdata/damselfly/
+    Pictures:
+      Default: ''
+      Description: "Container Path: /pictures\r\n\r\nLocation of your pictures."
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Pictures
+      Required: 'true'
+      Target: /pictures
+      Type: Path
+      value: ''
+    Thumbs:
+      Default: ''
+      Description: "Container Path: /thumbs\r\n\r\nLocation for Damselfly to store\
+        \ thumbs of your pictures."
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Thumbs
+      Required: 'true'
+      Target: /thumbs
+      Type: Path
+      value: ''
+  Port:
+    Damselfly port:
+      Default: '6363'
+      Description: 'Container port: 6363'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Damselfly port
+      Required: 'true'
+      Target: '6363'
+      Type: Port
+      value: ''
+  Variable: {}
 DonateLink: https://www.buymeacoffee.com/damselfly
 DonateText: Damselfly is free and open-source, but if you like it and fancy buying
   me a slice of pizza, that would be great!

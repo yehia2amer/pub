@@ -1,110 +1,115 @@
 CategoryList:
 - GameServers
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /serverdata/serverfiles'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: ServerFiles
-    Required: 'true'
-    Target: /serverdata/serverfiles
-    Type: Path
-  value: /mnt/cache/appdata/openttd
-- '@attributes':
-    Default: ''
-    Description: 'To load the last autosavegame you MUST specifie the following in
-      the GAME_PARAMETERS variable: ''-g /serverdata/serverfiles/.local/share/openttd/save/autosave/autosave0.sav'''
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: GAME_PARAMS
-    Required: 'false'
-    Target: GAME_PARAMS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 3979'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: TCP - Game Port
-    Required: 'true'
-    Target: '3979'
-    Type: Port
-  value: '3979'
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 3979'
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: UDP - Game Port
-    Required: 'true'
-    Target: '3979'
-    Type: Port
-  value: '3979'
-- '@attributes':
-    Default: ''
-    Description: 'WebConsole (by default, you can connect to the OpenTTD console by
-      opening your browser and go to HOSTIP:9015 - eg: 192.168.1.1:9015 - or click
-      on WebUI on the Docker page within Unraid).'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: TCP - WebConsole
-    Required: 'false'
-    Target: '8080'
-    Type: Port
-  value: '9015'
-- '@attributes':
-    Default: ''
-    Description: 'Define the prefered game version (eg: ''1.10.3'' without quotes)
-      or set to ''latest'' (without quotes) to pull the newest build.'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Game Version to Install
-    Required: 'true'
-    Target: GAME_VERSION
-    Type: Variable
-  value: latest
-- '@attributes':
-    Default: ''
-    Description: 'Define the prefered OpenGFX version (eg: ''0.6.0'' without quotes)
-      or set to ''latest'' (without quotes) to pull the newest build.'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: OpenGFX Version
-    Required: 'true'
-    Target: GFX_PK_V
-    Type: Variable
-  value: latest
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: UID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: UID
-    Required: 'true'
-    Target: UID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: GID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: GID
-    Required: 'true'
-    Target: GID
-    Type: Variable
-  value: '100'
+  Device: {}
+  Label: {}
+  Path:
+    ServerFiles:
+      Default: ''
+      Description: 'Container Path: /serverdata/serverfiles'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: ServerFiles
+      Required: 'true'
+      Target: /serverdata/serverfiles
+      Type: Path
+      value: /mnt/cache/appdata/openttd
+  Port:
+    TCP - Game Port:
+      Default: ''
+      Description: 'Container Port: 3979'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: TCP - Game Port
+      Required: 'true'
+      Target: '3979'
+      Type: Port
+      value: '3979'
+    TCP - WebConsole:
+      Default: ''
+      Description: 'WebConsole (by default, you can connect to the OpenTTD console
+        by opening your browser and go to HOSTIP:9015 - eg: 192.168.1.1:9015 - or
+        click on WebUI on the Docker page within Unraid).'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: TCP - WebConsole
+      Required: 'false'
+      Target: '8080'
+      Type: Port
+      value: '9015'
+    UDP - Game Port:
+      Default: ''
+      Description: 'Container Port: 3979'
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: UDP - Game Port
+      Required: 'true'
+      Target: '3979'
+      Type: Port
+      value: '3979'
+  Variable:
+    GAME_PARAMS:
+      Default: ''
+      Description: 'To load the last autosavegame you MUST specifie the following
+        in the GAME_PARAMETERS variable: ''-g /serverdata/serverfiles/.local/share/openttd/save/autosave/autosave0.sav'''
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: GAME_PARAMS
+      Required: 'false'
+      Target: GAME_PARAMS
+      Type: Variable
+      value: ''
+    GID:
+      Default: ''
+      Description: 'Container Variable: GID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: GID
+      Required: 'true'
+      Target: GID
+      Type: Variable
+      value: '100'
+    Game Version to Install:
+      Default: ''
+      Description: 'Define the prefered game version (eg: ''1.10.3'' without quotes)
+        or set to ''latest'' (without quotes) to pull the newest build.'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Game Version to Install
+      Required: 'true'
+      Target: GAME_VERSION
+      Type: Variable
+      value: latest
+    OpenGFX Version:
+      Default: ''
+      Description: 'Define the prefered OpenGFX version (eg: ''0.6.0'' without quotes)
+        or set to ''latest'' (without quotes) to pull the newest build.'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: OpenGFX Version
+      Required: 'true'
+      Target: GFX_PK_V
+      Type: Variable
+      value: latest
+    UID:
+      Default: ''
+      Description: 'Container Variable: UID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: UID
+      Required: 'true'
+      Target: UID
+      Type: Variable
+      value: '99'
 DonateImg: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/donate.png
 DonateLink: https://www.paypal.me/chips777
 DonateText: 'If you like my work please '

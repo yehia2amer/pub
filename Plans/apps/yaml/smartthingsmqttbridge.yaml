@@ -2,28 +2,33 @@ CategoryList:
 - HomeAutomation
 - Network-Management
 Config:
-- '@attributes':
-    Default: '8080'
-    Description: 'Container Port: 8080'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: BridgePort
-    Required: 'true'
-    Target: '8080'
-    Type: Port
-  value: '8080'
-- '@attributes':
-    Default: /mnt/user/appdata/smartthings-mqtt-bridge
-    Description: 'Container Path: /config'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: BridgeDataPath
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: /mnt/user/appdata/smartthings-mqtt-bridge
+  Device: {}
+  Label: {}
+  Path:
+    BridgeDataPath:
+      Default: /mnt/user/appdata/smartthings-mqtt-bridge
+      Description: 'Container Path: /config'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: BridgeDataPath
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: /mnt/user/appdata/smartthings-mqtt-bridge
+  Port:
+    BridgePort:
+      Default: '8080'
+      Description: 'Container Port: 8080'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: BridgePort
+      Required: 'true'
+      Target: '8080'
+      Type: Port
+      value: '8080'
+  Variable: {}
 Deprecated: true
 FirstSeen: '1530060995'
 Icon: https://raw.githubusercontent.com/digiblur/unraid-docker-templates/master/images/smartthings-mqtt-bridge_icon.png

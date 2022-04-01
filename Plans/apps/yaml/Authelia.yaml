@@ -3,49 +3,54 @@ CategoryList:
 - Security
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: '9091'
-    Description: This is the Web UI Port, and is used to access the server gui.
-    Display: always
-    Mode: tcp
-    Name: Authelia Web UI
-    Required: 'true'
-    Target: '9091'
-    Type: Port
-  value: '9091'
-- '@attributes':
-    Default: ''
-    Description: PUID
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: PUID
-    Required: 'false'
-    Target: PUID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: ''
-    Description: PGID
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: PGID
-    Required: 'false'
-    Target: PGID
-    Type: Variable
-  value: '100'
-- '@attributes':
-    Default: /mnt/user/appdata/authelia
-    Description: 'Container Path: /config'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: AppData Config Path
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: /mnt/user/appdata/authelia
+  Device: {}
+  Label: {}
+  Path:
+    AppData Config Path:
+      Default: /mnt/user/appdata/authelia
+      Description: 'Container Path: /config'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: AppData Config Path
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: /mnt/user/appdata/authelia
+  Port:
+    Authelia Web UI:
+      Default: '9091'
+      Description: This is the Web UI Port, and is used to access the server gui.
+      Display: always
+      Mode: tcp
+      Name: Authelia Web UI
+      Required: 'true'
+      Target: '9091'
+      Type: Port
+      value: '9091'
+  Variable:
+    PGID:
+      Default: ''
+      Description: PGID
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PGID
+      Required: 'false'
+      Target: PGID
+      Type: Variable
+      value: '100'
+    PUID:
+      Default: ''
+      Description: PUID
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PUID
+      Required: 'false'
+      Target: PUID
+      Type: Variable
+      value: '99'
 DonateLink: https://paypal.me/ramteksolutions
 DonateText: Help support my work by buying me a beer
 FirstSeen: 1593270239

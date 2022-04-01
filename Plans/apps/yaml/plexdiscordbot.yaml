@@ -1,138 +1,143 @@
 CAComment: Note that this project appears to have been abandoned, and may ultimately
   be removed from CA
 Config:
-- '@attributes':
-    Default: America/Denver
-    Description: Local TimeZone
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Time_Zone
-    Required: 'true'
-    Target: TZ
-    Type: Variable
-  value: America/Denver
-- '@attributes':
-    Default: Client ID
-    Description: 'Container Variable: DISCORD_CLIENT_ID'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DISCORD_CLIENT_ID
-    Required: 'true'
-    Target: DISCORD_CLIENT_ID
-    Type: Variable
-  value: Client ID
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: DISCORD_CLIENT_SECRET'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DISCORD_CLIENT_SECRET
-    Required: 'true'
-    Target: DISCORD_CLIENT_SECRET
-    Type: Variable
-  value: Client Secret
-- '@attributes':
-    Default: Username
-    Description: 'Container Variable: DISCORD_BOT_USERNAME'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DISCORD_BOT_USERNAME
-    Required: 'true'
-    Target: DISCORD_BOT_USERNAME
-    Type: Variable
-  value: username
-- '@attributes':
-    Default: Token
-    Description: 'Container Variable: DISCORD_BOT_TOKEN'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DISCORD_BOT_TOKEN
-    Required: 'true'
-    Target: DISCORD_BOT_TOKEN
-    Type: Variable
-  value: token
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: PLEX_LOCAL_IP'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: PLEX_LOCAL_IP
-    Required: 'true'
-    Target: PLEX_LOCAL_IP
-    Type: Variable
-  value: Local IP
-- '@attributes':
-    Default: '32400'
-    Description: 'Container Port: PLEX_LOCAL_PORT'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: PLEX_LOCAL_PORT
-    Required: 'true'
-    Target: PLEX_LOCAL_PORT
-    Type: Port
-  value: Local Port
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: PLEX_USERNAME'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: PLEX_USERNAME
-    Required: 'true'
-    Target: PLEX_USERNAME
-    Type: Variable
-  value: Username
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: PLEX_PASSWORD'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: PLEX_PASSWORD
-    Required: 'true'
-    Target: PLEX_PASSWORD
-    Type: Variable
-  value: Password
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: PLEX_TOKEN'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: PLEX_TOKEN
-    Required: 'true'
-    Target: PLEX_TOKEN
-    Type: Variable
-  value: Token
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: PLEX_MACHINEID'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: PLEX_MACHINEID
-    Required: 'true'
-    Target: PLEX_MACHINEID
-    Type: Variable
-  value: Machine ID
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: PLEX_MANAGED_USERNAME'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: PLEX_MANAGED_USERNAME
-    Required: 'true'
-    Target: PLEX_MANAGED_USERNAME
-    Type: Variable
-  value: Managed user
+  Device: {}
+  Label: {}
+  Path: {}
+  Port:
+    PLEX_LOCAL_PORT:
+      Default: '32400'
+      Description: 'Container Port: PLEX_LOCAL_PORT'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: PLEX_LOCAL_PORT
+      Required: 'true'
+      Target: PLEX_LOCAL_PORT
+      Type: Port
+      value: Local Port
+  Variable:
+    DISCORD_BOT_TOKEN:
+      Default: Token
+      Description: 'Container Variable: DISCORD_BOT_TOKEN'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DISCORD_BOT_TOKEN
+      Required: 'true'
+      Target: DISCORD_BOT_TOKEN
+      Type: Variable
+      value: token
+    DISCORD_BOT_USERNAME:
+      Default: Username
+      Description: 'Container Variable: DISCORD_BOT_USERNAME'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DISCORD_BOT_USERNAME
+      Required: 'true'
+      Target: DISCORD_BOT_USERNAME
+      Type: Variable
+      value: username
+    DISCORD_CLIENT_ID:
+      Default: Client ID
+      Description: 'Container Variable: DISCORD_CLIENT_ID'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DISCORD_CLIENT_ID
+      Required: 'true'
+      Target: DISCORD_CLIENT_ID
+      Type: Variable
+      value: Client ID
+    DISCORD_CLIENT_SECRET:
+      Default: ''
+      Description: 'Container Variable: DISCORD_CLIENT_SECRET'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DISCORD_CLIENT_SECRET
+      Required: 'true'
+      Target: DISCORD_CLIENT_SECRET
+      Type: Variable
+      value: Client Secret
+    PLEX_LOCAL_IP:
+      Default: ''
+      Description: 'Container Variable: PLEX_LOCAL_IP'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: PLEX_LOCAL_IP
+      Required: 'true'
+      Target: PLEX_LOCAL_IP
+      Type: Variable
+      value: Local IP
+    PLEX_MACHINEID:
+      Default: ''
+      Description: 'Container Variable: PLEX_MACHINEID'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: PLEX_MACHINEID
+      Required: 'true'
+      Target: PLEX_MACHINEID
+      Type: Variable
+      value: Machine ID
+    PLEX_MANAGED_USERNAME:
+      Default: ''
+      Description: 'Container Variable: PLEX_MANAGED_USERNAME'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: PLEX_MANAGED_USERNAME
+      Required: 'true'
+      Target: PLEX_MANAGED_USERNAME
+      Type: Variable
+      value: Managed user
+    PLEX_PASSWORD:
+      Default: ''
+      Description: 'Container Variable: PLEX_PASSWORD'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: PLEX_PASSWORD
+      Required: 'true'
+      Target: PLEX_PASSWORD
+      Type: Variable
+      value: Password
+    PLEX_TOKEN:
+      Default: ''
+      Description: 'Container Variable: PLEX_TOKEN'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: PLEX_TOKEN
+      Required: 'true'
+      Target: PLEX_TOKEN
+      Type: Variable
+      value: Token
+    PLEX_USERNAME:
+      Default: ''
+      Description: 'Container Variable: PLEX_USERNAME'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: PLEX_USERNAME
+      Required: 'true'
+      Target: PLEX_USERNAME
+      Type: Variable
+      value: Username
+    Time_Zone:
+      Default: America/Denver
+      Description: Local TimeZone
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Time_Zone
+      Required: 'true'
+      Target: TZ
+      Type: Variable
+      value: America/Denver
 FirstSeen: '1530633774'
 Icon: ''
 LastUpdate: 1510588536

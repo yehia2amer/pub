@@ -5,113 +5,107 @@ CategoryList:
 - Tools-Utilities
 ChangeLogPresent: true
 Config:
-- '@attributes':
-    Default: '8384'
-    Description: Application WebUI
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'true'
-    Target: '8384'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: '22000'
-    Description: Listening port (TCP)
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: 'Port: 22000'
-    Required: 'true'
-    Target: '22000'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: '22000'
-    Description: Listening port (UDP)
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: 'Port: 22000'
-    Required: 'true'
-    Target: '22000'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: '21027'
-    Description: Protocol discovery
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: 'Port: 21027'
-    Required: 'true'
-    Target: '21027'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Configuration files.
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: Appdata
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Data1
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: 'Path: /data1'
-    Required: 'true'
-    Target: /data1
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Data2
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: 'Path: /data2'
-    Required: 'true'
-    Target: /data2
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: '99'
-    Description: 'Container Variable: PUID'
-    Display: advanced
-    Mask: 'false'
-    Name: PUID
-    Required: 'true'
-    Target: PUID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '100'
-    Description: 'Container Variable: PGID'
-    Display: advanced
-    Mask: 'false'
-    Name: PGID
-    Required: 'true'
-    Target: PGID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '022'
-    Description: 'Container Variable: UMASK'
-    Display: advanced
-    Mask: 'false'
-    Name: UMASK
-    Required: 'false'
-    Target: UMASK
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Appdata:
+      Default: ''
+      Description: Configuration files.
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: Appdata
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: ''
+    'Path: /data1':
+      Default: ''
+      Description: Data1
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: 'Path: /data1'
+      Required: 'true'
+      Target: /data1
+      Type: Path
+      value: ''
+    'Path: /data2':
+      Default: ''
+      Description: Data2
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: 'Path: /data2'
+      Required: 'true'
+      Target: /data2
+      Type: Path
+      value: ''
+  Port:
+    'Port: 21027':
+      Default: '21027'
+      Description: Protocol discovery
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: 'Port: 21027'
+      Required: 'true'
+      Target: '21027'
+      Type: Port
+      value: ''
+    'Port: 22000':
+      Default: '22000'
+      Description: Listening port (UDP)
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: 'Port: 22000'
+      Required: 'true'
+      Target: '22000'
+      Type: Port
+      value: ''
+    WebUI:
+      Default: '8384'
+      Description: Application WebUI
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'true'
+      Target: '8384'
+      Type: Port
+      value: ''
+  Variable:
+    PGID:
+      Default: '100'
+      Description: 'Container Variable: PGID'
+      Display: advanced
+      Mask: 'false'
+      Name: PGID
+      Required: 'true'
+      Target: PGID
+      Type: Variable
+      value: ''
+    PUID:
+      Default: '99'
+      Description: 'Container Variable: PUID'
+      Display: advanced
+      Mask: 'false'
+      Name: PUID
+      Required: 'true'
+      Target: PUID
+      Type: Variable
+      value: ''
+    UMASK:
+      Default: '022'
+      Description: 'Container Variable: UMASK'
+      Display: advanced
+      Mask: 'false'
+      Name: UMASK
+      Required: 'false'
+      Target: UMASK
+      Type: Variable
+      value: ''
 DonateImg: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/donate.png
 DonateLink: https://www.linuxserver.io/donate
 DonateText: Donations

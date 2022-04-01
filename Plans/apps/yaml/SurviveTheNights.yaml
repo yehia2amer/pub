@@ -1,134 +1,139 @@
 CategoryList:
 - GameServers
 Config:
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: SteamCMD
-    Required: 'true'
-    Target: /serverdata/steamcmd
-    Type: Path
-  value: /mnt/user/appdata/steamcmd
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: ServerFiles
-    Required: 'true'
-    Target: /serverdata/serverfiles
-    Type: Path
-  value: /mnt/cache/appdata/survivethenights
-- '@attributes':
-    Default: ''
-    Description: The GAME_ID that the container download at startup.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: GAME_ID
-    Required: 'true'
-    Target: GAME_ID
-    Type: Variable
-  value: '1502300'
-- '@attributes':
-    Default: ''
-    Description: Enter your start up commands for the server.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: GAME_PARAMS
-    Required: 'false'
-    Target: GAME_PARAMS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: UDP Game Ports (If you need another port delete this entry and create
-      a new UDP port mapping with the corresponding port range | GAME_PORT +1 | also
-      don't forget to change the port in your ServerConfig.txt)
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: UDP - Game Port Range
-    Required: 'false'
-    Target: 7950-7951
-    Type: Port
-  value: 7950-7951
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: UID
-    Required: 'true'
-    Target: UID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: GID
-    Required: 'true'
-    Target: GID
-    Type: Variable
-  value: '100'
-- '@attributes':
-    Default: ''
-    Description: 'Your Steam username goes here if you want to install a game that
-      needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
-      Steam Guard).'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Steam-Username
-    Required: 'false'
-    Target: USERNAME
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Set the Variable to 'true' if you want to validate the installation
-      otherwise leave it blank.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Validate Installation
-    Required: 'false'
-    Target: VALIDATE
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Your Steam password goes here if you want to install a game that
-      needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
-      Steam Guard).'
-    Display: advanced
-    Mask: 'true'
-    Mode: ''
-    Name: Steam-Password
-    Required: 'false'
-    Target: PASSWRD
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Only change if you know what you are doing!
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Debug Log Output
-    Required: 'false'
-    Target: DEBUG_OUTPUT
-    Type: Variable
-  value: 'false'
+  Device: {}
+  Label: {}
+  Path:
+    ServerFiles:
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: ServerFiles
+      Required: 'true'
+      Target: /serverdata/serverfiles
+      Type: Path
+      value: /mnt/cache/appdata/survivethenights
+    SteamCMD:
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: SteamCMD
+      Required: 'true'
+      Target: /serverdata/steamcmd
+      Type: Path
+      value: /mnt/user/appdata/steamcmd
+  Port:
+    UDP - Game Port Range:
+      Default: ''
+      Description: UDP Game Ports (If you need another port delete this entry and
+        create a new UDP port mapping with the corresponding port range | GAME_PORT
+        +1 | also don't forget to change the port in your ServerConfig.txt)
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: UDP - Game Port Range
+      Required: 'false'
+      Target: 7950-7951
+      Type: Port
+      value: 7950-7951
+  Variable:
+    Debug Log Output:
+      Default: ''
+      Description: Only change if you know what you are doing!
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Debug Log Output
+      Required: 'false'
+      Target: DEBUG_OUTPUT
+      Type: Variable
+      value: 'false'
+    GAME_ID:
+      Default: ''
+      Description: The GAME_ID that the container download at startup.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: GAME_ID
+      Required: 'true'
+      Target: GAME_ID
+      Type: Variable
+      value: '1502300'
+    GAME_PARAMS:
+      Default: ''
+      Description: Enter your start up commands for the server.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: GAME_PARAMS
+      Required: 'false'
+      Target: GAME_PARAMS
+      Type: Variable
+      value: ''
+    GID:
+      Default: ''
+      Description: ''
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: GID
+      Required: 'true'
+      Target: GID
+      Type: Variable
+      value: '100'
+    Steam-Password:
+      Default: ''
+      Description: 'Your Steam password goes here if you want to install a game that
+        needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
+        Steam Guard).'
+      Display: advanced
+      Mask: 'true'
+      Mode: ''
+      Name: Steam-Password
+      Required: 'false'
+      Target: PASSWRD
+      Type: Variable
+      value: ''
+    Steam-Username:
+      Default: ''
+      Description: 'Your Steam username goes here if you want to install a game that
+        needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
+        Steam Guard).'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Steam-Username
+      Required: 'false'
+      Target: USERNAME
+      Type: Variable
+      value: ''
+    UID:
+      Default: ''
+      Description: ''
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: UID
+      Required: 'true'
+      Target: UID
+      Type: Variable
+      value: '99'
+    Validate Installation:
+      Default: ''
+      Description: Set the Variable to 'true' if you want to validate the installation
+        otherwise leave it blank.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Validate Installation
+      Required: 'false'
+      Target: VALIDATE
+      Type: Variable
+      value: ''
 DonateLink: https://www.paypal.me/chips777
 DonateText: 'If you like my work please '
 ExtraParams: --restart=unless-stopped

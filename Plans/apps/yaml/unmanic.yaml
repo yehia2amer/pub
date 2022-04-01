@@ -2,95 +2,100 @@ CategoryList:
 - Productivity
 - MediaApp-Video
 Config:
-- '@attributes':
-    Default: '8888'
-    Description: 'Container Port: 8888'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'false'
-    Target: '8888'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: /mnt/user/appdata/unmanic
-    Description: 'Container Path: /config'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Appdata
-    Required: 'false'
-    Target: /config
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: /mnt/user/Media/Movies
-    Description: 'Container Path: /library/movies'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Library Movies
-    Required: 'false'
-    Target: /library/movies
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: /mnt/user/Media/TV
-    Description: 'Container Path: /library/tv'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Library TV
-    Required: 'false'
-    Target: /library/tv
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /tmp/unmanic'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Encoding Cache Directory
-    Required: 'false'
-    Target: /tmp/unmanic
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: '99'
-    Description: 'Container Variable: PUID'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: PUID
-    Required: 'false'
-    Target: PUID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '100'
-    Description: 'Container Variable: PGID'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: PGID
-    Required: 'false'
-    Target: PGID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 'false'
-    Description: 'Container Variable: NVIDIA_VISIBLE_DEVICES  (Required only for Nvidia
-      GPU hardware accelerated encoding)'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Nvidia GPU UUID
-    Required: 'false'
-    Target: NVIDIA_VISIBLE_DEVICES
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Appdata:
+      Default: /mnt/user/appdata/unmanic
+      Description: 'Container Path: /config'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Appdata
+      Required: 'false'
+      Target: /config
+      Type: Path
+      value: ''
+    Encoding Cache Directory:
+      Default: ''
+      Description: 'Container Path: /tmp/unmanic'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Encoding Cache Directory
+      Required: 'false'
+      Target: /tmp/unmanic
+      Type: Path
+      value: ''
+    Library Movies:
+      Default: /mnt/user/Media/Movies
+      Description: 'Container Path: /library/movies'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Library Movies
+      Required: 'false'
+      Target: /library/movies
+      Type: Path
+      value: ''
+    Library TV:
+      Default: /mnt/user/Media/TV
+      Description: 'Container Path: /library/tv'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Library TV
+      Required: 'false'
+      Target: /library/tv
+      Type: Path
+      value: ''
+  Port:
+    WebUI:
+      Default: '8888'
+      Description: 'Container Port: 8888'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'false'
+      Target: '8888'
+      Type: Port
+      value: ''
+  Variable:
+    Nvidia GPU UUID:
+      Default: 'false'
+      Description: 'Container Variable: NVIDIA_VISIBLE_DEVICES  (Required only for
+        Nvidia GPU hardware accelerated encoding)'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Nvidia GPU UUID
+      Required: 'false'
+      Target: NVIDIA_VISIBLE_DEVICES
+      Type: Variable
+      value: ''
+    PGID:
+      Default: '100'
+      Description: 'Container Variable: PGID'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PGID
+      Required: 'false'
+      Target: PGID
+      Type: Variable
+      value: ''
+    PUID:
+      Default: '99'
+      Description: 'Container Variable: PUID'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PUID
+      Required: 'false'
+      Target: PUID
+      Type: Variable
+      value: ''
 DonateLink: https://www.patreon.com/josh5
 DonateText: Support me on Patreon
 FirstSeen: 1636693401

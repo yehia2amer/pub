@@ -2,28 +2,33 @@ CategoryList:
 - HomeAutomation
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: /mnt/user/appdata/zigbee2mqtt
-    Description: 'Container Path: /app/data'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: appdata
-    Required: 'true'
-    Target: /app/data
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: '9442'
-    Description: 'Container Port: 9442'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'true'
-    Target: '9442'
-    Type: Port
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    appdata:
+      Default: /mnt/user/appdata/zigbee2mqtt
+      Description: 'Container Path: /app/data'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: appdata
+      Required: 'true'
+      Target: /app/data
+      Type: Path
+      value: ''
+  Port:
+    WebUI:
+      Default: '9442'
+      Description: 'Container Port: 9442'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'true'
+      Target: '9442'
+      Type: Port
+      value: ''
+  Variable: {}
 FirstSeen: 1599768471
 Icon: https://raw.githubusercontent.com/digiblur/unraid-docker-templates/master/images/zigbee2mqtt.png
 LastUpdate: 1646495509

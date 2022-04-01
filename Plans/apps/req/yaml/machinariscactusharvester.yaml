@@ -1,135 +1,140 @@
 CategoryList:
 - Crypto
 Config:
-- '@attributes':
-    Default: /mnt/user/appdata/machinaris-cactus
-    Description: Holds app data for the container. Not for temp plotting or final
-      plot storage.
-    Display: always-hide
-    Mask: 'false'
-    Mode: rw
-    Name: appdata
-    Required: 'false'
-    Target: /root/.chia
-    Type: Path
-  value: /mnt/user/appdata/machinaris-cactus
-- '@attributes':
-    Default: ''
-    Description: 'Holds completed plots for farming. Create more Paths for additional
-      folders like plots1,plots2,etc... '
-    Display: always-hide
-    Mask: 'false'
-    Mode: rw
-    Name: plots1
-    Required: 'false'
-    Target: /plots1
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: /plots1
-    Description: 'A colon-separated list of all in-container paths (defined above)
-      holding your completed plots.  Example: /plots1:/plots2:/plots3'
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: plots_dir
-    Required: 'false'
-    Target: plots_dir
-    Type: Variable
-  value: /plots1
-- '@attributes':
-    Default: ''
-    Description: The IP address of the Machinaris Controller on your LAN for controller/worker
-      communication. ANOTHER COMPUTER
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: controller_host
-    Required: 'true'
-    Target: controller_host
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: The IP address of the Cactus fullnode farmer this harvester will
-      connect to. ANOTHER COMPUTER
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: farmer_address
-    Required: 'true'
-    Target: farmer_address
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '11447'
-    Description: The port of the Cactus fullnode farmer this harvester will connect
-      to.
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: farmer_port
-    Required: 'true'
-    Target: farmer_port
-    Type: Variable
-  value: '11447'
-- '@attributes':
-    Default: ''
-    Description: The IP address of this Unraid server on your LAN for controller/worker
-      communication. THIS COMPUTER
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: worker_address
-    Required: 'true'
-    Target: worker_address
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: The TCP port of the Machinaris worker for controller/worker communication.
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: worker_api_port
-    Required: 'true'
-    Target: worker_api_port
-    Type: Variable
-  value: '8936'
-- '@attributes':
-    Default: '8936'
-    Description: Leave at 8936 for Cactus
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: tcp
-    Name: worker_port
-    Required: 'true'
-    Target: '8936'
-    Type: Port
-  value: '8936'
-- '@attributes':
-    Default: harvester
-    Description: Default is 'harvester'.  If plotting as well, use 'harvester,plotter'
-      and add a '/plotting' Path mount.
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: mode
-    Required: 'true'
-    Target: mode
-    Type: Variable
-  value: harvester
-- '@attributes':
-    Default: cactus
-    Description: Leave at 'cactus'.  Only one, not multple.
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: blockchains
-    Required: 'false'
-    Target: blockchains
-    Type: Variable
-  value: cactus
+  Device: {}
+  Label: {}
+  Path:
+    appdata:
+      Default: /mnt/user/appdata/machinaris-cactus
+      Description: Holds app data for the container. Not for temp plotting or final
+        plot storage.
+      Display: always-hide
+      Mask: 'false'
+      Mode: rw
+      Name: appdata
+      Required: 'false'
+      Target: /root/.chia
+      Type: Path
+      value: /mnt/user/appdata/machinaris-cactus
+    plots1:
+      Default: ''
+      Description: 'Holds completed plots for farming. Create more Paths for additional
+        folders like plots1,plots2,etc... '
+      Display: always-hide
+      Mask: 'false'
+      Mode: rw
+      Name: plots1
+      Required: 'false'
+      Target: /plots1
+      Type: Path
+      value: ''
+  Port:
+    worker_port:
+      Default: '8936'
+      Description: Leave at 8936 for Cactus
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: tcp
+      Name: worker_port
+      Required: 'true'
+      Target: '8936'
+      Type: Port
+      value: '8936'
+  Variable:
+    blockchains:
+      Default: cactus
+      Description: Leave at 'cactus'.  Only one, not multple.
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: blockchains
+      Required: 'false'
+      Target: blockchains
+      Type: Variable
+      value: cactus
+    controller_host:
+      Default: ''
+      Description: The IP address of the Machinaris Controller on your LAN for controller/worker
+        communication. ANOTHER COMPUTER
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: controller_host
+      Required: 'true'
+      Target: controller_host
+      Type: Variable
+      value: ''
+    farmer_address:
+      Default: ''
+      Description: The IP address of the Cactus fullnode farmer this harvester will
+        connect to. ANOTHER COMPUTER
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: farmer_address
+      Required: 'true'
+      Target: farmer_address
+      Type: Variable
+      value: ''
+    farmer_port:
+      Default: '11447'
+      Description: The port of the Cactus fullnode farmer this harvester will connect
+        to.
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: farmer_port
+      Required: 'true'
+      Target: farmer_port
+      Type: Variable
+      value: '11447'
+    mode:
+      Default: harvester
+      Description: Default is 'harvester'.  If plotting as well, use 'harvester,plotter'
+        and add a '/plotting' Path mount.
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: mode
+      Required: 'true'
+      Target: mode
+      Type: Variable
+      value: harvester
+    plots_dir:
+      Default: /plots1
+      Description: 'A colon-separated list of all in-container paths (defined above)
+        holding your completed plots.  Example: /plots1:/plots2:/plots3'
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: plots_dir
+      Required: 'false'
+      Target: plots_dir
+      Type: Variable
+      value: /plots1
+    worker_address:
+      Default: ''
+      Description: The IP address of this Unraid server on your LAN for controller/worker
+        communication. THIS COMPUTER
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: worker_address
+      Required: 'true'
+      Target: worker_address
+      Type: Variable
+      value: ''
+    worker_api_port:
+      Default: ''
+      Description: The TCP port of the Machinaris worker for controller/worker communication.
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: worker_api_port
+      Required: 'true'
+      Target: worker_api_port
+      Type: Variable
+      value: '8936'
 ExtraParams: -h $HOSTNAME
 FirstSeen: 1636700604
 Icon: https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/logos/cactus.png

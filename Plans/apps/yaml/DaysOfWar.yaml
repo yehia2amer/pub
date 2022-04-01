@@ -1,158 +1,163 @@
 CategoryList:
 - GameServers
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /serverdata/steamcmd'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: SteamCMD
-    Required: 'true'
-    Target: /serverdata/steamcmd
-    Type: Path
-  value: /mnt/user/appdata/steamcmd
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /serverdata/serverfiles'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Server Files
-    Required: 'true'
-    Target: /serverdata/serverfiles
-    Type: Path
-  value: /mnt/cache/appdata/daysofwar/
-- '@attributes':
-    Default: ''
-    Description: "The GAME_ID that the container download at startup.\r\n(https://developer.valvesoftware.com/wiki/Dedicated_Servers_List)"
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: GAME_ID
-    Required: 'true'
-    Target: GAME_ID
-    Type: Variable
-  value: '541790'
-- '@attributes':
-    Default: ''
-    Description: Enter your start up commands for the server.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: GAME_PARAMS
-    Required: 'false'
-    Target: GAME_PARAMS
-    Type: Variable
-  value: dow_cathedral
-- '@attributes':
-    Default: ''
-    Description: 'Your Steam username goes here if you want to install a game that
-      needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
-      Steam Guard).'
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: Steam-Username
-    Required: 'false'
-    Target: USERNAME
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Set the Variable to 'true' if you want to validate the installation
-      otherwise leave it blank.
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: Validate Installation
-    Required: 'false'
-    Target: VALIDATE
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Your Steam password goes here if you want to install a game that
-      needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
-      Steam Guard).'
-    Display: always-hide
-    Mask: 'true'
-    Mode: ''
-    Name: Steam-Password
-    Required: 'false'
-    Target: PASSWRD
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: UDP Game Port (if you need another port, please delete this entry
-      and create a new UDP Port with the required port number, also don't forget to
-      click on 'Show more settings' in the template and change the portnumber)
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: UDP1 - Game Port
-    Required: 'true'
-    Target: '7777'
-    Type: Port
-  value: '7777'
-- '@attributes':
-    Default: ''
-    Description: UDP Steam Port (if you need another port, please delete this entry
-      and create a new UDP Port with the required port number, also don't forget to
-      click on 'Show more settings' in the template and change the portnumber)
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: UDP2 - Steam Port
-    Required: 'true'
-    Target: '27015'
-    Type: Port
-  value: '27015'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: GAME_PORT'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Host Key 6
-    Required: 'true'
-    Target: GAME_PORT
-    Type: Variable
-  value: '7777'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: QUERY_PORT'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Host Key 7
-    Required: 'true'
-    Target: QUERY_PORT
-    Type: Variable
-  value: '27015'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: UID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: UID
-    Required: 'true'
-    Target: UID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: GID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: GID
-    Required: 'true'
-    Target: GID
-    Type: Variable
-  value: '100'
+  Device: {}
+  Label: {}
+  Path:
+    Server Files:
+      Default: ''
+      Description: 'Container Path: /serverdata/serverfiles'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Server Files
+      Required: 'true'
+      Target: /serverdata/serverfiles
+      Type: Path
+      value: /mnt/cache/appdata/daysofwar/
+    SteamCMD:
+      Default: ''
+      Description: 'Container Path: /serverdata/steamcmd'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: SteamCMD
+      Required: 'true'
+      Target: /serverdata/steamcmd
+      Type: Path
+      value: /mnt/user/appdata/steamcmd
+  Port:
+    UDP1 - Game Port:
+      Default: ''
+      Description: UDP Game Port (if you need another port, please delete this entry
+        and create a new UDP Port with the required port number, also don't forget
+        to click on 'Show more settings' in the template and change the portnumber)
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: UDP1 - Game Port
+      Required: 'true'
+      Target: '7777'
+      Type: Port
+      value: '7777'
+    UDP2 - Steam Port:
+      Default: ''
+      Description: UDP Steam Port (if you need another port, please delete this entry
+        and create a new UDP Port with the required port number, also don't forget
+        to click on 'Show more settings' in the template and change the portnumber)
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: UDP2 - Steam Port
+      Required: 'true'
+      Target: '27015'
+      Type: Port
+      value: '27015'
+  Variable:
+    GAME_ID:
+      Default: ''
+      Description: "The GAME_ID that the container download at startup.\r\n(https://developer.valvesoftware.com/wiki/Dedicated_Servers_List)"
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: GAME_ID
+      Required: 'true'
+      Target: GAME_ID
+      Type: Variable
+      value: '541790'
+    GAME_PARAMS:
+      Default: ''
+      Description: Enter your start up commands for the server.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: GAME_PARAMS
+      Required: 'false'
+      Target: GAME_PARAMS
+      Type: Variable
+      value: dow_cathedral
+    GID:
+      Default: ''
+      Description: 'Container Variable: GID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: GID
+      Required: 'true'
+      Target: GID
+      Type: Variable
+      value: '100'
+    Host Key 6:
+      Default: ''
+      Description: 'Container Variable: GAME_PORT'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Host Key 6
+      Required: 'true'
+      Target: GAME_PORT
+      Type: Variable
+      value: '7777'
+    Host Key 7:
+      Default: ''
+      Description: 'Container Variable: QUERY_PORT'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Host Key 7
+      Required: 'true'
+      Target: QUERY_PORT
+      Type: Variable
+      value: '27015'
+    Steam-Password:
+      Default: ''
+      Description: 'Your Steam password goes here if you want to install a game that
+        needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
+        Steam Guard).'
+      Display: always-hide
+      Mask: 'true'
+      Mode: ''
+      Name: Steam-Password
+      Required: 'false'
+      Target: PASSWRD
+      Type: Variable
+      value: ''
+    Steam-Username:
+      Default: ''
+      Description: 'Your Steam username goes here if you want to install a game that
+        needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
+        Steam Guard).'
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: Steam-Username
+      Required: 'false'
+      Target: USERNAME
+      Type: Variable
+      value: ''
+    UID:
+      Default: ''
+      Description: 'Container Variable: UID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: UID
+      Required: 'true'
+      Target: UID
+      Type: Variable
+      value: '99'
+    Validate Installation:
+      Default: ''
+      Description: Set the Variable to 'true' if you want to validate the installation
+        otherwise leave it blank.
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: Validate Installation
+      Required: 'false'
+      Target: VALIDATE
+      Type: Variable
+      value: ''
 DonateLink: https://www.paypal.me/chips777
 DonateText: 'If you like my work please '
 ExtraParams: --restart=unless-stopped

@@ -1,116 +1,121 @@
 CategoryList:
 - Network-DNS
 Config:
-- '@attributes':
-    Default: '*/30 * * * *'
-    Description: CRON expression to schedule ddns-route53 - http://www.cronmaker.com
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: SCHEDULE
-    Required: 'false'
-    Target: SCHEDULE
-    Type: Variable
-  value: '*/30 * * * *'
-- '@attributes':
-    Default: '3'
-    Description: Number of retries in case of WAN IP retrieval failure
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: MAX_RETRIES
-    Required: 'false'
-    Target: MAX_RETRIES
-    Type: Variable
-  value: '3'
-- '@attributes':
-    Default: info
-    Description: Log level output
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: LOG_LEVEL
-    Required: 'false'
-    Target: LOG_LEVEL
-    Type: Variable
-  value: info
-- '@attributes':
-    Default: 'false'
-    Description: Enable JSON logging output
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: LOG_JSON
-    Required: 'false'
-    Target: LOG_JSON
-    Type: Variable
-  value: 'false'
-- '@attributes':
-    Default: ABCDEFGHIJKLMNO123456
-    Description: Access Key ID
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DDNSR53_CREDENTIALS_ACCESSKEYID
-    Required: 'false'
-    Target: DDNSR53_CREDENTIALS_ACCESSKEYID
-    Type: Variable
-  value: ABCDEFGHIJKLMNO123456
-- '@attributes':
-    Default: abcdefgh123456IJKLMN+OPQRS7890+ABCDEFGH
-    Description: Secret Access Key
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DDNSR53_CREDENTIALS_SECRETACCESSKEY
-    Required: 'false'
-    Target: DDNSR53_CREDENTIALS_SECRETACCESSKEY
-    Type: Variable
-  value: abcdefgh123456IJKLMN+OPQRS7890+ABCDEFGH
-- '@attributes':
-    Default: ABCEEFG123456789
-    Description: Host Zone ID
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DDNSR53_ROUTE53_HOSTEDZONEID
-    Required: 'false'
-    Target: DDNSR53_ROUTE53_HOSTEDZONEID
-    Type: Variable
-  value: ABCEEFG123456789
-- '@attributes':
-    Default: ddns.example.com.
-    Description: 'Record Set 0 '
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DDNSR53_ROUTE53_RECORDSSET_0_NAME
-    Required: 'false'
-    Target: DDNSR53_ROUTE53_RECORDSSET_0_NAME
-    Type: Variable
-  value: ddns.example.com.
-- '@attributes':
-    Default: A
-    Description: Record Set 0 Type
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DDNSR53_ROUTE53_RECORDSSET_0_TYPE
-    Required: 'false'
-    Target: DDNSR53_ROUTE53_RECORDSSET_0_TYPE
-    Type: Variable
-  value: A
-- '@attributes':
-    Default: '300'
-    Description: Record Set 0 TTL
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DDNSR53_ROUTE53_RECORDSSET_0_TTL
-    Required: 'false'
-    Target: DDNSR53_ROUTE53_RECORDSSET_0_TTL
-    Type: Variable
-  value: '300'
+  Device: {}
+  Label: {}
+  Path: {}
+  Port: {}
+  Variable:
+    DDNSR53_CREDENTIALS_ACCESSKEYID:
+      Default: ABCDEFGHIJKLMNO123456
+      Description: Access Key ID
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DDNSR53_CREDENTIALS_ACCESSKEYID
+      Required: 'false'
+      Target: DDNSR53_CREDENTIALS_ACCESSKEYID
+      Type: Variable
+      value: ABCDEFGHIJKLMNO123456
+    DDNSR53_CREDENTIALS_SECRETACCESSKEY:
+      Default: abcdefgh123456IJKLMN+OPQRS7890+ABCDEFGH
+      Description: Secret Access Key
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DDNSR53_CREDENTIALS_SECRETACCESSKEY
+      Required: 'false'
+      Target: DDNSR53_CREDENTIALS_SECRETACCESSKEY
+      Type: Variable
+      value: abcdefgh123456IJKLMN+OPQRS7890+ABCDEFGH
+    DDNSR53_ROUTE53_HOSTEDZONEID:
+      Default: ABCEEFG123456789
+      Description: Host Zone ID
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DDNSR53_ROUTE53_HOSTEDZONEID
+      Required: 'false'
+      Target: DDNSR53_ROUTE53_HOSTEDZONEID
+      Type: Variable
+      value: ABCEEFG123456789
+    DDNSR53_ROUTE53_RECORDSSET_0_NAME:
+      Default: ddns.example.com.
+      Description: 'Record Set 0 '
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DDNSR53_ROUTE53_RECORDSSET_0_NAME
+      Required: 'false'
+      Target: DDNSR53_ROUTE53_RECORDSSET_0_NAME
+      Type: Variable
+      value: ddns.example.com.
+    DDNSR53_ROUTE53_RECORDSSET_0_TTL:
+      Default: '300'
+      Description: Record Set 0 TTL
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DDNSR53_ROUTE53_RECORDSSET_0_TTL
+      Required: 'false'
+      Target: DDNSR53_ROUTE53_RECORDSSET_0_TTL
+      Type: Variable
+      value: '300'
+    DDNSR53_ROUTE53_RECORDSSET_0_TYPE:
+      Default: A
+      Description: Record Set 0 Type
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DDNSR53_ROUTE53_RECORDSSET_0_TYPE
+      Required: 'false'
+      Target: DDNSR53_ROUTE53_RECORDSSET_0_TYPE
+      Type: Variable
+      value: A
+    LOG_JSON:
+      Default: 'false'
+      Description: Enable JSON logging output
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: LOG_JSON
+      Required: 'false'
+      Target: LOG_JSON
+      Type: Variable
+      value: 'false'
+    LOG_LEVEL:
+      Default: info
+      Description: Log level output
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: LOG_LEVEL
+      Required: 'false'
+      Target: LOG_LEVEL
+      Type: Variable
+      value: info
+    MAX_RETRIES:
+      Default: '3'
+      Description: Number of retries in case of WAN IP retrieval failure
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: MAX_RETRIES
+      Required: 'false'
+      Target: MAX_RETRIES
+      Type: Variable
+      value: '3'
+    SCHEDULE:
+      Default: '*/30 * * * *'
+      Description: CRON expression to schedule ddns-route53 - http://www.cronmaker.com
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: SCHEDULE
+      Required: 'false'
+      Target: SCHEDULE
+      Type: Variable
+      value: '*/30 * * * *'
 FirstSeen: 1586450112
 Icon: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/ddns-route53.png
 LastUpdate: 1647347147

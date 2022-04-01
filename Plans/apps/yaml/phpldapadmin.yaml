@@ -2,205 +2,211 @@ CategoryList:
 - Network-Other
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: '443'
-    Description: WebUI port
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI port
-    Required: 'true'
-    Target: '443'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: example.org
-    Description: Set in the phpldapadmin server config.php
-    Display: always
-    Mask: 'false'
-    Name: PHPLDAPADMIN_LDAP_HOSTS
-    Required: 'true'
-    Target: PHPLDAPADMIN_LDAP_HOSTS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: webmaster@example.org
-    Description: Server admin email.
-    Display: always
-    Mask: 'false'
-    Name: PHPLDAPADMIN_SERVER_ADMIN
-    Required: 'true'
-    Target: PHPLDAPADMIN_SERVER_ADMIN
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 'true'
-    Description: Use apache ssl config. Defaults to true
-    Display: always
-    Mask: 'false'
-    Mode: 'true'
-    Name: PHPLDAPADMIN_HTTPS
-    Required: 'false'
-    Target: PHPLDAPADMIN_HTTPS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: live/example.org/cert.pem
-    Description: 'Apache ssl certificate filename. If getting certs from Let''s Encrypt,
-      this should be of the form: live/example.org/cert.pem'
-    Display: always
-    Mask: 'false'
-    Name: PHPLDAPADMIN_HTTPS_CRT_FILENAME
-    Required: 'false'
-    Target: PHPLDAPADMIN_HTTPS_CRT_FILENAME
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: live/example.org/privkey.pem
-    Description: 'Apache ssl certificate private key filename. If getting certs from
-      Let''s Encrypt, this should be of the form: live/example.org/privkey.pem'
-    Display: always
-    Mask: 'false'
-    Name: PHPLDAPADMIN_HTTPS_KEY_FILENAME
-    Required: 'false'
-    Target: PHPLDAPADMIN_HTTPS_KEY_FILENAME
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: live/example.org/fullchain.pem
-    Description: 'Apache ssl CA certificate filename. If getting certs from Let''s
-      Encrypt, this should be of the form: live/example.org/fullchain.pem'
-    Display: always
-    Mask: 'false'
-    Name: PHPLDAPADMIN_HTTPS_CA_CRT_FILENAME
-    Required: 'false'
-    Target: PHPLDAPADMIN_HTTPS_CA_CRT_FILENAME
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: letsencrypt-keys
-    Description: 'Shared volume with Let''s Encrypt certs. Create a docker volume
-      -&gt; docker create volume letsencrypt-keys, then link it in your linuxserver.io/letsencrypt
-      docker container with container path: /config/etc/letsencrypt and host path:
-      letsencrypt-keys'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: LDAP SSL Certificate Path
-    Required: 'false'
-    Target: /container/service/phpldapadmin/assets/apache2/certs/
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: /phpldapadmin
-    Description: Server path (useful if behind a reverse proxy). Defaults to /phpldapadmin
-    Display: advanced
-    Mask: 'false'
-    Mode: /phpldapadmin
-    Name: PHPLDAPADMIN_SERVER_PATH
-    Required: 'false'
-    Target: PHPLDAPADMIN_SERVER_PATH
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 'true'
-    Description: Set to true to trust X-Forwarded-Proto header
-    Display: advanced
-    Mask: 'false'
-    Name: PHPLDAPADMIN_TRUST_PROXY_SSL
-    Required: 'false'
-    Target: PHPLDAPADMIN_TRUST_PROXY_SSL
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 'true'
-    Description: Enable ldap client tls config, ldap server certificate check and
-      set client certificate. Defaults to true
-    Display: advanced
-    Mask: 'false'
-    Name: PHPLDAPADMIN_LDAP_CLIENT_TLS
-    Required: 'false'
-    Target: PHPLDAPADMIN_LDAP_CLIENT_TLS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: demand
-    Description: Set ldap.conf TLS_REQCERT. Defaults to demand
-    Display: advanced
-    Mask: 'false'
-    Name: PHPLDAPADMIN_LDAP_CLIENT_TLS_REQCERT
-    Required: 'false'
-    Target: PHPLDAPADMIN_LDAP_CLIENT_TLS_REQCERT
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ldap-ca.crt
-    Description: Set ldap.conf TLS_CACERT to /container/service/ldap-client/assets/certs/$PHPLDAPADMIN_LDAP_CLIENT_TLS_CA_CRT_FILENAME.
-      Defaults to ldap-ca.crt
-    Display: advanced
-    Mask: 'false'
-    Name: PHPLDAPADMIN_LDAP_CLIENT_TLS_CA_CRT_FILENAME
-    Required: 'false'
-    Target: PHPLDAPADMIN_LDAP_CLIENT_TLS_CA_CRT_FILENAME
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ldap-client.crt
-    Description: Set .ldaprc TLS_CERT to /container/service/ldap-client/assets/certs/$PHPLDAPADMIN_LDAP_CLIENT_TLS_CRT_FILENAME.
-      Defaults to ldap-client.crt
-    Display: advanced
-    Mask: 'false'
-    Name: PHPLDAPADMIN_LDAP_CLIENT_TLS_CRT_FILENAME
-    Required: 'false'
-    Target: PHPLDAPADMIN_LDAP_CLIENT_TLS_CRT_FILENAME
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ldap-client.key
-    Description: Set .ldaprc TLS_KEY to /container/service/ldap-client/assets/certs/$PHPLDAPADMIN_LDAP_CLIENT_TLS_KEY_FILENAME.
-      Defaults to ldap-client.key
-    Display: advanced
-    Mask: 'false'
-    Name: PHPLDAPADMIN_LDAP_CLIENT_TLS_KEY_FILENAME
-    Required: 'false'
-    Target: PHPLDAPADMIN_LDAP_CLIENT_TLS_KEY_FILENAME
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: phpldapadmin
-    Description: ssl-helper environment variables prefix. Defaults to phpldapadmin,
-      ssl-helper first search config from PHPLDAPADMIN_SSL_HELPER_* variables, before
-      SSL_HELPER_* variables.
-    Display: advanced
-    Mask: 'false'
-    Name: PHPLDAPADMIN_SSL_HELPER_PREFIX
-    Required: 'false'
-    Target: PHPLDAPADMIN_SSL_HELPER_PREFIX
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ldap
-    Description: ssl-helper environment variables prefix. Defaults to ldap, ssl-helper
-      first search config from LDAP_SSL_HELPER_* variables, before SSL_HELPER_* variables.
-    Display: advanced
-    Mask: 'false'
-    Name: LDAP_CLIENT_SSL_HELPER_PREFIX
-    Required: 'false'
-    Target: LDAP_CLIENT_SSL_HELPER_PREFIX
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: /mnt/user/appdata/phpldapadmin
-    Description: Place your config.php in this path after setting up basic stuff in
-      it like a hostname value
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: Appdata
-    Required: 'true'
-    Target: /container/service/phpldapadmin/assets/config/
-    Type: Path
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Appdata:
+      Default: /mnt/user/appdata/phpldapadmin
+      Description: Place your config.php in this path after setting up basic stuff
+        in it like a hostname value
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: Appdata
+      Required: 'true'
+      Target: /container/service/phpldapadmin/assets/config/
+      Type: Path
+      value: ''
+    LDAP SSL Certificate Path:
+      Default: letsencrypt-keys
+      Description: 'Shared volume with Let''s Encrypt certs. Create a docker volume
+        -&gt; docker create volume letsencrypt-keys, then link it in your linuxserver.io/letsencrypt
+        docker container with container path: /config/etc/letsencrypt and host path:
+        letsencrypt-keys'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: LDAP SSL Certificate Path
+      Required: 'false'
+      Target: /container/service/phpldapadmin/assets/apache2/certs/
+      Type: Path
+      value: ''
+  Port:
+    WebUI port:
+      Default: '443'
+      Description: WebUI port
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI port
+      Required: 'true'
+      Target: '443'
+      Type: Port
+      value: ''
+  Variable:
+    LDAP_CLIENT_SSL_HELPER_PREFIX:
+      Default: ldap
+      Description: ssl-helper environment variables prefix. Defaults to ldap, ssl-helper
+        first search config from LDAP_SSL_HELPER_* variables, before SSL_HELPER_*
+        variables.
+      Display: advanced
+      Mask: 'false'
+      Name: LDAP_CLIENT_SSL_HELPER_PREFIX
+      Required: 'false'
+      Target: LDAP_CLIENT_SSL_HELPER_PREFIX
+      Type: Variable
+      value: ''
+    PHPLDAPADMIN_HTTPS:
+      Default: 'true'
+      Description: Use apache ssl config. Defaults to true
+      Display: always
+      Mask: 'false'
+      Mode: 'true'
+      Name: PHPLDAPADMIN_HTTPS
+      Required: 'false'
+      Target: PHPLDAPADMIN_HTTPS
+      Type: Variable
+      value: ''
+    PHPLDAPADMIN_HTTPS_CA_CRT_FILENAME:
+      Default: live/example.org/fullchain.pem
+      Description: 'Apache ssl CA certificate filename. If getting certs from Let''s
+        Encrypt, this should be of the form: live/example.org/fullchain.pem'
+      Display: always
+      Mask: 'false'
+      Name: PHPLDAPADMIN_HTTPS_CA_CRT_FILENAME
+      Required: 'false'
+      Target: PHPLDAPADMIN_HTTPS_CA_CRT_FILENAME
+      Type: Variable
+      value: ''
+    PHPLDAPADMIN_HTTPS_CRT_FILENAME:
+      Default: live/example.org/cert.pem
+      Description: 'Apache ssl certificate filename. If getting certs from Let''s
+        Encrypt, this should be of the form: live/example.org/cert.pem'
+      Display: always
+      Mask: 'false'
+      Name: PHPLDAPADMIN_HTTPS_CRT_FILENAME
+      Required: 'false'
+      Target: PHPLDAPADMIN_HTTPS_CRT_FILENAME
+      Type: Variable
+      value: ''
+    PHPLDAPADMIN_HTTPS_KEY_FILENAME:
+      Default: live/example.org/privkey.pem
+      Description: 'Apache ssl certificate private key filename. If getting certs
+        from Let''s Encrypt, this should be of the form: live/example.org/privkey.pem'
+      Display: always
+      Mask: 'false'
+      Name: PHPLDAPADMIN_HTTPS_KEY_FILENAME
+      Required: 'false'
+      Target: PHPLDAPADMIN_HTTPS_KEY_FILENAME
+      Type: Variable
+      value: ''
+    PHPLDAPADMIN_LDAP_CLIENT_TLS:
+      Default: 'true'
+      Description: Enable ldap client tls config, ldap server certificate check and
+        set client certificate. Defaults to true
+      Display: advanced
+      Mask: 'false'
+      Name: PHPLDAPADMIN_LDAP_CLIENT_TLS
+      Required: 'false'
+      Target: PHPLDAPADMIN_LDAP_CLIENT_TLS
+      Type: Variable
+      value: ''
+    PHPLDAPADMIN_LDAP_CLIENT_TLS_CA_CRT_FILENAME:
+      Default: ldap-ca.crt
+      Description: Set ldap.conf TLS_CACERT to /container/service/ldap-client/assets/certs/$PHPLDAPADMIN_LDAP_CLIENT_TLS_CA_CRT_FILENAME.
+        Defaults to ldap-ca.crt
+      Display: advanced
+      Mask: 'false'
+      Name: PHPLDAPADMIN_LDAP_CLIENT_TLS_CA_CRT_FILENAME
+      Required: 'false'
+      Target: PHPLDAPADMIN_LDAP_CLIENT_TLS_CA_CRT_FILENAME
+      Type: Variable
+      value: ''
+    PHPLDAPADMIN_LDAP_CLIENT_TLS_CRT_FILENAME:
+      Default: ldap-client.crt
+      Description: Set .ldaprc TLS_CERT to /container/service/ldap-client/assets/certs/$PHPLDAPADMIN_LDAP_CLIENT_TLS_CRT_FILENAME.
+        Defaults to ldap-client.crt
+      Display: advanced
+      Mask: 'false'
+      Name: PHPLDAPADMIN_LDAP_CLIENT_TLS_CRT_FILENAME
+      Required: 'false'
+      Target: PHPLDAPADMIN_LDAP_CLIENT_TLS_CRT_FILENAME
+      Type: Variable
+      value: ''
+    PHPLDAPADMIN_LDAP_CLIENT_TLS_KEY_FILENAME:
+      Default: ldap-client.key
+      Description: Set .ldaprc TLS_KEY to /container/service/ldap-client/assets/certs/$PHPLDAPADMIN_LDAP_CLIENT_TLS_KEY_FILENAME.
+        Defaults to ldap-client.key
+      Display: advanced
+      Mask: 'false'
+      Name: PHPLDAPADMIN_LDAP_CLIENT_TLS_KEY_FILENAME
+      Required: 'false'
+      Target: PHPLDAPADMIN_LDAP_CLIENT_TLS_KEY_FILENAME
+      Type: Variable
+      value: ''
+    PHPLDAPADMIN_LDAP_CLIENT_TLS_REQCERT:
+      Default: demand
+      Description: Set ldap.conf TLS_REQCERT. Defaults to demand
+      Display: advanced
+      Mask: 'false'
+      Name: PHPLDAPADMIN_LDAP_CLIENT_TLS_REQCERT
+      Required: 'false'
+      Target: PHPLDAPADMIN_LDAP_CLIENT_TLS_REQCERT
+      Type: Variable
+      value: ''
+    PHPLDAPADMIN_LDAP_HOSTS:
+      Default: example.org
+      Description: Set in the phpldapadmin server config.php
+      Display: always
+      Mask: 'false'
+      Name: PHPLDAPADMIN_LDAP_HOSTS
+      Required: 'true'
+      Target: PHPLDAPADMIN_LDAP_HOSTS
+      Type: Variable
+      value: ''
+    PHPLDAPADMIN_SERVER_ADMIN:
+      Default: webmaster@example.org
+      Description: Server admin email.
+      Display: always
+      Mask: 'false'
+      Name: PHPLDAPADMIN_SERVER_ADMIN
+      Required: 'true'
+      Target: PHPLDAPADMIN_SERVER_ADMIN
+      Type: Variable
+      value: ''
+    PHPLDAPADMIN_SERVER_PATH:
+      Default: /phpldapadmin
+      Description: Server path (useful if behind a reverse proxy). Defaults to /phpldapadmin
+      Display: advanced
+      Mask: 'false'
+      Mode: /phpldapadmin
+      Name: PHPLDAPADMIN_SERVER_PATH
+      Required: 'false'
+      Target: PHPLDAPADMIN_SERVER_PATH
+      Type: Variable
+      value: ''
+    PHPLDAPADMIN_SSL_HELPER_PREFIX:
+      Default: phpldapadmin
+      Description: ssl-helper environment variables prefix. Defaults to phpldapadmin,
+        ssl-helper first search config from PHPLDAPADMIN_SSL_HELPER_* variables, before
+        SSL_HELPER_* variables.
+      Display: advanced
+      Mask: 'false'
+      Name: PHPLDAPADMIN_SSL_HELPER_PREFIX
+      Required: 'false'
+      Target: PHPLDAPADMIN_SSL_HELPER_PREFIX
+      Type: Variable
+      value: ''
+    PHPLDAPADMIN_TRUST_PROXY_SSL:
+      Default: 'true'
+      Description: Set to true to trust X-Forwarded-Proto header
+      Display: advanced
+      Mask: 'false'
+      Name: PHPLDAPADMIN_TRUST_PROXY_SSL
+      Required: 'false'
+      Target: PHPLDAPADMIN_TRUST_PROXY_SSL
+      Type: Variable
+      value: ''
 ExtraParams: --link openldap:example.org
 FirstSeen: 1577308133
 Icon: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/phpldapadmin.png

@@ -2,391 +2,398 @@ CategoryList:
 - MediaApp-Video
 ChangeLogPresent: true
 Config:
-- '@attributes':
-    Default: /mnt/user/appdata/handbrake
-    Description: 'This is where the application stores its configuration, log and
-      any files needing persistency.&lt;br&gt;Container path: /config'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: rw
-    Name: Config Directory
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: /mnt/user
-    Description: 'This location contains files from your host that need to be accessible
-      by the application.&lt;br&gt;Container path: /storage'
-    Display: always-hide
-    Mask: 'false'
-    Mode: ro
-    Name: Storage
-    Required: 'true'
-    Target: /storage
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'This is the watch folder of the automatic video converter.  Any
-      video copied into this folder will be automatically converted by HandBrake.&lt;br&gt;Container
-      path: /watch'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Watch Directory
-    Required: 'false'
-    Target: /watch
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'This is the default output folder for converted videos.  Also used
-      by the automatic video converter.&lt;br&gt;Container path: /output'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Output Directory
-    Required: 'true'
-    Target: /output
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: '99'
-    Description: ID of the user the application runs as.
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: User ID
-    Required: 'true'
-    Target: USER_ID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '100'
-    Description: ID of the group the application runs as.
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: Group ID
-    Required: 'true'
-    Target: GROUP_ID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '000'
-    Description: Mask that controls how file permissions are set for newly created
-      files. The value of the mask is in octal notation.
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Umask
-    Required: 'false'
-    Target: UMASK
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Priority at which the application should run.  A niceness value of
-      -20 is the highest priority and 19 is the lowest priority.&lt;br&gt;&lt;b&gt;NOTE:&lt;/b&gt;
-      Setting a negative value requires additional permissions.  Thus, &lt;i&gt;&lt;b&gt;--cap-add=SYS_NICE&lt;/b&gt;&lt;/i&gt;
-      must be added in &lt;i&gt;Extra Parameters&lt;/i&gt; (shown when &lt;i&gt;Advanced
-      View&lt;/i&gt; is enabled).
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Niceness (priority)
-    Required: 'false'
-    Target: APP_NICENESS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '1280'
-    Description: Width (in pixels) of the application's window.
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Display Width
-    Required: 'false'
-    Target: DISPLAY_WIDTH
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '768'
-    Description: Height (in pixels) of the application's window.
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Display Height
-    Required: 'false'
-    Target: DISPLAY_HEIGHT
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '0'
-    Description: 'Whether or not an encrypted connection should be used to access
-      the application''s GUI.  Set to &lt;i&gt;&lt;b&gt;1&lt;/b&gt;&lt;/i&gt; to encrypt
-      the connection.&lt;br&gt;&lt;span style=''color: red;''&gt;&lt;b&gt;Note:&lt;/b&gt;&lt;/span&gt;
-      When enabling the secure connection, security parameters needs to be generated.  This
-      &lt;b&gt;one-time&lt;/b&gt; operation is done during container startup.  Depending
-      on your system, this could take a few minutes.  GUI of the application won''t
-      be available until the operation completes.'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Secure Connection
-    Required: 'false'
-    Target: SECURE_CONNECTION
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Extra options to pass to the x11vnc server running in the Docker
-      container.&lt;br&gt;&lt;span style=''color: red;''&gt;&lt;b&gt;Warning:&lt;/b&gt;&lt;/span&gt;
-      For advanced users. Do not use unless you know what you are doing.'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Extra x11vnc Options
-    Required: 'false'
-    Target: X11VNC_EXTRA_OPTS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: General/Very Fast 1080p30
-    Description: Preset used by the automatic video converter.  Identification of
-      the preset must follow the format 'CATEGORY/PRESET NAME'.  Name of all available
-      presets can be seen via the HandBrake GUI.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: 'Automatic Video Converter: Preset'
-    Required: 'false'
-    Target: AUTOMATED_CONVERSION_PRESET
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: mp4
-    Description: Video container format used by the automatic video converter for
-      output files.  This is typically the video filename extension.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: 'Automatic Video Converter: Format'
-    Required: 'false'
-    Target: AUTOMATED_CONVERSION_FORMAT
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '1'
-    Description: Set to 0 to remove successfully converted videos from the watch folder,
-      1 to keep them.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: 'Automatic Video Converter: Keep Source Files'
-    Required: 'false'
-    Target: AUTOMATED_CONVERSION_KEEP_SOURCE
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Space-separated list of file extensions to be considered as video
-      files.  By default, this list is empty, meaning that the automatic video converter
-      will let HandBrake automatically detects if a file, no matter its extension,
-      is a video or not (note that extensions defined by the &lt;i&gt;Non-Video File
-      Extensions&lt;/i&gt; list are always considered as non-video files).  Normally,
-      this variable doesn't need to be set.  Usage of this variable is useful when
-      only specific video files need to converted.
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: 'Automatic Video Converter: Video File Extensions'
-    Required: 'false'
-    Target: AUTOMATED_CONVERSION_VIDEO_FILE_EXTENSIONS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ignore
-    Description: Set to &lt;b&gt;&lt;i&gt;ignore&lt;/i&gt;&lt;/b&gt; to ignore non-video
-      files from the watch folder, or set to &lt;b&gt;&lt;i&gt;copy&lt;/i&gt;&lt;/b&gt;
-      to copy them as-is to the output folder.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: 'Automatic Video Converter: Non-Video File Action'
-    Required: 'false'
-    Target: AUTOMATED_CONVERSION_NON_VIDEO_FILE_ACTION
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: jpg jpeg bmp png gif txt nfo
-    Description: Space-separated list of file extensions to be considered as not being
-      videos.  Most non-video files are properly rejected by HandBrake.  However,
-      some files, like images, are convertible by HandBrake even if they are not video
-      files.
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: 'Automatic Video Converter: Non-Video File Extensions'
-    Required: 'false'
-    Target: AUTOMATED_CONVERSION_NON_VIDEO_FILE_EXTENSIONS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: /output
-    Description: Root directory where converted videos should be written.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: 'Automatic Video Converter: Output directory'
-    Required: 'false'
-    Target: AUTOMATED_CONVERSION_OUTPUT_DIR
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Subdirectory of the output folder into which converted videos should
-      be written.&lt;ul&gt;&lt;li&gt;Leave value empty to save converted videos directly
-      into &lt;b&gt;&lt;i&gt;/output/&lt;/i&gt;&lt;/b&gt;.&lt;/li&gt;&lt;li&gt;Use
-      the special value &lt;b&gt;&lt;i&gt;SAME_AS_SRC&lt;/i&gt;&lt;/b&gt; to use the
-      same subfolder as the source.  For example, if the video source file is &lt;b&gt;&lt;i&gt;/watch/Movies/mymovie.mkv&lt;/i&gt;&lt;/b&gt;,
-      the converted video will be written to &lt;b&gt;&lt;i&gt;/output/Movies/&lt;/i&gt;&lt;/b&gt;.&lt;/li&gt;&lt;li&gt;Use
-      any subfolder name.  For example, setting the value &lt;b&gt;&lt;i&gt;Home/Movies&lt;/i&gt;&lt;/b&gt;
-      will make converted videos written to &lt;b&gt;&lt;i&gt;/output/Home/Movies&lt;/i&gt;&lt;/b&gt;/&lt;/li&gt;&lt;/ul&gt;
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: 'Automatic Video Converter: Output Subdirectory'
-    Required: 'false'
-    Target: AUTOMATED_CONVERSION_OUTPUT_SUBDIR
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '0'
-    Description: Setting this to 1 allows the final destination file to be overwritten
-      if it already exists.
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: 'Automatic Video Converter: Overwrite Destination'
-    Required: 'false'
-    Target: AUTOMATED_CONVERSION_OVERWRITE_OUTPUT
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '5'
-    Description: Time (in seconds) during which properties (e.g. size, time, etc)
-      of a video file in the watch folder need to remain the same.  This is to avoid
-      processing a file that is being copied.
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: 'Automatic Video Converter: Source File Stable Time'
-    Required: 'false'
-    Target: AUTOMATED_CONVERSION_SOURCE_STABLE_TIME
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '10'
-    Description: Minimum title duration (in seconds).  Shorter titles will be ignored.  This
-      applies only to video disc sources (ISO file, &lt;i&gt;VIDEO_TS&lt;/i&gt; folder
-      or &lt;i&gt;BDMV&lt;/i&gt; folder).
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: 'Automatic Video Converter: Minimum Title Duration'
-    Required: 'false'
-    Target: AUTOMATED_CONVERSION_SOURCE_MIN_DURATION
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '5'
-    Description: Interval (in seconds) at which the automatic video converter checks
-      for new files.
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: 'Automatic Video Converter: Check Interval'
-    Required: 'false'
-    Target: AUTOMATED_CONVERSION_CHECK_INTERVAL
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '5'
-    Description: Maximum number of watch folders handled by the automatic video converter.
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: 'Automatic Video Converter: Number of Watch Folders'
-    Required: 'false'
-    Target: AUTOMATED_CONVERSION_MAX_WATCH_FOLDERS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '0'
-    Description: Set to 1 to disable display of the video conversion progress in HandBrake
-      GUI.
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: 'Automatic Video Converter: Disable Progress in GUI'
-    Required: 'false'
-    Target: AUTOMATED_CONVERSION_NO_GUI_PROGRESS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Custom arguments to pass to HandBrake when performing a conversion.
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: 'Automatic Video Converter: Custom HandBrake Arguments'
-    Required: 'false'
-    Target: AUTOMATED_CONVERSION_HANDBRAKE_CUSTOM_ARGS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Space-separated list of Alpine Linux packages to install.  This is
-      useful when the automatic video converter's hooks require requires tools not
-      available in the container image.  See &lt;i&gt;https://pkgs.alpinelinux.org&lt;/i&gt;
-      for the list of available Alpine Linux packages.
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: 'Automatic Video Converter: Install Packages'
-    Required: 'false'
-    Target: AUTOMATED_CONVERSION_INSTALL_PKGS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '7803'
-    Description: Port used to access the application's GUI via the web interface.&lt;br&gt;&lt;b&gt;NOTE:&lt;/b&gt;
-      This applies only when &lt;i&gt;Network Type&lt;/i&gt; is set to &lt;i&gt;Bridge&lt;/i&gt;.  For
-      other network types, port 5800 should be used instead.
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: tcp
-    Name: WEB Port for GUI
-    Required: 'true'
-    Target: '5800'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: '7903'
-    Description: Port used to access the application's GUI via the VNC protocol.  Optional
-      if no VNC client is used.&lt;br&gt;&lt;b&gt;NOTE:&lt;/b&gt; This applies only
-      when &lt;i&gt;Network Type&lt;/i&gt; is set to &lt;i&gt;Bridge&lt;/i&gt;.  For
-      other network types, port 5900 should be used instead.
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: tcp
-    Name: VNC Port for GUI
-    Required: 'false'
-    Target: '5900'
-    Type: Port
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Config Directory:
+      Default: /mnt/user/appdata/handbrake
+      Description: 'This is where the application stores its configuration, log and
+        any files needing persistency.&lt;br&gt;Container path: /config'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: rw
+      Name: Config Directory
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: ''
+    Output Directory:
+      Default: ''
+      Description: 'This is the default output folder for converted videos.  Also
+        used by the automatic video converter.&lt;br&gt;Container path: /output'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Output Directory
+      Required: 'true'
+      Target: /output
+      Type: Path
+      value: ''
+    Storage:
+      Default: /mnt/user
+      Description: 'This location contains files from your host that need to be accessible
+        by the application.&lt;br&gt;Container path: /storage'
+      Display: always-hide
+      Mask: 'false'
+      Mode: ro
+      Name: Storage
+      Required: 'true'
+      Target: /storage
+      Type: Path
+      value: ''
+    Watch Directory:
+      Default: ''
+      Description: 'This is the watch folder of the automatic video converter.  Any
+        video copied into this folder will be automatically converted by HandBrake.&lt;br&gt;Container
+        path: /watch'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Watch Directory
+      Required: 'false'
+      Target: /watch
+      Type: Path
+      value: ''
+  Port:
+    VNC Port for GUI:
+      Default: '7903'
+      Description: Port used to access the application's GUI via the VNC protocol.  Optional
+        if no VNC client is used.&lt;br&gt;&lt;b&gt;NOTE:&lt;/b&gt; This applies only
+        when &lt;i&gt;Network Type&lt;/i&gt; is set to &lt;i&gt;Bridge&lt;/i&gt;.  For
+        other network types, port 5900 should be used instead.
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: tcp
+      Name: VNC Port for GUI
+      Required: 'false'
+      Target: '5900'
+      Type: Port
+      value: ''
+    WEB Port for GUI:
+      Default: '7803'
+      Description: Port used to access the application's GUI via the web interface.&lt;br&gt;&lt;b&gt;NOTE:&lt;/b&gt;
+        This applies only when &lt;i&gt;Network Type&lt;/i&gt; is set to &lt;i&gt;Bridge&lt;/i&gt;.  For
+        other network types, port 5800 should be used instead.
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: tcp
+      Name: WEB Port for GUI
+      Required: 'true'
+      Target: '5800'
+      Type: Port
+      value: ''
+  Variable:
+    'Automatic Video Converter: Check Interval':
+      Default: '5'
+      Description: Interval (in seconds) at which the automatic video converter checks
+        for new files.
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: 'Automatic Video Converter: Check Interval'
+      Required: 'false'
+      Target: AUTOMATED_CONVERSION_CHECK_INTERVAL
+      Type: Variable
+      value: ''
+    'Automatic Video Converter: Custom HandBrake Arguments':
+      Default: ''
+      Description: Custom arguments to pass to HandBrake when performing a conversion.
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: 'Automatic Video Converter: Custom HandBrake Arguments'
+      Required: 'false'
+      Target: AUTOMATED_CONVERSION_HANDBRAKE_CUSTOM_ARGS
+      Type: Variable
+      value: ''
+    'Automatic Video Converter: Disable Progress in GUI':
+      Default: '0'
+      Description: Set to 1 to disable display of the video conversion progress in
+        HandBrake GUI.
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: 'Automatic Video Converter: Disable Progress in GUI'
+      Required: 'false'
+      Target: AUTOMATED_CONVERSION_NO_GUI_PROGRESS
+      Type: Variable
+      value: ''
+    'Automatic Video Converter: Format':
+      Default: mp4
+      Description: Video container format used by the automatic video converter for
+        output files.  This is typically the video filename extension.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: 'Automatic Video Converter: Format'
+      Required: 'false'
+      Target: AUTOMATED_CONVERSION_FORMAT
+      Type: Variable
+      value: ''
+    'Automatic Video Converter: Install Packages':
+      Default: ''
+      Description: Space-separated list of Alpine Linux packages to install.  This
+        is useful when the automatic video converter's hooks require requires tools
+        not available in the container image.  See &lt;i&gt;https://pkgs.alpinelinux.org&lt;/i&gt;
+        for the list of available Alpine Linux packages.
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: 'Automatic Video Converter: Install Packages'
+      Required: 'false'
+      Target: AUTOMATED_CONVERSION_INSTALL_PKGS
+      Type: Variable
+      value: ''
+    'Automatic Video Converter: Keep Source Files':
+      Default: '1'
+      Description: Set to 0 to remove successfully converted videos from the watch
+        folder, 1 to keep them.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: 'Automatic Video Converter: Keep Source Files'
+      Required: 'false'
+      Target: AUTOMATED_CONVERSION_KEEP_SOURCE
+      Type: Variable
+      value: ''
+    'Automatic Video Converter: Minimum Title Duration':
+      Default: '10'
+      Description: Minimum title duration (in seconds).  Shorter titles will be ignored.  This
+        applies only to video disc sources (ISO file, &lt;i&gt;VIDEO_TS&lt;/i&gt;
+        folder or &lt;i&gt;BDMV&lt;/i&gt; folder).
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: 'Automatic Video Converter: Minimum Title Duration'
+      Required: 'false'
+      Target: AUTOMATED_CONVERSION_SOURCE_MIN_DURATION
+      Type: Variable
+      value: ''
+    'Automatic Video Converter: Non-Video File Action':
+      Default: ignore
+      Description: Set to &lt;b&gt;&lt;i&gt;ignore&lt;/i&gt;&lt;/b&gt; to ignore non-video
+        files from the watch folder, or set to &lt;b&gt;&lt;i&gt;copy&lt;/i&gt;&lt;/b&gt;
+        to copy them as-is to the output folder.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: 'Automatic Video Converter: Non-Video File Action'
+      Required: 'false'
+      Target: AUTOMATED_CONVERSION_NON_VIDEO_FILE_ACTION
+      Type: Variable
+      value: ''
+    'Automatic Video Converter: Non-Video File Extensions':
+      Default: jpg jpeg bmp png gif txt nfo
+      Description: Space-separated list of file extensions to be considered as not
+        being videos.  Most non-video files are properly rejected by HandBrake.  However,
+        some files, like images, are convertible by HandBrake even if they are not
+        video files.
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: 'Automatic Video Converter: Non-Video File Extensions'
+      Required: 'false'
+      Target: AUTOMATED_CONVERSION_NON_VIDEO_FILE_EXTENSIONS
+      Type: Variable
+      value: ''
+    'Automatic Video Converter: Number of Watch Folders':
+      Default: '5'
+      Description: Maximum number of watch folders handled by the automatic video
+        converter.
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: 'Automatic Video Converter: Number of Watch Folders'
+      Required: 'false'
+      Target: AUTOMATED_CONVERSION_MAX_WATCH_FOLDERS
+      Type: Variable
+      value: ''
+    'Automatic Video Converter: Output Subdirectory':
+      Default: ''
+      Description: Subdirectory of the output folder into which converted videos should
+        be written.&lt;ul&gt;&lt;li&gt;Leave value empty to save converted videos
+        directly into &lt;b&gt;&lt;i&gt;/output/&lt;/i&gt;&lt;/b&gt;.&lt;/li&gt;&lt;li&gt;Use
+        the special value &lt;b&gt;&lt;i&gt;SAME_AS_SRC&lt;/i&gt;&lt;/b&gt; to use
+        the same subfolder as the source.  For example, if the video source file is
+        &lt;b&gt;&lt;i&gt;/watch/Movies/mymovie.mkv&lt;/i&gt;&lt;/b&gt;, the converted
+        video will be written to &lt;b&gt;&lt;i&gt;/output/Movies/&lt;/i&gt;&lt;/b&gt;.&lt;/li&gt;&lt;li&gt;Use
+        any subfolder name.  For example, setting the value &lt;b&gt;&lt;i&gt;Home/Movies&lt;/i&gt;&lt;/b&gt;
+        will make converted videos written to &lt;b&gt;&lt;i&gt;/output/Home/Movies&lt;/i&gt;&lt;/b&gt;/&lt;/li&gt;&lt;/ul&gt;
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: 'Automatic Video Converter: Output Subdirectory'
+      Required: 'false'
+      Target: AUTOMATED_CONVERSION_OUTPUT_SUBDIR
+      Type: Variable
+      value: ''
+    'Automatic Video Converter: Output directory':
+      Default: /output
+      Description: Root directory where converted videos should be written.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: 'Automatic Video Converter: Output directory'
+      Required: 'false'
+      Target: AUTOMATED_CONVERSION_OUTPUT_DIR
+      Type: Variable
+      value: ''
+    'Automatic Video Converter: Overwrite Destination':
+      Default: '0'
+      Description: Setting this to 1 allows the final destination file to be overwritten
+        if it already exists.
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: 'Automatic Video Converter: Overwrite Destination'
+      Required: 'false'
+      Target: AUTOMATED_CONVERSION_OVERWRITE_OUTPUT
+      Type: Variable
+      value: ''
+    'Automatic Video Converter: Preset':
+      Default: General/Very Fast 1080p30
+      Description: Preset used by the automatic video converter.  Identification of
+        the preset must follow the format 'CATEGORY/PRESET NAME'.  Name of all available
+        presets can be seen via the HandBrake GUI.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: 'Automatic Video Converter: Preset'
+      Required: 'false'
+      Target: AUTOMATED_CONVERSION_PRESET
+      Type: Variable
+      value: ''
+    'Automatic Video Converter: Source File Stable Time':
+      Default: '5'
+      Description: Time (in seconds) during which properties (e.g. size, time, etc)
+        of a video file in the watch folder need to remain the same.  This is to avoid
+        processing a file that is being copied.
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: 'Automatic Video Converter: Source File Stable Time'
+      Required: 'false'
+      Target: AUTOMATED_CONVERSION_SOURCE_STABLE_TIME
+      Type: Variable
+      value: ''
+    'Automatic Video Converter: Video File Extensions':
+      Default: ''
+      Description: Space-separated list of file extensions to be considered as video
+        files.  By default, this list is empty, meaning that the automatic video converter
+        will let HandBrake automatically detects if a file, no matter its extension,
+        is a video or not (note that extensions defined by the &lt;i&gt;Non-Video
+        File Extensions&lt;/i&gt; list are always considered as non-video files).  Normally,
+        this variable doesn't need to be set.  Usage of this variable is useful when
+        only specific video files need to converted.
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: 'Automatic Video Converter: Video File Extensions'
+      Required: 'false'
+      Target: AUTOMATED_CONVERSION_VIDEO_FILE_EXTENSIONS
+      Type: Variable
+      value: ''
+    Display Height:
+      Default: '768'
+      Description: Height (in pixels) of the application's window.
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Display Height
+      Required: 'false'
+      Target: DISPLAY_HEIGHT
+      Type: Variable
+      value: ''
+    Display Width:
+      Default: '1280'
+      Description: Width (in pixels) of the application's window.
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Display Width
+      Required: 'false'
+      Target: DISPLAY_WIDTH
+      Type: Variable
+      value: ''
+    Extra x11vnc Options:
+      Default: ''
+      Description: 'Extra options to pass to the x11vnc server running in the Docker
+        container.&lt;br&gt;&lt;span style=''color: red;''&gt;&lt;b&gt;Warning:&lt;/b&gt;&lt;/span&gt;
+        For advanced users. Do not use unless you know what you are doing.'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Extra x11vnc Options
+      Required: 'false'
+      Target: X11VNC_EXTRA_OPTS
+      Type: Variable
+      value: ''
+    Group ID:
+      Default: '100'
+      Description: ID of the group the application runs as.
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: Group ID
+      Required: 'true'
+      Target: GROUP_ID
+      Type: Variable
+      value: ''
+    Niceness (priority):
+      Default: ''
+      Description: Priority at which the application should run.  A niceness value
+        of -20 is the highest priority and 19 is the lowest priority.&lt;br&gt;&lt;b&gt;NOTE:&lt;/b&gt;
+        Setting a negative value requires additional permissions.  Thus, &lt;i&gt;&lt;b&gt;--cap-add=SYS_NICE&lt;/b&gt;&lt;/i&gt;
+        must be added in &lt;i&gt;Extra Parameters&lt;/i&gt; (shown when &lt;i&gt;Advanced
+        View&lt;/i&gt; is enabled).
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Niceness (priority)
+      Required: 'false'
+      Target: APP_NICENESS
+      Type: Variable
+      value: ''
+    Secure Connection:
+      Default: '0'
+      Description: 'Whether or not an encrypted connection should be used to access
+        the application''s GUI.  Set to &lt;i&gt;&lt;b&gt;1&lt;/b&gt;&lt;/i&gt; to
+        encrypt the connection.&lt;br&gt;&lt;span style=''color: red;''&gt;&lt;b&gt;Note:&lt;/b&gt;&lt;/span&gt;
+        When enabling the secure connection, security parameters needs to be generated.  This
+        &lt;b&gt;one-time&lt;/b&gt; operation is done during container startup.  Depending
+        on your system, this could take a few minutes.  GUI of the application won''t
+        be available until the operation completes.'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Secure Connection
+      Required: 'false'
+      Target: SECURE_CONNECTION
+      Type: Variable
+      value: ''
+    Umask:
+      Default: '000'
+      Description: Mask that controls how file permissions are set for newly created
+        files. The value of the mask is in octal notation.
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Umask
+      Required: 'false'
+      Target: UMASK
+      Type: Variable
+      value: ''
+    User ID:
+      Default: '99'
+      Description: ID of the user the application runs as.
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: User ID
+      Required: 'true'
+      Target: USER_ID
+      Type: Variable
+      value: ''
 FirstSeen: 1537329600
 Icon: https://raw.githubusercontent.com/jlesage/docker-templates/master/jlesage/images/handbrake-icon.png
 LastUpdate: 1643340719

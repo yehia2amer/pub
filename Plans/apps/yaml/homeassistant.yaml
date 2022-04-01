@@ -1,66 +1,71 @@
 ChangeLogPresent: true
 Config:
-- '@attributes':
-    Default: '8123'
-    Description: Application WebUI, only use this if you are not using host mode.
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: 'Port: 8123'
-    Required: 'false'
-    Target: '8123'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Home Assistant config storage path.
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: Appdata
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: '99'
-    Description: 'Container Variable: PUID'
-    Display: advanced
-    Mask: 'false'
-    Name: PUID
-    Required: 'true'
-    Target: PUID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '100'
-    Description: 'Container Variable: PGID'
-    Display: advanced
-    Mask: 'false'
-    Name: PGID
-    Required: 'true'
-    Target: PGID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '022'
-    Description: 'Container Variable: UMASK'
-    Display: advanced
-    Mask: 'false'
-    Name: UMASK
-    Required: 'false'
-    Target: UMASK
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: /path/to/device
-    Description: For passing through USB, serial or gpio devices.
-    Display: always
-    Mask: 'false'
-    Name: /path/to/device
-    Required: 'false'
-    Type: Device
-  value: ''
+  Device:
+    /path/to/device:
+      Default: /path/to/device
+      Description: For passing through USB, serial or gpio devices.
+      Display: always
+      Mask: 'false'
+      Name: /path/to/device
+      Required: 'false'
+      Type: Device
+      value: ''
+  Label: {}
+  Path:
+    Appdata:
+      Default: ''
+      Description: Home Assistant config storage path.
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: Appdata
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: ''
+  Port:
+    'Port: 8123':
+      Default: '8123'
+      Description: Application WebUI, only use this if you are not using host mode.
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: 'Port: 8123'
+      Required: 'false'
+      Target: '8123'
+      Type: Port
+      value: ''
+  Variable:
+    PGID:
+      Default: '100'
+      Description: 'Container Variable: PGID'
+      Display: advanced
+      Mask: 'false'
+      Name: PGID
+      Required: 'true'
+      Target: PGID
+      Type: Variable
+      value: ''
+    PUID:
+      Default: '99'
+      Description: 'Container Variable: PUID'
+      Display: advanced
+      Mask: 'false'
+      Name: PUID
+      Required: 'true'
+      Target: PUID
+      Type: Variable
+      value: ''
+    UMASK:
+      Default: '022'
+      Description: 'Container Variable: UMASK'
+      Display: advanced
+      Mask: 'false'
+      Name: UMASK
+      Required: 'false'
+      Target: UMASK
+      Type: Variable
+      value: ''
 DonateImg: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/donate.png
 DonateLink: https://www.linuxserver.io/donate
 DonateText: Donations

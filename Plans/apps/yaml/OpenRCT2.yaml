@@ -1,128 +1,134 @@
 CategoryList:
 - GameServers
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /serverdata/serverfiles'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: ServerFiles
-    Required: 'true'
-    Target: /serverdata/serverfiles
-    Type: Path
-  value: /mnt/cache/appdata/openrct2
-- '@attributes':
-    Default: ''
-    Description: 'Preferred game version to install or set to ''latest'' to check
-      on every start if there is a newer version available (If you want to install
-      a custom version the version number must look like this: ''v0.2.3-develop-e4a2b1f9c''
-      if the source file is named like this: ''OpenRCT2-0.2.3-develop-e4a2b1f9c-linux-x86_64.tar'')'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Game Version
-    Required: 'true'
-    Target: GAME_VERSION
-    Type: Variable
-  value: latest
-- '@attributes':
-    Default: ''
-    Description: Enter you Extra Startup Parameters if needed.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Extra Startup Parameters
-    Required: 'false'
-    Target: GAME_CONFIG
-    Type: Variable
-  value: --password Docker
-- '@attributes':
-    Default: ''
-    Description: 'Enter here the name of the savegame to load (located for example:
-      /saves/docker.sav)'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Savegame Name
-    Required: 'true'
-    Target: GAME_SAVE_NAME
-    Type: Variable
-  value: docker.sv6
-- '@attributes':
-    Default: ''
-    Description: TCP Game Port (if you need another port, please delete this entry
-      and create a new TCP Port with the required port number, also don't forget to
-      change it in the 'Show more settings ...' section below)
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: TCP - Game Port
-    Required: 'true'
-    Target: '11753'
-    Type: Port
-  value: '11753'
-- '@attributes':
-    Default: ''
-    Description: 'Name of the user who should become the admin (Note: this must be
-      the username that connects to the server from the client machine)'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Admin Name
-    Required: 'false'
-    Target: ADMIN_NAME
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: "The hash of the admin user (you find it on the client computer in\
-      \ the 'user-data/keys' folder from OpenRCT2 - if nothing is in there try to\
-      \ connect to any server and the game will create the hash, it\u2019s the numbers\
-      \ and letters after the username without \u2018-\u2019 and without the ending\
-      \ \u2018.pubkey\u2019 or just turn on \u2018log_server_actions\u2019 in the\
-      \ \u2018config.ini\u2019 on the server and you\u2019ll find it in the logs)"
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Admin Hash
-    Required: 'false'
-    Target: ADMIN_HASH
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: GAME_PORT'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: GAME_PORT
-    Required: 'true'
-    Target: GAME_PORT
-    Type: Variable
-  value: '11753'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: UID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: UID
-    Required: 'true'
-    Target: UID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: GID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: GID
-    Required: 'true'
-    Target: GID
-    Type: Variable
-  value: '100'
+  Device: {}
+  Label: {}
+  Path:
+    ServerFiles:
+      Default: ''
+      Description: 'Container Path: /serverdata/serverfiles'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: ServerFiles
+      Required: 'true'
+      Target: /serverdata/serverfiles
+      Type: Path
+      value: /mnt/cache/appdata/openrct2
+  Port:
+    TCP - Game Port:
+      Default: ''
+      Description: TCP Game Port (if you need another port, please delete this entry
+        and create a new TCP Port with the required port number, also don't forget
+        to change it in the 'Show more settings ...' section below)
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: TCP - Game Port
+      Required: 'true'
+      Target: '11753'
+      Type: Port
+      value: '11753'
+  Variable:
+    Admin Hash:
+      Default: ''
+      Description: "The hash of the admin user (you find it on the client computer\
+        \ in the 'user-data/keys' folder from OpenRCT2 - if nothing is in there try\
+        \ to connect to any server and the game will create the hash, it\u2019s the\
+        \ numbers and letters after the username without \u2018-\u2019 and without\
+        \ the ending \u2018.pubkey\u2019 or just turn on \u2018log_server_actions\u2019\
+        \ in the \u2018config.ini\u2019 on the server and you\u2019ll find it in the\
+        \ logs)"
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Admin Hash
+      Required: 'false'
+      Target: ADMIN_HASH
+      Type: Variable
+      value: ''
+    Admin Name:
+      Default: ''
+      Description: 'Name of the user who should become the admin (Note: this must
+        be the username that connects to the server from the client machine)'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Admin Name
+      Required: 'false'
+      Target: ADMIN_NAME
+      Type: Variable
+      value: ''
+    Extra Startup Parameters:
+      Default: ''
+      Description: Enter you Extra Startup Parameters if needed.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Extra Startup Parameters
+      Required: 'false'
+      Target: GAME_CONFIG
+      Type: Variable
+      value: --password Docker
+    GAME_PORT:
+      Default: ''
+      Description: 'Container Variable: GAME_PORT'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: GAME_PORT
+      Required: 'true'
+      Target: GAME_PORT
+      Type: Variable
+      value: '11753'
+    GID:
+      Default: ''
+      Description: 'Container Variable: GID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: GID
+      Required: 'true'
+      Target: GID
+      Type: Variable
+      value: '100'
+    Game Version:
+      Default: ''
+      Description: 'Preferred game version to install or set to ''latest'' to check
+        on every start if there is a newer version available (If you want to install
+        a custom version the version number must look like this: ''v0.2.3-develop-e4a2b1f9c''
+        if the source file is named like this: ''OpenRCT2-0.2.3-develop-e4a2b1f9c-linux-x86_64.tar'')'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Game Version
+      Required: 'true'
+      Target: GAME_VERSION
+      Type: Variable
+      value: latest
+    Savegame Name:
+      Default: ''
+      Description: 'Enter here the name of the savegame to load (located for example:
+        /saves/docker.sav)'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Savegame Name
+      Required: 'true'
+      Target: GAME_SAVE_NAME
+      Type: Variable
+      value: docker.sv6
+    UID:
+      Default: ''
+      Description: 'Container Variable: UID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: UID
+      Required: 'true'
+      Target: UID
+      Type: Variable
+      value: '99'
 DonateLink: https://www.paypal.me/chips777
 DonateText: 'If you like my work please '
 ExtraParams: --restart=unless-stopped

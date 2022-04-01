@@ -4,39 +4,44 @@ CategoryList:
 - Tools-Utilities
 - Network-Web
 Config:
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'false'
-    Target: '8080'
-    Type: Port
-  value: '3300'
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Storage (data)
-    Required: 'false'
-    Target: /app/data
-    Type: Path
-  value: /mnt/user/appdata/mojopaste
-- '@attributes':
-    Default: ''
-    Description: The application can make charts from the input data. (1/0)
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: PASTE_ENABLE_CHARTS
-    Required: 'false'
-    Target: PASTE_ENABLE_CHARTS
-    Type: Variable
-  value: '0'
+  Device: {}
+  Label: {}
+  Path:
+    Storage (data):
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Storage (data)
+      Required: 'false'
+      Target: /app/data
+      Type: Path
+      value: /mnt/user/appdata/mojopaste
+  Port:
+    WebUI:
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'false'
+      Target: '8080'
+      Type: Port
+      value: '3300'
+  Variable:
+    PASTE_ENABLE_CHARTS:
+      Default: ''
+      Description: The application can make charts from the input data. (1/0)
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PASTE_ENABLE_CHARTS
+      Required: 'false'
+      Target: PASTE_ENABLE_CHARTS
+      Type: Variable
+      value: '0'
 FirstSeen: 1643403816
 Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/mojopaste.png
 LastUpdate: 1642234160

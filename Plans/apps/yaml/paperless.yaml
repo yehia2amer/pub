@@ -2,152 +2,157 @@ CAComment: While still functional, the author recommends to migrate to paperless
 CategoryList:
 - Productivity
 Config:
-- '@attributes':
-    Default: '8000'
-    Description: 'Container Port: 8000'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Port
-    Required: 'false'
-    Target: '8000'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: /mnt/user/appdata/paperless/data
-    Description: "Container Path: /usr/src/paperless/data . \r\nThis contains the\
-      \ paperless database. Should be in appdata."
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Data
-    Required: 'true'
-    Target: /usr/src/paperless/data
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: "Container Path: /usr/src/paperless/media . \r\nOnce consumed, files\
-      \ will be stored here."
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Media
-    Required: 'true'
-    Target: /usr/src/paperless/media
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: "Container Path: /consume . \r\nFiles placed here will be consumed\
-      \ by paperless."
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Consumption
-    Required: 'true'
-    Target: /consume
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: "Container Path: /export . \r\nLocation for files used by the exporter\
-      \ utility.\r\nSee https://paperless.readthedocs.io/en/latest/utilities.html#the-exporter"
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Export
-    Required: 'false'
-    Target: /export
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: eng
-    Description: 'Container Variable: PAPERLESS_OCR_LANGUAGE . Override the language
-      that tesseract will attempt to use when parsing documents. Use a 3-letter language
-      code consistent with ISO 639: https://www.loc.gov/standards/iso639-2/php/code_list.php'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: PAPERLESS_OCR_LANGUAGE
-    Required: 'false'
-    Target: PAPERLESS_OCR_LANGUAGE
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: eng
-    Description: 'Container Variable: PAPERLESS_OCR_LANGUAGES . Additional languages
-      to install for text recognition. Use a space separated list of 3-letter language
-      codes consistent with ISO 639: https://www.loc.gov/standards/iso639-2/php/code_list.php'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: PAPERLESS_OCR_LANGUAGES
-    Required: 'false'
-    Target: PAPERLESS_OCR_LANGUAGES
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 'false'
-    Description: "Container Variable: PAPERLESS_FORGIVING_OCR . \r\nWhen true, Paperless\
-      \ will consume documents even if the language detection fails."
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: PAPERLESS_FORGIVING_OCR
-    Required: 'false'
-    Target: PAPERLESS_FORGIVING_OCR
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 'false'
-    Description: "Container Variable: PAPERLESS_INLINE_DOC.\r\nWhen true, PDF files\
-      \ will be viewed in the browser. When false (default), PDF files will be downloaded."
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: PAPERLESS_INLINE_DOC
-    Required: 'false'
-    Target: PAPERLESS_INLINE_DOC
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '{created}-{correspondent}-{title}'
-    Description: 'Specify a filename format for the document (directories are supported).
-      Use the following placeholders: {correspondent}, {title}, {created}, {added},
-      {tags[KEY]} If your tags conform to key_value or key-value, {tags[INDEX]} If
-      your tags are strings, select the tag by index. Uniqueness of filenames is ensured,
-      as an incrementing counter is attached.'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: PAPERLESS_FILENAME_FORMAT
-    Required: 'false'
-    Target: PAPERLESS_FILENAME_FORMAT
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '99'
-    Description: 'Container Variable: USERMAP_UID'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: PUID
-    Required: 'false'
-    Target: USERMAP_UID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '100'
-    Description: 'Container Variable: USERMAP_GID'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: PGID
-    Required: 'false'
-    Target: USERMAP_GID
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Consumption:
+      Default: ''
+      Description: "Container Path: /consume . \r\nFiles placed here will be consumed\
+        \ by paperless."
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Consumption
+      Required: 'true'
+      Target: /consume
+      Type: Path
+      value: ''
+    Data:
+      Default: /mnt/user/appdata/paperless/data
+      Description: "Container Path: /usr/src/paperless/data . \r\nThis contains the\
+        \ paperless database. Should be in appdata."
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Data
+      Required: 'true'
+      Target: /usr/src/paperless/data
+      Type: Path
+      value: ''
+    Export:
+      Default: ''
+      Description: "Container Path: /export . \r\nLocation for files used by the exporter\
+        \ utility.\r\nSee https://paperless.readthedocs.io/en/latest/utilities.html#the-exporter"
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Export
+      Required: 'false'
+      Target: /export
+      Type: Path
+      value: ''
+    Media:
+      Default: ''
+      Description: "Container Path: /usr/src/paperless/media . \r\nOnce consumed,\
+        \ files will be stored here."
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Media
+      Required: 'true'
+      Target: /usr/src/paperless/media
+      Type: Path
+      value: ''
+  Port:
+    Port:
+      Default: '8000'
+      Description: 'Container Port: 8000'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Port
+      Required: 'false'
+      Target: '8000'
+      Type: Port
+      value: ''
+  Variable:
+    PAPERLESS_FILENAME_FORMAT:
+      Default: '{created}-{correspondent}-{title}'
+      Description: 'Specify a filename format for the document (directories are supported).
+        Use the following placeholders: {correspondent}, {title}, {created}, {added},
+        {tags[KEY]} If your tags conform to key_value or key-value, {tags[INDEX]}
+        If your tags are strings, select the tag by index. Uniqueness of filenames
+        is ensured, as an incrementing counter is attached.'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: PAPERLESS_FILENAME_FORMAT
+      Required: 'false'
+      Target: PAPERLESS_FILENAME_FORMAT
+      Type: Variable
+      value: ''
+    PAPERLESS_FORGIVING_OCR:
+      Default: 'false'
+      Description: "Container Variable: PAPERLESS_FORGIVING_OCR . \r\nWhen true, Paperless\
+        \ will consume documents even if the language detection fails."
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: PAPERLESS_FORGIVING_OCR
+      Required: 'false'
+      Target: PAPERLESS_FORGIVING_OCR
+      Type: Variable
+      value: ''
+    PAPERLESS_INLINE_DOC:
+      Default: 'false'
+      Description: "Container Variable: PAPERLESS_INLINE_DOC.\r\nWhen true, PDF files\
+        \ will be viewed in the browser. When false (default), PDF files will be downloaded."
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: PAPERLESS_INLINE_DOC
+      Required: 'false'
+      Target: PAPERLESS_INLINE_DOC
+      Type: Variable
+      value: ''
+    PAPERLESS_OCR_LANGUAGE:
+      Default: eng
+      Description: 'Container Variable: PAPERLESS_OCR_LANGUAGE . Override the language
+        that tesseract will attempt to use when parsing documents. Use a 3-letter
+        language code consistent with ISO 639: https://www.loc.gov/standards/iso639-2/php/code_list.php'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: PAPERLESS_OCR_LANGUAGE
+      Required: 'false'
+      Target: PAPERLESS_OCR_LANGUAGE
+      Type: Variable
+      value: ''
+    PAPERLESS_OCR_LANGUAGES:
+      Default: eng
+      Description: 'Container Variable: PAPERLESS_OCR_LANGUAGES . Additional languages
+        to install for text recognition. Use a space separated list of 3-letter language
+        codes consistent with ISO 639: https://www.loc.gov/standards/iso639-2/php/code_list.php'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: PAPERLESS_OCR_LANGUAGES
+      Required: 'false'
+      Target: PAPERLESS_OCR_LANGUAGES
+      Type: Variable
+      value: ''
+    PGID:
+      Default: '100'
+      Description: 'Container Variable: USERMAP_GID'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PGID
+      Required: 'false'
+      Target: USERMAP_GID
+      Type: Variable
+      value: ''
+    PUID:
+      Default: '99'
+      Description: 'Container Variable: USERMAP_UID'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PUID
+      Required: 'false'
+      Target: USERMAP_UID
+      Type: Variable
+      value: ''
 Deprecated: true
 FirstSeen: 1578344958
 Icon: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/paperless.png

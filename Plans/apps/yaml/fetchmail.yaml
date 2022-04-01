@@ -3,29 +3,34 @@ CategoryList:
 - Other
 - Network-Other
 Config:
-- '@attributes':
-    Default: '300'
-    Description: 'TIMECRON: Time to Recheck mail, if nothing set it defaults to 300
-      seconds (which should accept the most mail servers)'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: TIMECRON
-    Required: 'false'
-    Target: TIMECRON
-    Type: Variable
-  value: '300'
-- '@attributes':
-    Default: /mnt/user/appdata/fetchmail
-    Description: 'Container Path: /data'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Config
-    Required: 'false'
-    Target: /data/etc/
-    Type: Path
-  value: /mnt/user/appdata/fetchmail
+  Device: {}
+  Label: {}
+  Path:
+    Config:
+      Default: /mnt/user/appdata/fetchmail
+      Description: 'Container Path: /data'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Config
+      Required: 'false'
+      Target: /data/etc/
+      Type: Path
+      value: /mnt/user/appdata/fetchmail
+  Port: {}
+  Variable:
+    TIMECRON:
+      Default: '300'
+      Description: 'TIMECRON: Time to Recheck mail, if nothing set it defaults to
+        300 seconds (which should accept the most mail servers)'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: TIMECRON
+      Required: 'false'
+      Target: TIMECRON
+      Type: Variable
+      value: '300'
 FirstSeen: 1635422601
 Icon: https://www.fetchmail.info/bighand.png
 LastUpdate: 1648340701

@@ -2,50 +2,55 @@ CategoryList:
 - HomeAutomation
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: /mnt/user/appdata/esphome
-    Description: 'Container Path: /config'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Config Folder
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: '6123'
-    Description: Communication Port
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Communication
-    Required: 'false'
-    Target: '6123'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: '6052'
-    Description: WebUI Port
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'true'
-    Target: '6052'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: 'false'
-    Description: Set this to true if the devices are showing offline
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Dashboard Use Ping
-    Required: 'true'
-    Target: ESPHOME_DASHBOARD_USE_PING
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Config Folder:
+      Default: /mnt/user/appdata/esphome
+      Description: 'Container Path: /config'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Config Folder
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: ''
+  Port:
+    Communication:
+      Default: '6123'
+      Description: Communication Port
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Communication
+      Required: 'false'
+      Target: '6123'
+      Type: Port
+      value: ''
+    WebUI:
+      Default: '6052'
+      Description: WebUI Port
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'true'
+      Target: '6052'
+      Type: Port
+      value: ''
+  Variable:
+    Dashboard Use Ping:
+      Default: 'false'
+      Description: Set this to true if the devices are showing offline
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Dashboard Use Ping
+      Required: 'true'
+      Target: ESPHOME_DASHBOARD_USE_PING
+      Type: Variable
+      value: ''
 ExtraParams: --restart unless-stopped
 FirstSeen: 1551315760
 Icon: https://raw.githubusercontent.com/digiblur/unraid-docker-templates/master/images/esphome.png

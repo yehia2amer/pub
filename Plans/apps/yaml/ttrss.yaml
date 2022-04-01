@@ -2,127 +2,132 @@ CategoryList:
 - Productivity
 - Other
 Config:
-- '@attributes':
-    Default: '8000'
-    Description: Port
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Port
-    Required: 'false'
-    Target: '80'
-    Type: Port
-  value: '8000'
-- '@attributes':
-    Default: /mnt/user/appdata/tt-rss/
-    Description: AppData
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: AppData
-    Required: 'false'
-    Target: /config
-    Type: Path
-  value: /mnt/user/appdata/tt-rss
-- '@attributes':
-    Default: mysql
-    Description: TTRSS_DB_TYPE
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: TTRSS_DB_TYPE
-    Required: 'false'
-    Target: TTRSS_DB_TYPE
-    Type: Variable
-  value: mysql
-- '@attributes':
-    Default: 192.168.0.100
-    Description: Database IP (Change it)
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: TTRSS_DB_HOST
-    Required: 'false'
-    Target: TTRSS_DB_HOST
-    Type: Variable
-  value: 192.168.0.100
-- '@attributes':
-    Default: root
-    Description: TTRSS_DB_USER
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: TTRSS_DB_USER
-    Required: 'false'
-    Target: TTRSS_DB_USER
-    Type: Variable
-  value: root
-- '@attributes':
-    Default: tt-rss
-    Description: TTRSS_DB_NAME
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: TTRSS_DB_NAME
-    Required: 'false'
-    Target: TTRSS_DB_NAME
-    Type: Variable
-  value: tt-rss
-- '@attributes':
-    Default: dbpassword
-    Description: TTRSS_DB_PASS
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: TTRSS_DB_PASS
-    Required: 'false'
-    Target: TTRSS_DB_PASS
-    Type: Variable
-  value: dbpassword
-- '@attributes':
-    Default: '3306'
-    Description: TTRSS_DB_PORT
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: TTRSS_DB_PORT
-    Required: 'false'
-    Target: TTRSS_DB_PORT
-    Type: Variable
-  value: '3306'
-- '@attributes':
-    Default: http://192.168.0.100:8000/
-    Description: TTRSS_SELF_URL_PATH
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: TTRSS_SELF_URL_PATH
-    Required: 'false'
-    Target: TTRSS_SELF_URL_PATH
-    Type: Variable
-  value: http://192.168.0.100:8000/
-- '@attributes':
-    Default: '99'
-    Description: PUID
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: PUID
-    Required: 'false'
-    Target: PUID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: '100'
-    Description: PGID
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: PGID
-    Required: 'false'
-    Target: PGID
-    Type: Variable
-  value: '100'
+  Device: {}
+  Label: {}
+  Path:
+    AppData:
+      Default: /mnt/user/appdata/tt-rss/
+      Description: AppData
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: AppData
+      Required: 'false'
+      Target: /config
+      Type: Path
+      value: /mnt/user/appdata/tt-rss
+  Port:
+    Port:
+      Default: '8000'
+      Description: Port
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Port
+      Required: 'false'
+      Target: '80'
+      Type: Port
+      value: '8000'
+  Variable:
+    PGID:
+      Default: '100'
+      Description: PGID
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PGID
+      Required: 'false'
+      Target: PGID
+      Type: Variable
+      value: '100'
+    PUID:
+      Default: '99'
+      Description: PUID
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PUID
+      Required: 'false'
+      Target: PUID
+      Type: Variable
+      value: '99'
+    TTRSS_DB_HOST:
+      Default: 192.168.0.100
+      Description: Database IP (Change it)
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: TTRSS_DB_HOST
+      Required: 'false'
+      Target: TTRSS_DB_HOST
+      Type: Variable
+      value: 192.168.0.100
+    TTRSS_DB_NAME:
+      Default: tt-rss
+      Description: TTRSS_DB_NAME
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: TTRSS_DB_NAME
+      Required: 'false'
+      Target: TTRSS_DB_NAME
+      Type: Variable
+      value: tt-rss
+    TTRSS_DB_PASS:
+      Default: dbpassword
+      Description: TTRSS_DB_PASS
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: TTRSS_DB_PASS
+      Required: 'false'
+      Target: TTRSS_DB_PASS
+      Type: Variable
+      value: dbpassword
+    TTRSS_DB_PORT:
+      Default: '3306'
+      Description: TTRSS_DB_PORT
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: TTRSS_DB_PORT
+      Required: 'false'
+      Target: TTRSS_DB_PORT
+      Type: Variable
+      value: '3306'
+    TTRSS_DB_TYPE:
+      Default: mysql
+      Description: TTRSS_DB_TYPE
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: TTRSS_DB_TYPE
+      Required: 'false'
+      Target: TTRSS_DB_TYPE
+      Type: Variable
+      value: mysql
+    TTRSS_DB_USER:
+      Default: root
+      Description: TTRSS_DB_USER
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: TTRSS_DB_USER
+      Required: 'false'
+      Target: TTRSS_DB_USER
+      Type: Variable
+      value: root
+    TTRSS_SELF_URL_PATH:
+      Default: http://192.168.0.100:8000/
+      Description: TTRSS_SELF_URL_PATH
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: TTRSS_SELF_URL_PATH
+      Required: 'false'
+      Target: TTRSS_SELF_URL_PATH
+      Type: Variable
+      value: http://192.168.0.100:8000/
 Deprecated: true
 FirstSeen: 1596744529
 Icon: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/tt-rss.png

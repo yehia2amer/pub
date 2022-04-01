@@ -3,306 +3,312 @@ CategoryList:
 - Network-Management
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: '1389'
-    Description: 'Container Port: 1389'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: HTTP_PORT
-    Required: 'true'
-    Target: '1389'
-    Type: Port
-  value: '1389'
-- '@attributes':
-    Default: '1636'
-    Description: 'Container Port: 1636'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: HTTPS_PORT
-    Required: 'true'
-    Target: '1636'
-    Type: Port
-  value: '1636'
-- '@attributes':
-    Default: admin
-    Description: 'Container Variable: LDAP_ADMIN_USERNAME'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: LDAP_ADMIN_USERNAME
-    Required: 'true'
-    Target: LDAP_ADMIN_USERNAME
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: adminpassword
-    Description: 'Container Variable: LDAP_ADMIN_PASSWORD'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: LDAP_ADMIN_PASSWORD
-    Required: 'true'
-    Target: LDAP_ADMIN_PASSWORD
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: user01,user02
-    Description: 'Comma separated list of LDAP users to create in the default LDAP
-      tree. Default: user01,user02'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: LDAP_USERS
-    Required: 'true'
-    Target: LDAP_USERS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: password1,password2
-    Description: 'Comma separated list of passwords to use for LDAP users. Default:
-      password1,password2'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: LDAP_PASSWORDS
-    Required: 'true'
-    Target: LDAP_PASSWORDS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 'no'
-    Description: Whether to enable TLS for traffic or not. Defaults to no
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: LDAP_ENABLE_TLS
-    Required: 'false'
-    Target: LDAP_ENABLE_TLS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Path to your certificates e.g. if you're using SWAG it would be /mnt/user/appdata/swag/keys
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Certs folder path
-    Required: 'false'
-    Target: /opt/bitnami/openldap/certs/
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: /opt/bitnami/openldap/certs/openldap.crt
-    Description: File containing the certificate file for the TSL traffic. No defaults.
-      (container's relative path, e.g. /opt/bitnami/openldap/certs/openldap.crt)
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: LDAP_TLS_CERT_FILE
-    Required: 'false'
-    Target: LDAP_TLS_CERT_FILE
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: /opt/bitnami/openldap/certs/openldap.key
-    Description: File containing the key for certificate. No defaults. (container's
-      relative path, e.g. /opt/bitnami/openldap/certs/openldap.key)
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: LDAP_TLS_KEY_FILE
-    Required: 'false'
-    Target: LDAP_TLS_KEY_FILE
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: /opt/bitnami/openldap/certs/openldapCA.crt
-    Description: File containing the CA of the certificate. No defaults. (container's
-      relative path, e.g. /opt/bitnami/openldap/certs/openldapCA.crt)
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: LDAP_TLS_CA_FILE
-    Required: 'false'
-    Target: LDAP_TLS_CA_FILE
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: File containing the DH parameters. No defaults.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: LDAP_TLS_DH_PARAMS_FILE
-    Required: 'false'
-    Target: LDAP_TLS_DH_PARAMS_FILE
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: dc=example,dc=org
-    Description: 'LDAP database root node of the LDAP tree. Default: dc=example,dc=org'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: LDAP_ROOT
-    Required: 'true'
-    Target: LDAP_ROOT
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: users
-    Description: 'DC for the users'' organizational unit. Default: users'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: LDAP_USER_DC
-    Required: 'true'
-    Target: LDAP_USER_DC
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: readers
-    Description: 'Group used to group created users. Default: readers'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: LDAP_GROUP
-    Required: 'true'
-    Target: LDAP_GROUP
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 'no'
-    Description: 'Whether to create a configuration admin user. Default: no.'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: LDAP_CONFIG_ADMIN_ENABLED
-    Required: 'false'
-    Target: LDAP_CONFIG_ADMIN_ENABLED
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: admin
-    Description: 'LDAP configuration admin user. This is separate from LDAP_ADMIN_USERNAME.
-      Default: admin.'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: LDAP_CONFIG_ADMIN_USERNAME
-    Required: 'false'
-    Target: LDAP_CONFIG_ADMIN_USERNAME
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: configpassword
-    Description: 'LDAP configuration admin password. Default: configpassword.'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: LDAP_CONFIG_ADMIN_PASSWORD
-    Required: 'false'
-    Target: LDAP_CONFIG_ADMIN_PASSWORD
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: cosine, inetorgperson, nis
-    Description: 'Extra schemas to add, among OpenLDAP''s distributed schemas. Default:
-      cosine, inetorgperson, nis'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: LDAP_EXTRA_SCHEMAS
-    Required: 'false'
-    Target: LDAP_EXTRA_SCHEMAS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 'no'
-    Description: 'Whether to skip creating the default LDAP tree based on LDAP_USERS,
-      LDAP_PASSWORDS, LDAP_USER_DC and LDAP_GROUP. Default: no'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: LDAP_SKIP_DEFAULT_TREE
-    Required: 'false'
-    Target: LDAP_SKIP_DEFAULT_TREE
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: /mnt/user/appdata/bitnami-openldap/ldifs
-    Description: Location of a directory that contains LDIF files that should be used
-      to bootstrap the database. Only files ending in .ldif will be used. Default
-      LDAP tree based on the LDAP_USERS, LDAP_PASSWORDS, LDAP_USER_DC and LDAP_GROUP
-      will be skipped when LDAP_CUSTOM_LDIF_DIR is used. When using this will override
-      the usage of LDAP_ROOT,LDAP_USERS, LDAP_PASSWORDS, LDAP_USER_DC and LDAP_GROUP.
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: LDAP_CUSTOM_LDIF_DIR
-    Required: 'false'
-    Target: /ldifs
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: /mnt/user/appdata/bitnami-openldap/custom.ldif
-    Description: Location of a custom internal schema file that could not be added
-      as custom ldif file (i.e. containing some structuralObjectClass). Default is
-      /mnt/user/appdata/bitnami-openldap/custom.ldif
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: LDAP_CUSTOM_SCHEMA_FILE
-    Required: 'false'
-    Target: /schema/custom.ldif
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: '1024'
-    Description: 'Maximum number of open file descriptors. Default: 1024.'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: LDAP_ULIMIT_NOFILES
-    Required: 'false'
-    Target: LDAP_ULIMIT_NOFILES
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 'yes'
-    Description: 'Allow anonymous bindings to the LDAP server. Default: yes'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: LDAP_ALLOW_ANON_BINDING
-    Required: 'false'
-    Target: LDAP_ALLOW_ANON_BINDING
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: /mnt/user/appdata/bitnami-openldap
-    Description: 'Container Path: /bitnami/openldap/data'
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: Appdata
-    Required: 'true'
-    Target: /bitnami/openldap/
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: 'false'
-    Description: Turn on debug info in logs
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Log debug
-    Required: 'false'
-    Target: BITNAMI_DEBUG
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Appdata:
+      Default: /mnt/user/appdata/bitnami-openldap
+      Description: 'Container Path: /bitnami/openldap/data'
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: Appdata
+      Required: 'true'
+      Target: /bitnami/openldap/
+      Type: Path
+      value: ''
+    Certs folder path:
+      Default: ''
+      Description: Path to your certificates e.g. if you're using SWAG it would be
+        /mnt/user/appdata/swag/keys
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Certs folder path
+      Required: 'false'
+      Target: /opt/bitnami/openldap/certs/
+      Type: Path
+      value: ''
+    LDAP_CUSTOM_LDIF_DIR:
+      Default: /mnt/user/appdata/bitnami-openldap/ldifs
+      Description: Location of a directory that contains LDIF files that should be
+        used to bootstrap the database. Only files ending in .ldif will be used. Default
+        LDAP tree based on the LDAP_USERS, LDAP_PASSWORDS, LDAP_USER_DC and LDAP_GROUP
+        will be skipped when LDAP_CUSTOM_LDIF_DIR is used. When using this will override
+        the usage of LDAP_ROOT,LDAP_USERS, LDAP_PASSWORDS, LDAP_USER_DC and LDAP_GROUP.
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: LDAP_CUSTOM_LDIF_DIR
+      Required: 'false'
+      Target: /ldifs
+      Type: Path
+      value: ''
+    LDAP_CUSTOM_SCHEMA_FILE:
+      Default: /mnt/user/appdata/bitnami-openldap/custom.ldif
+      Description: Location of a custom internal schema file that could not be added
+        as custom ldif file (i.e. containing some structuralObjectClass). Default
+        is /mnt/user/appdata/bitnami-openldap/custom.ldif
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: LDAP_CUSTOM_SCHEMA_FILE
+      Required: 'false'
+      Target: /schema/custom.ldif
+      Type: Path
+      value: ''
+  Port:
+    HTTPS_PORT:
+      Default: '1636'
+      Description: 'Container Port: 1636'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: HTTPS_PORT
+      Required: 'true'
+      Target: '1636'
+      Type: Port
+      value: '1636'
+    HTTP_PORT:
+      Default: '1389'
+      Description: 'Container Port: 1389'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: HTTP_PORT
+      Required: 'true'
+      Target: '1389'
+      Type: Port
+      value: '1389'
+  Variable:
+    LDAP_ADMIN_PASSWORD:
+      Default: adminpassword
+      Description: 'Container Variable: LDAP_ADMIN_PASSWORD'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: LDAP_ADMIN_PASSWORD
+      Required: 'true'
+      Target: LDAP_ADMIN_PASSWORD
+      Type: Variable
+      value: ''
+    LDAP_ADMIN_USERNAME:
+      Default: admin
+      Description: 'Container Variable: LDAP_ADMIN_USERNAME'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: LDAP_ADMIN_USERNAME
+      Required: 'true'
+      Target: LDAP_ADMIN_USERNAME
+      Type: Variable
+      value: ''
+    LDAP_ALLOW_ANON_BINDING:
+      Default: 'yes'
+      Description: 'Allow anonymous bindings to the LDAP server. Default: yes'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: LDAP_ALLOW_ANON_BINDING
+      Required: 'false'
+      Target: LDAP_ALLOW_ANON_BINDING
+      Type: Variable
+      value: ''
+    LDAP_CONFIG_ADMIN_ENABLED:
+      Default: 'no'
+      Description: 'Whether to create a configuration admin user. Default: no.'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: LDAP_CONFIG_ADMIN_ENABLED
+      Required: 'false'
+      Target: LDAP_CONFIG_ADMIN_ENABLED
+      Type: Variable
+      value: ''
+    LDAP_CONFIG_ADMIN_PASSWORD:
+      Default: configpassword
+      Description: 'LDAP configuration admin password. Default: configpassword.'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: LDAP_CONFIG_ADMIN_PASSWORD
+      Required: 'false'
+      Target: LDAP_CONFIG_ADMIN_PASSWORD
+      Type: Variable
+      value: ''
+    LDAP_CONFIG_ADMIN_USERNAME:
+      Default: admin
+      Description: 'LDAP configuration admin user. This is separate from LDAP_ADMIN_USERNAME.
+        Default: admin.'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: LDAP_CONFIG_ADMIN_USERNAME
+      Required: 'false'
+      Target: LDAP_CONFIG_ADMIN_USERNAME
+      Type: Variable
+      value: ''
+    LDAP_ENABLE_TLS:
+      Default: 'no'
+      Description: Whether to enable TLS for traffic or not. Defaults to no
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: LDAP_ENABLE_TLS
+      Required: 'false'
+      Target: LDAP_ENABLE_TLS
+      Type: Variable
+      value: ''
+    LDAP_EXTRA_SCHEMAS:
+      Default: cosine, inetorgperson, nis
+      Description: 'Extra schemas to add, among OpenLDAP''s distributed schemas. Default:
+        cosine, inetorgperson, nis'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: LDAP_EXTRA_SCHEMAS
+      Required: 'false'
+      Target: LDAP_EXTRA_SCHEMAS
+      Type: Variable
+      value: ''
+    LDAP_GROUP:
+      Default: readers
+      Description: 'Group used to group created users. Default: readers'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: LDAP_GROUP
+      Required: 'true'
+      Target: LDAP_GROUP
+      Type: Variable
+      value: ''
+    LDAP_PASSWORDS:
+      Default: password1,password2
+      Description: 'Comma separated list of passwords to use for LDAP users. Default:
+        password1,password2'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: LDAP_PASSWORDS
+      Required: 'true'
+      Target: LDAP_PASSWORDS
+      Type: Variable
+      value: ''
+    LDAP_ROOT:
+      Default: dc=example,dc=org
+      Description: 'LDAP database root node of the LDAP tree. Default: dc=example,dc=org'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: LDAP_ROOT
+      Required: 'true'
+      Target: LDAP_ROOT
+      Type: Variable
+      value: ''
+    LDAP_SKIP_DEFAULT_TREE:
+      Default: 'no'
+      Description: 'Whether to skip creating the default LDAP tree based on LDAP_USERS,
+        LDAP_PASSWORDS, LDAP_USER_DC and LDAP_GROUP. Default: no'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: LDAP_SKIP_DEFAULT_TREE
+      Required: 'false'
+      Target: LDAP_SKIP_DEFAULT_TREE
+      Type: Variable
+      value: ''
+    LDAP_TLS_CA_FILE:
+      Default: /opt/bitnami/openldap/certs/openldapCA.crt
+      Description: File containing the CA of the certificate. No defaults. (container's
+        relative path, e.g. /opt/bitnami/openldap/certs/openldapCA.crt)
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: LDAP_TLS_CA_FILE
+      Required: 'false'
+      Target: LDAP_TLS_CA_FILE
+      Type: Variable
+      value: ''
+    LDAP_TLS_CERT_FILE:
+      Default: /opt/bitnami/openldap/certs/openldap.crt
+      Description: File containing the certificate file for the TSL traffic. No defaults.
+        (container's relative path, e.g. /opt/bitnami/openldap/certs/openldap.crt)
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: LDAP_TLS_CERT_FILE
+      Required: 'false'
+      Target: LDAP_TLS_CERT_FILE
+      Type: Variable
+      value: ''
+    LDAP_TLS_DH_PARAMS_FILE:
+      Default: ''
+      Description: File containing the DH parameters. No defaults.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: LDAP_TLS_DH_PARAMS_FILE
+      Required: 'false'
+      Target: LDAP_TLS_DH_PARAMS_FILE
+      Type: Variable
+      value: ''
+    LDAP_TLS_KEY_FILE:
+      Default: /opt/bitnami/openldap/certs/openldap.key
+      Description: File containing the key for certificate. No defaults. (container's
+        relative path, e.g. /opt/bitnami/openldap/certs/openldap.key)
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: LDAP_TLS_KEY_FILE
+      Required: 'false'
+      Target: LDAP_TLS_KEY_FILE
+      Type: Variable
+      value: ''
+    LDAP_ULIMIT_NOFILES:
+      Default: '1024'
+      Description: 'Maximum number of open file descriptors. Default: 1024.'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: LDAP_ULIMIT_NOFILES
+      Required: 'false'
+      Target: LDAP_ULIMIT_NOFILES
+      Type: Variable
+      value: ''
+    LDAP_USERS:
+      Default: user01,user02
+      Description: 'Comma separated list of LDAP users to create in the default LDAP
+        tree. Default: user01,user02'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: LDAP_USERS
+      Required: 'true'
+      Target: LDAP_USERS
+      Type: Variable
+      value: ''
+    LDAP_USER_DC:
+      Default: users
+      Description: 'DC for the users'' organizational unit. Default: users'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: LDAP_USER_DC
+      Required: 'true'
+      Target: LDAP_USER_DC
+      Type: Variable
+      value: ''
+    Log debug:
+      Default: 'false'
+      Description: Turn on debug info in logs
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Log debug
+      Required: 'false'
+      Target: BITNAMI_DEBUG
+      Type: Variable
+      value: ''
 FirstSeen: 1635798126
 Icon: https://secure.gravatar.com/avatar/b6d982581a58a6a39d12c5d5355dde23.jpg
 LastUpdate: 1648741645

@@ -3,105 +3,110 @@ CategoryList:
 - Network-Web
 - Network-Management
 Config:
-- '@attributes':
-    Default: '8080'
-    Description: Port
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Port
-    Required: 'true'
-    Target: '8080'
-    Type: Port
-  value: '8080'
-- '@attributes':
-    Default: https://commento.example.com
-    Description: Can be https://commento.example.com or http://ip:port
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: COMMENTO_ORIGIN
-    Required: 'true'
-    Target: COMMENTO_ORIGIN
-    Type: Variable
-  value: https://commento.example.com
-- '@attributes':
-    Default: postgres://postgres:mysupersecurepassword@db:5432/commento?sslmode=disable
-    Description: PostgreSQL Change it using your info
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: COMMENTO_POSTGRES
-    Required: 'true'
-    Target: COMMENTO_POSTGRES
-    Type: Variable
-  value: postgres://postgres:mysupersecurepassword@dbhostnameorip:5432/commento?sslmode=disable
-- '@attributes':
-    Default: example.com
-    Description: SMTP HOST
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: SMTP HOST
-    Required: 'false'
-    Target: COMMENTO_SMTP_HOST
-    Type: Variable
-  value: example.com
-- '@attributes':
-    Default: '587'
-    Description: SMTP PORT
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: SMTP PORT
-    Required: 'false'
-    Target: COMMENTO_SMTP_PORT
-    Type: Variable
-  value: '587'
-- '@attributes':
-    Default: user@example.com
-    Description: SMTP USERNAME
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: SMTP USERNAME
-    Required: 'false'
-    Target: COMMENTO_SMTP_USERNAME
-    Type: Variable
-  value: user@example.com
-- '@attributes':
-    Default: smtppassword
-    Description: SMTP PASSWORD
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: SMTP PASSWORD
-    Required: 'false'
-    Target: COMMENTO_SMTP_PASSWORD
-    Type: Variable
-  value: smtppassword
-- '@attributes':
-    Default: fromaddress@example.com
-    Description: SMTP FROM ADDRESS
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: SMTP FROM ADDRESS
-    Required: 'false'
-    Target: COMMENTO_SMTP_FROM_ADDRESS
-    Type: Variable
-  value: fromaddress@example.com
-- '@attributes':
-    Default: '8080'
-    Description: COMMENTO_PORT
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: COMMENTO_PORT
-    Required: 'true'
-    Target: COMMENTO_PORT
-    Type: Variable
-  value: '8080'
+  Device: {}
+  Label: {}
+  Path: {}
+  Port:
+    Port:
+      Default: '8080'
+      Description: Port
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Port
+      Required: 'true'
+      Target: '8080'
+      Type: Port
+      value: '8080'
+  Variable:
+    COMMENTO_ORIGIN:
+      Default: https://commento.example.com
+      Description: Can be https://commento.example.com or http://ip:port
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: COMMENTO_ORIGIN
+      Required: 'true'
+      Target: COMMENTO_ORIGIN
+      Type: Variable
+      value: https://commento.example.com
+    COMMENTO_PORT:
+      Default: '8080'
+      Description: COMMENTO_PORT
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: COMMENTO_PORT
+      Required: 'true'
+      Target: COMMENTO_PORT
+      Type: Variable
+      value: '8080'
+    COMMENTO_POSTGRES:
+      Default: postgres://postgres:mysupersecurepassword@db:5432/commento?sslmode=disable
+      Description: PostgreSQL Change it using your info
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: COMMENTO_POSTGRES
+      Required: 'true'
+      Target: COMMENTO_POSTGRES
+      Type: Variable
+      value: postgres://postgres:mysupersecurepassword@dbhostnameorip:5432/commento?sslmode=disable
+    SMTP FROM ADDRESS:
+      Default: fromaddress@example.com
+      Description: SMTP FROM ADDRESS
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: SMTP FROM ADDRESS
+      Required: 'false'
+      Target: COMMENTO_SMTP_FROM_ADDRESS
+      Type: Variable
+      value: fromaddress@example.com
+    SMTP HOST:
+      Default: example.com
+      Description: SMTP HOST
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: SMTP HOST
+      Required: 'false'
+      Target: COMMENTO_SMTP_HOST
+      Type: Variable
+      value: example.com
+    SMTP PASSWORD:
+      Default: smtppassword
+      Description: SMTP PASSWORD
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: SMTP PASSWORD
+      Required: 'false'
+      Target: COMMENTO_SMTP_PASSWORD
+      Type: Variable
+      value: smtppassword
+    SMTP PORT:
+      Default: '587'
+      Description: SMTP PORT
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: SMTP PORT
+      Required: 'false'
+      Target: COMMENTO_SMTP_PORT
+      Type: Variable
+      value: '587'
+    SMTP USERNAME:
+      Default: user@example.com
+      Description: SMTP USERNAME
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: SMTP USERNAME
+      Required: 'false'
+      Target: COMMENTO_SMTP_USERNAME
+      Type: Variable
+      value: user@example.com
 FirstSeen: 1590437793
 Icon: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/commento.png
 LastUpdateScan: 1647597799

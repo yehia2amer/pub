@@ -4,87 +4,92 @@ CategoryList:
 - Tools-Utilities
 - MediaApp-Books
 Config:
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'false'
-    Target: '8765'
-    Type: Port
-  value: '8765'
-- '@attributes':
-    Default: ''
-    Description: 'Generate secret key, by running the following cmd from unRAID Terminal:
-      ''openssl rand -base64 32''.'
-    Display: always
-    Mask: 'true'
-    Mode: ''
-    Name: SECRET_KEY
-    Required: 'true'
-    Target: SECRET_KEY
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Storage (data)
-    Required: 'false'
-    Target: /app/data/
-    Type: Path
-  value: /mnt/user/appdata/dailytxt
-- '@attributes':
-    Default: ''
-    Description: Enables or disables registration for new users. (True/False)
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: ALLOW_REGISTRATION
-    Required: 'false'
-    Target: ALLOW_REGISTRATION
-    Type: Variable
-  value: 'True'
-- '@attributes':
-    Default: ''
-    Description: Use this if you want the JSON log file to be indented. Makes it easier
-      to compare the files.
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: DATA_INDENT
-    Required: 'false'
-    Target: DATA_INDENT
-    Type: Variable
-  value: '2'
-- '@attributes':
-    Default: ''
-    Description: After how many days the JWT token will expire and you have to re-login.
-      (default 30 days)
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: JWT_EXP_DAYS
-    Required: 'false'
-    Target: JWT_EXP_DAYS
-    Type: Variable
-  value: '7'
-- '@attributes':
-    Default: ''
-    Description: Used to pass the number of the port to the nginx 'default.conf' file,
-      from inside the container.
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: PORT
-    Required: 'false'
-    Target: PORT
-    Type: Variable
-  value: '8765'
+  Device: {}
+  Label: {}
+  Path:
+    Storage (data):
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Storage (data)
+      Required: 'false'
+      Target: /app/data/
+      Type: Path
+      value: /mnt/user/appdata/dailytxt
+  Port:
+    WebUI:
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'false'
+      Target: '8765'
+      Type: Port
+      value: '8765'
+  Variable:
+    ALLOW_REGISTRATION:
+      Default: ''
+      Description: Enables or disables registration for new users. (True/False)
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: ALLOW_REGISTRATION
+      Required: 'false'
+      Target: ALLOW_REGISTRATION
+      Type: Variable
+      value: 'True'
+    DATA_INDENT:
+      Default: ''
+      Description: Use this if you want the JSON log file to be indented. Makes it
+        easier to compare the files.
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: DATA_INDENT
+      Required: 'false'
+      Target: DATA_INDENT
+      Type: Variable
+      value: '2'
+    JWT_EXP_DAYS:
+      Default: ''
+      Description: After how many days the JWT token will expire and you have to re-login.
+        (default 30 days)
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: JWT_EXP_DAYS
+      Required: 'false'
+      Target: JWT_EXP_DAYS
+      Type: Variable
+      value: '7'
+    PORT:
+      Default: ''
+      Description: Used to pass the number of the port to the nginx 'default.conf'
+        file, from inside the container.
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PORT
+      Required: 'false'
+      Target: PORT
+      Type: Variable
+      value: '8765'
+    SECRET_KEY:
+      Default: ''
+      Description: 'Generate secret key, by running the following cmd from unRAID
+        Terminal: ''openssl rand -base64 32''.'
+      Display: always
+      Mask: 'true'
+      Mode: ''
+      Name: SECRET_KEY
+      Required: 'true'
+      Target: SECRET_KEY
+      Type: Variable
+      value: ''
 FirstSeen: 1643663014
 Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/dailytxt.png
 LastUpdate: 1644158545

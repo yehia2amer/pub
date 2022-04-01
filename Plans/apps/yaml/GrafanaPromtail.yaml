@@ -2,39 +2,44 @@ CategoryList:
 - Tools-Utilities
 - Network-Other
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 9080'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Host Port 1
-    Required: 'false'
-    Target: '9080'
-    Type: Port
-  value: '9080'
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /etc/promtail'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Host Path 1
-    Required: 'false'
-    Target: /etc/promtail
-    Type: Path
-  value: /mnt/user/appdata/promtail
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /positions'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Positions
-    Required: 'false'
-    Target: /positions
-    Type: Path
-  value: /mnt/user/appdata/promtail/positions
+  Device: {}
+  Label: {}
+  Path:
+    Host Path 1:
+      Default: ''
+      Description: 'Container Path: /etc/promtail'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Host Path 1
+      Required: 'false'
+      Target: /etc/promtail
+      Type: Path
+      value: /mnt/user/appdata/promtail
+    Positions:
+      Default: ''
+      Description: 'Container Path: /positions'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Positions
+      Required: 'false'
+      Target: /positions
+      Type: Path
+      value: /mnt/user/appdata/promtail/positions
+  Port:
+    Host Port 1:
+      Default: ''
+      Description: 'Container Port: 9080'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Host Port 1
+      Required: 'false'
+      Target: '9080'
+      Type: Port
+      value: '9080'
+  Variable: {}
 FirstSeen: 1593808588
 Icon: https://github.com/natcoso9955/unRAID-docker/raw/master/icons/loki.png
 LastUpdate: 1648217516

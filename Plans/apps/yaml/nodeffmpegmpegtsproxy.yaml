@@ -1,26 +1,31 @@
 Config:
-- '@attributes':
-    Default: '9128'
-    Description: The port the HTTP server should be listening on
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Listen Port
-    Required: 'false'
-    Target: '9128'
-    Type: Port
-  value: '9128'
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /home/node/node-ffmpeg-mpegts-proxy/sources.json'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: JSON Path
-    Required: 'false'
-    Target: /home/node/node-ffmpeg-mpegts-proxy/sources.json
-    Type: Path
-  value: path/to/your/sources.json
+  Device: {}
+  Label: {}
+  Path:
+    JSON Path:
+      Default: ''
+      Description: 'Container Path: /home/node/node-ffmpeg-mpegts-proxy/sources.json'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: JSON Path
+      Required: 'false'
+      Target: /home/node/node-ffmpeg-mpegts-proxy/sources.json
+      Type: Path
+      value: path/to/your/sources.json
+  Port:
+    Listen Port:
+      Default: '9128'
+      Description: The port the HTTP server should be listening on
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Listen Port
+      Required: 'false'
+      Target: '9128'
+      Type: Port
+      value: '9128'
+  Variable: {}
 FirstSeen: 1634997805
 LastUpdate: 1536769637
 LastUpdateScan: 1647986619

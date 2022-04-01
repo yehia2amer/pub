@@ -5,86 +5,91 @@ CategoryList:
 - Productivity
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: '3306'
-    Description: 'Container Port: 3306'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: MySQL Port
-    Required: 'true'
-    Target: '3306'
-    Type: Port
-  value: '3306'
-- '@attributes':
-    Default: /mnt/user/appdata/onlyoffice/mysql/conf.d
-    Description: 'Container Path: /etc/mysql/conf.d'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Onlyoffice MySQL Config (onlyoffice.cnf created before mysql container is
-      started )
-    Required: 'false'
-    Target: /etc/mysql/conf.d
-    Type: Path
-  value: /mnt/user/appdata/onlyoffice/mysql/conf.d
-- '@attributes':
-    Default: /mnt/user/appdata/onlyoffice/mysql/data
-    Description: 'Container Path: /var/lib/mysql'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Mounted Folder for MySQL Database
-    Required: 'false'
-    Target: /var/lib/mysql
-    Type: Path
-  value: /mnt/user/appdata/onlyoffice/mysql/data
-- '@attributes':
-    Default: /mnt/user/appdata/onlyoffice/mysql/initdb
-    Description: 'Container Path: /docker-entrypoint-initdb.d'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Onlyoffice entrypoint for MySQL database setup ( setup.sql created before
-      mysql container is started )
-    Required: 'false'
-    Target: /docker-entrypoint-initdb.d
-    Type: Path
-  value: /mnt/user/appdata/onlyoffice/mysql/initdb
-- '@attributes':
-    Default: /mnt/user/appdata/onlyoffice/mysql/logs
-    Description: 'Container Path: /var/log/mysql'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Mounted MySQL Logs
-    Required: 'false'
-    Target: /var/log/mysql
-    Type: Path
-  value: /mnt/user/appdata/onlyoffice/mysql/logs
-- '@attributes':
-    Default: my-secret-pw
-    Description: 'Container Variable: MYSQL_ROOT_PASSWORD'
-    Display: always
-    Mask: 'true'
-    Mode: ''
-    Name: MySQL root password ( match the root password with the one in the setup.sql
-      script )
-    Required: 'false'
-    Target: MYSQL_ROOT_PASSWORD
-    Type: Variable
-  value: my-secret-pw
-- '@attributes':
-    Default: onlyoffice
-    Description: 'Container Variable: MYSQL_DATABASE'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Default OnlyOffice Community Server MySQL Database
-    Required: 'false'
-    Target: MYSQL_DATABASE
-    Type: Variable
-  value: onlyoffice
+  Device: {}
+  Label: {}
+  Path:
+    Mounted Folder for MySQL Database:
+      Default: /mnt/user/appdata/onlyoffice/mysql/data
+      Description: 'Container Path: /var/lib/mysql'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Mounted Folder for MySQL Database
+      Required: 'false'
+      Target: /var/lib/mysql
+      Type: Path
+      value: /mnt/user/appdata/onlyoffice/mysql/data
+    Mounted MySQL Logs:
+      Default: /mnt/user/appdata/onlyoffice/mysql/logs
+      Description: 'Container Path: /var/log/mysql'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Mounted MySQL Logs
+      Required: 'false'
+      Target: /var/log/mysql
+      Type: Path
+      value: /mnt/user/appdata/onlyoffice/mysql/logs
+    Onlyoffice MySQL Config (onlyoffice.cnf created before mysql container is started ):
+      Default: /mnt/user/appdata/onlyoffice/mysql/conf.d
+      Description: 'Container Path: /etc/mysql/conf.d'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Onlyoffice MySQL Config (onlyoffice.cnf created before mysql container
+        is started )
+      Required: 'false'
+      Target: /etc/mysql/conf.d
+      Type: Path
+      value: /mnt/user/appdata/onlyoffice/mysql/conf.d
+    Onlyoffice entrypoint for MySQL database setup ( setup.sql created before mysql container is started ):
+      Default: /mnt/user/appdata/onlyoffice/mysql/initdb
+      Description: 'Container Path: /docker-entrypoint-initdb.d'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Onlyoffice entrypoint for MySQL database setup ( setup.sql created before
+        mysql container is started )
+      Required: 'false'
+      Target: /docker-entrypoint-initdb.d
+      Type: Path
+      value: /mnt/user/appdata/onlyoffice/mysql/initdb
+  Port:
+    MySQL Port:
+      Default: '3306'
+      Description: 'Container Port: 3306'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: MySQL Port
+      Required: 'true'
+      Target: '3306'
+      Type: Port
+      value: '3306'
+  Variable:
+    Default OnlyOffice Community Server MySQL Database:
+      Default: onlyoffice
+      Description: 'Container Variable: MYSQL_DATABASE'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Default OnlyOffice Community Server MySQL Database
+      Required: 'false'
+      Target: MYSQL_DATABASE
+      Type: Variable
+      value: onlyoffice
+    MySQL root password ( match the root password with the one in the setup.sql script ):
+      Default: my-secret-pw
+      Description: 'Container Variable: MYSQL_ROOT_PASSWORD'
+      Display: always
+      Mask: 'true'
+      Mode: ''
+      Name: MySQL root password ( match the root password with the one in the setup.sql
+        script )
+      Required: 'false'
+      Target: MYSQL_ROOT_PASSWORD
+      Type: Variable
+      value: my-secret-pw
 DonateLink: https://www.paypal.me/xternet
 DonateText: Donate me a coffee or a beer if you like my work :)
 FirstSeen: 1575680732

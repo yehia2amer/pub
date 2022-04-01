@@ -1,40 +1,45 @@
 CategoryList:
 - Network-Other
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /DoH'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Container Path
-    Required: 'false'
-    Target: /DoH
-    Type: Path
-  value: /mnt/cache/appdata/doh-server
-- '@attributes':
-    Default: ''
-    Description: 'Find the versions here: https://github.com/m13253/dns-over-https/releases
-      or set to ''latest'' without quotes to download the latest version'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DoH Version
-    Required: 'true'
-    Target: DoH_V
-    Type: Variable
-  value: latest
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: GO_DL_URL'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Golang Download URL
-    Required: 'true'
-    Target: GO_DL_URL
-    Type: Variable
-  value: https://dl.google.com/go/go1.13.1.linux-amd64.tar.gz
+  Device: {}
+  Label: {}
+  Path:
+    Container Path:
+      Default: ''
+      Description: 'Container Path: /DoH'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Container Path
+      Required: 'false'
+      Target: /DoH
+      Type: Path
+      value: /mnt/cache/appdata/doh-server
+  Port: {}
+  Variable:
+    DoH Version:
+      Default: ''
+      Description: 'Find the versions here: https://github.com/m13253/dns-over-https/releases
+        or set to ''latest'' without quotes to download the latest version'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DoH Version
+      Required: 'true'
+      Target: DoH_V
+      Type: Variable
+      value: latest
+    Golang Download URL:
+      Default: ''
+      Description: 'Container Variable: GO_DL_URL'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Golang Download URL
+      Required: 'true'
+      Target: GO_DL_URL
+      Type: Variable
+      value: https://dl.google.com/go/go1.13.1.linux-amd64.tar.gz
 DonateLink: https://www.paypal.me/chips777
 DonateText: 'If you like my work please '
 ExtraParams: --restart=unless-stopped

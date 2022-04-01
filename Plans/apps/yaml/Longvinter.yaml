@@ -1,88 +1,93 @@
 CategoryList:
 - GameServers
 Config:
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: SteamCMD
-    Required: 'true'
-    Target: /serverdata/steamcmd
-    Type: Path
-  value: /mnt/user/appdata/steamcmd
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Server Files
-    Required: 'true'
-    Target: /serverdata/serverfiles
-    Type: Path
-  value: /mnt/cache/appdata/longvinter/
-- '@attributes':
-    Default: ''
-    Description: Enter your extra start up commands for the server here otherwise
-      leave empty.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: GAME_PARAMS
-    Required: 'false'
-    Target: GAME_PARAMS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: UDP Game Port (If you need another port delete this Entry and create
-      a new UDP port mapping with the corresponding port | also don't forget to click
-      on show more and change the variable GAME_PORT)
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: UDP - Game Port
-    Required: 'true'
-    Target: '27016'
-    Type: Port
-  value: '27016'
-- '@attributes':
-    Default: ''
-    Description: Only change if you know what you are doing (intital GAME_PORT | Don't
-      forget to create create a new UDP port mapping with the corresponding port and
-      to delete the old port from the template)
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: GAME_PORT
-    Required: 'true'
-    Target: GAME_PORT
-    Type: Variable
-  value: '27016'
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: UID
-    Required: 'true'
-    Target: UID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: GID
-    Required: 'true'
-    Target: GID
-    Type: Variable
-  value: '100'
+  Device: {}
+  Label: {}
+  Path:
+    Server Files:
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Server Files
+      Required: 'true'
+      Target: /serverdata/serverfiles
+      Type: Path
+      value: /mnt/cache/appdata/longvinter/
+    SteamCMD:
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: SteamCMD
+      Required: 'true'
+      Target: /serverdata/steamcmd
+      Type: Path
+      value: /mnt/user/appdata/steamcmd
+  Port:
+    UDP - Game Port:
+      Default: ''
+      Description: UDP Game Port (If you need another port delete this Entry and create
+        a new UDP port mapping with the corresponding port | also don't forget to
+        click on show more and change the variable GAME_PORT)
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: UDP - Game Port
+      Required: 'true'
+      Target: '27016'
+      Type: Port
+      value: '27016'
+  Variable:
+    GAME_PARAMS:
+      Default: ''
+      Description: Enter your extra start up commands for the server here otherwise
+        leave empty.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: GAME_PARAMS
+      Required: 'false'
+      Target: GAME_PARAMS
+      Type: Variable
+      value: ''
+    GAME_PORT:
+      Default: ''
+      Description: Only change if you know what you are doing (intital GAME_PORT |
+        Don't forget to create create a new UDP port mapping with the corresponding
+        port and to delete the old port from the template)
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: GAME_PORT
+      Required: 'true'
+      Target: GAME_PORT
+      Type: Variable
+      value: '27016'
+    GID:
+      Default: ''
+      Description: ''
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: GID
+      Required: 'true'
+      Target: GID
+      Type: Variable
+      value: '100'
+    UID:
+      Default: ''
+      Description: ''
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: UID
+      Required: 'true'
+      Target: UID
+      Type: Variable
+      value: '99'
 DonateLink: https://www.paypal.me/chips777
 DonateText: 'If you like my work please '
 ExtraParams: --restart=unless-stopped

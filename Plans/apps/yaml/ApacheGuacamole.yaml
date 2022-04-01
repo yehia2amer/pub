@@ -4,160 +4,165 @@ CategoryList:
 - Network-Other
 ChangeLogPresent: true
 Config:
-- '@attributes':
-    Default: '8080'
-    Description: 'Container Port: 8080'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Web Port
-    Required: 'true'
-    Target: '8080'
-    Type: Port
-  value: '8080'
-- '@attributes':
-    Default: Y
-    Description: 'Container Variable: OPT_MYSQL'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: OPT_MYSQL
-    Required: 'false'
-    Target: OPT_MYSQL
-    Type: Variable
-  value: Y
-- '@attributes':
-    Default: N
-    Description: 'Container Variable: OPT_MYSQL_EXTENSION'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: OPT_MYSQL_EXTENSION
-    Required: 'false'
-    Target: OPT_MYSQL_EXTENSION
-    Type: Variable
-  value: N
-- '@attributes':
-    Default: N
-    Description: 'Container Variable: OPT_SQLSERVER'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: OPT_SQLSERVER
-    Required: 'false'
-    Target: OPT_SQLSERVER
-    Type: Variable
-  value: N
-- '@attributes':
-    Default: N
-    Description: 'Container Variable: OPT_LDAP'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: OPT_LDAP
-    Required: 'false'
-    Target: OPT_LDAP
-    Type: Variable
-  value: N
-- '@attributes':
-    Default: N
-    Description: 'Container Variable: OPT_DUO'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: OPT_DUO
-    Required: 'false'
-    Target: OPT_DUO
-    Type: Variable
-  value: N
-- '@attributes':
-    Default: N
-    Description: 'Container Variable: OPT_CAS'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: OPT_CAS
-    Required: 'false'
-    Target: OPT_CAS
-    Type: Variable
-  value: N
-- '@attributes':
-    Default: N
-    Description: 'Container Variable: OPT_TOTP'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: OPT_TOTP
-    Required: 'false'
-    Target: OPT_TOTP
-    Type: Variable
-  value: N
-- '@attributes':
-    Default: N
-    Description: 'Container Variable: OPT_QUICKCONNECT'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: OPT_QUICKCONNECT
-    Required: 'false'
-    Target: OPT_QUICKCONNECT
-    Type: Variable
-  value: N
-- '@attributes':
-    Default: N
-    Description: 'Container Variable: OPT_HEADER'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: OPT_HEADER
-    Required: 'false'
-    Target: OPT_HEADER
-    Type: Variable
-  value: N
-- '@attributes':
-    Default: N
-    Description: 'Container Variable: OPT_SAML'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: OPT_SAML
-    Required: 'false'
-    Target: OPT_SAML
-    Type: Variable
-  value: N
-- '@attributes':
-    Default: /mnt/user/appdata/ApacheGuacamole
-    Description: 'Container Path: /config'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: rw
-    Name: AppData Config Path
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: /mnt/user/appdata/ApacheGuacamole
-- '@attributes':
-    Default: '90'
-    Description: 'Container Variable: PUID'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: PUID
-    Required: 'false'
-    Target: PUID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: '100'
-    Description: 'Container Variable: PGID'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: PGID
-    Required: 'false'
-    Target: PGID
-    Type: Variable
-  value: '100'
+  Device: {}
+  Label: {}
+  Path:
+    AppData Config Path:
+      Default: /mnt/user/appdata/ApacheGuacamole
+      Description: 'Container Path: /config'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: rw
+      Name: AppData Config Path
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: /mnt/user/appdata/ApacheGuacamole
+  Port:
+    Web Port:
+      Default: '8080'
+      Description: 'Container Port: 8080'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Web Port
+      Required: 'true'
+      Target: '8080'
+      Type: Port
+      value: '8080'
+  Variable:
+    OPT_CAS:
+      Default: N
+      Description: 'Container Variable: OPT_CAS'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: OPT_CAS
+      Required: 'false'
+      Target: OPT_CAS
+      Type: Variable
+      value: N
+    OPT_DUO:
+      Default: N
+      Description: 'Container Variable: OPT_DUO'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: OPT_DUO
+      Required: 'false'
+      Target: OPT_DUO
+      Type: Variable
+      value: N
+    OPT_HEADER:
+      Default: N
+      Description: 'Container Variable: OPT_HEADER'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: OPT_HEADER
+      Required: 'false'
+      Target: OPT_HEADER
+      Type: Variable
+      value: N
+    OPT_LDAP:
+      Default: N
+      Description: 'Container Variable: OPT_LDAP'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: OPT_LDAP
+      Required: 'false'
+      Target: OPT_LDAP
+      Type: Variable
+      value: N
+    OPT_MYSQL:
+      Default: Y
+      Description: 'Container Variable: OPT_MYSQL'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: OPT_MYSQL
+      Required: 'false'
+      Target: OPT_MYSQL
+      Type: Variable
+      value: Y
+    OPT_MYSQL_EXTENSION:
+      Default: N
+      Description: 'Container Variable: OPT_MYSQL_EXTENSION'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: OPT_MYSQL_EXTENSION
+      Required: 'false'
+      Target: OPT_MYSQL_EXTENSION
+      Type: Variable
+      value: N
+    OPT_QUICKCONNECT:
+      Default: N
+      Description: 'Container Variable: OPT_QUICKCONNECT'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: OPT_QUICKCONNECT
+      Required: 'false'
+      Target: OPT_QUICKCONNECT
+      Type: Variable
+      value: N
+    OPT_SAML:
+      Default: N
+      Description: 'Container Variable: OPT_SAML'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: OPT_SAML
+      Required: 'false'
+      Target: OPT_SAML
+      Type: Variable
+      value: N
+    OPT_SQLSERVER:
+      Default: N
+      Description: 'Container Variable: OPT_SQLSERVER'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: OPT_SQLSERVER
+      Required: 'false'
+      Target: OPT_SQLSERVER
+      Type: Variable
+      value: N
+    OPT_TOTP:
+      Default: N
+      Description: 'Container Variable: OPT_TOTP'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: OPT_TOTP
+      Required: 'false'
+      Target: OPT_TOTP
+      Type: Variable
+      value: N
+    PGID:
+      Default: '100'
+      Description: 'Container Variable: PGID'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PGID
+      Required: 'false'
+      Target: PGID
+      Type: Variable
+      value: '100'
+    PUID:
+      Default: '90'
+      Description: 'Container Variable: PUID'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PUID
+      Required: 'false'
+      Target: PUID
+      Type: Variable
+      value: '99'
 DonateLink: https://paypal.me/jasonsbean/0usd
 DonateText: Donate To Author
 FirstSeen: 1

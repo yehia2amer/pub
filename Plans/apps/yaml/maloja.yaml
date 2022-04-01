@@ -3,51 +3,56 @@ CategoryList:
 - MediaServer-Music
 ChangeLogPresent: true
 Config:
-- '@attributes':
-    Default: '42010'
-    Description: Port for accessing web ui and api
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Web Port
-    Required: 'true'
-    Target: '42010'
-    Type: Port
-  value: '42010'
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /config'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: User Data
-    Required: 'false'
-    Target: /config
-    Type: Path
-  value: /mnt/user/appdata/maloja
-- '@attributes':
-    Default: 0.0.0.0
-    Description: Specifies to Maloja what address to listen on (should not change)
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Container Host
-    Required: 'true'
-    Target: MALOJA_HOST
-    Type: Variable
-  value: 0.0.0.0
-- '@attributes':
-    Default: ''
-    Description: Specifies to Maloja which directory to use for data/configuration
-      files
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Data Directory
-    Required: 'false'
-    Target: MALOJA_DATA_DIRECTORY
-    Type: Variable
-  value: /config
+  Device: {}
+  Label: {}
+  Path:
+    User Data:
+      Default: ''
+      Description: 'Container Path: /config'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: User Data
+      Required: 'false'
+      Target: /config
+      Type: Path
+      value: /mnt/user/appdata/maloja
+  Port:
+    Web Port:
+      Default: '42010'
+      Description: Port for accessing web ui and api
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Web Port
+      Required: 'true'
+      Target: '42010'
+      Type: Port
+      value: '42010'
+  Variable:
+    Container Host:
+      Default: 0.0.0.0
+      Description: Specifies to Maloja what address to listen on (should not change)
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Container Host
+      Required: 'true'
+      Target: MALOJA_HOST
+      Type: Variable
+      value: 0.0.0.0
+    Data Directory:
+      Default: ''
+      Description: Specifies to Maloja which directory to use for data/configuration
+        files
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Data Directory
+      Required: 'false'
+      Target: MALOJA_DATA_DIRECTORY
+      Type: Variable
+      value: /config
 FirstSeen: 1639753431
 Icon: https://github.com/FoxxMD/unraid-docker-templates/raw/master/icons/maloja.png
 LastUpdate: 1641016244

@@ -2,74 +2,79 @@ CategoryList:
 - Other
 - Network-Web
 Config:
-- '@attributes':
-    Default: ''
-    Description: Connects to internal port 80 (Ex. 8080:80)
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Container port
-    Required: 'false'
-    Target: '80'
-    Type: Port
-  value: '8080'
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /var/www/html'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: www
-    Required: 'false'
-    Target: /var/www/html
-    Type: Path
-  value: /mnt/user/appdata/wordpress
-- '@attributes':
-    Default: ''
-    Description: "External database container hostname and port \r\n&lt;br&gt;ex.\
-      \ 192.168.1.100:8080"
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: WORDPRESS_DB_HOST
-    Required: 'false'
-    Target: WORDPRESS_DB_HOST
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: External database user
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: WORDPRESS_DB_USER
-    Required: 'false'
-    Target: WORDPRESS_DB_USER
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: External database password
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: WORDPRESS_DB_PASSWORD
-    Required: 'false'
-    Target: WORDPRESS_DB_PASSWORD
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: The WORDPRESS_DB_NAME needs to already exist on the given DB server;
-      it will not be created by the wordpress container.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: WORDPRESS_DB_NAME
-    Required: 'false'
-    Target: WORDPRESS_DB_NAME
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    www:
+      Default: ''
+      Description: 'Container Path: /var/www/html'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: www
+      Required: 'false'
+      Target: /var/www/html
+      Type: Path
+      value: /mnt/user/appdata/wordpress
+  Port:
+    Container port:
+      Default: ''
+      Description: Connects to internal port 80 (Ex. 8080:80)
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Container port
+      Required: 'false'
+      Target: '80'
+      Type: Port
+      value: '8080'
+  Variable:
+    WORDPRESS_DB_HOST:
+      Default: ''
+      Description: "External database container hostname and port \r\n&lt;br&gt;ex.\
+        \ 192.168.1.100:8080"
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: WORDPRESS_DB_HOST
+      Required: 'false'
+      Target: WORDPRESS_DB_HOST
+      Type: Variable
+      value: ''
+    WORDPRESS_DB_NAME:
+      Default: ''
+      Description: The WORDPRESS_DB_NAME needs to already exist on the given DB server;
+        it will not be created by the wordpress container.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: WORDPRESS_DB_NAME
+      Required: 'false'
+      Target: WORDPRESS_DB_NAME
+      Type: Variable
+      value: ''
+    WORDPRESS_DB_PASSWORD:
+      Default: ''
+      Description: External database password
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: WORDPRESS_DB_PASSWORD
+      Required: 'false'
+      Target: WORDPRESS_DB_PASSWORD
+      Type: Variable
+      value: ''
+    WORDPRESS_DB_USER:
+      Default: ''
+      Description: External database user
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: WORDPRESS_DB_USER
+      Required: 'false'
+      Target: WORDPRESS_DB_USER
+      Type: Variable
+      value: ''
 DonateLink: https://www.savethekoala.com/donate
 DonateText: Better spent on them, then me :-)
 FirstSeen: 1581023199

@@ -3,28 +3,33 @@ CAComment: This template is set up to use a custom network. You may have to adju
 CategoryList:
 - MediaApp-Video
 Config:
-- '@attributes':
-    Default: http://username:password@tvheadendip:9981
-    Description: 'Container Variable: TVH_URL'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: TvHeadend URL
-    Required: 'false'
-    Target: TVH_URL
-    Type: Variable
-  value: http://username:password@tvheadendip:9981
-- '@attributes':
-    Default: '4'
-    Description: 'Container Variable: TVH_TUNER_COUNT'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Tuner Count
-    Required: 'false'
-    Target: TVH_TUNER_COUNT
-    Type: Variable
-  value: '4'
+  Device: {}
+  Label: {}
+  Path: {}
+  Port: {}
+  Variable:
+    Tuner Count:
+      Default: '4'
+      Description: 'Container Variable: TVH_TUNER_COUNT'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Tuner Count
+      Required: 'false'
+      Target: TVH_TUNER_COUNT
+      Type: Variable
+      value: '4'
+    TvHeadend URL:
+      Default: http://username:password@tvheadendip:9981
+      Description: 'Container Variable: TVH_URL'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: TvHeadend URL
+      Required: 'false'
+      Target: TVH_URL
+      Type: Variable
+      value: http://username:password@tvheadendip:9981
 FirstSeen: '1498761403'
 Icon: https://raw.githubusercontent.com/chvb/docker-templates/master/chvb/img/tvhproxy.png
 LastUpdate: 1509089942

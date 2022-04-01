@@ -4,70 +4,75 @@ CategoryList:
 - Tools-Utilities
 ChangeLogPresent: true
 Config:
-- '@attributes':
-    Default: '8080'
-    Description: This is the default port that davos runs under
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'true'
-    Target: '8080'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: davos's config location. This is where it stores its database file
-      and logs.
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: Appdata
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: davos's file download location
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: 'Path: /download'
-    Required: 'true'
-    Target: /download
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: '99'
-    Description: 'Container Variable: PUID'
-    Display: advanced
-    Mask: 'false'
-    Name: PUID
-    Required: 'true'
-    Target: PUID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '100'
-    Description: 'Container Variable: PGID'
-    Display: advanced
-    Mask: 'false'
-    Name: PGID
-    Required: 'true'
-    Target: PGID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '022'
-    Description: 'Container Variable: UMASK'
-    Display: advanced
-    Mask: 'false'
-    Name: UMASK
-    Required: 'false'
-    Target: UMASK
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Appdata:
+      Default: ''
+      Description: davos's config location. This is where it stores its database file
+        and logs.
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: Appdata
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: ''
+    'Path: /download':
+      Default: ''
+      Description: davos's file download location
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: 'Path: /download'
+      Required: 'true'
+      Target: /download
+      Type: Path
+      value: ''
+  Port:
+    WebUI:
+      Default: '8080'
+      Description: This is the default port that davos runs under
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'true'
+      Target: '8080'
+      Type: Port
+      value: ''
+  Variable:
+    PGID:
+      Default: '100'
+      Description: 'Container Variable: PGID'
+      Display: advanced
+      Mask: 'false'
+      Name: PGID
+      Required: 'true'
+      Target: PGID
+      Type: Variable
+      value: ''
+    PUID:
+      Default: '99'
+      Description: 'Container Variable: PUID'
+      Display: advanced
+      Mask: 'false'
+      Name: PUID
+      Required: 'true'
+      Target: PUID
+      Type: Variable
+      value: ''
+    UMASK:
+      Default: '022'
+      Description: 'Container Variable: UMASK'
+      Display: advanced
+      Mask: 'false'
+      Name: UMASK
+      Required: 'false'
+      Target: UMASK
+      Type: Variable
+      value: ''
 DonateImg: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/donate.png
 DonateLink: https://www.linuxserver.io/donate
 DonateText: Donations

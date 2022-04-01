@@ -7,152 +7,157 @@ Branch:
   TagDescription: Beta emby releases
 ChangeLogPresent: true
 Config:
-- '@attributes':
-    Default: '8096'
-    Description: Http webUI.
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'true'
-    Target: '8096'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: '8920'
-    Description: Https webUI (you need to setup your own certificate).
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: 'Port: 8920'
-    Required: 'false'
-    Target: '8920'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Emby data storage location. *This can grow very large, 50gb+ is likely
-      for a large collection.*
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: Appdata
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Media goes here. Add as many as needed e.g. `/data/movies`, `/data/tv`,
-      etc.
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: 'Path: /data/tvshows'
-    Required: 'true'
-    Target: /data/tvshows
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Media goes here. Add as many as needed e.g. `/data/movies`, `/data/tv`,
-      etc.
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: 'Path: /data/movies'
-    Required: 'true'
-    Target: /data/movies
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Path for Raspberry Pi OpenMAX libs *optional*.
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: 'Path: /opt/vc/lib'
-    Required: 'false'
-    Target: /opt/vc/lib
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: '99'
-    Description: 'Container Variable: PUID'
-    Display: advanced
-    Mask: 'false'
-    Name: PUID
-    Required: 'true'
-    Target: PUID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '100'
-    Description: 'Container Variable: PGID'
-    Display: advanced
-    Mask: 'false'
-    Name: PGID
-    Required: 'true'
-    Target: PGID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '022'
-    Description: 'Container Variable: UMASK'
-    Display: advanced
-    Mask: 'false'
-    Name: UMASK
-    Required: 'false'
-    Target: UMASK
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: /dev/dri
-    Description: Only needed if you want to use your Intel or AMD GPU for hardware
-      accelerated video encoding (vaapi).
-    Display: always
-    Mask: 'false'
-    Name: /dev/dri
-    Required: 'false'
-    Type: Device
-  value: ''
-- '@attributes':
-    Default: /dev/vchiq
-    Description: Only needed if you want to use your Raspberry Pi OpenMax video encoding
-      (Bellagio).
-    Display: always
-    Mask: 'false'
-    Name: /dev/vchiq
-    Required: 'false'
-    Type: Device
-  value: ''
-- '@attributes':
-    Default: /dev/video10
-    Description: Only needed if you want to use your Raspberry Pi V4L2 video encoding.
-    Display: always
-    Mask: 'false'
-    Name: /dev/video10
-    Required: 'false'
-    Type: Device
-  value: ''
-- '@attributes':
-    Default: /dev/video11
-    Description: Only needed if you want to use your Raspberry Pi V4L2 video encoding.
-    Display: always
-    Mask: 'false'
-    Name: /dev/video11
-    Required: 'false'
-    Type: Device
-  value: ''
-- '@attributes':
-    Default: /dev/video12
-    Description: Only needed if you want to use your Raspberry Pi V4L2 video encoding.
-    Display: always
-    Mask: 'false'
-    Name: /dev/video12
-    Required: 'false'
-    Type: Device
-  value: ''
+  Device:
+    /dev/dri:
+      Default: /dev/dri
+      Description: Only needed if you want to use your Intel or AMD GPU for hardware
+        accelerated video encoding (vaapi).
+      Display: always
+      Mask: 'false'
+      Name: /dev/dri
+      Required: 'false'
+      Type: Device
+      value: ''
+    /dev/vchiq:
+      Default: /dev/vchiq
+      Description: Only needed if you want to use your Raspberry Pi OpenMax video
+        encoding (Bellagio).
+      Display: always
+      Mask: 'false'
+      Name: /dev/vchiq
+      Required: 'false'
+      Type: Device
+      value: ''
+    /dev/video10:
+      Default: /dev/video10
+      Description: Only needed if you want to use your Raspberry Pi V4L2 video encoding.
+      Display: always
+      Mask: 'false'
+      Name: /dev/video10
+      Required: 'false'
+      Type: Device
+      value: ''
+    /dev/video11:
+      Default: /dev/video11
+      Description: Only needed if you want to use your Raspberry Pi V4L2 video encoding.
+      Display: always
+      Mask: 'false'
+      Name: /dev/video11
+      Required: 'false'
+      Type: Device
+      value: ''
+    /dev/video12:
+      Default: /dev/video12
+      Description: Only needed if you want to use your Raspberry Pi V4L2 video encoding.
+      Display: always
+      Mask: 'false'
+      Name: /dev/video12
+      Required: 'false'
+      Type: Device
+      value: ''
+  Label: {}
+  Path:
+    Appdata:
+      Default: ''
+      Description: Emby data storage location. *This can grow very large, 50gb+ is
+        likely for a large collection.*
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: Appdata
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: ''
+    'Path: /data/movies':
+      Default: ''
+      Description: Media goes here. Add as many as needed e.g. `/data/movies`, `/data/tv`,
+        etc.
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: 'Path: /data/movies'
+      Required: 'true'
+      Target: /data/movies
+      Type: Path
+      value: ''
+    'Path: /data/tvshows':
+      Default: ''
+      Description: Media goes here. Add as many as needed e.g. `/data/movies`, `/data/tv`,
+        etc.
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: 'Path: /data/tvshows'
+      Required: 'true'
+      Target: /data/tvshows
+      Type: Path
+      value: ''
+    'Path: /opt/vc/lib':
+      Default: ''
+      Description: Path for Raspberry Pi OpenMAX libs *optional*.
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: 'Path: /opt/vc/lib'
+      Required: 'false'
+      Target: /opt/vc/lib
+      Type: Path
+      value: ''
+  Port:
+    'Port: 8920':
+      Default: '8920'
+      Description: Https webUI (you need to setup your own certificate).
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: 'Port: 8920'
+      Required: 'false'
+      Target: '8920'
+      Type: Port
+      value: ''
+    WebUI:
+      Default: '8096'
+      Description: Http webUI.
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'true'
+      Target: '8096'
+      Type: Port
+      value: ''
+  Variable:
+    PGID:
+      Default: '100'
+      Description: 'Container Variable: PGID'
+      Display: advanced
+      Mask: 'false'
+      Name: PGID
+      Required: 'true'
+      Target: PGID
+      Type: Variable
+      value: ''
+    PUID:
+      Default: '99'
+      Description: 'Container Variable: PUID'
+      Display: advanced
+      Mask: 'false'
+      Name: PUID
+      Required: 'true'
+      Target: PUID
+      Type: Variable
+      value: ''
+    UMASK:
+      Default: '022'
+      Description: 'Container Variable: UMASK'
+      Display: advanced
+      Mask: 'false'
+      Name: UMASK
+      Required: 'false'
+      Target: UMASK
+      Type: Variable
+      value: ''
 DonateImg: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/donate.png
 DonateLink: https://www.linuxserver.io/donate
 DonateText: Donations

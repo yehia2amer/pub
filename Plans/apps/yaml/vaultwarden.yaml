@@ -6,68 +6,73 @@ Branch:
 CategoryList:
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: '4743'
-    Description: 'Container Port: 80'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI HTTP Port
-    Required: 'true'
-    Target: '80'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: /mnt/user/appdata/vaultwarden
-    Description: 'Container Path: /data'
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: Storage
-    Required: 'true'
-    Target: /data
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: true|false
-    Description: 'Container Variable: Signups'
-    Display: always
-    Mask: 'false'
-    Name: SIGNUPS_ALLOWED
-    Required: 'false'
-    Target: SIGNUPS_ALLOWED
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: true|false
-    Description: 'Container Variable: Invitations'
-    Display: always
-    Mask: 'false'
-    Name: INVITATIONS_ALLOWED
-    Required: 'false'
-    Target: INVITATIONS_ALLOWED
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 'false'
-    Description: 'Container Variable: Websockets Enabled'
-    Display: always
-    Mask: 'false'
-    Name: WEBSOCKET_ENABLED
-    Required: 'false'
-    Target: WEBSOCKET_ENABLED
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: ADMIN_TOKEN'
-    Display: always
-    Mask: 'true'
-    Name: ADMIN_TOKEN
-    Required: 'true'
-    Target: ADMIN_TOKEN
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Storage:
+      Default: /mnt/user/appdata/vaultwarden
+      Description: 'Container Path: /data'
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: Storage
+      Required: 'true'
+      Target: /data
+      Type: Path
+      value: ''
+  Port:
+    WebUI HTTP Port:
+      Default: '4743'
+      Description: 'Container Port: 80'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI HTTP Port
+      Required: 'true'
+      Target: '80'
+      Type: Port
+      value: ''
+  Variable:
+    ADMIN_TOKEN:
+      Default: ''
+      Description: 'Container Variable: ADMIN_TOKEN'
+      Display: always
+      Mask: 'true'
+      Name: ADMIN_TOKEN
+      Required: 'true'
+      Target: ADMIN_TOKEN
+      Type: Variable
+      value: ''
+    INVITATIONS_ALLOWED:
+      Default: true|false
+      Description: 'Container Variable: Invitations'
+      Display: always
+      Mask: 'false'
+      Name: INVITATIONS_ALLOWED
+      Required: 'false'
+      Target: INVITATIONS_ALLOWED
+      Type: Variable
+      value: ''
+    SIGNUPS_ALLOWED:
+      Default: true|false
+      Description: 'Container Variable: Signups'
+      Display: always
+      Mask: 'false'
+      Name: SIGNUPS_ALLOWED
+      Required: 'false'
+      Target: SIGNUPS_ALLOWED
+      Type: Variable
+      value: ''
+    WEBSOCKET_ENABLED:
+      Default: 'false'
+      Description: 'Container Variable: Websockets Enabled'
+      Display: always
+      Mask: 'false'
+      Name: WEBSOCKET_ENABLED
+      Required: 'false'
+      Target: WEBSOCKET_ENABLED
+      Type: Variable
+      value: ''
 FirstSeen: 1619798558
 Icon: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/bitwardenrs.png
 LastUpdate: 1648325591

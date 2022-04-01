@@ -2,91 +2,96 @@ CategoryList:
 - MediaApp-Books
 ChangeLogPresent: true
 Config:
-- '@attributes':
-    Default: '5299'
-    Description: The port for the LazyLibrarian webinterface
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'true'
-    Target: '5299'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: LazyLibrarian config
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: Appdata
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Download location
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: 'Path: /downloads'
-    Required: 'true'
-    Target: /downloads
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Books location
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: 'Path: /books'
-    Required: 'false'
-    Target: /books
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: linuxserver/calibre-web:calibre|linuxserver/mods:lazylibrarian-ffmpeg
-    Description: Allows additional functionality to be added, e.g. the Calibredb import
-      program (optional, more info below)
-    Display: always
-    Mask: 'false'
-    Name: DOCKER_MODS
-    Required: 'false'
-    Target: DOCKER_MODS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '99'
-    Description: 'Container Variable: PUID'
-    Display: advanced
-    Mask: 'false'
-    Name: PUID
-    Required: 'true'
-    Target: PUID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '100'
-    Description: 'Container Variable: PGID'
-    Display: advanced
-    Mask: 'false'
-    Name: PGID
-    Required: 'true'
-    Target: PGID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '022'
-    Description: 'Container Variable: UMASK'
-    Display: advanced
-    Mask: 'false'
-    Name: UMASK
-    Required: 'false'
-    Target: UMASK
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Appdata:
+      Default: ''
+      Description: LazyLibrarian config
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: Appdata
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: ''
+    'Path: /books':
+      Default: ''
+      Description: Books location
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: 'Path: /books'
+      Required: 'false'
+      Target: /books
+      Type: Path
+      value: ''
+    'Path: /downloads':
+      Default: ''
+      Description: Download location
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: 'Path: /downloads'
+      Required: 'true'
+      Target: /downloads
+      Type: Path
+      value: ''
+  Port:
+    WebUI:
+      Default: '5299'
+      Description: The port for the LazyLibrarian webinterface
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'true'
+      Target: '5299'
+      Type: Port
+      value: ''
+  Variable:
+    DOCKER_MODS:
+      Default: linuxserver/calibre-web:calibre|linuxserver/mods:lazylibrarian-ffmpeg
+      Description: Allows additional functionality to be added, e.g. the Calibredb
+        import program (optional, more info below)
+      Display: always
+      Mask: 'false'
+      Name: DOCKER_MODS
+      Required: 'false'
+      Target: DOCKER_MODS
+      Type: Variable
+      value: ''
+    PGID:
+      Default: '100'
+      Description: 'Container Variable: PGID'
+      Display: advanced
+      Mask: 'false'
+      Name: PGID
+      Required: 'true'
+      Target: PGID
+      Type: Variable
+      value: ''
+    PUID:
+      Default: '99'
+      Description: 'Container Variable: PUID'
+      Display: advanced
+      Mask: 'false'
+      Name: PUID
+      Required: 'true'
+      Target: PUID
+      Type: Variable
+      value: ''
+    UMASK:
+      Default: '022'
+      Description: 'Container Variable: UMASK'
+      Display: advanced
+      Mask: 'false'
+      Name: UMASK
+      Required: 'false'
+      Target: UMASK
+      Type: Variable
+      value: ''
 DonateImg: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/donate.png
 DonateLink: https://www.linuxserver.io/donate
 DonateText: Donations

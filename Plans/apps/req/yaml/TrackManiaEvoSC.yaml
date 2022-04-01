@@ -1,127 +1,121 @@
 CategoryList:
 - GameServers
 Config:
-- '@attributes':
-    Default: ''
-    Description: MySQL / MariaDB DB_HOST
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DB_HOST
-    Required: 'true'
-    Target: DB_HOST
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: MySQL / MariaDB DB_NAME
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DB_NAME
-    Required: 'true'
-    Target: DB_NAME
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: MySQL / MariaDB DB_USER
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DB_USER
-    Required: 'true'
-    Target: DB_USER
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: MySQL / MariaDB DB_PASSWORD
-    Display: always
-    Mask: 'true'
-    Mode: ''
-    Name: DB_PASSWORD
-    Required: 'true'
-    Target: DB_PASSWORD
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: trackmania
-    Description: TrackMania server IP
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: RPC_IP
-    Required: 'true'
-    Target: RPC_IP
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: SuperAdmin
-    Description: TrackMania server RPC_LOGIN, Default 'SuperAdmin'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: RPC_LOGIN
-    Required: 'true'
-    Target: RPC_LOGIN
-    Type: Variable
-  value: SuperAdmin
-- '@attributes':
-    Default: SuperAdmin
-    Description: TrackMania server RPC_PASSWORD, Default 'SuperAdmin'
-    Display: always
-    Mask: 'true'
-    Mode: ''
-    Name: RPC_PASSWORD
-    Required: 'true'
-    Target: RPC_PASSWORD
-    Type: Variable
-  value: SuperAdmin
-- '@attributes':
-    Default: /mnt/user/appdata/TrackmaniaServer/
-    Description: 'Container Path: /server/UserData'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: trackmania server
-    Required: 'true'
-    Target: /server/UserData
-    Type: Path
-  value: /mnt/user/appdata/Trackmania2020Server/
-- '@attributes':
-    Default: /mnt/user/appdata/TrackmaniaServer/EvoSC/config
-    Description: 'Container Path: /controller/'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: EvoSC Data
-    Required: 'true'
-    Target: /controller/config
-    Type: Path
-  value: /mnt/user/appdata/Trackmania2020Server/EvoSC/config/
-- '@attributes':
-    Default: /mnt/user/appdata/TrackmaniaServer/EvoSC/modules
-    Description: 'Container Path: /controller/modules'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: EvoSC Data
-    Required: 'true'
-    Target: /controller/modules
-    Type: Path
-  value: /mnt/user/appdata/Trackmania2020Server/EvoSC/modules
-- '@attributes':
-    Default: /mnt/user/appdata/TrackmaniaServer/EvoSC/cache
-    Description: 'Container Path: /controller/cache'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: EvoSc Data
-    Required: 'true'
-    Target: /controller/cache
-    Type: Path
-  value: /mnt/user/appdata/Trackmania2020Server/EvoSC/cache
+  Device: {}
+  Label: {}
+  Path:
+    EvoSC Data:
+      Default: /mnt/user/appdata/TrackmaniaServer/EvoSC/modules
+      Description: 'Container Path: /controller/modules'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: EvoSC Data
+      Required: 'true'
+      Target: /controller/modules
+      Type: Path
+      value: /mnt/user/appdata/Trackmania2020Server/EvoSC/modules
+    EvoSc Data:
+      Default: /mnt/user/appdata/TrackmaniaServer/EvoSC/cache
+      Description: 'Container Path: /controller/cache'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: EvoSc Data
+      Required: 'true'
+      Target: /controller/cache
+      Type: Path
+      value: /mnt/user/appdata/Trackmania2020Server/EvoSC/cache
+    trackmania server:
+      Default: /mnt/user/appdata/TrackmaniaServer/
+      Description: 'Container Path: /server/UserData'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: trackmania server
+      Required: 'true'
+      Target: /server/UserData
+      Type: Path
+      value: /mnt/user/appdata/Trackmania2020Server/
+  Port: {}
+  Variable:
+    DB_HOST:
+      Default: ''
+      Description: MySQL / MariaDB DB_HOST
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DB_HOST
+      Required: 'true'
+      Target: DB_HOST
+      Type: Variable
+      value: ''
+    DB_NAME:
+      Default: ''
+      Description: MySQL / MariaDB DB_NAME
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DB_NAME
+      Required: 'true'
+      Target: DB_NAME
+      Type: Variable
+      value: ''
+    DB_PASSWORD:
+      Default: ''
+      Description: MySQL / MariaDB DB_PASSWORD
+      Display: always
+      Mask: 'true'
+      Mode: ''
+      Name: DB_PASSWORD
+      Required: 'true'
+      Target: DB_PASSWORD
+      Type: Variable
+      value: ''
+    DB_USER:
+      Default: ''
+      Description: MySQL / MariaDB DB_USER
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DB_USER
+      Required: 'true'
+      Target: DB_USER
+      Type: Variable
+      value: ''
+    RPC_IP:
+      Default: trackmania
+      Description: TrackMania server IP
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: RPC_IP
+      Required: 'true'
+      Target: RPC_IP
+      Type: Variable
+      value: ''
+    RPC_LOGIN:
+      Default: SuperAdmin
+      Description: TrackMania server RPC_LOGIN, Default 'SuperAdmin'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: RPC_LOGIN
+      Required: 'true'
+      Target: RPC_LOGIN
+      Type: Variable
+      value: SuperAdmin
+    RPC_PASSWORD:
+      Default: SuperAdmin
+      Description: TrackMania server RPC_PASSWORD, Default 'SuperAdmin'
+      Display: always
+      Mask: 'true'
+      Mode: ''
+      Name: RPC_PASSWORD
+      Required: 'true'
+      Target: RPC_PASSWORD
+      Type: Variable
+      value: SuperAdmin
 ExtraParams: --restart=unless-stopped
 FirstSeen: 1637675266
 Icon: https://raw.githubusercontent.com/L4stIdi0t/Unraid-template/master/TrackMania2020-Server/logoTM.png

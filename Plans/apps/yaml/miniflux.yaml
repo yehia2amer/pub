@@ -1,151 +1,157 @@
 CategoryList:
 - Other
 Config:
-- '@attributes':
-    Default: '5600'
-    Description: Port
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Port
-    Required: 'true'
-    Target: '8080'
-    Type: Port
-  value: '5600'
-- '@attributes':
-    Default: postgres://miniflux:secret@Hostname/miniflux2?sslmode=disable
-    Description: PostgresDB Change this with correct database configuration you have.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: PostgresDB
-    Required: 'true'
-    Target: DATABASE_URL
-    Type: Variable
-  value: postgres://miniflux:secret@Hostname/miniflux2?sslmode=disable
-- '@attributes':
-    Default: admin
-    Description: Admin Username
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Admin Username
-    Required: 'false'
-    Target: ADMIN_USERNAME
-    Type: Variable
-  value: admin
-- '@attributes':
-    Default: password
-    Description: Admin Password
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Admin Password
-    Required: 'false'
-    Target: ADMIN_PASSWORD
-    Type: Variable
-  value: password
-- '@attributes':
-    Default: http://192.168.1.100:5600
-    Description: Base URL to generate HTML links and base path for cookies for example
-      http://192.168.1.100:5600 or https://rss.example.com
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Base URL
-    Required: 'true'
-    Target: BASE_URL
-    Type: Variable
-  value: http://192.168.1.100:5600
-- '@attributes':
-    Default: '60'
-    Description: Refresh interval in minutes for feeds by minutes
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: 'Feed Refresh Interval '
-    Required: 'false'
-    Target: POLLING_FREQUENCY
-    Type: Variable
-  value: '60'
-- '@attributes':
-    Default: '24'
-    Description: Cleanup job frequency, remove old sessions and archive read entries
-      by hours
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Cleanup Job Frequency
-    Required: 'false'
-    Target: CLEANUP_FREQUENCY_HOURS
-    Type: Variable
-  value: '24'
-- '@attributes':
-    Default: '60'
-    Description: Number of days after which marking read items as removed
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Cleanup Read Items
-    Required: 'false'
-    Target: CLEANUP_ARCHIVE_READ_DAYS
-    Type: Variable
-  value: '60'
-- '@attributes':
-    Default: '30'
-    Description: Number of days after removing old sessions from the database
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: 'Cleanup Old Sessions '
-    Required: 'false'
-    Target: CLEANUP_REMOVE_SESSIONS_DAYS
-    Type: Variable
-  value: '30'
-- '@attributes':
-    Default: ''
-    Description: CREATE_ADMIN
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Create Admin
-    Required: 'true'
-    Target: CREATE_ADMIN
-    Type: Variable
-  value: '1'
-- '@attributes':
-    Default: ''
-    Description: Migrate
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Migrate
-    Required: 'true'
-    Target: RUN_MIGRATIONS
-    Type: Variable
-  value: '1'
-- '@attributes':
-    Default: 0|1
-    Description: Set the value to 1 to show date/time in log messages
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Log Time
-    Required: 'false'
-    Target: LOG_DATE_TIME
-    Type: Variable
-  value: '0'
-- '@attributes':
-    Default: 0|1
-    Description: DEBUG
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: DEBUG
-    Required: 'false'
-    Target: DEBUG
-    Type: Variable
-  value: '0'
+  Device: {}
+  Label: {}
+  Path: {}
+  Port:
+    Port:
+      Default: '5600'
+      Description: Port
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Port
+      Required: 'true'
+      Target: '8080'
+      Type: Port
+      value: '5600'
+  Variable:
+    Admin Password:
+      Default: password
+      Description: Admin Password
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Admin Password
+      Required: 'false'
+      Target: ADMIN_PASSWORD
+      Type: Variable
+      value: password
+    Admin Username:
+      Default: admin
+      Description: Admin Username
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Admin Username
+      Required: 'false'
+      Target: ADMIN_USERNAME
+      Type: Variable
+      value: admin
+    Base URL:
+      Default: http://192.168.1.100:5600
+      Description: Base URL to generate HTML links and base path for cookies for example
+        http://192.168.1.100:5600 or https://rss.example.com
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Base URL
+      Required: 'true'
+      Target: BASE_URL
+      Type: Variable
+      value: http://192.168.1.100:5600
+    Cleanup Job Frequency:
+      Default: '24'
+      Description: Cleanup job frequency, remove old sessions and archive read entries
+        by hours
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Cleanup Job Frequency
+      Required: 'false'
+      Target: CLEANUP_FREQUENCY_HOURS
+      Type: Variable
+      value: '24'
+    'Cleanup Old Sessions ':
+      Default: '30'
+      Description: Number of days after removing old sessions from the database
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: 'Cleanup Old Sessions '
+      Required: 'false'
+      Target: CLEANUP_REMOVE_SESSIONS_DAYS
+      Type: Variable
+      value: '30'
+    Cleanup Read Items:
+      Default: '60'
+      Description: Number of days after which marking read items as removed
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Cleanup Read Items
+      Required: 'false'
+      Target: CLEANUP_ARCHIVE_READ_DAYS
+      Type: Variable
+      value: '60'
+    Create Admin:
+      Default: ''
+      Description: CREATE_ADMIN
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Create Admin
+      Required: 'true'
+      Target: CREATE_ADMIN
+      Type: Variable
+      value: '1'
+    DEBUG:
+      Default: 0|1
+      Description: DEBUG
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: DEBUG
+      Required: 'false'
+      Target: DEBUG
+      Type: Variable
+      value: '0'
+    'Feed Refresh Interval ':
+      Default: '60'
+      Description: Refresh interval in minutes for feeds by minutes
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: 'Feed Refresh Interval '
+      Required: 'false'
+      Target: POLLING_FREQUENCY
+      Type: Variable
+      value: '60'
+    Log Time:
+      Default: 0|1
+      Description: Set the value to 1 to show date/time in log messages
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Log Time
+      Required: 'false'
+      Target: LOG_DATE_TIME
+      Type: Variable
+      value: '0'
+    Migrate:
+      Default: ''
+      Description: Migrate
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Migrate
+      Required: 'true'
+      Target: RUN_MIGRATIONS
+      Type: Variable
+      value: '1'
+    PostgresDB:
+      Default: postgres://miniflux:secret@Hostname/miniflux2?sslmode=disable
+      Description: PostgresDB Change this with correct database configuration you
+        have.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: PostgresDB
+      Required: 'true'
+      Target: DATABASE_URL
+      Type: Variable
+      value: postgres://miniflux:secret@Hostname/miniflux2?sslmode=disable
 FirstSeen: 1585649559
 Icon: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/miniflux.png
 LastUpdate: 1647999931

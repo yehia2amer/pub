@@ -1,28 +1,33 @@
 CAComment: This template is set up to use a custom network. You may have to adjust
   the network or IP address etc to match your system
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /RSSNotipy/data'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: data
-    Required: 'false'
-    Target: /RSSNotipy/data
-    Type: Path
-  value: /mnt/user/appdata/rssnotipy
-- '@attributes':
-    Default: '3247'
-    Description: 'Container Port: 3247'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: '3247'
-    Required: 'false'
-    Target: '3247'
-    Type: Port
-  value: '3247'
+  Device: {}
+  Label: {}
+  Path:
+    data:
+      Default: ''
+      Description: 'Container Path: /RSSNotipy/data'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: data
+      Required: 'false'
+      Target: /RSSNotipy/data
+      Type: Path
+      value: /mnt/user/appdata/rssnotipy
+  Port:
+    '3247':
+      Default: '3247'
+      Description: 'Container Port: 3247'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: '3247'
+      Required: 'false'
+      Target: '3247'
+      Type: Port
+      value: '3247'
+  Variable: {}
 DonateLink: https://www.buymeacoffee.com/maschhoff
 DonateText: Please buy me a Pizza
 FirstSeen: 1580058427

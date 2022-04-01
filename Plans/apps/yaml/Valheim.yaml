@@ -1,286 +1,291 @@
 CategoryList:
 - GameServers
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /serverdata/steamcmd'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: SteamCMD
-    Required: 'true'
-    Target: /serverdata/steamcmd
-    Type: Path
-  value: /mnt/user/appdata/steamcmd
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /serverdata/serverfiles'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: ServerFiles
-    Required: 'true'
-    Target: /serverdata/serverfiles
-    Type: Path
-  value: /mnt/cache/appdata/valheim
-- '@attributes':
-    Default: ''
-    Description: "The GAME_ID that the container downloads at startup.\r\nIf you want\
-      \ to install a static or beta version of the game change the value to: '896660\
-      \ -beta YOURBRANCH' (without quotes, replace YOURBRANCH with the branch or version\
-      \ you want to install)."
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: GAME_ID
-    Required: 'true'
-    Target: GAME_ID
-    Type: Variable
-  value: '896660'
-- '@attributes':
-    Default: ''
-    Description: Enter your extra start up commands for the server here otherwise
-      leave empty.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: GAME_PARAMS
-    Required: 'false'
-    Target: GAME_PARAMS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Your Steam username goes here if you want to install a game that
-      needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
-      Steam Guard).'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: Steam-Username
-    Required: 'false'
-    Target: USERNAME
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Set the Variable to 'true' if you want to validate the installation
-      otherwise leave it blank.
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: Validate Installation
-    Required: 'false'
-    Target: VALIDATE
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Your Steam password goes here if you want to install a game that
-      needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
-      Steam Guard).'
-    Display: advanced-hide
-    Mask: 'true'
-    Mode: ''
-    Name: Steam-Password
-    Required: 'false'
-    Target: PASSWRD
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Name of the Server
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Server Name
-    Required: 'true'
-    Target: SRV_NAME
-    Type: Variable
-  value: Valheim Docker
-- '@attributes':
-    Default: ''
-    Description: Name of the Server World
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: World Name
-    Required: 'true'
-    Target: WORLD_NAME
-    Type: Variable
-  value: Dedicated
-- '@attributes':
-    Default: ''
-    Description: 'Server Password - ATTENTION: the minimum length is 6 characters!'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Server Password
-    Required: 'true'
-    Target: SRV_PWD
-    Type: Variable
-  value: Docker
-- '@attributes':
-    Default: ''
-    Description: List Server as Public (set to '0' to disable or set to '1' to enable).
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Public Server
-    Required: 'false'
-    Target: PUBLIC
-    Type: Variable
-  value: '1'
-- '@attributes':
-    Default: ''
-    Description: UDP Game Ports (If you need another port delete this Entry and create
-      a new UDP port mapping with the corresponding port range | GAME_PORT +2 | also
-      don't forget to click on show more and change the GAME_PORT)
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: UDP - Game Port Range
-    Required: 'false'
-    Target: 2456-2458
-    Type: Port
-  value: 2456-2458
-- '@attributes':
-    Default: ''
-    Description: If set to 'true' (without quotes) the container will automatically
-      check every 60 minuts if there is an update available and restart the container
-      if a update is found (please keep in mind if you enable the auto update function
-      the container will automatically restart if a newer version is found, set to
-      'false' without quotes to disable the update check).
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Automatically Update Game
-    Required: 'true'
-    Target: UPDATE_CHECK
-    Type: Variable
-  value: 'true'
-- '@attributes':
-    Default: ''
-    Description: 'If you want to enable ValheimPlus set this variable to ''true''
-      (without quotes). For more help please refer to this site: https://github.com/nxPublic/ValheimPlus'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: ValheimPlus
-    Required: 'false'
-    Target: ENABLE_VALHEIMPLUS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'If you want to enable BepInEx for Valheim set this variable to ''true''
-      (without quotes). For more help please refer to this site: https://valheim.thunderstore.io/package/denikson/BepInExPack_Valheim/'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: BepInEx for Valheim
-    Required: 'false'
-    Target: ENABLE_BEPINEX
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Set this value to 'true' (without quotes) to enable the automated
-      backup function from the container, you find the Backups in '.../valheim/Backups/'.
-      Set to 'false' (without quotes) to disable the backup function.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Backup
-    Required: 'true'
-    Target: BACKUP_FILES
-    Type: Variable
-  value: 'true'
-- '@attributes':
-    Default: ''
-    Description: "The backup interval in minutes (set to 62 minutes because the game\
-      \ automatically saves the database every 30 minutes)\r\nATTENTION: The first\
-      \ backup will be triggered after the set interval in this variable after the\
-      \ start/restart of the container)."
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Backup Interval (in minutes)
-    Required: 'true'
-    Target: BACKUP_INTERVAL
-    Type: Variable
-  value: '62'
-- '@attributes':
-    Default: ''
-    Description: Number of backups to keep (by default set to 24 to keep the last
-      backups of the last 24 hours).
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Backups to keep
-    Required: 'true'
-    Target: BACKUP_TO_KEEP
-    Type: Variable
-  value: '24'
-- '@attributes':
-    Default: ''
-    Description: Only change if you know what you are doing (intital GAME_PORT | Dont
-      forget to create create a new UDP port mapping with the corresponding port range
-      and delete the default port range | GAME_PORT +2)
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: GAME_PORT
-    Required: 'true'
-    Target: GAME_PORT
-    Type: Variable
-  value: '2456'
-- '@attributes':
-    Default: ''
-    Description: Only change if you know what you are doing!
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: UID
-    Required: 'true'
-    Target: UID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: ''
-    Description: Only change if you know what you are doing!
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: GID
-    Required: 'true'
-    Target: GID
-    Type: Variable
-  value: '100'
-- '@attributes':
-    Default: ''
-    Description: Only change if you know what you are doing!
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Debug Log Output
-    Required: 'false'
-    Target: DEBUG_OUTPUT
-    Type: Variable
-  value: 'false'
-- '@attributes':
-    Default: ''
-    Description: "This will write the log output to a file, by default to 'valheim.log'\
-      \ to the main directory.&lt;br/&gt;\r\nATTENTION: Keep in mind this option will\
-      \ force Debug Log Output no matter what you choose in the above variable."
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Write Log to File
-    Required: 'false'
-    Target: LOG_OUTPUT
-    Type: Variable
-  value: 'false'
+  Device: {}
+  Label: {}
+  Path:
+    ServerFiles:
+      Default: ''
+      Description: 'Container Path: /serverdata/serverfiles'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: ServerFiles
+      Required: 'true'
+      Target: /serverdata/serverfiles
+      Type: Path
+      value: /mnt/cache/appdata/valheim
+    SteamCMD:
+      Default: ''
+      Description: 'Container Path: /serverdata/steamcmd'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: SteamCMD
+      Required: 'true'
+      Target: /serverdata/steamcmd
+      Type: Path
+      value: /mnt/user/appdata/steamcmd
+  Port:
+    UDP - Game Port Range:
+      Default: ''
+      Description: UDP Game Ports (If you need another port delete this Entry and
+        create a new UDP port mapping with the corresponding port range | GAME_PORT
+        +2 | also don't forget to click on show more and change the GAME_PORT)
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: UDP - Game Port Range
+      Required: 'false'
+      Target: 2456-2458
+      Type: Port
+      value: 2456-2458
+  Variable:
+    Automatically Update Game:
+      Default: ''
+      Description: If set to 'true' (without quotes) the container will automatically
+        check every 60 minuts if there is an update available and restart the container
+        if a update is found (please keep in mind if you enable the auto update function
+        the container will automatically restart if a newer version is found, set
+        to 'false' without quotes to disable the update check).
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Automatically Update Game
+      Required: 'true'
+      Target: UPDATE_CHECK
+      Type: Variable
+      value: 'true'
+    Backup:
+      Default: ''
+      Description: Set this value to 'true' (without quotes) to enable the automated
+        backup function from the container, you find the Backups in '.../valheim/Backups/'.
+        Set to 'false' (without quotes) to disable the backup function.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Backup
+      Required: 'true'
+      Target: BACKUP_FILES
+      Type: Variable
+      value: 'true'
+    Backup Interval (in minutes):
+      Default: ''
+      Description: "The backup interval in minutes (set to 62 minutes because the\
+        \ game automatically saves the database every 30 minutes)\r\nATTENTION: The\
+        \ first backup will be triggered after the set interval in this variable after\
+        \ the start/restart of the container)."
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Backup Interval (in minutes)
+      Required: 'true'
+      Target: BACKUP_INTERVAL
+      Type: Variable
+      value: '62'
+    Backups to keep:
+      Default: ''
+      Description: Number of backups to keep (by default set to 24 to keep the last
+        backups of the last 24 hours).
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Backups to keep
+      Required: 'true'
+      Target: BACKUP_TO_KEEP
+      Type: Variable
+      value: '24'
+    BepInEx for Valheim:
+      Default: ''
+      Description: 'If you want to enable BepInEx for Valheim set this variable to
+        ''true'' (without quotes). For more help please refer to this site: https://valheim.thunderstore.io/package/denikson/BepInExPack_Valheim/'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: BepInEx for Valheim
+      Required: 'false'
+      Target: ENABLE_BEPINEX
+      Type: Variable
+      value: ''
+    Debug Log Output:
+      Default: ''
+      Description: Only change if you know what you are doing!
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Debug Log Output
+      Required: 'false'
+      Target: DEBUG_OUTPUT
+      Type: Variable
+      value: 'false'
+    GAME_ID:
+      Default: ''
+      Description: "The GAME_ID that the container downloads at startup.\r\nIf you\
+        \ want to install a static or beta version of the game change the value to:\
+        \ '896660 -beta YOURBRANCH' (without quotes, replace YOURBRANCH with the branch\
+        \ or version you want to install)."
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: GAME_ID
+      Required: 'true'
+      Target: GAME_ID
+      Type: Variable
+      value: '896660'
+    GAME_PARAMS:
+      Default: ''
+      Description: Enter your extra start up commands for the server here otherwise
+        leave empty.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: GAME_PARAMS
+      Required: 'false'
+      Target: GAME_PARAMS
+      Type: Variable
+      value: ''
+    GAME_PORT:
+      Default: ''
+      Description: Only change if you know what you are doing (intital GAME_PORT |
+        Dont forget to create create a new UDP port mapping with the corresponding
+        port range and delete the default port range | GAME_PORT +2)
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: GAME_PORT
+      Required: 'true'
+      Target: GAME_PORT
+      Type: Variable
+      value: '2456'
+    GID:
+      Default: ''
+      Description: Only change if you know what you are doing!
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: GID
+      Required: 'true'
+      Target: GID
+      Type: Variable
+      value: '100'
+    Public Server:
+      Default: ''
+      Description: List Server as Public (set to '0' to disable or set to '1' to enable).
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Public Server
+      Required: 'false'
+      Target: PUBLIC
+      Type: Variable
+      value: '1'
+    Server Name:
+      Default: ''
+      Description: Name of the Server
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Server Name
+      Required: 'true'
+      Target: SRV_NAME
+      Type: Variable
+      value: Valheim Docker
+    Server Password:
+      Default: ''
+      Description: 'Server Password - ATTENTION: the minimum length is 6 characters!'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Server Password
+      Required: 'true'
+      Target: SRV_PWD
+      Type: Variable
+      value: Docker
+    Steam-Password:
+      Default: ''
+      Description: 'Your Steam password goes here if you want to install a game that
+        needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
+        Steam Guard).'
+      Display: advanced-hide
+      Mask: 'true'
+      Mode: ''
+      Name: Steam-Password
+      Required: 'false'
+      Target: PASSWRD
+      Type: Variable
+      value: ''
+    Steam-Username:
+      Default: ''
+      Description: 'Your Steam username goes here if you want to install a game that
+        needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
+        Steam Guard).'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: Steam-Username
+      Required: 'false'
+      Target: USERNAME
+      Type: Variable
+      value: ''
+    UID:
+      Default: ''
+      Description: Only change if you know what you are doing!
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: UID
+      Required: 'true'
+      Target: UID
+      Type: Variable
+      value: '99'
+    ValheimPlus:
+      Default: ''
+      Description: 'If you want to enable ValheimPlus set this variable to ''true''
+        (without quotes). For more help please refer to this site: https://github.com/nxPublic/ValheimPlus'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: ValheimPlus
+      Required: 'false'
+      Target: ENABLE_VALHEIMPLUS
+      Type: Variable
+      value: ''
+    Validate Installation:
+      Default: ''
+      Description: Set the Variable to 'true' if you want to validate the installation
+        otherwise leave it blank.
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: Validate Installation
+      Required: 'false'
+      Target: VALIDATE
+      Type: Variable
+      value: ''
+    World Name:
+      Default: ''
+      Description: Name of the Server World
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: World Name
+      Required: 'true'
+      Target: WORLD_NAME
+      Type: Variable
+      value: Dedicated
+    Write Log to File:
+      Default: ''
+      Description: "This will write the log output to a file, by default to 'valheim.log'\
+        \ to the main directory.&lt;br/&gt;\r\nATTENTION: Keep in mind this option\
+        \ will force Debug Log Output no matter what you choose in the above variable."
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Write Log to File
+      Required: 'false'
+      Target: LOG_OUTPUT
+      Type: Variable
+      value: 'false'
 DonateLink: https://www.paypal.me/chips777
 DonateText: 'If you like my work please '
 ExtraParams: --restart=unless-stopped

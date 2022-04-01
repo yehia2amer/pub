@@ -1,28 +1,33 @@
 CategoryList:
 - HomeAutomation
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /server/volume'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Appdata
-    Required: 'false'
-    Target: /server/volume
-    Type: Path
-  value: /mnt/user/appdata/scrypted
-- '@attributes':
-    Default: '9443'
-    Description: 'Container Port: '
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'false'
-    Target: '9443'
-    Type: Port
-  value: '9443'
+  Device: {}
+  Label: {}
+  Path:
+    Appdata:
+      Default: ''
+      Description: 'Container Path: /server/volume'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Appdata
+      Required: 'false'
+      Target: /server/volume
+      Type: Path
+      value: /mnt/user/appdata/scrypted
+  Port:
+    WebUI:
+      Default: '9443'
+      Description: 'Container Port: '
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'false'
+      Target: '9443'
+      Type: Port
+      value: '9443'
+  Variable: {}
 FirstSeen: 1632362658
 Icon: https://raw.githubusercontent.com/PTRFRLL/unraid-templates/master/scrypted/icon.png
 LastUpdate: 1647942157

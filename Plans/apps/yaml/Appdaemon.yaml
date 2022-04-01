@@ -2,61 +2,66 @@ CategoryList:
 - HomeAutomation
 - Other
 Config:
-- '@attributes':
-    Default: '5050'
-    Description: 'Container Port: 5050'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Web UI Port
-    Required: 'false'
-    Target: '5050'
-    Type: Port
-  value: '5050'
-- '@attributes':
-    Default: /mnt/user/appdata/appdaemon
-    Description: 'Container Path: /conf'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Configuration Path
-    Required: 'true'
-    Target: /conf
-    Type: Path
-  value: /mnt/user/appdata/appdaemon
-- '@attributes':
-    Default: ''
-    Description: Your local Home Assistant URL. (NO trailing / at the end!)
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Home Assistant URL
-    Required: 'true'
-    Target: HA_URL
-    Type: Variable
-  value: http://X.X.X.X:8123
-- '@attributes':
-    Default: ''
-    Description: Home Assistant Long Lived Access Tokens
-    Display: always
-    Mask: 'true'
-    Mode: ''
-    Name: Token
-    Required: 'false'
-    Target: TOKEN
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: This should be left as-is.
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Dashboard URL
-    Required: 'false'
-    Target: DASH_URL
-    Type: Variable
-  value: http://$HOSTNAME:5050
+  Device: {}
+  Label: {}
+  Path:
+    Configuration Path:
+      Default: /mnt/user/appdata/appdaemon
+      Description: 'Container Path: /conf'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Configuration Path
+      Required: 'true'
+      Target: /conf
+      Type: Path
+      value: /mnt/user/appdata/appdaemon
+  Port:
+    Web UI Port:
+      Default: '5050'
+      Description: 'Container Port: 5050'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Web UI Port
+      Required: 'false'
+      Target: '5050'
+      Type: Port
+      value: '5050'
+  Variable:
+    Dashboard URL:
+      Default: ''
+      Description: This should be left as-is.
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Dashboard URL
+      Required: 'false'
+      Target: DASH_URL
+      Type: Variable
+      value: http://$HOSTNAME:5050
+    Home Assistant URL:
+      Default: ''
+      Description: Your local Home Assistant URL. (NO trailing / at the end!)
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Home Assistant URL
+      Required: 'true'
+      Target: HA_URL
+      Type: Variable
+      value: http://X.X.X.X:8123
+    Token:
+      Default: ''
+      Description: Home Assistant Long Lived Access Tokens
+      Display: always
+      Mask: 'true'
+      Mode: ''
+      Name: Token
+      Required: 'false'
+      Target: TOKEN
+      Type: Variable
+      value: ''
 DonateLink: http://paypal.me/corneliousjd
 DonateText: Donate
 FirstSeen: '1528206366'

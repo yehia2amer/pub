@@ -2,105 +2,110 @@ CategoryList:
 - Productivity
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: '8383'
-    Description: 'Container Port: 8080'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'true'
-    Target: '80'
-    Type: Port
-  value: '8383'
-- '@attributes':
-    Default: /mnt/user/appdata/matomo
-    Description: 'Container Path: /var/www/html'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Appdata
-    Required: 'true'
-    Target: /var/www/html
-    Type: Path
-  value: /mnt/user/appdata/matomo
-- '@attributes':
-    Default: 192.168.1.100
-    Description: IP or hostname of the database server
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: MATOMO_DATABASE_HOST
-    Required: 'true'
-    Target: MATOMO_DATABASE_HOST
-    Type: Variable
-  value: 192.168.1.100
-- '@attributes':
-    Default: '3306'
-    Description: Port of the database server
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: MATOMO_DATABASE_PORT
-    Required: 'true'
-    Target: MATOMO_DATABASE_PORT
-    Type: Variable
-  value: '3306'
-- '@attributes':
-    Default: matomo
-    Description: Username of the database user
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: MATOMO_DATABASE_USERNAME
-    Required: 'true'
-    Target: MATOMO_DATABASE_USERNAME
-    Type: Variable
-  value: matomo
-- '@attributes':
-    Default: password
-    Description: Password of the database user
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: MATOMO_DATABASE_PASSWORD
-    Required: 'true'
-    Target: MATOMO_DATABASE_PASSWORD
-    Type: Variable
-  value: password
-- '@attributes':
-    Default: matomo
-    Description: Database name
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: MATOMO_DATABASE_DBNAME
-    Required: 'true'
-    Target: MATOMO_DATABASE_DBNAME
-    Type: Variable
-  value: matomo
-- '@attributes':
-    Default: 192.168.1.100
-    Description: 'Container Variable: MATOMO_SERVER_NAME'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: MATOMO_SERVER_NAME
-    Required: 'true'
-    Target: MATOMO_SERVER_NAME
-    Type: Variable
-  value: 192.168.1.100
-- '@attributes':
-    Default: MYSQL
-    Description: 'Container Variable: MATOMO_DATABASE_ADAPTER'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: MATOMO_DATABASE_ADAPTER
-    Required: 'true'
-    Target: MATOMO_DATABASE_ADAPTER
-    Type: Variable
-  value: MYSQL
+  Device: {}
+  Label: {}
+  Path:
+    Appdata:
+      Default: /mnt/user/appdata/matomo
+      Description: 'Container Path: /var/www/html'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Appdata
+      Required: 'true'
+      Target: /var/www/html
+      Type: Path
+      value: /mnt/user/appdata/matomo
+  Port:
+    WebUI:
+      Default: '8383'
+      Description: 'Container Port: 8080'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'true'
+      Target: '80'
+      Type: Port
+      value: '8383'
+  Variable:
+    MATOMO_DATABASE_ADAPTER:
+      Default: MYSQL
+      Description: 'Container Variable: MATOMO_DATABASE_ADAPTER'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: MATOMO_DATABASE_ADAPTER
+      Required: 'true'
+      Target: MATOMO_DATABASE_ADAPTER
+      Type: Variable
+      value: MYSQL
+    MATOMO_DATABASE_DBNAME:
+      Default: matomo
+      Description: Database name
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: MATOMO_DATABASE_DBNAME
+      Required: 'true'
+      Target: MATOMO_DATABASE_DBNAME
+      Type: Variable
+      value: matomo
+    MATOMO_DATABASE_HOST:
+      Default: 192.168.1.100
+      Description: IP or hostname of the database server
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: MATOMO_DATABASE_HOST
+      Required: 'true'
+      Target: MATOMO_DATABASE_HOST
+      Type: Variable
+      value: 192.168.1.100
+    MATOMO_DATABASE_PASSWORD:
+      Default: password
+      Description: Password of the database user
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: MATOMO_DATABASE_PASSWORD
+      Required: 'true'
+      Target: MATOMO_DATABASE_PASSWORD
+      Type: Variable
+      value: password
+    MATOMO_DATABASE_PORT:
+      Default: '3306'
+      Description: Port of the database server
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: MATOMO_DATABASE_PORT
+      Required: 'true'
+      Target: MATOMO_DATABASE_PORT
+      Type: Variable
+      value: '3306'
+    MATOMO_DATABASE_USERNAME:
+      Default: matomo
+      Description: Username of the database user
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: MATOMO_DATABASE_USERNAME
+      Required: 'true'
+      Target: MATOMO_DATABASE_USERNAME
+      Type: Variable
+      value: matomo
+    MATOMO_SERVER_NAME:
+      Default: 192.168.1.100
+      Description: 'Container Variable: MATOMO_SERVER_NAME'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: MATOMO_SERVER_NAME
+      Required: 'true'
+      Target: MATOMO_SERVER_NAME
+      Type: Variable
+      value: 192.168.1.100
 DonateLink: https://paypal.me/ramteksolutions
 DonateText: Help support my work by buying me a beer
 FirstSeen: 1615194175

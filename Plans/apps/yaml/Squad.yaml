@@ -1,191 +1,196 @@
 CategoryList:
 - GameServers
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /serverdata/steamcmd'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: SteamCMD
-    Required: 'true'
-    Target: /serverdata/steamcmd
-    Type: Path
-  value: /mnt/user/appdata/steamcmd
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /serverdata/serverfiles'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: ServerFiles
-    Required: 'true'
-    Target: /serverdata/serverfiles
-    Type: Path
-  value: /mnt/cache/appdata/squad
-- '@attributes':
-    Default: ''
-    Description: "The GAME_ID that the container download at startup.\r\n(https://developer.valvesoftware.com/wiki/Dedicated_Servers_List)"
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: GAME_ID
-    Required: 'true'
-    Target: GAME_ID
-    Type: Variable
-  value: '403240'
-- '@attributes':
-    Default: ''
-    Description: Enter your start up commands for the server.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: GAME_PARAMS
-    Required: 'false'
-    Target: GAME_PARAMS
-    Type: Variable
-  value: Port=7787 QueryPort=27165
-- '@attributes':
-    Default: ''
-    Description: 'Your Steam username goes here if you want to install a game that
-      needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
-      Steam Guard).'
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: Steam-Username
-    Required: 'false'
-    Target: USERNAME
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Set the Variable to 'true' if you want to validate the installation
-      otherwise leave it blank.
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: Validate Installation
-    Required: 'false'
-    Target: VALIDATE
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Your Steam password goes here if you want to install a game that
-      needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
-      Steam Guard).'
-    Display: always-hide
-    Mask: 'true'
-    Mode: ''
-    Name: Steam-Password
-    Required: 'false'
-    Target: PASSWRD
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: UDP Gameport (if you need another port, please delete this entry
-      and create a new UDP Port with the required port number, also don't forget to
-      change the port number in the 'GAME_PARAMS')
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: UDP1 - Game Port 1
-    Required: 'true'
-    Target: '7787'
-    Type: Port
-  value: '7787'
-- '@attributes':
-    Default: ''
-    Description: UDP Game Port +1
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: UDP2 - Game Port 2
-    Required: 'true'
-    Target: '7788'
-    Type: Port
-  value: '7788'
-- '@attributes':
-    Default: ''
-    Description: UDP Query Port (if you need another port, please delete this entry
-      and create a new UDP Port with the required port number, also don't forget to
-      change the port number in the 'GAME_PARAMS')
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: UDP3 - Query Port 1
-    Required: 'true'
-    Target: '27165'
-    Type: Port
-  value: '27165'
-- '@attributes':
-    Default: ''
-    Description: UDP Query Port +1
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: UDP4 - Query Port 2
-    Required: 'true'
-    Target: '27166'
-    Type: Port
-  value: '27166'
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 27166'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: TCP1 - Query Port 2
-    Required: 'true'
-    Target: '27166'
-    Type: Port
-  value: '27166'
-- '@attributes':
-    Default: ''
-    Description: TCP RCON Port (not required)
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: TCP2 - RCON Port
-    Required: 'false'
-    Target: '21114'
-    Type: Port
-  value: '21114'
-- '@attributes':
-    Default: ''
-    Description: UDP RCON Port (not required)
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: 'UDP5 - RCON Port:'
-    Required: 'false'
-    Target: '21114'
-    Type: Port
-  value: '21114'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: UID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: UID
-    Required: 'true'
-    Target: UID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: GID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: GID
-    Required: 'true'
-    Target: GID
-    Type: Variable
-  value: '100'
+  Device: {}
+  Label: {}
+  Path:
+    ServerFiles:
+      Default: ''
+      Description: 'Container Path: /serverdata/serverfiles'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: ServerFiles
+      Required: 'true'
+      Target: /serverdata/serverfiles
+      Type: Path
+      value: /mnt/cache/appdata/squad
+    SteamCMD:
+      Default: ''
+      Description: 'Container Path: /serverdata/steamcmd'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: SteamCMD
+      Required: 'true'
+      Target: /serverdata/steamcmd
+      Type: Path
+      value: /mnt/user/appdata/steamcmd
+  Port:
+    TCP1 - Query Port 2:
+      Default: ''
+      Description: 'Container Port: 27166'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: TCP1 - Query Port 2
+      Required: 'true'
+      Target: '27166'
+      Type: Port
+      value: '27166'
+    TCP2 - RCON Port:
+      Default: ''
+      Description: TCP RCON Port (not required)
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: TCP2 - RCON Port
+      Required: 'false'
+      Target: '21114'
+      Type: Port
+      value: '21114'
+    UDP1 - Game Port 1:
+      Default: ''
+      Description: UDP Gameport (if you need another port, please delete this entry
+        and create a new UDP Port with the required port number, also don't forget
+        to change the port number in the 'GAME_PARAMS')
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: UDP1 - Game Port 1
+      Required: 'true'
+      Target: '7787'
+      Type: Port
+      value: '7787'
+    UDP2 - Game Port 2:
+      Default: ''
+      Description: UDP Game Port +1
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: UDP2 - Game Port 2
+      Required: 'true'
+      Target: '7788'
+      Type: Port
+      value: '7788'
+    UDP3 - Query Port 1:
+      Default: ''
+      Description: UDP Query Port (if you need another port, please delete this entry
+        and create a new UDP Port with the required port number, also don't forget
+        to change the port number in the 'GAME_PARAMS')
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: UDP3 - Query Port 1
+      Required: 'true'
+      Target: '27165'
+      Type: Port
+      value: '27165'
+    UDP4 - Query Port 2:
+      Default: ''
+      Description: UDP Query Port +1
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: UDP4 - Query Port 2
+      Required: 'true'
+      Target: '27166'
+      Type: Port
+      value: '27166'
+    'UDP5 - RCON Port:':
+      Default: ''
+      Description: UDP RCON Port (not required)
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: 'UDP5 - RCON Port:'
+      Required: 'false'
+      Target: '21114'
+      Type: Port
+      value: '21114'
+  Variable:
+    GAME_ID:
+      Default: ''
+      Description: "The GAME_ID that the container download at startup.\r\n(https://developer.valvesoftware.com/wiki/Dedicated_Servers_List)"
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: GAME_ID
+      Required: 'true'
+      Target: GAME_ID
+      Type: Variable
+      value: '403240'
+    GAME_PARAMS:
+      Default: ''
+      Description: Enter your start up commands for the server.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: GAME_PARAMS
+      Required: 'false'
+      Target: GAME_PARAMS
+      Type: Variable
+      value: Port=7787 QueryPort=27165
+    GID:
+      Default: ''
+      Description: 'Container Variable: GID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: GID
+      Required: 'true'
+      Target: GID
+      Type: Variable
+      value: '100'
+    Steam-Password:
+      Default: ''
+      Description: 'Your Steam password goes here if you want to install a game that
+        needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
+        Steam Guard).'
+      Display: always-hide
+      Mask: 'true'
+      Mode: ''
+      Name: Steam-Password
+      Required: 'false'
+      Target: PASSWRD
+      Type: Variable
+      value: ''
+    Steam-Username:
+      Default: ''
+      Description: 'Your Steam username goes here if you want to install a game that
+        needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
+        Steam Guard).'
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: Steam-Username
+      Required: 'false'
+      Target: USERNAME
+      Type: Variable
+      value: ''
+    UID:
+      Default: ''
+      Description: 'Container Variable: UID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: UID
+      Required: 'true'
+      Target: UID
+      Type: Variable
+      value: '99'
+    Validate Installation:
+      Default: ''
+      Description: Set the Variable to 'true' if you want to validate the installation
+        otherwise leave it blank.
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: Validate Installation
+      Required: 'false'
+      Target: VALIDATE
+      Type: Variable
+      value: ''
 DonateLink: https://www.paypal.me/chips777
 DonateText: 'If you like my work please '
 ExtraParams: --restart=unless-stopped

@@ -1,28 +1,33 @@
 CategoryList:
 - HomeAutomation
 Config:
-- '@attributes':
-    Default: '3000'
-    Description: 'Container Port: 3000'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'false'
-    Target: '3000'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: /mnt/user/appdata/huginn
-    Description: 'Container Path: /var/lib/mysql'
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: Database files
-    Required: 'false'
-    Target: /var/lib/mysql
-    Type: Path
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Database files:
+      Default: /mnt/user/appdata/huginn
+      Description: 'Container Path: /var/lib/mysql'
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: Database files
+      Required: 'false'
+      Target: /var/lib/mysql
+      Type: Path
+      value: ''
+  Port:
+    WebUI:
+      Default: '3000'
+      Description: 'Container Port: 3000'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'false'
+      Target: '3000'
+      Type: Port
+      value: ''
+  Variable: {}
 FirstSeen: 1573427255
 Icon: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/huginn.png
 LastUpdate: 1648257448

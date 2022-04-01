@@ -1,50 +1,55 @@
 CategoryList:
 - HomeAutomation
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 8091'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'false'
-    Target: '8091'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: OZW_NETWORK_KEY'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: OZW_NETWORK_KEY
-    Required: 'false'
-    Target: OZW_NETWORK_KEY
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /usr/src/app/store'
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: Appdata
-    Required: 'false'
-    Target: /usr/src/app/store
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: /dev/ttyACM0
-    Description: 'Container Device: /dev/ttyACM0'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Serial device
-    Required: 'false'
-    Target: ''
-    Type: Device
-  value: ''
+  Device:
+    Serial device:
+      Default: /dev/ttyACM0
+      Description: 'Container Device: /dev/ttyACM0'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Serial device
+      Required: 'false'
+      Target: ''
+      Type: Device
+      value: ''
+  Label: {}
+  Path:
+    Appdata:
+      Default: ''
+      Description: 'Container Path: /usr/src/app/store'
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: Appdata
+      Required: 'false'
+      Target: /usr/src/app/store
+      Type: Path
+      value: ''
+  Port:
+    WebUI:
+      Default: ''
+      Description: 'Container Port: 8091'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'false'
+      Target: '8091'
+      Type: Port
+      value: ''
+  Variable:
+    OZW_NETWORK_KEY:
+      Default: ''
+      Description: 'Container Variable: OZW_NETWORK_KEY'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: OZW_NETWORK_KEY
+      Required: 'false'
+      Target: OZW_NETWORK_KEY
+      Type: Variable
+      value: ''
 FirstSeen: 1599768472
 Icon: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/zwave2mqtt.png
 LastUpdate: 1609150982

@@ -2,39 +2,44 @@ CategoryList:
 - Productivity
 - Crypto
 Config:
-- '@attributes':
-    Default: '8000'
-    Description: HTTP Port
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: HTTP Port
-    Required: 'false'
-    Target: '8000'
-    Type: Port
-  value: '8000'
-- '@attributes':
-    Default: '8001'
-    Description: WS Port
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WS Port
-    Required: 'false'
-    Target: '8001'
-    Type: Port
-  value: '8001'
-- '@attributes':
-    Default: /mnt/user/appdata/crypto-exchanges-gateway/
-    Description: https://raw.githubusercontent.com/aloysius-pgast/crypto-exchanges-gateway/master/config/config.sample.json
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Config Path
-    Required: 'false'
-    Target: /root/crypto-exchanges-gateway/custom_config
-    Type: Path
-  value: /mnt/user/appdata/crypto-exchanges-gateway/
+  Device: {}
+  Label: {}
+  Path:
+    Config Path:
+      Default: /mnt/user/appdata/crypto-exchanges-gateway/
+      Description: https://raw.githubusercontent.com/aloysius-pgast/crypto-exchanges-gateway/master/config/config.sample.json
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Config Path
+      Required: 'false'
+      Target: /root/crypto-exchanges-gateway/custom_config
+      Type: Path
+      value: /mnt/user/appdata/crypto-exchanges-gateway/
+  Port:
+    HTTP Port:
+      Default: '8000'
+      Description: HTTP Port
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: HTTP Port
+      Required: 'false'
+      Target: '8000'
+      Type: Port
+      value: '8000'
+    WS Port:
+      Default: '8001'
+      Description: WS Port
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WS Port
+      Required: 'false'
+      Target: '8001'
+      Type: Port
+      value: '8001'
+  Variable: {}
 FirstSeen: 1619553755
 Icon: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/crypto-exchanges-gateway.png
 LastUpdate: 1633989892

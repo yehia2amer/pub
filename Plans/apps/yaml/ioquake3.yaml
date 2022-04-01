@@ -1,132 +1,137 @@
 CategoryList:
 - GameServers
 Config:
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: ServerFiles
-    Required: 'true'
-    Target: /ioquake3
-    Type: Path
-  value: /mnt/cache/appdata/ioquake3
-- '@attributes':
-    Default: ''
-    Description: The startup parameters for the server (only change if you know what
-      you are doing!)
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: GAME_PARAMS
-    Required: 'true'
-    Target: GAME_PARAMS
-    Type: Variable
-  value: +set dedicated 2 +set sv_allowDownload 1 +set com_hunkmegs 64
-- '@attributes':
-    Default: ''
-    Description: The initial map wich the server would start.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Q3_MAP
-    Required: 'true'
-    Target: Q3_MAP
-    Type: Variable
-  value: q3dm1
-- '@attributes':
-    Default: ''
-    Description: Game Port (If you want to change the game port please click on more
-      settings here in the template, change the port, then delete this entry and create
-      a new one with the corresponding port number and UDP only!).
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: UDP - Game Port
-    Required: 'false'
-    Target: '27960'
-    Type: Port
-  value: '27960'
-- '@attributes':
-    Default: ''
-    Description: 'WebConsole (by default, you can connect to the ioquake3 console
-      by opening your browser and go to HOSTIP:9021 - eg: 192.168.1.1:9029 - or click
-      on WebUI on the Docker page within Unraid).'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: TCP - WebConsole
-    Required: 'false'
-    Target: '8080'
-    Type: Port
-  value: '9029'
-- '@attributes':
-    Default: ''
-    Description: Base Port
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: ioquake 3 Base Port
-    Required: 'true'
-    Target: IOQ3_PORT
-    Type: Variable
-  value: '27960'
-- '@attributes':
-    Default: ''
-    Description: Only change if you know what you're doing!
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: ioquake3 Download URL
-    Required: 'true'
-    Target: DL_URL
-    Type: Variable
-  value: https://files.ioquake3.org/Linux.zip
-- '@attributes':
-    Default: ''
-    Description: Only change if you know what you're doing!
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Patch URL
-    Required: 'true'
-    Target: DL_URL_PATCH
-    Type: Variable
-  value: https://files.ioquake3.org/quake3-latest-pk3s.zip
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: UMASK
-    Required: 'true'
-    Target: UMASK
-    Type: Variable
-  value: '000'
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: UID
-    Required: 'true'
-    Target: UID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: GID
-    Required: 'true'
-    Target: GID
-    Type: Variable
-  value: '100'
+  Device: {}
+  Label: {}
+  Path:
+    ServerFiles:
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: ServerFiles
+      Required: 'true'
+      Target: /ioquake3
+      Type: Path
+      value: /mnt/cache/appdata/ioquake3
+  Port:
+    TCP - WebConsole:
+      Default: ''
+      Description: 'WebConsole (by default, you can connect to the ioquake3 console
+        by opening your browser and go to HOSTIP:9021 - eg: 192.168.1.1:9029 - or
+        click on WebUI on the Docker page within Unraid).'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: TCP - WebConsole
+      Required: 'false'
+      Target: '8080'
+      Type: Port
+      value: '9029'
+    UDP - Game Port:
+      Default: ''
+      Description: Game Port (If you want to change the game port please click on
+        more settings here in the template, change the port, then delete this entry
+        and create a new one with the corresponding port number and UDP only!).
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: UDP - Game Port
+      Required: 'false'
+      Target: '27960'
+      Type: Port
+      value: '27960'
+  Variable:
+    GAME_PARAMS:
+      Default: ''
+      Description: The startup parameters for the server (only change if you know
+        what you are doing!)
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: GAME_PARAMS
+      Required: 'true'
+      Target: GAME_PARAMS
+      Type: Variable
+      value: +set dedicated 2 +set sv_allowDownload 1 +set com_hunkmegs 64
+    GID:
+      Default: ''
+      Description: ''
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: GID
+      Required: 'true'
+      Target: GID
+      Type: Variable
+      value: '100'
+    Patch URL:
+      Default: ''
+      Description: Only change if you know what you're doing!
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Patch URL
+      Required: 'true'
+      Target: DL_URL_PATCH
+      Type: Variable
+      value: https://files.ioquake3.org/quake3-latest-pk3s.zip
+    Q3_MAP:
+      Default: ''
+      Description: The initial map wich the server would start.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Q3_MAP
+      Required: 'true'
+      Target: Q3_MAP
+      Type: Variable
+      value: q3dm1
+    UID:
+      Default: ''
+      Description: ''
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: UID
+      Required: 'true'
+      Target: UID
+      Type: Variable
+      value: '99'
+    UMASK:
+      Default: ''
+      Description: ''
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: UMASK
+      Required: 'true'
+      Target: UMASK
+      Type: Variable
+      value: '000'
+    ioquake 3 Base Port:
+      Default: ''
+      Description: Base Port
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: ioquake 3 Base Port
+      Required: 'true'
+      Target: IOQ3_PORT
+      Type: Variable
+      value: '27960'
+    ioquake3 Download URL:
+      Default: ''
+      Description: Only change if you know what you're doing!
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: ioquake3 Download URL
+      Required: 'true'
+      Target: DL_URL
+      Type: Variable
+      value: https://files.ioquake3.org/Linux.zip
 DonateLink: https://www.paypal.me/chips777
 DonateText: If you like my work please consider donating
 ExtraParams: --restart=unless-stopped

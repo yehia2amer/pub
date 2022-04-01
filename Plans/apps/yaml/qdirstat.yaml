@@ -2,29 +2,34 @@ CategoryList:
 - Productivity
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: ''
-    Description: RDP
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: RDP
-    Required: 'true'
-    Target: '3389'
-    Type: Port
-  value: '33389'
-- '@attributes':
-    Default: ''
-    Description: "Container Path: /files\r\n\r\nHost location should be at what you\
-      \ want to survey using QDirStat."
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Array
-    Required: 'true'
-    Target: /files
-    Type: Path
-  value: /mnt/user/
+  Device: {}
+  Label: {}
+  Path:
+    Array:
+      Default: ''
+      Description: "Container Path: /files\r\n\r\nHost location should be at what\
+        \ you want to survey using QDirStat."
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Array
+      Required: 'true'
+      Target: /files
+      Type: Path
+      value: /mnt/user/
+  Port:
+    RDP:
+      Default: ''
+      Description: RDP
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: RDP
+      Required: 'true'
+      Target: '3389'
+      Type: Port
+      value: '33389'
+  Variable: {}
 Deprecated: true
 DonateImg: ''
 DonateText: Scooby Doo, &quot;Coin! Coin!&quot;

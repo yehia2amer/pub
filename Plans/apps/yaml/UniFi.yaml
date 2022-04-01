@@ -3,127 +3,132 @@ CategoryList:
 - Network-Management
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: '3478'
-    Description: 'Container Port: 3478'
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: Host Port 1
-    Required: 'true'
-    Target: '3478'
-    Type: Port
-  value: '3478'
-- '@attributes':
-    Default: '6789'
-    Description: 'Container Port: 6789'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Host Port 2
-    Required: 'true'
-    Target: '6789'
-    Type: Port
-  value: '6789'
-- '@attributes':
-    Default: '8080'
-    Description: 'Container Port: 8080'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Host Port 3
-    Required: 'true'
-    Target: '8080'
-    Type: Port
-  value: '8080'
-- '@attributes':
-    Default: '8081'
-    Description: 'Container Port: 8081'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Host Port 4
-    Required: 'true'
-    Target: '8081'
-    Type: Port
-  value: '8081'
-- '@attributes':
-    Default: '8443'
-    Description: 'Container Port: 8443'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Host Port 5
-    Required: 'true'
-    Target: '8443'
-    Type: Port
-  value: '8443'
-- '@attributes':
-    Default: '8843'
-    Description: 'Container Port: 8843'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Host Port 6
-    Required: 'true'
-    Target: '8843'
-    Type: Port
-  value: '8843'
-- '@attributes':
-    Default: '8880'
-    Description: 'Container Port: 8880'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Host Port 7
-    Required: 'true'
-    Target: '8880'
-    Type: Port
-  value: '8880'
-- '@attributes':
-    Default: /mnt/cache/appdata/unifi
-    Description: 'Container Path: /usr/lib/unifi/data'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Host Path 1
-    Required: 'true'
-    Target: /usr/lib/unifi/data
-    Type: Path
-  value: /mnt/cache/appdata/unifi
-- '@attributes':
-    Default: /mnt/cache/appdata/unifi/logs
-    Description: 'Container Path: /usr/lib/unifi/logs'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Host Path 2
-    Required: 'true'
-    Target: /usr/lib/unifi/logs
-    Type: Path
-  value: /mnt/cache/appdata/unifi/logs
-- '@attributes':
-    Default: '99'
-    Description: 'Container Variable: PUID'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Key 1
-    Required: 'false'
-    Target: PUID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: '100'
-    Description: 'Container Variable: PGID'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Key 2
-    Required: 'false'
-    Target: PGID
-    Type: Variable
-  value: '100'
+  Device: {}
+  Label: {}
+  Path:
+    Host Path 1:
+      Default: /mnt/cache/appdata/unifi
+      Description: 'Container Path: /usr/lib/unifi/data'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Host Path 1
+      Required: 'true'
+      Target: /usr/lib/unifi/data
+      Type: Path
+      value: /mnt/cache/appdata/unifi
+    Host Path 2:
+      Default: /mnt/cache/appdata/unifi/logs
+      Description: 'Container Path: /usr/lib/unifi/logs'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Host Path 2
+      Required: 'true'
+      Target: /usr/lib/unifi/logs
+      Type: Path
+      value: /mnt/cache/appdata/unifi/logs
+  Port:
+    Host Port 1:
+      Default: '3478'
+      Description: 'Container Port: 3478'
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: Host Port 1
+      Required: 'true'
+      Target: '3478'
+      Type: Port
+      value: '3478'
+    Host Port 2:
+      Default: '6789'
+      Description: 'Container Port: 6789'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Host Port 2
+      Required: 'true'
+      Target: '6789'
+      Type: Port
+      value: '6789'
+    Host Port 3:
+      Default: '8080'
+      Description: 'Container Port: 8080'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Host Port 3
+      Required: 'true'
+      Target: '8080'
+      Type: Port
+      value: '8080'
+    Host Port 4:
+      Default: '8081'
+      Description: 'Container Port: 8081'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Host Port 4
+      Required: 'true'
+      Target: '8081'
+      Type: Port
+      value: '8081'
+    Host Port 5:
+      Default: '8443'
+      Description: 'Container Port: 8443'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Host Port 5
+      Required: 'true'
+      Target: '8443'
+      Type: Port
+      value: '8443'
+    Host Port 6:
+      Default: '8843'
+      Description: 'Container Port: 8843'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Host Port 6
+      Required: 'true'
+      Target: '8843'
+      Type: Port
+      value: '8843'
+    Host Port 7:
+      Default: '8880'
+      Description: 'Container Port: 8880'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Host Port 7
+      Required: 'true'
+      Target: '8880'
+      Type: Port
+      value: '8880'
+  Variable:
+    Key 1:
+      Default: '99'
+      Description: 'Container Variable: PUID'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Key 1
+      Required: 'false'
+      Target: PUID
+      Type: Variable
+      value: '99'
+    Key 2:
+      Default: '100'
+      Description: 'Container Variable: PGID'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Key 2
+      Required: 'false'
+      Target: PGID
+      Type: Variable
+      value: '100'
 DonateImg: https://www.paypal.com/en_US/i/btn/btn_donate_SM.gif
 DonateLink: https://paypal.me/brettm357?locale.x=en_AU
 DonateText: Please Donate to the Project

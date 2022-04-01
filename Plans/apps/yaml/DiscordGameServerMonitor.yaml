@@ -1,39 +1,44 @@
 CategoryList:
 - Other
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /dgsm-docker/configs'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Configs
-    Required: 'false'
-    Target: /dgsm-docker/configs
-    Type: Path
-  value: /mnt/cache/appdata/dgsm
-- '@attributes':
-    Default: ''
-    Description: PGID
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: PGID
-    Required: 'false'
-    Target: PGID
-    Type: Variable
-  value: '100'
-- '@attributes':
-    Default: ''
-    Description: PUID
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: PUID
-    Required: 'false'
-    Target: PUID
-    Type: Variable
-  value: '99'
+  Device: {}
+  Label: {}
+  Path:
+    Configs:
+      Default: ''
+      Description: 'Container Path: /dgsm-docker/configs'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Configs
+      Required: 'false'
+      Target: /dgsm-docker/configs
+      Type: Path
+      value: /mnt/cache/appdata/dgsm
+  Port: {}
+  Variable:
+    PGID:
+      Default: ''
+      Description: PGID
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: PGID
+      Required: 'false'
+      Target: PGID
+      Type: Variable
+      value: '100'
+    PUID:
+      Default: ''
+      Description: PUID
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: PUID
+      Required: 'false'
+      Target: PUID
+      Type: Variable
+      value: '99'
 FirstSeen: 1629540202
 Icon: https://discordgsm.com/icon/discordgsm-public.png
 LastUpdate: 1644624063

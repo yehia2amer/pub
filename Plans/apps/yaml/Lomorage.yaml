@@ -5,39 +5,44 @@ CategoryList:
 - MediaServer-Video
 - MediaServer-Photos
 Config:
-- '@attributes':
-    Default: ''
-    Description: Volume to store photos, videos
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: MediaDir
-    Required: 'false'
-    Target: /media
-    Type: Path
-  value: /mnt/user/
-- '@attributes':
-    Default: ''
-    Description: Volume for application configuration and logs
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: AppDir
-    Required: 'false'
-    Target: /lomo
-    Type: Path
-  value: /mnt/user/appdata/
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /etc/passwd'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: User
-    Required: 'false'
-    Target: /etc/passwd
-    Type: Path
-  value: /etc/passwd
+  Device: {}
+  Label: {}
+  Path:
+    AppDir:
+      Default: ''
+      Description: Volume for application configuration and logs
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: AppDir
+      Required: 'false'
+      Target: /lomo
+      Type: Path
+      value: /mnt/user/appdata/
+    MediaDir:
+      Default: ''
+      Description: Volume to store photos, videos
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: MediaDir
+      Required: 'false'
+      Target: /media
+      Type: Path
+      value: /mnt/user/
+    User:
+      Default: ''
+      Description: 'Container Path: /etc/passwd'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: User
+      Required: 'false'
+      Target: /etc/passwd
+      Type: Path
+      value: /etc/passwd
+  Port: {}
+  Variable: {}
 ExtraParams: --user=99:100
 FirstSeen: 1634301902
 Icon: https://lomorage.com/img/logo.png

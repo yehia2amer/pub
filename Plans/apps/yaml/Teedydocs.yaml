@@ -7,39 +7,44 @@ CategoryList:
 - Cloud
 - Productivity
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 8080'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI Port
-    Required: 'true'
-    Target: '8080'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: /mnt/user/appdata/Teedy
-    Description: 'Container Path: /data'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Data Storage
-    Required: 'true'
-    Target: /data
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: For using an external URL, for example https://teedy.mycompany.com
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DOCS_BASE_URL
-    Required: 'false'
-    Target: DOCS_BASE_URL
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Data Storage:
+      Default: /mnt/user/appdata/Teedy
+      Description: 'Container Path: /data'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Data Storage
+      Required: 'true'
+      Target: /data
+      Type: Path
+      value: ''
+  Port:
+    WebUI Port:
+      Default: ''
+      Description: 'Container Port: 8080'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI Port
+      Required: 'true'
+      Target: '8080'
+      Type: Port
+      value: ''
+  Variable:
+    DOCS_BASE_URL:
+      Default: ''
+      Description: For using an external URL, for example https://teedy.mycompany.com
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DOCS_BASE_URL
+      Required: 'false'
+      Target: DOCS_BASE_URL
+      Type: Variable
+      value: ''
 FirstSeen: 1587653575
 Icon: https://raw.githubusercontent.com/sismics/docs/master/docs-web/src/main/resources/image/logo.png
 LastUpdate: 1645369060

@@ -2,39 +2,44 @@ CategoryList:
 - Cloud
 - Other
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /sia-data'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Container path on host
-    Required: 'true'
-    Target: /sia-data
-    Type: Path
-  value: /mnt/user/Sia
-- '@attributes':
-    Default: gctw
-    Description: 'Container Variable: SIA_MODULES'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Sia modules
-    Required: 'false'
-    Target: SIA_MODULES
-    Type: Variable
-  value: gctwh
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: SIA_WALLET_PASSWORD'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Sia wallet password
-    Required: 'false'
-    Target: SIA_WALLET_PASSWORD
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Container path on host:
+      Default: ''
+      Description: 'Container Path: /sia-data'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Container path on host
+      Required: 'true'
+      Target: /sia-data
+      Type: Path
+      value: /mnt/user/Sia
+  Port: {}
+  Variable:
+    Sia modules:
+      Default: gctw
+      Description: 'Container Variable: SIA_MODULES'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Sia modules
+      Required: 'false'
+      Target: SIA_MODULES
+      Type: Variable
+      value: gctwh
+    Sia wallet password:
+      Default: ''
+      Description: 'Container Variable: SIA_WALLET_PASSWORD'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Sia wallet password
+      Required: 'false'
+      Target: SIA_WALLET_PASSWORD
+      Type: Variable
+      value: ''
 DonateImg: https://mattvonrocketstein.github.io/heredoc/img/ethereum-icon.png
 DonateText: 'ETHERIUM accepted:  0xe09a2b205d3a76196a88505f059c78df7d7c556f'
 FirstSeen: '1525560903'

@@ -5,39 +5,44 @@ CategoryList:
 - MediaApp-Music
 - MediaServer-Music
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /mopidy.conf'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: config
-    Required: 'false'
-    Target: /etc/mopidy.conf
-    Type: Path
-  value: /mnt/user/appdata/mopidy/mopidy.conf
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /tmp/snapfifo'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Host Path 2
-    Required: 'false'
-    Target: /tmp/
-    Type: Path
-  value: /mnt/user/appdata/mopidy/tmp/
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /media'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Host Path 3
-    Required: 'false'
-    Target: /media
-    Type: Path
-  value: /mnt/user/Media/Musik/
+  Device: {}
+  Label: {}
+  Path:
+    Host Path 2:
+      Default: ''
+      Description: 'Container Path: /tmp/snapfifo'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Host Path 2
+      Required: 'false'
+      Target: /tmp/
+      Type: Path
+      value: /mnt/user/appdata/mopidy/tmp/
+    Host Path 3:
+      Default: ''
+      Description: 'Container Path: /media'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Host Path 3
+      Required: 'false'
+      Target: /media
+      Type: Path
+      value: /mnt/user/Media/Musik/
+    config:
+      Default: ''
+      Description: 'Container Path: /mopidy.conf'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: config
+      Required: 'false'
+      Target: /etc/mopidy.conf
+      Type: Path
+      value: /mnt/user/appdata/mopidy/mopidy.conf
+  Port: {}
+  Variable: {}
 DonateLink: https://www.buymeacoffee.com/maschhoff
 DonateText: Please buy me a Pizza
 FirstSeen: 1551483559

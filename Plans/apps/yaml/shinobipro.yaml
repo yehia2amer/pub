@@ -3,215 +3,220 @@ CategoryList:
 - MediaApp-Video
 - MediaServer-Video
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 8080'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Web port
-    Required: 'false'
-    Target: '8080'
-    Type: Port
-  value: '8080'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: ADMIN_USER'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: username for superuser
-    Required: 'false'
-    Target: ADMIN_USER
-    Type: Variable
-  value: admin
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: ADMIN_PASSWORD'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: password for superuser
-    Required: 'false'
-    Target: ADMIN_PASSWORD
-    Type: Variable
-  value: password
-- '@attributes':
-    Default: ''
-    Description: /opt/shinobi/videos
-    Display: always
-    Mask: 'false'
-    Mode: rw,slave
-    Name: video storage location
-    Required: 'true'
-    Target: /opt/shinobi/videos
-    Type: Path
-  value: /mnt/user/cctv/
-- '@attributes':
-    Default: ''
-    Description: If using tag :nvidia  -- set to   all
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: '****Nvidia build only  -- Driver capabilities'
-    Required: 'false'
-    Target: NVIDIA_DRIVER_CAPABILITIES
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: add gpu id (from nvidia unraid plugin)
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: '****Nvidia build only -- GPU ID'
-    Required: 'false'
-    Target: NVIDIA_VISIBLE_DEVICES
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: MYSQL_ROOT_PASSWORD
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: MYSQL_ROOT_PASSWORD
-    Required: 'false'
-    Target: MYSQL_ROOT_PASSWORD
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: MYSQL_PORT  standard port 3306
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: MYSQL_PORT
-    Required: 'false'
-    Target: MYSQL_PORT
-    Type: Variable
-  value: '3306'
-- '@attributes':
-    Default: ''
-    Description: MYSQL_USER
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: MYSQL_USER
-    Required: 'false'
-    Target: MYSQL_USER
-    Type: Variable
-  value: majesticflame
-- '@attributes':
-    Default: ''
-    Description: MYSQL_DATABASE NAME
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: MYSQL_DATABASE
-    Required: 'false'
-    Target: MYSQL_DATABASE
-    Type: Variable
-  value: ccio
-- '@attributes':
-    Default: ''
-    Description: MYSQL_HOST leave as localhost for container built in mariadb
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: MYSQL_HOST
-    Required: 'false'
-    Target: MYSQL_HOST
-    Type: Variable
-  value: localhost
-- '@attributes':
-    Default: ''
-    Description: Temporary Streams
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: Temporary Streams
-    Required: 'false'
-    Target: /dev/shm/streams
-    Type: Path
-  value: /dev/shm/shinobi
-- '@attributes':
-    Default: /mnt/user/appdata/shinobipro
-    Description: /config
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: appdata location
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: /mnt/user/appdata/shinobipro
-- '@attributes':
-    Default: ''
-    Description: /var/lib/mysql
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: maria db database location
-    Required: 'true'
-    Target: /var/lib/mysql
-    Type: Path
-  value: /mnt/user/appdata/shinobipro/database
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /opt/shinobi/libs/customAutoLoad'
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: customautoload modules
-    Required: 'false'
-    Target: /opt/shinobi/libs/customAutoLoad
-    Type: Path
-  value: /mnt/user/appdata/shinobipro/customautoload
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /usr/share/zoneinfo/'
-    Display: advanced
-    Mask: 'false'
-    Mode: ro
-    Name: TIMEZONE
-    Required: 'false'
-    Target: /usr/share/zoneinfo/
-    Type: Path
-  value: /usr/share/zoneinfo/
-- '@attributes':
-    Default: ''
-    Description: MYSQL_PASSWORD default none for internal mariadb
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: MYSQL_PASSWORD
-    Required: 'false'
-    Target: MYSQL_PASSWORD
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /etc/localtime'
-    Display: advanced
-    Mask: 'false'
-    Mode: ro
-    Name: LOCAL TIME
-    Required: 'false'
-    Target: /etc/localtime
-    Type: Path
-  value: /etc/localtime
-- '@attributes':
-    Default: ''
-    Description: MYSQL_ROOT_USER
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: MYSQL_ROOT_USER
-    Required: 'false'
-    Target: MYSQL_ROOT_USER
-    Type: Variable
-  value: root
+  Device: {}
+  Label: {}
+  Path:
+    LOCAL TIME:
+      Default: ''
+      Description: 'Container Path: /etc/localtime'
+      Display: advanced
+      Mask: 'false'
+      Mode: ro
+      Name: LOCAL TIME
+      Required: 'false'
+      Target: /etc/localtime
+      Type: Path
+      value: /etc/localtime
+    TIMEZONE:
+      Default: ''
+      Description: 'Container Path: /usr/share/zoneinfo/'
+      Display: advanced
+      Mask: 'false'
+      Mode: ro
+      Name: TIMEZONE
+      Required: 'false'
+      Target: /usr/share/zoneinfo/
+      Type: Path
+      value: /usr/share/zoneinfo/
+    Temporary Streams:
+      Default: ''
+      Description: Temporary Streams
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: Temporary Streams
+      Required: 'false'
+      Target: /dev/shm/streams
+      Type: Path
+      value: /dev/shm/shinobi
+    appdata location:
+      Default: /mnt/user/appdata/shinobipro
+      Description: /config
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: appdata location
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: /mnt/user/appdata/shinobipro
+    customautoload modules:
+      Default: ''
+      Description: 'Container Path: /opt/shinobi/libs/customAutoLoad'
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: customautoload modules
+      Required: 'false'
+      Target: /opt/shinobi/libs/customAutoLoad
+      Type: Path
+      value: /mnt/user/appdata/shinobipro/customautoload
+    maria db database location:
+      Default: ''
+      Description: /var/lib/mysql
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: maria db database location
+      Required: 'true'
+      Target: /var/lib/mysql
+      Type: Path
+      value: /mnt/user/appdata/shinobipro/database
+    video storage location:
+      Default: ''
+      Description: /opt/shinobi/videos
+      Display: always
+      Mask: 'false'
+      Mode: rw,slave
+      Name: video storage location
+      Required: 'true'
+      Target: /opt/shinobi/videos
+      Type: Path
+      value: /mnt/user/cctv/
+  Port:
+    Web port:
+      Default: ''
+      Description: 'Container Port: 8080'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Web port
+      Required: 'false'
+      Target: '8080'
+      Type: Port
+      value: '8080'
+  Variable:
+    '****Nvidia build only  -- Driver capabilities':
+      Default: ''
+      Description: If using tag :nvidia  -- set to   all
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: '****Nvidia build only  -- Driver capabilities'
+      Required: 'false'
+      Target: NVIDIA_DRIVER_CAPABILITIES
+      Type: Variable
+      value: ''
+    '****Nvidia build only -- GPU ID':
+      Default: ''
+      Description: add gpu id (from nvidia unraid plugin)
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: '****Nvidia build only -- GPU ID'
+      Required: 'false'
+      Target: NVIDIA_VISIBLE_DEVICES
+      Type: Variable
+      value: ''
+    MYSQL_DATABASE:
+      Default: ''
+      Description: MYSQL_DATABASE NAME
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: MYSQL_DATABASE
+      Required: 'false'
+      Target: MYSQL_DATABASE
+      Type: Variable
+      value: ccio
+    MYSQL_HOST:
+      Default: ''
+      Description: MYSQL_HOST leave as localhost for container built in mariadb
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: MYSQL_HOST
+      Required: 'false'
+      Target: MYSQL_HOST
+      Type: Variable
+      value: localhost
+    MYSQL_PASSWORD:
+      Default: ''
+      Description: MYSQL_PASSWORD default none for internal mariadb
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: MYSQL_PASSWORD
+      Required: 'false'
+      Target: MYSQL_PASSWORD
+      Type: Variable
+      value: ''
+    MYSQL_PORT:
+      Default: ''
+      Description: MYSQL_PORT  standard port 3306
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: MYSQL_PORT
+      Required: 'false'
+      Target: MYSQL_PORT
+      Type: Variable
+      value: '3306'
+    MYSQL_ROOT_PASSWORD:
+      Default: ''
+      Description: MYSQL_ROOT_PASSWORD
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: MYSQL_ROOT_PASSWORD
+      Required: 'false'
+      Target: MYSQL_ROOT_PASSWORD
+      Type: Variable
+      value: ''
+    MYSQL_ROOT_USER:
+      Default: ''
+      Description: MYSQL_ROOT_USER
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: MYSQL_ROOT_USER
+      Required: 'false'
+      Target: MYSQL_ROOT_USER
+      Type: Variable
+      value: root
+    MYSQL_USER:
+      Default: ''
+      Description: MYSQL_USER
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: MYSQL_USER
+      Required: 'false'
+      Target: MYSQL_USER
+      Type: Variable
+      value: majesticflame
+    password for superuser:
+      Default: ''
+      Description: 'Container Variable: ADMIN_PASSWORD'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: password for superuser
+      Required: 'false'
+      Target: ADMIN_PASSWORD
+      Type: Variable
+      value: password
+    username for superuser:
+      Default: ''
+      Description: 'Container Variable: ADMIN_USER'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: username for superuser
+      Required: 'false'
+      Target: ADMIN_USER
+      Type: Variable
+      value: admin
 DonateLink: https://www.paypal.me/spaceinvader
 FirstSeen: 1575579943
 Icon: https://shinobi.video//libs/assets/icon/apple-touch-icon-57x57.png

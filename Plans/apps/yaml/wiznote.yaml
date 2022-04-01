@@ -1,50 +1,55 @@
 CategoryList:
 - Productivity
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /wiz/storage'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: /wiz/storage
-    Required: 'false'
-    Target: /wiz/storage
-    Type: Path
-  value: /mnt/user/appdata/wiznote
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /etc/localtime'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: /etc/localtime
-    Required: 'false'
-    Target: /etc/localtime
-    Type: Path
-  value: /etc/localtime
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 80'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: '80'
-    Required: 'false'
-    Target: '80'
-    Type: Port
-  value: '888'
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 9269'
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: '9269'
-    Required: 'false'
-    Target: '9269'
-    Type: Port
-  value: '9269'
+  Device: {}
+  Label: {}
+  Path:
+    /etc/localtime:
+      Default: ''
+      Description: 'Container Path: /etc/localtime'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: /etc/localtime
+      Required: 'false'
+      Target: /etc/localtime
+      Type: Path
+      value: /etc/localtime
+    /wiz/storage:
+      Default: ''
+      Description: 'Container Path: /wiz/storage'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: /wiz/storage
+      Required: 'false'
+      Target: /wiz/storage
+      Type: Path
+      value: /mnt/user/appdata/wiznote
+  Port:
+    '80':
+      Default: ''
+      Description: 'Container Port: 80'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: '80'
+      Required: 'false'
+      Target: '80'
+      Type: Port
+      value: '888'
+    '9269':
+      Default: ''
+      Description: 'Container Port: 9269'
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: '9269'
+      Required: 'false'
+      Target: '9269'
+      Type: Port
+      value: '9269'
+  Variable: {}
 FirstSeen: 1613164241
 Icon: https://github.com/Muwahhidun/logo/blob/main/wiznote-icon.png?raw=true
 LastUpdate: 1646729003

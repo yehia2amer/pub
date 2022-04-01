@@ -1,50 +1,55 @@
 CategoryList:
 - Productivity
 Config:
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'false'
-    Target: '8000'
-    Type: Port
-  value: '8000'
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Directory (data)
-    Required: 'false'
-    Target: /var/lib/mayan
-    Type: Path
-  value: /mnt/user/appdata/mayan-edms
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: rw
-    Name: Watch Folder (optional)
-    Required: 'false'
-    Target: /opt/watch_folder
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: Staging Folder (optional)
-    Required: 'false'
-    Target: /opt/staging_folder
-    Type: Path
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Directory (data):
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Directory (data)
+      Required: 'false'
+      Target: /var/lib/mayan
+      Type: Path
+      value: /mnt/user/appdata/mayan-edms
+    Staging Folder (optional):
+      Default: ''
+      Description: ''
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: Staging Folder (optional)
+      Required: 'false'
+      Target: /opt/staging_folder
+      Type: Path
+      value: ''
+    Watch Folder (optional):
+      Default: ''
+      Description: ''
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: rw
+      Name: Watch Folder (optional)
+      Required: 'false'
+      Target: /opt/watch_folder
+      Type: Path
+      value: ''
+  Port:
+    WebUI:
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'false'
+      Target: '8000'
+      Type: Port
+      value: '8000'
+  Variable: {}
 FirstSeen: 1638320619
 Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/mayan-edms_200x200.png
 LastUpdate: 1647865573

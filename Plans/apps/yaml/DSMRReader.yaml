@@ -1,183 +1,189 @@
 CategoryList:
 - HomeAutomation
 Config:
-- '@attributes':
-    Default: '[IP]'
-    Description: "Container Variable: DJANGO_DATABASE_HOST\r\n"
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DATABASE HOST (Adjust to your UNRAID host IP)
-    Required: 'true'
-    Target: DJANGO_DATABASE_HOST
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: DSMRREADER_ADMIN_USER'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: WEBUI ADMIN USERNAME
-    Required: 'true'
-    Target: DSMRREADER_ADMIN_USER
-    Type: Variable
-  value: admin
-- '@attributes':
-    Default: dsmrreader
-    Description: 'Container Variable: DSMRREADER_ADMIN_PASSWORD'
-    Display: always
-    Mask: 'true'
-    Mode: ''
-    Name: WEBUI ADMIN PASSWORD
-    Required: 'true'
-    Target: DSMRREADER_ADMIN_PASSWORD
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 80'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WEB UI Port
-    Required: 'true'
-    Target: '80'
-    Type: Port
-  value: '7777'
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /home/dsmr/app/backups'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Backup directory
-    Required: 'true'
-    Target: /home/dsmr/app/backups
-    Type: Path
-  value: /mnt/user/appdata/dsmr-reader/backups
-- '@attributes':
-    Default: receiver|standalone
-    Description: 'Container Variable: DATALOGGER_MODE'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DATALOGGER MODE (change if P1 port is on this machine to STANDALONE)
-    Required: 'true'
-    Target: DATALOGGER_MODE
-    Type: Variable
-  value: receiver
-- '@attributes':
-    Default: '|/dev/ttyUSB0'
-    Description: Optional - required if setting DATALOGGER MODE to standalone!
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DATALOGGER SERIAL PORT
-    Required: 'false'
-    Target: DATALOGGER_SERIAL_PORT
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '|115200'
-    Description: Optional - required if setting DATALOGGER MODE to standalone!
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DATALOGGER SERIAL BAUDRATE
-    Required: 'false'
-    Target: DATALOGGER_SERIAL_BAUDRATE
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: VIRTUAL_HOST'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: VIRTUAL_HOST
-    Required: 'true'
-    Target: VIRTUAL_HOST
-    Type: Variable
-  value: localhost
-- '@attributes':
-    Default: '5432'
-    Description: 'Container Variable: DJANGO_DATABASE_PORT'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: DATABASE PORT
-    Required: 'true'
-    Target: DJANGO_DATABASE_PORT
-    Type: Variable
-  value: '5432'
-- '@attributes':
-    Default: dsmrreader
-    Description: 'Container Variable: DJANGO_DATABASE_NAME'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: DATABASE NAME
-    Required: 'true'
-    Target: DJANGO_DATABASE_NAME
-    Type: Variable
-  value: dsmrdb
-- '@attributes':
-    Default: '5'
-    Description: 'Container Variable: DATALOGGER_SLEEP'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: DATALOGGER SLEEP TIME (seconds)
-    Required: 'true'
-    Target: DATALOGGER_SLEEP
-    Type: Variable
-  value: '10'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: PUID'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: PUID
-    Required: 'true'
-    Target: PUID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: PGID'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: PGID
-    Required: 'true'
-    Target: PGID
-    Type: Variable
-  value: '100'
-- '@attributes':
-    Default: nobody
-    Description: User of which the supervisor should be part, important for file permissions!
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Supervisor User
-    Required: 'true'
-    Target: SD_USER
-    Type: Variable
-  value: nobody
-- '@attributes':
-    Default: users
-    Description: Group of which the supervisor should be part, important for file
-      permissions!
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Supervisor Group
-    Required: 'true'
-    Target: SD_GROUP
-    Type: Variable
-  value: users
+  Device: {}
+  Label: {}
+  Path:
+    Backup directory:
+      Default: ''
+      Description: 'Container Path: /home/dsmr/app/backups'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Backup directory
+      Required: 'true'
+      Target: /home/dsmr/app/backups
+      Type: Path
+      value: /mnt/user/appdata/dsmr-reader/backups
+  Port:
+    WEB UI Port:
+      Default: ''
+      Description: 'Container Port: 80'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WEB UI Port
+      Required: 'true'
+      Target: '80'
+      Type: Port
+      value: '7777'
+  Variable:
+    DATABASE HOST (Adjust to your UNRAID host IP):
+      Default: '[IP]'
+      Description: "Container Variable: DJANGO_DATABASE_HOST\r\n"
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DATABASE HOST (Adjust to your UNRAID host IP)
+      Required: 'true'
+      Target: DJANGO_DATABASE_HOST
+      Type: Variable
+      value: ''
+    DATABASE NAME:
+      Default: dsmrreader
+      Description: 'Container Variable: DJANGO_DATABASE_NAME'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: DATABASE NAME
+      Required: 'true'
+      Target: DJANGO_DATABASE_NAME
+      Type: Variable
+      value: dsmrdb
+    DATABASE PORT:
+      Default: '5432'
+      Description: 'Container Variable: DJANGO_DATABASE_PORT'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: DATABASE PORT
+      Required: 'true'
+      Target: DJANGO_DATABASE_PORT
+      Type: Variable
+      value: '5432'
+    DATALOGGER MODE (change if P1 port is on this machine to STANDALONE):
+      Default: receiver|standalone
+      Description: 'Container Variable: DATALOGGER_MODE'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DATALOGGER MODE (change if P1 port is on this machine to STANDALONE)
+      Required: 'true'
+      Target: DATALOGGER_MODE
+      Type: Variable
+      value: receiver
+    DATALOGGER SERIAL BAUDRATE:
+      Default: '|115200'
+      Description: Optional - required if setting DATALOGGER MODE to standalone!
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DATALOGGER SERIAL BAUDRATE
+      Required: 'false'
+      Target: DATALOGGER_SERIAL_BAUDRATE
+      Type: Variable
+      value: ''
+    DATALOGGER SERIAL PORT:
+      Default: '|/dev/ttyUSB0'
+      Description: Optional - required if setting DATALOGGER MODE to standalone!
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DATALOGGER SERIAL PORT
+      Required: 'false'
+      Target: DATALOGGER_SERIAL_PORT
+      Type: Variable
+      value: ''
+    DATALOGGER SLEEP TIME (seconds):
+      Default: '5'
+      Description: 'Container Variable: DATALOGGER_SLEEP'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: DATALOGGER SLEEP TIME (seconds)
+      Required: 'true'
+      Target: DATALOGGER_SLEEP
+      Type: Variable
+      value: '10'
+    PGID:
+      Default: ''
+      Description: 'Container Variable: PGID'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PGID
+      Required: 'true'
+      Target: PGID
+      Type: Variable
+      value: '100'
+    PUID:
+      Default: ''
+      Description: 'Container Variable: PUID'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PUID
+      Required: 'true'
+      Target: PUID
+      Type: Variable
+      value: '99'
+    Supervisor Group:
+      Default: users
+      Description: Group of which the supervisor should be part, important for file
+        permissions!
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Supervisor Group
+      Required: 'true'
+      Target: SD_GROUP
+      Type: Variable
+      value: users
+    Supervisor User:
+      Default: nobody
+      Description: User of which the supervisor should be part, important for file
+        permissions!
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Supervisor User
+      Required: 'true'
+      Target: SD_USER
+      Type: Variable
+      value: nobody
+    VIRTUAL_HOST:
+      Default: ''
+      Description: 'Container Variable: VIRTUAL_HOST'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: VIRTUAL_HOST
+      Required: 'true'
+      Target: VIRTUAL_HOST
+      Type: Variable
+      value: localhost
+    WEBUI ADMIN PASSWORD:
+      Default: dsmrreader
+      Description: 'Container Variable: DSMRREADER_ADMIN_PASSWORD'
+      Display: always
+      Mask: 'true'
+      Mode: ''
+      Name: WEBUI ADMIN PASSWORD
+      Required: 'true'
+      Target: DSMRREADER_ADMIN_PASSWORD
+      Type: Variable
+      value: ''
+    WEBUI ADMIN USERNAME:
+      Default: ''
+      Description: 'Container Variable: DSMRREADER_ADMIN_USER'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: WEBUI ADMIN USERNAME
+      Required: 'true'
+      Target: DSMRREADER_ADMIN_USER
+      Type: Variable
+      value: admin
 DonateLink: https://www.paypal.me/robvermeij
 FirstSeen: 1585787455
 Icon: https://raw.githubusercontent.com/Flight777/unraid_justworks_templates/main/images/dsmrreader/dsmrreader.png

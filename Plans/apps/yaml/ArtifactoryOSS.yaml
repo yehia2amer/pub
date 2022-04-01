@@ -2,39 +2,44 @@ CategoryList:
 - Productivity
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: -Xmx512m
-    Description: 'Container Variable: EXTRA_JAVA_OPTIONS'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: EXTRA_JAVA_OPTIONS
-    Required: 'false'
-    Target: EXTRA_JAVA_OPTIONS
-    Type: Variable
-  value: -Xms512m -Xmx4g
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 8081'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Port 8081
-    Required: 'false'
-    Target: '8081'
-    Type: Port
-  value: '8181'
-- '@attributes':
-    Default: ''
-    Description: /var/opt/jfrog/artifactory
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: /var/opt/jfrog/artifactory
-    Required: 'false'
-    Target: /var/opt/jfrog/artifactory
-    Type: Path
-  value: /mnt/user/appdata/artifactory-oss
+  Device: {}
+  Label: {}
+  Path:
+    /var/opt/jfrog/artifactory:
+      Default: ''
+      Description: /var/opt/jfrog/artifactory
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: /var/opt/jfrog/artifactory
+      Required: 'false'
+      Target: /var/opt/jfrog/artifactory
+      Type: Path
+      value: /mnt/user/appdata/artifactory-oss
+  Port:
+    Port 8081:
+      Default: ''
+      Description: 'Container Port: 8081'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Port 8081
+      Required: 'false'
+      Target: '8081'
+      Type: Port
+      value: '8181'
+  Variable:
+    EXTRA_JAVA_OPTIONS:
+      Default: -Xmx512m
+      Description: 'Container Variable: EXTRA_JAVA_OPTIONS'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: EXTRA_JAVA_OPTIONS
+      Required: 'false'
+      Target: EXTRA_JAVA_OPTIONS
+      Type: Variable
+      value: -Xms512m -Xmx4g
 ExtraParams: --ulimit nofile=32000:40000 --ulimit nproc=65535
 FirstSeen: 1612840028
 Icon: https://i.imgur.com/aYdPHTy.png

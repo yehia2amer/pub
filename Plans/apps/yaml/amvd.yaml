@@ -2,236 +2,241 @@ CategoryList:
 - Downloaders
 - MediaApp-Video
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /config'
-    Display: always-hide
-    Mask: 'false'
-    Mode: rw
-    Name: Host Path for /config
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /downloads-amvd'
-    Display: always-hide
-    Mask: 'false'
-    Mode: rw
-    Name: Host Path for /downloads-amvd
-    Required: 'true'
-    Target: /downloads-amvd
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: 'true'
-    Description: 'true = Enabled :: Runs script automatically on startup'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Enable Automatic Script Start
-    Required: 'true'
-    Target: AUTOSTART
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 15m
-    Description: '#s or #m or #h or #d :: s = seconds, m = minutes, h = hours, d =
-      days :: Amount of time between each script run, when AUTOSTART is enabled'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Script Interval
-    Required: 'true'
-    Target: SCRIPTINTERVAL
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: https://musicbrainz.org
-    Description: 'OPTIONAL: Only change if using a different mirror'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: Musicbrainz Mirror URL
-    Required: 'false'
-    Target: MBRAINZMIRROR
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '1'
-    Description: 'OPTIONAL: musicbrainz rate limit, musicbrainz allows only 1 connection
-      per second, max setting is 10'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: Musicbrainz Rate Limit
-    Required: 'false'
-    Target: MBRATELIMIT
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: lidarr
-    Description: 'lidarr or ama :: ama requires the AMA config folder to be mounted
-      as a volume: /ama'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Music Videos Source Connection
-    Required: 'true'
-    Target: SOURCE_CONNECTION
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: http://127.0.0.1:8686
-    Description: Set domain or IP to your Lidarr instance including port. If using
-      reverse proxy, do not use a trailing slash. Ensure you specify http/s.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Lidarr Url
-    Required: 'false'
-    Target: LidarrUrl
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Lidarr API key
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Lidarr API Key
-    Required: 'false'
-    Target: LidarrAPIkey
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: us
-    Description: Set the country code for preferred video matching, uses Musicbrainz
-      Country Codes, lowercase only.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Music Videos Country Code
-    Required: 'true'
-    Target: CountryCode
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 'true'
-    Description: 'true = enabled :: Only keep videos that could be matched to a Musicbrainz
-      music track.'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Music Videos Require Match
-    Required: 'true'
-    Target: RequireVideoMatch
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: en
-    Description: 'Desired Language Code :: For guidence, please see youtube-dl documentation'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Music Videos Subtitle Langauge
-    Required: 'true'
-    Target: subtitlelanguage
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: live
-    Description: This will filter out videos Matching MusicBrainz secondary release
-      type and album disambiguation (single word only)
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Music Videos Filter Match
-    Required: 'true'
-    Target: videofilter
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 'false'
-    Description: 'true = enabled :: Create NFO and Local Thumbnail for use in applications
-      such as Kodi'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Music Videos Write NFO
-    Required: 'true'
-    Target: WriteNFOs
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 'false'
-    Description: 'true = enabled :: Creates subfolders using the Lidarr Artist folder
-      name'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Music Videos Use Folders
-    Required: 'true'
-    Target: USEFOLDERS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 'false'
-    Description: 'true = enabled :: Creates subfolders using Video File Name only,
-      requires USEFOLDERS to be enabled'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Music Videos Use Video Folders
-    Required: 'true'
-    Target: USEVIDEOFOLDERS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '766'
-    Description: Based on chmod linux permissions
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Music Videos Folder Permissions
-    Required: 'true'
-    Target: FolderPermissions
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '666'
-    Description: Based on chmod linux permissions
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Music Videos File Permissions
-    Required: 'true'
-    Target: FilePermissions
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '99'
-    Description: 'Container Variable: USER_ID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: PUID
-    Required: 'false'
-    Target: PUID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '100'
-    Description: 'Container Variable: GROUP_ID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: PGID
-    Required: 'false'
-    Target: PGID
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Host Path for /config:
+      Default: ''
+      Description: 'Container Path: /config'
+      Display: always-hide
+      Mask: 'false'
+      Mode: rw
+      Name: Host Path for /config
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: ''
+    Host Path for /downloads-amvd:
+      Default: ''
+      Description: 'Container Path: /downloads-amvd'
+      Display: always-hide
+      Mask: 'false'
+      Mode: rw
+      Name: Host Path for /downloads-amvd
+      Required: 'true'
+      Target: /downloads-amvd
+      Type: Path
+      value: ''
+  Port: {}
+  Variable:
+    Enable Automatic Script Start:
+      Default: 'true'
+      Description: 'true = Enabled :: Runs script automatically on startup'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Enable Automatic Script Start
+      Required: 'true'
+      Target: AUTOSTART
+      Type: Variable
+      value: ''
+    Lidarr API Key:
+      Default: ''
+      Description: Lidarr API key
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Lidarr API Key
+      Required: 'false'
+      Target: LidarrAPIkey
+      Type: Variable
+      value: ''
+    Lidarr Url:
+      Default: http://127.0.0.1:8686
+      Description: Set domain or IP to your Lidarr instance including port. If using
+        reverse proxy, do not use a trailing slash. Ensure you specify http/s.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Lidarr Url
+      Required: 'false'
+      Target: LidarrUrl
+      Type: Variable
+      value: ''
+    Music Videos Country Code:
+      Default: us
+      Description: Set the country code for preferred video matching, uses Musicbrainz
+        Country Codes, lowercase only.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Music Videos Country Code
+      Required: 'true'
+      Target: CountryCode
+      Type: Variable
+      value: ''
+    Music Videos File Permissions:
+      Default: '666'
+      Description: Based on chmod linux permissions
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Music Videos File Permissions
+      Required: 'true'
+      Target: FilePermissions
+      Type: Variable
+      value: ''
+    Music Videos Filter Match:
+      Default: live
+      Description: This will filter out videos Matching MusicBrainz secondary release
+        type and album disambiguation (single word only)
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Music Videos Filter Match
+      Required: 'true'
+      Target: videofilter
+      Type: Variable
+      value: ''
+    Music Videos Folder Permissions:
+      Default: '766'
+      Description: Based on chmod linux permissions
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Music Videos Folder Permissions
+      Required: 'true'
+      Target: FolderPermissions
+      Type: Variable
+      value: ''
+    Music Videos Require Match:
+      Default: 'true'
+      Description: 'true = enabled :: Only keep videos that could be matched to a
+        Musicbrainz music track.'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Music Videos Require Match
+      Required: 'true'
+      Target: RequireVideoMatch
+      Type: Variable
+      value: ''
+    Music Videos Source Connection:
+      Default: lidarr
+      Description: 'lidarr or ama :: ama requires the AMA config folder to be mounted
+        as a volume: /ama'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Music Videos Source Connection
+      Required: 'true'
+      Target: SOURCE_CONNECTION
+      Type: Variable
+      value: ''
+    Music Videos Subtitle Langauge:
+      Default: en
+      Description: 'Desired Language Code :: For guidence, please see youtube-dl documentation'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Music Videos Subtitle Langauge
+      Required: 'true'
+      Target: subtitlelanguage
+      Type: Variable
+      value: ''
+    Music Videos Use Folders:
+      Default: 'false'
+      Description: 'true = enabled :: Creates subfolders using the Lidarr Artist folder
+        name'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Music Videos Use Folders
+      Required: 'true'
+      Target: USEFOLDERS
+      Type: Variable
+      value: ''
+    Music Videos Use Video Folders:
+      Default: 'false'
+      Description: 'true = enabled :: Creates subfolders using Video File Name only,
+        requires USEFOLDERS to be enabled'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Music Videos Use Video Folders
+      Required: 'true'
+      Target: USEVIDEOFOLDERS
+      Type: Variable
+      value: ''
+    Music Videos Write NFO:
+      Default: 'false'
+      Description: 'true = enabled :: Create NFO and Local Thumbnail for use in applications
+        such as Kodi'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Music Videos Write NFO
+      Required: 'true'
+      Target: WriteNFOs
+      Type: Variable
+      value: ''
+    Musicbrainz Mirror URL:
+      Default: https://musicbrainz.org
+      Description: 'OPTIONAL: Only change if using a different mirror'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: Musicbrainz Mirror URL
+      Required: 'false'
+      Target: MBRAINZMIRROR
+      Type: Variable
+      value: ''
+    Musicbrainz Rate Limit:
+      Default: '1'
+      Description: 'OPTIONAL: musicbrainz rate limit, musicbrainz allows only 1 connection
+        per second, max setting is 10'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: Musicbrainz Rate Limit
+      Required: 'false'
+      Target: MBRATELIMIT
+      Type: Variable
+      value: ''
+    PGID:
+      Default: '100'
+      Description: 'Container Variable: GROUP_ID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: PGID
+      Required: 'false'
+      Target: PGID
+      Type: Variable
+      value: ''
+    PUID:
+      Default: '99'
+      Description: 'Container Variable: USER_ID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: PUID
+      Required: 'false'
+      Target: PUID
+      Type: Variable
+      value: ''
+    Script Interval:
+      Default: 15m
+      Description: '#s or #m or #h or #d :: s = seconds, m = minutes, h = hours, d
+        = days :: Amount of time between each script run, when AUTOSTART is enabled'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Script Interval
+      Required: 'true'
+      Target: SCRIPTINTERVAL
+      Type: Variable
+      value: ''
 DonateImg: ''
 DonateLink: https://github.com/sponsors/RandomNinjaAtk
 FirstSeen: 1596161409

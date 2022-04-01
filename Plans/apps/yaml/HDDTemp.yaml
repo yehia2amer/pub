@@ -1,50 +1,55 @@
 CategoryList:
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: /var/run/docker.sock
-    Description: 'Container Path: /var/run/docker.sock'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: docker.sock
-    Required: 'true'
-    Target: /var/run/docker.sock
-    Type: Path
-  value: /var/run/docker.sock
-- '@attributes':
-    Default: /dev
-    Description: 'Container Path: /dev'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: /dev
-    Required: 'true'
-    Target: /dev
-    Type: Path
-  value: /dev
-- '@attributes':
-    Default: America/Denver
-    Description: Timezone
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: timezone
-    Required: 'false'
-    Target: TZ
-    Type: Variable
-  value: America/Denver
-- '@attributes':
-    Default: -q -d -F /dev/sd*
-    Description: 'Container Variable: HDDTEMP_ARGS'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: HDDTEMP_ARGS
-    Required: 'true'
-    Target: HDDTEMP_ARGS
-    Type: Variable
-  value: -q -d -F /dev/sd*
+  Device: {}
+  Label: {}
+  Path:
+    /dev:
+      Default: /dev
+      Description: 'Container Path: /dev'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: /dev
+      Required: 'true'
+      Target: /dev
+      Type: Path
+      value: /dev
+    docker.sock:
+      Default: /var/run/docker.sock
+      Description: 'Container Path: /var/run/docker.sock'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: docker.sock
+      Required: 'true'
+      Target: /var/run/docker.sock
+      Type: Path
+      value: /var/run/docker.sock
+  Port: {}
+  Variable:
+    HDDTEMP_ARGS:
+      Default: -q -d -F /dev/sd*
+      Description: 'Container Variable: HDDTEMP_ARGS'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: HDDTEMP_ARGS
+      Required: 'true'
+      Target: HDDTEMP_ARGS
+      Type: Variable
+      value: -q -d -F /dev/sd*
+    timezone:
+      Default: America/Denver
+      Description: Timezone
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: timezone
+      Required: 'false'
+      Target: TZ
+      Type: Variable
+      value: America/Denver
 DonateImg: ''
 FirstSeen: '1528858402'
 Icon: https://github.com/atribe/unRAID-docker/raw/master/icons/hddtemp.png

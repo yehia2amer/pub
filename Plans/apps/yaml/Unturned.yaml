@@ -1,233 +1,223 @@
 CategoryList:
 - GameServers
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /serverdata/steamcmd'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: SteamCMD
-    Required: 'true'
-    Target: /serverdata/steamcmd
-    Type: Path
-  value: /mnt/user/appdata/steamcmd
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /serverdata/serverfiles'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: ServerFiles
-    Required: 'true'
-    Target: /serverdata/serverfiles
-    Type: Path
-  value: /mnt/cache/appdata/unturned
-- '@attributes':
-    Default: ''
-    Description: "The GAME_ID that the container download at startup.\r\n(https://developer.valvesoftware.com/wiki/Dedicated_Servers_List)"
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: GAME_ID
-    Required: 'true'
-    Target: GAME_ID
-    Type: Variable
-  value: '1110390'
-- '@attributes':
-    Default: ''
-    Description: Enter your start up commands for the server.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: GAME_PARAMS
-    Required: 'false'
-    Target: GAME_PARAMS
-    Type: Variable
-  value: -pei -normal -nosync -pve
-- '@attributes':
-    Default: ''
-    Description: 'Your Steam username goes here if you want to install a game that
-      needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
-      Steam Guard).'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: Steam-Username
-    Required: 'false'
-    Target: USERNAME
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Set the Variable to 'true' if you want to validate the installation
-      otherwise leave it blank.
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: Validate Installation
-    Required: 'false'
-    Target: VALIDATE
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Your Steam password goes here if you want to install a game that
-      needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
-      Steam Guard).'
-    Display: advanced-hide
-    Mask: 'true'
-    Mode: ''
-    Name: Steam-Password
-    Required: 'false'
-    Target: PASSWRD
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Set to 'true' (without quotes) to install Rocket Mod otherwise leave
-      blank
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Install Rocket Mod
-    Required: 'false'
-    Target: ROCKET_MOD
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: "If you want to force a update of Rocket Mod set to 'true' (without\
-      \ quotes)\r\nATTENTION: All files in the 'Modules' &amp; 'Scripts' folder will\
-      \ be overwritten backup the files bevor doing that!"
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Rocket Mod Force Update
-    Required: 'false'
-    Target: ROCKET_FORCE_UPDATE
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: "TCP Game Port (if you need another port, please delete this entry\
-      \ and create a new TCP Port with the required port number, also don't forget\
-      \ to change it in the 'Show more settings ...' section below)\r\nATTENTION:\
-      \ Don't forget that you must set 2 other ports GAME_PORT +1 &amp; GAME_PORT\
-      \ +2"
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: TCP1 - Game Port
-    Required: 'true'
-    Target: '27015'
-    Type: Port
-  value: '27015'
-- '@attributes':
-    Default: ''
-    Description: "UDP Game Port (if you need another port, please delete this entry\
-      \ and create a new UDP Port with the required port number, also don't forget\
-      \ to change it in the 'Show more settings ...' section below)\r\nATTENTION:\
-      \ Don't forget that you must set 2 other ports GAME_PORT +1 &amp; GAME_PORT\
-      \ +2"
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: UDP2 - Game Port
-    Required: 'false'
-    Target: '27015'
-    Type: Port
-  value: '27015'
-- '@attributes':
-    Default: ''
-    Description: Game Port +1
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: TCP2 - Game Port
-    Required: 'false'
-    Target: '27016'
-    Type: Port
-  value: '27016'
-- '@attributes':
-    Default: ''
-    Description: Game Port +1
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: UDP2 - Game Port
-    Required: 'false'
-    Target: '27016'
-    Type: Port
-  value: '27016'
-- '@attributes':
-    Default: ''
-    Description: Game Port +2
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: TCP3 - Game Port
-    Required: 'false'
-    Target: '27017'
-    Type: Port
-  value: '27017'
-- '@attributes':
-    Default: ''
-    Description: Game Port +2
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: UDP3 - Game Port
-    Required: 'false'
-    Target: '27017'
-    Type: Port
-  value: '27017'
-- '@attributes':
-    Default: ''
-    Description: Only change if you are know what you are doing
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Rocket Mod Download URL
-    Required: 'true'
-    Target: ROCKET_URL
-    Type: Variable
-  value: https://ci.rocketmod.net/job/Rocket.Unturned/lastSuccessfulBuild/artifact/Rocket.Unturned/bin/Release/Rocket.zip
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: UID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: UID
-    Required: 'true'
-    Target: UID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: GID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: GID
-    Required: 'true'
-    Target: GID
-    Type: Variable
-  value: '100'
-- '@attributes':
-    Default: ''
-    Description: If you change this setting don't forget to delete the gameport above
-      and create 3 entries for TCP and 3 entries for UDP (GAME_PORT +2 TCP &amp; GAME_PORT
-      UDP +2)
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Base Game Port
-    Required: 'true'
-    Target: GAME_PORT
-    Type: Variable
-  value: '27015'
+  Device: {}
+  Label: {}
+  Path:
+    ServerFiles:
+      Default: ''
+      Description: 'Container Path: /serverdata/serverfiles'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: ServerFiles
+      Required: 'true'
+      Target: /serverdata/serverfiles
+      Type: Path
+      value: /mnt/cache/appdata/unturned
+    SteamCMD:
+      Default: ''
+      Description: 'Container Path: /serverdata/steamcmd'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: SteamCMD
+      Required: 'true'
+      Target: /serverdata/steamcmd
+      Type: Path
+      value: /mnt/user/appdata/steamcmd
+  Port:
+    TCP1 - Game Port:
+      Default: ''
+      Description: "TCP Game Port (if you need another port, please delete this entry\
+        \ and create a new TCP Port with the required port number, also don't forget\
+        \ to change it in the 'Show more settings ...' section below)\r\nATTENTION:\
+        \ Don't forget that you must set 2 other ports GAME_PORT +1 &amp; GAME_PORT\
+        \ +2"
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: TCP1 - Game Port
+      Required: 'true'
+      Target: '27015'
+      Type: Port
+      value: '27015'
+    TCP2 - Game Port:
+      Default: ''
+      Description: Game Port +1
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: TCP2 - Game Port
+      Required: 'false'
+      Target: '27016'
+      Type: Port
+      value: '27016'
+    TCP3 - Game Port:
+      Default: ''
+      Description: Game Port +2
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: TCP3 - Game Port
+      Required: 'false'
+      Target: '27017'
+      Type: Port
+      value: '27017'
+    UDP2 - Game Port:
+      Default: ''
+      Description: Game Port +1
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: UDP2 - Game Port
+      Required: 'false'
+      Target: '27016'
+      Type: Port
+      value: '27016'
+    UDP3 - Game Port:
+      Default: ''
+      Description: Game Port +2
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: UDP3 - Game Port
+      Required: 'false'
+      Target: '27017'
+      Type: Port
+      value: '27017'
+  Variable:
+    Base Game Port:
+      Default: ''
+      Description: If you change this setting don't forget to delete the gameport
+        above and create 3 entries for TCP and 3 entries for UDP (GAME_PORT +2 TCP
+        &amp; GAME_PORT UDP +2)
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Base Game Port
+      Required: 'true'
+      Target: GAME_PORT
+      Type: Variable
+      value: '27015'
+    GAME_ID:
+      Default: ''
+      Description: "The GAME_ID that the container download at startup.\r\n(https://developer.valvesoftware.com/wiki/Dedicated_Servers_List)"
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: GAME_ID
+      Required: 'true'
+      Target: GAME_ID
+      Type: Variable
+      value: '1110390'
+    GAME_PARAMS:
+      Default: ''
+      Description: Enter your start up commands for the server.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: GAME_PARAMS
+      Required: 'false'
+      Target: GAME_PARAMS
+      Type: Variable
+      value: -pei -normal -nosync -pve
+    GID:
+      Default: ''
+      Description: 'Container Variable: GID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: GID
+      Required: 'true'
+      Target: GID
+      Type: Variable
+      value: '100'
+    Install Rocket Mod:
+      Default: ''
+      Description: Set to 'true' (without quotes) to install Rocket Mod otherwise
+        leave blank
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Install Rocket Mod
+      Required: 'false'
+      Target: ROCKET_MOD
+      Type: Variable
+      value: ''
+    Rocket Mod Download URL:
+      Default: ''
+      Description: Only change if you are know what you are doing
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Rocket Mod Download URL
+      Required: 'true'
+      Target: ROCKET_URL
+      Type: Variable
+      value: https://ci.rocketmod.net/job/Rocket.Unturned/lastSuccessfulBuild/artifact/Rocket.Unturned/bin/Release/Rocket.zip
+    Rocket Mod Force Update:
+      Default: ''
+      Description: "If you want to force a update of Rocket Mod set to 'true' (without\
+        \ quotes)\r\nATTENTION: All files in the 'Modules' &amp; 'Scripts' folder\
+        \ will be overwritten backup the files bevor doing that!"
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Rocket Mod Force Update
+      Required: 'false'
+      Target: ROCKET_FORCE_UPDATE
+      Type: Variable
+      value: ''
+    Steam-Password:
+      Default: ''
+      Description: 'Your Steam password goes here if you want to install a game that
+        needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
+        Steam Guard).'
+      Display: advanced-hide
+      Mask: 'true'
+      Mode: ''
+      Name: Steam-Password
+      Required: 'false'
+      Target: PASSWRD
+      Type: Variable
+      value: ''
+    Steam-Username:
+      Default: ''
+      Description: 'Your Steam username goes here if you want to install a game that
+        needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
+        Steam Guard).'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: Steam-Username
+      Required: 'false'
+      Target: USERNAME
+      Type: Variable
+      value: ''
+    UID:
+      Default: ''
+      Description: 'Container Variable: UID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: UID
+      Required: 'true'
+      Target: UID
+      Type: Variable
+      value: '99'
+    Validate Installation:
+      Default: ''
+      Description: Set the Variable to 'true' if you want to validate the installation
+        otherwise leave it blank.
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: Validate Installation
+      Required: 'false'
+      Target: VALIDATE
+      Type: Variable
+      value: ''
 DonateLink: https://www.paypal.me/chips777
 DonateText: 'If you like my work please '
 ExtraParams: --restart=unless-stopped

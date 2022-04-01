@@ -3,61 +3,66 @@ CategoryList:
 - MediaServer-Music
 - MediaServer-Photos
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /media'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Media
-    Required: 'true'
-    Target: /media
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 9001'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'true'
-    Target: '9001'
-    Type: Port
-  value: '9001'
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 5002'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Port 5002
-    Required: 'true'
-    Target: '5002'
-    Type: Port
-  value: '5002'
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 1044'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Port 1044
-    Required: 'true'
-    Target: '1044'
-    Type: Port
-  value: '1044'
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /root/.config/UMS/'
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: Config
-    Required: 'true'
-    Target: /root/.config/UMS/
-    Type: Path
-  value: /mnt/user/appdata/ums
+  Device: {}
+  Label: {}
+  Path:
+    Config:
+      Default: ''
+      Description: 'Container Path: /root/.config/UMS/'
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: Config
+      Required: 'true'
+      Target: /root/.config/UMS/
+      Type: Path
+      value: /mnt/user/appdata/ums
+    Media:
+      Default: ''
+      Description: 'Container Path: /media'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Media
+      Required: 'true'
+      Target: /media
+      Type: Path
+      value: ''
+  Port:
+    Port 1044:
+      Default: ''
+      Description: 'Container Port: 1044'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Port 1044
+      Required: 'true'
+      Target: '1044'
+      Type: Port
+      value: '1044'
+    Port 5002:
+      Default: ''
+      Description: 'Container Port: 5002'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Port 5002
+      Required: 'true'
+      Target: '5002'
+      Type: Port
+      value: '5002'
+    WebUI:
+      Default: ''
+      Description: 'Container Port: 9001'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'true'
+      Target: '9001'
+      Type: Port
+      value: '9001'
+  Variable: {}
 FirstSeen: 1637492599
 Icon: https://www.universalmediaserver.com/assets/img/logo.png
 LastUpdate: 1647313942

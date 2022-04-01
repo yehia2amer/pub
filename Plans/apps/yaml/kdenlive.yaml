@@ -1,86 +1,91 @@
 ChangeLogPresent: true
 Config:
-- '@attributes':
-    Default: '3000'
-    Description: Kdenlive desktop gui
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'true'
-    Target: '3000'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Users home directory in the container, stores local files and settings
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: Appdata
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: /
-    Description: Specify a subfolder to use with reverse proxies, IE `/subfolder/`
-    Display: always
-    Mask: 'false'
-    Name: SUBFOLDER
-    Required: 'false'
-    Target: SUBFOLDER
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: en-us-qwerty
-    Description: See the keyboard layouts section for more information and options.
-    Display: always
-    Mask: 'true'
-    Name: KEYBOARD
-    Required: 'false'
-    Target: KEYBOARD
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '99'
-    Description: 'Container Variable: PUID'
-    Display: advanced
-    Mask: 'false'
-    Name: PUID
-    Required: 'true'
-    Target: PUID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '100'
-    Description: 'Container Variable: PGID'
-    Display: advanced
-    Mask: 'false'
-    Name: PGID
-    Required: 'true'
-    Target: PGID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '022'
-    Description: 'Container Variable: UMASK'
-    Display: advanced
-    Mask: 'false'
-    Name: UMASK
-    Required: 'false'
-    Target: UMASK
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: /dev/dri
-    Description: Add this for hardware acceleration (Linux hosts only)
-    Display: always
-    Mask: 'false'
-    Name: /dev/dri
-    Required: 'false'
-    Type: Device
-  value: ''
+  Device:
+    /dev/dri:
+      Default: /dev/dri
+      Description: Add this for hardware acceleration (Linux hosts only)
+      Display: always
+      Mask: 'false'
+      Name: /dev/dri
+      Required: 'false'
+      Type: Device
+      value: ''
+  Label: {}
+  Path:
+    Appdata:
+      Default: ''
+      Description: Users home directory in the container, stores local files and settings
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: Appdata
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: ''
+  Port:
+    WebUI:
+      Default: '3000'
+      Description: Kdenlive desktop gui
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'true'
+      Target: '3000'
+      Type: Port
+      value: ''
+  Variable:
+    KEYBOARD:
+      Default: en-us-qwerty
+      Description: See the keyboard layouts section for more information and options.
+      Display: always
+      Mask: 'true'
+      Name: KEYBOARD
+      Required: 'false'
+      Target: KEYBOARD
+      Type: Variable
+      value: ''
+    PGID:
+      Default: '100'
+      Description: 'Container Variable: PGID'
+      Display: advanced
+      Mask: 'false'
+      Name: PGID
+      Required: 'true'
+      Target: PGID
+      Type: Variable
+      value: ''
+    PUID:
+      Default: '99'
+      Description: 'Container Variable: PUID'
+      Display: advanced
+      Mask: 'false'
+      Name: PUID
+      Required: 'true'
+      Target: PUID
+      Type: Variable
+      value: ''
+    SUBFOLDER:
+      Default: /
+      Description: Specify a subfolder to use with reverse proxies, IE `/subfolder/`
+      Display: always
+      Mask: 'false'
+      Name: SUBFOLDER
+      Required: 'false'
+      Target: SUBFOLDER
+      Type: Variable
+      value: ''
+    UMASK:
+      Default: '022'
+      Description: 'Container Variable: UMASK'
+      Display: advanced
+      Mask: 'false'
+      Name: UMASK
+      Required: 'false'
+      Target: UMASK
+      Type: Variable
+      value: ''
 DonateImg: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/donate.png
 DonateLink: https://www.linuxserver.io/donate
 DonateText: Donations

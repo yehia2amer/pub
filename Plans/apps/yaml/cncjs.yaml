@@ -1,50 +1,55 @@
 CategoryList:
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /opt/cncjs'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: /config
-    Required: 'false'
-    Target: /cncjs/
-    Type: Path
-  value: /mnt/user/appdata/cncjs
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 8000'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: port
-    Required: 'false'
-    Target: '8000'
-    Type: Port
-  value: '8000'
-- '@attributes':
-    Default: ''
-    Description: 'Container Device: '
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Webcam
-    Required: 'false'
-    Target: ''
-    Type: Device
-  value: /dev/
-- '@attributes':
-    Default: ''
-    Description: 'Container Device: '
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: CNC
-    Required: 'false'
-    Target: ''
-    Type: Device
-  value: /dev/
+  Device:
+    CNC:
+      Default: ''
+      Description: 'Container Device: '
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: CNC
+      Required: 'false'
+      Target: ''
+      Type: Device
+      value: /dev/
+    Webcam:
+      Default: ''
+      Description: 'Container Device: '
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Webcam
+      Required: 'false'
+      Target: ''
+      Type: Device
+      value: /dev/
+  Label: {}
+  Path:
+    /config:
+      Default: ''
+      Description: 'Container Path: /opt/cncjs'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: /config
+      Required: 'false'
+      Target: /cncjs/
+      Type: Path
+      value: /mnt/user/appdata/cncjs
+  Port:
+    port:
+      Default: ''
+      Description: 'Container Port: 8000'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: port
+      Required: 'false'
+      Target: '8000'
+      Type: Port
+      value: '8000'
+  Variable: {}
 FirstSeen: 1636967004
 Icon: https://cnc.js.org/logo.png
 LastUpdate: 1635178820

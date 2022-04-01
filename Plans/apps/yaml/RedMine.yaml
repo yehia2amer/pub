@@ -2,94 +2,99 @@ CategoryList:
 - Cloud
 - Network-Web
 Config:
-- '@attributes':
-    Default: '3000'
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Port
-    Required: 'true'
-    Target: '3000'
-    Type: Port
-  value: '3000'
-- '@attributes':
-    Default: ''
-    Description: The IP of your database
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DatabaseHost
-    Required: 'true'
-    Target: REDMINE_DB_MYSQL
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '3306'
-    Description: The port of your database
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DatabasePort
-    Required: 'true'
-    Target: REDMINE_DB_PORT
-    Type: Variable
-  value: '3306'
-- '@attributes':
-    Default: RedMine
-    Description: The name of the database you will use
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DatabaseName
-    Required: 'true'
-    Target: REDMINE_DB_DATABASE
-    Type: Variable
-  value: RedMine
-- '@attributes':
-    Default: RedmineUser
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DatabaseUser
-    Required: 'true'
-    Target: REDMINE_DB_USERNAME
-    Type: Variable
-  value: RedmineUser
-- '@attributes':
-    Default: changeme
-    Description: ''
-    Display: always
-    Mask: 'true'
-    Mode: ''
-    Name: DatabaseUserPassword
-    Required: 'true'
-    Target: REDMINE_DB_PASSWORD
-    Type: Variable
-  value: test1234
-- '@attributes':
-    Default: /mnt/user/appdata/redmine/plugins
-    Description: Plugins path for redmine
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: RedMinePlugin
-    Required: 'true'
-    Target: /usr/src/redmine/files
-    Type: Path
-  value: /mnt/user/appdata/redmine/plugins
-- '@attributes':
-    Default: /mnt/user/appdata/redmine/themes
-    Description: Themes path for RedMine
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: RedMineThemes
-    Required: 'true'
-    Target: /usr/src/redmine/public/themes
-    Type: Path
-  value: /mnt/user/appdata/redmine/themes
+  Device: {}
+  Label: {}
+  Path:
+    RedMinePlugin:
+      Default: /mnt/user/appdata/redmine/plugins
+      Description: Plugins path for redmine
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: RedMinePlugin
+      Required: 'true'
+      Target: /usr/src/redmine/files
+      Type: Path
+      value: /mnt/user/appdata/redmine/plugins
+    RedMineThemes:
+      Default: /mnt/user/appdata/redmine/themes
+      Description: Themes path for RedMine
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: RedMineThemes
+      Required: 'true'
+      Target: /usr/src/redmine/public/themes
+      Type: Path
+      value: /mnt/user/appdata/redmine/themes
+  Port:
+    Port:
+      Default: '3000'
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Port
+      Required: 'true'
+      Target: '3000'
+      Type: Port
+      value: '3000'
+  Variable:
+    DatabaseHost:
+      Default: ''
+      Description: The IP of your database
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DatabaseHost
+      Required: 'true'
+      Target: REDMINE_DB_MYSQL
+      Type: Variable
+      value: ''
+    DatabaseName:
+      Default: RedMine
+      Description: The name of the database you will use
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DatabaseName
+      Required: 'true'
+      Target: REDMINE_DB_DATABASE
+      Type: Variable
+      value: RedMine
+    DatabasePort:
+      Default: '3306'
+      Description: The port of your database
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DatabasePort
+      Required: 'true'
+      Target: REDMINE_DB_PORT
+      Type: Variable
+      value: '3306'
+    DatabaseUser:
+      Default: RedmineUser
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DatabaseUser
+      Required: 'true'
+      Target: REDMINE_DB_USERNAME
+      Type: Variable
+      value: RedmineUser
+    DatabaseUserPassword:
+      Default: changeme
+      Description: ''
+      Display: always
+      Mask: 'true'
+      Mode: ''
+      Name: DatabaseUserPassword
+      Required: 'true'
+      Target: REDMINE_DB_PASSWORD
+      Type: Variable
+      value: test1234
 FirstSeen: 1646111000
 Icon: https://avatars.githubusercontent.com/u/93662?s=200&amp;v=4
 LastUpdate: 1648691050

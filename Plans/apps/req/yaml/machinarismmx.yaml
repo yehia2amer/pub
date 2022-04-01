@@ -2,180 +2,185 @@ Beta: 'true'
 CategoryList:
 - Crypto
 Config:
-- '@attributes':
-    Default: /mnt/user/appdata/machinaris-mmx
-    Description: Holds app data for the container. Not for temp plotting or final
-      plot mmxage.
-    Display: always-hide
-    Mask: 'false'
-    Mode: rw
-    Name: appdata
-    Required: 'false'
-    Target: /root/.chia
-    Type: Path
-  value: /mnt/user/appdata/machinaris-mmx
-- '@attributes':
-    Default: ''
-    Description: 'Holds completed plots for farming. Create more Paths for additional
-      folders like plots1,plots2,etc... '
-    Display: always-hide
-    Mask: 'false'
-    Mode: rw
-    Name: plots1
-    Required: 'false'
-    Target: /plots1
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Your fast temp space for plotting, ideally a cache pool or unassigned
-      SSD.
-    Display: always-hide
-    Mask: 'false'
-    Mode: rw
-    Name: plotting
-    Required: 'false'
-    Target: /plotting
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: /plots1
-    Description: 'A colon-separated list of all in-container paths (defined above)
-      holding your completed plots.  Example: /plots1:/plots2:/plots3'
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: plots_dir
-    Required: 'false'
-    Target: plots_dir
-    Type: Variable
-  value: /plots1
-- '@attributes':
-    Default: ''
-    Description: The IP address of your Unraid server on your LAN for controller/worker
-      communication.
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: controller_host
-    Required: 'true'
-    Target: controller_host
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Again, the IP address of your Unraid server on your LAN for controller/worker
-      communication.
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: worker_address
-    Required: 'true'
-    Target: worker_address
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: The TCP port of the Machinaris worker for controller/worker communication.
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: worker_api_port
-    Required: 'true'
-    Target: worker_api_port
-    Type: Variable
-  value: '8940'
-- '@attributes':
-    Default: '8940'
-    Description: The TCP port to reach this worker at.  Leave at 8940 for MMX blockchain.
-    Display: always-hide
-    Mask: 'false'
-    Mode: tcp
-    Name: worker_port
-    Required: 'true'
-    Target: '8940'
-    Type: Port
-  value: '8940'
-- '@attributes':
-    Default: '12335'
-    Description: The TCP port for connecting to peers.  Port forward at your router.
-    Display: always-hide
-    Mask: 'false'
-    Mode: tcp
-    Name: protocol_port
-    Required: 'true'
-    Target: '12335'
-    Type: Port
-  value: '12335'
-- '@attributes':
-    Default: '11330'
-    Description: The TCP port allowing harvesters to connect with on your LAN.  DO
-      NOT port forward at your router.
-    Display: always-hide
-    Mask: 'false'
-    Mode: tcp
-    Name: farmer_port
-    Required: 'true'
-    Target: '11330'
-    Type: Port
-  value: '11330'
-- '@attributes':
-    Default: fullnode
-    Description: Determines which services Machinaris starts.  Default is everything
-      (aka fullnode).
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: mode
-    Required: 'true'
-    Target: mode
-    Type: Variable
-  value: fullnode
-- '@attributes':
-    Default: mmx
-    Description: The blockchain to farm.  Leave set to 'mmx'.
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: blockchains
-    Required: 'false'
-    Target: blockchains
-    Type: Variable
-  value: mmx
-- '@attributes':
-    Default: all
-    Description: 'GPU(s) to use in container. See: https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/user-guide.html#gpu-enumeration'
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: NVIDIA_VISIBLE_DEVICES
-    Required: 'false'
-    Target: NVIDIA_VISIBLE_DEVICES
-    Type: Variable
-  value: '0'
-- '@attributes':
-    Default: compute,utility
-    Description: 'Driver features to load.  See: https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/user-guide.html#driver-capabilities'
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: NVIDIA_DRIVER_CAPABILITIES
-    Required: 'false'
-    Target: NVIDIA_DRIVER_CAPABILITIES
-    Type: Variable
-  value: all
-- '@attributes':
-    Default: ''
-    Description: OpenCL GPU type.  Leave blank if you have no GPU. Use exactly 'nvidia'
-      if you have a supported Nvidia GPU. AMD and iPU not currently supported.
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: OPENCL_GPU
-    Required: 'false'
-    Target: OPENCL_GPU
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    appdata:
+      Default: /mnt/user/appdata/machinaris-mmx
+      Description: Holds app data for the container. Not for temp plotting or final
+        plot mmxage.
+      Display: always-hide
+      Mask: 'false'
+      Mode: rw
+      Name: appdata
+      Required: 'false'
+      Target: /root/.chia
+      Type: Path
+      value: /mnt/user/appdata/machinaris-mmx
+    plots1:
+      Default: ''
+      Description: 'Holds completed plots for farming. Create more Paths for additional
+        folders like plots1,plots2,etc... '
+      Display: always-hide
+      Mask: 'false'
+      Mode: rw
+      Name: plots1
+      Required: 'false'
+      Target: /plots1
+      Type: Path
+      value: ''
+    plotting:
+      Default: ''
+      Description: Your fast temp space for plotting, ideally a cache pool or unassigned
+        SSD.
+      Display: always-hide
+      Mask: 'false'
+      Mode: rw
+      Name: plotting
+      Required: 'false'
+      Target: /plotting
+      Type: Path
+      value: ''
+  Port:
+    farmer_port:
+      Default: '11330'
+      Description: The TCP port allowing harvesters to connect with on your LAN.  DO
+        NOT port forward at your router.
+      Display: always-hide
+      Mask: 'false'
+      Mode: tcp
+      Name: farmer_port
+      Required: 'true'
+      Target: '11330'
+      Type: Port
+      value: '11330'
+    protocol_port:
+      Default: '12335'
+      Description: The TCP port for connecting to peers.  Port forward at your router.
+      Display: always-hide
+      Mask: 'false'
+      Mode: tcp
+      Name: protocol_port
+      Required: 'true'
+      Target: '12335'
+      Type: Port
+      value: '12335'
+    worker_port:
+      Default: '8940'
+      Description: The TCP port to reach this worker at.  Leave at 8940 for MMX blockchain.
+      Display: always-hide
+      Mask: 'false'
+      Mode: tcp
+      Name: worker_port
+      Required: 'true'
+      Target: '8940'
+      Type: Port
+      value: '8940'
+  Variable:
+    NVIDIA_DRIVER_CAPABILITIES:
+      Default: compute,utility
+      Description: 'Driver features to load.  See: https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/user-guide.html#driver-capabilities'
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: NVIDIA_DRIVER_CAPABILITIES
+      Required: 'false'
+      Target: NVIDIA_DRIVER_CAPABILITIES
+      Type: Variable
+      value: all
+    NVIDIA_VISIBLE_DEVICES:
+      Default: all
+      Description: 'GPU(s) to use in container. See: https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/user-guide.html#gpu-enumeration'
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: NVIDIA_VISIBLE_DEVICES
+      Required: 'false'
+      Target: NVIDIA_VISIBLE_DEVICES
+      Type: Variable
+      value: '0'
+    OPENCL_GPU:
+      Default: ''
+      Description: OpenCL GPU type.  Leave blank if you have no GPU. Use exactly 'nvidia'
+        if you have a supported Nvidia GPU. AMD and iPU not currently supported.
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: OPENCL_GPU
+      Required: 'false'
+      Target: OPENCL_GPU
+      Type: Variable
+      value: ''
+    blockchains:
+      Default: mmx
+      Description: The blockchain to farm.  Leave set to 'mmx'.
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: blockchains
+      Required: 'false'
+      Target: blockchains
+      Type: Variable
+      value: mmx
+    controller_host:
+      Default: ''
+      Description: The IP address of your Unraid server on your LAN for controller/worker
+        communication.
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: controller_host
+      Required: 'true'
+      Target: controller_host
+      Type: Variable
+      value: ''
+    mode:
+      Default: fullnode
+      Description: Determines which services Machinaris starts.  Default is everything
+        (aka fullnode).
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: mode
+      Required: 'true'
+      Target: mode
+      Type: Variable
+      value: fullnode
+    plots_dir:
+      Default: /plots1
+      Description: 'A colon-separated list of all in-container paths (defined above)
+        holding your completed plots.  Example: /plots1:/plots2:/plots3'
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: plots_dir
+      Required: 'false'
+      Target: plots_dir
+      Type: Variable
+      value: /plots1
+    worker_address:
+      Default: ''
+      Description: Again, the IP address of your Unraid server on your LAN for controller/worker
+        communication.
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: worker_address
+      Required: 'true'
+      Target: worker_address
+      Type: Variable
+      value: ''
+    worker_api_port:
+      Default: ''
+      Description: The TCP port of the Machinaris worker for controller/worker communication.
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: worker_api_port
+      Required: 'true'
+      Target: worker_api_port
+      Type: Variable
+      value: '8940'
 ExtraParams: -h $HOSTNAME
 FirstSeen: 1643935756
 Icon: https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/logos/mmx.png

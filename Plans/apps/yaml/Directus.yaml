@@ -3,233 +3,238 @@ CategoryList:
 - Tools-Utilities
 - Network-Web
 Config:
-- '@attributes':
-    Default: '8055'
-    Description: 'Container Port: 8055'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'true'
-    Target: '8055'
-    Type: Port
-  value: '8055'
-- '@attributes':
-    Default: admin@example.com
-    Description: The Direcuts Admin User Account. Feel free to change this to your
-      email address.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Admin Email
-    Required: 'false'
-    Target: ADMIN_EMAIL
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: "The Direcuts Admin User Account. Feel free to pass your desired\
-      \ password here,\r\notherwise a default password will be generated on first\
-      \ launch. (check logs!)"
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Admin Password
-    Required: 'false'
-    Target: ADMIN_PASSWORD
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: /mnt/user/appdata/directus/uploads/
-    Description: "Container Path: /directus/uploads/\r\n\r\nThis is where your files\
-      \ get stored you upload to and manage within Directus"
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: App Data/Uploads
-    Required: 'true'
-    Target: /directus/uploads/
-    Type: Path
-  value: /mnt/user/appdata/directus/uploads/
-- '@attributes':
-    Default: /mnt/user/appdata/directus/extensions/
-    Description: 'Container Path: /directus/extensions/'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: App Data/Extensions
-    Required: 'false'
-    Target: /directus/extensions/
-    Type: Path
-  value: /mnt/user/appdata/directus/extensions/
-- '@attributes':
-    Default: /mnt/user/appdata/directus/database/
-    Description: Only needed for SQLite environments
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: App Data/Database (SQLite)
-    Required: 'false'
-    Target: /directus/database/
-    Type: Path
-  value: /mnt/user/appdata/directus/database/
-- '@attributes':
-    Default: ''
-    Description: What database client to use. One of pg or postgres, mysql, oracledb,
-      mssql, or sqlite3.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Database
-    Required: 'true'
-    Target: DB_CLIENT
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Database host. Required when using pg, mysql, oracledb, or mssql.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Database Host
-    Required: 'false'
-    Target: DB_HOST
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Database port. Required when using pg, mysql, oracledb, or mssql.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Database Port
-    Required: 'false'
-    Target: DB_PORT
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Database name. Required when using pg, mysql, oracledb, or mssql.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Database Name
-    Required: 'false'
-    Target: DB_DATABASE
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Database user. Required when using pg, mysql, oracledb, or mssql.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Database User
-    Required: 'false'
-    Target: DB_USER
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Database user's password. Required when using pg, mysql, oracledb,
-      or mssql.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Database Password
-    Required: 'false'
-    Target: DB_PASSWORD
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Unique identifier for the project.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: KEY
-    Required: 'true'
-    Target: KEY
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Secret string for the project.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: SECRET
-    Required: 'true'
-    Target: SECRET
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Where to read/write the SQLite database. Required when using sqlite3.
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Database Filename
-    Required: 'false'
-    Target: DB_FILENAME
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: When using pg, you can submit a connection string instead of individual
-      properties. Using this will ignore any of the other connection settings.
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Postgres Connection String
-    Required: 'false'
-    Target: DB_CONNECTION_STRING
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '99'
-    Description: 'Container Variable: PUID'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: PUID
-    Required: 'true'
-    Target: PUID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: '100'
-    Description: 'Container Variable: PGID'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: PGID
-    Required: 'true'
-    Target: PGID
-    Type: Variable
-  value: '100'
-- '@attributes':
-    Default: '002'
-    Description: 'Container Variable: UMASK'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: UMASK
-    Required: 'true'
-    Target: UMASK
-    Type: Variable
-  value: '002'
-- '@attributes':
-    Default: ''
-    Description: Set your Time Zone here (e.g. Europe/Berlin)
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: TZ
-    Required: 'false'
-    Target: TZ
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    App Data/Database (SQLite):
+      Default: /mnt/user/appdata/directus/database/
+      Description: Only needed for SQLite environments
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: App Data/Database (SQLite)
+      Required: 'false'
+      Target: /directus/database/
+      Type: Path
+      value: /mnt/user/appdata/directus/database/
+    App Data/Extensions:
+      Default: /mnt/user/appdata/directus/extensions/
+      Description: 'Container Path: /directus/extensions/'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: App Data/Extensions
+      Required: 'false'
+      Target: /directus/extensions/
+      Type: Path
+      value: /mnt/user/appdata/directus/extensions/
+    App Data/Uploads:
+      Default: /mnt/user/appdata/directus/uploads/
+      Description: "Container Path: /directus/uploads/\r\n\r\nThis is where your files\
+        \ get stored you upload to and manage within Directus"
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: App Data/Uploads
+      Required: 'true'
+      Target: /directus/uploads/
+      Type: Path
+      value: /mnt/user/appdata/directus/uploads/
+  Port:
+    WebUI:
+      Default: '8055'
+      Description: 'Container Port: 8055'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'true'
+      Target: '8055'
+      Type: Port
+      value: '8055'
+  Variable:
+    Admin Email:
+      Default: admin@example.com
+      Description: The Direcuts Admin User Account. Feel free to change this to your
+        email address.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Admin Email
+      Required: 'false'
+      Target: ADMIN_EMAIL
+      Type: Variable
+      value: ''
+    Admin Password:
+      Default: ''
+      Description: "The Direcuts Admin User Account. Feel free to pass your desired\
+        \ password here,\r\notherwise a default password will be generated on first\
+        \ launch. (check logs!)"
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Admin Password
+      Required: 'false'
+      Target: ADMIN_PASSWORD
+      Type: Variable
+      value: ''
+    Database:
+      Default: ''
+      Description: What database client to use. One of pg or postgres, mysql, oracledb,
+        mssql, or sqlite3.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Database
+      Required: 'true'
+      Target: DB_CLIENT
+      Type: Variable
+      value: ''
+    Database Filename:
+      Default: ''
+      Description: Where to read/write the SQLite database. Required when using sqlite3.
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Database Filename
+      Required: 'false'
+      Target: DB_FILENAME
+      Type: Variable
+      value: ''
+    Database Host:
+      Default: ''
+      Description: Database host. Required when using pg, mysql, oracledb, or mssql.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Database Host
+      Required: 'false'
+      Target: DB_HOST
+      Type: Variable
+      value: ''
+    Database Name:
+      Default: ''
+      Description: Database name. Required when using pg, mysql, oracledb, or mssql.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Database Name
+      Required: 'false'
+      Target: DB_DATABASE
+      Type: Variable
+      value: ''
+    Database Password:
+      Default: ''
+      Description: Database user's password. Required when using pg, mysql, oracledb,
+        or mssql.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Database Password
+      Required: 'false'
+      Target: DB_PASSWORD
+      Type: Variable
+      value: ''
+    Database Port:
+      Default: ''
+      Description: Database port. Required when using pg, mysql, oracledb, or mssql.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Database Port
+      Required: 'false'
+      Target: DB_PORT
+      Type: Variable
+      value: ''
+    Database User:
+      Default: ''
+      Description: Database user. Required when using pg, mysql, oracledb, or mssql.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Database User
+      Required: 'false'
+      Target: DB_USER
+      Type: Variable
+      value: ''
+    KEY:
+      Default: ''
+      Description: Unique identifier for the project.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: KEY
+      Required: 'true'
+      Target: KEY
+      Type: Variable
+      value: ''
+    PGID:
+      Default: '100'
+      Description: 'Container Variable: PGID'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PGID
+      Required: 'true'
+      Target: PGID
+      Type: Variable
+      value: '100'
+    PUID:
+      Default: '99'
+      Description: 'Container Variable: PUID'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PUID
+      Required: 'true'
+      Target: PUID
+      Type: Variable
+      value: '99'
+    Postgres Connection String:
+      Default: ''
+      Description: When using pg, you can submit a connection string instead of individual
+        properties. Using this will ignore any of the other connection settings.
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Postgres Connection String
+      Required: 'false'
+      Target: DB_CONNECTION_STRING
+      Type: Variable
+      value: ''
+    SECRET:
+      Default: ''
+      Description: Secret string for the project.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: SECRET
+      Required: 'true'
+      Target: SECRET
+      Type: Variable
+      value: ''
+    TZ:
+      Default: ''
+      Description: Set your Time Zone here (e.g. Europe/Berlin)
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: TZ
+      Required: 'false'
+      Target: TZ
+      Type: Variable
+      value: ''
+    UMASK:
+      Default: '002'
+      Description: 'Container Variable: UMASK'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: UMASK
+      Required: 'true'
+      Target: UMASK
+      Type: Variable
+      value: '002'
 ExtraParams: --restart unless-stopped
 FirstSeen: 1630591419
 Icon: https://github.com/GlassedSilver/unRAID-CAs/raw/master/directus/directus_logo.png

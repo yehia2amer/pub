@@ -1,162 +1,167 @@
 CategoryList:
 - GameServers
 Config:
-- '@attributes':
-    Default: /mnt/user/appdata/steam-headless
-    Description: "Default user home directory.\r\nAll application software and configuration\
-      \ will be saved into this directory.\r\nAny files saved outside of this path\
-      \ will be cleared if the container image this templated is updated."
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Appdata
-    Required: 'false'
-    Target: /home/default
-    Type: Path
-  value: /mnt/user/appdata/steam-headless
-- '@attributes':
-    Default: /mnt/user/Games
-    Description: "Option path to your games.\r\nThis path will need to also be configured\
-      \ in Steam after the first boot."
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Games
-    Required: 'false'
-    Target: /mnt/games
-    Type: Path
-  value: /mnt/user/Games
-- '@attributes':
-    Default: password
-    Description: "The password for this container.\r\nNote: This password will also\
-      \ be used for the root user. However, the default user has sudo access."
-    Display: always
-    Mask: 'true'
-    Mode: ''
-    Name: User password
-    Required: 'false'
-    Target: USER_PASSWORD
-    Type: Variable
-  value: password
-- '@attributes':
-    Default: Pacific/Auckland
-    Description: "Enter your local timezone.\r\nYou can find a full list of supported\
-      \ timezones \r\nin: '/usr/share/zoneinfo' (eg: 'Etc/UTC' or 'Australia/Melbourne',...)"
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Timezone
-    Required: 'false'
-    Target: TZ
-    Type: Variable
-  value: Pacific/Auckland
-- '@attributes':
-    Default: en_US.UTF-8 UTF-8
-    Description: "Enter your prefered locales.\r\nYou can find a full list of supported\
-      \ languages \r\nin: '/usr/share/i18n/SUPPORTED' (eg: 'en_US.UTF-8 UTF8' or 'de_DE.UTF-8\
-      \ UTF-8',...)"
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Locales
-    Required: 'false'
-    Target: USER_LOCALES
-    Type: Variable
-  value: en_US.UTF-8 UTF-8
-- '@attributes':
-    Default: all
-    Description: 'For users with multiple GPUs, add the ID found under the '
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Nvidia GPU UUID
-    Required: 'false'
-    Target: NVIDIA_VISIBLE_DEVICES
-    Type: Variable
-  value: all
-- '@attributes':
-    Default: all
-    Description: ''
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Driver Capabilities
-    Required: 'false'
-    Target: NVIDIA_DRIVER_CAPABILITIES
-    Type: Variable
-  value: all
-- '@attributes':
-    Default: '8083'
-    Description: ''
-    Display: advanced
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'false'
-    Target: '8083'
-    Type: Port
-  value: '8083'
-- '@attributes':
-    Default: '32123'
-    Description: Websocket (Required for audio playback through WebUI)
-    Display: advanced
-    Mask: 'false'
-    Mode: tcp
-    Name: Websocket
-    Required: 'false'
-    Target: '32123'
-    Type: Port
-  value: '32123'
-- '@attributes':
-    Default: '2222'
-    Description: "OpenSSH Server Port.\r\nTo avoid conflicts, this has been configured\
-      \ to run on a non-default port"
-    Display: advanced
-    Mask: 'false'
-    Mode: tcp
-    Name: SSH
-    Required: 'false'
-    Target: '2222'
-    Type: Port
-  value: '2222'
-- '@attributes':
-    Default: 'true'
-    Description: Enable WebUI Audio. This creats a opus encoded audio websocket that
-      will tie into the VNC WebUI. Disable this if your browser is incompatible or
-      you do not wish for this additional process overhead.
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Enable WebUI Audio
-    Required: 'false'
-    Target: ENABLE_VNC_AUDIO
-    Type: Variable
-  value: 'true'
-- '@attributes':
-    Default: :55
-    Description: Set the X display. To use the host X server, set this to :0 (or whatever
-      your host is currently running in /tmp/.X11-unix/X*)
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Display ID
-    Required: 'false'
-    Target: DISPLAY
-    Type: Variable
-  value: :55
-- '@attributes':
-    Default: primary
-    Description: 'Options: [''primary'', ''secondary'']. Most of the time this should
-      be set to ''primary'' on a headless server. If your server is already running
-      an X server that you wish to use, set this to ''secondary''.'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Mode
-    Required: 'false'
-    Target: MODE
-    Type: Variable
-  value: primary
+  Device: {}
+  Label: {}
+  Path:
+    Appdata:
+      Default: /mnt/user/appdata/steam-headless
+      Description: "Default user home directory.\r\nAll application software and configuration\
+        \ will be saved into this directory.\r\nAny files saved outside of this path\
+        \ will be cleared if the container image this templated is updated."
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Appdata
+      Required: 'false'
+      Target: /home/default
+      Type: Path
+      value: /mnt/user/appdata/steam-headless
+    Games:
+      Default: /mnt/user/Games
+      Description: "Option path to your games.\r\nThis path will need to also be configured\
+        \ in Steam after the first boot."
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Games
+      Required: 'false'
+      Target: /mnt/games
+      Type: Path
+      value: /mnt/user/Games
+  Port:
+    SSH:
+      Default: '2222'
+      Description: "OpenSSH Server Port.\r\nTo avoid conflicts, this has been configured\
+        \ to run on a non-default port"
+      Display: advanced
+      Mask: 'false'
+      Mode: tcp
+      Name: SSH
+      Required: 'false'
+      Target: '2222'
+      Type: Port
+      value: '2222'
+    WebUI:
+      Default: '8083'
+      Description: ''
+      Display: advanced
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'false'
+      Target: '8083'
+      Type: Port
+      value: '8083'
+    Websocket:
+      Default: '32123'
+      Description: Websocket (Required for audio playback through WebUI)
+      Display: advanced
+      Mask: 'false'
+      Mode: tcp
+      Name: Websocket
+      Required: 'false'
+      Target: '32123'
+      Type: Port
+      value: '32123'
+  Variable:
+    Display ID:
+      Default: :55
+      Description: Set the X display. To use the host X server, set this to :0 (or
+        whatever your host is currently running in /tmp/.X11-unix/X*)
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Display ID
+      Required: 'false'
+      Target: DISPLAY
+      Type: Variable
+      value: :55
+    Driver Capabilities:
+      Default: all
+      Description: ''
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Driver Capabilities
+      Required: 'false'
+      Target: NVIDIA_DRIVER_CAPABILITIES
+      Type: Variable
+      value: all
+    Enable WebUI Audio:
+      Default: 'true'
+      Description: Enable WebUI Audio. This creats a opus encoded audio websocket
+        that will tie into the VNC WebUI. Disable this if your browser is incompatible
+        or you do not wish for this additional process overhead.
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Enable WebUI Audio
+      Required: 'false'
+      Target: ENABLE_VNC_AUDIO
+      Type: Variable
+      value: 'true'
+    Locales:
+      Default: en_US.UTF-8 UTF-8
+      Description: "Enter your prefered locales.\r\nYou can find a full list of supported\
+        \ languages \r\nin: '/usr/share/i18n/SUPPORTED' (eg: 'en_US.UTF-8 UTF8' or\
+        \ 'de_DE.UTF-8 UTF-8',...)"
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Locales
+      Required: 'false'
+      Target: USER_LOCALES
+      Type: Variable
+      value: en_US.UTF-8 UTF-8
+    Mode:
+      Default: primary
+      Description: 'Options: [''primary'', ''secondary'']. Most of the time this should
+        be set to ''primary'' on a headless server. If your server is already running
+        an X server that you wish to use, set this to ''secondary''.'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Mode
+      Required: 'false'
+      Target: MODE
+      Type: Variable
+      value: primary
+    Nvidia GPU UUID:
+      Default: all
+      Description: 'For users with multiple GPUs, add the ID found under the '
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Nvidia GPU UUID
+      Required: 'false'
+      Target: NVIDIA_VISIBLE_DEVICES
+      Type: Variable
+      value: all
+    Timezone:
+      Default: Pacific/Auckland
+      Description: "Enter your local timezone.\r\nYou can find a full list of supported\
+        \ timezones \r\nin: '/usr/share/zoneinfo' (eg: 'Etc/UTC' or 'Australia/Melbourne',...)"
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Timezone
+      Required: 'false'
+      Target: TZ
+      Type: Variable
+      value: Pacific/Auckland
+    User password:
+      Default: password
+      Description: "The password for this container.\r\nNote: This password will also\
+        \ be used for the root user. However, the default user has sudo access."
+      Display: always
+      Mask: 'true'
+      Mode: ''
+      Name: User password
+      Required: 'false'
+      Target: USER_PASSWORD
+      Type: Variable
+      value: password
 DonateLink: https://www.patreon.com/josh5
 DonateText: Support me on Patreon
 ExtraParams: --hostname='SteamHeadless' --add-host='SteamHeadless:127.0.0.1' --restart=unless-stopped

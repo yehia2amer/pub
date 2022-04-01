@@ -1,113 +1,118 @@
 CategoryList:
 - GameServers
 Config:
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: SteamCMD
-    Required: 'true'
-    Target: /serverdata/steamcmd
-    Type: Path
-  value: /mnt/user/appdata/steamcmd
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Server Files
-    Required: 'true'
-    Target: /serverdata/serverfiles
-    Type: Path
-  value: /mnt/cache/appdata/necesse/
-- '@attributes':
-    Default: ''
-    Description: Enter your extra start up commands for the server here otherwise
-      leave empty.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: GAME_PARAMS
-    Required: 'false'
-    Target: GAME_PARAMS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'The GAME_ID that the container downloads at startup. If you want
-      to install a static or beta version of the game change the value to: ''1169370
-      -beta YOURBRANCH'' (without quotes, replace YOURBRANCH with the branch or version
-      you want to install).'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: GAME_ID
-    Required: 'true'
-    Target: GAME_ID
-    Type: Variable
-  value: '1169370'
-- '@attributes':
-    Default: ''
-    Description: UDP Game Port (If you need another port delete this Entry and create
-      a new UDP port mapping with the corresponding port | also don't forget to set
-      the right port in your server configuration file!)
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: UDP - Game Port
-    Required: 'true'
-    Target: '14159'
-    Type: Port
-  value: '14159'
-- '@attributes':
-    Default: ''
-    Description: 'WebConsole (by default, you can connect to the Necesse console by
-      opening your browser and go to HOSTIP:9023 - eg: 192.168.1.1:9023 - or click
-      on WebUI on the Docker page within Unraid).'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: TCP - WebConsole
-    Required: 'true'
-    Target: '8080'
-    Type: Port
-  value: '9023'
-- '@attributes':
-    Default: ''
-    Description: Specify the world name here (your worlds are saved in .../.config/Necesse/saves/)
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: World Name
-    Required: 'true'
-    Target: WORLD_NAME
-    Type: Variable
-  value: World
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: UID
-    Required: 'true'
-    Target: UID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: GID
-    Required: 'true'
-    Target: GID
-    Type: Variable
-  value: '100'
+  Device: {}
+  Label: {}
+  Path:
+    Server Files:
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Server Files
+      Required: 'true'
+      Target: /serverdata/serverfiles
+      Type: Path
+      value: /mnt/cache/appdata/necesse/
+    SteamCMD:
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: SteamCMD
+      Required: 'true'
+      Target: /serverdata/steamcmd
+      Type: Path
+      value: /mnt/user/appdata/steamcmd
+  Port:
+    TCP - WebConsole:
+      Default: ''
+      Description: 'WebConsole (by default, you can connect to the Necesse console
+        by opening your browser and go to HOSTIP:9023 - eg: 192.168.1.1:9023 - or
+        click on WebUI on the Docker page within Unraid).'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: TCP - WebConsole
+      Required: 'true'
+      Target: '8080'
+      Type: Port
+      value: '9023'
+    UDP - Game Port:
+      Default: ''
+      Description: UDP Game Port (If you need another port delete this Entry and create
+        a new UDP port mapping with the corresponding port | also don't forget to
+        set the right port in your server configuration file!)
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: UDP - Game Port
+      Required: 'true'
+      Target: '14159'
+      Type: Port
+      value: '14159'
+  Variable:
+    GAME_ID:
+      Default: ''
+      Description: 'The GAME_ID that the container downloads at startup. If you want
+        to install a static or beta version of the game change the value to: ''1169370
+        -beta YOURBRANCH'' (without quotes, replace YOURBRANCH with the branch or
+        version you want to install).'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: GAME_ID
+      Required: 'true'
+      Target: GAME_ID
+      Type: Variable
+      value: '1169370'
+    GAME_PARAMS:
+      Default: ''
+      Description: Enter your extra start up commands for the server here otherwise
+        leave empty.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: GAME_PARAMS
+      Required: 'false'
+      Target: GAME_PARAMS
+      Type: Variable
+      value: ''
+    GID:
+      Default: ''
+      Description: ''
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: GID
+      Required: 'true'
+      Target: GID
+      Type: Variable
+      value: '100'
+    UID:
+      Default: ''
+      Description: ''
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: UID
+      Required: 'true'
+      Target: UID
+      Type: Variable
+      value: '99'
+    World Name:
+      Default: ''
+      Description: Specify the world name here (your worlds are saved in .../.config/Necesse/saves/)
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: World Name
+      Required: 'true'
+      Target: WORLD_NAME
+      Type: Variable
+      value: World
 DonateLink: https://www.paypal.me/chips777
 DonateText: 'If you like my work please '
 ExtraParams: --restart=unless-stopped

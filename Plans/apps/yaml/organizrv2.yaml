@@ -6,60 +6,65 @@ CategoryList:
 - Productivity
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: master|develop
-    Description: Chooses which branch of organizr you wish to use
-    Display: always
-    Mask: 'false'
-    Name: Branch
-    Required: 'false'
-    Target: branch
-    Type: Variable
-  value: master
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 80'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'false'
-    Target: '80'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: /mnt/user/appdata/organizr
-    Description: 'Container Path: /config'
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: AppData Config Path
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: '99'
-    Description: 'Variable: PUID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: PUID
-    Required: 'true'
-    Target: PUID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: '100'
-    Description: 'Variable: PGID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: PGID
-    Required: 'true'
-    Target: PGID
-    Type: Variable
-  value: '100'
+  Device: {}
+  Label: {}
+  Path:
+    AppData Config Path:
+      Default: /mnt/user/appdata/organizr
+      Description: 'Container Path: /config'
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: AppData Config Path
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: ''
+  Port:
+    WebUI:
+      Default: ''
+      Description: 'Container Port: 80'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'false'
+      Target: '80'
+      Type: Port
+      value: ''
+  Variable:
+    Branch:
+      Default: master|develop
+      Description: Chooses which branch of organizr you wish to use
+      Display: always
+      Mask: 'false'
+      Name: Branch
+      Required: 'false'
+      Target: branch
+      Type: Variable
+      value: master
+    PGID:
+      Default: '100'
+      Description: 'Variable: PGID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: PGID
+      Required: 'true'
+      Target: PGID
+      Type: Variable
+      value: '100'
+    PUID:
+      Default: '99'
+      Description: 'Variable: PUID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: PUID
+      Required: 'true'
+      Target: PUID
+      Type: Variable
+      value: '99'
 DonateLink: https://paypal.me/causefx
 DonateText: Donations
 FirstSeen: 1596282256

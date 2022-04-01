@@ -2,193 +2,198 @@ BindTime: 'true'
 CategoryList:
 - Network-Web
 Config:
-- '@attributes':
-    Default: '8888'
-    Description: Roundcube Host Port
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Roundcube Port
-    Required: 'true'
-    Target: '8888'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: '8080'
-    Description: Postfixadmin Host Port
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Postfixadmin Port
-    Required: 'true'
-    Target: '8080'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Your MariaDB/MySQL Server IP Address/Hostname
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: MySQL Host
-    Required: 'true'
-    Target: MYSQL_HOST
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: roundcube
-    Description: Your MariaDB/MySQL Server Roundcube Username
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: MySQL Roundcube Username
-    Required: 'true'
-    Target: ROUND_USER
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Your MariaDB/MySQL Server Roundcube Password
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: MySQL Roundcube Password
-    Required: 'true'
-    Target: ROUND_PASS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: roundcube
-    Description: Your MariaDB/MySQL Server Roundcube Database Name
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: MySQL Roundcube Database
-    Required: 'true'
-    Target: ROUND_DB
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: postfix
-    Description: Your MariaDB/MySQL Server Postfixadmin Username
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: MySQL Postfixadmin Username
-    Required: 'true'
-    Target: POST_USER
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Your MariaDB/MySQL Server Postfixadmin Password
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: MySQL Postfixadmin Password
-    Required: 'true'
-    Target: POST_PASS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: postfix
-    Description: Your MariaDB/MySQL Server Postfixadmin Database Name
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: MySQL Postfixadmin Database
-    Required: 'true'
-    Target: POST_DB
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: mail.domain.com
-    Description: Your Mail Server IP Address/Hostname
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Mail Server Name
-    Required: 'true'
-    Target: MAIL_HOST
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 'true'
-    Description: Enables or Disables IMAPS for Roundcube
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: IMAPS
-    Required: 'true'
-    Target: ENABLE_IMAPS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 'true'
-    Description: Enables or Disables SMTPS for Roundcube
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: SMTPS
-    Required: 'true'
-    Target: ENABLE_SMTPS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 'false'
-    Description: Enables or Disables the Roundcube Installer
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Roundcube Setup Installer
-    Required: 'true'
-    Target: DISABLE_INSTALLER
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '8888'
-    Description: Roundcube Container Listening Port
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: tcp
-    Name: Roundcube Listening Port
-    Required: 'false'
-    Target: ROUNDCUBE_PORT
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '8080'
-    Description: Roundcube Container Listening Port
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: tcp
-    Name: Postfixadmin Listening Port
-    Required: 'false'
-    Target: POSTFIX_PORT
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Postfixadmin Password Encryption Method
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: Encryption Method
-    Required: 'false'
-    Target: PASS_CRYPT
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: /mnt/user/appdata/malfurious-roundcube-postfixadmin
-    Description: 'Container Path: /enigma'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: rw
-    Name: Enigma GPG Key Storage Path
-    Required: 'true'
-    Target: /enigma
-    Type: Path
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Enigma GPG Key Storage Path:
+      Default: /mnt/user/appdata/malfurious-roundcube-postfixadmin
+      Description: 'Container Path: /enigma'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: rw
+      Name: Enigma GPG Key Storage Path
+      Required: 'true'
+      Target: /enigma
+      Type: Path
+      value: ''
+  Port:
+    Postfixadmin Port:
+      Default: '8080'
+      Description: Postfixadmin Host Port
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Postfixadmin Port
+      Required: 'true'
+      Target: '8080'
+      Type: Port
+      value: ''
+    Roundcube Port:
+      Default: '8888'
+      Description: Roundcube Host Port
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Roundcube Port
+      Required: 'true'
+      Target: '8888'
+      Type: Port
+      value: ''
+  Variable:
+    Encryption Method:
+      Default: ''
+      Description: Postfixadmin Password Encryption Method
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: Encryption Method
+      Required: 'false'
+      Target: PASS_CRYPT
+      Type: Variable
+      value: ''
+    IMAPS:
+      Default: 'true'
+      Description: Enables or Disables IMAPS for Roundcube
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: IMAPS
+      Required: 'true'
+      Target: ENABLE_IMAPS
+      Type: Variable
+      value: ''
+    Mail Server Name:
+      Default: mail.domain.com
+      Description: Your Mail Server IP Address/Hostname
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Mail Server Name
+      Required: 'true'
+      Target: MAIL_HOST
+      Type: Variable
+      value: ''
+    MySQL Host:
+      Default: ''
+      Description: Your MariaDB/MySQL Server IP Address/Hostname
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: MySQL Host
+      Required: 'true'
+      Target: MYSQL_HOST
+      Type: Variable
+      value: ''
+    MySQL Postfixadmin Database:
+      Default: postfix
+      Description: Your MariaDB/MySQL Server Postfixadmin Database Name
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: MySQL Postfixadmin Database
+      Required: 'true'
+      Target: POST_DB
+      Type: Variable
+      value: ''
+    MySQL Postfixadmin Password:
+      Default: ''
+      Description: Your MariaDB/MySQL Server Postfixadmin Password
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: MySQL Postfixadmin Password
+      Required: 'true'
+      Target: POST_PASS
+      Type: Variable
+      value: ''
+    MySQL Postfixadmin Username:
+      Default: postfix
+      Description: Your MariaDB/MySQL Server Postfixadmin Username
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: MySQL Postfixadmin Username
+      Required: 'true'
+      Target: POST_USER
+      Type: Variable
+      value: ''
+    MySQL Roundcube Database:
+      Default: roundcube
+      Description: Your MariaDB/MySQL Server Roundcube Database Name
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: MySQL Roundcube Database
+      Required: 'true'
+      Target: ROUND_DB
+      Type: Variable
+      value: ''
+    MySQL Roundcube Password:
+      Default: ''
+      Description: Your MariaDB/MySQL Server Roundcube Password
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: MySQL Roundcube Password
+      Required: 'true'
+      Target: ROUND_PASS
+      Type: Variable
+      value: ''
+    MySQL Roundcube Username:
+      Default: roundcube
+      Description: Your MariaDB/MySQL Server Roundcube Username
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: MySQL Roundcube Username
+      Required: 'true'
+      Target: ROUND_USER
+      Type: Variable
+      value: ''
+    Postfixadmin Listening Port:
+      Default: '8080'
+      Description: Roundcube Container Listening Port
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: tcp
+      Name: Postfixadmin Listening Port
+      Required: 'false'
+      Target: POSTFIX_PORT
+      Type: Variable
+      value: ''
+    Roundcube Listening Port:
+      Default: '8888'
+      Description: Roundcube Container Listening Port
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: tcp
+      Name: Roundcube Listening Port
+      Required: 'false'
+      Target: ROUNDCUBE_PORT
+      Type: Variable
+      value: ''
+    Roundcube Setup Installer:
+      Default: 'false'
+      Description: Enables or Disables the Roundcube Installer
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Roundcube Setup Installer
+      Required: 'true'
+      Target: DISABLE_INSTALLER
+      Type: Variable
+      value: ''
+    SMTPS:
+      Default: 'true'
+      Description: Enables or Disables SMTPS for Roundcube
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: SMTPS
+      Required: 'true'
+      Target: ENABLE_SMTPS
+      Type: Variable
+      value: ''
 DonateImg: ''
 ExtraParams: --add-host mail.domain.com:xxx.xxx.xxx.xxx
 FirstSeen: 1

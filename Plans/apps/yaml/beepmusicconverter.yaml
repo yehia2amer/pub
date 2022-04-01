@@ -1,64 +1,69 @@
 CategoryList:
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: default|Indiana_Jones|Monkey_Island
-    Description: Default or choose other for an example to be converted
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: custom
-    Required: 'false'
-    Target: custom
-    Type: Variable
-  value: default
-- '@attributes':
-    Default: no|yes
-    Description: Silent converts file without also playing through beep speaker. Default
-      'no'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: silent
-    Required: 'false'
-    Target: silent
-    Type: Variable
-  value: 'no'
-- '@attributes':
-    Default: '50'
-    Description: Time window for frequency analysis (in ms). Default 50 ms. Experiment
-      with different values for individual tune to find best
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: time
-    Required: 'false'
-    Target: time
-    Type: Variable
-  value: '98'
-- '@attributes':
-    Default: ''
-    Description: path to beep speaker (you must have a beep speaker for this container
-      to work)
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: beep
-    Required: 'false'
-    Target: ''
-    Type: Device
-  value: /dev/tty0
-- '@attributes':
-    Default: /mnt/user/appdata/Beep-Music-Converter
-    Description: appdata
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: appdata
-    Required: 'false'
-    Target: /config
-    Type: Path
-  value: /mnt/user/appdata/beep_music_converter
+  Device:
+    beep:
+      Default: ''
+      Description: path to beep speaker (you must have a beep speaker for this container
+        to work)
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: beep
+      Required: 'false'
+      Target: ''
+      Type: Device
+      value: /dev/tty0
+  Label: {}
+  Path:
+    appdata:
+      Default: /mnt/user/appdata/Beep-Music-Converter
+      Description: appdata
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: appdata
+      Required: 'false'
+      Target: /config
+      Type: Path
+      value: /mnt/user/appdata/beep_music_converter
+  Port: {}
+  Variable:
+    custom:
+      Default: default|Indiana_Jones|Monkey_Island
+      Description: Default or choose other for an example to be converted
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: custom
+      Required: 'false'
+      Target: custom
+      Type: Variable
+      value: default
+    silent:
+      Default: no|yes
+      Description: Silent converts file without also playing through beep speaker.
+        Default 'no'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: silent
+      Required: 'false'
+      Target: silent
+      Type: Variable
+      value: 'no'
+    time:
+      Default: '50'
+      Description: Time window for frequency analysis (in ms). Default 50 ms. Experiment
+        with different values for individual tune to find best
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: time
+      Required: 'false'
+      Target: time
+      Type: Variable
+      value: '98'
 FirstSeen: 1626617002
 Icon: https://raw.githubusercontent.com/SpaceinvaderOne/Beep-Music-Converter/main/beep_icon.png
 LastUpdate: 1626616103

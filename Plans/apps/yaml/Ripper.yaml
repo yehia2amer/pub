@@ -6,75 +6,80 @@ CategoryList:
 - Productivity
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: ''
-    Description: Output files are stored here
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Output Dir
-    Required: 'true'
-    Target: /out
-    Type: Path
-  value: /mnt/user/Downloads/
-- '@attributes':
-    Default: /mnt/user/appdata/ripper
-    Description: Configuration files are stored here
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: rw
-    Name: Config Dir
-    Required: 'true'
-    Target: /config/
-    Type: Path
-  value: /mnt/user/appdata/ripper
-- '@attributes':
-    Default: ''
-    Description: 'Web UI Port to view the Ripper log: 9090'
-    Display: always-hide
-    Mask: 'false'
-    Mode: tcp
-    Name: Webserver
-    Required: 'true'
-    Target: '9090'
-    Type: Port
-  value: '9090'
-- '@attributes':
-    Default: ''
-    Description: 'Optional: can be used to set a path prefix (e.g. /ripper-ui). This
-      is useful when you are running multiple services at one domain.'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Web Path Prefix
-    Required: 'false'
-    Target: OPTIONAL_WEB_UI_PATH_PREFIX
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Optional: Requires OPTIONAL_WEB_UI_PASSWORD, enables http-Auth in
-      Web UI'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Web UI Username
-    Required: 'false'
-    Target: 'OPTIONAL_WEB_UI_USERNAME '
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Optional: Requires OPTIONAL_WEB_UI_USERNAME, enables http-Auth in
-      Web UI'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Web UI Password
-    Required: 'false'
-    Target: 'OPTIONAL_WEB_UI_PASSWORD '
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Config Dir:
+      Default: /mnt/user/appdata/ripper
+      Description: Configuration files are stored here
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: rw
+      Name: Config Dir
+      Required: 'true'
+      Target: /config/
+      Type: Path
+      value: /mnt/user/appdata/ripper
+    Output Dir:
+      Default: ''
+      Description: Output files are stored here
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Output Dir
+      Required: 'true'
+      Target: /out
+      Type: Path
+      value: /mnt/user/Downloads/
+  Port:
+    Webserver:
+      Default: ''
+      Description: 'Web UI Port to view the Ripper log: 9090'
+      Display: always-hide
+      Mask: 'false'
+      Mode: tcp
+      Name: Webserver
+      Required: 'true'
+      Target: '9090'
+      Type: Port
+      value: '9090'
+  Variable:
+    Web Path Prefix:
+      Default: ''
+      Description: 'Optional: can be used to set a path prefix (e.g. /ripper-ui).
+        This is useful when you are running multiple services at one domain.'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Web Path Prefix
+      Required: 'false'
+      Target: OPTIONAL_WEB_UI_PATH_PREFIX
+      Type: Variable
+      value: ''
+    Web UI Password:
+      Default: ''
+      Description: 'Optional: Requires OPTIONAL_WEB_UI_USERNAME, enables http-Auth
+        in Web UI'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Web UI Password
+      Required: 'false'
+      Target: 'OPTIONAL_WEB_UI_PASSWORD '
+      Type: Variable
+      value: ''
+    Web UI Username:
+      Default: ''
+      Description: 'Optional: Requires OPTIONAL_WEB_UI_PASSWORD, enables http-Auth
+        in Web UI'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Web UI Username
+      Required: 'false'
+      Target: 'OPTIONAL_WEB_UI_USERNAME '
+      Type: Variable
+      value: ''
 DonateLink: https://github.com/sponsors/rix1337
 DonateText: Sponsor me!
 ExtraParams: --device=/dev/sr0:/dev/sr0

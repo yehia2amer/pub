@@ -3,138 +3,143 @@ CategoryList:
 - Network-Web
 - Network-Management
 Config:
-- '@attributes':
-    Default: '8000'
-    Description: Port
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Port
-    Required: 'true'
-    Target: '8000'
-    Type: Port
-  value: '8000'
-- '@attributes':
-    Default: /mnt/user/appdata/healthchecks/
-    Description: Appdata
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Appdata
-    Required: 'true'
-    Target: /data
-    Type: Path
-  value: /mnt/user/appdata/healthchecks/
-- '@attributes':
-    Default: /data/hc.sqlite
-    Description: DB_NAME
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DB_NAME
-    Required: 'true'
-    Target: DB_NAME
-    Type: Variable
-  value: /data/hc.sqlite
-- '@attributes':
-    Default: ChangeMe
-    Description: SECRET_KEY
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: SECRET_KEY
-    Required: 'true'
-    Target: SECRET_KEY
-    Type: Variable
-  value: ChangeMe
-- '@attributes':
-    Default: example.com
-    Description: PING_EMAIL_DOMAIN
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: PING_EMAIL_DOMAIN
-    Required: 'true'
-    Target: PING_EMAIL_DOMAIN
-    Type: Variable
-  value: example.com
-- '@attributes':
-    Default: http://example.com
-    Description: SITE_ROOT
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: SITE_ROOT
-    Required: 'true'
-    Target: SITE_ROOT
-    Type: Variable
-  value: http://example.com
-- '@attributes':
-    Default: smtp.example.com
-    Description: EMAIL_HOST
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: EMAIL_HOST
-    Required: 'true'
-    Target: EMAIL_HOST
-    Type: Variable
-  value: smtp.example.com
-- '@attributes':
-    Default: '25'
-    Description: EMAIL_PORT
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: EMAIL_PORT
-    Required: 'true'
-    Target: EMAIL_PORT
-    Type: Variable
-  value: '25'
-- '@attributes':
-    Default: True|False
-    Description: EMAIL_USE_TLS
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: EMAIL_USE_TLS
-    Required: 'true'
-    Target: EMAIL_USE_TLS
-    Type: Variable
-  value: 'True'
-- '@attributes':
-    Default: user@example.com
-    Description: EMAIL_HOST_USER
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: EMAIL_HOST_USER
-    Required: 'true'
-    Target: EMAIL_HOST_USER
-    Type: Variable
-  value: user@example.com
-- '@attributes':
-    Default: YOUR_PASSWORD
-    Description: EMAIL_HOST_PASSWORD
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: EMAIL_HOST_PASSWORD
-    Required: 'true'
-    Target: EMAIL_HOST_PASSWORD
-    Type: Variable
-  value: YOUR_PASSWORD
-- '@attributes':
-    Default: '*'
-    Description: ALLOWED_HOSTS
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: ALLOWED_HOSTS
-    Required: 'true'
-    Target: ALLOWED_HOSTS
-    Type: Variable
-  value: '*'
+  Device: {}
+  Label: {}
+  Path:
+    Appdata:
+      Default: /mnt/user/appdata/healthchecks/
+      Description: Appdata
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Appdata
+      Required: 'true'
+      Target: /data
+      Type: Path
+      value: /mnt/user/appdata/healthchecks/
+  Port:
+    Port:
+      Default: '8000'
+      Description: Port
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Port
+      Required: 'true'
+      Target: '8000'
+      Type: Port
+      value: '8000'
+  Variable:
+    ALLOWED_HOSTS:
+      Default: '*'
+      Description: ALLOWED_HOSTS
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: ALLOWED_HOSTS
+      Required: 'true'
+      Target: ALLOWED_HOSTS
+      Type: Variable
+      value: '*'
+    DB_NAME:
+      Default: /data/hc.sqlite
+      Description: DB_NAME
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DB_NAME
+      Required: 'true'
+      Target: DB_NAME
+      Type: Variable
+      value: /data/hc.sqlite
+    EMAIL_HOST:
+      Default: smtp.example.com
+      Description: EMAIL_HOST
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: EMAIL_HOST
+      Required: 'true'
+      Target: EMAIL_HOST
+      Type: Variable
+      value: smtp.example.com
+    EMAIL_HOST_PASSWORD:
+      Default: YOUR_PASSWORD
+      Description: EMAIL_HOST_PASSWORD
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: EMAIL_HOST_PASSWORD
+      Required: 'true'
+      Target: EMAIL_HOST_PASSWORD
+      Type: Variable
+      value: YOUR_PASSWORD
+    EMAIL_HOST_USER:
+      Default: user@example.com
+      Description: EMAIL_HOST_USER
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: EMAIL_HOST_USER
+      Required: 'true'
+      Target: EMAIL_HOST_USER
+      Type: Variable
+      value: user@example.com
+    EMAIL_PORT:
+      Default: '25'
+      Description: EMAIL_PORT
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: EMAIL_PORT
+      Required: 'true'
+      Target: EMAIL_PORT
+      Type: Variable
+      value: '25'
+    EMAIL_USE_TLS:
+      Default: True|False
+      Description: EMAIL_USE_TLS
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: EMAIL_USE_TLS
+      Required: 'true'
+      Target: EMAIL_USE_TLS
+      Type: Variable
+      value: 'True'
+    PING_EMAIL_DOMAIN:
+      Default: example.com
+      Description: PING_EMAIL_DOMAIN
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: PING_EMAIL_DOMAIN
+      Required: 'true'
+      Target: PING_EMAIL_DOMAIN
+      Type: Variable
+      value: example.com
+    SECRET_KEY:
+      Default: ChangeMe
+      Description: SECRET_KEY
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: SECRET_KEY
+      Required: 'true'
+      Target: SECRET_KEY
+      Type: Variable
+      value: ChangeMe
+    SITE_ROOT:
+      Default: http://example.com
+      Description: SITE_ROOT
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: SITE_ROOT
+      Required: 'true'
+      Target: SITE_ROOT
+      Type: Variable
+      value: http://example.com
 FirstSeen: 1590437793
 Icon: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/healthchecks.png
 LastUpdate: 1625319879

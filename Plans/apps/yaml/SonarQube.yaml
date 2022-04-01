@@ -1,61 +1,66 @@
 CategoryList:
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 9000'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Port
-    Required: 'false'
-    Target: '9000'
-    Type: Port
-  value: '9000'
-- '@attributes':
-    Default: 'true'
-    Description: 'Container Variable: SONAR_ES_BOOTSTRAP_CHECKS_DISABLE'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: bootstrapChecks
-    Required: 'false'
-    Target: SONAR_ES_BOOTSTRAP_CHECKS_DISABLE
-    Type: Variable
-  value: 'true'
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /opt/sonarqube/data'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Data
-    Required: 'false'
-    Target: /opt/sonarqube/data
-    Type: Path
-  value: /mnt/user/appdata/sonarqube/data
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /opt/sonarqube/logs'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Logs
-    Required: 'false'
-    Target: /opt/sonarqube/logs
-    Type: Path
-  value: /mnt/user/appdata/sonarqube/logs
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /opt/sonarqube/extensions'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Extensions
-    Required: 'false'
-    Target: /opt/sonarqube/extensions
-    Type: Path
-  value: /mnt/user/appdata/sonarqube/extesions
+  Device: {}
+  Label: {}
+  Path:
+    Data:
+      Default: ''
+      Description: 'Container Path: /opt/sonarqube/data'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Data
+      Required: 'false'
+      Target: /opt/sonarqube/data
+      Type: Path
+      value: /mnt/user/appdata/sonarqube/data
+    Extensions:
+      Default: ''
+      Description: 'Container Path: /opt/sonarqube/extensions'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Extensions
+      Required: 'false'
+      Target: /opt/sonarqube/extensions
+      Type: Path
+      value: /mnt/user/appdata/sonarqube/extesions
+    Logs:
+      Default: ''
+      Description: 'Container Path: /opt/sonarqube/logs'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Logs
+      Required: 'false'
+      Target: /opt/sonarqube/logs
+      Type: Path
+      value: /mnt/user/appdata/sonarqube/logs
+  Port:
+    Port:
+      Default: ''
+      Description: 'Container Port: 9000'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Port
+      Required: 'false'
+      Target: '9000'
+      Type: Port
+      value: '9000'
+  Variable:
+    bootstrapChecks:
+      Default: 'true'
+      Description: 'Container Variable: SONAR_ES_BOOTSTRAP_CHECKS_DISABLE'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: bootstrapChecks
+      Required: 'false'
+      Target: SONAR_ES_BOOTSTRAP_CHECKS_DISABLE
+      Type: Variable
+      value: 'true'
 FirstSeen: 1628431051
 Icon: https://github.com/SonarSource/sonarqube/raw/master/server/sonar-docs/src/images/sonarqube-icon.png
 LastUpdate: 1644041030

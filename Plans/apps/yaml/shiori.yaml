@@ -2,28 +2,33 @@ CategoryList:
 - Productivity
 - Network-Web
 Config:
-- '@attributes':
-    Default: '8080'
-    Description: Port
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Port
-    Required: 'false'
-    Target: '8080'
-    Type: Port
-  value: '8080'
-- '@attributes':
-    Default: /mnt/user/appdata/shiori/
-    Description: Appdata
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Appdata
-    Required: 'false'
-    Target: /srv/shiori/
-    Type: Path
-  value: /mnt/user/appdata/shiori/
+  Device: {}
+  Label: {}
+  Path:
+    Appdata:
+      Default: /mnt/user/appdata/shiori/
+      Description: Appdata
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Appdata
+      Required: 'false'
+      Target: /srv/shiori/
+      Type: Path
+      value: /mnt/user/appdata/shiori/
+  Port:
+    Port:
+      Default: '8080'
+      Description: Port
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Port
+      Required: 'false'
+      Target: '8080'
+      Type: Port
+      value: '8080'
+  Variable: {}
 FirstSeen: 1586772529
 Icon: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/shiori.png
 LastUpdate: 1597941829

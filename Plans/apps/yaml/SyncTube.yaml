@@ -6,28 +6,33 @@ CategoryList:
 - MediaServer-Video
 - Network-Web
 Config:
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'false'
-    Target: '4200'
-    Type: Port
-  value: '4200'
-- '@attributes':
-    Default: ''
-    Description: This is the location for the config file.
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Storage (config)
-    Required: 'false'
-    Target: /usr/src/app/user
-    Type: Path
-  value: /mnt/user/appdata/synctube/
+  Device: {}
+  Label: {}
+  Path:
+    Storage (config):
+      Default: ''
+      Description: This is the location for the config file.
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Storage (config)
+      Required: 'false'
+      Target: /usr/src/app/user
+      Type: Path
+      value: /mnt/user/appdata/synctube/
+  Port:
+    WebUI:
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'false'
+      Target: '4200'
+      Type: Port
+      value: '4200'
+  Variable: {}
 FirstSeen: 1643900608
 Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/synctube.png
 LastUpdate: 1638588857

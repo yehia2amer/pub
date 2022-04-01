@@ -5,40 +5,45 @@ CategoryList:
 - Crypto
 - Downloaders
 Config:
-- '@attributes':
-    Default: '8088'
-    Description: Port 80 is used for Urbit's HTTP interface for both Landscape and
-      for API calls to the ship.
-    Display: always-hide
-    Mode: tcp
-    Name: Web Interface Port
-    Required: 'true'
-    Target: '8088'
-    Type: Port
-  value: '80'
-- '@attributes':
-    Default: '34343'
-    Description: Port 34343 is set by default to be used by Ames for ship-to-ship
-      communication.
-    Display: advanced-hide
-    Mode: udp
-    Name: UDP Ames Port
-    Required: 'true'
-    Target: '34343'
-    Type: Port
-  value: '34343'
-- '@attributes':
-    Default: /mnt/user/appdata/urbit
-    Description: This is where Urbit will access the key or the data pier of an existing
-      planet. A key file sampel-palnet.key will boot the sampel-palnet planet. For
-      booting a comet create a file in .comet.
-    Display: always-hide
-    Mode: rw
-    Name: Urbit Config Path
-    Required: 'true'
-    Target: /urbit
-    Type: Path
-  value: /mnt/user/appdata/urbit
+  Device: {}
+  Label: {}
+  Path:
+    Urbit Config Path:
+      Default: /mnt/user/appdata/urbit
+      Description: This is where Urbit will access the key or the data pier of an
+        existing planet. A key file sampel-palnet.key will boot the sampel-palnet
+        planet. For booting a comet create a file in .comet.
+      Display: always-hide
+      Mode: rw
+      Name: Urbit Config Path
+      Required: 'true'
+      Target: /urbit
+      Type: Path
+      value: /mnt/user/appdata/urbit
+  Port:
+    UDP Ames Port:
+      Default: '34343'
+      Description: Port 34343 is set by default to be used by Ames for ship-to-ship
+        communication.
+      Display: advanced-hide
+      Mode: udp
+      Name: UDP Ames Port
+      Required: 'true'
+      Target: '34343'
+      Type: Port
+      value: '34343'
+    Web Interface Port:
+      Default: '8088'
+      Description: Port 80 is used for Urbit's HTTP interface for both Landscape and
+        for API calls to the ship.
+      Display: always-hide
+      Mode: tcp
+      Name: Web Interface Port
+      Required: 'true'
+      Target: '8088'
+      Type: Port
+      value: '80'
+  Variable: {}
 FirstSeen: 1644513761
 GitHub: https://github.com/urbit/urbit
 Icon: https://raw.githubusercontent.com/tipdec-siblyn/unraid-template/main/urbit.png

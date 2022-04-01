@@ -2,72 +2,77 @@ CategoryList:
 - GameServers
 - Network-Management
 Config:
-- '@attributes':
-    Default: '2022'
-    Description: 'Container Port: 2022'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Host Port 1
-    Required: 'true'
-    Target: '2022'
-    Type: Port
-  value: '2022'
-- '@attributes':
-    Default: '8080'
-    Description: 'Container Port: 8080'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Host Port 2
-    Required: 'true'
-    Target: '8080'
-    Type: Port
-  value: '8181'
-- '@attributes':
-    Default: /mnt/user/pterodactyl-node/
-    Description: 'Container Path: /etc/pterodactyl'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: appdata
-    Required: 'true'
-    Target: /etc/pterodactyl
-    Type: Path
-  value: /mnt/user/pterodactyl-node/
-- '@attributes':
-    Default: /var/run/docker.sock
-    Description: 'Container Path: /var/run/docker.sock'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: docker.sock
-    Required: 'true'
-    Target: /var/run/docker.sock
-    Type: Path
-  value: /var/run/docker.sock
-- '@attributes':
-    Default: /mnt/user/pterodactyl-node/data
-    Description: 'Container Path: /mnt/user/pterodactyl-node/data'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: data
-    Required: 'false'
-    Target: /mnt/user/pterodactyl-node/data
-    Type: Path
-  value: /mnt/user/pterodactyl-node/data
-- '@attributes':
-    Default: /tmp/pterodactyl
-    Description: 'Container Path: /tmp/pterodactyl'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: tmp
-    Required: 'false'
-    Target: /tmp/pterodactyl
-    Type: Path
-  value: /tmp/pterodactyl
+  Device: {}
+  Label: {}
+  Path:
+    appdata:
+      Default: /mnt/user/pterodactyl-node/
+      Description: 'Container Path: /etc/pterodactyl'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: appdata
+      Required: 'true'
+      Target: /etc/pterodactyl
+      Type: Path
+      value: /mnt/user/pterodactyl-node/
+    data:
+      Default: /mnt/user/pterodactyl-node/data
+      Description: 'Container Path: /mnt/user/pterodactyl-node/data'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: data
+      Required: 'false'
+      Target: /mnt/user/pterodactyl-node/data
+      Type: Path
+      value: /mnt/user/pterodactyl-node/data
+    docker.sock:
+      Default: /var/run/docker.sock
+      Description: 'Container Path: /var/run/docker.sock'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: docker.sock
+      Required: 'true'
+      Target: /var/run/docker.sock
+      Type: Path
+      value: /var/run/docker.sock
+    tmp:
+      Default: /tmp/pterodactyl
+      Description: 'Container Path: /tmp/pterodactyl'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: tmp
+      Required: 'false'
+      Target: /tmp/pterodactyl
+      Type: Path
+      value: /tmp/pterodactyl
+  Port:
+    Host Port 1:
+      Default: '2022'
+      Description: 'Container Port: 2022'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Host Port 1
+      Required: 'true'
+      Target: '2022'
+      Type: Port
+      value: '2022'
+    Host Port 2:
+      Default: '8080'
+      Description: 'Container Port: 8080'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Host Port 2
+      Required: 'true'
+      Target: '8080'
+      Type: Port
+      value: '8181'
+  Variable: {}
 DonateLink: https://paypal.me/ramteksolutions
 DonateText: Help support my work by buying me a beer
 ExtraParams: --privileged=true --restart=unless-stopped

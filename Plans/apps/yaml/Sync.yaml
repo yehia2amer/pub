@@ -3,46 +3,51 @@ CategoryList:
 - Cloud
 ChangeLogPresent: true
 Config:
-- '@attributes':
-    Default: '8888'
-    Description: This is Sync's Web UI port you can access via a web browser.
-    Display: always-hide
-    Mode: tcp
-    Name: Web Interface Port
-    Required: 'true'
-    Target: '8888'
-    Type: Port
-  value: '8888'
-- '@attributes':
-    Default: '5555'
-    Description: This is Sync's TCP port for data transfers.
-    Display: advanced-hide
-    Mode: tcp
-    Name: TCP Data Transfer Port
-    Required: 'true'
-    Target: '5555'
-    Type: Port
-  value: '5555'
-- '@attributes':
-    Default: '3838'
-    Description: This is Sync's UDP port for data transfers.
-    Display: advanced-hide
-    Mode: udp
-    Name: UDP Data Transfer Port
-    Required: 'true'
-    Target: '3838'
-    Type: Port
-  value: '3838'
-- '@attributes':
-    Default: /mnt/user/appdata/Sync
-    Description: This is where Sync will store its databases and configuration.
-    Display: advanced-hide
-    Mode: rw
-    Name: Config Storage Path
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: /mnt/user/appdata/Sync
+  Device: {}
+  Label: {}
+  Path:
+    Config Storage Path:
+      Default: /mnt/user/appdata/Sync
+      Description: This is where Sync will store its databases and configuration.
+      Display: advanced-hide
+      Mode: rw
+      Name: Config Storage Path
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: /mnt/user/appdata/Sync
+  Port:
+    TCP Data Transfer Port:
+      Default: '5555'
+      Description: This is Sync's TCP port for data transfers.
+      Display: advanced-hide
+      Mode: tcp
+      Name: TCP Data Transfer Port
+      Required: 'true'
+      Target: '5555'
+      Type: Port
+      value: '5555'
+    UDP Data Transfer Port:
+      Default: '3838'
+      Description: This is Sync's UDP port for data transfers.
+      Display: advanced-hide
+      Mode: udp
+      Name: UDP Data Transfer Port
+      Required: 'true'
+      Target: '3838'
+      Type: Port
+      value: '3838'
+    Web Interface Port:
+      Default: '8888'
+      Description: This is Sync's Web UI port you can access via a web browser.
+      Display: always-hide
+      Mode: tcp
+      Name: Web Interface Port
+      Required: 'true'
+      Target: '8888'
+      Type: Port
+      value: '8888'
+  Variable: {}
 Deprecated: true
 FirstSeen: 1528776000
 GitHub: https://github.com/limetech/dockerapp-sync

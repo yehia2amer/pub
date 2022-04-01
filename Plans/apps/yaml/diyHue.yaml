@@ -3,83 +3,88 @@ CAComment: This template is set up to use a custom network. You may have to adju
 CategoryList:
 - HomeAutomation
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /opt/hue-emulator/export/'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: App Data
-    Required: 'true'
-    Target: /opt/hue-emulator/export/
-    Type: Path
-  value: /mnt/user/appdata/diyHue
-- '@attributes':
-    Default: '80'
-    Description: 'Container Port: 80'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: '80'
-    Required: 'true'
-    Target: '80'
-    Type: Port
-  value: '80'
-- '@attributes':
-    Default: '443'
-    Description: 'Container Port: 443'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: '443'
-    Required: 'true'
-    Target: '443'
-    Type: Port
-  value: '443'
-- '@attributes':
-    Default: '1900'
-    Description: 'Container Port: 1900'
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: '1900'
-    Required: 'true'
-    Target: '1900'
-    Type: Port
-  value: '1900'
-- '@attributes':
-    Default: '2100'
-    Description: 'Container Port: 2100'
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: '2100'
-    Required: 'true'
-    Target: '2100'
-    Type: Port
-  value: '2100'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: MAC'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: MAC
-    Required: 'true'
-    Target: MAC
-    Type: Variable
-  value: bc:5f:f4:cd:c6:19
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: IP'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: IP
-    Required: 'true'
-    Target: IP
-    Type: Variable
-  value: 192.168.1.4
+  Device: {}
+  Label: {}
+  Path:
+    App Data:
+      Default: ''
+      Description: 'Container Path: /opt/hue-emulator/export/'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: App Data
+      Required: 'true'
+      Target: /opt/hue-emulator/export/
+      Type: Path
+      value: /mnt/user/appdata/diyHue
+  Port:
+    '1900':
+      Default: '1900'
+      Description: 'Container Port: 1900'
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: '1900'
+      Required: 'true'
+      Target: '1900'
+      Type: Port
+      value: '1900'
+    '2100':
+      Default: '2100'
+      Description: 'Container Port: 2100'
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: '2100'
+      Required: 'true'
+      Target: '2100'
+      Type: Port
+      value: '2100'
+    '443':
+      Default: '443'
+      Description: 'Container Port: 443'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: '443'
+      Required: 'true'
+      Target: '443'
+      Type: Port
+      value: '443'
+    '80':
+      Default: '80'
+      Description: 'Container Port: 80'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: '80'
+      Required: 'true'
+      Target: '80'
+      Type: Port
+      value: '80'
+  Variable:
+    IP:
+      Default: ''
+      Description: 'Container Variable: IP'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: IP
+      Required: 'true'
+      Target: IP
+      Type: Variable
+      value: 192.168.1.4
+    MAC:
+      Default: ''
+      Description: 'Container Variable: MAC'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: MAC
+      Required: 'true'
+      Target: MAC
+      Type: Variable
+      value: bc:5f:f4:cd:c6:19
 DonateImg: https://az743702.vo.msecnd.net/cdn/kofi2.png
 DonateLink: https://ko-fi.com/I2I0CW9G
 DonateText: Buy me a coffee

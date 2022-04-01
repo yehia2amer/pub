@@ -2,28 +2,33 @@ CategoryList:
 - Productivity
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /app/data'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Application Data
-    Required: 'false'
-    Target: /app/data
-    Type: Path
-  value: /mnt/user/appdata/snippet-box/
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 5000'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Application Port
-    Required: 'false'
-    Target: '5000'
-    Type: Port
-  value: '5039'
+  Device: {}
+  Label: {}
+  Path:
+    Application Data:
+      Default: ''
+      Description: 'Container Path: /app/data'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Application Data
+      Required: 'false'
+      Target: /app/data
+      Type: Path
+      value: /mnt/user/appdata/snippet-box/
+  Port:
+    Application Port:
+      Default: ''
+      Description: 'Container Port: 5000'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Application Port
+      Required: 'false'
+      Target: '5000'
+      Type: Port
+      value: '5039'
+  Variable: {}
 ExtraParams: --init
 FirstSeen: 1632405855
 Icon: https://raw.githubusercontent.com/pawelmalak/unraid-templates/master/templates/icons/snippet-box.png

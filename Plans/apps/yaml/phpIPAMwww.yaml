@@ -3,161 +3,166 @@ CAComment: This template is set up to use a custom network. You may have to adju
 CategoryList:
 - Network-Management
 Config:
-- '@attributes':
-    Default: '80'
-    Description: 'This is phpIPAM''s Web UI port you can access via a web browser.(Default:
-      80)'
-    Display: always-hide
-    Mask: 'false'
-    Mode: tcp
-    Name: Web Interface Port
-    Required: 'true'
-    Target: '80'
-    Type: Port
-  value: '80'
-- '@attributes':
-    Default: 127.0.0.1
-    Description: 'MySQL database host (Default: 127.0.0.1)'
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: IPAM_DATABASE_HOST
-    Required: 'true'
-    Target: IPAM_DATABASE_HOST
-    Type: Variable
-  value: 127.0.0.1
-- '@attributes':
-    Default: '3306'
-    Description: 'MySQL database port (Default: 3306)'
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: IPAM_DATABASE_PORT
-    Required: 'true'
-    Target: IPAM_DATABASE_PORT
-    Type: Variable
-  value: '3306'
-- '@attributes':
-    Default: phpipam
-    Description: 'MySQL database name (Default: phpipam)'
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: IPAM_DATABASE_NAME
-    Required: 'true'
-    Target: IPAM_DATABASE_NAME
-    Type: Variable
-  value: phpipam
-- '@attributes':
-    Default: phpipam
-    Description: 'MySQL database user (Default: phpipam)'
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: IPAM_DATABASE_USER
-    Required: 'true'
-    Target: IPAM_DATABASE_USER
-    Type: Variable
-  value: phpipam
-- '@attributes':
-    Default: phpipamadmin
-    Description: 'MySQL database password (Default: phpipamadmin)'
-    Display: always-hide
-    Mask: 'true'
-    Mode: ''
-    Name: IPAM_DATABASE_PASS
-    Required: 'true'
-    Target: IPAM_DATABASE_PASS
-    Type: Variable
-  value: phpipamadmin
-- '@attributes':
-    Default: localhost
-    Description: 'MySQL allowed hosts (Default: localhost)'
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: IPAM_DATABASE_WEBHOST
-    Required: 'true'
-    Target: IPAM_DATABASE_WEBHOST
-    Type: Variable
-  value: localhost
-- '@attributes':
-    Default: ''
-    Description: Google Maps and Geocode API Key
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: IPAM_GMAPS_API_KEY
-    Required: 'false'
-    Target: IPAM_GMAPS_API_KEY
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 'false'
-    Description: 'Use proxy (Default: false)'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: PROXY_ENABLED
-    Required: 'false'
-    Target: PROXY_ENABLED
-    Type: Variable
-  value: 'false'
-- '@attributes':
-    Default: myproxy.something.com
-    Description: 'Proxy server (Default: myproxy.something.com)'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: PROXY_SERVER
-    Required: 'false'
-    Target: PROXY_SERVER
-    Type: Variable
-  value: myproxy.something.com
-- '@attributes':
-    Default: '8080'
-    Description: 'Proxy port (Default: 8080)'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: PROXY_PORT
-    Required: 'false'
-    Target: PROXY_PORT
-    Type: Variable
-  value: '8080'
-- '@attributes':
-    Default: 'false'
-    Description: 'Proxy authentication (Default: false)'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: PROXY_USE_AUTH
-    Required: 'false'
-    Target: PROXY_USE_AUTH
-    Type: Variable
-  value: 'false'
-- '@attributes':
-    Default: USERNAME
-    Description: Proxy username
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: PROXY_USER
-    Required: 'false'
-    Target: PROXY_USER
-    Type: Variable
-  value: USERNAME
-- '@attributes':
-    Default: PASSWORD
-    Description: Proxy password
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: PROXY_PASS
-    Required: 'false'
-    Target: PROXY_PASS
-    Type: Variable
-  value: PASSWORD
+  Device: {}
+  Label: {}
+  Path: {}
+  Port:
+    Web Interface Port:
+      Default: '80'
+      Description: 'This is phpIPAM''s Web UI port you can access via a web browser.(Default:
+        80)'
+      Display: always-hide
+      Mask: 'false'
+      Mode: tcp
+      Name: Web Interface Port
+      Required: 'true'
+      Target: '80'
+      Type: Port
+      value: '80'
+  Variable:
+    IPAM_DATABASE_HOST:
+      Default: 127.0.0.1
+      Description: 'MySQL database host (Default: 127.0.0.1)'
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: IPAM_DATABASE_HOST
+      Required: 'true'
+      Target: IPAM_DATABASE_HOST
+      Type: Variable
+      value: 127.0.0.1
+    IPAM_DATABASE_NAME:
+      Default: phpipam
+      Description: 'MySQL database name (Default: phpipam)'
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: IPAM_DATABASE_NAME
+      Required: 'true'
+      Target: IPAM_DATABASE_NAME
+      Type: Variable
+      value: phpipam
+    IPAM_DATABASE_PASS:
+      Default: phpipamadmin
+      Description: 'MySQL database password (Default: phpipamadmin)'
+      Display: always-hide
+      Mask: 'true'
+      Mode: ''
+      Name: IPAM_DATABASE_PASS
+      Required: 'true'
+      Target: IPAM_DATABASE_PASS
+      Type: Variable
+      value: phpipamadmin
+    IPAM_DATABASE_PORT:
+      Default: '3306'
+      Description: 'MySQL database port (Default: 3306)'
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: IPAM_DATABASE_PORT
+      Required: 'true'
+      Target: IPAM_DATABASE_PORT
+      Type: Variable
+      value: '3306'
+    IPAM_DATABASE_USER:
+      Default: phpipam
+      Description: 'MySQL database user (Default: phpipam)'
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: IPAM_DATABASE_USER
+      Required: 'true'
+      Target: IPAM_DATABASE_USER
+      Type: Variable
+      value: phpipam
+    IPAM_DATABASE_WEBHOST:
+      Default: localhost
+      Description: 'MySQL allowed hosts (Default: localhost)'
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: IPAM_DATABASE_WEBHOST
+      Required: 'true'
+      Target: IPAM_DATABASE_WEBHOST
+      Type: Variable
+      value: localhost
+    IPAM_GMAPS_API_KEY:
+      Default: ''
+      Description: Google Maps and Geocode API Key
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: IPAM_GMAPS_API_KEY
+      Required: 'false'
+      Target: IPAM_GMAPS_API_KEY
+      Type: Variable
+      value: ''
+    PROXY_ENABLED:
+      Default: 'false'
+      Description: 'Use proxy (Default: false)'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PROXY_ENABLED
+      Required: 'false'
+      Target: PROXY_ENABLED
+      Type: Variable
+      value: 'false'
+    PROXY_PASS:
+      Default: PASSWORD
+      Description: Proxy password
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PROXY_PASS
+      Required: 'false'
+      Target: PROXY_PASS
+      Type: Variable
+      value: PASSWORD
+    PROXY_PORT:
+      Default: '8080'
+      Description: 'Proxy port (Default: 8080)'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PROXY_PORT
+      Required: 'false'
+      Target: PROXY_PORT
+      Type: Variable
+      value: '8080'
+    PROXY_SERVER:
+      Default: myproxy.something.com
+      Description: 'Proxy server (Default: myproxy.something.com)'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PROXY_SERVER
+      Required: 'false'
+      Target: PROXY_SERVER
+      Type: Variable
+      value: myproxy.something.com
+    PROXY_USER:
+      Default: USERNAME
+      Description: Proxy username
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PROXY_USER
+      Required: 'false'
+      Target: PROXY_USER
+      Type: Variable
+      value: USERNAME
+    PROXY_USE_AUTH:
+      Default: 'false'
+      Description: 'Proxy authentication (Default: false)'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PROXY_USE_AUTH
+      Required: 'false'
+      Target: PROXY_USE_AUTH
+      Type: Variable
+      value: 'false'
 FirstSeen: 1590506426
 Icon: https://phpipam.net/css/images/logo_icon.png
 LastUpdate: 1647654589

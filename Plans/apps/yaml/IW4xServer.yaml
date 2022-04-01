@@ -2,144 +2,149 @@ Beta: 'true'
 CategoryList:
 - GameServers
 Config:
-- '@attributes':
-    Default: ''
-    Description: Server Files
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: ServerFiles
-    Required: 'true'
-    Target: /iw4x
-    Type: Path
-  value: /mnt/cache/appdata/iw4x
-- '@attributes':
-    Default: ''
-    Description: TCP Game Port same as UDP (if you need another port, please delete
-      this entry and create a new TCP Port with the corresponding port number, also
-      don't forget to click an 'Show more settings ...' and change the port number)
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: TCP - Game Port
-    Required: 'false'
-    Target: '28960'
-    Type: Port
-  value: '28960'
-- '@attributes':
-    Default: ''
-    Description: UDP Game Port same as TCP (if you need another port, please delete
-      this entry and create a new UDP Port with the corresponding port number, also
-      don't forget to click an 'Show more settings ...' and change the port number)
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: UDP - Game Port
-    Required: 'false'
-    Target: '28960'
-    Type: Port
-  value: '28960'
-- '@attributes':
-    Default: ''
-    Description: Specify your Startup Parameters here.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Startup Parameters
-    Required: 'true'
-    Target: GAME_PARAMS
-    Type: Variable
-  value: +exec server.cfg +sv_maxclients 12 +set fs_game mods/bots +set playlistFilename
-    playlists.info
-- '@attributes':
-    Default: ''
-    Description: Set to 'true' (without quotes) to force an update.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Force Update
-    Required: 'false'
-    Target: FORCE_UPDATE
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Main IW4x Download URL (only change if you know what you are doing)
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Main IW4x Download URL
-    Required: 'true'
-    Target: IW4X_DL_URL
-    Type: Variable
-  value: https://dss0.cc/updater/iw4x_files.zip
-- '@attributes':
-    Default: ''
-    Description: IW4x DLC Download URL (only change if you know what you are doing)
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: IW4x DLC Download URL
-    Required: 'true'
-    Target: IW4X_DLC_URL
-    Type: Variable
-  value: https://iw4x-my.sharepoint.com/:u:/g/personal/emosewaj_iw4x_onmicrosoft_com/EYnWYmCXExpEvn-bL2262Q0BSy0jVZF0FXslvpJEDPE5Fw?e=gPx8RF&download=1
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: UMASK'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: UMASK
-    Required: 'true'
-    Target: UMASK
-    Type: Variable
-  value: '000'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: DATA_PERM'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: DATA_PERM
-    Required: 'true'
-    Target: DATA_PERM
-    Type: Variable
-  value: '770'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: UID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: UID
-    Required: 'true'
-    Target: UID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: GID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: GID
-    Required: 'true'
-    Target: GID
-    Type: Variable
-  value: '100'
-- '@attributes':
-    Default: ''
-    Description: Change if you need another Game Port (please create a new TCP and
-      UDP Port with the corresponding port number)
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: GAME_PORT
-    Required: 'true'
-    Target: GAME_PORT
-    Type: Variable
-  value: '28960'
+  Device: {}
+  Label: {}
+  Path:
+    ServerFiles:
+      Default: ''
+      Description: Server Files
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: ServerFiles
+      Required: 'true'
+      Target: /iw4x
+      Type: Path
+      value: /mnt/cache/appdata/iw4x
+  Port:
+    TCP - Game Port:
+      Default: ''
+      Description: TCP Game Port same as UDP (if you need another port, please delete
+        this entry and create a new TCP Port with the corresponding port number, also
+        don't forget to click an 'Show more settings ...' and change the port number)
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: TCP - Game Port
+      Required: 'false'
+      Target: '28960'
+      Type: Port
+      value: '28960'
+    UDP - Game Port:
+      Default: ''
+      Description: UDP Game Port same as TCP (if you need another port, please delete
+        this entry and create a new UDP Port with the corresponding port number, also
+        don't forget to click an 'Show more settings ...' and change the port number)
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: UDP - Game Port
+      Required: 'false'
+      Target: '28960'
+      Type: Port
+      value: '28960'
+  Variable:
+    DATA_PERM:
+      Default: ''
+      Description: 'Container Variable: DATA_PERM'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: DATA_PERM
+      Required: 'true'
+      Target: DATA_PERM
+      Type: Variable
+      value: '770'
+    Force Update:
+      Default: ''
+      Description: Set to 'true' (without quotes) to force an update.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Force Update
+      Required: 'false'
+      Target: FORCE_UPDATE
+      Type: Variable
+      value: ''
+    GAME_PORT:
+      Default: ''
+      Description: Change if you need another Game Port (please create a new TCP and
+        UDP Port with the corresponding port number)
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: GAME_PORT
+      Required: 'true'
+      Target: GAME_PORT
+      Type: Variable
+      value: '28960'
+    GID:
+      Default: ''
+      Description: 'Container Variable: GID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: GID
+      Required: 'true'
+      Target: GID
+      Type: Variable
+      value: '100'
+    IW4x DLC Download URL:
+      Default: ''
+      Description: IW4x DLC Download URL (only change if you know what you are doing)
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: IW4x DLC Download URL
+      Required: 'true'
+      Target: IW4X_DLC_URL
+      Type: Variable
+      value: https://iw4x-my.sharepoint.com/:u:/g/personal/emosewaj_iw4x_onmicrosoft_com/EYnWYmCXExpEvn-bL2262Q0BSy0jVZF0FXslvpJEDPE5Fw?e=gPx8RF&download=1
+    Main IW4x Download URL:
+      Default: ''
+      Description: Main IW4x Download URL (only change if you know what you are doing)
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Main IW4x Download URL
+      Required: 'true'
+      Target: IW4X_DL_URL
+      Type: Variable
+      value: https://dss0.cc/updater/iw4x_files.zip
+    Startup Parameters:
+      Default: ''
+      Description: Specify your Startup Parameters here.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Startup Parameters
+      Required: 'true'
+      Target: GAME_PARAMS
+      Type: Variable
+      value: +exec server.cfg +sv_maxclients 12 +set fs_game mods/bots +set playlistFilename
+        playlists.info
+    UID:
+      Default: ''
+      Description: 'Container Variable: UID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: UID
+      Required: 'true'
+      Target: UID
+      Type: Variable
+      value: '99'
+    UMASK:
+      Default: ''
+      Description: 'Container Variable: UMASK'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: UMASK
+      Required: 'true'
+      Target: UMASK
+      Type: Variable
+      value: '000'
 DonateLink: https://www.paypal.me/chips777
 DonateText: 'If you like my work please '
 ExtraParams: --restart=unless-stopped

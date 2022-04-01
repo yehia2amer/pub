@@ -3,18 +3,23 @@ CategoryList:
 - Network-Other
 ChangeLogPresent: true
 Config:
-  '@attributes':
-    Default: /mnt/cache/appdata/EAPcontroller
-    Description: The host path needs to have a direct path, example /mnt/cache, /mnt/disk1
-      or mongodb cant start(cant handle unraids shfs)
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Config Directory
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Config Directory:
+      Default: /mnt/cache/appdata/EAPcontroller
+      Description: The host path needs to have a direct path, example /mnt/cache,
+        /mnt/disk1 or mongodb cant start(cant handle unraids shfs)
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Config Directory
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: ''
+  Port: {}
+  Variable: {}
 FirstSeen: 1529467200
 GitHub: https://github.com/macexx/EAP-Controller
 Icon: https://raw.githubusercontent.com/macexx/docker-templates/master/images/tplink-icon.png

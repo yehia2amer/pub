@@ -4,64 +4,69 @@ CategoryList:
 - Tools-Utilities
 - Network-Web
 Config:
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'false'
-    Target: '9001'
-    Type: Port
-  value: '9001'
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Storage (data)
-    Required: 'false'
-    Target: /opt/etherpad-lite/var
-    Type: Path
-  value: /mnt/user/appdata/etherpad
-- '@attributes':
-    Default: ''
-    Description: The name of the instance.
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: TITLE
-    Required: 'false'
-    Target: TITLE
-    Type: Variable
-  value: Etherpad (unRAID)
-- '@attributes':
-    Default: ''
-    Description: This is the favicon default name, or a fully specified URL to your
-      own favicon.
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: FAVICON
-    Required: 'false'
-    Target: FAVICON
-    Type: Variable
-  value: favicon.ico
-- '@attributes':
-    Default: ''
-    Description: The default text of a pad
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: DEFAULT_PAD_TEXT
-    Required: 'false'
-    Target: DEFAULT_PAD_TEXT
-    Type: Variable
-  value: Welcome to Etherpad! This pad text is synchronized as you type, so that everyone
-    viewing this page sees the same text. This allows you to collaborate seamlessly
-    on documents! Get involved with Etherpad at https://etherpad.org
+  Device: {}
+  Label: {}
+  Path:
+    Storage (data):
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Storage (data)
+      Required: 'false'
+      Target: /opt/etherpad-lite/var
+      Type: Path
+      value: /mnt/user/appdata/etherpad
+  Port:
+    WebUI:
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'false'
+      Target: '9001'
+      Type: Port
+      value: '9001'
+  Variable:
+    DEFAULT_PAD_TEXT:
+      Default: ''
+      Description: The default text of a pad
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: DEFAULT_PAD_TEXT
+      Required: 'false'
+      Target: DEFAULT_PAD_TEXT
+      Type: Variable
+      value: Welcome to Etherpad! This pad text is synchronized as you type, so that
+        everyone viewing this page sees the same text. This allows you to collaborate
+        seamlessly on documents! Get involved with Etherpad at https://etherpad.org
+    FAVICON:
+      Default: ''
+      Description: This is the favicon default name, or a fully specified URL to your
+        own favicon.
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: FAVICON
+      Required: 'false'
+      Target: FAVICON
+      Type: Variable
+      value: favicon.ico
+    TITLE:
+      Default: ''
+      Description: The name of the instance.
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: TITLE
+      Required: 'false'
+      Target: TITLE
+      Type: Variable
+      value: Etherpad (unRAID)
 FirstSeen: 1643159000
 Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/etherpad.png
 LastUpdate: 1648155135

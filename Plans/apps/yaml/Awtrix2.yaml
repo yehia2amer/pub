@@ -2,107 +2,112 @@ CategoryList:
 - Drivers
 - MediaServer-Other
 Config:
-- '@attributes':
-    Default: '7000'
-    Description: Web Controller Port
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Web Controller Port
-    Required: 'true'
-    Target: '7000'
-    Type: Port
-  value: '7000'
-- '@attributes':
-    Default: '7001'
-    Description: API Port
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: API Port
-    Required: 'true'
-    Target: '7001'
-    Type: Port
-  value: '7001'
-- '@attributes':
-    Default: '5568'
-    Description: 'Container Port: 5568'
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: Host Port 3
-    Required: 'true'
-    Target: '5568'
-    Type: Port
-  value: '5568'
-- '@attributes':
-    Default: '80'
-    Description: For Amazon Alexa Support you need this Port. If This Port is already
-      used this can be changed in the config file.
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Amazon Alexa Port
-    Required: 'false'
-    Target: '80'
-    Type: Port
-  value: '80'
-- '@attributes':
-    Default: /mnt/user/appdata/awtrix2
-    Description: "Config Path\r\nContainer Path: /data"
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Config Path
-    Required: 'true'
-    Target: /data
-    Type: Path
-  value: /mnt/user/appdata/awtrix2
-- '@attributes':
-    Default: Asia/Shanghai
-    Description: 'Container Variable: TZ'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Time Zone
-    Required: 'true'
-    Target: TZ
-    Type: Variable
-  value: Asia/Shanghai
-- '@attributes':
-    Default: -Duser.language=en -Duser.country=US
-    Description: 'If you want AWTRIX to automatically display some apps like DayOfTheWeek
-      in your local language/format (e.g. '
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Language
-    Required: 'true'
-    Target: JAVA_TOOL_OPTIONS
-    Type: Variable
-  value: -Duser.language=en -Duser.country=US
-- '@attributes':
-    Default: 'true'
-    Description: 'Container Variable: AUTOUPDATE'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Auto Update
-    Required: 'true'
-    Target: AUTOUPDATE
-    Type: Variable
-  value: 'true'
-- '@attributes':
-    Default: 'true'
-    Description: 'Container Variable: AWTRIX_BETA'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Beta Version
-    Required: 'true'
-    Target: AWTRIX_BETA
-    Type: Variable
-  value: 'true'
+  Device: {}
+  Label: {}
+  Path:
+    Config Path:
+      Default: /mnt/user/appdata/awtrix2
+      Description: "Config Path\r\nContainer Path: /data"
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Config Path
+      Required: 'true'
+      Target: /data
+      Type: Path
+      value: /mnt/user/appdata/awtrix2
+  Port:
+    API Port:
+      Default: '7001'
+      Description: API Port
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: API Port
+      Required: 'true'
+      Target: '7001'
+      Type: Port
+      value: '7001'
+    Amazon Alexa Port:
+      Default: '80'
+      Description: For Amazon Alexa Support you need this Port. If This Port is already
+        used this can be changed in the config file.
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Amazon Alexa Port
+      Required: 'false'
+      Target: '80'
+      Type: Port
+      value: '80'
+    Host Port 3:
+      Default: '5568'
+      Description: 'Container Port: 5568'
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: Host Port 3
+      Required: 'true'
+      Target: '5568'
+      Type: Port
+      value: '5568'
+    Web Controller Port:
+      Default: '7000'
+      Description: Web Controller Port
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Web Controller Port
+      Required: 'true'
+      Target: '7000'
+      Type: Port
+      value: '7000'
+  Variable:
+    Auto Update:
+      Default: 'true'
+      Description: 'Container Variable: AUTOUPDATE'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Auto Update
+      Required: 'true'
+      Target: AUTOUPDATE
+      Type: Variable
+      value: 'true'
+    Beta Version:
+      Default: 'true'
+      Description: 'Container Variable: AWTRIX_BETA'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Beta Version
+      Required: 'true'
+      Target: AWTRIX_BETA
+      Type: Variable
+      value: 'true'
+    Language:
+      Default: -Duser.language=en -Duser.country=US
+      Description: 'If you want AWTRIX to automatically display some apps like DayOfTheWeek
+        in your local language/format (e.g. '
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Language
+      Required: 'true'
+      Target: JAVA_TOOL_OPTIONS
+      Type: Variable
+      value: -Duser.language=en -Duser.country=US
+    Time Zone:
+      Default: Asia/Shanghai
+      Description: 'Container Variable: TZ'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Time Zone
+      Required: 'true'
+      Target: TZ
+      Type: Variable
+      value: Asia/Shanghai
 FirstSeen: 1627212595
 Icon: https://avatars.githubusercontent.com/u/38006982?s=200&amp;v=4
 LastUpdate: 1633458280

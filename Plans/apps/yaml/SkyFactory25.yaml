@@ -1,84 +1,89 @@
 CategoryList:
 - GameServers
 Config:
-- '@attributes':
-    Default: /mnt/user/appdata/ftbskyfactory25/
-    Description: Path to store the installed server files.
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Installed Location
-    Required: 'true'
-    Target: /data
-    Type: Path
-  value: /mnt/user/appdata/ftbskyfactory25/
-- '@attributes':
-    Default: 'false'
-    Description: Do you agree to the Mojang EULA available at https://account.mojang.com/documents/minecraft_eula?
-      Server will not start without accepting. Set to 'true' to accept.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: EULA
-    Required: 'true'
-    Target: EULA
-    Type: Variable
-  value: 'false'
-- '@attributes':
-    Default: -Xms4096m -Xmx4096m
-    Description: Java Options
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: JVM_OPTS
-    Required: 'false'
-    Target: JVM_OPTS
-    Type: Variable
-  value: -Xms4096m -Xmx4096m
-- '@attributes':
-    Default: ''
-    Description: Comma separated list of players to have op capability
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: OPS
-    Required: 'false'
-    Target: OPS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Custom Message of the Day
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: MOTD
-    Required: 'false'
-    Target: MOTD
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '25565'
-    Description: Port for the server. Ignored if using a dedicated IP for the container.
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Port
-    Required: 'false'
-    Target: '25565'
-    Type: Port
-  value: '25565'
-- '@attributes':
-    Default: world
-    Description: Name of the world directory.  It is usually world.
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: LEVEL
-    Required: 'false'
-    Target: LEVEL
-    Type: Variable
-  value: world
+  Device: {}
+  Label: {}
+  Path:
+    Installed Location:
+      Default: /mnt/user/appdata/ftbskyfactory25/
+      Description: Path to store the installed server files.
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Installed Location
+      Required: 'true'
+      Target: /data
+      Type: Path
+      value: /mnt/user/appdata/ftbskyfactory25/
+  Port:
+    Port:
+      Default: '25565'
+      Description: Port for the server. Ignored if using a dedicated IP for the container.
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Port
+      Required: 'false'
+      Target: '25565'
+      Type: Port
+      value: '25565'
+  Variable:
+    EULA:
+      Default: 'false'
+      Description: Do you agree to the Mojang EULA available at https://account.mojang.com/documents/minecraft_eula?
+        Server will not start without accepting. Set to 'true' to accept.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: EULA
+      Required: 'true'
+      Target: EULA
+      Type: Variable
+      value: 'false'
+    JVM_OPTS:
+      Default: -Xms4096m -Xmx4096m
+      Description: Java Options
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: JVM_OPTS
+      Required: 'false'
+      Target: JVM_OPTS
+      Type: Variable
+      value: -Xms4096m -Xmx4096m
+    LEVEL:
+      Default: world
+      Description: Name of the world directory.  It is usually world.
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: LEVEL
+      Required: 'false'
+      Target: LEVEL
+      Type: Variable
+      value: world
+    MOTD:
+      Default: ''
+      Description: Custom Message of the Day
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: MOTD
+      Required: 'false'
+      Target: MOTD
+      Type: Variable
+      value: ''
+    OPS:
+      Default: ''
+      Description: Comma separated list of players to have op capability
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: OPS
+      Required: 'false'
+      Target: OPS
+      Type: Variable
+      value: ''
 FirstSeen: 1640984615
 Icon: https://apps.modpacks.ch/modpacks/art/25/skyfactory-2-5.png
 LastUpdate: 1640978778

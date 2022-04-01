@@ -1,41 +1,46 @@
 CategoryList:
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: '5000'
-    Description: Port
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Port
-    Required: 'false'
-    Target: '5000'
-    Type: Port
-  value: '5000'
-- '@attributes':
-    Default: /mnt/user/appdata/changedetection/
-    Description: Appdata
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Appdata
-    Required: 'false'
-    Target: /datastore
-    Type: Path
-  value: /mnt/user/appdata/changedetection/
-- '@attributes':
-    Default: ''
-    Description: The URL this application will be accessed from your clients without
-      trailing slash. Needed for notifications if you want to be linked to the diff
-      page for example.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Base URL
-    Required: 'false'
-    Target: BASE_URL
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Appdata:
+      Default: /mnt/user/appdata/changedetection/
+      Description: Appdata
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Appdata
+      Required: 'false'
+      Target: /datastore
+      Type: Path
+      value: /mnt/user/appdata/changedetection/
+  Port:
+    Port:
+      Default: '5000'
+      Description: Port
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Port
+      Required: 'false'
+      Target: '5000'
+      Type: Port
+      value: '5000'
+  Variable:
+    Base URL:
+      Default: ''
+      Description: The URL this application will be accessed from your clients without
+        trailing slash. Needed for notifications if you want to be linked to the diff
+        page for example.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Base URL
+      Required: 'false'
+      Target: BASE_URL
+      Type: Variable
+      value: ''
 FirstSeen: 1620576150
 Icon: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/changedetection.io.png
 LastUpdate: 1646485658

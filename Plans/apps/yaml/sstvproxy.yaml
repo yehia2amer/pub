@@ -1,161 +1,166 @@
 CategoryList:
 - MediaServer-Video
 Config:
-- '@attributes':
-    Default: '8098'
-    Description: 'Container Port: 8098'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: YAP exposed local port
-    Required: 'true'
-    Target: '8098'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: '8099'
-    Description: 'Container Port: 8099'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: YAP exposed external port
-    Required: 'true'
-    Target: '8099'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /config'
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: Appdata
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: '99'
-    Description: 'Container Variable: PUID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: PUID
-    Required: 'true'
-    Target: PUID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '100'
-    Description: 'Container Variable: PGID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: PGID
-    Required: 'true'
-    Target: PGID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: master
-    Description: For specifying which branch to use (master or dev), defaults to master
-      if not set.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: YAP_GIT_BRANCH
-    Required: 'false'
-    Target: YAP_GIT_BRANCH
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Short code for smoothstreams service
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: YAP_SERVICE
-    Required: 'true'
-    Target: YAP_SERVICE
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: YAP_USERNAME'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: YAP_USERNAME
-    Required: 'true'
-    Target: YAP_USERNAME
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: YAP_PASSWORD'
-    Display: always
-    Mask: 'true'
-    Mode: ''
-    Name: YAP_PASSWORD
-    Required: 'true'
-    Target: YAP_PASSWORD
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: SS server EG. dnae2, dmaw2, etc
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: YAP_SERVER
-    Required: 'false'
-    Target: YAP_SERVER
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: For quality (1 for HD, 2 for HQ, 3 for SD)
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: YAP_QUALITY
-    Required: 'false'
-    Target: YAP_QUALITY
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: For stream type (rtmp or hls)
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: YAP_STREAM
-    Required: 'false'
-    Target: YAP_STREAM
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: For specifying external IP to use
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: YAP_EXTERNALIP
-    Required: 'false'
-    Target: YAP_EXTERNALIP
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: For Kodi port
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: YAP_KODIPORT
-    Required: 'false'
-    Target: YAP_KODIPORT
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Appdata:
+      Default: ''
+      Description: 'Container Path: /config'
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: Appdata
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: ''
+  Port:
+    YAP exposed external port:
+      Default: '8099'
+      Description: 'Container Port: 8099'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: YAP exposed external port
+      Required: 'true'
+      Target: '8099'
+      Type: Port
+      value: ''
+    YAP exposed local port:
+      Default: '8098'
+      Description: 'Container Port: 8098'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: YAP exposed local port
+      Required: 'true'
+      Target: '8098'
+      Type: Port
+      value: ''
+  Variable:
+    PGID:
+      Default: '100'
+      Description: 'Container Variable: PGID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: PGID
+      Required: 'true'
+      Target: PGID
+      Type: Variable
+      value: ''
+    PUID:
+      Default: '99'
+      Description: 'Container Variable: PUID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: PUID
+      Required: 'true'
+      Target: PUID
+      Type: Variable
+      value: ''
+    YAP_EXTERNALIP:
+      Default: ''
+      Description: For specifying external IP to use
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: YAP_EXTERNALIP
+      Required: 'false'
+      Target: YAP_EXTERNALIP
+      Type: Variable
+      value: ''
+    YAP_GIT_BRANCH:
+      Default: master
+      Description: For specifying which branch to use (master or dev), defaults to
+        master if not set.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: YAP_GIT_BRANCH
+      Required: 'false'
+      Target: YAP_GIT_BRANCH
+      Type: Variable
+      value: ''
+    YAP_KODIPORT:
+      Default: ''
+      Description: For Kodi port
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: YAP_KODIPORT
+      Required: 'false'
+      Target: YAP_KODIPORT
+      Type: Variable
+      value: ''
+    YAP_PASSWORD:
+      Default: ''
+      Description: 'Container Variable: YAP_PASSWORD'
+      Display: always
+      Mask: 'true'
+      Mode: ''
+      Name: YAP_PASSWORD
+      Required: 'true'
+      Target: YAP_PASSWORD
+      Type: Variable
+      value: ''
+    YAP_QUALITY:
+      Default: ''
+      Description: For quality (1 for HD, 2 for HQ, 3 for SD)
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: YAP_QUALITY
+      Required: 'false'
+      Target: YAP_QUALITY
+      Type: Variable
+      value: ''
+    YAP_SERVER:
+      Default: ''
+      Description: SS server EG. dnae2, dmaw2, etc
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: YAP_SERVER
+      Required: 'false'
+      Target: YAP_SERVER
+      Type: Variable
+      value: ''
+    YAP_SERVICE:
+      Default: ''
+      Description: Short code for smoothstreams service
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: YAP_SERVICE
+      Required: 'true'
+      Target: YAP_SERVICE
+      Type: Variable
+      value: ''
+    YAP_STREAM:
+      Default: ''
+      Description: For stream type (rtmp or hls)
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: YAP_STREAM
+      Required: 'false'
+      Target: YAP_STREAM
+      Type: Variable
+      value: ''
+    YAP_USERNAME:
+      Default: ''
+      Description: 'Container Variable: YAP_USERNAME'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: YAP_USERNAME
+      Required: 'true'
+      Target: YAP_USERNAME
+      Type: Variable
+      value: ''
 FirstSeen: 1599768471
 LastUpdate: 1513873885
 LastUpdateScan: 1646521384

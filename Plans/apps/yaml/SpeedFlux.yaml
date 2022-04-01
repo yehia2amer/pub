@@ -3,133 +3,139 @@ CategoryList:
 - Network-Management
 - Network-Other
 Config:
-- '@attributes':
-    Default: ''
-    Description: "Container Variable: INFLUX_DB_ADDRESS\r\nIP or Hostname of Influx\
-      \ DB"
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: InfluxDB Address
-    Required: 'true'
-    Target: INFLUX_DB_ADDRESS
-    Type: Variable
-  value: influxdb
-- '@attributes':
-    Default: '8086'
-    Description: 'Container Variable: INFLUX_DB_PORT'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: InfluxDB Port
-    Required: 'true'
-    Target: INFLUX_DB_PORT
-    Type: Variable
-  value: '8086'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: INFLUX_DB_USER'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: InfluxDB User
-    Required: 'false'
-    Target: INFLUX_DB_USER
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: INFLUX_DB_PASSWORD'
-    Display: always
-    Mask: 'true'
-    Mode: ''
-    Name: InfluxDB Pass
-    Required: 'false'
-    Target: INFLUX_DB_PASSWORD
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: "Container Variable: INFLUX_DB_DATABASE\r\nIf the database doesn't\
-      \ exist, it will be created. "
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: InfluxDB Database Name
-    Required: 'true'
-    Target: INFLUX_DB_DATABASE
-    Type: Variable
-  value: speedtest
-- '@attributes':
-    Default: '150'
-    Description: 'How often should speed be tested, in minutes. Default is set at
-      2:30 as I like to see changes over time at different times of day. '
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Test Interval
-    Required: 'false'
-    Target: SPEEDTEST_INTERVAL
-    Type: Variable
-  value: '150'
-- '@attributes':
-    Default: isp, external_ip, server_id, server_name, server_location, speedtest_url
-    Description: Tags to be added to the datasets. See https://github.com/breadlysm/speedtest-to-influxdb#tag-options.
-      Tags must be comma seperated
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: InfluxDB Tags
-    Required: 'false'
-    Target: INFLUX_DB_TAGS
-    Type: Variable
-  value: isp, external_ip, server_id, server_name, server_location, speedtest_url
-- '@attributes':
-    Default: '60'
-    Description: 'Interval is in seconds. This is how often your latency will be checked. '
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Ping Interval
-    Required: 'false'
-    Target: PING_INTERVAL
-    Type: Variable
-  value: '60'
-- '@attributes':
-    Default: 1.1.1.1, 8.8.8.8
-    Description: 'hostnames or domains to use to test ping. On every ping interval,
-      all servers input will be tested. Must be comma seperated. '
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Ping Servers
-    Required: 'false'
-    Target: PING_TARGETS
-    Type: Variable
-  value: 1.1.1.1, 8.8.8.8
-- '@attributes':
-    Default: info
-    Description: 'Options are: ''info'' or ''debug'' '
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Log Level
-    Required: 'false'
-    Target: LOG_TYPE
-    Type: Variable
-  value: info
-- '@attributes':
-    Default: ''
-    Description: 'Input a Ookla Speedtest server ID to use for your tests. This will
-      use this server for every test. '
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: (Optional) Server ID
-    Required: 'false'
-    Target: SPEEDTEST_SERVER_ID
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path: {}
+  Port: {}
+  Variable:
+    (Optional) Server ID:
+      Default: ''
+      Description: 'Input a Ookla Speedtest server ID to use for your tests. This
+        will use this server for every test. '
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: (Optional) Server ID
+      Required: 'false'
+      Target: SPEEDTEST_SERVER_ID
+      Type: Variable
+      value: ''
+    InfluxDB Address:
+      Default: ''
+      Description: "Container Variable: INFLUX_DB_ADDRESS\r\nIP or Hostname of Influx\
+        \ DB"
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: InfluxDB Address
+      Required: 'true'
+      Target: INFLUX_DB_ADDRESS
+      Type: Variable
+      value: influxdb
+    InfluxDB Database Name:
+      Default: ''
+      Description: "Container Variable: INFLUX_DB_DATABASE\r\nIf the database doesn't\
+        \ exist, it will be created. "
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: InfluxDB Database Name
+      Required: 'true'
+      Target: INFLUX_DB_DATABASE
+      Type: Variable
+      value: speedtest
+    InfluxDB Pass:
+      Default: ''
+      Description: 'Container Variable: INFLUX_DB_PASSWORD'
+      Display: always
+      Mask: 'true'
+      Mode: ''
+      Name: InfluxDB Pass
+      Required: 'false'
+      Target: INFLUX_DB_PASSWORD
+      Type: Variable
+      value: ''
+    InfluxDB Port:
+      Default: '8086'
+      Description: 'Container Variable: INFLUX_DB_PORT'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: InfluxDB Port
+      Required: 'true'
+      Target: INFLUX_DB_PORT
+      Type: Variable
+      value: '8086'
+    InfluxDB Tags:
+      Default: isp, external_ip, server_id, server_name, server_location, speedtest_url
+      Description: Tags to be added to the datasets. See https://github.com/breadlysm/speedtest-to-influxdb#tag-options.
+        Tags must be comma seperated
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: InfluxDB Tags
+      Required: 'false'
+      Target: INFLUX_DB_TAGS
+      Type: Variable
+      value: isp, external_ip, server_id, server_name, server_location, speedtest_url
+    InfluxDB User:
+      Default: ''
+      Description: 'Container Variable: INFLUX_DB_USER'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: InfluxDB User
+      Required: 'false'
+      Target: INFLUX_DB_USER
+      Type: Variable
+      value: ''
+    Log Level:
+      Default: info
+      Description: 'Options are: ''info'' or ''debug'' '
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Log Level
+      Required: 'false'
+      Target: LOG_TYPE
+      Type: Variable
+      value: info
+    Ping Interval:
+      Default: '60'
+      Description: 'Interval is in seconds. This is how often your latency will be
+        checked. '
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Ping Interval
+      Required: 'false'
+      Target: PING_INTERVAL
+      Type: Variable
+      value: '60'
+    Ping Servers:
+      Default: 1.1.1.1, 8.8.8.8
+      Description: 'hostnames or domains to use to test ping. On every ping interval,
+        all servers input will be tested. Must be comma seperated. '
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Ping Servers
+      Required: 'false'
+      Target: PING_TARGETS
+      Type: Variable
+      value: 1.1.1.1, 8.8.8.8
+    Test Interval:
+      Default: '150'
+      Description: 'How often should speed be tested, in minutes. Default is set at
+        2:30 as I like to see changes over time at different times of day. '
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Test Interval
+      Required: 'false'
+      Target: SPEEDTEST_INTERVAL
+      Type: Variable
+      value: '150'
 FirstSeen: 1622107275
 Icon: https://user-images.githubusercontent.com/3665468/119735610-974a0500-be4a-11eb-9149-dd12ceee03df.png
 LastUpdateScan: 1648094606

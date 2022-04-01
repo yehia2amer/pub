@@ -1,72 +1,77 @@
 CategoryList:
 - Productivity
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 5800'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Web Port
-    Required: 'false'
-    Target: '5800'
-    Type: Port
-  value: '5800'
-- '@attributes':
-    Default: /mnt/user/appdata/joplinweb
-    Description: 'Container Path: /app/.config'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: AppData
-    Required: 'false'
-    Target: /app/.config
-    Type: Path
-  value: /mnt/user/appdata/joplinapp
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: VNC_PASSWORD'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: VNC_PASSWORD
-    Required: 'false'
-    Target: VNC_PASSWORD
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '1280'
-    Description: 'Container Variable: DISPLAY_WIDTH'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DISPLAY_WIDTH
-    Required: 'false'
-    Target: DISPLAY_WIDTH
-    Type: Variable
-  value: '1280'
-- '@attributes':
-    Default: '768'
-    Description: 'Container Variable: DISPLAY_HEIGHT'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DISPLAY_HEIGHT
-    Required: 'false'
-    Target: DISPLAY_HEIGHT
-    Type: Variable
-  value: '768'
-- '@attributes':
-    Default: '41184'
-    Description: Likely can't be used unless you have an advanced use case.
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Web Clipper Port
-    Required: 'false'
-    Target: '41184'
-    Type: Port
-  value: '41184'
+  Device: {}
+  Label: {}
+  Path:
+    AppData:
+      Default: /mnt/user/appdata/joplinweb
+      Description: 'Container Path: /app/.config'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: AppData
+      Required: 'false'
+      Target: /app/.config
+      Type: Path
+      value: /mnt/user/appdata/joplinapp
+  Port:
+    Web Clipper Port:
+      Default: '41184'
+      Description: Likely can't be used unless you have an advanced use case.
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Web Clipper Port
+      Required: 'false'
+      Target: '41184'
+      Type: Port
+      value: '41184'
+    Web Port:
+      Default: ''
+      Description: 'Container Port: 5800'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Web Port
+      Required: 'false'
+      Target: '5800'
+      Type: Port
+      value: '5800'
+  Variable:
+    DISPLAY_HEIGHT:
+      Default: '768'
+      Description: 'Container Variable: DISPLAY_HEIGHT'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DISPLAY_HEIGHT
+      Required: 'false'
+      Target: DISPLAY_HEIGHT
+      Type: Variable
+      value: '768'
+    DISPLAY_WIDTH:
+      Default: '1280'
+      Description: 'Container Variable: DISPLAY_WIDTH'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DISPLAY_WIDTH
+      Required: 'false'
+      Target: DISPLAY_WIDTH
+      Type: Variable
+      value: '1280'
+    VNC_PASSWORD:
+      Default: ''
+      Description: 'Container Variable: VNC_PASSWORD'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: VNC_PASSWORD
+      Required: 'false'
+      Target: VNC_PASSWORD
+      Type: Variable
+      value: ''
 DonateText: Donate
 FirstSeen: 1613934149
 Icon: https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/icons/joplin.png

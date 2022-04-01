@@ -61,46 +61,51 @@ Branch:
 CategoryList:
 - MediaApp-Other
 Config:
-- '@attributes':
-    Default: '8800'
-    Description: 'Container Port: 80'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Host Port 1
-    Required: 'true'
-    Target: '80'
-    Type: Port
-  value: '8800'
-- '@attributes':
-    Default: ''
-    Description: This is where Compressarr will store it's configuration.
-    Mode: rw
-    Name: Config directory
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: /mnt/user/Media
-    Description: This needs to be the same as the root for Radarr/Sonarr. Create more
-      as required
-    Mode: rw
-    Name: Media directory
-    Required: 'false'
-    Target: /media
-    Type: Path
-  value: /mnt/user/Media
-- '@attributes':
-    Default: /mnt/user/Media/Compressarr
-    Description: This is an output directory, Radarr/Sonarr needs to see this for
-      importing to work
-    Mode: rw
-    Name: Output directory
-    Required: 'false'
-    Target: /output
-    Type: Path
-  value: /mnt/user/Media/Compressarr
+  Device: {}
+  Label: {}
+  Path:
+    Config directory:
+      Default: ''
+      Description: This is where Compressarr will store it's configuration.
+      Mode: rw
+      Name: Config directory
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: ''
+    Media directory:
+      Default: /mnt/user/Media
+      Description: This needs to be the same as the root for Radarr/Sonarr. Create
+        more as required
+      Mode: rw
+      Name: Media directory
+      Required: 'false'
+      Target: /media
+      Type: Path
+      value: /mnt/user/Media
+    Output directory:
+      Default: /mnt/user/Media/Compressarr
+      Description: This is an output directory, Radarr/Sonarr needs to see this for
+        importing to work
+      Mode: rw
+      Name: Output directory
+      Required: 'false'
+      Target: /output
+      Type: Path
+      value: /mnt/user/Media/Compressarr
+  Port:
+    Host Port 1:
+      Default: '8800'
+      Description: 'Container Port: 80'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Host Port 1
+      Required: 'true'
+      Target: '80'
+      Type: Port
+      value: '8800'
+  Variable: {}
 FirstSeen: 1622217151
 Icon: https://github.com/OFark/Compressarr/raw/master/Compressarr/wwwroot/android-chrome-192x192.png
 LastUpdate: 1648036768

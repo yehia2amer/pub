@@ -1,72 +1,77 @@
 CategoryList:
 - Productivity
 Config:
-- '@attributes':
-    Default: '8787'
-    Description: 'Container Port: 8787'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Host Port 1
-    Required: 'false'
-    Target: '8787'
-    Type: Port
-  value: '8787'
-- '@attributes':
-    Default: yourpasswordhere
-    Description: 'Container Variable: PASSWORD'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Password
-    Required: 'true'
-    Target: PASSWORD
-    Type: Variable
-  value: yourpasswordhere
-- '@attributes':
-    Default: 'FALSE'
-    Description: Give the user root permissions
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Root
-    Required: 'false'
-    Target: ROOT
-    Type: Variable
-  value: 'FALSE'
-- '@attributes':
-    Default: ''
-    Description: Input 'shiny' without quotes to add shiny server
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Add Shiny Server
-    Required: 'false'
-    Target: ADD
-    Type: Variable
-  value: shiny
-- '@attributes':
-    Default: '3838'
-    Description: Required for shiny server
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Host Port 2
-    Required: 'false'
-    Target: '3838'
-    Type: Port
-  value: '3838'
-- '@attributes':
-    Default: /mnt/user
-    Description: Shared folder for saving your files
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: User Data Directory
-    Required: 'true'
-    Target: /home/rstudio/Documents
-    Type: Path
-  value: /mnt/user
+  Device: {}
+  Label: {}
+  Path:
+    User Data Directory:
+      Default: /mnt/user
+      Description: Shared folder for saving your files
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: User Data Directory
+      Required: 'true'
+      Target: /home/rstudio/Documents
+      Type: Path
+      value: /mnt/user
+  Port:
+    Host Port 1:
+      Default: '8787'
+      Description: 'Container Port: 8787'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Host Port 1
+      Required: 'false'
+      Target: '8787'
+      Type: Port
+      value: '8787'
+    Host Port 2:
+      Default: '3838'
+      Description: Required for shiny server
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Host Port 2
+      Required: 'false'
+      Target: '3838'
+      Type: Port
+      value: '3838'
+  Variable:
+    Add Shiny Server:
+      Default: ''
+      Description: Input 'shiny' without quotes to add shiny server
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Add Shiny Server
+      Required: 'false'
+      Target: ADD
+      Type: Variable
+      value: shiny
+    Password:
+      Default: yourpasswordhere
+      Description: 'Container Variable: PASSWORD'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Password
+      Required: 'true'
+      Target: PASSWORD
+      Type: Variable
+      value: yourpasswordhere
+    Root:
+      Default: 'FALSE'
+      Description: Give the user root permissions
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Root
+      Required: 'false'
+      Target: ROOT
+      Type: Variable
+      value: 'FALSE'
 FirstSeen: 1575068844
 Icon: https://avatars0.githubusercontent.com/u/9100160?v=3&amp;s=200
 LastUpdate: 1647825688

@@ -5,138 +5,143 @@ CategoryList:
 - MediaServer-Video
 ChangeLogPresent: true
 Config:
-- '@attributes':
-    Default: ''
-    Description: PLEX_SERVER_IP
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: PLEX SERVER IP
-    Required: 'true'
-    Target: PLEX_SERVER_IP
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: PLEX_USERNAME
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: PLEX USERNAME
-    Required: 'false'
-    Target: PLEX_USERNAME
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: PLEX_PASSWORD
-    Display: always-hide
-    Mask: 'true'
-    Mode: ''
-    Name: PLEX PASSWORD
-    Required: 'false'
-    Target: PLEX_PASSWORD
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: SMTP_SERVER
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: SMTP SERVER
-    Required: 'true'
-    Target: SMTP_SERVER
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: SMTP_PORT (Use 587 for Gmail)
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: SMTP PORT
-    Required: 'true'
-    Target: SMTP_PORT
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: EMAIL_USERNAME
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: EMAIL USERNAME
-    Required: 'true'
-    Target: EMAIL_USERNAME
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: EMAIL_PASSWORD
-    Display: always-hide
-    Mask: 'true'
-    Mode: ''
-    Name: EMAIL PASSWORD
-    Required: 'true'
-    Target: EMAIL_PASSWORD
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '6878'
-    Description: 'Container Port: 6878'
-    Display: always-hide
-    Mask: 'false'
-    Mode: tcp
-    Name: Host Port
-    Required: 'true'
-    Target: '6878'
-    Type: Port
-  value: '6878'
-- '@attributes':
-    Default: /mnt/user/cache/appdata/NowShowing
-    Description: 'Container Path: /config'
-    Display: always-hide
-    Mask: 'false'
-    Mode: rw
-    Name: AppData Config Path
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: /mnt/user/cache/appdata/NowShowing
-- '@attributes':
-    Default: ''
-    Description: PLEX_TOKEN (Optional - use if you don't want to enter Plex username/password)
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: PLEX TOKEN
-    Required: 'false'
-    Target: PLEX_TOKEN
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '99'
-    Description: Optional PUID - Usually do not change this. See instructions
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: PUID
-    Required: 'false'
-    Target: PUID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: '100'
-    Description: Optional PGID - Usually do not change this. See instructions
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: PGID
-    Required: 'false'
-    Target: PGID
-    Type: Variable
-  value: '100'
+  Device: {}
+  Label: {}
+  Path:
+    AppData Config Path:
+      Default: /mnt/user/cache/appdata/NowShowing
+      Description: 'Container Path: /config'
+      Display: always-hide
+      Mask: 'false'
+      Mode: rw
+      Name: AppData Config Path
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: /mnt/user/cache/appdata/NowShowing
+  Port:
+    Host Port:
+      Default: '6878'
+      Description: 'Container Port: 6878'
+      Display: always-hide
+      Mask: 'false'
+      Mode: tcp
+      Name: Host Port
+      Required: 'true'
+      Target: '6878'
+      Type: Port
+      value: '6878'
+  Variable:
+    EMAIL PASSWORD:
+      Default: ''
+      Description: EMAIL_PASSWORD
+      Display: always-hide
+      Mask: 'true'
+      Mode: ''
+      Name: EMAIL PASSWORD
+      Required: 'true'
+      Target: EMAIL_PASSWORD
+      Type: Variable
+      value: ''
+    EMAIL USERNAME:
+      Default: ''
+      Description: EMAIL_USERNAME
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: EMAIL USERNAME
+      Required: 'true'
+      Target: EMAIL_USERNAME
+      Type: Variable
+      value: ''
+    PGID:
+      Default: '100'
+      Description: Optional PGID - Usually do not change this. See instructions
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: PGID
+      Required: 'false'
+      Target: PGID
+      Type: Variable
+      value: '100'
+    PLEX PASSWORD:
+      Default: ''
+      Description: PLEX_PASSWORD
+      Display: always-hide
+      Mask: 'true'
+      Mode: ''
+      Name: PLEX PASSWORD
+      Required: 'false'
+      Target: PLEX_PASSWORD
+      Type: Variable
+      value: ''
+    PLEX SERVER IP:
+      Default: ''
+      Description: PLEX_SERVER_IP
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: PLEX SERVER IP
+      Required: 'true'
+      Target: PLEX_SERVER_IP
+      Type: Variable
+      value: ''
+    PLEX TOKEN:
+      Default: ''
+      Description: PLEX_TOKEN (Optional - use if you don't want to enter Plex username/password)
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: PLEX TOKEN
+      Required: 'false'
+      Target: PLEX_TOKEN
+      Type: Variable
+      value: ''
+    PLEX USERNAME:
+      Default: ''
+      Description: PLEX_USERNAME
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: PLEX USERNAME
+      Required: 'false'
+      Target: PLEX_USERNAME
+      Type: Variable
+      value: ''
+    PUID:
+      Default: '99'
+      Description: Optional PUID - Usually do not change this. See instructions
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: PUID
+      Required: 'false'
+      Target: PUID
+      Type: Variable
+      value: '99'
+    SMTP PORT:
+      Default: ''
+      Description: SMTP_PORT (Use 587 for Gmail)
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: SMTP PORT
+      Required: 'true'
+      Target: SMTP_PORT
+      Type: Variable
+      value: ''
+    SMTP SERVER:
+      Default: ''
+      Description: SMTP_SERVER
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: SMTP SERVER
+      Required: 'true'
+      Target: SMTP_SERVER
+      Type: Variable
+      value: ''
 Deprecated: true
 FirstSeen: 1491796800
 Icon: https://raw.githubusercontent.com/ninthwalker/NowShowing/master/images/nowshowing-icon.png

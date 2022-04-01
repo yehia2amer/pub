@@ -5,99 +5,104 @@ CategoryList:
 - Tools-Utilities
 ChangeLogPresent: true
 Config:
-- '@attributes':
-    Default: '8875'
-    Description: Status Page WebUI
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'true'
-    Target: '8875'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: '554'
-    Description: RTSP Port
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: 'Port: 554'
-    Required: 'true'
-    Target: '554'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: '1900'
-    Description: App Discovery
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: 'Port: 1900'
-    Required: 'true'
-    Target: '1900'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Configuration files and minisatip data
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: Appdata
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: parameter
-    Description: Specify specific run params for minisatip
-    Display: always
-    Mask: 'false'
-    Name: RUN_OPTS
-    Required: 'true'
-    Target: RUN_OPTS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '99'
-    Description: 'Container Variable: PUID'
-    Display: advanced
-    Mask: 'false'
-    Name: PUID
-    Required: 'true'
-    Target: PUID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '100'
-    Description: 'Container Variable: PGID'
-    Display: advanced
-    Mask: 'false'
-    Name: PGID
-    Required: 'true'
-    Target: PGID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '022'
-    Description: 'Container Variable: UMASK'
-    Display: advanced
-    Mask: 'false'
-    Name: UMASK
-    Required: 'false'
-    Target: UMASK
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: /dev/dvb
-    Description: For passing through Tv-cards
-    Display: always
-    Mask: 'false'
-    Name: /dev/dvb
-    Required: 'true'
-    Type: Device
-  value: ''
+  Device:
+    /dev/dvb:
+      Default: /dev/dvb
+      Description: For passing through Tv-cards
+      Display: always
+      Mask: 'false'
+      Name: /dev/dvb
+      Required: 'true'
+      Type: Device
+      value: ''
+  Label: {}
+  Path:
+    Appdata:
+      Default: ''
+      Description: Configuration files and minisatip data
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: Appdata
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: ''
+  Port:
+    'Port: 1900':
+      Default: '1900'
+      Description: App Discovery
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: 'Port: 1900'
+      Required: 'true'
+      Target: '1900'
+      Type: Port
+      value: ''
+    'Port: 554':
+      Default: '554'
+      Description: RTSP Port
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: 'Port: 554'
+      Required: 'true'
+      Target: '554'
+      Type: Port
+      value: ''
+    WebUI:
+      Default: '8875'
+      Description: Status Page WebUI
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'true'
+      Target: '8875'
+      Type: Port
+      value: ''
+  Variable:
+    PGID:
+      Default: '100'
+      Description: 'Container Variable: PGID'
+      Display: advanced
+      Mask: 'false'
+      Name: PGID
+      Required: 'true'
+      Target: PGID
+      Type: Variable
+      value: ''
+    PUID:
+      Default: '99'
+      Description: 'Container Variable: PUID'
+      Display: advanced
+      Mask: 'false'
+      Name: PUID
+      Required: 'true'
+      Target: PUID
+      Type: Variable
+      value: ''
+    RUN_OPTS:
+      Default: parameter
+      Description: Specify specific run params for minisatip
+      Display: always
+      Mask: 'false'
+      Name: RUN_OPTS
+      Required: 'true'
+      Target: RUN_OPTS
+      Type: Variable
+      value: ''
+    UMASK:
+      Default: '022'
+      Description: 'Container Variable: UMASK'
+      Display: advanced
+      Mask: 'false'
+      Name: UMASK
+      Required: 'false'
+      Target: UMASK
+      Type: Variable
+      value: ''
 DonateImg: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/donate.png
 DonateLink: https://www.linuxserver.io/donate
 DonateText: Donations

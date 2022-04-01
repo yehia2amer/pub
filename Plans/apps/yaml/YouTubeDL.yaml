@@ -4,94 +4,99 @@ CategoryList:
 - MediaApp-Video
 - MediaServer-Video
 Config:
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'false'
-    Target: '8080'
-    Type: Port
-  value: '8013'
-- '@attributes':
-    Default: ''
-    Description: This is where YouTube-DL will download all videos.
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Storage (media)
-    Required: 'true'
-    Target: /downloads
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: App's Data
-    Required: 'false'
-    Target: /config
-    Type: Path
-  value: /mnt/user/appdata/youtube-dl
-- '@attributes':
-    Default: ''
-    Description: Enable WebUI interface (true/false)
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: youtubedl_webui
-    Required: 'false'
-    Target: youtubedl_webui
-    Type: Variable
-  value: 'true'
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: PUID
-    Required: 'false'
-    Target: PUID
-    Type: Variable
-  value: '911'
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: PGID
-    Required: 'false'
-    Target: PGID
-    Type: Variable
-  value: '911'
-- '@attributes':
-    Default: ''
-    Description: To customize the download interval (1h,3h,12h,3d).
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: youtubedl_interval
-    Required: 'false'
-    Target: youtubedl_interval
-    Type: Variable
-  value: 12h
-- '@attributes':
-    Default: ''
-    Description: To customize the download quality (720,1080,1440,2160).
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: youtubedl_quality
-    Required: 'false'
-    Target: youtubedl_quality
-    Type: Variable
-  value: 1080p
+  Device: {}
+  Label: {}
+  Path:
+    App's Data:
+      Default: ''
+      Description: ''
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: App's Data
+      Required: 'false'
+      Target: /config
+      Type: Path
+      value: /mnt/user/appdata/youtube-dl
+    Storage (media):
+      Default: ''
+      Description: This is where YouTube-DL will download all videos.
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Storage (media)
+      Required: 'true'
+      Target: /downloads
+      Type: Path
+      value: ''
+  Port:
+    WebUI:
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'false'
+      Target: '8080'
+      Type: Port
+      value: '8013'
+  Variable:
+    PGID:
+      Default: ''
+      Description: ''
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PGID
+      Required: 'false'
+      Target: PGID
+      Type: Variable
+      value: '911'
+    PUID:
+      Default: ''
+      Description: ''
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PUID
+      Required: 'false'
+      Target: PUID
+      Type: Variable
+      value: '911'
+    youtubedl_interval:
+      Default: ''
+      Description: To customize the download interval (1h,3h,12h,3d).
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: youtubedl_interval
+      Required: 'false'
+      Target: youtubedl_interval
+      Type: Variable
+      value: 12h
+    youtubedl_quality:
+      Default: ''
+      Description: To customize the download quality (720,1080,1440,2160).
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: youtubedl_quality
+      Required: 'false'
+      Target: youtubedl_quality
+      Type: Variable
+      value: 1080p
+    youtubedl_webui:
+      Default: ''
+      Description: Enable WebUI interface (true/false)
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: youtubedl_webui
+      Required: 'false'
+      Target: youtubedl_webui
+      Type: Variable
+      value: 'true'
 FirstSeen: 1639587841
 Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/youtube-dl.png
 LastUpdate: 1646788367

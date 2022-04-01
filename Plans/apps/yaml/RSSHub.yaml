@@ -1,52 +1,57 @@
 CategoryList:
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: '1200'
-    Description: Web UI Port
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Web UI Port
-    Required: 'false'
-    Target: '1200'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: memory
-    Description: Cache type, memory or redis, empty this value will disable caching,
-      default to memory
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Cache Type
-    Required: 'false'
-    Target: CACHE_TYPE
-    Type: Variable
-  value: memory
-- '@attributes':
-    Default: 5 * 60
-    Description: Route cache expiry time in seconds, default to 5 * 60
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Cache Expire
-    Required: 'false'
-    Target: CACHE_EXPIRE
-    Type: Variable
-  value: 5 * 60
-- '@attributes':
-    Default: redis://localhost:6379/
-    Description: Redis target address (invalid when CACHE_TYPE is set to memory),
-      default to redis://localhost:6379/
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Redis URL
-    Required: 'false'
-    Target: REDIS_URL
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path: {}
+  Port:
+    Web UI Port:
+      Default: '1200'
+      Description: Web UI Port
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Web UI Port
+      Required: 'false'
+      Target: '1200'
+      Type: Port
+      value: ''
+  Variable:
+    Cache Expire:
+      Default: 5 * 60
+      Description: Route cache expiry time in seconds, default to 5 * 60
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Cache Expire
+      Required: 'false'
+      Target: CACHE_EXPIRE
+      Type: Variable
+      value: 5 * 60
+    Cache Type:
+      Default: memory
+      Description: Cache type, memory or redis, empty this value will disable caching,
+        default to memory
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Cache Type
+      Required: 'false'
+      Target: CACHE_TYPE
+      Type: Variable
+      value: memory
+    Redis URL:
+      Default: redis://localhost:6379/
+      Description: Redis target address (invalid when CACHE_TYPE is set to memory),
+        default to redis://localhost:6379/
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Redis URL
+      Required: 'false'
+      Target: REDIS_URL
+      Type: Variable
+      value: ''
 FirstSeen: 1645887791
 Icon: https://i.loli.net/2019/04/23/5cbeb7e41414c.png
 LastUpdate: 1648481719

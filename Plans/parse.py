@@ -23,6 +23,31 @@ for n in afList:
     n.pop("templatePath", "")
     n.pop("Shell", "")
     n.pop("CPUset", "")
+    
+    if "Config" in n.keys() and n["Config"]:
+      hold = {}
+      hold["Port"] = {}
+      hold["Variable"] = {}
+      hold["Path"] = {}
+      hold["Device"] = {}
+      hold["Label"] = {}
+      if isinstance(n["Config"], list):
+        for a in n["Config"]:
+          name = a["@attributes"]["Name"]
+          type = a["@attributes"]["Type"]
+          a.update(a["@attributes"])
+          a.pop("@attributes", "")
+          hold[type][name] = a
+      else:
+          name = n["Config"]["@attributes"]["Name"]
+          type = n["Config"]["@attributes"]["Type"]
+          n["Config"].update(n["Config"]["@attributes"])
+          n["Config"].pop("@attributes", "")
+          hold[type][name] = n["Config"]
+      n.pop("Config", "")
+      n["Config"] = hold
+      
+    
     globals()['%s' % tmp] = n
     
     if "Plugin" in n.keys() and n["Plugin"]:

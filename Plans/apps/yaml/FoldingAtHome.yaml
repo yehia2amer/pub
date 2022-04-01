@@ -3,61 +3,66 @@ CAComment: The webUI for this application does not work.  See <a href=https://fo
 CategoryList:
 - Other
 Config:
-- '@attributes':
-    Default: '36330'
-    Description: 'Container Port: 36330'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Host Port 1
-    Required: 'true'
-    Target: '36330'
-    Type: Port
-  value: '36330'
-- '@attributes':
-    Default: '7396'
-    Description: 'Container Port: 7396'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Host Port 2
-    Required: 'true'
-    Target: '7396'
-    Type: Port
-  value: '7396'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: NVIDIA_DRIVER_CAPABILITIES'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Host Key 1
-    Required: 'false'
-    Target: NVIDIA_DRIVER_CAPABILITIES
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: NVIDIA_VISIBLE_DEVICES'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Host Key 2
-    Required: 'false'
-    Target: NVIDIA_VISIBLE_DEVICES
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: /mnt/user/appdata/FoldingAtHome
-    Description: 'Container Path: /config'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: rw
-    Name: AppData Config Path
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: /mnt/user/appdata/FoldingAtHome
+  Device: {}
+  Label: {}
+  Path:
+    AppData Config Path:
+      Default: /mnt/user/appdata/FoldingAtHome
+      Description: 'Container Path: /config'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: rw
+      Name: AppData Config Path
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: /mnt/user/appdata/FoldingAtHome
+  Port:
+    Host Port 1:
+      Default: '36330'
+      Description: 'Container Port: 36330'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Host Port 1
+      Required: 'true'
+      Target: '36330'
+      Type: Port
+      value: '36330'
+    Host Port 2:
+      Default: '7396'
+      Description: 'Container Port: 7396'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Host Port 2
+      Required: 'true'
+      Target: '7396'
+      Type: Port
+      value: '7396'
+  Variable:
+    Host Key 1:
+      Default: ''
+      Description: 'Container Variable: NVIDIA_DRIVER_CAPABILITIES'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Host Key 1
+      Required: 'false'
+      Target: NVIDIA_DRIVER_CAPABILITIES
+      Type: Variable
+      value: ''
+    Host Key 2:
+      Default: ''
+      Description: 'Container Variable: NVIDIA_VISIBLE_DEVICES'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Host Key 2
+      Required: 'false'
+      Target: NVIDIA_VISIBLE_DEVICES
+      Type: Variable
+      value: ''
 FirstSeen: 1552656324
 Icon: https://i.imgur.com/AKptFCw.png
 LastUpdate: 1611922904

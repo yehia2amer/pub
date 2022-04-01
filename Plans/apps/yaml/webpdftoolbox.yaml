@@ -2,39 +2,44 @@ CategoryList:
 - Productivity
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: /mnt/user/appdata/web-pdf-toolbox
-    Description: 'Container Path: /tmp/pdf/'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Appdata
-    Required: 'true'
-    Target: /tmp/pdf/
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: '25568'
-    Description: 'Container Port: 80'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'true'
-    Target: '80'
-    Type: Port
-  value: '25568'
-- '@attributes':
-    Default: America/Chicago
-    Description: 'Container Variable: TZ'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Timezone
-    Required: 'false'
-    Target: TZ
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Appdata:
+      Default: /mnt/user/appdata/web-pdf-toolbox
+      Description: 'Container Path: /tmp/pdf/'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Appdata
+      Required: 'true'
+      Target: /tmp/pdf/
+      Type: Path
+      value: ''
+  Port:
+    WebUI:
+      Default: '25568'
+      Description: 'Container Port: 80'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'true'
+      Target: '80'
+      Type: Port
+      value: '25568'
+  Variable:
+    Timezone:
+      Default: America/Chicago
+      Description: 'Container Variable: TZ'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Timezone
+      Required: 'false'
+      Target: TZ
+      Type: Variable
+      value: ''
 FirstSeen: 1639095664
 LastUpdate: 1633630780
 LastUpdateScan: 1646888593

@@ -1,83 +1,88 @@
 CategoryList:
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: ''
-    Description: GUI Port - Default 8080
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: GUI Port
-    Required: 'true'
-    Target: '8080'
-    Type: Port
-  value: '8322'
-- '@attributes':
-    Default: ''
-    Description: Username for the desktop GUI.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: GUAC_USER
-    Required: 'false'
-    Target: GUAC_USER
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Password MD5 hash for the desktop GUI.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: GUAC_PASS
-    Required: 'false'
-    Target: GUAC_PASS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Search location /root
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Search location
-    Required: 'true'
-    Target: /root
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: PUID
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: PUID
-    Required: 'false'
-    Target: PUID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: ''
-    Description: PGID
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: PGID
-    Required: 'false'
-    Target: PGID
-    Type: Variable
-  value: '100'
-- '@attributes':
-    Default: ''
-    Description: Appdata
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Appdata
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Appdata:
+      Default: ''
+      Description: Appdata
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Appdata
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: ''
+    Search location:
+      Default: ''
+      Description: Search location /root
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Search location
+      Required: 'true'
+      Target: /root
+      Type: Path
+      value: ''
+  Port:
+    GUI Port:
+      Default: ''
+      Description: GUI Port - Default 8080
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: GUI Port
+      Required: 'true'
+      Target: '8080'
+      Type: Port
+      value: '8322'
+  Variable:
+    GUAC_PASS:
+      Default: ''
+      Description: Password MD5 hash for the desktop GUI.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: GUAC_PASS
+      Required: 'false'
+      Target: GUAC_PASS
+      Type: Variable
+      value: ''
+    GUAC_USER:
+      Default: ''
+      Description: Username for the desktop GUI.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: GUAC_USER
+      Required: 'false'
+      Target: GUAC_USER
+      Type: Variable
+      value: ''
+    PGID:
+      Default: ''
+      Description: PGID
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PGID
+      Required: 'false'
+      Target: PGID
+      Type: Variable
+      value: '100'
+    PUID:
+      Default: ''
+      Description: PUID
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PUID
+      Required: 'false'
+      Target: PUID
+      Type: Variable
+      value: '99'
 FirstSeen: 1613387509
 Icon: https://raw.githubusercontent.com/bobbintb/docker-rmlint-unraid/master/rmlint-icon.png
 LastUpdate: 1613286351

@@ -4,28 +4,33 @@ CategoryList:
 - Tools-Utilities
 - Network-Web
 Config:
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'false'
-    Target: '9090'
-    Type: Port
-  value: '9090'
-- '@attributes':
-    Default: ''
-    Description: This is where Sharry will read the configuration from the Host.
-    Display: always
-    Mask: 'false'
-    Mode: ro
-    Name: Config File
-    Required: 'false'
-    Target: /opt/sharry.conf
-    Type: Path
-  value: /mnt/user/appdata/sharry/sharry.conf
+  Device: {}
+  Label: {}
+  Path:
+    Config File:
+      Default: ''
+      Description: This is where Sharry will read the configuration from the Host.
+      Display: always
+      Mask: 'false'
+      Mode: ro
+      Name: Config File
+      Required: 'false'
+      Target: /opt/sharry.conf
+      Type: Path
+      value: /mnt/user/appdata/sharry/sharry.conf
+  Port:
+    WebUI:
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'false'
+      Target: '9090'
+      Type: Port
+      value: '9090'
+  Variable: {}
 FirstSeen: 1639674226
 Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/sharry2.png
 LastUpdate: 1647388010

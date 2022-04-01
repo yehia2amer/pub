@@ -1,66 +1,71 @@
 CategoryList:
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: /proc
-    Description: 'Container Path: /host/proc'
-    Display: always
-    Mask: 'false'
-    Mode: ro
-    Name: proc
-    Required: 'false'
-    Target: /host/proc
-    Type: Path
-  value: /proc
-- '@attributes':
-    Default: /host/sys
-    Description: 'Container Path: /host/sys'
-    Display: always
-    Mask: 'false'
-    Mode: ro
-    Name: sys
-    Required: 'false'
-    Target: /host/sys
-    Type: Path
-  value: /sys
-- '@attributes':
-    Default: /var/run/docker.sock
-    Description: 'Container Path: /var/run/docker.sock'
-    Display: always
-    Mask: 'false'
-    Mode: ro
-    Name: doker.sock
-    Required: 'false'
-    Target: /var/run/docker.sock
-    Type: Path
-  value: /var/run/docker.sock
-- '@attributes':
-    Default: '281'
-    Description: "If you want to have your container names resolved by netdata it\
-      \ needs to have access to docker group. To achive that just add environment\
-      \ variable PGID=999 to netdata container, where 999 is a docker group id from\
-      \ your host. This number can be found by running:\r\n\r\ngrep docker /etc/group\
-      \ | cut -d ':' -f 3"
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: PGID
-    Required: 'false'
-    Target: PGID
-    Type: Variable
-  value: '281'
-- '@attributes':
-    Default: '0'
-    Description: "Set to 1 to stop anonymous tracking\r\n( https://docs.netdata.cloud/docs/anonymous-statistics/#opt-out\
-      \ )"
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Do Not Track
-    Required: 'false'
-    Target: DO_NOT_TRACK
-    Type: Variable
-  value: '0'
+  Device: {}
+  Label: {}
+  Path:
+    doker.sock:
+      Default: /var/run/docker.sock
+      Description: 'Container Path: /var/run/docker.sock'
+      Display: always
+      Mask: 'false'
+      Mode: ro
+      Name: doker.sock
+      Required: 'false'
+      Target: /var/run/docker.sock
+      Type: Path
+      value: /var/run/docker.sock
+    proc:
+      Default: /proc
+      Description: 'Container Path: /host/proc'
+      Display: always
+      Mask: 'false'
+      Mode: ro
+      Name: proc
+      Required: 'false'
+      Target: /host/proc
+      Type: Path
+      value: /proc
+    sys:
+      Default: /host/sys
+      Description: 'Container Path: /host/sys'
+      Display: always
+      Mask: 'false'
+      Mode: ro
+      Name: sys
+      Required: 'false'
+      Target: /host/sys
+      Type: Path
+      value: /sys
+  Port: {}
+  Variable:
+    Do Not Track:
+      Default: '0'
+      Description: "Set to 1 to stop anonymous tracking\r\n( https://docs.netdata.cloud/docs/anonymous-statistics/#opt-out\
+        \ )"
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Do Not Track
+      Required: 'false'
+      Target: DO_NOT_TRACK
+      Type: Variable
+      value: '0'
+    PGID:
+      Default: '281'
+      Description: "If you want to have your container names resolved by netdata it\
+        \ needs to have access to docker group. To achive that just add environment\
+        \ variable PGID=999 to netdata container, where 999 is a docker group id from\
+        \ your host. This number can be found by running:\r\n\r\ngrep docker /etc/group\
+        \ | cut -d ':' -f 3"
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: PGID
+      Required: 'false'
+      Target: PGID
+      Type: Variable
+      value: '281'
 DonateLink: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=MDUDJ3BAXMJ4C&amp;item_name=thanks+for+the+coffee%21&amp;currency_code=AUD&amp;source=url
 DonateText: Thanks for the coffee
 ExtraParams: --cap-add SYS_PTRACE --security-opt apparmor=unconfined --log-opt max-size=200m

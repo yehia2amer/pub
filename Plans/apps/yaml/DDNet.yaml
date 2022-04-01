@@ -1,76 +1,81 @@
 CategoryList:
 - GameServers
 Config:
-- '@attributes':
-    Default: ''
-    Description: Default path to the game files.
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: ServerFiles
-    Required: 'true'
-    Target: /serverdata/serverfiles/
-    Type: Path
-  value: /mnt/cache/appdata/ddnet/
-- '@attributes':
-    Default: ''
-    Description: UDP Gameport (delete this entry and create a new one if you change
-      the port in the config file with the corresponding port)
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: UDP
-    Required: 'true'
-    Target: '8303'
-    Type: Port
-  value: '8303'
-- '@attributes':
-    Default: ''
-    Description: Change only if you know what you are doing (default game config file
-      that will be executed on start of the container - located in the main directory
-      for DDNet)
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: ConfigFile
-    Required: 'true'
-    Target: GAME_CONFIG
-    Type: Variable
-  value: autoexec.cfg
-- '@attributes':
-    Default: ''
-    Description: TCP Gameport (delete this entry and create a new one if you change
-      the port in the config file with the corresponding port)
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: TCP
-    Required: 'true'
-    Target: '8303'
-    Type: Port
-  value: '8303'
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: UID
-    Required: 'true'
-    Target: UID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: GID
-    Required: 'true'
-    Target: GID
-    Type: Variable
-  value: '100'
+  Device: {}
+  Label: {}
+  Path:
+    ServerFiles:
+      Default: ''
+      Description: Default path to the game files.
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: ServerFiles
+      Required: 'true'
+      Target: /serverdata/serverfiles/
+      Type: Path
+      value: /mnt/cache/appdata/ddnet/
+  Port:
+    TCP:
+      Default: ''
+      Description: TCP Gameport (delete this entry and create a new one if you change
+        the port in the config file with the corresponding port)
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: TCP
+      Required: 'true'
+      Target: '8303'
+      Type: Port
+      value: '8303'
+    UDP:
+      Default: ''
+      Description: UDP Gameport (delete this entry and create a new one if you change
+        the port in the config file with the corresponding port)
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: UDP
+      Required: 'true'
+      Target: '8303'
+      Type: Port
+      value: '8303'
+  Variable:
+    ConfigFile:
+      Default: ''
+      Description: Change only if you know what you are doing (default game config
+        file that will be executed on start of the container - located in the main
+        directory for DDNet)
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: ConfigFile
+      Required: 'true'
+      Target: GAME_CONFIG
+      Type: Variable
+      value: autoexec.cfg
+    GID:
+      Default: ''
+      Description: ''
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: GID
+      Required: 'true'
+      Target: GID
+      Type: Variable
+      value: '100'
+    UID:
+      Default: ''
+      Description: ''
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: UID
+      Required: 'true'
+      Target: UID
+      Type: Variable
+      value: '99'
 DonateImg: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/donate.png
 DonateLink: https://www.paypal.me/chips777
 DonateText: 'If you like my work please '

@@ -2,50 +2,55 @@ CategoryList:
 - Tools-Utilities
 - Network-Management
 Config:
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'false'
-    Target: '9000'
-    Type: Port
-  value: '9996'
-- '@attributes':
-    Default: ''
-    Description: Used to connect to Edge Agent via SSH.
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: SSH Tunnel
-    Required: 'false'
-    Target: '8000'
-    Type: Port
-  value: '8000'
-- '@attributes':
-    Default: ''
-    Description: Used to get information from Docker Socket from Host.
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Docker Socket
-    Required: 'false'
-    Target: /var/run/docker.sock
-    Type: Path
-  value: /var/run/docker.sock
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Directory (data)
-    Required: 'false'
-    Target: /data
-    Type: Path
-  value: /mnt/user/appdata/portainer-ce
+  Device: {}
+  Label: {}
+  Path:
+    Directory (data):
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Directory (data)
+      Required: 'false'
+      Target: /data
+      Type: Path
+      value: /mnt/user/appdata/portainer-ce
+    Docker Socket:
+      Default: ''
+      Description: Used to get information from Docker Socket from Host.
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Docker Socket
+      Required: 'false'
+      Target: /var/run/docker.sock
+      Type: Path
+      value: /var/run/docker.sock
+  Port:
+    SSH Tunnel:
+      Default: ''
+      Description: Used to connect to Edge Agent via SSH.
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: SSH Tunnel
+      Required: 'false'
+      Target: '8000'
+      Type: Port
+      value: '8000'
+    WebUI:
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'false'
+      Target: '9000'
+      Type: Port
+      value: '9996'
+  Variable: {}
 FirstSeen: 1606914355
 Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/portainer-ce_200x200.png
 LastUpdate: 1644370833

@@ -3,127 +3,132 @@ CategoryList:
 - Downloaders
 - MediaServer-Books
 Config:
-- '@attributes':
-    Default: '7007'
-    Description: API Port for alt. Front-ends like HappyPandaX Desktop.
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: HPX Port
-    Required: 'true'
-    Target: '7007'
-    Type: Port
-  value: '7007'
-- '@attributes':
-    Default: '7008'
-    Description: WebUI
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI Port
-    Required: 'true'
-    Target: '7008'
-    Type: Port
-  value: '7008'
-- '@attributes':
-    Default: '7006'
-    Description: HPX_TORRENTPORT
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Torrent Port
-    Required: 'true'
-    Target: '7006'
-    Type: Port
-  value: '7006'
-- '@attributes':
-    Default: /mnt/user/appdata/happypandax/
-    Description: 'Container Path: /data'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: AppData Path
-    Required: 'true'
-    Target: /data
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /content'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Content Path
-    Required: 'true'
-    Target: /content
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: 'true'
-    Description: 'Container Variable: RUN_IN_BACKGROUND'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: RUN_IN_BACKGROUND
-    Required: 'true'
-    Target: RUN_IN_BACKGROUND
-    Type: Variable
-  value: 'true'
-- '@attributes':
-    Default: always
-    Description: 'Container Variable: AUTOSTART_ON_BOOT'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: AUTOSTART_ON_BOOT
-    Required: 'true'
-    Target: AUTOSTART_ON_BOOT
-    Type: Variable
-  value: always
-- '@attributes':
-    Default: '99'
-    Description: 'Container Variable: PUID'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: PUID
-    Required: 'true'
-    Target: PUID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: '100'
-    Description: 'Container Variable: PGID'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: PGID
-    Required: 'true'
-    Target: PGID
-    Type: Variable
-  value: '100'
-- '@attributes':
-    Default: '002'
-    Description: 'Container Variable: UMASK'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: UMASK
-    Required: 'true'
-    Target: UMASK
-    Type: Variable
-  value: '002'
-- '@attributes':
-    Default: ''
-    Description: Set your Time Zone here (e.g. Europe/Berlin)
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: TZ
-    Required: 'false'
-    Target: TZ
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    AppData Path:
+      Default: /mnt/user/appdata/happypandax/
+      Description: 'Container Path: /data'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: AppData Path
+      Required: 'true'
+      Target: /data
+      Type: Path
+      value: ''
+    Content Path:
+      Default: ''
+      Description: 'Container Path: /content'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Content Path
+      Required: 'true'
+      Target: /content
+      Type: Path
+      value: ''
+  Port:
+    HPX Port:
+      Default: '7007'
+      Description: API Port for alt. Front-ends like HappyPandaX Desktop.
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: HPX Port
+      Required: 'true'
+      Target: '7007'
+      Type: Port
+      value: '7007'
+    Torrent Port:
+      Default: '7006'
+      Description: HPX_TORRENTPORT
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Torrent Port
+      Required: 'true'
+      Target: '7006'
+      Type: Port
+      value: '7006'
+    WebUI Port:
+      Default: '7008'
+      Description: WebUI
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI Port
+      Required: 'true'
+      Target: '7008'
+      Type: Port
+      value: '7008'
+  Variable:
+    AUTOSTART_ON_BOOT:
+      Default: always
+      Description: 'Container Variable: AUTOSTART_ON_BOOT'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: AUTOSTART_ON_BOOT
+      Required: 'true'
+      Target: AUTOSTART_ON_BOOT
+      Type: Variable
+      value: always
+    PGID:
+      Default: '100'
+      Description: 'Container Variable: PGID'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PGID
+      Required: 'true'
+      Target: PGID
+      Type: Variable
+      value: '100'
+    PUID:
+      Default: '99'
+      Description: 'Container Variable: PUID'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PUID
+      Required: 'true'
+      Target: PUID
+      Type: Variable
+      value: '99'
+    RUN_IN_BACKGROUND:
+      Default: 'true'
+      Description: 'Container Variable: RUN_IN_BACKGROUND'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: RUN_IN_BACKGROUND
+      Required: 'true'
+      Target: RUN_IN_BACKGROUND
+      Type: Variable
+      value: 'true'
+    TZ:
+      Default: ''
+      Description: Set your Time Zone here (e.g. Europe/Berlin)
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: TZ
+      Required: 'false'
+      Target: TZ
+      Type: Variable
+      value: ''
+    UMASK:
+      Default: '002'
+      Description: 'Container Variable: UMASK'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: UMASK
+      Required: 'true'
+      Target: UMASK
+      Type: Variable
+      value: '002'
 DonateImg: https://c5.patreon.com/external/logo/become_a_patron_button.png
 DonateLink: https://www.patreon.com/twiddly
 DonateText: Support the application author on Patreon!

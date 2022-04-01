@@ -3,117 +3,122 @@ CategoryList:
 - Security
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'false'
-    Target: '443'
-    Type: Port
-  value: '8080'
-- '@attributes':
-    Default: ''
-    Description: This is the database host ip.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DATASOURCES_DEFAULT_HOST
-    Required: 'true'
-    Target: DATASOURCES_DEFAULT_HOST
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: This is the database port.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DATASOURCES_DEFAULT_PORT
-    Required: 'true'
-    Target: DATASOURCES_DEFAULT_PORT
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: This is the database name.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DATASOURCES_DEFAULT_DATABASE
-    Required: 'true'
-    Target: DATASOURCES_DEFAULT_DATABASE
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: This is the database password.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DATASOURCES_DEFAULT_PASSWORD
-    Required: 'true'
-    Target: DATASOURCES_DEFAULT_PASSWORD
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: This is the database username.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DATASOURCES_DEFAULT_USERNAME
-    Required: 'true'
-    Target: DATASOURCES_DEFAULT_USERNAME
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Storage (data) [1]
-    Required: 'false'
-    Target: /etc/passbolt/gpg
-    Type: Path
-  value: /mnt/user/appdata/passbolt/gpg
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Storage (data) [2]
-    Required: 'false'
-    Target: /etc/passbolt/jwt
-    Type: Path
-  value: /mnt/user/appdata/passbolt/jwt
-- '@attributes':
-    Default: ''
-    Description: This is the base URL used when creating new user on first launch
-      (terminal). Make sure it matches with your container (ip and port).
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: APP_FULL_BASE_URL
-    Required: 'true'
-    Target: APP_FULL_BASE_URL
-    Type: Variable
-  value: https://HOST_IP:PORT
-- '@attributes':
-    Default: ''
-    Description: This is your paid subscription key.
-    Display: advanced
-    Mask: 'false'
-    Mode: ro
-    Name: Storage (key)
-    Required: 'false'
-    Target: /etc/passbolt/subscription_key.txt
-    Type: Path
-  value: /mnt/user/appdata/passbolt-pro/key/subscription_key.txt
+  Device: {}
+  Label: {}
+  Path:
+    Storage (data) [1]:
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Storage (data) [1]
+      Required: 'false'
+      Target: /etc/passbolt/gpg
+      Type: Path
+      value: /mnt/user/appdata/passbolt/gpg
+    Storage (data) [2]:
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Storage (data) [2]
+      Required: 'false'
+      Target: /etc/passbolt/jwt
+      Type: Path
+      value: /mnt/user/appdata/passbolt/jwt
+    Storage (key):
+      Default: ''
+      Description: This is your paid subscription key.
+      Display: advanced
+      Mask: 'false'
+      Mode: ro
+      Name: Storage (key)
+      Required: 'false'
+      Target: /etc/passbolt/subscription_key.txt
+      Type: Path
+      value: /mnt/user/appdata/passbolt-pro/key/subscription_key.txt
+  Port:
+    WebUI:
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'false'
+      Target: '443'
+      Type: Port
+      value: '8080'
+  Variable:
+    APP_FULL_BASE_URL:
+      Default: ''
+      Description: This is the base URL used when creating new user on first launch
+        (terminal). Make sure it matches with your container (ip and port).
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: APP_FULL_BASE_URL
+      Required: 'true'
+      Target: APP_FULL_BASE_URL
+      Type: Variable
+      value: https://HOST_IP:PORT
+    DATASOURCES_DEFAULT_DATABASE:
+      Default: ''
+      Description: This is the database name.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DATASOURCES_DEFAULT_DATABASE
+      Required: 'true'
+      Target: DATASOURCES_DEFAULT_DATABASE
+      Type: Variable
+      value: ''
+    DATASOURCES_DEFAULT_HOST:
+      Default: ''
+      Description: This is the database host ip.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DATASOURCES_DEFAULT_HOST
+      Required: 'true'
+      Target: DATASOURCES_DEFAULT_HOST
+      Type: Variable
+      value: ''
+    DATASOURCES_DEFAULT_PASSWORD:
+      Default: ''
+      Description: This is the database password.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DATASOURCES_DEFAULT_PASSWORD
+      Required: 'true'
+      Target: DATASOURCES_DEFAULT_PASSWORD
+      Type: Variable
+      value: ''
+    DATASOURCES_DEFAULT_PORT:
+      Default: ''
+      Description: This is the database port.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DATASOURCES_DEFAULT_PORT
+      Required: 'true'
+      Target: DATASOURCES_DEFAULT_PORT
+      Type: Variable
+      value: ''
+    DATASOURCES_DEFAULT_USERNAME:
+      Default: ''
+      Description: This is the database username.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DATASOURCES_DEFAULT_USERNAME
+      Required: 'true'
+      Target: DATASOURCES_DEFAULT_USERNAME
+      Type: Variable
+      value: ''
 FirstSeen: 1643935757
 Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/passbolt.png
 LastUpdate: 1642524945

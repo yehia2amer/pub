@@ -1,166 +1,171 @@
 CategoryList:
 - GameServers
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /serverdata/serverfiles'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: ServerFiles
-    Required: 'true'
-    Target: /serverdata/serverfiles
-    Type: Path
-  value: /mnt/cache/appdata/fivem
-- '@attributes':
-    Default: ''
-    Description: 'You can edit the server.cfg after the first start (if you don''t
-      want to use the server.cfg then leave this field empty. For exampele: if you
-      plan to use txAdmin you have to add another port in the template with the host
-      and container port 40120, you then can connect to txAdmin with YOURSERVERIP:40120).'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: ConfigFile
-    Required: 'false'
-    Target: GAME_CONFIG
-    Type: Variable
-  value: server.cfg
-- '@attributes':
-    Default: ''
-    Description: Extra start variables.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Start Variables
-    Required: 'false'
-    Target: START_VARS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Your Servername
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Server Name
-    Required: 'true'
-    Target: SRV_NAME
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Your Server Key from: https://keymaster.fivem.net/'
-    Display: always
-    Mask: 'true'
-    Mode: ''
-    Name: Server Key
-    Required: 'true'
-    Target: SERVER_KEY
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 30110'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: TCP 1
-    Required: 'true'
-    Target: '30110'
-    Type: Port
-  value: '30110'
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 30120'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: TCP 2
-    Required: 'true'
-    Target: '30120'
-    Type: Port
-  value: '30120'
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 30110'
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: UDP 1
-    Required: 'true'
-    Target: '30110'
-    Type: Port
-  value: '30110'
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 30120'
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: UDP 2
-    Required: 'true'
-    Target: '30120'
-    Type: Port
-  value: '30120'
-- '@attributes':
-    Default: ''
-    Description: 'WebConsole (by default, you can connect to the FiveM console by
-      opening your browser and go to HOSTIP:9016 - eg: 192.168.1.1:9016 - or click
-      on WebUI on the Docker page within Unraid).'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: TCP - WebConsole
-    Required: 'false'
-    Target: '8080'
-    Type: Port
-  value: '9016'
-- '@attributes':
-    Default: ''
-    Description: 'Looks something like this: https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master/'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: FiveM Artifacts Server Adress
-    Required: 'true'
-    Target: SRV_ADR
-    Type: Variable
-  value: https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master/
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: UID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: UID
-    Required: 'true'
-    Target: UID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: GID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: GID
-    Required: 'true'
-    Target: GID
-    Type: Variable
-  value: '100'
-- '@attributes':
-    Default: ''
-    Description: Set this to 'true' without quotes to update your server manually
-      (otherwise leave blank)
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Manual Updates
-    Required: 'false'
-    Target: MANUAL_UPDATES
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    ServerFiles:
+      Default: ''
+      Description: 'Container Path: /serverdata/serverfiles'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: ServerFiles
+      Required: 'true'
+      Target: /serverdata/serverfiles
+      Type: Path
+      value: /mnt/cache/appdata/fivem
+  Port:
+    TCP - WebConsole:
+      Default: ''
+      Description: 'WebConsole (by default, you can connect to the FiveM console by
+        opening your browser and go to HOSTIP:9016 - eg: 192.168.1.1:9016 - or click
+        on WebUI on the Docker page within Unraid).'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: TCP - WebConsole
+      Required: 'false'
+      Target: '8080'
+      Type: Port
+      value: '9016'
+    TCP 1:
+      Default: ''
+      Description: 'Container Port: 30110'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: TCP 1
+      Required: 'true'
+      Target: '30110'
+      Type: Port
+      value: '30110'
+    TCP 2:
+      Default: ''
+      Description: 'Container Port: 30120'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: TCP 2
+      Required: 'true'
+      Target: '30120'
+      Type: Port
+      value: '30120'
+    UDP 1:
+      Default: ''
+      Description: 'Container Port: 30110'
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: UDP 1
+      Required: 'true'
+      Target: '30110'
+      Type: Port
+      value: '30110'
+    UDP 2:
+      Default: ''
+      Description: 'Container Port: 30120'
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: UDP 2
+      Required: 'true'
+      Target: '30120'
+      Type: Port
+      value: '30120'
+  Variable:
+    ConfigFile:
+      Default: ''
+      Description: 'You can edit the server.cfg after the first start (if you don''t
+        want to use the server.cfg then leave this field empty. For exampele: if you
+        plan to use txAdmin you have to add another port in the template with the
+        host and container port 40120, you then can connect to txAdmin with YOURSERVERIP:40120).'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: ConfigFile
+      Required: 'false'
+      Target: GAME_CONFIG
+      Type: Variable
+      value: server.cfg
+    FiveM Artifacts Server Adress:
+      Default: ''
+      Description: 'Looks something like this: https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master/'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: FiveM Artifacts Server Adress
+      Required: 'true'
+      Target: SRV_ADR
+      Type: Variable
+      value: https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master/
+    GID:
+      Default: ''
+      Description: 'Container Variable: GID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: GID
+      Required: 'true'
+      Target: GID
+      Type: Variable
+      value: '100'
+    Manual Updates:
+      Default: ''
+      Description: Set this to 'true' without quotes to update your server manually
+        (otherwise leave blank)
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Manual Updates
+      Required: 'false'
+      Target: MANUAL_UPDATES
+      Type: Variable
+      value: ''
+    Server Key:
+      Default: ''
+      Description: 'Your Server Key from: https://keymaster.fivem.net/'
+      Display: always
+      Mask: 'true'
+      Mode: ''
+      Name: Server Key
+      Required: 'true'
+      Target: SERVER_KEY
+      Type: Variable
+      value: ''
+    Server Name:
+      Default: ''
+      Description: Your Servername
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Server Name
+      Required: 'true'
+      Target: SRV_NAME
+      Type: Variable
+      value: ''
+    Start Variables:
+      Default: ''
+      Description: Extra start variables.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Start Variables
+      Required: 'false'
+      Target: START_VARS
+      Type: Variable
+      value: ''
+    UID:
+      Default: ''
+      Description: 'Container Variable: UID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: UID
+      Required: 'true'
+      Target: UID
+      Type: Variable
+      value: '99'
 DonateLink: https://www.paypal.me/chips777
 DonateText: 'If you like my work please '
 ExtraParams: --restart=unless-stopped

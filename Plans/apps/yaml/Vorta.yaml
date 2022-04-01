@@ -2,83 +2,88 @@ CategoryList:
 - Backup
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'false'
-    Target: '5800'
-    Type: Port
-  value: '5800'
-- '@attributes':
-    Default: ''
-    Description: Specify the location for backups (destination).
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Backups (to)
-    Required: 'true'
-    Target: /destination
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Specify the location for backups (source).
-    Display: always
-    Mask: 'false'
-    Mode: ro
-    Name: Backups (from)
-    Required: 'true'
-    Target: /data
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: This is the location for the internal data.
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Storage (config)
-    Required: 'false'
-    Target: /config
-    Type: Path
-  value: /mnt/user/appdata/vorta
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Timezone
-    Required: 'false'
-    Target: TZ
-    Type: Variable
-  value: Europe/Madrid
-- '@attributes':
-    Default: ''
-    Description: 'Default: 1028'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: USER_ID
-    Required: 'false'
-    Target: USER_ID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: ''
-    Description: 'Default: 100'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: GROUP_ID
-    Required: 'false'
-    Target: GROUP_ID
-    Type: Variable
-  value: '100'
+  Device: {}
+  Label: {}
+  Path:
+    Backups (from):
+      Default: ''
+      Description: Specify the location for backups (source).
+      Display: always
+      Mask: 'false'
+      Mode: ro
+      Name: Backups (from)
+      Required: 'true'
+      Target: /data
+      Type: Path
+      value: ''
+    Backups (to):
+      Default: ''
+      Description: Specify the location for backups (destination).
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Backups (to)
+      Required: 'true'
+      Target: /destination
+      Type: Path
+      value: ''
+    Storage (config):
+      Default: ''
+      Description: This is the location for the internal data.
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Storage (config)
+      Required: 'false'
+      Target: /config
+      Type: Path
+      value: /mnt/user/appdata/vorta
+  Port:
+    WebUI:
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'false'
+      Target: '5800'
+      Type: Port
+      value: '5800'
+  Variable:
+    GROUP_ID:
+      Default: ''
+      Description: 'Default: 100'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: GROUP_ID
+      Required: 'false'
+      Target: GROUP_ID
+      Type: Variable
+      value: '100'
+    Timezone:
+      Default: ''
+      Description: ''
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Timezone
+      Required: 'false'
+      Target: TZ
+      Type: Variable
+      value: Europe/Madrid
+    USER_ID:
+      Default: ''
+      Description: 'Default: 1028'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: USER_ID
+      Required: 'false'
+      Target: USER_ID
+      Type: Variable
+      value: '99'
 DonateLink: https://github.com/SmartPhoneLover/unraid-docker-templates/blob/main/DONATION.md
 DonateText: If you like my work, please consider making a little donation.
 FirstSeen: 1646046195

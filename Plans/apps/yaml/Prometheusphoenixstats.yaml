@@ -3,50 +3,55 @@ CategoryList:
 - Productivity
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: '9192'
-    Description: 'Container Port: 80'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Apache
-    Required: 'false'
-    Target: '80'
-    Type: Port
-  value: '9192'
-- '@attributes':
-    Default: Unraid
-    Description: Server name for miner (Can be set to anything)
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Server Name
-    Required: 'false'
-    Target: S_NAME
-    Type: Variable
-  value: Unraid
-- '@attributes':
-    Default: unraid.local
-    Description: Host for miner (usually an IP)
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Miner Host
-    Required: 'false'
-    Target: S_HOST
-    Type: Variable
-  value: 192.168.2.254
-- '@attributes':
-    Default: '5450'
-    Description: Port shared by miner over http (usually 5450)
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Miner Port
-    Required: 'false'
-    Target: S_PORT
-    Type: Variable
-  value: '5450'
+  Device: {}
+  Label: {}
+  Path: {}
+  Port:
+    Apache:
+      Default: '9192'
+      Description: 'Container Port: 80'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Apache
+      Required: 'false'
+      Target: '80'
+      Type: Port
+      value: '9192'
+  Variable:
+    Miner Host:
+      Default: unraid.local
+      Description: Host for miner (usually an IP)
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Miner Host
+      Required: 'false'
+      Target: S_HOST
+      Type: Variable
+      value: 192.168.2.254
+    Miner Port:
+      Default: '5450'
+      Description: Port shared by miner over http (usually 5450)
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Miner Port
+      Required: 'false'
+      Target: S_PORT
+      Type: Variable
+      value: '5450'
+    Server Name:
+      Default: Unraid
+      Description: Server name for miner (Can be set to anything)
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Server Name
+      Required: 'false'
+      Target: S_NAME
+      Type: Variable
+      value: Unraid
 ExtraParams: ' '
 FirstSeen: 1634969005
 Icon: https://raw.githubusercontent.com/corgan2222/Prometheus-phoenixstats-Exporter/master/phoenixstats-logo.png

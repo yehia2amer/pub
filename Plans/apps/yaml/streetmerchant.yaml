@@ -1,465 +1,476 @@
 CategoryList:
 - Cloud
 Config:
-- '@attributes':
-    Default: '7279'
-    Description: This is Web UI port you can access via a web browser.
-    Display: always-hide
-    Mask: 'null'
-    Mode: tcp
-    Name: Web Interface Port
-    Required: 'true'
-    Target: '8081'
-    Type: Port
-  value: '7279'
-- '@attributes':
-    Default: ''
-    Description: http or socks5
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: PROXY_PROTOCOL
-    Required: 'false'
-    Target: PROXY_PROTOCOL
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: The IP address or domain name of your proxy
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: PROXY_ADDRESS
-    Required: 'false'
-    Target: PROXY_ADDRESS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '80'
-    Description: TCP Port number on which the proxy is listening for connections
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: PROXY_PORT
-    Required: 'false'
-    Target: PROXY_PORT
-    Type: Variable
-  value: '80'
-- '@attributes':
-    Default: ''
-    Description: Destination Email. Defaults to username if not set. Can be comma
-      separated
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: EMAIL_TO
-    Required: 'false'
-    Target: EMAIL_TO
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Email address
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: EMAIL_USERNAME
-    Required: 'false'
-    Target: EMAIL_USERNAME
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: "Email password. (See below for Gmail MFA users)\r\n\r\nIf you use\
-      \ Gmail and have multi-factor authentication (MFA), you will need to create\
-      \ an app password and use this instead of your Gmail password.\r\n\r\nhttps://myaccount.google.com/apppasswords"
-    Display: always-hide
-    Mask: 'true'
-    Mode: ''
-    Name: EMAIL_PASSWORD
-    Required: 'false'
-    Target: EMAIL_PASSWORD
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: TWITTER_ACCESS_TOKEN_KEY'
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: TWITTER_ACCESS_TOKEN_KEY
-    Required: 'false'
-    Target: TWITTER_ACCESS_TOKEN_KEY
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Twitter Token Secret
-    Display: always-hide
-    Mask: 'true'
-    Mode: ''
-    Name: TWITTER_ACCESS_TOKEN_SECRET
-    Required: 'false'
-    Target: TWITTER_ACCESS_TOKEN_SECRET
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Twitter Consumer Key
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: TWITTER_CONSUMER_KEY
-    Required: 'false'
-    Target: TWITTER_CONSUMER_KEY
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Twitter Consumer Secret
-    Display: always
-    Mask: 'true'
-    Mode: ''
-    Name: TWITTER_CONSUMER_SECRET
-    Required: 'false'
-    Target: TWITTER_CONSUMER_SECRET
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'List of hashtags to append to the tweet message, e.g.: #nvidia #nvidiastock'
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: TWITTER_TWEET_TAGS
-    Required: 'false'
-    Target: TWITTER_TWEET_TAGS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Access token
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: TELEGRAM_ACCESS_TOKEN
-    Required: 'false'
-    Target: TELEGRAM_ACCESS_TOKEN
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Chat ID. Can be comma separated, e.g.: 123456789,987654321'
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: TELEGRAM_CHAT_ID
-    Required: 'false'
-    Target: TELEGRAM_CHAT_ID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: API key
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: PUSHBULLET
-    Required: 'false'
-    Target: PUSHBULLET
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '0'
-    Description: Time to wait between requests to the same link if it has that card
-      in stock. In seconds
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: IN_STOCK_WAIT_TIME
-    Required: 'true'
-    Target: IN_STOCK_WAIT_TIME
-    Type: Variable
-  value: '0'
-- '@attributes':
-    Default: 'true'
-    Description: Capture screenshot of page if the product is in stock.
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: SCREENSHOT
-    Required: 'true'
-    Target: SCREENSHOT
-    Type: Variable
-  value: 'true'
-- '@attributes':
-    Default: ''
-    Description: "Supported carriers for SMS. E.g.: att or att,verizon,google, email\
-      \ configuration required. If multiple phone numbers are listed, enter a carrier\
-      \ for each phone number.\r\n\r\nhttps://jef.codes/streetmerchant/reference/notification/#supported-carriers"
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: PHONE_CARRIER
-    Required: 'false'
-    Target: PHONE_CARRIER
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: '10 digit phone number(s). E.g.: 1234567890 or 1234567890,0987654321,11112223333,
-      email configuration required.  '
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: PHONE_NUMBER
-    Required: 'false'
-    Target: PHONE_NUMBER
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: "Filter to show specified brands. Comma separated, e.g.: evga,zotac\r\
-      \n\r\nhttps://jef.codes/streetmerchant/reference/filter/"
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: SHOW_ONLY_BRANDS
-    Required: 'false'
-    Target: SHOW_ONLY_BRANDS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: "Filter to show specified series. Comma separated, e.g.: 3080,ryzen5900\r\
-      \n\r\nhttps://jef.codes/streetmerchant/reference/filter/"
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: SHOW_ONLY_SERIES
-    Required: 'false'
-    Target: SHOW_ONLY_SERIES
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: "Filter to show specified models\tBoth supported formats are comma\
-      \ separated"
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: SHOW_ONLY_MODELS
-    Required: 'false'
-    Target: SHOW_ONLY_MODELS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: "Supported stores you want to be scraped. Default: amazon,bestbuy.\
-      \ Comma separated, can include PAGE_SLEEP_MIN and PAGE_SLEEP_MAX values. E.g.:\
-      \ amazon:10000:30000,bestbuy,newegg:50000:80000.\r\n\r\nhttps://jef.codes/streetmerchant/reference/filter/#supported-stores"
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: STORES
-    Required: 'false'
-    Target: STORES
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 'false'
-    Description: "Future Feature. Not available yet.\r\n\r\nEnable auto add to cart\
-      \ on support stores, default: true"
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: AUTO_ADD_TO_CART
-    Required: 'false'
-    Target: AUTO_ADD_TO_CART
-    Type: Variable
-  value: 'false'
-- '@attributes':
-    Default: 'true'
-    Description: Skip Chromium Sandbox. Set to true for containerized environments,
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: BROWSER_TRUSTED
-    Required: 'true'
-    Target: BROWSER_TRUSTED
-    Type: Variable
-  value: 'true'
-- '@attributes':
-    Default: 'true'
-    Description: 'Puppeteer to run headless or not. Debugging related, default: true'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: HEADLESS
-    Required: 'true'
-    Target: HEADLESS
-    Type: Variable
-  value: 'true'
-- '@attributes':
-    Default: 'false'
-    Description: 'Puppeteer to run incognito or not. Debugging related, default: false'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: INCOGNITO
-    Required: 'true'
-    Target: INCOGNITO
-    Type: Variable
-  value: 'false'
-- '@attributes':
-    Default: 'true'
-    Description: 'Blocks images/fonts to reduce traffic. Disables ad blocker, default:
-      false'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: LOW_BANDWIDTH
-    Required: 'true'
-    Target: LOW_BANDWIDTH
-    Type: Variable
-  value: 'true'
-- '@attributes':
-    Default: '10000'
-    Description: Minimum backoff time between retrying requests for the same store
-      when a forbidden response is received (ms)
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: PAGE_BACKOFF_MIN
-    Required: 'true'
-    Target: PAGE_BACKOFF_MIN
-    Type: Variable
-  value: '10000'
-- '@attributes':
-    Default: '3600000'
-    Description: Maximum backoff time between retrying requests for the same store
-      when a forbidden response is received. (ms)
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: PAGE_BACKOFF_MAX
-    Required: 'true'
-    Target: PAGE_BACKOFF_MAX
-    Type: Variable
-  value: '3600000'
-- '@attributes':
-    Default: '5000'
-    Description: Minimum sleep time between queries of the same product page. In milliseconds,
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: PAGE_SLEEP_MIN
-    Required: 'true'
-    Target: PAGE_SLEEP_MIN
-    Type: Variable
-  value: '5000'
-- '@attributes':
-    Default: '10000'
-    Description: Maximum sleep time between queries of the same product page. In milliseconds,
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: PAGE_SLEEP_MAX
-    Required: 'true'
-    Target: PAGE_SLEEP_MAX
-    Type: Variable
-  value: '10000'
-- '@attributes':
-    Default: '30000'
-    Description: 'Navigation Timeout in milliseconds. 0 for infinite, default: 30000'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: PAGE_TIMEOUT
-    Required: 'true'
-    Target: PAGE_TIMEOUT
-    Type: Variable
-  value: '30000'
-- '@attributes':
-    Default: '7239'
-    Description: "This must be synchronized with the Web Interface Port values.\r\n\
-      \r\nThis is the internal port the container should serve the web interface on."
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: WEB_PORT
-    Required: 'true'
-    Target: WEB_PORT
-    Type: Variable
-  value: '8081'
-- '@attributes':
-    Default: usa
-    Description: "Supported country you want to be scraped\tOnly used with nvidia-api,\
-      \ default: usa\r\n\r\nhttps://jef.codes/streetmerchant/reference/filter/#supported-countries"
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: COUNTRY
-    Required: 'false'
-    Target: COUNTRY
-    Type: Variable
-  value: usa
-- '@attributes':
-    Default: /mnt/user/appdata/streetmerchant/logs
-    Description: 'This is where log files will be written if an error occurs. '
-    Display: advanced-hide
-    Mask: 'null'
-    Mode: rw
-    Name: Log Path
-    Required: 'true'
-    Target: /home/appuser/.npm/_logs
-    Type: Path
-  value: /mnt/user/appdata/streetmerchant/logs
-- '@attributes':
-    Default: '25'
-    Description: TCP Port number on which the smtp server is listening for connections.
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: SMTP_PORT
-    Required: 'false'
-    Target: SMTP_PORT
-    Type: Variable
-  value: '25'
-- '@attributes':
-    Default: ''
-    Description: IP Address or FQDN of SMTP server
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: SMTP_ADDRESS
-    Required: 'false'
-    Target: SMTP_ADDRESS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: info
-    Description: "The console output verbosity.  \r\n\r\nNote: This is not logged\
-      \ to the system logger."
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: Console Verbosity
-    Required: 'true'
-    Target: LOG_LEVEL
-    Type: Variable
-  value: info
-- '@attributes':
-    Default: ''
-    Description: Set an optional API key for faster Bestbuy checking via JSON
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: BESTBUY_API_KEY
-    Required: 'false'
-    Target: BESTBUY_API_KEY
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Log Path:
+      Default: /mnt/user/appdata/streetmerchant/logs
+      Description: 'This is where log files will be written if an error occurs. '
+      Display: advanced-hide
+      Mask: 'null'
+      Mode: rw
+      Name: Log Path
+      Required: 'true'
+      Target: /home/appuser/.npm/_logs
+      Type: Path
+      value: /mnt/user/appdata/streetmerchant/logs
+  Port:
+    Web Interface Port:
+      Default: '7279'
+      Description: This is Web UI port you can access via a web browser.
+      Display: always-hide
+      Mask: 'null'
+      Mode: tcp
+      Name: Web Interface Port
+      Required: 'true'
+      Target: '8081'
+      Type: Port
+      value: '7279'
+  Variable:
+    AUTO_ADD_TO_CART:
+      Default: 'false'
+      Description: "Future Feature. Not available yet.\r\n\r\nEnable auto add to cart\
+        \ on support stores, default: true"
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: AUTO_ADD_TO_CART
+      Required: 'false'
+      Target: AUTO_ADD_TO_CART
+      Type: Variable
+      value: 'false'
+    BESTBUY_API_KEY:
+      Default: ''
+      Description: Set an optional API key for faster Bestbuy checking via JSON
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: BESTBUY_API_KEY
+      Required: 'false'
+      Target: BESTBUY_API_KEY
+      Type: Variable
+      value: ''
+    BROWSER_TRUSTED:
+      Default: 'true'
+      Description: Skip Chromium Sandbox. Set to true for containerized environments,
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: BROWSER_TRUSTED
+      Required: 'true'
+      Target: BROWSER_TRUSTED
+      Type: Variable
+      value: 'true'
+    COUNTRY:
+      Default: usa
+      Description: "Supported country you want to be scraped\tOnly used with nvidia-api,\
+        \ default: usa\r\n\r\nhttps://jef.codes/streetmerchant/reference/filter/#supported-countries"
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: COUNTRY
+      Required: 'false'
+      Target: COUNTRY
+      Type: Variable
+      value: usa
+    Console Verbosity:
+      Default: info
+      Description: "The console output verbosity.  \r\n\r\nNote: This is not logged\
+        \ to the system logger."
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: Console Verbosity
+      Required: 'true'
+      Target: LOG_LEVEL
+      Type: Variable
+      value: info
+    EMAIL_PASSWORD:
+      Default: ''
+      Description: "Email password. (See below for Gmail MFA users)\r\n\r\nIf you\
+        \ use Gmail and have multi-factor authentication (MFA), you will need to create\
+        \ an app password and use this instead of your Gmail password.\r\n\r\nhttps://myaccount.google.com/apppasswords"
+      Display: always-hide
+      Mask: 'true'
+      Mode: ''
+      Name: EMAIL_PASSWORD
+      Required: 'false'
+      Target: EMAIL_PASSWORD
+      Type: Variable
+      value: ''
+    EMAIL_TO:
+      Default: ''
+      Description: Destination Email. Defaults to username if not set. Can be comma
+        separated
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: EMAIL_TO
+      Required: 'false'
+      Target: EMAIL_TO
+      Type: Variable
+      value: ''
+    EMAIL_USERNAME:
+      Default: ''
+      Description: Email address
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: EMAIL_USERNAME
+      Required: 'false'
+      Target: EMAIL_USERNAME
+      Type: Variable
+      value: ''
+    HEADLESS:
+      Default: 'true'
+      Description: 'Puppeteer to run headless or not. Debugging related, default:
+        true'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: HEADLESS
+      Required: 'true'
+      Target: HEADLESS
+      Type: Variable
+      value: 'true'
+    INCOGNITO:
+      Default: 'false'
+      Description: 'Puppeteer to run incognito or not. Debugging related, default:
+        false'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: INCOGNITO
+      Required: 'true'
+      Target: INCOGNITO
+      Type: Variable
+      value: 'false'
+    IN_STOCK_WAIT_TIME:
+      Default: '0'
+      Description: Time to wait between requests to the same link if it has that card
+        in stock. In seconds
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: IN_STOCK_WAIT_TIME
+      Required: 'true'
+      Target: IN_STOCK_WAIT_TIME
+      Type: Variable
+      value: '0'
+    LOW_BANDWIDTH:
+      Default: 'true'
+      Description: 'Blocks images/fonts to reduce traffic. Disables ad blocker, default:
+        false'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: LOW_BANDWIDTH
+      Required: 'true'
+      Target: LOW_BANDWIDTH
+      Type: Variable
+      value: 'true'
+    PAGE_BACKOFF_MAX:
+      Default: '3600000'
+      Description: Maximum backoff time between retrying requests for the same store
+        when a forbidden response is received. (ms)
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: PAGE_BACKOFF_MAX
+      Required: 'true'
+      Target: PAGE_BACKOFF_MAX
+      Type: Variable
+      value: '3600000'
+    PAGE_BACKOFF_MIN:
+      Default: '10000'
+      Description: Minimum backoff time between retrying requests for the same store
+        when a forbidden response is received (ms)
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: PAGE_BACKOFF_MIN
+      Required: 'true'
+      Target: PAGE_BACKOFF_MIN
+      Type: Variable
+      value: '10000'
+    PAGE_SLEEP_MAX:
+      Default: '10000'
+      Description: Maximum sleep time between queries of the same product page. In
+        milliseconds,
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: PAGE_SLEEP_MAX
+      Required: 'true'
+      Target: PAGE_SLEEP_MAX
+      Type: Variable
+      value: '10000'
+    PAGE_SLEEP_MIN:
+      Default: '5000'
+      Description: Minimum sleep time between queries of the same product page. In
+        milliseconds,
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: PAGE_SLEEP_MIN
+      Required: 'true'
+      Target: PAGE_SLEEP_MIN
+      Type: Variable
+      value: '5000'
+    PAGE_TIMEOUT:
+      Default: '30000'
+      Description: 'Navigation Timeout in milliseconds. 0 for infinite, default: 30000'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: PAGE_TIMEOUT
+      Required: 'true'
+      Target: PAGE_TIMEOUT
+      Type: Variable
+      value: '30000'
+    PHONE_CARRIER:
+      Default: ''
+      Description: "Supported carriers for SMS. E.g.: att or att,verizon,google, email\
+        \ configuration required. If multiple phone numbers are listed, enter a carrier\
+        \ for each phone number.\r\n\r\nhttps://jef.codes/streetmerchant/reference/notification/#supported-carriers"
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: PHONE_CARRIER
+      Required: 'false'
+      Target: PHONE_CARRIER
+      Type: Variable
+      value: ''
+    PHONE_NUMBER:
+      Default: ''
+      Description: '10 digit phone number(s). E.g.: 1234567890 or 1234567890,0987654321,11112223333,
+        email configuration required.  '
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: PHONE_NUMBER
+      Required: 'false'
+      Target: PHONE_NUMBER
+      Type: Variable
+      value: ''
+    PROXY_ADDRESS:
+      Default: ''
+      Description: The IP address or domain name of your proxy
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: PROXY_ADDRESS
+      Required: 'false'
+      Target: PROXY_ADDRESS
+      Type: Variable
+      value: ''
+    PROXY_PORT:
+      Default: '80'
+      Description: TCP Port number on which the proxy is listening for connections
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: PROXY_PORT
+      Required: 'false'
+      Target: PROXY_PORT
+      Type: Variable
+      value: '80'
+    PROXY_PROTOCOL:
+      Default: ''
+      Description: http or socks5
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: PROXY_PROTOCOL
+      Required: 'false'
+      Target: PROXY_PROTOCOL
+      Type: Variable
+      value: ''
+    PUSHBULLET:
+      Default: ''
+      Description: API key
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: PUSHBULLET
+      Required: 'false'
+      Target: PUSHBULLET
+      Type: Variable
+      value: ''
+    SCREENSHOT:
+      Default: 'true'
+      Description: Capture screenshot of page if the product is in stock.
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: SCREENSHOT
+      Required: 'true'
+      Target: SCREENSHOT
+      Type: Variable
+      value: 'true'
+    SHOW_ONLY_BRANDS:
+      Default: ''
+      Description: "Filter to show specified brands. Comma separated, e.g.: evga,zotac\r\
+        \n\r\nhttps://jef.codes/streetmerchant/reference/filter/"
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: SHOW_ONLY_BRANDS
+      Required: 'false'
+      Target: SHOW_ONLY_BRANDS
+      Type: Variable
+      value: ''
+    SHOW_ONLY_MODELS:
+      Default: ''
+      Description: "Filter to show specified models\tBoth supported formats are comma\
+        \ separated"
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: SHOW_ONLY_MODELS
+      Required: 'false'
+      Target: SHOW_ONLY_MODELS
+      Type: Variable
+      value: ''
+    SHOW_ONLY_SERIES:
+      Default: ''
+      Description: "Filter to show specified series. Comma separated, e.g.: 3080,ryzen5900\r\
+        \n\r\nhttps://jef.codes/streetmerchant/reference/filter/"
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: SHOW_ONLY_SERIES
+      Required: 'false'
+      Target: SHOW_ONLY_SERIES
+      Type: Variable
+      value: ''
+    SMTP_ADDRESS:
+      Default: ''
+      Description: IP Address or FQDN of SMTP server
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: SMTP_ADDRESS
+      Required: 'false'
+      Target: SMTP_ADDRESS
+      Type: Variable
+      value: ''
+    SMTP_PORT:
+      Default: '25'
+      Description: TCP Port number on which the smtp server is listening for connections.
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: SMTP_PORT
+      Required: 'false'
+      Target: SMTP_PORT
+      Type: Variable
+      value: '25'
+    STORES:
+      Default: ''
+      Description: "Supported stores you want to be scraped. Default: amazon,bestbuy.\
+        \ Comma separated, can include PAGE_SLEEP_MIN and PAGE_SLEEP_MAX values. E.g.:\
+        \ amazon:10000:30000,bestbuy,newegg:50000:80000.\r\n\r\nhttps://jef.codes/streetmerchant/reference/filter/#supported-stores"
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: STORES
+      Required: 'false'
+      Target: STORES
+      Type: Variable
+      value: ''
+    TELEGRAM_ACCESS_TOKEN:
+      Default: ''
+      Description: Access token
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: TELEGRAM_ACCESS_TOKEN
+      Required: 'false'
+      Target: TELEGRAM_ACCESS_TOKEN
+      Type: Variable
+      value: ''
+    TELEGRAM_CHAT_ID:
+      Default: ''
+      Description: 'Chat ID. Can be comma separated, e.g.: 123456789,987654321'
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: TELEGRAM_CHAT_ID
+      Required: 'false'
+      Target: TELEGRAM_CHAT_ID
+      Type: Variable
+      value: ''
+    TWITTER_ACCESS_TOKEN_KEY:
+      Default: ''
+      Description: 'Container Variable: TWITTER_ACCESS_TOKEN_KEY'
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: TWITTER_ACCESS_TOKEN_KEY
+      Required: 'false'
+      Target: TWITTER_ACCESS_TOKEN_KEY
+      Type: Variable
+      value: ''
+    TWITTER_ACCESS_TOKEN_SECRET:
+      Default: ''
+      Description: Twitter Token Secret
+      Display: always-hide
+      Mask: 'true'
+      Mode: ''
+      Name: TWITTER_ACCESS_TOKEN_SECRET
+      Required: 'false'
+      Target: TWITTER_ACCESS_TOKEN_SECRET
+      Type: Variable
+      value: ''
+    TWITTER_CONSUMER_KEY:
+      Default: ''
+      Description: Twitter Consumer Key
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: TWITTER_CONSUMER_KEY
+      Required: 'false'
+      Target: TWITTER_CONSUMER_KEY
+      Type: Variable
+      value: ''
+    TWITTER_CONSUMER_SECRET:
+      Default: ''
+      Description: Twitter Consumer Secret
+      Display: always
+      Mask: 'true'
+      Mode: ''
+      Name: TWITTER_CONSUMER_SECRET
+      Required: 'false'
+      Target: TWITTER_CONSUMER_SECRET
+      Type: Variable
+      value: ''
+    TWITTER_TWEET_TAGS:
+      Default: ''
+      Description: 'List of hashtags to append to the tweet message, e.g.: #nvidia
+        #nvidiastock'
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: TWITTER_TWEET_TAGS
+      Required: 'false'
+      Target: TWITTER_TWEET_TAGS
+      Type: Variable
+      value: ''
+    WEB_PORT:
+      Default: '7239'
+      Description: "This must be synchronized with the Web Interface Port values.\r\
+        \n\r\nThis is the internal port the container should serve the web interface\
+        \ on."
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: WEB_PORT
+      Required: 'true'
+      Target: WEB_PORT
+      Type: Variable
+      value: '8081'
 DonateLink: https://paypal.me/MitchRiley?locale.x=en_US
 FirstSeen: 1608505703
 Icon: https://jef.codes/streetmerchant/assets/images/streetmerchant-logo.png

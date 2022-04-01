@@ -3,97 +3,91 @@ CategoryList:
 - Crypto
 - Other
 Config:
-- '@attributes':
-    Default: '28967'
-    Description: QUIC Port
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: TCP Port
-    Required: 'true'
-    Target: '28967'
-    Type: Port
-  value: '28967'
-- '@attributes':
-    Default: '28967'
-    Description: Default Storj V3 node port.
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: TCP Port
-    Required: 'true'
-    Target: '28967'
-    Type: Port
-  value: '28967'
-- '@attributes':
-    Default: ''
-    Description: Your Payout address here.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Wallet Address
-    Required: 'true'
-    Target: WALLET
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Email address used to sign Storj V3 node. (recommended)
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Email address
-    Required: 'true'
-    Target: EMAIL
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: domain.ddns.net:28967
-    Description: Your ISP IP address:28967 (static IP) or dynamic DNS address here.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Internet Address
-    Required: 'true'
-    Target: ADDRESS
-    Type: Variable
-  value: my.ddns.com:28969
-- '@attributes':
-    Default: 2TB
-    Description: A minimum of 500GB with no maximum of available space per node.  Preferred
-      minimum of 8TB and maximum of 24TB of available space per node.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Allocated Storage
-    Required: 'true'
-    Target: STORAGE
-    Type: Variable
-  value: 8TB
-- '@attributes':
-    Default: '14002'
-    Description: The port to access web dashboard
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Dashboard Port
-    Required: 'true'
-    Target: '14002'
-    Type: Port
-  value: '14002'
-- '@attributes':
-    Default: ''
-    Description: (OPTIONAL) Amount of  bandwidth used, per month, to Storj network.  According
-      to Storj documentation, minimum is 2TB, recommended is 16+ TB, preferred is
-      unlimited (e.g. 100000TB).
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Bandwidth
-    Required: 'false'
-    Target: BANDWIDTH
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path: {}
+  Port:
+    Dashboard Port:
+      Default: '14002'
+      Description: The port to access web dashboard
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Dashboard Port
+      Required: 'true'
+      Target: '14002'
+      Type: Port
+      value: '14002'
+    TCP Port:
+      Default: '28967'
+      Description: Default Storj V3 node port.
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: TCP Port
+      Required: 'true'
+      Target: '28967'
+      Type: Port
+      value: '28967'
+  Variable:
+    Allocated Storage:
+      Default: 2TB
+      Description: A minimum of 500GB with no maximum of available space per node.  Preferred
+        minimum of 8TB and maximum of 24TB of available space per node.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Allocated Storage
+      Required: 'true'
+      Target: STORAGE
+      Type: Variable
+      value: 8TB
+    Bandwidth:
+      Default: ''
+      Description: (OPTIONAL) Amount of  bandwidth used, per month, to Storj network.  According
+        to Storj documentation, minimum is 2TB, recommended is 16+ TB, preferred is
+        unlimited (e.g. 100000TB).
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Bandwidth
+      Required: 'false'
+      Target: BANDWIDTH
+      Type: Variable
+      value: ''
+    Email address:
+      Default: ''
+      Description: Email address used to sign Storj V3 node. (recommended)
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Email address
+      Required: 'true'
+      Target: EMAIL
+      Type: Variable
+      value: ''
+    Internet Address:
+      Default: domain.ddns.net:28967
+      Description: Your ISP IP address:28967 (static IP) or dynamic DNS address here.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Internet Address
+      Required: 'true'
+      Target: ADDRESS
+      Type: Variable
+      value: my.ddns.com:28969
+    Wallet Address:
+      Default: ''
+      Description: Your Payout address here.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Wallet Address
+      Required: 'true'
+      Target: WALLET
+      Type: Variable
+      value: ''
 ExtraParams: -e SETUP=true --mount type=bind,source="/mnt/user/[your identity directory]/identity/storagenode/",destination=/app/identity  --mount
   type=bind,source="/mnt/user/[your storage directory]/",destination=/app/config
 FirstSeen: 1611428928

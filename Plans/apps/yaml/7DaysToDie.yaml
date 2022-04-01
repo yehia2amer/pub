@@ -1,225 +1,230 @@
 CategoryList:
 - GameServers
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /serverdata/steamcmd'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: SteamCMD
-    Required: 'true'
-    Target: /serverdata/steamcmd
-    Type: Path
-  value: /mnt/user/appdata/steamcmd
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /serverdata/serverfiles'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: ServerFiles
-    Required: 'true'
-    Target: /serverdata/serverfiles
-    Type: Path
-  value: /mnt/cache/appdata/7dtd
-- '@attributes':
-    Default: ''
-    Description: "The GAME_ID that the container download at startup.\r\n(https://developer.valvesoftware.com/wiki/Dedicated_Servers_List)\r\
-      \nIf you want to use a static version of the game and not always the latest\
-      \ one then enter this: '294420 -beta stable_alpha19.4' or '294420 -beta latest_experimental'\
-      \ (without quotes) if you want to stay for example on alpha19.4."
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: GAME_ID
-    Required: 'true'
-    Target: GAME_ID
-    Type: Variable
-  value: '294420'
-- '@attributes':
-    Default: ''
-    Description: Please change if your serverconfigfile has another name.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Serverconfig
-    Required: 'true'
-    Target: SERVERCONFIG
-    Type: Variable
-  value: serverconfig.xml
-- '@attributes':
-    Default: ''
-    Description: Enter your start up commands for the server.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: GAME_PARAMS
-    Required: 'false'
-    Target: GAME_PARAMS
-    Type: Variable
-  value: -logfile 7DaysToDie_Data/output_log.txt $@
-- '@attributes':
-    Default: ''
-    Description: 'Your Steam username goes here if you want to install a game that
-      needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
-      Steam Guard).'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: Steam-Username
-    Required: 'false'
-    Target: USERNAME
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Set the Variable to 'true' if you want to validate the installation
-      otherwise leave it blank.
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: Validate Installation
-    Required: 'false'
-    Target: VALIDATE
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Your Steam password goes here if you want to install a game that
-      needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
-      Steam Guard).'
-    Display: advanced-hide
-    Mask: 'true'
-    Mode: ''
-    Name: Steam-Password
-    Required: 'false'
-    Target: PASSWRD
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 26900'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: TCP - Game details
-    Required: 'true'
-    Target: '26900'
-    Type: Port
-  value: '26900'
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 26900'
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: UDP1 - Steam Master server
-    Required: 'true'
-    Target: '26900'
-    Type: Port
-  value: '26900'
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 26901'
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: UDP2 - Steam Communications
-    Required: 'true'
-    Target: '26901'
-    Type: Port
-  value: '26901'
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 26902'
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: UDP3 - RakNet
-    Required: 'true'
-    Target: '26902'
-    Type: Port
-  value: '26902'
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: '
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: UDP4 - UNET
-    Required: 'true'
-    Target: '26903'
-    Type: Port
-  value: '26903'
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 8080'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: TCP2 - Web base control
-    Required: 'false'
-    Target: '8080'
-    Type: Port
-  value: '8080'
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 8082'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: TCP3 - Web Panel
-    Required: 'false'
-    Target: '8082'
-    Type: Port
-  value: '8082'
-- '@attributes':
-    Default: ''
-    Description: Should be in the range 27015 - 27030, don't forget to set also a
-      different Container Port if you change this value.
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: UDP5 - Registering at server list
-    Required: 'true'
-    Target: '27015'
-    Type: Port
-  value: '27015'
-- '@attributes':
-    Default: ''
-    Description: If you want to enable BepInEx set this variable to 'true' (without
-      quotes).
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: BepInEx
-    Required: 'false'
-    Target: ENABLE_BEPINEX
-    Type: Variable
-  value: 'false'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: UID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: UID
-    Required: 'true'
-    Target: UID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: GID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: GID
-    Required: 'true'
-    Target: GID
-    Type: Variable
-  value: '100'
+  Device: {}
+  Label: {}
+  Path:
+    ServerFiles:
+      Default: ''
+      Description: 'Container Path: /serverdata/serverfiles'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: ServerFiles
+      Required: 'true'
+      Target: /serverdata/serverfiles
+      Type: Path
+      value: /mnt/cache/appdata/7dtd
+    SteamCMD:
+      Default: ''
+      Description: 'Container Path: /serverdata/steamcmd'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: SteamCMD
+      Required: 'true'
+      Target: /serverdata/steamcmd
+      Type: Path
+      value: /mnt/user/appdata/steamcmd
+  Port:
+    TCP - Game details:
+      Default: ''
+      Description: 'Container Port: 26900'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: TCP - Game details
+      Required: 'true'
+      Target: '26900'
+      Type: Port
+      value: '26900'
+    TCP2 - Web base control:
+      Default: ''
+      Description: 'Container Port: 8080'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: TCP2 - Web base control
+      Required: 'false'
+      Target: '8080'
+      Type: Port
+      value: '8080'
+    TCP3 - Web Panel:
+      Default: ''
+      Description: 'Container Port: 8082'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: TCP3 - Web Panel
+      Required: 'false'
+      Target: '8082'
+      Type: Port
+      value: '8082'
+    UDP1 - Steam Master server:
+      Default: ''
+      Description: 'Container Port: 26900'
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: UDP1 - Steam Master server
+      Required: 'true'
+      Target: '26900'
+      Type: Port
+      value: '26900'
+    UDP2 - Steam Communications:
+      Default: ''
+      Description: 'Container Port: 26901'
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: UDP2 - Steam Communications
+      Required: 'true'
+      Target: '26901'
+      Type: Port
+      value: '26901'
+    UDP3 - RakNet:
+      Default: ''
+      Description: 'Container Port: 26902'
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: UDP3 - RakNet
+      Required: 'true'
+      Target: '26902'
+      Type: Port
+      value: '26902'
+    UDP4 - UNET:
+      Default: ''
+      Description: 'Container Port: '
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: UDP4 - UNET
+      Required: 'true'
+      Target: '26903'
+      Type: Port
+      value: '26903'
+    UDP5 - Registering at server list:
+      Default: ''
+      Description: Should be in the range 27015 - 27030, don't forget to set also
+        a different Container Port if you change this value.
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: UDP5 - Registering at server list
+      Required: 'true'
+      Target: '27015'
+      Type: Port
+      value: '27015'
+  Variable:
+    BepInEx:
+      Default: ''
+      Description: If you want to enable BepInEx set this variable to 'true' (without
+        quotes).
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: BepInEx
+      Required: 'false'
+      Target: ENABLE_BEPINEX
+      Type: Variable
+      value: 'false'
+    GAME_ID:
+      Default: ''
+      Description: "The GAME_ID that the container download at startup.\r\n(https://developer.valvesoftware.com/wiki/Dedicated_Servers_List)\r\
+        \nIf you want to use a static version of the game and not always the latest\
+        \ one then enter this: '294420 -beta stable_alpha19.4' or '294420 -beta latest_experimental'\
+        \ (without quotes) if you want to stay for example on alpha19.4."
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: GAME_ID
+      Required: 'true'
+      Target: GAME_ID
+      Type: Variable
+      value: '294420'
+    GAME_PARAMS:
+      Default: ''
+      Description: Enter your start up commands for the server.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: GAME_PARAMS
+      Required: 'false'
+      Target: GAME_PARAMS
+      Type: Variable
+      value: -logfile 7DaysToDie_Data/output_log.txt $@
+    GID:
+      Default: ''
+      Description: 'Container Variable: GID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: GID
+      Required: 'true'
+      Target: GID
+      Type: Variable
+      value: '100'
+    Serverconfig:
+      Default: ''
+      Description: Please change if your serverconfigfile has another name.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Serverconfig
+      Required: 'true'
+      Target: SERVERCONFIG
+      Type: Variable
+      value: serverconfig.xml
+    Steam-Password:
+      Default: ''
+      Description: 'Your Steam password goes here if you want to install a game that
+        needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
+        Steam Guard).'
+      Display: advanced-hide
+      Mask: 'true'
+      Mode: ''
+      Name: Steam-Password
+      Required: 'false'
+      Target: PASSWRD
+      Type: Variable
+      value: ''
+    Steam-Username:
+      Default: ''
+      Description: 'Your Steam username goes here if you want to install a game that
+        needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
+        Steam Guard).'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: Steam-Username
+      Required: 'false'
+      Target: USERNAME
+      Type: Variable
+      value: ''
+    UID:
+      Default: ''
+      Description: 'Container Variable: UID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: UID
+      Required: 'true'
+      Target: UID
+      Type: Variable
+      value: '99'
+    Validate Installation:
+      Default: ''
+      Description: Set the Variable to 'true' if you want to validate the installation
+        otherwise leave it blank.
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: Validate Installation
+      Required: 'false'
+      Target: VALIDATE
+      Type: Variable
+      value: ''
 DonateImg: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/donate.png
 DonateLink: https://www.paypal.me/chips777
 DonateText: 'If you like my work please '

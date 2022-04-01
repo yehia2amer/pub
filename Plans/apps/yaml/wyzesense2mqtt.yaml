@@ -2,39 +2,44 @@ CategoryList:
 - HomeAutomation
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: /mnt/user/appdata/wyzesense2mqtt/config/
-    Description: 'Container Path: /wyzesense2mqtt/config'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: ConfigPath
-    Required: 'true'
-    Target: /wyzesense2mqtt/config
-    Type: Path
-  value: /mnt/user/appdata/wyzesense2mqtt/config
-- '@attributes':
-    Default: /mnt/user/appdata/wyzesense2mqtt/logs/
-    Description: 'Container Path: /wyzesense2mqtt/logs'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: LogsPath
-    Required: 'true'
-    Target: /mnt/user/appdata/wyzesense2mqtt/logs/
-    Type: Path
-  value: /mnt/user/appdata/wyzesense2mqtt/logs/
-- '@attributes':
-    Default: /dev/hidraw0
-    Description: Container Device
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: WyzeSensePort
-    Required: 'true'
-    Target: /dev/hidraw0
-    Type: Device
-  value: /dev/hidraw0
+  Device:
+    WyzeSensePort:
+      Default: /dev/hidraw0
+      Description: Container Device
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: WyzeSensePort
+      Required: 'true'
+      Target: /dev/hidraw0
+      Type: Device
+      value: /dev/hidraw0
+  Label: {}
+  Path:
+    ConfigPath:
+      Default: /mnt/user/appdata/wyzesense2mqtt/config/
+      Description: 'Container Path: /wyzesense2mqtt/config'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: ConfigPath
+      Required: 'true'
+      Target: /wyzesense2mqtt/config
+      Type: Path
+      value: /mnt/user/appdata/wyzesense2mqtt/config
+    LogsPath:
+      Default: /mnt/user/appdata/wyzesense2mqtt/logs/
+      Description: 'Container Path: /wyzesense2mqtt/logs'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: LogsPath
+      Required: 'true'
+      Target: /mnt/user/appdata/wyzesense2mqtt/logs/
+      Type: Path
+      value: /mnt/user/appdata/wyzesense2mqtt/logs/
+  Port: {}
+  Variable: {}
 FirstSeen: 1607037287
 Icon: https://github.com/digiblur/unraid-docker-templates/raw/master/images/wyzesense2mqtt.png
 LastUpdate: 1622683513

@@ -2,39 +2,44 @@ Beta: 'true'
 CategoryList:
 - Network-DNS
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 53'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: TCP DNS Port
-    Required: 'true'
-    Target: '53'
-    Type: Port
-  value: '5335'
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 53'
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: UDP DNS Port
-    Required: 'true'
-    Target: '53'
-    Type: Port
-  value: '5335'
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /opt/unbound/etc/unbound/'
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: Config Path
-    Required: 'false'
-    Target: /opt/unbound/etc/unbound/
-    Type: Path
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Config Path:
+      Default: ''
+      Description: 'Container Path: /opt/unbound/etc/unbound/'
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: Config Path
+      Required: 'false'
+      Target: /opt/unbound/etc/unbound/
+      Type: Path
+      value: ''
+  Port:
+    TCP DNS Port:
+      Default: ''
+      Description: 'Container Port: 53'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: TCP DNS Port
+      Required: 'true'
+      Target: '53'
+      Type: Port
+      value: '5335'
+    UDP DNS Port:
+      Default: ''
+      Description: 'Container Port: 53'
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: UDP DNS Port
+      Required: 'true'
+      Target: '53'
+      Type: Port
+      value: '5335'
+  Variable: {}
 FirstSeen: 1627385442
 Icon: https://raw.githubusercontent.com/kutzilla/unraid-templates/master/images/unbound.png
 LastUpdate: 1627306991

@@ -1,81 +1,86 @@
 ChangeLogPresent: true
 Config:
-- '@attributes':
-    Default: '8000'
-    Description: http gui
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'true'
-    Target: '8000'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Contains all relevant configuration files.
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: Appdata
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Storage location for all paperless-ngx data files.
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: 'Path: /data'
-    Required: 'true'
-    Target: /data
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Specify an external redis instance to use. Can optionally include
-      a port (`redis:6379`) and/or db (`redis/foo`). If left blank or not included,
-      will use a built-in redis instance. If changed after initial setup will also
-      require manual modification of /config/settings.py
-    Display: always
-    Mask: 'false'
-    Name: REDIS_URL
-    Required: 'false'
-    Target: REDIS_URL
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '99'
-    Description: 'Container Variable: PUID'
-    Display: advanced
-    Mask: 'false'
-    Name: PUID
-    Required: 'true'
-    Target: PUID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '100'
-    Description: 'Container Variable: PGID'
-    Display: advanced
-    Mask: 'false'
-    Name: PGID
-    Required: 'true'
-    Target: PGID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '022'
-    Description: 'Container Variable: UMASK'
-    Display: advanced
-    Mask: 'false'
-    Name: UMASK
-    Required: 'false'
-    Target: UMASK
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Appdata:
+      Default: ''
+      Description: Contains all relevant configuration files.
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: Appdata
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: ''
+    'Path: /data':
+      Default: ''
+      Description: Storage location for all paperless-ngx data files.
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: 'Path: /data'
+      Required: 'true'
+      Target: /data
+      Type: Path
+      value: ''
+  Port:
+    WebUI:
+      Default: '8000'
+      Description: http gui
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'true'
+      Target: '8000'
+      Type: Port
+      value: ''
+  Variable:
+    PGID:
+      Default: '100'
+      Description: 'Container Variable: PGID'
+      Display: advanced
+      Mask: 'false'
+      Name: PGID
+      Required: 'true'
+      Target: PGID
+      Type: Variable
+      value: ''
+    PUID:
+      Default: '99'
+      Description: 'Container Variable: PUID'
+      Display: advanced
+      Mask: 'false'
+      Name: PUID
+      Required: 'true'
+      Target: PUID
+      Type: Variable
+      value: ''
+    REDIS_URL:
+      Default: ''
+      Description: Specify an external redis instance to use. Can optionally include
+        a port (`redis:6379`) and/or db (`redis/foo`). If left blank or not included,
+        will use a built-in redis instance. If changed after initial setup will also
+        require manual modification of /config/settings.py
+      Display: always
+      Mask: 'false'
+      Name: REDIS_URL
+      Required: 'false'
+      Target: REDIS_URL
+      Type: Variable
+      value: ''
+    UMASK:
+      Default: '022'
+      Description: 'Container Variable: UMASK'
+      Display: advanced
+      Mask: 'false'
+      Name: UMASK
+      Required: 'false'
+      Target: UMASK
+      Type: Variable
+      value: ''
 DonateImg: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/donate.png
 DonateLink: https://www.linuxserver.io/donate
 DonateText: Donations

@@ -1,98 +1,103 @@
 CategoryList:
 - GameServers
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /serverdata/serverfiles'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: ServerFiles
-    Required: 'true'
-    Target: /serverdata/serverfiles
-    Type: Path
-  value: /mnt/cache/appdata/minecraftbedrockedition
-- '@attributes':
-    Default: ''
-    Description: Enter your extra startup parameters otherwise leave blank!
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Game Parameters
-    Required: 'false'
-    Target: GAME_PARAMS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: TCP Gameport (if you need another port, please delete this entry
-      and create a new TCP Port with the required port number)
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: TCP - Game Port
-    Required: 'true'
-    Target: '19132'
-    Type: Port
-  value: '19132'
-- '@attributes':
-    Default: ''
-    Description: UDP Gameport (if you need another port, please delete this entry
-      and create a new UDP Port with the required port number)
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: UDP - Game Port
-    Required: 'true'
-    Target: '19132'
-    Type: Port
-  value: '19132'
-- '@attributes':
-    Default: ''
-    Description: 'WebConsole (by default, you can connect to the Minecraft console
-      by opening your browser and go to HOSTIP:9010 - eg: 192.168.1.1:9010 - or click
-      on WebUI on the Docker page within Unraid).'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: TCP - WebConsole
-    Required: 'true'
-    Target: '8080'
-    Type: Port
-  value: '9010'
-- '@attributes':
-    Default: ''
-    Description: Enter the prefered version to install.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Game Version
-    Required: 'false'
-    Target: GAME_VERSION
-    Type: Variable
-  value: latest
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: UID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: UID
-    Required: 'true'
-    Target: UID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: GID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: GID
-    Required: 'true'
-    Target: GID
-    Type: Variable
-  value: '100'
+  Device: {}
+  Label: {}
+  Path:
+    ServerFiles:
+      Default: ''
+      Description: 'Container Path: /serverdata/serverfiles'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: ServerFiles
+      Required: 'true'
+      Target: /serverdata/serverfiles
+      Type: Path
+      value: /mnt/cache/appdata/minecraftbedrockedition
+  Port:
+    TCP - Game Port:
+      Default: ''
+      Description: TCP Gameport (if you need another port, please delete this entry
+        and create a new TCP Port with the required port number)
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: TCP - Game Port
+      Required: 'true'
+      Target: '19132'
+      Type: Port
+      value: '19132'
+    TCP - WebConsole:
+      Default: ''
+      Description: 'WebConsole (by default, you can connect to the Minecraft console
+        by opening your browser and go to HOSTIP:9010 - eg: 192.168.1.1:9010 - or
+        click on WebUI on the Docker page within Unraid).'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: TCP - WebConsole
+      Required: 'true'
+      Target: '8080'
+      Type: Port
+      value: '9010'
+    UDP - Game Port:
+      Default: ''
+      Description: UDP Gameport (if you need another port, please delete this entry
+        and create a new UDP Port with the required port number)
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: UDP - Game Port
+      Required: 'true'
+      Target: '19132'
+      Type: Port
+      value: '19132'
+  Variable:
+    GID:
+      Default: ''
+      Description: 'Container Variable: GID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: GID
+      Required: 'true'
+      Target: GID
+      Type: Variable
+      value: '100'
+    Game Parameters:
+      Default: ''
+      Description: Enter your extra startup parameters otherwise leave blank!
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Game Parameters
+      Required: 'false'
+      Target: GAME_PARAMS
+      Type: Variable
+      value: ''
+    Game Version:
+      Default: ''
+      Description: Enter the prefered version to install.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Game Version
+      Required: 'false'
+      Target: GAME_VERSION
+      Type: Variable
+      value: latest
+    UID:
+      Default: ''
+      Description: 'Container Variable: UID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: UID
+      Required: 'true'
+      Target: UID
+      Type: Variable
+      value: '99'
 DonateLink: https://www.paypal.me/chips777
 DonateText: 'If you like my work please '
 ExtraParams: --restart=unless-stopped

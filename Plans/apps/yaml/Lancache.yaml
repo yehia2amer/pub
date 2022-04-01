@@ -4,50 +4,55 @@ CategoryList:
 - Downloaders
 - Other
 Config:
-- '@attributes':
-    Default: '80'
-    Description: 'Container Port: 80'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: HTTP-Port
-    Required: 'false'
-    Target: '80'
-    Type: Port
-  value: '80'
-- '@attributes':
-    Default: '443'
-    Description: 'Container Port: 443'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: HTTPS-Port
-    Required: 'false'
-    Target: '443'
-    Type: Port
-  value: '443'
-- '@attributes':
-    Default: /mnt/user/appdata/lancache/logs
-    Description: 'Container Path: /data/logs'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Logs-Folder
-    Required: 'true'
-    Target: /data/logs
-    Type: Path
-  value: /mnt/user/appdata/lancache/logs
-- '@attributes':
-    Default: /mnt/user/appdata/lancache/cache
-    Description: 'Container Path: /data/cache/'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Cache-Folder
-    Required: 'false'
-    Target: /data/cache/
-    Type: Path
-  value: /mnt/user/appdata/lancache/cache
+  Device: {}
+  Label: {}
+  Path:
+    Cache-Folder:
+      Default: /mnt/user/appdata/lancache/cache
+      Description: 'Container Path: /data/cache/'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Cache-Folder
+      Required: 'false'
+      Target: /data/cache/
+      Type: Path
+      value: /mnt/user/appdata/lancache/cache
+    Logs-Folder:
+      Default: /mnt/user/appdata/lancache/logs
+      Description: 'Container Path: /data/logs'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Logs-Folder
+      Required: 'true'
+      Target: /data/logs
+      Type: Path
+      value: /mnt/user/appdata/lancache/logs
+  Port:
+    HTTP-Port:
+      Default: '80'
+      Description: 'Container Port: 80'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: HTTP-Port
+      Required: 'false'
+      Target: '80'
+      Type: Port
+      value: '80'
+    HTTPS-Port:
+      Default: '443'
+      Description: 'Container Port: 443'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: HTTPS-Port
+      Required: 'false'
+      Target: '443'
+      Type: Port
+      value: '443'
+  Variable: {}
 DonateLink: https://paypal.me/RedVex2460Gaming
 FirstSeen: 1632175428
 Icon: https://raw.githubusercontent.com/redvex2460/docker-templates/master/redvex2460/images/lancache.png

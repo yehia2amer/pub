@@ -1,39 +1,44 @@
 CategoryList:
 - Backup
 Config:
-- '@attributes':
-    Default: ''
-    Description: The directory for the program to dedupe.
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Scan Directory
-    Required: 'true'
-    Target: /scan
-    Type: Path
-  value: /mnt/user/Media/
-- '@attributes':
-    Default: '5800'
-    Description: The port of the WebUI
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'true'
-    Target: '5800'
-    Type: Port
-  value: '5800'
-- '@attributes':
-    Default: /mnt/user/appdata/deduper
-    Description: For the apps app data (hashes.json)
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Appdata
-    Required: 'true'
-    Target: /appdata
-    Type: Path
-  value: /mnt/user/appdata/deduper
+  Device: {}
+  Label: {}
+  Path:
+    Appdata:
+      Default: /mnt/user/appdata/deduper
+      Description: For the apps app data (hashes.json)
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Appdata
+      Required: 'true'
+      Target: /appdata
+      Type: Path
+      value: /mnt/user/appdata/deduper
+    Scan Directory:
+      Default: ''
+      Description: The directory for the program to dedupe.
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Scan Directory
+      Required: 'true'
+      Target: /scan
+      Type: Path
+      value: /mnt/user/Media/
+  Port:
+    WebUI:
+      Default: '5800'
+      Description: The port of the WebUI
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'true'
+      Target: '5800'
+      Type: Port
+      value: '5800'
+  Variable: {}
 FirstSeen: 1624536589
 Icon: https://raw.githubusercontent.com/daman20/deduper/master/Deduper%20Logo.png
 LastUpdate: 1630374024

@@ -4,50 +4,55 @@ CategoryList:
 - MediaServer-Music
 - MediaServer-Photos
 Config:
-- '@attributes':
-    Default: /mnt/user/appdata/nextcloudpi
-    Description: The folder to store all data related to the container
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Nextcloud data folder
-    Required: 'false'
-    Target: /data
-    Type: Path
-  value: /mnt/user/appdata/nextcloudpi
-- '@attributes':
-    Default: '80'
-    Description: Non secure web port
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: HTTP web port
-    Required: 'false'
-    Target: '80'
-    Type: Port
-  value: '80'
-- '@attributes':
-    Default: '443'
-    Description: Secure web port
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: HTTPS web port
-    Required: 'false'
-    Target: '443'
-    Type: Port
-  value: '443'
-- '@attributes':
-    Default: '4443'
-    Description: Port to serve the Nextcloudpi management panel on.
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Panel web port
-    Required: 'false'
-    Target: '4443'
-    Type: Port
-  value: '4443'
+  Device: {}
+  Label: {}
+  Path:
+    Nextcloud data folder:
+      Default: /mnt/user/appdata/nextcloudpi
+      Description: The folder to store all data related to the container
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Nextcloud data folder
+      Required: 'false'
+      Target: /data
+      Type: Path
+      value: /mnt/user/appdata/nextcloudpi
+  Port:
+    HTTP web port:
+      Default: '80'
+      Description: Non secure web port
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: HTTP web port
+      Required: 'false'
+      Target: '80'
+      Type: Port
+      value: '80'
+    HTTPS web port:
+      Default: '443'
+      Description: Secure web port
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: HTTPS web port
+      Required: 'false'
+      Target: '443'
+      Type: Port
+      value: '443'
+    Panel web port:
+      Default: '4443'
+      Description: Port to serve the Nextcloudpi management panel on.
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Panel web port
+      Required: 'false'
+      Target: '4443'
+      Type: Port
+      value: '4443'
+  Variable: {}
 FirstSeen: 1571956300
 Icon: https://github.com/Dimtar/unraidtemplates/raw/master/nextcloudpi/logo.jpg
 LastUpdate: 1646683850

@@ -10,83 +10,88 @@ CategoryList:
 - Downloaders
 - MediaApp-Video
 Config:
-- '@attributes':
-    Default: '7878'
-    Description: 'Container Port: 7878'
-    Display: always-hide
-    Mask: 'false'
-    Mode: tcp
-    Name: Host Port for 7878
-    Required: 'true'
-    Target: '7878'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /config'
-    Display: always-hide
-    Mask: 'false'
-    Mode: rw
-    Name: Host Path for /config
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: /mnt/user
-    Description: 'Container Path: /storage'
-    Display: always-hide
-    Mask: 'false'
-    Mode: rw
-    Name: Host Path for /storage
-    Required: 'true'
-    Target: /storage
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: NVIDIA_VISIBLE_DEVICES
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: NVIDIA_VISIBLE_DEVICES
-    Required: 'false'
-    Target: NVIDIA_VISIBLE_DEVICES
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: all
-    Description: NVIDIA_DRIVER_CAPABILITIES
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: NVIDIA_DRIVER_CAPABILITIES
-    Required: 'false'
-    Target: NVIDIA_DRIVER_CAPABILITIES
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '99'
-    Description: 'Container Variable: PUID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: PUID
-    Required: 'false'
-    Target: PUID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '100'
-    Description: 'Container Variable: PGID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: PGID
-    Required: 'false'
-    Target: PGID
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Host Path for /config:
+      Default: ''
+      Description: 'Container Path: /config'
+      Display: always-hide
+      Mask: 'false'
+      Mode: rw
+      Name: Host Path for /config
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: ''
+    Host Path for /storage:
+      Default: /mnt/user
+      Description: 'Container Path: /storage'
+      Display: always-hide
+      Mask: 'false'
+      Mode: rw
+      Name: Host Path for /storage
+      Required: 'true'
+      Target: /storage
+      Type: Path
+      value: ''
+  Port:
+    Host Port for 7878:
+      Default: '7878'
+      Description: 'Container Port: 7878'
+      Display: always-hide
+      Mask: 'false'
+      Mode: tcp
+      Name: Host Port for 7878
+      Required: 'true'
+      Target: '7878'
+      Type: Port
+      value: ''
+  Variable:
+    NVIDIA_DRIVER_CAPABILITIES:
+      Default: all
+      Description: NVIDIA_DRIVER_CAPABILITIES
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: NVIDIA_DRIVER_CAPABILITIES
+      Required: 'false'
+      Target: NVIDIA_DRIVER_CAPABILITIES
+      Type: Variable
+      value: ''
+    NVIDIA_VISIBLE_DEVICES:
+      Default: ''
+      Description: NVIDIA_VISIBLE_DEVICES
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: NVIDIA_VISIBLE_DEVICES
+      Required: 'false'
+      Target: NVIDIA_VISIBLE_DEVICES
+      Type: Variable
+      value: ''
+    PGID:
+      Default: '100'
+      Description: 'Container Variable: PGID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: PGID
+      Required: 'false'
+      Target: PGID
+      Type: Variable
+      value: ''
+    PUID:
+      Default: '99'
+      Description: 'Container Variable: PUID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: PUID
+      Required: 'false'
+      Target: PUID
+      Type: Variable
+      value: ''
 DonateImg: ''
 DonateLink: https://github.com/sponsors/RandomNinjaAtk
 FirstSeen: 1584050818

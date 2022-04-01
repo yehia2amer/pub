@@ -2,72 +2,77 @@ CategoryList:
 - Productivity
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: '8000'
-    Description: HTTP
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: HTTP
-    Required: 'false'
-    Target: '80'
-    Type: Port
-  value: '8000'
-- '@attributes':
-    Default: '8443'
-    Description: HTTPS - NOT REQUIRE IF YOU ARE USING REVERSE PROXY
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: HTTPS
-    Required: 'false'
-    Target: '443'
-    Type: Variable
-  value: '8443'
-- '@attributes':
-    Default: /mnt/user/appdata/docpht/config/
-    Description: Config
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Config
-    Required: 'false'
-    Target: /var/www/app/src/config
-    Type: Path
-  value: /mnt/user/appdata/docpht/config/
-- '@attributes':
-    Default: /mnt/user/appdata/docpht/data/
-    Description: Data
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Data
-    Required: 'false'
-    Target: /var/www/app/data
-    Type: Path
-  value: /mnt/user/appdata/docpht/data/
-- '@attributes':
-    Default: /mnt/user/appdata/docpht/pages/
-    Description: Pages
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Pages
-    Required: 'false'
-    Target: /var/www/app/pages
-    Type: Path
-  value: /mnt/user/appdata/docpht/pages/
-- '@attributes':
-    Default: /mnt/user/appdata/docpht/ssl/
-    Description: SSL - NOT REQUIRE IF YOU ARE USING REVERSE PROXY
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: SSL
-    Required: 'false'
-    Target: /etc/nginx/ssl
-    Type: Path
-  value: /mnt/user/appdata/docpht/ssl/
+  Device: {}
+  Label: {}
+  Path:
+    Config:
+      Default: /mnt/user/appdata/docpht/config/
+      Description: Config
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Config
+      Required: 'false'
+      Target: /var/www/app/src/config
+      Type: Path
+      value: /mnt/user/appdata/docpht/config/
+    Data:
+      Default: /mnt/user/appdata/docpht/data/
+      Description: Data
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Data
+      Required: 'false'
+      Target: /var/www/app/data
+      Type: Path
+      value: /mnt/user/appdata/docpht/data/
+    Pages:
+      Default: /mnt/user/appdata/docpht/pages/
+      Description: Pages
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Pages
+      Required: 'false'
+      Target: /var/www/app/pages
+      Type: Path
+      value: /mnt/user/appdata/docpht/pages/
+    SSL:
+      Default: /mnt/user/appdata/docpht/ssl/
+      Description: SSL - NOT REQUIRE IF YOU ARE USING REVERSE PROXY
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: SSL
+      Required: 'false'
+      Target: /etc/nginx/ssl
+      Type: Path
+      value: /mnt/user/appdata/docpht/ssl/
+  Port:
+    HTTP:
+      Default: '8000'
+      Description: HTTP
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: HTTP
+      Required: 'false'
+      Target: '80'
+      Type: Port
+      value: '8000'
+  Variable:
+    HTTPS:
+      Default: '8443'
+      Description: HTTPS - NOT REQUIRE IF YOU ARE USING REVERSE PROXY
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: HTTPS
+      Required: 'false'
+      Target: '443'
+      Type: Variable
+      value: '8443'
 FirstSeen: 1587283638
 Icon: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/docpht.png
 LastUpdate: 1610475993

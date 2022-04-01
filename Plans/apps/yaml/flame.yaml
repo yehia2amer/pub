@@ -2,39 +2,44 @@ CategoryList:
 - Tools-Utilities
 - Network-Web
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 5005'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Host Port 1
-    Required: 'false'
-    Target: '5005'
-    Type: Port
-  value: '5030'
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /app/data'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Host Path 1
-    Required: 'false'
-    Target: /app/data
-    Type: Path
-  value: /mnt/user/appdata/flame
-- '@attributes':
-    Default: flame_password
-    Description: 'Container Variable: PASSWORD'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: User password
-    Required: 'false'
-    Target: PASSWORD
-    Type: Variable
-  value: flame_password
+  Device: {}
+  Label: {}
+  Path:
+    Host Path 1:
+      Default: ''
+      Description: 'Container Path: /app/data'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Host Path 1
+      Required: 'false'
+      Target: /app/data
+      Type: Path
+      value: /mnt/user/appdata/flame
+  Port:
+    Host Port 1:
+      Default: ''
+      Description: 'Container Port: 5005'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Host Port 1
+      Required: 'false'
+      Target: '5005'
+      Type: Port
+      value: '5030'
+  Variable:
+    User password:
+      Default: flame_password
+      Description: 'Container Variable: PASSWORD'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: User password
+      Required: 'false'
+      Target: PASSWORD
+      Type: Variable
+      value: flame_password
 ExtraParams: --init
 FirstSeen: 1623157932
 Icon: https://raw.githubusercontent.com/pawelmalak/unraid-templates/master/templates/icons/flame.png

@@ -2,39 +2,44 @@ CategoryList:
 - Tools-Utilities
 - Network-Management
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 3100'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Web Port
-    Required: 'false'
-    Target: '3100'
-    Type: Port
-  value: '3100'
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /etc/loki'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Host Path 1
-    Required: 'false'
-    Target: /etc/loki
-    Type: Path
-  value: /mnt/user/appdata/loki/conf/
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /loki'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Host Path 2
-    Required: 'false'
-    Target: /loki
-    Type: Path
-  value: /mnt/user/appdata/loki/
+  Device: {}
+  Label: {}
+  Path:
+    Host Path 1:
+      Default: ''
+      Description: 'Container Path: /etc/loki'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Host Path 1
+      Required: 'false'
+      Target: /etc/loki
+      Type: Path
+      value: /mnt/user/appdata/loki/conf/
+    Host Path 2:
+      Default: ''
+      Description: 'Container Path: /loki'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Host Path 2
+      Required: 'false'
+      Target: /loki
+      Type: Path
+      value: /mnt/user/appdata/loki/
+  Port:
+    Web Port:
+      Default: ''
+      Description: 'Container Port: 3100'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Web Port
+      Required: 'false'
+      Target: '3100'
+      Type: Port
+      value: '3100'
+  Variable: {}
 FirstSeen: 1593808589
 Icon: https://github.com/natcoso9955/unRAID-docker/raw/master/icons/loki.png
 LastUpdate: 1648217518

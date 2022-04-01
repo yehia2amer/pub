@@ -1,187 +1,192 @@
 CategoryList:
 - GameServers
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /serverdata/steamcmd'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: SteamCMD
-    Required: 'true'
-    Target: /serverdata/steamcmd
-    Type: Path
-  value: /mnt/user/appdata/steamcmd
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /serverdata/serverfiles'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: ServerFiles
-    Required: 'true'
-    Target: /serverdata/serverfiles
-    Type: Path
-  value: /mnt/cache/appdata/killingfloor
-- '@attributes':
-    Default: ''
-    Description: "The GAME_ID that the container download at startup.\r\n(https://developer.valvesoftware.com/wiki/Dedicated_Servers_List)"
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: GAME_ID
-    Required: 'true'
-    Target: GAME_ID
-    Type: Variable
-  value: '215360'
-- '@attributes':
-    Default: ''
-    Description: 'Type in your Extra Game Parameters seperated with - (like: -DisableDeathSpectator)'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: GAME_PARAMS_EXTRA
-    Required: 'false'
-    Target: GAME_PARAMS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Your Steam username goes here if you want to install a game that
-      needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
-      Steam Guard).'
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: Steam-Username
-    Required: 'true'
-    Target: USERNAME
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Set the Variable to 'true' if you want to validate the installation
-      otherwise leave it blank.
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: Validate Installation
-    Required: 'false'
-    Target: VALIDATE
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Your Steam password goes here if you want to install a game that
-      needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
-      Steam Guard).'
-    Display: always-hide
-    Mask: 'true'
-    Mode: ''
-    Name: Steam-Password
-    Required: 'true'
-    Target: PASSWRD
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 7707'
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: UDP1 - Game
-    Required: 'true'
-    Target: '7707'
-    Type: Port
-  value: '7707'
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 7708'
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: UDP2 - Query
-    Required: 'true'
-    Target: '7708'
-    Type: Port
-  value: '7708'
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 7717'
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: UDP3 - GameSpy Query
-    Required: 'true'
-    Target: '7717'
-    Type: Port
-  value: '7717'
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 28852'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: TCP1 - Master Server Browser
-    Required: 'true'
-    Target: '28852'
-    Type: Port
-  value: '28852'
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 28852'
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: 'UDP4 - Master Server Browser:'
-    Required: 'true'
-    Target: '28852'
-    Type: Port
-  value: '28852'
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 8075'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: TCP2 - Admin Port
-    Required: 'false'
-    Target: '8075'
-    Type: Port
-  value: '8075'
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 20560'
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: UDP5 - Steam Port
-    Required: 'false'
-    Target: '20560'
-    Type: Port
-  value: '20560'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: UID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: UID
-    Required: 'true'
-    Target: UID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: GID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: GID
-    Required: 'true'
-    Target: GID
-    Type: Variable
-  value: '100'
+  Device: {}
+  Label: {}
+  Path:
+    ServerFiles:
+      Default: ''
+      Description: 'Container Path: /serverdata/serverfiles'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: ServerFiles
+      Required: 'true'
+      Target: /serverdata/serverfiles
+      Type: Path
+      value: /mnt/cache/appdata/killingfloor
+    SteamCMD:
+      Default: ''
+      Description: 'Container Path: /serverdata/steamcmd'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: SteamCMD
+      Required: 'true'
+      Target: /serverdata/steamcmd
+      Type: Path
+      value: /mnt/user/appdata/steamcmd
+  Port:
+    TCP1 - Master Server Browser:
+      Default: ''
+      Description: 'Container Port: 28852'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: TCP1 - Master Server Browser
+      Required: 'true'
+      Target: '28852'
+      Type: Port
+      value: '28852'
+    TCP2 - Admin Port:
+      Default: ''
+      Description: 'Container Port: 8075'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: TCP2 - Admin Port
+      Required: 'false'
+      Target: '8075'
+      Type: Port
+      value: '8075'
+    UDP1 - Game:
+      Default: ''
+      Description: 'Container Port: 7707'
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: UDP1 - Game
+      Required: 'true'
+      Target: '7707'
+      Type: Port
+      value: '7707'
+    UDP2 - Query:
+      Default: ''
+      Description: 'Container Port: 7708'
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: UDP2 - Query
+      Required: 'true'
+      Target: '7708'
+      Type: Port
+      value: '7708'
+    UDP3 - GameSpy Query:
+      Default: ''
+      Description: 'Container Port: 7717'
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: UDP3 - GameSpy Query
+      Required: 'true'
+      Target: '7717'
+      Type: Port
+      value: '7717'
+    'UDP4 - Master Server Browser:':
+      Default: ''
+      Description: 'Container Port: 28852'
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: 'UDP4 - Master Server Browser:'
+      Required: 'true'
+      Target: '28852'
+      Type: Port
+      value: '28852'
+    UDP5 - Steam Port:
+      Default: ''
+      Description: 'Container Port: 20560'
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: UDP5 - Steam Port
+      Required: 'false'
+      Target: '20560'
+      Type: Port
+      value: '20560'
+  Variable:
+    GAME_ID:
+      Default: ''
+      Description: "The GAME_ID that the container download at startup.\r\n(https://developer.valvesoftware.com/wiki/Dedicated_Servers_List)"
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: GAME_ID
+      Required: 'true'
+      Target: GAME_ID
+      Type: Variable
+      value: '215360'
+    GAME_PARAMS_EXTRA:
+      Default: ''
+      Description: 'Type in your Extra Game Parameters seperated with - (like: -DisableDeathSpectator)'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: GAME_PARAMS_EXTRA
+      Required: 'false'
+      Target: GAME_PARAMS
+      Type: Variable
+      value: ''
+    GID:
+      Default: ''
+      Description: 'Container Variable: GID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: GID
+      Required: 'true'
+      Target: GID
+      Type: Variable
+      value: '100'
+    Steam-Password:
+      Default: ''
+      Description: 'Your Steam password goes here if you want to install a game that
+        needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
+        Steam Guard).'
+      Display: always-hide
+      Mask: 'true'
+      Mode: ''
+      Name: Steam-Password
+      Required: 'true'
+      Target: PASSWRD
+      Type: Variable
+      value: ''
+    Steam-Username:
+      Default: ''
+      Description: 'Your Steam username goes here if you want to install a game that
+        needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
+        Steam Guard).'
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: Steam-Username
+      Required: 'true'
+      Target: USERNAME
+      Type: Variable
+      value: ''
+    UID:
+      Default: ''
+      Description: 'Container Variable: UID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: UID
+      Required: 'true'
+      Target: UID
+      Type: Variable
+      value: '99'
+    Validate Installation:
+      Default: ''
+      Description: Set the Variable to 'true' if you want to validate the installation
+        otherwise leave it blank.
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: Validate Installation
+      Required: 'false'
+      Target: VALIDATE
+      Type: Variable
+      value: ''
 DonateImg: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/donate.png
 DonateLink: https://www.paypal.me/chips777
 DonateText: 'If you like my work please '

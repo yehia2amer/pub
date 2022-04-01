@@ -2,50 +2,55 @@ CategoryList:
 - Other
 - Network-Other
 Config:
-- '@attributes':
-    Default: batch,daemon
-    Description: 'Container Variable: run_mode'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: run_mode
-    Required: 'true'
-    Target: run_mode
-    Type: Variable
-  value: batch,daemon
-- '@attributes':
-    Default: 'true'
-    Description: 'Container Variable: host_routes'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: host_routes
-    Required: 'true'
-    Target: host_routes
-    Type: Variable
-  value: 'true'
-- '@attributes':
-    Default: /var/run/docker.sock
-    Description: 'Container Path: /docker.sock'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: rw
-    Name: docker.sock
-    Required: 'true'
-    Target: /docker.sock
-    Type: Path
-  value: /var/run/docker.sock
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: DOCKER_API_VERSION'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: DOCKER_API_VERSION
-    Required: 'false'
-    Target: DOCKER_API_VERSION
-    Type: Variable
-  value: '1.22'
+  Device: {}
+  Label: {}
+  Path:
+    docker.sock:
+      Default: /var/run/docker.sock
+      Description: 'Container Path: /docker.sock'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: rw
+      Name: docker.sock
+      Required: 'true'
+      Target: /docker.sock
+      Type: Path
+      value: /var/run/docker.sock
+  Port: {}
+  Variable:
+    DOCKER_API_VERSION:
+      Default: ''
+      Description: 'Container Variable: DOCKER_API_VERSION'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: DOCKER_API_VERSION
+      Required: 'false'
+      Target: DOCKER_API_VERSION
+      Type: Variable
+      value: '1.22'
+    host_routes:
+      Default: 'true'
+      Description: 'Container Variable: host_routes'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: host_routes
+      Required: 'true'
+      Target: host_routes
+      Type: Variable
+      value: 'true'
+    run_mode:
+      Default: batch,daemon
+      Description: 'Container Variable: run_mode'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: run_mode
+      Required: 'true'
+      Target: run_mode
+      Type: Variable
+      value: batch,daemon
 Deprecated: true
 ExtraParams: --pid=host --restart=always
 FirstSeen: '1472794415'

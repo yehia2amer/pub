@@ -6,20 +6,25 @@ CategoryList:
 - Cloud
 - Network-Web
 Config:
-  '@attributes':
-    Default: /mnt/user/appdata/speedtest-influxdb/config.ini
-    Description: "Download the config.ini file from https://github.com/barrycarey/Speedtest-for-InfluxDB-and-Grafana/blob/master/config.ini\
-      \ and copy it to /mnt/user/appdata/speedtest-influxdb/config.ini\r\nCOPY THE\
-      \ FILE BEFORE YOU START THE CONTAINER. IF YOU DON'T AN EMPTY DIRECTORY WILL\
-      \ BE CREATED INSTEAD."
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Config File
-    Required: 'true'
-    Target: /src/config.ini
-    Type: Path
-  value: /mnt/user/appdata/speedtest-influxdb/config.ini
+  Device: {}
+  Label: {}
+  Path:
+    Config File:
+      Default: /mnt/user/appdata/speedtest-influxdb/config.ini
+      Description: "Download the config.ini file from https://github.com/barrycarey/Speedtest-for-InfluxDB-and-Grafana/blob/master/config.ini\
+        \ and copy it to /mnt/user/appdata/speedtest-influxdb/config.ini\r\nCOPY THE\
+        \ FILE BEFORE YOU START THE CONTAINER. IF YOU DON'T AN EMPTY DIRECTORY WILL\
+        \ BE CREATED INSTEAD."
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Config File
+      Required: 'true'
+      Target: /src/config.ini
+      Type: Path
+      value: /mnt/user/appdata/speedtest-influxdb/config.ini
+  Port: {}
+  Variable: {}
 FirstSeen: 1573355252
 Icon: ''
 LastUpdate: 1568589542

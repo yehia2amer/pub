@@ -2,138 +2,143 @@ CategoryList:
 - Backup
 - Cloud
 Config:
-- '@attributes':
-    Default: unraid
-    Description: 'Container Variable: HOST_ID'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Host identifier
-    Required: 'true'
-    Target: HOST_ID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: BORG_PASSPHRASE'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: borg repo passphrase (both remote &amp; local)
-    Required: 'true'
-    Target: BORG_PASSPHRASE
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: --keep-daily=7 --keep-weekly=4 --keep-monthly=3 --keep-within=3d
-    Description: 'Container Variable: PRUNE_OPTS'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: borg prune options
-    Required: 'true'
-    Target: PRUNE_OPTS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /backup'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: local borg repo location
-    Required: 'false'
-    Target: /backup
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: --compression zlib,5
-    Description: 'Container Variable: CREATE_OPTS'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: borg create options
-    Required: 'false'
-    Target: CREATE_OPTS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: borg1
-    Description: 'Container Variable: BORG_REMOTE_PATH'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: borg remote path
-    Required: 'false'
-    Target: BORG_REMOTE_PATH
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: /etc/localtime
-    Description: 'Container Path: /etc/localtime'
-    Display: always
-    Mask: 'false'
-    Mode: ro
-    Name: /etc/localtime (for syncing with host clock)
-    Required: 'false'
-    Target: /etc/localtime
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: /mnt/user/appdata/borg-mysql-backup/.borg/cache
-    Description: 'Container Path: /root/.cache/borg'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: borg cache; see borg docs for additional info
-    Required: 'false'
-    Target: /root/.cache/borg
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: /mnt/user/appdata/borg-mysql-backup/.borg/config
-    Description: 'Container Path: /root/.config/borg'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: borg config; see borg docs for additional info
-    Required: 'false'
-    Target: /root/.config/borg
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: /mnt/user/appdata/borg-mysql-backup/logs
-    Description: 'Container Path: /var/log'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: scripts' logs
-    Required: 'false'
-    Target: /var/log
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: --lock-wait 18000
-    Description: 'Container Variable: COMMON_OPTS'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: common opts for all borg commands
-    Required: 'false'
-    Target: COMMON_OPTS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: /mnt/user/appdata/borg-mysql-backup
-    Description: 'Container Path: /config'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ro
-    Name: config location
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    /etc/localtime (for syncing with host clock):
+      Default: /etc/localtime
+      Description: 'Container Path: /etc/localtime'
+      Display: always
+      Mask: 'false'
+      Mode: ro
+      Name: /etc/localtime (for syncing with host clock)
+      Required: 'false'
+      Target: /etc/localtime
+      Type: Path
+      value: ''
+    borg cache; see borg docs for additional info:
+      Default: /mnt/user/appdata/borg-mysql-backup/.borg/cache
+      Description: 'Container Path: /root/.cache/borg'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: borg cache; see borg docs for additional info
+      Required: 'false'
+      Target: /root/.cache/borg
+      Type: Path
+      value: ''
+    borg config; see borg docs for additional info:
+      Default: /mnt/user/appdata/borg-mysql-backup/.borg/config
+      Description: 'Container Path: /root/.config/borg'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: borg config; see borg docs for additional info
+      Required: 'false'
+      Target: /root/.config/borg
+      Type: Path
+      value: ''
+    config location:
+      Default: /mnt/user/appdata/borg-mysql-backup
+      Description: 'Container Path: /config'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ro
+      Name: config location
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: ''
+    local borg repo location:
+      Default: ''
+      Description: 'Container Path: /backup'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: local borg repo location
+      Required: 'false'
+      Target: /backup
+      Type: Path
+      value: ''
+    scripts' logs:
+      Default: /mnt/user/appdata/borg-mysql-backup/logs
+      Description: 'Container Path: /var/log'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: scripts' logs
+      Required: 'false'
+      Target: /var/log
+      Type: Path
+      value: ''
+  Port: {}
+  Variable:
+    Host identifier:
+      Default: unraid
+      Description: 'Container Variable: HOST_ID'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Host identifier
+      Required: 'true'
+      Target: HOST_ID
+      Type: Variable
+      value: ''
+    borg create options:
+      Default: --compression zlib,5
+      Description: 'Container Variable: CREATE_OPTS'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: borg create options
+      Required: 'false'
+      Target: CREATE_OPTS
+      Type: Variable
+      value: ''
+    borg prune options:
+      Default: --keep-daily=7 --keep-weekly=4 --keep-monthly=3 --keep-within=3d
+      Description: 'Container Variable: PRUNE_OPTS'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: borg prune options
+      Required: 'true'
+      Target: PRUNE_OPTS
+      Type: Variable
+      value: ''
+    borg remote path:
+      Default: borg1
+      Description: 'Container Variable: BORG_REMOTE_PATH'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: borg remote path
+      Required: 'false'
+      Target: BORG_REMOTE_PATH
+      Type: Variable
+      value: ''
+    borg repo passphrase (both remote &amp; local):
+      Default: ''
+      Description: 'Container Variable: BORG_PASSPHRASE'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: borg repo passphrase (both remote &amp; local)
+      Required: 'true'
+      Target: BORG_PASSPHRASE
+      Type: Variable
+      value: ''
+    common opts for all borg commands:
+      Default: --lock-wait 18000
+      Description: 'Container Variable: COMMON_OPTS'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: common opts for all borg commands
+      Required: 'false'
+      Target: COMMON_OPTS
+      Type: Variable
+      value: ''
 FirstSeen: 1605618511
 Icon: ''
 LastUpdate: 1639257146

@@ -1,50 +1,55 @@
 CategoryList:
 - GameServers
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 34197'
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: UDP
-    Required: 'false'
-    Target: '34197'
-    Type: Port
-  value: '34197'
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /factorio'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Path
-    Required: 'false'
-    Target: /factorio
-    Type: Path
-  value: /mnt/cache/appdata/factorio/
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: PUID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: PUID
-    Required: 'false'
-    Target: PUID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: PGID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: PGID
-    Required: 'false'
-    Target: PGID
-    Type: Variable
-  value: '100'
+  Device: {}
+  Label: {}
+  Path:
+    Path:
+      Default: ''
+      Description: 'Container Path: /factorio'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Path
+      Required: 'false'
+      Target: /factorio
+      Type: Path
+      value: /mnt/cache/appdata/factorio/
+  Port:
+    UDP:
+      Default: ''
+      Description: 'Container Port: 34197'
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: UDP
+      Required: 'false'
+      Target: '34197'
+      Type: Port
+      value: '34197'
+  Variable:
+    PGID:
+      Default: ''
+      Description: 'Container Variable: PGID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: PGID
+      Required: 'false'
+      Target: PGID
+      Type: Variable
+      value: '100'
+    PUID:
+      Default: ''
+      Description: 'Container Variable: PUID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: PUID
+      Required: 'false'
+      Target: PUID
+      Type: Variable
+      value: '99'
 DonateImg: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/donate.png
 DonateLink: https://www.paypal.me/chips777
 DonateText: 'If you like my work please '

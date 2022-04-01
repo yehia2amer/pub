@@ -3,50 +3,55 @@ CategoryList:
 - MediaApp-Photos
 - MediaServer-Photos
 Config:
-- '@attributes':
-    Default: /mnt/user/appdata/data
-    Description: 'Container Path: /config'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Config
-    Required: 'false'
-    Target: /config
-    Type: Path
-  value: /mnt/user/appdata/fotosho
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /photos'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Photos
-    Required: 'false'
-    Target: /photos
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /thumbnails'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Thumbs
-    Required: 'false'
-    Target: /thumbnails
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 80'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Web Port
-    Required: 'false'
-    Target: '80'
-    Type: Port
-  value: '13377'
+  Device: {}
+  Label: {}
+  Path:
+    Config:
+      Default: /mnt/user/appdata/data
+      Description: 'Container Path: /config'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Config
+      Required: 'false'
+      Target: /config
+      Type: Path
+      value: /mnt/user/appdata/fotosho
+    Photos:
+      Default: ''
+      Description: 'Container Path: /photos'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Photos
+      Required: 'false'
+      Target: /photos
+      Type: Path
+      value: ''
+    Thumbs:
+      Default: ''
+      Description: 'Container Path: /thumbnails'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Thumbs
+      Required: 'false'
+      Target: /thumbnails
+      Type: Path
+      value: ''
+  Port:
+    Web Port:
+      Default: ''
+      Description: 'Container Port: 80'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Web Port
+      Required: 'false'
+      Target: '80'
+      Type: Port
+      value: '13377'
+  Variable: {}
 FirstSeen: 1626055393
 Icon: https://github.com/advplyr/fotosho/raw/master/static/Logo.png
 LastUpdate: 1627656094

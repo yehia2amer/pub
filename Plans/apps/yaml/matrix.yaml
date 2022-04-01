@@ -3,117 +3,122 @@ CategoryList:
 - Network-Voip
 - Network-Messenger
 Config:
-- '@attributes':
-    Default: '8008'
-    Description: HTTP
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: HTTP
-    Required: 'false'
-    Target: '8008'
-    Type: Port
-  value: '8008'
-- '@attributes':
-    Default: '8448'
-    Description: HTTPS
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: HTTPS
-    Required: 'false'
-    Target: '8448'
-    Type: Port
-  value: '8448'
-- '@attributes':
-    Default: '3478'
-    Description: STUN TCP
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: STUN TCP
-    Required: 'false'
-    Target: '3478'
-    Type: Port
-  value: '3478'
-- '@attributes':
-    Default: '3478'
-    Description: STUN UDP
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: STUN UDP
-    Required: 'false'
-    Target: '3478'
-    Type: Port
-  value: '3478'
-- '@attributes':
-    Default: ''
-    Description: Appdata
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Appdata
-    Required: 'false'
-    Target: /data
-    Type: Path
-  value: /mnt/user/appdata/matrix/
-- '@attributes':
-    Default: ''
-    Description: Server and domain name, mandatory, needed only for generate
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Server Name
-    Required: 'false'
-    Target: SERVER_NAME
-    Type: Variable
-  value: matrix
-- '@attributes':
-    Default: ''
-    Description: 'statistic report, mandatory, values: yes or no, needed only for
-      generate'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Report Stats
-    Required: 'false'
-    Target: REPORT_STATS
-    Type: Variable
-  value: 'no'
-- '@attributes':
-    Default: '0.5'
-    Description: https://github.com/matrix-org/synapse#id19
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: CACHE_FACTOR
-    Required: 'false'
-    Target: SYNAPSE_CACHE_FACTOR
-    Type: Variable
-  value: '0.5'
-- '@attributes':
-    Default: ''
-    Description: UID
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: UID
-    Required: 'false'
-    Target: MATRIX_UID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: ''
-    Description: GID
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: GID
-    Required: 'false'
-    Target: MATRIX_GID
-    Type: Variable
-  value: '100'
+  Device: {}
+  Label: {}
+  Path:
+    Appdata:
+      Default: ''
+      Description: Appdata
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Appdata
+      Required: 'false'
+      Target: /data
+      Type: Path
+      value: /mnt/user/appdata/matrix/
+  Port:
+    HTTP:
+      Default: '8008'
+      Description: HTTP
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: HTTP
+      Required: 'false'
+      Target: '8008'
+      Type: Port
+      value: '8008'
+    HTTPS:
+      Default: '8448'
+      Description: HTTPS
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: HTTPS
+      Required: 'false'
+      Target: '8448'
+      Type: Port
+      value: '8448'
+    STUN TCP:
+      Default: '3478'
+      Description: STUN TCP
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: STUN TCP
+      Required: 'false'
+      Target: '3478'
+      Type: Port
+      value: '3478'
+    STUN UDP:
+      Default: '3478'
+      Description: STUN UDP
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: STUN UDP
+      Required: 'false'
+      Target: '3478'
+      Type: Port
+      value: '3478'
+  Variable:
+    CACHE_FACTOR:
+      Default: '0.5'
+      Description: https://github.com/matrix-org/synapse#id19
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: CACHE_FACTOR
+      Required: 'false'
+      Target: SYNAPSE_CACHE_FACTOR
+      Type: Variable
+      value: '0.5'
+    GID:
+      Default: ''
+      Description: GID
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: GID
+      Required: 'false'
+      Target: MATRIX_GID
+      Type: Variable
+      value: '100'
+    Report Stats:
+      Default: ''
+      Description: 'statistic report, mandatory, values: yes or no, needed only for
+        generate'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Report Stats
+      Required: 'false'
+      Target: REPORT_STATS
+      Type: Variable
+      value: 'no'
+    Server Name:
+      Default: ''
+      Description: Server and domain name, mandatory, needed only for generate
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Server Name
+      Required: 'false'
+      Target: SERVER_NAME
+      Type: Variable
+      value: matrix
+    UID:
+      Default: ''
+      Description: UID
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: UID
+      Required: 'false'
+      Target: MATRIX_UID
+      Type: Variable
+      value: '99'
 FirstSeen: 1585681770
 Icon: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/matrix.png
 LastUpdate: 1647966414

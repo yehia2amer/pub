@@ -1,39 +1,44 @@
 CategoryList:
 - GameServers
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 27960'
-    Display: always-hide
-    Mask: 'false'
-    Mode: udp
-    Name: Game
-    Required: 'true'
-    Target: '27960'
-    Type: Port
-  value: '27960'
-- '@attributes':
-    Default: /mnt/user/appdata/rtcw/main
-    Description: Folder with RTCW/Main/*.pk3 files
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: RTCW
-    Required: 'true'
-    Target: /home/rtcw/main
-    Type: Path
-  value: /mnt/user/appdata/rtcw/main
-- '@attributes':
-    Default: /mnt/user/appdata/rtcw/coopmain
-    Description: Folder with RealRTCW/coop/coopmain/*.pk3 files
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: RealRTCW
-    Required: 'true'
-    Target: /home/rtcw/coopmain
-    Type: Path
-  value: /mnt/user/appdata/rtcw/coopmain
+  Device: {}
+  Label: {}
+  Path:
+    RTCW:
+      Default: /mnt/user/appdata/rtcw/main
+      Description: Folder with RTCW/Main/*.pk3 files
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: RTCW
+      Required: 'true'
+      Target: /home/rtcw/main
+      Type: Path
+      value: /mnt/user/appdata/rtcw/main
+    RealRTCW:
+      Default: /mnt/user/appdata/rtcw/coopmain
+      Description: Folder with RealRTCW/coop/coopmain/*.pk3 files
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: RealRTCW
+      Required: 'true'
+      Target: /home/rtcw/coopmain
+      Type: Path
+      value: /mnt/user/appdata/rtcw/coopmain
+  Port:
+    Game:
+      Default: ''
+      Description: 'Container Port: 27960'
+      Display: always-hide
+      Mask: 'false'
+      Mode: udp
+      Name: Game
+      Required: 'true'
+      Target: '27960'
+      Type: Port
+      value: '27960'
+  Variable: {}
 FirstSeen: 1639458222
 Icon: https://raw.githubusercontent.com/ivaxor/unraid-ca-docker-templates/main/rtcwcoop.png
 LastUpdate: 1639466556

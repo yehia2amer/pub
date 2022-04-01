@@ -1,84 +1,89 @@
 CategoryList:
 - GameServers
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /xlinkkaievolution'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: ServerFiles
-    Required: 'true'
-    Target: /xlinkkaievolution
-    Type: Path
-  value: /mnt/cache/appdata/xlinkkaievolution/
-- '@attributes':
-    Default: ''
-    Description: Only change if you know what you are doing!
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Interface Name
-    Required: 'true'
-    Target: INTERFACE_NAME
-    Type: Variable
-  value: eth0
-- '@attributes':
-    Default: ''
-    Description: Enter extra startup parameters here if needed.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Extra Parameters
-    Required: 'false'
-    Target: EXTRA_PARAMS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: UID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: UID
-    Required: 'true'
-    Target: UID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: GID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: GID
-    Required: 'true'
-    Target: GID
-    Type: Variable
-  value: '100'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: UMASK'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: UMASK
-    Required: 'true'
-    Target: UMASK
-    Type: Variable
-  value: '000'
-- '@attributes':
-    Default: ''
-    Description: This port must be forwarded in your router so that the XLinkKai Orbs
-      can communicate with the container.
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: UDP - Connection to the Orbs
-    Required: 'true'
-    Target: UDP_PORT
-    Type: Variable
-  value: '30000'
+  Device: {}
+  Label: {}
+  Path:
+    ServerFiles:
+      Default: ''
+      Description: 'Container Path: /xlinkkaievolution'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: ServerFiles
+      Required: 'true'
+      Target: /xlinkkaievolution
+      Type: Path
+      value: /mnt/cache/appdata/xlinkkaievolution/
+  Port: {}
+  Variable:
+    Extra Parameters:
+      Default: ''
+      Description: Enter extra startup parameters here if needed.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Extra Parameters
+      Required: 'false'
+      Target: EXTRA_PARAMS
+      Type: Variable
+      value: ''
+    GID:
+      Default: ''
+      Description: 'Container Variable: GID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: GID
+      Required: 'true'
+      Target: GID
+      Type: Variable
+      value: '100'
+    Interface Name:
+      Default: ''
+      Description: Only change if you know what you are doing!
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Interface Name
+      Required: 'true'
+      Target: INTERFACE_NAME
+      Type: Variable
+      value: eth0
+    UDP - Connection to the Orbs:
+      Default: ''
+      Description: This port must be forwarded in your router so that the XLinkKai
+        Orbs can communicate with the container.
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: UDP - Connection to the Orbs
+      Required: 'true'
+      Target: UDP_PORT
+      Type: Variable
+      value: '30000'
+    UID:
+      Default: ''
+      Description: 'Container Variable: UID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: UID
+      Required: 'true'
+      Target: UID
+      Type: Variable
+      value: '99'
+    UMASK:
+      Default: ''
+      Description: 'Container Variable: UMASK'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: UMASK
+      Required: 'true'
+      Target: UMASK
+      Type: Variable
+      value: '000'
 DonateLink: https://www.paypal.me/chips777
 DonateText: 'If you like my work please '
 ExtraParams: --cap-add=NET_ADMIN --restart=unless-stopped

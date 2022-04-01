@@ -2,107 +2,112 @@ CategoryList:
 - MediaApp-Video
 - MediaServer-Video
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Installation instructions here: https://github.com/mizz141/PlexAniSync-Mappings/wiki/Installation-on-unRAID'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: CUSTOM_MAPPINGS
-    Required: 'false'
-    Target: /plexanisync/custom_mappings.yaml
-    Type: Path
-  value: /mnt/user/appdata/PlexAniSync/PlexAniSync-Mappings/custom_mappings.yaml
-- '@attributes':
-    Default: ''
-    Description: Your http://www.anilist.co username
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: ANI_USERNAME
-    Required: 'false'
-    Target: ANI_USERNAME
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'The address to your Plex Media Server, for example: http://127.0.0.1:32400'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: PLEX_URL
-    Required: 'false'
-    Target: PLEX_URL
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Your anilist token (See install guide)
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: ANI_TOKEN
-    Required: 'false'
-    Target: ANI_TOKEN
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Follow this guide: https://support.plex.tv/articles/204059436-finding-an-authentication-token-x-plex-token/'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: PLEX_TOKEN
-    Required: 'false'
-    Target: PLEX_TOKEN
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: The library where your anime resides
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: PLEX_SECTION
-    Required: 'false'
-    Target: PLEX_SECTION
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: If set to True, it will NOT update your AniList which is useful if
-      you want to do a test run to check if everything lines up properly. (default
-      = False)
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: SKIP_LIST_UPDATE
-    Required: 'false'
-    Target: SKIP_LIST_UPDATE
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: /config/settings.ini, ONLY USE WHEN NECESSARY
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: settings_location
-    Required: 'false'
-    Target: /config/settings.ini
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: /config/settings.ini, ONLY USE WHEN NECESSARY
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: SETTINGS_FILE
-    Required: 'false'
-    Target: SETTINGS_FILE
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    CUSTOM_MAPPINGS:
+      Default: ''
+      Description: 'Installation instructions here: https://github.com/mizz141/PlexAniSync-Mappings/wiki/Installation-on-unRAID'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: CUSTOM_MAPPINGS
+      Required: 'false'
+      Target: /plexanisync/custom_mappings.yaml
+      Type: Path
+      value: /mnt/user/appdata/PlexAniSync/PlexAniSync-Mappings/custom_mappings.yaml
+    settings_location:
+      Default: ''
+      Description: /config/settings.ini, ONLY USE WHEN NECESSARY
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: settings_location
+      Required: 'false'
+      Target: /config/settings.ini
+      Type: Path
+      value: ''
+  Port: {}
+  Variable:
+    ANI_TOKEN:
+      Default: ''
+      Description: Your anilist token (See install guide)
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: ANI_TOKEN
+      Required: 'false'
+      Target: ANI_TOKEN
+      Type: Variable
+      value: ''
+    ANI_USERNAME:
+      Default: ''
+      Description: Your http://www.anilist.co username
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: ANI_USERNAME
+      Required: 'false'
+      Target: ANI_USERNAME
+      Type: Variable
+      value: ''
+    PLEX_SECTION:
+      Default: ''
+      Description: The library where your anime resides
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: PLEX_SECTION
+      Required: 'false'
+      Target: PLEX_SECTION
+      Type: Variable
+      value: ''
+    PLEX_TOKEN:
+      Default: ''
+      Description: 'Follow this guide: https://support.plex.tv/articles/204059436-finding-an-authentication-token-x-plex-token/'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: PLEX_TOKEN
+      Required: 'false'
+      Target: PLEX_TOKEN
+      Type: Variable
+      value: ''
+    PLEX_URL:
+      Default: ''
+      Description: 'The address to your Plex Media Server, for example: http://127.0.0.1:32400'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: PLEX_URL
+      Required: 'false'
+      Target: PLEX_URL
+      Type: Variable
+      value: ''
+    SETTINGS_FILE:
+      Default: ''
+      Description: /config/settings.ini, ONLY USE WHEN NECESSARY
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: SETTINGS_FILE
+      Required: 'false'
+      Target: SETTINGS_FILE
+      Type: Variable
+      value: ''
+    SKIP_LIST_UPDATE:
+      Default: ''
+      Description: If set to True, it will NOT update your AniList which is useful
+        if you want to do a test run to check if everything lines up properly. (default
+        = False)
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: SKIP_LIST_UPDATE
+      Required: 'false'
+      Target: SKIP_LIST_UPDATE
+      Type: Variable
+      value: ''
 FirstSeen: 1640697388
 Icon: https://github.com/RickDB/PlexAniSync/raw/master/logo.png
 LastUpdate: 1646104816

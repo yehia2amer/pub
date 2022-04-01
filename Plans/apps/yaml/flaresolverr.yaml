@@ -1,39 +1,44 @@
 CategoryList:
 - Downloaders
 Config:
-- '@attributes':
-    Default: '8191'
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Port
-    Required: 'true'
-    Target: '8191'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: info
-    Description: Verbosity of the logging. Use `LOG_LEVEL=debug` for more information.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Log Level
-    Required: 'false'
-    Target: LOG_LEVEL
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: UTC
-    Description: Timezone used in the logs and the web browser.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Time Zone
-    Required: 'false'
-    Target: TZ
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path: {}
+  Port:
+    Port:
+      Default: '8191'
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Port
+      Required: 'true'
+      Target: '8191'
+      Type: Port
+      value: ''
+  Variable:
+    Log Level:
+      Default: info
+      Description: Verbosity of the logging. Use `LOG_LEVEL=debug` for more information.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Log Level
+      Required: 'false'
+      Target: LOG_LEVEL
+      Type: Variable
+      value: ''
+    Time Zone:
+      Default: UTC
+      Description: Timezone used in the logs and the web browser.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Time Zone
+      Required: 'false'
+      Target: TZ
+      Type: Variable
+      value: ''
 FirstSeen: 1637658218
 Icon: https://raw.githubusercontent.com/FlareSolverr/FlareSolverr/master/resources/flaresolverr_logo.png
 LastUpdate: 1647664482

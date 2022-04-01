@@ -6,109 +6,114 @@ CategoryList:
 - MediaServer-Photos
 ChangeLogPresent: true
 Config:
-- '@attributes':
-    Default: '80'
-    Description: http gui
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'true'
-    Target: '80'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Contains all relevant configuration files.
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: Appdata
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Where lychee will store uploaded data.
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: 'Path: /pictures'
-    Required: 'true'
-    Target: /pictures
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: mariadb
-    Description: for specifying the database host
-    Display: always
-    Mask: 'false'
-    Name: DB_HOST
-    Required: 'true'
-    Target: DB_HOST
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: lychee
-    Description: for specifying the database user
-    Display: always
-    Mask: 'false'
-    Name: DB_USERNAME
-    Required: 'true'
-    Target: DB_USERNAME
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: dbpassword
-    Description: for specifying the database password
-    Display: always
-    Mask: 'true'
-    Name: DB_PASSWORD
-    Required: 'true'
-    Target: DB_PASSWORD
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: lychee
-    Description: for specifying the database to be used
-    Display: always
-    Mask: 'false'
-    Name: DB_DATABASE
-    Required: 'true'
-    Target: DB_DATABASE
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '99'
-    Description: 'Container Variable: PUID'
-    Display: advanced
-    Mask: 'false'
-    Name: PUID
-    Required: 'true'
-    Target: PUID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '100'
-    Description: 'Container Variable: PGID'
-    Display: advanced
-    Mask: 'false'
-    Name: PGID
-    Required: 'true'
-    Target: PGID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '022'
-    Description: 'Container Variable: UMASK'
-    Display: advanced
-    Mask: 'false'
-    Name: UMASK
-    Required: 'false'
-    Target: UMASK
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Appdata:
+      Default: ''
+      Description: Contains all relevant configuration files.
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: Appdata
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: ''
+    'Path: /pictures':
+      Default: ''
+      Description: Where lychee will store uploaded data.
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: 'Path: /pictures'
+      Required: 'true'
+      Target: /pictures
+      Type: Path
+      value: ''
+  Port:
+    WebUI:
+      Default: '80'
+      Description: http gui
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'true'
+      Target: '80'
+      Type: Port
+      value: ''
+  Variable:
+    DB_DATABASE:
+      Default: lychee
+      Description: for specifying the database to be used
+      Display: always
+      Mask: 'false'
+      Name: DB_DATABASE
+      Required: 'true'
+      Target: DB_DATABASE
+      Type: Variable
+      value: ''
+    DB_HOST:
+      Default: mariadb
+      Description: for specifying the database host
+      Display: always
+      Mask: 'false'
+      Name: DB_HOST
+      Required: 'true'
+      Target: DB_HOST
+      Type: Variable
+      value: ''
+    DB_PASSWORD:
+      Default: dbpassword
+      Description: for specifying the database password
+      Display: always
+      Mask: 'true'
+      Name: DB_PASSWORD
+      Required: 'true'
+      Target: DB_PASSWORD
+      Type: Variable
+      value: ''
+    DB_USERNAME:
+      Default: lychee
+      Description: for specifying the database user
+      Display: always
+      Mask: 'false'
+      Name: DB_USERNAME
+      Required: 'true'
+      Target: DB_USERNAME
+      Type: Variable
+      value: ''
+    PGID:
+      Default: '100'
+      Description: 'Container Variable: PGID'
+      Display: advanced
+      Mask: 'false'
+      Name: PGID
+      Required: 'true'
+      Target: PGID
+      Type: Variable
+      value: ''
+    PUID:
+      Default: '99'
+      Description: 'Container Variable: PUID'
+      Display: advanced
+      Mask: 'false'
+      Name: PUID
+      Required: 'true'
+      Target: PUID
+      Type: Variable
+      value: ''
+    UMASK:
+      Default: '022'
+      Description: 'Container Variable: UMASK'
+      Display: advanced
+      Mask: 'false'
+      Name: UMASK
+      Required: 'false'
+      Target: UMASK
+      Type: Variable
+      value: ''
 DonateImg: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/donate.png
 DonateLink: https://www.linuxserver.io/donate
 DonateText: Donations

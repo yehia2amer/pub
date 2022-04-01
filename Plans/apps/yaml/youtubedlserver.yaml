@@ -1,28 +1,33 @@
 CategoryList:
 - Downloaders
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 8080'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: port
-    Required: 'false'
-    Target: '8080'
-    Type: Port
-  value: '8080'
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /youtube-dl'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Download
-    Required: 'false'
-    Target: /youtube-dl
-    Type: Path
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Download:
+      Default: ''
+      Description: 'Container Path: /youtube-dl'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Download
+      Required: 'false'
+      Target: /youtube-dl
+      Type: Path
+      value: ''
+  Port:
+    port:
+      Default: ''
+      Description: 'Container Port: 8080'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: port
+      Required: 'false'
+      Target: '8080'
+      Type: Port
+      value: '8080'
+  Variable: {}
 FirstSeen: '1533428737'
 Icon: https://i.imgur.com/taKLB37.png
 LastUpdate: 1637179037

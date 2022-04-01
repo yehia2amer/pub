@@ -13,91 +13,96 @@ CategoryList:
 - Tools-Utilities
 ChangeLogPresent: true
 Config:
-- '@attributes':
-    Default: '8200'
-    Description: http gui
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'true'
-    Target: '8200'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Contains all relevant configuration files.
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: Appdata
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Path to store local backups.
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: 'Path: /backups'
-    Required: 'true'
-    Target: /backups
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Path to source for files to backup.
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: 'Path: /source'
-    Required: 'true'
-    Target: /source
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Optionally specify any CLI variables(https://duplicati.readthedocs.io/en/latest/07-other-command-line-utilities/)
-      you want to launch the app with
-    Display: always
-    Mask: 'false'
-    Name: CLI_ARGS
-    Required: 'false'
-    Target: CLI_ARGS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '99'
-    Description: 'Container Variable: PUID'
-    Display: advanced
-    Mask: 'false'
-    Name: PUID
-    Required: 'true'
-    Target: PUID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '100'
-    Description: 'Container Variable: PGID'
-    Display: advanced
-    Mask: 'false'
-    Name: PGID
-    Required: 'true'
-    Target: PGID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '022'
-    Description: 'Container Variable: UMASK'
-    Display: advanced
-    Mask: 'false'
-    Name: UMASK
-    Required: 'false'
-    Target: UMASK
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Appdata:
+      Default: ''
+      Description: Contains all relevant configuration files.
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: Appdata
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: ''
+    'Path: /backups':
+      Default: ''
+      Description: Path to store local backups.
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: 'Path: /backups'
+      Required: 'true'
+      Target: /backups
+      Type: Path
+      value: ''
+    'Path: /source':
+      Default: ''
+      Description: Path to source for files to backup.
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: 'Path: /source'
+      Required: 'true'
+      Target: /source
+      Type: Path
+      value: ''
+  Port:
+    WebUI:
+      Default: '8200'
+      Description: http gui
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'true'
+      Target: '8200'
+      Type: Port
+      value: ''
+  Variable:
+    CLI_ARGS:
+      Default: ''
+      Description: Optionally specify any CLI variables(https://duplicati.readthedocs.io/en/latest/07-other-command-line-utilities/)
+        you want to launch the app with
+      Display: always
+      Mask: 'false'
+      Name: CLI_ARGS
+      Required: 'false'
+      Target: CLI_ARGS
+      Type: Variable
+      value: ''
+    PGID:
+      Default: '100'
+      Description: 'Container Variable: PGID'
+      Display: advanced
+      Mask: 'false'
+      Name: PGID
+      Required: 'true'
+      Target: PGID
+      Type: Variable
+      value: ''
+    PUID:
+      Default: '99'
+      Description: 'Container Variable: PUID'
+      Display: advanced
+      Mask: 'false'
+      Name: PUID
+      Required: 'true'
+      Target: PUID
+      Type: Variable
+      value: ''
+    UMASK:
+      Default: '022'
+      Description: 'Container Variable: UMASK'
+      Display: advanced
+      Mask: 'false'
+      Name: UMASK
+      Required: 'false'
+      Target: UMASK
+      Type: Variable
+      value: ''
 DonateImg: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/donate.png
 DonateLink: https://www.linuxserver.io/donate
 DonateText: Donations

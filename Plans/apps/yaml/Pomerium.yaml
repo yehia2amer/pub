@@ -2,72 +2,77 @@ CategoryList:
 - Productivity
 - Security
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: COOKIE_SECRET'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Cookie Secret
-    Required: 'true'
-    Target: COOKIE_SECRET
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '443'
-    Description: 'Container Port: 443'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: HTTPS
-    Required: 'true'
-    Target: '443'
-    Type: Port
-  value: '1443'
-- '@attributes':
-    Default: '80'
-    Description: 'Container Port: 80'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: HTTP
-    Required: 'true'
-    Target: '80'
-    Type: Port
-  value: '180'
-- '@attributes':
-    Default: /mnt/user/appdata/pomerium
-    Description: 'Container Path: /data'
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: Appdata
-    Required: 'true'
-    Target: /data
-    Type: Path
-  value: /mnt/user/appdata/pomerium
-- '@attributes':
-    Default: /mnt/user/appdata/pomerium/pomerium
-    Description: 'Container Path: /pomerium/'
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: Pomerium
-    Required: 'true'
-    Target: /pomerium/
-    Type: Path
-  value: /mnt/user/appdata/pomerium/pomerium
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 5443'
-    Display: advanced
-    Mask: 'false'
-    Mode: tcp
-    Name: '5443'
-    Required: 'true'
-    Target: '5443'
-    Type: Port
-  value: '5443'
+  Device: {}
+  Label: {}
+  Path:
+    Appdata:
+      Default: /mnt/user/appdata/pomerium
+      Description: 'Container Path: /data'
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: Appdata
+      Required: 'true'
+      Target: /data
+      Type: Path
+      value: /mnt/user/appdata/pomerium
+    Pomerium:
+      Default: /mnt/user/appdata/pomerium/pomerium
+      Description: 'Container Path: /pomerium/'
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: Pomerium
+      Required: 'true'
+      Target: /pomerium/
+      Type: Path
+      value: /mnt/user/appdata/pomerium/pomerium
+  Port:
+    '5443':
+      Default: ''
+      Description: 'Container Port: 5443'
+      Display: advanced
+      Mask: 'false'
+      Mode: tcp
+      Name: '5443'
+      Required: 'true'
+      Target: '5443'
+      Type: Port
+      value: '5443'
+    HTTP:
+      Default: '80'
+      Description: 'Container Port: 80'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: HTTP
+      Required: 'true'
+      Target: '80'
+      Type: Port
+      value: '180'
+    HTTPS:
+      Default: '443'
+      Description: 'Container Port: 443'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: HTTPS
+      Required: 'true'
+      Target: '443'
+      Type: Port
+      value: '1443'
+  Variable:
+    Cookie Secret:
+      Default: ''
+      Description: 'Container Variable: COOKIE_SECRET'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Cookie Secret
+      Required: 'true'
+      Target: COOKIE_SECRET
+      Type: Variable
+      value: ''
 DonateLink: https://paypal.me/ramteksolutions
 DonateText: Help support my work by buying me a beer
 FirstSeen: 1612667216

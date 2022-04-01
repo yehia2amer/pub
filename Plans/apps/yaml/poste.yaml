@@ -7,128 +7,133 @@ CategoryList:
 - Network-Other
 - Network-Messenger
 Config:
-- '@attributes':
-    Default: '25'
-    Description: 'Container Port: '
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Port25
-    Required: 'true'
-    Target: '25'
-    Type: Port
-  value: '25'
-- '@attributes':
-    Default: '8280'
-    Description: web interface port
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Webui
-    Required: 'true'
-    Target: '80'
-    Type: Port
-  value: '8280'
-- '@attributes':
-    Default: '110'
-    Description: POP3
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: POP3 Port
-    Required: 'true'
-    Target: '110'
-    Type: Port
-  value: '110'
-- '@attributes':
-    Default: '143'
-    Description: IMAP
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: IMAP
-    Required: 'true'
-    Target: '143'
-    Type: Port
-  value: '143'
-- '@attributes':
-    Default: '43443'
-    Description: HTTPS
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Container HTTPS
-    Required: 'true'
-    Target: '443'
-    Type: Port
-  value: '443'
-- '@attributes':
-    Default: '465'
-    Description: SMTPS
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Container SMTPS
-    Required: 'true'
-    Target: '465'
-    Type: Port
-  value: '465'
-- '@attributes':
-    Default: '587'
-    Description: MSA
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Container MSA
-    Required: 'true'
-    Target: '587'
-    Type: Port
-  value: '587'
-- '@attributes':
-    Default: '993'
-    Description: IMAPS
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Container IMAPS
-    Required: 'true'
-    Target: '993'
-    Type: Port
-  value: '993'
-- '@attributes':
-    Default: '995'
-    Description: POP3S
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Container POP3S
-    Required: 'true'
-    Target: '995'
-    Type: Port
-  value: '995'
-- '@attributes':
-    Default: /mnt/user/poste
-    Description: poste data folder
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Data Folder
-    Required: 'true'
-    Target: /data
-    Type: Path
-  value: /mnt/user/poste
-- '@attributes':
-    Default: '4190'
-    Description: When you are going to use clients with ability to manage Sieve filters
-      externally, you need also publish port 4190
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: external Sieve filter manager
-    Required: 'false'
-    Target: '4190'
-    Type: Port
-  value: '4190'
+  Device: {}
+  Label: {}
+  Path:
+    Data Folder:
+      Default: /mnt/user/poste
+      Description: poste data folder
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Data Folder
+      Required: 'true'
+      Target: /data
+      Type: Path
+      value: /mnt/user/poste
+  Port:
+    Container HTTPS:
+      Default: '43443'
+      Description: HTTPS
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Container HTTPS
+      Required: 'true'
+      Target: '443'
+      Type: Port
+      value: '443'
+    Container IMAPS:
+      Default: '993'
+      Description: IMAPS
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Container IMAPS
+      Required: 'true'
+      Target: '993'
+      Type: Port
+      value: '993'
+    Container MSA:
+      Default: '587'
+      Description: MSA
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Container MSA
+      Required: 'true'
+      Target: '587'
+      Type: Port
+      value: '587'
+    Container POP3S:
+      Default: '995'
+      Description: POP3S
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Container POP3S
+      Required: 'true'
+      Target: '995'
+      Type: Port
+      value: '995'
+    Container SMTPS:
+      Default: '465'
+      Description: SMTPS
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Container SMTPS
+      Required: 'true'
+      Target: '465'
+      Type: Port
+      value: '465'
+    IMAP:
+      Default: '143'
+      Description: IMAP
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: IMAP
+      Required: 'true'
+      Target: '143'
+      Type: Port
+      value: '143'
+    POP3 Port:
+      Default: '110'
+      Description: POP3
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: POP3 Port
+      Required: 'true'
+      Target: '110'
+      Type: Port
+      value: '110'
+    Port25:
+      Default: '25'
+      Description: 'Container Port: '
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Port25
+      Required: 'true'
+      Target: '25'
+      Type: Port
+      value: '25'
+    Webui:
+      Default: '8280'
+      Description: web interface port
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Webui
+      Required: 'true'
+      Target: '80'
+      Type: Port
+      value: '8280'
+    external Sieve filter manager:
+      Default: '4190'
+      Description: When you are going to use clients with ability to manage Sieve
+        filters externally, you need also publish port 4190
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: external Sieve filter manager
+      Required: 'false'
+      Target: '4190'
+      Type: Port
+      value: '4190'
+  Variable: {}
 DonateImg: ''
 DonateText: '&quot;Coin! Coin!&quot; -- Scooby Doo'
 FirstSeen: '1519017501'

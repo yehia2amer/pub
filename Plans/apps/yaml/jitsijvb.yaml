@@ -3,150 +3,155 @@ CategoryList:
 - Network-Voip
 - Network-Messenger
 Config:
-- '@attributes':
-    Default: '10000'
-    Description: Media port for the Jitsi Videobridge
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: JVB_PORT
-    Required: 'false'
-    Target: '10000'
-    Type: Port
-  value: '10000'
-- '@attributes':
-    Default: '4443'
-    Description: "TCP Fallback for Jitsi Videobridge for when UDP isn\u2019t available"
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: JVB_TCP_PORT
-    Required: 'false'
-    Target: '4443'
-    Type: Port
-  value: '4443'
-- '@attributes':
-    Default: /mnt/user/appdata/jitsi/jvb/
-    Description: IMPORTENT Change to /mnt/user/appdata/jitsi/jvb/
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: AppData Config Path
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: /mnt/user/appdata/jitsi/jvb/
-- '@attributes':
-    Default: 192.168.1.1
-    Description: IP address of the Docker host, needed for LAN environments
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DOCKER_HOST_ADDRESS
-    Required: 'false'
-    Target: DOCKER_HOST_ADDRESS
-    Type: Variable
-  value: 192.168.1.1
-- '@attributes':
-    Default: auth.meet.jitsi
-    Description: Internal XMPP domain for authenticated services
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: XMPP_AUTH_DOMAIN
-    Required: 'false'
-    Target: XMPP_AUTH_DOMAIN
-    Type: Variable
-  value: auth.meet.jitsi
-- '@attributes':
-    Default: internal-muc.meet.jitsi
-    Description: XMPP domain for the internal MUC
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: XMPP_INTERNAL_MUC_DOMAIN
-    Required: 'false'
-    Target: XMPP_INTERNAL_MUC_DOMAIN
-    Type: Variable
-  value: internal-muc.meet.jitsi
-- '@attributes':
-    Default: xmpp.meet.jitsi
-    Description: Internal XMPP server name xmpp.meet.jitsi
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: XMPP_SERVER
-    Required: 'false'
-    Target: XMPP_SERVER
-    Type: Variable
-  value: xmpp.meet.jitsi
-- '@attributes':
-    Default: jvb
-    Description: XMPP user for JVB MUC client connections
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: JVB_AUTH_USER
-    Required: 'false'
-    Target: JVB_AUTH_USER
-    Type: Variable
-  value: jvb
-- '@attributes':
-    Default: passw0rd
-    Description: XMPP password for JVB MUC client connections
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: JVB_AUTH_PASSWORD
-    Required: 'false'
-    Target: JVB_AUTH_PASSWORD
-    Type: Variable
-  value: passw0rd
-- '@attributes':
-    Default: jvbbrewery
-    Description: MUC name for the JVB pool
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: JVB_BREWERY_MUC
-    Required: 'false'
-    Target: JVB_BREWERY_MUC
-    Type: Variable
-  value: jvbbrewery
-- '@attributes':
-    Default: 'true'
-    Description: Disable the additional harvester which allows video over TCP (rather
-      than just UDP)
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: JVB_TCP_HARVESTER_DISABLED
-    Required: 'false'
-    Target: JVB_TCP_HARVESTER_DISABLED
-    Type: Variable
-  value: 'true'
-- '@attributes':
-    Default: stun.l.google.com:19302, stun1.l.google.com:19302, stun2.l.google.com:19302
-    Description: STUN servers used to discover the server's public IP
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: JVB_STUN_SERVERS
-    Required: 'false'
-    Target: JVB_STUN_SERVERS
-    Type: Variable
-  value: stun.l.google.com:19302, stun1.l.google.com:19302, stun2.l.google.com:19302
-- '@attributes':
-    Default: none
-    Description: Comma separated list of JVB APIs to enable
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: JVB_ENABLE_APIS
-    Required: 'false'
-    Target: JVB_ENABLE_APIS
-    Type: Variable
-  value: none
+  Device: {}
+  Label: {}
+  Path:
+    AppData Config Path:
+      Default: /mnt/user/appdata/jitsi/jvb/
+      Description: IMPORTENT Change to /mnt/user/appdata/jitsi/jvb/
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: AppData Config Path
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: /mnt/user/appdata/jitsi/jvb/
+  Port:
+    JVB_PORT:
+      Default: '10000'
+      Description: Media port for the Jitsi Videobridge
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: JVB_PORT
+      Required: 'false'
+      Target: '10000'
+      Type: Port
+      value: '10000'
+    JVB_TCP_PORT:
+      Default: '4443'
+      Description: "TCP Fallback for Jitsi Videobridge for when UDP isn\u2019t available"
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: JVB_TCP_PORT
+      Required: 'false'
+      Target: '4443'
+      Type: Port
+      value: '4443'
+  Variable:
+    DOCKER_HOST_ADDRESS:
+      Default: 192.168.1.1
+      Description: IP address of the Docker host, needed for LAN environments
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DOCKER_HOST_ADDRESS
+      Required: 'false'
+      Target: DOCKER_HOST_ADDRESS
+      Type: Variable
+      value: 192.168.1.1
+    JVB_AUTH_PASSWORD:
+      Default: passw0rd
+      Description: XMPP password for JVB MUC client connections
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: JVB_AUTH_PASSWORD
+      Required: 'false'
+      Target: JVB_AUTH_PASSWORD
+      Type: Variable
+      value: passw0rd
+    JVB_AUTH_USER:
+      Default: jvb
+      Description: XMPP user for JVB MUC client connections
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: JVB_AUTH_USER
+      Required: 'false'
+      Target: JVB_AUTH_USER
+      Type: Variable
+      value: jvb
+    JVB_BREWERY_MUC:
+      Default: jvbbrewery
+      Description: MUC name for the JVB pool
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: JVB_BREWERY_MUC
+      Required: 'false'
+      Target: JVB_BREWERY_MUC
+      Type: Variable
+      value: jvbbrewery
+    JVB_ENABLE_APIS:
+      Default: none
+      Description: Comma separated list of JVB APIs to enable
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: JVB_ENABLE_APIS
+      Required: 'false'
+      Target: JVB_ENABLE_APIS
+      Type: Variable
+      value: none
+    JVB_STUN_SERVERS:
+      Default: stun.l.google.com:19302, stun1.l.google.com:19302, stun2.l.google.com:19302
+      Description: STUN servers used to discover the server's public IP
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: JVB_STUN_SERVERS
+      Required: 'false'
+      Target: JVB_STUN_SERVERS
+      Type: Variable
+      value: stun.l.google.com:19302, stun1.l.google.com:19302, stun2.l.google.com:19302
+    JVB_TCP_HARVESTER_DISABLED:
+      Default: 'true'
+      Description: Disable the additional harvester which allows video over TCP (rather
+        than just UDP)
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: JVB_TCP_HARVESTER_DISABLED
+      Required: 'false'
+      Target: JVB_TCP_HARVESTER_DISABLED
+      Type: Variable
+      value: 'true'
+    XMPP_AUTH_DOMAIN:
+      Default: auth.meet.jitsi
+      Description: Internal XMPP domain for authenticated services
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: XMPP_AUTH_DOMAIN
+      Required: 'false'
+      Target: XMPP_AUTH_DOMAIN
+      Type: Variable
+      value: auth.meet.jitsi
+    XMPP_INTERNAL_MUC_DOMAIN:
+      Default: internal-muc.meet.jitsi
+      Description: XMPP domain for the internal MUC
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: XMPP_INTERNAL_MUC_DOMAIN
+      Required: 'false'
+      Target: XMPP_INTERNAL_MUC_DOMAIN
+      Type: Variable
+      value: internal-muc.meet.jitsi
+    XMPP_SERVER:
+      Default: xmpp.meet.jitsi
+      Description: Internal XMPP server name xmpp.meet.jitsi
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: XMPP_SERVER
+      Required: 'false'
+      Target: XMPP_SERVER
+      Type: Variable
+      value: xmpp.meet.jitsi
 FirstSeen: 1586362160
 Icon: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/jitsi.png
 LastUpdate: 1648707560

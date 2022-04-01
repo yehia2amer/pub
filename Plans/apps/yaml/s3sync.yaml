@@ -3,83 +3,88 @@ CategoryList:
 - Backup
 - Cloud
 Config:
-- '@attributes':
-    Default: ''
-    Description: Your AWS Access Key.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: ACCESS_KEY
-    Required: 'true'
-    Target: ACCESS_KEY
-    Type: Variable
-  value: your_access_key_here
-- '@attributes':
-    Default: ''
-    Description: Your AWS Secret Key.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: SECRET_KEY
-    Required: 'true'
-    Target: SECRET_KEY
-    Type: Variable
-  value: your_secret_key_here
-- '@attributes':
-    Default: ''
-    Description: The region of your bucket.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Region
-    Required: 'true'
-    Target: REGION
-    Type: Variable
-  value: bucket_region_here
-- '@attributes':
-    Default: ''
-    Description: (Optional) Extra parameters for the s3 sync command.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: S3 Sync Parameters
-    Required: 'false'
-    Target: S3SYNCPARAMS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: The target bucket path with optional prefix.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: S3 Path
-    Required: 'true'
-    Target: S3PATH
-    Type: Variable
-  value: s3://your_bucket_name
-- '@attributes':
-    Default: ''
-    Description: Cron schedule of backup.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Cron Schedule
-    Required: 'true'
-    Target: CRON_SCHEDULE
-    Type: Variable
-  value: 0 * * * *
-- '@attributes':
-    Default: ''
-    Description: This folder will be backed up.
-    Display: always
-    Mask: 'false'
-    Mode: ro
-    Name: Backup Source Example
-    Required: 'false'
-    Target: /data/example
-    Type: Path
-  value: /mnt/user/example
+  Device: {}
+  Label: {}
+  Path:
+    Backup Source Example:
+      Default: ''
+      Description: This folder will be backed up.
+      Display: always
+      Mask: 'false'
+      Mode: ro
+      Name: Backup Source Example
+      Required: 'false'
+      Target: /data/example
+      Type: Path
+      value: /mnt/user/example
+  Port: {}
+  Variable:
+    ACCESS_KEY:
+      Default: ''
+      Description: Your AWS Access Key.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: ACCESS_KEY
+      Required: 'true'
+      Target: ACCESS_KEY
+      Type: Variable
+      value: your_access_key_here
+    Cron Schedule:
+      Default: ''
+      Description: Cron schedule of backup.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Cron Schedule
+      Required: 'true'
+      Target: CRON_SCHEDULE
+      Type: Variable
+      value: 0 * * * *
+    Region:
+      Default: ''
+      Description: The region of your bucket.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Region
+      Required: 'true'
+      Target: REGION
+      Type: Variable
+      value: bucket_region_here
+    S3 Path:
+      Default: ''
+      Description: The target bucket path with optional prefix.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: S3 Path
+      Required: 'true'
+      Target: S3PATH
+      Type: Variable
+      value: s3://your_bucket_name
+    S3 Sync Parameters:
+      Default: ''
+      Description: (Optional) Extra parameters for the s3 sync command.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: S3 Sync Parameters
+      Required: 'false'
+      Target: S3SYNCPARAMS
+      Type: Variable
+      value: ''
+    SECRET_KEY:
+      Default: ''
+      Description: Your AWS Secret Key.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: SECRET_KEY
+      Required: 'true'
+      Target: SECRET_KEY
+      Type: Variable
+      value: your_secret_key_here
 FirstSeen: 1618747359
 Icon: https://raw.githubusercontent.com/what-name/unraid-templates/main/static/s3-icon.png
 LastUpdate: 1620909219

@@ -10,28 +10,33 @@ CategoryList:
 - MediaServer-Photos
 - MediaServer-Other
 Config:
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'false'
-    Target: '80'
-    Type: Port
-  value: '8085'
-- '@attributes':
-    Default: ''
-    Description: This is the configuration file.
-    Display: always
-    Mask: 'false'
-    Mode: ro
-    Name: Storage (config file)
-    Required: 'false'
-    Target: /var/www/html/HRProprietary/HRConvert2/config.php
-    Type: Path
-  value: /mnt/user/appdata/hrconvert2/config.php
+  Device: {}
+  Label: {}
+  Path:
+    Storage (config file):
+      Default: ''
+      Description: This is the configuration file.
+      Display: always
+      Mask: 'false'
+      Mode: ro
+      Name: Storage (config file)
+      Required: 'false'
+      Target: /var/www/html/HRProprietary/HRConvert2/config.php
+      Type: Path
+      value: /mnt/user/appdata/hrconvert2/config.php
+  Port:
+    WebUI:
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'false'
+      Target: '80'
+      Type: Port
+      value: '8085'
+  Variable: {}
 FirstSeen: 1643245399
 Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/hrconvert2.png
 LastUpdate: 1553602065

@@ -3,171 +3,176 @@ CategoryList:
 - Network-Voip
 - Network-Messenger
 Config:
-- '@attributes':
-    Default: /mnt/user/appdata/jitsi/jicofo/
-    Description: IMPORTENT Change to /mnt/user/appdata/jitsi/jicofo/
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: AppData Config Path
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: /mnt/user/appdata/jitsi/jicofo/
-- '@attributes':
-    Default: '1'
-    Description: Enable authentication
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: ENABLE_AUTH
-    Required: 'false'
-    Target: ENABLE_AUTH
-    Type: Variable
-  value: '1'
-- '@attributes':
-    Default: meet.jitsi
-    Description: Internal XMPP domain
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: XMPP_DOMAIN
-    Required: 'false'
-    Target: XMPP_DOMAIN
-    Type: Variable
-  value: meet.jitsi
-- '@attributes':
-    Default: auth.meet.jitsi
-    Description: Internal XMPP domain for authenticated services
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: XMPP_AUTH_DOMAIN
-    Required: 'false'
-    Target: XMPP_AUTH_DOMAIN
-    Type: Variable
-  value: auth.meet.jitsi
-- '@attributes':
-    Default: internal-muc.meet.jitsi
-    Description: XMPP domain for the internal MUC
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: XMPP_INTERNAL_MUC_DOMAIN
-    Required: 'false'
-    Target: XMPP_INTERNAL_MUC_DOMAIN
-    Type: Variable
-  value: internal-muc.meet.jitsi
-- '@attributes':
-    Default: xmpp.meet.jitsi
-    Description: Internal XMPP server name xmpp.meet.jitsi
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: XMPP_SERVER
-    Required: 'false'
-    Target: XMPP_SERVER
-    Type: Variable
-  value: xmpp.meet.jitsi
-- '@attributes':
-    Default: s3cr37
-    Description: XMPP component password for Jicofo
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: JICOFO_COMPONENT_SECRET
-    Required: 'false'
-    Target: JICOFO_COMPONENT_SECRET
-    Type: Variable
-  value: s3cr37
-- '@attributes':
-    Default: focus
-    Description: XMPP user for Jicofo client connections
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: JICOFO_AUTH_USER
-    Required: 'false'
-    Target: JICOFO_AUTH_USER
-    Type: Variable
-  value: focus
-- '@attributes':
-    Default: passw0rd
-    Description: XMPP password for Jicofo client connections
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: JICOFO_AUTH_PASSWORD
-    Required: 'false'
-    Target: JICOFO_AUTH_PASSWORD
-    Type: Variable
-  value: passw0rd
-- '@attributes':
-    Default: http://reservation.example.com
-    Description: "Base URL of Jicofo\u2019s reservation REST API"
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: JICOFO_RESERVATION_REST_BASE_URL
-    Required: 'false'
-    Target: JICOFO_RESERVATION_REST_BASE_URL
-    Type: Variable
-  value: http://reservation.example.com
-- '@attributes':
-    Default: jvbbrewery
-    Description: MUC name for the JVB pool
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: JVB_BREWERY_MUC
-    Required: 'false'
-    Target: JVB_BREWERY_MUC
-    Type: Variable
-  value: jvbbrewery
-- '@attributes':
-    Default: jigasibrewery
-    Description: MUC name for the Jigasi pool
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: JIGASI_BREWERY_MUC
-    Required: 'false'
-    Target: JIGASI_BREWERY_MUC
-    Type: Variable
-  value: jigasibrewery
-- '@attributes':
-    Default: test@sip2sip.info
-    Description: SIP URI for incoming / outgoing calls
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: JIGASI_SIP_URI
-    Required: 'false'
-    Target: JIGASI_SIP_URI
-    Type: Variable
-  value: test@sip2sip.info
-- '@attributes':
-    Default: jibribrewery
-    Description: MUC name for the Jibri pool
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: JIBRI_BREWERY_MUC
-    Required: 'false'
-    Target: JIBRI_BREWERY_MUC
-    Type: Variable
-  value: jibribrewery
-- '@attributes':
-    Default: '90'
-    Description: MUC connection timeout
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: JIBRI_PENDING_TIMEOUT
-    Required: 'false'
-    Target: JIBRI_PENDING_TIMEOUT
-    Type: Variable
-  value: '90'
+  Device: {}
+  Label: {}
+  Path:
+    AppData Config Path:
+      Default: /mnt/user/appdata/jitsi/jicofo/
+      Description: IMPORTENT Change to /mnt/user/appdata/jitsi/jicofo/
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: AppData Config Path
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: /mnt/user/appdata/jitsi/jicofo/
+  Port: {}
+  Variable:
+    ENABLE_AUTH:
+      Default: '1'
+      Description: Enable authentication
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: ENABLE_AUTH
+      Required: 'false'
+      Target: ENABLE_AUTH
+      Type: Variable
+      value: '1'
+    JIBRI_BREWERY_MUC:
+      Default: jibribrewery
+      Description: MUC name for the Jibri pool
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: JIBRI_BREWERY_MUC
+      Required: 'false'
+      Target: JIBRI_BREWERY_MUC
+      Type: Variable
+      value: jibribrewery
+    JIBRI_PENDING_TIMEOUT:
+      Default: '90'
+      Description: MUC connection timeout
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: JIBRI_PENDING_TIMEOUT
+      Required: 'false'
+      Target: JIBRI_PENDING_TIMEOUT
+      Type: Variable
+      value: '90'
+    JICOFO_AUTH_PASSWORD:
+      Default: passw0rd
+      Description: XMPP password for Jicofo client connections
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: JICOFO_AUTH_PASSWORD
+      Required: 'false'
+      Target: JICOFO_AUTH_PASSWORD
+      Type: Variable
+      value: passw0rd
+    JICOFO_AUTH_USER:
+      Default: focus
+      Description: XMPP user for Jicofo client connections
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: JICOFO_AUTH_USER
+      Required: 'false'
+      Target: JICOFO_AUTH_USER
+      Type: Variable
+      value: focus
+    JICOFO_COMPONENT_SECRET:
+      Default: s3cr37
+      Description: XMPP component password for Jicofo
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: JICOFO_COMPONENT_SECRET
+      Required: 'false'
+      Target: JICOFO_COMPONENT_SECRET
+      Type: Variable
+      value: s3cr37
+    JICOFO_RESERVATION_REST_BASE_URL:
+      Default: http://reservation.example.com
+      Description: "Base URL of Jicofo\u2019s reservation REST API"
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: JICOFO_RESERVATION_REST_BASE_URL
+      Required: 'false'
+      Target: JICOFO_RESERVATION_REST_BASE_URL
+      Type: Variable
+      value: http://reservation.example.com
+    JIGASI_BREWERY_MUC:
+      Default: jigasibrewery
+      Description: MUC name for the Jigasi pool
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: JIGASI_BREWERY_MUC
+      Required: 'false'
+      Target: JIGASI_BREWERY_MUC
+      Type: Variable
+      value: jigasibrewery
+    JIGASI_SIP_URI:
+      Default: test@sip2sip.info
+      Description: SIP URI for incoming / outgoing calls
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: JIGASI_SIP_URI
+      Required: 'false'
+      Target: JIGASI_SIP_URI
+      Type: Variable
+      value: test@sip2sip.info
+    JVB_BREWERY_MUC:
+      Default: jvbbrewery
+      Description: MUC name for the JVB pool
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: JVB_BREWERY_MUC
+      Required: 'false'
+      Target: JVB_BREWERY_MUC
+      Type: Variable
+      value: jvbbrewery
+    XMPP_AUTH_DOMAIN:
+      Default: auth.meet.jitsi
+      Description: Internal XMPP domain for authenticated services
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: XMPP_AUTH_DOMAIN
+      Required: 'false'
+      Target: XMPP_AUTH_DOMAIN
+      Type: Variable
+      value: auth.meet.jitsi
+    XMPP_DOMAIN:
+      Default: meet.jitsi
+      Description: Internal XMPP domain
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: XMPP_DOMAIN
+      Required: 'false'
+      Target: XMPP_DOMAIN
+      Type: Variable
+      value: meet.jitsi
+    XMPP_INTERNAL_MUC_DOMAIN:
+      Default: internal-muc.meet.jitsi
+      Description: XMPP domain for the internal MUC
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: XMPP_INTERNAL_MUC_DOMAIN
+      Required: 'false'
+      Target: XMPP_INTERNAL_MUC_DOMAIN
+      Type: Variable
+      value: internal-muc.meet.jitsi
+    XMPP_SERVER:
+      Default: xmpp.meet.jitsi
+      Description: Internal XMPP server name xmpp.meet.jitsi
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: XMPP_SERVER
+      Required: 'false'
+      Target: XMPP_SERVER
+      Type: Variable
+      value: xmpp.meet.jitsi
 FirstSeen: 1586362160
 Icon: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/jitsi.png
 LastUpdate: 1648707556

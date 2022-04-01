@@ -3,50 +3,55 @@ CategoryList:
 - Productivity
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'false'
-    Target: '8000'
-    Type: Port
-  value: '8000'
-- '@attributes':
-    Default: ''
-    Description: This is the location for uploaded files.
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Storage (uploads)
-    Required: 'false'
-    Target: /app/upload
-    Type: Path
-  value: /mnt/user/appdata/rustypaste/upload
-- '@attributes':
-    Default: ''
-    Description: This is the configuration file.
-    Display: always
-    Mask: 'false'
-    Mode: ro
-    Name: Storage (config file)
-    Required: 'false'
-    Target: /app/config.toml
-    Type: Path
-  value: /mnt/user/appdata/rustypaste/config.toml
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: RUST_LOG
-    Required: 'false'
-    Target: RUST_LOG
-    Type: Variable
-  value: debug
+  Device: {}
+  Label: {}
+  Path:
+    Storage (config file):
+      Default: ''
+      Description: This is the configuration file.
+      Display: always
+      Mask: 'false'
+      Mode: ro
+      Name: Storage (config file)
+      Required: 'false'
+      Target: /app/config.toml
+      Type: Path
+      value: /mnt/user/appdata/rustypaste/config.toml
+    Storage (uploads):
+      Default: ''
+      Description: This is the location for uploaded files.
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Storage (uploads)
+      Required: 'false'
+      Target: /app/upload
+      Type: Path
+      value: /mnt/user/appdata/rustypaste/upload
+  Port:
+    WebUI:
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'false'
+      Target: '8000'
+      Type: Port
+      value: '8000'
+  Variable:
+    RUST_LOG:
+      Default: ''
+      Description: ''
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: RUST_LOG
+      Required: 'false'
+      Target: RUST_LOG
+      Type: Variable
+      value: debug
 FirstSeen: 1644419004
 Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/rustypaste.png
 LastUpdate: 1646529053

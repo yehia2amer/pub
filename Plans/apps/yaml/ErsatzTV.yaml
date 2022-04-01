@@ -13,40 +13,45 @@ Branch:
 CategoryList:
 - MediaApp-Video
 Config:
-- '@attributes':
-    Default: '8409'
-    Description: 'Container Port: 8409'
-    Display: always-hide
-    Mask: 'false'
-    Mode: tcp
-    Name: Host Port for 8409
-    Required: 'true'
-    Target: '8409'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: /mnt/user/appdata/ErsatzTV
-    Description: 'Container Path: /root/.local/share/ersatztv'
-    Display: always-hide
-    Mask: 'false'
-    Mode: rw
-    Name: Host Path for /root/.local/share/ersatztv
-    Required: 'true'
-    Target: /root/.local/share/ersatztv
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Nvidia Visible Devices (Optional - Requires Nvidia GPU and Unraid
-      Nvidia build)
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: Nvidia Visible Devices
-    Required: 'false'
-    Target: NVIDIA_VISIBLE_DEVICES
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Host Path for /root/.local/share/ersatztv:
+      Default: /mnt/user/appdata/ErsatzTV
+      Description: 'Container Path: /root/.local/share/ersatztv'
+      Display: always-hide
+      Mask: 'false'
+      Mode: rw
+      Name: Host Path for /root/.local/share/ersatztv
+      Required: 'true'
+      Target: /root/.local/share/ersatztv
+      Type: Path
+      value: ''
+  Port:
+    Host Port for 8409:
+      Default: '8409'
+      Description: 'Container Port: 8409'
+      Display: always-hide
+      Mask: 'false'
+      Mode: tcp
+      Name: Host Port for 8409
+      Required: 'true'
+      Target: '8409'
+      Type: Port
+      value: ''
+  Variable:
+    Nvidia Visible Devices:
+      Default: ''
+      Description: Nvidia Visible Devices (Optional - Requires Nvidia GPU and Unraid
+        Nvidia build)
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: Nvidia Visible Devices
+      Required: 'false'
+      Target: NVIDIA_VISIBLE_DEVICES
+      Type: Variable
+      value: ''
 DonateImg: ''
 DonateLink: https://github.com/sponsors/jasongdove
 FirstSeen: 1616025779

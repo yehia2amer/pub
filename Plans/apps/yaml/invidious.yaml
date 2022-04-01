@@ -1,28 +1,33 @@
 CategoryList:
 - Network-Web
 Config:
-- '@attributes':
-    Default: '3000'
-    Description: Webgui port
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Port
-    Required: 'false'
-    Target: '3000'
-    Type: Port
-  value: '3000'
-- '@attributes':
-    Default: /mnt/user/appdata/invidious/config/
-    Description: Config
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Config
-    Required: 'false'
-    Target: /invidious/config
-    Type: Path
-  value: /mnt/user/appdata/invidious/config/
+  Device: {}
+  Label: {}
+  Path:
+    Config:
+      Default: /mnt/user/appdata/invidious/config/
+      Description: Config
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Config
+      Required: 'false'
+      Target: /invidious/config
+      Type: Path
+      value: /mnt/user/appdata/invidious/config/
+  Port:
+    Port:
+      Default: '3000'
+      Description: Webgui port
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Port
+      Required: 'false'
+      Target: '3000'
+      Type: Port
+      value: '3000'
+  Variable: {}
 ExtraParams: --restart=always
 FirstSeen: 1629374613
 Icon: https://raw.githubusercontent.com/Joshndroid/joshndroid-unraid-docker-templates/main/icons/invidious.png

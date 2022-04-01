@@ -2,160 +2,165 @@ CategoryList:
 - Backup
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /var/opt/pgbackups'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: /var/opt/pgbackups
-    Required: 'false'
-    Target: /var/opt/pgbackups
-    Type: Path
-  value: /mnt/user/appdata/pgbackups
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /var/lib/postgresql/data'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: /var/lib/postgresql/data
-    Required: 'false'
-    Target: /var/lib/postgresql/data
-    Type: Path
-  value: /mnt/user/appdata/pgbackups/data
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /backups'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: /backups
-    Required: 'false'
-    Target: /backups
-    Type: Path
-  value: /mnt/user/Backups
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: POSTGRES_HOST'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: POSTGRES_HOST
-    Required: 'false'
-    Target: POSTGRES_HOST
-    Type: Variable
-  value: 192.168.1.7
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: POSTGRES_PORT'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: POSTGRES_PORT
-    Required: 'false'
-    Target: POSTGRES_PORT
-    Type: Variable
-  value: '5432'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: POSTGRES_DB'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: POSTGRES_DB
-    Required: 'false'
-    Target: POSTGRES_DB
-    Type: Variable
-  value: postgres, nextcloud, traccar, joplin, wikijs, authelia
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: POSTGRES_USER'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: POSTGRES_USER
-    Required: 'false'
-    Target: POSTGRES_USER
-    Type: Variable
-  value: postgres_root_user
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: POSTGRES_PASSWORD'
-    Display: always
-    Mask: 'true'
-    Mode: ''
-    Name: POSTGRES_PASSWORD
-    Required: 'false'
-    Target: POSTGRES_PASSWORD
-    Type: Variable
-  value: postgres_root_password
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: POSTGRES_EXTRA_OPTS'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: POSTGRES_EXTRA_OPTS
-    Required: 'false'
-    Target: POSTGRES_EXTRA_OPTS
-    Type: Variable
-  value: -Z9 --schema=public --blobs
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: SCHEDULE'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: SCHEDULE
-    Required: 'false'
-    Target: SCHEDULE
-    Type: Variable
-  value: '@hourly'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: BACKUP_KEEP_DAYS'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: BACKUP_KEEP_DAYS
-    Required: 'false'
-    Target: BACKUP_KEEP_DAYS
-    Type: Variable
-  value: '7'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: BACKUP_KEEP_WEEKS'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: BACKUP_KEEP_WEEKS
-    Required: 'false'
-    Target: BACKUP_KEEP_WEEKS
-    Type: Variable
-  value: '4'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: BACKUP_KEEP_MONTHS'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: BACKUP_KEEP_MONTHS
-    Required: 'false'
-    Target: BACKUP_KEEP_MONTHS
-    Type: Variable
-  value: '6'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: HEALTHCHECK_PORT'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: HEALTHCHECK_PORT
-    Required: 'false'
-    Target: HEALTHCHECK_PORT
-    Type: Variable
-  value: '9080'
+  Device: {}
+  Label: {}
+  Path:
+    /backups:
+      Default: ''
+      Description: 'Container Path: /backups'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: /backups
+      Required: 'false'
+      Target: /backups
+      Type: Path
+      value: /mnt/user/Backups
+    /var/lib/postgresql/data:
+      Default: ''
+      Description: 'Container Path: /var/lib/postgresql/data'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: /var/lib/postgresql/data
+      Required: 'false'
+      Target: /var/lib/postgresql/data
+      Type: Path
+      value: /mnt/user/appdata/pgbackups/data
+    /var/opt/pgbackups:
+      Default: ''
+      Description: 'Container Path: /var/opt/pgbackups'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: /var/opt/pgbackups
+      Required: 'false'
+      Target: /var/opt/pgbackups
+      Type: Path
+      value: /mnt/user/appdata/pgbackups
+  Port: {}
+  Variable:
+    BACKUP_KEEP_DAYS:
+      Default: ''
+      Description: 'Container Variable: BACKUP_KEEP_DAYS'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: BACKUP_KEEP_DAYS
+      Required: 'false'
+      Target: BACKUP_KEEP_DAYS
+      Type: Variable
+      value: '7'
+    BACKUP_KEEP_MONTHS:
+      Default: ''
+      Description: 'Container Variable: BACKUP_KEEP_MONTHS'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: BACKUP_KEEP_MONTHS
+      Required: 'false'
+      Target: BACKUP_KEEP_MONTHS
+      Type: Variable
+      value: '6'
+    BACKUP_KEEP_WEEKS:
+      Default: ''
+      Description: 'Container Variable: BACKUP_KEEP_WEEKS'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: BACKUP_KEEP_WEEKS
+      Required: 'false'
+      Target: BACKUP_KEEP_WEEKS
+      Type: Variable
+      value: '4'
+    HEALTHCHECK_PORT:
+      Default: ''
+      Description: 'Container Variable: HEALTHCHECK_PORT'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: HEALTHCHECK_PORT
+      Required: 'false'
+      Target: HEALTHCHECK_PORT
+      Type: Variable
+      value: '9080'
+    POSTGRES_DB:
+      Default: ''
+      Description: 'Container Variable: POSTGRES_DB'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: POSTGRES_DB
+      Required: 'false'
+      Target: POSTGRES_DB
+      Type: Variable
+      value: postgres, nextcloud, traccar, joplin, wikijs, authelia
+    POSTGRES_EXTRA_OPTS:
+      Default: ''
+      Description: 'Container Variable: POSTGRES_EXTRA_OPTS'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: POSTGRES_EXTRA_OPTS
+      Required: 'false'
+      Target: POSTGRES_EXTRA_OPTS
+      Type: Variable
+      value: -Z9 --schema=public --blobs
+    POSTGRES_HOST:
+      Default: ''
+      Description: 'Container Variable: POSTGRES_HOST'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: POSTGRES_HOST
+      Required: 'false'
+      Target: POSTGRES_HOST
+      Type: Variable
+      value: 192.168.1.7
+    POSTGRES_PASSWORD:
+      Default: ''
+      Description: 'Container Variable: POSTGRES_PASSWORD'
+      Display: always
+      Mask: 'true'
+      Mode: ''
+      Name: POSTGRES_PASSWORD
+      Required: 'false'
+      Target: POSTGRES_PASSWORD
+      Type: Variable
+      value: postgres_root_password
+    POSTGRES_PORT:
+      Default: ''
+      Description: 'Container Variable: POSTGRES_PORT'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: POSTGRES_PORT
+      Required: 'false'
+      Target: POSTGRES_PORT
+      Type: Variable
+      value: '5432'
+    POSTGRES_USER:
+      Default: ''
+      Description: 'Container Variable: POSTGRES_USER'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: POSTGRES_USER
+      Required: 'false'
+      Target: POSTGRES_USER
+      Type: Variable
+      value: postgres_root_user
+    SCHEDULE:
+      Default: ''
+      Description: 'Container Variable: SCHEDULE'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: SCHEDULE
+      Required: 'false'
+      Target: SCHEDULE
+      Type: Variable
+      value: '@hourly'
 FirstSeen: 1613689351
 Icon: https://github.com/Muwahhidun/logo/blob/main/logo%20backup.png?raw=true
 LastUpdate: 1646405965

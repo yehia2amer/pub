@@ -2,61 +2,66 @@ Beta: 'true'
 CategoryList:
 - GameServers
 Config:
-- '@attributes':
-    Default: ''
-    Description: (check if Port is already used by other Contrainer)
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: FSM Port
-    Required: 'false'
-    Target: '80'
-    Type: Port
-  value: '8888'
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: FSM Saves
-    Required: 'false'
-    Target: /opt/factorio/saves
-    Type: Path
-  value: /mnt/user/appdata/fsm_saves/
-- '@attributes':
-    Default: ''
-    Description: (can be left as it is)
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: FSM Mods
-    Required: 'false'
-    Target: /opt/factorio/mods
-    Type: Path
-  value: /mnt/user/appdata/fsm_mods
-- '@attributes':
-    Default: ''
-    Description: (can be left as it is)
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: FSM Config
-    Required: 'false'
-    Target: /opt/factorio/config
-    Type: Path
-  value: /mnt/user/appdata/fsm_config
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: Factorio Port
-    Required: 'false'
-    Target: '34197'
-    Type: Port
-  value: '34197'
+  Device: {}
+  Label: {}
+  Path:
+    FSM Config:
+      Default: ''
+      Description: (can be left as it is)
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: FSM Config
+      Required: 'false'
+      Target: /opt/factorio/config
+      Type: Path
+      value: /mnt/user/appdata/fsm_config
+    FSM Mods:
+      Default: ''
+      Description: (can be left as it is)
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: FSM Mods
+      Required: 'false'
+      Target: /opt/factorio/mods
+      Type: Path
+      value: /mnt/user/appdata/fsm_mods
+    FSM Saves:
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: FSM Saves
+      Required: 'false'
+      Target: /opt/factorio/saves
+      Type: Path
+      value: /mnt/user/appdata/fsm_saves/
+  Port:
+    FSM Port:
+      Default: ''
+      Description: (check if Port is already used by other Contrainer)
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: FSM Port
+      Required: 'false'
+      Target: '80'
+      Type: Port
+      value: '8888'
+    Factorio Port:
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: Factorio Port
+      Required: 'false'
+      Target: '34197'
+      Type: Port
+      value: '34197'
+  Variable: {}
 FirstSeen: 1636560150
 Icon: https://raw.githubusercontent.com/lordfiSh/unraid-docker-images/main/images/factorio-server-manager.png
 LastUpdate: 1644700607

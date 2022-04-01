@@ -2,18 +2,23 @@ CategoryList:
 - Tools-Utilities
 - Network-Other
 Config:
-  '@attributes':
-    Default: ''
-    Description: 'In roder to start npc client, make sure to place your ''npc.conf''
-      file to this path '
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Config path
-    Required: 'true'
-    Target: /conf
-    Type: Path
-  value: /mnt/user/appdata/nps-client
+  Device: {}
+  Label: {}
+  Path:
+    Config path:
+      Default: ''
+      Description: 'In roder to start npc client, make sure to place your ''npc.conf''
+        file to this path '
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Config path
+      Required: 'true'
+      Target: /conf
+      Type: Path
+      value: /mnt/user/appdata/nps-client
+  Port: {}
+  Variable: {}
 ExtraParams: --restart always
 FirstSeen: 1627279396
 Icon: https://raw.githubusercontent.com/L1cardo/Unraid-Templates/main/nps-client/nps-client-icon.png

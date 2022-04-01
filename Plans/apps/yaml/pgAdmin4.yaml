@@ -1,61 +1,66 @@
 CategoryList:
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 80'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Web UI
-    Required: 'false'
-    Target: '80'
-    Type: Port
-  value: '8792'
-- '@attributes':
-    Default: ''
-    Description: Must provide if not using an existing configuration
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Default Email
-    Required: 'false'
-    Target: PGADMIN_DEFAULT_EMAIL
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Must provide if not using an existing configuration
-    Display: always
-    Mask: 'true'
-    Mode: ''
-    Name: Default Password
-    Required: 'false'
-    Target: PGADMIN_DEFAULT_PASSWORD
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /lib/var/pgadmin'
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: Config
-    Required: 'false'
-    Target: /var/lib/pgadmin
-    Type: Path
-  value: /mnt/user/appdata/pgadmin4
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: PGADMIN_LISTEN_ADDRESS'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Listen Address
-    Required: 'false'
-    Target: PGADMIN_LISTEN_ADDRESS
-    Type: Variable
-  value: 0.0.0.0
+  Device: {}
+  Label: {}
+  Path:
+    Config:
+      Default: ''
+      Description: 'Container Path: /lib/var/pgadmin'
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: Config
+      Required: 'false'
+      Target: /var/lib/pgadmin
+      Type: Path
+      value: /mnt/user/appdata/pgadmin4
+  Port:
+    Web UI:
+      Default: ''
+      Description: 'Container Port: 80'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Web UI
+      Required: 'false'
+      Target: '80'
+      Type: Port
+      value: '8792'
+  Variable:
+    Default Email:
+      Default: ''
+      Description: Must provide if not using an existing configuration
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Default Email
+      Required: 'false'
+      Target: PGADMIN_DEFAULT_EMAIL
+      Type: Variable
+      value: ''
+    Default Password:
+      Default: ''
+      Description: Must provide if not using an existing configuration
+      Display: always
+      Mask: 'true'
+      Mode: ''
+      Name: Default Password
+      Required: 'false'
+      Target: PGADMIN_DEFAULT_PASSWORD
+      Type: Variable
+      value: ''
+    Listen Address:
+      Default: ''
+      Description: 'Container Variable: PGADMIN_LISTEN_ADDRESS'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Listen Address
+      Required: 'false'
+      Target: PGADMIN_LISTEN_ADDRESS
+      Type: Variable
+      value: 0.0.0.0
 FirstSeen: 1591042693
 Icon: https://github.com/FoxxMD/unraid-docker-templates/raw/master/icons/pgadmin4.png
 LastUpdate: 1648171145

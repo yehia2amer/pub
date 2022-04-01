@@ -4,105 +4,110 @@ CategoryList:
 - Tools-Utilities
 - Network-Web
 Config:
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'true'
-    Target: '8000'
-    Type: Port
-  value: '8000'
-- '@attributes':
-    Default: ''
-    Description: Random 32-chars phrase.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: APP_KEY
-    Required: 'true'
-    Target: APP_KEY
-    Type: Variable
-  value: 4FCXdQ6E9fdA44C94FgT9ob9SwvxiTyk
-- '@attributes':
-    Default: ''
-    Description: 'Redis server IP (i.e.: 192.168.1.100)'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: REDIS_HOST
-    Required: 'true'
-    Target: REDIS_HOST
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Redis server port (i.e.: 6379)'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: REDIS_PORT
-    Required: 'true'
-    Target: REDIS_PORT
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Redis server password (default: null)'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: REDIS_PASSWORD
-    Required: 'true'
-    Target: REDIS_PASSWORD
-    Type: Variable
-  value: 'null'
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Storage (config)
-    Required: 'false'
-    Target: /2fauth
-    Type: Path
-  value: /mnt/user/appdata/2fauth/
-- '@attributes':
-    Default: ''
-    Description: Name of the app (tab name).
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: APP_NAME
-    Required: 'false'
-    Target: APP_NAME
-    Type: Variable
-  value: 2FAuth (unRAID)
-- '@attributes':
-    Default: ''
-    Description: Show debug information in error logs (true/false).
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: APP_DEBUG
-    Required: 'false'
-    Target: APP_DEBUG
-    Type: Variable
-  value: 'true'
-- '@attributes':
-    Default: ''
-    Description: Log level (debug/info/notice/warning/error/critical/alert/emergency)
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: APP_LOG_LEVEL
-    Required: 'false'
-    Target: APP_LOG_LEVEL
-    Type: Variable
-  value: notice
+  Device: {}
+  Label: {}
+  Path:
+    Storage (config):
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Storage (config)
+      Required: 'false'
+      Target: /2fauth
+      Type: Path
+      value: /mnt/user/appdata/2fauth/
+  Port:
+    WebUI:
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'true'
+      Target: '8000'
+      Type: Port
+      value: '8000'
+  Variable:
+    APP_DEBUG:
+      Default: ''
+      Description: Show debug information in error logs (true/false).
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: APP_DEBUG
+      Required: 'false'
+      Target: APP_DEBUG
+      Type: Variable
+      value: 'true'
+    APP_KEY:
+      Default: ''
+      Description: Random 32-chars phrase.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: APP_KEY
+      Required: 'true'
+      Target: APP_KEY
+      Type: Variable
+      value: 4FCXdQ6E9fdA44C94FgT9ob9SwvxiTyk
+    APP_LOG_LEVEL:
+      Default: ''
+      Description: Log level (debug/info/notice/warning/error/critical/alert/emergency)
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: APP_LOG_LEVEL
+      Required: 'false'
+      Target: APP_LOG_LEVEL
+      Type: Variable
+      value: notice
+    APP_NAME:
+      Default: ''
+      Description: Name of the app (tab name).
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: APP_NAME
+      Required: 'false'
+      Target: APP_NAME
+      Type: Variable
+      value: 2FAuth (unRAID)
+    REDIS_HOST:
+      Default: ''
+      Description: 'Redis server IP (i.e.: 192.168.1.100)'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: REDIS_HOST
+      Required: 'true'
+      Target: REDIS_HOST
+      Type: Variable
+      value: ''
+    REDIS_PASSWORD:
+      Default: ''
+      Description: 'Redis server password (default: null)'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: REDIS_PASSWORD
+      Required: 'true'
+      Target: REDIS_PASSWORD
+      Type: Variable
+      value: 'null'
+    REDIS_PORT:
+      Default: ''
+      Description: 'Redis server port (i.e.: 6379)'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: REDIS_PORT
+      Required: 'true'
+      Target: REDIS_PORT
+      Type: Variable
+      value: ''
 FirstSeen: 1642964614
 Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/2fauth.png
 LastUpdate: 1644493094

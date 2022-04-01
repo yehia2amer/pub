@@ -5,88 +5,93 @@ CategoryList:
 - Productivity
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: ''
-    Description: Path to the unraid folder in which to sync the files, it also will
-      contain .grive config file
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: UNRAID_FOLDER
-    Required: 'true'
-    Target: /drive
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Your Client ID obtained by doing the procedure in the description
-    Display: always
-    Mask: 'true'
-    Mode: ''
-    Name: CLIENT_ID
-    Required: 'false'
-    Target: ID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Your Client Secret obtained by doing the procedure in the description
-    Display: always
-    Mask: 'true'
-    Mode: ''
-    Name: SECRET
-    Required: 'false'
-    Target: SECRET
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: "Your client secret obtained from the URL in the description\r\n\
-      Delete me after the setup is complete"
-    Display: always
-    Mask: 'true'
-    Mode: ''
-    Name: CODE
-    Required: 'false'
-    Target: CODE
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Passes parameters to grive2. For example -s my_drive_folder. See
-      https://github.com/agusalex/grive2docker#grive-settings '
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: GRIVE_PARAMS
-    Required: 'false'
-    Target: PARAMS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Crontab schedule to run this container, use this to generate it:
-      https://crontab.guru/'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: CRON
-    Required: 'false'
-    Target: CRON
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: The UNIX permissions to apply to all files in the folder after sync.
-      This will override any permissions you already have.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: PERMISSIONS
-    Required: 'false'
-    Target: PERM
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    UNRAID_FOLDER:
+      Default: ''
+      Description: Path to the unraid folder in which to sync the files, it also will
+        contain .grive config file
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: UNRAID_FOLDER
+      Required: 'true'
+      Target: /drive
+      Type: Path
+      value: ''
+  Port: {}
+  Variable:
+    CLIENT_ID:
+      Default: ''
+      Description: Your Client ID obtained by doing the procedure in the description
+      Display: always
+      Mask: 'true'
+      Mode: ''
+      Name: CLIENT_ID
+      Required: 'false'
+      Target: ID
+      Type: Variable
+      value: ''
+    CODE:
+      Default: ''
+      Description: "Your client secret obtained from the URL in the description\r\n\
+        Delete me after the setup is complete"
+      Display: always
+      Mask: 'true'
+      Mode: ''
+      Name: CODE
+      Required: 'false'
+      Target: CODE
+      Type: Variable
+      value: ''
+    CRON:
+      Default: ''
+      Description: 'Crontab schedule to run this container, use this to generate it:
+        https://crontab.guru/'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: CRON
+      Required: 'false'
+      Target: CRON
+      Type: Variable
+      value: ''
+    GRIVE_PARAMS:
+      Default: ''
+      Description: 'Passes parameters to grive2. For example -s my_drive_folder. See
+        https://github.com/agusalex/grive2docker#grive-settings '
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: GRIVE_PARAMS
+      Required: 'false'
+      Target: PARAMS
+      Type: Variable
+      value: ''
+    PERMISSIONS:
+      Default: ''
+      Description: The UNIX permissions to apply to all files in the folder after
+        sync. This will override any permissions you already have.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: PERMISSIONS
+      Required: 'false'
+      Target: PERM
+      Type: Variable
+      value: ''
+    SECRET:
+      Default: ''
+      Description: Your Client Secret obtained by doing the procedure in the description
+      Display: always
+      Mask: 'true'
+      Mode: ''
+      Name: SECRET
+      Required: 'false'
+      Target: SECRET
+      Type: Variable
+      value: ''
 FirstSeen: 1601034298
 Icon: https://github.com/agusalex/docker-templates/raw/master/agusalex/images/Grive2.png
 LastUpdate: 1646098582

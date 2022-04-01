@@ -1,118 +1,123 @@
 CategoryList:
 - Productivity
 Config:
-- '@attributes':
-    Default: '3000'
-    Description: 'Container Port: 8080'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI Port
-    Required: 'false'
-    Target: '8080'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: '3443'
-    Description: 'Container Port: 8443'
-    Display: advanced
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI SSL Port
-    Required: 'false'
-    Target: '8443'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: 'false'
-    Description: Enables Let's Encrypt certificate instead of self-signed certificates
-    Display: advanced
-    Mask: 'false'
-    Name: Enable Lets Encrypt
-    Required: 'false'
-    Target: LETS_ENCRYPT_ENABLED
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: ' DNS domain to be used as certificate '
-    Display: advanced
-    Mask: 'false'
-    Name: PUBLIC_DNS
-    Required: 'false'
-    Target: PUBLIC_DNS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Organisation unit to be used as certificate '
-    Display: advanced
-    Mask: 'false'
-    Name: ORGANISATION_UNIT
-    Required: 'false'
-    Target: ORGANISATION_UNIT
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Organisation name to be used as certificate '
-    Display: advanced
-    Mask: 'false'
-    Name: ORGANISATION
-    Required: 'false'
-    Target: ORGANISATION
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'City name to be used as certificate '
-    Display: advanced
-    Mask: 'false'
-    Name: CITY
-    Required: 'false'
-    Target: CITY
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: ' State name to be used as certificate '
-    Display: advanced
-    Mask: 'false'
-    Name: STATE
-    Required: 'false'
-    Target: STATE
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Country code to be used as certificate '
-    Display: advanced
-    Mask: 'false'
-    Name: COUNTRY_CODE
-    Required: 'false'
-    Target: COUNTRY_CODE
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: '''.keystore''/.jks'' store password'
-    Display: advanced
-    Mask: 'true'
-    Name: KEYSTORE_PASS
-    Required: 'true'
-    Target: KEYSTORE_PASS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Private key password &lt;ref:KEYSTORE_PASS&gt;
-    Display: advanced
-    Mask: 'true'
-    Name: KEY_PASS
-    Required: 'true'
-    Target: KEY_PASS
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path: {}
+  Port:
+    WebUI Port:
+      Default: '3000'
+      Description: 'Container Port: 8080'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI Port
+      Required: 'false'
+      Target: '8080'
+      Type: Port
+      value: ''
+    WebUI SSL Port:
+      Default: '3443'
+      Description: 'Container Port: 8443'
+      Display: advanced
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI SSL Port
+      Required: 'false'
+      Target: '8443'
+      Type: Port
+      value: ''
+  Variable:
+    CITY:
+      Default: ''
+      Description: 'City name to be used as certificate '
+      Display: advanced
+      Mask: 'false'
+      Name: CITY
+      Required: 'false'
+      Target: CITY
+      Type: Variable
+      value: ''
+    COUNTRY_CODE:
+      Default: ''
+      Description: 'Country code to be used as certificate '
+      Display: advanced
+      Mask: 'false'
+      Name: COUNTRY_CODE
+      Required: 'false'
+      Target: COUNTRY_CODE
+      Type: Variable
+      value: ''
+    Enable Lets Encrypt:
+      Default: 'false'
+      Description: Enables Let's Encrypt certificate instead of self-signed certificates
+      Display: advanced
+      Mask: 'false'
+      Name: Enable Lets Encrypt
+      Required: 'false'
+      Target: LETS_ENCRYPT_ENABLED
+      Type: Variable
+      value: ''
+    KEYSTORE_PASS:
+      Default: ''
+      Description: '''.keystore''/.jks'' store password'
+      Display: advanced
+      Mask: 'true'
+      Name: KEYSTORE_PASS
+      Required: 'true'
+      Target: KEYSTORE_PASS
+      Type: Variable
+      value: ''
+    KEY_PASS:
+      Default: ''
+      Description: Private key password &lt;ref:KEYSTORE_PASS&gt;
+      Display: advanced
+      Mask: 'true'
+      Name: KEY_PASS
+      Required: 'true'
+      Target: KEY_PASS
+      Type: Variable
+      value: ''
+    ORGANISATION:
+      Default: ''
+      Description: 'Organisation name to be used as certificate '
+      Display: advanced
+      Mask: 'false'
+      Name: ORGANISATION
+      Required: 'false'
+      Target: ORGANISATION
+      Type: Variable
+      value: ''
+    ORGANISATION_UNIT:
+      Default: ''
+      Description: 'Organisation unit to be used as certificate '
+      Display: advanced
+      Mask: 'false'
+      Name: ORGANISATION_UNIT
+      Required: 'false'
+      Target: ORGANISATION_UNIT
+      Type: Variable
+      value: ''
+    PUBLIC_DNS:
+      Default: ''
+      Description: ' DNS domain to be used as certificate '
+      Display: advanced
+      Mask: 'false'
+      Name: PUBLIC_DNS
+      Required: 'false'
+      Target: PUBLIC_DNS
+      Type: Variable
+      value: ''
+    STATE:
+      Default: ''
+      Description: ' State name to be used as certificate '
+      Display: advanced
+      Mask: 'false'
+      Name: STATE
+      Required: 'false'
+      Target: STATE
+      Type: Variable
+      value: ''
 FirstSeen: 1573823228
 Icon: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/draw-io.png
 LastUpdate: 1646391218

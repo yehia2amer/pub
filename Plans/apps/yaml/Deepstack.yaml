@@ -4,156 +4,161 @@ CategoryList:
 - Tools-Utilities
 - Other
 Config:
-- '@attributes':
-    Default: '5000'
-    Description: 'For access to the Web UI and API. Default is 5000. '
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'true'
-    Target: '5000'
-    Type: Port
-  value: '5000'
-- '@attributes':
-    Default: /mnt/user/appdata/deepstack
-    Description: Config storage path. Default is /mnt/user/appdata/deepstack.
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: AppData
-    Required: 'true'
-    Target: /datastore
-    Type: Path
-  value: /mnt/user/appdata/deepstack
-- '@attributes':
-    Default: /mnt/user/appdata/deepstack/custom_models
-    Description: This specifies the local directory where you stored your custom models.
-      Default is /mnt/user/appdata/deepstack/custom_models.
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Custom Model Store
-    Required: 'false'
-    Target: /modelstore/detection
-    Type: Path
-  value: /mnt/user/appdata/deepstack/custom_models
-- '@attributes':
-    Default: False|True
-    Description: This enables the object detection API. Default is False.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Object Detection
-    Required: 'false'
-    Target: VISION-DETECTION
-    Type: Variable
-  value: 'False'
-- '@attributes':
-    Default: False|True
-    Description: This enables the face recognition APIs. Default is False.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Face Detection
-    Required: 'false'
-    Target: VISION-FACE
-    Type: Variable
-  value: 'False'
-- '@attributes':
-    Default: False|True
-    Description: This enables the scene recognition API. Default is False.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Scene Detection
-    Required: 'false'
-    Target: VISION-SCENE
-    Type: Variable
-  value: 'False'
-- '@attributes':
-    Default: False|True
-    Description: This enables the image enhance API. Default is False.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Image Enhance
-    Required: 'false'
-    Target: VISION-ENHANCE
-    Type: Variable
-  value: 'False'
-- '@attributes':
-    Default: High|Medium|Low
-    Description: Deepstack offers three modes allowing you to trade off speed for
-      performance. You can specify performance mode to be High, Medium, and Low. Default
-      is Medium.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Performance Mode
-    Required: 'false'
-    Target: MODE
-    Type: Variable
-  value: Medium
-- '@attributes':
-    Default: '5'
-    Description: This allows you to specify the number of threads each endpoint will
-      run with. This provides singificant performance boost, especially when running
-      multiple requests often. The default value is 5.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Multithreading
-    Required: 'false'
-    Target: THREADCOUNT
-    Type: Variable
-  value: '5'
-- '@attributes':
-    Default: ''
-    Description: Requires Nvidia GPU and Unraid Nvidia drivers. Default is none
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Nvidia Visible Devices
-    Required: 'false'
-    Target: NVIDIA_VISIBLE_DEVICES
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: API Key is used to protect your API endpoint to prevent unauthorized
-      access. Default is none.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: API Key
-    Required: 'false'
-    Target: API-KEY
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: The Admin Key protects admin APIs such as adding models, deleting
-      models, list models, backup, and restore. Default is none.
-    Display: always
-    Mask: 'true'
-    Mode: ''
-    Name: Admin Key
-    Required: 'false'
-    Target: ADMIN-KEY
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 'all '
-    Description: Requires Nvidia GPU and Unraid Nvidia drivers. Default is all.
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Nvidia Driver Capabilities
-    Required: 'false'
-    Target: NVIDIA_DRIVER_CAPABILITIES
-    Type: Variable
-  value: all
+  Device: {}
+  Label: {}
+  Path:
+    AppData:
+      Default: /mnt/user/appdata/deepstack
+      Description: Config storage path. Default is /mnt/user/appdata/deepstack.
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: AppData
+      Required: 'true'
+      Target: /datastore
+      Type: Path
+      value: /mnt/user/appdata/deepstack
+    Custom Model Store:
+      Default: /mnt/user/appdata/deepstack/custom_models
+      Description: This specifies the local directory where you stored your custom
+        models. Default is /mnt/user/appdata/deepstack/custom_models.
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Custom Model Store
+      Required: 'false'
+      Target: /modelstore/detection
+      Type: Path
+      value: /mnt/user/appdata/deepstack/custom_models
+  Port:
+    WebUI:
+      Default: '5000'
+      Description: 'For access to the Web UI and API. Default is 5000. '
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'true'
+      Target: '5000'
+      Type: Port
+      value: '5000'
+  Variable:
+    API Key:
+      Default: ''
+      Description: API Key is used to protect your API endpoint to prevent unauthorized
+        access. Default is none.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: API Key
+      Required: 'false'
+      Target: API-KEY
+      Type: Variable
+      value: ''
+    Admin Key:
+      Default: ''
+      Description: The Admin Key protects admin APIs such as adding models, deleting
+        models, list models, backup, and restore. Default is none.
+      Display: always
+      Mask: 'true'
+      Mode: ''
+      Name: Admin Key
+      Required: 'false'
+      Target: ADMIN-KEY
+      Type: Variable
+      value: ''
+    Face Detection:
+      Default: False|True
+      Description: This enables the face recognition APIs. Default is False.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Face Detection
+      Required: 'false'
+      Target: VISION-FACE
+      Type: Variable
+      value: 'False'
+    Image Enhance:
+      Default: False|True
+      Description: This enables the image enhance API. Default is False.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Image Enhance
+      Required: 'false'
+      Target: VISION-ENHANCE
+      Type: Variable
+      value: 'False'
+    Multithreading:
+      Default: '5'
+      Description: This allows you to specify the number of threads each endpoint
+        will run with. This provides singificant performance boost, especially when
+        running multiple requests often. The default value is 5.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Multithreading
+      Required: 'false'
+      Target: THREADCOUNT
+      Type: Variable
+      value: '5'
+    Nvidia Driver Capabilities:
+      Default: 'all '
+      Description: Requires Nvidia GPU and Unraid Nvidia drivers. Default is all.
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Nvidia Driver Capabilities
+      Required: 'false'
+      Target: NVIDIA_DRIVER_CAPABILITIES
+      Type: Variable
+      value: all
+    Nvidia Visible Devices:
+      Default: ''
+      Description: Requires Nvidia GPU and Unraid Nvidia drivers. Default is none
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Nvidia Visible Devices
+      Required: 'false'
+      Target: NVIDIA_VISIBLE_DEVICES
+      Type: Variable
+      value: ''
+    Object Detection:
+      Default: False|True
+      Description: This enables the object detection API. Default is False.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Object Detection
+      Required: 'false'
+      Target: VISION-DETECTION
+      Type: Variable
+      value: 'False'
+    Performance Mode:
+      Default: High|Medium|Low
+      Description: Deepstack offers three modes allowing you to trade off speed for
+        performance. You can specify performance mode to be High, Medium, and Low.
+        Default is Medium.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Performance Mode
+      Required: 'false'
+      Target: MODE
+      Type: Variable
+      value: Medium
+    Scene Detection:
+      Default: False|True
+      Description: This enables the scene recognition API. Default is False.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Scene Detection
+      Required: 'false'
+      Target: VISION-SCENE
+      Type: Variable
+      value: 'False'
 FirstSeen: 1605820582
 Icon: https://raw.githubusercontent.com/n8detar/docker-templates/master/n8detar/images/deepstack.png
 LastUpdate: 1642369804

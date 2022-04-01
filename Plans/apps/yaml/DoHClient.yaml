@@ -1,62 +1,67 @@
 CategoryList:
 - Network-Other
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /DoH'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Container Path
-    Required: 'false'
-    Target: /DoH
-    Type: Path
-  value: /mnt/cache/appdata/doh-client
-- '@attributes':
-    Default: ''
-    Description: 'Find the versions here: https://github.com/m13253/dns-over-https/releases
-      or set to ''latest'' without quotes to download the latest version'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DoH Version
-    Required: 'true'
-    Target: DoH_V
-    Type: Variable
-  value: latest
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: GO_DL_URL'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Golang Download URL
-    Required: 'true'
-    Target: GO_DL_URL
-    Type: Variable
-  value: https://dl.google.com/go/go1.13.1.linux-amd64.tar.gz
-- '@attributes':
-    Default: ''
-    Description: UDP DNS Query Port
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: udp
-    Name: UDP DNS Query Port
-    Required: 'true'
-    Target: '53'
-    Type: Port
-  value: '53'
-- '@attributes':
-    Default: ''
-    Description: TCP DNS Query Port
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: tcp
-    Name: TCP DNS Query Port
-    Required: 'true'
-    Target: '53'
-    Type: Port
-  value: '53'
+  Device: {}
+  Label: {}
+  Path:
+    Container Path:
+      Default: ''
+      Description: 'Container Path: /DoH'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Container Path
+      Required: 'false'
+      Target: /DoH
+      Type: Path
+      value: /mnt/cache/appdata/doh-client
+  Port:
+    TCP DNS Query Port:
+      Default: ''
+      Description: TCP DNS Query Port
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: tcp
+      Name: TCP DNS Query Port
+      Required: 'true'
+      Target: '53'
+      Type: Port
+      value: '53'
+    UDP DNS Query Port:
+      Default: ''
+      Description: UDP DNS Query Port
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: udp
+      Name: UDP DNS Query Port
+      Required: 'true'
+      Target: '53'
+      Type: Port
+      value: '53'
+  Variable:
+    DoH Version:
+      Default: ''
+      Description: 'Find the versions here: https://github.com/m13253/dns-over-https/releases
+        or set to ''latest'' without quotes to download the latest version'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DoH Version
+      Required: 'true'
+      Target: DoH_V
+      Type: Variable
+      value: latest
+    Golang Download URL:
+      Default: ''
+      Description: 'Container Variable: GO_DL_URL'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Golang Download URL
+      Required: 'true'
+      Target: GO_DL_URL
+      Type: Variable
+      value: https://dl.google.com/go/go1.13.1.linux-amd64.tar.gz
 DonateImg: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/donate.png
 DonateLink: https://www.paypal.me/chips777
 DonateText: 'If you like my work please '

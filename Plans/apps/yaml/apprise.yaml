@@ -2,28 +2,33 @@ CategoryList:
 - HomeAutomation
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: '8000'
-    Description: Port
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Port
-    Required: 'true'
-    Target: '8000'
-    Type: Port
-  value: '8000'
-- '@attributes':
-    Default: /mnt/user/appdata/apprise/
-    Description: Appdata
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Appdata
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: /mnt/user/appdata/apprise/
+  Device: {}
+  Label: {}
+  Path:
+    Appdata:
+      Default: /mnt/user/appdata/apprise/
+      Description: Appdata
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Appdata
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: /mnt/user/appdata/apprise/
+  Port:
+    Port:
+      Default: '8000'
+      Description: Port
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Port
+      Required: 'true'
+      Target: '8000'
+      Type: Port
+      value: '8000'
+  Variable: {}
 FirstSeen: 1591121810
 Icon: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/apprise.png
 LastUpdate: 1647279257

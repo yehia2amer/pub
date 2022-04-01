@@ -1,39 +1,44 @@
 CategoryList:
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: ''
-    Description: Path to the pre rolls files. Must be the same for your Plex container.
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Prerolls
-    Required: 'true'
-    Target: /media/prerolls
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: '3100'
-    Description: 'Container Port: 3100'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: GUI
-    Required: 'true'
-    Target: '3100'
-    Type: Port
-  value: '3100'
-- '@attributes':
-    Default: /mnt/user/appdata/rollarr/data.json
-    Description: Contains all relevant configuration and data
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Appdata
-    Required: 'true'
-    Target: /rollar/data.json
-    Type: Path
-  value: /mnt/user/appdata/rollarr/data.json
+  Device: {}
+  Label: {}
+  Path:
+    Appdata:
+      Default: /mnt/user/appdata/rollarr/data.json
+      Description: Contains all relevant configuration and data
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Appdata
+      Required: 'true'
+      Target: /rollar/data.json
+      Type: Path
+      value: /mnt/user/appdata/rollarr/data.json
+    Prerolls:
+      Default: ''
+      Description: Path to the pre rolls files. Must be the same for your Plex container.
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Prerolls
+      Required: 'true'
+      Target: /media/prerolls
+      Type: Path
+      value: ''
+  Port:
+    GUI:
+      Default: '3100'
+      Description: 'Container Port: 3100'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: GUI
+      Required: 'true'
+      Target: '3100'
+      Type: Port
+      value: '3100'
+  Variable: {}
 FirstSeen: 1641427640
 Icon: https://github.com/MasterEvarior/unraid-templates/blob/main/rollarr/rollarr.png?raw=true
 LastUpdate: 1641596546

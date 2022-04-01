@@ -4,326 +4,331 @@ CategoryList:
 - Productivity
 - Other
 Config:
-- '@attributes':
-    Default: '8000'
-    Description: 'WebUI port: 8000'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: PORT
-    Required: 'true'
-    Target: '8000'
-    Type: Port
-  value: "8555\n    "
-- '@attributes':
-    Default: django.db.backends.postgresql
-    Description: Database Engine
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DJANGO_DB_ENGINE
-    Required: 'true'
-    Target: DJANGO_DB_ENGINE
-    Type: Variable
-  value: "\n        django.db.backends.postgresql\n    "
-- '@attributes':
-    Default: wger
-    Description: Database Name
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DJANGO_DB_DATABASE
-    Required: 'true'
-    Target: DJANGO_DB_DATABASE
-    Type: Variable
-  value: "wger\n    "
-- '@attributes':
-    Default: wger
-    Description: Database User
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DJANGO_DB_USER
-    Required: 'true'
-    Target: DJANGO_DB_USER
-    Type: Variable
-  value: "wger\n    "
-- '@attributes':
-    Default: ''
-    Description: Database password
-    Display: always
-    Mask: 'true'
-    Mode: ''
-    Name: DJANGO_DB_PASSWORD
-    Required: 'false'
-    Target: DJANGO_DB_PASSWORD
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Database host
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DJANGO_DB_HOST
-    Required: 'true'
-    Target: DJANGO_DB_HOST
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '5432'
-    Description: Database port
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DJANGO_DB_PORT
-    Required: 'true'
-    Target: DJANGO_DB_PORT
-    Type: Variable
-  value: "5432\n    "
-- '@attributes':
-    Default: US/Central
-    Description: Time Zone
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: TIME_ZONE
-    Required: 'true'
-    Target: TIME_ZONE
-    Type: Variable
-  value: "US/Central\n    "
-- '@attributes':
-    Default: ''
-    Description: 'SITE_URL: ex. http://www.my-local-gym.com'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: SITE_URL
-    Required: 'true'
-    Target: SITE_URL
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Path to uploaded files
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: DJANGO_MEDIA_ROOT
-    Required: 'true'
-    Target: /home/wger/media
-    Type: Path
-  value: "/mnt/user/appdata/wger/media\n    "
-- '@attributes':
-    Default: ''
-    Description: DJANGO_STATIC_ROOT
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: DJANGO_STATIC_ROOT
-    Required: 'true'
-    Target: /home/wger/static
-    Type: Path
-  value: "/mnt/user/appdata/wger/static\n    "
-- '@attributes':
-    Default: 'True'
-    Description: 'Default: True'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: ALLOW_REGISTRATION
-    Required: 'false'
-    Target: ALLOW_REGISTRATION
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 'True'
-    Description: 'Default: True'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: ALLOW_GUEST_USERS
-    Required: 'false'
-    Target: ALLOW_GUEST_USERS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Must be 50 characters
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: SECRET_KEY
-    Required: 'true'
-    Target: SECRET_KEY
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 'False'
-    Description: 'Enable SMTP email setting: True/False; Default False'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: ENABLE_EMAIL
-    Required: 'false'
-    Target: ENABLE_EMAIL
-    Type: Variable
-  value: "False\n    "
-- '@attributes':
-    Default: ''
-    Description: EMAIL_HOST
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: EMAIL_HOST
-    Required: 'false'
-    Target: EMAIL_HOST
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: EMAIL_PORT
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: EMAIL_PORT
-    Required: 'false'
-    Target: EMAIL_PORT
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: EMAIL_HOST_USER
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: EMAIL_HOST_USER
-    Required: 'false'
-    Target: EMAIL_HOST_USER
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: EMAIL_HOST_PASSWORD
-    Display: always
-    Mask: 'true'
-    Mode: ''
-    Name: EMAIL_HOST_PASSWORD
-    Required: 'false'
-    Target: EMAIL_HOST_PASSWORD
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 'False'
-    Description: 'EMAIL_USE_TLS: True/False; Default: False'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: EMAIL_USE_TLS
-    Required: 'false'
-    Target: EMAIL_USE_TLS
-    Type: Variable
-  value: "True\n    "
-- '@attributes':
-    Default: 'False'
-    Description: 'EMAIL_USE_SSL: True/False; Default: False'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: EMAIL_USE_SSL
-    Required: 'false'
-    Target: EMAIL_USE_SSL
-    Type: Variable
-  value: "False\n    "
-- '@attributes':
-    Default: ''
-    Description: FROM_EMAIL
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: FROM_EMAIL
-    Required: 'false'
-    Target: FROM_EMAIL
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: RECAPTCHA_PUBLIC_KEY
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: RECAPTCHA_PUBLIC_KEY
-    Required: 'false'
-    Target: RECAPTCHA_PUBLIC_KEY
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: RECAPTCHA_PRIVATE_KEY
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: RECAPTCHA_PRIVATE_KEY
-    Required: 'false'
-    Target: RECAPTCHA_PRIVATE_KEY
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 'false'
-    Description: "NOCAPTCHA: true/false\r\nDefault: false"
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: NOCAPTCHA
-    Required: 'false'
-    Target: NOCAPTCHA
-    Type: Variable
-  value: "False\n    "
-- '@attributes':
-    Default: ''
-    Description: "Leave blank for no cache. Otherwise use this example for redis:\
-      \ django_redis.cache.RedisCache\r\n"
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: DJANGO_CACHE_BACKEND
-    Required: 'false'
-    Target: DJANGO_CACHE_BACKEND
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: in seconds
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: DJANGO_CACHE_TIMEOUT
-    Required: 'false'
-    Target: DJANGO_CACHE_TIMEOUT
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Ex: redis://127.0.0.1:6379/1'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: DJANGO_CACHE_LOCATION
-    Required: 'false'
-    Target: DJANGO_CACHE_LOCATION
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: django_redis.client.DefaultClient
-    Description: 'Container Variable: DJANGO_CACHE_CLIENT_CLASS'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: DJANGO_CACHE_CLIENT_CLASS
-    Required: 'false'
-    Target: DJANGO_CACHE_CLIENT_CLASS
-    Type: Variable
-  value: "django_redis.client.DefaultClient\n    "
+  Device: {}
+  Label: {}
+  Path:
+    DJANGO_MEDIA_ROOT:
+      Default: ''
+      Description: Path to uploaded files
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: DJANGO_MEDIA_ROOT
+      Required: 'true'
+      Target: /home/wger/media
+      Type: Path
+      value: "/mnt/user/appdata/wger/media\n    "
+    DJANGO_STATIC_ROOT:
+      Default: ''
+      Description: DJANGO_STATIC_ROOT
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: DJANGO_STATIC_ROOT
+      Required: 'true'
+      Target: /home/wger/static
+      Type: Path
+      value: "/mnt/user/appdata/wger/static\n    "
+  Port:
+    PORT:
+      Default: '8000'
+      Description: 'WebUI port: 8000'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: PORT
+      Required: 'true'
+      Target: '8000'
+      Type: Port
+      value: "8555\n    "
+  Variable:
+    ALLOW_GUEST_USERS:
+      Default: 'True'
+      Description: 'Default: True'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: ALLOW_GUEST_USERS
+      Required: 'false'
+      Target: ALLOW_GUEST_USERS
+      Type: Variable
+      value: ''
+    ALLOW_REGISTRATION:
+      Default: 'True'
+      Description: 'Default: True'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: ALLOW_REGISTRATION
+      Required: 'false'
+      Target: ALLOW_REGISTRATION
+      Type: Variable
+      value: ''
+    DJANGO_CACHE_BACKEND:
+      Default: ''
+      Description: "Leave blank for no cache. Otherwise use this example for redis:\
+        \ django_redis.cache.RedisCache\r\n"
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: DJANGO_CACHE_BACKEND
+      Required: 'false'
+      Target: DJANGO_CACHE_BACKEND
+      Type: Variable
+      value: ''
+    DJANGO_CACHE_CLIENT_CLASS:
+      Default: django_redis.client.DefaultClient
+      Description: 'Container Variable: DJANGO_CACHE_CLIENT_CLASS'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: DJANGO_CACHE_CLIENT_CLASS
+      Required: 'false'
+      Target: DJANGO_CACHE_CLIENT_CLASS
+      Type: Variable
+      value: "django_redis.client.DefaultClient\n    "
+    DJANGO_CACHE_LOCATION:
+      Default: ''
+      Description: 'Ex: redis://127.0.0.1:6379/1'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: DJANGO_CACHE_LOCATION
+      Required: 'false'
+      Target: DJANGO_CACHE_LOCATION
+      Type: Variable
+      value: ''
+    DJANGO_CACHE_TIMEOUT:
+      Default: ''
+      Description: in seconds
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: DJANGO_CACHE_TIMEOUT
+      Required: 'false'
+      Target: DJANGO_CACHE_TIMEOUT
+      Type: Variable
+      value: ''
+    DJANGO_DB_DATABASE:
+      Default: wger
+      Description: Database Name
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DJANGO_DB_DATABASE
+      Required: 'true'
+      Target: DJANGO_DB_DATABASE
+      Type: Variable
+      value: "wger\n    "
+    DJANGO_DB_ENGINE:
+      Default: django.db.backends.postgresql
+      Description: Database Engine
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DJANGO_DB_ENGINE
+      Required: 'true'
+      Target: DJANGO_DB_ENGINE
+      Type: Variable
+      value: "\n        django.db.backends.postgresql\n    "
+    DJANGO_DB_HOST:
+      Default: ''
+      Description: Database host
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DJANGO_DB_HOST
+      Required: 'true'
+      Target: DJANGO_DB_HOST
+      Type: Variable
+      value: ''
+    DJANGO_DB_PASSWORD:
+      Default: ''
+      Description: Database password
+      Display: always
+      Mask: 'true'
+      Mode: ''
+      Name: DJANGO_DB_PASSWORD
+      Required: 'false'
+      Target: DJANGO_DB_PASSWORD
+      Type: Variable
+      value: ''
+    DJANGO_DB_PORT:
+      Default: '5432'
+      Description: Database port
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DJANGO_DB_PORT
+      Required: 'true'
+      Target: DJANGO_DB_PORT
+      Type: Variable
+      value: "5432\n    "
+    DJANGO_DB_USER:
+      Default: wger
+      Description: Database User
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DJANGO_DB_USER
+      Required: 'true'
+      Target: DJANGO_DB_USER
+      Type: Variable
+      value: "wger\n    "
+    EMAIL_HOST:
+      Default: ''
+      Description: EMAIL_HOST
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: EMAIL_HOST
+      Required: 'false'
+      Target: EMAIL_HOST
+      Type: Variable
+      value: ''
+    EMAIL_HOST_PASSWORD:
+      Default: ''
+      Description: EMAIL_HOST_PASSWORD
+      Display: always
+      Mask: 'true'
+      Mode: ''
+      Name: EMAIL_HOST_PASSWORD
+      Required: 'false'
+      Target: EMAIL_HOST_PASSWORD
+      Type: Variable
+      value: ''
+    EMAIL_HOST_USER:
+      Default: ''
+      Description: EMAIL_HOST_USER
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: EMAIL_HOST_USER
+      Required: 'false'
+      Target: EMAIL_HOST_USER
+      Type: Variable
+      value: ''
+    EMAIL_PORT:
+      Default: ''
+      Description: EMAIL_PORT
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: EMAIL_PORT
+      Required: 'false'
+      Target: EMAIL_PORT
+      Type: Variable
+      value: ''
+    EMAIL_USE_SSL:
+      Default: 'False'
+      Description: 'EMAIL_USE_SSL: True/False; Default: False'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: EMAIL_USE_SSL
+      Required: 'false'
+      Target: EMAIL_USE_SSL
+      Type: Variable
+      value: "False\n    "
+    EMAIL_USE_TLS:
+      Default: 'False'
+      Description: 'EMAIL_USE_TLS: True/False; Default: False'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: EMAIL_USE_TLS
+      Required: 'false'
+      Target: EMAIL_USE_TLS
+      Type: Variable
+      value: "True\n    "
+    ENABLE_EMAIL:
+      Default: 'False'
+      Description: 'Enable SMTP email setting: True/False; Default False'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: ENABLE_EMAIL
+      Required: 'false'
+      Target: ENABLE_EMAIL
+      Type: Variable
+      value: "False\n    "
+    FROM_EMAIL:
+      Default: ''
+      Description: FROM_EMAIL
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: FROM_EMAIL
+      Required: 'false'
+      Target: FROM_EMAIL
+      Type: Variable
+      value: ''
+    NOCAPTCHA:
+      Default: 'false'
+      Description: "NOCAPTCHA: true/false\r\nDefault: false"
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: NOCAPTCHA
+      Required: 'false'
+      Target: NOCAPTCHA
+      Type: Variable
+      value: "False\n    "
+    RECAPTCHA_PRIVATE_KEY:
+      Default: ''
+      Description: RECAPTCHA_PRIVATE_KEY
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: RECAPTCHA_PRIVATE_KEY
+      Required: 'false'
+      Target: RECAPTCHA_PRIVATE_KEY
+      Type: Variable
+      value: ''
+    RECAPTCHA_PUBLIC_KEY:
+      Default: ''
+      Description: RECAPTCHA_PUBLIC_KEY
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: RECAPTCHA_PUBLIC_KEY
+      Required: 'false'
+      Target: RECAPTCHA_PUBLIC_KEY
+      Type: Variable
+      value: ''
+    SECRET_KEY:
+      Default: ''
+      Description: Must be 50 characters
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: SECRET_KEY
+      Required: 'true'
+      Target: SECRET_KEY
+      Type: Variable
+      value: ''
+    SITE_URL:
+      Default: ''
+      Description: 'SITE_URL: ex. http://www.my-local-gym.com'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: SITE_URL
+      Required: 'true'
+      Target: SITE_URL
+      Type: Variable
+      value: ''
+    TIME_ZONE:
+      Default: US/Central
+      Description: Time Zone
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: TIME_ZONE
+      Required: 'true'
+      Target: TIME_ZONE
+      Type: Variable
+      value: "US/Central\n    "
 FirstSeen: 1633889018
 Icon: "\n        https://raw.githubusercontent.com/wger-project/wger/master/wger/core/static/images/logos/logo.png\n\
   \    "

@@ -1,28 +1,33 @@
 CategoryList:
 - Network-Other
 Config:
-- '@attributes':
-    Default: '27017'
-    Description: 'Container Port: 27017'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Host Port 1
-    Required: 'true'
-    Target: '27017'
-    Type: Port
-  value: '27017'
-- '@attributes':
-    Default: /mnt/user/appdata/mongodb/
-    Description: 'Container Path: /data/db'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Host Path 1
-    Required: 'true'
-    Target: /data/db
-    Type: Path
-  value: /mnt/user/appdata/mongodb/
+  Device: {}
+  Label: {}
+  Path:
+    Host Path 1:
+      Default: /mnt/user/appdata/mongodb/
+      Description: 'Container Path: /data/db'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Host Path 1
+      Required: 'true'
+      Target: /data/db
+      Type: Path
+      value: /mnt/user/appdata/mongodb/
+  Port:
+    Host Port 1:
+      Default: '27017'
+      Description: 'Container Port: 27017'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Host Port 1
+      Required: 'true'
+      Target: '27017'
+      Type: Port
+      value: '27017'
+  Variable: {}
 DonateLink: https://paypal.me/jasonsbean/0usd
 DonateText: Donate To Author
 FirstSeen: '1476159987'

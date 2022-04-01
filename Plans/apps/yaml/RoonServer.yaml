@@ -1,50 +1,55 @@
 CategoryList:
 - MediaServer-Music
 Config:
-- '@attributes':
-    Default: /mnt/cache/appdata/roonserver/app/
-    Description: 'Container Path: /app'
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: Config
-    Required: 'true'
-    Target: /app
-    Type: Path
-  value: /mnt/cache/appdata/roonserver/app
-- '@attributes':
-    Default: /mnt/cache/appdata/roonserver/data/
-    Description: 'Container Path: /data'
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: Data
-    Required: 'true'
-    Target: /data
-    Type: Path
-  value: /mnt/cache/appdata/roonserver/data
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /music'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Music
-    Required: 'true'
-    Target: /music
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /backup'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Backup
-    Required: 'false'
-    Target: /backup
-    Type: Path
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Backup:
+      Default: ''
+      Description: 'Container Path: /backup'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Backup
+      Required: 'false'
+      Target: /backup
+      Type: Path
+      value: ''
+    Config:
+      Default: /mnt/cache/appdata/roonserver/app/
+      Description: 'Container Path: /app'
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: Config
+      Required: 'true'
+      Target: /app
+      Type: Path
+      value: /mnt/cache/appdata/roonserver/app
+    Data:
+      Default: /mnt/cache/appdata/roonserver/data/
+      Description: 'Container Path: /data'
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: Data
+      Required: 'true'
+      Target: /data
+      Type: Path
+      value: /mnt/cache/appdata/roonserver/data
+    Music:
+      Default: ''
+      Description: 'Container Path: /music'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Music
+      Required: 'true'
+      Target: /music
+      Type: Path
+      value: ''
+  Port: {}
+  Variable: {}
 DonateLink: https://www.buymeacoffee.com/xthursdayx
 DonateText: "\u200B If you appreciate my work please consider buying me a coffee,\
   \ cheers!\_\U0001F601"

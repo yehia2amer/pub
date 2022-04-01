@@ -2,52 +2,57 @@ CategoryList:
 - MediaApp-Other
 - Network-Proxy
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /root/.xteve'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: /xteve
-    Required: 'true'
-    Target: /root/.xteve
-    Type: Path
-  value: /mnt/user/appdata/xteve/
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /config'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: /config
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: /mnt/user/appdata/xteve/config/
-- '@attributes':
-    Default: ''
-    Description: "/tmp/xteve\r\nin case u want to move /tmp to RAM on host\r\nbuffer,\
-      \ ..."
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: /tmp
-    Required: 'false'
-    Target: /tmp/xteve
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: "/mnt/user/appdata/tvheadend/data/\r\nin case TVHeadend functions\
-      \ are used to move"
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: /TVH
-    Required: 'false'
-    Target: /TVH
-    Type: Path
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    /TVH:
+      Default: ''
+      Description: "/mnt/user/appdata/tvheadend/data/\r\nin case TVHeadend functions\
+        \ are used to move"
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: /TVH
+      Required: 'false'
+      Target: /TVH
+      Type: Path
+      value: ''
+    /config:
+      Default: ''
+      Description: 'Container Path: /config'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: /config
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: /mnt/user/appdata/xteve/config/
+    /tmp:
+      Default: ''
+      Description: "/tmp/xteve\r\nin case u want to move /tmp to RAM on host\r\nbuffer,\
+        \ ..."
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: /tmp
+      Required: 'false'
+      Target: /tmp/xteve
+      Type: Path
+      value: ''
+    /xteve:
+      Default: ''
+      Description: 'Container Path: /root/.xteve'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: /xteve
+      Required: 'true'
+      Target: /root/.xteve
+      Type: Path
+      value: /mnt/user/appdata/xteve/
+  Port: {}
+  Variable: {}
 FirstSeen: 1563977317
 Icon: https://avatars0.githubusercontent.com/u/53275662?s=460&amp;v=4
 LastUpdate: 1627986332

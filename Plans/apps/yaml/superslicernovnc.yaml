@@ -2,50 +2,55 @@ CategoryList:
 - HomeAutomation
 - Productivity
 Config:
-- '@attributes':
-    Default: /mnt/user/appdata/superslicer
-    Description: 'Container Path: /configs/'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Configs folder
-    Required: 'true'
-    Target: /configs/
-    Type: Path
-  value: /mnt/user/appdata/superslicer
-- '@attributes':
-    Default: '6080'
-    Description: 'Container Port: 8080'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: VNC Interface
-    Required: 'true'
-    Target: '8080'
-    Type: Port
-  value: '6080'
-- '@attributes':
-    Default: /etc/ssl/certs/ca-certificates.crt
-    Description: Needed to allow Superslicer to open without any prompts upon startup.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: SSL_CERT_FILE
-    Required: 'true'
-    Target: SSL_CERT_FILE
-    Type: Variable
-  value: /etc/ssl/certs/ca-certificates.crt
-- '@attributes':
-    Default: /mnt/user/3D Printing/
-    Description: 3D Printing Folder
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Prints
-    Required: 'false'
-    Target: /prints/
-    Type: Path
-  value: /mnt/user/3D Printing/
+  Device: {}
+  Label: {}
+  Path:
+    Configs folder:
+      Default: /mnt/user/appdata/superslicer
+      Description: 'Container Path: /configs/'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Configs folder
+      Required: 'true'
+      Target: /configs/
+      Type: Path
+      value: /mnt/user/appdata/superslicer
+    Prints:
+      Default: /mnt/user/3D Printing/
+      Description: 3D Printing Folder
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Prints
+      Required: 'false'
+      Target: /prints/
+      Type: Path
+      value: /mnt/user/3D Printing/
+  Port:
+    VNC Interface:
+      Default: '6080'
+      Description: 'Container Port: 8080'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: VNC Interface
+      Required: 'true'
+      Target: '8080'
+      Type: Port
+      value: '6080'
+  Variable:
+    SSL_CERT_FILE:
+      Default: /etc/ssl/certs/ca-certificates.crt
+      Description: Needed to allow Superslicer to open without any prompts upon startup.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: SSL_CERT_FILE
+      Required: 'true'
+      Target: SSL_CERT_FILE
+      Type: Variable
+      value: /etc/ssl/certs/ca-certificates.crt
 FirstSeen: 1644548590
 Icon: https://user-images.githubusercontent.com/22458343/85674332-9ed0bf00-b679-11ea-876f-ee5bb4e30a64.png
 LastUpdate: 1646961093

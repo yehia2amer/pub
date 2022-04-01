@@ -2,178 +2,184 @@ CategoryList:
 - Tools-Utilities
 - Other
 Config:
-- '@attributes':
-    Default: Big Sur|Monterey|Catalina|Mojave|High Sierra
-    Description: 'Choose macOS version to install '
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Operating System Version
-    Required: 'true'
-    Target: flavour
-    Type: Variable
-  value: Big Sur
-- '@attributes':
-    Default: Auto install|Manual install
-    Description: Auto install to install a vm directly into Unraid. Manual for advanced
-      install
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Install Type
-    Required: 'true'
-    Target: vminstall
-    Type: Variable
-  value: Auto install
-- '@attributes':
-    Default: ''
-    Description: Enter desired vdisk size (only used by auto install - ignored by
-      manual install)
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Vdisk Size
-    Required: 'true'
-    Target: vdisksize
-    Type: Variable
-  value: 100G
-- '@attributes':
-    Default: raw|qcow2
-    Description: Choose vdisk type  raw or qcow2  (qcow2 takes less space)
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Vdisk Type
-    Required: 'true'
-    Target: vdisktype
-    Type: Variable
-  value: raw
-- '@attributes':
-    Default: stock|custom
-    Description: Choose from the built in Opencore in macinabox or choose a custom
-      one (add in appdata/macinabox/custom_opencore)
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Opencore stock or custom
-    Required: 'true'
-    Target: opencore
-    Type: Variable
-  value: stock
-- '@attributes':
-    Default: no|yes
-    Description: 'Set to '
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Delete and replace Opencore
-    Required: 'true'
-    Target: replaceopencore
-    Type: Variable
-  value: 'no'
-- '@attributes':
-    Default: no|e1000-82545em|virtio|virtio-net|vmxnet3
-    Description: "Defualt is no\r\nChange to override the template defualt for the\
-      \ NIC"
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Override defualt NIC type
-    Required: 'true'
-    Target: overridenic
-    Type: Variable
-  value: 'no'
-- '@attributes':
-    Default: /mnt/user/domains/
-    Description: Select where your vm images are stored on the server - defualt location
-      is /mnt/user/domains/
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: VM Images Location
-    Required: 'true'
-    Target: /domains
-    Type: Path
-  value: /mnt/user/domains/
-- '@attributes':
-    Default: /mnt/user/domains/
-    Description: This must match the above VM Images Location (yes we need it twice!)
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: VM Images Location AGAIN !!!
-    Required: 'true'
-    Target: VMIMAGES
-    Type: Variable
-  value: /mnt/user/domains/
-- '@attributes':
-    Default: /mnt/user/isos/
-    Description: Your isos share path - macOS install media will be put here.  defualt
-      location is  /mnt/user/isos/
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Isos Share Location
-    Required: 'true'
-    Target: /isos
-    Type: Path
-  value: /mnt/user/isos/
-- '@attributes':
-    Default: /mnt/user/isos/
-    Description: This must match the above Isos Share Location (yes we need it twice!)
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Isos Share Location AGAIN !!!
-    Required: 'true'
-    Target: ISOIMAGES
-    Type: Variable
-  value: /mnt/user/isos/
-- '@attributes':
-    Default: /mnt/user/appdata/macinabox
-    Description: Appdata location. If you change this you will need to do the same
-      in the macinabox help user script
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: appdata
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: /mnt/user/appdata/macinabox
-- '@attributes':
-    Default: /mnt/user/system/custom_ovmf/
-    Description: Dont change
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: custom ovmf location
-    Required: 'true'
-    Target: /customovmf/
-    Type: Path
-  value: /mnt/user/system/custom_ovmf/
-- '@attributes':
-    Default: yes|no
-    Description: 'Injects macinabox helper userscript directly into userscripts plugin '
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Inject Macinabox helper scripts
-    Required: 'true'
-    Target: injectfixxml
-    Type: Variable
-  value: 'yes'
-- '@attributes':
-    Default: /boot/config/plugins/user.scripts/scripts
-    Description: Dont change this!
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: Userscripts Location
-    Required: 'true'
-    Target: /userscripts
-    Type: Path
-  value: /boot/config/plugins/user.scripts/scripts
+  Device: {}
+  Label: {}
+  Path:
+    Isos Share Location:
+      Default: /mnt/user/isos/
+      Description: Your isos share path - macOS install media will be put here.  defualt
+        location is  /mnt/user/isos/
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Isos Share Location
+      Required: 'true'
+      Target: /isos
+      Type: Path
+      value: /mnt/user/isos/
+    Userscripts Location:
+      Default: /boot/config/plugins/user.scripts/scripts
+      Description: Dont change this!
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: Userscripts Location
+      Required: 'true'
+      Target: /userscripts
+      Type: Path
+      value: /boot/config/plugins/user.scripts/scripts
+    VM Images Location:
+      Default: /mnt/user/domains/
+      Description: Select where your vm images are stored on the server - defualt
+        location is /mnt/user/domains/
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: VM Images Location
+      Required: 'true'
+      Target: /domains
+      Type: Path
+      value: /mnt/user/domains/
+    appdata:
+      Default: /mnt/user/appdata/macinabox
+      Description: Appdata location. If you change this you will need to do the same
+        in the macinabox help user script
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: appdata
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: /mnt/user/appdata/macinabox
+    custom ovmf location:
+      Default: /mnt/user/system/custom_ovmf/
+      Description: Dont change
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: custom ovmf location
+      Required: 'true'
+      Target: /customovmf/
+      Type: Path
+      value: /mnt/user/system/custom_ovmf/
+  Port: {}
+  Variable:
+    Delete and replace Opencore:
+      Default: no|yes
+      Description: 'Set to '
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Delete and replace Opencore
+      Required: 'true'
+      Target: replaceopencore
+      Type: Variable
+      value: 'no'
+    Inject Macinabox helper scripts:
+      Default: yes|no
+      Description: 'Injects macinabox helper userscript directly into userscripts
+        plugin '
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Inject Macinabox helper scripts
+      Required: 'true'
+      Target: injectfixxml
+      Type: Variable
+      value: 'yes'
+    Install Type:
+      Default: Auto install|Manual install
+      Description: Auto install to install a vm directly into Unraid. Manual for advanced
+        install
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Install Type
+      Required: 'true'
+      Target: vminstall
+      Type: Variable
+      value: Auto install
+    Isos Share Location AGAIN !!!:
+      Default: /mnt/user/isos/
+      Description: This must match the above Isos Share Location (yes we need it twice!)
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Isos Share Location AGAIN !!!
+      Required: 'true'
+      Target: ISOIMAGES
+      Type: Variable
+      value: /mnt/user/isos/
+    Opencore stock or custom:
+      Default: stock|custom
+      Description: Choose from the built in Opencore in macinabox or choose a custom
+        one (add in appdata/macinabox/custom_opencore)
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Opencore stock or custom
+      Required: 'true'
+      Target: opencore
+      Type: Variable
+      value: stock
+    Operating System Version:
+      Default: Big Sur|Monterey|Catalina|Mojave|High Sierra
+      Description: 'Choose macOS version to install '
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Operating System Version
+      Required: 'true'
+      Target: flavour
+      Type: Variable
+      value: Big Sur
+    Override defualt NIC type:
+      Default: no|e1000-82545em|virtio|virtio-net|vmxnet3
+      Description: "Defualt is no\r\nChange to override the template defualt for the\
+        \ NIC"
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Override defualt NIC type
+      Required: 'true'
+      Target: overridenic
+      Type: Variable
+      value: 'no'
+    VM Images Location AGAIN !!!:
+      Default: /mnt/user/domains/
+      Description: This must match the above VM Images Location (yes we need it twice!)
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: VM Images Location AGAIN !!!
+      Required: 'true'
+      Target: VMIMAGES
+      Type: Variable
+      value: /mnt/user/domains/
+    Vdisk Size:
+      Default: ''
+      Description: Enter desired vdisk size (only used by auto install - ignored by
+        manual install)
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Vdisk Size
+      Required: 'true'
+      Target: vdisksize
+      Type: Variable
+      value: 100G
+    Vdisk Type:
+      Default: raw|qcow2
+      Description: Choose vdisk type  raw or qcow2  (qcow2 takes less space)
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Vdisk Type
+      Required: 'true'
+      Target: vdisktype
+      Type: Variable
+      value: raw
 FirstSeen: 1571970649
 Icon: https://raw.githubusercontent.com/SpaceinvaderOne/Docker-Templates-Unraid/master/spaceinvaderone/docker_icons/Macinabox.png
 LastUpdate: 1643739871

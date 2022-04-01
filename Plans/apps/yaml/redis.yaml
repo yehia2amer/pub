@@ -1,40 +1,45 @@
 CategoryList:
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: '6379'
-    Description: Redis Port
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Redis Port
-    Required: 'true'
-    Target: '6379'
-    Type: Port
-  value: '6379'
-- '@attributes':
-    Default: yes|no
-    Description: ALLOW_EMPTY_PASSWORD
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: ALLOW_EMPTY_PASSWORD
-    Required: 'true'
-    Target: ALLOW_EMPTY_PASSWORD
-    Type: Variable
-  value: 'yes'
-- '@attributes':
-    Default: ''
-    Description: If you want password put ALLOW_EMPTY_PASSWORD to no, then put the
-      password here.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Password
-    Required: 'false'
-    Target: REDIS_PASSWORD
-    Type: Variable
-  value: '941378'
+  Device: {}
+  Label: {}
+  Path: {}
+  Port:
+    Redis Port:
+      Default: '6379'
+      Description: Redis Port
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Redis Port
+      Required: 'true'
+      Target: '6379'
+      Type: Port
+      value: '6379'
+  Variable:
+    ALLOW_EMPTY_PASSWORD:
+      Default: yes|no
+      Description: ALLOW_EMPTY_PASSWORD
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: ALLOW_EMPTY_PASSWORD
+      Required: 'true'
+      Target: ALLOW_EMPTY_PASSWORD
+      Type: Variable
+      value: 'yes'
+    Password:
+      Default: ''
+      Description: If you want password put ALLOW_EMPTY_PASSWORD to no, then put the
+        password here.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Password
+      Required: 'false'
+      Target: REDIS_PASSWORD
+      Type: Variable
+      value: '941378'
 FirstSeen: 1589926064
 Icon: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/redis.png
 LastUpdate: 1647032403

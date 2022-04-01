@@ -2,39 +2,44 @@ CategoryList:
 - HomeAutomation
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: /mnt/user/appdata/hoobs/
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Application Path
-    Required: 'true'
-    Target: /hoobs
-    Type: Path
-  value: '/mnt/user/appdata/hoobs/  '
-- '@attributes':
-    Default: '51826'
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Homebridge Port
-    Required: 'true'
-    Target: '51826'
-    Type: Port
-  value: '51826'
-- '@attributes':
-    Default: '8082'
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Server Port
-    Required: 'false'
-    Target: '80'
-    Type: Port
-  value: '8082'
+  Device: {}
+  Label: {}
+  Path:
+    Application Path:
+      Default: /mnt/user/appdata/hoobs/
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Application Path
+      Required: 'true'
+      Target: /hoobs
+      Type: Path
+      value: '/mnt/user/appdata/hoobs/  '
+  Port:
+    Homebridge Port:
+      Default: '51826'
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Homebridge Port
+      Required: 'true'
+      Target: '51826'
+      Type: Port
+      value: '51826'
+    Server Port:
+      Default: '8082'
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Server Port
+      Required: 'false'
+      Target: '80'
+      Type: Port
+      value: '8082'
+  Variable: {}
 ExtraParams: --restart=unless-stopped
 FirstSeen: 1582909662
 Icon: https://raw.githubusercontent.com/malvarez00/unRAID-Docker-Templates/master/malvarez00/icons/hoobs_96x96.png

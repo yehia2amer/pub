@@ -1,39 +1,44 @@
 CategoryList:
 - Backup
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /data'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Data directory
-    Required: 'true'
-    Target: /data
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: '8000'
-    Description: 'Container Port: 8000'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Rest-server listen port
-    Required: 'true'
-    Target: '8000'
-    Type: Port
-  value: '8000'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: OPTIONS'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Additional rest-server options
-    Required: 'false'
-    Target: OPTIONS
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Data directory:
+      Default: ''
+      Description: 'Container Path: /data'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Data directory
+      Required: 'true'
+      Target: /data
+      Type: Path
+      value: ''
+  Port:
+    Rest-server listen port:
+      Default: '8000'
+      Description: 'Container Port: 8000'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Rest-server listen port
+      Required: 'true'
+      Target: '8000'
+      Type: Port
+      value: '8000'
+  Variable:
+    Additional rest-server options:
+      Default: ''
+      Description: 'Container Variable: OPTIONS'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Additional rest-server options
+      Required: 'false'
+      Target: OPTIONS
+      Type: Variable
+      value: ''
 FirstSeen: 1636222461
 Icon: https://raw.githubusercontent.com/jorgenman/unraid-templates/main/jorgenman/images/restic-rest-server-icon.png
 LastUpdate: 1644520810

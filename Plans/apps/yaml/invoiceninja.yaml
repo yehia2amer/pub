@@ -2,230 +2,235 @@ CategoryList:
 - Productivity
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: production
-    Description: 'Container Variable: APP_ENV'
-    Display: advanced
-    Mask: 'false'
-    Name: APP_ENV
-    Required: 'false'
-    Target: APP_ENV
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '0'
-    Description: 'Container Variable: APP_DEBUG'
-    Display: advanced
-    Mask: 'false'
-    Name: Debug Mode
-    Required: 'false'
-    Target: APP_DEBUG
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: mysql
-    Description: 'Container Variable: DB_TYPE'
-    Display: always
-    Mask: 'false'
-    Name: Database Type
-    Required: 'false'
-    Target: DB_TYPE
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 'false'
-    Description: 'Container Variable: DB_STRICT'
-    Display: always
-    Mask: 'false'
-    Name: DB_STRICT
-    Required: 'false'
-    Target: DB_STRICT
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: unraidIP:port
-    Description: 'Container Variable: DB_HOST'
-    Display: always
-    Mask: 'false'
-    Name: Database Host
-    Required: 'false'
-    Target: DB_HOST
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ninja
-    Description: 'Container Variable: DB_DATABASE'
-    Display: always
-    Mask: 'false'
-    Name: Database Name
-    Required: 'false'
-    Target: DB_DATABASE
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ninja
-    Description: 'Container Variable: DB_USERNAME'
-    Display: always
-    Mask: 'false'
-    Name: Database username
-    Required: 'false'
-    Target: DB_USERNAME
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ninja
-    Description: 'Container Variable: DB_PASSWORD'
-    Display: always
-    Mask: 'true'
-    Name: Database Password
-    Required: 'false'
-    Target: DB_PASSWORD
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: https://invoice.domain.com
-    Description: 'Container Variable: APP_URL'
-    Display: always
-    Mask: 'false'
-    Name: APP_URL
-    Required: 'false'
-    Target: APP_URL
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: SomeRandom32CharacterLongAlphanumericString
-    Description: 'Container Variable: APP_KEY'
-    Display: always
-    Mask: 'false'
-    Name: APP_KEY
-    Required: 'false'
-    Target: APP_KEY
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: smtp
-    Description: 'Container Variable: MAIL_DRIVER'
-    Display: always
-    Mask: 'false'
-    Name: MAIL_DRIVER
-    Required: 'false'
-    Target: MAIL_DRIVER
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '587'
-    Description: 'Container Variable: MAIL_PORT'
-    Display: always
-    Mask: 'false'
-    Name: MAIL_PORT
-    Required: 'false'
-    Target: MAIL_PORT
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: tls
-    Description: 'Container Variable: MAIL_ENCRYPTION'
-    Display: always
-    Mask: 'false'
-    Name: MAIL_ENCRYPTION
-    Required: 'false'
-    Target: MAIL_ENCRYPTION
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: smtp.example.com
-    Description: 'Container Variable: MAIL_HOST'
-    Display: always
-    Mask: 'false'
-    Name: MAIL_HOST
-    Required: 'false'
-    Target: MAIL_HOST
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: johndoe@example.com
-    Description: 'Container Variable: MAIL_USERNAME'
-    Display: always
-    Mask: 'false'
-    Name: MAIL_USERNAME
-    Required: 'false'
-    Target: MAIL_USERNAME
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: invoice@example.com
-    Description: 'Container Variable: MAIL_FROM_ADDRESS'
-    Display: always
-    Mask: 'false'
-    Name: MAIL_FROM_ADDRESS
-    Required: 'false'
-    Target: MAIL_FROM_ADDRESS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: Invoice Department
-    Description: 'Container Variable: MAIL_FROM_NAME'
-    Display: always
-    Mask: 'false'
-    Name: MAIL_FROM_NAME
-    Required: 'false'
-    Target: MAIL_FROM_NAME
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: SUPERSECRETEMAILPASSWORD
-    Description: 'Container Variable: MAIL_PASSWORD'
-    Display: always
-    Mask: 'true'
-    Name: MAIL_PASSWORD
-    Required: 'false'
-    Target: MAIL_PASSWORD
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '8000'
-    Description: 'Container Port: 80'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: HTTP Port
-    Required: 'false'
-    Target: '80'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: '8443'
-    Description: 'Container Port: 443'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: HTTPS Port
-    Required: 'false'
-    Target: '443'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: /mnt/user/appdata/invoiceninja/storage
-    Description: 'Container Path: /var/www/app/storage'
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: Storage
-    Required: 'false'
-    Target: /var/www/app/storage
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: /mnt/user/appdata/invoiceninja/logo
-    Description: 'Container Path: /var/www/app/public/logo'
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: Logo
-    Required: 'false'
-    Target: /var/www/app/public/logo
-    Type: Path
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Logo:
+      Default: /mnt/user/appdata/invoiceninja/logo
+      Description: 'Container Path: /var/www/app/public/logo'
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: Logo
+      Required: 'false'
+      Target: /var/www/app/public/logo
+      Type: Path
+      value: ''
+    Storage:
+      Default: /mnt/user/appdata/invoiceninja/storage
+      Description: 'Container Path: /var/www/app/storage'
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: Storage
+      Required: 'false'
+      Target: /var/www/app/storage
+      Type: Path
+      value: ''
+  Port:
+    HTTP Port:
+      Default: '8000'
+      Description: 'Container Port: 80'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: HTTP Port
+      Required: 'false'
+      Target: '80'
+      Type: Port
+      value: ''
+    HTTPS Port:
+      Default: '8443'
+      Description: 'Container Port: 443'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: HTTPS Port
+      Required: 'false'
+      Target: '443'
+      Type: Port
+      value: ''
+  Variable:
+    APP_ENV:
+      Default: production
+      Description: 'Container Variable: APP_ENV'
+      Display: advanced
+      Mask: 'false'
+      Name: APP_ENV
+      Required: 'false'
+      Target: APP_ENV
+      Type: Variable
+      value: ''
+    APP_KEY:
+      Default: SomeRandom32CharacterLongAlphanumericString
+      Description: 'Container Variable: APP_KEY'
+      Display: always
+      Mask: 'false'
+      Name: APP_KEY
+      Required: 'false'
+      Target: APP_KEY
+      Type: Variable
+      value: ''
+    APP_URL:
+      Default: https://invoice.domain.com
+      Description: 'Container Variable: APP_URL'
+      Display: always
+      Mask: 'false'
+      Name: APP_URL
+      Required: 'false'
+      Target: APP_URL
+      Type: Variable
+      value: ''
+    DB_STRICT:
+      Default: 'false'
+      Description: 'Container Variable: DB_STRICT'
+      Display: always
+      Mask: 'false'
+      Name: DB_STRICT
+      Required: 'false'
+      Target: DB_STRICT
+      Type: Variable
+      value: ''
+    Database Host:
+      Default: unraidIP:port
+      Description: 'Container Variable: DB_HOST'
+      Display: always
+      Mask: 'false'
+      Name: Database Host
+      Required: 'false'
+      Target: DB_HOST
+      Type: Variable
+      value: ''
+    Database Name:
+      Default: ninja
+      Description: 'Container Variable: DB_DATABASE'
+      Display: always
+      Mask: 'false'
+      Name: Database Name
+      Required: 'false'
+      Target: DB_DATABASE
+      Type: Variable
+      value: ''
+    Database Password:
+      Default: ninja
+      Description: 'Container Variable: DB_PASSWORD'
+      Display: always
+      Mask: 'true'
+      Name: Database Password
+      Required: 'false'
+      Target: DB_PASSWORD
+      Type: Variable
+      value: ''
+    Database Type:
+      Default: mysql
+      Description: 'Container Variable: DB_TYPE'
+      Display: always
+      Mask: 'false'
+      Name: Database Type
+      Required: 'false'
+      Target: DB_TYPE
+      Type: Variable
+      value: ''
+    Database username:
+      Default: ninja
+      Description: 'Container Variable: DB_USERNAME'
+      Display: always
+      Mask: 'false'
+      Name: Database username
+      Required: 'false'
+      Target: DB_USERNAME
+      Type: Variable
+      value: ''
+    Debug Mode:
+      Default: '0'
+      Description: 'Container Variable: APP_DEBUG'
+      Display: advanced
+      Mask: 'false'
+      Name: Debug Mode
+      Required: 'false'
+      Target: APP_DEBUG
+      Type: Variable
+      value: ''
+    MAIL_DRIVER:
+      Default: smtp
+      Description: 'Container Variable: MAIL_DRIVER'
+      Display: always
+      Mask: 'false'
+      Name: MAIL_DRIVER
+      Required: 'false'
+      Target: MAIL_DRIVER
+      Type: Variable
+      value: ''
+    MAIL_ENCRYPTION:
+      Default: tls
+      Description: 'Container Variable: MAIL_ENCRYPTION'
+      Display: always
+      Mask: 'false'
+      Name: MAIL_ENCRYPTION
+      Required: 'false'
+      Target: MAIL_ENCRYPTION
+      Type: Variable
+      value: ''
+    MAIL_FROM_ADDRESS:
+      Default: invoice@example.com
+      Description: 'Container Variable: MAIL_FROM_ADDRESS'
+      Display: always
+      Mask: 'false'
+      Name: MAIL_FROM_ADDRESS
+      Required: 'false'
+      Target: MAIL_FROM_ADDRESS
+      Type: Variable
+      value: ''
+    MAIL_FROM_NAME:
+      Default: Invoice Department
+      Description: 'Container Variable: MAIL_FROM_NAME'
+      Display: always
+      Mask: 'false'
+      Name: MAIL_FROM_NAME
+      Required: 'false'
+      Target: MAIL_FROM_NAME
+      Type: Variable
+      value: ''
+    MAIL_HOST:
+      Default: smtp.example.com
+      Description: 'Container Variable: MAIL_HOST'
+      Display: always
+      Mask: 'false'
+      Name: MAIL_HOST
+      Required: 'false'
+      Target: MAIL_HOST
+      Type: Variable
+      value: ''
+    MAIL_PASSWORD:
+      Default: SUPERSECRETEMAILPASSWORD
+      Description: 'Container Variable: MAIL_PASSWORD'
+      Display: always
+      Mask: 'true'
+      Name: MAIL_PASSWORD
+      Required: 'false'
+      Target: MAIL_PASSWORD
+      Type: Variable
+      value: ''
+    MAIL_PORT:
+      Default: '587'
+      Description: 'Container Variable: MAIL_PORT'
+      Display: always
+      Mask: 'false'
+      Name: MAIL_PORT
+      Required: 'false'
+      Target: MAIL_PORT
+      Type: Variable
+      value: ''
+    MAIL_USERNAME:
+      Default: johndoe@example.com
+      Description: 'Container Variable: MAIL_USERNAME'
+      Display: always
+      Mask: 'false'
+      Name: MAIL_USERNAME
+      Required: 'false'
+      Target: MAIL_USERNAME
+      Type: Variable
+      value: ''
 FirstSeen: 1567771788
 Icon: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/invoiceninja.png
 LastUpdate: 1646563839

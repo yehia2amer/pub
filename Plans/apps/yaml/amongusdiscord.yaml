@@ -7,94 +7,99 @@ CategoryList:
 - Network-Voip
 - Network-Messenger
 Config:
-- '@attributes':
-    Default: ''
-    Description: The Bot Token used by the bot to authenticate with Discord.
-    Display: always
-    Mask: 'true'
-    Mode: ''
-    Name: DISCORD_BOT_TOKEN
-    Required: 'true'
-    Target: DISCORD_BOT_TOKEN
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '8123'
-    Description: The port the Bot will use for incoming Socket.io communications from
-      the capture client. Defaults to 8123. You must specify more (comma-delimited
-      ports) if you are running with NUM_SHARDS &gt; 1. For example, with 3 shards,
-      PORT = 8123,8124,8125
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: PORT
-    Required: 'true'
-    Target: '8123'
-    Type: Port
-  value: '8123'
-- '@attributes':
-    Default: http://au.yourdomain.com:8123
-    Description: 'The externally-accessible URL for this instance of the discord bot.
-      For example, http://test.com:8123 (NOTE: The EXTERNAL PORT of the bot must be
-      included at the end of the URL This is used to provide the linking URI to the
-      capture, via the Direct Message the bot sends you when typing .au new (in conjunction
-      with the PORT above). You must specify http:// or https:// accordingly as part
-      of the URL'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: HOST
-    Required: 'true'
-    Target: HOST
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /config'
-    Display: always
-    Mask: 'false'
-    Mode: rw,slave
-    Name: CONFIG_PATH
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: /mnt/user/appdata/amongusdiscord/
-- '@attributes':
-    Default: ''
-    Description: ' (Optional) A second Bot Token to be used to distribute the mute/deafen
-      requests to Discord. If you play in larger groups of 8+ people, this is recommended
-      to not be rate-limited (delayed) by Discord when rounds change!'
-    Display: always
-    Mask: 'true'
-    Mode: ''
-    Name: DISCORD_BOT_TOKEN_2
-    Required: 'false'
-    Target: DISCORD_BOT_TOKEN_2
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: How many total bot shard instances you'll be running in your current
-      stack.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: NUM_SHARDS
-    Required: 'false'
-    Target: NUM_SHARDS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: The path where the bot will store it's log files
-    Display: always
-    Mask: 'false'
-    Mode: rw,slave
-    Name: LOG_PATH
-    Required: 'true'
-    Target: /config/log_path
-    Type: Path
-  value: /mnt/user/appdata/amongusdiscord/log_path
+  Device: {}
+  Label: {}
+  Path:
+    CONFIG_PATH:
+      Default: ''
+      Description: 'Container Path: /config'
+      Display: always
+      Mask: 'false'
+      Mode: rw,slave
+      Name: CONFIG_PATH
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: /mnt/user/appdata/amongusdiscord/
+    LOG_PATH:
+      Default: ''
+      Description: The path where the bot will store it's log files
+      Display: always
+      Mask: 'false'
+      Mode: rw,slave
+      Name: LOG_PATH
+      Required: 'true'
+      Target: /config/log_path
+      Type: Path
+      value: /mnt/user/appdata/amongusdiscord/log_path
+  Port:
+    PORT:
+      Default: '8123'
+      Description: The port the Bot will use for incoming Socket.io communications
+        from the capture client. Defaults to 8123. You must specify more (comma-delimited
+        ports) if you are running with NUM_SHARDS &gt; 1. For example, with 3 shards,
+        PORT = 8123,8124,8125
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: PORT
+      Required: 'true'
+      Target: '8123'
+      Type: Port
+      value: '8123'
+  Variable:
+    DISCORD_BOT_TOKEN:
+      Default: ''
+      Description: The Bot Token used by the bot to authenticate with Discord.
+      Display: always
+      Mask: 'true'
+      Mode: ''
+      Name: DISCORD_BOT_TOKEN
+      Required: 'true'
+      Target: DISCORD_BOT_TOKEN
+      Type: Variable
+      value: ''
+    DISCORD_BOT_TOKEN_2:
+      Default: ''
+      Description: ' (Optional) A second Bot Token to be used to distribute the mute/deafen
+        requests to Discord. If you play in larger groups of 8+ people, this is recommended
+        to not be rate-limited (delayed) by Discord when rounds change!'
+      Display: always
+      Mask: 'true'
+      Mode: ''
+      Name: DISCORD_BOT_TOKEN_2
+      Required: 'false'
+      Target: DISCORD_BOT_TOKEN_2
+      Type: Variable
+      value: ''
+    HOST:
+      Default: http://au.yourdomain.com:8123
+      Description: 'The externally-accessible URL for this instance of the discord
+        bot. For example, http://test.com:8123 (NOTE: The EXTERNAL PORT of the bot
+        must be included at the end of the URL This is used to provide the linking
+        URI to the capture, via the Direct Message the bot sends you when typing .au
+        new (in conjunction with the PORT above). You must specify http:// or https://
+        accordingly as part of the URL'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: HOST
+      Required: 'true'
+      Target: HOST
+      Type: Variable
+      value: ''
+    NUM_SHARDS:
+      Default: ''
+      Description: How many total bot shard instances you'll be running in your current
+        stack.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: NUM_SHARDS
+      Required: 'false'
+      Target: NUM_SHARDS
+      Type: Variable
+      value: ''
 FirstSeen: 1602720717
 Icon: https://github.com/denverquane/amongusdiscord/raw/master/assets/botProfilePicture.jpg
 LastUpdate: 1644951465

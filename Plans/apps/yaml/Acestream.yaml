@@ -1,28 +1,33 @@
 CategoryList:
 - MediaServer-Video
 Config:
-- '@attributes':
-    Default: ''
-    Description: Stream cache data
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: acestream cache
-    Required: 'true'
-    Target: /srv/acestream/.ACEStream
-    Type: Path
-  value: /mnt/user/appdata/acestream/
-- '@attributes':
-    Default: ''
-    Description: Redirect default engine port 6878
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: HOST PORT
-    Required: 'true'
-    Target: '6878'
-    Type: Port
-  value: '8008'
+  Device: {}
+  Label: {}
+  Path:
+    acestream cache:
+      Default: ''
+      Description: Stream cache data
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: acestream cache
+      Required: 'true'
+      Target: /srv/acestream/.ACEStream
+      Type: Path
+      value: /mnt/user/appdata/acestream/
+  Port:
+    HOST PORT:
+      Default: ''
+      Description: Redirect default engine port 6878
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: HOST PORT
+      Required: 'true'
+      Target: '6878'
+      Type: Port
+      value: '8008'
+  Variable: {}
 FirstSeen: 1641906264
 Icon: https://raw.githubusercontent.com/qubex22/unraid-templates/main/acestream/acestream.png
 LastUpdate: 1638459271

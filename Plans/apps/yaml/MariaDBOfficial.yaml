@@ -3,98 +3,103 @@ CategoryList:
 - Other
 - Network-Other
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 3306'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Port
-    Required: 'true'
-    Target: '3306'
-    Type: Port
-  value: '3306'
-- '@attributes':
-    Default: ''
-    Description: Set to yes, to generate a random root password. The generated password
-      will be printed to the logs (Docker &gt; MariaDB Icon &gt; Logs).
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Generate Random Password
-    Required: 'false'
-    Target: MARIADB_RANDOM_ROOT_PASSWORD
-    Type: Variable
-  value: 'Yes'
-- '@attributes':
-    Default: ''
-    Description: This variable allows you to specify the name of a database to be
-      created on image startup.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Database Name
-    Required: 'true'
-    Target: MARIADB_DATABASE
-    Type: Variable
-  value: dbname_here
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: MARIADB_USER'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Database User
-    Required: 'true'
-    Target: MARIADB_USER
-    Type: Variable
-  value: dbuser_here
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: MARIADB_PASSWORD'
-    Display: always
-    Mask: 'true'
-    Mode: ''
-    Name: Database Password
-    Required: 'true'
-    Target: MARIADB_PASSWORD
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Recommened: For better performance replace /mnt/user against /mnt/cache.
-      Note: This requires appdata share caching set to Prefer or Only!'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Data
-    Required: 'true'
-    Target: /var/lib/mysql
-    Type: Path
-  value: /mnt/user/appdata/mariadb-official/data
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /etc/mysql/conf.d'
-    Display: always-hide
-    Mask: 'false'
-    Mode: rw
-    Name: Config
-    Required: 'true'
-    Target: /etc/mysql/conf.d
-    Type: Path
-  value: /mnt/user/appdata/mariadb-official/config
-- '@attributes':
-    Default: ''
-    Description: Generate Random Password must be empty if you like to set your own
-      Root Password!
-    Display: advanced-hide
-    Mask: 'true'
-    Mode: ''
-    Name: Root Password
-    Required: 'false'
-    Target: MARIADB_ROOT_PASSWORD
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Config:
+      Default: ''
+      Description: 'Container Path: /etc/mysql/conf.d'
+      Display: always-hide
+      Mask: 'false'
+      Mode: rw
+      Name: Config
+      Required: 'true'
+      Target: /etc/mysql/conf.d
+      Type: Path
+      value: /mnt/user/appdata/mariadb-official/config
+    Data:
+      Default: ''
+      Description: 'Recommened: For better performance replace /mnt/user against /mnt/cache.
+        Note: This requires appdata share caching set to Prefer or Only!'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Data
+      Required: 'true'
+      Target: /var/lib/mysql
+      Type: Path
+      value: /mnt/user/appdata/mariadb-official/data
+  Port:
+    Port:
+      Default: ''
+      Description: 'Container Port: 3306'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Port
+      Required: 'true'
+      Target: '3306'
+      Type: Port
+      value: '3306'
+  Variable:
+    Database Name:
+      Default: ''
+      Description: This variable allows you to specify the name of a database to be
+        created on image startup.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Database Name
+      Required: 'true'
+      Target: MARIADB_DATABASE
+      Type: Variable
+      value: dbname_here
+    Database Password:
+      Default: ''
+      Description: 'Container Variable: MARIADB_PASSWORD'
+      Display: always
+      Mask: 'true'
+      Mode: ''
+      Name: Database Password
+      Required: 'true'
+      Target: MARIADB_PASSWORD
+      Type: Variable
+      value: ''
+    Database User:
+      Default: ''
+      Description: 'Container Variable: MARIADB_USER'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Database User
+      Required: 'true'
+      Target: MARIADB_USER
+      Type: Variable
+      value: dbuser_here
+    Generate Random Password:
+      Default: ''
+      Description: Set to yes, to generate a random root password. The generated password
+        will be printed to the logs (Docker &gt; MariaDB Icon &gt; Logs).
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Generate Random Password
+      Required: 'false'
+      Target: MARIADB_RANDOM_ROOT_PASSWORD
+      Type: Variable
+      value: 'Yes'
+    Root Password:
+      Default: ''
+      Description: Generate Random Password must be empty if you like to set your
+        own Root Password!
+      Display: advanced-hide
+      Mask: 'true'
+      Mode: ''
+      Name: Root Password
+      Required: 'false'
+      Target: MARIADB_ROOT_PASSWORD
+      Type: Variable
+      value: ''
 DonateLink: http://paypal.me/marcgutt
 DonateText: 'If you like my work please '
 ExtraParams: --user=99:100 --memory=2G

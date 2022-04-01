@@ -10,94 +10,99 @@ CategoryList:
 - MediaServer-Other
 - Network-Web
 Config:
-- '@attributes':
-    Default: '80'
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI Port
-    Required: 'false'
-    Target: '80'
-    Type: Port
-  value: '80'
-- '@attributes':
-    Default: 127.0.0.1
-    Description: Set the database IP here
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DatabaseHost
-    Required: 'true'
-    Target: FR_DB_HOST
-    Type: Variable
-  value: 127.0.0.1
-- '@attributes':
-    Default: '3306'
-    Description: Set the port of your database here
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DatabasePort
-    Required: 'true'
-    Target: FR_DB_PORT
-    Type: Variable
-  value: '3306'
-- '@attributes':
-    Default: ''
-    Description: Set the Database Name here
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DatabaseName
-    Required: 'true'
-    Target: FR_DB_NAME
-    Type: Variable
-  value: image
-- '@attributes':
-    Default: filerun
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DatabaseUser
-    Required: 'true'
-    Target: FR_DB_USER
-    Type: Variable
-  value: image
-- '@attributes':
-    Default: changeme
-    Description: Set the Database Password here
-    Display: always
-    Mask: 'true'
-    Mode: ''
-    Name: DatabasePassword
-    Required: 'true'
-    Target: FR_DB_PASS
-    Type: Variable
-  value: changeme
-- '@attributes':
-    Default: /mnt/user/appdata/FilesRun/
-    Description: Set the appdata path part here
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: AppData
-    Required: 'true'
-    Target: /var/www/html
-    Type: Path
-  value: /mnt/user/appdata/FilesRun/
-- '@attributes':
-    Default: /mnt/user/FileRunData/
-    Description: Set where will be stock all image ect...
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: UserFile
-    Required: 'true'
-    Target: /user-files/
-    Type: Path
-  value: /mnt/user/FileRunData/
+  Device: {}
+  Label: {}
+  Path:
+    AppData:
+      Default: /mnt/user/appdata/FilesRun/
+      Description: Set the appdata path part here
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: AppData
+      Required: 'true'
+      Target: /var/www/html
+      Type: Path
+      value: /mnt/user/appdata/FilesRun/
+    UserFile:
+      Default: /mnt/user/FileRunData/
+      Description: Set where will be stock all image ect...
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: UserFile
+      Required: 'true'
+      Target: /user-files/
+      Type: Path
+      value: /mnt/user/FileRunData/
+  Port:
+    WebUI Port:
+      Default: '80'
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI Port
+      Required: 'false'
+      Target: '80'
+      Type: Port
+      value: '80'
+  Variable:
+    DatabaseHost:
+      Default: 127.0.0.1
+      Description: Set the database IP here
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DatabaseHost
+      Required: 'true'
+      Target: FR_DB_HOST
+      Type: Variable
+      value: 127.0.0.1
+    DatabaseName:
+      Default: ''
+      Description: Set the Database Name here
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DatabaseName
+      Required: 'true'
+      Target: FR_DB_NAME
+      Type: Variable
+      value: image
+    DatabasePassword:
+      Default: changeme
+      Description: Set the Database Password here
+      Display: always
+      Mask: 'true'
+      Mode: ''
+      Name: DatabasePassword
+      Required: 'true'
+      Target: FR_DB_PASS
+      Type: Variable
+      value: changeme
+    DatabasePort:
+      Default: '3306'
+      Description: Set the port of your database here
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DatabasePort
+      Required: 'true'
+      Target: FR_DB_PORT
+      Type: Variable
+      value: '3306'
+    DatabaseUser:
+      Default: filerun
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DatabaseUser
+      Required: 'true'
+      Target: FR_DB_USER
+      Type: Variable
+      value: image
 FirstSeen: 1646305405
 Icon: https://www.filerun.com/images/logo.png
 LastUpdate: 1641942829

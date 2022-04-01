@@ -4,50 +4,55 @@ CategoryList:
 - Network-Messenger
 - Productivity
 Config:
-- '@attributes':
-    Default: ''
-    Description: Telegram bot token https://botsfortelegram.com/project/the-bot-father/
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: TOKEN
-    Required: 'true'
-    Target: TOKEN
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Telegram chatId, can be found by running bot with /help
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: CHATID
-    Required: 'true'
-    Target: CHATID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Delay between RSS feed checks
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DELAY
-    Required: 'true'
-    Target: DELAY
-    Type: Variable
-  value: '60'
-- '@attributes':
-    Default: /mnt/user/appdata/rsstt
-    Description: Config Path
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Config Path
-    Required: 'false'
-    Target: /config
-    Type: Path
-  value: /mnt/user/appdata/rsstt
+  Device: {}
+  Label: {}
+  Path:
+    Config Path:
+      Default: /mnt/user/appdata/rsstt
+      Description: Config Path
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Config Path
+      Required: 'false'
+      Target: /config
+      Type: Path
+      value: /mnt/user/appdata/rsstt
+  Port: {}
+  Variable:
+    CHATID:
+      Default: ''
+      Description: Telegram chatId, can be found by running bot with /help
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: CHATID
+      Required: 'true'
+      Target: CHATID
+      Type: Variable
+      value: ''
+    DELAY:
+      Default: ''
+      Description: Delay between RSS feed checks
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DELAY
+      Required: 'true'
+      Target: DELAY
+      Type: Variable
+      value: '60'
+    TOKEN:
+      Default: ''
+      Description: Telegram bot token https://botsfortelegram.com/project/the-bot-father/
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: TOKEN
+      Required: 'true'
+      Target: TOKEN
+      Type: Variable
+      value: ''
 FirstSeen: 1597520728
 Icon: https://raw.githubusercontent.com/BoKKeR/RSS-to-Telegram-Bot/master/rsstt.png
 LastUpdate: 1645177398

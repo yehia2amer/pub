@@ -1,61 +1,66 @@
 CategoryList:
 - Network-Proxy
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /config'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: /config
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: /mnt/user/appdata/OpenVPN/
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: LOCAL_NET'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: LOCAL_NET
-    Required: 'true'
-    Target: LOCAL_NET
-    Type: Variable
-  value: 192.168.1.0/24
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: OPENVPN_FILE'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: OPENVPN_FILE
-    Required: 'true'
-    Target: OPENVPN_FILE
-    Type: Variable
-  value: Frankfurt.ovpn
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 8080'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Port
-    Required: 'true'
-    Target: '8080'
-    Type: Port
-  value: '8118'
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 1080'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Microsocks Port
-    Required: 'false'
-    Target: '1080'
-    Type: Port
-  value: '1080'
+  Device: {}
+  Label: {}
+  Path:
+    /config:
+      Default: ''
+      Description: 'Container Path: /config'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: /config
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: /mnt/user/appdata/OpenVPN/
+  Port:
+    Microsocks Port:
+      Default: ''
+      Description: 'Container Port: 1080'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Microsocks Port
+      Required: 'false'
+      Target: '1080'
+      Type: Port
+      value: '1080'
+    Port:
+      Default: ''
+      Description: 'Container Port: 8080'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Port
+      Required: 'true'
+      Target: '8080'
+      Type: Port
+      value: '8118'
+  Variable:
+    LOCAL_NET:
+      Default: ''
+      Description: 'Container Variable: LOCAL_NET'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: LOCAL_NET
+      Required: 'true'
+      Target: LOCAL_NET
+      Type: Variable
+      value: 192.168.1.0/24
+    OPENVPN_FILE:
+      Default: ''
+      Description: 'Container Variable: OPENVPN_FILE'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: OPENVPN_FILE
+      Required: 'true'
+      Target: OPENVPN_FILE
+      Type: Variable
+      value: Frankfurt.ovpn
 ExtraParams: --cap-add=NET_ADMIN --device /dev/net/tun --sysctl net.ipv6.conf.all.disable_ipv6=0
   --dns=8.8.8.8
 FirstSeen: 1563862230

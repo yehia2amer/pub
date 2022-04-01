@@ -2,130 +2,135 @@ CategoryList:
 - Tools-Utilities
 - Network-Management
 Config:
-- '@attributes':
-    Default: ''
-    Description: Host for your iDRAC instance. Make sure your instance is reachable
-      with https://IDRAC_HOST;. See IDRAC_PORT for using custom ports. HTTPS is always
-      used.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: idrac host
-    Required: 'true'
-    Target: IDRAC_HOST
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: root
-    Description: Username for your iDRAC instance.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: idrac user
-    Required: 'true'
-    Target: IDRAC_USER
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: calvin
-    Description: Password for your iDRAC instance.
-    Display: always
-    Mask: 'true'
-    Mode: ''
-    Name: idrac password
-    Required: 'true'
-    Target: IDRAC_PASSWORD
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '5800'
-    Description: web interface port
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'true'
-    Target: '5800'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: '443'
-    Description: The optional port for the web interface.
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: idrac port
-    Required: 'false'
-    Target: IDRAC_PORT;
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: false|true
-    Description: If you have issues with keyboard input, try setting this to true.
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: keyboard fix
-    Required: 'false'
-    Target: IDRAC_KEYCODE_HACK
-    Type: Variable
-  value: 'false'
-- '@attributes':
-    Default: ''
-    Description: PUID
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: PUID
-    Required: 'false'
-    Target: USER_ID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: ''
-    Description: PGID
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: PGID
-    Required: 'false'
-    Target: GROUP_ID
-    Type: Variable
-  value: '100'
-- '@attributes':
-    Default: /mnt/user/appdata/idrac/vmedia
-    Description: Can be used to allow virtual media to be mounted.
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: Virtual media
-    Required: 'false'
-    Target: /vmedia
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: /mnt/user/appdata/idrac/app
-    Description: Libraries downloaded from your iDRAC instance will be stored here.
-      Add a volume to cache those files for a faster container startup.
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: Libraries
-    Required: 'false'
-    Target: /app
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: /mnt/user/appdata/idrac/screenshots
-    Description: 'Container Path: /screenshots'
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: Screenshots
-    Required: 'false'
-    Target: /screenshots
-    Type: Path
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Libraries:
+      Default: /mnt/user/appdata/idrac/app
+      Description: Libraries downloaded from your iDRAC instance will be stored here.
+        Add a volume to cache those files for a faster container startup.
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: Libraries
+      Required: 'false'
+      Target: /app
+      Type: Path
+      value: ''
+    Screenshots:
+      Default: /mnt/user/appdata/idrac/screenshots
+      Description: 'Container Path: /screenshots'
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: Screenshots
+      Required: 'false'
+      Target: /screenshots
+      Type: Path
+      value: ''
+    Virtual media:
+      Default: /mnt/user/appdata/idrac/vmedia
+      Description: Can be used to allow virtual media to be mounted.
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: Virtual media
+      Required: 'false'
+      Target: /vmedia
+      Type: Path
+      value: ''
+  Port:
+    WebUI:
+      Default: '5800'
+      Description: web interface port
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'true'
+      Target: '5800'
+      Type: Port
+      value: ''
+  Variable:
+    PGID:
+      Default: ''
+      Description: PGID
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PGID
+      Required: 'false'
+      Target: GROUP_ID
+      Type: Variable
+      value: '100'
+    PUID:
+      Default: ''
+      Description: PUID
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PUID
+      Required: 'false'
+      Target: USER_ID
+      Type: Variable
+      value: '99'
+    idrac host:
+      Default: ''
+      Description: Host for your iDRAC instance. Make sure your instance is reachable
+        with https://IDRAC_HOST;. See IDRAC_PORT for using custom ports. HTTPS is
+        always used.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: idrac host
+      Required: 'true'
+      Target: IDRAC_HOST
+      Type: Variable
+      value: ''
+    idrac password:
+      Default: calvin
+      Description: Password for your iDRAC instance.
+      Display: always
+      Mask: 'true'
+      Mode: ''
+      Name: idrac password
+      Required: 'true'
+      Target: IDRAC_PASSWORD
+      Type: Variable
+      value: ''
+    idrac port:
+      Default: '443'
+      Description: The optional port for the web interface.
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: idrac port
+      Required: 'false'
+      Target: IDRAC_PORT;
+      Type: Variable
+      value: ''
+    idrac user:
+      Default: root
+      Description: Username for your iDRAC instance.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: idrac user
+      Required: 'true'
+      Target: IDRAC_USER
+      Type: Variable
+      value: ''
+    keyboard fix:
+      Default: false|true
+      Description: If you have issues with keyboard input, try setting this to true.
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: keyboard fix
+      Required: 'false'
+      Target: IDRAC_KEYCODE_HACK
+      Type: Variable
+      value: 'false'
 FirstSeen: 1580684936
 Icon: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/idrac6.png
 LastUpdate: 1646297115

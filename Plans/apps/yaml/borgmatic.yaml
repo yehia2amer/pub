@@ -1,138 +1,145 @@
 CategoryList:
 - Backup
 Config:
-- '@attributes':
-    Default: /mnt/user
-    Description: 'Container Path: /mnt/user'
-    Display: always
-    Mask: 'false'
-    Mode: ro
-    Name: User Shares (Read-only Backup Source)
-    Required: 'true'
-    Target: /mnt/user
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: /boot
-    Description: 'Container Path: /boot'
-    Display: always
-    Mask: 'false'
-    Mode: ro
-    Name: Flash Drive (Read-only Backup Source)
-    Required: 'false'
-    Target: /boot
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: /mnt/disks/borg_backup/repo
-    Description: 'Container Path: /mnt/borg-repository'
-    Display: always
-    Mask: 'false'
-    Mode: rw,slave
-    Name: Borg Repo (Backup Destination)
-    Required: 'true'
-    Target: /mnt/borg-repository
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: /mnt/disks/borg_backup/cache
-    Description: 'Container Path: /root/.cache/borg'
-    Display: always
-    Mask: 'false'
-    Mode: rw,slave
-    Name: Borg Cache
-    Required: 'true'
-    Target: /root/.cache/borg
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: /mnt/user/appdata/borgmatic/config
-    Description: 'Container Path: /etc/borgmatic.d'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Borgmatic Config
-    Required: 'true'
-    Target: /etc/borgmatic.d
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: /mnt/user/appdata/borgmatic/borg_keys
-    Description: 'Container Path: /root/.config/borg'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Borg Keys
-    Required: 'true'
-    Target: /root/.config/borg
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: /mnt/user/appdata/borgmatic/ssh_keys
-    Description: 'Container Path: /root/.ssh'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: SSH Keys
-    Required: 'false'
-    Target: /root/.ssh
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: /mnt/borg
-    Description: 'Container Path: /mnt/fuse'
-    Display: always
-    Mask: 'false'
-    Mode: rw,shared
-    Name: Fuse mount point
-    Required: 'false'
-    Target: /mnt/fuse
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: America/New_York
-    Description: 'Container Variable: TZ'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: TZ
-    Required: 'false'
-    Target: TZ
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: /dev/fuse
-    Description: 'Container Device: '
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: /dev/fuse
-    Required: 'false'
-    Target: ''
-    Type: Device
-  value: ''
-- '@attributes':
-    Default: '99'
-    Description: UID for permissions.  Do not change unless you know what you're doing.
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: PUID
-    Required: 'true'
-    Target: PUID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '100'
-    Description: GID for permissions.  Do not change unless you know what you're doing.
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: PGID
-    Required: 'true'
-    Target: PGID
-    Type: Variable
-  value: ''
+  Device:
+    /dev/fuse:
+      Default: /dev/fuse
+      Description: 'Container Device: '
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: /dev/fuse
+      Required: 'false'
+      Target: ''
+      Type: Device
+      value: ''
+  Label: {}
+  Path:
+    Borg Cache:
+      Default: /mnt/disks/borg_backup/cache
+      Description: 'Container Path: /root/.cache/borg'
+      Display: always
+      Mask: 'false'
+      Mode: rw,slave
+      Name: Borg Cache
+      Required: 'true'
+      Target: /root/.cache/borg
+      Type: Path
+      value: ''
+    Borg Keys:
+      Default: /mnt/user/appdata/borgmatic/borg_keys
+      Description: 'Container Path: /root/.config/borg'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Borg Keys
+      Required: 'true'
+      Target: /root/.config/borg
+      Type: Path
+      value: ''
+    Borg Repo (Backup Destination):
+      Default: /mnt/disks/borg_backup/repo
+      Description: 'Container Path: /mnt/borg-repository'
+      Display: always
+      Mask: 'false'
+      Mode: rw,slave
+      Name: Borg Repo (Backup Destination)
+      Required: 'true'
+      Target: /mnt/borg-repository
+      Type: Path
+      value: ''
+    Borgmatic Config:
+      Default: /mnt/user/appdata/borgmatic/config
+      Description: 'Container Path: /etc/borgmatic.d'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Borgmatic Config
+      Required: 'true'
+      Target: /etc/borgmatic.d
+      Type: Path
+      value: ''
+    Flash Drive (Read-only Backup Source):
+      Default: /boot
+      Description: 'Container Path: /boot'
+      Display: always
+      Mask: 'false'
+      Mode: ro
+      Name: Flash Drive (Read-only Backup Source)
+      Required: 'false'
+      Target: /boot
+      Type: Path
+      value: ''
+    Fuse mount point:
+      Default: /mnt/borg
+      Description: 'Container Path: /mnt/fuse'
+      Display: always
+      Mask: 'false'
+      Mode: rw,shared
+      Name: Fuse mount point
+      Required: 'false'
+      Target: /mnt/fuse
+      Type: Path
+      value: ''
+    SSH Keys:
+      Default: /mnt/user/appdata/borgmatic/ssh_keys
+      Description: 'Container Path: /root/.ssh'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: SSH Keys
+      Required: 'false'
+      Target: /root/.ssh
+      Type: Path
+      value: ''
+    User Shares (Read-only Backup Source):
+      Default: /mnt/user
+      Description: 'Container Path: /mnt/user'
+      Display: always
+      Mask: 'false'
+      Mode: ro
+      Name: User Shares (Read-only Backup Source)
+      Required: 'true'
+      Target: /mnt/user
+      Type: Path
+      value: ''
+  Port: {}
+  Variable:
+    PGID:
+      Default: '100'
+      Description: GID for permissions.  Do not change unless you know what you're
+        doing.
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: PGID
+      Required: 'true'
+      Target: PGID
+      Type: Variable
+      value: ''
+    PUID:
+      Default: '99'
+      Description: UID for permissions.  Do not change unless you know what you're
+        doing.
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: PUID
+      Required: 'true'
+      Target: PUID
+      Type: Variable
+      value: ''
+    TZ:
+      Default: America/New_York
+      Description: 'Container Variable: TZ'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: TZ
+      Required: 'false'
+      Target: TZ
+      Type: Variable
+      value: ''
 ExtraParams: --cap-add SYS_ADMIN
 FirstSeen: 1606005862
 Icon: https://github.com/witten/borgmatic/raw/master/docs/static/borgmatic.png

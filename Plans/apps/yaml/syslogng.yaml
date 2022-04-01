@@ -1,90 +1,95 @@
 ChangeLogPresent: true
 Config:
-- '@attributes':
-    Default: '514'
-    Description: Syslog UDP
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: WebUI
-    Required: 'true'
-    Target: '5514'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: '601'
-    Description: Syslog TCP
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: 'Port: 6601'
-    Required: 'true'
-    Target: '6601'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: '6514'
-    Description: Syslog TLS
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: 'Port: 6514'
-    Required: 'true'
-    Target: '6514'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Stores config and application files
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: Appdata
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Stores logs collected by the syslog-ng service
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: 'Path: /var/log'
-    Required: 'false'
-    Target: /var/log
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: '99'
-    Description: 'Container Variable: PUID'
-    Display: advanced
-    Mask: 'false'
-    Name: PUID
-    Required: 'true'
-    Target: PUID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '100'
-    Description: 'Container Variable: PGID'
-    Display: advanced
-    Mask: 'false'
-    Name: PGID
-    Required: 'true'
-    Target: PGID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '022'
-    Description: 'Container Variable: UMASK'
-    Display: advanced
-    Mask: 'false'
-    Name: UMASK
-    Required: 'false'
-    Target: UMASK
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Appdata:
+      Default: ''
+      Description: Stores config and application files
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: Appdata
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: ''
+    'Path: /var/log':
+      Default: ''
+      Description: Stores logs collected by the syslog-ng service
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: 'Path: /var/log'
+      Required: 'false'
+      Target: /var/log
+      Type: Path
+      value: ''
+  Port:
+    'Port: 6514':
+      Default: '6514'
+      Description: Syslog TLS
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: 'Port: 6514'
+      Required: 'true'
+      Target: '6514'
+      Type: Port
+      value: ''
+    'Port: 6601':
+      Default: '601'
+      Description: Syslog TCP
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: 'Port: 6601'
+      Required: 'true'
+      Target: '6601'
+      Type: Port
+      value: ''
+    WebUI:
+      Default: '514'
+      Description: Syslog UDP
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: WebUI
+      Required: 'true'
+      Target: '5514'
+      Type: Port
+      value: ''
+  Variable:
+    PGID:
+      Default: '100'
+      Description: 'Container Variable: PGID'
+      Display: advanced
+      Mask: 'false'
+      Name: PGID
+      Required: 'true'
+      Target: PGID
+      Type: Variable
+      value: ''
+    PUID:
+      Default: '99'
+      Description: 'Container Variable: PUID'
+      Display: advanced
+      Mask: 'false'
+      Name: PUID
+      Required: 'true'
+      Target: PUID
+      Type: Variable
+      value: ''
+    UMASK:
+      Default: '022'
+      Description: 'Container Variable: UMASK'
+      Display: advanced
+      Mask: 'false'
+      Name: UMASK
+      Required: 'false'
+      Target: UMASK
+      Type: Variable
+      value: ''
 DonateImg: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/donate.png
 DonateLink: https://www.linuxserver.io/donate
 DonateText: Donations

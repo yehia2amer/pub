@@ -1,62 +1,67 @@
 CategoryList:
 - Productivity
 Config:
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'false'
-    Target: '8080'
-    Type: Port
-  value: '8990'
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Config File (1)
-    Required: 'false'
-    Target: /opt/tomcat/conf/server.xml
-    Type: Path
-  value: /mnt/user/appdata/openkm-ce/server.xml
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Config File (2)
-    Required: 'false'
-    Target: /opt/tomcat/OpenKM.cfg
-    Type: Path
-  value: /mnt/user/appdata/openkm-ce/OpenKM.cfg
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Repository (data)
-    Required: 'false'
-    Target: /opt/tomcat/repository
-    Type: Path
-  value: /mnt/user/appdata/openkm-ce/repository
-- '@attributes':
-    Default: ''
-    Description: Use this directory (HOST_SWAP) to allow communication between OpenKM
-      container and the host.
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: Swap Space
-    Required: 'false'
-    Target: /HOST_SWAP
-    Type: Path
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Config File (1):
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Config File (1)
+      Required: 'false'
+      Target: /opt/tomcat/conf/server.xml
+      Type: Path
+      value: /mnt/user/appdata/openkm-ce/server.xml
+    Config File (2):
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Config File (2)
+      Required: 'false'
+      Target: /opt/tomcat/OpenKM.cfg
+      Type: Path
+      value: /mnt/user/appdata/openkm-ce/OpenKM.cfg
+    Repository (data):
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Repository (data)
+      Required: 'false'
+      Target: /opt/tomcat/repository
+      Type: Path
+      value: /mnt/user/appdata/openkm-ce/repository
+    Swap Space:
+      Default: ''
+      Description: Use this directory (HOST_SWAP) to allow communication between OpenKM
+        container and the host.
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: Swap Space
+      Required: 'false'
+      Target: /HOST_SWAP
+      Type: Path
+      value: ''
+  Port:
+    WebUI:
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'false'
+      Target: '8080'
+      Type: Port
+      value: '8990'
+  Variable: {}
 FirstSeen: 1638291832
 Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/openkm-ce_200x200.png
 LastUpdate: 1625224531

@@ -4,72 +4,77 @@ CategoryList:
 - MediaApp-Photos
 - MediaServer-Photos
 Config:
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'false'
-    Target: '4000'
-    Type: Port
-  value: '4000'
-- '@attributes':
-    Default: ''
-    Description: Location for original files (photos).
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Storage (images)
-    Required: 'true'
-    Target: /photo-stream/photos/original
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: TITLE
-    Required: 'false'
-    Target: TITLE
-    Type: Variable
-  value: Photo Stream for unRAID
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: AUTHOR_NAME
-    Required: 'false'
-    Target: AUTHOR_NAME
-    Type: Variable
-  value: unRAID
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: DESCRIPTION
-    Required: 'false'
-    Target: DESCRIPTION
-    Type: Variable
-  value: My unRAID Photo Stream collection.
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: SHOW_OFFICIAL_GITHUB
-    Required: 'false'
-    Target: SHOW_OFFICIAL_GITHUB
-    Type: Variable
-  value: '0'
+  Device: {}
+  Label: {}
+  Path:
+    Storage (images):
+      Default: ''
+      Description: Location for original files (photos).
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Storage (images)
+      Required: 'true'
+      Target: /photo-stream/photos/original
+      Type: Path
+      value: ''
+  Port:
+    WebUI:
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'false'
+      Target: '4000'
+      Type: Port
+      value: '4000'
+  Variable:
+    AUTHOR_NAME:
+      Default: ''
+      Description: ''
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: AUTHOR_NAME
+      Required: 'false'
+      Target: AUTHOR_NAME
+      Type: Variable
+      value: unRAID
+    DESCRIPTION:
+      Default: ''
+      Description: ''
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: DESCRIPTION
+      Required: 'false'
+      Target: DESCRIPTION
+      Type: Variable
+      value: My unRAID Photo Stream collection.
+    SHOW_OFFICIAL_GITHUB:
+      Default: ''
+      Description: ''
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: SHOW_OFFICIAL_GITHUB
+      Required: 'false'
+      Target: SHOW_OFFICIAL_GITHUB
+      Type: Variable
+      value: '0'
+    TITLE:
+      Default: ''
+      Description: ''
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: TITLE
+      Required: 'false'
+      Target: TITLE
+      Type: Variable
+      value: Photo Stream for unRAID
 FirstSeen: 1642357556
 Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/photo-stream.png
 LastUpdate: 1645980074

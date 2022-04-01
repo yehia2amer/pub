@@ -2,83 +2,88 @@ CategoryList:
 - Downloaders
 - MediaApp-Other
 Config:
-- '@attributes':
-    Default: America/New_York
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Time Zone
-    Required: 'false'
-    Target: TZ
-    Type: Variable
-  value: America/New_York
-- '@attributes':
-    Default: ''
-    Description: Optional - password for Guacamole's web interface
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: PASSWORD
-    Required: 'false'
-    Target: PASSWORD
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '3000'
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Port
-    Required: 'true'
-    Target: '3000'
-    Type: Port
-  value: '3000'
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Downloads Path
-    Required: 'true'
-    Target: /downloads
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: '99'
-    Description: ''
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: PUID
-    Required: 'true'
-    Target: PUID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: '100'
-    Description: ''
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: PGID
-    Required: 'true'
-    Target: PGID
-    Type: Variable
-  value: '100'
-- '@attributes':
-    Default: /mnt/cache/appdata/gpodder
-    Description: ''
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: Config Path
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: /mnt/cache/appdata/gPodder
+  Device: {}
+  Label: {}
+  Path:
+    Config Path:
+      Default: /mnt/cache/appdata/gpodder
+      Description: ''
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: Config Path
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: /mnt/cache/appdata/gPodder
+    Downloads Path:
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Downloads Path
+      Required: 'true'
+      Target: /downloads
+      Type: Path
+      value: ''
+  Port:
+    Port:
+      Default: '3000'
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Port
+      Required: 'true'
+      Target: '3000'
+      Type: Port
+      value: '3000'
+  Variable:
+    PASSWORD:
+      Default: ''
+      Description: Optional - password for Guacamole's web interface
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: PASSWORD
+      Required: 'false'
+      Target: PASSWORD
+      Type: Variable
+      value: ''
+    PGID:
+      Default: '100'
+      Description: ''
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PGID
+      Required: 'true'
+      Target: PGID
+      Type: Variable
+      value: '100'
+    PUID:
+      Default: '99'
+      Description: ''
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PUID
+      Required: 'true'
+      Target: PUID
+      Type: Variable
+      value: '99'
+    Time Zone:
+      Default: America/New_York
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Time Zone
+      Required: 'false'
+      Target: TZ
+      Type: Variable
+      value: America/New_York
 ExtraParams: --restart=unless-stopped
 FirstSeen: 1637183020
 Icon: https://raw.githubusercontent.com/xthursdayx/docker-templates/master/xthursdayx/images/gpodder-icon.png

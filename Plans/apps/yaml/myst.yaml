@@ -1,28 +1,33 @@
 CategoryList:
 - Network-VPN
 Config:
-- '@attributes':
-    Default: '4449'
-    Description: 'Container Port: 4449'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI Port
-    Required: 'true'
-    Target: '4449'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /var/lib/mysterium-node'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Myst Config
-    Required: 'false'
-    Target: /var/lib/mysterium-node
-    Type: Path
-  value: /mnt/user/appdata/myst/
+  Device: {}
+  Label: {}
+  Path:
+    Myst Config:
+      Default: ''
+      Description: 'Container Path: /var/lib/mysterium-node'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Myst Config
+      Required: 'false'
+      Target: /var/lib/mysterium-node
+      Type: Path
+      value: /mnt/user/appdata/myst/
+  Port:
+    WebUI Port:
+      Default: '4449'
+      Description: 'Container Port: 4449'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI Port
+      Required: 'true'
+      Target: '4449'
+      Type: Port
+      value: ''
+  Variable: {}
 ExtraParams: --device=/dev/net/tun --cap-add NET_ADMIN
 FirstSeen: 1638621741
 Icon: https://raw.githubusercontent.com/locus313/unraid-docker-templates/main/templates/img/myst.png

@@ -1,39 +1,44 @@
 CategoryList:
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: '11211'
-    Description: Port
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Port
-    Required: 'true'
-    Target: '11211'
-    Type: Port
-  value: '11211'
-- '@attributes':
-    Default: ''
-    Description: 'Memcached Username if you want authentication '
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Memcached Username
-    Required: 'false'
-    Target: MEMCACHED_USERNAME
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Memcache Password if you want authentication '
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Memcache Password
-    Required: 'false'
-    Target: MEMCACHED_PASSWORD
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path: {}
+  Port:
+    Port:
+      Default: '11211'
+      Description: Port
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Port
+      Required: 'true'
+      Target: '11211'
+      Type: Port
+      value: '11211'
+  Variable:
+    Memcache Password:
+      Default: ''
+      Description: 'Memcache Password if you want authentication '
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Memcache Password
+      Required: 'false'
+      Target: MEMCACHED_PASSWORD
+      Type: Variable
+      value: ''
+    Memcached Username:
+      Default: ''
+      Description: 'Memcached Username if you want authentication '
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Memcached Username
+      Required: 'false'
+      Target: MEMCACHED_USERNAME
+      Type: Variable
+      value: ''
 FirstSeen: 1590847659
 Icon: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/memcached.png
 LastUpdate: 1647947771

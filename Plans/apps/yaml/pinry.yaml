@@ -4,28 +4,33 @@ CategoryList:
 - MediaServer-Other
 ChangeLogPresent: true
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 80'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Web UI
-    Required: 'true'
-    Target: '80'
-    Type: Port
-  value: '8438'
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /data'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Data
-    Required: 'true'
-    Target: /data
-    Type: Path
-  value: /mnt/user/appdata/pinry
+  Device: {}
+  Label: {}
+  Path:
+    Data:
+      Default: ''
+      Description: 'Container Path: /data'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Data
+      Required: 'true'
+      Target: /data
+      Type: Path
+      value: /mnt/user/appdata/pinry
+  Port:
+    Web UI:
+      Default: ''
+      Description: 'Container Port: 80'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Web UI
+      Required: 'true'
+      Target: '80'
+      Type: Port
+      value: '8438'
+  Variable: {}
 FirstSeen: 1590783339
 Icon: https://github.com/FoxxMD/unraid-docker-templates/raw/master/icons/pinry.png
 LastUpdate: 1645251736

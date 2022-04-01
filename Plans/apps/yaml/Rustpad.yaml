@@ -3,62 +3,67 @@ CategoryList:
 - Productivity
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'false'
-    Target: '3030'
-    Type: Port
-  value: '3030'
-- '@attributes':
-    Default: ''
-    Description: This is the location for the SQLite DB file.
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Storage (database)
-    Required: 'false'
-    Target: /persist
-    Type: Path
-  value: /mnt/user/appdata/rustpad
-- '@attributes':
-    Default: ''
-    Description: The number of days that inactive documents are kept in memory before
-      being garbage collected by the server (default 1).
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: EXPIRY_DAYS
-    Required: 'false'
-    Target: EXPIRY_DAYS
-    Type: Variable
-  value: '1'
-- '@attributes':
-    Default: ''
-    Description: Directives that control application logging. (error/warn/info/debug/trace)
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: RUST_LOG
-    Required: 'false'
-    Target: RUST_LOG
-    Type: Variable
-  value: info
-- '@attributes':
-    Default: ''
-    Description: A SQLite connection string used for persistence.
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: SQLITE_URI
-    Required: 'false'
-    Target: SQLITE_URI
-    Type: Variable
-  value: sqlite:///persist/rustpad_db.db
+  Device: {}
+  Label: {}
+  Path:
+    Storage (database):
+      Default: ''
+      Description: This is the location for the SQLite DB file.
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Storage (database)
+      Required: 'false'
+      Target: /persist
+      Type: Path
+      value: /mnt/user/appdata/rustpad
+  Port:
+    WebUI:
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'false'
+      Target: '3030'
+      Type: Port
+      value: '3030'
+  Variable:
+    EXPIRY_DAYS:
+      Default: ''
+      Description: The number of days that inactive documents are kept in memory before
+        being garbage collected by the server (default 1).
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: EXPIRY_DAYS
+      Required: 'false'
+      Target: EXPIRY_DAYS
+      Type: Variable
+      value: '1'
+    RUST_LOG:
+      Default: ''
+      Description: Directives that control application logging. (error/warn/info/debug/trace)
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: RUST_LOG
+      Required: 'false'
+      Target: RUST_LOG
+      Type: Variable
+      value: info
+    SQLITE_URI:
+      Default: ''
+      Description: A SQLite connection string used for persistence.
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: SQLITE_URI
+      Required: 'false'
+      Target: SQLITE_URI
+      Type: Variable
+      value: sqlite:///persist/rustpad_db.db
 FirstSeen: 1643490193
 Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/rustpad.png
 LastUpdate: 1645292137

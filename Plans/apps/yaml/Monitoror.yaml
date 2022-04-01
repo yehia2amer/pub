@@ -4,39 +4,44 @@ CategoryList:
 - Network-Management
 - Network-Other
 Config:
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'false'
-    Target: '8080'
-    Type: Port
-  value: '8080'
-- '@attributes':
-    Default: ''
-    Description: Use this path (host) to pass the config.json to the container.
-    Display: always
-    Mask: 'false'
-    Mode: ro
-    Name: Directory (config)
-    Required: 'true'
-    Target: /configs
-    Type: Path
-  value: /mnt/user/appdata/monitoror/
-- '@attributes':
-    Default: ''
-    Description: It can be a path or URL.
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: MO_CONFIG
-    Required: 'false'
-    Target: MO_CONFIG
-    Type: Variable
-  value: /configs/config.json
+  Device: {}
+  Label: {}
+  Path:
+    Directory (config):
+      Default: ''
+      Description: Use this path (host) to pass the config.json to the container.
+      Display: always
+      Mask: 'false'
+      Mode: ro
+      Name: Directory (config)
+      Required: 'true'
+      Target: /configs
+      Type: Path
+      value: /mnt/user/appdata/monitoror/
+  Port:
+    WebUI:
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'false'
+      Target: '8080'
+      Type: Port
+      value: '8080'
+  Variable:
+    MO_CONFIG:
+      Default: ''
+      Description: It can be a path or URL.
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: MO_CONFIG
+      Required: 'false'
+      Target: MO_CONFIG
+      Type: Variable
+      value: /configs/config.json
 FirstSeen: 1638637421
 Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/monitoror_200x200.png
 LastUpdate: 1595757441

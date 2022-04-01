@@ -1,183 +1,188 @@
 CategoryList:
 - Productivity
 Config:
-- '@attributes':
-    Default: '8154'
-    Description: 'Container Port: 8080'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Port
-    Required: 'true'
-    Target: '8080'
-    Type: Port
-  value: '8154'
-- '@attributes':
-    Default: America/New_York
-    Description: 'Timezone in TZ format. See here: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Timezone
-    Required: 'false'
-    Target: TIMEZONE
-    Type: Variable
-  value: America/New_York
-- '@attributes':
-    Default: django.db.backends.sqlite3
-    Description: 'Either SQLite (default for unRAID) or PostgreSQL with: django.db.backends.postgresql'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Database Engine
-    Required: 'true'
-    Target: DB_ENGINE
-    Type: Variable
-  value: django.db.backends.sqlite3
-- '@attributes':
-    Default: /mnt/user/appdata/recipes/data
-    Description: 'Container Path: /data'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Database Location
-    Required: 'true'
-    Target: /data
-    Type: Path
-  value: /mnt/user/appdata/recipes/data
-- '@attributes':
-    Default: /mnt/user/appdata/recipes/media
-    Description: 'Container Path: /opt/recipes/mediafiles/'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Media Location
-    Required: 'true'
-    Target: /opt/recipes/mediafiles/
-    Type: Path
-  value: /mnt/user/appdata/recipes/media
-- '@attributes':
-    Default: ''
-    Description: Randomly generate a secret key please.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Secret Key
-    Required: 'true'
-    Target: SECRET_KEY
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '*'
-    Description: Either * for all, or specific domains/subdomains, etc.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Allowed Hosts
-    Required: 'false'
-    Target: ALLOWED_HOSTS
-    Type: Variable
-  value: '*'
-- '@attributes':
-    Default: '1'
-    Description: Enables or disables the comment system.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Comment System
-    Required: 'true'
-    Target: COMMENT_PREF_DEFAULT
-    Type: Variable
-  value: '1'
-- '@attributes':
-    Default: '5'
-    Description: Minimum shopping list refresh interval.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Shopping List Min Refresh
-    Required: 'false'
-    Target: SHOPPING_MIN_AUTOSYNC_INTERVAL
-    Type: Variable
-  value: '5'
-- '@attributes':
-    Default: '0'
-    Description: Debug mode disabled (default) or enabled.
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Debug Mode
-    Required: 'true'
-    Target: DEBUG
-    Type: Variable
-  value: '0'
-- '@attributes':
-    Default: '1'
-    Description: Enables serving media files directly from Gunicorn.
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Serve Gunicorn Meida
-    Required: 'true'
-    Target: GUNICORN_MEDIA
-    Type: Variable
-  value: '1'
-- '@attributes':
-    Default: ''
-    Description: Host for PostgreSQL, should you choose to use it.
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: PostgreSQL Host
-    Required: 'false'
-    Target: POSTGRES_HOST
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '5432'
-    Description: Port for PostgreSQL server shouldy you choose to use it.
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: PostgreSQL Port
-    Required: 'false'
-    Target: POSTGRES_PORT
-    Type: Variable
-  value: '5432'
-- '@attributes':
-    Default: ''
-    Description: User for PostgreSQL should you choose to use it.
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: PostgreSQL User
-    Required: 'false'
-    Target: POSTGRES_USER
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Password for PostgreSQL should you choose to use it.
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: PostgreSQL Password
-    Required: 'false'
-    Target: POSTGRES_PASSWORD
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: /data/recipes.db
-    Description: Name of SQLite database, or the name of your PostgreSQL database
-      if you are using that.
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Database
-    Required: 'false'
-    Target: POSTGRES_DB
-    Type: Variable
-  value: /data/recipes.db
+  Device: {}
+  Label: {}
+  Path:
+    Database Location:
+      Default: /mnt/user/appdata/recipes/data
+      Description: 'Container Path: /data'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Database Location
+      Required: 'true'
+      Target: /data
+      Type: Path
+      value: /mnt/user/appdata/recipes/data
+    Media Location:
+      Default: /mnt/user/appdata/recipes/media
+      Description: 'Container Path: /opt/recipes/mediafiles/'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Media Location
+      Required: 'true'
+      Target: /opt/recipes/mediafiles/
+      Type: Path
+      value: /mnt/user/appdata/recipes/media
+  Port:
+    Port:
+      Default: '8154'
+      Description: 'Container Port: 8080'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Port
+      Required: 'true'
+      Target: '8080'
+      Type: Port
+      value: '8154'
+  Variable:
+    Allowed Hosts:
+      Default: '*'
+      Description: Either * for all, or specific domains/subdomains, etc.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Allowed Hosts
+      Required: 'false'
+      Target: ALLOWED_HOSTS
+      Type: Variable
+      value: '*'
+    Comment System:
+      Default: '1'
+      Description: Enables or disables the comment system.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Comment System
+      Required: 'true'
+      Target: COMMENT_PREF_DEFAULT
+      Type: Variable
+      value: '1'
+    Database:
+      Default: /data/recipes.db
+      Description: Name of SQLite database, or the name of your PostgreSQL database
+        if you are using that.
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Database
+      Required: 'false'
+      Target: POSTGRES_DB
+      Type: Variable
+      value: /data/recipes.db
+    Database Engine:
+      Default: django.db.backends.sqlite3
+      Description: 'Either SQLite (default for unRAID) or PostgreSQL with: django.db.backends.postgresql'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Database Engine
+      Required: 'true'
+      Target: DB_ENGINE
+      Type: Variable
+      value: django.db.backends.sqlite3
+    Debug Mode:
+      Default: '0'
+      Description: Debug mode disabled (default) or enabled.
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Debug Mode
+      Required: 'true'
+      Target: DEBUG
+      Type: Variable
+      value: '0'
+    PostgreSQL Host:
+      Default: ''
+      Description: Host for PostgreSQL, should you choose to use it.
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PostgreSQL Host
+      Required: 'false'
+      Target: POSTGRES_HOST
+      Type: Variable
+      value: ''
+    PostgreSQL Password:
+      Default: ''
+      Description: Password for PostgreSQL should you choose to use it.
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PostgreSQL Password
+      Required: 'false'
+      Target: POSTGRES_PASSWORD
+      Type: Variable
+      value: ''
+    PostgreSQL Port:
+      Default: '5432'
+      Description: Port for PostgreSQL server shouldy you choose to use it.
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PostgreSQL Port
+      Required: 'false'
+      Target: POSTGRES_PORT
+      Type: Variable
+      value: '5432'
+    PostgreSQL User:
+      Default: ''
+      Description: User for PostgreSQL should you choose to use it.
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PostgreSQL User
+      Required: 'false'
+      Target: POSTGRES_USER
+      Type: Variable
+      value: ''
+    Secret Key:
+      Default: ''
+      Description: Randomly generate a secret key please.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Secret Key
+      Required: 'true'
+      Target: SECRET_KEY
+      Type: Variable
+      value: ''
+    Serve Gunicorn Meida:
+      Default: '1'
+      Description: Enables serving media files directly from Gunicorn.
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Serve Gunicorn Meida
+      Required: 'true'
+      Target: GUNICORN_MEDIA
+      Type: Variable
+      value: '1'
+    Shopping List Min Refresh:
+      Default: '5'
+      Description: Minimum shopping list refresh interval.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Shopping List Min Refresh
+      Required: 'false'
+      Target: SHOPPING_MIN_AUTOSYNC_INTERVAL
+      Type: Variable
+      value: '5'
+    Timezone:
+      Default: America/New_York
+      Description: 'Timezone in TZ format. See here: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Timezone
+      Required: 'false'
+      Target: TIMEZONE
+      Type: Variable
+      value: America/New_York
 DonateLink: http://paypal.me/corneliousjd
 DonateText: Donate
 FirstSeen: 1603512480

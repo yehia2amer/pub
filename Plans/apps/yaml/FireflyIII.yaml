@@ -1,233 +1,239 @@
 CategoryList:
 - Productivity
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /var/www/html/storage/upload - Uploaded files that
-      are used for bulk importing are stored here'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: UPLOAD_PATH
-    Required: 'true'
-    Target: /var/www/html/storage/upload
-    Type: Path
-  value: /mnt/user/appdata/firefly-iii/upload/
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 8080'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Port
-    Required: 'true'
-    Target: '8080'
-    Type: Port
-  value: '8080'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: DB_CONNECTION - Database type (''pgsql'', ''mysql'',
-      ''sqlite'')'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DB_CONNECTION
-    Required: 'true'
-    Target: DB_CONNECTION
-    Type: Variable
-  value: mysql
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: DB_HOST - Database host, e.g. 192.168.0.3'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DB_HOST
-    Required: 'true'
-    Target: DB_HOST
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: DB_PORT - Database port, e.g. 3306'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DB_PORT
-    Required: 'true'
-    Target: DB_PORT
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: DB_DATABASE - Database name'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DB_DATABASE
-    Required: 'true'
-    Target: DB_DATABASE
-    Type: Variable
-  value: fireflydb
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: DB_USERNAME - Database username. It is recommended
-      to create a dedicated user for Firefly.'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DB_USERNAME
-    Required: 'true'
-    Target: DB_USERNAME
-    Type: Variable
-  value: firefly
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: DB_PASSWORD - Database password'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DB_PASSWORD
-    Required: 'true'
-    Target: DB_PASSWORD
-    Type: Variable
-  value: secret_firefly_password
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: APP_KEY - The encryption key for your sessions.
-      Keep this very secure. If you generate a new one all existing attachments must
-      be considered LOST. Change it to a string of exactly 32 chars.'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: APP_KEY
-    Required: 'true'
-    Target: APP_KEY
-    Type: Variable
-  value: SomeRandomStringOf32CharsExactly
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: FIREFLY_III_LAYOUT'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: FIREFLY_III_LAYOUT
-    Required: 'false'
-    Target: FIREFLY_III_LAYOUT
-    Type: Variable
-  value: v1
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: TRUSTED_PROXIES - Set to ** when using reverse
-      proxy.'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: TRUSTED_PROXIES
-    Required: 'false'
-    Target: TRUSTED_PROXIES
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: "Container Variable: MAIL_MAILER -\r\nRefer to https://docs.firefly-iii.org/advanced-installation/email\
-      \ for more information"
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: MAIL_MAILER
-    Required: 'false'
-    Target: MAIL_MAILER
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: MAIL_HOST'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: MAIL_HOST
-    Required: 'false'
-    Target: MAIL_HOST
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: MAIL_PORT'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: MAIL_PORT
-    Required: 'false'
-    Target: MAIL_PORT
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: MAIL_FROM'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: MAIL_FROM
-    Required: 'false'
-    Target: MAIL_FROM
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: MAIL_USERNAME'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: MAIL_USERNAME
-    Required: 'false'
-    Target: MAIL_USERNAME
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: MAIL_PASSWORD'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: MAIL_PASSWORD
-    Required: 'false'
-    Target: MAIL_PASSWORD
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: MAIL_ENCRYPTION'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: MAIL_ENCRYPTION
-    Required: 'false'
-    Target: MAIL_ENCRYPTION
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: APP_URL - Only used when sending emails.'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: APP_URL
-    Required: 'false'
-    Target: APP_URL
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: SEND_ERROR_MESSAGE - Sends email if error occurs'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: SEND_ERROR_MESSAGE
-    Required: 'false'
-    Target: SEND_ERROR_MESSAGE
-    Type: Variable
-  value: 'true'
+  Device: {}
+  Label: {}
+  Path:
+    UPLOAD_PATH:
+      Default: ''
+      Description: 'Container Path: /var/www/html/storage/upload - Uploaded files
+        that are used for bulk importing are stored here'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: UPLOAD_PATH
+      Required: 'true'
+      Target: /var/www/html/storage/upload
+      Type: Path
+      value: /mnt/user/appdata/firefly-iii/upload/
+  Port:
+    Port:
+      Default: ''
+      Description: 'Container Port: 8080'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Port
+      Required: 'true'
+      Target: '8080'
+      Type: Port
+      value: '8080'
+  Variable:
+    APP_KEY:
+      Default: ''
+      Description: 'Container Variable: APP_KEY - The encryption key for your sessions.
+        Keep this very secure. If you generate a new one all existing attachments
+        must be considered LOST. Change it to a string of exactly 32 chars.'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: APP_KEY
+      Required: 'true'
+      Target: APP_KEY
+      Type: Variable
+      value: SomeRandomStringOf32CharsExactly
+    APP_URL:
+      Default: ''
+      Description: 'Container Variable: APP_URL - Only used when sending emails.'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: APP_URL
+      Required: 'false'
+      Target: APP_URL
+      Type: Variable
+      value: ''
+    DB_CONNECTION:
+      Default: ''
+      Description: 'Container Variable: DB_CONNECTION - Database type (''pgsql'',
+        ''mysql'', ''sqlite'')'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DB_CONNECTION
+      Required: 'true'
+      Target: DB_CONNECTION
+      Type: Variable
+      value: mysql
+    DB_DATABASE:
+      Default: ''
+      Description: 'Container Variable: DB_DATABASE - Database name'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DB_DATABASE
+      Required: 'true'
+      Target: DB_DATABASE
+      Type: Variable
+      value: fireflydb
+    DB_HOST:
+      Default: ''
+      Description: 'Container Variable: DB_HOST - Database host, e.g. 192.168.0.3'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DB_HOST
+      Required: 'true'
+      Target: DB_HOST
+      Type: Variable
+      value: ''
+    DB_PASSWORD:
+      Default: ''
+      Description: 'Container Variable: DB_PASSWORD - Database password'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DB_PASSWORD
+      Required: 'true'
+      Target: DB_PASSWORD
+      Type: Variable
+      value: secret_firefly_password
+    DB_PORT:
+      Default: ''
+      Description: 'Container Variable: DB_PORT - Database port, e.g. 3306'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DB_PORT
+      Required: 'true'
+      Target: DB_PORT
+      Type: Variable
+      value: ''
+    DB_USERNAME:
+      Default: ''
+      Description: 'Container Variable: DB_USERNAME - Database username. It is recommended
+        to create a dedicated user for Firefly.'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DB_USERNAME
+      Required: 'true'
+      Target: DB_USERNAME
+      Type: Variable
+      value: firefly
+    FIREFLY_III_LAYOUT:
+      Default: ''
+      Description: 'Container Variable: FIREFLY_III_LAYOUT'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: FIREFLY_III_LAYOUT
+      Required: 'false'
+      Target: FIREFLY_III_LAYOUT
+      Type: Variable
+      value: v1
+    MAIL_ENCRYPTION:
+      Default: ''
+      Description: 'Container Variable: MAIL_ENCRYPTION'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: MAIL_ENCRYPTION
+      Required: 'false'
+      Target: MAIL_ENCRYPTION
+      Type: Variable
+      value: ''
+    MAIL_FROM:
+      Default: ''
+      Description: 'Container Variable: MAIL_FROM'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: MAIL_FROM
+      Required: 'false'
+      Target: MAIL_FROM
+      Type: Variable
+      value: ''
+    MAIL_HOST:
+      Default: ''
+      Description: 'Container Variable: MAIL_HOST'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: MAIL_HOST
+      Required: 'false'
+      Target: MAIL_HOST
+      Type: Variable
+      value: ''
+    MAIL_MAILER:
+      Default: ''
+      Description: "Container Variable: MAIL_MAILER -\r\nRefer to https://docs.firefly-iii.org/advanced-installation/email\
+        \ for more information"
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: MAIL_MAILER
+      Required: 'false'
+      Target: MAIL_MAILER
+      Type: Variable
+      value: ''
+    MAIL_PASSWORD:
+      Default: ''
+      Description: 'Container Variable: MAIL_PASSWORD'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: MAIL_PASSWORD
+      Required: 'false'
+      Target: MAIL_PASSWORD
+      Type: Variable
+      value: ''
+    MAIL_PORT:
+      Default: ''
+      Description: 'Container Variable: MAIL_PORT'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: MAIL_PORT
+      Required: 'false'
+      Target: MAIL_PORT
+      Type: Variable
+      value: ''
+    MAIL_USERNAME:
+      Default: ''
+      Description: 'Container Variable: MAIL_USERNAME'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: MAIL_USERNAME
+      Required: 'false'
+      Target: MAIL_USERNAME
+      Type: Variable
+      value: ''
+    SEND_ERROR_MESSAGE:
+      Default: ''
+      Description: 'Container Variable: SEND_ERROR_MESSAGE - Sends email if error
+        occurs'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: SEND_ERROR_MESSAGE
+      Required: 'false'
+      Target: SEND_ERROR_MESSAGE
+      Type: Variable
+      value: 'true'
+    TRUSTED_PROXIES:
+      Default: ''
+      Description: 'Container Variable: TRUSTED_PROXIES - Set to ** when using reverse
+        proxy.'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: TRUSTED_PROXIES
+      Required: 'false'
+      Target: TRUSTED_PROXIES
+      Type: Variable
+      value: ''
 FirstSeen: 1623513815
 Icon: https://www.firefly-iii.org/assets/logo/color.png
 LastUpdate: 1646568252

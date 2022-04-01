@@ -6,62 +6,67 @@ CategoryList:
 - MediaApp-Video
 - MediaApp-Photos
 Config:
-- '@attributes':
-    Default: '3000'
-    Description: The port for the porn-vault webinterface
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI port
-    Required: 'true'
-    Target: '3000'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: /mnt/user/appdata/porn-vault
-    Description: Directory for persistent files (config file, database, backups...)
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Config directory
-    Required: 'false'
-    Target: /config
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Images stored here will be shown in the WebUI under 'Images'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Images import directory
-    Required: 'false'
-    Target: /images
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Videos stored here will be shown in the WebUI under 'Scenes'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Videos import directory
-    Required: 'false'
-    Target: /videos
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Images added through the WebUI are stored here. By default this is
-      inside the config directory
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Uploaded images directory
-    Required: 'false'
-    Target: /config/library/images
-    Type: Path
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Config directory:
+      Default: /mnt/user/appdata/porn-vault
+      Description: Directory for persistent files (config file, database, backups...)
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Config directory
+      Required: 'false'
+      Target: /config
+      Type: Path
+      value: ''
+    Images import directory:
+      Default: ''
+      Description: Images stored here will be shown in the WebUI under 'Images'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Images import directory
+      Required: 'false'
+      Target: /images
+      Type: Path
+      value: ''
+    Uploaded images directory:
+      Default: ''
+      Description: Images added through the WebUI are stored here. By default this
+        is inside the config directory
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Uploaded images directory
+      Required: 'false'
+      Target: /config/library/images
+      Type: Path
+      value: ''
+    Videos import directory:
+      Default: ''
+      Description: Videos stored here will be shown in the WebUI under 'Scenes'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Videos import directory
+      Required: 'false'
+      Target: /videos
+      Type: Path
+      value: ''
+  Port:
+    WebUI port:
+      Default: '3000'
+      Description: The port for the porn-vault webinterface
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI port
+      Required: 'true'
+      Target: '3000'
+      Type: Port
+      value: ''
+  Variable: {}
 FirstSeen: 1614862955
 Icon: https://raw.githubusercontent.com/C4ArtZ/Unraid-Templates/master/templates/icons/porn-vault.png
 LastUpdate: 1629581059

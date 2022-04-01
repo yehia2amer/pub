@@ -2,50 +2,55 @@ CategoryList:
 - Security
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: '5800'
-    Description: 'Container Port: 5800'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Web Port
-    Required: 'true'
-    Target: '5800'
-    Type: Port
-  value: '5800'
-- '@attributes':
-    Default: '5900'
-    Description: 'Container Port: 5900'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: VNC Port
-    Required: 'false'
-    Target: '5900'
-    Type: Port
-  value: '5900'
-- '@attributes':
-    Default: /mnt/user/appdata/P3R-KeePassXC/
-    Description: 'Container Path: /config/'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: AppData
-    Required: 'true'
-    Target: /config/
-    Type: Path
-  value: /mnt/user/appdata/P3R-KeePassXC/
-- '@attributes':
-    Default: ''
-    Description: Set New VNC Password
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: VNC Password
-    Required: 'false'
-    Target: VNC_PASSWORD
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    AppData:
+      Default: /mnt/user/appdata/P3R-KeePassXC/
+      Description: 'Container Path: /config/'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: AppData
+      Required: 'true'
+      Target: /config/
+      Type: Path
+      value: /mnt/user/appdata/P3R-KeePassXC/
+  Port:
+    VNC Port:
+      Default: '5900'
+      Description: 'Container Port: 5900'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: VNC Port
+      Required: 'false'
+      Target: '5900'
+      Type: Port
+      value: '5900'
+    Web Port:
+      Default: '5800'
+      Description: 'Container Port: 5800'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Web Port
+      Required: 'true'
+      Target: '5800'
+      Type: Port
+      value: '5800'
+  Variable:
+    VNC Password:
+      Default: ''
+      Description: Set New VNC Password
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: VNC Password
+      Required: 'false'
+      Target: VNC_PASSWORD
+      Type: Variable
+      value: ''
 DonateLink: https://www.patreon.com/keepitPG
 DonateText: Please support me on Patreon
 FirstSeen: 1589155728

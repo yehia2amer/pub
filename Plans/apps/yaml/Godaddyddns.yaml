@@ -1,40 +1,45 @@
 CategoryList:
 - Network-Web
 Config:
-- '@attributes':
-    Default: Use the 'key' from your godaddy account
-    Description: Use the 'key' from your godaddy account
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Godaddy's API Key
-    Required: 'false'
-    Target: GODADDY_API_KEY
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 'Use the ''secret'' from your godaddy account '
-    Description: 'Use the ''secret'' from your godaddy account '
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Godaddy's API Secret
-    Required: 'false'
-    Target: GODADDY_API_SECRET
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: Domain Name
-    Description: 'A comma-separated list of domains that you''d like to update. For
-      example: mydomain.com or mydomain.com,anotherdomain.com'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Domain Name
-    Required: 'false'
-    Target: GODADDY_DOMAINS
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path: {}
+  Port: {}
+  Variable:
+    Domain Name:
+      Default: Domain Name
+      Description: 'A comma-separated list of domains that you''d like to update.
+        For example: mydomain.com or mydomain.com,anotherdomain.com'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Domain Name
+      Required: 'false'
+      Target: GODADDY_DOMAINS
+      Type: Variable
+      value: ''
+    Godaddy's API Key:
+      Default: Use the 'key' from your godaddy account
+      Description: Use the 'key' from your godaddy account
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Godaddy's API Key
+      Required: 'false'
+      Target: GODADDY_API_KEY
+      Type: Variable
+      value: ''
+    Godaddy's API Secret:
+      Default: 'Use the ''secret'' from your godaddy account '
+      Description: 'Use the ''secret'' from your godaddy account '
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Godaddy's API Secret
+      Required: 'false'
+      Target: GODADDY_API_SECRET
+      Type: Variable
+      value: ''
 ExtraParams: --restart=always
 FirstSeen: 1577941580
 Icon: https://rawgit.com/Kru-x/unraid-docker-templates/master/Kru-x/img/GoDaddy.png

@@ -1,28 +1,33 @@
 CategoryList:
 - Network-VPN
 Config:
-- '@attributes':
-    Default: ''
-    Description: Data Path for your 'vpn.ovpn' and your certificates or your 'vpn.auth'.
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Data Path
-    Required: 'true'
-    Target: /vpn
-    Type: Path
-  value: /mnt/cache/appdata/openvpn-client
-- '@attributes':
-    Default: ''
-    Description: TUN device that is needed to run the container.
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: TUN device
-    Required: 'true'
-    Target: ''
-    Type: Device
-  value: /dev/net/tun
+  Device:
+    TUN device:
+      Default: ''
+      Description: TUN device that is needed to run the container.
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: TUN device
+      Required: 'true'
+      Target: ''
+      Type: Device
+      value: /dev/net/tun
+  Label: {}
+  Path:
+    Data Path:
+      Default: ''
+      Description: Data Path for your 'vpn.ovpn' and your certificates or your 'vpn.auth'.
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Data Path
+      Required: 'true'
+      Target: /vpn
+      Type: Path
+      value: /mnt/cache/appdata/openvpn-client
+  Port: {}
+  Variable: {}
 ExtraParams: --cap-add=NET_ADMIN --dns=8.8.8.8 --sysctl net.ipv6.conf.all.disable_ipv6=0
 FirstSeen: 1641719003
 Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/openvpn-client.png

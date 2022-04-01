@@ -4,151 +4,156 @@ CategoryList:
 - Productivity
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'false'
-    Target: '4711'
-    Type: Port
-  value: '4711'
-- '@attributes':
-    Default: ''
-    Description: Edonkey network
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Port (TCP)
-    Required: 'false'
-    Target: '23732'
-    Type: Port
-  value: '23732'
-- '@attributes':
-    Default: ''
-    Description: Kad network
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Port (UDP)
-    Required: 'false'
-    Target: '23733'
-    Type: Port
-  value: '23733'
-- '@attributes':
-    Default: ''
-    Description: 'This is the location for torrent files: complete (download), incomplete
-      (tmp).'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Storage (downloads)
-    Required: 'true'
-    Target: /data
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: UNIX user ID used to create files.
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: UID
-    Required: 'false'
-    Target: UID
-    Type: Variable
-  value: root
-- '@attributes':
-    Default: ''
-    Description: UNIX group ID used to create files.
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: GID
-    Required: 'false'
-    Target: GID
-    Type: Variable
-  value: root
-- '@attributes':
-    Default: ''
-    Description: User nickname.
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: EMULE_NICK
-    Required: 'false'
-    Target: EMULE_NICK
-    Type: Variable
-  value: eMule_DOCKER
-- '@attributes':
-    Default: ''
-    Description: Max upload speed, in KB format.
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: EMULE_MAX_UPLOAD
-    Required: 'false'
-    Target: EMULE_MAX_UPLOAD
-    Type: Variable
-  value: '100000'
-- '@attributes':
-    Default: ''
-    Description: WebUI languange code. Visit 'https://www.science.co.il/language/Locale-codes.php'
-      for your language.
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: EMULE_LANGUAGE
-    Required: 'false'
-    Target: EMULE_LANGUAGE
-    Type: Variable
-  value: '1033'
-- '@attributes':
-    Default: ''
-    Description: Upload capacity, in KB format.
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: EMULE_CAP_UPLOAD
-    Required: 'false'
-    Target: EMULE_CAP_UPLOAD
-    Type: Variable
-  value: '1000000'
-- '@attributes':
-    Default: ''
-    Description: Download capacity, in KB format.
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: EMULE_CAP_DOWNLOAD
-    Required: 'false'
-    Target: EMULE_CAP_DOWNLOAD
-    Type: Variable
-  value: '1000000'
-- '@attributes':
-    Default: 1|0
-    Description: Automatic reconnect.
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: EMULE_RECONNECT
-    Required: 'false'
-    Target: EMULE_RECONNECT
-    Type: Variable
-  value: '1'
-- '@attributes':
-    Default: 1|0
-    Description: Update server list from other servers.
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: EMULE_UPDATE_FROM_SERVER
-    Required: 'false'
-    Target: EMULE_UPDATE_FROM_SERVER
-    Type: Variable
-  value: '1'
+  Device: {}
+  Label: {}
+  Path:
+    Storage (downloads):
+      Default: ''
+      Description: 'This is the location for torrent files: complete (download), incomplete
+        (tmp).'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Storage (downloads)
+      Required: 'true'
+      Target: /data
+      Type: Path
+      value: ''
+  Port:
+    Port (TCP):
+      Default: ''
+      Description: Edonkey network
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Port (TCP)
+      Required: 'false'
+      Target: '23732'
+      Type: Port
+      value: '23732'
+    Port (UDP):
+      Default: ''
+      Description: Kad network
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Port (UDP)
+      Required: 'false'
+      Target: '23733'
+      Type: Port
+      value: '23733'
+    WebUI:
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'false'
+      Target: '4711'
+      Type: Port
+      value: '4711'
+  Variable:
+    EMULE_CAP_DOWNLOAD:
+      Default: ''
+      Description: Download capacity, in KB format.
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: EMULE_CAP_DOWNLOAD
+      Required: 'false'
+      Target: EMULE_CAP_DOWNLOAD
+      Type: Variable
+      value: '1000000'
+    EMULE_CAP_UPLOAD:
+      Default: ''
+      Description: Upload capacity, in KB format.
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: EMULE_CAP_UPLOAD
+      Required: 'false'
+      Target: EMULE_CAP_UPLOAD
+      Type: Variable
+      value: '1000000'
+    EMULE_LANGUAGE:
+      Default: ''
+      Description: WebUI languange code. Visit 'https://www.science.co.il/language/Locale-codes.php'
+        for your language.
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: EMULE_LANGUAGE
+      Required: 'false'
+      Target: EMULE_LANGUAGE
+      Type: Variable
+      value: '1033'
+    EMULE_MAX_UPLOAD:
+      Default: ''
+      Description: Max upload speed, in KB format.
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: EMULE_MAX_UPLOAD
+      Required: 'false'
+      Target: EMULE_MAX_UPLOAD
+      Type: Variable
+      value: '100000'
+    EMULE_NICK:
+      Default: ''
+      Description: User nickname.
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: EMULE_NICK
+      Required: 'false'
+      Target: EMULE_NICK
+      Type: Variable
+      value: eMule_DOCKER
+    EMULE_RECONNECT:
+      Default: 1|0
+      Description: Automatic reconnect.
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: EMULE_RECONNECT
+      Required: 'false'
+      Target: EMULE_RECONNECT
+      Type: Variable
+      value: '1'
+    EMULE_UPDATE_FROM_SERVER:
+      Default: 1|0
+      Description: Update server list from other servers.
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: EMULE_UPDATE_FROM_SERVER
+      Required: 'false'
+      Target: EMULE_UPDATE_FROM_SERVER
+      Type: Variable
+      value: '1'
+    GID:
+      Default: ''
+      Description: UNIX group ID used to create files.
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: GID
+      Required: 'false'
+      Target: GID
+      Type: Variable
+      value: root
+    UID:
+      Default: ''
+      Description: UNIX user ID used to create files.
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: UID
+      Required: 'false'
+      Target: UID
+      Type: Variable
+      value: root
 FirstSeen: 1645614216
 Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/emule.png
 LastUpdate: 1583099032

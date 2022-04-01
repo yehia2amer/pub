@@ -3,72 +3,77 @@ CategoryList:
 - Network-Voip
 ChangeLogPresent: true
 Config:
-- '@attributes':
-    Default: '9987'
-    Description: 'Container Port: 9987'
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: Host Port 1
-    Required: 'true'
-    Target: '9987'
-    Type: Port
-  value: '9987'
-- '@attributes':
-    Default: '10011'
-    Description: 'Container Port: 10011'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Host Port 2
-    Required: 'true'
-    Target: '10011'
-    Type: Port
-  value: '10011'
-- '@attributes':
-    Default: '30033'
-    Description: 'Container Port: 30033'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Host Port 3
-    Required: 'true'
-    Target: '30033'
-    Type: Port
-  value: '30033'
-- '@attributes':
-    Default: /mnt/user/appdata/teamspeak3
-    Description: 'Container Path: /ts3server'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: rw
-    Name: AppData Config Path
-    Required: 'true'
-    Target: /ts3server
-    Type: Path
-  value: /mnt/user/appdata/teamspeak3
-- '@attributes':
-    Default: '99'
-    Description: 'Container Variable: PUID'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Key 2
-    Required: 'false'
-    Target: PUID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: '100'
-    Description: 'Container Variable: PGID'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Key 3
-    Required: 'false'
-    Target: PGID
-    Type: Variable
-  value: '100'
+  Device: {}
+  Label: {}
+  Path:
+    AppData Config Path:
+      Default: /mnt/user/appdata/teamspeak3
+      Description: 'Container Path: /ts3server'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: rw
+      Name: AppData Config Path
+      Required: 'true'
+      Target: /ts3server
+      Type: Path
+      value: /mnt/user/appdata/teamspeak3
+  Port:
+    Host Port 1:
+      Default: '9987'
+      Description: 'Container Port: 9987'
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: Host Port 1
+      Required: 'true'
+      Target: '9987'
+      Type: Port
+      value: '9987'
+    Host Port 2:
+      Default: '10011'
+      Description: 'Container Port: 10011'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Host Port 2
+      Required: 'true'
+      Target: '10011'
+      Type: Port
+      value: '10011'
+    Host Port 3:
+      Default: '30033'
+      Description: 'Container Port: 30033'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Host Port 3
+      Required: 'true'
+      Target: '30033'
+      Type: Port
+      value: '30033'
+  Variable:
+    Key 2:
+      Default: '99'
+      Description: 'Container Variable: PUID'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Key 2
+      Required: 'false'
+      Target: PUID
+      Type: Variable
+      value: '99'
+    Key 3:
+      Default: '100'
+      Description: 'Container Variable: PGID'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Key 3
+      Required: 'false'
+      Target: PGID
+      Type: Variable
+      value: '100'
 DonateLink: https://checkout.square.site/pay/340d93c602a042b8a223a2f7c184a6a2
 DonateText: Buy me a coffee if you like.
 FirstSeen: 1593050885

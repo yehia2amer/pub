@@ -2,72 +2,77 @@ CategoryList:
 - Network-Web
 - Other
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /etc/piaware.conf'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Piaware Config
-    Required: 'true'
-    Target: /etc/piaware.conf
-    Type: Path
-  value: /mnt/user/appdata/fr24feed-piaware/piaware.conf
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /usr/lib/fr24/public_html/config.js'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Dump1090 Config
-    Required: 'true'
-    Target: /usr/lib/fr24/public_html/config.js
-    Type: Path
-  value: /mnt/user/appdata/fr24feed-piaware/config.js
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /etc/fr24feed.ini'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: fr24feed Config
-    Required: 'true'
-    Target: /etc/fr24feed.ini
-    Type: Path
-  value: /mnt/user/appdata/fr24feed-piaware/fr24feed.ini
-- '@attributes':
-    Default: ''
-    Description: 'Container Device: RTL-SDR'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: RTL-SDR Device
-    Required: 'true'
-    Target: ''
-    Type: Device
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 8080'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: HTTP Port
-    Required: 'false'
-    Target: '8080'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: '8754'
-    Description: 'Container Port: 8754'
-    Display: advanced
-    Mask: 'false'
-    Mode: tcp
-    Name: fr24feed Admin HTTP Port
-    Required: 'false'
-    Target: '8754'
-    Type: Port
-  value: ''
+  Device:
+    RTL-SDR Device:
+      Default: ''
+      Description: 'Container Device: RTL-SDR'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: RTL-SDR Device
+      Required: 'true'
+      Target: ''
+      Type: Device
+      value: ''
+  Label: {}
+  Path:
+    Dump1090 Config:
+      Default: ''
+      Description: 'Container Path: /usr/lib/fr24/public_html/config.js'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Dump1090 Config
+      Required: 'true'
+      Target: /usr/lib/fr24/public_html/config.js
+      Type: Path
+      value: /mnt/user/appdata/fr24feed-piaware/config.js
+    Piaware Config:
+      Default: ''
+      Description: 'Container Path: /etc/piaware.conf'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Piaware Config
+      Required: 'true'
+      Target: /etc/piaware.conf
+      Type: Path
+      value: /mnt/user/appdata/fr24feed-piaware/piaware.conf
+    fr24feed Config:
+      Default: ''
+      Description: 'Container Path: /etc/fr24feed.ini'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: fr24feed Config
+      Required: 'true'
+      Target: /etc/fr24feed.ini
+      Type: Path
+      value: /mnt/user/appdata/fr24feed-piaware/fr24feed.ini
+  Port:
+    HTTP Port:
+      Default: ''
+      Description: 'Container Port: 8080'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: HTTP Port
+      Required: 'false'
+      Target: '8080'
+      Type: Port
+      value: ''
+    fr24feed Admin HTTP Port:
+      Default: '8754'
+      Description: 'Container Port: 8754'
+      Display: advanced
+      Mask: 'false'
+      Mode: tcp
+      Name: fr24feed Admin HTTP Port
+      Required: 'false'
+      Target: '8754'
+      Type: Port
+      value: ''
+  Variable: {}
 FirstSeen: 1555351790
 Icon: https://github.com/FoxxMD/unraid-docker-templates/raw/master/icons/flightaware.jpg
 LastUpdate: 1646135348

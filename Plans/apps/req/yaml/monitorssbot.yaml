@@ -1,50 +1,55 @@
 CategoryList:
 - Network-Messenger
 Config:
-- '@attributes':
-    Default: \
-    Description: Information here https://docs.monitorss.xyz/configuration/bot-configuration#bot
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: BOT_PREFIX
-    Required: 'true'
-    Target: DRSS_BOT_PREFIX
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '22222222222'
-    Description: Information here https://docs.monitorss.xyz/configuration/bot-configuration#bot
-    Display: always
-    Mask: 'true'
-    Mode: ''
-    Name: TOKEN
-    Required: 'true'
-    Target: DRSS_BOT_TOKEN
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: mongodb://[REPLACE-WITH-IP]:27017/drss
-    Description: Information here https://docs.monitorss.xyz/configuration/web-interface#database
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DATABASE_URI
-    Required: 'true'
-    Target: DRSS_DATABASE_URI
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: bot
-    Description: Do not change
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: Component
-    Required: 'true'
-    Target: DRSS_START
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path: {}
+  Port: {}
+  Variable:
+    BOT_PREFIX:
+      Default: \
+      Description: Information here https://docs.monitorss.xyz/configuration/bot-configuration#bot
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: BOT_PREFIX
+      Required: 'true'
+      Target: DRSS_BOT_PREFIX
+      Type: Variable
+      value: ''
+    Component:
+      Default: bot
+      Description: Do not change
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: Component
+      Required: 'true'
+      Target: DRSS_START
+      Type: Variable
+      value: ''
+    DATABASE_URI:
+      Default: mongodb://[REPLACE-WITH-IP]:27017/drss
+      Description: Information here https://docs.monitorss.xyz/configuration/web-interface#database
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DATABASE_URI
+      Required: 'true'
+      Target: DRSS_DATABASE_URI
+      Type: Variable
+      value: ''
+    TOKEN:
+      Default: '22222222222'
+      Description: Information here https://docs.monitorss.xyz/configuration/bot-configuration#bot
+      Display: always
+      Mask: 'true'
+      Mode: ''
+      Name: TOKEN
+      Required: 'true'
+      Target: DRSS_BOT_TOKEN
+      Type: Variable
+      value: ''
 FirstSeen: 1613243438
 Icon: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/monitorss.png
 LastUpdate: 1644634037

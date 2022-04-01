@@ -1,95 +1,100 @@
 CategoryList:
 - HomeAutomation
 Config:
-- '@attributes':
-    Default: Europe/Paris
-    Description: Visit https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-      to get the right one
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Time Zone
-    Required: 'true'
-    Target: TZ
-    Type: Variable
-  value: Europe/Paris
-- '@attributes':
-    Default: '80'
-    Description: 'Container Variable: SERVER_PORT'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: server-port
-    Required: 'true'
-    Target: SERVER_PORT
-    Type: Variable
-  value: '8006'
-- '@attributes':
-    Default: /mnt/user/appdata/Gladys
-    Description: 'Container Path: /var/lib/gladysassistant'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: rw
-    Name: Gladys lib folder
-    Required: 'true'
-    Target: /var/lib/gladysassistant
-    Type: Path
-  value: /mnt/user/appdata/Gladys
-- '@attributes':
-    Default: /dev
-    Description: 'Container Path: /dev'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: rw
-    Name: Gladys Dev Folder
-    Required: 'true'
-    Target: /dev
-    Type: Path
-  value: /dev
-- '@attributes':
-    Default: /run/udev
-    Description: 'Container Path: /run/udev'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ro
-    Name: Gladys uDev Folder
-    Required: 'true'
-    Target: /run/udev
-    Type: Path
-  value: /run/udev
-- '@attributes':
-    Default: /var/lib/gladysassistant/gladys-production.db
-    Description: 'Container Variable: SQLITE_FILE_PATH'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: DB File path
-    Required: 'true'
-    Target: SQLITE_FILE_PATH
-    Type: Variable
-  value: /var/lib/gladysassistant/gladys-production.db
-- '@attributes':
-    Default: production
-    Description: 'Container Variable: NODE_ENV'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: Environement
-    Required: 'true'
-    Target: NODE_ENV
-    Type: Variable
-  value: production
-- '@attributes':
-    Default: /var/run/docker.sock
-    Description: 'Container Path: /var/run/docker.sock'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: rw
-    Name: Gladys Docker Folder
-    Required: 'true'
-    Target: /var/run/docker.sock
-    Type: Path
-  value: /var/run/docker.sock
+  Device: {}
+  Label: {}
+  Path:
+    Gladys Dev Folder:
+      Default: /dev
+      Description: 'Container Path: /dev'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: rw
+      Name: Gladys Dev Folder
+      Required: 'true'
+      Target: /dev
+      Type: Path
+      value: /dev
+    Gladys Docker Folder:
+      Default: /var/run/docker.sock
+      Description: 'Container Path: /var/run/docker.sock'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: rw
+      Name: Gladys Docker Folder
+      Required: 'true'
+      Target: /var/run/docker.sock
+      Type: Path
+      value: /var/run/docker.sock
+    Gladys lib folder:
+      Default: /mnt/user/appdata/Gladys
+      Description: 'Container Path: /var/lib/gladysassistant'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: rw
+      Name: Gladys lib folder
+      Required: 'true'
+      Target: /var/lib/gladysassistant
+      Type: Path
+      value: /mnt/user/appdata/Gladys
+    Gladys uDev Folder:
+      Default: /run/udev
+      Description: 'Container Path: /run/udev'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ro
+      Name: Gladys uDev Folder
+      Required: 'true'
+      Target: /run/udev
+      Type: Path
+      value: /run/udev
+  Port: {}
+  Variable:
+    DB File path:
+      Default: /var/lib/gladysassistant/gladys-production.db
+      Description: 'Container Variable: SQLITE_FILE_PATH'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: DB File path
+      Required: 'true'
+      Target: SQLITE_FILE_PATH
+      Type: Variable
+      value: /var/lib/gladysassistant/gladys-production.db
+    Environement:
+      Default: production
+      Description: 'Container Variable: NODE_ENV'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: Environement
+      Required: 'true'
+      Target: NODE_ENV
+      Type: Variable
+      value: production
+    Time Zone:
+      Default: Europe/Paris
+      Description: Visit https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+        to get the right one
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Time Zone
+      Required: 'true'
+      Target: TZ
+      Type: Variable
+      value: Europe/Paris
+    server-port:
+      Default: '80'
+      Description: 'Container Variable: SERVER_PORT'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: server-port
+      Required: 'true'
+      Target: SERVER_PORT
+      Type: Variable
+      value: '8006'
 DonateLink: https://www.buymeacoffee.com/gladysassistant
 ExtraParams: --restart=always --log-opt max-size=10m
 FirstSeen: 1648140267

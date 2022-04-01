@@ -2,94 +2,100 @@ Beta: 'true'
 CategoryList:
 - MediaApp-Video
 Config:
-- '@attributes':
-    Default: '5004'
-    Description: 'Container Port: 5004'
-    Display: always-hide
-    Mask: 'false'
-    Mode: tcp
-    Name: Host Port for 5004
-    Required: 'true'
-    Target: '5004'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /config'
-    Display: always-hide
-    Mask: 'false'
-    Mode: rw
-    Name: Host Path for /config
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Example: locast,plutotv (this is a '','' separated list plugin names)'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Origin Plugins
-    Required: 'false'
-    Target: ORIGIN_PLUGINS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Example: hdhr (this is a '','' separated list plugin names)'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Interface Plugins
-    Required: 'false'
-    Target: INTERFACE_PLUGINS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Example: vlc (this is a '','' separated list plugin names)'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Stream Plugins
-    Required: 'false'
-    Target: STREAM_PLUGINS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Example: zap2it (this is a '','' separated list plugin names)'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: EPG Plugins
-    Required: 'false'
-    Target: EPG_PLUGINS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '99'
-    Description: 'Container Variable: PUID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: PUID
-    Required: 'false'
-    Target: PUID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '100'
-    Description: 'Container Variable: PGID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: PGID
-    Required: 'false'
-    Target: PGID
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Host Path for /config:
+      Default: ''
+      Description: 'Container Path: /config'
+      Display: always-hide
+      Mask: 'false'
+      Mode: rw
+      Name: Host Path for /config
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: ''
+  Port:
+    Host Port for 5004:
+      Default: '5004'
+      Description: 'Container Port: 5004'
+      Display: always-hide
+      Mask: 'false'
+      Mode: tcp
+      Name: Host Port for 5004
+      Required: 'true'
+      Target: '5004'
+      Type: Port
+      value: ''
+  Variable:
+    EPG Plugins:
+      Default: ''
+      Description: 'Example: zap2it (this is a '','' separated list plugin names)'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: EPG Plugins
+      Required: 'false'
+      Target: EPG_PLUGINS
+      Type: Variable
+      value: ''
+    Interface Plugins:
+      Default: ''
+      Description: 'Example: hdhr (this is a '','' separated list plugin names)'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Interface Plugins
+      Required: 'false'
+      Target: INTERFACE_PLUGINS
+      Type: Variable
+      value: ''
+    Origin Plugins:
+      Default: ''
+      Description: 'Example: locast,plutotv (this is a '','' separated list plugin
+        names)'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Origin Plugins
+      Required: 'false'
+      Target: ORIGIN_PLUGINS
+      Type: Variable
+      value: ''
+    PGID:
+      Default: '100'
+      Description: 'Container Variable: PGID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: PGID
+      Required: 'false'
+      Target: PGID
+      Type: Variable
+      value: ''
+    PUID:
+      Default: '99'
+      Description: 'Container Variable: PUID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: PUID
+      Required: 'false'
+      Target: PUID
+      Type: Variable
+      value: ''
+    Stream Plugins:
+      Default: ''
+      Description: 'Example: vlc (this is a '','' separated list plugin names)'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Stream Plugins
+      Required: 'false'
+      Target: STREAM_PLUGINS
+      Type: Variable
+      value: ''
 DonateImg: ''
 DonateLink: https://github.com/sponsors/RandomNinjaAtk
 FirstSeen: 1616090572

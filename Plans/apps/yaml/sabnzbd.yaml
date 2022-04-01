@@ -14,61 +14,66 @@ Branch:
 CategoryList:
 - Downloaders
 Config:
-- '@attributes':
-    Default: '8080'
-    Description: 'Container Port: 8080'
-    Display: always-hide
-    Mask: 'false'
-    Mode: tcp
-    Name: Host Port for 8080
-    Required: 'true'
-    Target: '8080'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /config'
-    Display: always-hide
-    Mask: 'false'
-    Mode: rw
-    Name: Host Path for /config
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: '99'
-    Description: 'Container Variable: PUID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: PUID
-    Required: 'false'
-    Target: PUID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '100'
-    Description: 'Container Variable: PGID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: PGID
-    Required: 'false'
-    Target: PGID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '002'
-    Description: 'Container Variable: UMASK'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: UMASK
-    Required: 'false'
-    Target: UMASK
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Host Path for /config:
+      Default: ''
+      Description: 'Container Path: /config'
+      Display: always-hide
+      Mask: 'false'
+      Mode: rw
+      Name: Host Path for /config
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: ''
+  Port:
+    Host Port for 8080:
+      Default: '8080'
+      Description: 'Container Port: 8080'
+      Display: always-hide
+      Mask: 'false'
+      Mode: tcp
+      Name: Host Port for 8080
+      Required: 'true'
+      Target: '8080'
+      Type: Port
+      value: ''
+  Variable:
+    PGID:
+      Default: '100'
+      Description: 'Container Variable: PGID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: PGID
+      Required: 'false'
+      Target: PGID
+      Type: Variable
+      value: ''
+    PUID:
+      Default: '99'
+      Description: 'Container Variable: PUID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: PUID
+      Required: 'false'
+      Target: PUID
+      Type: Variable
+      value: ''
+    UMASK:
+      Default: '002'
+      Description: 'Container Variable: UMASK'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: UMASK
+      Required: 'false'
+      Target: UMASK
+      Type: Variable
+      value: ''
 FirstSeen: 1604308114
 Icon: https://hotio.dev/webhook-avatars/sabnzbd.png
 LastUpdate: 1647445186

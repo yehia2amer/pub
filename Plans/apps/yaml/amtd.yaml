@@ -2,202 +2,207 @@ CategoryList:
 - Downloaders
 - MediaApp-Video
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /config'
-    Display: always-hide
-    Mask: 'false'
-    Mode: rw
-    Name: Host Path for /config
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: 'true'
-    Description: 'true = Enabled :: Runs script automatically on startup'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Enable Automatic Script Start
-    Required: 'true'
-    Target: AUTOSTART
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 1h
-    Description: '#s or #m or #h or #d :: s = seconds, m = minutes, h = hours, d =
-      days :: Amount of time between each script run, when AUTOSTART is enabled'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Script Interval
-    Required: 'true'
-    Target: SCRIPTINTERVAL
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: http://127.0.0.1:7878
-    Description: Set domain or IP to your Radarr instance including port. If using
-      reverse proxy, do not use a trailing slash. Ensure you specify http/s...
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Radarr Url
-    Required: 'false'
-    Target: RadarrUrl
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Radarr API Key
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Radarr API Key
-    Required: 'false'
-    Target: RadarrAPIkey
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: all
-    Description: 'all or trailers :: all downloads all available videos (trailers,
-      clips, featurettes, etc...) :: trailers only downloads trailers'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Extras Type
-    Required: 'true'
-    Target: extrastype
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: en
-    Description: Set the primary desired language, if not found, fallback to next
-      langauge in the list... (this is a ',' separated list of ISO 639-1 language
-      codes)
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Extras Audio Language
-    Required: 'true'
-    Target: LANGUAGES
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: --format bestvideo[vcodec*=avc1]+bestaudio[ext=m4a]
-    Description: For guidence, please see youtube-dl documentation
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Extras Format
-    Required: 'true'
-    Target: videoformat
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: en
-    Description: 'Desired Language Code :: For guidence, please see youtube-dl documentation'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Extras Subtitle Langauge
-    Required: 'true'
-    Target: subtitlelanguage
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 'true'
-    Description: 'true = enabled :: Only downloads the first available trailer, does
-      not apply to other extras type'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Single Trailer
-    Required: 'true'
-    Target: SINGLETRAILER
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 'false'
-    Description: 'true = enabled :: Checks for existing trailer file, and skips it
-      if found'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Prefer Existing Trailer
-    Required: 'true'
-    Target: PREFER_EXISTING
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 'false'
-    Description: 'true = enabled :: Creates subfolders within the movie folder for
-      extras'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Use Folders
-    Required: 'true'
-    Target: USEFOLDERS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: plex
-    Description: 'plex or emby or jellyfin :: Select the appropriate client for maximum
-      compatibility'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: End Client Compatibility
-    Required: 'true'
-    Target: EndClient
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '644'
-    Description: Based on chmod linux permissions
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Extras File Permissions
-    Required: 'true'
-    Target: FilePermissions
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '755'
-    Description: Based on chmod linux permissions
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Extras Folder Permissions
-    Required: 'true'
-    Target: FolderPermissions
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '99'
-    Description: 'Container Variable: USER_ID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: PUID
-    Required: 'false'
-    Target: PUID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '100'
-    Description: 'Container Variable: GROUP_ID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: PGID
-    Required: 'false'
-    Target: PGID
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Host Path for /config:
+      Default: ''
+      Description: 'Container Path: /config'
+      Display: always-hide
+      Mask: 'false'
+      Mode: rw
+      Name: Host Path for /config
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: ''
+  Port: {}
+  Variable:
+    Enable Automatic Script Start:
+      Default: 'true'
+      Description: 'true = Enabled :: Runs script automatically on startup'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Enable Automatic Script Start
+      Required: 'true'
+      Target: AUTOSTART
+      Type: Variable
+      value: ''
+    End Client Compatibility:
+      Default: plex
+      Description: 'plex or emby or jellyfin :: Select the appropriate client for
+        maximum compatibility'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: End Client Compatibility
+      Required: 'true'
+      Target: EndClient
+      Type: Variable
+      value: ''
+    Extras Audio Language:
+      Default: en
+      Description: Set the primary desired language, if not found, fallback to next
+        langauge in the list... (this is a ',' separated list of ISO 639-1 language
+        codes)
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Extras Audio Language
+      Required: 'true'
+      Target: LANGUAGES
+      Type: Variable
+      value: ''
+    Extras File Permissions:
+      Default: '644'
+      Description: Based on chmod linux permissions
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Extras File Permissions
+      Required: 'true'
+      Target: FilePermissions
+      Type: Variable
+      value: ''
+    Extras Folder Permissions:
+      Default: '755'
+      Description: Based on chmod linux permissions
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Extras Folder Permissions
+      Required: 'true'
+      Target: FolderPermissions
+      Type: Variable
+      value: ''
+    Extras Format:
+      Default: --format bestvideo[vcodec*=avc1]+bestaudio[ext=m4a]
+      Description: For guidence, please see youtube-dl documentation
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Extras Format
+      Required: 'true'
+      Target: videoformat
+      Type: Variable
+      value: ''
+    Extras Subtitle Langauge:
+      Default: en
+      Description: 'Desired Language Code :: For guidence, please see youtube-dl documentation'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Extras Subtitle Langauge
+      Required: 'true'
+      Target: subtitlelanguage
+      Type: Variable
+      value: ''
+    Extras Type:
+      Default: all
+      Description: 'all or trailers :: all downloads all available videos (trailers,
+        clips, featurettes, etc...) :: trailers only downloads trailers'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Extras Type
+      Required: 'true'
+      Target: extrastype
+      Type: Variable
+      value: ''
+    PGID:
+      Default: '100'
+      Description: 'Container Variable: GROUP_ID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: PGID
+      Required: 'false'
+      Target: PGID
+      Type: Variable
+      value: ''
+    PUID:
+      Default: '99'
+      Description: 'Container Variable: USER_ID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: PUID
+      Required: 'false'
+      Target: PUID
+      Type: Variable
+      value: ''
+    Prefer Existing Trailer:
+      Default: 'false'
+      Description: 'true = enabled :: Checks for existing trailer file, and skips
+        it if found'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Prefer Existing Trailer
+      Required: 'true'
+      Target: PREFER_EXISTING
+      Type: Variable
+      value: ''
+    Radarr API Key:
+      Default: ''
+      Description: Radarr API Key
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Radarr API Key
+      Required: 'false'
+      Target: RadarrAPIkey
+      Type: Variable
+      value: ''
+    Radarr Url:
+      Default: http://127.0.0.1:7878
+      Description: Set domain or IP to your Radarr instance including port. If using
+        reverse proxy, do not use a trailing slash. Ensure you specify http/s...
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Radarr Url
+      Required: 'false'
+      Target: RadarrUrl
+      Type: Variable
+      value: ''
+    Script Interval:
+      Default: 1h
+      Description: '#s or #m or #h or #d :: s = seconds, m = minutes, h = hours, d
+        = days :: Amount of time between each script run, when AUTOSTART is enabled'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Script Interval
+      Required: 'true'
+      Target: SCRIPTINTERVAL
+      Type: Variable
+      value: ''
+    Single Trailer:
+      Default: 'true'
+      Description: 'true = enabled :: Only downloads the first available trailer,
+        does not apply to other extras type'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Single Trailer
+      Required: 'true'
+      Target: SINGLETRAILER
+      Type: Variable
+      value: ''
+    Use Folders:
+      Default: 'false'
+      Description: 'true = enabled :: Creates subfolders within the movie folder for
+        extras'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Use Folders
+      Required: 'true'
+      Target: USEFOLDERS
+      Type: Variable
+      value: ''
 DonateImg: ''
 DonateLink: https://github.com/sponsors/RandomNinjaAtk
 FirstSeen: 1596564504

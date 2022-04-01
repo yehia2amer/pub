@@ -6,172 +6,178 @@ Branch:
 CategoryList:
 - Network-DNS
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /config'
-    Display: always-hide
-    Mask: 'false'
-    Mode: rw
-    Name: Host Path for /config
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: '300'
-    Description: 'Container Variable: INTERVAL'
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: INTERVAL
-    Required: 'false'
-    Target: INTERVAL
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: dig-whoami.cloudflare|dig-google.com|dig-opendns.com|curl-icanhazip.com|curl-wtfismyip.com|curl-showmyip.ca|curl-da.gd|curl-seeip.org|curl-ifconfig.co
-    Description: 'Container Variable: DETECTION_MODE'
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: DETECTION_MODE
-    Required: 'false'
-    Target: DETECTION_MODE
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 3|2|1|0
-    Description: 'Container Variable: LOG_LEVEL&lt;br&gt;3 - Debug logging&lt;br&gt;2
-      - Verbose logging&lt;br&gt;1 - Normal logging&lt;br&gt;0 - No logging'
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: LOG_LEVEL
-    Required: 'false'
-    Target: LOG_LEVEL
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: APPRISE&lt;br&gt;Send notifications with Apprise.'
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: APPRISE
-    Required: 'false'
-    Target: APPRISE
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: CF_USER&lt;br&gt;Leave blank if you use CF_APITOKEN.'
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: CF_USER
-    Required: 'false'
-    Target: CF_USER
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: CF_APIKEY&lt;br&gt;Leave blank if you use CF_APITOKEN.'
-    Display: always-hide
-    Mask: 'true'
-    Mode: ''
-    Name: CF_APIKEY
-    Required: 'false'
-    Target: CF_APIKEY
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: CF_APITOKEN'
-    Display: always-hide
-    Mask: 'true'
-    Mode: ''
-    Name: CF_APITOKEN
-    Required: 'false'
-    Target: CF_APITOKEN
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: CF_APITOKEN_ZONE'
-    Display: always-hide
-    Mask: 'true'
-    Mode: ''
-    Name: CF_APITOKEN_ZONE
-    Required: 'false'
-    Target: CF_APITOKEN_ZONE
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: CF_HOSTS&lt;br&gt;Example: test.example.com;test.foobar.com;test2.foobar.com'
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: CF_HOSTS
-    Required: 'true'
-    Target: CF_HOSTS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: CF_ZONES&lt;br&gt;Example: example.com;foobar.com;foobar.com'
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: CF_ZONES
-    Required: 'true'
-    Target: CF_ZONES
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: CF_RECORDTYPES&lt;br&gt;Example: A;A;AAAA'
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: CF_RECORDTYPES
-    Required: 'true'
-    Target: CF_RECORDTYPES
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '99'
-    Description: 'Container Variable: PUID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: PUID
-    Required: 'false'
-    Target: PUID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '100'
-    Description: 'Container Variable: PGID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: PGID
-    Required: 'false'
-    Target: PGID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '002'
-    Description: 'Container Variable: UMASK'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: UMASK
-    Required: 'false'
-    Target: UMASK
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Host Path for /config:
+      Default: ''
+      Description: 'Container Path: /config'
+      Display: always-hide
+      Mask: 'false'
+      Mode: rw
+      Name: Host Path for /config
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: ''
+  Port: {}
+  Variable:
+    APPRISE:
+      Default: ''
+      Description: 'Container Variable: APPRISE&lt;br&gt;Send notifications with Apprise.'
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: APPRISE
+      Required: 'false'
+      Target: APPRISE
+      Type: Variable
+      value: ''
+    CF_APIKEY:
+      Default: ''
+      Description: 'Container Variable: CF_APIKEY&lt;br&gt;Leave blank if you use
+        CF_APITOKEN.'
+      Display: always-hide
+      Mask: 'true'
+      Mode: ''
+      Name: CF_APIKEY
+      Required: 'false'
+      Target: CF_APIKEY
+      Type: Variable
+      value: ''
+    CF_APITOKEN:
+      Default: ''
+      Description: 'Container Variable: CF_APITOKEN'
+      Display: always-hide
+      Mask: 'true'
+      Mode: ''
+      Name: CF_APITOKEN
+      Required: 'false'
+      Target: CF_APITOKEN
+      Type: Variable
+      value: ''
+    CF_APITOKEN_ZONE:
+      Default: ''
+      Description: 'Container Variable: CF_APITOKEN_ZONE'
+      Display: always-hide
+      Mask: 'true'
+      Mode: ''
+      Name: CF_APITOKEN_ZONE
+      Required: 'false'
+      Target: CF_APITOKEN_ZONE
+      Type: Variable
+      value: ''
+    CF_HOSTS:
+      Default: ''
+      Description: 'Container Variable: CF_HOSTS&lt;br&gt;Example: test.example.com;test.foobar.com;test2.foobar.com'
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: CF_HOSTS
+      Required: 'true'
+      Target: CF_HOSTS
+      Type: Variable
+      value: ''
+    CF_RECORDTYPES:
+      Default: ''
+      Description: 'Container Variable: CF_RECORDTYPES&lt;br&gt;Example: A;A;AAAA'
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: CF_RECORDTYPES
+      Required: 'true'
+      Target: CF_RECORDTYPES
+      Type: Variable
+      value: ''
+    CF_USER:
+      Default: ''
+      Description: 'Container Variable: CF_USER&lt;br&gt;Leave blank if you use CF_APITOKEN.'
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: CF_USER
+      Required: 'false'
+      Target: CF_USER
+      Type: Variable
+      value: ''
+    CF_ZONES:
+      Default: ''
+      Description: 'Container Variable: CF_ZONES&lt;br&gt;Example: example.com;foobar.com;foobar.com'
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: CF_ZONES
+      Required: 'true'
+      Target: CF_ZONES
+      Type: Variable
+      value: ''
+    DETECTION_MODE:
+      Default: dig-whoami.cloudflare|dig-google.com|dig-opendns.com|curl-icanhazip.com|curl-wtfismyip.com|curl-showmyip.ca|curl-da.gd|curl-seeip.org|curl-ifconfig.co
+      Description: 'Container Variable: DETECTION_MODE'
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: DETECTION_MODE
+      Required: 'false'
+      Target: DETECTION_MODE
+      Type: Variable
+      value: ''
+    INTERVAL:
+      Default: '300'
+      Description: 'Container Variable: INTERVAL'
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: INTERVAL
+      Required: 'false'
+      Target: INTERVAL
+      Type: Variable
+      value: ''
+    LOG_LEVEL:
+      Default: 3|2|1|0
+      Description: 'Container Variable: LOG_LEVEL&lt;br&gt;3 - Debug logging&lt;br&gt;2
+        - Verbose logging&lt;br&gt;1 - Normal logging&lt;br&gt;0 - No logging'
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: LOG_LEVEL
+      Required: 'false'
+      Target: LOG_LEVEL
+      Type: Variable
+      value: ''
+    PGID:
+      Default: '100'
+      Description: 'Container Variable: PGID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: PGID
+      Required: 'false'
+      Target: PGID
+      Type: Variable
+      value: ''
+    PUID:
+      Default: '99'
+      Description: 'Container Variable: PUID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: PUID
+      Required: 'false'
+      Target: PUID
+      Type: Variable
+      value: ''
+    UMASK:
+      Default: '002'
+      Description: 'Container Variable: UMASK'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: UMASK
+      Required: 'false'
+      Target: UMASK
+      Type: Variable
+      value: ''
 FirstSeen: 1608491249
 Icon: https://hotio.dev/webhook-avatars/cloudflareddns.png
 LastUpdate: 1643831529

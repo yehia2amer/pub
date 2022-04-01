@@ -1,39 +1,44 @@
 CategoryList:
 - Network-Web
 Config:
-- '@attributes':
-    Default: /mnt/user/appdata/nginx-pagespeed
-    Description: 'Container Path: /config'
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: Configuration Folder
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: /mnt/user/appdata/nginx-pagespeed
-- '@attributes':
-    Default: '81'
-    Description: Port for the HTTP Protocol
-    Display: advanced
-    Mask: 'false'
-    Mode: tcp
-    Name: HTTP Port
-    Required: 'true'
-    Target: '80'
-    Type: Port
-  value: '81'
-- '@attributes':
-    Default: '444'
-    Description: Port for the HTTPS Protocol (Not enabled by default)
-    Display: advanced
-    Mask: 'false'
-    Mode: tcp
-    Name: HTTPS Port
-    Required: 'true'
-    Target: '443'
-    Type: Port
-  value: '444'
+  Device: {}
+  Label: {}
+  Path:
+    Configuration Folder:
+      Default: /mnt/user/appdata/nginx-pagespeed
+      Description: 'Container Path: /config'
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: Configuration Folder
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: /mnt/user/appdata/nginx-pagespeed
+  Port:
+    HTTP Port:
+      Default: '81'
+      Description: Port for the HTTP Protocol
+      Display: advanced
+      Mask: 'false'
+      Mode: tcp
+      Name: HTTP Port
+      Required: 'true'
+      Target: '80'
+      Type: Port
+      value: '81'
+    HTTPS Port:
+      Default: '444'
+      Description: Port for the HTTPS Protocol (Not enabled by default)
+      Display: advanced
+      Mask: 'false'
+      Mode: tcp
+      Name: HTTPS Port
+      Required: 'true'
+      Target: '443'
+      Type: Port
+      value: '444'
+  Variable: {}
 DonateImg: https://www.paypal.com/en_US/i/btn/btn_donate_SM.gif
 DonateLink: https://www.paypal.me/siwatsirichai
 DonateText: If you like it, then consider buying me a soda as I don&#39;t like beer

@@ -2,182 +2,187 @@ BindTime: 'true'
 CategoryList:
 - Network-Web
 Config:
-- '@attributes':
-    Default: '25'
-    Description: SMTP Port
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: SMTP Port
-    Required: 'true'
-    Target: '25'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: '143'
-    Description: IMAP Port
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: IMAP Port
-    Required: 'true'
-    Target: '143'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: '587'
-    Description: SMTPS Port
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: SMTPS Port
-    Required: 'true'
-    Target: '587'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: '993'
-    Description: IMAPS Port
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: IMAPS Port
-    Required: 'true'
-    Target: '993'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: '4190'
-    Description: ManageSieve Port
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: ManageSieve Port
-    Required: 'true'
-    Target: '4190'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: '11334'
-    Description: RSPAMD WebGUI Port
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: RSPAMD WebGUI Port
-    Required: 'true'
-    Target: '11334'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Mail Server Hostname
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Mail Server Hostname
-    Required: 'true'
-    Target: MAIL_HOST
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: postfix
-    Description: MySQL Postfix Username
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: MySQL Postfix Username
-    Required: 'true'
-    Target: POST_USER
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: MySQL Postfix Password
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: MySQL Postfix Password
-    Required: 'true'
-    Target: POST_PASS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: postfix
-    Description: MySQL Postfix Database Name
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: MySQL Postfix Database Name
-    Required: 'true'
-    Target: POST_DB
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Your MariaDB/MySQL Server IP Address/Hostname
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: MySQL Host
-    Required: 'true'
-    Target: MYSQL_HOST
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: RSPAMD Password
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: RSPAMD Password
-    Required: 'true'
-    Target: RSPAMD_PASSWORD
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Postfixadmin Password Encryption Method
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: Encryption Method
-    Required: 'false'
-    Target: PASS_CRYPT
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /var/mail'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Mail Data Path
-    Required: 'true'
-    Target: /var/mail
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: /mnt/user/appdata/malfurious-mailserver/redis
-    Description: 'Container Path: /data'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: rw
-    Name: Redis Data Path
-    Required: 'false'
-    Target: /data
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /etc/letsencrypt'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: r
-    Name: LetsEncrypt Certificate Path
-    Required: 'false'
-    Target: /etc/letsencrypt
-    Type: Path
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    LetsEncrypt Certificate Path:
+      Default: ''
+      Description: 'Container Path: /etc/letsencrypt'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: r
+      Name: LetsEncrypt Certificate Path
+      Required: 'false'
+      Target: /etc/letsencrypt
+      Type: Path
+      value: ''
+    Mail Data Path:
+      Default: ''
+      Description: 'Container Path: /var/mail'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Mail Data Path
+      Required: 'true'
+      Target: /var/mail
+      Type: Path
+      value: ''
+    Redis Data Path:
+      Default: /mnt/user/appdata/malfurious-mailserver/redis
+      Description: 'Container Path: /data'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: rw
+      Name: Redis Data Path
+      Required: 'false'
+      Target: /data
+      Type: Path
+      value: ''
+  Port:
+    IMAP Port:
+      Default: '143'
+      Description: IMAP Port
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: IMAP Port
+      Required: 'true'
+      Target: '143'
+      Type: Port
+      value: ''
+    IMAPS Port:
+      Default: '993'
+      Description: IMAPS Port
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: IMAPS Port
+      Required: 'true'
+      Target: '993'
+      Type: Port
+      value: ''
+    ManageSieve Port:
+      Default: '4190'
+      Description: ManageSieve Port
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: ManageSieve Port
+      Required: 'true'
+      Target: '4190'
+      Type: Port
+      value: ''
+    RSPAMD WebGUI Port:
+      Default: '11334'
+      Description: RSPAMD WebGUI Port
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: RSPAMD WebGUI Port
+      Required: 'true'
+      Target: '11334'
+      Type: Port
+      value: ''
+    SMTP Port:
+      Default: '25'
+      Description: SMTP Port
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: SMTP Port
+      Required: 'true'
+      Target: '25'
+      Type: Port
+      value: ''
+    SMTPS Port:
+      Default: '587'
+      Description: SMTPS Port
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: SMTPS Port
+      Required: 'true'
+      Target: '587'
+      Type: Port
+      value: ''
+  Variable:
+    Encryption Method:
+      Default: ''
+      Description: Postfixadmin Password Encryption Method
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: Encryption Method
+      Required: 'false'
+      Target: PASS_CRYPT
+      Type: Variable
+      value: ''
+    Mail Server Hostname:
+      Default: ''
+      Description: Mail Server Hostname
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Mail Server Hostname
+      Required: 'true'
+      Target: MAIL_HOST
+      Type: Variable
+      value: ''
+    MySQL Host:
+      Default: ''
+      Description: Your MariaDB/MySQL Server IP Address/Hostname
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: MySQL Host
+      Required: 'true'
+      Target: MYSQL_HOST
+      Type: Variable
+      value: ''
+    MySQL Postfix Database Name:
+      Default: postfix
+      Description: MySQL Postfix Database Name
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: MySQL Postfix Database Name
+      Required: 'true'
+      Target: POST_DB
+      Type: Variable
+      value: ''
+    MySQL Postfix Password:
+      Default: ''
+      Description: MySQL Postfix Password
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: MySQL Postfix Password
+      Required: 'true'
+      Target: POST_PASS
+      Type: Variable
+      value: ''
+    MySQL Postfix Username:
+      Default: postfix
+      Description: MySQL Postfix Username
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: MySQL Postfix Username
+      Required: 'true'
+      Target: POST_USER
+      Type: Variable
+      value: ''
+    RSPAMD Password:
+      Default: ''
+      Description: RSPAMD Password
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: RSPAMD Password
+      Required: 'true'
+      Target: RSPAMD_PASSWORD
+      Type: Variable
+      value: ''
 DonateImg: ''
 FirstSeen: 1
 GitHub: https://github.com/malfurious/mailserver

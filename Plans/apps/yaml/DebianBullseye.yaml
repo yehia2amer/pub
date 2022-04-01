@@ -3,132 +3,137 @@ CategoryList:
 - Productivity
 - Tools-System
 Config:
-- '@attributes':
-    Default: ''
-    Description: All things that are saved in the container should be in the this
-      or a subdirectory in of this folder, all files that are store outside this folder
-      are not persistant and will be wiped if there is an update of the container
-      or you change something in the template.
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Home Directory
-    Required: 'true'
-    Target: /debian
-    Type: Path
-  value: /mnt/cache/appdata/debian-bullseye/
-- '@attributes':
-    Default: ''
-    Description: noVNC Port
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: TCP - VNC Port
-    Required: 'false'
-    Target: '8080'
-    Type: Port
-  value: '8080'
-- '@attributes':
-    Default: ''
-    Description: Enter the preferred resolution width
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Custom Resolution Width
-    Required: 'true'
-    Target: CUSTOM_RES_W
-    Type: Variable
-  value: '1800'
-- '@attributes':
-    Default: ''
-    Description: Enter the preferred resolution height
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Custom Resolution Height
-    Required: 'true'
-    Target: CUSTOM_RES_H
-    Type: Variable
-  value: '1000'
-- '@attributes':
-    Default: ''
-    Description: Please choose a strong password for your root account!
-    Display: always
-    Mask: 'true'
-    Mode: ''
-    Name: Root Password
-    Required: 'true'
-    Target: ROOT_PWD
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: DATA_PERM'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: DATA_PERM
-    Required: 'true'
-    Target: DATA_PERM
-    Type: Variable
-  value: '770'
-- '@attributes':
-    Default: ''
-    Description: 'Enter your prefered locales, you can find a full list of supported
-      languages in: ''/usr/share/i18n/SUPPORTED'' (eg: ''en_US.UTF-8 UTF8'' or ''de_DE.UTF-8
-      UTF-8'',...)'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Locales
-    Required: 'true'
-    Target: USER_LOCALES
-    Type: Variable
-  value: en_US.UTF-8 UTF-8
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: DEV'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: DEV_LOG_OUTPUT
-    Required: 'false'
-    Target: DEV
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: UID'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: UID
-    Required: 'true'
-    Target: UID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: GID'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: GID
-    Required: 'true'
-    Target: GID
-    Type: Variable
-  value: '100'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: UMASK'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: UMASK
-    Required: 'true'
-    Target: UMASK
-    Type: Variable
-  value: '0000'
+  Device: {}
+  Label: {}
+  Path:
+    Home Directory:
+      Default: ''
+      Description: All things that are saved in the container should be in the this
+        or a subdirectory in of this folder, all files that are store outside this
+        folder are not persistant and will be wiped if there is an update of the container
+        or you change something in the template.
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Home Directory
+      Required: 'true'
+      Target: /debian
+      Type: Path
+      value: /mnt/cache/appdata/debian-bullseye/
+  Port:
+    TCP - VNC Port:
+      Default: ''
+      Description: noVNC Port
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: TCP - VNC Port
+      Required: 'false'
+      Target: '8080'
+      Type: Port
+      value: '8080'
+  Variable:
+    Custom Resolution Height:
+      Default: ''
+      Description: Enter the preferred resolution height
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Custom Resolution Height
+      Required: 'true'
+      Target: CUSTOM_RES_H
+      Type: Variable
+      value: '1000'
+    Custom Resolution Width:
+      Default: ''
+      Description: Enter the preferred resolution width
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Custom Resolution Width
+      Required: 'true'
+      Target: CUSTOM_RES_W
+      Type: Variable
+      value: '1800'
+    DATA_PERM:
+      Default: ''
+      Description: 'Container Variable: DATA_PERM'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: DATA_PERM
+      Required: 'true'
+      Target: DATA_PERM
+      Type: Variable
+      value: '770'
+    DEV_LOG_OUTPUT:
+      Default: ''
+      Description: 'Container Variable: DEV'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: DEV_LOG_OUTPUT
+      Required: 'false'
+      Target: DEV
+      Type: Variable
+      value: ''
+    GID:
+      Default: ''
+      Description: 'Container Variable: GID'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: GID
+      Required: 'true'
+      Target: GID
+      Type: Variable
+      value: '100'
+    Locales:
+      Default: ''
+      Description: 'Enter your prefered locales, you can find a full list of supported
+        languages in: ''/usr/share/i18n/SUPPORTED'' (eg: ''en_US.UTF-8 UTF8'' or ''de_DE.UTF-8
+        UTF-8'',...)'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Locales
+      Required: 'true'
+      Target: USER_LOCALES
+      Type: Variable
+      value: en_US.UTF-8 UTF-8
+    Root Password:
+      Default: ''
+      Description: Please choose a strong password for your root account!
+      Display: always
+      Mask: 'true'
+      Mode: ''
+      Name: Root Password
+      Required: 'true'
+      Target: ROOT_PWD
+      Type: Variable
+      value: ''
+    UID:
+      Default: ''
+      Description: 'Container Variable: UID'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: UID
+      Required: 'true'
+      Target: UID
+      Type: Variable
+      value: '99'
+    UMASK:
+      Default: ''
+      Description: 'Container Variable: UMASK'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: UMASK
+      Required: 'true'
+      Target: UMASK
+      Type: Variable
+      value: '0000'
 DonateLink: https://www.paypal.me/chips777
 DonateText: 'If you like my work please '
 ExtraParams: --restart=unless-stopped --shm-size=2G

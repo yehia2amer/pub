@@ -2,95 +2,100 @@ CategoryList:
 - Downloaders
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: '8080'
-    Description: The port for the web UI
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI port
-    Required: 'true'
-    Target: '80'
-    Type: Port
-  value: '8080'
-- '@attributes':
-    Default: ''
-    Description: You can mount the /nzb volume and let Spotweb save nzb's to that
-      directory
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Automated NZB's
-    Required: 'false'
-    Target: /nzb
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: mysql
-    Description: 'Container Variable: DB_HOST'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DB_HOST
-    Required: 'true'
-    Target: DB_HOST
-    Type: Variable
-  value: mysql
-- '@attributes':
-    Default: '3306'
-    Description: 'Container Variable: DB_PORT'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DB_PORT
-    Required: 'true'
-    Target: DB_PORT
-    Type: Variable
-  value: '3306'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: DB_NAME'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DB_NAME
-    Required: 'true'
-    Target: DB_NAME
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: DB_USER'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DB_USER
-    Required: 'true'
-    Target: DB_USER
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: DB_PASS'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DB_PASS
-    Required: 'true'
-    Target: DB_PASS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: pdo_mysql
-    Description: 'Container Variable: DB_ENGINE'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DB_ENGINE
-    Required: 'true'
-    Target: DB_ENGINE
-    Type: Variable
-  value: pdo_mysql
+  Device: {}
+  Label: {}
+  Path:
+    Automated NZB's:
+      Default: ''
+      Description: You can mount the /nzb volume and let Spotweb save nzb's to that
+        directory
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Automated NZB's
+      Required: 'false'
+      Target: /nzb
+      Type: Path
+      value: ''
+  Port:
+    WebUI port:
+      Default: '8080'
+      Description: The port for the web UI
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI port
+      Required: 'true'
+      Target: '80'
+      Type: Port
+      value: '8080'
+  Variable:
+    DB_ENGINE:
+      Default: pdo_mysql
+      Description: 'Container Variable: DB_ENGINE'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DB_ENGINE
+      Required: 'true'
+      Target: DB_ENGINE
+      Type: Variable
+      value: pdo_mysql
+    DB_HOST:
+      Default: mysql
+      Description: 'Container Variable: DB_HOST'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DB_HOST
+      Required: 'true'
+      Target: DB_HOST
+      Type: Variable
+      value: mysql
+    DB_NAME:
+      Default: ''
+      Description: 'Container Variable: DB_NAME'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DB_NAME
+      Required: 'true'
+      Target: DB_NAME
+      Type: Variable
+      value: ''
+    DB_PASS:
+      Default: ''
+      Description: 'Container Variable: DB_PASS'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DB_PASS
+      Required: 'true'
+      Target: DB_PASS
+      Type: Variable
+      value: ''
+    DB_PORT:
+      Default: '3306'
+      Description: 'Container Variable: DB_PORT'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DB_PORT
+      Required: 'true'
+      Target: DB_PORT
+      Type: Variable
+      value: '3306'
+    DB_USER:
+      Default: ''
+      Description: 'Container Variable: DB_USER'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DB_USER
+      Required: 'true'
+      Target: DB_USER
+      Type: Variable
+      value: ''
 FirstSeen: 1637751825
 Icon: https://raw.githubusercontent.com/L4stIdi0t/Unraid-template/master/Spotweb/spotweb-logo.png
 LastUpdate: 1646815620

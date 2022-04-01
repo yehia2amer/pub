@@ -1,103 +1,108 @@
 ChangeLogPresent: true
 Config:
-- '@attributes':
-    Default: '3000'
-    Description: Rom/artwork management interface, used to generate/manage config
-      files and download artwork
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'true'
-    Target: '3000'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: '80'
-    Description: Emulation frontend containing static web files used to browse and
-      launch games
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: 'Port: 80'
-    Required: 'true'
-    Target: '80'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: '4001'
-    Description: IPFS peering port, if you want to participate in the P2P network
-      to distribute frontend artwork please forward this to the Internet
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: 'Port: 4001'
-    Required: 'false'
-    Target: '4001'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Path to store user profiles
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: Appdata
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Path to store roms/artwork
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: 'Path: /data'
-    Required: 'true'
-    Target: /data
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: /
-    Description: Specify a subfolder for reverse proxies IE '/FOLDER/'
-    Display: always
-    Mask: 'false'
-    Name: SUBFOLDER
-    Required: 'false'
-    Target: SUBFOLDER
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '99'
-    Description: 'Container Variable: PUID'
-    Display: advanced
-    Mask: 'false'
-    Name: PUID
-    Required: 'true'
-    Target: PUID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '100'
-    Description: 'Container Variable: PGID'
-    Display: advanced
-    Mask: 'false'
-    Name: PGID
-    Required: 'true'
-    Target: PGID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '022'
-    Description: 'Container Variable: UMASK'
-    Display: advanced
-    Mask: 'false'
-    Name: UMASK
-    Required: 'false'
-    Target: UMASK
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Appdata:
+      Default: ''
+      Description: Path to store user profiles
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: Appdata
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: ''
+    'Path: /data':
+      Default: ''
+      Description: Path to store roms/artwork
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: 'Path: /data'
+      Required: 'true'
+      Target: /data
+      Type: Path
+      value: ''
+  Port:
+    'Port: 4001':
+      Default: '4001'
+      Description: IPFS peering port, if you want to participate in the P2P network
+        to distribute frontend artwork please forward this to the Internet
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: 'Port: 4001'
+      Required: 'false'
+      Target: '4001'
+      Type: Port
+      value: ''
+    'Port: 80':
+      Default: '80'
+      Description: Emulation frontend containing static web files used to browse and
+        launch games
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: 'Port: 80'
+      Required: 'true'
+      Target: '80'
+      Type: Port
+      value: ''
+    WebUI:
+      Default: '3000'
+      Description: Rom/artwork management interface, used to generate/manage config
+        files and download artwork
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'true'
+      Target: '3000'
+      Type: Port
+      value: ''
+  Variable:
+    PGID:
+      Default: '100'
+      Description: 'Container Variable: PGID'
+      Display: advanced
+      Mask: 'false'
+      Name: PGID
+      Required: 'true'
+      Target: PGID
+      Type: Variable
+      value: ''
+    PUID:
+      Default: '99'
+      Description: 'Container Variable: PUID'
+      Display: advanced
+      Mask: 'false'
+      Name: PUID
+      Required: 'true'
+      Target: PUID
+      Type: Variable
+      value: ''
+    SUBFOLDER:
+      Default: /
+      Description: Specify a subfolder for reverse proxies IE '/FOLDER/'
+      Display: always
+      Mask: 'false'
+      Name: SUBFOLDER
+      Required: 'false'
+      Target: SUBFOLDER
+      Type: Variable
+      value: ''
+    UMASK:
+      Default: '022'
+      Description: 'Container Variable: UMASK'
+      Display: advanced
+      Mask: 'false'
+      Name: UMASK
+      Required: 'false'
+      Target: UMASK
+      Type: Variable
+      value: ''
 DonateImg: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/donate.png
 DonateLink: https://www.linuxserver.io/donate
 DonateText: Donations

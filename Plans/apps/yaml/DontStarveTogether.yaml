@@ -1,154 +1,159 @@
 CategoryList:
 - GameServers
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /serverdata/steamcmd'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: SteamCMD
-    Required: 'true'
-    Target: /serverdata/steamcmd
-    Type: Path
-  value: /mnt/user/appdata/steamcmd
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /serverdata/serverfiles'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: ServerFiles
-    Required: 'true'
-    Target: /serverdata/serverfiles
-    Type: Path
-  value: /mnt/cache/appdata/dontstarve/serverfiles
-- '@attributes':
-    Default: ''
-    Description: "The GAME_ID that the container download at startup.\r\n(https://developer.valvesoftware.com/wiki/Dedicated_Servers_List)"
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: GAME_ID
-    Required: 'true'
-    Target: GAME_ID
-    Type: Variable
-  value: '343050'
-- '@attributes':
-    Default: ''
-    Description: 'Your Steam username goes here if you want to install a game that
-      needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
-      Steam Guard).'
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: Steam-Username
-    Required: 'false'
-    Target: USERNAME
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Set the Variable to 'true' if you want to validate the installation
-      otherwise leave it blank.
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: Validate Installation
-    Required: 'false'
-    Target: VALIDATE
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Your Steam password goes here if you want to install a game that
-      needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
-      Steam Guard).'
-    Display: always-hide
-    Mask: 'true'
-    Mode: ''
-    Name: Steam-Password
-    Required: 'false'
-    Target: PASSWRD
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Put your created 'cluster_token.txt' in the 'Cluster_1' subfolder.
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Token
-    Required: 'true'
-    Target: /serverdata/.klei/DoNotStarveTogether
-    Type: Path
-  value: /mnt/cache/appdata/dontstarve/token
-- '@attributes':
-    Default: ''
-    Description: Delete 'true' if you don't want Caves on your Server.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Caves
-    Required: 'false'
-    Target: CAVES
-    Type: Variable
-  value: 'true'
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 10890'
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: UDP1 - Game
-    Required: 'true'
-    Target: '10890'
-    Type: Port
-  value: '10890'
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 27016'
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: UDP2 - Master Server
-    Required: 'true'
-    Target: '27016'
-    Type: Port
-  value: '27016'
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 8766'
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: UDP3 - Authentication
-    Required: 'true'
-    Target: '8766'
-    Type: Port
-  value: '8766'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: UID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: UID
-    Required: 'true'
-    Target: UID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: GID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: GID
-    Required: 'true'
-    Target: GID
-    Type: Variable
-  value: '100'
+  Device: {}
+  Label: {}
+  Path:
+    ServerFiles:
+      Default: ''
+      Description: 'Container Path: /serverdata/serverfiles'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: ServerFiles
+      Required: 'true'
+      Target: /serverdata/serverfiles
+      Type: Path
+      value: /mnt/cache/appdata/dontstarve/serverfiles
+    SteamCMD:
+      Default: ''
+      Description: 'Container Path: /serverdata/steamcmd'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: SteamCMD
+      Required: 'true'
+      Target: /serverdata/steamcmd
+      Type: Path
+      value: /mnt/user/appdata/steamcmd
+    Token:
+      Default: ''
+      Description: Put your created 'cluster_token.txt' in the 'Cluster_1' subfolder.
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Token
+      Required: 'true'
+      Target: /serverdata/.klei/DoNotStarveTogether
+      Type: Path
+      value: /mnt/cache/appdata/dontstarve/token
+  Port:
+    UDP1 - Game:
+      Default: ''
+      Description: 'Container Port: 10890'
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: UDP1 - Game
+      Required: 'true'
+      Target: '10890'
+      Type: Port
+      value: '10890'
+    UDP2 - Master Server:
+      Default: ''
+      Description: 'Container Port: 27016'
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: UDP2 - Master Server
+      Required: 'true'
+      Target: '27016'
+      Type: Port
+      value: '27016'
+    UDP3 - Authentication:
+      Default: ''
+      Description: 'Container Port: 8766'
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: UDP3 - Authentication
+      Required: 'true'
+      Target: '8766'
+      Type: Port
+      value: '8766'
+  Variable:
+    Caves:
+      Default: ''
+      Description: Delete 'true' if you don't want Caves on your Server.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Caves
+      Required: 'false'
+      Target: CAVES
+      Type: Variable
+      value: 'true'
+    GAME_ID:
+      Default: ''
+      Description: "The GAME_ID that the container download at startup.\r\n(https://developer.valvesoftware.com/wiki/Dedicated_Servers_List)"
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: GAME_ID
+      Required: 'true'
+      Target: GAME_ID
+      Type: Variable
+      value: '343050'
+    GID:
+      Default: ''
+      Description: 'Container Variable: GID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: GID
+      Required: 'true'
+      Target: GID
+      Type: Variable
+      value: '100'
+    Steam-Password:
+      Default: ''
+      Description: 'Your Steam password goes here if you want to install a game that
+        needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
+        Steam Guard).'
+      Display: always-hide
+      Mask: 'true'
+      Mode: ''
+      Name: Steam-Password
+      Required: 'false'
+      Target: PASSWRD
+      Type: Variable
+      value: ''
+    Steam-Username:
+      Default: ''
+      Description: 'Your Steam username goes here if you want to install a game that
+        needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
+        Steam Guard).'
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: Steam-Username
+      Required: 'false'
+      Target: USERNAME
+      Type: Variable
+      value: ''
+    UID:
+      Default: ''
+      Description: 'Container Variable: UID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: UID
+      Required: 'true'
+      Target: UID
+      Type: Variable
+      value: '99'
+    Validate Installation:
+      Default: ''
+      Description: Set the Variable to 'true' if you want to validate the installation
+        otherwise leave it blank.
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: Validate Installation
+      Required: 'false'
+      Target: VALIDATE
+      Type: Variable
+      value: ''
 DonateImg: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/donate.png
 DonateLink: https://www.paypal.me/chips777
 DonateText: 'If you like my work please '

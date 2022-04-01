@@ -2,94 +2,99 @@ CategoryList:
 - Security
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: '8080'
-    Description: Port
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Port
-    Required: 'true'
-    Target: '8080'
-    Type: Port
-  value: '8080'
-- '@attributes':
-    Default: admin
-    Description: Keycloak Admin User
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Keycloak Admin User
-    Required: 'true'
-    Target: KEYCLOAK_ADMIN_USER
-    Type: Variable
-  value: admin
-- '@attributes':
-    Default: password
-    Description: Keycloak Admin Password
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Keycloak Admin Password
-    Required: 'true'
-    Target: KEYCLOAK_ADMIN_PASSWORD
-    Type: Variable
-  value: password
-- '@attributes':
-    Default: 192.168.0.100
-    Description: Postgres Database Hostname or IP
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Postgres Database Hostname or IP
-    Required: 'true'
-    Target: KEYCLOAK_DATABASE_HOST
-    Type: Variable
-  value: 192.168.1.100
-- '@attributes':
-    Default: '5432'
-    Description: Postgres Database Port
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Postgres Database Port
-    Required: 'true'
-    Target: KEYCLOAK_DATABASE_PORT
-    Type: Variable
-  value: '5432'
-- '@attributes':
-    Default: keyclock
-    Description: Postgres Database User
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Postgres Database User
-    Required: 'true'
-    Target: KEYCLOAK_DATABASE_USER
-    Type: Variable
-  value: keyclock
-- '@attributes':
-    Default: password
-    Description: Postgres Database Password
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Postgres Database Password
-    Required: 'true'
-    Target: KEYCLOAK_DATABASE_PASSWORD
-    Type: Variable
-  value: password
-- '@attributes':
-    Default: keyclock
-    Description: Postgres Database Name
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Postgres Database Name
-    Required: 'true'
-    Target: KEYCLOAK_DATABASE_NAME
-    Type: Variable
-  value: keyclock
+  Device: {}
+  Label: {}
+  Path: {}
+  Port:
+    Port:
+      Default: '8080'
+      Description: Port
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Port
+      Required: 'true'
+      Target: '8080'
+      Type: Port
+      value: '8080'
+  Variable:
+    Keycloak Admin Password:
+      Default: password
+      Description: Keycloak Admin Password
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Keycloak Admin Password
+      Required: 'true'
+      Target: KEYCLOAK_ADMIN_PASSWORD
+      Type: Variable
+      value: password
+    Keycloak Admin User:
+      Default: admin
+      Description: Keycloak Admin User
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Keycloak Admin User
+      Required: 'true'
+      Target: KEYCLOAK_ADMIN_USER
+      Type: Variable
+      value: admin
+    Postgres Database Hostname or IP:
+      Default: 192.168.0.100
+      Description: Postgres Database Hostname or IP
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Postgres Database Hostname or IP
+      Required: 'true'
+      Target: KEYCLOAK_DATABASE_HOST
+      Type: Variable
+      value: 192.168.1.100
+    Postgres Database Name:
+      Default: keyclock
+      Description: Postgres Database Name
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Postgres Database Name
+      Required: 'true'
+      Target: KEYCLOAK_DATABASE_NAME
+      Type: Variable
+      value: keyclock
+    Postgres Database Password:
+      Default: password
+      Description: Postgres Database Password
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Postgres Database Password
+      Required: 'true'
+      Target: KEYCLOAK_DATABASE_PASSWORD
+      Type: Variable
+      value: password
+    Postgres Database Port:
+      Default: '5432'
+      Description: Postgres Database Port
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Postgres Database Port
+      Required: 'true'
+      Target: KEYCLOAK_DATABASE_PORT
+      Type: Variable
+      value: '5432'
+    Postgres Database User:
+      Default: keyclock
+      Description: Postgres Database User
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Postgres Database User
+      Required: 'true'
+      Target: KEYCLOAK_DATABASE_USER
+      Type: Variable
+      value: keyclock
 FirstSeen: 1625169800
 Icon: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/keycloak.png
 LastUpdate: 1648498903

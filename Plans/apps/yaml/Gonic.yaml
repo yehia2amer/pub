@@ -4,62 +4,67 @@ CategoryList:
 - MediaApp-Music
 - MediaServer-Music
 Config:
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'false'
-    Target: '80'
-    Type: Port
-  value: '8059'
-- '@attributes':
-    Default: ''
-    Description: This is the location of the internal data from Gonic.
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Storage (data)
-    Required: 'false'
-    Target: /data
-    Type: Path
-  value: /mnt/user/appdata/gonic/data
-- '@attributes':
-    Default: ''
-    Description: 'This the location the temporal files, like: transcodes, covers,
-      etc.'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Storage (cache)
-    Required: 'false'
-    Target: /cache
-    Type: Path
-  value: /mnt/user/appdata/gonic/cache
-- '@attributes':
-    Default: ''
-    Description: This is your media library for your music.
-    Display: always
-    Mask: 'false'
-    Mode: ro
-    Name: Storage (music)
-    Required: 'true'
-    Target: /music
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: This is your media library for your podcasts.
-    Display: always
-    Mask: 'false'
-    Mode: ro
-    Name: Storage (podcasts)
-    Required: 'true'
-    Target: /podcasts
-    Type: Path
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Storage (cache):
+      Default: ''
+      Description: 'This the location the temporal files, like: transcodes, covers,
+        etc.'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Storage (cache)
+      Required: 'false'
+      Target: /cache
+      Type: Path
+      value: /mnt/user/appdata/gonic/cache
+    Storage (data):
+      Default: ''
+      Description: This is the location of the internal data from Gonic.
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Storage (data)
+      Required: 'false'
+      Target: /data
+      Type: Path
+      value: /mnt/user/appdata/gonic/data
+    Storage (music):
+      Default: ''
+      Description: This is your media library for your music.
+      Display: always
+      Mask: 'false'
+      Mode: ro
+      Name: Storage (music)
+      Required: 'true'
+      Target: /music
+      Type: Path
+      value: ''
+    Storage (podcasts):
+      Default: ''
+      Description: This is your media library for your podcasts.
+      Display: always
+      Mask: 'false'
+      Mode: ro
+      Name: Storage (podcasts)
+      Required: 'true'
+      Target: /podcasts
+      Type: Path
+      value: ''
+  Port:
+    WebUI:
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'false'
+      Target: '80'
+      Type: Port
+      value: '8059'
+  Variable: {}
 FirstSeen: 1644426209
 Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/gonic.png
 LastUpdate: 1646958041

@@ -2,193 +2,198 @@ CategoryList:
 - Network
 - Network-Web
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 80'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Host Port 1
-    Required: 'false'
-    Target: '80'
-    Type: Port
-  value: '1154'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: ROUNDCUBEMAIL_DB_TYPE'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: ROUNDCUBEMAIL_DB_TYPE
-    Required: 'false'
-    Target: ROUNDCUBEMAIL_DB_TYPE
-    Type: Variable
-  value: mysql
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: ROUNDCUBEMAIL_DB_HOST'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: ROUNDCUBEMAIL_DB_HOST
-    Required: 'false'
-    Target: ROUNDCUBEMAIL_DB_HOST
-    Type: Variable
-  value: 192.168.1.1
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: ROUNDCUBEMAIL_DB_PORT'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: ROUNDCUBEMAIL_DB_PORT
-    Required: 'false'
-    Target: ROUNDCUBEMAIL_DB_PORT
-    Type: Variable
-  value: '3306'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: ROUNDCUBEMAIL_DB_USER'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: ROUNDCUBEMAIL_DB_USER
-    Required: 'false'
-    Target: ROUNDCUBEMAIL_DB_USER
-    Type: Variable
-  value: rc_user
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: ROUNDCUBEMAIL_DB_PASSWORD'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: ROUNDCUBEMAIL_DB_PASSWORD
-    Required: 'false'
-    Target: ROUNDCUBEMAIL_DB_PASSWORD
-    Type: Variable
-  value: rc_password
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: ROUNDCUBEMAIL_DB_NAME'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: ROUNDCUBEMAIL_DB_NAME
-    Required: 'false'
-    Target: ROUNDCUBEMAIL_DB_NAME
-    Type: Variable
-  value: rc_db
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: ROUNDCUBEMAIL_DEFAULT_HOST'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: ROUNDCUBEMAIL_DEFAULT_HOST
-    Required: 'false'
-    Target: ROUNDCUBEMAIL_DEFAULT_HOST
-    Type: Variable
-  value: tls://imap.mailserver.com
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: ROUNDCUBEMAIL_DEFAULT_PORT'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: ROUNDCUBEMAIL_DEFAULT_PORT
-    Required: 'false'
-    Target: ROUNDCUBEMAIL_DEFAULT_PORT
-    Type: Variable
-  value: '143'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: ROUNDCUBEMAIL_SMTP_SERVER'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: ROUNDCUBEMAIL_SMTP_SERVER
-    Required: 'false'
-    Target: ROUNDCUBEMAIL_SMTP_SERVER
-    Type: Variable
-  value: tls://smtp.mailserver.com
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: ROUNDCUBEMAIL_SMTP_PORT'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: ROUNDCUBEMAIL_SMTP_PORT
-    Required: 'false'
-    Target: ROUNDCUBEMAIL_SMTP_PORT
-    Type: Variable
-  value: '587'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: ROUNDCUBEMAIL_PLUGINS'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: ROUNDCUBEMAIL_PLUGINS
-    Required: 'false'
-    Target: ROUNDCUBEMAIL_PLUGINS
-    Type: Variable
-  value: archive,zipdownload
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: ROUNDCUBEMAIL_SKIN'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: ROUNDCUBEMAIL_SKIN
-    Required: 'false'
-    Target: ROUNDCUBEMAIL_SKIN
-    Type: Variable
-  value: elastic
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /tmp/roundcube-temp'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: roundcube-temp location
-    Required: 'false'
-    Target: /tmp/roundcube-temp
-    Type: Path
-  value: /mnt/user/appdata/roundcube/roundcube-temp
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /var/www/html'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: html location
-    Required: 'false'
-    Target: /var/www/html
-    Type: Path
-  value: /mnt/user/appdata/roundcube/html
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /var/roundcube/db'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: db location
-    Required: 'false'
-    Target: /var/roundcube/db
-    Type: Path
-  value: /mnt/user/appdata/roundcube/db
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /var/roundcube/config'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: config location
-    Required: 'false'
-    Target: /var/roundcube/config
-    Type: Path
-  value: /mnt/user/appdata/roundcube/config
+  Device: {}
+  Label: {}
+  Path:
+    config location:
+      Default: ''
+      Description: 'Container Path: /var/roundcube/config'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: config location
+      Required: 'false'
+      Target: /var/roundcube/config
+      Type: Path
+      value: /mnt/user/appdata/roundcube/config
+    db location:
+      Default: ''
+      Description: 'Container Path: /var/roundcube/db'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: db location
+      Required: 'false'
+      Target: /var/roundcube/db
+      Type: Path
+      value: /mnt/user/appdata/roundcube/db
+    html location:
+      Default: ''
+      Description: 'Container Path: /var/www/html'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: html location
+      Required: 'false'
+      Target: /var/www/html
+      Type: Path
+      value: /mnt/user/appdata/roundcube/html
+    roundcube-temp location:
+      Default: ''
+      Description: 'Container Path: /tmp/roundcube-temp'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: roundcube-temp location
+      Required: 'false'
+      Target: /tmp/roundcube-temp
+      Type: Path
+      value: /mnt/user/appdata/roundcube/roundcube-temp
+  Port:
+    Host Port 1:
+      Default: ''
+      Description: 'Container Port: 80'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Host Port 1
+      Required: 'false'
+      Target: '80'
+      Type: Port
+      value: '1154'
+  Variable:
+    ROUNDCUBEMAIL_DB_HOST:
+      Default: ''
+      Description: 'Container Variable: ROUNDCUBEMAIL_DB_HOST'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: ROUNDCUBEMAIL_DB_HOST
+      Required: 'false'
+      Target: ROUNDCUBEMAIL_DB_HOST
+      Type: Variable
+      value: 192.168.1.1
+    ROUNDCUBEMAIL_DB_NAME:
+      Default: ''
+      Description: 'Container Variable: ROUNDCUBEMAIL_DB_NAME'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: ROUNDCUBEMAIL_DB_NAME
+      Required: 'false'
+      Target: ROUNDCUBEMAIL_DB_NAME
+      Type: Variable
+      value: rc_db
+    ROUNDCUBEMAIL_DB_PASSWORD:
+      Default: ''
+      Description: 'Container Variable: ROUNDCUBEMAIL_DB_PASSWORD'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: ROUNDCUBEMAIL_DB_PASSWORD
+      Required: 'false'
+      Target: ROUNDCUBEMAIL_DB_PASSWORD
+      Type: Variable
+      value: rc_password
+    ROUNDCUBEMAIL_DB_PORT:
+      Default: ''
+      Description: 'Container Variable: ROUNDCUBEMAIL_DB_PORT'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: ROUNDCUBEMAIL_DB_PORT
+      Required: 'false'
+      Target: ROUNDCUBEMAIL_DB_PORT
+      Type: Variable
+      value: '3306'
+    ROUNDCUBEMAIL_DB_TYPE:
+      Default: ''
+      Description: 'Container Variable: ROUNDCUBEMAIL_DB_TYPE'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: ROUNDCUBEMAIL_DB_TYPE
+      Required: 'false'
+      Target: ROUNDCUBEMAIL_DB_TYPE
+      Type: Variable
+      value: mysql
+    ROUNDCUBEMAIL_DB_USER:
+      Default: ''
+      Description: 'Container Variable: ROUNDCUBEMAIL_DB_USER'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: ROUNDCUBEMAIL_DB_USER
+      Required: 'false'
+      Target: ROUNDCUBEMAIL_DB_USER
+      Type: Variable
+      value: rc_user
+    ROUNDCUBEMAIL_DEFAULT_HOST:
+      Default: ''
+      Description: 'Container Variable: ROUNDCUBEMAIL_DEFAULT_HOST'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: ROUNDCUBEMAIL_DEFAULT_HOST
+      Required: 'false'
+      Target: ROUNDCUBEMAIL_DEFAULT_HOST
+      Type: Variable
+      value: tls://imap.mailserver.com
+    ROUNDCUBEMAIL_DEFAULT_PORT:
+      Default: ''
+      Description: 'Container Variable: ROUNDCUBEMAIL_DEFAULT_PORT'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: ROUNDCUBEMAIL_DEFAULT_PORT
+      Required: 'false'
+      Target: ROUNDCUBEMAIL_DEFAULT_PORT
+      Type: Variable
+      value: '143'
+    ROUNDCUBEMAIL_PLUGINS:
+      Default: ''
+      Description: 'Container Variable: ROUNDCUBEMAIL_PLUGINS'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: ROUNDCUBEMAIL_PLUGINS
+      Required: 'false'
+      Target: ROUNDCUBEMAIL_PLUGINS
+      Type: Variable
+      value: archive,zipdownload
+    ROUNDCUBEMAIL_SKIN:
+      Default: ''
+      Description: 'Container Variable: ROUNDCUBEMAIL_SKIN'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: ROUNDCUBEMAIL_SKIN
+      Required: 'false'
+      Target: ROUNDCUBEMAIL_SKIN
+      Type: Variable
+      value: elastic
+    ROUNDCUBEMAIL_SMTP_PORT:
+      Default: ''
+      Description: 'Container Variable: ROUNDCUBEMAIL_SMTP_PORT'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: ROUNDCUBEMAIL_SMTP_PORT
+      Required: 'false'
+      Target: ROUNDCUBEMAIL_SMTP_PORT
+      Type: Variable
+      value: '587'
+    ROUNDCUBEMAIL_SMTP_SERVER:
+      Default: ''
+      Description: 'Container Variable: ROUNDCUBEMAIL_SMTP_SERVER'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: ROUNDCUBEMAIL_SMTP_SERVER
+      Required: 'false'
+      Target: ROUNDCUBEMAIL_SMTP_SERVER
+      Type: Variable
+      value: tls://smtp.mailserver.com
 FirstSeen: 1610816844
 Icon: https://raw.githubusercontent.com/Muwahhidun/logo/main/roundcube.png
 LastUpdate: 1644184926

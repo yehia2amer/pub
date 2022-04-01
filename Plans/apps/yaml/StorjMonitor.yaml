@@ -4,120 +4,126 @@ CategoryList:
 - Other
 - Network-Other
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Enter location of your storj share folder on unRAID host. '
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Path of Storj share on array
-    Required: 'true'
-    Target: /storj
-    Type: Path
-  value: /mnt/user/storj
-- '@attributes':
-    Default: ''
-    Description: Value should be changed to your Wallet address you use for payout.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Wallet Address
-    Required: 'true'
-    Target: WALLET_ADDRESS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 100GB
-    Description: 'Example: 500GB, 1TB, 8TB, for each node you start. MAX SIZE=8TB
-      per node.'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: SHARE_SIZE
-    Required: 'true'
-    Target: SHARE_SIZE
-    Type: Variable
-  value: 100GB
-- '@attributes':
-    Default: 0.0.0.0
-    Description: 'Your DynamicDNS or external DNS address here. If you need a DDNS
-      service, a free one: is duckdns.org'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: RPCADDRESS
-    Required: 'false'
-    Target: RPCADDRESS
-    Type: Variable
-  value: 0.0.0.0
-- '@attributes':
-    Default: ''
-    Description: API-Key for Storjstat.com.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Storjstat.com API-Key
-    Required: 'false'
-    Target: STORJ_MONITOR_API_KEY
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '0'
-    Description: 'Storj daemon can run multiple farming nodes at once. The maximum
-      number of nodes per container is number of threads the CPU has. '
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Number of extra nodes
-    Required: 'false'
-    Target: NODE_COUNT
-    Type: Variable
-  value: '0'
-- '@attributes':
-    Default: Node_
-    Description: "For multiple nodes this builds your directory, example /storj/thisNameHere#/\r\
-      \n\r\n\r\n\r\n"
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Custom node-directory name
-    Required: 'false'
-    Target: NODE_DIR
-    Type: Variable
-  value: Node_
-- '@attributes':
-    Default: 'TRUE'
-    Description: TCP NAT tunnel on/off switch
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Tunneling Required
-    Required: 'false'
-    Target: TUNNELING_REQUIRED
-    Type: Variable
-  value: 'FALSE'
-- '@attributes':
-    Default: 'FALSE'
-    Description: "Delete Storj logs on/off switch.\r\nEnable == 'TRUE'"
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Delete log files
-    Required: 'false'
-    Target: DEL_LOGS
-    Type: Variable
-  value: 'FALSE'
-- '@attributes':
-    Default: '7'
-    Description: How many days worth of logs to keep. Deletes everything greater than.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Number of log files to keep (days)
-    Required: 'false'
-    Target: DEL_LOGS_DAYS
-    Type: Variable
-  value: '7'
+  Device: {}
+  Label: {}
+  Path:
+    Path of Storj share on array:
+      Default: ''
+      Description: 'Enter location of your storj share folder on unRAID host. '
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Path of Storj share on array
+      Required: 'true'
+      Target: /storj
+      Type: Path
+      value: /mnt/user/storj
+  Port: {}
+  Variable:
+    Custom node-directory name:
+      Default: Node_
+      Description: "For multiple nodes this builds your directory, example /storj/thisNameHere#/\r\
+        \n\r\n\r\n\r\n"
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Custom node-directory name
+      Required: 'false'
+      Target: NODE_DIR
+      Type: Variable
+      value: Node_
+    Delete log files:
+      Default: 'FALSE'
+      Description: "Delete Storj logs on/off switch.\r\nEnable == 'TRUE'"
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Delete log files
+      Required: 'false'
+      Target: DEL_LOGS
+      Type: Variable
+      value: 'FALSE'
+    Number of extra nodes:
+      Default: '0'
+      Description: 'Storj daemon can run multiple farming nodes at once. The maximum
+        number of nodes per container is number of threads the CPU has. '
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Number of extra nodes
+      Required: 'false'
+      Target: NODE_COUNT
+      Type: Variable
+      value: '0'
+    Number of log files to keep (days):
+      Default: '7'
+      Description: How many days worth of logs to keep. Deletes everything greater
+        than.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Number of log files to keep (days)
+      Required: 'false'
+      Target: DEL_LOGS_DAYS
+      Type: Variable
+      value: '7'
+    RPCADDRESS:
+      Default: 0.0.0.0
+      Description: 'Your DynamicDNS or external DNS address here. If you need a DDNS
+        service, a free one: is duckdns.org'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: RPCADDRESS
+      Required: 'false'
+      Target: RPCADDRESS
+      Type: Variable
+      value: 0.0.0.0
+    SHARE_SIZE:
+      Default: 100GB
+      Description: 'Example: 500GB, 1TB, 8TB, for each node you start. MAX SIZE=8TB
+        per node.'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: SHARE_SIZE
+      Required: 'true'
+      Target: SHARE_SIZE
+      Type: Variable
+      value: 100GB
+    Storjstat.com API-Key:
+      Default: ''
+      Description: API-Key for Storjstat.com.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Storjstat.com API-Key
+      Required: 'false'
+      Target: STORJ_MONITOR_API_KEY
+      Type: Variable
+      value: ''
+    Tunneling Required:
+      Default: 'TRUE'
+      Description: TCP NAT tunnel on/off switch
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Tunneling Required
+      Required: 'false'
+      Target: TUNNELING_REQUIRED
+      Type: Variable
+      value: 'FALSE'
+    Wallet Address:
+      Default: ''
+      Description: Value should be changed to your Wallet address you use for payout.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Wallet Address
+      Required: 'true'
+      Target: WALLET_ADDRESS
+      Type: Variable
+      value: ''
 DonateImg: ''
 DonateText: 'Etherium wallet address for the generous '
 FirstSeen: '1525159259'

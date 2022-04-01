@@ -1,149 +1,154 @@
 CategoryList:
 - HomeAutomation
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /opt/iobroker'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Data
-    Required: 'false'
-    Target: /opt/iobroker
-    Type: Path
-  value: /mnt/user/appdata/iobroker/data
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /opt/userscripts'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Scripts
-    Required: 'false'
-    Target: /opt/userscripts
-    Type: Path
-  value: /mnt/user/appdata/iobroker/scripts
-- '@attributes':
-    Default: ''
-    Description: 'Sets relevant permissions on mounted devices like '
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: USB Devices
-    Required: 'false'
-    Target: USBDEVICES
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 5683'
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: CoAP Port (Shelly)
-    Required: 'false'
-    Target: '5683'
-    Type: Port
-  value: '5683'
-- '@attributes':
-    Default: ''
-    Description: flot adapter
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: flot Port
-    Required: 'false'
-    Target: '8282'
-    Type: Port
-  value: '8282'
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 2001'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: HomeMatic Port
-    Required: 'false'
-    Target: '2001'
-    Type: Port
-  value: '2001'
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 1883'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: MQTT Port
-    Required: 'false'
-    Target: '1883'
-    Type: Port
-  value: '1883'
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 8883'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: MQTT SSL Port
-    Required: 'false'
-    Target: '8883'
-    Type: Port
-  value: '8883'
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 1880'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Node-RED Port
-    Required: 'false'
-    Target: '1880'
-    Type: Port
-  value: '1880'
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 8284'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Socket.IO Port
-    Required: 'false'
-    Target: '8284'
-    Type: Port
-  value: '8284'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: SETUID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: UID
-    Required: 'true'
-    Target: SETUID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: SETGID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: GID
-    Required: 'false'
-    Target: SETGID
-    Type: Variable
-  value: '100'
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 8081'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI Port
-    Required: 'false'
-    Target: '8081'
-    Type: Port
-  value: '8081'
+  Device: {}
+  Label: {}
+  Path:
+    Data:
+      Default: ''
+      Description: 'Container Path: /opt/iobroker'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Data
+      Required: 'false'
+      Target: /opt/iobroker
+      Type: Path
+      value: /mnt/user/appdata/iobroker/data
+    Scripts:
+      Default: ''
+      Description: 'Container Path: /opt/userscripts'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Scripts
+      Required: 'false'
+      Target: /opt/userscripts
+      Type: Path
+      value: /mnt/user/appdata/iobroker/scripts
+  Port:
+    CoAP Port (Shelly):
+      Default: ''
+      Description: 'Container Port: 5683'
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: CoAP Port (Shelly)
+      Required: 'false'
+      Target: '5683'
+      Type: Port
+      value: '5683'
+    HomeMatic Port:
+      Default: ''
+      Description: 'Container Port: 2001'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: HomeMatic Port
+      Required: 'false'
+      Target: '2001'
+      Type: Port
+      value: '2001'
+    MQTT Port:
+      Default: ''
+      Description: 'Container Port: 1883'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: MQTT Port
+      Required: 'false'
+      Target: '1883'
+      Type: Port
+      value: '1883'
+    MQTT SSL Port:
+      Default: ''
+      Description: 'Container Port: 8883'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: MQTT SSL Port
+      Required: 'false'
+      Target: '8883'
+      Type: Port
+      value: '8883'
+    Node-RED Port:
+      Default: ''
+      Description: 'Container Port: 1880'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Node-RED Port
+      Required: 'false'
+      Target: '1880'
+      Type: Port
+      value: '1880'
+    Socket.IO Port:
+      Default: ''
+      Description: 'Container Port: 8284'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Socket.IO Port
+      Required: 'false'
+      Target: '8284'
+      Type: Port
+      value: '8284'
+    WebUI Port:
+      Default: ''
+      Description: 'Container Port: 8081'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI Port
+      Required: 'false'
+      Target: '8081'
+      Type: Port
+      value: '8081'
+    flot Port:
+      Default: ''
+      Description: flot adapter
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: flot Port
+      Required: 'false'
+      Target: '8282'
+      Type: Port
+      value: '8282'
+  Variable:
+    GID:
+      Default: ''
+      Description: 'Container Variable: SETGID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: GID
+      Required: 'false'
+      Target: SETGID
+      Type: Variable
+      value: '100'
+    UID:
+      Default: ''
+      Description: 'Container Variable: SETUID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: UID
+      Required: 'true'
+      Target: SETUID
+      Type: Variable
+      value: '99'
+    USB Devices:
+      Default: ''
+      Description: 'Sets relevant permissions on mounted devices like '
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: USB Devices
+      Required: 'false'
+      Target: USBDEVICES
+      Type: Variable
+      value: ''
 DonateLink: http://paypal.me/marcgutt
 DonateText: 'If you like my work please '
 ExtraParams: '--no-healthcheck '

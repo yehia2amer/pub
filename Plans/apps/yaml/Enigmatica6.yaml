@@ -1,74 +1,79 @@
 CategoryList:
 - GameServers
 Config:
-- '@attributes':
-    Default: /mnt/user/appdata/enigmatica6/
-    Description: Path to store the installed server files.
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Installed Location
-    Required: 'true'
-    Target: /data
-    Type: Path
-  value: /mnt/user/appdata/enigmatica6/
-- '@attributes':
-    Default: 'false'
-    Description: By typing TRUE you are indicating your agreement to the EULA of Mojang.
-      Read it at https://account.mojang.com/documents/minecraft_eula before accepting
-      it.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: EULA
-    Required: 'true'
-    Target: EULA
-    Type: Variable
-  value: 'false'
-- '@attributes':
-    Default: 5G
-    Description: Maximum memory for the server. Must end in G for gigabytes.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: MAX_RAM
-    Required: 'true'
-    Target: MAX_RAM
-    Type: Variable
-  value: 5G
-- '@attributes':
-    Default: '25565'
-    Description: Port for the server. Ignored if using a dedicated IP for the container.
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Port
-    Required: 'true'
-    Target: '25565'
-    Type: Port
-  value: '25565'
-- '@attributes':
-    Default: ''
-    Description: Comma separated list of players to have op capability
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: OPS
-    Required: 'false'
-    Target: OPS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Custom Message of the Day
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: MOTD
-    Required: 'false'
-    Target: MOTD
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Installed Location:
+      Default: /mnt/user/appdata/enigmatica6/
+      Description: Path to store the installed server files.
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Installed Location
+      Required: 'true'
+      Target: /data
+      Type: Path
+      value: /mnt/user/appdata/enigmatica6/
+  Port:
+    Port:
+      Default: '25565'
+      Description: Port for the server. Ignored if using a dedicated IP for the container.
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Port
+      Required: 'true'
+      Target: '25565'
+      Type: Port
+      value: '25565'
+  Variable:
+    EULA:
+      Default: 'false'
+      Description: By typing TRUE you are indicating your agreement to the EULA of
+        Mojang. Read it at https://account.mojang.com/documents/minecraft_eula before
+        accepting it.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: EULA
+      Required: 'true'
+      Target: EULA
+      Type: Variable
+      value: 'false'
+    MAX_RAM:
+      Default: 5G
+      Description: Maximum memory for the server. Must end in G for gigabytes.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: MAX_RAM
+      Required: 'true'
+      Target: MAX_RAM
+      Type: Variable
+      value: 5G
+    MOTD:
+      Default: ''
+      Description: Custom Message of the Day
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: MOTD
+      Required: 'false'
+      Target: MOTD
+      Type: Variable
+      value: ''
+    OPS:
+      Default: ''
+      Description: Comma separated list of players to have op capability
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: OPS
+      Required: 'false'
+      Target: OPS
+      Type: Variable
+      value: ''
 FirstSeen: 1638500615
 Icon: https://raw.githubusercontent.com/Goobaroo/docker-enigmatica6/main/enigmatica6.png
 LastUpdate: 1643515916

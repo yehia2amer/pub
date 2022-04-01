@@ -3,39 +3,44 @@ CAComment: This template is set up to use a custom network. You may have to adju
 CategoryList:
 - HomeAutomation
 Config:
-- '@attributes':
-    Default: /etc/localtime
-    Description: 'Container Path: /etc/localtime'
-    Display: always
-    Mask: 'false'
-    Mode: ro
-    Name: Host Path 1
-    Required: 'true'
-    Target: /etc/localtime
-    Type: Path
-  value: /etc/localtime
-- '@attributes':
-    Default: /mnt/user/appdata/openhab/conf/
-    Description: 'Container Path: /openhab/conf'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Host Path 2
-    Required: 'true'
-    Target: /openhab/conf
-    Type: Path
-  value: /mnt/user/appdata/openhab2/conf/
-- '@attributes':
-    Default: /mnt/user/appdata/openhab/userdata/
-    Description: 'Container Path: /openhab/userdata'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Host Path 3
-    Required: 'true'
-    Target: /openhab/userdata
-    Type: Path
-  value: /mnt/user/appdata/openhab2/userdata/
+  Device: {}
+  Label: {}
+  Path:
+    Host Path 1:
+      Default: /etc/localtime
+      Description: 'Container Path: /etc/localtime'
+      Display: always
+      Mask: 'false'
+      Mode: ro
+      Name: Host Path 1
+      Required: 'true'
+      Target: /etc/localtime
+      Type: Path
+      value: /etc/localtime
+    Host Path 2:
+      Default: /mnt/user/appdata/openhab/conf/
+      Description: 'Container Path: /openhab/conf'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Host Path 2
+      Required: 'true'
+      Target: /openhab/conf
+      Type: Path
+      value: /mnt/user/appdata/openhab2/conf/
+    Host Path 3:
+      Default: /mnt/user/appdata/openhab/userdata/
+      Description: 'Container Path: /openhab/userdata'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Host Path 3
+      Required: 'true'
+      Target: /openhab/userdata
+      Type: Path
+      value: /mnt/user/appdata/openhab2/userdata/
+  Port: {}
+  Variable: {}
 DonateLink: https://www.buymeacoffee.com/maschhoff
 DonateText: Please buy me a Pizza
 ExtraParams: --tty --shm-size 2g

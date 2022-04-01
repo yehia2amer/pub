@@ -3,163 +3,168 @@ CategoryList:
 - Productivity
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: ''
-    Description: Data Path
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Data Path
-    Required: 'true'
-    Target: /anope
-    Type: Path
-  value: /mnt/cache/appdata/anope
-- '@attributes':
-    Default: ''
-    Description: Specify the full hostname from your IRCd (must be the same as configured
-      in your IRCd Server).
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Hostname from IRCd
-    Required: 'true'
-    Target: HOST
-    Type: Variable
-  value: irc.example.com
-- '@attributes':
-    Default: ''
-    Description: Specify the IP Address from your IRCd (if you run it on Unraid it
-      is usually the IP address of Unraid).
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: IP Address from IRCd
-    Required: 'true'
-    Target: IP_ADDR
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Use SSL to establish the connection (if your IRCd is on the same
-      network this is no problem since Anope talks internally to your IRCd - use this
-      carefully since you have to configure some extra settings in the services.conf
-      itself - valid options are: ''yes'' or ''no'').'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Use SSL
-    Required: 'true'
-    Target: SSL
-    Type: Variable
-  value: 'yes'
-- '@attributes':
-    Default: ''
-    Description: The Server port of your IRCd (usually 7000 is without SSL - this
-      is be no proble if you connect it to your internal network since it only talks
-      internally to your IRCd - if you want to enable SSL you have to configure some
-      extra settings in the services.conf itself).
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Server Port from IRCd
-    Required: 'true'
-    Target: PORT
-    Type: Variable
-  value: '7000'
-- '@attributes':
-    Default: ''
-    Description: This have to be the same as your IRCd Service Password (if you are
-      using InspIRCd click on 'Show more Settings').
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Service Password from IRCd
-    Required: 'true'
-    Target: PASSWORD
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Set your IRCd type (valid options are: bahamut, charybdis, hybrid,
-      inspircd12, inspircd20, inspircd3, ngircd, plexus, ratbox, unreal (for 3.2.x),
-      unreal4)'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: IRCd Type
-    Required: 'true'
-    Target: IRCD
-    Type: Variable
-  value: inspircd3
-- '@attributes':
-    Default: ''
-    Description: 'Specify the casemap of your IRCd (if you use InspIRCd the default
-      value is: ''rfc1459'' other clients often use for example ''ascii'')'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Casemap from IRCd
-    Required: 'true'
-    Target: CASEMAP
-    Type: Variable
-  value: rfc1459
-- '@attributes':
-    Default: ''
-    Description: Specify the hostname where Anope is available (this has to be something
-      different than your IRCd hostname, you don't have to make it reachable from
-      outside or create any port forwarding - leave this value as it is)
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Hostname from Anope
-    Required: 'true'
-    Target: LOCAL_HOSTNAME
-    Type: Variable
-  value: services
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: UMASK'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: UMASK
-    Required: 'true'
-    Target: UMASK
-    Type: Variable
-  value: '000'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: UID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: UID
-    Required: 'true'
-    Target: UID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: GID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: GID
-    Required: 'true'
-    Target: GID
-    Type: Variable
-  value: '100'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: DATA_PERM'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: DATA_PERM
-    Required: 'true'
-    Target: DATA_PERM
-    Type: Variable
-  value: '770'
+  Device: {}
+  Label: {}
+  Path:
+    Data Path:
+      Default: ''
+      Description: Data Path
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Data Path
+      Required: 'true'
+      Target: /anope
+      Type: Path
+      value: /mnt/cache/appdata/anope
+  Port: {}
+  Variable:
+    Casemap from IRCd:
+      Default: ''
+      Description: 'Specify the casemap of your IRCd (if you use InspIRCd the default
+        value is: ''rfc1459'' other clients often use for example ''ascii'')'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Casemap from IRCd
+      Required: 'true'
+      Target: CASEMAP
+      Type: Variable
+      value: rfc1459
+    DATA_PERM:
+      Default: ''
+      Description: 'Container Variable: DATA_PERM'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: DATA_PERM
+      Required: 'true'
+      Target: DATA_PERM
+      Type: Variable
+      value: '770'
+    GID:
+      Default: ''
+      Description: 'Container Variable: GID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: GID
+      Required: 'true'
+      Target: GID
+      Type: Variable
+      value: '100'
+    Hostname from Anope:
+      Default: ''
+      Description: Specify the hostname where Anope is available (this has to be something
+        different than your IRCd hostname, you don't have to make it reachable from
+        outside or create any port forwarding - leave this value as it is)
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Hostname from Anope
+      Required: 'true'
+      Target: LOCAL_HOSTNAME
+      Type: Variable
+      value: services
+    Hostname from IRCd:
+      Default: ''
+      Description: Specify the full hostname from your IRCd (must be the same as configured
+        in your IRCd Server).
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Hostname from IRCd
+      Required: 'true'
+      Target: HOST
+      Type: Variable
+      value: irc.example.com
+    IP Address from IRCd:
+      Default: ''
+      Description: Specify the IP Address from your IRCd (if you run it on Unraid
+        it is usually the IP address of Unraid).
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: IP Address from IRCd
+      Required: 'true'
+      Target: IP_ADDR
+      Type: Variable
+      value: ''
+    IRCd Type:
+      Default: ''
+      Description: 'Set your IRCd type (valid options are: bahamut, charybdis, hybrid,
+        inspircd12, inspircd20, inspircd3, ngircd, plexus, ratbox, unreal (for 3.2.x),
+        unreal4)'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: IRCd Type
+      Required: 'true'
+      Target: IRCD
+      Type: Variable
+      value: inspircd3
+    Server Port from IRCd:
+      Default: ''
+      Description: The Server port of your IRCd (usually 7000 is without SSL - this
+        is be no proble if you connect it to your internal network since it only talks
+        internally to your IRCd - if you want to enable SSL you have to configure
+        some extra settings in the services.conf itself).
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Server Port from IRCd
+      Required: 'true'
+      Target: PORT
+      Type: Variable
+      value: '7000'
+    Service Password from IRCd:
+      Default: ''
+      Description: This have to be the same as your IRCd Service Password (if you
+        are using InspIRCd click on 'Show more Settings').
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Service Password from IRCd
+      Required: 'true'
+      Target: PASSWORD
+      Type: Variable
+      value: ''
+    UID:
+      Default: ''
+      Description: 'Container Variable: UID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: UID
+      Required: 'true'
+      Target: UID
+      Type: Variable
+      value: '99'
+    UMASK:
+      Default: ''
+      Description: 'Container Variable: UMASK'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: UMASK
+      Required: 'true'
+      Target: UMASK
+      Type: Variable
+      value: '000'
+    Use SSL:
+      Default: ''
+      Description: 'Use SSL to establish the connection (if your IRCd is on the same
+        network this is no problem since Anope talks internally to your IRCd - use
+        this carefully since you have to configure some extra settings in the services.conf
+        itself - valid options are: ''yes'' or ''no'').'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Use SSL
+      Required: 'true'
+      Target: SSL
+      Type: Variable
+      value: 'yes'
 DonateLink: https://www.paypal.me/chips777
 DonateText: 'If you like my work please '
 ExtraParams: --restart=unless-stopped

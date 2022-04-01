@@ -3,66 +3,71 @@ CategoryList:
 - Other
 ChangeLogPresent: true
 Config:
-- '@attributes':
-    Default: '32500'
-    Description: The port for incoming webhooks from Plex, it must match the port
-      specified in the webhook url in your plex settings.
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Webhook Port
-    Required: 'true'
-    Target: '32500'
-    Type: Port
-  value: '32500'
-- '@attributes':
-    Default: ''
-    Description: The url pointing to your Plex server, you can obtain it from the
-      external url of one of your Plex server libraries.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Plex Server URL
-    Required: 'true'
-    Target: PLEX_SERVER_URL
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Some randomly generated token, you can put anything alphanumeric
-      in here.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Plex Webhook Token
-    Required: 'true'
-    Target: PLEX_WEBHOOK_TOKEN
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: The url of your Discord webhook, retrieve it from your server webhook
-      settings.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Discord Webhook URL
-    Required: 'true'
-    Target: DISCORD_WEBHOOK_URL
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: List of libraries that will be checked, if this is empty all libraries
-      will be checked.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Updated Libraries
-    Required: 'false'
-    Target: UPDATED_LIBRARIES
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path: {}
+  Port:
+    Webhook Port:
+      Default: '32500'
+      Description: The port for incoming webhooks from Plex, it must match the port
+        specified in the webhook url in your plex settings.
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Webhook Port
+      Required: 'true'
+      Target: '32500'
+      Type: Port
+      value: '32500'
+  Variable:
+    Discord Webhook URL:
+      Default: ''
+      Description: The url of your Discord webhook, retrieve it from your server webhook
+        settings.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Discord Webhook URL
+      Required: 'true'
+      Target: DISCORD_WEBHOOK_URL
+      Type: Variable
+      value: ''
+    Plex Server URL:
+      Default: ''
+      Description: The url pointing to your Plex server, you can obtain it from the
+        external url of one of your Plex server libraries.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Plex Server URL
+      Required: 'true'
+      Target: PLEX_SERVER_URL
+      Type: Variable
+      value: ''
+    Plex Webhook Token:
+      Default: ''
+      Description: Some randomly generated token, you can put anything alphanumeric
+        in here.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Plex Webhook Token
+      Required: 'true'
+      Target: PLEX_WEBHOOK_TOKEN
+      Type: Variable
+      value: ''
+    Updated Libraries:
+      Default: ''
+      Description: List of libraries that will be checked, if this is empty all libraries
+        will be checked.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Updated Libraries
+      Required: 'false'
+      Target: UPDATED_LIBRARIES
+      Type: Variable
+      value: ''
 FirstSeen: 1615723385
 Icon: https://raw.githubusercontent.com/tenasi/unraid-templates/main/plexannouncer/icon.png
 LastUpdate: 1617453564

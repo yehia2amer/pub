@@ -3,59 +3,64 @@ CategoryList:
 - Productivity
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: ''
-    Description: Initial superuser password (required)
-    Display: always
-    Mask: 'true'
-    Mode: ''
-    Name: POSTGRES_PASSWORD
-    Required: 'true'
-    Target: POSTGRES_PASSWORD
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Initial superuser name (default: postgres)'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: POSTGRES_USER
-    Required: 'false'
-    Target: POSTGRES_USER
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Initial database name (default: postgres)'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: POSTGRES_DB
-    Required: 'false'
-    Target: POSTGRES_DB
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: /mnt/cache/appdata/postgresql10
-    Description: PostgreSQL data storage location
-    Display: always
-    Mode: rw
-    Name: Database Storage Path
-    Required: 'true'
-    Target: /var/lib/postgresql/data
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: '5432'
-    Description: PostgreSQL TCP connection port
-    Display: always-hide
-    Mode: tcp
-    Name: PostgreSQL access port
-    Required: 'true'
-    Target: '5432'
-    Type: Port
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Database Storage Path:
+      Default: /mnt/cache/appdata/postgresql10
+      Description: PostgreSQL data storage location
+      Display: always
+      Mode: rw
+      Name: Database Storage Path
+      Required: 'true'
+      Target: /var/lib/postgresql/data
+      Type: Path
+      value: ''
+  Port:
+    PostgreSQL access port:
+      Default: '5432'
+      Description: PostgreSQL TCP connection port
+      Display: always-hide
+      Mode: tcp
+      Name: PostgreSQL access port
+      Required: 'true'
+      Target: '5432'
+      Type: Port
+      value: ''
+  Variable:
+    POSTGRES_DB:
+      Default: ''
+      Description: 'Initial database name (default: postgres)'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: POSTGRES_DB
+      Required: 'false'
+      Target: POSTGRES_DB
+      Type: Variable
+      value: ''
+    POSTGRES_PASSWORD:
+      Default: ''
+      Description: Initial superuser password (required)
+      Display: always
+      Mask: 'true'
+      Mode: ''
+      Name: POSTGRES_PASSWORD
+      Required: 'true'
+      Target: POSTGRES_PASSWORD
+      Type: Variable
+      value: ''
+    POSTGRES_USER:
+      Default: ''
+      Description: 'Initial superuser name (default: postgres)'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: POSTGRES_USER
+      Required: 'false'
+      Target: POSTGRES_USER
+      Type: Variable
+      value: ''
 FirstSeen: 1636099404
 GitHub: https://github.com/docker-library/postgres
 Icon: https://github.com/juusujanar/unraid-templates/raw/master/img/PostgreSQL-logo.png

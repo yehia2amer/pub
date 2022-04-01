@@ -1,107 +1,112 @@
 CategoryList:
 - Backup
 Config:
-- '@attributes':
-    Default: ''
-    Description: Main Data directory
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Data Dir
-    Required: 'true'
-    Target: /unmined
-    Type: Path
-  value: /mnt/cache/appdata/unmined/
-- '@attributes':
-    Default: ''
-    Description: WebGUI http Port
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebGUI
-    Required: 'true'
-    Target: '8080'
-    Type: Port
-  value: '8080'
-- '@attributes':
-    Default: ''
-    Description: Path to your Minecraft world folder (You can also create multiple
-      mappings but it is strongly recommended to mount it as Read Only and to the
-      path /unmined/worlds/...)
-    Display: always
-    Mask: 'false'
-    Mode: ro
-    Name: Minecraft World
-    Required: 'true'
-    Target: /unmined/worlds
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Data Permissions for config directory
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Data Permissions
-    Required: 'true'
-    Target: DATA_PERM
-    Type: Variable
-  value: '770'
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Umask Value
-    Required: 'true'
-    Target: UMASK
-    Type: Variable
-  value: '0000'
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: UID
-    Required: 'true'
-    Target: UID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: GID
-    Required: 'true'
-    Target: GID
-    Type: Variable
-  value: '100'
-- '@attributes':
-    Default: ''
-    Description: Minimum screen width 1280 pixels
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Custom Screen Width
-    Required: 'true'
-    Target: CUSTOM_RES_W
-    Type: Variable
-  value: '1280'
-- '@attributes':
-    Default: ''
-    Description: Minimum screen hight 850 pixels
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Custom Screen Height
-    Required: 'true'
-    Target: CUSTOM_RES_H
-    Type: Variable
-  value: '850'
+  Device: {}
+  Label: {}
+  Path:
+    Data Dir:
+      Default: ''
+      Description: Main Data directory
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Data Dir
+      Required: 'true'
+      Target: /unmined
+      Type: Path
+      value: /mnt/cache/appdata/unmined/
+    Minecraft World:
+      Default: ''
+      Description: Path to your Minecraft world folder (You can also create multiple
+        mappings but it is strongly recommended to mount it as Read Only and to the
+        path /unmined/worlds/...)
+      Display: always
+      Mask: 'false'
+      Mode: ro
+      Name: Minecraft World
+      Required: 'true'
+      Target: /unmined/worlds
+      Type: Path
+      value: ''
+  Port:
+    WebGUI:
+      Default: ''
+      Description: WebGUI http Port
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebGUI
+      Required: 'true'
+      Target: '8080'
+      Type: Port
+      value: '8080'
+  Variable:
+    Custom Screen Height:
+      Default: ''
+      Description: Minimum screen hight 850 pixels
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Custom Screen Height
+      Required: 'true'
+      Target: CUSTOM_RES_H
+      Type: Variable
+      value: '850'
+    Custom Screen Width:
+      Default: ''
+      Description: Minimum screen width 1280 pixels
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Custom Screen Width
+      Required: 'true'
+      Target: CUSTOM_RES_W
+      Type: Variable
+      value: '1280'
+    Data Permissions:
+      Default: ''
+      Description: Data Permissions for config directory
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Data Permissions
+      Required: 'true'
+      Target: DATA_PERM
+      Type: Variable
+      value: '770'
+    GID:
+      Default: ''
+      Description: ''
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: GID
+      Required: 'true'
+      Target: GID
+      Type: Variable
+      value: '100'
+    UID:
+      Default: ''
+      Description: ''
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: UID
+      Required: 'true'
+      Target: UID
+      Type: Variable
+      value: '99'
+    Umask Value:
+      Default: ''
+      Description: ''
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Umask Value
+      Required: 'true'
+      Target: UMASK
+      Type: Variable
+      value: '0000'
 DonateLink: https://www.patreon.com/bePatron?u=543858&redirect_uri=https%3A%2F%2Funmined.net%2Fdownloads%2F&utm_medium=widget
 DonateText: 'If you want to support the developer from uNmINeD, please '
 ExtraParams: --restart=unless-stopped

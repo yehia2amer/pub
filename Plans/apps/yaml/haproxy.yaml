@@ -1,39 +1,44 @@
 CategoryList:
 - Network-Proxy
 Config:
-- '@attributes':
-    Default: '80'
-    Description: 'Container Port: 80'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: http port
-    Required: 'false'
-    Target: '80'
-    Type: Port
-  value: '80'
-- '@attributes':
-    Default: '443'
-    Description: 'Container Port: 443'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: https port
-    Required: 'false'
-    Target: '443'
-    Type: Port
-  value: '443'
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /usr/local/etc/haproxy'
-    Display: always
-    Mask: 'false'
-    Mode: ro
-    Name: configuration directory
-    Required: 'true'
-    Target: /usr/local/etc/haproxy
-    Type: Path
-  value: /mnt/user/appdata/haproxy
+  Device: {}
+  Label: {}
+  Path:
+    configuration directory:
+      Default: ''
+      Description: 'Container Path: /usr/local/etc/haproxy'
+      Display: always
+      Mask: 'false'
+      Mode: ro
+      Name: configuration directory
+      Required: 'true'
+      Target: /usr/local/etc/haproxy
+      Type: Path
+      value: /mnt/user/appdata/haproxy
+  Port:
+    http port:
+      Default: '80'
+      Description: 'Container Port: 80'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: http port
+      Required: 'false'
+      Target: '80'
+      Type: Port
+      value: '80'
+    https port:
+      Default: '443'
+      Description: 'Container Port: 443'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: https port
+      Required: 'false'
+      Target: '443'
+      Type: Port
+      value: '443'
+  Variable: {}
 FirstSeen: 1627300999
 Icon: https://raw.githubusercontent.com/vrx-666/unraid-xml/master/img/haproxy.png
 LastUpdate: 1648072778

@@ -1,84 +1,89 @@
 CategoryList:
 - GameServers
 Config:
-- '@attributes':
-    Default: ''
-    Description: https://players.trackmania.com/server/dedicated/create
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: MASTER_LOGIN
-    Required: 'true'
-    Target: MASTER_LOGIN
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: https://players.trackmania.com/server/dedicated/create
-    Display: always
-    Mask: 'true'
-    Mode: ''
-    Name: MASTER_PASSWORD
-    Required: 'true'
-    Target: MASTER_PASSWORD
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 'false'
-    Description: 'Container Variable: XMLRPC_ALLOWREMOTE'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: XMLRPC_ALLOWREMOTE
-    Required: 'true'
-    Target: XMLRPC_ALLOWREMOTE
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: /mnt/user/appdata/TrackmaniaServer/
-    Description: 'Container Path: /server/UserData'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: ServerData
-    Required: 'true'
-    Target: /server/UserData
-    Type: Path
-  value: /mnt/user/appdata/Trackmania2020Server/
-- '@attributes':
-    Default: '2350'
-    Description: Required to connect to the game server
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Game TCP
-    Required: 'true'
-    Target: '2350'
-    Type: Port
-  value: '2350'
-- '@attributes':
-    Default: '2350'
-    Description: Required to connect to the game server
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: Game UDP
-    Required: 'true'
-    Target: '2350'
-    Type: Port
-  value: '2350'
-- '@attributes':
-    Default: '5000'
-    Description: This port can be safely removed for improved security of your server.(no
-      remote control)
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: XMLRPC
-    Required: 'false'
-    Target: '5000'
-    Type: Port
-  value: '5000'
+  Device: {}
+  Label: {}
+  Path:
+    ServerData:
+      Default: /mnt/user/appdata/TrackmaniaServer/
+      Description: 'Container Path: /server/UserData'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: ServerData
+      Required: 'true'
+      Target: /server/UserData
+      Type: Path
+      value: /mnt/user/appdata/Trackmania2020Server/
+  Port:
+    Game TCP:
+      Default: '2350'
+      Description: Required to connect to the game server
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Game TCP
+      Required: 'true'
+      Target: '2350'
+      Type: Port
+      value: '2350'
+    Game UDP:
+      Default: '2350'
+      Description: Required to connect to the game server
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: Game UDP
+      Required: 'true'
+      Target: '2350'
+      Type: Port
+      value: '2350'
+    XMLRPC:
+      Default: '5000'
+      Description: This port can be safely removed for improved security of your server.(no
+        remote control)
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: XMLRPC
+      Required: 'false'
+      Target: '5000'
+      Type: Port
+      value: '5000'
+  Variable:
+    MASTER_LOGIN:
+      Default: ''
+      Description: https://players.trackmania.com/server/dedicated/create
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: MASTER_LOGIN
+      Required: 'true'
+      Target: MASTER_LOGIN
+      Type: Variable
+      value: ''
+    MASTER_PASSWORD:
+      Default: ''
+      Description: https://players.trackmania.com/server/dedicated/create
+      Display: always
+      Mask: 'true'
+      Mode: ''
+      Name: MASTER_PASSWORD
+      Required: 'true'
+      Target: MASTER_PASSWORD
+      Type: Variable
+      value: ''
+    XMLRPC_ALLOWREMOTE:
+      Default: 'false'
+      Description: 'Container Variable: XMLRPC_ALLOWREMOTE'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: XMLRPC_ALLOWREMOTE
+      Required: 'true'
+      Target: XMLRPC_ALLOWREMOTE
+      Type: Variable
+      value: ''
 FirstSeen: 1637675266
 Icon: https://raw.githubusercontent.com/L4stIdi0t/Unraid-template/master/TrackMania2020-Server/logoTM.png
 LastUpdate: 1645891520

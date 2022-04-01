@@ -3,61 +3,66 @@ CategoryList:
 - Tools-Utilities
 - Network-Management
 Config:
-- '@attributes':
-    Default: /mnt/user/appdata/ipmi_tools
-    Description: /data
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: Appdata Location
-    Required: 'true'
-    Target: /data
-    Type: Path
-  value: /mnt/user/appdata/ipmi_tools
-- '@attributes':
-    Default: ''
-    Description: The IP or host of your iDRAC interface.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: IPMI Host
-    Required: 'false'
-    Target: APP_IPMI_HOST
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Your IPMI username (same as your iDRAC user)
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: IPMI User
-    Required: 'false'
-    Target: APP_IPMI_USER
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Your IPMI password (same as your iDRAC password)
-    Display: always
-    Mask: 'true'
-    Mode: ''
-    Name: IPMI Password
-    Required: 'false'
-    Target: APP_IPMI_PASS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: WebUI port
-    Display: advanced
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'true'
-    Target: '80'
-    Type: Port
-  value: '4017'
+  Device: {}
+  Label: {}
+  Path:
+    Appdata Location:
+      Default: /mnt/user/appdata/ipmi_tools
+      Description: /data
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: Appdata Location
+      Required: 'true'
+      Target: /data
+      Type: Path
+      value: /mnt/user/appdata/ipmi_tools
+  Port:
+    WebUI:
+      Default: ''
+      Description: WebUI port
+      Display: advanced
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'true'
+      Target: '80'
+      Type: Port
+      value: '4017'
+  Variable:
+    IPMI Host:
+      Default: ''
+      Description: The IP or host of your iDRAC interface.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: IPMI Host
+      Required: 'false'
+      Target: APP_IPMI_HOST
+      Type: Variable
+      value: ''
+    IPMI Password:
+      Default: ''
+      Description: Your IPMI password (same as your iDRAC password)
+      Display: always
+      Mask: 'true'
+      Mode: ''
+      Name: IPMI Password
+      Required: 'false'
+      Target: APP_IPMI_PASS
+      Type: Variable
+      value: ''
+    IPMI User:
+      Default: ''
+      Description: Your IPMI username (same as your iDRAC user)
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: IPMI User
+      Required: 'false'
+      Target: APP_IPMI_USER
+      Type: Variable
+      value: ''
 FirstSeen: 1619697763
 Icon: https://github.com/EdwardChamberlain/unraid-templates/blob/main/assets/server_icon.png?raw=true
 LastUpdate: 1621183104

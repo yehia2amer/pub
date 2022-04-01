@@ -1,74 +1,79 @@
 CategoryList:
 - GameServers
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /altitude'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: ServerFiles
-    Required: 'true'
-    Target: /altitude
-    Type: Path
-  value: /mnt/cache/appdata/altitude
-- '@attributes':
-    Default: ''
-    Description: Enter your start up commands for the server.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: GAME_PARAMS
-    Required: 'false'
-    Target: GAME_PARAMS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: UDP Game Port (if you need another port, please delete this entry
-      and create a new UDP Port with the required port number, don't forget to change
-      it also in your launcher_config.xml)
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: UDP - Server Port
-    Required: 'true'
-    Target: '27276'
-    Type: Port
-  value: '27276'
-- '@attributes':
-    Default: ''
-    Description: Don't change unless you know what you are doing.
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Download URL
-    Required: 'true'
-    Target: DL_URL
-    Type: Variable
-  value: http://installer.altitudegame.com/0.0.1/altitude.sh
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: UID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: UID
-    Required: 'true'
-    Target: UID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: GID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: GID
-    Required: 'true'
-    Target: GID
-    Type: Variable
-  value: '100'
+  Device: {}
+  Label: {}
+  Path:
+    ServerFiles:
+      Default: ''
+      Description: 'Container Path: /altitude'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: ServerFiles
+      Required: 'true'
+      Target: /altitude
+      Type: Path
+      value: /mnt/cache/appdata/altitude
+  Port:
+    UDP - Server Port:
+      Default: ''
+      Description: UDP Game Port (if you need another port, please delete this entry
+        and create a new UDP Port with the required port number, don't forget to change
+        it also in your launcher_config.xml)
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: UDP - Server Port
+      Required: 'true'
+      Target: '27276'
+      Type: Port
+      value: '27276'
+  Variable:
+    Download URL:
+      Default: ''
+      Description: Don't change unless you know what you are doing.
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Download URL
+      Required: 'true'
+      Target: DL_URL
+      Type: Variable
+      value: http://installer.altitudegame.com/0.0.1/altitude.sh
+    GAME_PARAMS:
+      Default: ''
+      Description: Enter your start up commands for the server.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: GAME_PARAMS
+      Required: 'false'
+      Target: GAME_PARAMS
+      Type: Variable
+      value: ''
+    GID:
+      Default: ''
+      Description: 'Container Variable: GID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: GID
+      Required: 'true'
+      Target: GID
+      Type: Variable
+      value: '100'
+    UID:
+      Default: ''
+      Description: 'Container Variable: UID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: UID
+      Required: 'true'
+      Target: UID
+      Type: Variable
+      value: '99'
 DonateLink: https://www.paypal.me/chips777
 DonateText: 'If you like my work please '
 ExtraParams: --restart=unless-stopped

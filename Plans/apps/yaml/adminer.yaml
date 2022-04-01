@@ -1,37 +1,42 @@
 CategoryList:
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: '8080'
-    Description: 'Container Port: 8080'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI Port
-    Required: 'true'
-    Target: '8080'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: flat
-    Description: 'Container Variable: ADMINER_DESIGN'
-    Display: always
-    Mask: 'false'
-    Name: Theme
-    Required: 'false'
-    Target: ADMINER_DESIGN
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: e.g. ADMINER_PLUGINS='tables-filter tinymce'
-    Display: always
-    Mask: 'false'
-    Name: Plugins
-    Required: 'false'
-    Target: ADMINER_PLUGINS
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path: {}
+  Port:
+    WebUI Port:
+      Default: '8080'
+      Description: 'Container Port: 8080'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI Port
+      Required: 'true'
+      Target: '8080'
+      Type: Port
+      value: ''
+  Variable:
+    Plugins:
+      Default: ''
+      Description: e.g. ADMINER_PLUGINS='tables-filter tinymce'
+      Display: always
+      Mask: 'false'
+      Name: Plugins
+      Required: 'false'
+      Target: ADMINER_PLUGINS
+      Type: Variable
+      value: ''
+    Theme:
+      Default: flat
+      Description: 'Container Variable: ADMINER_DESIGN'
+      Display: always
+      Mask: 'false'
+      Name: Theme
+      Required: 'false'
+      Target: ADMINER_DESIGN
+      Type: Variable
+      value: ''
 FirstSeen: 1569355623
 Icon: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/adminer.png
 LastUpdate: 1647009928

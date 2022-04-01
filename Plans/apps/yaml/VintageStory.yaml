@@ -1,63 +1,68 @@
 CategoryList:
 - GameServers
 Config:
-- '@attributes':
-    Default: ''
-    Description: Data Path
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: ServerFiles
-    Required: 'true'
-    Target: /vintagestory
-    Type: Path
-  value: /mnt/cache/appdata/vintagestory
-- '@attributes':
-    Default: ''
-    Description: Extra startup parameters (leave empty if you don't need it).
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Extra Startup Parameters
-    Required: 'false'
-    Target: GAME_PARAMS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: TCP GamePort (if you need another port, please delete this entry
-      and create a new TCP Port with the required port number, also don't forget to
-      change it in your configuration).
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: TCP - GamePort
-    Required: 'true'
-    Target: '42420'
-    Type: Port
-  value: '42420'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: UID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: UID
-    Required: 'true'
-    Target: UID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: GID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: GID
-    Required: 'true'
-    Target: GID
-    Type: Variable
-  value: '100'
+  Device: {}
+  Label: {}
+  Path:
+    ServerFiles:
+      Default: ''
+      Description: Data Path
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: ServerFiles
+      Required: 'true'
+      Target: /vintagestory
+      Type: Path
+      value: /mnt/cache/appdata/vintagestory
+  Port:
+    TCP - GamePort:
+      Default: ''
+      Description: TCP GamePort (if you need another port, please delete this entry
+        and create a new TCP Port with the required port number, also don't forget
+        to change it in your configuration).
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: TCP - GamePort
+      Required: 'true'
+      Target: '42420'
+      Type: Port
+      value: '42420'
+  Variable:
+    Extra Startup Parameters:
+      Default: ''
+      Description: Extra startup parameters (leave empty if you don't need it).
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Extra Startup Parameters
+      Required: 'false'
+      Target: GAME_PARAMS
+      Type: Variable
+      value: ''
+    GID:
+      Default: ''
+      Description: 'Container Variable: GID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: GID
+      Required: 'true'
+      Target: GID
+      Type: Variable
+      value: '100'
+    UID:
+      Default: ''
+      Description: 'Container Variable: UID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: UID
+      Required: 'true'
+      Target: UID
+      Type: Variable
+      value: '99'
 DonateLink: https://www.paypal.me/chips777
 DonateText: 'If you like my work please '
 ExtraParams: --restart=unless-stopped

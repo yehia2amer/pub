@@ -3,171 +3,176 @@ CAComment: This template is set up to use a custom network. You may have to adju
 CategoryList:
 - Network-Other
 Config:
-- '@attributes':
-    Default: '4443'
-    Description: 'Container Port: 4443/tcp'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: 4443/tcp
-    Required: 'true'
-    Target: '4443'
-    Type: Port
-  value: '4443'
-- '@attributes':
-    Default: '4443'
-    Description: 'Container Port: 4443/udp'
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: 4443/udp
-    Required: 'true'
-    Target: '4443'
-    Type: Port
-  value: '4443'
-- '@attributes':
-    Default: '4443'
-    Description: 'Container Variable: LISTEN_PORT'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: LISTEN_PORT
-    Required: 'false'
-    Target: LISTEN_PORT
-    Type: Variable
-  value: '4443'
-- '@attributes':
-    Default: 8.8.8.8,37.235.1.174,8.8.4.4,37.235.1.177
-    Description: 'Container Variable: DNS_SERVERS'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DNS_SERVERS
-    Required: 'false'
-    Target: DNS_SERVERS
-    Type: Variable
-  value: 8.8.8.8,37.235.1.174,8.8.4.4,37.235.1.177
-- '@attributes':
-    Default: VPN CA
-    Description: Name of CA for generated certs
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: CA_CN
-    Required: 'false'
-    Target: CA_CN
-    Type: Variable
-  value: VPN CA
-- '@attributes':
-    Default: OCSERV
-    Description: Organization of CA for generated certs
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: CA_ORG
-    Required: 'false'
-    Target: CA_ORG
-    Type: Variable
-  value: OCSERV
-- '@attributes':
-    Default: '9999'
-    Description: Days CA cert is valid for generated certs
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: CA_DAYS
-    Required: 'false'
-    Target: CA_DAYS
-    Type: Variable
-  value: '9999'
-- '@attributes':
-    Default: vpn.example.com
-    Description: Name of server for generated certs
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: SRV_CN
-    Required: 'false'
-    Target: SRV_CN
-    Type: Variable
-  value: vpn.example.com
-- '@attributes':
-    Default: My Company
-    Description: Organization of server for generated certs
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: SRV_ORG
-    Required: 'false'
-    Target: SRV_ORG
-    Type: Variable
-  value: My Company
-- '@attributes':
-    Default: '9999'
-    Description: Days server cert is valid for generated certs
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: SRV_DAYS
-    Required: 'false'
-    Target: SRV_DAYS
-    Type: Variable
-  value: '9999'
-- '@attributes':
-    Default: /mnt/cache/appdata/openconnect/
-    Description: 'Container Path: /config'
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: config
-    Required: 'false'
-    Target: /config
-    Type: Path
-  value: /mnt/cache/appdata/openconnect/
-- '@attributes':
-    Default: all
-    Description: 'Container Variable: TUNNEL_MODE'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: TUNNEL_MODE
-    Required: 'false'
-    Target: TUNNEL_MODE
-    Type: Variable
-  value: all
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: TUNNEL_ROUTES'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: TUNNEL_ROUTES
-    Required: 'false'
-    Target: TUNNEL_ROUTES
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: SPLIT_DNS_DOMAINS'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: SPLIT_DNS_DOMAINS
-    Required: 'false'
-    Target: SPLIT_DNS_DOMAINS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 'no'
-    Description: 'Container Variable: POWER_USER'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: POWER_USER
-    Required: 'false'
-    Target: POWER_USER
-    Type: Variable
-  value: 'no'
+  Device: {}
+  Label: {}
+  Path:
+    config:
+      Default: /mnt/cache/appdata/openconnect/
+      Description: 'Container Path: /config'
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: config
+      Required: 'false'
+      Target: /config
+      Type: Path
+      value: /mnt/cache/appdata/openconnect/
+  Port:
+    4443/tcp:
+      Default: '4443'
+      Description: 'Container Port: 4443/tcp'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: 4443/tcp
+      Required: 'true'
+      Target: '4443'
+      Type: Port
+      value: '4443'
+    4443/udp:
+      Default: '4443'
+      Description: 'Container Port: 4443/udp'
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: 4443/udp
+      Required: 'true'
+      Target: '4443'
+      Type: Port
+      value: '4443'
+  Variable:
+    CA_CN:
+      Default: VPN CA
+      Description: Name of CA for generated certs
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: CA_CN
+      Required: 'false'
+      Target: CA_CN
+      Type: Variable
+      value: VPN CA
+    CA_DAYS:
+      Default: '9999'
+      Description: Days CA cert is valid for generated certs
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: CA_DAYS
+      Required: 'false'
+      Target: CA_DAYS
+      Type: Variable
+      value: '9999'
+    CA_ORG:
+      Default: OCSERV
+      Description: Organization of CA for generated certs
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: CA_ORG
+      Required: 'false'
+      Target: CA_ORG
+      Type: Variable
+      value: OCSERV
+    DNS_SERVERS:
+      Default: 8.8.8.8,37.235.1.174,8.8.4.4,37.235.1.177
+      Description: 'Container Variable: DNS_SERVERS'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DNS_SERVERS
+      Required: 'false'
+      Target: DNS_SERVERS
+      Type: Variable
+      value: 8.8.8.8,37.235.1.174,8.8.4.4,37.235.1.177
+    LISTEN_PORT:
+      Default: '4443'
+      Description: 'Container Variable: LISTEN_PORT'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: LISTEN_PORT
+      Required: 'false'
+      Target: LISTEN_PORT
+      Type: Variable
+      value: '4443'
+    POWER_USER:
+      Default: 'no'
+      Description: 'Container Variable: POWER_USER'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: POWER_USER
+      Required: 'false'
+      Target: POWER_USER
+      Type: Variable
+      value: 'no'
+    SPLIT_DNS_DOMAINS:
+      Default: ''
+      Description: 'Container Variable: SPLIT_DNS_DOMAINS'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: SPLIT_DNS_DOMAINS
+      Required: 'false'
+      Target: SPLIT_DNS_DOMAINS
+      Type: Variable
+      value: ''
+    SRV_CN:
+      Default: vpn.example.com
+      Description: Name of server for generated certs
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: SRV_CN
+      Required: 'false'
+      Target: SRV_CN
+      Type: Variable
+      value: vpn.example.com
+    SRV_DAYS:
+      Default: '9999'
+      Description: Days server cert is valid for generated certs
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: SRV_DAYS
+      Required: 'false'
+      Target: SRV_DAYS
+      Type: Variable
+      value: '9999'
+    SRV_ORG:
+      Default: My Company
+      Description: Organization of server for generated certs
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: SRV_ORG
+      Required: 'false'
+      Target: SRV_ORG
+      Type: Variable
+      value: My Company
+    TUNNEL_MODE:
+      Default: all
+      Description: 'Container Variable: TUNNEL_MODE'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: TUNNEL_MODE
+      Required: 'false'
+      Target: TUNNEL_MODE
+      Type: Variable
+      value: all
+    TUNNEL_ROUTES:
+      Default: ''
+      Description: 'Container Variable: TUNNEL_ROUTES'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: TUNNEL_ROUTES
+      Required: 'false'
+      Target: TUNNEL_ROUTES
+      Type: Variable
+      value: ''
 FirstSeen: '1518285860'
 Icon: https://raw.githubusercontent.com/MarkusMcNugen/docker-templates/master/openconnect/ocserv-icon.png
 LastUpdate: 1631832513

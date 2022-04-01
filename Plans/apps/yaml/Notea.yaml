@@ -2,61 +2,66 @@ BindTime: 'true'
 CategoryList:
 - Productivity
 Config:
-- '@attributes':
-    Default: ''
-    Description: Port for Notea WebUI
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Notea Port
-    Required: 'true'
-    Target: '3000'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Port for MinIO WebUI
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: MinIO Port
-    Required: 'false'
-    Target: '9000'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Set the password to use on Notea's Website
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: WebUI Password
-    Required: 'true'
-    Target: PASSWORD
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: User for MinIO Backend
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: MinIO User
-    Required: 'true'
-    Target: STORE_USER
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Password for MinIO Backend
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: MinIO Password
-    Required: 'true'
-    Target: STORE_PASSWORD
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path: {}
+  Port:
+    MinIO Port:
+      Default: ''
+      Description: Port for MinIO WebUI
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: MinIO Port
+      Required: 'false'
+      Target: '9000'
+      Type: Port
+      value: ''
+    Notea Port:
+      Default: ''
+      Description: Port for Notea WebUI
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Notea Port
+      Required: 'true'
+      Target: '3000'
+      Type: Port
+      value: ''
+  Variable:
+    MinIO Password:
+      Default: ''
+      Description: Password for MinIO Backend
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: MinIO Password
+      Required: 'true'
+      Target: STORE_PASSWORD
+      Type: Variable
+      value: ''
+    MinIO User:
+      Default: ''
+      Description: User for MinIO Backend
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: MinIO User
+      Required: 'true'
+      Target: STORE_USER
+      Type: Variable
+      value: ''
+    WebUI Password:
+      Default: ''
+      Description: Set the password to use on Notea's Website
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: WebUI Password
+      Required: 'true'
+      Target: PASSWORD
+      Type: Variable
+      value: ''
 FirstSeen: 1620014554
 Icon: https://raw.githubusercontent.com/diamkil/docker-templates/master/diamkil/images/notea.png
 LastUpdate: 1643036674

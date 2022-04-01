@@ -2,72 +2,77 @@ CategoryList:
 - Productivity
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: '8000'
-    Description: 'WebUI Port: 8000'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'true'
-    Target: '8000'
-    Type: Port
-  value: '8000'
-- '@attributes':
-    Default: /mnt/user/appdata/yacht
-    Description: 'To store Yacht configuration. Default: /appdata'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Appdata
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: /mnt/user/appdata/yacht
-- '@attributes':
-    Default: admin@yacht.local
-    Description: Administrator email address. Default = admin@yacht.local
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: ADMIN_EMAIL
-    Required: 'false'
-    Target: ADMIN_EMAIL
-    Type: Variable
-  value: admin@yacht.local
-- '@attributes':
-    Default: '99'
-    Description: 'Container Variable: PUID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: PUID
-    Required: 'true'
-    Target: PUID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: '100'
-    Description: 'Container Variable: PGID'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: PGID
-    Required: 'true'
-    Target: PGID
-    Type: Variable
-  value: '100'
-- '@attributes':
-    Default: /var/run/docker.sock
-    Description: Needed to connect Yacht to Docker.
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: Docker Socket
-    Required: 'true'
-    Target: /var/run/docker.sock
-    Type: Path
-  value: /var/run/docker.sock
+  Device: {}
+  Label: {}
+  Path:
+    Appdata:
+      Default: /mnt/user/appdata/yacht
+      Description: 'To store Yacht configuration. Default: /appdata'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Appdata
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: /mnt/user/appdata/yacht
+    Docker Socket:
+      Default: /var/run/docker.sock
+      Description: Needed to connect Yacht to Docker.
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: Docker Socket
+      Required: 'true'
+      Target: /var/run/docker.sock
+      Type: Path
+      value: /var/run/docker.sock
+  Port:
+    WebUI:
+      Default: '8000'
+      Description: 'WebUI Port: 8000'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'true'
+      Target: '8000'
+      Type: Port
+      value: '8000'
+  Variable:
+    ADMIN_EMAIL:
+      Default: admin@yacht.local
+      Description: Administrator email address. Default = admin@yacht.local
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: ADMIN_EMAIL
+      Required: 'false'
+      Target: ADMIN_EMAIL
+      Type: Variable
+      value: admin@yacht.local
+    PGID:
+      Default: '100'
+      Description: 'Container Variable: PGID'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PGID
+      Required: 'true'
+      Target: PGID
+      Type: Variable
+      value: '100'
+    PUID:
+      Default: '99'
+      Description: 'Container Variable: PUID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: PUID
+      Required: 'true'
+      Target: PUID
+      Type: Variable
+      value: '99'
 DonateLink: https://paypal.me/ramteksolutions
 DonateText: Help support my work by buying me a beer
 FirstSeen: 1628561005

@@ -2,83 +2,88 @@ CategoryList:
 - Tools-Utilities
 - Network-FTP
 Config:
-- '@attributes':
-    Default: '2100'
-    Description: FTP port
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: FTP port
-    Required: 'false'
-    Target: '2100'
-    Type: Port
-  value: '2100'
-- '@attributes':
-    Default: 30000-30009
-    Description: PASV port range
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: PASV port range
-    Required: 'false'
-    Target: 30000-30009
-    Type: Port
-  value: 30000-30009
-- '@attributes':
-    Default: /mnt/user/appdata/pure-ftpd/
-    Description: Contains config files and PureDB file
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Appdata
-    Required: 'false'
-    Target: /data
-    Type: Path
-  value: /mnt/user/appdata/pure-ftpd/
-- '@attributes':
-    Default: ''
-    Description: Contains FTP Files
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: FTP Folder
-    Required: 'false'
-    Target: /home
-    Type: Path
-  value: /mnt/user/pure-ftpd/
-- '@attributes':
-    Default: puredb
-    Description: 'Authentication method to use. Can be puredb, mysql, pgsql or ldap '
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: AUTH_METHOD
-    Required: 'false'
-    Target: AUTH_METHOD
-    Type: Variable
-  value: puredb
-- '@attributes':
-    Default: 'true'
-    Description: Enable secure mode - https://github.com/crazy-max/docker-pure-ftpd#secure-mode
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: SECURE_MODE
-    Required: 'false'
-    Target: SECURE_MODE
-    Type: Variable
-  value: 'true'
-- '@attributes':
-    Default: 30000:30009
-    Description: Port range for passive connections
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: PASSIVE_PORT_RANGE
-    Required: 'false'
-    Target: PASSIVE_PORT_RANGE
-    Type: Variable
-  value: 30000:30009
+  Device: {}
+  Label: {}
+  Path:
+    Appdata:
+      Default: /mnt/user/appdata/pure-ftpd/
+      Description: Contains config files and PureDB file
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Appdata
+      Required: 'false'
+      Target: /data
+      Type: Path
+      value: /mnt/user/appdata/pure-ftpd/
+    FTP Folder:
+      Default: ''
+      Description: Contains FTP Files
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: FTP Folder
+      Required: 'false'
+      Target: /home
+      Type: Path
+      value: /mnt/user/pure-ftpd/
+  Port:
+    FTP port:
+      Default: '2100'
+      Description: FTP port
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: FTP port
+      Required: 'false'
+      Target: '2100'
+      Type: Port
+      value: '2100'
+    PASV port range:
+      Default: 30000-30009
+      Description: PASV port range
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: PASV port range
+      Required: 'false'
+      Target: 30000-30009
+      Type: Port
+      value: 30000-30009
+  Variable:
+    AUTH_METHOD:
+      Default: puredb
+      Description: 'Authentication method to use. Can be puredb, mysql, pgsql or ldap '
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: AUTH_METHOD
+      Required: 'false'
+      Target: AUTH_METHOD
+      Type: Variable
+      value: puredb
+    PASSIVE_PORT_RANGE:
+      Default: 30000:30009
+      Description: Port range for passive connections
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: PASSIVE_PORT_RANGE
+      Required: 'false'
+      Target: PASSIVE_PORT_RANGE
+      Type: Variable
+      value: 30000:30009
+    SECURE_MODE:
+      Default: 'true'
+      Description: Enable secure mode - https://github.com/crazy-max/docker-pure-ftpd#secure-mode
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: SECURE_MODE
+      Required: 'false'
+      Target: SECURE_MODE
+      Type: Variable
+      value: 'true'
 FirstSeen: 1586450113
 Icon: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/pure-ftpd.png
 LastUpdate: 1647412696

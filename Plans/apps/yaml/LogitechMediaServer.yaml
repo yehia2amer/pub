@@ -2,94 +2,99 @@ BaseImage: phusion/baseimage:0.11
 CategoryList:
 - MediaServer-Music
 Config:
-- '@attributes':
-    Default: '9000'
-    Description: 'Container Port: 9000'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI Port
-    Required: 'true'
-    Target: '9000'
-    Type: Port
-  value: '9000'
-- '@attributes':
-    Default: '3483'
-    Description: 'Container Port: 3483/TCP'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Control Port - TCP
-    Required: 'true'
-    Target: '3483'
-    Type: Port
-  value: '3483'
-- '@attributes':
-    Default: '3483'
-    Description: 'Container Port: 3483/UDP'
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: Control Port - UDP
-    Required: 'true'
-    Target: '3483'
-    Type: Port
-  value: '3483'
-- '@attributes':
-    Default: '9090'
-    Description: 'Container Port: 9090'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: CLI Port
-    Required: 'true'
-    Target: '9090'
-    Type: Port
-  value: '9090'
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /music'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Music Path
-    Required: 'true'
-    Target: /music
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: '99'
-    Description: 'Container Variable: PUID'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: PUID
-    Required: 'false'
-    Target: PUID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: '100'
-    Description: 'Container Variable: PGID'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: PGID
-    Required: 'false'
-    Target: PGID
-    Type: Variable
-  value: '100'
-- '@attributes':
-    Default: /mnt/user/appdata/LogitechMediaServer
-    Description: 'Container Path: /config'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: rw
-    Name: AppData Config Path
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: /mnt/user/appdata/LogitechMediaServer
+  Device: {}
+  Label: {}
+  Path:
+    AppData Config Path:
+      Default: /mnt/user/appdata/LogitechMediaServer
+      Description: 'Container Path: /config'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: rw
+      Name: AppData Config Path
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: /mnt/user/appdata/LogitechMediaServer
+    Music Path:
+      Default: ''
+      Description: 'Container Path: /music'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Music Path
+      Required: 'true'
+      Target: /music
+      Type: Path
+      value: ''
+  Port:
+    CLI Port:
+      Default: '9090'
+      Description: 'Container Port: 9090'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: CLI Port
+      Required: 'true'
+      Target: '9090'
+      Type: Port
+      value: '9090'
+    Control Port - TCP:
+      Default: '3483'
+      Description: 'Container Port: 3483/TCP'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Control Port - TCP
+      Required: 'true'
+      Target: '3483'
+      Type: Port
+      value: '3483'
+    Control Port - UDP:
+      Default: '3483'
+      Description: 'Container Port: 3483/UDP'
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: Control Port - UDP
+      Required: 'true'
+      Target: '3483'
+      Type: Port
+      value: '3483'
+    WebUI Port:
+      Default: '9000'
+      Description: 'Container Port: 9000'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI Port
+      Required: 'true'
+      Target: '9000'
+      Type: Port
+      value: '9000'
+  Variable:
+    PGID:
+      Default: '100'
+      Description: 'Container Variable: PGID'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: PGID
+      Required: 'false'
+      Target: PGID
+      Type: Variable
+      value: '100'
+    PUID:
+      Default: '99'
+      Description: 'Container Variable: PUID'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: PUID
+      Required: 'false'
+      Target: PUID
+      Type: Variable
+      value: '99'
 DonateImage: https://www.paypalobjects.com/webstatic/en_US/btn/btn_donate_74x21.png
 DonateLink: https://www.paypal.com/us/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=EJGPC7B5CS66E
 DonateText: For my retirement.

@@ -11,89 +11,94 @@ CategoryList:
 - MediaServer-Books
 ChangeLogPresent: true
 Config:
-- '@attributes':
-    Default: '8080'
-    Description: Calibre desktop gui.
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'true'
-    Target: '8080'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: '8081'
-    Description: Calibre webserver gui.
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: 'Port: 8081'
-    Required: 'true'
-    Target: '8081'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Where calibre should store its database and library.
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: Appdata
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Optionally set a password for the gui.
-    Display: always
-    Mask: 'true'
-    Name: PASSWORD
-    Required: 'false'
-    Target: PASSWORD
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Optionally pass cli start arguments to calibre.
-    Display: always
-    Mask: 'false'
-    Name: CLI_ARGS
-    Required: 'false'
-    Target: CLI_ARGS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '99'
-    Description: 'Container Variable: PUID'
-    Display: advanced
-    Mask: 'false'
-    Name: PUID
-    Required: 'true'
-    Target: PUID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '100'
-    Description: 'Container Variable: PGID'
-    Display: advanced
-    Mask: 'false'
-    Name: PGID
-    Required: 'true'
-    Target: PGID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '022'
-    Description: 'Container Variable: UMASK'
-    Display: advanced
-    Mask: 'false'
-    Name: UMASK
-    Required: 'false'
-    Target: UMASK
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Appdata:
+      Default: ''
+      Description: Where calibre should store its database and library.
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: Appdata
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: ''
+  Port:
+    'Port: 8081':
+      Default: '8081'
+      Description: Calibre webserver gui.
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: 'Port: 8081'
+      Required: 'true'
+      Target: '8081'
+      Type: Port
+      value: ''
+    WebUI:
+      Default: '8080'
+      Description: Calibre desktop gui.
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'true'
+      Target: '8080'
+      Type: Port
+      value: ''
+  Variable:
+    CLI_ARGS:
+      Default: ''
+      Description: Optionally pass cli start arguments to calibre.
+      Display: always
+      Mask: 'false'
+      Name: CLI_ARGS
+      Required: 'false'
+      Target: CLI_ARGS
+      Type: Variable
+      value: ''
+    PASSWORD:
+      Default: ''
+      Description: Optionally set a password for the gui.
+      Display: always
+      Mask: 'true'
+      Name: PASSWORD
+      Required: 'false'
+      Target: PASSWORD
+      Type: Variable
+      value: ''
+    PGID:
+      Default: '100'
+      Description: 'Container Variable: PGID'
+      Display: advanced
+      Mask: 'false'
+      Name: PGID
+      Required: 'true'
+      Target: PGID
+      Type: Variable
+      value: ''
+    PUID:
+      Default: '99'
+      Description: 'Container Variable: PUID'
+      Display: advanced
+      Mask: 'false'
+      Name: PUID
+      Required: 'true'
+      Target: PUID
+      Type: Variable
+      value: ''
+    UMASK:
+      Default: '022'
+      Description: 'Container Variable: UMASK'
+      Display: advanced
+      Mask: 'false'
+      Name: UMASK
+      Required: 'false'
+      Target: UMASK
+      Type: Variable
+      value: ''
 DonateImg: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/donate.png
 DonateLink: https://www.linuxserver.io/donate
 DonateText: Donations

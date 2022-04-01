@@ -3,116 +3,121 @@ CategoryList:
 - Productivity
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'false'
-    Target: '4711'
-    Type: Port
-  value: '4711'
-- '@attributes':
-    Default: ''
-    Description: Client to client transfers
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Port (TCP)
-    Required: 'false'
-    Target: '4662'
-    Type: Port
-  value: '4662'
-- '@attributes':
-    Default: ''
-    Description: Extended aMule protocol, Queue Rating, File Reask Ping
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: Port (UDP)
-    Required: 'false'
-    Target: '4672'
-    Type: Port
-  value: '4672'
-- '@attributes':
-    Default: ''
-    Description: This is the location for complete downloads.
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Storage (complete)
-    Required: 'true'
-    Target: /incoming
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: This is the location for incomplete downloads.
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Storage (incomplete)
-    Required: 'true'
-    Target: /temp
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: This is the location for the internal data.
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Storage (config)
-    Required: 'false'
-    Target: /home/amule/.aMule
-    Type: Path
-  value: /mnt/user/appdata/amule
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: PUID
-    Required: 'false'
-    Target: PUID
-    Type: Variable
-  value: '1000'
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: PGID
-    Required: 'false'
-    Target: PGID
-    Type: Variable
-  value: '1000'
-- '@attributes':
-    Default: ''
-    Description: Password for WebUI.
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: WEBUI_PWD
-    Required: 'false'
-    Target: WEBUI_PWD
-    Type: Variable
-  value: admin
-- '@attributes':
-    Default: default|AmuleWebUI-Reloaded
-    Description: Alternative material WebUI design.
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: WEBUI_TEMPLATE
-    Required: 'false'
-    Target: WEBUI_TEMPLATE
-    Type: Variable
-  value: default
+  Device: {}
+  Label: {}
+  Path:
+    Storage (complete):
+      Default: ''
+      Description: This is the location for complete downloads.
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Storage (complete)
+      Required: 'true'
+      Target: /incoming
+      Type: Path
+      value: ''
+    Storage (config):
+      Default: ''
+      Description: This is the location for the internal data.
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Storage (config)
+      Required: 'false'
+      Target: /home/amule/.aMule
+      Type: Path
+      value: /mnt/user/appdata/amule
+    Storage (incomplete):
+      Default: ''
+      Description: This is the location for incomplete downloads.
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Storage (incomplete)
+      Required: 'true'
+      Target: /temp
+      Type: Path
+      value: ''
+  Port:
+    Port (TCP):
+      Default: ''
+      Description: Client to client transfers
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Port (TCP)
+      Required: 'false'
+      Target: '4662'
+      Type: Port
+      value: '4662'
+    Port (UDP):
+      Default: ''
+      Description: Extended aMule protocol, Queue Rating, File Reask Ping
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: Port (UDP)
+      Required: 'false'
+      Target: '4672'
+      Type: Port
+      value: '4672'
+    WebUI:
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'false'
+      Target: '4711'
+      Type: Port
+      value: '4711'
+  Variable:
+    PGID:
+      Default: ''
+      Description: ''
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PGID
+      Required: 'false'
+      Target: PGID
+      Type: Variable
+      value: '1000'
+    PUID:
+      Default: ''
+      Description: ''
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PUID
+      Required: 'false'
+      Target: PUID
+      Type: Variable
+      value: '1000'
+    WEBUI_PWD:
+      Default: ''
+      Description: Password for WebUI.
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: WEBUI_PWD
+      Required: 'false'
+      Target: WEBUI_PWD
+      Type: Variable
+      value: admin
+    WEBUI_TEMPLATE:
+      Default: default|AmuleWebUI-Reloaded
+      Description: Alternative material WebUI design.
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: WEBUI_TEMPLATE
+      Required: 'false'
+      Target: WEBUI_TEMPLATE
+      Type: Variable
+      value: default
 FirstSeen: 1645618070
 Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/amule.png
 LastUpdate: 1623387016

@@ -6,51 +6,56 @@ CategoryList:
 - Cloud
 - Network-Web
 Config:
-- '@attributes':
-    Default: ''
-    Description: Container port to start whoogle on. Default is 5000
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Web UI
-    Required: 'true'
-    Target: '5000'
-    Type: Port
-  value: '8798'
-- '@attributes':
-    Default: ''
-    Description: persistent application data/configuration
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Config
-    Required: 'false'
-    Target: /config
-    Type: Path
-  value: /mnt/user/appdata/whoogle
-- '@attributes':
-    Default: ''
-    Description: Set whether whoogle should enforce HTTPS inside container. Default
-      is false
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Application HTTPS Only
-    Required: 'false'
-    Target: HTTPS_ONLY
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Container Port to start whoogle on. Default is 5000
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Container Port
-    Required: 'false'
-    Target: EXPOSE_PORT
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Config:
+      Default: ''
+      Description: persistent application data/configuration
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Config
+      Required: 'false'
+      Target: /config
+      Type: Path
+      value: /mnt/user/appdata/whoogle
+  Port:
+    Web UI:
+      Default: ''
+      Description: Container port to start whoogle on. Default is 5000
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Web UI
+      Required: 'true'
+      Target: '5000'
+      Type: Port
+      value: '8798'
+  Variable:
+    Application HTTPS Only:
+      Default: ''
+      Description: Set whether whoogle should enforce HTTPS inside container. Default
+        is false
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Application HTTPS Only
+      Required: 'false'
+      Target: HTTPS_ONLY
+      Type: Variable
+      value: ''
+    Container Port:
+      Default: ''
+      Description: Container Port to start whoogle on. Default is 5000
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Container Port
+      Required: 'false'
+      Target: EXPOSE_PORT
+      Type: Variable
+      value: ''
 FirstSeen: 1589292467
 Icon: https://github.com/benbusby/whoogle-search/blob/main/app/static/img/favicon/favicon-96x96.png?raw=true
 LastUpdate: 1646165743

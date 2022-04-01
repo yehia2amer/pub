@@ -3,39 +3,44 @@ CategoryList:
 - Productivity
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: ''
-    Description: Main data path
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Data path
-    Required: 'true'
-    Target: /omd/sites
-    Type: Path
-  value: /mnt/user/appdata/checkmk
-- '@attributes':
-    Default: ''
-    Description: WebUI Port
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'true'
-    Target: '5000'
-    Type: Port
-  value: '5000'
-- '@attributes':
-    Default: ''
-    Description: Get local time from Host.
-    Display: advanced
-    Mask: 'false'
-    Mode: ro
-    Name: Host Localtime
-    Required: 'false'
-    Target: /etc/localtime
-    Type: Path
-  value: /etc/localtime
+  Device: {}
+  Label: {}
+  Path:
+    Data path:
+      Default: ''
+      Description: Main data path
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Data path
+      Required: 'true'
+      Target: /omd/sites
+      Type: Path
+      value: /mnt/user/appdata/checkmk
+    Host Localtime:
+      Default: ''
+      Description: Get local time from Host.
+      Display: advanced
+      Mask: 'false'
+      Mode: ro
+      Name: Host Localtime
+      Required: 'false'
+      Target: /etc/localtime
+      Type: Path
+      value: /etc/localtime
+  Port:
+    WebUI:
+      Default: ''
+      Description: WebUI Port
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'true'
+      Target: '5000'
+      Type: Port
+      value: '5000'
+  Variable: {}
 DonateImg: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/donate.png
 DonateLink: https://www.paypal.me/chips777
 DonateText: 'If you like my work please '

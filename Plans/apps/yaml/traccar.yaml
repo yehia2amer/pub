@@ -1,61 +1,66 @@
 CategoryList:
 - MediaApp-Other
 Config:
-- '@attributes':
-    Default: '8082'
-    Description: 'Container Port: 8082'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'false'
-    Target: '8082'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: 5000-5150
-    Description: 'Container Port: 5000-5150'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Host port 1
-    Required: 'false'
-    Target: 5000-5150
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: 5000-5150
-    Description: 'Container Port: 5000-5150'
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: Host port 2
-    Required: 'false'
-    Target: 5000-5150
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: /mnt/user/appdata/traccar/logs
-    Description: 'Container Path: /opt/traccar/logs'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Logs
-    Required: 'false'
-    Target: /opt/traccar/logs
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: /mnt/user/appdata/traccar/traccar.xml
-    Description: 'Container Path: /opt/traccar/conf/traccar.xml'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: traccar.xml host path
-    Required: 'false'
-    Target: /opt/traccar/conf/traccar.xml
-    Type: Path
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Logs:
+      Default: /mnt/user/appdata/traccar/logs
+      Description: 'Container Path: /opt/traccar/logs'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Logs
+      Required: 'false'
+      Target: /opt/traccar/logs
+      Type: Path
+      value: ''
+    traccar.xml host path:
+      Default: /mnt/user/appdata/traccar/traccar.xml
+      Description: 'Container Path: /opt/traccar/conf/traccar.xml'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: traccar.xml host path
+      Required: 'false'
+      Target: /opt/traccar/conf/traccar.xml
+      Type: Path
+      value: ''
+  Port:
+    Host port 1:
+      Default: 5000-5150
+      Description: 'Container Port: 5000-5150'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Host port 1
+      Required: 'false'
+      Target: 5000-5150
+      Type: Port
+      value: ''
+    Host port 2:
+      Default: 5000-5150
+      Description: 'Container Port: 5000-5150'
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: Host port 2
+      Required: 'false'
+      Target: 5000-5150
+      Type: Port
+      value: ''
+    WebUI:
+      Default: '8082'
+      Description: 'Container Port: 8082'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'false'
+      Target: '8082'
+      Type: Port
+      value: ''
+  Variable: {}
 ExtraParams: --restart always --hostname traccar
 FirstSeen: 1570896419
 Icon: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/traccar.png

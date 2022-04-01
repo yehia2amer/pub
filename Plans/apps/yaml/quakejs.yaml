@@ -3,50 +3,55 @@ CAComment: This template is set up to use a custom network. You may have to adju
 CategoryList:
 - Other
 Config:
-- '@attributes':
-    Default: '80'
-    Description: HTTP
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: HTTP
-    Required: 'true'
-    Target: '80'
-    Type: Variable
-  value: '80'
-- '@attributes':
-    Default: '27960'
-    Description: Game Port
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Game Port
-    Required: 'true'
-    Target: '27960'
-    Type: Port
-  value: '27960'
-- '@attributes':
-    Default: 192.168.0.266
-    Description: Put your Fixed IP address Here
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: SERVER
-    Required: 'true'
-    Target: SERVER
-    Type: Variable
-  value: 192.168.0.266
-- '@attributes':
-    Default: '80'
-    Description: HTTP_PORT
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: HTTP_PORT
-    Required: 'true'
-    Target: HTTP_PORT
-    Type: Variable
-  value: '80'
+  Device: {}
+  Label: {}
+  Path: {}
+  Port:
+    Game Port:
+      Default: '27960'
+      Description: Game Port
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Game Port
+      Required: 'true'
+      Target: '27960'
+      Type: Port
+      value: '27960'
+  Variable:
+    HTTP:
+      Default: '80'
+      Description: HTTP
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: HTTP
+      Required: 'true'
+      Target: '80'
+      Type: Variable
+      value: '80'
+    HTTP_PORT:
+      Default: '80'
+      Description: HTTP_PORT
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: HTTP_PORT
+      Required: 'true'
+      Target: HTTP_PORT
+      Type: Variable
+      value: '80'
+    SERVER:
+      Default: 192.168.0.266
+      Description: Put your Fixed IP address Here
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: SERVER
+      Required: 'true'
+      Target: SERVER
+      Type: Variable
+      value: 192.168.0.266
 FirstSeen: 1588465551
 Icon: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/quakejs.png
 LastUpdate: 1587610494

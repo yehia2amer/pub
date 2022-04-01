@@ -10,94 +10,99 @@ Branch:
 CategoryList:
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: '19999'
-    Description: Netdata Web UI Port
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Netdata Web UI Port
-    Required: 'true'
-    Target: '19999'
-    Type: Port
-  value: '19999'
-- '@attributes':
-    Default: ''
-    Description: Set to 1 to disable anonymous statistics.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Anonymous Statistics
-    Required: 'false'
-    Target: DO_NOT_TRACK
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: /mnt/user/appdata/netdata/override
-    Description: 'Container Path: /etc/netdata'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Netdata Override
-    Required: 'false'
-    Target: /etc/netdata
-    Type: Path
-  value: /mnt/user/appdata/netdata/override
-- '@attributes':
-    Default: /proc
-    Description: 'Container Path: /host/proc'
-    Display: advanced
-    Mask: 'false'
-    Mode: ro
-    Name: Host /proc
-    Required: 'true'
-    Target: /host/proc
-    Type: Path
-  value: /proc
-- '@attributes':
-    Default: /sys
-    Description: 'Container Path: /host/sys'
-    Display: advanced
-    Mask: 'false'
-    Mode: ro
-    Name: Host /sys
-    Required: 'true'
-    Target: /host/sys
-    Type: Path
-  value: /sys
-- '@attributes':
-    Default: /var/run/docker.sock
-    Description: 'Container Path: /var/run/docker.sock'
-    Display: advanced
-    Mask: 'false'
-    Mode: ro
-    Name: doker.sock
-    Required: 'true'
-    Target: /var/run/docker.sock
-    Type: Path
-  value: /var/run/docker.sock
-- '@attributes':
-    Default: '281'
-    Description: Host docker user gid. Required for container name resolution.
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Docker PGID
-    Required: 'true'
-    Target: PGID
-    Type: Variable
-  value: '281'
-- '@attributes':
-    Default: all
-    Description: 'Valid options: 0,1,2, GPU-fef8089b, all, none, void'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: NVIDIA_VISIBLE_DEVICES
-    Required: 'false'
-    Target: NVIDIA_VISIBLE_DEVICES
-    Type: Variable
-  value: all
+  Device: {}
+  Label: {}
+  Path:
+    Host /proc:
+      Default: /proc
+      Description: 'Container Path: /host/proc'
+      Display: advanced
+      Mask: 'false'
+      Mode: ro
+      Name: Host /proc
+      Required: 'true'
+      Target: /host/proc
+      Type: Path
+      value: /proc
+    Host /sys:
+      Default: /sys
+      Description: 'Container Path: /host/sys'
+      Display: advanced
+      Mask: 'false'
+      Mode: ro
+      Name: Host /sys
+      Required: 'true'
+      Target: /host/sys
+      Type: Path
+      value: /sys
+    Netdata Override:
+      Default: /mnt/user/appdata/netdata/override
+      Description: 'Container Path: /etc/netdata'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Netdata Override
+      Required: 'false'
+      Target: /etc/netdata
+      Type: Path
+      value: /mnt/user/appdata/netdata/override
+    doker.sock:
+      Default: /var/run/docker.sock
+      Description: 'Container Path: /var/run/docker.sock'
+      Display: advanced
+      Mask: 'false'
+      Mode: ro
+      Name: doker.sock
+      Required: 'true'
+      Target: /var/run/docker.sock
+      Type: Path
+      value: /var/run/docker.sock
+  Port:
+    Netdata Web UI Port:
+      Default: '19999'
+      Description: Netdata Web UI Port
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Netdata Web UI Port
+      Required: 'true'
+      Target: '19999'
+      Type: Port
+      value: '19999'
+  Variable:
+    Anonymous Statistics:
+      Default: ''
+      Description: Set to 1 to disable anonymous statistics.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Anonymous Statistics
+      Required: 'false'
+      Target: DO_NOT_TRACK
+      Type: Variable
+      value: ''
+    Docker PGID:
+      Default: '281'
+      Description: Host docker user gid. Required for container name resolution.
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Docker PGID
+      Required: 'true'
+      Target: PGID
+      Type: Variable
+      value: '281'
+    NVIDIA_VISIBLE_DEVICES:
+      Default: all
+      Description: 'Valid options: 0,1,2, GPU-fef8089b, all, none, void'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: NVIDIA_VISIBLE_DEVICES
+      Required: 'false'
+      Target: NVIDIA_VISIBLE_DEVICES
+      Type: Variable
+      value: all
 ExtraParams: --runtime=nvidia --cap-add SYS_PTRACE --security-opt apparmor=unconfined
 FirstSeen: 1586881119
 Icon: https://raw.githubusercontent.com/netdata/netdata/master/web/gui/dashboard/images/ms-icon-310x310.png

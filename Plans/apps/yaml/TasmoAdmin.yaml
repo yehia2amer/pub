@@ -2,28 +2,33 @@ CategoryList:
 - HomeAutomation
 - Network-Management
 Config:
-- '@attributes':
-    Default: /mnt/user/appdata/tasmoadmin/
-    Description: 'Container Path: /data'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: data
-    Required: 'true'
-    Target: /data
-    Type: Path
-  value: /mnt/user/appdata/tasmoadmin/
-- '@attributes':
-    Default: '9541'
-    Description: 'Container Port: 80'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: '9541'
-    Required: 'true'
-    Target: '80'
-    Type: Port
-  value: '9541'
+  Device: {}
+  Label: {}
+  Path:
+    data:
+      Default: /mnt/user/appdata/tasmoadmin/
+      Description: 'Container Path: /data'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: data
+      Required: 'true'
+      Target: /data
+      Type: Path
+      value: /mnt/user/appdata/tasmoadmin/
+  Port:
+    '9541':
+      Default: '9541'
+      Description: 'Container Port: 80'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: '9541'
+      Required: 'true'
+      Target: '80'
+      Type: Port
+      value: '9541'
+  Variable: {}
 DonateImg: ''
 FirstSeen: '1528149716'
 Icon: https://raw.githubusercontent.com/digiblur/unraid-docker-templates/master/images/tasmoadmin_icon.png

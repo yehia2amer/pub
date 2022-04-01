@@ -3,127 +3,132 @@ CategoryList:
 - Productivity
 - MediaApp-Video
 Config:
-- '@attributes':
-    Default: 0.0.0.0
-    Description: Server IP. Required if using Tdarr Nodes across your local network
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Server IP
-    Required: 'false'
-    Target: serverIP
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '8266'
-    Description: 'Container Variable: serverPort'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Server Port
-    Required: 'false'
-    Target: serverPort
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 0.0.0.0
-    Description: Node IP. Required if using Tdarr Nodes across your local network
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Node IP
-    Required: 'false'
-    Target: nodeIP
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: Node Name
-    Description: Node ID Name
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Node ID
-    Required: 'false'
-    Target: nodeID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '8267'
-    Description: Node Port
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Node Port
-    Required: 'false'
-    Target: '8267'
-    Type: Port
-  value: '8267'
-- '@attributes':
-    Default: '99'
-    Description: 'Container Variable: PUID'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: PUID
-    Required: 'false'
-    Target: PUID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '100'
-    Description: 'Container Variable: PGID'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: PGID
-    Required: 'false'
-    Target: PGID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: /mnt/user/appdata/tdarr/configs
-    Description: 'Container Path: /app/configs'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Configs
-    Required: 'false'
-    Target: /app/configs
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: /mnt/user/appdata/tdarr/logs
-    Description: 'Container Path: /app/logs'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Logs
-    Required: 'false'
-    Target: /app/logs
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /mnt/media'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Media Library
-    Required: 'false'
-    Target: /mnt/media
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /temp'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Transcode Cache
-    Required: 'false'
-    Target: /temp
-    Type: Path
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Configs:
+      Default: /mnt/user/appdata/tdarr/configs
+      Description: 'Container Path: /app/configs'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Configs
+      Required: 'false'
+      Target: /app/configs
+      Type: Path
+      value: ''
+    Logs:
+      Default: /mnt/user/appdata/tdarr/logs
+      Description: 'Container Path: /app/logs'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Logs
+      Required: 'false'
+      Target: /app/logs
+      Type: Path
+      value: ''
+    Media Library:
+      Default: ''
+      Description: 'Container Path: /mnt/media'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Media Library
+      Required: 'false'
+      Target: /mnt/media
+      Type: Path
+      value: ''
+    Transcode Cache:
+      Default: ''
+      Description: 'Container Path: /temp'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Transcode Cache
+      Required: 'false'
+      Target: /temp
+      Type: Path
+      value: ''
+  Port:
+    Node Port:
+      Default: '8267'
+      Description: Node Port
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Node Port
+      Required: 'false'
+      Target: '8267'
+      Type: Port
+      value: '8267'
+  Variable:
+    Node ID:
+      Default: Node Name
+      Description: Node ID Name
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Node ID
+      Required: 'false'
+      Target: nodeID
+      Type: Variable
+      value: ''
+    Node IP:
+      Default: 0.0.0.0
+      Description: Node IP. Required if using Tdarr Nodes across your local network
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Node IP
+      Required: 'false'
+      Target: nodeIP
+      Type: Variable
+      value: ''
+    PGID:
+      Default: '100'
+      Description: 'Container Variable: PGID'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: PGID
+      Required: 'false'
+      Target: PGID
+      Type: Variable
+      value: ''
+    PUID:
+      Default: '99'
+      Description: 'Container Variable: PUID'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: PUID
+      Required: 'false'
+      Target: PUID
+      Type: Variable
+      value: ''
+    Server IP:
+      Default: 0.0.0.0
+      Description: Server IP. Required if using Tdarr Nodes across your local network
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Server IP
+      Required: 'false'
+      Target: serverIP
+      Type: Variable
+      value: ''
+    Server Port:
+      Default: '8266'
+      Description: 'Container Variable: serverPort'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Server Port
+      Required: 'false'
+      Target: serverPort
+      Type: Variable
+      value: ''
 DonateLink: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=L5MWTNDLLB6AC&amp;source=url
 DonateText: If you appreciate my work, then please consider buying me a beer :D
 FirstSeen: 1647453806

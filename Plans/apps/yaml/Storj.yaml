@@ -4,73 +4,78 @@ CategoryList:
 - Other
 - Network-Other
 Config:
-- '@attributes':
-    Default: /mnt/user/storj
-    Description: 'Enter location of your storj share folder on unRAID host. '
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Path of Storj share on array
-    Required: 'true'
-    Target: /storj
-    Type: Path
-  value: /mnt/user/storj
-- '@attributes':
-    Default: ''
-    Description: Value should be changed to your Wallet address you use for payout.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Wallet Address
-    Required: 'true'
-    Target: WALLET_ADDRESS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 3TB
-    Description: 'Example: 500GB, 1TB, 10TB.'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: SHARE_SIZE
-    Required: 'true'
-    Target: SHARE_SIZE
-    Type: Variable
-  value: 1TB
-- '@attributes':
-    Default: 0.0.0.0
-    Description: DDNS, DNS, or external IP address
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: RPC Host Address
-    Required: 'true'
-    Target: RPCADDRESS
-    Type: Variable
-  value: 0.0.0.0
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: STORJ_MONITOR_API_KEY'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Storjstat.com Monitor API-Key
-    Required: 'false'
-    Target: STORJ_MONITOR_API_KEY
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 4000-4003
-    Description: Storj service uses TCP 4000. However, if it doesn't find an open
-      connection it will try to tunnel using ports 4001-4003.
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Storj TCP ports
-    Required: 'false'
-    Target: 4000-4003
-    Type: Port
-  value: 4000-4003
+  Device: {}
+  Label: {}
+  Path:
+    Path of Storj share on array:
+      Default: /mnt/user/storj
+      Description: 'Enter location of your storj share folder on unRAID host. '
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Path of Storj share on array
+      Required: 'true'
+      Target: /storj
+      Type: Path
+      value: /mnt/user/storj
+  Port:
+    Storj TCP ports:
+      Default: 4000-4003
+      Description: Storj service uses TCP 4000. However, if it doesn't find an open
+        connection it will try to tunnel using ports 4001-4003.
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Storj TCP ports
+      Required: 'false'
+      Target: 4000-4003
+      Type: Port
+      value: 4000-4003
+  Variable:
+    RPC Host Address:
+      Default: 0.0.0.0
+      Description: DDNS, DNS, or external IP address
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: RPC Host Address
+      Required: 'true'
+      Target: RPCADDRESS
+      Type: Variable
+      value: 0.0.0.0
+    SHARE_SIZE:
+      Default: 3TB
+      Description: 'Example: 500GB, 1TB, 10TB.'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: SHARE_SIZE
+      Required: 'true'
+      Target: SHARE_SIZE
+      Type: Variable
+      value: 1TB
+    Storjstat.com Monitor API-Key:
+      Default: ''
+      Description: 'Container Variable: STORJ_MONITOR_API_KEY'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Storjstat.com Monitor API-Key
+      Required: 'false'
+      Target: STORJ_MONITOR_API_KEY
+      Type: Variable
+      value: ''
+    Wallet Address:
+      Default: ''
+      Description: Value should be changed to your Wallet address you use for payout.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Wallet Address
+      Required: 'true'
+      Target: WALLET_ADDRESS
+      Type: Variable
+      value: ''
 DonateImg: ''
 DonateText: Etherum or STORJ tokens for template author
 ExtraParams: --restart=always

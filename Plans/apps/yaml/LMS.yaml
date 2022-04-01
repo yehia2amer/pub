@@ -3,50 +3,55 @@ CategoryList:
 - MediaApp-Music
 - MediaServer-Music
 Config:
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'false'
-    Target: '5082'
-    Type: Port
-  value: '5082'
-- '@attributes':
-    Default: ''
-    Description: This is the location for the internal data.
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Storage (data)
-    Required: 'false'
-    Target: /var/lms
-    Type: Path
-  value: /mnt/user/appdata/lms/data
-- '@attributes':
-    Default: ''
-    Description: This is the configuration file.
-    Display: always
-    Mask: 'false'
-    Mode: ro
-    Name: Storage (config file)
-    Required: 'false'
-    Target: /etc/lms.conf
-    Type: Path
-  value: /mnt/user/appdata/lms/config/lms.conf
-- '@attributes':
-    Default: ''
-    Description: This is the location for you media library.
-    Display: always
-    Mask: 'false'
-    Mode: ro
-    Name: Storage (media)
-    Required: 'true'
-    Target: /music
-    Type: Path
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Storage (config file):
+      Default: ''
+      Description: This is the configuration file.
+      Display: always
+      Mask: 'false'
+      Mode: ro
+      Name: Storage (config file)
+      Required: 'false'
+      Target: /etc/lms.conf
+      Type: Path
+      value: /mnt/user/appdata/lms/config/lms.conf
+    Storage (data):
+      Default: ''
+      Description: This is the location for the internal data.
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Storage (data)
+      Required: 'false'
+      Target: /var/lms
+      Type: Path
+      value: /mnt/user/appdata/lms/data
+    Storage (media):
+      Default: ''
+      Description: This is the location for you media library.
+      Display: always
+      Mask: 'false'
+      Mode: ro
+      Name: Storage (media)
+      Required: 'true'
+      Target: /music
+      Type: Path
+      value: ''
+  Port:
+    WebUI:
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'false'
+      Target: '5082'
+      Type: Port
+      value: '5082'
+  Variable: {}
 FirstSeen: 1644447794
 Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/lms.png
 LastUpdate: 1644103636

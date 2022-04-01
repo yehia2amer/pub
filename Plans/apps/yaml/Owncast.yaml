@@ -2,122 +2,127 @@ CategoryList:
 - Productivity
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: ''
-    Description: Data Path
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Data Dir
-    Required: 'true'
-    Target: /owncast
-    Type: Path
-  value: /mnt/cache/appdata/owncast/
-- '@attributes':
-    Default: ''
-    Description: "Preferred Owncast version goes here (set to \u2018latest\u2019 to\
-      \ download the latest and check on every startup if there is a newer version\
-      \ available)"
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Preferred Version
-    Required: 'true'
-    Target: OWNCAST_V
-    Type: Variable
-  value: latest
-- '@attributes':
-    Default: ''
-    Description: TCP Port - WebInterface
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: TCP1 - WebInterface
-    Required: 'true'
-    Target: '8080'
-    Type: Port
-  value: '8080'
-- '@attributes':
-    Default: ''
-    Description: TCP Port - RTMP Streaming port
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: TCP2 - RTMP
-    Required: 'true'
-    Target: '1935'
-    Type: Port
-  value: '1935'
-- '@attributes':
-    Default: ''
-    Description: Enter extra startup parameters if needed here (leave empty if not
-      needed)
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Extra Startup Parameters
-    Required: 'false'
-    Target: START_PARAMS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Nvidia Visible Devices - enter your GPU UUID here (only required
-      if you plan to use Nvidia hardware transcoding otherwise leave empty, don't
-      forget to add '--runtime=nvidia' to your 'Extra Parameters' in the template).
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Nvidia Visible Devices
-    Required: 'false'
-    Target: NVIDIA_VISIBLE_DEVICES
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Nvidia Driver Capabilities (This value can be left in the template
-      even if you don't want to use Nvidia hardware transcoding).
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Nvidia Driver Capabilities
-    Required: 'false'
-    Target: NVIDIA_DRIVER_CAPABILITIES
-    Type: Variable
-  value: all
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: UID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: UID
-    Required: 'true'
-    Target: UID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: GID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: GID
-    Required: 'true'
-    Target: GID
-    Type: Variable
-  value: '100'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: UMASK'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Umask
-    Required: 'true'
-    Target: UMASK
-    Type: Variable
-  value: '0000'
+  Device: {}
+  Label: {}
+  Path:
+    Data Dir:
+      Default: ''
+      Description: Data Path
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Data Dir
+      Required: 'true'
+      Target: /owncast
+      Type: Path
+      value: /mnt/cache/appdata/owncast/
+  Port:
+    TCP1 - WebInterface:
+      Default: ''
+      Description: TCP Port - WebInterface
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: TCP1 - WebInterface
+      Required: 'true'
+      Target: '8080'
+      Type: Port
+      value: '8080'
+    TCP2 - RTMP:
+      Default: ''
+      Description: TCP Port - RTMP Streaming port
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: TCP2 - RTMP
+      Required: 'true'
+      Target: '1935'
+      Type: Port
+      value: '1935'
+  Variable:
+    Extra Startup Parameters:
+      Default: ''
+      Description: Enter extra startup parameters if needed here (leave empty if not
+        needed)
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Extra Startup Parameters
+      Required: 'false'
+      Target: START_PARAMS
+      Type: Variable
+      value: ''
+    GID:
+      Default: ''
+      Description: 'Container Variable: GID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: GID
+      Required: 'true'
+      Target: GID
+      Type: Variable
+      value: '100'
+    Nvidia Driver Capabilities:
+      Default: ''
+      Description: Nvidia Driver Capabilities (This value can be left in the template
+        even if you don't want to use Nvidia hardware transcoding).
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Nvidia Driver Capabilities
+      Required: 'false'
+      Target: NVIDIA_DRIVER_CAPABILITIES
+      Type: Variable
+      value: all
+    Nvidia Visible Devices:
+      Default: ''
+      Description: Nvidia Visible Devices - enter your GPU UUID here (only required
+        if you plan to use Nvidia hardware transcoding otherwise leave empty, don't
+        forget to add '--runtime=nvidia' to your 'Extra Parameters' in the template).
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Nvidia Visible Devices
+      Required: 'false'
+      Target: NVIDIA_VISIBLE_DEVICES
+      Type: Variable
+      value: ''
+    Preferred Version:
+      Default: ''
+      Description: "Preferred Owncast version goes here (set to \u2018latest\u2019\
+        \ to download the latest and check on every startup if there is a newer version\
+        \ available)"
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Preferred Version
+      Required: 'true'
+      Target: OWNCAST_V
+      Type: Variable
+      value: latest
+    UID:
+      Default: ''
+      Description: 'Container Variable: UID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: UID
+      Required: 'true'
+      Target: UID
+      Type: Variable
+      value: '99'
+    Umask:
+      Default: ''
+      Description: 'Container Variable: UMASK'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Umask
+      Required: 'true'
+      Target: UMASK
+      Type: Variable
+      value: '0000'
 ExtraParams: --restart=unless-stopped
 FirstSeen: 1617969765
 Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/owncast.png

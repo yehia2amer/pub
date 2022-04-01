@@ -2,50 +2,55 @@ CategoryList:
 - Other
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: '9200'
-    Description: Host port exposed for REST HTTP interface.
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: REST API Port
-    Required: 'true'
-    Target: '9200'
-    Type: Port
-  value: '9200'
-- '@attributes':
-    Default: '9300'
-    Description: Host port exposed for node communication.
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Nodes Communication Port
-    Required: 'true'
-    Target: '9300'
-    Type: Port
-  value: '9300'
-- '@attributes':
-    Default: single-node
-    Description: 'Container Variable: discovery.type'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Discovery Type
-    Required: 'true'
-    Target: discovery.type
-    Type: Variable
-  value: single-node
-- '@attributes':
-    Default: /mnt/user/appdata/elasticsearch
-    Description: Directory where ES configurations and data is persisted
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: AppData
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    AppData:
+      Default: /mnt/user/appdata/elasticsearch
+      Description: Directory where ES configurations and data is persisted
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: AppData
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: ''
+  Port:
+    Nodes Communication Port:
+      Default: '9300'
+      Description: Host port exposed for node communication.
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Nodes Communication Port
+      Required: 'true'
+      Target: '9300'
+      Type: Port
+      value: '9300'
+    REST API Port:
+      Default: '9200'
+      Description: Host port exposed for REST HTTP interface.
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: REST API Port
+      Required: 'true'
+      Target: '9200'
+      Type: Port
+      value: '9200'
+  Variable:
+    Discovery Type:
+      Default: single-node
+      Description: 'Container Variable: discovery.type'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Discovery Type
+      Required: 'true'
+      Target: discovery.type
+      Type: Variable
+      value: single-node
 DonateLink: https://paypal.me/d8sychain
 DonateText: Donations
 ExtraParams: --ulimit nofile=262144:262144 -u 1000

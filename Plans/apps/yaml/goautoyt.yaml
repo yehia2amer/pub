@@ -3,72 +3,77 @@ CategoryList:
 - Downloaders
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: '9000'
-    Description: 'Container Port: 8080'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: HTTP Port
-    Required: 'false'
-    Target: '8080'
-    Type: Port
-  value: '9000'
-- '@attributes':
-    Default: /mnt/user/appdata/go-auto-yt/downloads
-    Description: 'Container Path: /app/downloads'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Mounted Downloads Folder
-    Required: 'false'
-    Target: /app/downloads
-    Type: Path
-  value: /mnt/user/appdata/go-auto-yt/downloads
-- '@attributes':
-    Default: /mnt/user/appdata/go-auto-yt/config
-    Description: 'Container Path: /app/config'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Mounted Configuration Folder
-    Required: 'false'
-    Target: /app/config
-    Type: Path
-  value: /mnt/user/appdata/go-auto-yt/config
-- '@attributes':
-    Default: '1000'
-    Description: 'Container Variable: PUID'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: User Identifier ( PUID )
-    Required: 'false'
-    Target: PUID
-    Type: Variable
-  value: '1000'
-- '@attributes':
-    Default: '1000'
-    Description: 'Container Variable: PGID'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Group ID ( PGID )
-    Required: 'false'
-    Target: PGID
-    Type: Variable
-  value: '1000'
-- '@attributes':
-    Default: '0022'
-    Description: 'Container Variable: UMASK_SET'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: User File Creation MASK ( UMASK )
-    Required: 'false'
-    Target: UMASK_SET
-    Type: Variable
-  value: '0022'
+  Device: {}
+  Label: {}
+  Path:
+    Mounted Configuration Folder:
+      Default: /mnt/user/appdata/go-auto-yt/config
+      Description: 'Container Path: /app/config'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Mounted Configuration Folder
+      Required: 'false'
+      Target: /app/config
+      Type: Path
+      value: /mnt/user/appdata/go-auto-yt/config
+    Mounted Downloads Folder:
+      Default: /mnt/user/appdata/go-auto-yt/downloads
+      Description: 'Container Path: /app/downloads'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Mounted Downloads Folder
+      Required: 'false'
+      Target: /app/downloads
+      Type: Path
+      value: /mnt/user/appdata/go-auto-yt/downloads
+  Port:
+    HTTP Port:
+      Default: '9000'
+      Description: 'Container Port: 8080'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: HTTP Port
+      Required: 'false'
+      Target: '8080'
+      Type: Port
+      value: '9000'
+  Variable:
+    Group ID ( PGID ):
+      Default: '1000'
+      Description: 'Container Variable: PGID'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Group ID ( PGID )
+      Required: 'false'
+      Target: PGID
+      Type: Variable
+      value: '1000'
+    User File Creation MASK ( UMASK ):
+      Default: '0022'
+      Description: 'Container Variable: UMASK_SET'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: User File Creation MASK ( UMASK )
+      Required: 'false'
+      Target: UMASK_SET
+      Type: Variable
+      value: '0022'
+    User Identifier ( PUID ):
+      Default: '1000'
+      Description: 'Container Variable: PUID'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: User Identifier ( PUID )
+      Required: 'false'
+      Target: PUID
+      Type: Variable
+      value: '1000'
 DonateLink: https://www.paypal.me/xternet
 DonateText: Donate me a coffee or a beer if you like my work :)
 FirstSeen: 1575731130

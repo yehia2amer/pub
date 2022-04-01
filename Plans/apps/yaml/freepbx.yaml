@@ -3,262 +3,255 @@ CategoryList:
 - Network-Voip
 - Network-Messenger
 Config:
-- '@attributes':
-    Default: '8150'
-    Description: HTTP
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: HTTP
-    Required: 'false'
-    Target: '80'
-    Type: Port
-  value: '8150'
-- '@attributes':
-    Default: '4150'
-    Description: HTTPs
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: HTTPs
-    Required: 'false'
-    Target: '443'
-    Type: Port
-  value: '4150'
-- '@attributes':
-    Default: '5060'
-    Description: PJSIP
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: PJSIP
-    Required: 'false'
-    Target: '5060'
-    Type: Port
-  value: '5060'
-- '@attributes':
-    Default: '5160'
-    Description: SIP
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: SIP
-    Required: 'false'
-    Target: '5160'
-    Type: Port
-  value: '5160'
-- '@attributes':
-    Default: '5161'
-    Description: TLS SIP
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: TLS SIP
-    Required: 'false'
-    Target: '5161'
-    Type: Port
-  value: '5161'
-- '@attributes':
-    Default: 18000-20000
-    Description: RTP Ports
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: RTP Ports
-    Required: 'false'
-    Target: 18000-20000
-    Type: Port
-  value: 18000-20000
-- '@attributes':
-    Default: '4445'
-    Description: FOP
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: FOP
-    Required: 'false'
-    Target: '4445'
-    Type: Port
-  value: '4445'
-- '@attributes':
-    Default: /mnt/user/appdata/freepbx/data/
-    Description: Data
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Data
-    Required: 'false'
-    Target: /data
-    Type: Path
-  value: /mnt/user/appdata/freepbx/data/
-- '@attributes':
-    Default: TRUE|FALSE
-    Description: Allows you to use an internally provided MariaDB Server e.g. TRUE
-      or FALSE
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DB_EMBEDDED
-    Required: 'false'
-    Target: DB_EMBEDDED
-    Type: Variable
-  value: 'TRUE'
-- '@attributes':
-    Default: ''
-    Description: Log
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Log
-    Required: 'false'
-    Target: /var/log
-    Type: Path
-  value: /mnt/user/appdata/freepbx/logs/
-- '@attributes':
-    Default: ''
-    Description: WWW
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: WWW
-    Required: 'false'
-    Target: /var/www/html
-    Type: Path
-  value: /mnt/user/appdata/freepbx/www/
-- '@attributes':
-    Default: /mnt/user/appdata/freepbx/certs/
-    Description: Certs
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Certs
-    Required: 'false'
-    Target: /certs
-    Type: Path
-  value: /mnt/user/appdata/freepbx/certs/
-- '@attributes':
-    Default: ''
-    Description: DB Path
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: DB Path
-    Required: 'false'
-    Target: /var/lib/mysql
-    Type: Path
-  value: /mnt/user/appdata/freepbx/db/
-- '@attributes':
-    Default: TRUE|FALSE
-    Description: ENABLE_FAIL2BAN
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: ENABLE_FAIL2BAN
-    Required: 'false'
-    Target: ENABLE_FAIL2BAN
-    Type: Variable
-  value: 'FALSE'
-- '@attributes':
-    Default: TRUE|FALSE
-    Description: Enable Flash Operator Panel
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Flash Operator Panel
-    Required: 'false'
-    Target: ENABLE_FOP
-    Type: Variable
-  value: 'TRUE'
-- '@attributes':
-    Default: FALSE|TRUE
-    Description: Enable HTTPs to serve SSL requests - Default FALSE
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: ENABLE_SSL
-    Required: 'false'
-    Target: ENABLE_SSL
-    Type: Variable
-  value: 'FALSE'
-- '@attributes':
-    Default: FALSE|TRUE
-    Description: Enable XMPP Module with MongoDB - Default FALSE
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: ENABLE_XMPP
-    Required: 'false'
-    Target: ENABLE_XMPP
-    Type: Variable
-  value: 'FALSE'
-- '@attributes':
-    Default: ''
-    Description: Comma seperated list of modules to additionally install on first
-      container startup
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: INSTALL_ADDITIONAL_MODULES
-    Required: 'false'
-    Target: INSTALL_ADDITIONAL_MODULES
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '18000'
-    Description: What port to start RTP Transmissions
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: RTP_START
-    Required: 'false'
-    Target: RTP_START
-    Type: Variable
-  value: '18000'
-- '@attributes':
-    Default: '20000'
-    Description: What port to end RTP Transmissions
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: RTP_FINISH
-    Required: 'false'
-    Target: RTP_FINISH
-    Type: Variable
-  value: '20000'
-- '@attributes':
-    Default: cert.pem
-    Description: TLS Certificate to drop in /certs for HTTPS if no reverse proxy
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: TLS_CERT
-    Required: 'false'
-    Target: TLS_CERT
-    Type: Variable
-  value: cert.pem
-- '@attributes':
-    Default: key.pem
-    Description: TLS Key to drop in /certs for HTTPS if no reverse proxy
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: TLS_KEY
-    Required: 'false'
-    Target: TLS_KEY
-    Type: Variable
-  value: key.pem
-- '@attributes':
-    Default: TRUE|FALSE
-    Description: Allows you to use an internally provided MariaDB Server e.g. TRUE
-      or FALSE
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DB_EMBEDDED
-    Required: 'false'
-    Target: DB_EMBEDDED
-    Type: Variable
-  value: 'TRUE'
+  Device: {}
+  Label: {}
+  Path:
+    Certs:
+      Default: /mnt/user/appdata/freepbx/certs/
+      Description: Certs
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Certs
+      Required: 'false'
+      Target: /certs
+      Type: Path
+      value: /mnt/user/appdata/freepbx/certs/
+    DB Path:
+      Default: ''
+      Description: DB Path
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: DB Path
+      Required: 'false'
+      Target: /var/lib/mysql
+      Type: Path
+      value: /mnt/user/appdata/freepbx/db/
+    Data:
+      Default: /mnt/user/appdata/freepbx/data/
+      Description: Data
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Data
+      Required: 'false'
+      Target: /data
+      Type: Path
+      value: /mnt/user/appdata/freepbx/data/
+    Log:
+      Default: ''
+      Description: Log
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Log
+      Required: 'false'
+      Target: /var/log
+      Type: Path
+      value: /mnt/user/appdata/freepbx/logs/
+    WWW:
+      Default: ''
+      Description: WWW
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: WWW
+      Required: 'false'
+      Target: /var/www/html
+      Type: Path
+      value: /mnt/user/appdata/freepbx/www/
+  Port:
+    FOP:
+      Default: '4445'
+      Description: FOP
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: FOP
+      Required: 'false'
+      Target: '4445'
+      Type: Port
+      value: '4445'
+    HTTP:
+      Default: '8150'
+      Description: HTTP
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: HTTP
+      Required: 'false'
+      Target: '80'
+      Type: Port
+      value: '8150'
+    HTTPs:
+      Default: '4150'
+      Description: HTTPs
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: HTTPs
+      Required: 'false'
+      Target: '443'
+      Type: Port
+      value: '4150'
+    PJSIP:
+      Default: '5060'
+      Description: PJSIP
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: PJSIP
+      Required: 'false'
+      Target: '5060'
+      Type: Port
+      value: '5060'
+    RTP Ports:
+      Default: 18000-20000
+      Description: RTP Ports
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: RTP Ports
+      Required: 'false'
+      Target: 18000-20000
+      Type: Port
+      value: 18000-20000
+    SIP:
+      Default: '5160'
+      Description: SIP
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: SIP
+      Required: 'false'
+      Target: '5160'
+      Type: Port
+      value: '5160'
+    TLS SIP:
+      Default: '5161'
+      Description: TLS SIP
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: TLS SIP
+      Required: 'false'
+      Target: '5161'
+      Type: Port
+      value: '5161'
+  Variable:
+    DB_EMBEDDED:
+      Default: TRUE|FALSE
+      Description: Allows you to use an internally provided MariaDB Server e.g. TRUE
+        or FALSE
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DB_EMBEDDED
+      Required: 'false'
+      Target: DB_EMBEDDED
+      Type: Variable
+      value: 'TRUE'
+    ENABLE_FAIL2BAN:
+      Default: TRUE|FALSE
+      Description: ENABLE_FAIL2BAN
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: ENABLE_FAIL2BAN
+      Required: 'false'
+      Target: ENABLE_FAIL2BAN
+      Type: Variable
+      value: 'FALSE'
+    ENABLE_SSL:
+      Default: FALSE|TRUE
+      Description: Enable HTTPs to serve SSL requests - Default FALSE
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: ENABLE_SSL
+      Required: 'false'
+      Target: ENABLE_SSL
+      Type: Variable
+      value: 'FALSE'
+    ENABLE_XMPP:
+      Default: FALSE|TRUE
+      Description: Enable XMPP Module with MongoDB - Default FALSE
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: ENABLE_XMPP
+      Required: 'false'
+      Target: ENABLE_XMPP
+      Type: Variable
+      value: 'FALSE'
+    Flash Operator Panel:
+      Default: TRUE|FALSE
+      Description: Enable Flash Operator Panel
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Flash Operator Panel
+      Required: 'false'
+      Target: ENABLE_FOP
+      Type: Variable
+      value: 'TRUE'
+    INSTALL_ADDITIONAL_MODULES:
+      Default: ''
+      Description: Comma seperated list of modules to additionally install on first
+        container startup
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: INSTALL_ADDITIONAL_MODULES
+      Required: 'false'
+      Target: INSTALL_ADDITIONAL_MODULES
+      Type: Variable
+      value: ''
+    RTP_FINISH:
+      Default: '20000'
+      Description: What port to end RTP Transmissions
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: RTP_FINISH
+      Required: 'false'
+      Target: RTP_FINISH
+      Type: Variable
+      value: '20000'
+    RTP_START:
+      Default: '18000'
+      Description: What port to start RTP Transmissions
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: RTP_START
+      Required: 'false'
+      Target: RTP_START
+      Type: Variable
+      value: '18000'
+    TLS_CERT:
+      Default: cert.pem
+      Description: TLS Certificate to drop in /certs for HTTPS if no reverse proxy
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: TLS_CERT
+      Required: 'false'
+      Target: TLS_CERT
+      Type: Variable
+      value: cert.pem
+    TLS_KEY:
+      Default: key.pem
+      Description: TLS Key to drop in /certs for HTTPS if no reverse proxy
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: TLS_KEY
+      Required: 'false'
+      Target: TLS_KEY
+      Type: Variable
+      value: key.pem
 FirstSeen: 1585959012
 Icon: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/freepbx.png
 LastUpdate: 1645113233

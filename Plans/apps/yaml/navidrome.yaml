@@ -1,94 +1,99 @@
 CategoryList:
 - MediaServer-Music
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 4533'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'false'
-    Target: '4533'
-    Type: Port
-  value: '4533'
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /data'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Appdata
-    Required: 'false'
-    Target: /data
-    Type: Path
-  value: /mnt/user/appdata/navidrome
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /music'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Music
-    Required: 'false'
-    Target: /music
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: ND_SCANSCHEDULE'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Scan Schedule
-    Required: 'false'
-    Target: ND_SCANSCHEDULE
-    Type: Variable
-  value: 1m
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: ND_LOGLEVEL'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Log Level
-    Required: 'false'
-    Target: ND_LOGLEVEL
-    Type: Variable
-  value: info
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: ND_SESSIONTIMEOUT'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Timeout
-    Required: 'false'
-    Target: ND_SESSIONTIMEOUT
-    Type: Variable
-  value: 24h
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: ND_BASEURL'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: BaseURL
-    Required: 'false'
-    Target: ND_BASEURL
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: ND_IMAGECACHESIZE'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Image Caching
-    Required: 'false'
-    Target: ND_IMAGECACHESIZE
-    Type: Variable
-  value: 200MB
+  Device: {}
+  Label: {}
+  Path:
+    Appdata:
+      Default: ''
+      Description: 'Container Path: /data'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Appdata
+      Required: 'false'
+      Target: /data
+      Type: Path
+      value: /mnt/user/appdata/navidrome
+    Music:
+      Default: ''
+      Description: 'Container Path: /music'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Music
+      Required: 'false'
+      Target: /music
+      Type: Path
+      value: ''
+  Port:
+    WebUI:
+      Default: ''
+      Description: 'Container Port: 4533'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'false'
+      Target: '4533'
+      Type: Port
+      value: '4533'
+  Variable:
+    BaseURL:
+      Default: ''
+      Description: 'Container Variable: ND_BASEURL'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: BaseURL
+      Required: 'false'
+      Target: ND_BASEURL
+      Type: Variable
+      value: ''
+    Image Caching:
+      Default: ''
+      Description: 'Container Variable: ND_IMAGECACHESIZE'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Image Caching
+      Required: 'false'
+      Target: ND_IMAGECACHESIZE
+      Type: Variable
+      value: 200MB
+    Log Level:
+      Default: ''
+      Description: 'Container Variable: ND_LOGLEVEL'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Log Level
+      Required: 'false'
+      Target: ND_LOGLEVEL
+      Type: Variable
+      value: info
+    Scan Schedule:
+      Default: ''
+      Description: 'Container Variable: ND_SCANSCHEDULE'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Scan Schedule
+      Required: 'false'
+      Target: ND_SCANSCHEDULE
+      Type: Variable
+      value: 1m
+    Timeout:
+      Default: ''
+      Description: 'Container Variable: ND_SESSIONTIMEOUT'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Timeout
+      Required: 'false'
+      Target: ND_SESSIONTIMEOUT
+      Type: Variable
+      value: 24h
 FirstSeen: 1610651376
 Icon: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/navidrome.png
 LastUpdate: 1645989052

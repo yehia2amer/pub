@@ -1,39 +1,44 @@
 CategoryList:
 - Network-Messenger
 Config:
-- '@attributes':
-    Default: '8000'
-    Description: HTTP
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: HTTP
-    Required: 'true'
-    Target: '80'
-    Type: Port
-  value: '8000'
-- '@attributes':
-    Default: '8443'
-    Description: HTTPs (Not Required if you use reverse proxy)
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: HTTPs
-    Required: 'false'
-    Target: '443'
-    Type: Port
-  value: '4596'
-- '@attributes':
-    Default: /mnt/user/appdata/dispatch/
-    Description: Data
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Data
-    Required: 'true'
-    Target: /data
-    Type: Path
-  value: /mnt/user/appdata/dispatch/
+  Device: {}
+  Label: {}
+  Path:
+    Data:
+      Default: /mnt/user/appdata/dispatch/
+      Description: Data
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Data
+      Required: 'true'
+      Target: /data
+      Type: Path
+      value: /mnt/user/appdata/dispatch/
+  Port:
+    HTTP:
+      Default: '8000'
+      Description: HTTP
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: HTTP
+      Required: 'true'
+      Target: '80'
+      Type: Port
+      value: '8000'
+    HTTPs:
+      Default: '8443'
+      Description: HTTPs (Not Required if you use reverse proxy)
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: HTTPs
+      Required: 'false'
+      Target: '443'
+      Type: Port
+      value: '4596'
+  Variable: {}
 FirstSeen: 1588291709
 Icon: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/dispatch.png
 LastUpdate: 1622395218

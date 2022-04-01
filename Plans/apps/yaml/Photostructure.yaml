@@ -3,111 +3,117 @@ CategoryList:
 - MediaServer-Video
 - MediaServer-Photos
 Config:
-- '@attributes':
-    Default: ''
-    Description: Port to access the HTTP UI. Can be modified by setting the PS_HTTP_PORT
-      environment variable.
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Web UI
-    Required: 'true'
-    Target: '1787'
-    Type: Port
-  value: '1787'
-- '@attributes':
-    Default: /mnt/user/Photos
-    Description: This is where your PhotoStructure Library will be stored. It needs
-      to have sufficient free space to hold preview images, and transcoded videos.
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Library
-    Required: 'true'
-    Target: /ps/library
-    Type: Path
-  value: /mnt/user/Photos
-- '@attributes':
-    Default: ''
-    Description: "This is the userid that PhotoStructure will run under, instead of\
-      \ the default of root (userid 0).\r\n\r\nFiles copied into your library will\
-      \ be owned by this userid."
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: User ID
-    Required: 'false'
-    Target: PUID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'This is the groupid that PhotoStructure will run under. '
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Group ID
-    Required: 'false'
-    Target: PGID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: TZ
-    Description: "Setting the default timezone helps PhotoStructure infer captured-at\
-      \ time for assets that are missing timezone metadata.\r\n\r\n"
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: TZ
-    Required: 'false'
-    Target: TZ
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: error
-    Description: Valid values are debug, info, warn, and error. Default is error,
-      which (should be) quiet.
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Logging level
-    Required: 'false'
-    Target: PS_LOG_LEVEL
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: /mnt/cache/appdata/photostructure/tmp
-    Description: This needs to be fast, local disk.
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: Temp/Scratch disk
-    Required: 'true'
-    Target: /ps/tmp
-    Type: Path
-  value: /mnt/cache/appdata/photostructure/tmp
-- '@attributes':
-    Default: /mnt/user/appdata/photostructure/logs
-    Description: 'Logfiles will be written into this directory. Set environment variable '
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: Logs
-    Required: 'true'
-    Target: /ps/logs
-    Type: Path
-  value: /mnt/user/appdata/photostructure/logs
-- '@attributes':
-    Default: /mnt/user/appdata/photostructure/config
-    Description: System configuration is written into this directory.
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: System config
-    Required: 'true'
-    Target: /ps/config
-    Type: Path
-  value: /mnt/user/appdata/photostructure/config
+  Device: {}
+  Label: {}
+  Path:
+    Library:
+      Default: /mnt/user/Photos
+      Description: This is where your PhotoStructure Library will be stored. It needs
+        to have sufficient free space to hold preview images, and transcoded videos.
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Library
+      Required: 'true'
+      Target: /ps/library
+      Type: Path
+      value: /mnt/user/Photos
+    Logs:
+      Default: /mnt/user/appdata/photostructure/logs
+      Description: 'Logfiles will be written into this directory. Set environment
+        variable '
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: Logs
+      Required: 'true'
+      Target: /ps/logs
+      Type: Path
+      value: /mnt/user/appdata/photostructure/logs
+    System config:
+      Default: /mnt/user/appdata/photostructure/config
+      Description: System configuration is written into this directory.
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: System config
+      Required: 'true'
+      Target: /ps/config
+      Type: Path
+      value: /mnt/user/appdata/photostructure/config
+    Temp/Scratch disk:
+      Default: /mnt/cache/appdata/photostructure/tmp
+      Description: This needs to be fast, local disk.
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: Temp/Scratch disk
+      Required: 'true'
+      Target: /ps/tmp
+      Type: Path
+      value: /mnt/cache/appdata/photostructure/tmp
+  Port:
+    Web UI:
+      Default: ''
+      Description: Port to access the HTTP UI. Can be modified by setting the PS_HTTP_PORT
+        environment variable.
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Web UI
+      Required: 'true'
+      Target: '1787'
+      Type: Port
+      value: '1787'
+  Variable:
+    Group ID:
+      Default: ''
+      Description: 'This is the groupid that PhotoStructure will run under. '
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Group ID
+      Required: 'false'
+      Target: PGID
+      Type: Variable
+      value: ''
+    Logging level:
+      Default: error
+      Description: Valid values are debug, info, warn, and error. Default is error,
+        which (should be) quiet.
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Logging level
+      Required: 'false'
+      Target: PS_LOG_LEVEL
+      Type: Variable
+      value: ''
+    TZ:
+      Default: TZ
+      Description: "Setting the default timezone helps PhotoStructure infer captured-at\
+        \ time for assets that are missing timezone metadata.\r\n\r\n"
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: TZ
+      Required: 'false'
+      Target: TZ
+      Type: Variable
+      value: ''
+    User ID:
+      Default: ''
+      Description: "This is the userid that PhotoStructure will run under, instead\
+        \ of the default of root (userid 0).\r\n\r\nFiles copied into your library\
+        \ will be owned by this userid."
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: User ID
+      Required: 'false'
+      Target: PUID
+      Type: Variable
+      value: ''
 ExtraParams: --stop-timeout=120
 FirstSeen: 1630107985
 Icon: https://photostructure.com/img/logo-circle-gradient-256.png

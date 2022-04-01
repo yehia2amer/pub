@@ -1,61 +1,66 @@
 CategoryList:
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /signer-cfg.yml'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: /signer-cfg.yml
-    Required: 'false'
-    Target: /signer-cfg.yml
-    Type: Path
-  value: /mnt/user/appdata/ios/config/signer-cfg.yml
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 8080'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Container Port
-    Required: 'false'
-    Target: '8080'
-    Type: Port
-  value: '3344'
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /data'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: /data
-    Required: 'false'
-    Target: /data
-    Type: Path
-  value: /mnt/user/appdata/ios/
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /data/profiles/'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: /data/profiles/
-    Required: 'false'
-    Target: /data/profiles/
-    Type: Path
-  value: /mnt/user/appdata/ios/profiles/
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: -log-level'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: -log-level
-    Required: 'false'
-    Target: -log-level
-    Type: Variable
-  value: '2'
+  Device: {}
+  Label: {}
+  Path:
+    /data:
+      Default: ''
+      Description: 'Container Path: /data'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: /data
+      Required: 'false'
+      Target: /data
+      Type: Path
+      value: /mnt/user/appdata/ios/
+    /data/profiles/:
+      Default: ''
+      Description: 'Container Path: /data/profiles/'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: /data/profiles/
+      Required: 'false'
+      Target: /data/profiles/
+      Type: Path
+      value: /mnt/user/appdata/ios/profiles/
+    /signer-cfg.yml:
+      Default: ''
+      Description: 'Container Path: /signer-cfg.yml'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: /signer-cfg.yml
+      Required: 'false'
+      Target: /signer-cfg.yml
+      Type: Path
+      value: /mnt/user/appdata/ios/config/signer-cfg.yml
+  Port:
+    Container Port:
+      Default: ''
+      Description: 'Container Port: 8080'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Container Port
+      Required: 'false'
+      Target: '8080'
+      Type: Port
+      value: '3344'
+  Variable:
+    -log-level:
+      Default: ''
+      Description: 'Container Variable: -log-level'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: -log-level
+      Required: 'false'
+      Target: -log-level
+      Type: Variable
+      value: '2'
 FirstSeen: 1635552196
 Icon: https://raw.githubusercontent.com/SignTools/SignTools/master/img/logo.png
 LastUpdate: 1642959110

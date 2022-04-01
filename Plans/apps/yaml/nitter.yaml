@@ -1,28 +1,33 @@
 CategoryList:
 - Network-Web
 Config:
-- '@attributes':
-    Default: /mnt/user/appdata/nitter/nitter.conf
-    Description: Nitter.conf location
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Nitter.conf
-    Required: 'false'
-    Target: /src/nitter.conf
-    Type: Path
-  value: /mnt/user/appdata/nitter/nitter.conf
-- '@attributes':
-    Default: '8080'
-    Description: 'Container Port: 8080'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Port
-    Required: 'false'
-    Target: '8080'
-    Type: Port
-  value: '8080'
+  Device: {}
+  Label: {}
+  Path:
+    Nitter.conf:
+      Default: /mnt/user/appdata/nitter/nitter.conf
+      Description: Nitter.conf location
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Nitter.conf
+      Required: 'false'
+      Target: /src/nitter.conf
+      Type: Path
+      value: /mnt/user/appdata/nitter/nitter.conf
+  Port:
+    Port:
+      Default: '8080'
+      Description: 'Container Port: 8080'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Port
+      Required: 'false'
+      Target: '8080'
+      Type: Port
+      value: '8080'
+  Variable: {}
 ExtraParams: --restart=always
 FirstSeen: 1627914738
 Icon: https://raw.githubusercontent.com/Joshndroid/joshndroid-unraid-docker-templates/main/icons/nitter.png

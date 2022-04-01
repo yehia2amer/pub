@@ -3,50 +3,55 @@ CategoryList:
 - Network-Voip
 - Network-Messenger
 Config:
-- '@attributes':
-    Default: '64738'
-    Description: 64738 TCP
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Port TCP
-    Required: 'true'
-    Target: '64738'
-    Type: Port
-  value: '64738'
-- '@attributes':
-    Default: '64738'
-    Description: 64738 UDP
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: Port UDP
-    Required: 'true'
-    Target: '64738'
-    Type: Port
-  value: '64738'
-- '@attributes':
-    Default: /mnt/user/appdata/mumble/
-    Description: Appdata
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Appdata
-    Required: 'true'
-    Target: /etc/mumble
-    Type: Path
-  value: /mnt/user/appdata/mumble/
-- '@attributes':
-    Default: Password
-    Description: SUPERUSER_PASSWORD
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: SUPERUSER_PASSWORD
-    Required: 'false'
-    Target: SUPERUSER_PASSWORD
-    Type: Variable
-  value: Password
+  Device: {}
+  Label: {}
+  Path:
+    Appdata:
+      Default: /mnt/user/appdata/mumble/
+      Description: Appdata
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Appdata
+      Required: 'true'
+      Target: /etc/mumble
+      Type: Path
+      value: /mnt/user/appdata/mumble/
+  Port:
+    Port TCP:
+      Default: '64738'
+      Description: 64738 TCP
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Port TCP
+      Required: 'true'
+      Target: '64738'
+      Type: Port
+      value: '64738'
+    Port UDP:
+      Default: '64738'
+      Description: 64738 UDP
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: Port UDP
+      Required: 'true'
+      Target: '64738'
+      Type: Port
+      value: '64738'
+  Variable:
+    SUPERUSER_PASSWORD:
+      Default: Password
+      Description: SUPERUSER_PASSWORD
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: SUPERUSER_PASSWORD
+      Required: 'false'
+      Target: SUPERUSER_PASSWORD
+      Type: Variable
+      value: Password
 FirstSeen: 1588616386
 Icon: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/mumble.png
 LastUpdate: 1638376281

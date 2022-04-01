@@ -4,94 +4,99 @@ CategoryList:
 - Tools-Utilities
 - Network-FTP
 Config:
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI (HTTP)
-    Required: 'false'
-    Target: '80'
-    Type: Port
-  value: '8048'
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI (HTTPS)
-    Required: 'false'
-    Target: '443'
-    Type: Port
-  value: '8049'
-- '@attributes':
-    Default: ''
-    Description: This is the location for all the personal information.
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Storage (data)
-    Required: 'false'
-    Target: /data
-    Type: Path
-  value: /mnt/user/appdata/filegator/data
-- '@attributes':
-    Default: ''
-    Description: This is the location for the configuration files.
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Storage (config)
-    Required: 'false'
-    Target: /config
-    Type: Path
-  value: /mnt/user/appdata/filegator/config
-- '@attributes':
-    Default: ''
-    Description: This is the configuration file.
-    Display: always
-    Mask: 'false'
-    Mode: ro
-    Name: Storage (config file)
-    Required: 'false'
-    Target: /var/www/localhost/filegator/configuration.php
-    Type: Path
-  value: /mnt/user/appdata/filegator/config_file/configuration.php
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: TZ
-    Required: 'false'
-    Target: TZ
-    Type: Variable
-  value: Europe/Madrid
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: PUID
-    Required: 'false'
-    Target: PUID
-    Type: Variable
-  value: '1000'
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: PGID
-    Required: 'false'
-    Target: PGID
-    Type: Variable
-  value: '1000'
+  Device: {}
+  Label: {}
+  Path:
+    Storage (config file):
+      Default: ''
+      Description: This is the configuration file.
+      Display: always
+      Mask: 'false'
+      Mode: ro
+      Name: Storage (config file)
+      Required: 'false'
+      Target: /var/www/localhost/filegator/configuration.php
+      Type: Path
+      value: /mnt/user/appdata/filegator/config_file/configuration.php
+    Storage (config):
+      Default: ''
+      Description: This is the location for the configuration files.
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Storage (config)
+      Required: 'false'
+      Target: /config
+      Type: Path
+      value: /mnt/user/appdata/filegator/config
+    Storage (data):
+      Default: ''
+      Description: This is the location for all the personal information.
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Storage (data)
+      Required: 'false'
+      Target: /data
+      Type: Path
+      value: /mnt/user/appdata/filegator/data
+  Port:
+    WebUI (HTTP):
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI (HTTP)
+      Required: 'false'
+      Target: '80'
+      Type: Port
+      value: '8048'
+    WebUI (HTTPS):
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI (HTTPS)
+      Required: 'false'
+      Target: '443'
+      Type: Port
+      value: '8049'
+  Variable:
+    PGID:
+      Default: ''
+      Description: ''
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PGID
+      Required: 'false'
+      Target: PGID
+      Type: Variable
+      value: '1000'
+    PUID:
+      Default: ''
+      Description: ''
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PUID
+      Required: 'false'
+      Target: PUID
+      Type: Variable
+      value: '1000'
+    TZ:
+      Default: ''
+      Description: ''
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: TZ
+      Required: 'false'
+      Target: TZ
+      Type: Variable
+      value: Europe/Madrid
 DonateLink: https://github.com/SmartPhoneLover/unraid-docker-templates/blob/main/DONATION.md
 DonateText: If you like my work, please consider making a little donation.
 FirstSeen: 1644440623

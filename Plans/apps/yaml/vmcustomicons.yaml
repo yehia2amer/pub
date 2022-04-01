@@ -1,139 +1,144 @@
 CategoryList:
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: yes|no
-    Description: select yes or no to download windows vm icons
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: windows icons
-    Required: 'false'
-    Target: windows
-    Type: Variable
-  value: 'yes'
-- '@attributes':
-    Default: yes|no
-    Description: select yes or no to download linux vm icons
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: linux icons
-    Required: 'false'
-    Target: linux
-    Type: Variable
-  value: 'yes'
-- '@attributes':
-    Default: yes|no
-    Description: select yes or no to download freebsd vm icons
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: freebsd icons
-    Required: 'false'
-    Target: freebsd
-    Type: Variable
-  value: 'yes'
-- '@attributes':
-    Default: yes|no
-    Description: select yes or no to download macos vm icons
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: macos vm icons
-    Required: 'false'
-    Target: macos
-    Type: Variable
-  value: 'yes'
-- '@attributes':
-    Default: yes|no
-    Description: select yes or no to download other vm icons
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: other os  icons
-    Required: 'false'
-    Target: other
-    Type: Variable
-  value: 'yes'
-- '@attributes':
-    Default: yes|no
-    Description: set to no to remove stock unraid vm icons
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Keep Stock VM Icons
-    Required: 'false'
-    Target: stock
-    Type: Variable
-  value: 'yes'
-- '@attributes':
-    Default: no|yes
-    Description: 'set to yes to delete all vm icons. and redownload the above from
-      github on every run of container '
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Clear all icons &amp; redownload above on each start
-    Required: 'false'
-    Target: delete
-    Type: Variable
-  value: 'no'
-- '@attributes':
-    Default: no|yes
-    Description: Enable tune on sucess. (you must have a beep speaker)
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Enable sucess tune on icon load
-    Required: 'false'
-    Target: tune
-    Type: Variable
-  value: 'no'
-- '@attributes':
-    Default: 30 seconds|1 minute|2 minutes|5 minutes|10 minutes
-    Description: 'Time to wait before stopping container after syncing icons '
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Time to wait before exit
-    Required: 'false'
-    Target: sleeptimehuman
-    Type: Variable
-  value: 30 seconds
-- '@attributes':
-    Default: ''
-    Description: location on server where Unraid stores vm icons (dont change this)
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: vm manager icon location
-    Required: 'false'
-    Target: /unraid_vm_icons
-    Type: Path
-  value: /usr/local/emhttp/plugins/dynamix.vm.manager/templates/images
-- '@attributes':
-    Default: ''
-    Description: appdata
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: appdata
-    Required: 'false'
-    Target: /config
-    Type: Path
-  value: /mnt/user/appdata/vm_custom_icons
-- '@attributes':
-    Default: ''
-    Description: 'Container Device: '
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: beep speaker
-    Required: 'false'
-    Target: ''
-    Type: Device
-  value: /dev/tty0
+  Device:
+    beep speaker:
+      Default: ''
+      Description: 'Container Device: '
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: beep speaker
+      Required: 'false'
+      Target: ''
+      Type: Device
+      value: /dev/tty0
+  Label: {}
+  Path:
+    appdata:
+      Default: ''
+      Description: appdata
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: appdata
+      Required: 'false'
+      Target: /config
+      Type: Path
+      value: /mnt/user/appdata/vm_custom_icons
+    vm manager icon location:
+      Default: ''
+      Description: location on server where Unraid stores vm icons (dont change this)
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: vm manager icon location
+      Required: 'false'
+      Target: /unraid_vm_icons
+      Type: Path
+      value: /usr/local/emhttp/plugins/dynamix.vm.manager/templates/images
+  Port: {}
+  Variable:
+    Clear all icons &amp; redownload above on each start:
+      Default: no|yes
+      Description: 'set to yes to delete all vm icons. and redownload the above from
+        github on every run of container '
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Clear all icons &amp; redownload above on each start
+      Required: 'false'
+      Target: delete
+      Type: Variable
+      value: 'no'
+    Enable sucess tune on icon load:
+      Default: no|yes
+      Description: Enable tune on sucess. (you must have a beep speaker)
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Enable sucess tune on icon load
+      Required: 'false'
+      Target: tune
+      Type: Variable
+      value: 'no'
+    Keep Stock VM Icons:
+      Default: yes|no
+      Description: set to no to remove stock unraid vm icons
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Keep Stock VM Icons
+      Required: 'false'
+      Target: stock
+      Type: Variable
+      value: 'yes'
+    Time to wait before exit:
+      Default: 30 seconds|1 minute|2 minutes|5 minutes|10 minutes
+      Description: 'Time to wait before stopping container after syncing icons '
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Time to wait before exit
+      Required: 'false'
+      Target: sleeptimehuman
+      Type: Variable
+      value: 30 seconds
+    freebsd icons:
+      Default: yes|no
+      Description: select yes or no to download freebsd vm icons
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: freebsd icons
+      Required: 'false'
+      Target: freebsd
+      Type: Variable
+      value: 'yes'
+    linux icons:
+      Default: yes|no
+      Description: select yes or no to download linux vm icons
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: linux icons
+      Required: 'false'
+      Target: linux
+      Type: Variable
+      value: 'yes'
+    macos vm icons:
+      Default: yes|no
+      Description: select yes or no to download macos vm icons
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: macos vm icons
+      Required: 'false'
+      Target: macos
+      Type: Variable
+      value: 'yes'
+    other os  icons:
+      Default: yes|no
+      Description: select yes or no to download other vm icons
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: other os  icons
+      Required: 'false'
+      Target: other
+      Type: Variable
+      value: 'yes'
+    windows icons:
+      Default: yes|no
+      Description: select yes or no to download windows vm icons
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: windows icons
+      Required: 'false'
+      Target: windows
+      Type: Variable
+      value: 'yes'
 DonateLink: https://www.paypal.com/paypalme/spaceinvader
 DonateText: If you like my work then please buy me a beer! :)
 FirstSeen: 1605532105

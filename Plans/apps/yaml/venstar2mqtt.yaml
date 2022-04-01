@@ -2,62 +2,67 @@ CategoryList:
 - HomeAutomation
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: ''
-    Description: The IP or DNS of the Venstar Thermostat
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Venstar Host IP
-    Required: 'true'
-    Target: VENSTAR_HOST
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: venstar2mqtt
-    Description: MQTT Topic Prefix
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: MQTT Topic Prefix
-    Required: 'true'
-    Target: TOPIC_PREFIX
-    Type: Variable
-  value: venstar2mqtt
-- '@attributes':
-    Default: mqtt://
-    Description: 'Full URL required (ex: mqtt://192.168.1.10) Usually the UnRaid server
-      ethernet IP'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: MQTT URL
-    Required: 'true'
-    Target: MQTT_HOST
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Optional MQTT User ID
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: MQTT Username
-    Required: 'false'
-    Target: MQTT_USER
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Optional MQTT password
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: MQTT Password
-    Required: 'false'
-    Target: MQTT_PASS
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path: {}
+  Port: {}
+  Variable:
+    MQTT Password:
+      Default: ''
+      Description: Optional MQTT password
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: MQTT Password
+      Required: 'false'
+      Target: MQTT_PASS
+      Type: Variable
+      value: ''
+    MQTT Topic Prefix:
+      Default: venstar2mqtt
+      Description: MQTT Topic Prefix
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: MQTT Topic Prefix
+      Required: 'true'
+      Target: TOPIC_PREFIX
+      Type: Variable
+      value: venstar2mqtt
+    MQTT URL:
+      Default: mqtt://
+      Description: 'Full URL required (ex: mqtt://192.168.1.10) Usually the UnRaid
+        server ethernet IP'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: MQTT URL
+      Required: 'true'
+      Target: MQTT_HOST
+      Type: Variable
+      value: ''
+    MQTT Username:
+      Default: ''
+      Description: Optional MQTT User ID
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: MQTT Username
+      Required: 'false'
+      Target: MQTT_USER
+      Type: Variable
+      value: ''
+    Venstar Host IP:
+      Default: ''
+      Description: The IP or DNS of the Venstar Thermostat
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Venstar Host IP
+      Required: 'true'
+      Target: VENSTAR_HOST
+      Type: Variable
+      value: ''
 FirstSeen: 1621130581
 Icon: https://raw.githubusercontent.com/digiblur/unraid-docker-templates/master/images/venstar2mqtt.png
 LastUpdate: 1641612746

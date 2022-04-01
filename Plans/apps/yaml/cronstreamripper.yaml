@@ -2,40 +2,45 @@ CategoryList:
 - Other
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: /mnt/user/appdata/cron-streamripper/cron
-    Description: Directory where cron files are stored
-    Display: always
-    Mask: 'false'
-    Mode: ro
-    Name: Cron Dir
-    Required: 'true'
-    Target: /etc/cron.d
-    Type: Path
-  value: /mnt/user/appdata/cron-streamripper/cron
-- '@attributes':
-    Default: /mnt/user/appdata/cron-streamripper/streams
-    Description: Directory where saved streams are stored
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Streams Dir
-    Required: 'true'
-    Target: /home/streamripper/streams
-    Type: Path
-  value: /mnt/user/appdata/cron-streamripper/streams
-- '@attributes':
-    Default: /mnt/user/appdata/cron-streamripper/programs
-    Description: Directory where executable files, run from the station-cron file,
-      are stored
-    Display: always
-    Mask: 'false'
-    Mode: ro
-    Name: Programs Dir
-    Required: 'true'
-    Target: /home/streamripper/programs
-    Type: Path
-  value: /mnt/user/appdata/cron-streamripper/programs
+  Device: {}
+  Label: {}
+  Path:
+    Cron Dir:
+      Default: /mnt/user/appdata/cron-streamripper/cron
+      Description: Directory where cron files are stored
+      Display: always
+      Mask: 'false'
+      Mode: ro
+      Name: Cron Dir
+      Required: 'true'
+      Target: /etc/cron.d
+      Type: Path
+      value: /mnt/user/appdata/cron-streamripper/cron
+    Programs Dir:
+      Default: /mnt/user/appdata/cron-streamripper/programs
+      Description: Directory where executable files, run from the station-cron file,
+        are stored
+      Display: always
+      Mask: 'false'
+      Mode: ro
+      Name: Programs Dir
+      Required: 'true'
+      Target: /home/streamripper/programs
+      Type: Path
+      value: /mnt/user/appdata/cron-streamripper/programs
+    Streams Dir:
+      Default: /mnt/user/appdata/cron-streamripper/streams
+      Description: Directory where saved streams are stored
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Streams Dir
+      Required: 'true'
+      Target: /home/streamripper/streams
+      Type: Path
+      value: /mnt/user/appdata/cron-streamripper/streams
+  Port: {}
+  Variable: {}
 Deprecated: true
 FirstSeen: 1554246997
 Icon: https://github.com/FoxxMD/unraid-docker-templates/raw/master/antenna.png

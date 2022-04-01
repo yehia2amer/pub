@@ -1,39 +1,44 @@
 CategoryList:
 - HomeAutomation
 Config:
-- '@attributes':
-    Default: '1883'
-    Description: 'Container Port: 1883'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Port 1
-    Required: 'true'
-    Target: '1883'
-    Type: Port
-  value: '1883'
-- '@attributes':
-    Default: '9001'
-    Description: 'Container Port: 9001'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Port 2
-    Required: 'true'
-    Target: '9001'
-    Type: Port
-  value: '9001'
-- '@attributes':
-    Default: /mnt/user/docker/appdata/MQTT
-    Description: 'Container Path: /config'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: rw
-    Name: AppData Config Path
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: /mnt/user/appdata/MQTT
+  Device: {}
+  Label: {}
+  Path:
+    AppData Config Path:
+      Default: /mnt/user/docker/appdata/MQTT
+      Description: 'Container Path: /config'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: rw
+      Name: AppData Config Path
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: /mnt/user/appdata/MQTT
+  Port:
+    Port 1:
+      Default: '1883'
+      Description: 'Container Port: 1883'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Port 1
+      Required: 'true'
+      Target: '1883'
+      Type: Port
+      value: '1883'
+    Port 2:
+      Default: '9001'
+      Description: 'Container Port: 9001'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Port 2
+      Required: 'true'
+      Target: '9001'
+      Type: Port
+      value: '9001'
+  Variable: {}
 FirstSeen: 1491451200
 Icon: https://i.imgur.com/Cc9Jkcr.png
 LastUpdate: 1581501495

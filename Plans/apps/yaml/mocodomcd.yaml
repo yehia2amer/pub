@@ -1,28 +1,33 @@
 CategoryList:
 - Productivity
 Config:
-- '@attributes':
-    Default: '8888'
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'true'
-    Target: '8888'
-    Type: Port
-  value: '8888'
-- '@attributes':
-    Default: /mnt/user/mocodo/
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: path
-    Required: 'true'
-    Target: /root/mocodo
-    Type: Path
-  value: /mnt/user/mocodo/
+  Device: {}
+  Label: {}
+  Path:
+    path:
+      Default: /mnt/user/mocodo/
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: path
+      Required: 'true'
+      Target: /root/mocodo
+      Type: Path
+      value: /mnt/user/mocodo/
+  Port:
+    WebUI:
+      Default: '8888'
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'true'
+      Target: '8888'
+      Type: Port
+      value: '8888'
+  Variable: {}
 FirstSeen: 1647118995
 Icon: https://raw.githubusercontent.com/Olprog59/unraid-templates/main/mocodo/mocodo.png
 LastUpdate: 1647113146

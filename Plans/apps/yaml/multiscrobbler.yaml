@@ -4,39 +4,44 @@ CategoryList:
 - MediaServer-Music
 ChangeLogPresent: true
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 9078'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Web Port
-    Required: 'false'
-    Target: '9078'
-    Type: Port
-  value: '9078'
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /home/node/config'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Config
-    Required: 'false'
-    Target: /home/node/config
-    Type: Path
-  value: /mnt/user/appdata/spotify-scrobbler/config
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /home/node/app/logs'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Logs
-    Required: 'false'
-    Target: /home/node/app/logs
-    Type: Path
-  value: /mnt/user/appdata/spotify-scrobbler/logs
+  Device: {}
+  Label: {}
+  Path:
+    Config:
+      Default: ''
+      Description: 'Container Path: /home/node/config'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Config
+      Required: 'false'
+      Target: /home/node/config
+      Type: Path
+      value: /mnt/user/appdata/spotify-scrobbler/config
+    Logs:
+      Default: ''
+      Description: 'Container Path: /home/node/app/logs'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Logs
+      Required: 'false'
+      Target: /home/node/app/logs
+      Type: Path
+      value: /mnt/user/appdata/spotify-scrobbler/logs
+  Port:
+    Web Port:
+      Default: ''
+      Description: 'Container Port: 9078'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Web Port
+      Required: 'false'
+      Target: '9078'
+      Type: Port
+      value: '9078'
+  Variable: {}
 FirstSeen: 1605805861
 Icon: https://github.com/FoxxMD/unraid-docker-templates/raw/master/icons/multi-scrobbler.png
 LastUpdate: 1639756939

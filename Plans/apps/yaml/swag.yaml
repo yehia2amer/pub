@@ -3,201 +3,207 @@ CategoryList:
 - Network-Web
 ChangeLogPresent: true
 Config:
-- '@attributes':
-    Default: '443'
-    Description: Https port
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'true'
-    Target: '443'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: '80'
-    Description: Http port (required for http validation and http - https redirect)
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: 'Port: 80'
-    Required: 'false'
-    Target: '80'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: All the config files including the webroot reside here.
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: Appdata
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: yourdomain.url
-    Description: Top url you have control over (`customdomain.com` if you own it,
-      or `customsubdomain.ddnsprovider.com` if dynamic dns).
-    Display: always
-    Mask: 'false'
-    Name: URL
-    Required: 'true'
-    Target: URL
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: http
-    Description: Certbot validation method to use, options are `http`, `dns` or `duckdns`
-      (`dns` method also requires `DNSPLUGIN` variable set) (`duckdns` method requires
-      `DUCKDNSTOKEN` variable set, and the `SUBDOMAINS` variable must be either empty
-      or set to `wildcard`).
-    Display: always
-    Mask: 'false'
-    Name: VALIDATION
-    Required: 'true'
-    Target: VALIDATION
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: www,
-    Description: Subdomains you'd like the cert to cover (comma separated, no spaces)
-      ie. `www,ftp,cloud`. For a wildcard cert, set this _exactly_ to `wildcard` (wildcard
-      cert is available via `dns` and `duckdns` validation only)
-    Display: always
-    Mask: 'false'
-    Name: SUBDOMAINS
-    Required: 'false'
-    Target: SUBDOMAINS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Optionally define the cert provider. Set to `zerossl` for ZeroSSL
-      certs (requires existing ZeroSSL account(https://app.zerossl.com/signup) and
-      the e-mail address entered in `EMAIL` env var). Otherwise defaults to Let's
-      Encrypt.
-    Display: always
-    Mask: 'false'
-    Name: CERTPROVIDER
-    Required: 'false'
-    Target: CERTPROVIDER
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: cloudflare
-    Description: Required if `VALIDATION` is set to `dns`. Options are `aliyun`, `cloudflare`,
-      `cloudxns`, `cpanel`, `desec`, `digitalocean`, `directadmin`, `dnsimple`, `dnsmadeeasy`,
-      `dnspod`, `domeneshop`, `gandi`, `gehirn`, `google`, `he`, `hetzner`, `infomaniak`,
-      `inwx`, `ionos`, `linode`, `luadns`, `netcup`, `njalla`, `nsone`, `ovh`, `rfc2136`,
-      `route53`, `sakuracloud`, `transip` and `vultr`. Also need to enter the credentials
-      into the corresponding ini (or json for some plugins) file under `/config/dns-conf`.
-    Display: always
-    Mask: 'false'
-    Name: DNSPLUGIN
-    Required: 'false'
-    Target: DNSPLUGIN
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Optionally override (in seconds) the default propagation time for
-      the dns plugins.
-    Display: always
-    Mask: 'false'
-    Name: PROPAGATION
-    Required: 'false'
-    Target: PROPAGATION
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Required if `VALIDATION` is set to `duckdns`. Retrieve your token
-      from https://www.duckdns.org
-    Display: always
-    Mask: 'true'
-    Name: DUCKDNSTOKEN
-    Required: 'false'
-    Target: DUCKDNSTOKEN
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Optional e-mail address used for cert expiration notifications (Required
-      for ZeroSSL).
-    Display: always
-    Mask: 'false'
-    Name: EMAIL
-    Required: 'false'
-    Target: EMAIL
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 'false'
-    Description: If you wish to get certs only for certain subdomains, but not the
-      main domain (main domain may be hosted on another machine and cannot be validated),
-      set this to `true`
-    Display: always
-    Mask: 'false'
-    Name: ONLY_SUBDOMAINS
-    Required: 'false'
-    Target: ONLY_SUBDOMAINS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Additional fully qualified domain names (comma separated, no spaces)
-      ie. `extradomain.com,subdomain.anotherdomain.org,*.anotherdomain.org`
-    Display: always
-    Mask: 'false'
-    Name: EXTRA_DOMAINS
-    Required: 'false'
-    Target: EXTRA_DOMAINS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 'false'
-    Description: Set to `true` to retrieve certs in staging mode. Rate limits will
-      be much higher, but the resulting cert will not pass the browser's security
-      test. Only to be used for testing purposes.
-    Display: always
-    Mask: 'false'
-    Name: STAGING
-    Required: 'false'
-    Target: STAGING
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '99'
-    Description: 'Container Variable: PUID'
-    Display: advanced
-    Mask: 'false'
-    Name: PUID
-    Required: 'true'
-    Target: PUID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '100'
-    Description: 'Container Variable: PGID'
-    Display: advanced
-    Mask: 'false'
-    Name: PGID
-    Required: 'true'
-    Target: PGID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '022'
-    Description: 'Container Variable: UMASK'
-    Display: advanced
-    Mask: 'false'
-    Name: UMASK
-    Required: 'false'
-    Target: UMASK
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Appdata:
+      Default: ''
+      Description: All the config files including the webroot reside here.
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: Appdata
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: ''
+  Port:
+    'Port: 80':
+      Default: '80'
+      Description: Http port (required for http validation and http - https redirect)
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: 'Port: 80'
+      Required: 'false'
+      Target: '80'
+      Type: Port
+      value: ''
+    WebUI:
+      Default: '443'
+      Description: Https port
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'true'
+      Target: '443'
+      Type: Port
+      value: ''
+  Variable:
+    CERTPROVIDER:
+      Default: ''
+      Description: Optionally define the cert provider. Set to `zerossl` for ZeroSSL
+        certs (requires existing ZeroSSL account(https://app.zerossl.com/signup) and
+        the e-mail address entered in `EMAIL` env var). Otherwise defaults to Let's
+        Encrypt.
+      Display: always
+      Mask: 'false'
+      Name: CERTPROVIDER
+      Required: 'false'
+      Target: CERTPROVIDER
+      Type: Variable
+      value: ''
+    DNSPLUGIN:
+      Default: cloudflare
+      Description: Required if `VALIDATION` is set to `dns`. Options are `aliyun`,
+        `cloudflare`, `cloudxns`, `cpanel`, `desec`, `digitalocean`, `directadmin`,
+        `dnsimple`, `dnsmadeeasy`, `dnspod`, `domeneshop`, `gandi`, `gehirn`, `google`,
+        `he`, `hetzner`, `infomaniak`, `inwx`, `ionos`, `linode`, `luadns`, `netcup`,
+        `njalla`, `nsone`, `ovh`, `rfc2136`, `route53`, `sakuracloud`, `transip` and
+        `vultr`. Also need to enter the credentials into the corresponding ini (or
+        json for some plugins) file under `/config/dns-conf`.
+      Display: always
+      Mask: 'false'
+      Name: DNSPLUGIN
+      Required: 'false'
+      Target: DNSPLUGIN
+      Type: Variable
+      value: ''
+    DUCKDNSTOKEN:
+      Default: ''
+      Description: Required if `VALIDATION` is set to `duckdns`. Retrieve your token
+        from https://www.duckdns.org
+      Display: always
+      Mask: 'true'
+      Name: DUCKDNSTOKEN
+      Required: 'false'
+      Target: DUCKDNSTOKEN
+      Type: Variable
+      value: ''
+    EMAIL:
+      Default: ''
+      Description: Optional e-mail address used for cert expiration notifications
+        (Required for ZeroSSL).
+      Display: always
+      Mask: 'false'
+      Name: EMAIL
+      Required: 'false'
+      Target: EMAIL
+      Type: Variable
+      value: ''
+    EXTRA_DOMAINS:
+      Default: ''
+      Description: Additional fully qualified domain names (comma separated, no spaces)
+        ie. `extradomain.com,subdomain.anotherdomain.org,*.anotherdomain.org`
+      Display: always
+      Mask: 'false'
+      Name: EXTRA_DOMAINS
+      Required: 'false'
+      Target: EXTRA_DOMAINS
+      Type: Variable
+      value: ''
+    ONLY_SUBDOMAINS:
+      Default: 'false'
+      Description: If you wish to get certs only for certain subdomains, but not the
+        main domain (main domain may be hosted on another machine and cannot be validated),
+        set this to `true`
+      Display: always
+      Mask: 'false'
+      Name: ONLY_SUBDOMAINS
+      Required: 'false'
+      Target: ONLY_SUBDOMAINS
+      Type: Variable
+      value: ''
+    PGID:
+      Default: '100'
+      Description: 'Container Variable: PGID'
+      Display: advanced
+      Mask: 'false'
+      Name: PGID
+      Required: 'true'
+      Target: PGID
+      Type: Variable
+      value: ''
+    PROPAGATION:
+      Default: ''
+      Description: Optionally override (in seconds) the default propagation time for
+        the dns plugins.
+      Display: always
+      Mask: 'false'
+      Name: PROPAGATION
+      Required: 'false'
+      Target: PROPAGATION
+      Type: Variable
+      value: ''
+    PUID:
+      Default: '99'
+      Description: 'Container Variable: PUID'
+      Display: advanced
+      Mask: 'false'
+      Name: PUID
+      Required: 'true'
+      Target: PUID
+      Type: Variable
+      value: ''
+    STAGING:
+      Default: 'false'
+      Description: Set to `true` to retrieve certs in staging mode. Rate limits will
+        be much higher, but the resulting cert will not pass the browser's security
+        test. Only to be used for testing purposes.
+      Display: always
+      Mask: 'false'
+      Name: STAGING
+      Required: 'false'
+      Target: STAGING
+      Type: Variable
+      value: ''
+    SUBDOMAINS:
+      Default: www,
+      Description: Subdomains you'd like the cert to cover (comma separated, no spaces)
+        ie. `www,ftp,cloud`. For a wildcard cert, set this _exactly_ to `wildcard`
+        (wildcard cert is available via `dns` and `duckdns` validation only)
+      Display: always
+      Mask: 'false'
+      Name: SUBDOMAINS
+      Required: 'false'
+      Target: SUBDOMAINS
+      Type: Variable
+      value: ''
+    UMASK:
+      Default: '022'
+      Description: 'Container Variable: UMASK'
+      Display: advanced
+      Mask: 'false'
+      Name: UMASK
+      Required: 'false'
+      Target: UMASK
+      Type: Variable
+      value: ''
+    URL:
+      Default: yourdomain.url
+      Description: Top url you have control over (`customdomain.com` if you own it,
+        or `customsubdomain.ddnsprovider.com` if dynamic dns).
+      Display: always
+      Mask: 'false'
+      Name: URL
+      Required: 'true'
+      Target: URL
+      Type: Variable
+      value: ''
+    VALIDATION:
+      Default: http
+      Description: Certbot validation method to use, options are `http`, `dns` or
+        `duckdns` (`dns` method also requires `DNSPLUGIN` variable set) (`duckdns`
+        method requires `DUCKDNSTOKEN` variable set, and the `SUBDOMAINS` variable
+        must be either empty or set to `wildcard`).
+      Display: always
+      Mask: 'false'
+      Name: VALIDATION
+      Required: 'true'
+      Target: VALIDATION
+      Type: Variable
+      value: ''
 DonateImg: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/donate.png
 DonateLink: https://www.linuxserver.io/donate
 DonateText: Donations

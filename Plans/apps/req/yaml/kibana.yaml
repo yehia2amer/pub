@@ -2,28 +2,33 @@ CategoryList:
 - Tools-Utilities
 - Other
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: ELASTICSEARCH_HOSTS'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: ELASTICSEARCH_HOSTS
-    Required: 'false'
-    Target: ELASTICSEARCH_HOSTS
-    Type: Variable
-  value: http://192.168.1.20:9200
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 5601'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Web UI
-    Required: 'false'
-    Target: '5601'
-    Type: Port
-  value: '5601'
+  Device: {}
+  Label: {}
+  Path: {}
+  Port:
+    Web UI:
+      Default: ''
+      Description: 'Container Port: 5601'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Web UI
+      Required: 'false'
+      Target: '5601'
+      Type: Port
+      value: '5601'
+  Variable:
+    ELASTICSEARCH_HOSTS:
+      Default: ''
+      Description: 'Container Variable: ELASTICSEARCH_HOSTS'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: ELASTICSEARCH_HOSTS
+      Required: 'false'
+      Target: ELASTICSEARCH_HOSTS
+      Type: Variable
+      value: http://192.168.1.20:9200
 FirstSeen: 1618027367
 Icon: https://raw.githubusercontent.com/cschanot/docker-templates/main/images/kibana.png
 LastUpdate: 1646272626

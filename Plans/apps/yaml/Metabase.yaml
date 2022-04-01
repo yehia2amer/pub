@@ -1,39 +1,44 @@
 CategoryList:
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 3000'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Web UI Port
-    Required: 'false'
-    Target: '3000'
-    Type: Port
-  value: '3000'
-- '@attributes':
-    Default: /tmp/metabase.db
-    Description: allow external db host
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Key 1
-    Required: 'true'
-    Target: MB_DB_FILE
-    Type: Variable
-  value: /tmp/metabase.db
-- '@attributes':
-    Default: /mnt/user/appdata/Metabase
-    Description: 'Container Path: /tmp'
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: Config Path
-    Required: 'true'
-    Target: /tmp
-    Type: Path
-  value: /mnt/user/appdata/Metabase
+  Device: {}
+  Label: {}
+  Path:
+    Config Path:
+      Default: /mnt/user/appdata/Metabase
+      Description: 'Container Path: /tmp'
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: Config Path
+      Required: 'true'
+      Target: /tmp
+      Type: Path
+      value: /mnt/user/appdata/Metabase
+  Port:
+    Web UI Port:
+      Default: ''
+      Description: 'Container Port: 3000'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Web UI Port
+      Required: 'false'
+      Target: '3000'
+      Type: Port
+      value: '3000'
+  Variable:
+    Key 1:
+      Default: /tmp/metabase.db
+      Description: allow external db host
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Key 1
+      Required: 'true'
+      Target: MB_DB_FILE
+      Type: Variable
+      value: /tmp/metabase.db
 DonateImg: https://az743702.vo.msecnd.net/cdn/kofi4.png?v=0
 DonateLink: https://ko-fi.com/I2I0CW9G
 DonateText: Buy Me a Coffee

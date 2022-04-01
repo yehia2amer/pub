@@ -3,27 +3,32 @@ CategoryList:
 - Productivity
 ChangeLogPresent: true
 Config:
-- '@attributes':
-    Default: '8123'
-    Description: KitchenOwl UI Port
-    Display: always
-    Mode: tcp
-    Name: KitchenOwl UI
-    Required: 'true'
-    Target: '80'
-    Type: Port
-  value: '8123'
-- '@attributes':
-    Default: http://localhost:5000
-    Description: Url to the Backend (needs kitchenowl container)
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Url to the Backend (needs kitchenowl container)
-    Required: 'true'
-    Target: BACK_URL
-    Type: Variable
-  value: http://localhost:5000
+  Device: {}
+  Label: {}
+  Path: {}
+  Port:
+    KitchenOwl UI:
+      Default: '8123'
+      Description: KitchenOwl UI Port
+      Display: always
+      Mode: tcp
+      Name: KitchenOwl UI
+      Required: 'true'
+      Target: '80'
+      Type: Port
+      value: '8123'
+  Variable:
+    Url to the Backend (needs kitchenowl container):
+      Default: http://localhost:5000
+      Description: Url to the Backend (needs kitchenowl container)
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Url to the Backend (needs kitchenowl container)
+      Required: 'true'
+      Target: BACK_URL
+      Type: Variable
+      value: http://localhost:5000
 FirstSeen: 1643389407
 Icon: https://raw.githubusercontent.com/TomBursch/kitchenowl/main/assets/icon/icon.png
 LastUpdate: 1648222552

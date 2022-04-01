@@ -2,29 +2,34 @@ CategoryList:
 - Network-Other
 - Crypto
 Config:
-- '@attributes':
-    Default: /mnt/user/appdata/doge-node/
-    Description: Blockchain storage. As of 08/21 requires 50GB free space. (Cache
-      recommended)
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Appdata
-    Required: 'true'
-    Target: /etc/doge/
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: '22556'
-    Description: Port to liston on for incoming connections. (Port forward required)
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: P2P TCP
-    Required: 'true'
-    Target: '22556'
-    Type: Port
-  value: '22556'
+  Device: {}
+  Label: {}
+  Path:
+    Appdata:
+      Default: /mnt/user/appdata/doge-node/
+      Description: Blockchain storage. As of 08/21 requires 50GB free space. (Cache
+        recommended)
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Appdata
+      Required: 'true'
+      Target: /etc/doge/
+      Type: Path
+      value: ''
+  Port:
+    P2P TCP:
+      Default: '22556'
+      Description: Port to liston on for incoming connections. (Port forward required)
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: P2P TCP
+      Required: 'true'
+      Target: '22556'
+      Type: Port
+      value: '22556'
+  Variable: {}
 FirstSeen: 1630429175
 Icon: https://raw.githubusercontent.com/BigManDave/dogecoin-docker/main/icon.png
 LastUpdate: 1636447761

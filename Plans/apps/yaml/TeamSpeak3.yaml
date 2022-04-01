@@ -1,121 +1,126 @@
 CategoryList:
 - Network-Voip
 Config:
-- '@attributes':
-    Default: ''
-    Description: Data Path
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Data Path
-    Required: 'true'
-    Target: /teamspeak
-    Type: Path
-  value: /mnt/cache/appdata/teamspeak3
-- '@attributes':
-    Default: '9987'
-    Description: UDP Voice Port
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: UDP - Voice
-    Required: 'true'
-    Target: '9987'
-    Type: Port
-  value: '9987'
-- '@attributes':
-    Default: '10011'
-    Description: TCP Query Port
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: TCP1 - Query Port
-    Required: 'true'
-    Target: '10011'
-    Type: Port
-  value: '10011'
-- '@attributes':
-    Default: '30033'
-    Description: TCP File Transfer Port
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: TCP2 - File Transfer
-    Required: 'true'
-    Target: '30033'
-    Type: Port
-  value: '30033'
-- '@attributes':
-    Default: ''
-    Description: Set to 'accept' if you agree the license agreement (you can find
-      the license after the first start of the container in the main directory of
-      the container or you can set it also to 'view' to read it in the terminal -
-      without quotes).
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: License agreement
-    Required: 'true'
-    Target: TS3SERVER_LICENSE
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'If you enable the TSDNS service please also add a new TCP Port to
-      the template with the Container and Host port: 41144'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Enable TSDNS
-    Required: 'false'
-    Target: ENABLE_TSDNS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Only change if you know what you are doing!
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: UMASK
-    Required: 'true'
-    Target: UMASK
-    Type: Variable
-  value: '000'
-- '@attributes':
-    Default: ''
-    Description: Only change if you know what you are doing!
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: UID
-    Required: 'true'
-    Target: UID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: ''
-    Description: Only change if you know what you are doing!
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: GID
-    Required: 'true'
-    Target: GID
-    Type: Variable
-  value: '100'
-- '@attributes':
-    Default: ''
-    Description: Only change if you know what you are doing (set the Data Permissions
-      on the server files)!
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: DATA_PERM
-    Required: 'true'
-    Target: DATA_PERM
-    Type: Variable
-  value: '770'
+  Device: {}
+  Label: {}
+  Path:
+    Data Path:
+      Default: ''
+      Description: Data Path
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Data Path
+      Required: 'true'
+      Target: /teamspeak
+      Type: Path
+      value: /mnt/cache/appdata/teamspeak3
+  Port:
+    TCP1 - Query Port:
+      Default: '10011'
+      Description: TCP Query Port
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: TCP1 - Query Port
+      Required: 'true'
+      Target: '10011'
+      Type: Port
+      value: '10011'
+    TCP2 - File Transfer:
+      Default: '30033'
+      Description: TCP File Transfer Port
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: TCP2 - File Transfer
+      Required: 'true'
+      Target: '30033'
+      Type: Port
+      value: '30033'
+    UDP - Voice:
+      Default: '9987'
+      Description: UDP Voice Port
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: UDP - Voice
+      Required: 'true'
+      Target: '9987'
+      Type: Port
+      value: '9987'
+  Variable:
+    DATA_PERM:
+      Default: ''
+      Description: Only change if you know what you are doing (set the Data Permissions
+        on the server files)!
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: DATA_PERM
+      Required: 'true'
+      Target: DATA_PERM
+      Type: Variable
+      value: '770'
+    Enable TSDNS:
+      Default: ''
+      Description: 'If you enable the TSDNS service please also add a new TCP Port
+        to the template with the Container and Host port: 41144'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Enable TSDNS
+      Required: 'false'
+      Target: ENABLE_TSDNS
+      Type: Variable
+      value: ''
+    GID:
+      Default: ''
+      Description: Only change if you know what you are doing!
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: GID
+      Required: 'true'
+      Target: GID
+      Type: Variable
+      value: '100'
+    License agreement:
+      Default: ''
+      Description: Set to 'accept' if you agree the license agreement (you can find
+        the license after the first start of the container in the main directory of
+        the container or you can set it also to 'view' to read it in the terminal
+        - without quotes).
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: License agreement
+      Required: 'true'
+      Target: TS3SERVER_LICENSE
+      Type: Variable
+      value: ''
+    UID:
+      Default: ''
+      Description: Only change if you know what you are doing!
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: UID
+      Required: 'true'
+      Target: UID
+      Type: Variable
+      value: '99'
+    UMASK:
+      Default: ''
+      Description: Only change if you know what you are doing!
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: UMASK
+      Required: 'true'
+      Target: UMASK
+      Type: Variable
+      value: '000'
 DonateImg: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/donate.png
 DonateLink: https://www.paypal.me/chips777
 DonateText: 'If you like my work please '

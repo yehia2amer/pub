@@ -2,370 +2,375 @@ CategoryList:
 - Downloaders
 - MediaApp-Music
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /config'
-    Display: always-hide
-    Mask: 'false'
-    Mode: rw
-    Name: Host Path for /config
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: /mnt/user/downloads
-    Description: 'Container Path: /downloads-amd (DO NOT DELETE) :: !!!!IMPORTANT!!!
-      Map this exact volume mount to your Lidarr Container for everything to work
-      properly!!!'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Host Path for /downloads-amd
-    Required: 'true'
-    Target: /downloads-amd
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: 'true'
-    Description: 'true = Enabled :: Runs script automatically on startup'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Enable Automatic Script Start
-    Required: 'true'
-    Target: AUTOSTART
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 15m
-    Description: '#s or #m or #h or #d :: s = seconds, m = minutes, h = hours, d =
-      days :: Amount of time between each script run, when AUTOSTART is enabled'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Script Interval
-    Required: 'true'
-    Target: SCRIPTINTERVAL
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: http://127.0.0.1:8686
-    Description: Set domain or IP to your Lidarr instance including port. If using
-      reverse proxy, do not use a trailing slash. Ensure you specify http/s.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Lidarr Url
-    Required: 'false'
-    Target: LidarrUrl
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Lidarr API key
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Lidarr API Key
-    Required: 'false'
-    Target: LidarrAPIkey
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'OPTIONAL :: ADVANCED FEATURE :: Configure this to the local volume
-      path for Lidarr to see the downloads folder, this will enable file moves, instead
-      of copies... Less resource intensive'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: Lidarr Remote Path Mapping
-    Required: 'false'
-    Target: LIDARRREMOTEPATH
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'User token for dl client, for instructions to obtain token: https://notabug.org/RemixDevs/DeezloaderRemix/wiki/Login+via+userToken'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Music Download Client ARL Token
-    Required: 'true'
-    Target: ARL_TOKEN
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: wanted
-    Description: 'wanted or artist :: wanted mode only download missing/cutoff ::
-      artist mode downloads all albums by an artist (requires lidarr volume mapping
-      root media folders for import)'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Music Download Mode
-    Required: 'true'
-    Target: DOWNLOADMODE
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Filter Types: COMPILE, SINGLE, ALBUM, EP (this is a '', '' separated
-      list of Album Types to skip) (artist mode only)'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Music Album Type Filter
-    Required: 'false'
-    Target: ALBUM_TYPE_FILTER
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: both
-    Description: 'both or missing or cutoff :: both = missing + cutoff :: missng =
-      lidarr missing list :: cutoff = lidarr cutoff li'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Music List Type
-    Required: 'true'
-    Target: LIST
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: both
-    Description: 'both or artist or fuzzy :: both = artist + fuzzy searching :: artist
-      = only artist searching :: fuzzy = only fuzzy searching (Various Artist is always
-      fuzzy searched, regardless of setting)'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Music Search Type
-    Required: 'true'
-    Target: SearchType
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '3'
-    Description: Number of concurrent downloads
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Music Concurrency
-    Required: 'true'
-    Target: Concurrency
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '1'
-    Description: Controls number of threads used for Format conversion and replaygain
-      tagging
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Music Post Process Threads
-    Required: 'false'
-    Target: POSTPROCESSTHREADS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '80'
-    Description: Controls the quality of the cover image compression in percentage,
-      100 = no compression
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Music Embedded Cover Quality
-    Required: 'true'
-    Target: EMBEDDED_COVER_QUALITY
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: FLAC
-    Description: FLAC or MP3 or OPUS or AAC or ALAC
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Music Download Format
-    Required: 'true'
-    Target: FORMAT
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '320'
-    Description: FLAC -> OPUS/AAC/MP3 will be converted using this bitrate (MP3 320/128
-      is native, not converted)
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Music Download Bitrate
-    Required: 'true'
-    Target: BITRATE
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 'false'
-    Description: 'true = enabled :: This will convert lossy MP3 to desired target
-      format (exluding FLAC/ALAC, ALAC setting will convert to AAC)'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Music Force Convert
-    Required: 'true'
-    Target: FORCECONVERT
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 'false'
-    Description: 'true = enabled :: Requires all downloaded files match target file
-      extension (mp3 or flac) when enabled'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Music Require Quality
-    Required: 'true'
-    Target: requirequality
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 'true'
-    Description: 'true = enabled :: true = enabled :: Scans and analyzes files to
-      add replaygain tags to song metadata'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Music Replaygain Tagging
-    Required: 'true'
-    Target: replaygain
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '10'
-    Description: 'Set as an integer, the higher the number, the more lienet it is.
-      Example: A match score of 0 is a perfect match :: For more information, this
-      score is produced using this function: https://en.wikibooks.org/wiki/Algorithm_Implementation/Strings/Levenshtein_distance'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Music Match Distance
-    Required: 'true'
-    Target: MatchDistance
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '766'
-    Description: Based on chmod linux permissions
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Music Folder Permissions
-    Required: 'true'
-    Target: FolderPermissions
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '666'
-    Description: Based on chmod linux permissions
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Music File Permissions
-    Required: 'true'
-    Target: FilePermissions
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: https://musicbrainz.org
-    Description: 'OPTIONAL: Only change if using a different mirror'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Musicbrainz Mirror URL
-    Required: 'false'
-    Target: MBRAINZMIRROR
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '1'
-    Description: 'OPTIONAL: musicbrainz rate limit, musicbrainz allows only 1 connection
-      per second, max setting is 10 :: Set to 101 to disable limit'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Musicbrainz Rate Limit
-    Required: 'false'
-    Target: MBRATELIMIT
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 'false'
-    Description: 'true = enabled :: Plex must have a Music library added and also
-      be configured with the /downloads-ama directory'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Plex Scan Notifications
-    Required: 'true'
-    Target: NOTIFYPLEX
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: Music
-    Description: This must exactly match the name of the Plex Library that contains
-      the Lidarr Media Folder data
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Plex Library Name
-    Required: 'true'
-    Target: PLEXLIBRARYNAME
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: http://x.x.x.x:32400
-    Description: ONLY used if NOTIFYPLEX is enabled...
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Plex Url
-    Required: 'false'
-    Target: PLEXURL
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: ONLY used if NOTIFYPLEX is enabled...
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Plex Token
-    Required: 'false'
-    Target: PLEXTOKEN
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '99'
-    Description: 'Container Variable: PUID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: PUID
-    Required: 'false'
-    Target: PUID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '100'
-    Description: 'Container Variable: PGID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: PGID
-    Required: 'false'
-    Target: PGID
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Host Path for /config:
+      Default: ''
+      Description: 'Container Path: /config'
+      Display: always-hide
+      Mask: 'false'
+      Mode: rw
+      Name: Host Path for /config
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: ''
+    Host Path for /downloads-amd:
+      Default: /mnt/user/downloads
+      Description: 'Container Path: /downloads-amd (DO NOT DELETE) :: !!!!IMPORTANT!!!
+        Map this exact volume mount to your Lidarr Container for everything to work
+        properly!!!'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Host Path for /downloads-amd
+      Required: 'true'
+      Target: /downloads-amd
+      Type: Path
+      value: ''
+  Port: {}
+  Variable:
+    Enable Automatic Script Start:
+      Default: 'true'
+      Description: 'true = Enabled :: Runs script automatically on startup'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Enable Automatic Script Start
+      Required: 'true'
+      Target: AUTOSTART
+      Type: Variable
+      value: ''
+    Lidarr API Key:
+      Default: ''
+      Description: Lidarr API key
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Lidarr API Key
+      Required: 'false'
+      Target: LidarrAPIkey
+      Type: Variable
+      value: ''
+    Lidarr Remote Path Mapping:
+      Default: ''
+      Description: 'OPTIONAL :: ADVANCED FEATURE :: Configure this to the local volume
+        path for Lidarr to see the downloads folder, this will enable file moves,
+        instead of copies... Less resource intensive'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: Lidarr Remote Path Mapping
+      Required: 'false'
+      Target: LIDARRREMOTEPATH
+      Type: Variable
+      value: ''
+    Lidarr Url:
+      Default: http://127.0.0.1:8686
+      Description: Set domain or IP to your Lidarr instance including port. If using
+        reverse proxy, do not use a trailing slash. Ensure you specify http/s.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Lidarr Url
+      Required: 'false'
+      Target: LidarrUrl
+      Type: Variable
+      value: ''
+    Music Album Type Filter:
+      Default: ''
+      Description: 'Filter Types: COMPILE, SINGLE, ALBUM, EP (this is a '', '' separated
+        list of Album Types to skip) (artist mode only)'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Music Album Type Filter
+      Required: 'false'
+      Target: ALBUM_TYPE_FILTER
+      Type: Variable
+      value: ''
+    Music Concurrency:
+      Default: '3'
+      Description: Number of concurrent downloads
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Music Concurrency
+      Required: 'true'
+      Target: Concurrency
+      Type: Variable
+      value: ''
+    Music Download Bitrate:
+      Default: '320'
+      Description: FLAC -> OPUS/AAC/MP3 will be converted using this bitrate (MP3
+        320/128 is native, not converted)
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Music Download Bitrate
+      Required: 'true'
+      Target: BITRATE
+      Type: Variable
+      value: ''
+    Music Download Client ARL Token:
+      Default: ''
+      Description: 'User token for dl client, for instructions to obtain token: https://notabug.org/RemixDevs/DeezloaderRemix/wiki/Login+via+userToken'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Music Download Client ARL Token
+      Required: 'true'
+      Target: ARL_TOKEN
+      Type: Variable
+      value: ''
+    Music Download Format:
+      Default: FLAC
+      Description: FLAC or MP3 or OPUS or AAC or ALAC
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Music Download Format
+      Required: 'true'
+      Target: FORMAT
+      Type: Variable
+      value: ''
+    Music Download Mode:
+      Default: wanted
+      Description: 'wanted or artist :: wanted mode only download missing/cutoff ::
+        artist mode downloads all albums by an artist (requires lidarr volume mapping
+        root media folders for import)'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Music Download Mode
+      Required: 'true'
+      Target: DOWNLOADMODE
+      Type: Variable
+      value: ''
+    Music Embedded Cover Quality:
+      Default: '80'
+      Description: Controls the quality of the cover image compression in percentage,
+        100 = no compression
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Music Embedded Cover Quality
+      Required: 'true'
+      Target: EMBEDDED_COVER_QUALITY
+      Type: Variable
+      value: ''
+    Music File Permissions:
+      Default: '666'
+      Description: Based on chmod linux permissions
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Music File Permissions
+      Required: 'true'
+      Target: FilePermissions
+      Type: Variable
+      value: ''
+    Music Folder Permissions:
+      Default: '766'
+      Description: Based on chmod linux permissions
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Music Folder Permissions
+      Required: 'true'
+      Target: FolderPermissions
+      Type: Variable
+      value: ''
+    Music Force Convert:
+      Default: 'false'
+      Description: 'true = enabled :: This will convert lossy MP3 to desired target
+        format (exluding FLAC/ALAC, ALAC setting will convert to AAC)'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Music Force Convert
+      Required: 'true'
+      Target: FORCECONVERT
+      Type: Variable
+      value: ''
+    Music List Type:
+      Default: both
+      Description: 'both or missing or cutoff :: both = missing + cutoff :: missng
+        = lidarr missing list :: cutoff = lidarr cutoff li'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Music List Type
+      Required: 'true'
+      Target: LIST
+      Type: Variable
+      value: ''
+    Music Match Distance:
+      Default: '10'
+      Description: 'Set as an integer, the higher the number, the more lienet it is.
+        Example: A match score of 0 is a perfect match :: For more information, this
+        score is produced using this function: https://en.wikibooks.org/wiki/Algorithm_Implementation/Strings/Levenshtein_distance'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Music Match Distance
+      Required: 'true'
+      Target: MatchDistance
+      Type: Variable
+      value: ''
+    Music Post Process Threads:
+      Default: '1'
+      Description: Controls number of threads used for Format conversion and replaygain
+        tagging
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Music Post Process Threads
+      Required: 'false'
+      Target: POSTPROCESSTHREADS
+      Type: Variable
+      value: ''
+    Music Replaygain Tagging:
+      Default: 'true'
+      Description: 'true = enabled :: true = enabled :: Scans and analyzes files to
+        add replaygain tags to song metadata'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Music Replaygain Tagging
+      Required: 'true'
+      Target: replaygain
+      Type: Variable
+      value: ''
+    Music Require Quality:
+      Default: 'false'
+      Description: 'true = enabled :: Requires all downloaded files match target file
+        extension (mp3 or flac) when enabled'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Music Require Quality
+      Required: 'true'
+      Target: requirequality
+      Type: Variable
+      value: ''
+    Music Search Type:
+      Default: both
+      Description: 'both or artist or fuzzy :: both = artist + fuzzy searching ::
+        artist = only artist searching :: fuzzy = only fuzzy searching (Various Artist
+        is always fuzzy searched, regardless of setting)'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Music Search Type
+      Required: 'true'
+      Target: SearchType
+      Type: Variable
+      value: ''
+    Musicbrainz Mirror URL:
+      Default: https://musicbrainz.org
+      Description: 'OPTIONAL: Only change if using a different mirror'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Musicbrainz Mirror URL
+      Required: 'false'
+      Target: MBRAINZMIRROR
+      Type: Variable
+      value: ''
+    Musicbrainz Rate Limit:
+      Default: '1'
+      Description: 'OPTIONAL: musicbrainz rate limit, musicbrainz allows only 1 connection
+        per second, max setting is 10 :: Set to 101 to disable limit'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Musicbrainz Rate Limit
+      Required: 'false'
+      Target: MBRATELIMIT
+      Type: Variable
+      value: ''
+    PGID:
+      Default: '100'
+      Description: 'Container Variable: PGID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: PGID
+      Required: 'false'
+      Target: PGID
+      Type: Variable
+      value: ''
+    PUID:
+      Default: '99'
+      Description: 'Container Variable: PUID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: PUID
+      Required: 'false'
+      Target: PUID
+      Type: Variable
+      value: ''
+    Plex Library Name:
+      Default: Music
+      Description: This must exactly match the name of the Plex Library that contains
+        the Lidarr Media Folder data
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Plex Library Name
+      Required: 'true'
+      Target: PLEXLIBRARYNAME
+      Type: Variable
+      value: ''
+    Plex Scan Notifications:
+      Default: 'false'
+      Description: 'true = enabled :: Plex must have a Music library added and also
+        be configured with the /downloads-ama directory'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Plex Scan Notifications
+      Required: 'true'
+      Target: NOTIFYPLEX
+      Type: Variable
+      value: ''
+    Plex Token:
+      Default: ''
+      Description: ONLY used if NOTIFYPLEX is enabled...
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Plex Token
+      Required: 'false'
+      Target: PLEXTOKEN
+      Type: Variable
+      value: ''
+    Plex Url:
+      Default: http://x.x.x.x:32400
+      Description: ONLY used if NOTIFYPLEX is enabled...
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Plex Url
+      Required: 'false'
+      Target: PLEXURL
+      Type: Variable
+      value: ''
+    Script Interval:
+      Default: 15m
+      Description: '#s or #m or #h or #d :: s = seconds, m = minutes, h = hours, d
+        = days :: Amount of time between each script run, when AUTOSTART is enabled'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Script Interval
+      Required: 'true'
+      Target: SCRIPTINTERVAL
+      Type: Variable
+      value: ''
 DonateImg: ''
 DonateLink: https://github.com/sponsors/RandomNinjaAtk
 FirstSeen: 1596557285

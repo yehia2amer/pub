@@ -2,84 +2,89 @@ CategoryList:
 - Tools-Utilities
 - Crypto
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 4067'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'false'
-    Target: '4067'
-    Type: Port
-  value: '4067'
-- '@attributes':
-    Default: ''
-    Description: Username/Wallet address
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Wallet address
-    Required: 'true'
-    Target: WALLET
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: URL of the mining pool
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Server
-    Required: 'true'
-    Target: SERVER
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Worker name
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Worker Name
-    Required: 'false'
-    Target: WORKER
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ethash
-    Description: Specify the hash algorithm
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: algorithm
-    Required: 'true'
-    Target: ALGO
-    Type: Variable
-  value: ethash
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /config'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Config
-    Required: 'false'
-    Target: /config
-    Type: Path
-  value: /mnt/user/appdata/trex
-- '@attributes':
-    Default: ''
-    Description: Must be 8-64 characters long, without spaces, and must contain at
-      least one digit, lowercase, and uppercase letters.
-    Display: always
-    Mask: 'true'
-    Mode: ''
-    Name: webUI Password
-    Required: 'true'
-    Target: API_PASSWORD
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Config:
+      Default: ''
+      Description: 'Container Path: /config'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Config
+      Required: 'false'
+      Target: /config
+      Type: Path
+      value: /mnt/user/appdata/trex
+  Port:
+    WebUI:
+      Default: ''
+      Description: 'Container Port: 4067'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'false'
+      Target: '4067'
+      Type: Port
+      value: '4067'
+  Variable:
+    Server:
+      Default: ''
+      Description: URL of the mining pool
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Server
+      Required: 'true'
+      Target: SERVER
+      Type: Variable
+      value: ''
+    Wallet address:
+      Default: ''
+      Description: Username/Wallet address
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Wallet address
+      Required: 'true'
+      Target: WALLET
+      Type: Variable
+      value: ''
+    Worker Name:
+      Default: ''
+      Description: Worker name
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Worker Name
+      Required: 'false'
+      Target: WORKER
+      Type: Variable
+      value: ''
+    algorithm:
+      Default: ethash
+      Description: Specify the hash algorithm
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: algorithm
+      Required: 'true'
+      Target: ALGO
+      Type: Variable
+      value: ethash
+    webUI Password:
+      Default: ''
+      Description: Must be 8-64 characters long, without spaces, and must contain
+        at least one digit, lowercase, and uppercase letters.
+      Display: always
+      Mask: 'true'
+      Mode: ''
+      Name: webUI Password
+      Required: 'true'
+      Target: API_PASSWORD
+      Type: Variable
+      value: ''
 DonateLink: https://www.paypal.me/ptrfrll
 DonateText: Buy me a beer
 ExtraParams: --runtime=nvidia

@@ -3,204 +3,209 @@ CategoryList:
 - Tools-Utilities
 - Other
 Config:
-- '@attributes':
-    Default: /mnt/user/appdata/Grafana-Unraid-Stack/config
-    Description: 'Container Path: /config'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Config
-    Required: 'false'
-    Target: /config
-    Type: Path
-  value: /mnt/user/appdata/Grafana-Unraid-Stack/config
-- '@attributes':
-    Default: /mnt/user/appdata/Grafana-Unraid-Stack/data
-    Description: 'Container Path: /data'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Data (db)
-    Required: 'false'
-    Target: /data
-    Type: Path
-  value: /mnt/user/appdata/Grafana-Unraid-Stack/data
-- '@attributes':
-    Default: yes|no
-    Description: 'Container Variable: USE_HDDTEMP'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: USE_HDDTEMP
-    Required: 'false'
-    Target: USE_HDDTEMP
-    Type: Variable
-  value: 'no'
-- '@attributes':
-    Default: '8086'
-    Description: 'Container Variable: INFLUXDB_HTTP_PORT'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: INFLUXDB_HTTP_PORT
-    Required: 'false'
-    Target: INFLUXDB_HTTP_PORT
-    Type: Variable
-  value: '8086'
-- '@attributes':
-    Default: '3100'
-    Description: 'Container Variable: LOKI_PORT'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: LOKI_PORT
-    Required: 'false'
-    Target: LOKI_PORT
-    Type: Variable
-  value: '3100'
-- '@attributes':
-    Default: '9086'
-    Description: 'Container Variable: PROMTAIL_PORT'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: PROMTAIL_PORT
-    Required: 'false'
-    Target: PROMTAIL_PORT
-    Type: Variable
-  value: '9086'
-- '@attributes':
-    Default: '3006'
-    Description: 'Container Variable: GRAFANA_PORT'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: GRAFANA_PORT
-    Required: 'false'
-    Target: GRAFANA_PORT
-    Type: Variable
-  value: '3006'
-- '@attributes':
-    Default: /
-    Description: 'Container Path: /rootfs'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ro
-    Name: Telegraf 1
-    Required: 'false'
-    Target: /rootfs
-    Type: Path
-  value: /
-- '@attributes':
-    Default: /etc
-    Description: 'Container Path: /rootfs/etc'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ro
-    Name: Telegraf 2
-    Required: 'false'
-    Target: /rootfs/etc
-    Type: Path
-  value: /etc
-- '@attributes':
-    Default: /proc
-    Description: 'Container Path: /rootfs/proc'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ro
-    Name: Telegraf 3
-    Required: 'false'
-    Target: /rootfs/proc
-    Type: Path
-  value: /proc
-- '@attributes':
-    Default: /sys
-    Description: 'Container Path: /rootfs/sys'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ro
-    Name: Telegraf 4
-    Required: 'false'
-    Target: /rootfs/sys
-    Type: Path
-  value: /sys
-- '@attributes':
-    Default: /var/run/docker.sock
-    Description: 'Container Path: /var/run/docker.sock'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ro
-    Name: Telegraf 5
-    Required: 'false'
-    Target: /var/run/docker.sock
-    Type: Path
-  value: /var/run/docker.sock
-- '@attributes':
-    Default: /var/run/utmp
-    Description: 'Container Path: /var/run/utmp'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ro
-    Name: Telegraf 6
-    Required: 'false'
-    Target: /var/run/utmp
-    Type: Path
-  value: /var/run/utmp
-- '@attributes':
-    Default: /run/udev
-    Description: 'Container Path: /run/udev'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ro
-    Name: Telegraf 7
-    Required: 'false'
-    Target: /run/udev
-    Type: Path
-  value: /run/udev
-- '@attributes':
-    Default: /rootfs/etc
-    Description: 'Container Variable: HOST_ETC'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: HOST_ETC
-    Required: 'false'
-    Target: HOST_ETC
-    Type: Variable
-  value: /rootfs/etc
-- '@attributes':
-    Default: /rootfs/proc
-    Description: 'Container Variable: HOST_PROC'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: HOST_PROC
-    Required: 'false'
-    Target: HOST_PROC
-    Type: Variable
-  value: /rootfs/proc
-- '@attributes':
-    Default: /rootfs/sys
-    Description: 'Container Variable: HOST_SYS'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: HOST_SYS
-    Required: 'false'
-    Target: HOST_SYS
-    Type: Variable
-  value: /rootfs/sys
-- '@attributes':
-    Default: /rootfs
-    Description: 'Container Variable: HOST_MOUNT_PREFIX'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: HOST_MOUNT_PREFIX
-    Required: 'false'
-    Target: HOST_MOUNT_PREFIX
-    Type: Variable
-  value: /rootfs
+  Device: {}
+  Label: {}
+  Path:
+    Config:
+      Default: /mnt/user/appdata/Grafana-Unraid-Stack/config
+      Description: 'Container Path: /config'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Config
+      Required: 'false'
+      Target: /config
+      Type: Path
+      value: /mnt/user/appdata/Grafana-Unraid-Stack/config
+    Data (db):
+      Default: /mnt/user/appdata/Grafana-Unraid-Stack/data
+      Description: 'Container Path: /data'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Data (db)
+      Required: 'false'
+      Target: /data
+      Type: Path
+      value: /mnt/user/appdata/Grafana-Unraid-Stack/data
+    Telegraf 1:
+      Default: /
+      Description: 'Container Path: /rootfs'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ro
+      Name: Telegraf 1
+      Required: 'false'
+      Target: /rootfs
+      Type: Path
+      value: /
+    Telegraf 2:
+      Default: /etc
+      Description: 'Container Path: /rootfs/etc'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ro
+      Name: Telegraf 2
+      Required: 'false'
+      Target: /rootfs/etc
+      Type: Path
+      value: /etc
+    Telegraf 3:
+      Default: /proc
+      Description: 'Container Path: /rootfs/proc'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ro
+      Name: Telegraf 3
+      Required: 'false'
+      Target: /rootfs/proc
+      Type: Path
+      value: /proc
+    Telegraf 4:
+      Default: /sys
+      Description: 'Container Path: /rootfs/sys'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ro
+      Name: Telegraf 4
+      Required: 'false'
+      Target: /rootfs/sys
+      Type: Path
+      value: /sys
+    Telegraf 5:
+      Default: /var/run/docker.sock
+      Description: 'Container Path: /var/run/docker.sock'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ro
+      Name: Telegraf 5
+      Required: 'false'
+      Target: /var/run/docker.sock
+      Type: Path
+      value: /var/run/docker.sock
+    Telegraf 6:
+      Default: /var/run/utmp
+      Description: 'Container Path: /var/run/utmp'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ro
+      Name: Telegraf 6
+      Required: 'false'
+      Target: /var/run/utmp
+      Type: Path
+      value: /var/run/utmp
+    Telegraf 7:
+      Default: /run/udev
+      Description: 'Container Path: /run/udev'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ro
+      Name: Telegraf 7
+      Required: 'false'
+      Target: /run/udev
+      Type: Path
+      value: /run/udev
+  Port: {}
+  Variable:
+    GRAFANA_PORT:
+      Default: '3006'
+      Description: 'Container Variable: GRAFANA_PORT'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: GRAFANA_PORT
+      Required: 'false'
+      Target: GRAFANA_PORT
+      Type: Variable
+      value: '3006'
+    HOST_ETC:
+      Default: /rootfs/etc
+      Description: 'Container Variable: HOST_ETC'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: HOST_ETC
+      Required: 'false'
+      Target: HOST_ETC
+      Type: Variable
+      value: /rootfs/etc
+    HOST_MOUNT_PREFIX:
+      Default: /rootfs
+      Description: 'Container Variable: HOST_MOUNT_PREFIX'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: HOST_MOUNT_PREFIX
+      Required: 'false'
+      Target: HOST_MOUNT_PREFIX
+      Type: Variable
+      value: /rootfs
+    HOST_PROC:
+      Default: /rootfs/proc
+      Description: 'Container Variable: HOST_PROC'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: HOST_PROC
+      Required: 'false'
+      Target: HOST_PROC
+      Type: Variable
+      value: /rootfs/proc
+    HOST_SYS:
+      Default: /rootfs/sys
+      Description: 'Container Variable: HOST_SYS'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: HOST_SYS
+      Required: 'false'
+      Target: HOST_SYS
+      Type: Variable
+      value: /rootfs/sys
+    INFLUXDB_HTTP_PORT:
+      Default: '8086'
+      Description: 'Container Variable: INFLUXDB_HTTP_PORT'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: INFLUXDB_HTTP_PORT
+      Required: 'false'
+      Target: INFLUXDB_HTTP_PORT
+      Type: Variable
+      value: '8086'
+    LOKI_PORT:
+      Default: '3100'
+      Description: 'Container Variable: LOKI_PORT'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: LOKI_PORT
+      Required: 'false'
+      Target: LOKI_PORT
+      Type: Variable
+      value: '3100'
+    PROMTAIL_PORT:
+      Default: '9086'
+      Description: 'Container Variable: PROMTAIL_PORT'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: PROMTAIL_PORT
+      Required: 'false'
+      Target: PROMTAIL_PORT
+      Type: Variable
+      value: '9086'
+    USE_HDDTEMP:
+      Default: yes|no
+      Description: 'Container Variable: USE_HDDTEMP'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: USE_HDDTEMP
+      Required: 'false'
+      Target: USE_HDDTEMP
+      Type: Variable
+      value: 'no'
 DonateLink: https://paypal.me/mersenne
 DonateText: If you like my work, a donation to my burger fund is very much appreciated.
 FirstSeen: 1618588994

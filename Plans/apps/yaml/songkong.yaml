@@ -1,39 +1,44 @@
 CategoryList:
 - MediaApp-Music
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 4567'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Port
-    Required: 'false'
-    Target: '4567'
-    Type: Port
-  value: '4567'
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /music'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Music
-    Required: 'false'
-    Target: /music
-    Type: Path
-  value: /mnt/user/music
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /songkong'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: SongKong Config
-    Required: 'false'
-    Target: /songkong
-    Type: Path
-  value: /mnt/user/appdata/songkong
+  Device: {}
+  Label: {}
+  Path:
+    Music:
+      Default: ''
+      Description: 'Container Path: /music'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Music
+      Required: 'false'
+      Target: /music
+      Type: Path
+      value: /mnt/user/music
+    SongKong Config:
+      Default: ''
+      Description: 'Container Path: /songkong'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: SongKong Config
+      Required: 'false'
+      Target: /songkong
+      Type: Path
+      value: /mnt/user/appdata/songkong
+  Port:
+    Port:
+      Default: ''
+      Description: 'Container Port: 4567'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Port
+      Required: 'false'
+      Target: '4567'
+      Type: Port
+      value: '4567'
+  Variable: {}
 FirstSeen: 1559587569
 Icon: https://www.jthink.net/songkong/images/songkong_icon256.png
 LastUpdate: 1641551050

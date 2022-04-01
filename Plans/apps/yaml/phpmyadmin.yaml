@@ -2,61 +2,66 @@ CategoryList:
 - Tools-Utilities
 - Other
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: MYSQL_USER'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: MYSQL_USER
-    Required: 'false'
-    Target: MYSQL_USER
-    Type: Variable
-  value: root
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: MYSQL_PASSWORD'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: MYSQL_PASSWORD
-    Required: 'false'
-    Target: MYSQL_PASSWORD
-    Type: Variable
-  value: root
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: PMA_HOST'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: MYSQL_HOST
-    Required: 'false'
-    Target: PMA_HOST
-    Type: Variable
-  value: 192.168.70.99
-- '@attributes':
-    Default: '3306'
-    Description: 'Container Variable: PMA_PORT'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: MYSQL_PORT
-    Required: 'false'
-    Target: PMA_PORT
-    Type: Variable
-  value: '3306'
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 80'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Web UI PORT
-    Required: 'false'
-    Target: '80'
-    Type: Port
-  value: '8080'
+  Device: {}
+  Label: {}
+  Path: {}
+  Port:
+    Web UI PORT:
+      Default: ''
+      Description: 'Container Port: 80'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Web UI PORT
+      Required: 'false'
+      Target: '80'
+      Type: Port
+      value: '8080'
+  Variable:
+    MYSQL_HOST:
+      Default: ''
+      Description: 'Container Variable: PMA_HOST'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: MYSQL_HOST
+      Required: 'false'
+      Target: PMA_HOST
+      Type: Variable
+      value: 192.168.70.99
+    MYSQL_PASSWORD:
+      Default: ''
+      Description: 'Container Variable: MYSQL_PASSWORD'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: MYSQL_PASSWORD
+      Required: 'false'
+      Target: MYSQL_PASSWORD
+      Type: Variable
+      value: root
+    MYSQL_PORT:
+      Default: '3306'
+      Description: 'Container Variable: PMA_PORT'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: MYSQL_PORT
+      Required: 'false'
+      Target: PMA_PORT
+      Type: Variable
+      value: '3306'
+    MYSQL_USER:
+      Default: ''
+      Description: 'Container Variable: MYSQL_USER'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: MYSQL_USER
+      Required: 'false'
+      Target: MYSQL_USER
+      Type: Variable
+      value: root
 DonateLink: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=PJNVJNW2CPE3G&amp;source=url
 DonateText: Hey buy me some coffee
 FirstSeen: 1555092105

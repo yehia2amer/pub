@@ -2,77 +2,82 @@ CategoryList:
 - Cloud
 - Crypto
 Config:
-- '@attributes':
-    Default: /mnt/user/appdata/scprime
-    Description: 'Location where metadata is stored including consensus, wallets and
-      file contracts. 100Gb of free space is recommended, SSD preferred.&lt;br&gt;Container
-      Path: /scp-data'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Metadata
-    Required: 'true'
-    Target: /scp-data
-    Type: Path
-  value: /mnt/user/appdata/scprime
-- '@attributes':
-    Default: '4282'
-    Description: Open this port in your firewall and forward to your server.
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Port 1
-    Required: 'true'
-    Target: '4282'
-    Type: Port
-  value: '4282'
-- '@attributes':
-    Default: '4283'
-    Description: Open this port in your firewall and forward to your server.
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Port 2
-    Required: 'true'
-    Target: '4283'
-    Type: Port
-  value: '4283'
-- '@attributes':
-    Default: '4285'
-    Description: Open this port in your firewall and forward to your server.
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Port 3
-    Required: 'true'
-    Target: '4285'
-    Type: Port
-  value: '4285'
-- '@attributes':
-    Default: ''
-    Description: Enter your password to automatically unlock your wallet when the
-      docker starts.&lt;br&gt;&lt;b&gt;NOTE:&lt;/b&gt; Your default password is your
-      seed phrase unless changed.
-    Display: always
-    Mask: 'true'
-    Mode: ''
-    Name: Wallet Password
-    Required: 'false'
-    Target: SCPRIME_WALLET_PASSWORD
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Path where shared folders are located.&lt;br&gt;Container Path:
-      /storage'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Storage
-    Required: 'false'
-    Target: /storage
-    Type: Path
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Metadata:
+      Default: /mnt/user/appdata/scprime
+      Description: 'Location where metadata is stored including consensus, wallets
+        and file contracts. 100Gb of free space is recommended, SSD preferred.&lt;br&gt;Container
+        Path: /scp-data'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Metadata
+      Required: 'true'
+      Target: /scp-data
+      Type: Path
+      value: /mnt/user/appdata/scprime
+    Storage:
+      Default: ''
+      Description: 'Path where shared folders are located.&lt;br&gt;Container Path:
+        /storage'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Storage
+      Required: 'false'
+      Target: /storage
+      Type: Path
+      value: ''
+  Port:
+    Port 1:
+      Default: '4282'
+      Description: Open this port in your firewall and forward to your server.
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Port 1
+      Required: 'true'
+      Target: '4282'
+      Type: Port
+      value: '4282'
+    Port 2:
+      Default: '4283'
+      Description: Open this port in your firewall and forward to your server.
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Port 2
+      Required: 'true'
+      Target: '4283'
+      Type: Port
+      value: '4283'
+    Port 3:
+      Default: '4285'
+      Description: Open this port in your firewall and forward to your server.
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Port 3
+      Required: 'true'
+      Target: '4285'
+      Type: Port
+      value: '4285'
+  Variable:
+    Wallet Password:
+      Default: ''
+      Description: Enter your password to automatically unlock your wallet when the
+        docker starts.&lt;br&gt;&lt;b&gt;NOTE:&lt;/b&gt; Your default password is
+        your seed phrase unless changed.
+      Display: always
+      Mask: 'true'
+      Mode: ''
+      Name: Wallet Password
+      Required: 'false'
+      Target: SCPRIME_WALLET_PASSWORD
+      Type: Variable
+      value: ''
 ExtraParams: --restart unless-stopped
 FirstSeen: 1639501424
 Icon: https://raw.githubusercontent.com/rythmik/docker-templates/main/rythmik/images/scprime-icon.png

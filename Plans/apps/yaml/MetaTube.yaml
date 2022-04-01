@@ -4,84 +4,89 @@ CategoryList:
 - Productivity
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'false'
-    Target: '5000'
-    Type: Port
-  value: '5000'
-- '@attributes':
-    Default: ''
-    Description: This is the location for the database.
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Storage (database)
-    Required: 'false'
-    Target: /database
-    Type: Path
-  value: /mnt/user/appdata/metatube
-- '@attributes':
-    Default: ''
-    Description: This is the location for the downloads.
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Storage (downloads)
-    Required: 'true'
-    Target: /downloads
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Whether to enable debug mode or not
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: DEBUG
-    Required: 'false'
-    Target: DEBUG
-    Type: Variable
-  value: 'False'
-- '@attributes':
-    Default: ''
-    Description: Whether to keep logs or not
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: LOG
-    Required: 'false'
-    Target: LOG
-    Type: Variable
-  value: 'False'
-- '@attributes':
-    Default: ''
-    Description: 'Whether to log in- and outcoming websocket connections; warning:
-      your console can be spammed with connections.'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: SOCKET_LOG
-    Required: 'false'
-    Target: SOCKET_LOG
-    Type: Variable
-  value: 'False'
-- '@attributes':
-    Default: ''
-    Description: 'Numeric value from which MetaTube will keep logs. '
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: LOG_LEVEL
-    Required: 'false'
-    Target: LOG_LEVEL
-    Type: Variable
-  value: '10'
+  Device: {}
+  Label: {}
+  Path:
+    Storage (database):
+      Default: ''
+      Description: This is the location for the database.
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Storage (database)
+      Required: 'false'
+      Target: /database
+      Type: Path
+      value: /mnt/user/appdata/metatube
+    Storage (downloads):
+      Default: ''
+      Description: This is the location for the downloads.
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Storage (downloads)
+      Required: 'true'
+      Target: /downloads
+      Type: Path
+      value: ''
+  Port:
+    WebUI:
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'false'
+      Target: '5000'
+      Type: Port
+      value: '5000'
+  Variable:
+    DEBUG:
+      Default: ''
+      Description: Whether to enable debug mode or not
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: DEBUG
+      Required: 'false'
+      Target: DEBUG
+      Type: Variable
+      value: 'False'
+    LOG:
+      Default: ''
+      Description: Whether to keep logs or not
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: LOG
+      Required: 'false'
+      Target: LOG
+      Type: Variable
+      value: 'False'
+    LOG_LEVEL:
+      Default: ''
+      Description: 'Numeric value from which MetaTube will keep logs. '
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: LOG_LEVEL
+      Required: 'false'
+      Target: LOG_LEVEL
+      Type: Variable
+      value: '10'
+    SOCKET_LOG:
+      Default: ''
+      Description: 'Whether to log in- and outcoming websocket connections; warning:
+        your console can be spammed with connections.'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: SOCKET_LOG
+      Required: 'false'
+      Target: SOCKET_LOG
+      Type: Variable
+      value: 'False'
 FirstSeen: 1644706998
 Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/metatube.png
 LastUpdate: 1644506780

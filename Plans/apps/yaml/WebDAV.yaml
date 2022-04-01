@@ -3,83 +3,88 @@ CAComment: This template is set up to use a custom network. You may have to adju
 CategoryList:
 - Cloud
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: WEBDAV_USERNAME'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: WEBDAV_USERNAME
-    Required: 'false'
-    Target: WEBDAV_USERNAME
-    Type: Variable
-  value: USERNAME
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: WEBDAV_PASSWORD'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: WEBDAV_PASSWORD
-    Required: 'false'
-    Target: WEBDAV_PASSWORD
-    Type: Variable
-  value: PASSWORD
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /var/webdav/public'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: FILES_LOCATION
-    Required: 'false'
-    Target: /var/webdav/public
-    Type: Path
-  value: /mnt/user/location/of/files/
-- '@attributes':
-    Default: '8234'
-    Description: 'Container Port: 80'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: HTTP_PORT
-    Required: 'false'
-    Target: '80'
-    Type: Port
-  value: '8080'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: PUID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: User ID
-    Required: 'false'
-    Target: PUID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: PGID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: Group ID
-    Required: 'false'
-    Target: PGID
-    Type: Variable
-  value: '100'
-- '@attributes':
-    Default: '0000'
-    Description: 'Container Variable: PUMASK'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: umask
-    Required: 'false'
-    Target: PUMASK
-    Type: Variable
-  value: '0000'
+  Device: {}
+  Label: {}
+  Path:
+    FILES_LOCATION:
+      Default: ''
+      Description: 'Container Path: /var/webdav/public'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: FILES_LOCATION
+      Required: 'false'
+      Target: /var/webdav/public
+      Type: Path
+      value: /mnt/user/location/of/files/
+  Port:
+    HTTP_PORT:
+      Default: '8234'
+      Description: 'Container Port: 80'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: HTTP_PORT
+      Required: 'false'
+      Target: '80'
+      Type: Port
+      value: '8080'
+  Variable:
+    Group ID:
+      Default: ''
+      Description: 'Container Variable: PGID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: Group ID
+      Required: 'false'
+      Target: PGID
+      Type: Variable
+      value: '100'
+    User ID:
+      Default: ''
+      Description: 'Container Variable: PUID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: User ID
+      Required: 'false'
+      Target: PUID
+      Type: Variable
+      value: '99'
+    WEBDAV_PASSWORD:
+      Default: ''
+      Description: 'Container Variable: WEBDAV_PASSWORD'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: WEBDAV_PASSWORD
+      Required: 'false'
+      Target: WEBDAV_PASSWORD
+      Type: Variable
+      value: PASSWORD
+    WEBDAV_USERNAME:
+      Default: ''
+      Description: 'Container Variable: WEBDAV_USERNAME'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: WEBDAV_USERNAME
+      Required: 'false'
+      Target: WEBDAV_USERNAME
+      Type: Variable
+      value: USERNAME
+    umask:
+      Default: '0000'
+      Description: 'Container Variable: PUMASK'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: umask
+      Required: 'false'
+      Target: PUMASK
+      Type: Variable
+      value: '0000'
 FirstSeen: 1632500297
 Icon: https://camo.githubusercontent.com/ea0e36ac93ea7197dc50aa83adbd3269f7434e6f9a2aed50594cb5c7dc7aaaf3/687474703a2f2f73616272652e696f2f696d672f6c6f676f2e706e67
 LastUpdate: 1632486942

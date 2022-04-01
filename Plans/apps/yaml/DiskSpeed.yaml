@@ -1,39 +1,44 @@
 CategoryList:
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: '18888'
-    Description: Host Port used to access the DiskSpeed web site.
-    Display: always-hide
-    Mask: 'false'
-    Mode: tcp
-    Name: Web Port
-    Required: 'true'
-    Target: '8888'
-    Type: Port
-  value: '18888'
-- '@attributes':
-    Default: ''
-    Description: External storage location to store persistent data
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Local Storage
-    Required: 'true'
-    Target: /tmp/DiskSpeed
-    Type: Path
-  value: /mnt/user/appdata/DiskSpeed/
-- '@attributes':
-    Default: /var/local/emhttp
-    Description: Location of unRAID ini files
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ro
-    Name: unRAID ini Files
-    Required: 'false'
-    Target: /var/local/emhttp
-    Type: Path
-  value: /var/local/emhttp
+  Device: {}
+  Label: {}
+  Path:
+    Local Storage:
+      Default: ''
+      Description: External storage location to store persistent data
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Local Storage
+      Required: 'true'
+      Target: /tmp/DiskSpeed
+      Type: Path
+      value: /mnt/user/appdata/DiskSpeed/
+    unRAID ini Files:
+      Default: /var/local/emhttp
+      Description: Location of unRAID ini files
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ro
+      Name: unRAID ini Files
+      Required: 'false'
+      Target: /var/local/emhttp
+      Type: Path
+      value: /var/local/emhttp
+  Port:
+    Web Port:
+      Default: '18888'
+      Description: Host Port used to access the DiskSpeed web site.
+      Display: always-hide
+      Mask: 'false'
+      Mode: tcp
+      Name: Web Port
+      Required: 'true'
+      Target: '8888'
+      Type: Port
+      value: '18888'
+  Variable: {}
 DonateImg: ''
 FirstSeen: '1522949191'
 Icon: https://raw.githubusercontent.com/jbartlett777/DiskSpeed/master/DiskSpeed.png

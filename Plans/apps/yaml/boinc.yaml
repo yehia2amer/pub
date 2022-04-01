@@ -1,39 +1,44 @@
 CategoryList:
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: /mnt/user/appdata/boinc
-    Description: 'Container Path: /var/lib/boinc'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: App Data
-    Required: 'false'
-    Target: /var/lib/boinc
-    Type: Path
-  value: /mnt/user/appdata/boinc
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: BOINC_GUI_RPC_PASSWORD'
-    Display: always
-    Mask: 'true'
-    Mode: ''
-    Name: BOINC_GUI_RPC_PASSWORD
-    Required: 'true'
-    Target: BOINC_GUI_RPC_PASSWORD
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: BOINC_CMD_LINE_OPTIONS'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: BOINC_CMD_LINE_OPTIONS
-    Required: 'true'
-    Target: BOINC_CMD_LINE_OPTIONS
-    Type: Variable
-  value: --allow_remote_gui_rpc
+  Device: {}
+  Label: {}
+  Path:
+    App Data:
+      Default: /mnt/user/appdata/boinc
+      Description: 'Container Path: /var/lib/boinc'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: App Data
+      Required: 'false'
+      Target: /var/lib/boinc
+      Type: Path
+      value: /mnt/user/appdata/boinc
+  Port: {}
+  Variable:
+    BOINC_CMD_LINE_OPTIONS:
+      Default: ''
+      Description: 'Container Variable: BOINC_CMD_LINE_OPTIONS'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: BOINC_CMD_LINE_OPTIONS
+      Required: 'true'
+      Target: BOINC_CMD_LINE_OPTIONS
+      Type: Variable
+      value: --allow_remote_gui_rpc
+    BOINC_GUI_RPC_PASSWORD:
+      Default: ''
+      Description: 'Container Variable: BOINC_GUI_RPC_PASSWORD'
+      Display: always
+      Mask: 'true'
+      Mode: ''
+      Name: BOINC_GUI_RPC_PASSWORD
+      Required: 'true'
+      Target: BOINC_GUI_RPC_PASSWORD
+      Type: Variable
+      value: ''
 DonateLink: https://ko-fi.com/I2I0CW9G
 DonateText: Buy me a coffee
 FirstSeen: 1547316074

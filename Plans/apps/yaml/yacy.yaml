@@ -2,39 +2,44 @@ CategoryList:
 - Tools-Utilities
 - Network-Web
 Config:
-- '@attributes':
-    Default: '8090'
-    Description: HTTP
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: HTTP
-    Required: 'true'
-    Target: '8090'
-    Type: Port
-  value: '8090'
-- '@attributes':
-    Default: '8443'
-    Description: HTTPs (Not Required if you using reverse proxy)
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: HTTPs
-    Required: 'false'
-    Target: '8443'
-    Type: Port
-  value: '8443'
-- '@attributes':
-    Default: /mnt/user/appdata/yacy/
-    Description: Appdata
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Appdata
-    Required: 'true'
-    Target: /opt/yacy_search_server/DATA
-    Type: Path
-  value: /mnt/user/appdata/yacy/
+  Device: {}
+  Label: {}
+  Path:
+    Appdata:
+      Default: /mnt/user/appdata/yacy/
+      Description: Appdata
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Appdata
+      Required: 'true'
+      Target: /opt/yacy_search_server/DATA
+      Type: Path
+      value: /mnt/user/appdata/yacy/
+  Port:
+    HTTP:
+      Default: '8090'
+      Description: HTTP
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: HTTP
+      Required: 'true'
+      Target: '8090'
+      Type: Port
+      value: '8090'
+    HTTPs:
+      Default: '8443'
+      Description: HTTPs (Not Required if you using reverse proxy)
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: HTTPs
+      Required: 'false'
+      Target: '8443'
+      Type: Port
+      value: '8443'
+  Variable: {}
 ExtraParams: --log-opt max-size=200m --log-opt max-file=2
 FirstSeen: 1588616387
 Icon: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/yacy.png

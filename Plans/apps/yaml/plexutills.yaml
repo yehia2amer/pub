@@ -3,73 +3,78 @@ CategoryList:
 - Tools-Utilities
 - MediaApp-Other
 Config:
-- '@attributes':
-    Default: /mnt/user/plex-media
-    Description: "Location of your Plex media files.\r\n\r\nNeeded if you want to\
-      \ create backup posters"
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Plex Library
-    Required: 'false'
-    Target: /films
-    Type: Path
-  value: /mnt/user/Plex/
-- '@attributes':
-    Default: /mnt/user/appdata/plex-utills
-    Description: Location of your config file
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Config File
-    Required: 'false'
-    Target: /config
-    Type: Path
-  value: /mnt/user/appdata/plex-utills/
-- '@attributes':
-    Default: '80'
-    Description: 'Container Port: 80'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Webui Port
-    Required: 'true'
-    Target: '80'
-    Type: Port
-  value: '80'
-- '@attributes':
-    Default: /mnt/appdata/plex-utills/logs
-    Description: 'Container Path: /logs'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Logs
-    Required: 'false'
-    Target: /logs
-    Type: Path
-  value: /mnt/disks/Docker_SSD/plex-utills/logs
-- '@attributes':
-    Default: '99'
-    Description: 'Container Variable: PUID'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: PUID
-    Required: 'true'
-    Target: PUID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: '100'
-    Description: 'Container Variable: PGID'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: PGID
-    Required: 'true'
-    Target: PGID
-    Type: Variable
-  value: '100'
+  Device: {}
+  Label: {}
+  Path:
+    Config File:
+      Default: /mnt/user/appdata/plex-utills
+      Description: Location of your config file
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Config File
+      Required: 'false'
+      Target: /config
+      Type: Path
+      value: /mnt/user/appdata/plex-utills/
+    Logs:
+      Default: /mnt/appdata/plex-utills/logs
+      Description: 'Container Path: /logs'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Logs
+      Required: 'false'
+      Target: /logs
+      Type: Path
+      value: /mnt/disks/Docker_SSD/plex-utills/logs
+    Plex Library:
+      Default: /mnt/user/plex-media
+      Description: "Location of your Plex media files.\r\n\r\nNeeded if you want to\
+        \ create backup posters"
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Plex Library
+      Required: 'false'
+      Target: /films
+      Type: Path
+      value: /mnt/user/Plex/
+  Port:
+    Webui Port:
+      Default: '80'
+      Description: 'Container Port: 80'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Webui Port
+      Required: 'true'
+      Target: '80'
+      Type: Port
+      value: '80'
+  Variable:
+    PGID:
+      Default: '100'
+      Description: 'Container Variable: PGID'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PGID
+      Required: 'true'
+      Target: PGID
+      Type: Variable
+      value: '100'
+    PUID:
+      Default: '99'
+      Description: 'Container Variable: PUID'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PUID
+      Required: 'true'
+      Target: PUID
+      Type: Variable
+      value: '99'
 FirstSeen: 1627509804
 Icon: https://raw.githubusercontent.com/jkirkcaldy/plex-utills/master/app/img/logo.png
 LastUpdate: 1643128909

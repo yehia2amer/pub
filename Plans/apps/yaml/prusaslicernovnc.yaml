@@ -2,50 +2,55 @@ CategoryList:
 - HomeAutomation
 - Productivity
 Config:
-- '@attributes':
-    Default: /mnt/user/appdata/prusaslicer
-    Description: 'Container Path: /configs/'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Configs folder
-    Required: 'true'
-    Target: /configs/
-    Type: Path
-  value: /mnt/user/appdata/prusaslicer
-- '@attributes':
-    Default: '6080'
-    Description: 'Container Port: 8080'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: VNC Interface
-    Required: 'true'
-    Target: '8080'
-    Type: Port
-  value: '6080'
-- '@attributes':
-    Default: /etc/ssl/certs/ca-certificates.crt
-    Description: Needed to allow Prusaslicer to open without any prompts upon startup.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: SSL_CERT_FILE
-    Required: 'true'
-    Target: SSL_CERT_FILE
-    Type: Variable
-  value: /etc/ssl/certs/ca-certificates.crt
-- '@attributes':
-    Default: /mnt/user/3D Printing/
-    Description: 3D Printing Folder
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Prints
-    Required: 'false'
-    Target: /prints/
-    Type: Path
-  value: /mnt/user/3D Printing/
+  Device: {}
+  Label: {}
+  Path:
+    Configs folder:
+      Default: /mnt/user/appdata/prusaslicer
+      Description: 'Container Path: /configs/'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Configs folder
+      Required: 'true'
+      Target: /configs/
+      Type: Path
+      value: /mnt/user/appdata/prusaslicer
+    Prints:
+      Default: /mnt/user/3D Printing/
+      Description: 3D Printing Folder
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Prints
+      Required: 'false'
+      Target: /prints/
+      Type: Path
+      value: /mnt/user/3D Printing/
+  Port:
+    VNC Interface:
+      Default: '6080'
+      Description: 'Container Port: 8080'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: VNC Interface
+      Required: 'true'
+      Target: '8080'
+      Type: Port
+      value: '6080'
+  Variable:
+    SSL_CERT_FILE:
+      Default: /etc/ssl/certs/ca-certificates.crt
+      Description: Needed to allow Prusaslicer to open without any prompts upon startup.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: SSL_CERT_FILE
+      Required: 'true'
+      Target: SSL_CERT_FILE
+      Type: Variable
+      value: /etc/ssl/certs/ca-certificates.crt
 FirstSeen: 1643691793
 Icon: https://cdn.help.prusa3d.com/wp-content/uploads/PSlogo-1-300x300.jpg
 LastUpdate: 1645751711

@@ -1,39 +1,44 @@
 CategoryList:
 - Productivity
 Config:
-- '@attributes':
-    Default: '6806'
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Web UI
-    Required: 'true'
-    Target: '6806'
-    Type: Port
-  value: '6806'
-- '@attributes':
-    Default: ''
-    Description: Location on Unraid where you want to store your notes.
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Notes
-    Required: 'true'
-    Target: /root/Documents/SiYuan/data/
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: /mnt/user/appdata/SiYuan
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: AppData Config Path
-    Required: 'true'
-    Target: /root/Documents/SiYuan/conf/
-    Type: Path
-  value: /mnt/user/appdata/SiYuan
+  Device: {}
+  Label: {}
+  Path:
+    AppData Config Path:
+      Default: /mnt/user/appdata/SiYuan
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: AppData Config Path
+      Required: 'true'
+      Target: /root/Documents/SiYuan/conf/
+      Type: Path
+      value: /mnt/user/appdata/SiYuan
+    Notes:
+      Default: ''
+      Description: Location on Unraid where you want to store your notes.
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Notes
+      Required: 'true'
+      Target: /root/Documents/SiYuan/data/
+      Type: Path
+      value: ''
+  Port:
+    Web UI:
+      Default: '6806'
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Web UI
+      Required: 'true'
+      Target: '6806'
+      Type: Port
+      value: '6806'
+  Variable: {}
 FirstSeen: 1635298491
 Icon: https://camo.githubusercontent.com/b637054a2f0604c25fe9876a476117d96e16a9ec9698016252b50769108839f2/68747470733a2f2f62336c6f672e6f72672f696d616765732f6272616e642f73697975616e2d3132382e706e67
 LastUpdate: 1648103227

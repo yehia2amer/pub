@@ -2,39 +2,44 @@ CategoryList:
 - Network-Management
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: '6080'
-    Description: 'Container Port: 80'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Host Port 1
-    Required: 'true'
-    Target: '80'
-    Type: Port
-  value: '6080'
-- '@attributes':
-    Default: '6443'
-    Description: 'Container Port: 443'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Host Port 2
-    Required: 'true'
-    Target: '443'
-    Type: Port
-  value: '6443'
-- '@attributes':
-    Default: /mnt/user/appdata/unms
-    Description: 'Container Path: /config'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: rw
-    Name: AppData Config Path
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: /mnt/user/appdata/unms
+  Device: {}
+  Label: {}
+  Path:
+    AppData Config Path:
+      Default: /mnt/user/appdata/unms
+      Description: 'Container Path: /config'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: rw
+      Name: AppData Config Path
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: /mnt/user/appdata/unms
+  Port:
+    Host Port 1:
+      Default: '6080'
+      Description: 'Container Port: 80'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Host Port 1
+      Required: 'true'
+      Target: '80'
+      Type: Port
+      value: '6080'
+    Host Port 2:
+      Default: '6443'
+      Description: 'Container Port: 443'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Host Port 2
+      Required: 'true'
+      Target: '443'
+      Type: Port
+      value: '6443'
+  Variable: {}
 DonateImg: ''
 FirstSeen: 1565319116
 Icon: https://raw.githubusercontent.com/digiblur/unraid-docker-templates/master/images/unms_icon.png

@@ -3,72 +3,77 @@ CategoryList:
 - Tools-Utilities
 - Network-Other
 Config:
-- '@attributes':
-    Default: /mnt/user/appdata/hyperion.ng
-    Description: 'Container Path: /etc/hyperion'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Config
-    Required: 'true'
-    Target: /etc/hyperion
-    Type: Path
-  value: /mnt/user/appdata/hyperion.ng
-- '@attributes':
-    Default: '19445'
-    Description: 'Container Port: 19445'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Protobuffer
-    Required: 'true'
-    Target: '19445'
-    Type: Port
-  value: '19445'
-- '@attributes':
-    Default: '19400'
-    Description: 'Container Port: 19400'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Flatbuffer
-    Required: 'true'
-    Target: '19400'
-    Type: Port
-  value: '19400'
-- '@attributes':
-    Default: '19444'
-    Description: 'Container Port: 19444'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: JSON-Server
-    Required: 'true'
-    Target: '19444'
-    Type: Port
-  value: '19444'
-- '@attributes':
-    Default: '8090'
-    Description: 'Container Port: 8090'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: http / ws
-    Required: 'true'
-    Target: '8090'
-    Type: Port
-  value: '8090'
-- '@attributes':
-    Default: '8092'
-    Description: 'Container Port: 8092'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: https / wss
-    Required: 'true'
-    Target: '8092'
-    Type: Port
-  value: '8092'
+  Device: {}
+  Label: {}
+  Path:
+    Config:
+      Default: /mnt/user/appdata/hyperion.ng
+      Description: 'Container Path: /etc/hyperion'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Config
+      Required: 'true'
+      Target: /etc/hyperion
+      Type: Path
+      value: /mnt/user/appdata/hyperion.ng
+  Port:
+    Flatbuffer:
+      Default: '19400'
+      Description: 'Container Port: 19400'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Flatbuffer
+      Required: 'true'
+      Target: '19400'
+      Type: Port
+      value: '19400'
+    JSON-Server:
+      Default: '19444'
+      Description: 'Container Port: 19444'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: JSON-Server
+      Required: 'true'
+      Target: '19444'
+      Type: Port
+      value: '19444'
+    Protobuffer:
+      Default: '19445'
+      Description: 'Container Port: 19445'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Protobuffer
+      Required: 'true'
+      Target: '19445'
+      Type: Port
+      value: '19445'
+    http / ws:
+      Default: '8090'
+      Description: 'Container Port: 8090'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: http / ws
+      Required: 'true'
+      Target: '8090'
+      Type: Port
+      value: '8090'
+    https / wss:
+      Default: '8092'
+      Description: 'Container Port: 8092'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: https / wss
+      Required: 'true'
+      Target: '8092'
+      Type: Port
+      value: '8092'
+  Variable: {}
 ExtraSearchTerms: ambilight wled hue boblight led
 FirstSeen: 1643378273
 Icon: https://dashboard.snapcraft.io/site_media/appmedia/2021/05/hyperIconSmall-1024.png

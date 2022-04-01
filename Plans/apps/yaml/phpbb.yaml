@@ -1,160 +1,165 @@
 CategoryList:
 - Productivity
 Config:
-- '@attributes':
-    Default: '8080'
-    Description: Port
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Port
-    Required: 'true'
-    Target: '8080'
-    Type: Port
-  value: '8080'
-- '@attributes':
-    Default: /mnt/user/appdata/phpbb/
-    Description: Appdata
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Appdata
-    Required: 'true'
-    Target: /bitnami/phpbb
-    Type: Path
-  value: /mnt/user/appdata/phpbb/
-- '@attributes':
-    Default: no|yes
-    Description: ALLOW_EMPTY_PASSWORD
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: ALLOW_EMPTY_PASSWORD
-    Required: 'true'
-    Target: ALLOW_EMPTY_PASSWORD
-    Type: Variable
-  value: 'no'
-- '@attributes':
-    Default: mariadb
-    Description: Hostname or IP for MariaDB server.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: PHPBB_DATABASE_HOST
-    Required: 'false'
-    Target: PHPBB_DATABASE_HOST
-    Type: Variable
-  value: mariadb
-- '@attributes':
-    Default: '3306'
-    Description: Port used by MariaDB server.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: PHPBB_DATABASE_PORT_NUMBER
-    Required: 'false'
-    Target: PHPBB_DATABASE_PORT_NUMBER
-    Type: Variable
-  value: '3306'
-- '@attributes':
-    Default: bn_phpbb
-    Description: Database user that phpBB will use to connect with the database.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: PHPBB_DATABASE_USER
-    Required: 'true'
-    Target: PHPBB_DATABASE_USER
-    Type: Variable
-  value: bn_phpbb
-- '@attributes':
-    Default: password
-    Description: Database password that Phpbb will use to connect with the database
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: PHPBB_DATABASE_PASSWORD
-    Required: 'true'
-    Target: PHPBB_DATABASE_PASSWORD
-    Type: Variable
-  value: password
-- '@attributes':
-    Default: bitnami_phpbb
-    Description: Database name that phpBB will use to connect with the database
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: PHPBB_DATABASE_NAME
-    Required: 'true'
-    Target: PHPBB_DATABASE_NAME
-    Type: Variable
-  value: bitnami_phpbb
-- '@attributes':
-    Default: user
-    Description: phpBB application username.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: PHPBB_USERNAME
-    Required: 'false'
-    Target: PHPBB_USERNAME
-    Type: Variable
-  value: user
-- '@attributes':
-    Default: bitnami
-    Description: phpBB application password.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: PHPBB_PASSWORD
-    Required: 'false'
-    Target: PHPBB_PASSWORD
-    Type: Variable
-  value: bitnami
-- '@attributes':
-    Default: user@example.com
-    Description: phpBB application email.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: PHPBB_EMAIL
-    Required: 'false'
-    Target: PHPBB_EMAIL
-    Type: Variable
-  value: user@example.com
-- '@attributes':
-    Default: Phpbb
-    Description: Forum Name
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: PHPBB_FORUM_NAME
-    Required: 'false'
-    Target: PHPBB_FORUM_NAME
-    Type: Variable
-  value: Phpbb
-- '@attributes':
-    Default: A little text to describe your forum
-    Description: Forum Description
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: PHPBB_FORUM_DESCRIPTION
-    Required: 'false'
-    Target: PHPBB_FORUM_DESCRIPTION
-    Type: Variable
-  value: A little text to describe your forum
-- '@attributes':
-    Default: 256M
-    Description: Memory limit for PHP.
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: PHP_MEMORY_LIMIT
-    Required: 'false'
-    Target: PHP_MEMORY_LIMIT
-    Type: Variable
-  value: 256M
+  Device: {}
+  Label: {}
+  Path:
+    Appdata:
+      Default: /mnt/user/appdata/phpbb/
+      Description: Appdata
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Appdata
+      Required: 'true'
+      Target: /bitnami/phpbb
+      Type: Path
+      value: /mnt/user/appdata/phpbb/
+  Port:
+    Port:
+      Default: '8080'
+      Description: Port
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Port
+      Required: 'true'
+      Target: '8080'
+      Type: Port
+      value: '8080'
+  Variable:
+    ALLOW_EMPTY_PASSWORD:
+      Default: no|yes
+      Description: ALLOW_EMPTY_PASSWORD
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: ALLOW_EMPTY_PASSWORD
+      Required: 'true'
+      Target: ALLOW_EMPTY_PASSWORD
+      Type: Variable
+      value: 'no'
+    PHPBB_DATABASE_HOST:
+      Default: mariadb
+      Description: Hostname or IP for MariaDB server.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: PHPBB_DATABASE_HOST
+      Required: 'false'
+      Target: PHPBB_DATABASE_HOST
+      Type: Variable
+      value: mariadb
+    PHPBB_DATABASE_NAME:
+      Default: bitnami_phpbb
+      Description: Database name that phpBB will use to connect with the database
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: PHPBB_DATABASE_NAME
+      Required: 'true'
+      Target: PHPBB_DATABASE_NAME
+      Type: Variable
+      value: bitnami_phpbb
+    PHPBB_DATABASE_PASSWORD:
+      Default: password
+      Description: Database password that Phpbb will use to connect with the database
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: PHPBB_DATABASE_PASSWORD
+      Required: 'true'
+      Target: PHPBB_DATABASE_PASSWORD
+      Type: Variable
+      value: password
+    PHPBB_DATABASE_PORT_NUMBER:
+      Default: '3306'
+      Description: Port used by MariaDB server.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: PHPBB_DATABASE_PORT_NUMBER
+      Required: 'false'
+      Target: PHPBB_DATABASE_PORT_NUMBER
+      Type: Variable
+      value: '3306'
+    PHPBB_DATABASE_USER:
+      Default: bn_phpbb
+      Description: Database user that phpBB will use to connect with the database.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: PHPBB_DATABASE_USER
+      Required: 'true'
+      Target: PHPBB_DATABASE_USER
+      Type: Variable
+      value: bn_phpbb
+    PHPBB_EMAIL:
+      Default: user@example.com
+      Description: phpBB application email.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: PHPBB_EMAIL
+      Required: 'false'
+      Target: PHPBB_EMAIL
+      Type: Variable
+      value: user@example.com
+    PHPBB_FORUM_DESCRIPTION:
+      Default: A little text to describe your forum
+      Description: Forum Description
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: PHPBB_FORUM_DESCRIPTION
+      Required: 'false'
+      Target: PHPBB_FORUM_DESCRIPTION
+      Type: Variable
+      value: A little text to describe your forum
+    PHPBB_FORUM_NAME:
+      Default: Phpbb
+      Description: Forum Name
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: PHPBB_FORUM_NAME
+      Required: 'false'
+      Target: PHPBB_FORUM_NAME
+      Type: Variable
+      value: Phpbb
+    PHPBB_PASSWORD:
+      Default: bitnami
+      Description: phpBB application password.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: PHPBB_PASSWORD
+      Required: 'false'
+      Target: PHPBB_PASSWORD
+      Type: Variable
+      value: bitnami
+    PHPBB_USERNAME:
+      Default: user
+      Description: phpBB application username.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: PHPBB_USERNAME
+      Required: 'false'
+      Target: PHPBB_USERNAME
+      Type: Variable
+      value: user
+    PHP_MEMORY_LIMIT:
+      Default: 256M
+      Description: Memory limit for PHP.
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PHP_MEMORY_LIMIT
+      Required: 'false'
+      Target: PHP_MEMORY_LIMIT
+      Type: Variable
+      value: 256M
 FirstSeen: 1587470864
 Icon: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/phpbb.png
 LastUpdate: 1647159566

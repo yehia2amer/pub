@@ -1,27 +1,32 @@
 Beta: 'true'
 Config:
-- '@attributes':
-    Default: mypassword
-    Description: Please chose a strong password
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: VNC Password
-    Required: 'true'
-    Target: VNC_PASSWORD
-    Type: Variable
-  value: mypassword
-- '@attributes':
-    Default: '6900'
-    Description: 'Container Port: 8080'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: TCP - VNC Port
-    Required: 'true'
-    Target: '8080'
-    Type: Port
-  value: '6900'
+  Device: {}
+  Label: {}
+  Path: {}
+  Port:
+    TCP - VNC Port:
+      Default: '6900'
+      Description: 'Container Port: 8080'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: TCP - VNC Port
+      Required: 'true'
+      Target: '8080'
+      Type: Port
+      value: '6900'
+  Variable:
+    VNC Password:
+      Default: mypassword
+      Description: Please chose a strong password
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: VNC Password
+      Required: 'true'
+      Target: VNC_PASSWORD
+      Type: Variable
+      value: mypassword
 ExtraParams: --restart=unless-stopped --memory=2G
 FirstSeen: 1635725013
 Icon: https://github.com/knilix/ubuntu-focal_fossa-xfce-vnc-novnc/blob/main/opt/xfce_logo.png?raw=true

@@ -3,72 +3,77 @@ CategoryList:
 - Tools-Utilities
 - Network-Other
 Config:
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Container Dir (1)
-    Required: 'false'
-    Target: /usr/local
-    Type: Path
-  value: /mnt/user/appdata/monero-node/
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Container Dir (2)
-    Required: 'false'
-    Target: /src
-    Type: Path
-  value: /mnt/user/appdata/monero-node/src/
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Blockchain (storage)
-    Required: 'true'
-    Target: /home/monero/.bitmonero
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Port (1)
-    Required: 'false'
-    Target: '18080'
-    Type: Port
-  value: '18080'
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Port (2)
-    Required: 'false'
-    Target: '18081'
-    Type: Port
-  value: '18081'
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Daemon (user)
-    Required: 'false'
-    Target: name
-    Type: Variable
-  value: monerod
+  Device: {}
+  Label: {}
+  Path:
+    Blockchain (storage):
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Blockchain (storage)
+      Required: 'true'
+      Target: /home/monero/.bitmonero
+      Type: Path
+      value: ''
+    Container Dir (1):
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Container Dir (1)
+      Required: 'false'
+      Target: /usr/local
+      Type: Path
+      value: /mnt/user/appdata/monero-node/
+    Container Dir (2):
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Container Dir (2)
+      Required: 'false'
+      Target: /src
+      Type: Path
+      value: /mnt/user/appdata/monero-node/src/
+  Port:
+    Port (1):
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Port (1)
+      Required: 'false'
+      Target: '18080'
+      Type: Port
+      value: '18080'
+    Port (2):
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Port (2)
+      Required: 'false'
+      Target: '18081'
+      Type: Port
+      value: '18081'
+  Variable:
+    Daemon (user):
+      Default: ''
+      Description: ''
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Daemon (user)
+      Required: 'false'
+      Target: name
+      Type: Variable
+      value: monerod
 FirstSeen: 1638194064
 Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/monero-node_200x200.png
 LastUpdate: 1619435009

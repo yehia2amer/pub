@@ -3,28 +3,33 @@ CategoryList:
 - Tools-Utilities
 - Network-Other
 Config:
-- '@attributes':
-    Default: '3001'
-    Description: 'Container Port: 3001'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Web Interface
-    Required: 'false'
-    Target: '3001'
-    Type: Port
-  value: '3001'
-- '@attributes':
-    Default: /mnt/user/appdata/uptimekuma
-    Description: 'Container Path: /app/data'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: AppData
-    Required: 'false'
-    Target: /app/data
-    Type: Path
-  value: /mnt/user/appdata/uptimekuma
+  Device: {}
+  Label: {}
+  Path:
+    AppData:
+      Default: /mnt/user/appdata/uptimekuma
+      Description: 'Container Path: /app/data'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: AppData
+      Required: 'false'
+      Target: /app/data
+      Type: Path
+      value: /mnt/user/appdata/uptimekuma
+  Port:
+    Web Interface:
+      Default: '3001'
+      Description: 'Container Port: 3001'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Web Interface
+      Required: 'false'
+      Target: '3001'
+      Type: Port
+      value: '3001'
+  Variable: {}
 FirstSeen: 1627661002
 Icon: https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/icons/uptimekuma.png
 LastUpdate: 1648137273

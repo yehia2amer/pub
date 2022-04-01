@@ -5,126 +5,131 @@ CategoryList:
 - Tools-Utilities
 - Network-Web
 Config:
-- '@attributes':
-    Default: '80'
-    Description: 'Container Port: 80'
-    Display: always-hide
-    Mask: 'false'
-    Mode: tcp
-    Name: Host Port 1
-    Required: 'true'
-    Target: '80'
-    Type: Port
-  value: '9090'
-- '@attributes':
-    Default: disable
-    Description: "Allow MediaWiki to automatically be upgraded with new docker images.&lt;/br&gt;\r\
-      \nSet 'enable' to allow upgrades."
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: Allow Mediawiki Upgrades
-    Required: 'false'
-    Target: UPGRADE_MEDIAWIKI
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 'false'
-    Description: 'OPTIONAL: Set ''true'' to install built in MySQL/MariaDB'
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: Install MySQL/MariaDB
-    Required: 'false'
-    Target: MYSQL_INSTALL_OPTION
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ROOT_ACCESS_PASSWORD
-    Description: "Default: ROOT_ACCESS_PASSWORD&lt;br&gt;\r\nOnce the database has\
-      \ been initialized this can not be used to change the password.&lt;br&gt;\r\n\
-      Recommend removing value after the database has been initialized.&lt;br&gt;\r\
-      \nContainer Variable: MYSQL_ROOT_PASSWORD"
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: MySQL Root Password
-    Required: 'false'
-    Target: MYSQL_ROOT_PASSWORD
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 'false'
-    Description: "OPTIONS:&lt;br&gt;\r\nwiki = Backup mediawiki&lt;br&gt;\r\ndata\
-      \ = Backup database if you're using the internal MySQL add-on or SQLite&lt;br&gt;\r\
-      \nassest = Backup file uploads&lt;br&gt;\r\nall = Backup wiki, data, and assets&lt;br&gt;\r\
-      \nfalse =  Do not do a backup during container start&lt;br&gt;\r\nContainer\
-      \ Variable: BACKUP_MEDIAWIKI"
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: Backup On Start
-    Required: 'false'
-    Target: BACKUP_MEDIAWIKI
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: "OPTIONAL: Set a host path for file uploads. &lt;br&gt;\r\nContainer\
-      \ Path: /config/assets"
-    Display: always-hide
-    Mask: 'false'
-    Mode: rw
-    Name: File Uploads Dir
-    Required: 'false'
-    Target: /config/assets
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: "OPTIONAL: Set a host path for backups. &lt;br&gt;\r\nContainer Path:\
-      \ /config/backup"
-    Display: always-hide
-    Mask: 'false'
-    Mode: rw
-    Name: Backup Dir
-    Required: 'false'
-    Target: /config/backup
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: /mnt/user/appdata/mediawiki-edge
-    Description: 'Container Path: /config'
-    Display: always-hide
-    Mask: 'false'
-    Mode: rw
-    Name: Config Dir
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: '99'
-    Description: 'Container Variable: PUID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: Key 1
-    Required: 'false'
-    Target: PUID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: '100'
-    Description: 'Container Variable: PGID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: Key 2
-    Required: 'false'
-    Target: PGID
-    Type: Variable
-  value: '100'
+  Device: {}
+  Label: {}
+  Path:
+    Backup Dir:
+      Default: ''
+      Description: "OPTIONAL: Set a host path for backups. &lt;br&gt;\r\nContainer\
+        \ Path: /config/backup"
+      Display: always-hide
+      Mask: 'false'
+      Mode: rw
+      Name: Backup Dir
+      Required: 'false'
+      Target: /config/backup
+      Type: Path
+      value: ''
+    Config Dir:
+      Default: /mnt/user/appdata/mediawiki-edge
+      Description: 'Container Path: /config'
+      Display: always-hide
+      Mask: 'false'
+      Mode: rw
+      Name: Config Dir
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: ''
+    File Uploads Dir:
+      Default: ''
+      Description: "OPTIONAL: Set a host path for file uploads. &lt;br&gt;\r\nContainer\
+        \ Path: /config/assets"
+      Display: always-hide
+      Mask: 'false'
+      Mode: rw
+      Name: File Uploads Dir
+      Required: 'false'
+      Target: /config/assets
+      Type: Path
+      value: ''
+  Port:
+    Host Port 1:
+      Default: '80'
+      Description: 'Container Port: 80'
+      Display: always-hide
+      Mask: 'false'
+      Mode: tcp
+      Name: Host Port 1
+      Required: 'true'
+      Target: '80'
+      Type: Port
+      value: '9090'
+  Variable:
+    Allow Mediawiki Upgrades:
+      Default: disable
+      Description: "Allow MediaWiki to automatically be upgraded with new docker images.&lt;/br&gt;\r\
+        \nSet 'enable' to allow upgrades."
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: Allow Mediawiki Upgrades
+      Required: 'false'
+      Target: UPGRADE_MEDIAWIKI
+      Type: Variable
+      value: ''
+    Backup On Start:
+      Default: 'false'
+      Description: "OPTIONS:&lt;br&gt;\r\nwiki = Backup mediawiki&lt;br&gt;\r\ndata\
+        \ = Backup database if you're using the internal MySQL add-on or SQLite&lt;br&gt;\r\
+        \nassest = Backup file uploads&lt;br&gt;\r\nall = Backup wiki, data, and assets&lt;br&gt;\r\
+        \nfalse =  Do not do a backup during container start&lt;br&gt;\r\nContainer\
+        \ Variable: BACKUP_MEDIAWIKI"
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: Backup On Start
+      Required: 'false'
+      Target: BACKUP_MEDIAWIKI
+      Type: Variable
+      value: ''
+    Install MySQL/MariaDB:
+      Default: 'false'
+      Description: 'OPTIONAL: Set ''true'' to install built in MySQL/MariaDB'
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: Install MySQL/MariaDB
+      Required: 'false'
+      Target: MYSQL_INSTALL_OPTION
+      Type: Variable
+      value: ''
+    Key 1:
+      Default: '99'
+      Description: 'Container Variable: PUID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: Key 1
+      Required: 'false'
+      Target: PUID
+      Type: Variable
+      value: '99'
+    Key 2:
+      Default: '100'
+      Description: 'Container Variable: PGID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: Key 2
+      Required: 'false'
+      Target: PGID
+      Type: Variable
+      value: '100'
+    MySQL Root Password:
+      Default: ROOT_ACCESS_PASSWORD
+      Description: "Default: ROOT_ACCESS_PASSWORD&lt;br&gt;\r\nOnce the database has\
+        \ been initialized this can not be used to change the password.&lt;br&gt;\r\
+        \nRecommend removing value after the database has been initialized.&lt;br&gt;\r\
+        \nContainer Variable: MYSQL_ROOT_PASSWORD"
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: MySQL Root Password
+      Required: 'false'
+      Target: MYSQL_ROOT_PASSWORD
+      Type: Variable
+      value: ''
 DonateImg: https://raw.githubusercontent.com/d8sychain/docker-mediawiki/master/assets/donate.png
 DonateLink: https://paypal.me/d8sychain
 DonateText: Donations

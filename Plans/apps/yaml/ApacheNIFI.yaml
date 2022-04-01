@@ -3,26 +3,31 @@ CategoryList:
 - Productivity
 ChangeLogPresent: true
 Config:
-- '@attributes':
-    Default: '8080'
-    Description: This is NIFIs Web UI port you can access via a web browser.
-    Display: always-visible
-    Mode: tcp
-    Name: Web Interface Port
-    Required: 'true'
-    Target: '8080'
-    Type: Port
-  value: '8080'
-- '@attributes':
-    Default: /mnt/user/appdata/nifi
-    Description: This is where NIFI will store its databases and configuration.
-    Display: always-visible
-    Mode: rw
-    Name: Config Storage Path
-    Required: 'true'
-    Target: /nifi
-    Type: Path
-  value: /mnt/user/appdata/nifi
+  Device: {}
+  Label: {}
+  Path:
+    Config Storage Path:
+      Default: /mnt/user/appdata/nifi
+      Description: This is where NIFI will store its databases and configuration.
+      Display: always-visible
+      Mode: rw
+      Name: Config Storage Path
+      Required: 'true'
+      Target: /nifi
+      Type: Path
+      value: /mnt/user/appdata/nifi
+  Port:
+    Web Interface Port:
+      Default: '8080'
+      Description: This is NIFIs Web UI port you can access via a web browser.
+      Display: always-visible
+      Mode: tcp
+      Name: Web Interface Port
+      Required: 'true'
+      Target: '8080'
+      Type: Port
+      value: '8080'
+  Variable: {}
 FirstSeen: 1614730230
 GitHub: https://github.com/DanRegalia/NIFI-Unraid
 Icon: https://d36jcksde1wxzq.cloudfront.net/be7833db9bddb4494d2a7c3dd659199a.png

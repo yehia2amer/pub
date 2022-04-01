@@ -2,210 +2,215 @@ Beta: 'true'
 CategoryList:
 - GameServers
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /serverdata/steamcmd'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: SteamCMD
-    Required: 'true'
-    Target: /serverdata/steamcmd
-    Type: Path
-  value: /mnt/user/appdata/steamcmd
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /serverdata/serverfiles'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: ServerFiles
-    Required: 'true'
-    Target: /serverdata/serverfiles
-    Type: Path
-  value: /mnt/cache/appdata/pixark
-- '@attributes':
-    Default: ''
-    Description: "The GAME_ID that the container download at startup.\r\n(https://developer.valvesoftware.com/wiki/Dedicated_Servers_List)"
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: GAME_ID
-    Required: 'true'
-    Target: GAME_ID
-    Type: Variable
-  value: '824360'
-- '@attributes':
-    Default: ''
-    Description: 'Your Steam username goes here if you want to install a game that
-      needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
-      Steam Guard).'
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: Steam-Username
-    Required: 'false'
-    Target: USERNAME
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Set the Variable to 'true' if you want to validate the installation
-      otherwise leave it blank.
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: Validate Installation
-    Required: 'false'
-    Target: VALIDATE
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Your Steam password goes here if you want to install a game that
-      needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
-      Steam Guard).'
-    Display: always-hide
-    Mask: 'true'
-    Mode: ''
-    Name: Steam-Password
-    Required: 'false'
-    Target: PASSWRD
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: UDP Game Port (if you need another port, please delete this entry
-      and create a new UDP Port with the required port number, also don't forget to
-      click an 'Show more settings ...' and change the port number
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: UDP1 - Game Port
-    Required: 'true'
-    Target: '27015'
-    Type: Port
-  value: '27015'
-- '@attributes':
-    Default: ''
-    Description: UDP Cube Port (if you need another port, please delete this entry
-      and create a new UDP Port with the required port number, also don't forget to
-      click an 'Show more settings ...' and change the port number
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: UDP2 - Cube Port
-    Required: 'true'
-    Target: '27018'
-    Type: Port
-  value: '27018'
-- '@attributes':
-    Default: ''
-    Description: UDP Query Port (if you need another port, please delete this entry
-      and create a new UDP Port with the required port number, also don't forget to
-      click an 'Show more settings ...' and change the port number
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: UDP3 - Query Port
-    Required: 'true'
-    Target: '27016'
-    Type: Port
-  value: '27016'
-- '@attributes':
-    Default: TheIsland
-    Description: 'Container Variable: MAP'
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: Map
-    Required: 'true'
-    Target: MAP
-    Type: Variable
-  value: CubeWorld_Light
-- '@attributes':
-    Default: ''
-    Description: Leave empty if you want to use the settings from GameUserSettings.ini
-      (this field accepts no spaces)
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: Server Name
-    Required: 'false'
-    Target: SERVER_NAME
-    Type: Variable
-  value: PIXARKDocker
-- '@attributes':
-    Default: ''
-    Description: Leave empty if you want to use the settings from GameUserSettings.ini
-      (this field accepts no spaces)
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: Server Password
-    Required: 'false'
-    Target: SRV_PWD
-    Type: Variable
-  value: Docker
-- '@attributes':
-    Default: ''
-    Description: Leave empty if you want to use the settings from GameUserSettings.ini
-      (this field accepts no spaces)
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: Server Admin Password
-    Required: 'false'
-    Target: SRV_ADMIN_PWD
-    Type: Variable
-  value: adminDocker
-- '@attributes':
-    Default: ''
-    Description: 'Enter your game parameters seperated with ? and start with a ? (don''t
-      put spaces in between eg: ?MaxPlayers=40?FastDecayUnsnappedCoreStructures=true)'
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: Game Parameters
-    Required: 'false'
-    Target: GAME_PARAMS
-    Type: Variable
-  value: ?MaxPlayers=10
-- '@attributes':
-    Default: ''
-    Description: 'Type in your Extra Game Parameters seperated with a space and -
-      (eg: -DisableDeathSpectator -UseBattlEye)'
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: Extra Game Parameters
-    Required: 'true'
-    Target: GAME_PARAMS_EXTRA
-    Type: Variable
-  value: -QueryPort=27016 -Port=27015 -CubePort=27018 -NoBattlEye -nosteamclient -game
-    -server -log
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: UID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: UID
-    Required: 'true'
-    Target: UID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: GID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: GID
-    Required: 'true'
-    Target: GID
-    Type: Variable
-  value: '100'
+  Device: {}
+  Label: {}
+  Path:
+    ServerFiles:
+      Default: ''
+      Description: 'Container Path: /serverdata/serverfiles'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: ServerFiles
+      Required: 'true'
+      Target: /serverdata/serverfiles
+      Type: Path
+      value: /mnt/cache/appdata/pixark
+    SteamCMD:
+      Default: ''
+      Description: 'Container Path: /serverdata/steamcmd'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: SteamCMD
+      Required: 'true'
+      Target: /serverdata/steamcmd
+      Type: Path
+      value: /mnt/user/appdata/steamcmd
+  Port:
+    UDP1 - Game Port:
+      Default: ''
+      Description: UDP Game Port (if you need another port, please delete this entry
+        and create a new UDP Port with the required port number, also don't forget
+        to click an 'Show more settings ...' and change the port number
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: UDP1 - Game Port
+      Required: 'true'
+      Target: '27015'
+      Type: Port
+      value: '27015'
+    UDP2 - Cube Port:
+      Default: ''
+      Description: UDP Cube Port (if you need another port, please delete this entry
+        and create a new UDP Port with the required port number, also don't forget
+        to click an 'Show more settings ...' and change the port number
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: UDP2 - Cube Port
+      Required: 'true'
+      Target: '27018'
+      Type: Port
+      value: '27018'
+    UDP3 - Query Port:
+      Default: ''
+      Description: UDP Query Port (if you need another port, please delete this entry
+        and create a new UDP Port with the required port number, also don't forget
+        to click an 'Show more settings ...' and change the port number
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: UDP3 - Query Port
+      Required: 'true'
+      Target: '27016'
+      Type: Port
+      value: '27016'
+  Variable:
+    Extra Game Parameters:
+      Default: ''
+      Description: 'Type in your Extra Game Parameters seperated with a space and
+        - (eg: -DisableDeathSpectator -UseBattlEye)'
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: Extra Game Parameters
+      Required: 'true'
+      Target: GAME_PARAMS_EXTRA
+      Type: Variable
+      value: -QueryPort=27016 -Port=27015 -CubePort=27018 -NoBattlEye -nosteamclient
+        -game -server -log
+    GAME_ID:
+      Default: ''
+      Description: "The GAME_ID that the container download at startup.\r\n(https://developer.valvesoftware.com/wiki/Dedicated_Servers_List)"
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: GAME_ID
+      Required: 'true'
+      Target: GAME_ID
+      Type: Variable
+      value: '824360'
+    GID:
+      Default: ''
+      Description: 'Container Variable: GID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: GID
+      Required: 'true'
+      Target: GID
+      Type: Variable
+      value: '100'
+    Game Parameters:
+      Default: ''
+      Description: 'Enter your game parameters seperated with ? and start with a ?
+        (don''t put spaces in between eg: ?MaxPlayers=40?FastDecayUnsnappedCoreStructures=true)'
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: Game Parameters
+      Required: 'false'
+      Target: GAME_PARAMS
+      Type: Variable
+      value: ?MaxPlayers=10
+    Map:
+      Default: TheIsland
+      Description: 'Container Variable: MAP'
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: Map
+      Required: 'true'
+      Target: MAP
+      Type: Variable
+      value: CubeWorld_Light
+    Server Admin Password:
+      Default: ''
+      Description: Leave empty if you want to use the settings from GameUserSettings.ini
+        (this field accepts no spaces)
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: Server Admin Password
+      Required: 'false'
+      Target: SRV_ADMIN_PWD
+      Type: Variable
+      value: adminDocker
+    Server Name:
+      Default: ''
+      Description: Leave empty if you want to use the settings from GameUserSettings.ini
+        (this field accepts no spaces)
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: Server Name
+      Required: 'false'
+      Target: SERVER_NAME
+      Type: Variable
+      value: PIXARKDocker
+    Server Password:
+      Default: ''
+      Description: Leave empty if you want to use the settings from GameUserSettings.ini
+        (this field accepts no spaces)
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: Server Password
+      Required: 'false'
+      Target: SRV_PWD
+      Type: Variable
+      value: Docker
+    Steam-Password:
+      Default: ''
+      Description: 'Your Steam password goes here if you want to install a game that
+        needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
+        Steam Guard).'
+      Display: always-hide
+      Mask: 'true'
+      Mode: ''
+      Name: Steam-Password
+      Required: 'false'
+      Target: PASSWRD
+      Type: Variable
+      value: ''
+    Steam-Username:
+      Default: ''
+      Description: 'Your Steam username goes here if you want to install a game that
+        needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
+        Steam Guard).'
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: Steam-Username
+      Required: 'false'
+      Target: USERNAME
+      Type: Variable
+      value: ''
+    UID:
+      Default: ''
+      Description: 'Container Variable: UID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: UID
+      Required: 'true'
+      Target: UID
+      Type: Variable
+      value: '99'
+    Validate Installation:
+      Default: ''
+      Description: Set the Variable to 'true' if you want to validate the installation
+        otherwise leave it blank.
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: Validate Installation
+      Required: 'false'
+      Target: VALIDATE
+      Type: Variable
+      value: ''
 DonateLink: https://www.paypal.me/chips777
 DonateText: 'If you like my work please '
 ExtraParams: --restart=unless-stopped

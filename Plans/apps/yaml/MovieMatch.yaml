@@ -2,39 +2,44 @@ CategoryList:
 - Tools-Utilities
 - MediaApp-Other
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 8000'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Host Port 1
-    Required: 'false'
-    Target: '8000'
-    Type: Port
-  value: '8000'
-- '@attributes':
-    Default: ''
-    Description: Url of Plex Server
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: PLEX_URL
-    Required: 'true'
-    Target: PLEX_URL
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Plex API Token
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: PLEX_TOKEN
-    Required: 'true'
-    Target: PLEX_TOKEN
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path: {}
+  Port:
+    Host Port 1:
+      Default: ''
+      Description: 'Container Port: 8000'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Host Port 1
+      Required: 'false'
+      Target: '8000'
+      Type: Port
+      value: '8000'
+  Variable:
+    PLEX_TOKEN:
+      Default: ''
+      Description: Plex API Token
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: PLEX_TOKEN
+      Required: 'true'
+      Target: PLEX_TOKEN
+      Type: Variable
+      value: ''
+    PLEX_URL:
+      Default: ''
+      Description: Url of Plex Server
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: PLEX_URL
+      Required: 'true'
+      Target: PLEX_URL
+      Type: Variable
+      value: ''
 DonateLink: https://www.paypal.me/ptrfrll
 DonateText: Buy me a beer
 FirstSeen: 1611940114

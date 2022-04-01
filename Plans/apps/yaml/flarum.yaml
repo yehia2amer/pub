@@ -1,162 +1,167 @@
 CategoryList:
 - Network-Web
 Config:
-- '@attributes':
-    Default: '8000'
-    Description: Port
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Port
-    Required: 'false'
-    Target: '8000'
-    Type: Port
-  value: '8000'
-- '@attributes':
-    Default: /mnt/user/appdata/flarum/
-    Description: Contains assets, extensions and storage
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Appdata
-    Required: 'false'
-    Target: /data
-    Type: Path
-  value: /mnt/user/appdata/flarum/
-- '@attributes':
-    Default: http://&lt;IP&gt;:8000
-    Description: Make Sure the base url is right if it local use only use http://ip:8000
-      and if you are hosting it on your domain it should be http://example.com or
-      https://example.com.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: FLARUM_BASE_URL
-    Required: 'false'
-    Target: FLARUM_BASE_URL
-    Type: Variable
-  value: http://<IP>:8000
-- '@attributes':
-    Default: Flarum Dockerized
-    Description: Flarum forum title, only used during first installation
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: FLARUM_FORUM_TITLE
-    Required: 'false'
-    Target: FLARUM_FORUM_TITLE
-    Type: Variable
-  value: Flarum Dockerized
-- '@attributes':
-    Default: ''
-    Description: MySQL database hostname / IP address required
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DB_HOST
-    Required: 'false'
-    Target: DB_HOST
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '3306'
-    Description: MySQL database port
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DB_PORT
-    Required: 'false'
-    Target: DB_PORT
-    Type: Variable
-  value: '3306'
-- '@attributes':
-    Default: flarum
-    Description: MySQL database name
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DB_NAME
-    Required: 'false'
-    Target: DB_NAME
-    Type: Variable
-  value: flarum
-- '@attributes':
-    Default: flarum
-    Description: MySQL user
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DB_USER
-    Required: 'false'
-    Target: DB_USER
-    Type: Variable
-  value: flarum
-- '@attributes':
-    Default: ''
-    Description: MySQL password
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DB_PASSWORD
-    Required: 'false'
-    Target: DB_PASSWORD
-    Type: Variable
-  value: password
-- '@attributes':
-    Default: 256M
-    Description: PHP memory limit
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: MEMORY_LIMIT
-    Required: 'false'
-    Target: MEMORY_LIMIT
-    Type: Variable
-  value: 256M
-- '@attributes':
-    Default: 16M
-    Description: Upload max size
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: UPLOAD_MAX_SIZE
-    Required: 'false'
-    Target: UPLOAD_MAX_SIZE
-    Type: Variable
-  value: 16M
-- '@attributes':
-    Default: '128'
-    Description: PHP OpCache memory consumption
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: OPCACHE_MEM_SIZE
-    Required: 'false'
-    Target: OPCACHE_MEM_SIZE
-    Type: Variable
-  value: '128'
-- '@attributes':
-    Default: '99'
-    Description: PUID
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: PUID
-    Required: 'false'
-    Target: PUID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: '100'
-    Description: PGID
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: PGID
-    Required: 'false'
-    Target: PGID
-    Type: Variable
-  value: '100'
+  Device: {}
+  Label: {}
+  Path:
+    Appdata:
+      Default: /mnt/user/appdata/flarum/
+      Description: Contains assets, extensions and storage
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Appdata
+      Required: 'false'
+      Target: /data
+      Type: Path
+      value: /mnt/user/appdata/flarum/
+  Port:
+    Port:
+      Default: '8000'
+      Description: Port
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Port
+      Required: 'false'
+      Target: '8000'
+      Type: Port
+      value: '8000'
+  Variable:
+    DB_HOST:
+      Default: ''
+      Description: MySQL database hostname / IP address required
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DB_HOST
+      Required: 'false'
+      Target: DB_HOST
+      Type: Variable
+      value: ''
+    DB_NAME:
+      Default: flarum
+      Description: MySQL database name
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DB_NAME
+      Required: 'false'
+      Target: DB_NAME
+      Type: Variable
+      value: flarum
+    DB_PASSWORD:
+      Default: ''
+      Description: MySQL password
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DB_PASSWORD
+      Required: 'false'
+      Target: DB_PASSWORD
+      Type: Variable
+      value: password
+    DB_PORT:
+      Default: '3306'
+      Description: MySQL database port
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DB_PORT
+      Required: 'false'
+      Target: DB_PORT
+      Type: Variable
+      value: '3306'
+    DB_USER:
+      Default: flarum
+      Description: MySQL user
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DB_USER
+      Required: 'false'
+      Target: DB_USER
+      Type: Variable
+      value: flarum
+    FLARUM_BASE_URL:
+      Default: http://&lt;IP&gt;:8000
+      Description: Make Sure the base url is right if it local use only use http://ip:8000
+        and if you are hosting it on your domain it should be http://example.com or
+        https://example.com.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: FLARUM_BASE_URL
+      Required: 'false'
+      Target: FLARUM_BASE_URL
+      Type: Variable
+      value: http://<IP>:8000
+    FLARUM_FORUM_TITLE:
+      Default: Flarum Dockerized
+      Description: Flarum forum title, only used during first installation
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: FLARUM_FORUM_TITLE
+      Required: 'false'
+      Target: FLARUM_FORUM_TITLE
+      Type: Variable
+      value: Flarum Dockerized
+    MEMORY_LIMIT:
+      Default: 256M
+      Description: PHP memory limit
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: MEMORY_LIMIT
+      Required: 'false'
+      Target: MEMORY_LIMIT
+      Type: Variable
+      value: 256M
+    OPCACHE_MEM_SIZE:
+      Default: '128'
+      Description: PHP OpCache memory consumption
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: OPCACHE_MEM_SIZE
+      Required: 'false'
+      Target: OPCACHE_MEM_SIZE
+      Type: Variable
+      value: '128'
+    PGID:
+      Default: '100'
+      Description: PGID
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: PGID
+      Required: 'false'
+      Target: PGID
+      Type: Variable
+      value: '100'
+    PUID:
+      Default: '99'
+      Description: PUID
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: PUID
+      Required: 'false'
+      Target: PUID
+      Type: Variable
+      value: '99'
+    UPLOAD_MAX_SIZE:
+      Default: 16M
+      Description: Upload max size
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: UPLOAD_MAX_SIZE
+      Required: 'false'
+      Target: UPLOAD_MAX_SIZE
+      Type: Variable
+      value: 16M
 FirstSeen: 1586450112
 Icon: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/flarum.png
 LastUpdate: 1648313777

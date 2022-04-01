@@ -4,109 +4,114 @@ CategoryList:
 - Tools-Utilities
 - Drivers
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Keep in mind that the mirror can consume very much space (stable
-      main contrib non-free: Will need about 200GB of hard drive space!) - you can
-      also put the data directory somewhere on a disk outside the Array or Cache for
-      example with Unassigned Devices.'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Main Data Path
-    Required: 'true'
-    Target: /debian-mirror/data
-    Type: Path
-  value: /mnt/user/appdata/debian-apt-mirror/data
-- '@attributes':
-    Default: ''
-    Description: Configuration directory
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Main Configuration Path
-    Required: 'true'
-    Target: /debian-mirror/config
-    Type: Path
-  value: /mnt/user/appdata/debian-apt-mirror/config
-- '@attributes':
-    Default: ''
-    Description: Main http port
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Mirror http port
-    Required: 'true'
-    Target: '980'
-    Type: Port
-  value: '980'
-- '@attributes':
-    Default: false|true
-    Description: Force update from the packages on every start/restart of the container.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Force update on start
-    Required: 'true'
-    Target: FORCE_UPDATE
-    Type: Variable
-  value: 'false'
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: DATA_PERM
-    Required: 'true'
-    Target: DATA_PERM
-    Type: Variable
-  value: '770'
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: UID
-    Required: 'true'
-    Target: UID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: GID
-    Required: 'true'
-    Target: GID
-    Type: Variable
-  value: '100'
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: UMASK
-    Required: 'true'
-    Target: UMASK
-    Type: Variable
-  value: '0000'
-- '@attributes':
-    Default: ''
-    Description: If you change this value you also have to delete the old port mapping
-      and create a new one with the appropriate port mapping.
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Apache2 Port in Container
-    Required: 'true'
-    Target: APACHE2_PORT
-    Type: Variable
-  value: '980'
+  Device: {}
+  Label: {}
+  Path:
+    Main Configuration Path:
+      Default: ''
+      Description: Configuration directory
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Main Configuration Path
+      Required: 'true'
+      Target: /debian-mirror/config
+      Type: Path
+      value: /mnt/user/appdata/debian-apt-mirror/config
+    Main Data Path:
+      Default: ''
+      Description: 'Keep in mind that the mirror can consume very much space (stable
+        main contrib non-free: Will need about 200GB of hard drive space!) - you can
+        also put the data directory somewhere on a disk outside the Array or Cache
+        for example with Unassigned Devices.'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Main Data Path
+      Required: 'true'
+      Target: /debian-mirror/data
+      Type: Path
+      value: /mnt/user/appdata/debian-apt-mirror/data
+  Port:
+    Mirror http port:
+      Default: ''
+      Description: Main http port
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Mirror http port
+      Required: 'true'
+      Target: '980'
+      Type: Port
+      value: '980'
+  Variable:
+    Apache2 Port in Container:
+      Default: ''
+      Description: If you change this value you also have to delete the old port mapping
+        and create a new one with the appropriate port mapping.
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Apache2 Port in Container
+      Required: 'true'
+      Target: APACHE2_PORT
+      Type: Variable
+      value: '980'
+    DATA_PERM:
+      Default: ''
+      Description: ''
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: DATA_PERM
+      Required: 'true'
+      Target: DATA_PERM
+      Type: Variable
+      value: '770'
+    Force update on start:
+      Default: false|true
+      Description: Force update from the packages on every start/restart of the container.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Force update on start
+      Required: 'true'
+      Target: FORCE_UPDATE
+      Type: Variable
+      value: 'false'
+    GID:
+      Default: ''
+      Description: ''
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: GID
+      Required: 'true'
+      Target: GID
+      Type: Variable
+      value: '100'
+    UID:
+      Default: ''
+      Description: ''
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: UID
+      Required: 'true'
+      Target: UID
+      Type: Variable
+      value: '99'
+    UMASK:
+      Default: ''
+      Description: ''
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: UMASK
+      Required: 'true'
+      Target: UMASK
+      Type: Variable
+      value: '0000'
 DonateLink: https://www.paypal.me/chips777
 DonateText: 'If you like my work please '
 ExtraParams: --restart=unless-stopped

@@ -5,91 +5,96 @@ CategoryList:
 - Tools-Utilities
 ChangeLogPresent: true
 Config:
-- '@attributes':
-    Default: '8888'
-    Description: WebUI
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'true'
-    Target: '8888'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: '55555'
-    Description: Sync Port.
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: 'Port: 55555'
-    Required: 'true'
-    Target: '55555'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Where resilio-sync should store its config file.
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: Appdata
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Folder for downloads/cache.
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: 'Path: /downloads'
-    Required: 'true'
-    Target: /downloads
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Sync folders root.
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: 'Path: /sync'
-    Required: 'true'
-    Target: /sync
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: '99'
-    Description: 'Container Variable: PUID'
-    Display: advanced
-    Mask: 'false'
-    Name: PUID
-    Required: 'true'
-    Target: PUID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '100'
-    Description: 'Container Variable: PGID'
-    Display: advanced
-    Mask: 'false'
-    Name: PGID
-    Required: 'true'
-    Target: PGID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '022'
-    Description: 'Container Variable: UMASK'
-    Display: advanced
-    Mask: 'false'
-    Name: UMASK
-    Required: 'false'
-    Target: UMASK
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Appdata:
+      Default: ''
+      Description: Where resilio-sync should store its config file.
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: Appdata
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: ''
+    'Path: /downloads':
+      Default: ''
+      Description: Folder for downloads/cache.
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: 'Path: /downloads'
+      Required: 'true'
+      Target: /downloads
+      Type: Path
+      value: ''
+    'Path: /sync':
+      Default: ''
+      Description: Sync folders root.
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: 'Path: /sync'
+      Required: 'true'
+      Target: /sync
+      Type: Path
+      value: ''
+  Port:
+    'Port: 55555':
+      Default: '55555'
+      Description: Sync Port.
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: 'Port: 55555'
+      Required: 'true'
+      Target: '55555'
+      Type: Port
+      value: ''
+    WebUI:
+      Default: '8888'
+      Description: WebUI
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'true'
+      Target: '8888'
+      Type: Port
+      value: ''
+  Variable:
+    PGID:
+      Default: '100'
+      Description: 'Container Variable: PGID'
+      Display: advanced
+      Mask: 'false'
+      Name: PGID
+      Required: 'true'
+      Target: PGID
+      Type: Variable
+      value: ''
+    PUID:
+      Default: '99'
+      Description: 'Container Variable: PUID'
+      Display: advanced
+      Mask: 'false'
+      Name: PUID
+      Required: 'true'
+      Target: PUID
+      Type: Variable
+      value: ''
+    UMASK:
+      Default: '022'
+      Description: 'Container Variable: UMASK'
+      Display: advanced
+      Mask: 'false'
+      Name: UMASK
+      Required: 'false'
+      Target: UMASK
+      Type: Variable
+      value: ''
 DonateImg: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/donate.png
 DonateLink: https://www.linuxserver.io/donate
 DonateText: Donations

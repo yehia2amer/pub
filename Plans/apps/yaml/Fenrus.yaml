@@ -1,74 +1,79 @@
 CategoryList:
 - Productivity
 Config:
-- '@attributes':
-    Default: Pacific/Auckland
-    Description: TimeZone for the container refer to https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-      for a list of possible timezones
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: TimeZone
-    Required: 'true'
-    Target: TZ
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '99'
-    Description: 'Container Variable: PUID'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: PUID
-    Required: 'false'
-    Target: PUID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: '100'
-    Description: 'Container Variable: PGID'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: PGID
-    Required: 'false'
-    Target: PGID
-    Type: Variable
-  value: '100'
-- '@attributes':
-    Default: '3000'
-    Description: Port used to access the WebUI.  The container uses port 5000 this
-      can forward any port to that in the container.
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'false'
-    Target: '3000'
-    Type: Port
-  value: '3000'
-- '@attributes':
-    Default: /mnt/user/appdata/fenrus/data
-    Description: Location of user configuration files
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Data
-    Required: 'true'
-    Target: /app/data
-    Type: Path
-  value: /mnt/user/appdata/fenrus/data
-- '@attributes':
-    Default: /mnt/user/appdata/fenrus/images
-    Description: Location to store user images
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Images
-    Required: 'true'
-    Target: /app/wwwroot/images
-    Type: Path
-  value: /mnt/user/appdata/fenrus/images
+  Device: {}
+  Label: {}
+  Path:
+    Data:
+      Default: /mnt/user/appdata/fenrus/data
+      Description: Location of user configuration files
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Data
+      Required: 'true'
+      Target: /app/data
+      Type: Path
+      value: /mnt/user/appdata/fenrus/data
+    Images:
+      Default: /mnt/user/appdata/fenrus/images
+      Description: Location to store user images
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Images
+      Required: 'true'
+      Target: /app/wwwroot/images
+      Type: Path
+      value: /mnt/user/appdata/fenrus/images
+  Port:
+    WebUI:
+      Default: '3000'
+      Description: Port used to access the WebUI.  The container uses port 5000 this
+        can forward any port to that in the container.
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'false'
+      Target: '3000'
+      Type: Port
+      value: '3000'
+  Variable:
+    PGID:
+      Default: '100'
+      Description: 'Container Variable: PGID'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PGID
+      Required: 'false'
+      Target: PGID
+      Type: Variable
+      value: '100'
+    PUID:
+      Default: '99'
+      Description: 'Container Variable: PUID'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PUID
+      Required: 'false'
+      Target: PUID
+      Type: Variable
+      value: '99'
+    TimeZone:
+      Default: Pacific/Auckland
+      Description: TimeZone for the container refer to https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+        for a list of possible timezones
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: TimeZone
+      Required: 'true'
+      Target: TZ
+      Type: Variable
+      value: ''
 DonateLink: https://www.patreon.com/revenz
 FirstSeen: 1645340597
 Icon: https://raw.githubusercontent.com/revenz/Fenrus/master/icon_128.png?raw=true

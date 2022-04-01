@@ -11,122 +11,128 @@ CategoryList:
 - Network-Management
 ChangeLogPresent: true
 Config:
-- '@attributes':
-    Default: '3000'
-    Description: Web configuration interface.
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'true'
-    Target: '3000'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: '69'
-    Description: TFTP Port.
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: 'Port: 69'
-    Required: 'true'
-    Target: '69'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: '8080'
-    Description: NGINX server for hosting assets.
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: 'Port: 80'
-    Required: 'false'
-    Target: '80'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Storage for boot menu files and web application config
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: Appdata
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Storage for NETBOOT.XYZ bootable assets (live CDs and other files)
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: 'Path: /assets'
-    Required: 'false'
-    Target: /assets
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: 1.9.9
-    Description: Specify a specific version of boot files you want to use from NETBOOT.XYZ
-      (unset pulls latest)
-    Display: always
-    Mask: 'false'
-    Name: MENU_VERSION
-    Required: 'false'
-    Target: MENU_VERSION
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 30000:30010
-    Description: Specify the port range tftp will use for data transfers (see Wikipedia)(https://en.wikipedia.org/wiki/Trivial_File_Transfer_Protocol#Details)
-    Display: always
-    Mask: 'false'
-    Name: PORT_RANGE
-    Required: 'false'
-    Target: PORT_RANGE
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: /
-    Description: Specify a sobfolder if running this behind a reverse proxy (IE /proxy/)
-    Display: always
-    Mask: 'false'
-    Name: SUBFOLDER
-    Required: 'false'
-    Target: SUBFOLDER
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '99'
-    Description: 'Container Variable: PUID'
-    Display: advanced
-    Mask: 'false'
-    Name: PUID
-    Required: 'true'
-    Target: PUID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '100'
-    Description: 'Container Variable: PGID'
-    Display: advanced
-    Mask: 'false'
-    Name: PGID
-    Required: 'true'
-    Target: PGID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '022'
-    Description: 'Container Variable: UMASK'
-    Display: advanced
-    Mask: 'false'
-    Name: UMASK
-    Required: 'false'
-    Target: UMASK
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Appdata:
+      Default: ''
+      Description: Storage for boot menu files and web application config
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: Appdata
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: ''
+    'Path: /assets':
+      Default: ''
+      Description: Storage for NETBOOT.XYZ bootable assets (live CDs and other files)
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: 'Path: /assets'
+      Required: 'false'
+      Target: /assets
+      Type: Path
+      value: ''
+  Port:
+    'Port: 69':
+      Default: '69'
+      Description: TFTP Port.
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: 'Port: 69'
+      Required: 'true'
+      Target: '69'
+      Type: Port
+      value: ''
+    'Port: 80':
+      Default: '8080'
+      Description: NGINX server for hosting assets.
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: 'Port: 80'
+      Required: 'false'
+      Target: '80'
+      Type: Port
+      value: ''
+    WebUI:
+      Default: '3000'
+      Description: Web configuration interface.
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'true'
+      Target: '3000'
+      Type: Port
+      value: ''
+  Variable:
+    MENU_VERSION:
+      Default: 1.9.9
+      Description: Specify a specific version of boot files you want to use from NETBOOT.XYZ
+        (unset pulls latest)
+      Display: always
+      Mask: 'false'
+      Name: MENU_VERSION
+      Required: 'false'
+      Target: MENU_VERSION
+      Type: Variable
+      value: ''
+    PGID:
+      Default: '100'
+      Description: 'Container Variable: PGID'
+      Display: advanced
+      Mask: 'false'
+      Name: PGID
+      Required: 'true'
+      Target: PGID
+      Type: Variable
+      value: ''
+    PORT_RANGE:
+      Default: 30000:30010
+      Description: Specify the port range tftp will use for data transfers (see Wikipedia)(https://en.wikipedia.org/wiki/Trivial_File_Transfer_Protocol#Details)
+      Display: always
+      Mask: 'false'
+      Name: PORT_RANGE
+      Required: 'false'
+      Target: PORT_RANGE
+      Type: Variable
+      value: ''
+    PUID:
+      Default: '99'
+      Description: 'Container Variable: PUID'
+      Display: advanced
+      Mask: 'false'
+      Name: PUID
+      Required: 'true'
+      Target: PUID
+      Type: Variable
+      value: ''
+    SUBFOLDER:
+      Default: /
+      Description: Specify a sobfolder if running this behind a reverse proxy (IE
+        /proxy/)
+      Display: always
+      Mask: 'false'
+      Name: SUBFOLDER
+      Required: 'false'
+      Target: SUBFOLDER
+      Type: Variable
+      value: ''
+    UMASK:
+      Default: '022'
+      Description: 'Container Variable: UMASK'
+      Display: advanced
+      Mask: 'false'
+      Name: UMASK
+      Required: 'false'
+      Target: UMASK
+      Type: Variable
+      value: ''
 DonateImg: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/donate.png
 DonateLink: https://www.linuxserver.io/donate
 DonateText: Donations

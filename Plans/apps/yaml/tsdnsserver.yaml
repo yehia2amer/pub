@@ -3,61 +3,66 @@ Beta: 'true'
 CategoryList:
 - Network-DNS
 Config:
-- '@attributes':
-    Default: /mnt/user/appdata/ts-dnsserver
-    Description: 'Container Path: /config'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: App data
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: /mnt/user/appdata/ts-dnsserver
-- '@attributes':
-    Default: '5380'
-    Description: 'Container Port: '
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Web UI
-    Required: 'false'
-    Target: '5380'
-    Type: Port
-  value: '5380'
-- '@attributes':
-    Default: '53'
-    Description: 'Container Port: 53'
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: DNS Port
-    Required: 'false'
-    Target: '53'
-    Type: Port
-  value: '53'
-- '@attributes':
-    Default: '99'
-    Description: 'Container Variable: PUID 99'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: PUID
-    Required: 'false'
-    Target: PUID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: '100'
-    Description: 'Container Variable: PGID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: PGID
-    Required: 'false'
-    Target: PGID
-    Type: Variable
-  value: '100'
+  Device: {}
+  Label: {}
+  Path:
+    App data:
+      Default: /mnt/user/appdata/ts-dnsserver
+      Description: 'Container Path: /config'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: App data
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: /mnt/user/appdata/ts-dnsserver
+  Port:
+    DNS Port:
+      Default: '53'
+      Description: 'Container Port: 53'
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: DNS Port
+      Required: 'false'
+      Target: '53'
+      Type: Port
+      value: '53'
+    Web UI:
+      Default: '5380'
+      Description: 'Container Port: '
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Web UI
+      Required: 'false'
+      Target: '5380'
+      Type: Port
+      value: '5380'
+  Variable:
+    PGID:
+      Default: '100'
+      Description: 'Container Variable: PGID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: PGID
+      Required: 'false'
+      Target: PGID
+      Type: Variable
+      value: '100'
+    PUID:
+      Default: '99'
+      Description: 'Container Variable: PUID 99'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: PUID
+      Required: 'false'
+      Target: PUID
+      Type: Variable
+      value: '99'
 DonateLink: https://paypal.me/Roxedus
 DonateText: Buy me a Cola!
 FirstSeen: 1580850651

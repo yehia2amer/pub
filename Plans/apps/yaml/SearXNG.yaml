@@ -2,39 +2,44 @@ CategoryList:
 - Productivity
 - Other
 Config:
-- '@attributes':
-    Default: '8080'
-    Description: Port
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Port
-    Required: 'true'
-    Target: '8080'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: /mnt/cache/appdata/searx/
-    Description: SearXNG's config location
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Config
-    Required: 'true'
-    Target: /etc/searx
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Your SearXNG instance name
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: SearXNG Instance Name
-    Required: 'false'
-    Target: INSTANCE_NAME
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Config:
+      Default: /mnt/cache/appdata/searx/
+      Description: SearXNG's config location
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Config
+      Required: 'true'
+      Target: /etc/searx
+      Type: Path
+      value: ''
+  Port:
+    Port:
+      Default: '8080'
+      Description: Port
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Port
+      Required: 'true'
+      Target: '8080'
+      Type: Port
+      value: ''
+  Variable:
+    SearXNG Instance Name:
+      Default: ''
+      Description: Your SearXNG instance name
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: SearXNG Instance Name
+      Required: 'false'
+      Target: INSTANCE_NAME
+      Type: Variable
+      value: ''
 DonateLink: https://www.buymeacoffee.com/xthursdayx
 DonateText: "\u200B If you appreciate my work please consider buying me a coffee,\
   \ cheers!\_\U0001F601  \_      \u200B"

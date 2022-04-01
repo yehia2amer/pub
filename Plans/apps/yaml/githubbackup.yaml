@@ -1,53 +1,58 @@
 CategoryList:
 - Backup
 Config:
-- '@attributes':
-    Default: 1a2b3c4d5e6f71a2b3c4d5e6f71a2b3c4d5e6f7b
-    Description: Get your token from https://github.com/settings/tokens, see the support
-      page for more details.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Token
-    Required: 'false'
-    Target: TOKEN
-    Type: Variable
-  value: 1a2b3c4d5e6f71a2b3c4d5e6f71a2b3c4d5e6f7b
-- '@attributes':
-    Default: '3600'
-    Description: How often to sync in seconds (eg. 3600 for 1h, 21600 for 6h, 43200
-      for 12h, 86400 for 24h)
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Schedule
-    Required: 'false'
-    Target: SCHEDULE
-    Type: Variable
-  value: '3600'
-- '@attributes':
-    Default: /mnt/user/backup/github
-    Description: Set the location of your github backups. Please note that the default
-      will create a backup share if it does not exist and you don't change it.
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Backup location
-    Required: 'false'
-    Target: /home/docker/backups
-    Type: Path
-  value: /mnt/user/backup/github
-- '@attributes':
-    Default: ''
-    Description: Persistent storage for config.json
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: Config location
-    Required: 'false'
-    Target: /home/docker/github-backup/config/
-    Type: Path
-  value: /mnt/user/appdata/github-backup/
+  Device: {}
+  Label: {}
+  Path:
+    Backup location:
+      Default: /mnt/user/backup/github
+      Description: Set the location of your github backups. Please note that the default
+        will create a backup share if it does not exist and you don't change it.
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Backup location
+      Required: 'false'
+      Target: /home/docker/backups
+      Type: Path
+      value: /mnt/user/backup/github
+    Config location:
+      Default: ''
+      Description: Persistent storage for config.json
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: Config location
+      Required: 'false'
+      Target: /home/docker/github-backup/config/
+      Type: Path
+      value: /mnt/user/appdata/github-backup/
+  Port: {}
+  Variable:
+    Schedule:
+      Default: '3600'
+      Description: How often to sync in seconds (eg. 3600 for 1h, 21600 for 6h, 43200
+        for 12h, 86400 for 24h)
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Schedule
+      Required: 'false'
+      Target: SCHEDULE
+      Type: Variable
+      value: '3600'
+    Token:
+      Default: 1a2b3c4d5e6f71a2b3c4d5e6f71a2b3c4d5e6f7b
+      Description: Get your token from https://github.com/settings/tokens, see the
+        support page for more details.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Token
+      Required: 'false'
+      Target: TOKEN
+      Type: Variable
+      value: 1a2b3c4d5e6f71a2b3c4d5e6f71a2b3c4d5e6f7b
 DonateLink: https://github.com/lnxd
 DonateText: If you like my work please consider donating.
 FirstSeen: 1616680982

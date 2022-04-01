@@ -3,138 +3,143 @@ CategoryList:
 - Productivity
 - Tools-System
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 3000'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Host Port 1
-    Required: 'true'
-    Target: '3000'
-    Type: Port
-  value: '8090'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: SECRET_KEY_BASE'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: SECRET_KEY_BASE
-    Required: 'false'
-    Target: SECRET_KEY_BASE
-    Type: Variable
-  value: sensitive_secret_key_base
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: SMTP_ADDRESS'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: SMTP_ADDRESS
-    Required: 'false'
-    Target: SMTP_ADDRESS
-    Type: Variable
-  value: smtp.yourhost.com
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: SMTP_EMAIL_FROM'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: SMTP_EMAIL_FROM
-    Required: 'false'
-    Target: SMTP_EMAIL_FROM
-    Type: Variable
-  value: ciao@yourhost.com
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: SMTP_EMAIL_TO'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: SMTP_EMAIL_TO
-    Required: 'false'
-    Target: SMTP_EMAIL_TO
-    Type: Variable
-  value: you@yourhost.com
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: SMTP_PORT'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: SMTP_PORT
-    Required: 'false'
-    Target: SMTP_PORT
-    Type: Variable
-  value: '587'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: SMTP_DOMAIN'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: SMTP_DOMAIN
-    Required: 'false'
-    Target: SMTP_DOMAIN
-    Type: Variable
-  value: smtp.yourhost.com
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: SMTP_AUTHENTICATION'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: SMTP_AUTHENTICATION
-    Required: 'false'
-    Target: SMTP_AUTHENTICATION
-    Type: Variable
-  value: plain
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: SMTP_ENABLE_STARTTLS_AUTO'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: SMTP_ENABLE_STARTTLS_AUTO
-    Required: 'false'
-    Target: SMTP_ENABLE_STARTTLS_AUTO
-    Type: Variable
-  value: 'true'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: SMTP_USERNAME'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: SMTP_USERNAME
-    Required: 'false'
-    Target: SMTP_USERNAME
-    Type: Variable
-  value: ciao
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: SMTP_PASSWORD'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: SMTP_PASSWORD
-    Required: 'false'
-    Target: SMTP_PASSWORD
-    Type: Variable
-  value: sensitive_password
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /app/db/sqlite'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Database location
-    Required: 'false'
-    Target: /app/db/sqlite
-    Type: Path
-  value: /mnt/user/appdata/ciao
+  Device: {}
+  Label: {}
+  Path:
+    Database location:
+      Default: ''
+      Description: 'Container Path: /app/db/sqlite'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Database location
+      Required: 'false'
+      Target: /app/db/sqlite
+      Type: Path
+      value: /mnt/user/appdata/ciao
+  Port:
+    Host Port 1:
+      Default: ''
+      Description: 'Container Port: 3000'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Host Port 1
+      Required: 'true'
+      Target: '3000'
+      Type: Port
+      value: '8090'
+  Variable:
+    SECRET_KEY_BASE:
+      Default: ''
+      Description: 'Container Variable: SECRET_KEY_BASE'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: SECRET_KEY_BASE
+      Required: 'false'
+      Target: SECRET_KEY_BASE
+      Type: Variable
+      value: sensitive_secret_key_base
+    SMTP_ADDRESS:
+      Default: ''
+      Description: 'Container Variable: SMTP_ADDRESS'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: SMTP_ADDRESS
+      Required: 'false'
+      Target: SMTP_ADDRESS
+      Type: Variable
+      value: smtp.yourhost.com
+    SMTP_AUTHENTICATION:
+      Default: ''
+      Description: 'Container Variable: SMTP_AUTHENTICATION'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: SMTP_AUTHENTICATION
+      Required: 'false'
+      Target: SMTP_AUTHENTICATION
+      Type: Variable
+      value: plain
+    SMTP_DOMAIN:
+      Default: ''
+      Description: 'Container Variable: SMTP_DOMAIN'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: SMTP_DOMAIN
+      Required: 'false'
+      Target: SMTP_DOMAIN
+      Type: Variable
+      value: smtp.yourhost.com
+    SMTP_EMAIL_FROM:
+      Default: ''
+      Description: 'Container Variable: SMTP_EMAIL_FROM'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: SMTP_EMAIL_FROM
+      Required: 'false'
+      Target: SMTP_EMAIL_FROM
+      Type: Variable
+      value: ciao@yourhost.com
+    SMTP_EMAIL_TO:
+      Default: ''
+      Description: 'Container Variable: SMTP_EMAIL_TO'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: SMTP_EMAIL_TO
+      Required: 'false'
+      Target: SMTP_EMAIL_TO
+      Type: Variable
+      value: you@yourhost.com
+    SMTP_ENABLE_STARTTLS_AUTO:
+      Default: ''
+      Description: 'Container Variable: SMTP_ENABLE_STARTTLS_AUTO'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: SMTP_ENABLE_STARTTLS_AUTO
+      Required: 'false'
+      Target: SMTP_ENABLE_STARTTLS_AUTO
+      Type: Variable
+      value: 'true'
+    SMTP_PASSWORD:
+      Default: ''
+      Description: 'Container Variable: SMTP_PASSWORD'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: SMTP_PASSWORD
+      Required: 'false'
+      Target: SMTP_PASSWORD
+      Type: Variable
+      value: sensitive_password
+    SMTP_PORT:
+      Default: ''
+      Description: 'Container Variable: SMTP_PORT'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: SMTP_PORT
+      Required: 'false'
+      Target: SMTP_PORT
+      Type: Variable
+      value: '587'
+    SMTP_USERNAME:
+      Default: ''
+      Description: 'Container Variable: SMTP_USERNAME'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: SMTP_USERNAME
+      Required: 'false'
+      Target: SMTP_USERNAME
+      Type: Variable
+      value: ciao
 FirstSeen: 1611083913
 Icon: https://github.com/Muwahhidun/logo/blob/main/logo%20check.png?raw=true
 LastUpdate: 1639355042

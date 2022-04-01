@@ -3,116 +3,123 @@ CategoryList:
 - Cloud
 - Productivity
 Config:
-- '@attributes':
-    Default: '3000'
-    Description: 'Container Port: 3000'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'false'
-    Target: '3000'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: /mnt/user/appdata/wikijs/logs
-    Description: 'Container Path: /logs'
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: Logs
-    Required: 'false'
-    Target: /logs
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: mariadb
-    Description: 'DB_TYPE : Type of database (mysql, postgres, mariadb, mssql or sqlite)'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Database Type
-    Required: 'false'
-    Target: DB_TYPE
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 192.168.1.2
-    Description: 'DB_HOST : Hostname or IP of the database'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Database Host
-    Required: 'false'
-    Target: DB_HOST
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '3306'
-    Description: 'DB_PORT : Port of the database'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Database Port
-    Required: 'false'
-    Target: DB_PORT
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: wikijs
-    Description: 'DB_USER : Username to connect to the database'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Database User
-    Required: 'false'
-    Target: DB_USER
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: secretpassword
-    Description: 'DB_PASS : Password to connect to the database'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Database Password
-    Required: 'false'
-    Target: DB_PASS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: wikijs
-    Description: 'DB_NAME : Database name'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Database Name
-    Required: 'false'
-    Target: DB_NAME
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 'false'
-    Description: 'DB_SSL : Set to either 1 or true to enable. (optional, off if omitted)'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: 'Optional: Database SSL'
-    Required: 'false'
-    Target: DB_SSL
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: /mnt/user/appdata/wikijs/db
-    Description: 'For SQLite only: DB_FILEPATH : Path to the SQLite file'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: DB_FILEPATH
-    Required: 'false'
-    Target: DB_FILEPATH
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Logs:
+      Default: /mnt/user/appdata/wikijs/logs
+      Description: 'Container Path: /logs'
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: Logs
+      Required: 'false'
+      Target: /logs
+      Type: Path
+      value: ''
+  Port:
+    WebUI:
+      Default: '3000'
+      Description: 'Container Port: 3000'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'false'
+      Target: '3000'
+      Type: Port
+      value: ''
+  Variable:
+    DB_FILEPATH:
+      Default: /mnt/user/appdata/wikijs/db
+      Description: 'For SQLite only: DB_FILEPATH : Path to the SQLite file'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: DB_FILEPATH
+      Required: 'false'
+      Target: DB_FILEPATH
+      Type: Variable
+      value: ''
+    Database Host:
+      Default: 192.168.1.2
+      Description: 'DB_HOST : Hostname or IP of the database'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Database Host
+      Required: 'false'
+      Target: DB_HOST
+      Type: Variable
+      value: ''
+    Database Name:
+      Default: wikijs
+      Description: 'DB_NAME : Database name'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Database Name
+      Required: 'false'
+      Target: DB_NAME
+      Type: Variable
+      value: ''
+    Database Password:
+      Default: secretpassword
+      Description: 'DB_PASS : Password to connect to the database'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Database Password
+      Required: 'false'
+      Target: DB_PASS
+      Type: Variable
+      value: ''
+    Database Port:
+      Default: '3306'
+      Description: 'DB_PORT : Port of the database'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Database Port
+      Required: 'false'
+      Target: DB_PORT
+      Type: Variable
+      value: ''
+    Database Type:
+      Default: mariadb
+      Description: 'DB_TYPE : Type of database (mysql, postgres, mariadb, mssql or
+        sqlite)'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Database Type
+      Required: 'false'
+      Target: DB_TYPE
+      Type: Variable
+      value: ''
+    Database User:
+      Default: wikijs
+      Description: 'DB_USER : Username to connect to the database'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Database User
+      Required: 'false'
+      Target: DB_USER
+      Type: Variable
+      value: ''
+    'Optional: Database SSL':
+      Default: 'false'
+      Description: 'DB_SSL : Set to either 1 or true to enable. (optional, off if
+        omitted)'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: 'Optional: Database SSL'
+      Required: 'false'
+      Target: DB_SSL
+      Type: Variable
+      value: ''
 DonateLink: https://opencollective.com/wikijs
 DonateText: Wiki.js is an open source project that has been made possible due to the
   generous contributions by community backers. If you are interested in supporting

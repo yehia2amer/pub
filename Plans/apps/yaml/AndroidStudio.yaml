@@ -6,61 +6,66 @@ Branch:
 CategoryList:
 - Productivity
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 8887'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Host Port 1
-    Required: 'false'
-    Target: '8887'
-    Type: Port
-  value: '8887'
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /home/projector-user'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Host Path 1
-    Required: 'false'
-    Target: /home/projector-user
-    Type: Path
-  value: /mnt/user/appdata/android-studio
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: UMASK'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Host Key 1
-    Required: 'false'
-    Target: UMASK
-    Type: Variable
-  value: '000'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: PUID'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Host Key 2
-    Required: 'false'
-    Target: PUID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: PGID'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Host Key 3
-    Required: 'false'
-    Target: PGID
-    Type: Variable
-  value: '100'
+  Device: {}
+  Label: {}
+  Path:
+    Host Path 1:
+      Default: ''
+      Description: 'Container Path: /home/projector-user'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Host Path 1
+      Required: 'false'
+      Target: /home/projector-user
+      Type: Path
+      value: /mnt/user/appdata/android-studio
+  Port:
+    Host Port 1:
+      Default: ''
+      Description: 'Container Port: 8887'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Host Port 1
+      Required: 'false'
+      Target: '8887'
+      Type: Port
+      value: '8887'
+  Variable:
+    Host Key 1:
+      Default: ''
+      Description: 'Container Variable: UMASK'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Host Key 1
+      Required: 'false'
+      Target: UMASK
+      Type: Variable
+      value: '000'
+    Host Key 2:
+      Default: ''
+      Description: 'Container Variable: PUID'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Host Key 2
+      Required: 'false'
+      Target: PUID
+      Type: Variable
+      value: '99'
+    Host Key 3:
+      Default: ''
+      Description: 'Container Variable: PGID'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Host Key 3
+      Required: 'false'
+      Target: PGID
+      Type: Variable
+      value: '100'
 FirstSeen: 1605454081
 Icon: https://raw.githubusercontent.com/JetBrains/projector-docker/master/static/projector-user/DemoProject/src/pj.png
 LastUpdate: 1605778600

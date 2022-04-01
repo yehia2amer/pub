@@ -4,83 +4,88 @@ CategoryList:
 - Productivity
 - Network-Web
 Config:
-- '@attributes':
-    Default: '9090'
-    Description: Crush HTTP Port
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: tcp
-    Name: HTTP Port
-    Required: 'true'
-    Target: '9090'
-    Type: Port
-  value: '9090'
-- '@attributes':
-    Default: '9443'
-    Description: 'Crush HTTPS Port '
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: tcp
-    Name: HTTPS Port
-    Required: 'true'
-    Target: '9443'
-    Type: Port
-  value: '9443'
-- '@attributes':
-    Default: '9021'
-    Description: Crush FTP Port
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: tcp
-    Name: FTP Port
-    Required: 'true'
-    Target: '9021'
-    Type: Port
-  value: '9021'
-- '@attributes':
-    Default: /mnt/user/appdata/crushftp/
-    Description: CrushFTP Home/Installation Directory
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: CrushFTP Home
-    Required: 'true'
-    Target: /var/opt/CrushFTP8_PC
-    Type: Path
-  value: /mnt/user/appdata/crushftp/
-- '@attributes':
-    Default: /mnt/user/ftpfiles/
-    Description: FTP Files
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: FTP Files
-    Required: 'true'
-    Target: /files
-    Type: Path
-  value: /mnt/user/ftpfiles/
-- '@attributes':
-    Default: /mnt/user
-    Description: 'Container Path: /unraid'
-    Display: hidden
-    Mask: 'false'
-    Mode: rw
-    Name: unRAID Share Path
-    Required: 'false'
-    Target: /unraid
-    Type: Path
-  value: /mnt/user
-- '@attributes':
-    Default: crush8password$
-    Description: Default CrushFTP Admin Password
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: Crush Admin Password
-    Required: 'false'
-    Target: CRUSHPASSWORD
-    Type: Variable
-  value: crush8password$
+  Device: {}
+  Label: {}
+  Path:
+    CrushFTP Home:
+      Default: /mnt/user/appdata/crushftp/
+      Description: CrushFTP Home/Installation Directory
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: CrushFTP Home
+      Required: 'true'
+      Target: /var/opt/CrushFTP8_PC
+      Type: Path
+      value: /mnt/user/appdata/crushftp/
+    FTP Files:
+      Default: /mnt/user/ftpfiles/
+      Description: FTP Files
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: FTP Files
+      Required: 'true'
+      Target: /files
+      Type: Path
+      value: /mnt/user/ftpfiles/
+    unRAID Share Path:
+      Default: /mnt/user
+      Description: 'Container Path: /unraid'
+      Display: hidden
+      Mask: 'false'
+      Mode: rw
+      Name: unRAID Share Path
+      Required: 'false'
+      Target: /unraid
+      Type: Path
+      value: /mnt/user
+  Port:
+    FTP Port:
+      Default: '9021'
+      Description: Crush FTP Port
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: tcp
+      Name: FTP Port
+      Required: 'true'
+      Target: '9021'
+      Type: Port
+      value: '9021'
+    HTTP Port:
+      Default: '9090'
+      Description: Crush HTTP Port
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: tcp
+      Name: HTTP Port
+      Required: 'true'
+      Target: '9090'
+      Type: Port
+      value: '9090'
+    HTTPS Port:
+      Default: '9443'
+      Description: 'Crush HTTPS Port '
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: tcp
+      Name: HTTPS Port
+      Required: 'true'
+      Target: '9443'
+      Type: Port
+      value: '9443'
+  Variable:
+    Crush Admin Password:
+      Default: crush8password$
+      Description: Default CrushFTP Admin Password
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: Crush Admin Password
+      Required: 'false'
+      Target: CRUSHPASSWORD
+      Type: Variable
+      value: crush8password$
 Deprecated: true
 FirstSeen: 1
 GitHub: https://github.com/stuckless/unRAID-crushftp/

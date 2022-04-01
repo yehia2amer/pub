@@ -7,61 +7,66 @@ CategoryList:
 - Network-Management
 - Network-VPN
 Config:
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Port (WebUI)
-    Required: 'false'
-    Target: '51821'
-    Type: Port
-  value: '51821'
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: Port (VPN)
-    Required: 'false'
-    Target: '51820'
-    Type: Port
-  value: '51820'
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: WG_HOST
-    Required: 'false'
-    Target: WG_HOST
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: App's Data
-    Required: 'false'
-    Target: /etc/wireguard
-    Type: Path
-  value: /mnt/user/appdata/wireguard-easy
-- '@attributes':
-    Default: ''
-    Description: WebUI password
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: PASSWORD
-    Required: 'false'
-    Target: PASSWORD
-    Type: Variable
-  value: unraid
+  Device: {}
+  Label: {}
+  Path:
+    App's Data:
+      Default: ''
+      Description: ''
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: App's Data
+      Required: 'false'
+      Target: /etc/wireguard
+      Type: Path
+      value: /mnt/user/appdata/wireguard-easy
+  Port:
+    Port (VPN):
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: Port (VPN)
+      Required: 'false'
+      Target: '51820'
+      Type: Port
+      value: '51820'
+    Port (WebUI):
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Port (WebUI)
+      Required: 'false'
+      Target: '51821'
+      Type: Port
+      value: '51821'
+  Variable:
+    PASSWORD:
+      Default: ''
+      Description: WebUI password
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PASSWORD
+      Required: 'false'
+      Target: PASSWORD
+      Type: Variable
+      value: unraid
+    WG_HOST:
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: WG_HOST
+      Required: 'false'
+      Target: WG_HOST
+      Type: Variable
+      value: ''
 FirstSeen: 1639393417
 Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/wireguard-easy_200x200.png
 LastUpdate: 1647173569

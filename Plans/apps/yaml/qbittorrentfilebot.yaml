@@ -2,150 +2,155 @@ CategoryList:
 - Downloaders
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Media
-    Required: 'true'
-    Target: /media
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Downloads
-    Required: 'true'
-    Target: /downloads
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: CONFIG
-    Required: 'true'
-    Target: /data
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: copy
-    Description: 'Choices: move | copy | symlink | hardlink | test'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: FILEBOT_ACTION
-    Required: 'false'
-    Target: FILEBOT_ACTION
-    Type: Variable
-  value: copy
-- '@attributes':
-    Default: ''
-    Description: 'Choices: en | fr | ...'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: FILEBOT_LANG
-    Required: 'false'
-    Target: FILEBOT_LANG
-    Type: Variable
-  value: en
-- '@attributes':
-    Default: '{plex}'
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: MOVIE_FORMAT
-    Required: 'false'
-    Target: MOVIE_FORMAT
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '{plex}'
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: SERIE_FORMAT
-    Required: 'false'
-    Target: SERIE_FORMAT
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: animes/{n}/{e.pad(3)} - {t}
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: ANIME_FORMAT
-    Required: 'false'
-    Target: ANIME_FORMAT
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '{plex}'
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: MUSIC_FORMAT
-    Required: 'false'
-    Target: MUSIC_FORMAT
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '8080'
-    Description: WEB INTERFACE PORT
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: WEBUI_PORT
-    Required: 'true'
-    Target: WEBUI_PORT
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '99'
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: PUID
-    Required: 'false'
-    Target: PUID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: '100'
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: PGID
-    Required: 'false'
-    Target: PGID
-    Type: Variable
-  value: '100'
-- '@attributes':
-    Default: '8080'
-    Description: Must exist and be same as webgui_port in case u dont use a dedicated
-      ip
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: CONTAINER_PORT_MAPPING
-    Required: 'true'
-    Target: '8080'
-    Type: Port
-  value: '8080'
+  Device: {}
+  Label: {}
+  Path:
+    CONFIG:
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: CONFIG
+      Required: 'true'
+      Target: /data
+      Type: Path
+      value: ''
+    Downloads:
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Downloads
+      Required: 'true'
+      Target: /downloads
+      Type: Path
+      value: ''
+    Media:
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Media
+      Required: 'true'
+      Target: /media
+      Type: Path
+      value: ''
+  Port:
+    CONTAINER_PORT_MAPPING:
+      Default: '8080'
+      Description: Must exist and be same as webgui_port in case u dont use a dedicated
+        ip
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: CONTAINER_PORT_MAPPING
+      Required: 'true'
+      Target: '8080'
+      Type: Port
+      value: '8080'
+  Variable:
+    ANIME_FORMAT:
+      Default: animes/{n}/{e.pad(3)} - {t}
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: ANIME_FORMAT
+      Required: 'false'
+      Target: ANIME_FORMAT
+      Type: Variable
+      value: ''
+    FILEBOT_ACTION:
+      Default: copy
+      Description: 'Choices: move | copy | symlink | hardlink | test'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: FILEBOT_ACTION
+      Required: 'false'
+      Target: FILEBOT_ACTION
+      Type: Variable
+      value: copy
+    FILEBOT_LANG:
+      Default: ''
+      Description: 'Choices: en | fr | ...'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: FILEBOT_LANG
+      Required: 'false'
+      Target: FILEBOT_LANG
+      Type: Variable
+      value: en
+    MOVIE_FORMAT:
+      Default: '{plex}'
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: MOVIE_FORMAT
+      Required: 'false'
+      Target: MOVIE_FORMAT
+      Type: Variable
+      value: ''
+    MUSIC_FORMAT:
+      Default: '{plex}'
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: MUSIC_FORMAT
+      Required: 'false'
+      Target: MUSIC_FORMAT
+      Type: Variable
+      value: ''
+    PGID:
+      Default: '100'
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: PGID
+      Required: 'false'
+      Target: PGID
+      Type: Variable
+      value: '100'
+    PUID:
+      Default: '99'
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: PUID
+      Required: 'false'
+      Target: PUID
+      Type: Variable
+      value: '99'
+    SERIE_FORMAT:
+      Default: '{plex}'
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: SERIE_FORMAT
+      Required: 'false'
+      Target: SERIE_FORMAT
+      Type: Variable
+      value: ''
+    WEBUI_PORT:
+      Default: '8080'
+      Description: WEB INTERFACE PORT
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: WEBUI_PORT
+      Required: 'true'
+      Target: WEBUI_PORT
+      Type: Variable
+      value: ''
 FirstSeen: 1644527027
 Icon: https://raw.githubusercontent.com/imTHAI/docker-qbittorrent-filebot/master/img/qbittorrent-filebot.png
 LastUpdate: 1644524002

@@ -3,224 +3,230 @@ CategoryList:
 - Network-Management
 ChangeLogPresent: true
 Config:
-- '@attributes':
-    Default: false|true
-    Description: 'Container Variable: UP_POLLER_DEBUG - Setting true includes more
-      log output.'
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: Poller Debug Mode
-    Required: 'false'
-    Target: UP_POLLER_DEBUG
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: false|true
-    Description: 'Container Variable: UP_POLLER_QUIET - Setting true disables most
-      log output.'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: Poller Quiet Mode
-    Required: 'false'
-    Target: UP_POLLER_QUIET
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: https://unraid.ip:8443
-    Description: 'Container Variable: UP_UNIFI_CONTROLLER_0_URL - URL for UniFi controller.'
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: UniFi 1st Controller Host URL
-    Required: 'true'
-    Target: UP_UNIFI_CONTROLLER_0_URL
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: unifipoller
-    Description: 'Container Variable: UP_UNIFI_CONTROLLER_0_USER - Username for UniFi
-      Controller.'
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: UniFi 1st Controller Username
-    Required: 'true'
-    Target: UP_UNIFI_CONTROLLER_0_USER
-    Type: Variable
-  value: unifipoller
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: UP_UNIFI_CONTROLLER_0_PASS - Password for UniFi
-      Controller.'
-    Display: always-hide
-    Mask: 'true'
-    Mode: ''
-    Name: UniFi 1st Controller Password
-    Required: 'true'
-    Target: UP_UNIFI_CONTROLLER_0_PASS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: false|true
-    Description: 'Container Variable: UP_UNIFI_CONTROLLER_0_SAVE_DPI - Poll and save
-      deep packet inspection data. This is a lot of data, and it must be enabled on
-      the controller.'
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: UniFi 1st Controller Save DPI
-    Required: 'false'
-    Target: UP_UNIFI_CONTROLLER_0_SAVE_DPI
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: false|true
-    Description: 'Container Variable: UP_UNIFI_CONTROLLER_0_SAVE_IDS - Save intrusion
-      detection data (InfluxDB only). This data does not contain graphable metrics.'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: UniFi 1st Controller Save IDS
-    Required: 'false'
-    Target: UP_UNIFI_CONTROLLER_0_SAVE_IDS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: true|false
-    Description: 'Container Value: UP_UNIFI_CONTROLLER_0_SAVE_SITES - Set this to
-      ''false'' to save space and resources in InfluxDB. This data powers the Network
-      Sites dashboard.'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: UniFi 1st Controller Save Sites
-    Required: 'false'
-    Target: UP_UNIFI_CONTROLLER_0_SAVE_SITES
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: all
-    Description: 'Container Variable: UP_UNIFI_CONTROLLER_0_SITES_0 - List of sites
-      to poll on controller, comma separated. Use cryptic ID values here; set to ''all''
-      for all sites.'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: UniFi 1st Controller Poll Sites
-    Required: 'false'
-    Target: UP_UNIFI_CONTROLLER_0_SITES_0
-    Type: Variable
-  value: all
-- '@attributes':
-    Default: false|true
-    Description: 'Container Variable: UP_UNIFI_CONTROLLER_0_VERIFY_SSL - Enable this
-      if you have a valid SSL cert on your controller.'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: UniFi 1st Controller Verify SSL
-    Required: 'false'
-    Target: UP_UNIFI_CONTROLLER_0_VERIFY_SSL
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: http://unraid.ip:8086
-    Description: 'Container Variable: UP_INFLUXDB_URL - URL for InfluxDB. Not important
-      if using Prometheus only.'
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: InfluxDB Host URL
-    Required: 'false'
-    Target: UP_INFLUXDB_URL
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: unifipoller
-    Description: 'Container Variable: UP_INFLUXDB_USER - Username for InfluxDB. Usually
-      unimportant because InfluxDB has no auth by default.'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: InfluxDB Username
-    Required: 'false'
-    Target: UP_INFLUXDB_USER
-    Type: Variable
-  value: unifipoller
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: UP_INFLUXDB_PASS - Password for InfluxDB (if
-      required)'
-    Display: advanced-hide
-    Mask: 'true'
-    Mode: ''
-    Name: InfluxDB Password
-    Required: 'false'
-    Target: UP_INFLUXDB_PASS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: unifi
-    Description: 'Container Variable: UP_INFLUXDB_DB - InfluxDB database name. Create
-      this first with: CREATE DATABASE unifi'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: InfluxDB Database
-    Required: 'false'
-    Target: UP_INFLUXDB_DB
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 15s|30s|45s|1m|90s|2m|3m|4m|5m
-    Description: 'Container Variable: UP_INFLUXDB_INTERVAL - Polling interval for
-      saving metrics into InfluxDB. 30s-90s recommend.'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: InfluxDB Interval
-    Required: 'false'
-    Target: UP_INFLUXDB_INTERVAL
-    Type: Variable
-  value: 30s
-- '@attributes':
-    Default: false|true
-    Description: 'Container Variable: UP_INFLUXDB_DISABLE - Disable InfluxDB polling.
-      Set this true if you only use Prometheus.'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: InfluxDB Disabled
-    Required: 'false'
-    Target: UP_INFLUXDB_DISABLE
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 0.0.0.0:9031
-    Description: 'Container Value: UP_PROMETHEUS_HTTP_LISTEN - IP and port poller
-      listens on for HTTP Prometheus scrapes. Must be in 0.0.0.0:port format.'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: Prometheus Listener
-    Required: 'false'
-    Target: UP_PROMETHEUS_HTTP_LISTEN
-    Type: Variable
-  value: 0.0.0.0:9031
-- '@attributes':
-    Default: false|true
-    Description: 'Container Variable: UP_PROMETHEUS_DISABLE - Disable Prometheus listener.
-      Set true if you only use InfluxDB.'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: Prometheus Disabled
-    Required: 'false'
-    Target: UP_PROMETHEUS_DISABLE
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path: {}
+  Port: {}
+  Variable:
+    InfluxDB Database:
+      Default: unifi
+      Description: 'Container Variable: UP_INFLUXDB_DB - InfluxDB database name. Create
+        this first with: CREATE DATABASE unifi'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: InfluxDB Database
+      Required: 'false'
+      Target: UP_INFLUXDB_DB
+      Type: Variable
+      value: ''
+    InfluxDB Disabled:
+      Default: false|true
+      Description: 'Container Variable: UP_INFLUXDB_DISABLE - Disable InfluxDB polling.
+        Set this true if you only use Prometheus.'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: InfluxDB Disabled
+      Required: 'false'
+      Target: UP_INFLUXDB_DISABLE
+      Type: Variable
+      value: ''
+    InfluxDB Host URL:
+      Default: http://unraid.ip:8086
+      Description: 'Container Variable: UP_INFLUXDB_URL - URL for InfluxDB. Not important
+        if using Prometheus only.'
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: InfluxDB Host URL
+      Required: 'false'
+      Target: UP_INFLUXDB_URL
+      Type: Variable
+      value: ''
+    InfluxDB Interval:
+      Default: 15s|30s|45s|1m|90s|2m|3m|4m|5m
+      Description: 'Container Variable: UP_INFLUXDB_INTERVAL - Polling interval for
+        saving metrics into InfluxDB. 30s-90s recommend.'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: InfluxDB Interval
+      Required: 'false'
+      Target: UP_INFLUXDB_INTERVAL
+      Type: Variable
+      value: 30s
+    InfluxDB Password:
+      Default: ''
+      Description: 'Container Variable: UP_INFLUXDB_PASS - Password for InfluxDB (if
+        required)'
+      Display: advanced-hide
+      Mask: 'true'
+      Mode: ''
+      Name: InfluxDB Password
+      Required: 'false'
+      Target: UP_INFLUXDB_PASS
+      Type: Variable
+      value: ''
+    InfluxDB Username:
+      Default: unifipoller
+      Description: 'Container Variable: UP_INFLUXDB_USER - Username for InfluxDB.
+        Usually unimportant because InfluxDB has no auth by default.'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: InfluxDB Username
+      Required: 'false'
+      Target: UP_INFLUXDB_USER
+      Type: Variable
+      value: unifipoller
+    Poller Debug Mode:
+      Default: false|true
+      Description: 'Container Variable: UP_POLLER_DEBUG - Setting true includes more
+        log output.'
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: Poller Debug Mode
+      Required: 'false'
+      Target: UP_POLLER_DEBUG
+      Type: Variable
+      value: ''
+    Poller Quiet Mode:
+      Default: false|true
+      Description: 'Container Variable: UP_POLLER_QUIET - Setting true disables most
+        log output.'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: Poller Quiet Mode
+      Required: 'false'
+      Target: UP_POLLER_QUIET
+      Type: Variable
+      value: ''
+    Prometheus Disabled:
+      Default: false|true
+      Description: 'Container Variable: UP_PROMETHEUS_DISABLE - Disable Prometheus
+        listener. Set true if you only use InfluxDB.'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: Prometheus Disabled
+      Required: 'false'
+      Target: UP_PROMETHEUS_DISABLE
+      Type: Variable
+      value: ''
+    Prometheus Listener:
+      Default: 0.0.0.0:9031
+      Description: 'Container Value: UP_PROMETHEUS_HTTP_LISTEN - IP and port poller
+        listens on for HTTP Prometheus scrapes. Must be in 0.0.0.0:port format.'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: Prometheus Listener
+      Required: 'false'
+      Target: UP_PROMETHEUS_HTTP_LISTEN
+      Type: Variable
+      value: 0.0.0.0:9031
+    UniFi 1st Controller Host URL:
+      Default: https://unraid.ip:8443
+      Description: 'Container Variable: UP_UNIFI_CONTROLLER_0_URL - URL for UniFi
+        controller.'
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: UniFi 1st Controller Host URL
+      Required: 'true'
+      Target: UP_UNIFI_CONTROLLER_0_URL
+      Type: Variable
+      value: ''
+    UniFi 1st Controller Password:
+      Default: ''
+      Description: 'Container Variable: UP_UNIFI_CONTROLLER_0_PASS - Password for
+        UniFi Controller.'
+      Display: always-hide
+      Mask: 'true'
+      Mode: ''
+      Name: UniFi 1st Controller Password
+      Required: 'true'
+      Target: UP_UNIFI_CONTROLLER_0_PASS
+      Type: Variable
+      value: ''
+    UniFi 1st Controller Poll Sites:
+      Default: all
+      Description: 'Container Variable: UP_UNIFI_CONTROLLER_0_SITES_0 - List of sites
+        to poll on controller, comma separated. Use cryptic ID values here; set to
+        ''all'' for all sites.'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: UniFi 1st Controller Poll Sites
+      Required: 'false'
+      Target: UP_UNIFI_CONTROLLER_0_SITES_0
+      Type: Variable
+      value: all
+    UniFi 1st Controller Save DPI:
+      Default: false|true
+      Description: 'Container Variable: UP_UNIFI_CONTROLLER_0_SAVE_DPI - Poll and
+        save deep packet inspection data. This is a lot of data, and it must be enabled
+        on the controller.'
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: UniFi 1st Controller Save DPI
+      Required: 'false'
+      Target: UP_UNIFI_CONTROLLER_0_SAVE_DPI
+      Type: Variable
+      value: ''
+    UniFi 1st Controller Save IDS:
+      Default: false|true
+      Description: 'Container Variable: UP_UNIFI_CONTROLLER_0_SAVE_IDS - Save intrusion
+        detection data (InfluxDB only). This data does not contain graphable metrics.'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: UniFi 1st Controller Save IDS
+      Required: 'false'
+      Target: UP_UNIFI_CONTROLLER_0_SAVE_IDS
+      Type: Variable
+      value: ''
+    UniFi 1st Controller Save Sites:
+      Default: true|false
+      Description: 'Container Value: UP_UNIFI_CONTROLLER_0_SAVE_SITES - Set this to
+        ''false'' to save space and resources in InfluxDB. This data powers the Network
+        Sites dashboard.'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: UniFi 1st Controller Save Sites
+      Required: 'false'
+      Target: UP_UNIFI_CONTROLLER_0_SAVE_SITES
+      Type: Variable
+      value: ''
+    UniFi 1st Controller Username:
+      Default: unifipoller
+      Description: 'Container Variable: UP_UNIFI_CONTROLLER_0_USER - Username for
+        UniFi Controller.'
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: UniFi 1st Controller Username
+      Required: 'true'
+      Target: UP_UNIFI_CONTROLLER_0_USER
+      Type: Variable
+      value: unifipoller
+    UniFi 1st Controller Verify SSL:
+      Default: false|true
+      Description: 'Container Variable: UP_UNIFI_CONTROLLER_0_VERIFY_SSL - Enable
+        this if you have a valid SSL cert on your controller.'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: UniFi 1st Controller Verify SSL
+      Required: 'false'
+      Target: UP_UNIFI_CONTROLLER_0_VERIFY_SSL
+      Type: Variable
+      value: ''
 FirstSeen: 1567102098
 Icon: https://raw.githubusercontent.com/wiki/unifi-poller/unifi-poller/images/unifi-poller-logo.png
 LastUpdate: 1623350339

@@ -1,28 +1,33 @@
 CategoryList:
 - Security
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /data'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: dependency-track-data
-    Required: 'true'
-    Target: /data
-    Type: Path
-  value: /mnt/user/appdata/dependency-track-api
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 8080'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: API Port
-    Required: 'true'
-    Target: '8080'
-    Type: Port
-  value: '8081'
+  Device: {}
+  Label: {}
+  Path:
+    dependency-track-data:
+      Default: ''
+      Description: 'Container Path: /data'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: dependency-track-data
+      Required: 'true'
+      Target: /data
+      Type: Path
+      value: /mnt/user/appdata/dependency-track-api
+  Port:
+    API Port:
+      Default: ''
+      Description: 'Container Port: 8080'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: API Port
+      Required: 'true'
+      Target: '8080'
+      Type: Port
+      value: '8081'
+  Variable: {}
 FirstSeen: 1628453006
 Icon: https://github.com/DependencyTrack/dependency-track/raw/master/docs/touch-icon.png
 LastUpdate: 1646632520

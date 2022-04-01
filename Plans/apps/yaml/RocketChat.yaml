@@ -1,50 +1,55 @@
 CategoryList:
 - Network-Messenger
 Config:
-- '@attributes':
-    Default: /mnt/user/appdata/rocketchat
-    Description: 'Container Path: /app/uploads'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Upload Directory Path
-    Required: 'true'
-    Target: /app/uploads
-    Type: Path
-  value: /mnt/user/appdata/rocketchat
-- '@attributes':
-    Default: '3000'
-    Description: 'Container Port: 3000'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Web Frontend
-    Required: 'true'
-    Target: '3000'
-    Type: Port
-  value: '3000'
-- '@attributes':
-    Default: mongodb://mongo:27017/rocketchat
-    Description: 'Container Variable: MONGO_URL'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Mono DB
-    Required: 'true'
-    Target: MONGO_URL
-    Type: Variable
-  value: mongodb://mongo:27017/rocketchat
-- '@attributes':
-    Default: http://localhost:3000
-    Description: 'Container Variable: ROOT_URL'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Rocket.Chat URL
-    Required: 'true'
-    Target: ROOT_URL
-    Type: Variable
-  value: http://localhost:3000
+  Device: {}
+  Label: {}
+  Path:
+    Upload Directory Path:
+      Default: /mnt/user/appdata/rocketchat
+      Description: 'Container Path: /app/uploads'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Upload Directory Path
+      Required: 'true'
+      Target: /app/uploads
+      Type: Path
+      value: /mnt/user/appdata/rocketchat
+  Port:
+    Web Frontend:
+      Default: '3000'
+      Description: 'Container Port: 3000'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Web Frontend
+      Required: 'true'
+      Target: '3000'
+      Type: Port
+      value: '3000'
+  Variable:
+    Mono DB:
+      Default: mongodb://mongo:27017/rocketchat
+      Description: 'Container Variable: MONGO_URL'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Mono DB
+      Required: 'true'
+      Target: MONGO_URL
+      Type: Variable
+      value: mongodb://mongo:27017/rocketchat
+    Rocket.Chat URL:
+      Default: http://localhost:3000
+      Description: 'Container Variable: ROOT_URL'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Rocket.Chat URL
+      Required: 'true'
+      Target: ROOT_URL
+      Type: Variable
+      value: http://localhost:3000
 FirstSeen: 1
 Icon: https://raw.githubusercontent.com/fanningert/unraid-docker-templates/master/fanningert/icons/rocketchat.png
 LastUpdate: 1647595419

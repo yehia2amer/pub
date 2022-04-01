@@ -1,39 +1,44 @@
 CategoryList:
 - Productivity
 Config:
-- '@attributes':
-    Default: '9090'
-    Description: 'Container Port: 9090'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Port
-    Required: 'false'
-    Target: '9090'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: /mnt/user/appdata/prometheus/data
-    Description: Appdata directory
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: Appdata
-    Required: 'true'
-    Target: /prometheus
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: /mnt/user/appdata/prometheus/etc
-    Description: Config directory
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: Config
-    Required: 'true'
-    Target: /etc/prometheus/
-    Type: Path
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Appdata:
+      Default: /mnt/user/appdata/prometheus/data
+      Description: Appdata directory
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: Appdata
+      Required: 'true'
+      Target: /prometheus
+      Type: Path
+      value: ''
+    Config:
+      Default: /mnt/user/appdata/prometheus/etc
+      Description: Config directory
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: Config
+      Required: 'true'
+      Target: /etc/prometheus/
+      Type: Path
+      value: ''
+  Port:
+    Port:
+      Default: '9090'
+      Description: 'Container Port: 9090'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Port
+      Required: 'false'
+      Target: '9090'
+      Type: Port
+      value: ''
+  Variable: {}
 FirstSeen: 1569355624
 Icon: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/prometheus.png
 LastUpdate: 1647302959

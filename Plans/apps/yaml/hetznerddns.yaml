@@ -2,40 +2,45 @@ Beta: 'true'
 CategoryList:
 - Network-DNS
 Config:
-- '@attributes':
-    Default: ''
-    Description: The DNS zone that DDNS updates should be applied to.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Zone Name
-    Required: 'true'
-    Target: ZONE_NAME
-    Type: Variable
-  value: example.com
-- '@attributes':
-    Default: ''
-    Description: Your Hetzner  API token.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: API Token
-    Required: 'true'
-    Target: API_TOKEN
-    Type: Variable
-  value: my-secret-api-token
-- '@attributes':
-    Default: ''
-    Description: The record type of your zone. If your zone uses an IPv4 address use
-      A. Use AAAA if it uses an IPv6 address.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Record Type
-    Required: 'true'
-    Target: RECORD_TYPE
-    Type: Variable
-  value: A
+  Device: {}
+  Label: {}
+  Path: {}
+  Port: {}
+  Variable:
+    API Token:
+      Default: ''
+      Description: Your Hetzner  API token.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: API Token
+      Required: 'true'
+      Target: API_TOKEN
+      Type: Variable
+      value: my-secret-api-token
+    Record Type:
+      Default: ''
+      Description: The record type of your zone. If your zone uses an IPv4 address
+        use A. Use AAAA if it uses an IPv6 address.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Record Type
+      Required: 'true'
+      Target: RECORD_TYPE
+      Type: Variable
+      value: A
+    Zone Name:
+      Default: ''
+      Description: The DNS zone that DDNS updates should be applied to.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Zone Name
+      Required: 'true'
+      Target: ZONE_NAME
+      Type: Variable
+      value: example.com
 FirstSeen: 1633629830
 Icon: https://raw.githubusercontent.com/kutzilla/unraid-templates/master/images/hetzner-ddns.png
 LastUpdate: 1635870273

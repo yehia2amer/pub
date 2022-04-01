@@ -1,37 +1,42 @@
 Config:
-- '@attributes':
-    Default: /mnt/user/appdata/dailynotes
-    Description: 'Container Path: /app/config'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: App Config
-    Required: 'true'
-    Target: /app/config
-    Type: Path
-  value: /mnt/user/appdata/dailynotes
-- '@attributes':
-    Default: '5000'
-    Description: 'Container Port: 5000'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Container Port
-    Required: 'true'
-    Target: '5000'
-    Type: Port
-  value: '5000'
-- '@attributes':
-    Default: ''
-    Description: Disable signup form? Anything in this variable will prevent signups.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Prevent Signups?
-    Required: 'false'
-    Target: PREVENT_SIGNUPS
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    App Config:
+      Default: /mnt/user/appdata/dailynotes
+      Description: 'Container Path: /app/config'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: App Config
+      Required: 'true'
+      Target: /app/config
+      Type: Path
+      value: /mnt/user/appdata/dailynotes
+  Port:
+    Container Port:
+      Default: '5000'
+      Description: 'Container Port: 5000'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Container Port
+      Required: 'true'
+      Target: '5000'
+      Type: Port
+      value: '5000'
+  Variable:
+    Prevent Signups?:
+      Default: ''
+      Description: Disable signup form? Anything in this variable will prevent signups.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Prevent Signups?
+      Required: 'false'
+      Target: PREVENT_SIGNUPS
+      Type: Variable
+      value: ''
 FirstSeen: 1633550623
 Icon: https://i.imgur.com/AI8bd73.png
 LastUpdate: 1644387440

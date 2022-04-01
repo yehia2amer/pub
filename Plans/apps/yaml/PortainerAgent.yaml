@@ -2,39 +2,44 @@ CategoryList:
 - Tools-Utilities
 - Network-Management
 Config:
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: SSH Tunnel
-    Required: 'false'
-    Target: '9001'
-    Type: Port
-  value: '9001'
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Docker Socket
-    Required: 'true'
-    Target: /var/run/docker.sock
-    Type: Path
-  value: /var/run/docker.sock
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Docker Volumes
-    Required: 'true'
-    Target: /var/lib/docker/volumes
-    Type: Path
-  value: /var/lib/docker/volumes
+  Device: {}
+  Label: {}
+  Path:
+    Docker Socket:
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Docker Socket
+      Required: 'true'
+      Target: /var/run/docker.sock
+      Type: Path
+      value: /var/run/docker.sock
+    Docker Volumes:
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Docker Volumes
+      Required: 'true'
+      Target: /var/lib/docker/volumes
+      Type: Path
+      value: /var/lib/docker/volumes
+  Port:
+    SSH Tunnel:
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: SSH Tunnel
+      Required: 'false'
+      Target: '9001'
+      Type: Port
+      value: '9001'
+  Variable: {}
 FirstSeen: 1638824673
 Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/portainer-ce_200x200.png
 LastUpdate: 1646349598

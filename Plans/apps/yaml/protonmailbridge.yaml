@@ -1,37 +1,42 @@
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 25'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Host Port 1
-    Required: 'false'
-    Target: '25'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 143'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Host Port 2
-    Required: 'false'
-    Target: '143'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: /mnt/user/appdata/protonmail-bridge/
-    Description: 'Container Path: /root'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: appdata
-    Required: 'true'
-    Target: /root
-    Type: Path
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    appdata:
+      Default: /mnt/user/appdata/protonmail-bridge/
+      Description: 'Container Path: /root'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: appdata
+      Required: 'true'
+      Target: /root
+      Type: Path
+      value: ''
+  Port:
+    Host Port 1:
+      Default: ''
+      Description: 'Container Port: 25'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Host Port 1
+      Required: 'false'
+      Target: '25'
+      Type: Port
+      value: ''
+    Host Port 2:
+      Default: ''
+      Description: 'Container Port: 143'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Host Port 2
+      Required: 'false'
+      Target: '143'
+      Type: Port
+      value: ''
+  Variable: {}
 FirstSeen: 1609715259
 Icon: https://github.com/protonmail.png
 LastUpdate: 1648686345

@@ -1,39 +1,44 @@
 CategoryList:
 - HomeAutomation
 Config:
-- '@attributes':
-    Default: /mnt/user/appdata/home-assistant-configurator/
-    Description: 'Container Path: /config'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: config
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: /mnt/user/appdata/home-assistant/
-    Description: "Your home assistant configuration folder\r\n"
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: hass-config
-    Required: 'false'
-    Target: /hass-config
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: '3218'
-    Description: 'Container Port: 3218'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: '3218'
-    Required: 'false'
-    Target: '3218'
-    Type: Port
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    config:
+      Default: /mnt/user/appdata/home-assistant-configurator/
+      Description: 'Container Path: /config'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: config
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: ''
+    hass-config:
+      Default: /mnt/user/appdata/home-assistant/
+      Description: "Your home assistant configuration folder\r\n"
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: hass-config
+      Required: 'false'
+      Target: /hass-config
+      Type: Path
+      value: ''
+  Port:
+    '3218':
+      Default: '3218'
+      Description: 'Container Port: 3218'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: '3218'
+      Required: 'false'
+      Target: '3218'
+      Type: Port
+      value: ''
+  Variable: {}
 FirstSeen: 1549062642
 Icon: https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Home_Assistant_Logo.svg/2000px-Home_Assistant_Logo.svg.png
 LastUpdate: 1621966475

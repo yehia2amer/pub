@@ -4,28 +4,33 @@ CategoryList:
 - Network-Web
 - Network-Management
 Config:
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI (HTTPS)
-    Required: 'false'
-    Target: '443'
-    Type: Port
-  value: '8003'
-- '@attributes':
-    Default: ''
-    Description: 'Place here your files: ''dh.pem'', ''cert.pem'' and ''key.pem''.'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Storage (nginx)
-    Required: 'false'
-    Target: /etc/nginx/external/
-    Type: Path
-  value: /mnt/user/appdata/keeweb/
+  Device: {}
+  Label: {}
+  Path:
+    Storage (nginx):
+      Default: ''
+      Description: 'Place here your files: ''dh.pem'', ''cert.pem'' and ''key.pem''.'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Storage (nginx)
+      Required: 'false'
+      Target: /etc/nginx/external/
+      Type: Path
+      value: /mnt/user/appdata/keeweb/
+  Port:
+    WebUI (HTTPS):
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI (HTTPS)
+      Required: 'false'
+      Target: '443'
+      Type: Port
+      value: '8003'
+  Variable: {}
 FirstSeen: 1643468587
 Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/keeweb.png
 LastUpdate: 1626619985

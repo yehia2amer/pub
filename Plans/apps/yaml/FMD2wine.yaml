@@ -3,116 +3,121 @@ CategoryList:
 - Downloaders
 - MediaApp-Books
 Config:
-- '@attributes':
-    Default: '6080'
-    Description: 'Container Port: 6080'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'true'
-    Target: '6080'
-    Type: Port
-  value: '6080'
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /downloads'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Download Directory
-    Required: 'true'
-    Target: /downloads
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: /mnt/user/appdata/fmd2-wine/lua
-    Description: 'Container Path: /app/FMD2/lua'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: App LUA Modules Path
-    Required: 'true'
-    Target: /app/FMD2/lua
-    Type: Path
-  value: /mnt/user/appdata/fmd2-wine/lua
-- '@attributes':
-    Default: /mnt/user/appdata/fmd2-wine/data
-    Description: 'Container Path: /app/FMD2/data'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: App FMD2 Internal DB
-    Required: 'true'
-    Target: /app/FMD2/data
-    Type: Path
-  value: /mnt/user/appdata/fmd2-wine/data
-- '@attributes':
-    Default: /mnt/user/appdata/fmd2-wine/wine
-    Description: 'Container Path: /config/.wine'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: App Wine Config
-    Required: 'true'
-    Target: /config/.wine
-    Type: Path
-  value: /mnt/user/appdata/fmd2-wine/wine
-- '@attributes':
-    Default: /mnt/user/appdata/fmd2-wine/userdata
-    Description: 'Container Path: /app/FMD2/userdata'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: App userdata
-    Required: 'true'
-    Target: /app/FMD2/userdata
-    Type: Path
-  value: /mnt/user/appdata/fmd2-wine/userdata
-- '@attributes':
-    Default: '99'
-    Description: 'Container Variable: PUID'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: PUID
-    Required: 'true'
-    Target: PUID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: '100'
-    Description: 'Container Variable: PGID'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: PGID
-    Required: 'true'
-    Target: PGID
-    Type: Variable
-  value: '100'
-- '@attributes':
-    Default: '002'
-    Description: 'Container Variable: UMASK'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: UMASK
-    Required: 'true'
-    Target: UMASK
-    Type: Variable
-  value: '002'
-- '@attributes':
-    Default: ''
-    Description: Set your Time Zone here (e.g. Europe/Berlin)
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: TZ
-    Required: 'false'
-    Target: TZ
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    App FMD2 Internal DB:
+      Default: /mnt/user/appdata/fmd2-wine/data
+      Description: 'Container Path: /app/FMD2/data'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: App FMD2 Internal DB
+      Required: 'true'
+      Target: /app/FMD2/data
+      Type: Path
+      value: /mnt/user/appdata/fmd2-wine/data
+    App LUA Modules Path:
+      Default: /mnt/user/appdata/fmd2-wine/lua
+      Description: 'Container Path: /app/FMD2/lua'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: App LUA Modules Path
+      Required: 'true'
+      Target: /app/FMD2/lua
+      Type: Path
+      value: /mnt/user/appdata/fmd2-wine/lua
+    App Wine Config:
+      Default: /mnt/user/appdata/fmd2-wine/wine
+      Description: 'Container Path: /config/.wine'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: App Wine Config
+      Required: 'true'
+      Target: /config/.wine
+      Type: Path
+      value: /mnt/user/appdata/fmd2-wine/wine
+    App userdata:
+      Default: /mnt/user/appdata/fmd2-wine/userdata
+      Description: 'Container Path: /app/FMD2/userdata'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: App userdata
+      Required: 'true'
+      Target: /app/FMD2/userdata
+      Type: Path
+      value: /mnt/user/appdata/fmd2-wine/userdata
+    Download Directory:
+      Default: ''
+      Description: 'Container Path: /downloads'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Download Directory
+      Required: 'true'
+      Target: /downloads
+      Type: Path
+      value: ''
+  Port:
+    WebUI:
+      Default: '6080'
+      Description: 'Container Port: 6080'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'true'
+      Target: '6080'
+      Type: Port
+      value: '6080'
+  Variable:
+    PGID:
+      Default: '100'
+      Description: 'Container Variable: PGID'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PGID
+      Required: 'true'
+      Target: PGID
+      Type: Variable
+      value: '100'
+    PUID:
+      Default: '99'
+      Description: 'Container Variable: PUID'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PUID
+      Required: 'true'
+      Target: PUID
+      Type: Variable
+      value: '99'
+    TZ:
+      Default: ''
+      Description: Set your Time Zone here (e.g. Europe/Berlin)
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: TZ
+      Required: 'false'
+      Target: TZ
+      Type: Variable
+      value: ''
+    UMASK:
+      Default: '002'
+      Description: 'Container Variable: UMASK'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: UMASK
+      Required: 'true'
+      Target: UMASK
+      Type: Variable
+      value: '002'
 ExtraParams: --restart unless-stopped
 FirstSeen: 1648634605
 Icon: https://github.com/GlassedSilver/unRAID-CAs/raw/master/FMD2-wine/fmd2_logo.png

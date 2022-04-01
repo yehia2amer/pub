@@ -6,39 +6,44 @@ Branch:
 - Tag: dev
   TagDescription: Latest unstable dev release of Petio
 Config:
-- '@attributes':
-    Default: /mnt/user/appdata/petio/config
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Config Path
-    Required: 'true'
-    Target: /app/api/config
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: /mnt/user/appdata/petio/logs
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Logs Path
-    Required: 'true'
-    Target: /app/logs
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: '7777'
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: WebUI Port
-    Required: 'false'
-    Target: '7777'
-    Type: Port
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Config Path:
+      Default: /mnt/user/appdata/petio/config
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Config Path
+      Required: 'true'
+      Target: /app/api/config
+      Type: Path
+      value: ''
+    Logs Path:
+      Default: /mnt/user/appdata/petio/logs
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Logs Path
+      Required: 'true'
+      Target: /app/logs
+      Type: Path
+      value: ''
+  Port:
+    WebUI Port:
+      Default: '7777'
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: WebUI Port
+      Required: 'false'
+      Target: '7777'
+      Type: Port
+      value: ''
+  Variable: {}
 FirstSeen: 1616197385
 Icon: https://github.com/PotentialIngenuity/petio-unraid/raw/master/petio.png
 LastUpdateScan: 1647381815

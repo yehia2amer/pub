@@ -3,72 +3,77 @@ CategoryList:
 - Downloaders
 - MediaApp-Video
 Config:
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Network
-    Required: 'true'
-    Target: '5055'
-    Type: Port
-  value: '5055'
-- '@attributes':
-    Default: /mnt/user/appdata/Jellyseerr
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Appdata
-    Required: 'true'
-    Target: /app/config/
-    Type: Path
-  value: /mnt/user/appdata/Jellyseerr
-- '@attributes':
-    Default: debug
-    Description: Log verbosity.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Log
-    Required: 'false'
-    Target: LOG_LEVEL
-    Type: Variable
-  value: info
-- '@attributes':
-    Default: '99'
-    Description: ''
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: PUID
-    Required: 'true'
-    Target: PUID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: '100'
-    Description: ''
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: PGID
-    Required: 'true'
-    Target: PGID
-    Type: Variable
-  value: '100'
-- '@attributes':
-    Default: '022'
-    Description: ''
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: UMASK
-    Required: 'false'
-    Target: UMASK
-    Type: Variable
-  value: '022'
+  Device: {}
+  Label: {}
+  Path:
+    Appdata:
+      Default: /mnt/user/appdata/Jellyseerr
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Appdata
+      Required: 'true'
+      Target: /app/config/
+      Type: Path
+      value: /mnt/user/appdata/Jellyseerr
+  Port:
+    Network:
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Network
+      Required: 'true'
+      Target: '5055'
+      Type: Port
+      value: '5055'
+  Variable:
+    Log:
+      Default: debug
+      Description: Log verbosity.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Log
+      Required: 'false'
+      Target: LOG_LEVEL
+      Type: Variable
+      value: info
+    PGID:
+      Default: '100'
+      Description: ''
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: PGID
+      Required: 'true'
+      Target: PGID
+      Type: Variable
+      value: '100'
+    PUID:
+      Default: '99'
+      Description: ''
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: PUID
+      Required: 'true'
+      Target: PUID
+      Type: Variable
+      value: '99'
+    UMASK:
+      Default: '022'
+      Description: ''
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: UMASK
+      Required: 'false'
+      Target: UMASK
+      Type: Variable
+      value: '022'
 Discord: https://discord.gg/VpVnZ92yQK
 DonateLink: https://www.buymeacoffee.com/fallen.bagel
 DonateText: Like this project? Buy me a coffee!

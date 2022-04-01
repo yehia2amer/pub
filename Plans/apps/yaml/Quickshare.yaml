@@ -4,50 +4,55 @@ CategoryList:
 - Tools-Utilities
 - Network-FTP
 Config:
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'false'
-    Target: '8686'
-    Type: Port
-  value: '8686'
-- '@attributes':
-    Default: ''
-    Description: This is the location for all the data.
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Storage (data)
-    Required: 'false'
-    Target: /quickshare/root
-    Type: Path
-  value: /mnt/user/appdata/quickshare
-- '@attributes':
-    Default: ''
-    Description: Default user name.
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: DEFAULTADMIN
-    Required: 'false'
-    Target: DEFAULTADMIN
-    Type: Variable
-  value: admin
-- '@attributes':
-    Default: ''
-    Description: Default user password.
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: DEFAULTADMINPWD
-    Required: 'false'
-    Target: DEFAULTADMINPWD
-    Type: Variable
-  value: '1234'
+  Device: {}
+  Label: {}
+  Path:
+    Storage (data):
+      Default: ''
+      Description: This is the location for all the data.
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Storage (data)
+      Required: 'false'
+      Target: /quickshare/root
+      Type: Path
+      value: /mnt/user/appdata/quickshare
+  Port:
+    WebUI:
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'false'
+      Target: '8686'
+      Type: Port
+      value: '8686'
+  Variable:
+    DEFAULTADMIN:
+      Default: ''
+      Description: Default user name.
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: DEFAULTADMIN
+      Required: 'false'
+      Target: DEFAULTADMIN
+      Type: Variable
+      value: admin
+    DEFAULTADMINPWD:
+      Default: ''
+      Description: Default user password.
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: DEFAULTADMINPWD
+      Required: 'false'
+      Target: DEFAULTADMINPWD
+      Type: Variable
+      value: '1234'
 FirstSeen: 1644627798
 Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/quickshare.png
 LastUpdate: 1646990894

@@ -2,119 +2,126 @@ CategoryList:
 - Productivity
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: '8084'
-    Description: '(string) Defaults to 8080 - Port where the service will listen. '
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: MB_PORT
-    Required: 'true'
-    Target: '8080'
-    Type: Port
-  value: '8084'
-- '@attributes':
-    Default: 0.0.0.0
-    Description: '(string) Defaults to 0.0.0.0 - Address where the service will listen. '
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: MB_ADDRESS
-    Required: 'false'
-    Target: MB_ADDRESS
-    Type: Variable
-  value: 0.0.0.0
-- '@attributes':
-    Default: ''
-    Description: "Container Variable: MB_KEY\r\nGet one here https://machinebox.io/login"
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: API_KEY
-    Required: 'true'
-    Target: MB_KEY
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: '(string) The endpoint for Facebox '
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: MB_VIDEOBOX_FACEBOX_ADDR
-    Required: 'false'
-    Target: MB_VIDEOBOX_FACEBOX_ADDR
-    Type: Variable
-  value: http://192.168.2.254:8085
-- '@attributes':
-    Default: ''
-    Description: 'string) The endpoint for Tagbox '
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: MB_VIDEOBOX_TAGBOX_ADDR
-    Required: 'false'
-    Target: MB_VIDEOBOX_TAGBOX_ADDR
-    Type: Variable
-  value: http://192.168.2.254:8082
-- '@attributes':
-    Default: ''
-    Description: '(string) The endpoint for Nudebox '
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: MB_VIDEOBOX_NUDEBOX_ADDR
-    Required: 'false'
-    Target: MB_VIDEOBOX_NUDEBOX_ADDR
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 'false'
-    Description: '(bool) Defaults to false - If true will turn off CORS support for
-      the box. '
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: MB_DISABLE_CORS
-    Required: 'false'
-    Target: MB_DISABLE_CORS
-    Type: Variable
-  value: 'false'
-- '@attributes':
-    Default: ''
-    Description: '(string) The Basic Authentication username and password that every
-      request must use. Recommended for sitautions where the boxes are publicly accessible. '
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: MB_BASICAUTH_USER
-    Required: 'false'
-    Target: MB_BASICAUTH_USER
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: MB_BASICAUTH_PASS'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: MB_BASICAUTH_PASS
-    Required: 'false'
-    Target: MB_BASICAUTH_PASS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 1h
-    Description: 'Defaults to 1h (one hour) - Amount of time to keep the results before
-      automatically deleting them '
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: MB_VIDEOBOX_RESULT_DURATION
-    Required: 'false'
-    Target: MB_VIDEOBOX_RESULT_DURATION
-    Type: Variable
-  value: 1h
+  Device: {}
+  Label: {}
+  Path: {}
+  Port:
+    MB_PORT:
+      Default: '8084'
+      Description: '(string) Defaults to 8080 - Port where the service will listen. '
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: MB_PORT
+      Required: 'true'
+      Target: '8080'
+      Type: Port
+      value: '8084'
+  Variable:
+    API_KEY:
+      Default: ''
+      Description: "Container Variable: MB_KEY\r\nGet one here https://machinebox.io/login"
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: API_KEY
+      Required: 'true'
+      Target: MB_KEY
+      Type: Variable
+      value: ''
+    MB_ADDRESS:
+      Default: 0.0.0.0
+      Description: '(string) Defaults to 0.0.0.0 - Address where the service will
+        listen. '
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: MB_ADDRESS
+      Required: 'false'
+      Target: MB_ADDRESS
+      Type: Variable
+      value: 0.0.0.0
+    MB_BASICAUTH_PASS:
+      Default: ''
+      Description: 'Container Variable: MB_BASICAUTH_PASS'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: MB_BASICAUTH_PASS
+      Required: 'false'
+      Target: MB_BASICAUTH_PASS
+      Type: Variable
+      value: ''
+    MB_BASICAUTH_USER:
+      Default: ''
+      Description: '(string) The Basic Authentication username and password that every
+        request must use. Recommended for sitautions where the boxes are publicly
+        accessible. '
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: MB_BASICAUTH_USER
+      Required: 'false'
+      Target: MB_BASICAUTH_USER
+      Type: Variable
+      value: ''
+    MB_DISABLE_CORS:
+      Default: 'false'
+      Description: '(bool) Defaults to false - If true will turn off CORS support
+        for the box. '
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: MB_DISABLE_CORS
+      Required: 'false'
+      Target: MB_DISABLE_CORS
+      Type: Variable
+      value: 'false'
+    MB_VIDEOBOX_FACEBOX_ADDR:
+      Default: ''
+      Description: '(string) The endpoint for Facebox '
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: MB_VIDEOBOX_FACEBOX_ADDR
+      Required: 'false'
+      Target: MB_VIDEOBOX_FACEBOX_ADDR
+      Type: Variable
+      value: http://192.168.2.254:8085
+    MB_VIDEOBOX_NUDEBOX_ADDR:
+      Default: ''
+      Description: '(string) The endpoint for Nudebox '
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: MB_VIDEOBOX_NUDEBOX_ADDR
+      Required: 'false'
+      Target: MB_VIDEOBOX_NUDEBOX_ADDR
+      Type: Variable
+      value: ''
+    MB_VIDEOBOX_RESULT_DURATION:
+      Default: 1h
+      Description: 'Defaults to 1h (one hour) - Amount of time to keep the results
+        before automatically deleting them '
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: MB_VIDEOBOX_RESULT_DURATION
+      Required: 'false'
+      Target: MB_VIDEOBOX_RESULT_DURATION
+      Type: Variable
+      value: 1h
+    MB_VIDEOBOX_TAGBOX_ADDR:
+      Default: ''
+      Description: 'string) The endpoint for Tagbox '
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: MB_VIDEOBOX_TAGBOX_ADDR
+      Required: 'false'
+      Target: MB_VIDEOBOX_TAGBOX_ADDR
+      Type: Variable
+      value: http://192.168.2.254:8082
 FirstSeen: 1633917822
 Icon: https://github.com/corgan2222/unraid-templates/raw/main/img/videobox.jpg
 LastUpdate: 1566314575

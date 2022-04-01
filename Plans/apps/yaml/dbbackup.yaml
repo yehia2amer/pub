@@ -1,161 +1,166 @@
 CategoryList:
 - Backup
 Config:
-- '@attributes':
-    Default: ''
-    Description: Database Dump Location
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Backup Location
-    Required: 'false'
-    Target: /backup
-    Type: Path
-  value: /mnt/user/backups/db/
-- '@attributes':
-    Default: ''
-    Description: 'Gzip '
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Key 1
-    Required: 'false'
-    Target: COMPRESSION
-    Type: Variable
-  value: GZ
-- '@attributes':
-    Default: ''
-    Description: couch influx mysql pgsql mongo redis rethink
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Key 2
-    Required: 'false'
-    Target: DB_TYPE
-    Type: Variable
-  value: <Database_Type>
-- '@attributes':
-    Default: ''
-    Description: Database Hostname
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Key 3
-    Required: 'false'
-    Target: DB_HOST
-    Type: Variable
-  value: <DATABASE_IP>
-- '@attributes':
-    Default: ''
-    Description: Database User - use root to backup all MySQL of them.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Key 4
-    Required: 'false'
-    Target: DB_USER
-    Type: Variable
-  value: root
-- '@attributes':
-    Default: ''
-    Description: Database Password
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Key 5
-    Required: 'false'
-    Target: DB_PASS
-    Type: Variable
-  value: <DATABASE_PASSWORD>
-- '@attributes':
-    Default: ''
-    Description: Database Port
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Key 6
-    Required: 'false'
-    Target: DB_PORT
-    Type: Variable
-  value: '3306'
-- '@attributes':
-    Default: ''
-    Description: How often to dump DB Minutes Defaults 1440 = Day
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Key 7
-    Required: 'false'
-    Target: DB_DUMP_FREQ
-    Type: Variable
-  value: '1440'
-- '@attributes':
-    Default: ''
-    Description: What Time to Dump HHMM
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Key 8
-    Required: 'false'
-    Target: DB_DUMP_BEGIN
-    Type: Variable
-  value: '0300'
-- '@attributes':
-    Default: ''
-    Description: Value in minutes to delete old backups. 10080 = One Week. If you
-      want all backup delete this key.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Key 9
-    Required: 'false'
-    Target: DB_CLEANUP_TIME
-    Type: Variable
-  value: '10080'
-- '@attributes':
-    Default: 'TRUE'
-    Description: Multiple cores for compressing
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Key 10
-    Required: 'false'
-    Target: PARALLEL_COMPRESSION
-    Type: Variable
-  value: 'TRUE'
-- '@attributes':
-    Default: 'TRUE'
-    Description: Generate MD5 Sum in Directory.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Key 11
-    Required: 'false'
-    Target: MD5
-    Type: Variable
-  value: 'TRUE'
-- '@attributes':
-    Default: 'FALSE'
-    Description: Seperate DB Backups
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Key 12
-    Required: 'false'
-    Target: SPLIT_DB
-    Type: Variable
-  value: 'FALSE'
-- '@attributes':
-    Default: 'false'
-    Description: DEBUG_MODE
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Key 14
-    Required: 'false'
-    Target: DEBUG_MODE
-    Type: Variable
-  value: 'false'
+  Device: {}
+  Label: {}
+  Path:
+    Backup Location:
+      Default: ''
+      Description: Database Dump Location
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Backup Location
+      Required: 'false'
+      Target: /backup
+      Type: Path
+      value: /mnt/user/backups/db/
+  Port: {}
+  Variable:
+    Key 1:
+      Default: ''
+      Description: 'Gzip '
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Key 1
+      Required: 'false'
+      Target: COMPRESSION
+      Type: Variable
+      value: GZ
+    Key 10:
+      Default: 'TRUE'
+      Description: Multiple cores for compressing
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Key 10
+      Required: 'false'
+      Target: PARALLEL_COMPRESSION
+      Type: Variable
+      value: 'TRUE'
+    Key 11:
+      Default: 'TRUE'
+      Description: Generate MD5 Sum in Directory.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Key 11
+      Required: 'false'
+      Target: MD5
+      Type: Variable
+      value: 'TRUE'
+    Key 12:
+      Default: 'FALSE'
+      Description: Seperate DB Backups
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Key 12
+      Required: 'false'
+      Target: SPLIT_DB
+      Type: Variable
+      value: 'FALSE'
+    Key 14:
+      Default: 'false'
+      Description: DEBUG_MODE
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Key 14
+      Required: 'false'
+      Target: DEBUG_MODE
+      Type: Variable
+      value: 'false'
+    Key 2:
+      Default: ''
+      Description: couch influx mysql pgsql mongo redis rethink
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Key 2
+      Required: 'false'
+      Target: DB_TYPE
+      Type: Variable
+      value: <Database_Type>
+    Key 3:
+      Default: ''
+      Description: Database Hostname
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Key 3
+      Required: 'false'
+      Target: DB_HOST
+      Type: Variable
+      value: <DATABASE_IP>
+    Key 4:
+      Default: ''
+      Description: Database User - use root to backup all MySQL of them.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Key 4
+      Required: 'false'
+      Target: DB_USER
+      Type: Variable
+      value: root
+    Key 5:
+      Default: ''
+      Description: Database Password
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Key 5
+      Required: 'false'
+      Target: DB_PASS
+      Type: Variable
+      value: <DATABASE_PASSWORD>
+    Key 6:
+      Default: ''
+      Description: Database Port
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Key 6
+      Required: 'false'
+      Target: DB_PORT
+      Type: Variable
+      value: '3306'
+    Key 7:
+      Default: ''
+      Description: How often to dump DB Minutes Defaults 1440 = Day
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Key 7
+      Required: 'false'
+      Target: DB_DUMP_FREQ
+      Type: Variable
+      value: '1440'
+    Key 8:
+      Default: ''
+      Description: What Time to Dump HHMM
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Key 8
+      Required: 'false'
+      Target: DB_DUMP_BEGIN
+      Type: Variable
+      value: '0300'
+    Key 9:
+      Default: ''
+      Description: Value in minutes to delete old backups. 10080 = One Week. If you
+        want all backup delete this key.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Key 9
+      Required: 'false'
+      Target: DB_CLEANUP_TIME
+      Type: Variable
+      value: '10080'
 FirstSeen: 1583622406
 Icon: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/db-backup.png
 LastUpdate: 1648566819

@@ -1,59 +1,64 @@
 Config:
-- '@attributes':
-    Default: '8080'
-    Description: 'Container Port: 8080'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Webinterface
-    Required: 'true'
-    Target: '8080'
-    Type: Port
-  value: '8080'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: USER'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: MyJDownloader Username
-    Required: 'false'
-    Target: USER
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: PASS'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: MyJDownloader Password
-    Required: 'false'
-    Target: PASS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: DEVICE'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: MyJDownloader Device
-    Required: 'false'
-    Target: DEVICE
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /config'
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: /config
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: /mnt/user/appdata/myjd-api
+  Device: {}
+  Label: {}
+  Path:
+    /config:
+      Default: ''
+      Description: 'Container Path: /config'
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: /config
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: /mnt/user/appdata/myjd-api
+  Port:
+    Webinterface:
+      Default: '8080'
+      Description: 'Container Port: 8080'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Webinterface
+      Required: 'true'
+      Target: '8080'
+      Type: Port
+      value: '8080'
+  Variable:
+    MyJDownloader Device:
+      Default: ''
+      Description: 'Container Variable: DEVICE'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: MyJDownloader Device
+      Required: 'false'
+      Target: DEVICE
+      Type: Variable
+      value: ''
+    MyJDownloader Password:
+      Default: ''
+      Description: 'Container Variable: PASS'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: MyJDownloader Password
+      Required: 'false'
+      Target: PASS
+      Type: Variable
+      value: ''
+    MyJDownloader Username:
+      Default: ''
+      Description: 'Container Variable: USER'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: MyJDownloader Username
+      Required: 'false'
+      Target: USER
+      Type: Variable
+      value: ''
 DonateLink: https://github.com/sponsors/rix1337
 DonateText: Sponsor me!
 FirstSeen: 1561666075

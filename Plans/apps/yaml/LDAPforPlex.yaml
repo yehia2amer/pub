@@ -1,50 +1,55 @@
 CategoryList:
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: TOKEN'
-    Display: always
-    Mask: 'true'
-    Mode: ''
-    Name: Plex Token
-    Required: 'true'
-    Target: TOKEN
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: MACHINEID'
-    Display: always
-    Mask: 'true'
-    Mode: ''
-    Name: Plex machine identifier
-    Required: 'true'
-    Target: MACHINEID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: SERVERNAME'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Plex servername
-    Required: 'true'
-    Target: SERVERNAME
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '2389'
-    Description: 'Container Port: 2389'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: LDAP port
-    Required: 'false'
-    Target: '2389'
-    Type: Port
-  value: ''
+  Device: {}
+  Label: {}
+  Path: {}
+  Port:
+    LDAP port:
+      Default: '2389'
+      Description: 'Container Port: 2389'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: LDAP port
+      Required: 'false'
+      Target: '2389'
+      Type: Port
+      value: ''
+  Variable:
+    Plex Token:
+      Default: ''
+      Description: 'Container Variable: TOKEN'
+      Display: always
+      Mask: 'true'
+      Mode: ''
+      Name: Plex Token
+      Required: 'true'
+      Target: TOKEN
+      Type: Variable
+      value: ''
+    Plex machine identifier:
+      Default: ''
+      Description: 'Container Variable: MACHINEID'
+      Display: always
+      Mask: 'true'
+      Mode: ''
+      Name: Plex machine identifier
+      Required: 'true'
+      Target: MACHINEID
+      Type: Variable
+      value: ''
+    Plex servername:
+      Default: ''
+      Description: 'Container Variable: SERVERNAME'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Plex servername
+      Required: 'true'
+      Target: SERVERNAME
+      Type: Variable
+      value: ''
 FirstSeen: 1563307684
 Icon: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/plex_ldap.png
 LastUpdate: 1610702045

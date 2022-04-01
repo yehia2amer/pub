@@ -5,136 +5,141 @@ CategoryList:
 - Productivity
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: '5800'
-    Description: Port used to access the application's GUI via the web interface.
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Http VNC GUI
-    Required: 'true'
-    Target: '5800'
-    Type: Port
-  value: '5800'
-- '@attributes':
-    Default: '5900'
-    Description: Port used to access the application's GUI via the VNC protocol. Optional
-      if no VNC client is used.
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: VNC
-    Required: 'false'
-    Target: '5900'
-    Type: Port
-  value: '5900'
-- '@attributes':
-    Default: '0'
-    Description: "When set to 1, an encrypted connection is used to access the application's\
-      \ GUI (either via a web browser or VNC client). See the Security section \r\n\
-      \ in the README for more details."
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Encryption
-    Required: 'false'
-    Target: SECURE_CONNECTION
-    Type: Variable
-  value: '0'
-- '@attributes':
-    Default: Etc/UTC
-    Description: "Timezone of the container. Timezone can also be set by mapping /etc/localtime\
-      \ between the host and the container.\t"
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Timezone
-    Required: 'false'
-    Target: TZ
-    Type: Variable
-  value: Etc/UTC
-- '@attributes':
-    Default: '657'
-    Description: Width (in pixels) of the virtual screen's window.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Display Width
-    Required: 'false'
-    Target: DISPLAY_WIDTH
-    Type: Variable
-  value: '657'
-- '@attributes':
-    Default: '473'
-    Description: Height (in pixels) of the virtual screen's window.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Display Height
-    Required: 'false'
-    Target: DISPLAY_HEIGHT
-    Type: Variable
-  value: '473'
-- '@attributes':
-    Default: ''
-    Description: Password needed to connect to the application's GUI. See the VNC
-      Password section in the README for more details.
-    Display: always
-    Mask: 'true'
-    Mode: ''
-    Name: VNC Password
-    Required: 'false'
-    Target: VNC_PASSWORD
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Extra options to pass to the x11vnc server running in the Docker
-      container. WARNING: For advanced users. Do not use unless you know what you
-      are doing.'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: X11VNC_EXTRA_OPTS
-    Required: 'false'
-    Target: X11VNC_EXTRA_OPTS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: "When set to 1, open-source computer font WenQuanYi Zen Hei is installed.\
-      \ This font contains a large range of Chinese/Japanese/Korean characters.\t"
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: ENABLE_CJK_FONT
-    Required: 'false'
-    Target: ENABLE_CJK_FONT
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: /mnt/user/
-    Description: This will be exposed to the Backblaze Client as drive D and therefore
-      be backed up
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Storage to back up
-    Required: 'true'
-    Target: /drive_d/
-    Type: Path
-  value: /mnt/user/
-- '@attributes':
-    Default: /mnt/user/appdata/backblaze_personal_backup/
-    Description: 'Container Path: /config/'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Config
-    Required: 'true'
-    Target: /config/
-    Type: Path
-  value: /mnt/user/appdata/backblaze_personal_backup/
+  Device: {}
+  Label: {}
+  Path:
+    Config:
+      Default: /mnt/user/appdata/backblaze_personal_backup/
+      Description: 'Container Path: /config/'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Config
+      Required: 'true'
+      Target: /config/
+      Type: Path
+      value: /mnt/user/appdata/backblaze_personal_backup/
+    Storage to back up:
+      Default: /mnt/user/
+      Description: This will be exposed to the Backblaze Client as drive D and therefore
+        be backed up
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Storage to back up
+      Required: 'true'
+      Target: /drive_d/
+      Type: Path
+      value: /mnt/user/
+  Port:
+    Http VNC GUI:
+      Default: '5800'
+      Description: Port used to access the application's GUI via the web interface.
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Http VNC GUI
+      Required: 'true'
+      Target: '5800'
+      Type: Port
+      value: '5800'
+    VNC:
+      Default: '5900'
+      Description: Port used to access the application's GUI via the VNC protocol.
+        Optional if no VNC client is used.
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: VNC
+      Required: 'false'
+      Target: '5900'
+      Type: Port
+      value: '5900'
+  Variable:
+    Display Height:
+      Default: '473'
+      Description: Height (in pixels) of the virtual screen's window.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Display Height
+      Required: 'false'
+      Target: DISPLAY_HEIGHT
+      Type: Variable
+      value: '473'
+    Display Width:
+      Default: '657'
+      Description: Width (in pixels) of the virtual screen's window.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Display Width
+      Required: 'false'
+      Target: DISPLAY_WIDTH
+      Type: Variable
+      value: '657'
+    ENABLE_CJK_FONT:
+      Default: ''
+      Description: "When set to 1, open-source computer font WenQuanYi Zen Hei is\
+        \ installed. This font contains a large range of Chinese/Japanese/Korean characters.\t"
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: ENABLE_CJK_FONT
+      Required: 'false'
+      Target: ENABLE_CJK_FONT
+      Type: Variable
+      value: ''
+    Encryption:
+      Default: '0'
+      Description: "When set to 1, an encrypted connection is used to access the application's\
+        \ GUI (either via a web browser or VNC client). See the Security section \r\
+        \n in the README for more details."
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Encryption
+      Required: 'false'
+      Target: SECURE_CONNECTION
+      Type: Variable
+      value: '0'
+    Timezone:
+      Default: Etc/UTC
+      Description: "Timezone of the container. Timezone can also be set by mapping\
+        \ /etc/localtime between the host and the container.\t"
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Timezone
+      Required: 'false'
+      Target: TZ
+      Type: Variable
+      value: Etc/UTC
+    VNC Password:
+      Default: ''
+      Description: Password needed to connect to the application's GUI. See the VNC
+        Password section in the README for more details.
+      Display: always
+      Mask: 'true'
+      Mode: ''
+      Name: VNC Password
+      Required: 'false'
+      Target: VNC_PASSWORD
+      Type: Variable
+      value: ''
+    X11VNC_EXTRA_OPTS:
+      Default: ''
+      Description: 'Extra options to pass to the x11vnc server running in the Docker
+        container. WARNING: For advanced users. Do not use unless you know what you
+        are doing.'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: X11VNC_EXTRA_OPTS
+      Required: 'false'
+      Target: X11VNC_EXTRA_OPTS
+      Type: Variable
+      value: ''
 DonateLink: https://github.com/sponsors/JonathanTreffler
 DonateText: I would greatly appreciate a donation, so i can continue my open source
   work :)

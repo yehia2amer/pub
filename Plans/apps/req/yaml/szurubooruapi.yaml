@@ -2,72 +2,77 @@ CategoryList:
 - MediaServer-Photos
 ChangeLogPresent: true
 Config:
-- '@attributes':
-    Default: ''
-    Description: IP address of Postgres instance
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Postgres Host
-    Required: 'true'
-    Target: POSTGRES_HOST
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Name of the database on Postgres instance to use
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Postgres DB
-    Required: 'true'
-    Target: POSTGRES_DB
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Username of Postgres user
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Postgres User
-    Required: 'true'
-    Target: POSTGRES_USER
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Password of Postgres user
-    Display: always
-    Mask: 'true'
-    Mode: ''
-    Name: Postgres Password
-    Required: 'true'
-    Target: POSTGRES_PASSWORD
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: /mnt/user/appdata/szurubooru/data
-    Description: Directory on host to store image data
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Image Data
-    Required: 'true'
-    Target: /data
-    Type: Path
-  value: /mnt/user/appdata/szurubooru/data
-- '@attributes':
-    Default: '6666'
-    Description: Port to expose API interface on. This is accessed by the frontend.
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Api Port
-    Required: 'true'
-    Target: '6666'
-    Type: Port
-  value: '6666'
+  Device: {}
+  Label: {}
+  Path:
+    Image Data:
+      Default: /mnt/user/appdata/szurubooru/data
+      Description: Directory on host to store image data
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Image Data
+      Required: 'true'
+      Target: /data
+      Type: Path
+      value: /mnt/user/appdata/szurubooru/data
+  Port:
+    Api Port:
+      Default: '6666'
+      Description: Port to expose API interface on. This is accessed by the frontend.
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Api Port
+      Required: 'true'
+      Target: '6666'
+      Type: Port
+      value: '6666'
+  Variable:
+    Postgres DB:
+      Default: ''
+      Description: Name of the database on Postgres instance to use
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Postgres DB
+      Required: 'true'
+      Target: POSTGRES_DB
+      Type: Variable
+      value: ''
+    Postgres Host:
+      Default: ''
+      Description: IP address of Postgres instance
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Postgres Host
+      Required: 'true'
+      Target: POSTGRES_HOST
+      Type: Variable
+      value: ''
+    Postgres Password:
+      Default: ''
+      Description: Password of Postgres user
+      Display: always
+      Mask: 'true'
+      Mode: ''
+      Name: Postgres Password
+      Required: 'true'
+      Target: POSTGRES_PASSWORD
+      Type: Variable
+      value: ''
+    Postgres User:
+      Default: ''
+      Description: Username of Postgres user
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Postgres User
+      Required: 'true'
+      Target: POSTGRES_USER
+      Type: Variable
+      value: ''
 FirstSeen: 1576508766
 Icon: https://github.com/FoxxMD/unraid-docker-templates/raw/master/szurubooru.png
 LastUpdate: 1645020922

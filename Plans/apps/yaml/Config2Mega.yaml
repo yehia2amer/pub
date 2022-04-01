@@ -2,61 +2,66 @@ CategoryList:
 - Backup
 - Cloud
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: LOGIN'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Email
-    Required: 'true'
-    Target: LOGIN
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: PASS'
-    Display: always
-    Mask: 'true'
-    Mode: ''
-    Name: Password
-    Required: 'true'
-    Target: PASS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: Unraid/flash/config
-    Description: 'Container Variable: REMOTE'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Remote Folder
-    Required: 'true'
-    Target: REMOTE
-    Type: Variable
-  value: Unraid/flash/config
-- '@attributes':
-    Default: /boot/config/
-    Description: 'Container Path: /home/unraidconfig'
-    Display: advanced
-    Mask: 'false'
-    Mode: ro
-    Name: Unraid Config Folder
-    Required: 'true'
-    Target: /home/unraidconfig
-    Type: Path
-  value: /boot/config/
-- '@attributes':
-    Default: /mnt/user/appdata/Config2Mega/config
-    Description: 'Container Path: /root/.megaCmd'
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: Mega config folder
-    Required: 'false'
-    Target: /root/.megaCmd
-    Type: Path
-  value: /mnt/user/appdata/Config2Mega/config
+  Device: {}
+  Label: {}
+  Path:
+    Mega config folder:
+      Default: /mnt/user/appdata/Config2Mega/config
+      Description: 'Container Path: /root/.megaCmd'
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: Mega config folder
+      Required: 'false'
+      Target: /root/.megaCmd
+      Type: Path
+      value: /mnt/user/appdata/Config2Mega/config
+    Unraid Config Folder:
+      Default: /boot/config/
+      Description: 'Container Path: /home/unraidconfig'
+      Display: advanced
+      Mask: 'false'
+      Mode: ro
+      Name: Unraid Config Folder
+      Required: 'true'
+      Target: /home/unraidconfig
+      Type: Path
+      value: /boot/config/
+  Port: {}
+  Variable:
+    Email:
+      Default: ''
+      Description: 'Container Variable: LOGIN'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Email
+      Required: 'true'
+      Target: LOGIN
+      Type: Variable
+      value: ''
+    Password:
+      Default: ''
+      Description: 'Container Variable: PASS'
+      Display: always
+      Mask: 'true'
+      Mode: ''
+      Name: Password
+      Required: 'true'
+      Target: PASS
+      Type: Variable
+      value: ''
+    Remote Folder:
+      Default: Unraid/flash/config
+      Description: 'Container Variable: REMOTE'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Remote Folder
+      Required: 'true'
+      Target: REMOTE
+      Type: Variable
+      value: Unraid/flash/config
 DonateLink: https://www.paypal.me/husainalhadad
 DonateText: If you like my work please consider donating.
 FirstSeen: 1615453371

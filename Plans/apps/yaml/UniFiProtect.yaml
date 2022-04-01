@@ -1,28 +1,33 @@
 CategoryList:
 - Network-Other
 Config:
-- '@attributes':
-    Default: /mnt/user/appdata/unifiprotect/data
-    Description: 'Container Path: /srv/unifi-protect'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: AppData
-    Required: 'false'
-    Target: /srv/unifi-protect
-    Type: Path
-  value: /mnt/user/appdata/unifiprotect/data
-- '@attributes':
-    Default: /mnt/user/appdata/unifiprotect/database
-    Description: 'Container Path: /var/lib/postgresql/10/main'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Database
-    Required: 'false'
-    Target: /var/lib/postgresql/10/main
-    Type: Path
-  value: /mnt/user/appdata/unifiprotect/database
+  Device: {}
+  Label: {}
+  Path:
+    AppData:
+      Default: /mnt/user/appdata/unifiprotect/data
+      Description: 'Container Path: /srv/unifi-protect'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: AppData
+      Required: 'false'
+      Target: /srv/unifi-protect
+      Type: Path
+      value: /mnt/user/appdata/unifiprotect/data
+    Database:
+      Default: /mnt/user/appdata/unifiprotect/database
+      Description: 'Container Path: /var/lib/postgresql/10/main'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Database
+      Required: 'false'
+      Target: /var/lib/postgresql/10/main
+      Type: Path
+      value: /mnt/user/appdata/unifiprotect/database
+  Port: {}
+  Variable: {}
 ExtraParams: --tmpfs /srv/unifi-protect/temp -m 2048m
 FirstSeen: 1641611113
 Icon: https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/icons/unifiprotect.png

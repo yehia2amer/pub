@@ -3,212 +3,217 @@ CategoryList:
 - Downloaders
 - MediaApp-Music
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /config'
-    Display: always-hide
-    Mask: 'false'
-    Mode: rw
-    Name: Host Path for /config
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: /mnt/user
-    Description: Container Path for downloads library...
-    Display: always-hide
-    Mask: 'false'
-    Mode: rw
-    Name: Host Path for /downloads-atd
-    Required: 'true'
-    Target: /downloads-atd
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: 'true'
-    Description: 'true = Enabled :: Runs script automatically on startup'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: 'Both: Enable Automatic Script Start'
-    Required: 'true'
-    Target: AutoStart
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 15m
-    Description: '#s or #m or #h or #d :: s = seconds, m = minutes, h = hours, d =
-      days :: Amount of time between each script run, when AUTOSTART is enabled'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: 'Both: Script Interval'
-    Required: 'true'
-    Target: ScriptInterval
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: https://musicbrainz.org
-    Description: 'OPTIONAL :: Only change if using a different mirror'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: 'Both: Musicbrainz Mirror URL'
-    Required: 'false'
-    Target: MusicbrainzMirror
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '1'
-    Description: 'OPTIONAL: musicbrainz rate limit, musicbrainz allows only 1 connection
-      per second, max setting is 10 :: Set to 101 to disable limit'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: 'Both: Musicbrainz Rate Limit'
-    Required: 'false'
-    Target: MusicbrainzRateLimit
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: http://x.x.x.x:8686
-    Description: 'REQUIRED: Lidarr URL, Lidarr provides artist list for processing
-      with ATD...'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: 'Both: Lidarr Url'
-    Required: 'false'
-    Target: LidarrUrl
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'REQUIRED: Lidarr API Key, enables ATD to connect to Lidarr...'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: 'Both: Lidarr API Key'
-    Required: 'false'
-    Target: LidarrApiKey
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: both
-    Description: 'REQUIRED: set to: music or video or both :: both downloads music
-      and videos, the others set the download to the desired media type'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: 'Both: Script Mode'
-    Required: 'false'
-    Target: ScriptMode
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: US
-    Description: Set to Tidal Region, same region as your account
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: 'Both: CountryCode'
-    Required: 'false'
-    Target: CountryCode
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 'false'
-    Description: 'false = disabled; true = enabled :: Enabling this downloads compilations
-      the Artist Appears On...'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: 'Music: Compilations'
-    Required: 'false'
-    Target: Compilations
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: FLAC
-    Description: 'FLAC or 320 or 128 :: Maxium Quality :: FLAC (CD quality 16bit),
-      320 (320 kbps AAC), 128 (128 kbps AAC)'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: 'Music: WantedQuality'
-    Required: 'false'
-    Target: WantedQuality
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 'false'
-    Description: 'false = disabled; true = enabled :: Enabling requires the downloads
-      to match the expected file type (.flac or .m4a)...'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: 'Music: RequireQuality'
-    Required: 'false'
-    Target: RequireQuality
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 'false'
-    Description: 'true = enabled :: Scans and analyzes files to add replaygain tags
-      to song metadata'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: 'Music: Replaygain Tagging'
-    Required: 'true'
-    Target: EnableReplayGain
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '777'
-    Description: Folder Permissions (chmod)
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: FolderPermissions
-    Required: 'false'
-    Target: FolderPermissions
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '666'
-    Description: File Permissions (chmod)
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: FilePermisssions
-    Required: 'false'
-    Target: FilePermisssions
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '99'
-    Description: 'Container Variable: PUID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: PUID
-    Required: 'false'
-    Target: PUID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '100'
-    Description: 'Container Variable: PGID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: PGID
-    Required: 'false'
-    Target: PGID
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Host Path for /config:
+      Default: ''
+      Description: 'Container Path: /config'
+      Display: always-hide
+      Mask: 'false'
+      Mode: rw
+      Name: Host Path for /config
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: ''
+    Host Path for /downloads-atd:
+      Default: /mnt/user
+      Description: Container Path for downloads library...
+      Display: always-hide
+      Mask: 'false'
+      Mode: rw
+      Name: Host Path for /downloads-atd
+      Required: 'true'
+      Target: /downloads-atd
+      Type: Path
+      value: ''
+  Port: {}
+  Variable:
+    'Both: CountryCode':
+      Default: US
+      Description: Set to Tidal Region, same region as your account
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: 'Both: CountryCode'
+      Required: 'false'
+      Target: CountryCode
+      Type: Variable
+      value: ''
+    'Both: Enable Automatic Script Start':
+      Default: 'true'
+      Description: 'true = Enabled :: Runs script automatically on startup'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: 'Both: Enable Automatic Script Start'
+      Required: 'true'
+      Target: AutoStart
+      Type: Variable
+      value: ''
+    'Both: Lidarr API Key':
+      Default: ''
+      Description: 'REQUIRED: Lidarr API Key, enables ATD to connect to Lidarr...'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: 'Both: Lidarr API Key'
+      Required: 'false'
+      Target: LidarrApiKey
+      Type: Variable
+      value: ''
+    'Both: Lidarr Url':
+      Default: http://x.x.x.x:8686
+      Description: 'REQUIRED: Lidarr URL, Lidarr provides artist list for processing
+        with ATD...'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: 'Both: Lidarr Url'
+      Required: 'false'
+      Target: LidarrUrl
+      Type: Variable
+      value: ''
+    'Both: Musicbrainz Mirror URL':
+      Default: https://musicbrainz.org
+      Description: 'OPTIONAL :: Only change if using a different mirror'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: 'Both: Musicbrainz Mirror URL'
+      Required: 'false'
+      Target: MusicbrainzMirror
+      Type: Variable
+      value: ''
+    'Both: Musicbrainz Rate Limit':
+      Default: '1'
+      Description: 'OPTIONAL: musicbrainz rate limit, musicbrainz allows only 1 connection
+        per second, max setting is 10 :: Set to 101 to disable limit'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: 'Both: Musicbrainz Rate Limit'
+      Required: 'false'
+      Target: MusicbrainzRateLimit
+      Type: Variable
+      value: ''
+    'Both: Script Interval':
+      Default: 15m
+      Description: '#s or #m or #h or #d :: s = seconds, m = minutes, h = hours, d
+        = days :: Amount of time between each script run, when AUTOSTART is enabled'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: 'Both: Script Interval'
+      Required: 'true'
+      Target: ScriptInterval
+      Type: Variable
+      value: ''
+    'Both: Script Mode':
+      Default: both
+      Description: 'REQUIRED: set to: music or video or both :: both downloads music
+        and videos, the others set the download to the desired media type'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: 'Both: Script Mode'
+      Required: 'false'
+      Target: ScriptMode
+      Type: Variable
+      value: ''
+    FilePermisssions:
+      Default: '666'
+      Description: File Permissions (chmod)
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: FilePermisssions
+      Required: 'false'
+      Target: FilePermisssions
+      Type: Variable
+      value: ''
+    FolderPermissions:
+      Default: '777'
+      Description: Folder Permissions (chmod)
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: FolderPermissions
+      Required: 'false'
+      Target: FolderPermissions
+      Type: Variable
+      value: ''
+    'Music: Compilations':
+      Default: 'false'
+      Description: 'false = disabled; true = enabled :: Enabling this downloads compilations
+        the Artist Appears On...'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: 'Music: Compilations'
+      Required: 'false'
+      Target: Compilations
+      Type: Variable
+      value: ''
+    'Music: Replaygain Tagging':
+      Default: 'false'
+      Description: 'true = enabled :: Scans and analyzes files to add replaygain tags
+        to song metadata'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: 'Music: Replaygain Tagging'
+      Required: 'true'
+      Target: EnableReplayGain
+      Type: Variable
+      value: ''
+    'Music: RequireQuality':
+      Default: 'false'
+      Description: 'false = disabled; true = enabled :: Enabling requires the downloads
+        to match the expected file type (.flac or .m4a)...'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: 'Music: RequireQuality'
+      Required: 'false'
+      Target: RequireQuality
+      Type: Variable
+      value: ''
+    'Music: WantedQuality':
+      Default: FLAC
+      Description: 'FLAC or 320 or 128 :: Maxium Quality :: FLAC (CD quality 16bit),
+        320 (320 kbps AAC), 128 (128 kbps AAC)'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: 'Music: WantedQuality'
+      Required: 'false'
+      Target: WantedQuality
+      Type: Variable
+      value: ''
+    PGID:
+      Default: '100'
+      Description: 'Container Variable: PGID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: PGID
+      Required: 'false'
+      Target: PGID
+      Type: Variable
+      value: ''
+    PUID:
+      Default: '99'
+      Description: 'Container Variable: PUID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: PUID
+      Required: 'false'
+      Target: PUID
+      Type: Variable
+      value: ''
 DonateImg: ''
 DonateLink: https://github.com/sponsors/RandomNinjaAtk
 FirstSeen: 1633298612

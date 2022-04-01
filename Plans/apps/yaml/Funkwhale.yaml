@@ -3,84 +3,89 @@ CategoryList:
 - MediaServer-Music
 ChangeLogPresent: true
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /music'
-    Display: always
-    Mask: 'false'
-    Mode: ro
-    Name: Music Path
-    Required: 'true'
-    Target: /music
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: FUNKWHALE_HOSTNAME'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Funkwhale Hostname
-    Required: 'true'
-    Target: FUNKWHALE_HOSTNAME
-    Type: Variable
-  value: yourdomain.funkwhale
-- '@attributes':
-    Default: '0'
-    Description: 'Container Variable: NESTED_PROXY | Set to ''1'' when container is
-      behind a reverse proxy.'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Nested Proxy
-    Required: 'true'
-    Target: NESTED_PROXY
-    Type: Variable
-  value: '0'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: PUID'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: PUID
-    Required: 'true'
-    Target: PUID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: PGID'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: PGID
-    Required: 'true'
-    Target: PGID
-    Type: Variable
-  value: '100'
-- '@attributes':
-    Default: /mnt/user/appdata/funkwhale
-    Description: 'Container Path: /data'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: rw
-    Name: Data Path
-    Required: 'true'
-    Target: /data
-    Type: Path
-  value: /mnt/user/appdata/funkwhale
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 80'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: HTTP
-    Required: 'true'
-    Target: '80'
-    Type: Port
-  value: '3030'
+  Device: {}
+  Label: {}
+  Path:
+    Data Path:
+      Default: /mnt/user/appdata/funkwhale
+      Description: 'Container Path: /data'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: rw
+      Name: Data Path
+      Required: 'true'
+      Target: /data
+      Type: Path
+      value: /mnt/user/appdata/funkwhale
+    Music Path:
+      Default: ''
+      Description: 'Container Path: /music'
+      Display: always
+      Mask: 'false'
+      Mode: ro
+      Name: Music Path
+      Required: 'true'
+      Target: /music
+      Type: Path
+      value: ''
+  Port:
+    HTTP:
+      Default: ''
+      Description: 'Container Port: 80'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: HTTP
+      Required: 'true'
+      Target: '80'
+      Type: Port
+      value: '3030'
+  Variable:
+    Funkwhale Hostname:
+      Default: ''
+      Description: 'Container Variable: FUNKWHALE_HOSTNAME'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Funkwhale Hostname
+      Required: 'true'
+      Target: FUNKWHALE_HOSTNAME
+      Type: Variable
+      value: yourdomain.funkwhale
+    Nested Proxy:
+      Default: '0'
+      Description: 'Container Variable: NESTED_PROXY | Set to ''1'' when container
+        is behind a reverse proxy.'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Nested Proxy
+      Required: 'true'
+      Target: NESTED_PROXY
+      Type: Variable
+      value: '0'
+    PGID:
+      Default: ''
+      Description: 'Container Variable: PGID'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PGID
+      Required: 'true'
+      Target: PGID
+      Type: Variable
+      value: '100'
+    PUID:
+      Default: ''
+      Description: 'Container Variable: PUID'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PUID
+      Required: 'true'
+      Target: PUID
+      Type: Variable
+      value: '99'
 FirstSeen: 1547150480
 Icon: https://raw.githubusercontent.com/thetarkus/docker-templates/master/images/funkwhale-logo-500.png
 LastUpdate: 1553265965

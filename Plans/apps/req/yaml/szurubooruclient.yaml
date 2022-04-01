@@ -1,52 +1,57 @@
 CategoryList:
 - MediaApp-Photos
 Config:
-- '@attributes':
-    Default: latest
-    Description: Determines which git commit to use to build client code. Recommend
-      keep as 'latest'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Build Info
-    Required: 'true'
-    Target: BUILD_INFO
-    Type: Variable
-  value: latest
-- '@attributes':
-    Default: ''
-    Description: IP Address of the backend API instance
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Backend Host
-    Required: 'true'
-    Target: BACKEND_HOST
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '8118'
-    Description: Port to serve site to on host
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Http Port
-    Required: 'true'
-    Target: '80'
-    Type: Port
-  value: '8118'
-- '@attributes':
-    Default: /mnt/user/appdata/szurubooru/data
-    Description: Directory on host where image data is stored. Should be same as 'Image
-      Data' variable on szurubooru-api
-    Display: always
-    Mask: 'false'
-    Mode: ro
-    Name: Data
-    Required: 'true'
-    Target: /data
-    Type: Path
-  value: /mnt/user/appdata/szurubooru/data
+  Device: {}
+  Label: {}
+  Path:
+    Data:
+      Default: /mnt/user/appdata/szurubooru/data
+      Description: Directory on host where image data is stored. Should be same as
+        'Image Data' variable on szurubooru-api
+      Display: always
+      Mask: 'false'
+      Mode: ro
+      Name: Data
+      Required: 'true'
+      Target: /data
+      Type: Path
+      value: /mnt/user/appdata/szurubooru/data
+  Port:
+    Http Port:
+      Default: '8118'
+      Description: Port to serve site to on host
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Http Port
+      Required: 'true'
+      Target: '80'
+      Type: Port
+      value: '8118'
+  Variable:
+    Backend Host:
+      Default: ''
+      Description: IP Address of the backend API instance
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Backend Host
+      Required: 'true'
+      Target: BACKEND_HOST
+      Type: Variable
+      value: ''
+    Build Info:
+      Default: latest
+      Description: Determines which git commit to use to build client code. Recommend
+        keep as 'latest'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Build Info
+      Required: 'true'
+      Target: BUILD_INFO
+      Type: Variable
+      value: latest
 FirstSeen: 1576508766
 Icon: https://github.com/FoxxMD/unraid-docker-templates/raw/master/szurubooru.png
 LastUpdate: 1645020754

@@ -2,84 +2,89 @@ CategoryList:
 - Productivity
 - Other
 Config:
-- '@attributes':
-    Default: ''
-    Description: URL to TeamCity server
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: SERVER_URL
-    Required: 'true'
-    Target: SERVER_URL
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: Nick Fury
-    Description: Name of this TeamCity Build Agent
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: AGENT_NAME
-    Required: 'true'
-    Target: AGENT_NAME
-    Type: Variable
-  value: Phil Coulson
-- '@attributes':
-    Default: /mnt/user/appdata/teamcity-buildagent
-    Description: 'Container Path: /data/teamcity_agent/conf'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Config
-    Required: 'true'
-    Target: /data/teamcity_agent/conf
-    Type: Path
-  value: /mnt/user/appdata/teamcity-buildagent
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /opt/buildagent/work'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Work
-    Required: 'true'
-    Target: /opt/buildagent/work
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /opt/buildagent/temp'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Temp
-    Required: 'true'
-    Target: /opt/buildagent/temp
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: buildagent_volumes
-    Description: 'Container Path: /var/lib/docker'
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: Docker Volumes
-    Required: 'true'
-    Target: /var/lib/docker
-    Type: Path
-  value: buildagent_volumes
-- '@attributes':
-    Default: start
-    Description: "Run Docker daemon within your container (note that in this case\
-      \ the container should be run with \u2014privileged flag)"
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: DOCKER_IN_DOCKER
-    Required: 'true'
-    Target: DOCKER_IN_DOCKER
-    Type: Variable
-  value: start
+  Device: {}
+  Label: {}
+  Path:
+    Config:
+      Default: /mnt/user/appdata/teamcity-buildagent
+      Description: 'Container Path: /data/teamcity_agent/conf'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Config
+      Required: 'true'
+      Target: /data/teamcity_agent/conf
+      Type: Path
+      value: /mnt/user/appdata/teamcity-buildagent
+    Docker Volumes:
+      Default: buildagent_volumes
+      Description: 'Container Path: /var/lib/docker'
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: Docker Volumes
+      Required: 'true'
+      Target: /var/lib/docker
+      Type: Path
+      value: buildagent_volumes
+    Temp:
+      Default: ''
+      Description: 'Container Path: /opt/buildagent/temp'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Temp
+      Required: 'true'
+      Target: /opt/buildagent/temp
+      Type: Path
+      value: ''
+    Work:
+      Default: ''
+      Description: 'Container Path: /opt/buildagent/work'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Work
+      Required: 'true'
+      Target: /opt/buildagent/work
+      Type: Path
+      value: ''
+  Port: {}
+  Variable:
+    AGENT_NAME:
+      Default: Nick Fury
+      Description: Name of this TeamCity Build Agent
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: AGENT_NAME
+      Required: 'true'
+      Target: AGENT_NAME
+      Type: Variable
+      value: Phil Coulson
+    DOCKER_IN_DOCKER:
+      Default: start
+      Description: "Run Docker daemon within your container (note that in this case\
+        \ the container should be run with \u2014privileged flag)"
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: DOCKER_IN_DOCKER
+      Required: 'true'
+      Target: DOCKER_IN_DOCKER
+      Type: Variable
+      value: start
+    SERVER_URL:
+      Default: ''
+      Description: URL to TeamCity server
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: SERVER_URL
+      Required: 'true'
+      Target: SERVER_URL
+      Type: Variable
+      value: ''
 DonateLink: https://www.patreon.com/josh5
 DonateText: Support me on Patreon
 FirstSeen: 1557069695

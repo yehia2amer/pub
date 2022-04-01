@@ -2,39 +2,44 @@ Beta: 'true'
 CategoryList:
 - Network-Web
 Config:
-- '@attributes':
-    Default: '80'
-    Description: 'Container Port: 80'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: HTTP
-    Required: 'true'
-    Target: '80'
-    Type: Port
-  value: '80'
-- '@attributes':
-    Default: '443'
-    Description: 'Container Port: 443'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: HTTPS
-    Required: 'false'
-    Target: '443'
-    Type: Port
-  value: '443'
-- '@attributes':
-    Default: /mnt/user/appdata/P3R-LEMP-Stack/
-    Description: 'Container Path: /config/'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: AppData
-    Required: 'true'
-    Target: /config/
-    Type: Path
-  value: /mnt/user/appdata/P3R-LEMP-Stack/
+  Device: {}
+  Label: {}
+  Path:
+    AppData:
+      Default: /mnt/user/appdata/P3R-LEMP-Stack/
+      Description: 'Container Path: /config/'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: AppData
+      Required: 'true'
+      Target: /config/
+      Type: Path
+      value: /mnt/user/appdata/P3R-LEMP-Stack/
+  Port:
+    HTTP:
+      Default: '80'
+      Description: 'Container Port: 80'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: HTTP
+      Required: 'true'
+      Target: '80'
+      Type: Port
+      value: '80'
+    HTTPS:
+      Default: '443'
+      Description: 'Container Port: 443'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: HTTPS
+      Required: 'false'
+      Target: '443'
+      Type: Port
+      value: '443'
+  Variable: {}
 DonateLink: https://www.patreon.com/keepitPG
 DonateText: Please support me on Patreon
 FirstSeen: 1588839290

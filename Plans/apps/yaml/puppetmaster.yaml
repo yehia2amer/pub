@@ -2,61 +2,66 @@ CategoryList:
 - Tools-Utilities
 - Network-Management
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 8140'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Host Port 1
-    Required: 'false'
-    Target: '8140'
-    Type: Port
-  value: '8140'
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 8081'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Host Port 2
-    Required: 'false'
-    Target: '8081'
-    Type: Port
-  value: '8081'
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /etc/puppetlabs/puppet'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: confdir
-    Required: 'false'
-    Target: /etc/puppetlabs/puppet
-    Type: Path
-  value: /yourpuppet/conf
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /etc/puppetlabs/puppet/ssl'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: ssldir
-    Required: 'false'
-    Target: /etc/puppetlabs/puppet/ssl
-    Type: Path
-  value: /yourpuppet/ssl/
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /etc/puppetlabs/code'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: coded
-    Required: 'false'
-    Target: /etc/puppetlabs/code
-    Type: Path
-  value: /yourpuppet/conf/code
+  Device: {}
+  Label: {}
+  Path:
+    coded:
+      Default: ''
+      Description: 'Container Path: /etc/puppetlabs/code'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: coded
+      Required: 'false'
+      Target: /etc/puppetlabs/code
+      Type: Path
+      value: /yourpuppet/conf/code
+    confdir:
+      Default: ''
+      Description: 'Container Path: /etc/puppetlabs/puppet'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: confdir
+      Required: 'false'
+      Target: /etc/puppetlabs/puppet
+      Type: Path
+      value: /yourpuppet/conf
+    ssldir:
+      Default: ''
+      Description: 'Container Path: /etc/puppetlabs/puppet/ssl'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: ssldir
+      Required: 'false'
+      Target: /etc/puppetlabs/puppet/ssl
+      Type: Path
+      value: /yourpuppet/ssl/
+  Port:
+    Host Port 1:
+      Default: ''
+      Description: 'Container Port: 8140'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Host Port 1
+      Required: 'false'
+      Target: '8140'
+      Type: Port
+      value: '8140'
+    Host Port 2:
+      Default: ''
+      Description: 'Container Port: 8081'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Host Port 2
+      Required: 'false'
+      Target: '8081'
+      Type: Port
+      value: '8081'
+  Variable: {}
 FirstSeen: '1499079848'
 Icon: https://raw.githubusercontent.com/deasmi/docker-puppetmaster/master/logo.png
 LastUpdate: 1603795458

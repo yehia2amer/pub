@@ -1,61 +1,66 @@
 CategoryList:
 - Downloaders
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 9090'
-    Display: always-hide
-    Mask: 'false'
-    Mode: tcp
-    Name: Webserver
-    Required: 'true'
-    Target: '9090'
-    Type: Port
-  value: '9090'
-- '@attributes':
-    Default: /mnt/user/appdata/feedcrawler
-    Description: 'Container Path: /config'
-    Display: always-hide
-    Mask: 'false'
-    Mode: rw
-    Name: Config-Path
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: /mnt/cache/appdata/feedcrawler/
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: USER'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: MyJDownloader Username
-    Required: 'false'
-    Target: USER
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: PASS'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: MyJDownloader Password
-    Required: 'false'
-    Target: PASS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: DEVICE'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: MyJDownloader Device
-    Required: 'false'
-    Target: DEVICE
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Config-Path:
+      Default: /mnt/user/appdata/feedcrawler
+      Description: 'Container Path: /config'
+      Display: always-hide
+      Mask: 'false'
+      Mode: rw
+      Name: Config-Path
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: /mnt/cache/appdata/feedcrawler/
+  Port:
+    Webserver:
+      Default: ''
+      Description: 'Container Port: 9090'
+      Display: always-hide
+      Mask: 'false'
+      Mode: tcp
+      Name: Webserver
+      Required: 'true'
+      Target: '9090'
+      Type: Port
+      value: '9090'
+  Variable:
+    MyJDownloader Device:
+      Default: ''
+      Description: 'Container Variable: DEVICE'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: MyJDownloader Device
+      Required: 'false'
+      Target: DEVICE
+      Type: Variable
+      value: ''
+    MyJDownloader Password:
+      Default: ''
+      Description: 'Container Variable: PASS'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: MyJDownloader Password
+      Required: 'false'
+      Target: PASS
+      Type: Variable
+      value: ''
+    MyJDownloader Username:
+      Default: ''
+      Description: 'Container Variable: USER'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: MyJDownloader Username
+      Required: 'false'
+      Target: USER
+      Type: Variable
+      value: ''
 DonateLink: https://github.com/sponsors/rix1337
 DonateText: Sponsor me!
 ExtraParams: --log-opt max-size=50m

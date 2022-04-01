@@ -7,80 +7,85 @@ Branch:
   TagDescription: Releases from pyload Next develop branch
 ChangeLogPresent: true
 Config:
-- '@attributes':
-    Default: '8000'
-    Description: Allows HTTP access to the application
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'true'
-    Target: '8000'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: '9666'
-    Description: Click'n'Load port.
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: 'Port: 9666'
-    Required: 'false'
-    Target: '9666'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: pyLoad Configuration and files database
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: Appdata
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Destination of pyLoad downloads
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: 'Path: /downloads'
-    Required: 'true'
-    Target: /downloads
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: '99'
-    Description: 'Container Variable: PUID'
-    Display: advanced
-    Mask: 'false'
-    Name: PUID
-    Required: 'true'
-    Target: PUID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '100'
-    Description: 'Container Variable: PGID'
-    Display: advanced
-    Mask: 'false'
-    Name: PGID
-    Required: 'true'
-    Target: PGID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '022'
-    Description: 'Container Variable: UMASK'
-    Display: advanced
-    Mask: 'false'
-    Name: UMASK
-    Required: 'false'
-    Target: UMASK
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Appdata:
+      Default: ''
+      Description: pyLoad Configuration and files database
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: Appdata
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: ''
+    'Path: /downloads':
+      Default: ''
+      Description: Destination of pyLoad downloads
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: 'Path: /downloads'
+      Required: 'true'
+      Target: /downloads
+      Type: Path
+      value: ''
+  Port:
+    'Port: 9666':
+      Default: '9666'
+      Description: Click'n'Load port.
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: 'Port: 9666'
+      Required: 'false'
+      Target: '9666'
+      Type: Port
+      value: ''
+    WebUI:
+      Default: '8000'
+      Description: Allows HTTP access to the application
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'true'
+      Target: '8000'
+      Type: Port
+      value: ''
+  Variable:
+    PGID:
+      Default: '100'
+      Description: 'Container Variable: PGID'
+      Display: advanced
+      Mask: 'false'
+      Name: PGID
+      Required: 'true'
+      Target: PGID
+      Type: Variable
+      value: ''
+    PUID:
+      Default: '99'
+      Description: 'Container Variable: PUID'
+      Display: advanced
+      Mask: 'false'
+      Name: PUID
+      Required: 'true'
+      Target: PUID
+      Type: Variable
+      value: ''
+    UMASK:
+      Default: '022'
+      Description: 'Container Variable: UMASK'
+      Display: advanced
+      Mask: 'false'
+      Name: UMASK
+      Required: 'false'
+      Target: UMASK
+      Type: Variable
+      value: ''
 DonateImg: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/donate.png
 DonateLink: https://www.linuxserver.io/donate
 DonateText: Donations

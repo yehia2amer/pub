@@ -1,51 +1,56 @@
 CategoryList:
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: ''
-    Description: Your API Key for Emby
-    Display: always
-    Mask: 'true'
-    Mode: ''
-    Name: API Key
-    Required: 'true'
-    Target: SECRET_KEY
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: https://
-    Description: URL to your Emby server
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Emby server
-    Required: 'true'
-    Target: EMBY_SERVER
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '5000'
-    Description: 'Container Port: 5000'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Port
-    Required: 'true'
-    Target: '5000'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Make sure this room always exists! Leave empty for default. Default
-      is 'Bacon Bar'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Default room
-    Required: 'false'
-    Target: DEFAULT_ROOM
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path: {}
+  Port:
+    Port:
+      Default: '5000'
+      Description: 'Container Port: 5000'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Port
+      Required: 'true'
+      Target: '5000'
+      Type: Port
+      value: ''
+  Variable:
+    API Key:
+      Default: ''
+      Description: Your API Key for Emby
+      Display: always
+      Mask: 'true'
+      Mode: ''
+      Name: API Key
+      Required: 'true'
+      Target: SECRET_KEY
+      Type: Variable
+      value: ''
+    Default room:
+      Default: ''
+      Description: Make sure this room always exists! Leave empty for default. Default
+        is 'Bacon Bar'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Default room
+      Required: 'false'
+      Target: DEFAULT_ROOM
+      Type: Variable
+      value: ''
+    Emby server:
+      Default: https://
+      Description: URL to your Emby server
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Emby server
+      Required: 'true'
+      Target: EMBY_SERVER
+      Type: Variable
+      value: ''
 FirstSeen: 1613481065
 Icon: https://raw.githubusercontent.com/C4ArtZ/Unraid-Templates/master/templates/icons/emby-sync.png
 LastUpdate: 1632452771

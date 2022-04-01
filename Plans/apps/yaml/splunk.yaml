@@ -2,94 +2,99 @@ CategoryList:
 - Tools-Utilities
 - Network-Management
 Config:
-- '@attributes':
-    Default: '8000'
-    Description: HTTP Web UI
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Web
-    Required: 'true'
-    Target: '8000'
-    Type: Port
-  value: '8000'
-- '@attributes':
-    Default: /mnt/user/appdata/splunkenterprise/splunkdata
-    Description: For indexed data persistence
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: DataPersist
-    Required: 'true'
-    Target: /splunkdata
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: /mnt/user/appdata/splunkenterprise/etc/apps
-    Description: For config and app data persistence
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: ConfigPersist
-    Required: 'true'
-    Target: /opt/splunk/etc/apps
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: /mnt/user/appdata/splunkenterprise/etc/auth
-    Description: For password/encryption persistence
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: AppCredsPersist
-    Required: 'true'
-    Target: /opt/splunk/etc/auth
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: --accept-license --no-prompt
-    Description: 'Arguments to start Splunk with. '
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Splunk start args
-    Required: 'true'
-    Target: SPLUNK_CLI_ARGS
-    Type: Variable
-  value: --accept-license --no-prompt
-- '@attributes':
-    Default: changeme2019
-    Description: Splunk Web UI admin password.
-    Display: advanced
-    Mask: 'true'
-    Mode: ''
-    Name: Admin Password
-    Required: 'true'
-    Target: ADMIN_PASSWORD
-    Type: Variable
-  value: changeme2019
-- '@attributes':
-    Default: '8089'
-    Description: HTTPS API
-    Display: advanced
-    Mask: 'false'
-    Mode: tcp
-    Name: Management
-    Required: 'false'
-    Target: '8089'
-    Type: Port
-  value: '8089'
-- '@attributes':
-    Default: '9997'
-    Description: SplunkTCP input
-    Display: advanced
-    Mask: 'false'
-    Mode: tcp
-    Name: Data Ingest
-    Required: 'false'
-    Target: '9997'
-    Type: Port
-  value: '9997'
+  Device: {}
+  Label: {}
+  Path:
+    AppCredsPersist:
+      Default: /mnt/user/appdata/splunkenterprise/etc/auth
+      Description: For password/encryption persistence
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: AppCredsPersist
+      Required: 'true'
+      Target: /opt/splunk/etc/auth
+      Type: Path
+      value: ''
+    ConfigPersist:
+      Default: /mnt/user/appdata/splunkenterprise/etc/apps
+      Description: For config and app data persistence
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: ConfigPersist
+      Required: 'true'
+      Target: /opt/splunk/etc/apps
+      Type: Path
+      value: ''
+    DataPersist:
+      Default: /mnt/user/appdata/splunkenterprise/splunkdata
+      Description: For indexed data persistence
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: DataPersist
+      Required: 'true'
+      Target: /splunkdata
+      Type: Path
+      value: ''
+  Port:
+    Data Ingest:
+      Default: '9997'
+      Description: SplunkTCP input
+      Display: advanced
+      Mask: 'false'
+      Mode: tcp
+      Name: Data Ingest
+      Required: 'false'
+      Target: '9997'
+      Type: Port
+      value: '9997'
+    Management:
+      Default: '8089'
+      Description: HTTPS API
+      Display: advanced
+      Mask: 'false'
+      Mode: tcp
+      Name: Management
+      Required: 'false'
+      Target: '8089'
+      Type: Port
+      value: '8089'
+    Web:
+      Default: '8000'
+      Description: HTTP Web UI
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Web
+      Required: 'true'
+      Target: '8000'
+      Type: Port
+      value: '8000'
+  Variable:
+    Admin Password:
+      Default: changeme2019
+      Description: Splunk Web UI admin password.
+      Display: advanced
+      Mask: 'true'
+      Mode: ''
+      Name: Admin Password
+      Required: 'true'
+      Target: ADMIN_PASSWORD
+      Type: Variable
+      value: changeme2019
+    Splunk start args:
+      Default: --accept-license --no-prompt
+      Description: 'Arguments to start Splunk with. '
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Splunk start args
+      Required: 'true'
+      Target: SPLUNK_CLI_ARGS
+      Type: Variable
+      value: --accept-license --no-prompt
 DonateLink: https://paypal.me/atunnecliffe
 DonateText: Donate to Dockerfile author via PayPal
 FirstSeen: 1560968951

@@ -1,139 +1,144 @@
 CategoryList:
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: '7139'
-    Description: 'Container Port: 80'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Web Interface
-    Required: 'false'
-    Target: '80'
-    Type: Port
-  value: '7139'
-- '@attributes':
-    Default: ''
-    Description: Leave blank if you're just accessing locally, otherwise enter your
-      full reverse proxy URL (including https://)
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: PSM_BASE_URL
-    Required: 'false'
-    Target: PSM_BASE_URL
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Hostname or IP of MySQL or MariaDB.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: PSM_DB_HOST
-    Required: 'true'
-    Target: PSM_DB_HOST
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '3306'
-    Description: 'Container Variable: PSM_DB_PORT'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: PSM_DB_PORT
-    Required: 'true'
-    Target: PSM_DB_PORT
-    Type: Variable
-  value: '3306'
-- '@attributes':
-    Default: phpservermon
-    Description: 'Container Variable: PSM_DB_NAME'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: PSM_DB_NAME
-    Required: 'true'
-    Target: PSM_DB_NAME
-    Type: Variable
-  value: phpservermon
-- '@attributes':
-    Default: phpservermon
-    Description: 'Container Variable: PSM_DB_USER'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: PSM_DB_USER
-    Required: 'true'
-    Target: PSM_DB_USER
-    Type: Variable
-  value: phpservermon
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: PSM_DB_PASS'
-    Display: always
-    Mask: 'true'
-    Mode: ''
-    Name: PSM_DB_PASS
-    Required: 'true'
-    Target: PSM_DB_PASS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: UTC
-    Description: 'Container Variable: PHP_TIMEZONE'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: PHP_TIMEZONE
-    Required: 'false'
-    Target: PHP_TIMEZONE
-    Type: Variable
-  value: UTC
-- '@attributes':
-    Default: '120'
-    Description: 'Container Variable: UPDATE_INTERVAL'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: UPDATE_INTERVAL
-    Required: 'false'
-    Target: UPDATE_INTERVAL
-    Type: Variable
-  value: '120'
-- '@attributes':
-    Default: psm_
-    Description: 'Container Variable: PSM_DB_PREFIX'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: PSM_DB_PREFIX
-    Required: 'true'
-    Target: PSM_DB_PREFIX
-    Type: Variable
-  value: psm_
-- '@attributes':
-    Default: 512M
-    Description: 'Container Variable: PHP_MEMORY_LIMIT'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: PHP_MEMORY_LIMIT
-    Required: 'false'
-    Target: PHP_MEMORY_LIMIT
-    Type: Variable
-  value: 512M
-- '@attributes':
-    Default: 128M
-    Description: 'Container Variable: MAX_UPLOAD'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: MAX_UPLOAD
-    Required: 'false'
-    Target: MAX_UPLOAD
-    Type: Variable
-  value: 128M
+  Device: {}
+  Label: {}
+  Path: {}
+  Port:
+    Web Interface:
+      Default: '7139'
+      Description: 'Container Port: 80'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Web Interface
+      Required: 'false'
+      Target: '80'
+      Type: Port
+      value: '7139'
+  Variable:
+    MAX_UPLOAD:
+      Default: 128M
+      Description: 'Container Variable: MAX_UPLOAD'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: MAX_UPLOAD
+      Required: 'false'
+      Target: MAX_UPLOAD
+      Type: Variable
+      value: 128M
+    PHP_MEMORY_LIMIT:
+      Default: 512M
+      Description: 'Container Variable: PHP_MEMORY_LIMIT'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PHP_MEMORY_LIMIT
+      Required: 'false'
+      Target: PHP_MEMORY_LIMIT
+      Type: Variable
+      value: 512M
+    PHP_TIMEZONE:
+      Default: UTC
+      Description: 'Container Variable: PHP_TIMEZONE'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: PHP_TIMEZONE
+      Required: 'false'
+      Target: PHP_TIMEZONE
+      Type: Variable
+      value: UTC
+    PSM_BASE_URL:
+      Default: ''
+      Description: Leave blank if you're just accessing locally, otherwise enter your
+        full reverse proxy URL (including https://)
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: PSM_BASE_URL
+      Required: 'false'
+      Target: PSM_BASE_URL
+      Type: Variable
+      value: ''
+    PSM_DB_HOST:
+      Default: ''
+      Description: Hostname or IP of MySQL or MariaDB.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: PSM_DB_HOST
+      Required: 'true'
+      Target: PSM_DB_HOST
+      Type: Variable
+      value: ''
+    PSM_DB_NAME:
+      Default: phpservermon
+      Description: 'Container Variable: PSM_DB_NAME'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: PSM_DB_NAME
+      Required: 'true'
+      Target: PSM_DB_NAME
+      Type: Variable
+      value: phpservermon
+    PSM_DB_PASS:
+      Default: ''
+      Description: 'Container Variable: PSM_DB_PASS'
+      Display: always
+      Mask: 'true'
+      Mode: ''
+      Name: PSM_DB_PASS
+      Required: 'true'
+      Target: PSM_DB_PASS
+      Type: Variable
+      value: ''
+    PSM_DB_PORT:
+      Default: '3306'
+      Description: 'Container Variable: PSM_DB_PORT'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: PSM_DB_PORT
+      Required: 'true'
+      Target: PSM_DB_PORT
+      Type: Variable
+      value: '3306'
+    PSM_DB_PREFIX:
+      Default: psm_
+      Description: 'Container Variable: PSM_DB_PREFIX'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PSM_DB_PREFIX
+      Required: 'true'
+      Target: PSM_DB_PREFIX
+      Type: Variable
+      value: psm_
+    PSM_DB_USER:
+      Default: phpservermon
+      Description: 'Container Variable: PSM_DB_USER'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: PSM_DB_USER
+      Required: 'true'
+      Target: PSM_DB_USER
+      Type: Variable
+      value: phpservermon
+    UPDATE_INTERVAL:
+      Default: '120'
+      Description: 'Container Variable: UPDATE_INTERVAL'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: UPDATE_INTERVAL
+      Required: 'false'
+      Target: UPDATE_INTERVAL
+      Type: Variable
+      value: '120'
 FirstSeen: 1616450564
 Icon: https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/icons/phpservermon.png
 LastUpdate: 1605705025

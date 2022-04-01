@@ -2,39 +2,44 @@ CategoryList:
 - HomeAutomation
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: /mnt/user/appdata/plateminder/data
-    Description: Path for data/image storage
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: appdata
-    Required: 'true'
-    Target: /app/data
-    Type: Path
-  value: /mnt/user/appdata/plateminder/data
-- '@attributes':
-    Default: /mnt/user/appdata/plateminder/config.yaml
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: config_yaml
-    Required: 'true'
-    Target: /app/config.yaml
-    Type: Path
-  value: /mnt/user/appdata/plateminder/config.yaml
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: restapi
-    Required: 'false'
-    Target: '2576'
-    Type: Port
-  value: '2576'
+  Device: {}
+  Label: {}
+  Path:
+    appdata:
+      Default: /mnt/user/appdata/plateminder/data
+      Description: Path for data/image storage
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: appdata
+      Required: 'true'
+      Target: /app/data
+      Type: Path
+      value: /mnt/user/appdata/plateminder/data
+    config_yaml:
+      Default: /mnt/user/appdata/plateminder/config.yaml
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: config_yaml
+      Required: 'true'
+      Target: /app/config.yaml
+      Type: Path
+      value: /mnt/user/appdata/plateminder/config.yaml
+  Port:
+    restapi:
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: restapi
+      Required: 'false'
+      Target: '2576'
+      Type: Port
+      value: '2576'
+  Variable: {}
 ExtraParams: --restart unless-stopped
 FirstSeen: 1643490190
 Icon: https://raw.githubusercontent.com/digiblur/unraid-docker-templates/master/images/plate-minder.png

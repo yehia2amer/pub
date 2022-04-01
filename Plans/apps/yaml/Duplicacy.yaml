@@ -10,83 +10,88 @@ Branch:
 CategoryList:
 - Backup
 Config:
-- '@attributes':
-    Default: '3875'
-    Description: 'Container Port: 3875'
-    Display: always-hide
-    Mask: 'false'
-    Mode: tcp
-    Name: Host Port for 3875
-    Required: 'true'
-    Target: '3875'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /config'
-    Display: always-hide
-    Mask: 'false'
-    Mode: rw
-    Name: Host Path for /config
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /cache'
-    Display: always-hide
-    Mask: 'false'
-    Mode: rw
-    Name: Host Path for /cache
-    Required: 'true'
-    Target: /cache
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /logs'
-    Display: always-hide
-    Mask: 'false'
-    Mode: rw
-    Name: Host Path for /logs
-    Required: 'true'
-    Target: /logs
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: '99'
-    Description: 'Container Variable: PUID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: PUID
-    Required: 'false'
-    Target: PUID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '100'
-    Description: 'Container Variable: PGID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: PGID
-    Required: 'false'
-    Target: PGID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '002'
-    Description: 'Container Variable: UMASK'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: UMASK
-    Required: 'false'
-    Target: UMASK
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Host Path for /cache:
+      Default: ''
+      Description: 'Container Path: /cache'
+      Display: always-hide
+      Mask: 'false'
+      Mode: rw
+      Name: Host Path for /cache
+      Required: 'true'
+      Target: /cache
+      Type: Path
+      value: ''
+    Host Path for /config:
+      Default: ''
+      Description: 'Container Path: /config'
+      Display: always-hide
+      Mask: 'false'
+      Mode: rw
+      Name: Host Path for /config
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: ''
+    Host Path for /logs:
+      Default: ''
+      Description: 'Container Path: /logs'
+      Display: always-hide
+      Mask: 'false'
+      Mode: rw
+      Name: Host Path for /logs
+      Required: 'true'
+      Target: /logs
+      Type: Path
+      value: ''
+  Port:
+    Host Port for 3875:
+      Default: '3875'
+      Description: 'Container Port: 3875'
+      Display: always-hide
+      Mask: 'false'
+      Mode: tcp
+      Name: Host Port for 3875
+      Required: 'true'
+      Target: '3875'
+      Type: Port
+      value: ''
+  Variable:
+    PGID:
+      Default: '100'
+      Description: 'Container Variable: PGID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: PGID
+      Required: 'false'
+      Target: PGID
+      Type: Variable
+      value: ''
+    PUID:
+      Default: '99'
+      Description: 'Container Variable: PUID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: PUID
+      Required: 'false'
+      Target: PUID
+      Type: Variable
+      value: ''
+    UMASK:
+      Default: '002'
+      Description: 'Container Variable: UMASK'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: UMASK
+      Required: 'false'
+      Target: UMASK
+      Type: Variable
+      value: ''
 ExtraParams: --hostname=duplicacy
 FirstSeen: 1611961592
 Icon: https://hotio.dev/webhook-avatars/duplicacy.png

@@ -2,50 +2,55 @@ CategoryList:
 - MediaApp-Music
 - MediaApp-Other
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 8100'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: HTTP
-    Required: 'true'
-    Target: '8100'
-    Type: Port
-  value: '8100'
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 8101'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebSockets
-    Required: 'true'
-    Target: '8101'
-    Type: Port
-  value: '8101'
-- '@attributes':
-    Default: ''
-    Description: (Optional) Host device to pass through
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Radio Device
-    Required: 'false'
-    Target: ''
-    Type: Device
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /config'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Config
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: /mnt/user/appdata/shinysdr/config/
+  Device:
+    Radio Device:
+      Default: ''
+      Description: (Optional) Host device to pass through
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Radio Device
+      Required: 'false'
+      Target: ''
+      Type: Device
+      value: ''
+  Label: {}
+  Path:
+    Config:
+      Default: ''
+      Description: 'Container Path: /config'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Config
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: /mnt/user/appdata/shinysdr/config/
+  Port:
+    HTTP:
+      Default: ''
+      Description: 'Container Port: 8100'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: HTTP
+      Required: 'true'
+      Target: '8100'
+      Type: Port
+      value: '8100'
+    WebSockets:
+      Default: ''
+      Description: 'Container Port: 8101'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebSockets
+      Required: 'true'
+      Target: '8101'
+      Type: Port
+      value: '8101'
+  Variable: {}
 FirstSeen: 1555005862
 Icon: https://github.com/FoxxMD/unraid-docker-templates/raw/master/icons/shinysdr.png
 LastUpdate: 1585836553

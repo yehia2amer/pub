@@ -1,28 +1,33 @@
 CategoryList:
 - Network-VPN
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /state'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Appdata path
-    Required: 'false'
-    Target: /state
-    Type: Path
-  value: /mnt/user/appdata/tailscale
-- '@attributes':
-    Default: ''
-    Description: Additional flags to pass to tailscale on startup
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: UP_FLAGS
-    Required: 'false'
-    Target: UP_FLAGS
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Appdata path:
+      Default: ''
+      Description: 'Container Path: /state'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Appdata path
+      Required: 'false'
+      Target: /state
+      Type: Path
+      value: /mnt/user/appdata/tailscale
+  Port: {}
+  Variable:
+    UP_FLAGS:
+      Default: ''
+      Description: Additional flags to pass to tailscale on startup
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: UP_FLAGS
+      Required: 'false'
+      Target: UP_FLAGS
+      Type: Variable
+      value: ''
 ExtraParams: --cap-add=NET_ADMIN --hostname=unraid
 FirstSeen: 1586269763
 Icon: https://raw.githubusercontent.com/deasmi/unraid-tailscale/master/logo.png

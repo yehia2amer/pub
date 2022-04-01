@@ -2,73 +2,78 @@ CategoryList:
 - MediaApp-Books
 - MediaServer-Books
 Config:
-- '@attributes':
-    Default: '8083'
-    Description: 'Container Port: '
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebFrontend
-    Required: 'true'
-    Target: '8083'
-    Type: Port
-  value: '8083'
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /books'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Calibre library path
-    Required: 'true'
-    Target: /books
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: PGID'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: GroupID
-    Required: 'true'
-    Target: PGID
-    Type: Variable
-  value: '100'
-- '@attributes':
-    Default: '99'
-    Description: 'Container Variable: PUID'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: UserID
-    Required: 'true'
-    Target: PUID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: true|false
-    Description: 'Container Variable: SET_CONTAINER_TIMEZONE'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: SET_CONTAINER_TIMEZONE
-    Required: 'true'
-    Target: SET_CONTAINER_TIMEZONE
-    Type: Variable
-  value: 'true'
-- '@attributes':
-    Default: UTC
-    Description: "The possible container timezones can be found under the directory\
-      \ /usr/share/zoneinfo/.\r\nUTC, Europe/Berlin, Europe/Vienna\r\n, ..."
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: CONTAINER_TIMEZONE
-    Required: 'true'
-    Target: CONTAINER_TIMEZONE
-    Type: Variable
-  value: UTC
+  Device: {}
+  Label: {}
+  Path:
+    Calibre library path:
+      Default: ''
+      Description: 'Container Path: /books'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Calibre library path
+      Required: 'true'
+      Target: /books
+      Type: Path
+      value: ''
+  Port:
+    WebFrontend:
+      Default: '8083'
+      Description: 'Container Port: '
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebFrontend
+      Required: 'true'
+      Target: '8083'
+      Type: Port
+      value: '8083'
+  Variable:
+    CONTAINER_TIMEZONE:
+      Default: UTC
+      Description: "The possible container timezones can be found under the directory\
+        \ /usr/share/zoneinfo/.\r\nUTC, Europe/Berlin, Europe/Vienna\r\n, ..."
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: CONTAINER_TIMEZONE
+      Required: 'true'
+      Target: CONTAINER_TIMEZONE
+      Type: Variable
+      value: UTC
+    GroupID:
+      Default: ''
+      Description: 'Container Variable: PGID'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: GroupID
+      Required: 'true'
+      Target: PGID
+      Type: Variable
+      value: '100'
+    SET_CONTAINER_TIMEZONE:
+      Default: true|false
+      Description: 'Container Variable: SET_CONTAINER_TIMEZONE'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: SET_CONTAINER_TIMEZONE
+      Required: 'true'
+      Target: SET_CONTAINER_TIMEZONE
+      Type: Variable
+      value: 'true'
+    UserID:
+      Default: '99'
+      Description: 'Container Variable: PUID'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: UserID
+      Required: 'true'
+      Target: PUID
+      Type: Variable
+      value: '99'
 FirstSeen: 1
 Icon: https://raw.githubusercontent.com/fanningert/unraid-docker-templates/master/fanningert/icons/calibreweb.png
 LastUpdate: 1634922361

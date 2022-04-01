@@ -2,79 +2,84 @@ CategoryList:
 - HomeAutomation
 ChangeLogPresent: true
 Config:
-- '@attributes':
-    Default: '8080'
-    Description: WebUI
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'true'
-    Target: '8080'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: '50000'
-    Description: HABridge communication port.
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: 'Port: 50000'
-    Required: 'true'
-    Target: '50000'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Where HABridge stores config files and data.
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: Appdata
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: Your Key To Encrypt Security Data
-    Description: Key used to secure communication.
-    Display: always
-    Mask: 'true'
-    Name: SEC_KEY
-    Required: 'true'
-    Target: SEC_KEY
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '99'
-    Description: 'Container Variable: PUID'
-    Display: advanced
-    Mask: 'false'
-    Name: PUID
-    Required: 'true'
-    Target: PUID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '100'
-    Description: 'Container Variable: PGID'
-    Display: advanced
-    Mask: 'false'
-    Name: PGID
-    Required: 'true'
-    Target: PGID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '022'
-    Description: 'Container Variable: UMASK'
-    Display: advanced
-    Mask: 'false'
-    Name: UMASK
-    Required: 'false'
-    Target: UMASK
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Appdata:
+      Default: ''
+      Description: Where HABridge stores config files and data.
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: Appdata
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: ''
+  Port:
+    'Port: 50000':
+      Default: '50000'
+      Description: HABridge communication port.
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: 'Port: 50000'
+      Required: 'true'
+      Target: '50000'
+      Type: Port
+      value: ''
+    WebUI:
+      Default: '8080'
+      Description: WebUI
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'true'
+      Target: '8080'
+      Type: Port
+      value: ''
+  Variable:
+    PGID:
+      Default: '100'
+      Description: 'Container Variable: PGID'
+      Display: advanced
+      Mask: 'false'
+      Name: PGID
+      Required: 'true'
+      Target: PGID
+      Type: Variable
+      value: ''
+    PUID:
+      Default: '99'
+      Description: 'Container Variable: PUID'
+      Display: advanced
+      Mask: 'false'
+      Name: PUID
+      Required: 'true'
+      Target: PUID
+      Type: Variable
+      value: ''
+    SEC_KEY:
+      Default: Your Key To Encrypt Security Data
+      Description: Key used to secure communication.
+      Display: always
+      Mask: 'true'
+      Name: SEC_KEY
+      Required: 'true'
+      Target: SEC_KEY
+      Type: Variable
+      value: ''
+    UMASK:
+      Default: '022'
+      Description: 'Container Variable: UMASK'
+      Display: advanced
+      Mask: 'false'
+      Name: UMASK
+      Required: 'false'
+      Target: UMASK
+      Type: Variable
+      value: ''
 DonateImg: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/donate.png
 DonateLink: https://www.linuxserver.io/donate
 DonateText: Donations

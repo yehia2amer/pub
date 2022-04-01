@@ -2,28 +2,33 @@ CategoryList:
 - Tools-Utilities
 - MediaApp-Video
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 3000'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Port
-    Required: 'true'
-    Target: '3000'
-    Type: Port
-  value: '3000'
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /download'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Download
-    Required: 'false'
-    Target: /download
-    Type: Path
-  value: /mnt/user/media/video-downloads
+  Device: {}
+  Label: {}
+  Path:
+    Download:
+      Default: ''
+      Description: 'Container Path: /download'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Download
+      Required: 'false'
+      Target: /download
+      Type: Path
+      value: /mnt/user/media/video-downloads
+  Port:
+    Port:
+      Default: ''
+      Description: 'Container Port: 3000'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Port
+      Required: 'true'
+      Target: '3000'
+      Type: Port
+      value: '3000'
+  Variable: {}
 FirstSeen: 1581210455
 Icon: https://i.imgur.com/I7iwfnF.png
 LastUpdate: 1641147438

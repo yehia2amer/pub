@@ -1,282 +1,287 @@
 CategoryList:
 - GameServers
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /nwnee'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: ServerFiles
-    Required: 'true'
-    Target: /nwnee
-    Type: Path
-  value: /mnt/cache/appdata/nwnee
-- '@attributes':
-    Default: ''
-    Description: Set the log level (from 2=only fatal errors to 7=very verbose)
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Log Level
-    Required: 'true'
-    Target: LOG_LVL
-    Type: Variable
-  value: '4'
-- '@attributes':
-    Default: ''
-    Description: UDP Game Port
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: UDP - Game Port
-    Required: 'true'
-    Target: '5121'
-    Type: Port
-  value: '5121'
-- '@attributes':
-    Default: ''
-    Description: Enter the module name to load here (located in your serverdirectory
-      'Neverwinter Nights/modules' without the .mod extension)
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Module Name
-    Required: 'true'
-    Target: MOD_NAME
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Set the maximum number of connections to the game server.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Maximum Clients
-    Required: 'true'
-    Target: MAX_CLIENTS
-    Type: Variable
-  value: '4'
-- '@attributes':
-    Default: ''
-    Description: Set the minimum character level required by the server.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Minimum Character Level
-    Required: 'true'
-    Target: MINLEVEL
-    Type: Variable
-  value: '1'
-- '@attributes':
-    Default: ''
-    Description: Set the maximum character level allowed by the server.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Maximum Character Level
-    Required: 'true'
-    Target: MAXLEVEL
-    Type: Variable
-  value: '40'
-- '@attributes':
-    Default: ''
-    Description: Set if a player or DM can pause the game (0 = game can only be paused
-      by DM, 1 = game can by paused by players)
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Player Pause
-    Required: 'true'
-    Target: PAUSEAPLAY
-    Type: Variable
-  value: '0'
-- '@attributes':
-    Default: ''
-    Description: Set wich PVP mode do you want (0 = none, 1 = party, 2 = full)
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: PVP Mode
-    Required: 'true'
-    Target: PVP
-    Type: Variable
-  value: '0'
-- '@attributes':
-    Default: ''
-    Description: Set if local or server characters (0 = local characters only. 1 =
-      server characters only)
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Servercharacters Only
-    Required: 'true'
-    Target: SERVERVAULT
-    Type: Variable
-  value: '0'
-- '@attributes':
-    Default: ''
-    Description: Set enforcing legal characters (0 = don't enforce legal characters,
-      1 = do enforce legal characters)
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Enforce Legal Characters
-    Required: 'true'
-    Target: ELC
-    Type: Variable
-  value: '0'
-- '@attributes':
-    Default: ''
-    Description: Set enforcing item level restriction (0 = don't enforce item level
-      restrictions, 1 = do enforce item level restrictions)
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Enforce Item Level Restriction
-    Required: 'true'
-    Target: ILR
-    Type: Variable
-  value: '0'
-- '@attributes':
-    Default: ''
-    Description: Set if one or more parties are allowed (0 = allow only one party,
-      1 = allow multiple parties)
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Multiple Parties Allowed
-    Required: 'true'
-    Target: ONEPARTY
-    Type: Variable
-  value: '0'
-- '@attributes':
-    Default: ''
-    Description: Set difficutly (1 = easy, 2 = normal, 3 = D&amp;D hardcore, 4 = very
-      difficult)
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Difficulty
-    Required: 'true'
-    Target: DIFF
-    Type: Variable
-  value: '1'
-- '@attributes':
-    Default: ''
-    Description: Set how frequently (in minutes) to autosave.  0 disables autosave.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Autosave Intervall
-    Required: 'true'
-    Target: AUTO_SAV_I
-    Type: Variable
-  value: '5'
-- '@attributes':
-    Default: ''
-    Description: Set the name this server appears as in the mulitplayer game listing.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Server Name
-    Required: 'true'
-    Target: SRV_NAME
-    Type: Variable
-  value: Docker NWNEE
-- '@attributes':
-    Default: ''
-    Description: Set the password required by players to join the game.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Connection Password
-    Required: 'false'
-    Target: PPW
-    Type: Variable
-  value: Docker
-- '@attributes':
-    Default: ''
-    Description: Set the password required to remotely administer the game. Currently
-      unused.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Admin Password
-    Required: 'true'
-    Target: APWD
-    Type: Variable
-  value: adminDocker
-- '@attributes':
-    Default: ''
-    Description: Set if you want to list the game publicly (0 = do not list server
-      with the matching service. 1 = list server with the matching service).
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Public Server
-    Required: 'true'
-    Target: PUBLIC_SRV
-    Type: Variable
-  value: '0'
-- '@attributes':
-    Default: ''
-    Description: Restart module if server becomes empty (0 = module state is persistant
-      as long as server is running, 1 = module state is reset when the server becomes
-      empty).
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Restart Module If Server Becomes Empty
-    Required: 'true'
-    Target: RLD_W_E
-    Type: Variable
-  value: '0'
-- '@attributes':
-    Default: ''
-    Description: 'Enter your extra game startup parameters if needed here (eg: ''-dmpassword
-      supersecretpassword -quiet'' without quotes).'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Extra Startup Parameters
-    Required: 'false'
-    Target: GAME_PARAMS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: UID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: UID
-    Required: 'true'
-    Target: UID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: GID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: GID
-    Required: 'true'
-    Target: GID
-    Type: Variable
-  value: '100'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: UMASK'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: UMASK
-    Required: 'true'
-    Target: UMASK
-    Type: Variable
-  value: '000'
+  Device: {}
+  Label: {}
+  Path:
+    ServerFiles:
+      Default: ''
+      Description: 'Container Path: /nwnee'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: ServerFiles
+      Required: 'true'
+      Target: /nwnee
+      Type: Path
+      value: /mnt/cache/appdata/nwnee
+  Port:
+    UDP - Game Port:
+      Default: ''
+      Description: UDP Game Port
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: UDP - Game Port
+      Required: 'true'
+      Target: '5121'
+      Type: Port
+      value: '5121'
+  Variable:
+    Admin Password:
+      Default: ''
+      Description: Set the password required to remotely administer the game. Currently
+        unused.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Admin Password
+      Required: 'true'
+      Target: APWD
+      Type: Variable
+      value: adminDocker
+    Autosave Intervall:
+      Default: ''
+      Description: Set how frequently (in minutes) to autosave.  0 disables autosave.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Autosave Intervall
+      Required: 'true'
+      Target: AUTO_SAV_I
+      Type: Variable
+      value: '5'
+    Connection Password:
+      Default: ''
+      Description: Set the password required by players to join the game.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Connection Password
+      Required: 'false'
+      Target: PPW
+      Type: Variable
+      value: Docker
+    Difficulty:
+      Default: ''
+      Description: Set difficutly (1 = easy, 2 = normal, 3 = D&amp;D hardcore, 4 =
+        very difficult)
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Difficulty
+      Required: 'true'
+      Target: DIFF
+      Type: Variable
+      value: '1'
+    Enforce Item Level Restriction:
+      Default: ''
+      Description: Set enforcing item level restriction (0 = don't enforce item level
+        restrictions, 1 = do enforce item level restrictions)
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Enforce Item Level Restriction
+      Required: 'true'
+      Target: ILR
+      Type: Variable
+      value: '0'
+    Enforce Legal Characters:
+      Default: ''
+      Description: Set enforcing legal characters (0 = don't enforce legal characters,
+        1 = do enforce legal characters)
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Enforce Legal Characters
+      Required: 'true'
+      Target: ELC
+      Type: Variable
+      value: '0'
+    Extra Startup Parameters:
+      Default: ''
+      Description: 'Enter your extra game startup parameters if needed here (eg: ''-dmpassword
+        supersecretpassword -quiet'' without quotes).'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Extra Startup Parameters
+      Required: 'false'
+      Target: GAME_PARAMS
+      Type: Variable
+      value: ''
+    GID:
+      Default: ''
+      Description: 'Container Variable: GID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: GID
+      Required: 'true'
+      Target: GID
+      Type: Variable
+      value: '100'
+    Log Level:
+      Default: ''
+      Description: Set the log level (from 2=only fatal errors to 7=very verbose)
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Log Level
+      Required: 'true'
+      Target: LOG_LVL
+      Type: Variable
+      value: '4'
+    Maximum Character Level:
+      Default: ''
+      Description: Set the maximum character level allowed by the server.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Maximum Character Level
+      Required: 'true'
+      Target: MAXLEVEL
+      Type: Variable
+      value: '40'
+    Maximum Clients:
+      Default: ''
+      Description: Set the maximum number of connections to the game server.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Maximum Clients
+      Required: 'true'
+      Target: MAX_CLIENTS
+      Type: Variable
+      value: '4'
+    Minimum Character Level:
+      Default: ''
+      Description: Set the minimum character level required by the server.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Minimum Character Level
+      Required: 'true'
+      Target: MINLEVEL
+      Type: Variable
+      value: '1'
+    Module Name:
+      Default: ''
+      Description: Enter the module name to load here (located in your serverdirectory
+        'Neverwinter Nights/modules' without the .mod extension)
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Module Name
+      Required: 'true'
+      Target: MOD_NAME
+      Type: Variable
+      value: ''
+    Multiple Parties Allowed:
+      Default: ''
+      Description: Set if one or more parties are allowed (0 = allow only one party,
+        1 = allow multiple parties)
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Multiple Parties Allowed
+      Required: 'true'
+      Target: ONEPARTY
+      Type: Variable
+      value: '0'
+    PVP Mode:
+      Default: ''
+      Description: Set wich PVP mode do you want (0 = none, 1 = party, 2 = full)
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: PVP Mode
+      Required: 'true'
+      Target: PVP
+      Type: Variable
+      value: '0'
+    Player Pause:
+      Default: ''
+      Description: Set if a player or DM can pause the game (0 = game can only be
+        paused by DM, 1 = game can by paused by players)
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Player Pause
+      Required: 'true'
+      Target: PAUSEAPLAY
+      Type: Variable
+      value: '0'
+    Public Server:
+      Default: ''
+      Description: Set if you want to list the game publicly (0 = do not list server
+        with the matching service. 1 = list server with the matching service).
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Public Server
+      Required: 'true'
+      Target: PUBLIC_SRV
+      Type: Variable
+      value: '0'
+    Restart Module If Server Becomes Empty:
+      Default: ''
+      Description: Restart module if server becomes empty (0 = module state is persistant
+        as long as server is running, 1 = module state is reset when the server becomes
+        empty).
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Restart Module If Server Becomes Empty
+      Required: 'true'
+      Target: RLD_W_E
+      Type: Variable
+      value: '0'
+    Server Name:
+      Default: ''
+      Description: Set the name this server appears as in the mulitplayer game listing.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Server Name
+      Required: 'true'
+      Target: SRV_NAME
+      Type: Variable
+      value: Docker NWNEE
+    Servercharacters Only:
+      Default: ''
+      Description: Set if local or server characters (0 = local characters only. 1
+        = server characters only)
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Servercharacters Only
+      Required: 'true'
+      Target: SERVERVAULT
+      Type: Variable
+      value: '0'
+    UID:
+      Default: ''
+      Description: 'Container Variable: UID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: UID
+      Required: 'true'
+      Target: UID
+      Type: Variable
+      value: '99'
+    UMASK:
+      Default: ''
+      Description: 'Container Variable: UMASK'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: UMASK
+      Required: 'true'
+      Target: UMASK
+      Type: Variable
+      value: '000'
 DonateLink: https://www.paypal.me/chips777
 DonateText: 'If you like my work please '
 ExtraParams: --restart=unless-stopped

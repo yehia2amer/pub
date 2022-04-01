@@ -1,61 +1,66 @@
 CategoryList:
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 8010'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Host Port 1
-    Required: 'false'
-    Target: '8010'
-    Type: Port
-  value: '8010'
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /ngrams'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Host Path 1
-    Required: 'false'
-    Target: /ngrams
-    Type: Path
-  value: /mnt/user/appdata/languagetool
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: langtool_languageModel'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: langtool ngrams
-    Required: 'false'
-    Target: langtool_languageModel
-    Type: Variable
-  value: /ngrams
-- '@attributes':
-    Default: 256m
-    Description: 'Container Variable: Java_Xms'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Java heap size Min
-    Required: 'false'
-    Target: Java_Xms
-    Type: Variable
-  value: 256m
-- '@attributes':
-    Default: 512m
-    Description: 'Container Variable: Java_Xmx'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Java heap size Max
-    Required: 'false'
-    Target: Java_Xmx
-    Type: Variable
-  value: 512m
+  Device: {}
+  Label: {}
+  Path:
+    Host Path 1:
+      Default: ''
+      Description: 'Container Path: /ngrams'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Host Path 1
+      Required: 'false'
+      Target: /ngrams
+      Type: Path
+      value: /mnt/user/appdata/languagetool
+  Port:
+    Host Port 1:
+      Default: ''
+      Description: 'Container Port: 8010'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Host Port 1
+      Required: 'false'
+      Target: '8010'
+      Type: Port
+      value: '8010'
+  Variable:
+    Java heap size Max:
+      Default: 512m
+      Description: 'Container Variable: Java_Xmx'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Java heap size Max
+      Required: 'false'
+      Target: Java_Xmx
+      Type: Variable
+      value: 512m
+    Java heap size Min:
+      Default: 256m
+      Description: 'Container Variable: Java_Xms'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Java heap size Min
+      Required: 'false'
+      Target: Java_Xms
+      Type: Variable
+      value: 256m
+    langtool ngrams:
+      Default: ''
+      Description: 'Container Variable: langtool_languageModel'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: langtool ngrams
+      Required: 'false'
+      Target: langtool_languageModel
+      Type: Variable
+      value: /ngrams
 ExtraParams: --restart unless-stopped
 FirstSeen: 1610737854
 Icon: https://raw.githubusercontent.com/ArieDed/unraid-template/master/img/languagetool_icon.png

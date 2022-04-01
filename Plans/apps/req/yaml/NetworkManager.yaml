@@ -3,95 +3,100 @@ CategoryList:
 - Productivity
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: '9000'
-    Description: The port used for the HTTP service
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Web Port
-    Required: 'true'
-    Target: '9000'
-    Type: Port
-  value: '9000'
-- '@attributes':
-    Default: ''
-    Description: The key used to secure data. (random string of 32 characters [a-zA-Z0-9])
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Application Key
-    Required: 'true'
-    Target: APP_KEY
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 127.0.0.1
-    Description: 'Container Variable: DB_HOST'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Database Host
-    Required: 'false'
-    Target: DB_HOST
-    Type: Variable
-  value: 127.0.0.1
-- '@attributes':
-    Default: '3306'
-    Description: 'Container Variable: DB_PORT'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Database Port
-    Required: 'false'
-    Target: DB_PORT
-    Type: Variable
-  value: '3306'
-- '@attributes':
-    Default: root
-    Description: 'Container Variable: DB_USERNAME'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Database Username
-    Required: 'false'
-    Target: DB_USERNAME
-    Type: Variable
-  value: root
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: DB_PASSWORD'
-    Display: always
-    Mask: 'true'
-    Mode: ''
-    Name: Database Password
-    Required: 'false'
-    Target: DB_PASSWORD
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: network_manager
-    Description: 'Container Variable: DB_DATABASE'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Database Database
-    Required: 'false'
-    Target: DB_DATABASE
-    Type: Variable
-  value: network_manager
-- '@attributes':
-    Default: false|true
-    Description: Whether the webserver should generate HTTPS links instead of HTTP
-      links. (Set this to true when running behind a HTTPS proxy)
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: HTTPS
-    Required: 'false'
-    Target: OCTANE_HTTPS
-    Type: Variable
-  value: 'false'
+  Device: {}
+  Label: {}
+  Path: {}
+  Port:
+    Web Port:
+      Default: '9000'
+      Description: The port used for the HTTP service
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Web Port
+      Required: 'true'
+      Target: '9000'
+      Type: Port
+      value: '9000'
+  Variable:
+    Application Key:
+      Default: ''
+      Description: The key used to secure data. (random string of 32 characters [a-zA-Z0-9])
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Application Key
+      Required: 'true'
+      Target: APP_KEY
+      Type: Variable
+      value: ''
+    Database Database:
+      Default: network_manager
+      Description: 'Container Variable: DB_DATABASE'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Database Database
+      Required: 'false'
+      Target: DB_DATABASE
+      Type: Variable
+      value: network_manager
+    Database Host:
+      Default: 127.0.0.1
+      Description: 'Container Variable: DB_HOST'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Database Host
+      Required: 'false'
+      Target: DB_HOST
+      Type: Variable
+      value: 127.0.0.1
+    Database Password:
+      Default: ''
+      Description: 'Container Variable: DB_PASSWORD'
+      Display: always
+      Mask: 'true'
+      Mode: ''
+      Name: Database Password
+      Required: 'false'
+      Target: DB_PASSWORD
+      Type: Variable
+      value: ''
+    Database Port:
+      Default: '3306'
+      Description: 'Container Variable: DB_PORT'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Database Port
+      Required: 'false'
+      Target: DB_PORT
+      Type: Variable
+      value: '3306'
+    Database Username:
+      Default: root
+      Description: 'Container Variable: DB_USERNAME'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Database Username
+      Required: 'false'
+      Target: DB_USERNAME
+      Type: Variable
+      value: root
+    HTTPS:
+      Default: false|true
+      Description: Whether the webserver should generate HTTPS links instead of HTTP
+        links. (Set this to true when running behind a HTTPS proxy)
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: HTTPS
+      Required: 'false'
+      Target: OCTANE_HTTPS
+      Type: Variable
+      value: 'false'
 FirstSeen: 1640371140
 Icon: https://raw.githubusercontent.com/Sander0542/docker-templates/main/sander0542/icons/NetworkManager.png
 LastUpdate: 1647832251

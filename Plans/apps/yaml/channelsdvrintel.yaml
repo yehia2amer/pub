@@ -2,72 +2,77 @@ BindTime: 'true'
 CategoryList:
 - MediaServer-Video
 Config:
-- '@attributes':
-    Default: ''
-    Description: DVR Folder
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: DVR
-    Required: 'true'
-    Target: /shares/DVR
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: /mnt/user/appdata/channels-dvr
-    Description: Appdata
-    Dislay: always
-    Mask: 'false'
-    Mode: rw
-    Name: Appdata
-    Required: 'true'
-    Target: /channels-dvr
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: '8089'
-    Description: Admin Port
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'false'
-    Target: '8089'
-    Type: Port
-  value: '8089'
-- '@attributes':
-    Default: '99'
-    Description: PUID
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: PUID
-    Required: 'false'
-    Target: PUID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: '100'
-    Description: ''
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: PGID
-    Required: 'false'
-    Target: PGID
-    Type: Variable
-  value: '100'
-- '@attributes':
-    Default: America/New_York
-    Description: ''
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: TZ
-    Required: 'false'
-    Target: TZ
-    Type: Variable
-  value: America/New_York
+  Device: {}
+  Label: {}
+  Path:
+    Appdata:
+      Default: /mnt/user/appdata/channels-dvr
+      Description: Appdata
+      Dislay: always
+      Mask: 'false'
+      Mode: rw
+      Name: Appdata
+      Required: 'true'
+      Target: /channels-dvr
+      Type: Path
+      value: ''
+    DVR:
+      Default: ''
+      Description: DVR Folder
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: DVR
+      Required: 'true'
+      Target: /shares/DVR
+      Type: Path
+      value: ''
+  Port:
+    WebUI:
+      Default: '8089'
+      Description: Admin Port
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'false'
+      Target: '8089'
+      Type: Port
+      value: '8089'
+  Variable:
+    PGID:
+      Default: '100'
+      Description: ''
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PGID
+      Required: 'false'
+      Target: PGID
+      Type: Variable
+      value: '100'
+    PUID:
+      Default: '99'
+      Description: PUID
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PUID
+      Required: 'false'
+      Target: PUID
+      Type: Variable
+      value: '99'
+    TZ:
+      Default: America/New_York
+      Description: ''
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: TZ
+      Required: 'false'
+      Target: TZ
+      Type: Variable
+      value: America/New_York
 ExtraParams: --device=/dev/dri --security-opt seccomp=unconfined
 FirstSeen: 1642366205
 GitHub: https://github.com/timstephens24/channels-dvr_docker

@@ -1,65 +1,70 @@
 CategoryList:
 - GameServers
 Config:
-- '@attributes':
-    Default: ''
-    Description: Server Path
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: ServerFiles
-    Required: 'true'
-    Target: /zandronum
-    Type: Path
-  value: /mnt/cache/appdata/zandronum
-- '@attributes':
-    Default: ''
-    Description: 'Enter your start up commands for the server (eg: if you have more
-      wad files in your ''wads'' folder append: ''-iwad DOOM2.WAD'' - without quotes
-      - to load DOOM2, also note that the wad file is case sensitive).'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Game Parameters
-    Required: 'true'
-    Target: GAME_PARAMS
-    Type: Variable
-  value: -host 16 -exec server.cfg
-- '@attributes':
-    Default: ''
-    Description: Server Game Port (If you need another port please delete this entry
-      and create a new UDP port with the preferred port number - also don't forget
-      to change the port number in the GAME_PARAMS Variable).
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: UDP - GamePort
-    Required: 'true'
-    Target: '10666'
-    Type: Port
-  value: '10666'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: UID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: UID
-    Required: 'true'
-    Target: UID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: GID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: GID
-    Required: 'true'
-    Target: GID
-    Type: Variable
-  value: '100'
+  Device: {}
+  Label: {}
+  Path:
+    ServerFiles:
+      Default: ''
+      Description: Server Path
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: ServerFiles
+      Required: 'true'
+      Target: /zandronum
+      Type: Path
+      value: /mnt/cache/appdata/zandronum
+  Port:
+    UDP - GamePort:
+      Default: ''
+      Description: Server Game Port (If you need another port please delete this entry
+        and create a new UDP port with the preferred port number - also don't forget
+        to change the port number in the GAME_PARAMS Variable).
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: UDP - GamePort
+      Required: 'true'
+      Target: '10666'
+      Type: Port
+      value: '10666'
+  Variable:
+    GID:
+      Default: ''
+      Description: 'Container Variable: GID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: GID
+      Required: 'true'
+      Target: GID
+      Type: Variable
+      value: '100'
+    Game Parameters:
+      Default: ''
+      Description: 'Enter your start up commands for the server (eg: if you have more
+        wad files in your ''wads'' folder append: ''-iwad DOOM2.WAD'' - without quotes
+        - to load DOOM2, also note that the wad file is case sensitive).'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Game Parameters
+      Required: 'true'
+      Target: GAME_PARAMS
+      Type: Variable
+      value: -host 16 -exec server.cfg
+    UID:
+      Default: ''
+      Description: 'Container Variable: UID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: UID
+      Required: 'true'
+      Target: UID
+      Type: Variable
+      value: '99'
 DonateLink: https://www.paypal.me/chips777
 DonateText: 'If you like my work please '
 ExtraParams: --restart=unless-stopped

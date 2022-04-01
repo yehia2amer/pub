@@ -1,26 +1,31 @@
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /data'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: appdata
-    Required: 'false'
-    Target: /data
-    Type: Path
-  value: /mnt/user/appdata/truecommand
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 80'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: web
-    Required: 'false'
-    Target: '80'
-    Type: Port
-  value: '91'
+  Device: {}
+  Label: {}
+  Path:
+    appdata:
+      Default: ''
+      Description: 'Container Path: /data'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: appdata
+      Required: 'false'
+      Target: /data
+      Type: Path
+      value: /mnt/user/appdata/truecommand
+  Port:
+    web:
+      Default: ''
+      Description: 'Container Port: 80'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: web
+      Required: 'false'
+      Target: '80'
+      Type: Port
+      value: '91'
+  Variable: {}
 FirstSeen: 1626617002
 Icon: https://raw.githubusercontent.com/SpaceinvaderOne/unraid_vm_icons/master/icons/Freebsd/True_NAS.png
 LastUpdate: 1647012926

@@ -3,39 +3,44 @@ CategoryList:
 - Network-DNS
 - Network-Management
 Config:
-- '@attributes':
-    Default: www
-    Description: This is the host to be updated. e.g. 'www.'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: HOST
-    Required: 'true'
-    Target: APP_HOST
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: your domain.tld
-    Description: This is the domain to be updated. e.g. yourdomain.tld
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DOMAIN
-    Required: 'true'
-    Target: APP_DOMAIN
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Your Dynamic DNS password. NOT your namecheap password.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: PASSWORD
-    Required: 'true'
-    Target: APP_PASSWORD
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path: {}
+  Port: {}
+  Variable:
+    DOMAIN:
+      Default: your domain.tld
+      Description: This is the domain to be updated. e.g. yourdomain.tld
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DOMAIN
+      Required: 'true'
+      Target: APP_DOMAIN
+      Type: Variable
+      value: ''
+    HOST:
+      Default: www
+      Description: This is the host to be updated. e.g. 'www.'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: HOST
+      Required: 'true'
+      Target: APP_HOST
+      Type: Variable
+      value: ''
+    PASSWORD:
+      Default: ''
+      Description: Your Dynamic DNS password. NOT your namecheap password.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: PASSWORD
+      Required: 'true'
+      Target: APP_PASSWORD
+      Type: Variable
+      value: ''
 FirstSeen: 1618747360
 Icon: https://github.com/EdwardChamberlain/unraid-templates/blob/main/assets/namecheap.jpg?raw=true
 LastUpdate: 1625748677

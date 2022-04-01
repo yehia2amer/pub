@@ -3,61 +3,66 @@ CategoryList:
 - MediaApp-Other
 - MediaServer-Other
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 8484'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: UI
-    Required: 'true'
-    Target: '8484'
-    Type: Port
-  value: '8484'
-- '@attributes':
-    Default: ''
-    Description: true/false to enable WebUI https
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Enable https for WebUI
-    Required: 'true'
-    Target: ENABLE_SSL
-    Type: Variable
-  value: 'false'
-- '@attributes':
-    Default: ''
-    Description: true/false to require login
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Require login for WebUI
-    Required: 'true'
-    Target: ENABLE_LOGIN
-    Type: Variable
-  value: 'false'
-- '@attributes':
-    Default: ''
-    Description: The base URL for Gaps WebUI
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Set Gaps Base URL for WebUI
-    Required: 'false'
-    Target: BASE_URL
-    Type: Variable
-  value: /
-- '@attributes':
-    Default: ''
-    Description: File path for gaps config and data storage.
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: config
-    Required: 'true'
-    Target: /usr/data
-    Type: Path
-  value: /mnt/user/appdata/gaps/
+  Device: {}
+  Label: {}
+  Path:
+    config:
+      Default: ''
+      Description: File path for gaps config and data storage.
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: config
+      Required: 'true'
+      Target: /usr/data
+      Type: Path
+      value: /mnt/user/appdata/gaps/
+  Port:
+    UI:
+      Default: ''
+      Description: 'Container Port: 8484'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: UI
+      Required: 'true'
+      Target: '8484'
+      Type: Port
+      value: '8484'
+  Variable:
+    Enable https for WebUI:
+      Default: ''
+      Description: true/false to enable WebUI https
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Enable https for WebUI
+      Required: 'true'
+      Target: ENABLE_SSL
+      Type: Variable
+      value: 'false'
+    Require login for WebUI:
+      Default: ''
+      Description: true/false to require login
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Require login for WebUI
+      Required: 'true'
+      Target: ENABLE_LOGIN
+      Type: Variable
+      value: 'false'
+    Set Gaps Base URL for WebUI:
+      Default: ''
+      Description: The base URL for Gaps WebUI
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Set Gaps Base URL for WebUI
+      Required: 'false'
+      Target: BASE_URL
+      Type: Variable
+      value: /
 DonateLink: https://www.paypal.com/paypalme2/thehousewrecker
 DonateText: All support appreciated.
 FirstSeen: 1574725616

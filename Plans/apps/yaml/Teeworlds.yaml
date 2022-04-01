@@ -1,72 +1,77 @@
 CategoryList:
 - GameServers
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /serverdata/serverfiles'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: ServerFiles
-    Required: 'true'
-    Target: /serverdata/serverfiles/
-    Type: Path
-  value: /mnt/cache/appdata/teeworlds/
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 8303'
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: UDP
-    Required: 'true'
-    Target: '8303'
-    Type: Port
-  value: '8303'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: GAME_CONFIG'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: ConfigFile
-    Required: 'false'
-    Target: GAME_CONFIG
-    Type: Variable
-  value: dm.cfg
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 8303'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: TCP
-    Required: 'false'
-    Target: '8303'
-    Type: Port
-  value: '8303'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: UID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: UID
-    Required: 'true'
-    Target: UID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: GID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: GID
-    Required: 'true'
-    Target: GID
-    Type: Variable
-  value: '100'
+  Device: {}
+  Label: {}
+  Path:
+    ServerFiles:
+      Default: ''
+      Description: 'Container Path: /serverdata/serverfiles'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: ServerFiles
+      Required: 'true'
+      Target: /serverdata/serverfiles/
+      Type: Path
+      value: /mnt/cache/appdata/teeworlds/
+  Port:
+    TCP:
+      Default: ''
+      Description: 'Container Port: 8303'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: TCP
+      Required: 'false'
+      Target: '8303'
+      Type: Port
+      value: '8303'
+    UDP:
+      Default: ''
+      Description: 'Container Port: 8303'
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: UDP
+      Required: 'true'
+      Target: '8303'
+      Type: Port
+      value: '8303'
+  Variable:
+    ConfigFile:
+      Default: ''
+      Description: 'Container Variable: GAME_CONFIG'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: ConfigFile
+      Required: 'false'
+      Target: GAME_CONFIG
+      Type: Variable
+      value: dm.cfg
+    GID:
+      Default: ''
+      Description: 'Container Variable: GID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: GID
+      Required: 'true'
+      Target: GID
+      Type: Variable
+      value: '100'
+    UID:
+      Default: ''
+      Description: 'Container Variable: UID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: UID
+      Required: 'true'
+      Target: UID
+      Type: Variable
+      value: '99'
 DonateImg: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/donate.png
 DonateLink: https://www.paypal.me/chips777
 DonateText: 'If you like my work please '

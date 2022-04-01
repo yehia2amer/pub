@@ -10,61 +10,66 @@ CategoryList:
 - MediaServer-Other
 - Network-Web
 Config:
-- '@attributes':
-    Default: '80'
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Port
-    Required: 'true'
-    Target: '80'
-    Type: Port
-  value: '98'
-- '@attributes':
-    Default: ''
-    Description: Set the IP of your unraid. Please
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: UnraidIP
-    Required: 'true'
-    Target: SEAFILE_SERVER_HOSTNAME
-    Type: Variable
-  value: 192.168.0.59
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: DataPath
-    Required: 'true'
-    Target: /shared
-    Type: Path
-  value: /mnt/user/appdata/seafiles
-- '@attributes':
-    Default: admin@test.fr
-    Description: Specifies Seafile admin user, default is 'admin@test.fr'.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: AdminEmail
-    Required: 'true'
-    Target: SEAFILE_ADMIN_EMAIL
-    Type: Variable
-  value: admin@test.fr
-- '@attributes':
-    Default: changeme
-    Description: Specifies Seafile admin password, default is 'changeme'.
-    Display: always
-    Mask: 'true'
-    Mode: ''
-    Name: AdminPassword
-    Required: 'true'
-    Target: SEAFILE_ADMIN_PASSWORD
-    Type: Variable
-  value: changeme
+  Device: {}
+  Label: {}
+  Path:
+    DataPath:
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: DataPath
+      Required: 'true'
+      Target: /shared
+      Type: Path
+      value: /mnt/user/appdata/seafiles
+  Port:
+    Port:
+      Default: '80'
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Port
+      Required: 'true'
+      Target: '80'
+      Type: Port
+      value: '98'
+  Variable:
+    AdminEmail:
+      Default: admin@test.fr
+      Description: Specifies Seafile admin user, default is 'admin@test.fr'.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: AdminEmail
+      Required: 'true'
+      Target: SEAFILE_ADMIN_EMAIL
+      Type: Variable
+      value: admin@test.fr
+    AdminPassword:
+      Default: changeme
+      Description: Specifies Seafile admin password, default is 'changeme'.
+      Display: always
+      Mask: 'true'
+      Mode: ''
+      Name: AdminPassword
+      Required: 'true'
+      Target: SEAFILE_ADMIN_PASSWORD
+      Type: Variable
+      value: changeme
+    UnraidIP:
+      Default: ''
+      Description: Set the IP of your unraid. Please
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: UnraidIP
+      Required: 'true'
+      Target: SEAFILE_SERVER_HOSTNAME
+      Type: Variable
+      value: 192.168.0.59
 FirstSeen: 1545575241
 Icon: https://raw.githubusercontent.com/ItJustFox/unraidtemplate/main/seafiles/t%C3%A9l%C3%A9chargement.png
 LastUpdate: 1550561141

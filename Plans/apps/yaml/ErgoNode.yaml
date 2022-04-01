@@ -1,54 +1,59 @@
 CategoryList:
 - Other
 Config:
-- '@attributes':
-    Default: /mnt/user/appdata/ergo/data
-    Description: "Path should point to the location you want your &lt;br/&gt; node's\
-      \ data to be (large file 10-20g)\r\n&lt;br/&gt; Ex: /mnt/user/appdata/ergo/data\r\
-      \n&lt;br/&gt; Container Path: /home/ergo/.ergo"
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Node data
-    Required: 'true'
-    Target: /home/ergo/.ergo
-    Type: Path
-  value: /mnt/user/appdata/ergo2/data
-- '@attributes':
-    Default: ''
-    Description: "**IT MUST ALREADY EXIST. Path should point to the config file named\
-      \ ergo.conf &lt;br/&gt; Ex: /mnt/user/appdata/ergo/ergo.conf \r\n&lt;br/&gt;\
-      \ Container Path: /etc/myergo.conf "
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Node conf
-    Required: 'true'
-    Target: /etc/myergo.conf
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: '9030'
-    Description: 'Container Port: 9030'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Peer port
-    Required: 'true'
-    Target: '9030'
-    Type: Port
-  value: '9030'
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 9053'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Node swagger/panel
-    Required: 'true'
-    Target: '9053'
-    Type: Port
-  value: '9053'
+  Device: {}
+  Label: {}
+  Path:
+    Node conf:
+      Default: ''
+      Description: "**IT MUST ALREADY EXIST. Path should point to the config file\
+        \ named ergo.conf &lt;br/&gt; Ex: /mnt/user/appdata/ergo/ergo.conf \r\n&lt;br/&gt;\
+        \ Container Path: /etc/myergo.conf "
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Node conf
+      Required: 'true'
+      Target: /etc/myergo.conf
+      Type: Path
+      value: ''
+    Node data:
+      Default: /mnt/user/appdata/ergo/data
+      Description: "Path should point to the location you want your &lt;br/&gt; node's\
+        \ data to be (large file 10-20g)\r\n&lt;br/&gt; Ex: /mnt/user/appdata/ergo/data\r\
+        \n&lt;br/&gt; Container Path: /home/ergo/.ergo"
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Node data
+      Required: 'true'
+      Target: /home/ergo/.ergo
+      Type: Path
+      value: /mnt/user/appdata/ergo2/data
+  Port:
+    Node swagger/panel:
+      Default: ''
+      Description: 'Container Port: 9053'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Node swagger/panel
+      Required: 'true'
+      Target: '9053'
+      Type: Port
+      value: '9053'
+    Peer port:
+      Default: '9030'
+      Description: 'Container Port: 9030'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Peer port
+      Required: 'true'
+      Target: '9030'
+      Type: Port
+      value: '9030'
+  Variable: {}
 ExtraParams: ' -e MAX_HEAP=3G  --restart unless-stopped'
 FirstSeen: 1647214623
 Icon: https://ergoplatform.org/img/uploads/1762.png

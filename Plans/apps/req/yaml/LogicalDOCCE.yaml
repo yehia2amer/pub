@@ -1,83 +1,88 @@
 CategoryList:
 - Productivity
 Config:
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'false'
-    Target: '8080'
-    Type: Port
-  value: '8080'
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Database (host)
-    Required: 'true'
-    Target: DB_HOST
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Database (port)
-    Required: 'true'
-    Target: DB_PORT
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Database (user)
-    Required: 'true'
-    Target: DB_USER
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Database (pass)
-    Required: 'true'
-    Target: DB_PASSWORD
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: Directory (config)
-    Required: 'false'
-    Target: /opt/logicaldoc/conf
-    Type: Path
-  value: /mnt/user/appdata/logicaldoc-ce/config
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: Directory (repository)
-    Required: 'false'
-    Target: /opt/logicaldoc/repository
-    Type: Path
-  value: /mnt/user/appdata/logicaldoc-ce/repository
+  Device: {}
+  Label: {}
+  Path:
+    Directory (config):
+      Default: ''
+      Description: ''
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: Directory (config)
+      Required: 'false'
+      Target: /opt/logicaldoc/conf
+      Type: Path
+      value: /mnt/user/appdata/logicaldoc-ce/config
+    Directory (repository):
+      Default: ''
+      Description: ''
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: Directory (repository)
+      Required: 'false'
+      Target: /opt/logicaldoc/repository
+      Type: Path
+      value: /mnt/user/appdata/logicaldoc-ce/repository
+  Port:
+    WebUI:
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'false'
+      Target: '8080'
+      Type: Port
+      value: '8080'
+  Variable:
+    Database (host):
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Database (host)
+      Required: 'true'
+      Target: DB_HOST
+      Type: Variable
+      value: ''
+    Database (pass):
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Database (pass)
+      Required: 'true'
+      Target: DB_PASSWORD
+      Type: Variable
+      value: ''
+    Database (port):
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Database (port)
+      Required: 'true'
+      Target: DB_PORT
+      Type: Variable
+      value: ''
+    Database (user):
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Database (user)
+      Required: 'true'
+      Target: DB_USER
+      Type: Variable
+      value: ''
 FirstSeen: 1638464618
 Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/logicaldoc-ce_200x200.png
 LastUpdate: 1644569164

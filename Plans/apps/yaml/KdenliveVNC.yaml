@@ -4,39 +4,44 @@ CategoryList:
 - Productivity
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 5800'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'true'
-    Target: '5800'
-    Type: Port
-  value: '5800'
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 5900'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: VNC Port
-    Required: 'true'
-    Target: '5900'
-    Type: Port
-  value: '5900'
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /sharedContent'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Content
-    Required: 'true'
-    Target: /sharedContent
-    Type: Path
-  value: /mnt/user/appdata/kdenlive/
+  Device: {}
+  Label: {}
+  Path:
+    Content:
+      Default: ''
+      Description: 'Container Path: /sharedContent'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Content
+      Required: 'true'
+      Target: /sharedContent
+      Type: Path
+      value: /mnt/user/appdata/kdenlive/
+  Port:
+    VNC Port:
+      Default: ''
+      Description: 'Container Port: 5900'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: VNC Port
+      Required: 'true'
+      Target: '5900'
+      Type: Port
+      value: '5900'
+    WebUI:
+      Default: ''
+      Description: 'Container Port: 5800'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'true'
+      Target: '5800'
+      Type: Port
+      value: '5800'
+  Variable: {}
 FirstSeen: 1586016534
 Icon: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/kdenlive.png
 LastUpdate: 1593034445

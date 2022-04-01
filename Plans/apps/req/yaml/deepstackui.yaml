@@ -3,83 +3,88 @@ CategoryList:
 - Tools-Utilities
 - Other
 Config:
-- '@attributes':
-    Default: '8501'
-    Description: For access to the Web UI. Default is 8501.
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'true'
-    Target: '8501'
-    Type: Port
-  value: '8501'
-- '@attributes':
-    Default: localhost
-    Description: The IP address of your Deepstack instance. Default is localhost.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Deepstack IP
-    Required: 'true'
-    Target: DEEPSTACK_IP
-    Type: Variable
-  value: localhost
-- '@attributes':
-    Default: '80'
-    Description: 'The PORT of your Deepstack instance. Default is 80. '
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Deepstack Port
-    Required: 'true'
-    Target: DEEPSTACK_PORT
-    Type: Variable
-  value: '80'
-- '@attributes':
-    Default: ''
-    Description: The API key of your Deepstack instance, if you have set one.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Deepstack API Key
-    Required: 'false'
-    Target: DEEPSTACK_API_KEY
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '10'
-    Description: The timeout to wait for Deepstack. Default is 10 seconds.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Deepstack Timeout
-    Required: 'false'
-    Target: DEEPSTACK_TIMEOUT
-    Type: Variable
-  value: '10'
-- '@attributes':
-    Default: ''
-    Description: The name of a custom model, if you wish to use one.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Deepstack Custom Model
-    Required: 'false'
-    Target: DEEPSTACK_CUSTOM_MODEL
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: False|True
-    Description: Lowers the minimum confidence threshold to 1%. Default is False.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Deepstack UI Debug Mode
-    Required: 'false'
-    Target: DEEPSTACK_UI_DEBUG_MODE
-    Type: Variable
-  value: 'False'
+  Device: {}
+  Label: {}
+  Path: {}
+  Port:
+    WebUI:
+      Default: '8501'
+      Description: For access to the Web UI. Default is 8501.
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'true'
+      Target: '8501'
+      Type: Port
+      value: '8501'
+  Variable:
+    Deepstack API Key:
+      Default: ''
+      Description: The API key of your Deepstack instance, if you have set one.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Deepstack API Key
+      Required: 'false'
+      Target: DEEPSTACK_API_KEY
+      Type: Variable
+      value: ''
+    Deepstack Custom Model:
+      Default: ''
+      Description: The name of a custom model, if you wish to use one.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Deepstack Custom Model
+      Required: 'false'
+      Target: DEEPSTACK_CUSTOM_MODEL
+      Type: Variable
+      value: ''
+    Deepstack IP:
+      Default: localhost
+      Description: The IP address of your Deepstack instance. Default is localhost.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Deepstack IP
+      Required: 'true'
+      Target: DEEPSTACK_IP
+      Type: Variable
+      value: localhost
+    Deepstack Port:
+      Default: '80'
+      Description: 'The PORT of your Deepstack instance. Default is 80. '
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Deepstack Port
+      Required: 'true'
+      Target: DEEPSTACK_PORT
+      Type: Variable
+      value: '80'
+    Deepstack Timeout:
+      Default: '10'
+      Description: The timeout to wait for Deepstack. Default is 10 seconds.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Deepstack Timeout
+      Required: 'false'
+      Target: DEEPSTACK_TIMEOUT
+      Type: Variable
+      value: '10'
+    Deepstack UI Debug Mode:
+      Default: False|True
+      Description: Lowers the minimum confidence threshold to 1%. Default is False.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Deepstack UI Debug Mode
+      Required: 'false'
+      Target: DEEPSTACK_UI_DEBUG_MODE
+      Type: Variable
+      value: 'False'
 FirstSeen: 1609376858
 Icon: https://raw.githubusercontent.com/n8detar/docker-templates/master/n8detar/images/deepstack-ui.png
 LastUpdate: 1630651317

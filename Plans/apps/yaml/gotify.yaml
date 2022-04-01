@@ -3,50 +3,55 @@ CategoryList:
 - Tools-Utilities
 - Network-Messenger
 Config:
-- '@attributes':
-    Default: '8070'
-    Description: 'Container Port: 80'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Host Port 1
-    Required: 'true'
-    Target: '80'
-    Type: Port
-  value: '8070'
-- '@attributes':
-    Default: /mnt/user/appdata/gotify/
-    Description: /app/data
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Path 1
-    Required: 'true'
-    Target: /app/data
-    Type: Path
-  value: /mnt/user/appdata/gotify/
-- '@attributes':
-    Default: ''
-    Description: /etc/gotify
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Path 2
-    Required: 'true'
-    Target: /etc/gotify
-    Type: Path
-  value: /mnt/user/appdata/gotify/config/
-- '@attributes':
-    Default: admin
-    Description: Default User Password
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Default User Password
-    Required: 'false'
-    Target: GOTIFY_DEFAULTUSER_PASS
-    Type: Variable
-  value: admin
+  Device: {}
+  Label: {}
+  Path:
+    Path 1:
+      Default: /mnt/user/appdata/gotify/
+      Description: /app/data
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Path 1
+      Required: 'true'
+      Target: /app/data
+      Type: Path
+      value: /mnt/user/appdata/gotify/
+    Path 2:
+      Default: ''
+      Description: /etc/gotify
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Path 2
+      Required: 'true'
+      Target: /etc/gotify
+      Type: Path
+      value: /mnt/user/appdata/gotify/config/
+  Port:
+    Host Port 1:
+      Default: '8070'
+      Description: 'Container Port: 80'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Host Port 1
+      Required: 'true'
+      Target: '80'
+      Type: Port
+      value: '8070'
+  Variable:
+    Default User Password:
+      Default: admin
+      Description: Default User Password
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Default User Password
+      Required: 'false'
+      Target: GOTIFY_DEFAULTUSER_PASS
+      Type: Variable
+      value: admin
 FirstSeen: 1583622407
 Icon: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/gotify.png
 LastUpdate: 1642011870

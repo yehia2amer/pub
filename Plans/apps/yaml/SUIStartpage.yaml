@@ -2,28 +2,33 @@ CategoryList:
 - Tools-Utilities
 - Network-Web
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 80'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Web UI
-    Required: 'false'
-    Target: '80'
-    Type: Port
-  value: '8489'
-- '@attributes':
-    Default: /mnt/user/appdata/suistartpage/
-    Description: 'Container Path: /usr/share/nginx/html'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Appdata
-    Required: 'false'
-    Target: /usr/share/nginx/html
-    Type: Path
-  value: /mnt/user/appdata/suistartpage/
+  Device: {}
+  Label: {}
+  Path:
+    Appdata:
+      Default: /mnt/user/appdata/suistartpage/
+      Description: 'Container Path: /usr/share/nginx/html'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Appdata
+      Required: 'false'
+      Target: /usr/share/nginx/html
+      Type: Path
+      value: /mnt/user/appdata/suistartpage/
+  Port:
+    Web UI:
+      Default: ''
+      Description: 'Container Port: 80'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Web UI
+      Required: 'false'
+      Target: '80'
+      Type: Port
+      value: '8489'
+  Variable: {}
 DonateLink: http://paypal.me/corneliousjd
 DonateText: Donate
 FirstSeen: 1588968453

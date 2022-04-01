@@ -2,53 +2,58 @@ CategoryList:
 - MediaApp-Video
 ChangeLogPresent: true
 Config:
-- '@attributes':
-    Default: /mnt/user/appdata/Javinizer/config
-    Description: 'This location contains files from your host that need to be accessible
-      by the application.&lt;br&gt;Container path: /config'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: config
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: /mnt/user/appdata/Javinizer/config
-- '@attributes':
-    Default: /mnt/user/appdata/Javinizer/logs
-    Description: 'This location contains files from your host that need to be accessible
-      by the application.&lt;br&gt;Container path: /logs'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: logs
-    Required: 'true'
-    Target: /logs
-    Type: Path
-  value: /mnt/user/appdata/Javinizer/logs
-- '@attributes':
-    Default: /mnt/user/
-    Description: 'This location contains files from your host that need to be accessible
-      by the application.&lt;br&gt;Container path: /mnt'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: /mnt
-    Required: 'true'
-    Target: /mnt
-    Type: Path
-  value: /mnt/user/
-- '@attributes':
-    Default: '8600'
-    Description: Port used to access the application's GUI
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Port for GUI
-    Required: 'false'
-    Target: '8600'
-    Type: Port
-  value: '8600'
+  Device: {}
+  Label: {}
+  Path:
+    /mnt:
+      Default: /mnt/user/
+      Description: 'This location contains files from your host that need to be accessible
+        by the application.&lt;br&gt;Container path: /mnt'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: /mnt
+      Required: 'true'
+      Target: /mnt
+      Type: Path
+      value: /mnt/user/
+    config:
+      Default: /mnt/user/appdata/Javinizer/config
+      Description: 'This location contains files from your host that need to be accessible
+        by the application.&lt;br&gt;Container path: /config'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: config
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: /mnt/user/appdata/Javinizer/config
+    logs:
+      Default: /mnt/user/appdata/Javinizer/logs
+      Description: 'This location contains files from your host that need to be accessible
+        by the application.&lt;br&gt;Container path: /logs'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: logs
+      Required: 'true'
+      Target: /logs
+      Type: Path
+      value: /mnt/user/appdata/Javinizer/logs
+  Port:
+    Port for GUI:
+      Default: '8600'
+      Description: Port used to access the application's GUI
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Port for GUI
+      Required: 'false'
+      Target: '8600'
+      Type: Port
+      value: '8600'
+  Variable: {}
 DonateLink: https://www.paypal.me/angelics345
 FirstSeen: 1643015001
 LastUpdate: 1643003002

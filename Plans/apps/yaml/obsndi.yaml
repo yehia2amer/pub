@@ -6,61 +6,66 @@ CategoryList:
 - MediaApp-Video
 - MediaServer-Video
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /config/obs-studio'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Config Path
-    Required: 'false'
-    Target: /config/obs-studio
-    Type: Path
-  value: /mnt/user/appdata/obs
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 5901'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Port
-    Required: 'false'
-    Target: '5901'
-    Type: Port
-  value: '5901'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: NVIDIA_DRIVER_CAPABILITIES'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: NVIDIA_DRIVER_CAPABILITIES
-    Required: 'false'
-    Target: NVIDIA_DRIVER_CAPABILITIES
-    Type: Variable
-  value: all
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: NVIDIA_VISIBLE_DEVICES'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: NVIDIA_VISIBLE_DEVICES
-    Required: 'false'
-    Target: NVIDIA_VISIBLE_DEVICES
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '123456'
-    Description: 'Container Variable: VNC_PASSWD'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: VNC_PASSWD
-    Required: 'false'
-    Target: VNC_PASSWD
-    Type: Variable
-  value: '123456'
+  Device: {}
+  Label: {}
+  Path:
+    Config Path:
+      Default: ''
+      Description: 'Container Path: /config/obs-studio'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Config Path
+      Required: 'false'
+      Target: /config/obs-studio
+      Type: Path
+      value: /mnt/user/appdata/obs
+  Port:
+    Port:
+      Default: ''
+      Description: 'Container Port: 5901'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Port
+      Required: 'false'
+      Target: '5901'
+      Type: Port
+      value: '5901'
+  Variable:
+    NVIDIA_DRIVER_CAPABILITIES:
+      Default: ''
+      Description: 'Container Variable: NVIDIA_DRIVER_CAPABILITIES'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: NVIDIA_DRIVER_CAPABILITIES
+      Required: 'false'
+      Target: NVIDIA_DRIVER_CAPABILITIES
+      Type: Variable
+      value: all
+    NVIDIA_VISIBLE_DEVICES:
+      Default: ''
+      Description: 'Container Variable: NVIDIA_VISIBLE_DEVICES'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: NVIDIA_VISIBLE_DEVICES
+      Required: 'false'
+      Target: NVIDIA_VISIBLE_DEVICES
+      Type: Variable
+      value: ''
+    VNC_PASSWD:
+      Default: '123456'
+      Description: 'Container Variable: VNC_PASSWD'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: VNC_PASSWD
+      Required: 'false'
+      Target: VNC_PASSWD
+      Type: Variable
+      value: '123456'
 ExtraParams: --runtime=nvidia
 FirstSeen: 1634479403
 Icon: https://obsproject.com/assets/images/new_icon_small-r.png

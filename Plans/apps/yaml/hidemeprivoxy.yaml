@@ -4,72 +4,77 @@ CategoryList:
 - Network-Proxy
 - Network-VPN
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /config'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: /config
-    Required: 'false'
-    Target: /config
-    Type: Path
-  value: /mnt/user/appdata/wg_hideme_privoxy/
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: HIDEME_FILE'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: HIDEME_FILE
-    Required: 'false'
-    Target: HIDEME_FILE
-    Type: Variable
-  value: hideme.yaml
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: HIDEME_USER'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: HIDEME_USER
-    Required: 'false'
-    Target: HIDEME_USER
-    Type: Variable
-  value: username
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: HIDEME_PASS'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: HIDEME_PASS
-    Required: 'false'
-    Target: HIDEME_PASS
-    Type: Variable
-  value: password
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: HIDEME_SERVER'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: HIDEME_SERVER
-    Required: 'false'
-    Target: HIDEME_SERVER
-    Type: Variable
-  value: cz.hideservers.net
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: LOCAL_NET'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: LOCAL_NET
-    Required: 'false'
-    Target: LOCAL_NET
-    Type: Variable
-  value: 192.168.1.0/24
+  Device: {}
+  Label: {}
+  Path:
+    /config:
+      Default: ''
+      Description: 'Container Path: /config'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: /config
+      Required: 'false'
+      Target: /config
+      Type: Path
+      value: /mnt/user/appdata/wg_hideme_privoxy/
+  Port: {}
+  Variable:
+    HIDEME_FILE:
+      Default: ''
+      Description: 'Container Variable: HIDEME_FILE'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: HIDEME_FILE
+      Required: 'false'
+      Target: HIDEME_FILE
+      Type: Variable
+      value: hideme.yaml
+    HIDEME_PASS:
+      Default: ''
+      Description: 'Container Variable: HIDEME_PASS'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: HIDEME_PASS
+      Required: 'false'
+      Target: HIDEME_PASS
+      Type: Variable
+      value: password
+    HIDEME_SERVER:
+      Default: ''
+      Description: 'Container Variable: HIDEME_SERVER'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: HIDEME_SERVER
+      Required: 'false'
+      Target: HIDEME_SERVER
+      Type: Variable
+      value: cz.hideservers.net
+    HIDEME_USER:
+      Default: ''
+      Description: 'Container Variable: HIDEME_USER'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: HIDEME_USER
+      Required: 'false'
+      Target: HIDEME_USER
+      Type: Variable
+      value: username
+    LOCAL_NET:
+      Default: ''
+      Description: 'Container Variable: LOCAL_NET'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: LOCAL_NET
+      Required: 'false'
+      Target: LOCAL_NET
+      Type: Variable
+      value: 192.168.1.0/24
 ExtraParams: --cap-add=NET_ADMIN --device /dev/net/tun --sysctl net.ipv6.conf.all.disable_ipv6=0
   --dns=8.8.8.8
 FirstSeen: 1609657706

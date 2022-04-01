@@ -2,39 +2,44 @@ CategoryList:
 - Productivity
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'false'
-    Target: '8080'
-    Type: Port
-  value: '8585'
-- '@attributes':
-    Default: ''
-    Description: This is the location for the user's vaults.
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Storage (vaults)
-    Required: 'false'
-    Target: /vaults
-    Type: Path
-  value: /mnt/user/appdata/obsidian/vaults
-- '@attributes':
-    Default: ''
-    Description: This is the location for the internal data.
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Storage (config)
-    Required: 'false'
-    Target: /config/.config/obsidian
-    Type: Path
-  value: /mnt/user/appdata/obsidian/config
+  Device: {}
+  Label: {}
+  Path:
+    Storage (config):
+      Default: ''
+      Description: This is the location for the internal data.
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Storage (config)
+      Required: 'false'
+      Target: /config/.config/obsidian
+      Type: Path
+      value: /mnt/user/appdata/obsidian/config
+    Storage (vaults):
+      Default: ''
+      Description: This is the location for the user's vaults.
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Storage (vaults)
+      Required: 'false'
+      Target: /vaults
+      Type: Path
+      value: /mnt/user/appdata/obsidian/vaults
+  Port:
+    WebUI:
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'false'
+      Target: '8080'
+      Type: Port
+      value: '8585'
+  Variable: {}
 FirstSeen: 1647259402
 Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/obsidian.png
 LastUpdateScan: 1647259402

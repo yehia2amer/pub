@@ -5,50 +5,57 @@ CategoryList:
 - Network-Other
 ChangeLogPresent: true
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /games'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Games Folder
-    Required: 'false'
-    Target: /games
-    Type: Path
-  value: /mnt/user/
-- '@attributes':
-    Default: '38008'
-    Description: 'Container Port: 38008. '
-    Display: aalways
-    Mask: 'false'
-    Mode: tcp
-    Name: PORT
-    Required: 'true'
-    Target: '38008'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: '99'
-    Description: UID for permissions.  Do not change unless you know what you're doing.
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: PUID
-    Required: 'true'
-    Target: USER_ID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '100'
-    Description: GID for permissions.  Do not change unless you know what you're doing.
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: PGID
-    Required: 'true'
-    Target: GROUP_ID
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Games Folder:
+      Default: ''
+      Description: 'Container Path: /games'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Games Folder
+      Required: 'false'
+      Target: /games
+      Type: Path
+      value: /mnt/user/
+  Port:
+    PORT:
+      Default: '38008'
+      Description: 'Container Port: 38008. '
+      Display: aalways
+      Mask: 'false'
+      Mode: tcp
+      Name: PORT
+      Required: 'true'
+      Target: '38008'
+      Type: Port
+      value: ''
+  Variable:
+    PGID:
+      Default: '100'
+      Description: GID for permissions.  Do not change unless you know what you're
+        doing.
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: PGID
+      Required: 'true'
+      Target: GROUP_ID
+      Type: Variable
+      value: ''
+    PUID:
+      Default: '99'
+      Description: UID for permissions.  Do not change unless you know what you're
+        doing.
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: PUID
+      Required: 'true'
+      Target: USER_ID
+      Type: Variable
+      value: ''
 FirstSeen: 1590106075
 GitHub: https://github.com/shawly/docker-ps3netsrv
 Icon: https://raw.githubusercontent.com/miketweaver/docker-templates/master/bashninja/ps3netsrvicon.png

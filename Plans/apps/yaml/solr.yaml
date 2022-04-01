@@ -1,50 +1,55 @@
 CategoryList:
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: '8983'
-    Description: Port
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Port
-    Required: 'true'
-    Target: '8983'
-    Type: Port
-  value: '8983'
-- '@attributes':
-    Default: /mnt/user/appdata/solr/
-    Description: Appdata
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Appdata
-    Required: 'true'
-    Target: /bitnami
-    Type: Path
-  value: /mnt/user/appdata/solr/
-- '@attributes':
-    Default: '8983'
-    Description: 'Port used by Solr server. Default: 8983'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: SOLR_PORT_NUMBER
-    Required: 'true'
-    Target: SOLR_PORT_NUMBER
-    Type: Variable
-  value: '8983'
-- '@attributes':
-    Default: my_core
-    Description: Core name to create at first run.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: SOLR_CORE
-    Required: 'true'
-    Target: SOLR_CORE
-    Type: Variable
-  value: my_core
+  Device: {}
+  Label: {}
+  Path:
+    Appdata:
+      Default: /mnt/user/appdata/solr/
+      Description: Appdata
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Appdata
+      Required: 'true'
+      Target: /bitnami
+      Type: Path
+      value: /mnt/user/appdata/solr/
+  Port:
+    Port:
+      Default: '8983'
+      Description: Port
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Port
+      Required: 'true'
+      Target: '8983'
+      Type: Port
+      value: '8983'
+  Variable:
+    SOLR_CORE:
+      Default: my_core
+      Description: Core name to create at first run.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: SOLR_CORE
+      Required: 'true'
+      Target: SOLR_CORE
+      Type: Variable
+      value: my_core
+    SOLR_PORT_NUMBER:
+      Default: '8983'
+      Description: 'Port used by Solr server. Default: 8983'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: SOLR_PORT_NUMBER
+      Required: 'true'
+      Target: SOLR_PORT_NUMBER
+      Type: Variable
+      value: '8983'
 FirstSeen: 1588616386
 Icon: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/solr.png
 LastUpdate: 1648382919

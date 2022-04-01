@@ -1,28 +1,33 @@
 CategoryList:
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: '5000'
-    Description: 'Container Port: 80'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Web-GUI
-    Required: 'false'
-    Target: '80'
-    Type: Port
-  value: '5000'
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /tmp/lancache-autofill'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Temporary Download Folder
-    Required: 'false'
-    Target: /tmp/autofill
-    Type: Path
-  value: Fast Path On Unraid - SSD Or Cache
+  Device: {}
+  Label: {}
+  Path:
+    Temporary Download Folder:
+      Default: ''
+      Description: 'Container Path: /tmp/lancache-autofill'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Temporary Download Folder
+      Required: 'false'
+      Target: /tmp/autofill
+      Type: Path
+      value: Fast Path On Unraid - SSD Or Cache
+  Port:
+    Web-GUI:
+      Default: '5000'
+      Description: 'Container Port: 80'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Web-GUI
+      Required: 'false'
+      Target: '80'
+      Type: Port
+      value: '5000'
+  Variable: {}
 DonateLink: https://paypal.me/RedVex2460Gaming
 DonateText: If you like my work please consider Donating.
 FirstSeen: 1633377836

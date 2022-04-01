@@ -1,84 +1,89 @@
 CategoryList:
 - GameServers
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /serverdata/serverfiles'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: ServerFiles
-    Required: 'true'
-    Target: /serverdata/serverfiles
-    Type: Path
-  value: /mnt/cache/appdata/xonotic
-- '@attributes':
-    Default: ''
-    Description: Enter your extra start up commands for the server if needed.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: EXTRA_GAME_PARAMS
-    Required: 'false'
-    Target: GAME_PARAMS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: UDP Gameport (if you need another port, please delete this entry
-      and create a new UDP Port with the required port number)
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: UDP - Game Port
-    Required: 'true'
-    Target: '26000'
-    Type: Port
-  value: '26000'
-- '@attributes':
-    Default: ''
-    Description: Enter the preferred game version to download or update.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Game Version
-    Required: 'true'
-    Target: GAME_VERSION
-    Type: Variable
-  value: 0.8.2
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: UID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: UID
-    Required: 'true'
-    Target: UID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: GID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: GID
-    Required: 'true'
-    Target: GID
-    Type: Variable
-  value: '100'
-- '@attributes':
-    Default: ''
-    Description: 'Looks something like this: https://dl.xonotic.org/'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Basic Download URL
-    Required: 'true'
-    Target: BASIC_URL
-    Type: Variable
-  value: https://dl.xonotic.org/
+  Device: {}
+  Label: {}
+  Path:
+    ServerFiles:
+      Default: ''
+      Description: 'Container Path: /serverdata/serverfiles'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: ServerFiles
+      Required: 'true'
+      Target: /serverdata/serverfiles
+      Type: Path
+      value: /mnt/cache/appdata/xonotic
+  Port:
+    UDP - Game Port:
+      Default: ''
+      Description: UDP Gameport (if you need another port, please delete this entry
+        and create a new UDP Port with the required port number)
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: UDP - Game Port
+      Required: 'true'
+      Target: '26000'
+      Type: Port
+      value: '26000'
+  Variable:
+    Basic Download URL:
+      Default: ''
+      Description: 'Looks something like this: https://dl.xonotic.org/'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Basic Download URL
+      Required: 'true'
+      Target: BASIC_URL
+      Type: Variable
+      value: https://dl.xonotic.org/
+    EXTRA_GAME_PARAMS:
+      Default: ''
+      Description: Enter your extra start up commands for the server if needed.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: EXTRA_GAME_PARAMS
+      Required: 'false'
+      Target: GAME_PARAMS
+      Type: Variable
+      value: ''
+    GID:
+      Default: ''
+      Description: 'Container Variable: GID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: GID
+      Required: 'true'
+      Target: GID
+      Type: Variable
+      value: '100'
+    Game Version:
+      Default: ''
+      Description: Enter the preferred game version to download or update.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Game Version
+      Required: 'true'
+      Target: GAME_VERSION
+      Type: Variable
+      value: 0.8.2
+    UID:
+      Default: ''
+      Description: 'Container Variable: UID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: UID
+      Required: 'true'
+      Target: UID
+      Type: Variable
+      value: '99'
 DonateLink: https://www.paypal.me/chips777
 DonateText: 'If you like my work please '
 ExtraParams: --restart=unless-stopped

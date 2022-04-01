@@ -3,77 +3,82 @@ CategoryList:
 - Tools-Utilities
 ChangeLogPresent: true
 Config:
-- '@attributes':
-    Default: ''
-    Description: Used in conjunction with logging to file.
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Appdata
-    Required: 'false'
-    Target: /config
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: subdomain1,subdomain2
-    Description: multiple subdomains allowed, comma separated, no spaces
-    Display: always
-    Mask: 'false'
-    Name: SUBDOMAINS
-    Required: 'true'
-    Target: SUBDOMAINS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: token
-    Description: DuckDNS token
-    Display: always
-    Mask: 'true'
-    Name: TOKEN
-    Required: 'true'
-    Target: TOKEN
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 'false'
-    Description: Set to `true` to log to file (also need to map /config).
-    Display: always
-    Mask: 'false'
-    Name: LOG_FILE
-    Required: 'false'
-    Target: LOG_FILE
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '99'
-    Description: 'Container Variable: PUID'
-    Display: advanced
-    Mask: 'false'
-    Name: PUID
-    Required: 'true'
-    Target: PUID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '100'
-    Description: 'Container Variable: PGID'
-    Display: advanced
-    Mask: 'false'
-    Name: PGID
-    Required: 'true'
-    Target: PGID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '022'
-    Description: 'Container Variable: UMASK'
-    Display: advanced
-    Mask: 'false'
-    Name: UMASK
-    Required: 'false'
-    Target: UMASK
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Appdata:
+      Default: ''
+      Description: Used in conjunction with logging to file.
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Appdata
+      Required: 'false'
+      Target: /config
+      Type: Path
+      value: ''
+  Port: {}
+  Variable:
+    LOG_FILE:
+      Default: 'false'
+      Description: Set to `true` to log to file (also need to map /config).
+      Display: always
+      Mask: 'false'
+      Name: LOG_FILE
+      Required: 'false'
+      Target: LOG_FILE
+      Type: Variable
+      value: ''
+    PGID:
+      Default: '100'
+      Description: 'Container Variable: PGID'
+      Display: advanced
+      Mask: 'false'
+      Name: PGID
+      Required: 'true'
+      Target: PGID
+      Type: Variable
+      value: ''
+    PUID:
+      Default: '99'
+      Description: 'Container Variable: PUID'
+      Display: advanced
+      Mask: 'false'
+      Name: PUID
+      Required: 'true'
+      Target: PUID
+      Type: Variable
+      value: ''
+    SUBDOMAINS:
+      Default: subdomain1,subdomain2
+      Description: multiple subdomains allowed, comma separated, no spaces
+      Display: always
+      Mask: 'false'
+      Name: SUBDOMAINS
+      Required: 'true'
+      Target: SUBDOMAINS
+      Type: Variable
+      value: ''
+    TOKEN:
+      Default: token
+      Description: DuckDNS token
+      Display: always
+      Mask: 'true'
+      Name: TOKEN
+      Required: 'true'
+      Target: TOKEN
+      Type: Variable
+      value: ''
+    UMASK:
+      Default: '022'
+      Description: 'Container Variable: UMASK'
+      Display: advanced
+      Mask: 'false'
+      Name: UMASK
+      Required: 'false'
+      Target: UMASK
+      Type: Variable
+      value: ''
 DonateImg: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/donate.png
 DonateLink: https://www.linuxserver.io/donate
 DonateText: Donations

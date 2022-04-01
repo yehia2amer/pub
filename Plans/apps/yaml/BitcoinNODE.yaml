@@ -1,39 +1,44 @@
 CategoryList:
 - Crypto
 Config:
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Port (1)
-    Required: 'false'
-    Target: '8332'
-    Type: Port
-  value: '8332'
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Port (2)
-    Required: 'false'
-    Target: '8333'
-    Type: Port
-  value: '8333'
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Blockhain (storage)
-    Required: 'true'
-    Target: /bitcoin/.bitcoin
-    Type: Path
-  value: /mnt/user/appdata/Bitcoin-NODE
+  Device: {}
+  Label: {}
+  Path:
+    Blockhain (storage):
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Blockhain (storage)
+      Required: 'true'
+      Target: /bitcoin/.bitcoin
+      Type: Path
+      value: /mnt/user/appdata/Bitcoin-NODE
+  Port:
+    Port (1):
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Port (1)
+      Required: 'false'
+      Target: '8332'
+      Type: Port
+      value: '8332'
+    Port (2):
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Port (2)
+      Required: 'false'
+      Target: '8333'
+      Type: Port
+      value: '8333'
+  Variable: {}
 FirstSeen: 1638378221
 Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/bitcoin-node_200x200.png
 LastUpdate: 1636854174

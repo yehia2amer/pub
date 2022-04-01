@@ -5,95 +5,100 @@ CategoryList:
 - MediaApp-Video
 - MediaApp-Music
 Config:
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'false'
-    Target: '8080'
-    Type: Port
-  value: '5001'
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Storage (data)
-    Required: 'false'
-    Target: /debian
-    Type: Path
-  value: /mnt/user/appdata/tartube
-- '@attributes':
-    Default: ''
-    Description: This is the external mounting point to allow read/write data between
-      the container and the host.
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Storage (bridge)
-    Required: 'true'
-    Target: /unraid_mnt
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: UID
-    Required: 'false'
-    Target: UID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: GID
-    Required: 'false'
-    Target: GID
-    Type: Variable
-  value: '100'
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: UMASK
-    Required: 'false'
-    Target: UMASK
-    Type: Variable
-  value: '000'
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: USER
-    Required: 'false'
-    Target: USER
-    Type: Variable
-  value: Debian
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: ROOT_PWD
-    Required: 'false'
-    Target: ROOT_PWD
-    Type: Variable
-  value: Docker!
+  Device: {}
+  Label: {}
+  Path:
+    Storage (bridge):
+      Default: ''
+      Description: This is the external mounting point to allow read/write data between
+        the container and the host.
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Storage (bridge)
+      Required: 'true'
+      Target: /unraid_mnt
+      Type: Path
+      value: ''
+    Storage (data):
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Storage (data)
+      Required: 'false'
+      Target: /debian
+      Type: Path
+      value: /mnt/user/appdata/tartube
+  Port:
+    WebUI:
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'false'
+      Target: '8080'
+      Type: Port
+      value: '5001'
+  Variable:
+    GID:
+      Default: ''
+      Description: ''
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: GID
+      Required: 'false'
+      Target: GID
+      Type: Variable
+      value: '100'
+    ROOT_PWD:
+      Default: ''
+      Description: ''
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: ROOT_PWD
+      Required: 'false'
+      Target: ROOT_PWD
+      Type: Variable
+      value: Docker!
+    UID:
+      Default: ''
+      Description: ''
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: UID
+      Required: 'false'
+      Target: UID
+      Type: Variable
+      value: '99'
+    UMASK:
+      Default: ''
+      Description: ''
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: UMASK
+      Required: 'false'
+      Target: UMASK
+      Type: Variable
+      value: '000'
+    USER:
+      Default: ''
+      Description: ''
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: USER
+      Required: 'false'
+      Target: USER
+      Type: Variable
+      value: Debian
 FirstSeen: 1643807013
 Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/tartube.png
 LastUpdate: 1627406852

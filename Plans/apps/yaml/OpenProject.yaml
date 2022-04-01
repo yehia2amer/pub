@@ -3,39 +3,44 @@ CAComment: This template is set up to use a custom network. You may have to adju
 CategoryList:
 - Productivity
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: SECRET_KEY_BASE'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Host Key 1
-    Required: 'false'
-    Target: SECRET_KEY_BASE
-    Type: Variable
-  value: secret
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /var/openproject/pgdata'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Host Path 1
-    Required: 'false'
-    Target: /var/openproject/pgdata
-    Type: Path
-  value: /mnt/user/appdata/openproject/pgdata
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /var/openproject/assets'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Host Path 2
-    Required: 'false'
-    Target: /var/openproject/assets
-    Type: Path
-  value: /mnt/user/appdata/openproject/assets
+  Device: {}
+  Label: {}
+  Path:
+    Host Path 1:
+      Default: ''
+      Description: 'Container Path: /var/openproject/pgdata'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Host Path 1
+      Required: 'false'
+      Target: /var/openproject/pgdata
+      Type: Path
+      value: /mnt/user/appdata/openproject/pgdata
+    Host Path 2:
+      Default: ''
+      Description: 'Container Path: /var/openproject/assets'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Host Path 2
+      Required: 'false'
+      Target: /var/openproject/assets
+      Type: Path
+      value: /mnt/user/appdata/openproject/assets
+  Port: {}
+  Variable:
+    Host Key 1:
+      Default: ''
+      Description: 'Container Variable: SECRET_KEY_BASE'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Host Key 1
+      Required: 'false'
+      Target: SECRET_KEY_BASE
+      Type: Variable
+      value: secret
 DonateLink: https://www.buymeacoffee.com/maschhoff
 DonateText: Please buy me a Pizza
 FirstSeen: 1648245803

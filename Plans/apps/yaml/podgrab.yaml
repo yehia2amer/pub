@@ -4,59 +4,64 @@ CategoryList:
 - MediaServer-Other
 - Productivity
 Config:
-- '@attributes':
-    Default: '8080'
-    Description: 'Container Port: 8080'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI Port
-    Required: 'true'
-    Target: '8080'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: '240'
-    Description: 'Container Variable: CHECK_FREQUENCY'
-    Display: always
-    Mask: 'false'
-    Name: Check Frequency
-    Required: 'true'
-    Target: CHECK_FREQUENCY
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: When set, the default password is `podgrab`
-    Display: always
-    Mask: 'true'
-    Name: Password
-    Required: 'false'
-    Target: PASSWORD
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /config'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Appdata
-    Required: 'false'
-    Target: /config
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Location for the podcasts
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Assets
-    Required: 'false'
-    Target: /assets
-    Type: Path
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Appdata:
+      Default: ''
+      Description: 'Container Path: /config'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Appdata
+      Required: 'false'
+      Target: /config
+      Type: Path
+      value: ''
+    Assets:
+      Default: ''
+      Description: Location for the podcasts
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Assets
+      Required: 'false'
+      Target: /assets
+      Type: Path
+      value: ''
+  Port:
+    WebUI Port:
+      Default: '8080'
+      Description: 'Container Port: 8080'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI Port
+      Required: 'true'
+      Target: '8080'
+      Type: Port
+      value: ''
+  Variable:
+    Check Frequency:
+      Default: '240'
+      Description: 'Container Variable: CHECK_FREQUENCY'
+      Display: always
+      Mask: 'false'
+      Name: Check Frequency
+      Required: 'true'
+      Target: CHECK_FREQUENCY
+      Type: Variable
+      value: ''
+    Password:
+      Default: ''
+      Description: When set, the default password is `podgrab`
+      Display: always
+      Mask: 'true'
+      Name: Password
+      Required: 'false'
+      Target: PASSWORD
+      Type: Variable
+      value: ''
 ExtraParams: --user 99:100
 FirstSeen: 1618012970
 LastUpdate: 1638522135

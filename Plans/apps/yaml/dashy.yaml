@@ -1,61 +1,66 @@
 CategoryList:
 - Network-Web
 Config:
-- '@attributes':
-    Default: '4000'
-    Description: Port
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Port
-    Required: 'false'
-    Target: '80'
-    Type: Port
-  value: '4000'
-- '@attributes':
-    Default: ''
-    Description: "Config File\r\nhttps://github.com/Lissy93/dashy/blob/master/public/conf.yml"
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Config File
-    Required: 'false'
-    Target: /app/public/conf.yml
-    Type: Path
-  value: /mnt/user/appdata/dashy/conf.yml
-- '@attributes':
-    Default: /mnt/user/appdata/dashy/icons/
-    Description: Icons Path
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Icons Path
-    Required: 'false'
-    Target: /app/public/item-icons/
-    Type: Path
-  value: /mnt/user/appdata/dashy/icons/
-- '@attributes':
-    Default: '99'
-    Description: UID
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: UID
-    Required: 'false'
-    Target: UID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: '100'
-    Description: GID
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: GID
-    Required: 'false'
-    Target: GID
-    Type: Variable
-  value: '100'
+  Device: {}
+  Label: {}
+  Path:
+    Config File:
+      Default: ''
+      Description: "Config File\r\nhttps://github.com/Lissy93/dashy/blob/master/public/conf.yml"
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Config File
+      Required: 'false'
+      Target: /app/public/conf.yml
+      Type: Path
+      value: /mnt/user/appdata/dashy/conf.yml
+    Icons Path:
+      Default: /mnt/user/appdata/dashy/icons/
+      Description: Icons Path
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Icons Path
+      Required: 'false'
+      Target: /app/public/item-icons/
+      Type: Path
+      value: /mnt/user/appdata/dashy/icons/
+  Port:
+    Port:
+      Default: '4000'
+      Description: Port
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Port
+      Required: 'false'
+      Target: '80'
+      Type: Port
+      value: '4000'
+  Variable:
+    GID:
+      Default: '100'
+      Description: GID
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: GID
+      Required: 'false'
+      Target: GID
+      Type: Variable
+      value: '100'
+    UID:
+      Default: '99'
+      Description: UID
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: UID
+      Required: 'false'
+      Target: UID
+      Type: Variable
+      value: '99'
 FirstSeen: 1627315412
 Icon: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/dashy.png
 LastUpdate: 1647771679

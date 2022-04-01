@@ -1,72 +1,77 @@
 CategoryList:
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 80'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Host Port 1
-    Required: 'false'
-    Target: '80'
-    Type: Port
-  value: '8001'
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /var/www/app/data'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Data
-    Required: 'false'
-    Target: /var/www/app/data
-    Type: Path
-  value: /mnt/user/appdata/kanboard/data
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /var/www/app/plugins'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: plugins
-    Required: 'false'
-    Target: /var/www/app/plugins
-    Type: Path
-  value: /mnt/user/appdata/kanboard/plugins
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: PUID'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: PUID
-    Required: 'false'
-    Target: PUID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: PGID'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: PGID
-    Required: 'false'
-    Target: PGID
-    Type: Variable
-  value: '100'
-- '@attributes':
-    Default: 'false'
-    Description: Set to 'true' to enable plugins right away.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Plugins
-    Required: 'false'
-    Target: PLUGIN_INSTALLER
-    Type: Variable
-  value: 'false'
+  Device: {}
+  Label: {}
+  Path:
+    Data:
+      Default: ''
+      Description: 'Container Path: /var/www/app/data'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Data
+      Required: 'false'
+      Target: /var/www/app/data
+      Type: Path
+      value: /mnt/user/appdata/kanboard/data
+    plugins:
+      Default: ''
+      Description: 'Container Path: /var/www/app/plugins'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: plugins
+      Required: 'false'
+      Target: /var/www/app/plugins
+      Type: Path
+      value: /mnt/user/appdata/kanboard/plugins
+  Port:
+    Host Port 1:
+      Default: ''
+      Description: 'Container Port: 80'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Host Port 1
+      Required: 'false'
+      Target: '80'
+      Type: Port
+      value: '8001'
+  Variable:
+    PGID:
+      Default: ''
+      Description: 'Container Variable: PGID'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: PGID
+      Required: 'false'
+      Target: PGID
+      Type: Variable
+      value: '100'
+    PUID:
+      Default: ''
+      Description: 'Container Variable: PUID'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: PUID
+      Required: 'false'
+      Target: PUID
+      Type: Variable
+      value: '99'
+    Plugins:
+      Default: 'false'
+      Description: Set to 'true' to enable plugins right away.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Plugins
+      Required: 'false'
+      Target: PLUGIN_INSTALLER
+      Type: Variable
+      value: 'false'
 FirstSeen: 1610838482
 Icon: https://raw.githubusercontent.com/ArieDed/unraid-template/master/img/kanboard_logo.png
 LastUpdate: 1647134852

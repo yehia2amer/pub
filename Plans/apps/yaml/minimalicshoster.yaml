@@ -4,28 +4,33 @@ CategoryList:
 - Tools-Utilities
 - Network-Web
 Config:
-- '@attributes':
-    Default: '5004'
-    Description: 'Container Port: 5000'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Port
-    Required: 'false'
-    Target: '5000'
-    Type: Port
-  value: '5004'
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /data/'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Config Path
-    Required: 'false'
-    Target: /app/data/
-    Type: Path
-  value: /mnt/user/appdata/minimal-ics-hoster/
+  Device: {}
+  Label: {}
+  Path:
+    Config Path:
+      Default: ''
+      Description: 'Container Path: /data/'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Config Path
+      Required: 'false'
+      Target: /app/data/
+      Type: Path
+      value: /mnt/user/appdata/minimal-ics-hoster/
+  Port:
+    Port:
+      Default: '5004'
+      Description: 'Container Port: 5000'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Port
+      Required: 'false'
+      Target: '5000'
+      Type: Port
+      value: '5004'
+  Variable: {}
 ExtraParams: --restart=always
 FirstSeen: 1643425399
 Icon: https://github.com/patrickstigler/minimal-ics-host/raw/master/calendaricon.png

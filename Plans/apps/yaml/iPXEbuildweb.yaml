@@ -3,65 +3,70 @@ CategoryList:
 - Network-Other
 ChangeLogPresent: true
 Config:
-- '@attributes':
-    Default: /mnt/user/appdata/iPXE-buildweb/logs
-    Description: 'This location contains logs file from container. Container path:
-      /logs'
-    Display: always-hide
-    Mask: 'false'
-    Mode: rw
-    Name: Logs
-    Required: 'true'
-    Target: /logs
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: /mnt/user/appdata/iPXE-buildweb/ipxe
-    Description: 'This location contains logs file from container. Container path:
-      /ipxe'
-    Display: always-hide
-    Mask: 'false'
-    Mode: rw
-    Name: ipxe
-    Required: 'true'
-    Target: /ipxe
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: /mnt/user/appdata/iPXE-buildweb/ipxe-buildweb
-    Description: 'This location contains logs file from container. Container path:
-      /ipxe-buildweb'
-    Display: always-hide
-    Mask: 'false'
-    Mode: rw
-    Name: ipxe-buildweb
-    Required: 'true'
-    Target: /ipxe-buildweb
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: /mnt/user/appdata/iPXE-buildweb/cache
-    Description: 'This location contains logs file from container. Container path:
-      /cache'
-    Display: always-hide
-    Mask: 'false'
-    Mode: rw
-    Name: cache
-    Required: 'true'
-    Target: /cache
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: '8081'
-    Description: Port used to access the web interface.
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: tcp
-    Name: WEB Port
-    Required: 'true'
-    Target: '80'
-    Type: Port
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Logs:
+      Default: /mnt/user/appdata/iPXE-buildweb/logs
+      Description: 'This location contains logs file from container. Container path:
+        /logs'
+      Display: always-hide
+      Mask: 'false'
+      Mode: rw
+      Name: Logs
+      Required: 'true'
+      Target: /logs
+      Type: Path
+      value: ''
+    cache:
+      Default: /mnt/user/appdata/iPXE-buildweb/cache
+      Description: 'This location contains logs file from container. Container path:
+        /cache'
+      Display: always-hide
+      Mask: 'false'
+      Mode: rw
+      Name: cache
+      Required: 'true'
+      Target: /cache
+      Type: Path
+      value: ''
+    ipxe:
+      Default: /mnt/user/appdata/iPXE-buildweb/ipxe
+      Description: 'This location contains logs file from container. Container path:
+        /ipxe'
+      Display: always-hide
+      Mask: 'false'
+      Mode: rw
+      Name: ipxe
+      Required: 'true'
+      Target: /ipxe
+      Type: Path
+      value: ''
+    ipxe-buildweb:
+      Default: /mnt/user/appdata/iPXE-buildweb/ipxe-buildweb
+      Description: 'This location contains logs file from container. Container path:
+        /ipxe-buildweb'
+      Display: always-hide
+      Mask: 'false'
+      Mode: rw
+      Name: ipxe-buildweb
+      Required: 'true'
+      Target: /ipxe-buildweb
+      Type: Path
+      value: ''
+  Port:
+    WEB Port:
+      Default: '8081'
+      Description: Port used to access the web interface.
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: tcp
+      Name: WEB Port
+      Required: 'true'
+      Target: '80'
+      Type: Port
+      value: ''
+  Variable: {}
 FirstSeen: 1562227881
 Icon: https://raw.githubusercontent.com/xbgmsharp/ipxe-buildweb/master/favicon.ico
 LastUpdate: 1642668195

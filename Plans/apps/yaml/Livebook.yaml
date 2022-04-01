@@ -2,39 +2,44 @@ Beta: 'true'
 CategoryList:
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: '8080'
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: PORT
-    Required: 'true'
-    Target: '8080'
-    Type: Port
-  value: '8787'
-- '@attributes':
-    Default: ''
-    Description: Where livebook will save notebooks
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: DATA
-    Required: 'true'
-    Target: /data
-    Type: Path
-  value: /mnt/user/livebook
-- '@attributes':
-    Default: ''
-    Description: Password needed to access livebook (must be at least 12 characters)
-    Display: always
-    Mask: 'true'
-    Mode: ''
-    Name: PASSWORD
-    Required: 'true'
-    Target: LIVEBOOK_PASSWORD
-    Type: Variable
-  value: livebookiscool
+  Device: {}
+  Label: {}
+  Path:
+    DATA:
+      Default: ''
+      Description: Where livebook will save notebooks
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: DATA
+      Required: 'true'
+      Target: /data
+      Type: Path
+      value: /mnt/user/livebook
+  Port:
+    PORT:
+      Default: '8080'
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: PORT
+      Required: 'true'
+      Target: '8080'
+      Type: Port
+      value: '8787'
+  Variable:
+    PASSWORD:
+      Default: ''
+      Description: Password needed to access livebook (must be at least 12 characters)
+      Display: always
+      Mask: 'true'
+      Mode: ''
+      Name: PASSWORD
+      Required: 'true'
+      Target: LIVEBOOK_PASSWORD
+      Type: Variable
+      value: livebookiscool
 FirstSeen: 1639130843
 Icon: https://github.com/dylan-hoefsloot/unraid-docker-templates/raw/main/livebook/logo.png
 LastUpdate: 1646734576

@@ -5,50 +5,55 @@ CategoryList:
 - MediaServer-Video
 ChangeLogPresent: true
 Config:
-- '@attributes':
-    Default: '6878'
-    Description: 'Container Port: 6878'
-    Display: always-hide
-    Mask: 'false'
-    Mode: tcp
-    Name: Host Port
-    Required: 'true'
-    Target: '6878'
-    Type: Port
-  value: '6878'
-- '@attributes':
-    Default: /mnt/user/cache/appdata/NowShowingv2
-    Description: 'Container Path: /config'
-    Display: always-hide
-    Mask: 'false'
-    Mode: rw
-    Name: AppData Config Path
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: /mnt/user/cache/appdata/NowShowing
-- '@attributes':
-    Default: '99'
-    Description: Optional PUID - Usually do not change this. See instructions
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: PUID
-    Required: 'false'
-    Target: PUID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: '100'
-    Description: Optional PGID - Usually do not change this. See instructions
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: PGID
-    Required: 'false'
-    Target: PGID
-    Type: Variable
-  value: '100'
+  Device: {}
+  Label: {}
+  Path:
+    AppData Config Path:
+      Default: /mnt/user/cache/appdata/NowShowingv2
+      Description: 'Container Path: /config'
+      Display: always-hide
+      Mask: 'false'
+      Mode: rw
+      Name: AppData Config Path
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: /mnt/user/cache/appdata/NowShowing
+  Port:
+    Host Port:
+      Default: '6878'
+      Description: 'Container Port: 6878'
+      Display: always-hide
+      Mask: 'false'
+      Mode: tcp
+      Name: Host Port
+      Required: 'true'
+      Target: '6878'
+      Type: Port
+      value: '6878'
+  Variable:
+    PGID:
+      Default: '100'
+      Description: Optional PGID - Usually do not change this. See instructions
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: PGID
+      Required: 'false'
+      Target: PGID
+      Type: Variable
+      value: '100'
+    PUID:
+      Default: '99'
+      Description: Optional PUID - Usually do not change this. See instructions
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: PUID
+      Required: 'false'
+      Target: PUID
+      Type: Variable
+      value: '99'
 Deprecated: true
 FirstSeen: 1520913600
 Icon: https://raw.githubusercontent.com/ninthwalker/NowShowing/master/images/nowshowing-icon.png

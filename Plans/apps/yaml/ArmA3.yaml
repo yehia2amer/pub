@@ -1,204 +1,209 @@
 CategoryList:
 - GameServers
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /serverdata/steamcmd'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: SteamCMD
-    Required: 'true'
-    Target: /serverdata/steamcmd
-    Type: Path
-  value: /mnt/user/appdata/steamcmd
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /serverdata/serverfiles'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: ServerFiles
-    Required: 'true'
-    Target: /serverdata/serverfiles
-    Type: Path
-  value: /mnt/cache/appdata/arma3/gamefiles
-- '@attributes':
-    Default: ''
-    Description: "The GAME_ID that the container download at startup.\r\n(https://developer.valvesoftware.com/wiki/Dedicated_Servers_List)"
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: GAME_ID
-    Required: 'true'
-    Target: GAME_ID
-    Type: Variable
-  value: '233780'
-- '@attributes':
-    Default: ''
-    Description: "Enter your start up commands for the server.\r\nNote: To change\
-      \ the Port of the server please click on 'Show more settings' button, don't\
-      \ forget to change the other ports."
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: GAME_PARAMS
-    Required: 'true'
-    Target: GAME_PARAMS
-    Type: Variable
-  value: -config=server.cfg -mod=
-- '@attributes':
-    Default: ''
-    Description: TCP Gameport (if you need another port, please delete this entry
-      and create a new TCP Port with the required port number, also don't forget to
-      click an 'Show more settings ...' and change the port number, never forget that
-      ArmA III uses the starting port number with TCP and UDP and the following 4
-      ascendant port numbers UDP)
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: TCP GamePort
-    Required: 'true'
-    Target: '2302'
-    Type: Port
-  value: '2302'
-- '@attributes':
-    Default: ''
-    Description: Same as TCP Game Port
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: UDP Game Port
-    Required: 'true'
-    Target: '2302'
-    Type: Port
-  value: '2302'
-- '@attributes':
-    Default: ''
-    Description: UDP Game Port +1
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: UDP Steam Querry Port
-    Required: 'true'
-    Target: '2303'
-    Type: Port
-  value: '2303'
-- '@attributes':
-    Default: ''
-    Description: UDP Game Port +2
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: UDP Steam Master Port
-    Required: 'true'
-    Target: '2304'
-    Type: Port
-  value: '2304'
-- '@attributes':
-    Default: ''
-    Description: UDP Game Port +3
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: UDP VON Port
-    Required: 'true'
-    Target: '2305'
-    Type: Port
-  value: '2305'
-- '@attributes':
-    Default: ''
-    Description: UDP Game Port +4
-    Display: always
-    Mask: 'false'
-    Mode: udp
-    Name: UDP BattlEye Traffic
-    Required: 'true'
-    Target: '2306'
-    Type: Port
-  value: '2306'
-- '@attributes':
-    Default: ''
-    Description: 'Your Steam username goes here if you want to install a game that
-      needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
-      Steam Guard).'
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: Steam-Username
-    Required: 'true'
-    Target: USERNAME
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Your Steam password goes here if you want to install a game that
-      needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
-      Steam Guard).'
-    Display: always-hide
-    Mask: 'true'
-    Mode: ''
-    Name: Steam-Password
-    Required: 'true'
-    Target: PASSWRD
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Set the Variable to 'true' if you want to validate the installation
-      otherwise leave it blank.
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: Validate Installation
-    Required: 'false'
-    Target: VALIDATE
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: /serverdata/.local/share
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Profiles
-    Required: 'false'
-    Target: /serverdata/.local/share
-    Type: Path
-  value: /mnt/cache/appdata/arma3/profiles
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: GAME_PORT'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: GAME_PORT
-    Required: 'true'
-    Target: GAME_PORT
-    Type: Variable
-  value: '2302'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: UID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: UID
-    Required: 'true'
-    Target: UID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: GID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: GID
-    Required: 'true'
-    Target: GID
-    Type: Variable
-  value: '100'
+  Device: {}
+  Label: {}
+  Path:
+    Profiles:
+      Default: ''
+      Description: /serverdata/.local/share
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Profiles
+      Required: 'false'
+      Target: /serverdata/.local/share
+      Type: Path
+      value: /mnt/cache/appdata/arma3/profiles
+    ServerFiles:
+      Default: ''
+      Description: 'Container Path: /serverdata/serverfiles'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: ServerFiles
+      Required: 'true'
+      Target: /serverdata/serverfiles
+      Type: Path
+      value: /mnt/cache/appdata/arma3/gamefiles
+    SteamCMD:
+      Default: ''
+      Description: 'Container Path: /serverdata/steamcmd'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: SteamCMD
+      Required: 'true'
+      Target: /serverdata/steamcmd
+      Type: Path
+      value: /mnt/user/appdata/steamcmd
+  Port:
+    TCP GamePort:
+      Default: ''
+      Description: TCP Gameport (if you need another port, please delete this entry
+        and create a new TCP Port with the required port number, also don't forget
+        to click an 'Show more settings ...' and change the port number, never forget
+        that ArmA III uses the starting port number with TCP and UDP and the following
+        4 ascendant port numbers UDP)
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: TCP GamePort
+      Required: 'true'
+      Target: '2302'
+      Type: Port
+      value: '2302'
+    UDP BattlEye Traffic:
+      Default: ''
+      Description: UDP Game Port +4
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: UDP BattlEye Traffic
+      Required: 'true'
+      Target: '2306'
+      Type: Port
+      value: '2306'
+    UDP Game Port:
+      Default: ''
+      Description: Same as TCP Game Port
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: UDP Game Port
+      Required: 'true'
+      Target: '2302'
+      Type: Port
+      value: '2302'
+    UDP Steam Master Port:
+      Default: ''
+      Description: UDP Game Port +2
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: UDP Steam Master Port
+      Required: 'true'
+      Target: '2304'
+      Type: Port
+      value: '2304'
+    UDP Steam Querry Port:
+      Default: ''
+      Description: UDP Game Port +1
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: UDP Steam Querry Port
+      Required: 'true'
+      Target: '2303'
+      Type: Port
+      value: '2303'
+    UDP VON Port:
+      Default: ''
+      Description: UDP Game Port +3
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: UDP VON Port
+      Required: 'true'
+      Target: '2305'
+      Type: Port
+      value: '2305'
+  Variable:
+    GAME_ID:
+      Default: ''
+      Description: "The GAME_ID that the container download at startup.\r\n(https://developer.valvesoftware.com/wiki/Dedicated_Servers_List)"
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: GAME_ID
+      Required: 'true'
+      Target: GAME_ID
+      Type: Variable
+      value: '233780'
+    GAME_PARAMS:
+      Default: ''
+      Description: "Enter your start up commands for the server.\r\nNote: To change\
+        \ the Port of the server please click on 'Show more settings' button, don't\
+        \ forget to change the other ports."
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: GAME_PARAMS
+      Required: 'true'
+      Target: GAME_PARAMS
+      Type: Variable
+      value: -config=server.cfg -mod=
+    GAME_PORT:
+      Default: ''
+      Description: 'Container Variable: GAME_PORT'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: GAME_PORT
+      Required: 'true'
+      Target: GAME_PORT
+      Type: Variable
+      value: '2302'
+    GID:
+      Default: ''
+      Description: 'Container Variable: GID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: GID
+      Required: 'true'
+      Target: GID
+      Type: Variable
+      value: '100'
+    Steam-Password:
+      Default: ''
+      Description: 'Your Steam password goes here if you want to install a game that
+        needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
+        Steam Guard).'
+      Display: always-hide
+      Mask: 'true'
+      Mode: ''
+      Name: Steam-Password
+      Required: 'true'
+      Target: PASSWRD
+      Type: Variable
+      value: ''
+    Steam-Username:
+      Default: ''
+      Description: 'Your Steam username goes here if you want to install a game that
+        needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
+        Steam Guard).'
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: Steam-Username
+      Required: 'true'
+      Target: USERNAME
+      Type: Variable
+      value: ''
+    UID:
+      Default: ''
+      Description: 'Container Variable: UID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: UID
+      Required: 'true'
+      Target: UID
+      Type: Variable
+      value: '99'
+    Validate Installation:
+      Default: ''
+      Description: Set the Variable to 'true' if you want to validate the installation
+        otherwise leave it blank.
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: Validate Installation
+      Required: 'false'
+      Target: VALIDATE
+      Type: Variable
+      value: ''
 DonateImg: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/donate.png
 DonateLink: https://www.paypal.me/chips777
 DonateText: 'If you like my work please '

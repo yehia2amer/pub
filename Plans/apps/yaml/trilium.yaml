@@ -3,39 +3,44 @@ CategoryList:
 - Tools-Utilities
 ChangeLogPresent: true
 Config:
-- '@attributes':
-    Default: '8080'
-    Description: WebUI - Default 8888
-    Display: always-hide
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'true'
-    Target: '8080'
-    Type: Port
-  value: '8888'
-- '@attributes':
-    Default: /mnt/user/appdata/trilium
-    Description: 'Container Path: /home/node/trilium-data'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: rw
-    Name: Appdata
-    Required: 'true'
-    Target: /home/node/trilium-data
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: /mnt/user/appdata/trilium/backup
-    Description: 'Container Path: /home/node/trilium-data/backup'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: rw
-    Name: Backups
-    Required: 'true'
-    Target: /home/node/trilium-data/backup
-    Type: Path
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Appdata:
+      Default: /mnt/user/appdata/trilium
+      Description: 'Container Path: /home/node/trilium-data'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: rw
+      Name: Appdata
+      Required: 'true'
+      Target: /home/node/trilium-data
+      Type: Path
+      value: ''
+    Backups:
+      Default: /mnt/user/appdata/trilium/backup
+      Description: 'Container Path: /home/node/trilium-data/backup'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: rw
+      Name: Backups
+      Required: 'true'
+      Target: /home/node/trilium-data/backup
+      Type: Path
+      value: ''
+  Port:
+    WebUI:
+      Default: '8080'
+      Description: WebUI - Default 8888
+      Display: always-hide
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'true'
+      Target: '8080'
+      Type: Port
+      value: '8888'
+  Variable: {}
 DonateLink: https://bgameiro.me/page/donate
 FirstSeen: 1597687714
 Icon: https://raw.githubusercontent.com/BGameiro2000/unraid-ca/master/trilium/icon.png

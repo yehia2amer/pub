@@ -4,129 +4,135 @@ CategoryList:
 - Tools-Utilities
 - Crypto
 Config:
-- '@attributes':
-    Default: ''
-    Description: Please keep in mind that your wallet is stored there and I strongly
-      recommend you to backup that path (the wallet is stored in your FlutterCoin
-      appdata directory/.fluttercoin/wallet.dat).
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Data Path
-    Required: 'true'
-    Target: /fluttercoin
-    Type: Path
-  value: /mnt/cache/appdata/fluttercoin
-- '@attributes':
-    Default: ''
-    Description: TCP noVNC WebGUI Port
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebGUI
-    Required: 'true'
-    Target: '8080'
-    Type: Port
-  value: '8080'
-- '@attributes':
-    Default: ''
-    Description: TCP Port for Peer to Peer connection
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Peer to Peer connection
-    Required: 'false'
-    Target: '7408'
-    Type: Port
-  value: '7408'
-- '@attributes':
-    Default: ''
-    Description: TCP Port for Remote Connections
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: JSON Remote Port
-    Required: 'false'
-    Target: '7474'
-    Type: Port
-  value: '7474'
-- '@attributes':
-    Default: ''
-    Description: 'Leave empty if not needed (eg: ''-upnp'', ''-dns'',... without quotes)'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Extra Startup Parameters
-    Required: 'false'
-    Target: EXTRA_PARAMS
-    Type: Variable
-  value: -bind=0.0.0.0
-- '@attributes':
-    Default: ''
-    Description: Minimum screen hight 768 pixels
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Custom Screen Height
-    Required: 'true'
-    Target: CUSTOM_RES_H
-    Type: Variable
-  value: '768'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: UMASK'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: UMASK
-    Required: 'true'
-    Target: UMASK
-    Type: Variable
-  value: '000'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: UID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: UID
-    Required: 'true'
-    Target: UID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: GID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: GID
-    Required: 'true'
-    Target: GID
-    Type: Variable
-  value: '100'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: DATA_PERM'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: DATA_PERM
-    Required: 'true'
-    Target: DATA_PERM
-    Type: Variable
-  value: '770'
-- '@attributes':
-    Default: ''
-    Description: Minimum screen width 1024 pixels
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Custom Screen Width
-    Required: 'true'
-    Target: CUSTOM_RES_W
-    Type: Variable
-  value: '1024'
+  Device: {}
+  Label: {}
+  Path:
+    Data Path:
+      Default: ''
+      Description: Please keep in mind that your wallet is stored there and I strongly
+        recommend you to backup that path (the wallet is stored in your FlutterCoin
+        appdata directory/.fluttercoin/wallet.dat).
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Data Path
+      Required: 'true'
+      Target: /fluttercoin
+      Type: Path
+      value: /mnt/cache/appdata/fluttercoin
+  Port:
+    JSON Remote Port:
+      Default: ''
+      Description: TCP Port for Remote Connections
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: JSON Remote Port
+      Required: 'false'
+      Target: '7474'
+      Type: Port
+      value: '7474'
+    Peer to Peer connection:
+      Default: ''
+      Description: TCP Port for Peer to Peer connection
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Peer to Peer connection
+      Required: 'false'
+      Target: '7408'
+      Type: Port
+      value: '7408'
+    WebGUI:
+      Default: ''
+      Description: TCP noVNC WebGUI Port
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebGUI
+      Required: 'true'
+      Target: '8080'
+      Type: Port
+      value: '8080'
+  Variable:
+    Custom Screen Height:
+      Default: ''
+      Description: Minimum screen hight 768 pixels
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Custom Screen Height
+      Required: 'true'
+      Target: CUSTOM_RES_H
+      Type: Variable
+      value: '768'
+    Custom Screen Width:
+      Default: ''
+      Description: Minimum screen width 1024 pixels
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Custom Screen Width
+      Required: 'true'
+      Target: CUSTOM_RES_W
+      Type: Variable
+      value: '1024'
+    DATA_PERM:
+      Default: ''
+      Description: 'Container Variable: DATA_PERM'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: DATA_PERM
+      Required: 'true'
+      Target: DATA_PERM
+      Type: Variable
+      value: '770'
+    Extra Startup Parameters:
+      Default: ''
+      Description: 'Leave empty if not needed (eg: ''-upnp'', ''-dns'',... without
+        quotes)'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Extra Startup Parameters
+      Required: 'false'
+      Target: EXTRA_PARAMS
+      Type: Variable
+      value: -bind=0.0.0.0
+    GID:
+      Default: ''
+      Description: 'Container Variable: GID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: GID
+      Required: 'true'
+      Target: GID
+      Type: Variable
+      value: '100'
+    UID:
+      Default: ''
+      Description: 'Container Variable: UID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: UID
+      Required: 'true'
+      Target: UID
+      Type: Variable
+      value: '99'
+    UMASK:
+      Default: ''
+      Description: 'Container Variable: UMASK'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: UMASK
+      Required: 'true'
+      Target: UMASK
+      Type: Variable
+      value: '000'
 DonateLink: https://www.paypal.me/chips777
 DonateText: 'If you like my work please '
 ExtraParams: --restart=unless-stopped

@@ -3,72 +3,77 @@ CAComment: This template is set up to use a custom network. You may have to adju
 CategoryList:
 - Downloaders
 Config:
-- '@attributes':
-    Default: /mnt/user/Media
-    Description: 'Container Path: /data'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Host Path 2
-    Required: 'true'
-    Target: /data
-    Type: Path
-  value: /mnt/user/Media
-- '@attributes':
-    Default: 16 charactor password
-    Description: 'Container Variable: FG_WEBUI_PASSWD'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Key 1
-    Required: 'false'
-    Target: FG_WEBUI_PASSWD
-    Type: Variable
-  value: 16 charactor password
-- '@attributes':
-    Default: '000'
-    Description: 'Container Variable: UMASK'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Key 2
-    Required: 'false'
-    Target: UMASK
-    Type: Variable
-  value: '000'
-- '@attributes':
-    Default: '99'
-    Description: 'Container Variable: PUID'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Key 3
-    Required: 'false'
-    Target: PUID
-    Type: Variable
-  value: '99'
-- '@attributes':
-    Default: '100'
-    Description: 'Container Variable: PGID'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Key 4
-    Required: 'false'
-    Target: PGID
-    Type: Variable
-  value: '100'
-- '@attributes':
-    Default: /mnt/user/appdata/flexget
-    Description: 'Container Path: /config'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: rw
-    Name: AppData Config Path
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: /mnt/user/appdata/flexget
+  Device: {}
+  Label: {}
+  Path:
+    AppData Config Path:
+      Default: /mnt/user/appdata/flexget
+      Description: 'Container Path: /config'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: rw
+      Name: AppData Config Path
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: /mnt/user/appdata/flexget
+    Host Path 2:
+      Default: /mnt/user/Media
+      Description: 'Container Path: /data'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Host Path 2
+      Required: 'true'
+      Target: /data
+      Type: Path
+      value: /mnt/user/Media
+  Port: {}
+  Variable:
+    Key 1:
+      Default: 16 charactor password
+      Description: 'Container Variable: FG_WEBUI_PASSWD'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Key 1
+      Required: 'false'
+      Target: FG_WEBUI_PASSWD
+      Type: Variable
+      value: 16 charactor password
+    Key 2:
+      Default: '000'
+      Description: 'Container Variable: UMASK'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Key 2
+      Required: 'false'
+      Target: UMASK
+      Type: Variable
+      value: '000'
+    Key 3:
+      Default: '99'
+      Description: 'Container Variable: PUID'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Key 3
+      Required: 'false'
+      Target: PUID
+      Type: Variable
+      value: '99'
+    Key 4:
+      Default: '100'
+      Description: 'Container Variable: PGID'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Key 4
+      Required: 'false'
+      Target: PGID
+      Type: Variable
+      value: '100'
 ExtraParams: --net=container:binhex-delugevpn
 FirstSeen: 1633831416
 Icon: https://github.com/paulpoco/docker-templates/raw/master/paulpoco/images/Deluge-Flexget-icon-small.png

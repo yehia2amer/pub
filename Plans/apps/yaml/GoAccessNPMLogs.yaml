@@ -2,39 +2,44 @@ CategoryList:
 - Tools-Utilities
 - Network-Proxy
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 7880'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Host Port 1
-    Required: 'false'
-    Target: '7880'
-    Type: Port
-  value: '7880'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: TZ'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Host Key 1
-    Required: 'false'
-    Target: TZ
-    Type: Variable
-  value: America/Chicago
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /opt/log'
-    Display: always
-    Mask: 'false'
-    Mode: ro
-    Name: Host Path 1
-    Required: 'false'
-    Target: /opt/log
-    Type: Path
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Host Path 1:
+      Default: ''
+      Description: 'Container Path: /opt/log'
+      Display: always
+      Mask: 'false'
+      Mode: ro
+      Name: Host Path 1
+      Required: 'false'
+      Target: /opt/log
+      Type: Path
+      value: ''
+  Port:
+    Host Port 1:
+      Default: ''
+      Description: 'Container Port: 7880'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Host Port 1
+      Required: 'false'
+      Target: '7880'
+      Type: Port
+      value: '7880'
+  Variable:
+    Host Key 1:
+      Default: ''
+      Description: 'Container Variable: TZ'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Host Key 1
+      Required: 'false'
+      Target: TZ
+      Type: Variable
+      value: America/Chicago
 FirstSeen: 1646875585
 Icon: https://raw.githubusercontent.com/xavier-hernandez/unraid-templates/master/resources/goaccess-npm.png
 LastUpdate: 1646864639

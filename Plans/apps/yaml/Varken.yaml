@@ -2,28 +2,33 @@ CategoryList:
 - Tools-Utilities
 - Network-Management
 Config:
-- '@attributes':
-    Default: America/Denver
-    Description: 'Container Variable: TZ'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Timezone
-    Required: 'false'
-    Target: TZ
-    Type: Variable
-  value: America/Denver
-- '@attributes':
-    Default: /mnt/user/appdata/varken
-    Description: 'Container Path: /config'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: config
-    Required: 'false'
-    Target: /config
-    Type: Path
-  value: /mnt/user/appdata/varken
+  Device: {}
+  Label: {}
+  Path:
+    config:
+      Default: /mnt/user/appdata/varken
+      Description: 'Container Path: /config'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: config
+      Required: 'false'
+      Target: /config
+      Type: Path
+      value: /mnt/user/appdata/varken
+  Port: {}
+  Variable:
+    Timezone:
+      Default: America/Denver
+      Description: 'Container Variable: TZ'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Timezone
+      Required: 'false'
+      Target: TZ
+      Type: Variable
+      value: America/Denver
 FirstSeen: 1552514492
 Icon: https://raw.githubusercontent.com/benderstwin/docker-templates/master/images/varken.png
 LastUpdate: 1648635629

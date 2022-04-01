@@ -2,38 +2,43 @@ CategoryList:
 - Tools-Utilities
 - Other
 Config:
-- '@attributes':
-    Default: '3000'
-    Description: 'Container Port: 3000'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Web Port
-    Required: 'true'
-    Target: '3000'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: mongodb://UNRAID_IP:27017/nosqlclient
-    Description: 'Container Variable: MONGO_URL'
-    Display: always
-    Mask: 'false'
-    Name: Mongo URL
-    Required: 'true'
-    Target: MONGO_URL
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: /mnt/user/appdata/mongoclient
-    Description: 'Container Path: /data/db'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: rw
-    Name: Appdata
-    Required: 'true'
-    Target: /data/db
-    Type: Path
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Appdata:
+      Default: /mnt/user/appdata/mongoclient
+      Description: 'Container Path: /data/db'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: rw
+      Name: Appdata
+      Required: 'true'
+      Target: /data/db
+      Type: Path
+      value: ''
+  Port:
+    Web Port:
+      Default: '3000'
+      Description: 'Container Port: 3000'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Web Port
+      Required: 'true'
+      Target: '3000'
+      Type: Port
+      value: ''
+  Variable:
+    Mongo URL:
+      Default: mongodb://UNRAID_IP:27017/nosqlclient
+      Description: 'Container Variable: MONGO_URL'
+      Display: always
+      Mask: 'false'
+      Name: Mongo URL
+      Required: 'true'
+      Target: MONGO_URL
+      Type: Variable
+      value: ''
 FirstSeen: 1574294677
 Icon: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/nosqlclient.png
 LastUpdate: 1602159563

@@ -1,150 +1,156 @@
 CategoryList:
 - Cloud
 Config:
-- '@attributes':
-    Default: '1337'
-    Description: 'Container Port: 1337'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI port
-    Required: 'true'
-    Target: '1337'
-    Type: Port
-  value: '1337'
-- '@attributes':
-    Default: mongodb://db-user:db-password@mongodb-instance:port/db-name
-    Description: 'Container Variable: MONGO_CONNECTION'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: MongoDB Database
-    Required: 'true'
-    Target: MONGO_CONNECTION
-    Type: Variable
-  value: mongodb://db-user:db-password@mongodb-instance:port/db-name
-- '@attributes':
-    Default: ''
-    Description: Set to mg/dl or mmol
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Unit
-    Required: 'true'
-    Target: DISPLAY_UNITS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: BASE_URL'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: URL
-    Required: 'true'
-    Target: BASE_URL
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: API_SECRET    Should be a complex key'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: API_SECRET
-    Required: 'true'
-    Target: API_SECRET
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: ENABLE'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: ENABLE
-    Required: 'false'
-    Target: ENABLE
-    Type: Variable
-  value: delta direction upbat timeago devicestatus errorcodes ar2 simplealarms profile
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: BG_HIGH'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: BG_HIGH
-    Required: 'false'
-    Target: BG_HIGH
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: BG_LOW'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: BG_LOW
-    Required: 'false'
-    Target: BG_LOW
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: BG_TARGET_BOTTOM'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: BG_TARGET_BOTTOM
-    Required: 'false'
-    Target: BG_TARGET_BOTTOM
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: BG_TARGET_TOP'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: BG_TARGET_TOP
-    Required: 'false'
-    Target: BG_TARGET_TOP
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: THEME'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: THEME
-    Required: 'false'
-    Target: THEME
-    Type: Variable
-  value: colors
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: TIME_FORMAT'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: TIME_FORMAT
-    Required: 'false'
-    Target: TIME_FORMAT
-    Type: Variable
-  value: '24'
-- '@attributes':
-    Default: ''
-    Description: "Container Variable: INSECURE_USE_HTTP\r\nSet to true if used with\
-      \ reverse proxy"
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: INSECURE_USE_HTTP
-    Required: 'false'
-    Target: INSECURE_USE_HTTP
-    Type: Variable
-  value: 'true'
+  Device: {}
+  Label: {}
+  Path: {}
+  Port:
+    WebUI port:
+      Default: '1337'
+      Description: 'Container Port: 1337'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI port
+      Required: 'true'
+      Target: '1337'
+      Type: Port
+      value: '1337'
+  Variable:
+    API_SECRET:
+      Default: ''
+      Description: 'Container Variable: API_SECRET    Should be a complex key'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: API_SECRET
+      Required: 'true'
+      Target: API_SECRET
+      Type: Variable
+      value: ''
+    BG_HIGH:
+      Default: ''
+      Description: 'Container Variable: BG_HIGH'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: BG_HIGH
+      Required: 'false'
+      Target: BG_HIGH
+      Type: Variable
+      value: ''
+    BG_LOW:
+      Default: ''
+      Description: 'Container Variable: BG_LOW'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: BG_LOW
+      Required: 'false'
+      Target: BG_LOW
+      Type: Variable
+      value: ''
+    BG_TARGET_BOTTOM:
+      Default: ''
+      Description: 'Container Variable: BG_TARGET_BOTTOM'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: BG_TARGET_BOTTOM
+      Required: 'false'
+      Target: BG_TARGET_BOTTOM
+      Type: Variable
+      value: ''
+    BG_TARGET_TOP:
+      Default: ''
+      Description: 'Container Variable: BG_TARGET_TOP'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: BG_TARGET_TOP
+      Required: 'false'
+      Target: BG_TARGET_TOP
+      Type: Variable
+      value: ''
+    ENABLE:
+      Default: ''
+      Description: 'Container Variable: ENABLE'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: ENABLE
+      Required: 'false'
+      Target: ENABLE
+      Type: Variable
+      value: delta direction upbat timeago devicestatus errorcodes ar2 simplealarms
+        profile
+    INSECURE_USE_HTTP:
+      Default: ''
+      Description: "Container Variable: INSECURE_USE_HTTP\r\nSet to true if used with\
+        \ reverse proxy"
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: INSECURE_USE_HTTP
+      Required: 'false'
+      Target: INSECURE_USE_HTTP
+      Type: Variable
+      value: 'true'
+    MongoDB Database:
+      Default: mongodb://db-user:db-password@mongodb-instance:port/db-name
+      Description: 'Container Variable: MONGO_CONNECTION'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: MongoDB Database
+      Required: 'true'
+      Target: MONGO_CONNECTION
+      Type: Variable
+      value: mongodb://db-user:db-password@mongodb-instance:port/db-name
+    THEME:
+      Default: ''
+      Description: 'Container Variable: THEME'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: THEME
+      Required: 'false'
+      Target: THEME
+      Type: Variable
+      value: colors
+    TIME_FORMAT:
+      Default: ''
+      Description: 'Container Variable: TIME_FORMAT'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: TIME_FORMAT
+      Required: 'false'
+      Target: TIME_FORMAT
+      Type: Variable
+      value: '24'
+    URL:
+      Default: ''
+      Description: 'Container Variable: BASE_URL'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: URL
+      Required: 'true'
+      Target: BASE_URL
+      Type: Variable
+      value: ''
+    Unit:
+      Default: ''
+      Description: Set to mg/dl or mmol
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Unit
+      Required: 'true'
+      Target: DISPLAY_UNITS
+      Type: Variable
+      value: ''
 FirstSeen: 1594649283
 Icon: https://avatars2.githubusercontent.com/u/7661012?s=200&amp;v=4
 LastUpdate: 1609498596

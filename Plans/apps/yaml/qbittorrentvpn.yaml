@@ -6,116 +6,121 @@ Branch:
 CategoryList:
 - Downloaders
 Config:
-- '@attributes':
-    Default: '8080'
-    Description: 'Container Port: 8080'
-    Display: always-hide
-    Mask: 'false'
-    Mode: tcp
-    Name: Host Port for 8080
-    Required: 'true'
-    Target: '8080'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /config'
-    Display: always-hide
-    Mask: 'false'
-    Mode: rw
-    Name: Host Path for /config
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: true|false
-    Description: 'Container Variable: VPN_ENABLED'
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: VPN_ENABLED
-    Required: 'false'
-    Target: VPN_ENABLED
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: VPN_LAN_NETWORK'
-    Display: always-hide
-    Mask: 'false'
-    Mode: ''
-    Name: VPN_LAN_NETWORK
-    Required: 'false'
-    Target: VPN_LAN_NETWORK
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: wg0
-    Description: 'Container Variable: VPN_CONF'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: VPN_CONF
-    Required: 'false'
-    Target: VPN_CONF
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: VPN_ADDITIONAL_PORTS'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: VPN_ADDITIONAL_PORTS
-    Required: 'false'
-    Target: VPN_ADDITIONAL_PORTS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '5'
-    Description: 'Container Variable: VPN_IP_CHECK_DELAY'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: VPN_IP_CHECK_DELAY
-    Required: 'false'
-    Target: VPN_IP_CHECK_DELAY
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '99'
-    Description: 'Container Variable: PUID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: PUID
-    Required: 'false'
-    Target: PUID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '100'
-    Description: 'Container Variable: PGID'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: PGID
-    Required: 'false'
-    Target: PGID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '002'
-    Description: 'Container Variable: UMASK'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: ''
-    Name: UMASK
-    Required: 'false'
-    Target: UMASK
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Host Path for /config:
+      Default: ''
+      Description: 'Container Path: /config'
+      Display: always-hide
+      Mask: 'false'
+      Mode: rw
+      Name: Host Path for /config
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: ''
+  Port:
+    Host Port for 8080:
+      Default: '8080'
+      Description: 'Container Port: 8080'
+      Display: always-hide
+      Mask: 'false'
+      Mode: tcp
+      Name: Host Port for 8080
+      Required: 'true'
+      Target: '8080'
+      Type: Port
+      value: ''
+  Variable:
+    PGID:
+      Default: '100'
+      Description: 'Container Variable: PGID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: PGID
+      Required: 'false'
+      Target: PGID
+      Type: Variable
+      value: ''
+    PUID:
+      Default: '99'
+      Description: 'Container Variable: PUID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: PUID
+      Required: 'false'
+      Target: PUID
+      Type: Variable
+      value: ''
+    UMASK:
+      Default: '002'
+      Description: 'Container Variable: UMASK'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: UMASK
+      Required: 'false'
+      Target: UMASK
+      Type: Variable
+      value: ''
+    VPN_ADDITIONAL_PORTS:
+      Default: ''
+      Description: 'Container Variable: VPN_ADDITIONAL_PORTS'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: VPN_ADDITIONAL_PORTS
+      Required: 'false'
+      Target: VPN_ADDITIONAL_PORTS
+      Type: Variable
+      value: ''
+    VPN_CONF:
+      Default: wg0
+      Description: 'Container Variable: VPN_CONF'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: VPN_CONF
+      Required: 'false'
+      Target: VPN_CONF
+      Type: Variable
+      value: ''
+    VPN_ENABLED:
+      Default: true|false
+      Description: 'Container Variable: VPN_ENABLED'
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: VPN_ENABLED
+      Required: 'false'
+      Target: VPN_ENABLED
+      Type: Variable
+      value: ''
+    VPN_IP_CHECK_DELAY:
+      Default: '5'
+      Description: 'Container Variable: VPN_IP_CHECK_DELAY'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: VPN_IP_CHECK_DELAY
+      Required: 'false'
+      Target: VPN_IP_CHECK_DELAY
+      Type: Variable
+      value: ''
+    VPN_LAN_NETWORK:
+      Default: ''
+      Description: 'Container Variable: VPN_LAN_NETWORK'
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: VPN_LAN_NETWORK
+      Required: 'false'
+      Target: VPN_LAN_NETWORK
+      Type: Variable
+      value: ''
 ExtraParams: --cap-add=NET_ADMIN --sysctl="net.ipv4.conf.all.src_valid_mark=1" --sysctl="net.ipv6.conf.all.disable_ipv6=1"
 FirstSeen: 1609261657
 Icon: https://hotio.dev/webhook-avatars/qbittorrent.png

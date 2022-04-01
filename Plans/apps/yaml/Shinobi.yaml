@@ -1,83 +1,88 @@
 CategoryList:
 - HomeAutomation
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 8080'
-    Display: always-hide
-    Mask: 'false'
-    Mode: tcp
-    Name: GUI
-    Required: 'true'
-    Target: '8080'
-    Type: Port
-  value: '8080'
-- '@attributes':
-    Default: /mnt/user/appdata/shinobi/videos
-    Description: 'Container Path: /home/Shinobi/videos'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Videos
-    Required: 'true'
-    Target: /home/Shinobi/videos
-    Type: Path
-  value: /mnt/user/appdata/shinobi/videos
-- '@attributes':
-    Default: /mnt/user/appdata/shinobi/config
-    Description: 'Container Path: /config'
-    Display: always-hide
-    Mask: 'false'
-    Mode: rw
-    Name: Config
-    Required: 'false'
-    Target: /config
-    Type: Path
-  value: /mnt/user/appdata/shinobi/config
-- '@attributes':
-    Default: /mnt/user/appdata/shinobi/libs
-    Description: 'Container Path: /home/Shinobi/libs/customAutoLoad'
-    Display: always-hide
-    Mask: 'false'
-    Mode: rw
-    Name: Custom auto load libs
-    Required: 'false'
-    Target: /home/Shinobi/libs/customAutoLoad
-    Type: Path
-  value: /mnt/user/appdata/shinobi/libs
-- '@attributes':
-    Default: /mnt/user/appdata/shinobi/mysql
-    Description: 'Container Path: /var/lib/mysql'
-    Display: always-hide
-    Mask: 'false'
-    Mode: rw
-    Name: MySQL
-    Required: 'false'
-    Target: /var/lib/mysql
-    Type: Path
-  value: /mnt/user/appdata/shinobi/mysql
-- '@attributes':
-    Default: /mnt/user/appdata/shinobi/plugins
-    Description: 'Container Path: /home/Shinobi/plugins'
-    Display: always-hide
-    Mask: 'false'
-    Mode: rw
-    Name: Plugins
-    Required: 'false'
-    Target: /home/Shinobi/plugins
-    Type: Path
-  value: /mnt/user/appdata/shinobi/plugins
-- '@attributes':
-    Default: /etc/localtime
-    Description: 'Container Path: /etc/localtime'
-    Display: always-hide
-    Mask: 'false'
-    Mode: r
-    Name: Localtime
-    Required: 'true'
-    Target: /etc/localtime
-    Type: Path
-  value: /etc/localtime
+  Device: {}
+  Label: {}
+  Path:
+    Config:
+      Default: /mnt/user/appdata/shinobi/config
+      Description: 'Container Path: /config'
+      Display: always-hide
+      Mask: 'false'
+      Mode: rw
+      Name: Config
+      Required: 'false'
+      Target: /config
+      Type: Path
+      value: /mnt/user/appdata/shinobi/config
+    Custom auto load libs:
+      Default: /mnt/user/appdata/shinobi/libs
+      Description: 'Container Path: /home/Shinobi/libs/customAutoLoad'
+      Display: always-hide
+      Mask: 'false'
+      Mode: rw
+      Name: Custom auto load libs
+      Required: 'false'
+      Target: /home/Shinobi/libs/customAutoLoad
+      Type: Path
+      value: /mnt/user/appdata/shinobi/libs
+    Localtime:
+      Default: /etc/localtime
+      Description: 'Container Path: /etc/localtime'
+      Display: always-hide
+      Mask: 'false'
+      Mode: r
+      Name: Localtime
+      Required: 'true'
+      Target: /etc/localtime
+      Type: Path
+      value: /etc/localtime
+    MySQL:
+      Default: /mnt/user/appdata/shinobi/mysql
+      Description: 'Container Path: /var/lib/mysql'
+      Display: always-hide
+      Mask: 'false'
+      Mode: rw
+      Name: MySQL
+      Required: 'false'
+      Target: /var/lib/mysql
+      Type: Path
+      value: /mnt/user/appdata/shinobi/mysql
+    Plugins:
+      Default: /mnt/user/appdata/shinobi/plugins
+      Description: 'Container Path: /home/Shinobi/plugins'
+      Display: always-hide
+      Mask: 'false'
+      Mode: rw
+      Name: Plugins
+      Required: 'false'
+      Target: /home/Shinobi/plugins
+      Type: Path
+      value: /mnt/user/appdata/shinobi/plugins
+    Videos:
+      Default: /mnt/user/appdata/shinobi/videos
+      Description: 'Container Path: /home/Shinobi/videos'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Videos
+      Required: 'true'
+      Target: /home/Shinobi/videos
+      Type: Path
+      value: /mnt/user/appdata/shinobi/videos
+  Port:
+    GUI:
+      Default: ''
+      Description: 'Container Port: 8080'
+      Display: always-hide
+      Mask: 'false'
+      Mode: tcp
+      Name: GUI
+      Required: 'true'
+      Target: '8080'
+      Type: Port
+      value: '8080'
+  Variable: {}
 FirstSeen: 1638745409
 Icon: https://raw.githubusercontent.com/ivaxor/unraid-ca-docker-templates/main/shinobi.png
 LastUpdate: 1638289839

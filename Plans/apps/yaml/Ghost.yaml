@@ -1,244 +1,249 @@
 CategoryList:
 - Productivity
 Config:
-- '@attributes':
-    Default: localhost
-    Description: If you want to access your application from a public IP or hostname
-      you need to set this environment variable to your public IP or hostname. E.g.
-      blog.example.com
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: GHOST_HOST
-    Required: 'true'
-    Target: GHOST_HOST
-    Type: Variable
-  value: ghost.example.com
-- '@attributes':
-    Default: user@example.com
-    Description: 'Ghost application email. Default: user@example.com'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: GHOST_EMAIL
-    Required: 'false'
-    Target: GHOST_EMAIL
-    Type: Variable
-  value: user@example.com
-- '@attributes':
-    Default: User's Blog
-    Description: 'Ghost blog title. Default: User''s Blog'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: BLOG_TITLE
-    Required: 'false'
-    Target: BLOG_TITLE
-    Type: Variable
-  value: User's Blog
-- '@attributes':
-    Default: 192.168.1.100
-    Description: 'Hostname for MariaDB server. Default: mariadb'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: MARIADB_HOST
-    Required: 'true'
-    Target: MARIADB_HOST
-    Type: Variable
-  value: 192.168.1.100
-- '@attributes':
-    Default: '3306'
-    Description: 'Port used by MariaDB server. Default: 3306'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: MARIADB_PORT_NUMBER
-    Required: 'true'
-    Target: MARIADB_PORT_NUMBER
-    Type: Variable
-  value: '3306'
-- '@attributes':
-    Default: ghost
-    Description: 'Database name that Ghost will use to connect with the database.
-      Default: bitnami_ghost'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: GHOST_DATABASE_NAME
-    Required: 'true'
-    Target: GHOST_DATABASE_NAME
-    Type: Variable
-  value: ghost
-- '@attributes':
-    Default: ghost
-    Description: 'Database user that Ghost will use to connect with the database.
-      Default: bn_ghost'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: GHOST_DATABASE_USER
-    Required: 'true'
-    Target: GHOST_DATABASE_USER
-    Type: Variable
-  value: ghost
-- '@attributes':
-    Default: ''
-    Description: Database password that Ghost will use to connect with the database.
-      No defaults.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: GHOST_DATABASE_PASSWORD
-    Required: 'true'
-    Target: GHOST_DATABASE_PASSWORD
-    Type: Variable
-  value: password
-- '@attributes':
-    Default: 'no'
-    Description: 'It can be used to allow blank passwords. Default: no'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: ALLOW_EMPTY_PASSWORD
-    Required: 'true'
-    Target: ALLOW_EMPTY_PASSWORD
-    Type: Variable
-  value: 'no'
-- '@attributes':
-    Default: smtp.gmail.com
-    Description: SMTP host. E.g. smtp.gmail.com
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: SMTP_HOST
-    Required: 'true'
-    Target: SMTP_HOST
-    Type: Variable
-  value: smtp.gmail.com
-- '@attributes':
-    Default: '587'
-    Description: SMTP port. E.g. 587
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: SMTP_PORT
-    Required: 'true'
-    Target: SMTP_PORT
-    Type: Variable
-  value: '587'
-- '@attributes':
-    Default: your_email@gmail.com
-    Description: SMTP account user. E.g. your_email@gmail.com
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: SMTP_USER
-    Required: 'true'
-    Target: SMTP_USER
-    Type: Variable
-  value: your_email@gmail.com
-- '@attributes':
-    Default: password
-    Description: SMTP account password.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: SMTP_PASSWORD
-    Required: 'true'
-    Target: SMTP_PASSWORD
-    Type: Variable
-  value: password
-- '@attributes':
-    Default: you@domain.com
-    Description: SMTP from address.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: SMTP_FROM_ADDRESS
-    Required: 'true'
-    Target: SMTP_FROM_ADDRESS
-    Type: Variable
-  value: you@domain.com
-- '@attributes':
-    Default: GMail
-    Description: SMTP service to use. E.g. GMail or Mailgun
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: SMTP_SERVICE
-    Required: 'true'
-    Target: SMTP_SERVICE
-    Type: Variable
-  value: GMail
-- '@attributes':
-    Default: 'true'
-    Description: Use a secure connection for SMTP. true or false
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: SMTP_SECURE_CONNECTION
-    Required: 'true'
-    Target: SMTP_SECURE_CONNECTION
-    Type: Variable
-  value: 'true'
-- '@attributes':
-    Default: http
-    Description: 'Protocol to use in the application URLs. Valid values are https
-      or https. Default: http'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: GHOST_PROTOCOL
-    Required: 'true'
-    Target: GHOST_PROTOCOL
-    Type: Variable
-  value: http
-- '@attributes':
-    Default: user
-    Description: 'Ghost application username. Default: user'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: GHOST_USERNAME
-    Required: 'true'
-    Target: GHOST_USERNAME
-    Type: Variable
-  value: user
-- '@attributes':
-    Default: ' bitnami123'
-    Description: 'Ghost application password. The minimum length is 10 characters.
-      Default: bitnami123'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: GHOST_PASSWORD
-    Required: 'true'
-    Target: GHOST_PASSWORD
-    Type: Variable
-  value: bitnami123
-- '@attributes':
-    Default: '2368'
-    Description: WebUI Port
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'true'
-    Target: '2368'
-    Type: Port
-  value: '2368'
-- '@attributes':
-    Default: /mnt/user/appdata/ghost
-    Description: Appdata
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: rw
-    Name: Appdata
-    Required: 'true'
-    Target: /bitnami
-    Type: Path
-  value: /mnt/user/appdata/ghost
+  Device: {}
+  Label: {}
+  Path:
+    Appdata:
+      Default: /mnt/user/appdata/ghost
+      Description: Appdata
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: rw
+      Name: Appdata
+      Required: 'true'
+      Target: /bitnami
+      Type: Path
+      value: /mnt/user/appdata/ghost
+  Port:
+    WebUI:
+      Default: '2368'
+      Description: WebUI Port
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'true'
+      Target: '2368'
+      Type: Port
+      value: '2368'
+  Variable:
+    ALLOW_EMPTY_PASSWORD:
+      Default: 'no'
+      Description: 'It can be used to allow blank passwords. Default: no'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: ALLOW_EMPTY_PASSWORD
+      Required: 'true'
+      Target: ALLOW_EMPTY_PASSWORD
+      Type: Variable
+      value: 'no'
+    BLOG_TITLE:
+      Default: User's Blog
+      Description: 'Ghost blog title. Default: User''s Blog'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: BLOG_TITLE
+      Required: 'false'
+      Target: BLOG_TITLE
+      Type: Variable
+      value: User's Blog
+    GHOST_DATABASE_NAME:
+      Default: ghost
+      Description: 'Database name that Ghost will use to connect with the database.
+        Default: bitnami_ghost'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: GHOST_DATABASE_NAME
+      Required: 'true'
+      Target: GHOST_DATABASE_NAME
+      Type: Variable
+      value: ghost
+    GHOST_DATABASE_PASSWORD:
+      Default: ''
+      Description: Database password that Ghost will use to connect with the database.
+        No defaults.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: GHOST_DATABASE_PASSWORD
+      Required: 'true'
+      Target: GHOST_DATABASE_PASSWORD
+      Type: Variable
+      value: password
+    GHOST_DATABASE_USER:
+      Default: ghost
+      Description: 'Database user that Ghost will use to connect with the database.
+        Default: bn_ghost'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: GHOST_DATABASE_USER
+      Required: 'true'
+      Target: GHOST_DATABASE_USER
+      Type: Variable
+      value: ghost
+    GHOST_EMAIL:
+      Default: user@example.com
+      Description: 'Ghost application email. Default: user@example.com'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: GHOST_EMAIL
+      Required: 'false'
+      Target: GHOST_EMAIL
+      Type: Variable
+      value: user@example.com
+    GHOST_HOST:
+      Default: localhost
+      Description: If you want to access your application from a public IP or hostname
+        you need to set this environment variable to your public IP or hostname. E.g.
+        blog.example.com
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: GHOST_HOST
+      Required: 'true'
+      Target: GHOST_HOST
+      Type: Variable
+      value: ghost.example.com
+    GHOST_PASSWORD:
+      Default: ' bitnami123'
+      Description: 'Ghost application password. The minimum length is 10 characters.
+        Default: bitnami123'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: GHOST_PASSWORD
+      Required: 'true'
+      Target: GHOST_PASSWORD
+      Type: Variable
+      value: bitnami123
+    GHOST_PROTOCOL:
+      Default: http
+      Description: 'Protocol to use in the application URLs. Valid values are https
+        or https. Default: http'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: GHOST_PROTOCOL
+      Required: 'true'
+      Target: GHOST_PROTOCOL
+      Type: Variable
+      value: http
+    GHOST_USERNAME:
+      Default: user
+      Description: 'Ghost application username. Default: user'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: GHOST_USERNAME
+      Required: 'true'
+      Target: GHOST_USERNAME
+      Type: Variable
+      value: user
+    MARIADB_HOST:
+      Default: 192.168.1.100
+      Description: 'Hostname for MariaDB server. Default: mariadb'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: MARIADB_HOST
+      Required: 'true'
+      Target: MARIADB_HOST
+      Type: Variable
+      value: 192.168.1.100
+    MARIADB_PORT_NUMBER:
+      Default: '3306'
+      Description: 'Port used by MariaDB server. Default: 3306'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: MARIADB_PORT_NUMBER
+      Required: 'true'
+      Target: MARIADB_PORT_NUMBER
+      Type: Variable
+      value: '3306'
+    SMTP_FROM_ADDRESS:
+      Default: you@domain.com
+      Description: SMTP from address.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: SMTP_FROM_ADDRESS
+      Required: 'true'
+      Target: SMTP_FROM_ADDRESS
+      Type: Variable
+      value: you@domain.com
+    SMTP_HOST:
+      Default: smtp.gmail.com
+      Description: SMTP host. E.g. smtp.gmail.com
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: SMTP_HOST
+      Required: 'true'
+      Target: SMTP_HOST
+      Type: Variable
+      value: smtp.gmail.com
+    SMTP_PASSWORD:
+      Default: password
+      Description: SMTP account password.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: SMTP_PASSWORD
+      Required: 'true'
+      Target: SMTP_PASSWORD
+      Type: Variable
+      value: password
+    SMTP_PORT:
+      Default: '587'
+      Description: SMTP port. E.g. 587
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: SMTP_PORT
+      Required: 'true'
+      Target: SMTP_PORT
+      Type: Variable
+      value: '587'
+    SMTP_SECURE_CONNECTION:
+      Default: 'true'
+      Description: Use a secure connection for SMTP. true or false
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: SMTP_SECURE_CONNECTION
+      Required: 'true'
+      Target: SMTP_SECURE_CONNECTION
+      Type: Variable
+      value: 'true'
+    SMTP_SERVICE:
+      Default: GMail
+      Description: SMTP service to use. E.g. GMail or Mailgun
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: SMTP_SERVICE
+      Required: 'true'
+      Target: SMTP_SERVICE
+      Type: Variable
+      value: GMail
+    SMTP_USER:
+      Default: your_email@gmail.com
+      Description: SMTP account user. E.g. your_email@gmail.com
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: SMTP_USER
+      Required: 'true'
+      Target: SMTP_USER
+      Type: Variable
+      value: your_email@gmail.com
 DonateLink: https://paypal.me/ramteksolutions
 DonateText: Help support my work by buying me a beer
 FirstSeen: 1614157360

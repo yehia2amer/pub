@@ -2,39 +2,44 @@ CategoryList:
 - Cloud
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: ''
-    Description: WebUI Port
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Port
-    Required: 'false'
-    Target: '5000'
-    Type: Port
-  value: '5000'
-- '@attributes':
-    Default: ''
-    Description: Config Path
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Config
-    Required: 'false'
-    Target: /opt/youtransfer/config
-    Type: Path
-  value: /mnt/user/appdata/youtransfer/
-- '@attributes':
-    Default: ''
-    Description: Uploads Path
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Host Path 3
-    Required: 'false'
-    Target: /opt/youtransfer/uploads
-    Type: Path
-  value: /mnt/user/youtransfer
+  Device: {}
+  Label: {}
+  Path:
+    Config:
+      Default: ''
+      Description: Config Path
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Config
+      Required: 'false'
+      Target: /opt/youtransfer/config
+      Type: Path
+      value: /mnt/user/appdata/youtransfer/
+    Host Path 3:
+      Default: ''
+      Description: Uploads Path
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Host Path 3
+      Required: 'false'
+      Target: /opt/youtransfer/uploads
+      Type: Path
+      value: /mnt/user/youtransfer
+  Port:
+    Port:
+      Default: ''
+      Description: WebUI Port
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Port
+      Required: 'false'
+      Target: '5000'
+      Type: Port
+      value: '5000'
+  Variable: {}
 DonateLink: https://www.paypal.com/donate?hosted_button_id=4CL2REKSGRLWA
 DonateText: If you like my work, a donation to my snack fund is very much appreciated.
 FirstSeen: 1612487432

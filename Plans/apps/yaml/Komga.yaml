@@ -3,49 +3,54 @@ CategoryList:
 - MediaServer-Books
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: '8080'
-    Description: 'Container Port: 8080'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'true'
-    Target: '8080'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: '#recycle,@eaDir'
-    Description: 'Container Variable: KOMGA_LIBRARIES_SCAN_DIRECTORY_EXCLUSIONS'
-    Display: advanced
-    Mask: 'false'
-    Name: Exclusions
-    Required: 'true'
-    Target: KOMGA_LIBRARIES_SCAN_DIRECTORY_EXCLUSIONS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: /mnt/user/appdata/komga/
-    Description: 'Container Path: /config'
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: Config
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: /mnt/user/Media/books
-    Description: 'Container Path: /books'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Books
-    Required: 'true'
-    Target: /books
-    Type: Path
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Books:
+      Default: /mnt/user/Media/books
+      Description: 'Container Path: /books'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Books
+      Required: 'true'
+      Target: /books
+      Type: Path
+      value: ''
+    Config:
+      Default: /mnt/user/appdata/komga/
+      Description: 'Container Path: /config'
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: Config
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: ''
+  Port:
+    WebUI:
+      Default: '8080'
+      Description: 'Container Port: 8080'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'true'
+      Target: '8080'
+      Type: Port
+      value: ''
+  Variable:
+    Exclusions:
+      Default: '#recycle,@eaDir'
+      Description: 'Container Variable: KOMGA_LIBRARIES_SCAN_DIRECTORY_EXCLUSIONS'
+      Display: advanced
+      Mask: 'false'
+      Name: Exclusions
+      Required: 'true'
+      Target: KOMGA_LIBRARIES_SCAN_DIRECTORY_EXCLUSIONS
+      Type: Variable
+      value: ''
 FirstSeen: 1574572046
 Icon: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/komga.png
 LastUpdate: 1647240005

@@ -2,127 +2,132 @@ CategoryList:
 - GameServers
 - Network-Management
 Config:
-- '@attributes':
-    Default: '8000'
-    Description: Port
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: Port
-    Required: 'true'
-    Target: '80'
-    Type: Port
-  value: '8001'
-- '@attributes':
-    Default: /mnt/user/pterodactyl-node/data
-    Description: 'Container Path: /mnt/user/pterodactyl-node/data'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Shared data
-    Required: 'true'
-    Target: /mnt/user/pterodactyl-node/data
-    Type: Path
-  value: /mnt/user/pterodactyl-node/data
-- '@attributes':
-    Default: /mnt/user/pterodactyl-node/
-    Description: 'Container Path: /etc/pterodactyl'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Game Data
-    Required: 'false'
-    Target: /etc/pterodactyl
-    Type: Path
-  value: /mnt/user/pterodactyl-node/
-- '@attributes':
-    Default: /mnt/user/appdata/pterodactyl/
-    Description: Appdata
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Appdata
-    Required: 'true'
-    Target: /data
-    Type: Path
-  value: /mnt/user/appdata/pterodactyl/
-- '@attributes':
-    Default: UTC
-    Description: Timezone
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Timezone
-    Required: 'true'
-    Target: APP_TIMEZONE
-    Type: Variable
-  value: Europe/London
-- '@attributes':
-    Default: mariadb
-    Description: Database Hostname or IP.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Database Hostname or IP
-    Required: 'true'
-    Target: DB_HOST
-    Type: Variable
-  value: mariadb
-- '@attributes':
-    Default: '3306'
-    Description: Database Port
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Database Port
-    Required: 'true'
-    Target: DB_PORT
-    Type: Variable
-  value: '3306'
-- '@attributes':
-    Default: pterodactyl
-    Description: Database Name
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Database Name
-    Required: 'true'
-    Target: DB_DATABASE
-    Type: Variable
-  value: pterodactyl
-- '@attributes':
-    Default: pterodactyl
-    Description: Database Username
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Database Username
-    Required: 'true'
-    Target: DB_USERNAME
-    Type: Variable
-  value: pterodactyl
-- '@attributes':
-    Default: password
-    Description: Database Password
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Database Password
-    Required: 'true'
-    Target: DB_PASSWORD
-    Type: Variable
-  value: pterodactyl
-- '@attributes':
-    Default: false|true
-    Description: APP_DEBUG
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: DEBUG
-    Required: 'false'
-    Target: APP_DEBUG
-    Type: Variable
-  value: 'false'
+  Device: {}
+  Label: {}
+  Path:
+    Appdata:
+      Default: /mnt/user/appdata/pterodactyl/
+      Description: Appdata
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Appdata
+      Required: 'true'
+      Target: /data
+      Type: Path
+      value: /mnt/user/appdata/pterodactyl/
+    Game Data:
+      Default: /mnt/user/pterodactyl-node/
+      Description: 'Container Path: /etc/pterodactyl'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Game Data
+      Required: 'false'
+      Target: /etc/pterodactyl
+      Type: Path
+      value: /mnt/user/pterodactyl-node/
+    Shared data:
+      Default: /mnt/user/pterodactyl-node/data
+      Description: 'Container Path: /mnt/user/pterodactyl-node/data'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Shared data
+      Required: 'true'
+      Target: /mnt/user/pterodactyl-node/data
+      Type: Path
+      value: /mnt/user/pterodactyl-node/data
+  Port:
+    Port:
+      Default: '8000'
+      Description: Port
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Port
+      Required: 'true'
+      Target: '80'
+      Type: Port
+      value: '8001'
+  Variable:
+    DEBUG:
+      Default: false|true
+      Description: APP_DEBUG
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DEBUG
+      Required: 'false'
+      Target: APP_DEBUG
+      Type: Variable
+      value: 'false'
+    Database Hostname or IP:
+      Default: mariadb
+      Description: Database Hostname or IP.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Database Hostname or IP
+      Required: 'true'
+      Target: DB_HOST
+      Type: Variable
+      value: mariadb
+    Database Name:
+      Default: pterodactyl
+      Description: Database Name
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Database Name
+      Required: 'true'
+      Target: DB_DATABASE
+      Type: Variable
+      value: pterodactyl
+    Database Password:
+      Default: password
+      Description: Database Password
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Database Password
+      Required: 'true'
+      Target: DB_PASSWORD
+      Type: Variable
+      value: pterodactyl
+    Database Port:
+      Default: '3306'
+      Description: Database Port
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Database Port
+      Required: 'true'
+      Target: DB_PORT
+      Type: Variable
+      value: '3306'
+    Database Username:
+      Default: pterodactyl
+      Description: Database Username
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Database Username
+      Required: 'true'
+      Target: DB_USERNAME
+      Type: Variable
+      value: pterodactyl
+    Timezone:
+      Default: UTC
+      Description: Timezone
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Timezone
+      Required: 'true'
+      Target: APP_TIMEZONE
+      Type: Variable
+      value: Europe/London
 DonateLink: https://paypal.me/ramteksolutions
 DonateText: Help support my work by buying me a beer
 FirstSeen: 1589227646

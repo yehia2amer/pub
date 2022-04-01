@@ -10,111 +10,116 @@ CategoryList:
 - MediaServer-Other
 ChangeLogPresent: true
 Config:
-- '@attributes':
-    Default: '9981'
-    Description: WebUI
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'true'
-    Target: '9981'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: '9982'
-    Description: HTSP server port.
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: 'Port: 9982'
-    Required: 'true'
-    Target: '9982'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Where TVHeadend show store it's config files.
-    Display: advanced
-    Mask: 'false'
-    Mode: rw
-    Name: Appdata
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Where you want the PVR to store recordings.
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: 'Path: /recordings'
-    Required: 'true'
-    Target: /recordings
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: run options here
-    Description: Optionally specify additional arguments to be passed. See Additional
-      runtime parameters.
-    Display: always
-    Mask: 'false'
-    Name: RUN_OPTS
-    Required: 'false'
-    Target: RUN_OPTS
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '99'
-    Description: 'Container Variable: PUID'
-    Display: advanced
-    Mask: 'false'
-    Name: PUID
-    Required: 'true'
-    Target: PUID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '100'
-    Description: 'Container Variable: PGID'
-    Display: advanced
-    Mask: 'false'
-    Name: PGID
-    Required: 'true'
-    Target: PGID
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '022'
-    Description: 'Container Variable: UMASK'
-    Display: advanced
-    Mask: 'false'
-    Name: UMASK
-    Required: 'false'
-    Target: UMASK
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: /dev/dri
-    Description: Only needed if you want to use your AMD/Intel GPU for hardware accelerated
-      video encoding (vaapi).
-    Display: always
-    Mask: 'false'
-    Name: /dev/dri
-    Required: 'false'
-    Type: Device
-  value: ''
-- '@attributes':
-    Default: /dev/dvb
-    Description: Only needed if you want to pass through a DVB card to the container.
-      If you use IPTV or HDHomeRun you can leave it out.
-    Display: always
-    Mask: 'false'
-    Name: /dev/dvb
-    Required: 'false'
-    Type: Device
-  value: ''
+  Device:
+    /dev/dri:
+      Default: /dev/dri
+      Description: Only needed if you want to use your AMD/Intel GPU for hardware
+        accelerated video encoding (vaapi).
+      Display: always
+      Mask: 'false'
+      Name: /dev/dri
+      Required: 'false'
+      Type: Device
+      value: ''
+    /dev/dvb:
+      Default: /dev/dvb
+      Description: Only needed if you want to pass through a DVB card to the container.
+        If you use IPTV or HDHomeRun you can leave it out.
+      Display: always
+      Mask: 'false'
+      Name: /dev/dvb
+      Required: 'false'
+      Type: Device
+      value: ''
+  Label: {}
+  Path:
+    Appdata:
+      Default: ''
+      Description: Where TVHeadend show store it's config files.
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: Appdata
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: ''
+    'Path: /recordings':
+      Default: ''
+      Description: Where you want the PVR to store recordings.
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: 'Path: /recordings'
+      Required: 'true'
+      Target: /recordings
+      Type: Path
+      value: ''
+  Port:
+    'Port: 9982':
+      Default: '9982'
+      Description: HTSP server port.
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: 'Port: 9982'
+      Required: 'true'
+      Target: '9982'
+      Type: Port
+      value: ''
+    WebUI:
+      Default: '9981'
+      Description: WebUI
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'true'
+      Target: '9981'
+      Type: Port
+      value: ''
+  Variable:
+    PGID:
+      Default: '100'
+      Description: 'Container Variable: PGID'
+      Display: advanced
+      Mask: 'false'
+      Name: PGID
+      Required: 'true'
+      Target: PGID
+      Type: Variable
+      value: ''
+    PUID:
+      Default: '99'
+      Description: 'Container Variable: PUID'
+      Display: advanced
+      Mask: 'false'
+      Name: PUID
+      Required: 'true'
+      Target: PUID
+      Type: Variable
+      value: ''
+    RUN_OPTS:
+      Default: run options here
+      Description: Optionally specify additional arguments to be passed. See Additional
+        runtime parameters.
+      Display: always
+      Mask: 'false'
+      Name: RUN_OPTS
+      Required: 'false'
+      Target: RUN_OPTS
+      Type: Variable
+      value: ''
+    UMASK:
+      Default: '022'
+      Description: 'Container Variable: UMASK'
+      Display: advanced
+      Mask: 'false'
+      Name: UMASK
+      Required: 'false'
+      Target: UMASK
+      Type: Variable
+      value: ''
 DonateImg: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/donate.png
 DonateLink: https://www.linuxserver.io/donate
 DonateText: Donations

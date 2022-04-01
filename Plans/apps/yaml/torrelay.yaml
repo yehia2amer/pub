@@ -3,72 +3,77 @@ CAComment: This template is set up to use a custom network. You may have to adju
 CategoryList:
 - Network-Other
 Config:
-- '@attributes':
-    Default: '9030'
-    Description: 'Container Port: '
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: '9030'
-    Required: 'false'
-    Target: '9030'
-    Type: Port
-  value: '9030'
-- '@attributes':
-    Default: '9001'
-    Description: 'Container Port: '
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: '9001'
-    Required: 'false'
-    Target: '9001'
-    Type: Port
-  value: '9001'
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /etc/localtime'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: /etc/localtime
-    Required: 'false'
-    Target: /etc/localtime
-    Type: Path
-  value: /etc/localtime
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: NICKNAME'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: TOR_NICKNAME
-    Required: 'false'
-    Target: TOR_NICKNAME
-    Type: Variable
-  value: myRelay
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: CONTACTINFO'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: CONTACT_EMAIL
-    Required: 'false'
-    Target: CONTACT_EMAIL
-    Type: Variable
-  value: mail@domain.com
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /etc/tor/'
-    Display: always
-    Mask: 'false'
-    Mode: ro
-    Name: /etc/tor/
-    Required: 'false'
-    Target: /etc/tor/
-    Type: Path
-  value: /mnt/user/appdata/tor-data/config/
+  Device: {}
+  Label: {}
+  Path:
+    /etc/localtime:
+      Default: ''
+      Description: 'Container Path: /etc/localtime'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: /etc/localtime
+      Required: 'false'
+      Target: /etc/localtime
+      Type: Path
+      value: /etc/localtime
+    /etc/tor/:
+      Default: ''
+      Description: 'Container Path: /etc/tor/'
+      Display: always
+      Mask: 'false'
+      Mode: ro
+      Name: /etc/tor/
+      Required: 'false'
+      Target: /etc/tor/
+      Type: Path
+      value: /mnt/user/appdata/tor-data/config/
+  Port:
+    '9001':
+      Default: '9001'
+      Description: 'Container Port: '
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: '9001'
+      Required: 'false'
+      Target: '9001'
+      Type: Port
+      value: '9001'
+    '9030':
+      Default: '9030'
+      Description: 'Container Port: '
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: '9030'
+      Required: 'false'
+      Target: '9030'
+      Type: Port
+      value: '9030'
+  Variable:
+    CONTACT_EMAIL:
+      Default: ''
+      Description: 'Container Variable: CONTACTINFO'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: CONTACT_EMAIL
+      Required: 'false'
+      Target: CONTACT_EMAIL
+      Type: Variable
+      value: mail@domain.com
+    TOR_NICKNAME:
+      Default: ''
+      Description: 'Container Variable: NICKNAME'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: TOR_NICKNAME
+      Required: 'false'
+      Target: TOR_NICKNAME
+      Type: Variable
+      value: myRelay
 ExtraParams: --init
 FirstSeen: 1581081332
 Icon: https://clipartart.com/images/tor-browser-icon-clipart-9.png

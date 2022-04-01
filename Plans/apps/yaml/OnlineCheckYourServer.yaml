@@ -1,107 +1,112 @@
 CategoryList:
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: ''
-    Description: IP or Domainname to ping goes here.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Host
-    Required: 'true'
-    Target: HOST
-    Type: Variable
-  value: google.com
-- '@attributes':
-    Default: ''
-    Description: Interval in wich the Host is pinged (in seconds).
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Ping Interval
-    Required: 'true'
-    Target: PING_INTERVAL
-    Type: Variable
-  value: '300'
-- '@attributes':
-    Default: ''
-    Description: Time that the Host has to answer the ping request (in seconds).
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Ping Timeout
-    Required: 'true'
-    Target: PING_TIMEOUT
-    Type: Variable
-  value: '10'
-- '@attributes':
-    Default: ''
-    Description: Time to wait to retry it after the ping fails (in seconds).
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Retry after Fail
-    Required: 'true'
-    Target: PING_RETRY
-    Type: Variable
-  value: '3600'
-- '@attributes':
-    Default: ''
-    Description: Pushover APP Token goes here.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Pushover APP Token
-    Required: 'true'
-    Target: PUSHOVER_APP_TOKEN
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Pushover User Token goes here.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Pushover User Token
-    Required: 'true'
-    Target: PUSHOVER_USER_TOKEN
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: Customized Pushover Message Title here.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Pushover Message Title
-    Required: 'true'
-    Target: PUSHOVER_TITLE
-    Type: Variable
-  value: Online Check
-- '@attributes':
-    Default: ''
-    Description: Customized Pushover Message here.
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Pushover Message
-    Required: 'true'
-    Target: PUSHOVER_MESSAGE
-    Type: Variable
-  value: google.com is offline!
-- '@attributes':
-    Default: ''
-    Description: 'Customize the Pushover Priority (''-2'': Lowest priority | ''-1'':
-      Low Priority | ''0'': Normal Priority | ''1'': High Priority | ''2'': Emergency
-      Priority - without quotes)'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Pushover Priority
-    Required: 'true'
-    Target: PUSHOVER_PRIORITY
-    Type: Variable
-  value: '0'
+  Device: {}
+  Label: {}
+  Path: {}
+  Port: {}
+  Variable:
+    Host:
+      Default: ''
+      Description: IP or Domainname to ping goes here.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Host
+      Required: 'true'
+      Target: HOST
+      Type: Variable
+      value: google.com
+    Ping Interval:
+      Default: ''
+      Description: Interval in wich the Host is pinged (in seconds).
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Ping Interval
+      Required: 'true'
+      Target: PING_INTERVAL
+      Type: Variable
+      value: '300'
+    Ping Timeout:
+      Default: ''
+      Description: Time that the Host has to answer the ping request (in seconds).
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Ping Timeout
+      Required: 'true'
+      Target: PING_TIMEOUT
+      Type: Variable
+      value: '10'
+    Pushover APP Token:
+      Default: ''
+      Description: Pushover APP Token goes here.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Pushover APP Token
+      Required: 'true'
+      Target: PUSHOVER_APP_TOKEN
+      Type: Variable
+      value: ''
+    Pushover Message:
+      Default: ''
+      Description: Customized Pushover Message here.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Pushover Message
+      Required: 'true'
+      Target: PUSHOVER_MESSAGE
+      Type: Variable
+      value: google.com is offline!
+    Pushover Message Title:
+      Default: ''
+      Description: Customized Pushover Message Title here.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Pushover Message Title
+      Required: 'true'
+      Target: PUSHOVER_TITLE
+      Type: Variable
+      value: Online Check
+    Pushover Priority:
+      Default: ''
+      Description: 'Customize the Pushover Priority (''-2'': Lowest priority | ''-1'':
+        Low Priority | ''0'': Normal Priority | ''1'': High Priority | ''2'': Emergency
+        Priority - without quotes)'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Pushover Priority
+      Required: 'true'
+      Target: PUSHOVER_PRIORITY
+      Type: Variable
+      value: '0'
+    Pushover User Token:
+      Default: ''
+      Description: Pushover User Token goes here.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Pushover User Token
+      Required: 'true'
+      Target: PUSHOVER_USER_TOKEN
+      Type: Variable
+      value: ''
+    Retry after Fail:
+      Default: ''
+      Description: Time to wait to retry it after the ping fails (in seconds).
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Retry after Fail
+      Required: 'true'
+      Target: PING_RETRY
+      Type: Variable
+      value: '3600'
 DonateLink: https://www.paypal.me/chips777
 DonateText: 'If you like my work please '
 ExtraParams: --restart=unless-stopped

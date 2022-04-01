@@ -1,108 +1,113 @@
 CategoryList:
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: '8080'
-    Description: 'Container Port: 8888'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'false'
-    Target: '8080'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: /var/run/docker.sock
-    Description: 'Container Path: /var/run/docker.sock'
-    Display: always
-    Mask: 'false'
-    Mode: ro
-    Name: Docker Logs
-    Required: 'true'
-    Target: /var/run/docker.sock
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: DOZZLE_USERNAME'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Username
-    Required: 'false'
-    Target: DOZZLE_USERNAME
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: DOZZLE_PASSWORD'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Password
-    Required: 'false'
-    Target: DOZZLE_PASSWORD
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: /
-    Description: 'Container Variable: DOZZLE_BASE'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Base URL
-    Required: 'false'
-    Target: DOZZLE_BASE
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: info
-    Description: 'Container Variable: DOZZLE_LEVEL'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Log Level
-    Required: 'false'
-    Target: DOZZLE_LEVEL
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: '300'
-    Description: 'Container Variable: DOZZLE_TAILSIZE'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Log Tailsize
-    Required: 'false'
-    Target: DOZZLE_TAILSIZE
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 9Q9SJ69MZhZ0WrjbF
-    Description: 'Container Variable: DOZZLE_KEY . Dozzle uses this to make session
-      tokens. If you expose dozzle on the internet, you need to change this, since
-      the default secret is well known'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Secret Key
-    Required: 'false'
-    Target: DOZZLE_KEY
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: 'true'
-    Description: 'Container Variable: DOZZLE_NO_ANALYTICS . Dozzle collects anonymous
-      user configurations using Google Analytics.'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: Disable Analytics
-    Required: 'false'
-    Target: DOZZLE_NO_ANALYTICS
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Docker Logs:
+      Default: /var/run/docker.sock
+      Description: 'Container Path: /var/run/docker.sock'
+      Display: always
+      Mask: 'false'
+      Mode: ro
+      Name: Docker Logs
+      Required: 'true'
+      Target: /var/run/docker.sock
+      Type: Path
+      value: ''
+  Port:
+    WebUI:
+      Default: '8080'
+      Description: 'Container Port: 8888'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'false'
+      Target: '8080'
+      Type: Port
+      value: ''
+  Variable:
+    Base URL:
+      Default: /
+      Description: 'Container Variable: DOZZLE_BASE'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Base URL
+      Required: 'false'
+      Target: DOZZLE_BASE
+      Type: Variable
+      value: ''
+    Disable Analytics:
+      Default: 'true'
+      Description: 'Container Variable: DOZZLE_NO_ANALYTICS . Dozzle collects anonymous
+        user configurations using Google Analytics.'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Disable Analytics
+      Required: 'false'
+      Target: DOZZLE_NO_ANALYTICS
+      Type: Variable
+      value: ''
+    Log Level:
+      Default: info
+      Description: 'Container Variable: DOZZLE_LEVEL'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Log Level
+      Required: 'false'
+      Target: DOZZLE_LEVEL
+      Type: Variable
+      value: ''
+    Log Tailsize:
+      Default: '300'
+      Description: 'Container Variable: DOZZLE_TAILSIZE'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Log Tailsize
+      Required: 'false'
+      Target: DOZZLE_TAILSIZE
+      Type: Variable
+      value: ''
+    Password:
+      Default: ''
+      Description: 'Container Variable: DOZZLE_PASSWORD'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Password
+      Required: 'false'
+      Target: DOZZLE_PASSWORD
+      Type: Variable
+      value: ''
+    Secret Key:
+      Default: 9Q9SJ69MZhZ0WrjbF
+      Description: 'Container Variable: DOZZLE_KEY . Dozzle uses this to make session
+        tokens. If you expose dozzle on the internet, you need to change this, since
+        the default secret is well known'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Secret Key
+      Required: 'false'
+      Target: DOZZLE_KEY
+      Type: Variable
+      value: ''
+    Username:
+      Default: ''
+      Description: 'Container Variable: DOZZLE_USERNAME'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Username
+      Required: 'false'
+      Target: DOZZLE_USERNAME
+      Type: Variable
+      value: ''
 FirstSeen: 1602173315
 Icon: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/dozzle.png
 LastUpdate: 1646213058

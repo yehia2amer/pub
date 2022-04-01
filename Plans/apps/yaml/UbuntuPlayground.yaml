@@ -3,28 +3,34 @@ BindTime: 'true'
 CategoryList:
 - Tools
 Config:
-- '@attributes':
-    Default: /mnt/user/appdata/ubuntudata
-    Description: This is where playground will store you user's home directory
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: rw
-    Name: Home Directory
-    Required: 'true'
-    Target: /home/root
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: mc nano sudo
-    Description: The List of aptitude packages you wish to install (Seperated by space)
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: APT Packages
-    Required: 'true'
-    Target: packages
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Home Directory:
+      Default: /mnt/user/appdata/ubuntudata
+      Description: This is where playground will store you user's home directory
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: rw
+      Name: Home Directory
+      Required: 'true'
+      Target: /home/root
+      Type: Path
+      value: ''
+  Port: {}
+  Variable:
+    APT Packages:
+      Default: mc nano sudo
+      Description: The List of aptitude packages you wish to install (Seperated by
+        space)
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: APT Packages
+      Required: 'true'
+      Target: packages
+      Type: Variable
+      value: ''
 DonateImg: https://www.paypal.com/en_US/i/btn/btn_donate_SM.gif
 DonateLink: https://www.paypal.me/siwatsirichai
 DonateText: If you like it, then consider buying me a soda as I don&#39;t like beer

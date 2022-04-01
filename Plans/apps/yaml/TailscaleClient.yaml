@@ -3,40 +3,45 @@ CategoryList:
 - Network-VPN
 ChangeLogPresent: true
 Config:
-- '@attributes':
-    Default: 192.168.1.0/24
-    Description: 'Container Variable: ROUTES'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Exposed Routes
-    Required: 'false'
-    Target: ROUTES
-    Type: Variable
-  value: 192.168.88.0/24
-- '@attributes':
-    Default: tskey-xxxxxxxxxxxxxxxxxxxxxxxxx
-    Description: 'Container Variable: AUTHKEY - Use a Reusable Key to persist after
-      upgrades'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Authentication Key
-    Required: 'true'
-    Target: AUTHKEY
-    Type: Variable
-  value: tskey-xxxxxxxxxxxxxxxxxxxxxxxxx
-- '@attributes':
-    Default: tailscaleunraid
-    Description: 'Container Variable: HOSTNAME'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Hostname / Machine Name
-    Required: 'false'
-    Target: HOSTNAME
-    Type: Variable
-  value: tailscaleunraid
+  Device: {}
+  Label: {}
+  Path: {}
+  Port: {}
+  Variable:
+    Authentication Key:
+      Default: tskey-xxxxxxxxxxxxxxxxxxxxxxxxx
+      Description: 'Container Variable: AUTHKEY - Use a Reusable Key to persist after
+        upgrades'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Authentication Key
+      Required: 'true'
+      Target: AUTHKEY
+      Type: Variable
+      value: tskey-xxxxxxxxxxxxxxxxxxxxxxxxx
+    Exposed Routes:
+      Default: 192.168.1.0/24
+      Description: 'Container Variable: ROUTES'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Exposed Routes
+      Required: 'false'
+      Target: ROUTES
+      Type: Variable
+      value: 192.168.88.0/24
+    Hostname / Machine Name:
+      Default: tailscaleunraid
+      Description: 'Container Variable: HOSTNAME'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Hostname / Machine Name
+      Required: 'false'
+      Target: HOSTNAME
+      Type: Variable
+      value: tailscaleunraid
 FirstSeen: 1615119130
 Icon: https://github.com/hussainalhaddad/docker-templates/raw/master/tailscale/logo.png
 LastUpdate: 1635598416

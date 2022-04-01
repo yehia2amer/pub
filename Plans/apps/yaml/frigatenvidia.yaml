@@ -2,117 +2,122 @@ CategoryList:
 - HomeAutomation
 - Security
 Config:
-- '@attributes':
-    Default: /mnt/user/appdata/frigate-nvidia
-    Description: /mnt/user/appdata/frigate
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Config Path
-    Required: 'true'
-    Target: /config
-    Type: Path
-  value: /mnt/user/appdata/frigate-nvidia
-- '@attributes':
-    Default: /mnt/user/Media/frigate
-    Description: 'Container Path: /media/frigate'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Media path
-    Required: 'true'
-    Target: /media/frigate
-    Type: Path
-  value: /mnt/user/Media/frigate
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 5000'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: HTTP port
-    Required: 'true'
-    Target: '5000'
-    Type: Port
-  value: '5000'
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 1935'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: RTMP port
-    Required: 'true'
-    Target: '1935'
-    Type: Port
-  value: '1935'
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: FRIGATE_RTSP_PASSWORD'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Frigate RTSP Password
-    Required: 'true'
-    Target: FRIGATE_RTSP_PASSWORD
-    Type: Variable
-  value: enterpassword
-- '@attributes':
-    Default: ''
-    Description: Use /dev/bus/usb for USB devices and /dev/apex_0 for PCIe devices
-      (you must install the drivers first for PCIe devices)
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: TPU Mapping
-    Required: 'false'
-    Target: /dev/bus/usb
-    Type: Device
-  value: /dev/bus/usb
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: NVIDIA_VISIBLE_DEVICES'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: NVIDIA_VISIBLE_DEVICES
-    Required: 'true'
-    Target: NVIDIA_VISIBLE_DEVICES
-    Type: Variable
-  value: YOUR-GPU-UUID
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: NVIDIA_DRIVER_CAPABILITIES'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: NVIDIA_DRIVER_CAPABILITIES
-    Required: 'true'
-    Target: NVIDIA_DRIVER_CAPABILITIES
-    Type: Variable
-  value: compute,utility,video
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /tmp/cache'
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: rw
-    Name: Cache to RAM
-    Required: 'true'
-    Target: /tmp/cache
-    Type: Path
-  value: /tmp/frigate
-- '@attributes':
-    Default: ''
-    Description: /etc/localtime
-    Display: advanced-hide
-    Mask: 'false'
-    Mode: rw
-    Name: Localtime
-    Required: 'true'
-    Target: /etc/localtime
-    Type: Path
-  value: /etc/localtime
+  Device:
+    TPU Mapping:
+      Default: ''
+      Description: Use /dev/bus/usb for USB devices and /dev/apex_0 for PCIe devices
+        (you must install the drivers first for PCIe devices)
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: TPU Mapping
+      Required: 'false'
+      Target: /dev/bus/usb
+      Type: Device
+      value: /dev/bus/usb
+  Label: {}
+  Path:
+    Cache to RAM:
+      Default: ''
+      Description: 'Container Path: /tmp/cache'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: rw
+      Name: Cache to RAM
+      Required: 'true'
+      Target: /tmp/cache
+      Type: Path
+      value: /tmp/frigate
+    Config Path:
+      Default: /mnt/user/appdata/frigate-nvidia
+      Description: /mnt/user/appdata/frigate
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Config Path
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: /mnt/user/appdata/frigate-nvidia
+    Localtime:
+      Default: ''
+      Description: /etc/localtime
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: rw
+      Name: Localtime
+      Required: 'true'
+      Target: /etc/localtime
+      Type: Path
+      value: /etc/localtime
+    Media path:
+      Default: /mnt/user/Media/frigate
+      Description: 'Container Path: /media/frigate'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Media path
+      Required: 'true'
+      Target: /media/frigate
+      Type: Path
+      value: /mnt/user/Media/frigate
+  Port:
+    HTTP port:
+      Default: ''
+      Description: 'Container Port: 5000'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: HTTP port
+      Required: 'true'
+      Target: '5000'
+      Type: Port
+      value: '5000'
+    RTMP port:
+      Default: ''
+      Description: 'Container Port: 1935'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: RTMP port
+      Required: 'true'
+      Target: '1935'
+      Type: Port
+      value: '1935'
+  Variable:
+    Frigate RTSP Password:
+      Default: ''
+      Description: 'Container Variable: FRIGATE_RTSP_PASSWORD'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Frigate RTSP Password
+      Required: 'true'
+      Target: FRIGATE_RTSP_PASSWORD
+      Type: Variable
+      value: enterpassword
+    NVIDIA_DRIVER_CAPABILITIES:
+      Default: ''
+      Description: 'Container Variable: NVIDIA_DRIVER_CAPABILITIES'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: NVIDIA_DRIVER_CAPABILITIES
+      Required: 'true'
+      Target: NVIDIA_DRIVER_CAPABILITIES
+      Type: Variable
+      value: compute,utility,video
+    NVIDIA_VISIBLE_DEVICES:
+      Default: ''
+      Description: 'Container Variable: NVIDIA_VISIBLE_DEVICES'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: NVIDIA_VISIBLE_DEVICES
+      Required: 'true'
+      Target: NVIDIA_VISIBLE_DEVICES
+      Type: Variable
+      value: YOUR-GPU-UUID
 ExtraParams: --runtime=nvidia --shm-size=5G
 FirstSeen: 1620580238
 Icon: https://raw.githubusercontent.com/yayitazale/unraid-templates/main/frigate.png

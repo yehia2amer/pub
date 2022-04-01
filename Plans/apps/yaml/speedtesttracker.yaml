@@ -1,50 +1,55 @@
 CategoryList:
 - Tools-Utilities
 Config:
-- '@attributes':
-    Default: ''
-    Description: 'Container Port: 80'
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'false'
-    Target: '80'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Path: /config'
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Appdata
-    Required: 'false'
-    Target: /config
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: 'Container Variable: SLACK_WEBHOOK'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: Slack/Discord Webhook
-    Required: 'false'
-    Target: SLACK_WEBHOOK
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: false|true
-    Description: 'Container Variable: OOKLA_EULA_GDPR'
-    Display: always
-    Mask: 'false'
-    Mode: ''
-    Name: OOKLA Accept EULA and GDPR
-    Required: 'true'
-    Target: OOKLA_EULA_GDPR
-    Type: Variable
-  value: ''
+  Device: {}
+  Label: {}
+  Path:
+    Appdata:
+      Default: ''
+      Description: 'Container Path: /config'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Appdata
+      Required: 'false'
+      Target: /config
+      Type: Path
+      value: ''
+  Port:
+    WebUI:
+      Default: ''
+      Description: 'Container Port: 80'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'false'
+      Target: '80'
+      Type: Port
+      value: ''
+  Variable:
+    OOKLA Accept EULA and GDPR:
+      Default: false|true
+      Description: 'Container Variable: OOKLA_EULA_GDPR'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: OOKLA Accept EULA and GDPR
+      Required: 'true'
+      Target: OOKLA_EULA_GDPR
+      Type: Variable
+      value: ''
+    Slack/Discord Webhook:
+      Default: ''
+      Description: 'Container Variable: SLACK_WEBHOOK'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Slack/Discord Webhook
+      Required: 'false'
+      Target: SLACK_WEBHOOK
+      Type: Variable
+      value: ''
 ExtraParams: --restart unless-stopped
 FirstSeen: 1590336466
 Icon: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/speedtest-tracker.png

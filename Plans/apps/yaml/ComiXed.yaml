@@ -1,72 +1,77 @@
 CategoryList:
 - MediaServer-Other
 Config:
-- '@attributes':
-    Default: '7171'
-    Description: Port for WebUI
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'false'
-    Target: '7171'
-    Type: Port
-  value: ''
-- '@attributes':
-    Default: /mnt/user/appdata/comixed/library
-    Description: This is where your books will be stored.
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Library
-    Required: 'true'
-    Target: /library
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: /mnt/user/appdata/comixed/database
-    Description: Here the Database which Comixed uses will be saved.
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Database
-    Required: 'true'
-    Target: /root/.comixed
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: /mnt/user/appdata/comixed/incoming
-    Description: Put files here to import them to the library.
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Incoming
-    Required: 'false'
-    Target: /incoming
-    Type: Path
-  value: ''
-- '@attributes':
-    Default: '100'
-    Description: 'Container Variable: PGID'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: PGID
-    Required: 'false'
-    Target: PGID
-    Type: Variable
-  value: '100'
-- '@attributes':
-    Default: '99'
-    Description: 'Container Variable: PUID'
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: PUID
-    Required: 'false'
-    Target: PUID
-    Type: Variable
-  value: '99'
+  Device: {}
+  Label: {}
+  Path:
+    Database:
+      Default: /mnt/user/appdata/comixed/database
+      Description: Here the Database which Comixed uses will be saved.
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Database
+      Required: 'true'
+      Target: /root/.comixed
+      Type: Path
+      value: ''
+    Incoming:
+      Default: /mnt/user/appdata/comixed/incoming
+      Description: Put files here to import them to the library.
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Incoming
+      Required: 'false'
+      Target: /incoming
+      Type: Path
+      value: ''
+    Library:
+      Default: /mnt/user/appdata/comixed/library
+      Description: This is where your books will be stored.
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Library
+      Required: 'true'
+      Target: /library
+      Type: Path
+      value: ''
+  Port:
+    WebUI:
+      Default: '7171'
+      Description: Port for WebUI
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'false'
+      Target: '7171'
+      Type: Port
+      value: ''
+  Variable:
+    PGID:
+      Default: '100'
+      Description: 'Container Variable: PGID'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PGID
+      Required: 'false'
+      Target: PGID
+      Type: Variable
+      value: '100'
+    PUID:
+      Default: '99'
+      Description: 'Container Variable: PUID'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PUID
+      Required: 'false'
+      Target: PUID
+      Type: Variable
+      value: '99'
 FirstSeen: 1636477411
 Icon: ''
 LastUpdate: 1642518277

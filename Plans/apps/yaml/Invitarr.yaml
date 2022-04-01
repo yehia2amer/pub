@@ -5,28 +5,33 @@ CategoryList:
 - MediaApp-Other
 - MediaServer-Other
 Config:
-- '@attributes':
-    Default: ''
-    Description: Discord Bot Token
-    Display: always
-    Mask: 'true'
-    Mode: ''
-    Name: Discord Bot Token
-    Required: 'true'
-    Target: token
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: /mnt/user/appdata/Invitarr/
-    Description: Config path
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Config
-    Required: 'true'
-    Target: /app/app/config
-    Type: Path
-  value: /mnt/user/appdata/Invitarr/
+  Device: {}
+  Label: {}
+  Path:
+    Config:
+      Default: /mnt/user/appdata/Invitarr/
+      Description: Config path
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Config
+      Required: 'true'
+      Target: /app/app/config
+      Type: Path
+      value: /mnt/user/appdata/Invitarr/
+  Port: {}
+  Variable:
+    Discord Bot Token:
+      Default: ''
+      Description: Discord Bot Token
+      Display: always
+      Mask: 'true'
+      Mode: ''
+      Name: Discord Bot Token
+      Required: 'true'
+      Target: token
+      Type: Variable
+      value: ''
 FirstSeen: 1628455366
 Icon: https://raw.githubusercontent.com/Sleepingpirates/Invitarr/backupmaster/Screenshots/invitarr.png
 LastUpdate: 1628121774

@@ -5,216 +5,210 @@ CategoryList:
 - Tools-Utilities
 - Network-Web
 Config:
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: tcp
-    Name: WebUI
-    Required: 'false'
-    Target: '80'
-    Type: Port
-  value: '8544'
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: always
-    Mask: 'false'
-    Mode: rw
-    Name: Storage (data)
-    Required: 'false'
-    Target: /var/www/html/data
-    Type: Path
-  value: /mnt/user/appdata/flashpaper
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: SITE_TITLE
-    Required: 'false'
-    Target: SITE_TITLE
-    Type: Variable
-  value: FlashPaper - Self-Destructing Message
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: RETURN_FULL_URL
-    Required: 'false'
-    Target: RETURN_FULL_URL
-    Type: Variable
-  value: 'true'
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: MAX_SECRET_LENGTH
-    Required: 'false'
-    Target: MAX_SECRET_LENGTH
-    Type: Variable
-  value: '3000'
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: ANNOUNCEMENT
-    Required: 'false'
-    Target: ANNOUNCEMENT
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: MESSAGES_ERROR_SECRET_TOO_LONG
-    Required: 'false'
-    Target: MESSAGES_ERROR_SECRET_TOO_LONG
-    Type: Variable
-  value: Input length too long
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: MESSAGES_SUBMIT_SECRET_HEADER
-    Required: 'false'
-    Target: MESSAGES_SUBMIT_SECRET_HEADER
-    Type: Variable
-  value: Create A Self-Destructing Message
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: MESSAGES_SUBMIT_SECRET_SUBHEADER
-    Required: 'false'
-    Target: MESSAGES_SUBMIT_SECRET_SUBHEADER
-    Type: Variable
-  value: ''
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: MESSAGES_SUBMIT_SECRET_BUTTON
-    Required: 'false'
-    Target: MESSAGES_SUBMIT_SECRET_BUTTON
-    Type: Variable
-  value: Encrypt Message
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: MESSAGES_VIEW_CODE_HEADER
-    Required: 'false'
-    Target: MESSAGES_VIEW_CODE_HEADER
-    Type: Variable
-  value: Self-Destructing URL
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: MESSAGES_VIEW_CODE_SUBHEADER
-    Required: 'false'
-    Target: MESSAGES_VIEW_CODE_SUBHEADER
-    Type: Variable
-  value: Share this URL via email, chat, or another messaging service. It will self-destruct
-    after being viewed once.
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: MESSAGES_CONFIRM_VIEW_SECRET_HEADER
-    Required: 'false'
-    Target: MESSAGES_CONFIRM_VIEW_SECRET_HEADER
-    Type: Variable
-  value: View this secret?
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: MESSAGES_CONFIRM_VIEW_SECRET_BUTTON
-    Required: 'false'
-    Target: MESSAGES_CONFIRM_VIEW_SECRET_BUTTON
-    Type: Variable
-  value: View Secret
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: MESSAGES_VIEW_SECRET_HEADER
-    Required: 'false'
-    Target: MESSAGES_VIEW_SECRET_HEADER
-    Type: Variable
-  value: Self-Destructing Message
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: MESSAGES_VIEW_SECRET_HEADER
-    Required: 'false'
-    Target: MESSAGES_VIEW_SECRET_HEADER
-    Type: Variable
-  value: This message has been destroyed
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: PRUNE_ENABLED
-    Required: 'false'
-    Target: PRUNE_ENABLED
-    Type: Variable
-  value: 'true'
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: PRUNE_MIN_DAYS
-    Required: 'false'
-    Target: PRUNE_MIN_DAYS
-    Type: Variable
-  value: '365'
-- '@attributes':
-    Default: ''
-    Description: ''
-    Display: advanced
-    Mask: 'false'
-    Mode: ''
-    Name: PRUNE_MAX_DAYS
-    Required: 'false'
-    Target: PRUNE_MAX_DAYS
-    Type: Variable
-  value: '730'
+  Device: {}
+  Label: {}
+  Path:
+    Storage (data):
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Storage (data)
+      Required: 'false'
+      Target: /var/www/html/data
+      Type: Path
+      value: /mnt/user/appdata/flashpaper
+  Port:
+    WebUI:
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'false'
+      Target: '80'
+      Type: Port
+      value: '8544'
+  Variable:
+    ANNOUNCEMENT:
+      Default: ''
+      Description: ''
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: ANNOUNCEMENT
+      Required: 'false'
+      Target: ANNOUNCEMENT
+      Type: Variable
+      value: ''
+    MAX_SECRET_LENGTH:
+      Default: ''
+      Description: ''
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: MAX_SECRET_LENGTH
+      Required: 'false'
+      Target: MAX_SECRET_LENGTH
+      Type: Variable
+      value: '3000'
+    MESSAGES_CONFIRM_VIEW_SECRET_BUTTON:
+      Default: ''
+      Description: ''
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: MESSAGES_CONFIRM_VIEW_SECRET_BUTTON
+      Required: 'false'
+      Target: MESSAGES_CONFIRM_VIEW_SECRET_BUTTON
+      Type: Variable
+      value: View Secret
+    MESSAGES_CONFIRM_VIEW_SECRET_HEADER:
+      Default: ''
+      Description: ''
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: MESSAGES_CONFIRM_VIEW_SECRET_HEADER
+      Required: 'false'
+      Target: MESSAGES_CONFIRM_VIEW_SECRET_HEADER
+      Type: Variable
+      value: View this secret?
+    MESSAGES_ERROR_SECRET_TOO_LONG:
+      Default: ''
+      Description: ''
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: MESSAGES_ERROR_SECRET_TOO_LONG
+      Required: 'false'
+      Target: MESSAGES_ERROR_SECRET_TOO_LONG
+      Type: Variable
+      value: Input length too long
+    MESSAGES_SUBMIT_SECRET_BUTTON:
+      Default: ''
+      Description: ''
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: MESSAGES_SUBMIT_SECRET_BUTTON
+      Required: 'false'
+      Target: MESSAGES_SUBMIT_SECRET_BUTTON
+      Type: Variable
+      value: Encrypt Message
+    MESSAGES_SUBMIT_SECRET_HEADER:
+      Default: ''
+      Description: ''
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: MESSAGES_SUBMIT_SECRET_HEADER
+      Required: 'false'
+      Target: MESSAGES_SUBMIT_SECRET_HEADER
+      Type: Variable
+      value: Create A Self-Destructing Message
+    MESSAGES_SUBMIT_SECRET_SUBHEADER:
+      Default: ''
+      Description: ''
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: MESSAGES_SUBMIT_SECRET_SUBHEADER
+      Required: 'false'
+      Target: MESSAGES_SUBMIT_SECRET_SUBHEADER
+      Type: Variable
+      value: ''
+    MESSAGES_VIEW_CODE_HEADER:
+      Default: ''
+      Description: ''
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: MESSAGES_VIEW_CODE_HEADER
+      Required: 'false'
+      Target: MESSAGES_VIEW_CODE_HEADER
+      Type: Variable
+      value: Self-Destructing URL
+    MESSAGES_VIEW_CODE_SUBHEADER:
+      Default: ''
+      Description: ''
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: MESSAGES_VIEW_CODE_SUBHEADER
+      Required: 'false'
+      Target: MESSAGES_VIEW_CODE_SUBHEADER
+      Type: Variable
+      value: Share this URL via email, chat, or another messaging service. It will
+        self-destruct after being viewed once.
+    MESSAGES_VIEW_SECRET_HEADER:
+      Default: ''
+      Description: ''
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: MESSAGES_VIEW_SECRET_HEADER
+      Required: 'false'
+      Target: MESSAGES_VIEW_SECRET_HEADER
+      Type: Variable
+      value: This message has been destroyed
+    PRUNE_ENABLED:
+      Default: ''
+      Description: ''
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PRUNE_ENABLED
+      Required: 'false'
+      Target: PRUNE_ENABLED
+      Type: Variable
+      value: 'true'
+    PRUNE_MAX_DAYS:
+      Default: ''
+      Description: ''
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PRUNE_MAX_DAYS
+      Required: 'false'
+      Target: PRUNE_MAX_DAYS
+      Type: Variable
+      value: '730'
+    PRUNE_MIN_DAYS:
+      Default: ''
+      Description: ''
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PRUNE_MIN_DAYS
+      Required: 'false'
+      Target: PRUNE_MIN_DAYS
+      Type: Variable
+      value: '365'
+    RETURN_FULL_URL:
+      Default: ''
+      Description: ''
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: RETURN_FULL_URL
+      Required: 'false'
+      Target: RETURN_FULL_URL
+      Type: Variable
+      value: 'true'
+    SITE_TITLE:
+      Default: ''
+      Description: ''
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: SITE_TITLE
+      Required: 'false'
+      Target: SITE_TITLE
+      Type: Variable
+      value: FlashPaper - Self-Destructing Message
 FirstSeen: 1643159000
 Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/flashpaper.png
 LastUpdate: 1624082501
