@@ -373,7 +373,6 @@ These defaults can of course be changed, but as we guarantee "sane, working defa
 | xwiki                      |      main       |      main       | 10208 |   TCP    |                                                         |
 | picoshare                  |      main       |      main       | 10209 |   TCP    |                                                         |
 | linkding                   |      main       |      main       | 10210 |   TCP    |                                                         |
-| rocket-chat                |      main       |      main       | 10211 |   TCP    |                                                         |
 | storj-node                 |      main       |      main       | 14002 |   TCP    |                                                         |
 | satisfactory               |     beacon      |     beacon      | 15000 |   UDP    |                                                         |
 | satisfactory               |      query      |      query      | 15777 |   UDP    |                                                         |
