@@ -132,7 +132,6 @@ _This is the old list that was used to track `App Requests` from one place._
 ##### TODO: Requires MongoDB to be added first
 
 - [ ] overleaf ( example helm-chart available from [ k8s-at-home ](https://github.com/k8s-at-home/charts) )
-- [ ] WeKan #1225
 
 ##### TODO: Other Complications
 
@@ -520,3 +519,4 @@ _These Apps have specific requirements or need specific customisation and care_
 - [x] hedgedoc ( example helm-chart available from [ nicholaswilde ](https://github.com/nicholaswilde/helm-charts) )
 - [x] MakeMKV #1469
 - [x] Self Service Password  #1482
+- [x] WeKan #1225
