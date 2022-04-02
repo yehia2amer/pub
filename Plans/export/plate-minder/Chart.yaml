@@ -1,10 +1,8 @@
 annotations:
   truecharts.org/SCALE-support: 'true'
-  truecharts.org/catagories: '- media
-
-    - test
-
-    '
+  truecharts.org/catagories: | 
+    - HomeAutomation
+    - Tools-Utilities
   truecharts.org/grade: U
 apiVersion: v2
 appVersion: 0.0.1
@@ -13,16 +11,22 @@ dependencies:
   repository: https://library-charts.truecharts.org
   version: 9.2.6
 deprecated: false
-description: API Support for your favorite torrent trackers.
-home: https://github.com/truecharts/apps/tree/master/charts/stable/jackett
-icon: https://truecharts.org/_static/img/appicons/jackett.png
-keywords: []
+description: 'Monitor an RTSP / MJPEG stream for license plates, record them, store
+  them in SQL, send alerts via MQTT with AutoDiscovery into Home Assistant. REQUIRED:
+  open-alpr-http-wrapper docker container and configuration YAML file (example config
+  on the Plate-Minder Github page'
+home: https://github.com/truecharts/apps/tree/master/charts/stable/plate-minder
+icon: https://truecharts.org/_static/img/appicons/plate-minder.png
+keywords:
+- plate-minder
 kubeVersion: '>=1.16.0-0'
 maintainers:
 - email: info@truecharts.org
   name: TrueCharts
   url: https://truecharts.org
 name: plate-minder
-sources: []
+sources:
+- https://github.com/sclaflin/Plate-Minder
+- https://hub.docker.com/r/sclaflin/plate-minder/
 type: application
 version: 0.0.1

@@ -273,6 +273,8 @@ Config:
 ExtraParams: ' --cap-add=NET_ADMIN --restart=always --log-opt max-size=50m --log-driver
   json-file --dns 8.8.8.8 --dns 1.1.1.1'
 Icon: https://raw.githubusercontent.com/activ/docker-templates/master/activ/images/transmission-icon.png
+Keywords:
+- transmission_vpn
 Name: Transmission_VPN
 Network: bridge
 Networking:
@@ -284,6 +286,9 @@ Privileged: 'true'
 Project: https://github.com/haugene/docker-transmission-openvpn
 Registry: https://hub.docker.com/r/haugene/transmission-openvpn/
 Repository: haugene/transmission-openvpn:dev
+Sources:
+- https://github.com/haugene/docker-transmission-openvpn
+- https://hub.docker.com/r/haugene/transmission-openvpn/
 TemplateURL: https://raw.githubusercontent.com/clowrym/docker-templates/master/Transmission_VPN.xml
 WebUI: http://[IP]:[PORT:9091]/
 topPerforming: 0.868

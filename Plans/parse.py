@@ -64,7 +64,6 @@ for n in afList:
       tmp = tmp+"4"
     print(tmp.encode("utf-8"))
     
-    
     n.pop("downloads", "")
     n.pop("downloadtrend", "")
     n.pop("stars", "")
@@ -98,6 +97,22 @@ for n in afList:
       except ValueError:
         pass
       n["Overview"] = ovlist[0]
+
+    if not "CategoryList" in n.keys():
+      n["CategoryList"] = ["Other"]
+      
+    if not "Overview" in n.keys():
+      n["Overview"] = "This App does not have a description yet..."
+      
+    n["Sources"] = []
+    if "Project" in n.keys() and n["Project"]:
+      n["Sources"].append(n["Project"])
+      
+    if "Registry" in n.keys() and n["Registry"]:
+      n["Sources"].append(n["Registry"])
+      
+    n["Keywords"] = []
+    n["Keywords"].append(tmp)
     
     if "Config" in n.keys() and n["Config"]:
       hold = {}
@@ -185,6 +200,8 @@ yamlFile4 = open("apps.yaml", "w")
 yamlFile4.write(yamlString4)
 yamlFile4.close()
 
+print("Loading Helm Chart Defaults...")
+
 chartsyaml = {}
 questionsyaml = {}
 valuesyaml = {}
@@ -201,6 +218,9 @@ fileObject = open("example/questions.json", "r")
 jsonContent = fileObject.read()
 questionsyaml = json.loads(jsonContent)
 
+chartsyaml["annotations"].pop("truecharts.org/catagories", "")
+chartsyaml["annotations"]["truecharts.org/catagories"] = []
+
 print("building Helm Charts...")
 for name, app in combinedfree.items():
   appchartyaml = chartsyaml
@@ -211,8 +231,27 @@ for name, app in combinedfree.items():
     
   print(tmpname.encode("utf-8"))
   appchartyaml["name"] = tmpname
+  appchartyaml["annotations"]["truecharts.org/catagories"] = app["CategoryList"]
+  appchartyaml["description"] = app["Overview"]
+  appchartyaml["sources"] = app["Sources"]
+  appchartyaml["keywords"] = app["Keywords"]
+  appchartyaml["home"] = "https://github.com/truecharts/apps/tree/master/charts/stable/"+tmpname
+  appchartyaml["icon"] = "https://truecharts.org/_static/img/appicons/"+tmpname+".png"
+  
   os.mkdir("./export/"+tmpname)
   appyamlString = yaml.dump(appchartyaml)
   appyamlFile = open("./export/"+tmpname+"/Chart.yaml", "w")
   appyamlFile.write(appyamlString)
   appyamlFile.close()
+  
+  with open("./export/"+tmpname+"/Chart.yaml", "r") as f:
+      lines = f.readlines()
+  with open("./export/"+tmpname+"/Chart.yaml", "w") as f:
+      for line in lines:
+          if line.strip("\n") == "  truecharts.org/catagories:":
+            f.write("  truecharts.org/catagories: | \n")
+          elif "  - " in line:
+            f.write("  "+line)
+          else:
+              f.write(line)
+  

@@ -1,10 +1,7 @@
 annotations:
   truecharts.org/SCALE-support: 'true'
-  truecharts.org/catagories: '- media
-
-    - test
-
-    '
+  truecharts.org/catagories: | 
+    - Network-VPN
   truecharts.org/grade: U
 apiVersion: v2
 appVersion: 0.0.1
@@ -13,16 +10,22 @@ dependencies:
   repository: https://library-charts.truecharts.org
   version: 9.2.6
 deprecated: false
-description: API Support for your favorite torrent trackers.
-home: https://github.com/truecharts/apps/tree/master/charts/stable/jackett
-icon: https://truecharts.org/_static/img/appicons/jackett.png
-keywords: []
+description: "This OpenVPN container was designed to be started first to provide a\
+  \ connection to other containers (using '--net=container:OpenVPN-Client'), see the\
+  \ documentation for further help here: https://github.com/ich777/docker-openvpn-client\r\
+  \n"
+home: https://github.com/truecharts/apps/tree/master/charts/stable/OpenVPN-Client
+icon: https://truecharts.org/_static/img/appicons/OpenVPN-Client.png
+keywords:
+- openvpn-client
 kubeVersion: '>=1.16.0-0'
 maintainers:
 - email: info@truecharts.org
   name: TrueCharts
   url: https://truecharts.org
 name: OpenVPN-Client
-sources: []
+sources:
+- https://github.com/ich777/docker-openvpn-client
+- https://hub.docker.com/r/ich777/openvpn-client/
 type: application
 version: 0.0.1

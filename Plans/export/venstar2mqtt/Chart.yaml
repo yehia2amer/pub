@@ -1,10 +1,8 @@
 annotations:
   truecharts.org/SCALE-support: 'true'
-  truecharts.org/catagories: '- media
-
-    - test
-
-    '
+  truecharts.org/catagories: | 
+    - HomeAutomation
+    - Tools-Utilities
   truecharts.org/grade: U
 apiVersion: v2
 appVersion: 0.0.1
@@ -13,16 +11,21 @@ dependencies:
   repository: https://library-charts.truecharts.org
   version: 9.2.6
 deprecated: false
-description: API Support for your favorite torrent trackers.
-home: https://github.com/truecharts/apps/tree/master/charts/stable/jackett
-icon: https://truecharts.org/_static/img/appicons/jackett.png
-keywords: []
+description: Simple container that allows MQTT to be used to view data and push settings
+  to the Venstar Local API Thermostats.  Local API needs to be enabled on the thermostat.  No
+  Web UI or appdata folder necessary.
+home: https://github.com/truecharts/apps/tree/master/charts/stable/venstar2mqtt
+icon: https://truecharts.org/_static/img/appicons/venstar2mqtt.png
+keywords:
+- venstar2mqtt
 kubeVersion: '>=1.16.0-0'
 maintainers:
 - email: info@truecharts.org
   name: TrueCharts
   url: https://truecharts.org
 name: venstar2mqtt
-sources: []
+sources:
+- https://github.com/terafin/mqtt-venstar-bridge
+- https://hub.docker.com/r/terafin/mqtt-venstar-bridge/
 type: application
 version: 0.0.1

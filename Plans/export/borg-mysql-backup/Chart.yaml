@@ -1,10 +1,8 @@
 annotations:
   truecharts.org/SCALE-support: 'true'
-  truecharts.org/catagories: '- media
-
-    - test
-
-    '
+  truecharts.org/catagories: | 
+    - Backup
+    - Cloud
   truecharts.org/grade: U
 apiVersion: v2
 appVersion: 0.0.1
@@ -13,16 +11,20 @@ dependencies:
   repository: https://library-charts.truecharts.org
   version: 9.2.6
 deprecated: false
-description: API Support for your favorite torrent trackers.
-home: https://github.com/truecharts/apps/tree/master/charts/stable/jackett
-icon: https://truecharts.org/_static/img/appicons/jackett.png
-keywords: []
+description: "Service for backing up mysql dumps to local and/or remote borg repos.\r\
+  \n"
+home: https://github.com/truecharts/apps/tree/master/charts/stable/borg-mysql-backup
+icon: https://truecharts.org/_static/img/appicons/borg-mysql-backup.png
+keywords:
+- borg-mysql-backup
 kubeVersion: '>=1.16.0-0'
 maintainers:
 - email: info@truecharts.org
   name: TrueCharts
   url: https://truecharts.org
 name: borg-mysql-backup
-sources: []
+sources:
+- https://github.com/laur89/docker-borg-mysql-backup
+- https://hub.docker.com/r/layr/borg-mysql-backup
 type: application
 version: 0.0.1

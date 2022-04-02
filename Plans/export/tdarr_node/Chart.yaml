@@ -1,10 +1,8 @@
 annotations:
   truecharts.org/SCALE-support: 'true'
-  truecharts.org/catagories: '- media
-
-    - test
-
-    '
+  truecharts.org/catagories: | 
+    - Productivity
+    - MediaApp-Video
   truecharts.org/grade: U
 apiVersion: v2
 appVersion: 0.0.1
@@ -13,16 +11,23 @@ dependencies:
   repository: https://library-charts.truecharts.org
   version: 9.2.6
 deprecated: false
-description: API Support for your favorite torrent trackers.
-home: https://github.com/truecharts/apps/tree/master/charts/stable/jackett
-icon: https://truecharts.org/_static/img/appicons/jackett.png
-keywords: []
+description: "(tdarr server required separately) Tdarr V2 is a distributed transcoding\
+  \ system for automating media library transcode/remux management and making sure\
+  \ your files are exactly how you need them to be in terms of codecs/streams/containers\
+  \ and so on. Put your spare hardware to use with Tdarr Nodes for Windows, Linux\
+  \ (including Linux arm) and macOS. \r\n"
+home: https://github.com/truecharts/apps/tree/master/charts/stable/tdarr_node
+icon: https://truecharts.org/_static/img/appicons/tdarr_node.png
+keywords:
+- tdarr_node
 kubeVersion: '>=1.16.0-0'
 maintainers:
 - email: info@truecharts.org
   name: TrueCharts
   url: https://truecharts.org
 name: tdarr_node
-sources: []
+sources:
+- https://github.com/HaveAGitGat/Tdarr
+- https://hub.docker.com/r/haveagitgat/tdarr_node/
 type: application
 version: 0.0.1
