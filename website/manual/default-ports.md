@@ -9,9 +9,9 @@ These defaults can of course be changed, but as we guarantee "sane, working defa
 | :---------- | :-----------: | :-----------: | :---: | :------: | :------------------------------------------------: |
 | k8s-gateway |     main      |     main      |  53   |   UDP    | Potential conflict with pihole, mosdns, technitium |
 | traefik     |     main      |     main      | 9000  |   HTTP   |      Potential conflict with minio (Official)      |
-| traefik     |      tcp      |      web      | 9080  |   HTTP   |           Adviced to be moved to port 80           |
+| traefik     |      tcp      |      web      | 9080  |   HTTP   |           Advised to be moved to port 80           |
 | traefik     |    metrics    |    metrics    | 9100  |   HTTP   |                                                    |
-| traefik     |      tcp      |   websecure   | 9443  |  HTTPS   |          Adviced to be moved to port 443           |
+| traefik     |      tcp      |   websecure   | 9443  |  HTTPS   |          Advised to be moved to port 443           |
 | prometheus  | node-exporter | node-exporter | 9910  |   HTTP   |                                                    |
 | prometheus  |     main      |     main      | 10086 |   HTTP   |                                                    |
 | prometheus  | alertmanager  | alertmanager  | 10087 |   HTTP   |                                                    |
@@ -368,8 +368,11 @@ These defaults can of course be changed, but as we guarantee "sane, working defa
 | technitium                 |    dns-https    |    dns-https    | 10203 |   TCP    |                                                         |
 | technitium                 | dns-https-proxy | dns-https-proxy | 10204 |   TCP    |                                                         |
 | meshcentral                |      main       |      main       | 10205 |   TCP    |                                                         |
-| ferdi-server               |      main       |      main       | 10206 |   TCP    |                                                 |
-| typecho                    |      main       |      main       | 10207 |   TCP    |                                                 |
+| ferdi-server               |      main       |      main       | 10206 |   TCP    |                                                         |
+| typecho                    |      main       |      main       | 10207 |   TCP    |                                                         |
+| xwiki                      |      main       |      main       | 10208 |   TCP    |                                                         |
+| picoshare                  |      main       |      main       | 10209 |   TCP    |                                                         |
+| linkding                   |      main       |      main       | 10210 |   TCP    |                                                         |
 | storj-node                 |      main       |      main       | 14002 |   TCP    |                                                         |
 | satisfactory               |     beacon      |     beacon      | 15000 |   UDP    |                                                         |
 | satisfactory               |      query      |      query      | 15777 |   UDP    |                                                         |
