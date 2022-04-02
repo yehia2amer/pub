@@ -1,138 +1,243 @@
-Branch:
-  Registry: https://hub.docker.com/r/hotio/qbittorrent
-  Repository: cr.hotio.dev/hotio/qbittorrent:release
-  Tag: release
-  TagDescription: Stable
 CategoryList:
 - Downloaders
 Config:
   Device: {}
   Label: {}
   Path:
-    Host Path for /config:
+    Downloads Path:
       Default: ''
-      Description: 'Container Path: /config'
-      Display: always-hide
+      Description: Path for /downloads
+      Display: always
       Mask: 'false'
       Mode: rw
-      Name: Host Path for /config
+      Name: Downloads Path
+      Required: 'true'
+      Target: /downloads
+      Type: Path
+      value: ''
+    config:
+      Default: /mnt/user/appdata/qbittorrentvpn/
+      Description: config path of qbittorrentvpn
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: config
       Required: 'true'
       Target: /config
       Type: Path
-      value: ''
+      value: /mnt/user/appdata/qbittorrentvpn/
   Port:
-    Host Port for 8080:
-      Default: '8080'
-      Description: 'Container Port: 8080'
-      Display: always-hide
+    TCP_LISTENING:
+      Default: '8999'
+      Description: Port used to listen (TCP)
+      Display: advanced
       Mask: 'false'
       Mode: tcp
-      Name: Host Port for 8080
+      Name: TCP_LISTENING
+      Required: 'true'
+      Target: '8999'
+      Type: Port
+      value: '8999'
+    UDP_LISTENING:
+      Default: '8999'
+      Description: Port used to listen (UDP)
+      Display: advanced
+      Mask: 'false'
+      Mode: udp
+      Name: UDP_LISTENING
+      Required: 'true'
+      Target: '8999'
+      Type: Port
+      value: '8999'
+    WEBUI_PORT:
+      Default: '8080'
+      Description: Port used to access qBittorrent remotely
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WEBUI_PORT
       Required: 'true'
       Target: '8080'
       Type: Port
-      value: ''
+      value: '8080'
   Variable:
+    ADDITIONAL_PORTS:
+      Default: ''
+      Description: Additional ports for routing other containers through this one
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: ADDITIONAL_PORTS
+      Required: 'false'
+      Target: ADDITIONAL_PORTS
+      Type: Variable
+      value: ''
+    ENABLE_SSL:
+      Default: 'yes'
+      Description: Let the container handle SSL (yes/no)?
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: ENABLE_SSL
+      Required: 'false'
+      Target: ENABLE_SSL
+      Type: Variable
+      value: 'yes'
+    HEALTH_CHECK_HOST:
+      Default: one.one.one.one
+      Description: Host used to check if connection is up
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: HEALTH_CHECK_HOST
+      Required: 'false'
+      Target: HEALTH_CHECK_HOST
+      Type: Variable
+      value: one.one.one.one
+    HEALTH_CHECK_INTERVAL:
+      Default: '300'
+      Description: Interval in seconds between connection check
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: HEALTH_CHECK_INTERVAL
+      Required: 'false'
+      Target: HEALTH_CHECK_INTERVAL
+      Type: Variable
+      value: '300'
+    HEALTH_CHECK_SILENT:
+      Default: '1'
+      Description: 1 supresses the 'Network is up' message
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: HEALTH_CHECK_SILENT
+      Required: 'false'
+      Target: HEALTH_CHECK_SILENT
+      Type: Variable
+      value: '1'
+    INSTALL_PYTHON3:
+      Default: 'no'
+      Description: Set to 'yes' to install Python3
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: INSTALL_PYTHON3
+      Required: 'false'
+      Target: INSTALL_PYTHON3
+      Type: Variable
+      value: 'no'
+    LAN_NETWORK:
+      Default: 192.168.0.0/24
+      Description: Your local network address in CIDR notation
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: LAN_NETWORK
+      Required: 'true'
+      Target: LAN_NETWORK
+      Type: Variable
+      value: 192.168.0.0/24
+    NAME_SERVERS:
+      Default: 1.1.1.1,1.0.0.1
+      Description: DNS used by the container
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: NAME_SERVERS
+      Required: 'false'
+      Target: NAME_SERVERS
+      Type: Variable
+      value: 1.1.1.1,1.0.0.1
     PGID:
       Default: '100'
-      Description: 'Container Variable: PGID'
-      Display: advanced-hide
+      Description: The GID applied to the /config and /downloads
+      Display: always
       Mask: 'false'
       Mode: ''
       Name: PGID
       Required: 'false'
       Target: PGID
       Type: Variable
-      value: ''
+      value: '100'
     PUID:
       Default: '99'
-      Description: 'Container Variable: PUID'
-      Display: advanced-hide
+      Description: The UID applied to the /config and /downloads
+      Display: always
       Mask: 'false'
       Mode: ''
       Name: PUID
       Required: 'false'
       Target: PUID
       Type: Variable
-      value: ''
+      value: '99'
     UMASK:
       Default: '002'
-      Description: 'Container Variable: UMASK'
-      Display: advanced-hide
+      Description: umask used by the container
+      Display: advanced
       Mask: 'false'
       Mode: ''
       Name: UMASK
       Required: 'false'
       Target: UMASK
       Type: Variable
-      value: ''
-    VPN_ADDITIONAL_PORTS:
-      Default: ''
-      Description: 'Container Variable: VPN_ADDITIONAL_PORTS'
-      Display: advanced-hide
-      Mask: 'false'
-      Mode: ''
-      Name: VPN_ADDITIONAL_PORTS
-      Required: 'false'
-      Target: VPN_ADDITIONAL_PORTS
-      Type: Variable
-      value: ''
-    VPN_CONF:
-      Default: wg0
-      Description: 'Container Variable: VPN_CONF'
-      Display: advanced-hide
-      Mask: 'false'
-      Mode: ''
-      Name: VPN_CONF
-      Required: 'false'
-      Target: VPN_CONF
-      Type: Variable
-      value: ''
+      value: '002'
     VPN_ENABLED:
-      Default: true|false
-      Description: 'Container Variable: VPN_ENABLED'
-      Display: always-hide
+      Default: 'yes'
+      Description: Enable VPN? yes/no
+      Display: always
       Mask: 'false'
       Mode: ''
       Name: VPN_ENABLED
       Required: 'false'
       Target: VPN_ENABLED
       Type: Variable
-      value: ''
-    VPN_IP_CHECK_DELAY:
-      Default: '5'
-      Description: 'Container Variable: VPN_IP_CHECK_DELAY'
-      Display: advanced-hide
-      Mask: 'false'
-      Mode: ''
-      Name: VPN_IP_CHECK_DELAY
-      Required: 'false'
-      Target: VPN_IP_CHECK_DELAY
-      Type: Variable
-      value: ''
-    VPN_LAN_NETWORK:
+      value: 'yes'
+    VPN_PASSWORD:
       Default: ''
-      Description: 'Container Variable: VPN_LAN_NETWORK'
-      Display: always-hide
-      Mask: 'false'
+      Description: Password used to authenticate to the VPN (OpenVPN only)
+      Display: always
+      Mask: 'true'
       Mode: ''
-      Name: VPN_LAN_NETWORK
+      Name: VPN_PASSWORD
       Required: 'false'
-      Target: VPN_LAN_NETWORK
+      Target: VPN_PASSWORD
       Type: Variable
       value: ''
-ExtraParams: --cap-add=NET_ADMIN --sysctl="net.ipv4.conf.all.src_valid_mark=1" --sysctl="net.ipv6.conf.all.disable_ipv6=1"
-Icon: https://hotio.dev/webhook-avatars/qbittorrent.png
-Name: qbittorrent-vpn
+    VPN_TYPE:
+      Default: openvpn
+      Description: openvpn / wireguard?
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: VPN_TYPE
+      Required: 'true'
+      Target: VPN_TYPE
+      Type: Variable
+      value: openvpn
+    VPN_USERNAME:
+      Default: ''
+      Description: Username used to authenticate to the VPN (OpenVPN only)
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: VPN_USERNAME
+      Required: 'false'
+      Target: VPN_USERNAME
+      Type: Variable
+      value: ''
+ExtraParams: --restart unless-stopped
+Icon: https://raw.githubusercontent.com/DyonR/docker-templates/master/Icons/qbittorrentvpn/qbittorrent-icon-256.png
+Name: qbittorrentvpn
 Network: bridge
-Overview: Docker image with qBittorrent and bundled with the alternative VueTorrent
-  Web UI, with pre-configured VPN template settings.
-PostArgs: ''
-Privileged: 'false'
-Project: https://hotio.dev/containers/qbittorrent
-Registry: https://hub.docker.com/r/hotio/qbittorrent
-Repository: cr.hotio.dev/hotio/qbittorrent
-WebUI: http://[IP]:[PORT:8080]
-caTemplateURL: https://raw.githubusercontent.com/hotio/unraid-templates/master/hotio/qbittorrentvpn.xml
-topPerforming: 3.62
-topTrending: -31.891000000000002
+Overview: Docker container which runs the latest qBittorrent-nox client while connecting
+  to WireGuard or OpenVPN with iptables killswitch to prevent IP leakage when the
+  tunnel goes down.
+Privileged: 'true'
+Project: https://github.com/qBittorrent/qBittorrent
+Registry: https://hub.docker.com/r/dyonr/qbittorrentvpn
+Repository: dyonr/qbittorrentvpn
+TemplateURL: https://raw.githubusercontent.com/DyonR/docker-templates/master/Templates/qbittorrentvpn/qbittorrentvpn-template.xml
+WebUI: https://[IP]:[PORT:8080]/
+topPerforming: 12.761
+topTrending: -7.564

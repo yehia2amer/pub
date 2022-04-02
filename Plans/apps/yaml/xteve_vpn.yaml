@@ -1,0 +1,92 @@
+Beta: 'true'
+CategoryList:
+- MediaApp-Other
+- Network-Proxy
+Config:
+  Device: {}
+  Label: {}
+  Path:
+    /config:
+      Default: ''
+      Description: 'Container Path: /config'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: /config
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: /mnt/user/appdata/xteve_vpn/config/
+    /tmp:
+      Default: ''
+      Description: "/tmp/xteve\r\nin case u want to move /tmp to RAM on host\r\nbuffer,\
+        \ ..."
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: /tmp
+      Required: 'false'
+      Target: /tmp/xteve
+      Type: Path
+      value: ''
+    /xteve:
+      Default: ''
+      Description: 'Container Path: /root/.xteve'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: /xteve
+      Required: 'true'
+      Target: /root/.xteve
+      Type: Path
+      value: /mnt/user/appdata/xteve_vpn/
+  Port:
+    Port:
+      Default: ''
+      Description: 'Container Port: 34400'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Port
+      Required: 'false'
+      Target: '34400'
+      Type: Port
+      value: '34400'
+  Variable:
+    LOCAL_NET:
+      Default: ''
+      Description: 'Container Variable: LOCAL_NET'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: LOCAL_NET
+      Required: 'true'
+      Target: LOCAL_NET
+      Type: Variable
+      value: 192.168.1.0/24
+    OPENVPN_FILE:
+      Default: ''
+      Description: 'Container Variable: OPENVPN_FILE'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: OPENVPN_FILE
+      Required: 'true'
+      Target: OPENVPN_FILE
+      Type: Variable
+      value: Frankfurt.ovpn
+Icon: https://avatars0.githubusercontent.com/u/53275662?s=460&amp;v=4
+Name: xteve_vpn
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "xteve, in docker with ovpn\r\n"
+PostArgs: ''
+Privileged: 'true'
+Project: https://github.com/alturismo/xteve_vpn
+Registry: https://hub.docker.com/r/alturismo/xteve_vpn
+Repository: alturismo/xteve_vpn
+TemplateURL: https://raw.githubusercontent.com/alturismo/unraid_templates/master/my-xteve_vpn.xml
+WebUI: http://[IP]:[PORT:34400]/web/
+topPerforming: 0.801
+topTrending: -0.973

@@ -1,18 +1,51 @@
 BaseImage: justcontainers/base-alpine
-Blacklist: true
+BindTime: 'true'
 Branch:
   Tag: dev
   TagDescription: dev branch
 CategoryList:
 - Network-Proxy
 - Network-Other
+Config:
+  Device: {}
+  Label: {}
+  Path: {}
+  Port:
+    Forwarding port:
+      Default: '100'
+      Description: The port to redirect / forward TCP4 connections to
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Forwarding port
+      Required: 'true'
+      Target: PGID
+      Type: Port
+      value: ''
+    Listening port:
+      Default: '443'
+      Description: The port to listen for TCP4 connections
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Listening port
+      Required: 'true'
+      Target: '443'
+      Type: Port
+      value: ''
+  Variable: {}
+ExtraParams: --expose 443
 Icon: https://raw.githubusercontent.com/tynor88/docker-templates/master/images/socat_small.png
-ModeratorComment: Duplicated Template
 Name: socat
+Networking:
+  Mode: bridge
 Overview: Socat is a command line based utility that establishes two bidirectional
   byte streams and transfers data between them.
+Privileged: 'false'
 Project: http://www.dest-unreach.org/socat/
 Registry: https://hub.docker.com/r/tynor88/socat/
 Repository: tynor88/socat
+TemplateURL: https://raw.githubusercontent.com/tynor88/docker-templates/master/tynor88/socat.xml
+WebUI: ''
 topPerforming: 0.012
 topTrending: -0.006999999999999999

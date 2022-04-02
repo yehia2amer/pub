@@ -1,0 +1,80 @@
+BaseImage: https://hub.docker.com/_/alpine/
+Beta: 'true'
+CategoryList:
+- Backup
+- Cloud
+ChangeLogPresent: true
+Config:
+  Device: {}
+  Label: {}
+  Path:
+    Config Path:
+      Default: /mnt/cache/appdata/rclone/config/
+      Description: The path where the .rclone.conf file is
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Config Path
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: ''
+  Port: {}
+  Variable:
+    RCLONE_CONFIG_PASS:
+      Default: ''
+      Description: The password for the .rclone.conf pass (if specified when creating
+        the config file)
+      Display: advanced
+      Mask: 'true'
+      Mode: ''
+      Name: RCLONE_CONFIG_PASS
+      Required: 'false'
+      Target: RCLONE_CONFIG_PASS
+      Type: Variable
+      value: ''
+    RCLONE_MOUNT_OPTIONS:
+      Default: --read-only
+      Description: 'Extra mount options that can be used, see: https://rclone.org/commands/rclone_mount/
+        . E.g.: --read-only --buffer-size=1G --max-read-ahead=200M --acd-templink-threshold=0
+        --dir-cache-time=60m --timeout=30s --contimeout=15s --retries=3 --low-level-retries=1
+        --stats=0 -v'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: RCLONE_MOUNT_OPTIONS
+      Required: 'false'
+      Target: RCLONE_MOUNT_OPTIONS
+      Type: Variable
+      value: ''
+    RCLONE_REMOTE_MOUNT:
+      Default: ''
+      Description: The destination that the data should be backed up to (must be the
+        same name as specified in .rclone.conf. E.g. <em>AmazonEncrypted:<SubPath></em>)
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: RCLONE_REMOTE_MOUNT
+      Required: 'true'
+      Target: RCLONE_REMOTE_MOUNT
+      Type: Variable
+      value: ''
+ExtraParams: --cap-add SYS_ADMIN --device /dev/fuse --security-opt apparmor:unconfine
+  -v /mnt/disks/rclone_volume/:/data:shared
+Icon: https://raw.githubusercontent.com/tynor88/docker-templates/master/images/rclone_small.png
+Name: Rclone-mount
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: 'Docker for Rclone FUSE mount feature (exposable to host and other docker
+  containers, e.g. Plex, Nextcloud, glFTPd)
+
+  '
+Privileged: 'false'
+Project: http://rclone.org/
+Registry: https://hub.docker.com/r/tynor88/rclone-mount/
+Repository: tynor88/rclone-mount:dev
+TemplateURL: https://raw.githubusercontent.com/tynor88/docker-templates/master/tynor88/rclone-mount.xml
+WebUI: ''
+topPerforming: 0.626
+topTrending: -0.7839999999999999

@@ -1,14 +1,37 @@
-Blacklist: true
+BindTime: 'true'
 CategoryList:
-- Tools
+- MediaApp
+Data:
+  Volume:
+    ContainerDir: /config
+    HostDir: path to config
+    Mode: rw
+Environment:
+  Variable:
+  - Name: UMASK
+    Value: '000'
+  - Name: PUID
+    Value: '99'
+  - Name: PGID
+    Value: '100'
+GitHub: https://github.com/jcreynolds/docker-templates
 Icon: https://github.com/d8ahazard/Phlex/raw/master/img/android-icon-144x144.png
-ModeratorComment: Repository/tag no longer exists on dockerHub
 Name: FlexTV
-Overview: "Flex TV. is a web application that interfaces between google Assistant\
-  \ and Plex to allow you to control playback of media using Actions for Google or\
-  \ IFTTT.\r\n"
+Networking:
+  Mode: bridge
+  Publish:
+    Port:
+    - ContainerPort: '80'
+      HostPort: '5666'
+      Protocol: tcp
+    - ContainerPort: '443'
+      HostPort: '5667'
+      Protocol: tcp
+Overview: A super-sexy voice interface for the Plex HTPC.
+Privileged: 'false'
 Project: https://github.com/d8ahazard/FlexTV
-Registry: https://hub.docker.com/r/digitalhigh/flextv
-Repository: digitalhigh/flextv
-topPerforming: 0.347
-topTrending: -0.30600000000000005
+Registry: https://registry.hub.docker.com/r/jcreynolds/flextv/
+Repository: jcreynolds/flextv
+TemplateURL: https://raw.githubusercontent.com/jcreynolds/docker-templates/master/FlexTV.xml
+WebUI: http://[IP]:[PORT:80]
+topTrending: -11.367

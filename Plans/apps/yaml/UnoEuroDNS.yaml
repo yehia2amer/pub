@@ -1,11 +1,36 @@
-Blacklist: true
+BindTime: 'true'
 CategoryList:
 - Network-DNS
 ChangeLogPresent: true
+Data:
+  Volume:
+    ContainerDir: /config
+    HostDir: ''
+    Mode: rw
+Environment:
+  Variable:
+  - Name: DOMAIN
+    Value: ''
+  - Name: HOSTNAME
+    Value: ''
+  - Name: APIKEY
+    Value: ''
+  - Name: PUSHBULLET_ACCESS_TOKEN
+    Value: ''
+GitHub: https://github.com/tynor88/docker-unoeuro-dns
 Icon: https://raw.githubusercontent.com/tynor88/docker-templates/master/images/unoeuro_small.png
-ModeratorComment: Duplicated Template
 Name: UnoEuroDNS
+Networking:
+  Mode: bridge
+  Publish:
+    Port:
+      ContainerPort: ''
+      HostPort: ''
+      Protocol: ''
 Overview: Keep your DNS records for your own domains updated with this UnoEuro DDNS
   script.
+Privileged: 'false'
 Registry: https://hub.docker.com/r/tynor88/unoeuro-dns
 Repository: tynor88/unoeuro-dns
+TemplateURL: https://raw.githubusercontent.com/tynor88/docker-templates/master/tynor88/unoeuro-dns.xml
+WebUI: ''

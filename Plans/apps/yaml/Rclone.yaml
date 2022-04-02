@@ -1,17 +1,97 @@
 BaseImage: quay.io/justcontainers/base-alpine
 Beta: 'true'
-Blacklist: true
 CategoryList:
 - Backup
 - Cloud
 ChangeLogPresent: true
+Config:
+  Device: {}
+  Label: {}
+  Path:
+    Config Path:
+      Default: /mnt/cache/appdata/rclone/config/
+      Description: The path to where the .rclone.conf file is
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Config Path
+      Required: 'true'
+      Target: /config
+      Type: Path
+      value: ''
+    Data Path:
+      Default: ''
+      Description: The path to the data which should be backed up by Rclone
+      Display: always
+      Mask: 'false'
+      Mode: ro
+      Name: Data Path
+      Required: 'true'
+      Target: /data
+      Type: Path
+      value: ''
+  Port: {}
+  Variable:
+    Cron Schedule:
+      Default: 0 * * * *
+      Description: 'A custom cron schedule which will override the default value of:
+        0 * * * * (hourly)'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Cron Schedule
+      Required: 'false'
+      Target: CRON_SCHEDULE
+      Type: Variable
+      value: ''
+    Sync Command:
+      Default: ''
+      Description: 'A custom rclone command which will override the default value
+        of: rclone sync /data $SYNC_DESTINATION:/$SYNC_DESTINATION_SUBPATH'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Sync Command
+      Required: 'false'
+      Target: SYNC_COMMAND
+      Type: Variable
+      value: ''
+    Sync Destination:
+      Default: ''
+      Description: The destination that the data should be backed up to (must be the
+        same name as specified in .rclone.conf)
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Sync Destination
+      Required: 'true'
+      Target: SYNC_DESTINATION
+      Type: Variable
+      value: ''
+    Sync Destination Subpath:
+      Default: ''
+      Description: If the data should be backed up to a subpath on the destionation
+        (will automaticly be created if it does not exist)
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Sync Destination Subpath
+      Required: 'false'
+      Target: SYNC_DESTINATION_SUBPATH
+      Type: Variable
+      value: ''
 Icon: https://raw.githubusercontent.com/tynor88/docker-templates/master/images/rclone_small.png
-ModeratorComment: Duplicated Template
 Name: Rclone
+Network: bridge
+Networking:
+  Mode: bridge
 Overview: Docker for Rclone - a command line program to sync files and directories
   to and from various cloud services.
+Privileged: 'false'
 Project: http://rclone.org/
 Registry: https://hub.docker.com/r/tynor88/rclone/
 Repository: tynor88/rclone:dev
+TemplateURL: https://raw.githubusercontent.com/tynor88/docker-templates/master/tynor88/rclone.xml
+WebUI: ''
 topPerforming: 0.246
 topTrending: 0.068

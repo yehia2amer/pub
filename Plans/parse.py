@@ -4,15 +4,27 @@ import os
 import string
 import shutil
 
-try:
-  shutil.rmtree('./apps')
-except:
-  pass
-  
-try:
-  shutil.rmtree('./export')
-except:
-  pass
+invalid = '<>:"/\|?*$ '
+
+my_dir = './apps'
+for root, dirs, files in os.walk(my_dir, topdown=False):
+    for name in files:
+        os.remove(os.path.join(root, name))
+    for name in dirs:
+        os.rmdir(os.path.join(root, name))
+        
+my_dir = './export'
+for root, dirs, files in os.walk(my_dir, topdown=False):
+    for name in files:
+        os.remove(os.path.join(root, name))
+    for name in dirs:
+        os.rmdir(os.path.join(root, name))
+
+shutil.rmtree('./apps', ignore_errors=True)
+
+
+shutil.rmtree('./export', ignore_errors=True)
+
 
 os.mkdir("./apps")
 os.mkdir("./export")
@@ -38,11 +50,20 @@ paths = paths1 + paths2 + paths3 + paths4
 for p in range(len(paths)):
     paths[p] = paths[p].lower()
 
+print("Splitting and sanitising json input...")
 for n in afList:
-  if "Name" in n.keys() and n["Name"].lower() not in paths:
-    tmp = n["Name"]
-    tmp = ''.join(filter(str.isalnum, tmp))
+  if "Name" in n.keys() and n["Name"].lower() not in paths and ("Blacklist" not in n.keys() or not n["Blacklist"] ) and ("Deprecated" not in n.keys() or not n["Deprecated"] ) :
+    tmp = n["Name"].lower()
+    for char in invalid:
+      tmp = tmp.replace(char, '')
+    if tmp in n.keys():
+      tmp = tmp+"2"
+    if tmp in n.keys():
+      tmp = tmp+"3"
+    if tmp in n.keys():
+      tmp = tmp+"4"
     print(tmp.encode("utf-8"))
+    
     
     n.pop("downloads", "")
     n.pop("downloadtrend", "")
@@ -131,6 +152,8 @@ for n in afList:
         yamlFile.write(yamlString)
         yamlFile.close()
 
+print("Writhing combined json and yaml output...")
+
 jsonString2 = json.dumps(combinedfree)
 jsonFile2 = open("apps-free.json", "w")
 jsonFile2.write(jsonString2)
@@ -178,12 +201,18 @@ fileObject = open("example/questions.json", "r")
 jsonContent = fileObject.read()
 questionsyaml = json.loads(jsonContent)
 
+print("building Helm Charts...")
 for name, app in combinedfree.items():
   appchartyaml = chartsyaml
-  appchartyaml["name"] = app["Name"]
+  tmpname = app["Name"]
   
-  os.mkdir("./export/"+app["Name"])
+  for char in invalid:
+    tmpname = tmpname.replace(char, '')
+    
+  print(tmpname.encode("utf-8"))
+  appchartyaml["name"] = tmpname
+  os.mkdir("./export/"+tmpname)
   appyamlString = yaml.dump(appchartyaml)
-  appyamlFile = open("./export/"+app["Name"]+"/Chart.yaml", "w")
+  appyamlFile = open("./export/"+tmpname+"/Chart.yaml", "w")
   appyamlFile.write(appyamlString)
   appyamlFile.close()

@@ -1,32 +1,46 @@
 CategoryList:
+- Cloud
 - Tools-Utilities
 Config:
   Device: {}
   Label: {}
-  Path: {}
+  Path:
+    AppData:
+      Default: /mnt/user/appdata/cloudbeaver
+      Description: 'Container Path: /opt/cloudbeaver/workspace'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: AppData
+      Required: 'true'
+      Target: /opt/cloudbeaver/workspace
+      Type: Path
+      value: /mnt/user/appdata/cloudbeaver
   Port:
-    Port:
+    Web Interface Port:
       Default: '8978'
-      Description: Port
+      Description: 'Container Port: 8080'
       Display: always
       Mask: 'false'
       Mode: tcp
-      Name: Port
+      Name: Web Interface Port
       Required: 'true'
       Target: '8978'
       Type: Port
       value: '8978'
   Variable: {}
-Deprecated: true
-Icon: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/cloudbeaver.png
-Name: cloudbeaver
+Icon: https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/icons/cloudbeaver.png
+Name: CloudBeaver
 Network: bridge
-Overview: CloudBeaver is a free and open source web-based database management tool.
+Networking:
+  Mode: bridge
+Overview: "Cloud Database Manager (Official Docker Image)\r\n"
+PostArgs: ''
 Privileged: 'false'
 Project: https://github.com/dbeaver/cloudbeaver
-Registry: https://hub.docker.com/r/dalongrong/cloudbeaver/
-Repository: dalongrong/cloudbeaver:latest
-TemplateURL: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/deprecated/cloudbeaver.xml
-WebUI: http://[IP]:[PORT:8978]
-topPerforming: 0.653
-topTrending: -1.8860000000000001
+Registry: https://hub.docker.com/r/dbeaver/cloudbeaver/
+Repository: dbeaver/cloudbeaver
+TemplateURL: https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/cloudbeaver.xml
+WebUI: http://[IP]:[PORT:8978]/
+topPerforming: 0.6
+topTrending: -7.235

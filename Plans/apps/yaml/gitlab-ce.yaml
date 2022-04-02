@@ -1,0 +1,90 @@
+BindTime: 'true'
+CategoryList:
+- Backup
+- Cloud
+- Network-Web
+- Productivity
+- Tools-Utilities
+Config:
+  Device: {}
+  Label: {}
+  Path:
+    Application Data Storage Path:
+      Default: /mnt/cache/appdata/gitlab-ce/data
+      Description: This is where GitLab will store its application data (use cache
+        drive).
+      Display: advanced-hide
+      Mode: rw
+      Name: Application Data Storage Path
+      Required: 'true'
+      Target: /var/opt/gitlab
+      Type: Path
+      value: /mnt/cache/appdata/gitlab-ce/data
+    Config Storage Path:
+      Default: /mnt/cache/appdata/gitlab-ce/config
+      Description: This is where GitLab will store its configuration files (use cache
+        drive).
+      Display: advanced-hide
+      Mode: rw
+      Name: Config Storage Path
+      Required: 'true'
+      Target: /etc/gitlab
+      Type: Path
+      value: /mnt/cache/appdata/gitlab-ce/config
+    Log Storage Path:
+      Default: /mnt/cache/appdata/gitlab-ce/log
+      Description: This is where GitLab will store its logs.
+      Display: advanced-hide
+      Mode: rw
+      Name: Log Storage Path
+      Required: 'true'
+      Target: /var/log/gitlab
+      Type: Path
+      value: /mnt/cache/appdata/gitlab-ce/log
+  Port:
+    SSH Port:
+      Default: '9022'
+      Description: This is GitLab's SSH port.
+      Display: always-hide
+      Mode: tcp
+      Name: SSH Port
+      Required: 'true'
+      Target: '22'
+      Type: Port
+      value: '9022'
+    Web Interface Port (HTTP):
+      Default: '9080'
+      Description: This is GitLab's Web UI port you can access via a web browser.
+      Display: always-hide
+      Mode: tcp
+      Name: Web Interface Port (HTTP)
+      Required: 'true'
+      Target: '9080'
+      Type: Port
+      value: '9080'
+    Web Interface Port (HTTPS):
+      Default: '9443'
+      Description: This is GitLab's Web UI SSL port you can access via a web browser.
+      Display: always-hide
+      Mode: tcp
+      Name: Web Interface Port (HTTPS)
+      Required: 'true'
+      Target: '9443'
+      Type: Port
+      value: '9443'
+  Variable: {}
+ExtraParams: --env GITLAB_OMNIBUS_CONFIG="external_url 'http://unraid:9080/'"
+GitHub: https://github.com/gitlabhq/gitlabhq
+Icon: https://raw.githubusercontent.com/tynor88/docker-templates/master/images/gitlab_small.png
+Name: GitLab-CE
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: GitLab Community Edition docker image based on the Omnibus package.
+Privileged: 'false'
+Registry: https://hub.docker.com/r/gitlab/gitlab-ce/
+Repository: gitlab/gitlab-ce
+TemplateURL: https://raw.githubusercontent.com/tynor88/docker-templates/master/tynor88/gitlab-ce.xml
+WebUI: http://[IP]:[PORT:9080]
+topPerforming: 0.26
+topTrending: -2.099
