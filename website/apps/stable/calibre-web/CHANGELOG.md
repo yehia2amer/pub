@@ -1,6 +1,43 @@
 # Changelog<br>
 
 
+<a name="calibre-web-10.0.12"></a>
+### [calibre-web-10.0.12](https://github.com/truecharts/apps/compare/calibre-web-10.0.11...calibre-web-10.0.12) (2022-04-03)
+
+#### Chore
+
+* update helm general non-major helm releases ([#2410](https://github.com/truecharts/apps/issues/2410))
+
+
+
+<a name="calibre-web-10.0.11"></a>
+### [calibre-web-10.0.11](https://github.com/truecharts/apps/compare/calibre-web-10.0.10...calibre-web-10.0.11) (2022-03-31)
+
+#### Chore
+
+* update helm general non-major helm releases ([#2361](https://github.com/truecharts/apps/issues/2361))
+
+
+
+<a name="calibre-web-10.0.10"></a>
+### [calibre-web-10.0.10](https://github.com/truecharts/apps/compare/calibre-web-10.0.9...calibre-web-10.0.10) (2022-03-30)
+
+#### Chore
+
+* Auto-update chart README [skip ci]
+* update helm general non-major helm releases ([#2354](https://github.com/truecharts/apps/issues/2354))
+
+
+
+<a name="calibre-web-10.0.9"></a>
+### [calibre-web-10.0.9](https://github.com/truecharts/apps/compare/calibre-web-10.0.8...calibre-web-10.0.9) (2022-03-30)
+
+#### Chore
+
+* update docker general non-major ([#2349](https://github.com/truecharts/apps/issues/2349))
+
+
+
 <a name="calibre-web-10.0.8"></a>
 ### [calibre-web-10.0.8](https://github.com/truecharts/apps/compare/calibre-web-10.0.7...calibre-web-10.0.8) (2022-03-26)
 

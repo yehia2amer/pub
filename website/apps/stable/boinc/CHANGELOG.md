@@ -1,6 +1,33 @@
 # Changelog<br>
 
 
+<a name="boinc-1.0.13"></a>
+### [boinc-1.0.13](https://github.com/truecharts/apps/compare/boinc-1.0.12...boinc-1.0.13) (2022-04-03)
+
+#### Chore
+
+* update helm general non-major helm releases ([#2410](https://github.com/truecharts/apps/issues/2410))
+
+
+
+<a name="boinc-1.0.12"></a>
+### [boinc-1.0.12](https://github.com/truecharts/apps/compare/boinc-1.0.11...boinc-1.0.12) (2022-03-31)
+
+#### Chore
+
+* update helm general non-major helm releases ([#2361](https://github.com/truecharts/apps/issues/2361))
+
+
+
+<a name="boinc-1.0.11"></a>
+### [boinc-1.0.11](https://github.com/truecharts/apps/compare/boinc-1.0.10...boinc-1.0.11) (2022-03-30)
+
+#### Chore
+
+* update helm general non-major helm releases ([#2354](https://github.com/truecharts/apps/issues/2354))
+
+
+
 <a name="boinc-1.0.10"></a>
 ### [boinc-1.0.10](https://github.com/truecharts/apps/compare/boinc-1.0.9...boinc-1.0.10) (2022-03-28)
 
