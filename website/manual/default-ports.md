@@ -64,7 +64,7 @@ These defaults can of course be changed, but as we guarantee "sane, working defa
 | valheim                    |     valheim     |    valheim-1    | 2456  |   UDP    |                                                         |
 | valheim                    |     valheim     |    valheim-2    | 2457  |   UDP    |                                                         |
 | valheim                    |     valheim     |    valheim-3    | 2458  |   UDP    |                                                         |
-| sqlitebrowser              |      main       |      main       | 3000  |   TCP    |                                                         |
+| wireshark                  |      main       |      main       | 3000  |   TCP    |                                                         |
 | uptime-kuma                |      main       |      main       | 3001  |   TCP    |                                                         |
 | vaultwarden                |       ws        |       ws        | 3012  |   TCP    |                                                         |
 | loki                       |      main       |      main       | 3100  |   HTTP   |                                                         |
@@ -300,7 +300,7 @@ These defaults can of course be changed, but as we guarantee "sane, working defa
 | mysql-workbench            |      main       |      main       | 10134 |   TCP    |                                                         |
 | openvscode-server          |      main       |      main       | 10135 |   TCP    |                                                         |
 | pidgin                     |      main       |      main       | 10136 |   TCP    |                                                         |
-| wireshark                  |      main       |      main       | 10137 |   TCP    |                                                         |
+| sqlitebroswer              |      main       |      main       | 10137 |   TCP    |                                                         |
 | emulatorjs                 |      ipfs       |      ipfs       | 10138 |   TCP    |                                                         |
 | couchpotato                |      main       |      main       | 10139 |   TCP    |                                                         |
 | paperless-ng               |      main       |      main       | 10140 |   TCP    |                                                         |
