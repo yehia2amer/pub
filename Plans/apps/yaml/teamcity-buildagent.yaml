@@ -5,7 +5,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Config:
+    config:
       Default: /mnt/user/appdata/teamcity-buildagent
       Description: 'Container Path: /data/teamcity_agent/conf'
       Display: always
@@ -16,7 +16,7 @@ Config:
       Target: /data/teamcity_agent/conf
       Type: Path
       value: /mnt/user/appdata/teamcity-buildagent
-    Docker Volumes:
+    dockervolumes:
       Default: buildagent_volumes
       Description: 'Container Path: /var/lib/docker'
       Display: advanced
@@ -27,7 +27,7 @@ Config:
       Target: /var/lib/docker
       Type: Path
       value: buildagent_volumes
-    Temp:
+    temp:
       Default: ''
       Description: 'Container Path: /opt/buildagent/temp'
       Display: always
@@ -38,7 +38,7 @@ Config:
       Target: /opt/buildagent/temp
       Type: Path
       value: ''
-    Work:
+    work:
       Default: ''
       Description: 'Container Path: /opt/buildagent/work'
       Display: always
@@ -51,7 +51,7 @@ Config:
       value: ''
   Port: {}
   Variable:
-    AGENT_NAME:
+    agent_name:
       Default: Nick Fury
       Description: Name of this TeamCity Build Agent
       Display: always
@@ -62,7 +62,7 @@ Config:
       Target: AGENT_NAME
       Type: Variable
       value: Phil Coulson
-    DOCKER_IN_DOCKER:
+    docker_in_docker:
       Default: start
       Description: "Run Docker daemon within your container (note that in this case\
         \ the container should be run with \u2014privileged flag)"
@@ -74,7 +74,7 @@ Config:
       Target: DOCKER_IN_DOCKER
       Type: Variable
       value: start
-    SERVER_URL:
+    server_url:
       Default: ''
       Description: URL to TeamCity server
       Display: always

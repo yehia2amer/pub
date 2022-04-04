@@ -6,7 +6,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Certs:
+    certs:
       Default: /mnt/user/appdata/freepbx/certs/
       Description: Certs
       Display: always
@@ -17,18 +17,7 @@ Config:
       Target: /certs
       Type: Path
       value: /mnt/user/appdata/freepbx/certs/
-    DB Path:
-      Default: ''
-      Description: DB Path
-      Display: always
-      Mask: 'false'
-      Mode: rw
-      Name: DB Path
-      Required: 'false'
-      Target: /var/lib/mysql
-      Type: Path
-      value: /mnt/user/appdata/freepbx/db/
-    Data:
+    data:
       Default: /mnt/user/appdata/freepbx/data/
       Description: Data
       Display: always
@@ -39,7 +28,18 @@ Config:
       Target: /data
       Type: Path
       value: /mnt/user/appdata/freepbx/data/
-    Log:
+    dbpath:
+      Default: ''
+      Description: DB Path
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: DB Path
+      Required: 'false'
+      Target: /var/lib/mysql
+      Type: Path
+      value: /mnt/user/appdata/freepbx/db/
+    log:
       Default: ''
       Description: Log
       Display: always
@@ -50,7 +50,7 @@ Config:
       Target: /var/log
       Type: Path
       value: /mnt/user/appdata/freepbx/logs/
-    WWW:
+    www:
       Default: ''
       Description: WWW
       Display: always
@@ -62,7 +62,7 @@ Config:
       Type: Path
       value: /mnt/user/appdata/freepbx/www/
   Port:
-    FOP:
+    fop:
       Default: '4445'
       Description: FOP
       Display: always
@@ -73,7 +73,7 @@ Config:
       Target: '4445'
       Type: Port
       value: '4445'
-    HTTP:
+    http:
       Default: '8150'
       Description: HTTP
       Display: always
@@ -84,7 +84,7 @@ Config:
       Target: '80'
       Type: Port
       value: '8150'
-    HTTPs:
+    https:
       Default: '4150'
       Description: HTTPs
       Display: always
@@ -95,7 +95,7 @@ Config:
       Target: '443'
       Type: Port
       value: '4150'
-    PJSIP:
+    pjsip:
       Default: '5060'
       Description: PJSIP
       Display: always
@@ -106,7 +106,7 @@ Config:
       Target: '5060'
       Type: Port
       value: '5060'
-    RTP Ports:
+    rtpports:
       Default: 18000-20000
       Description: RTP Ports
       Display: always
@@ -117,7 +117,7 @@ Config:
       Target: 18000-20000
       Type: Port
       value: 18000-20000
-    SIP:
+    sip:
       Default: '5160'
       Description: SIP
       Display: always
@@ -128,7 +128,7 @@ Config:
       Target: '5160'
       Type: Port
       value: '5160'
-    TLS SIP:
+    tlssip:
       Default: '5161'
       Description: TLS SIP
       Display: always
@@ -140,7 +140,7 @@ Config:
       Type: Port
       value: '5161'
   Variable:
-    DB_EMBEDDED:
+    db_embedded:
       Default: TRUE|FALSE
       Description: Allows you to use an internally provided MariaDB Server e.g. TRUE
         or FALSE
@@ -152,7 +152,7 @@ Config:
       Target: DB_EMBEDDED
       Type: Variable
       value: 'TRUE'
-    ENABLE_FAIL2BAN:
+    enable_fail2ban:
       Default: TRUE|FALSE
       Description: ENABLE_FAIL2BAN
       Display: always
@@ -163,7 +163,7 @@ Config:
       Target: ENABLE_FAIL2BAN
       Type: Variable
       value: 'FALSE'
-    ENABLE_SSL:
+    enable_ssl:
       Default: FALSE|TRUE
       Description: Enable HTTPs to serve SSL requests - Default FALSE
       Display: always
@@ -174,7 +174,7 @@ Config:
       Target: ENABLE_SSL
       Type: Variable
       value: 'FALSE'
-    ENABLE_XMPP:
+    enable_xmpp:
       Default: FALSE|TRUE
       Description: Enable XMPP Module with MongoDB - Default FALSE
       Display: always
@@ -185,7 +185,7 @@ Config:
       Target: ENABLE_XMPP
       Type: Variable
       value: 'FALSE'
-    Flash Operator Panel:
+    flashoperatorpanel:
       Default: TRUE|FALSE
       Description: Enable Flash Operator Panel
       Display: always
@@ -196,7 +196,7 @@ Config:
       Target: ENABLE_FOP
       Type: Variable
       value: 'TRUE'
-    INSTALL_ADDITIONAL_MODULES:
+    install_additional_modules:
       Default: ''
       Description: Comma seperated list of modules to additionally install on first
         container startup
@@ -208,7 +208,7 @@ Config:
       Target: INSTALL_ADDITIONAL_MODULES
       Type: Variable
       value: ''
-    RTP_FINISH:
+    rtp_finish:
       Default: '20000'
       Description: What port to end RTP Transmissions
       Display: always
@@ -219,7 +219,7 @@ Config:
       Target: RTP_FINISH
       Type: Variable
       value: '20000'
-    RTP_START:
+    rtp_start:
       Default: '18000'
       Description: What port to start RTP Transmissions
       Display: always
@@ -230,7 +230,7 @@ Config:
       Target: RTP_START
       Type: Variable
       value: '18000'
-    TLS_CERT:
+    tls_cert:
       Default: cert.pem
       Description: TLS Certificate to drop in /certs for HTTPS if no reverse proxy
       Display: always
@@ -241,7 +241,7 @@ Config:
       Target: TLS_CERT
       Type: Variable
       value: cert.pem
-    TLS_KEY:
+    tls_key:
       Default: key.pem
       Description: TLS Key to drop in /certs for HTTPS if no reverse proxy
       Display: always

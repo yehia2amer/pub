@@ -4,86 +4,106 @@ CategoryList: &id001
 Config:
   Device: {}
   Label: {}
-  Path: {}
+  Path:
+    rtorrentvpn:
+      Mode: rw
+      Name: data
+      Target: /data
+      value: /mnt/user/appdata/data
   Port: {}
   Variable:
-    DEBUG:
+    debug:
       Name: DEBUG
+      Target: DEBUG
       value: 'false'
-    ENABLE_AUTODL_IRSSI:
+    enable_autodl_irssi:
       Name: ENABLE_AUTODL_IRSSI
+      Target: ENABLE_AUTODL_IRSSI
       value: 'no'
-    ENABLE_PRIVOXY:
+    enable_privoxy:
       Name: ENABLE_PRIVOXY
+      Target: ENABLE_PRIVOXY
       value: 'no'
-    ENABLE_RPC2:
+    enable_rpc2:
       Name: ENABLE_RPC2
+      Target: ENABLE_RPC2
       value: 'yes'
-    ENABLE_RPC2_AUTH:
+    enable_rpc2_auth:
       Name: ENABLE_RPC2_AUTH
+      Target: ENABLE_RPC2_AUTH
       value: 'yes'
-    ENABLE_WEBUI_AUTH:
+    enable_webui_auth:
       Name: ENABLE_WEBUI_AUTH
+      Target: ENABLE_WEBUI_AUTH
       value: 'yes'
-    LAN_NETWORK:
+    lan_network:
       Name: LAN_NETWORK
+      Target: LAN_NETWORK
       value: 192.168.1.0/24
-    NAME_SERVERS:
+    name_servers:
       Name: NAME_SERVERS
+      Target: NAME_SERVERS
       value: 84.200.69.80,37.235.1.174,1.1.1.1,37.235.1.177,84.200.70.40,1.0.0.1
-    PHP_TZ:
+    php_tz:
       Name: PHP_TZ
+      Target: PHP_TZ
       value: UTC
-    RPC2_PASS:
+    rpc2_pass:
       Name: RPC2_PASS
+      Target: RPC2_PASS
       value: ''
-    RPC2_USER:
+    rpc2_user:
       Name: RPC2_USER
+      Target: RPC2_USER
       value: admin
-    STRICT_PORT_FORWARD:
+    strict_port_forward:
       Name: STRICT_PORT_FORWARD
+      Target: STRICT_PORT_FORWARD
       value: 'yes'
-    UMASK:
+    umask:
       Name: UMASK
+      Target: UMASK
       value: '000'
-    VPN_CLIENT:
+    vpn_client:
       Name: VPN_CLIENT
+      Target: VPN_CLIENT
       value: openvpn|wireguard
-    VPN_ENABLED:
+    vpn_enabled:
       Name: VPN_ENABLED
+      Target: VPN_ENABLED
       value: 'yes'
-    VPN_INPUT_PORTS:
+    vpn_input_ports:
       Name: VPN_INPUT_PORTS
+      Target: VPN_INPUT_PORTS
       value: ''
-    VPN_OPTIONS:
+    vpn_options:
       Name: VPN_OPTIONS
+      Target: VPN_OPTIONS
       value: ''
-    VPN_OUTPUT_PORTS:
+    vpn_output_ports:
       Name: VPN_OUTPUT_PORTS
+      Target: VPN_OUTPUT_PORTS
       value: ''
-    VPN_PASS:
+    vpn_pass:
       Name: VPN_PASS
+      Target: VPN_PASS
       value: vpn password
-    VPN_PROV:
+    vpn_prov:
       Name: VPN_PROV
+      Target: VPN_PROV
       value: pia|airvpn|custom
-    VPN_USER:
+    vpn_user:
       Name: VPN_USER
+      Target: VPN_USER
       value: vpn username
-    WEBUI_PASS:
+    webui_pass:
       Name: WEBUI_PASS
+      Target: WEBUI_PASS
       value: ''
-    WEBUI_USER:
+    webui_user:
       Name: WEBUI_USER
+      Target: WEBUI_USER
       value: admin
-Data:
-  Volume:
-  - ContainerDir: /config
-    HostDir: /mnt/user/appdata/config
-    Mode: rw
-  - ContainerDir: /data
-    HostDir: /mnt/user/appdata/data
-    Mode: rw
 ExtraParams: --sysctl="net.ipv4.conf.all.src_valid_mark=1"
 GitHub: https://github.com/binhex/arch-rtorrentvpn
 Icon: https://raw.githubusercontent.com/binhex/docker-templates/master/binhex/images/rtorrent-icon.png

@@ -6,7 +6,7 @@ Config:
   Label: {}
   Path: {}
   Port:
-    PORT_TCP:
+    port_tcp:
       Default: '8388'
       Description: 'Container Port: 8388'
       Display: always
@@ -17,7 +17,7 @@ Config:
       Target: '8388'
       Type: Port
       value: '8388'
-    PORT_UDP:
+    port_udp:
       Default: '8388'
       Description: 'Container Port: 8388'
       Display: always
@@ -29,7 +29,7 @@ Config:
       Type: Port
       value: '8388'
   Variable:
-    CIPHER:
+    cipher:
       Default: chacha20-ietf-poly1305|aes-128-gcm|aes-256-gcm
       Description: Encryption cipher to use
       Display: always
@@ -40,7 +40,7 @@ Config:
       Target: CIPHER
       Type: Variable
       value: chacha20-ietf-poly1305
-    PASSWORD:
+    password:
       Default: ''
       Description: Password
       Display: always
@@ -51,7 +51,7 @@ Config:
       Target: PASSWORD
       Type: Variable
       value: ''
-    PROFILING:
+    profiling:
       Default: off|on
       Description: "Enable the Go pprof http server on :6060\r\n** If enabled you\
         \ must create a port variable to container port :6060"
@@ -63,7 +63,7 @@ Config:
       Target: PROFILING
       Type: Variable
       value: 'off'
-    TIMEZONE:
+    timezone:
       Default: ''
       Description: Timezone, i.e. America/Montreal
       Display: always

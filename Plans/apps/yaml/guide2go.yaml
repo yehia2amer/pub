@@ -4,19 +4,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    /TVH:
-      Default: ''
-      Description: "/mnt/user/appdata/tvheadend/data/\r\nin case move to TVHeadend\
-        \ is enabled u need to mount this.\r\n"
-      Display: always
-      Mask: 'false'
-      Mode: rw
-      Name: /TVH
-      Required: 'false'
-      Target: /TVH
-      Type: Path
-      value: ''
-    /config:
+    config:
       Default: ''
       Description: "/mnt/user/appdata/guide2go/_config/\r\nconfig and cron setting\r\
         \n"
@@ -28,7 +16,7 @@ Config:
       Target: /config
       Type: Path
       value: ''
-    /guide2go:
+    guide2go:
       Default: ''
       Description: "/mnt/user/appdata/guide2go/\r\noutput folder or where u can place\
         \ your existing .json files\r\n"
@@ -38,6 +26,18 @@ Config:
       Name: /guide2go
       Required: 'true'
       Target: /guide2go
+      Type: Path
+      value: ''
+    tvh:
+      Default: ''
+      Description: "/mnt/user/appdata/tvheadend/data/\r\nin case move to TVHeadend\
+        \ is enabled u need to mount this.\r\n"
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: /TVH
+      Required: 'false'
+      Target: /TVH
       Type: Path
       value: ''
   Port: {}

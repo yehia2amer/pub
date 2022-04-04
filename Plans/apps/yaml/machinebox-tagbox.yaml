@@ -6,7 +6,7 @@ Config:
   Label: {}
   Path: {}
   Port:
-    MB_PORT:
+    mb_port:
       Default: '8082'
       Description: '(string) Defaults to 8080 - Port where the service will listen. '
       Display: always
@@ -18,7 +18,7 @@ Config:
       Type: Port
       value: '8082'
   Variable:
-    API_KEY:
+    api_key:
       Default: ''
       Description: "Container Variable: MB_KEY\r\nGet one here https://machinebox.io/login"
       Display: always
@@ -29,7 +29,7 @@ Config:
       Target: MB_KEY
       Type: Variable
       value: ''
-    MB_ADDRESS:
+    mb_address:
       Default: 0.0.0.0
       Description: '(string) Defaults to 0.0.0.0 - Address where the service will
         listen. '
@@ -41,7 +41,7 @@ Config:
       Target: MB_ADDRESS
       Type: Variable
       value: 0.0.0.0
-    MB_BASICAUTH_PASS:
+    mb_basicauth_pass:
       Default: ''
       Description: 'Container Variable: MB_BASICAUTH_PASS'
       Display: advanced
@@ -52,7 +52,7 @@ Config:
       Target: MB_BASICAUTH_PASS
       Type: Variable
       value: ''
-    MB_BASICAUTH_USER:
+    mb_basicauth_user:
       Default: ''
       Description: '(string) The Basic Authentication username and password that every
         request must use. Recommended for sitautions where the boxes are publicly
@@ -65,7 +65,7 @@ Config:
       Target: MB_BASICAUTH_USER
       Type: Variable
       value: ''
-    MB_DISABLE_CORS:
+    mb_disable_cors:
       Default: 'false'
       Description: '(bool) Defaults to false - If true will turn off CORS support
         for the box. '
@@ -77,7 +77,7 @@ Config:
       Target: MB_DISABLE_CORS
       Type: Variable
       value: 'false'
-    MB_DOWNLOAD_TIMEOUT_SECONDS:
+    mb_download_timeout_seconds:
       Default: '60'
       Description: '(integer) Default to 60. Timeout in seconds that Tagbox will use
         when it downloads files, for example to download the state file. '
@@ -89,7 +89,7 @@ Config:
       Target: MB_DOWNLOAD_TIMEOUT_SECONDS
       Type: Variable
       value: '60'
-    MB_TAGBOX_INDEX_REFRESH_SECONDS:
+    mb_tagbox_index_refresh_seconds:
       Default: ''
       Description: '(integer) Defaults to 2 - Number of seconds that Tagbox will wait
         to update the index for new data, or changes in the data. Tagbox will accumulate
@@ -103,7 +103,7 @@ Config:
       Target: MB_TAGBOX_INDEX_REFRESH_SECONDS
       Type: Variable
       value: ''
-    MB_TAGBOX_ONLY_CUSTOM_TAGS:
+    mb_tagbox_only_custom_tags:
       Default: 'false'
       Description: 'Container Variable: MB_TAGBOX_ONLY_CUSTOM_TAGS'
       Display: always
@@ -114,7 +114,7 @@ Config:
       Target: MB_TAGBOX_ONLY_CUSTOM_TAGS
       Type: Variable
       value: 'false'
-    MB_TAGBOX_READ_ONLY:
+    mb_tagbox_read_only:
       Default: 'false'
       Description: ' (bool) Defaults to false - If true Tagbox will be read only.
         Teaching and updating state will be disabled. Be sure to provide MB_TAGBOX_STATE_URL
@@ -127,7 +127,7 @@ Config:
       Target: MB_TAGBOX_READ_ONLY
       Type: Variable
       value: 'false'
-    MB_TAGBOX_STATE_POLL_SECONDS:
+    mb_tagbox_state_poll_seconds:
       Default: ''
       Description: '(integer) Default to 0 (No polling). If this variable is set,
         Tagbox would poll the MB_TAGBOX_STATE_URL for changes on the file, based on
@@ -142,7 +142,7 @@ Config:
       Target: MB_TAGBOX_STATE_POLL_SECONDS
       Type: Variable
       value: ''
-    MB_TAGBOX_STATE_URL:
+    mb_tagbox_state_url:
       Default: ''
       Description: '(string) URL to a .tagbox state file to initialize the box with.
         Useful for spinning up many instances of Tagbox with the same state. '

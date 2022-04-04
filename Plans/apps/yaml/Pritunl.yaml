@@ -7,7 +7,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    AppData Config Path:
+    appdataconfigpath:
       Default: /mnt/user/appdata/pritunl
       Description: 'Container Path: /config'
       Display: always
@@ -19,28 +19,6 @@ Config:
       Type: Path
       value: ''
   Port:
-    VPN/tcp:
-      Default: '1194'
-      Description: 'Container Port: 1194/tcp'
-      Display: always
-      Mask: 'false'
-      Mode: tcp
-      Name: VPN/tcp
-      Required: 'false'
-      Target: '1194'
-      Type: Port
-      value: ''
-    VPN/udp:
-      Default: '1194'
-      Description: 'Container Port: 1194/udp'
-      Display: always
-      Mask: 'false'
-      Mode: udp
-      Name: VPN/udp
-      Required: 'false'
-      Target: '1194'
-      Type: Port
-      value: ''
     http:
       Default: '9699'
       Description: 'Container Port: 80. Only used for LetsEncrypt.'
@@ -63,8 +41,30 @@ Config:
       Target: '443'
       Type: Port
       value: ''
+    vpntcp:
+      Default: '1194'
+      Description: 'Container Port: 1194/tcp'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: VPN/tcp
+      Required: 'false'
+      Target: '1194'
+      Type: Port
+      value: ''
+    vpnudp:
+      Default: '1194'
+      Description: 'Container Port: 1194/udp'
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: VPN/udp
+      Required: 'false'
+      Target: '1194'
+      Type: Port
+      value: ''
   Variable:
-    PGID:
+    pgid:
       Default: '100'
       Description: GID for permissions.  Do not change unless you know what you're
         doing.
@@ -76,7 +76,7 @@ Config:
       Target: PGID
       Type: Variable
       value: ''
-    PUID:
+    puid:
       Default: '99'
       Description: UID for permissions.  Do not change unless you know what you're
         doing.

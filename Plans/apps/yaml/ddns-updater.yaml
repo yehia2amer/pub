@@ -5,7 +5,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Config:
+    config:
       Default: /mnt/user/appdata/ddns-updater
       Description: 'Container Path: /updater/data'
       Display: always
@@ -17,7 +17,7 @@ Config:
       Type: Path
       value: /mnt/user/appdata/ddns-updater
   Port:
-    WebUI:
+    webui:
       Default: '8000'
       Description: 'Container Port: 8000'
       Display: always
@@ -29,7 +29,7 @@ Config:
       Type: Port
       value: '8000'
   Variable:
-    BACKUP_DIRECTORY:
+    backup_directory:
       Default: /updater/data/backup
       Description: Directory to read and write data files from internally
       Display: advanced
@@ -40,7 +40,7 @@ Config:
       Target: BACKUP_DIRECTORY
       Type: Variable
       value: /updater/data/backup
-    BACKUP_PERIOD:
+    backup_period:
       Default: '0'
       Description: Set to a period (i.e. 72h15m) to enable zip backups of data/config.json
         and data/updates.json in a zip file
@@ -52,7 +52,7 @@ Config:
       Target: BACKUP_PERIOD
       Type: Variable
       value: '0'
-    HEALTH_SERVER_ADDRESS:
+    health_server_address:
       Default: 127.0.0.1:9999
       Description: Health server listening address
       Display: advanced
@@ -63,7 +63,7 @@ Config:
       Target: HEALTH_SERVER_ADDRESS
       Type: Variable
       value: 127.0.0.1:9999
-    HTTP_TIMEOUT:
+    http_timeout:
       Default: 10s
       Description: Timeout for all HTTP requests (in seconds)
       Display: always
@@ -74,7 +74,7 @@ Config:
       Target: HTTP_TIMEOUT
       Type: Variable
       value: 10s
-    LOG_CALLER:
+    log_caller:
       Default: hidden|short
       Description: 'Container Variable: LOG_CALLER'
       Display: advanced
@@ -85,7 +85,7 @@ Config:
       Target: LOG_CALLER
       Type: Variable
       value: hidden
-    LOG_LEVEL:
+    log_level:
       Default: info|warning|error|debug
       Description: Level of logging, debug, info, warning or error
       Display: advanced
@@ -96,33 +96,7 @@ Config:
       Target: LOG_LEVEL
       Type: Variable
       value: info
-    PUBLICIPV4_HTTP_PROVIDERS:
-      Default: all
-      Description: "PUBLICIPV4_HTTP_PROVIDERS gets your public IPv4 address only.\
-        \ It can be one or more of the following: (default:all), ipify, noip.\r\n\r\
-        \nYou can also specify an HTTPS URL such as https://ipinfo.io/ip"
-      Display: always
-      Mask: 'false'
-      Mode: ''
-      Name: PUBLICIPV4_HTTP_PROVIDERS
-      Required: 'false'
-      Target: PUBLICIPV4_HTTP_PROVIDERS
-      Type: Variable
-      value: all
-    PUBLICIPV6_HTTP_PROVIDERS:
-      Default: all
-      Description: "PUBLICIPV6_HTTP_PROVIDERS gets your public IPv6 address only.\
-        \ It can be one or more of the following: (default:all), ipify, noip.\r\n\r\
-        \nYou can also specify an HTTPS URL such as https://ipinfo.io/ip"
-      Display: always
-      Mask: 'false'
-      Mode: ''
-      Name: PUBLICIPV6_HTTP_PROVIDERS
-      Required: 'false'
-      Target: PUBLICIPV6_HTTP_PROVIDERS
-      Type: Variable
-      value: all
-    PUBLICIP_DNS_PROVIDERS:
+    publicip_dns_providers:
       Default: all
       Description: 'PUBLICIP_DNS_PROVIDERS gets your public IPv4 address only or IPv6
         address only or one of them. It can be one or more of the following: (default:all),
@@ -135,7 +109,7 @@ Config:
       Target: PUBLICIP_DNS_PROVIDERS
       Type: Variable
       value: all
-    PUBLICIP_DNS_TIMEOUT:
+    publicip_dns_timeout:
       Default: 3s
       Description: Public IP DNS query timeout (in seconds)
       Display: always
@@ -146,7 +120,7 @@ Config:
       Target: PUBLICIP_DNS_TIMEOUT
       Type: Variable
       value: 3s
-    PUBLICIP_FETCHERS:
+    publicip_fetchers:
       Default: all|http|dns
       Description: Comma separated fetcher types to obtain the public IP address from
         http and dns
@@ -158,7 +132,7 @@ Config:
       Target: PUBLICIP_FETCHERS
       Type: Variable
       value: all
-    PUBLICIP_HTTP_PROVIDERS:
+    publicip_http_providers:
       Default: all
       Description: "PUBLICIP_HTTP_PROVIDERS gets your public IPv4 or IPv6 address.\
         \ It can be one or more of the following: (default:all), opendns, ifconfig,\
@@ -171,7 +145,33 @@ Config:
       Target: PUBLICIP_HTTP_PROVIDERS
       Type: Variable
       value: all
-    ROOT_URL:
+    publicipv4_http_providers:
+      Default: all
+      Description: "PUBLICIPV4_HTTP_PROVIDERS gets your public IPv4 address only.\
+        \ It can be one or more of the following: (default:all), ipify, noip.\r\n\r\
+        \nYou can also specify an HTTPS URL such as https://ipinfo.io/ip"
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: PUBLICIPV4_HTTP_PROVIDERS
+      Required: 'false'
+      Target: PUBLICIPV4_HTTP_PROVIDERS
+      Type: Variable
+      value: all
+    publicipv6_http_providers:
+      Default: all
+      Description: "PUBLICIPV6_HTTP_PROVIDERS gets your public IPv6 address only.\
+        \ It can be one or more of the following: (default:all), ipify, noip.\r\n\r\
+        \nYou can also specify an HTTPS URL such as https://ipinfo.io/ip"
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: PUBLICIPV6_HTTP_PROVIDERS
+      Required: 'false'
+      Target: PUBLICIPV6_HTTP_PROVIDERS
+      Type: Variable
+      value: all
+    root_url:
       Default: /
       Description: URL path to append to all paths to the webUI (i.e. /ddns for accessing
         https://example.com/ddns through a proxy)
@@ -183,7 +183,7 @@ Config:
       Target: ROOT_URL
       Type: Variable
       value: /
-    SHOUTRRR_ADDRESSES:
+    shoutrrr_addresses:
       Default: ''
       Description: (optional) Comma separated list of Shoutrrr addresses (notification
         services) -- (See GitHub Documentation)
@@ -195,7 +195,7 @@ Config:
       Target: SHOUTRRR_ADDRESSES
       Type: Variable
       value: ''
-    TZ:
+    tz:
       Default: ''
       Description: Timezone to have accurate times, i.e. America/Montreal
       Display: always
@@ -206,7 +206,7 @@ Config:
       Target: TZ
       Type: Variable
       value: ''
-    UPDATE_COOLDOWN_PERIOD:
+    update_cooldown_period:
       Default: 5m
       Description: Duration to cooldown between updates for each record. This is useful
         to avoid being rate limited or banned. (in minutes)

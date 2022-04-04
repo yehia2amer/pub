@@ -5,7 +5,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    /backups:
+    backups:
       Default: ''
       Description: 'Container Path: /backups'
       Display: always
@@ -16,7 +16,7 @@ Config:
       Target: /backups
       Type: Path
       value: /mnt/user/Backups
-    /var/lib/postgresql/data:
+    varlibpostgresqldata:
       Default: ''
       Description: 'Container Path: /var/lib/postgresql/data'
       Display: always
@@ -27,7 +27,7 @@ Config:
       Target: /var/lib/postgresql/data
       Type: Path
       value: /mnt/user/appdata/pgbackups/data
-    /var/opt/pgbackups:
+    varoptpgbackups:
       Default: ''
       Description: 'Container Path: /var/opt/pgbackups'
       Display: always
@@ -40,7 +40,7 @@ Config:
       value: /mnt/user/appdata/pgbackups
   Port: {}
   Variable:
-    BACKUP_KEEP_DAYS:
+    backup_keep_days:
       Default: ''
       Description: 'Container Variable: BACKUP_KEEP_DAYS'
       Display: always
@@ -51,7 +51,7 @@ Config:
       Target: BACKUP_KEEP_DAYS
       Type: Variable
       value: '7'
-    BACKUP_KEEP_MONTHS:
+    backup_keep_months:
       Default: ''
       Description: 'Container Variable: BACKUP_KEEP_MONTHS'
       Display: always
@@ -62,7 +62,7 @@ Config:
       Target: BACKUP_KEEP_MONTHS
       Type: Variable
       value: '6'
-    BACKUP_KEEP_WEEKS:
+    backup_keep_weeks:
       Default: ''
       Description: 'Container Variable: BACKUP_KEEP_WEEKS'
       Display: always
@@ -73,7 +73,7 @@ Config:
       Target: BACKUP_KEEP_WEEKS
       Type: Variable
       value: '4'
-    HEALTHCHECK_PORT:
+    healthcheck_port:
       Default: ''
       Description: 'Container Variable: HEALTHCHECK_PORT'
       Display: always
@@ -84,7 +84,7 @@ Config:
       Target: HEALTHCHECK_PORT
       Type: Variable
       value: '9080'
-    POSTGRES_DB:
+    postgres_db:
       Default: ''
       Description: 'Container Variable: POSTGRES_DB'
       Display: always
@@ -95,7 +95,7 @@ Config:
       Target: POSTGRES_DB
       Type: Variable
       value: postgres, nextcloud, traccar, joplin, wikijs, authelia
-    POSTGRES_EXTRA_OPTS:
+    postgres_extra_opts:
       Default: ''
       Description: 'Container Variable: POSTGRES_EXTRA_OPTS'
       Display: always
@@ -106,7 +106,7 @@ Config:
       Target: POSTGRES_EXTRA_OPTS
       Type: Variable
       value: -Z9 --schema=public --blobs
-    POSTGRES_HOST:
+    postgres_host:
       Default: ''
       Description: 'Container Variable: POSTGRES_HOST'
       Display: always
@@ -117,7 +117,7 @@ Config:
       Target: POSTGRES_HOST
       Type: Variable
       value: 192.168.1.7
-    POSTGRES_PASSWORD:
+    postgres_password:
       Default: ''
       Description: 'Container Variable: POSTGRES_PASSWORD'
       Display: always
@@ -128,7 +128,7 @@ Config:
       Target: POSTGRES_PASSWORD
       Type: Variable
       value: postgres_root_password
-    POSTGRES_PORT:
+    postgres_port:
       Default: ''
       Description: 'Container Variable: POSTGRES_PORT'
       Display: always
@@ -139,7 +139,7 @@ Config:
       Target: POSTGRES_PORT
       Type: Variable
       value: '5432'
-    POSTGRES_USER:
+    postgres_user:
       Default: ''
       Description: 'Container Variable: POSTGRES_USER'
       Display: always
@@ -150,7 +150,7 @@ Config:
       Target: POSTGRES_USER
       Type: Variable
       value: postgres_root_user
-    SCHEDULE:
+    schedule:
       Default: ''
       Description: 'Container Variable: SCHEDULE'
       Display: always

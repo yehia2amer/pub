@@ -4,7 +4,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Appdata:
+    appdata:
       Default: /mnt/user/appdata/greylog
       Description: 'Container Path: /usr/share/graylog/data/journal'
       Display: advanced
@@ -16,7 +16,7 @@ Config:
       Type: Path
       value: ''
   Port:
-    GELF TCP:
+    gelftcp:
       Default: '12201'
       Description: 'Container Port: 12201'
       Display: always
@@ -27,7 +27,7 @@ Config:
       Target: '12201'
       Type: Port
       value: ''
-    GELF UDP:
+    gelfudp:
       Default: '12201'
       Description: 'Container Port: 12201'
       Display: always
@@ -38,7 +38,7 @@ Config:
       Target: '12201'
       Type: Port
       value: ''
-    Graylog web interface and REST API:
+    graylogwebinterfaceandrestapi:
       Default: '9000'
       Description: 'Container Port: 9000'
       Display: always
@@ -49,7 +49,7 @@ Config:
       Target: '9000'
       Type: Port
       value: ''
-    Syslog TCP:
+    syslogtcp:
       Default: '1514'
       Description: 'Container Port: 1514'
       Display: always
@@ -60,7 +60,7 @@ Config:
       Target: '1514'
       Type: Port
       value: ''
-    Syslog UDP:
+    syslogudp:
       Default: '1514'
       Description: 'Container Port: 1514'
       Display: always
@@ -72,7 +72,7 @@ Config:
       Type: Port
       value: ''
   Variable:
-    GRAYLOG_HTTP_EXTERNAL_URI:
+    graylog_http_external_uri:
       Default: http://unraidIP:9000/
       Description: 'Container Variable: GRAYLOG_HTTP_EXTERNAL_URI'
       Display: always
@@ -83,7 +83,7 @@ Config:
       Target: GRAYLOG_HTTP_EXTERNAL_URI
       Type: Variable
       value: ''
-    GRAYLOG_PASSWORD_SECRET:
+    graylog_password_secret:
       Default: ''
       Description: CHANGE ME (must be at least 16 characters)!
       Display: always
@@ -94,7 +94,7 @@ Config:
       Target: GRAYLOG_PASSWORD_SECRET
       Type: Variable
       value: ''
-    GRAYLOG_ROOT_PASSWORD_SHA2:
+    graylog_root_password_sha2:
       Default: ''
       Description: 'Container Variable: GRAYLOG_ROOT_PASSWORD_SHA2'
       Display: always
@@ -105,7 +105,7 @@ Config:
       Target: GRAYLOG_ROOT_PASSWORD_SHA2
       Type: Variable
       value: ''
-    List of Elasticsearch hosts Graylog should connect to:
+    listofelasticsearchhostsgraylogshouldconnectto:
       Default: http://unraidIP:9200
       Description: Need to be specified as a comma-separated list of valid URIs for
         the http ports of your elasticsearch nodes
@@ -117,7 +117,7 @@ Config:
       Target: GRAYLOG_ELASTICSEARCH_HOSTS
       Type: Variable
       value: ''
-    MongoDB connection string:
+    mongodbconnectionstring:
       Default: mongodb://unraidIP:27017/graylog
       Description: 'Container Variable: GRAYLOG_MONGODB_URI'
       Display: always

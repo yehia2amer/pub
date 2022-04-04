@@ -4,7 +4,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    UPLOAD_PATH:
+    upload_path:
       Default: ''
       Description: 'Container Path: /var/www/html/storage/upload - Uploaded files
         that are used for bulk importing are stored here'
@@ -17,7 +17,7 @@ Config:
       Type: Path
       value: /mnt/user/appdata/firefly-iii/upload/
   Port:
-    Port:
+    port:
       Default: ''
       Description: 'Container Port: 8080'
       Display: always
@@ -29,7 +29,7 @@ Config:
       Type: Port
       value: '8080'
   Variable:
-    APP_KEY:
+    app_key:
       Default: ''
       Description: 'Container Variable: APP_KEY - The encryption key for your sessions.
         Keep this very secure. If you generate a new one all existing attachments
@@ -42,7 +42,7 @@ Config:
       Target: APP_KEY
       Type: Variable
       value: SomeRandomStringOf32CharsExactly
-    APP_URL:
+    app_url:
       Default: ''
       Description: 'Container Variable: APP_URL - Only used when sending emails.'
       Display: always
@@ -53,7 +53,7 @@ Config:
       Target: APP_URL
       Type: Variable
       value: ''
-    DB_CONNECTION:
+    db_connection:
       Default: ''
       Description: 'Container Variable: DB_CONNECTION - Database type (''pgsql'',
         ''mysql'', ''sqlite'')'
@@ -65,7 +65,7 @@ Config:
       Target: DB_CONNECTION
       Type: Variable
       value: mysql
-    DB_DATABASE:
+    db_database:
       Default: ''
       Description: 'Container Variable: DB_DATABASE - Database name'
       Display: always
@@ -76,7 +76,7 @@ Config:
       Target: DB_DATABASE
       Type: Variable
       value: fireflydb
-    DB_HOST:
+    db_host:
       Default: ''
       Description: 'Container Variable: DB_HOST - Database host, e.g. 192.168.0.3'
       Display: always
@@ -87,7 +87,7 @@ Config:
       Target: DB_HOST
       Type: Variable
       value: ''
-    DB_PASSWORD:
+    db_password:
       Default: ''
       Description: 'Container Variable: DB_PASSWORD - Database password'
       Display: always
@@ -98,7 +98,7 @@ Config:
       Target: DB_PASSWORD
       Type: Variable
       value: secret_firefly_password
-    DB_PORT:
+    db_port:
       Default: ''
       Description: 'Container Variable: DB_PORT - Database port, e.g. 3306'
       Display: always
@@ -109,7 +109,7 @@ Config:
       Target: DB_PORT
       Type: Variable
       value: ''
-    DB_USERNAME:
+    db_username:
       Default: ''
       Description: 'Container Variable: DB_USERNAME - Database username. It is recommended
         to create a dedicated user for Firefly.'
@@ -121,7 +121,7 @@ Config:
       Target: DB_USERNAME
       Type: Variable
       value: firefly
-    FIREFLY_III_LAYOUT:
+    firefly_iii_layout:
       Default: ''
       Description: 'Container Variable: FIREFLY_III_LAYOUT'
       Display: always
@@ -132,7 +132,7 @@ Config:
       Target: FIREFLY_III_LAYOUT
       Type: Variable
       value: v1
-    MAIL_ENCRYPTION:
+    mail_encryption:
       Default: ''
       Description: 'Container Variable: MAIL_ENCRYPTION'
       Display: always
@@ -143,7 +143,7 @@ Config:
       Target: MAIL_ENCRYPTION
       Type: Variable
       value: ''
-    MAIL_FROM:
+    mail_from:
       Default: ''
       Description: 'Container Variable: MAIL_FROM'
       Display: always
@@ -154,7 +154,7 @@ Config:
       Target: MAIL_FROM
       Type: Variable
       value: ''
-    MAIL_HOST:
+    mail_host:
       Default: ''
       Description: 'Container Variable: MAIL_HOST'
       Display: always
@@ -165,7 +165,7 @@ Config:
       Target: MAIL_HOST
       Type: Variable
       value: ''
-    MAIL_MAILER:
+    mail_mailer:
       Default: ''
       Description: "Container Variable: MAIL_MAILER -\r\nRefer to https://docs.firefly-iii.org/advanced-installation/email\
         \ for more information"
@@ -177,7 +177,7 @@ Config:
       Target: MAIL_MAILER
       Type: Variable
       value: ''
-    MAIL_PASSWORD:
+    mail_password:
       Default: ''
       Description: 'Container Variable: MAIL_PASSWORD'
       Display: always
@@ -188,7 +188,7 @@ Config:
       Target: MAIL_PASSWORD
       Type: Variable
       value: ''
-    MAIL_PORT:
+    mail_port:
       Default: ''
       Description: 'Container Variable: MAIL_PORT'
       Display: always
@@ -199,7 +199,7 @@ Config:
       Target: MAIL_PORT
       Type: Variable
       value: ''
-    MAIL_USERNAME:
+    mail_username:
       Default: ''
       Description: 'Container Variable: MAIL_USERNAME'
       Display: always
@@ -210,7 +210,7 @@ Config:
       Target: MAIL_USERNAME
       Type: Variable
       value: ''
-    SEND_ERROR_MESSAGE:
+    send_error_message:
       Default: ''
       Description: 'Container Variable: SEND_ERROR_MESSAGE - Sends email if error
         occurs'
@@ -222,7 +222,7 @@ Config:
       Target: SEND_ERROR_MESSAGE
       Type: Variable
       value: 'true'
-    TRUSTED_PROXIES:
+    trusted_proxies:
       Default: ''
       Description: 'Container Variable: TRUSTED_PROXIES - Set to ** when using reverse
         proxy.'

@@ -8,28 +8,6 @@ Config:
   Device: {}
   Label: {}
   Path:
-    DNS Logs:
-      Default: ''
-      Description: Location to store the DNS logs
-      Display: always
-      Mask: 'false'
-      Mode: rw
-      Name: DNS Logs
-      Required: 'false'
-      Target: /var/log/named
-      Type: Path
-      value: /mnt/user/appdata/lancache-bundle/log/named
-    Nginx Logs:
-      Default: ''
-      Description: Location to store the Nginx logs
-      Display: always
-      Mask: 'false'
-      Mode: rw
-      Name: Nginx Logs
-      Required: 'false'
-      Target: /var/log/nginx
-      Type: Path
-      value: /mnt/user/appdata/lancache-bundle/log/nginx
     data:
       Default: ''
       Description: Location to store the cached files
@@ -41,8 +19,30 @@ Config:
       Target: /data/cache
       Type: Path
       value: /mnt/user/lancache
+    dnslogs:
+      Default: ''
+      Description: Location to store the DNS logs
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: DNS Logs
+      Required: 'false'
+      Target: /var/log/named
+      Type: Path
+      value: /mnt/user/appdata/lancache-bundle/log/named
+    nginxlogs:
+      Default: ''
+      Description: Location to store the Nginx logs
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Nginx Logs
+      Required: 'false'
+      Target: /var/log/nginx
+      Type: Path
+      value: /mnt/user/appdata/lancache-bundle/log/nginx
   Port:
-    DNS UDP Port:
+    dnsudpport:
       Default: '53'
       Description: DNS port, don't change!
       Display: advanced
@@ -53,7 +53,7 @@ Config:
       Target: '53'
       Type: Port
       value: '53'
-    HTTP Port:
+    httpport:
       Default: ''
       Description: "Container Port: 80\r\nDon't change!"
       Display: advanced
@@ -64,7 +64,7 @@ Config:
       Target: '80'
       Type: Port
       value: '80'
-    HTTPS Port:
+    httpsport:
       Default: ''
       Description: "Container Port: 443\r\nSNIProxy port, don't change!"
       Display: advanced
@@ -76,7 +76,7 @@ Config:
       Type: Port
       value: '443'
   Variable:
-    CACHE_DISK_SIZE:
+    cache_disk_size:
       Default: ''
       Description: Max size for the cache
       Display: always
@@ -87,7 +87,7 @@ Config:
       Target: CACHE_DISK_SIZE
       Type: Variable
       value: 2000g
-    CACHE_MAX_AGE:
+    cache_max_age:
       Default: ''
       Description: Max age for files in the cache
       Display: always
@@ -98,7 +98,7 @@ Config:
       Target: CACHE_MAX_AGE
       Type: Variable
       value: 150d
-    CACHE_MEM_SIZE:
+    cache_mem_size:
       Default: ''
       Description: Memory size for the cache
       Display: always
@@ -109,7 +109,7 @@ Config:
       Target: CACHE_MEM_SIZE
       Type: Variable
       value: 500m
-    DISABLE_ARENANET:
+    disable_arenanet:
       Default: ''
       Description: Set to true to disable arenanet caching
       Display: advanced
@@ -120,7 +120,7 @@ Config:
       Target: DISABLE_ARENANET
       Type: Variable
       value: ''
-    DISABLE_BLIZZARD:
+    disable_blizzard:
       Default: ''
       Description: Set to true to disable blizzard caching
       Display: advanced
@@ -131,7 +131,7 @@ Config:
       Target: DISABLE_BLIZZARD
       Type: Variable
       value: ''
-    DISABLE_CITYOFHEROES:
+    disable_cityofheroes:
       Default: ''
       Description: Set to true to disable cityofheroes caching
       Display: advanced
@@ -142,7 +142,7 @@ Config:
       Target: DISABLE_CITYOFHEROES
       Type: Variable
       value: ''
-    DISABLE_DAYBREAK:
+    disable_daybreak:
       Default: ''
       Description: Set to true to disable daybreak caching
       Display: advanced
@@ -153,7 +153,7 @@ Config:
       Target: DISABLE_DAYBREAK
       Type: Variable
       value: ''
-    DISABLE_EPICGAMES:
+    disable_epicgames:
       Default: ''
       Description: Set to true to disable epicgames caching
       Display: advanced
@@ -164,7 +164,7 @@ Config:
       Target: DISABLE_EPICGAMES
       Type: Variable
       value: ''
-    DISABLE_FRONTIER:
+    disable_frontier:
       Default: ''
       Description: Set to true to disable frontier caching
       Display: advanced
@@ -175,7 +175,7 @@ Config:
       Target: DISABLE_FRONTIER
       Type: Variable
       value: ''
-    DISABLE_HIREZ:
+    disable_hirez:
       Default: ''
       Description: Set to true to disable hirez caching
       Display: advanced
@@ -186,7 +186,7 @@ Config:
       Target: DISABLE_HIREZ
       Type: Variable
       value: ''
-    DISABLE_NEVERWINTER:
+    disable_neverwinter:
       Default: ''
       Description: Set to true to disable neverwinter caching
       Display: advanced
@@ -197,7 +197,7 @@ Config:
       Target: DISABLE_NEVERWINTER
       Type: Variable
       value: ''
-    DISABLE_NEXUSMODS:
+    disable_nexusmods:
       Default: ''
       Description: Set to true to disable nexusmods caching
       Display: advanced
@@ -208,7 +208,7 @@ Config:
       Target: DISABLE_NEXUSMODS
       Type: Variable
       value: ''
-    DISABLE_NINTENDO:
+    disable_nintendo:
       Default: ''
       Description: Set to true to disable nintendo caching
       Display: advanced
@@ -219,7 +219,7 @@ Config:
       Target: DISABLE_NINTENDO
       Type: Variable
       value: ''
-    DISABLE_ORIGIN:
+    disable_origin:
       Default: ''
       Description: Set to true to disable origin caching
       Display: advanced
@@ -230,7 +230,7 @@ Config:
       Target: DISABLE_ORIGIN
       Type: Variable
       value: ''
-    DISABLE_RENEGADEX:
+    disable_renegadex:
       Default: ''
       Description: Set to true to disable renegadex caching
       Display: advanced
@@ -241,7 +241,7 @@ Config:
       Target: DISABLE_RENEGADEX
       Type: Variable
       value: ''
-    DISABLE_RIOT:
+    disable_riot:
       Default: ''
       Description: Set to true to disable riot caching
       Display: advanced
@@ -252,7 +252,7 @@ Config:
       Target: DISABLE_RIOT
       Type: Variable
       value: ''
-    DISABLE_ROCKSTAR:
+    disable_rockstar:
       Default: ''
       Description: Set to true to disable rockstar caching
       Display: advanced
@@ -263,7 +263,7 @@ Config:
       Target: DISABLE_ROCKSTAR
       Type: Variable
       value: ''
-    DISABLE_SONY:
+    disable_sony:
       Default: ''
       Description: Set to true to disable sony caching
       Display: advanced
@@ -274,7 +274,7 @@ Config:
       Target: DISABLE_SONY
       Type: Variable
       value: ''
-    DISABLE_STEAM:
+    disable_steam:
       Default: ''
       Description: Set to true to disable steam caching
       Display: advanced
@@ -285,7 +285,7 @@ Config:
       Target: DISABLE_STEAM
       Type: Variable
       value: ''
-    DISABLE_TESO:
+    disable_teso:
       Default: ''
       Description: Set to true to disable teso caching
       Display: advanced
@@ -296,7 +296,7 @@ Config:
       Target: DISABLE_TESO
       Type: Variable
       value: ''
-    DISABLE_TWITCH:
+    disable_twitch:
       Default: ''
       Description: Set to true to disable twitch caching
       Display: advanced
@@ -307,7 +307,7 @@ Config:
       Target: DISABLE_TWITCH
       Type: Variable
       value: ''
-    DISABLE_UPLAY:
+    disable_uplay:
       Default: ''
       Description: Set to true to disable uplay caching
       Display: advanced
@@ -318,7 +318,7 @@ Config:
       Target: DISABLE_UPLAY
       Type: Variable
       value: ''
-    DISABLE_WARFRAME:
+    disable_warframe:
       Default: ''
       Description: Set to true to disable warframe caching
       Display: advanced
@@ -329,7 +329,7 @@ Config:
       Target: DISABLE_WARFRAME
       Type: Variable
       value: ''
-    DISABLE_WARGAMING:
+    disable_wargaming:
       Default: ''
       Description: Set to true to disable wargaming caching
       Display: advanced
@@ -340,7 +340,7 @@ Config:
       Target: DISABLE_WARGAMING
       Type: Variable
       value: ''
-    DISABLE_WSUS:
+    disable_wsus:
       Default: ''
       Description: Set to true to disable windowsupdates caching
       Display: advanced
@@ -351,7 +351,7 @@ Config:
       Target: DISABLE_WSUS
       Type: Variable
       value: ''
-    DISABLE_XBOXLIVE:
+    disable_xboxlive:
       Default: ''
       Description: Set to true to disable xboxlive caching
       Display: advanced
@@ -362,7 +362,7 @@ Config:
       Target: DISABLE_XBOXLIVE
       Type: Variable
       value: ''
-    DNS_BIND_IP:
+    dns_bind_ip:
       Default: ''
       Description: IP Address of cache container. (Has to be the same as the HOST's
         IP. If you set the container's IP to 192.168.1.202 this has to be the same.
@@ -375,7 +375,7 @@ Config:
       Target: DNS_BIND_IP
       Type: Variable
       value: 192.168.1.202
-    LANCACHE_IP:
+    lancache_ip:
       Default: ''
       Description: IP Address of cache container. (Has to be the same as the HOST's
         IP. If you set the container's IP to 192.168.1.202 this has to be the same.
@@ -388,7 +388,7 @@ Config:
       Target: LANCACHE_IP
       Type: Variable
       value: 192.168.1.202
-    UPSTREAM_DNS:
+    upstream_dns:
       Default: ''
       Description: 'Container Variable: UPSTREAM_DNS'
       Display: advanced
@@ -399,7 +399,7 @@ Config:
       Target: UPSTREAM_DNS
       Type: Variable
       value: 1.1.1.1
-    USE_GENERIC_CACHE:
+    use_generic_cache:
       Default: ''
       Description: Must be set to true to use generic cache
       Display: advanced

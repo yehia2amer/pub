@@ -4,7 +4,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    ServerFiles:
+    serverfiles:
       Default: ''
       Description: 'Container Path: /serverdata/serverfiles'
       Display: always
@@ -16,7 +16,7 @@ Config:
       Type: Path
       value: /mnt/cache/appdata/minecraftbedrockedition
   Port:
-    TCP - Game Port:
+    tcp-gameport:
       Default: ''
       Description: TCP Gameport (if you need another port, please delete this entry
         and create a new TCP Port with the required port number)
@@ -28,7 +28,7 @@ Config:
       Target: '19132'
       Type: Port
       value: '19132'
-    TCP - WebConsole:
+    tcp-webconsole:
       Default: ''
       Description: 'WebConsole (by default, you can connect to the Minecraft console
         by opening your browser and go to HOSTIP:9010 - eg: 192.168.1.1:9010 - or
@@ -41,7 +41,7 @@ Config:
       Target: '8080'
       Type: Port
       value: '9010'
-    UDP - Game Port:
+    udp-gameport:
       Default: ''
       Description: UDP Gameport (if you need another port, please delete this entry
         and create a new UDP Port with the required port number)
@@ -54,18 +54,7 @@ Config:
       Type: Port
       value: '19132'
   Variable:
-    GID:
-      Default: ''
-      Description: 'Container Variable: GID'
-      Display: advanced-hide
-      Mask: 'false'
-      Mode: ''
-      Name: GID
-      Required: 'true'
-      Target: GID
-      Type: Variable
-      value: '100'
-    Game Parameters:
+    gameparameters:
       Default: ''
       Description: Enter your extra startup parameters otherwise leave blank!
       Display: always
@@ -76,7 +65,7 @@ Config:
       Target: GAME_PARAMS
       Type: Variable
       value: ''
-    Game Version:
+    gameversion:
       Default: ''
       Description: Enter the prefered version to install.
       Display: always
@@ -87,7 +76,18 @@ Config:
       Target: GAME_VERSION
       Type: Variable
       value: latest
-    UID:
+    gid:
+      Default: ''
+      Description: 'Container Variable: GID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: GID
+      Required: 'true'
+      Target: GID
+      Type: Variable
+      value: '100'
+    uid:
       Default: ''
       Description: 'Container Variable: UID'
       Display: advanced-hide

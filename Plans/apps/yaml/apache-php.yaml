@@ -4,23 +4,14 @@ CategoryList: &id001
 Config:
   Device: {}
   Label: {}
-  Path: {}
+  Path:
+    apache-php:
+      Mode: ro
+      Name: localtime
+      Target: /etc/localtime
+      value: /etc/localtime
   Port: {}
   Variable: {}
-Data:
-  Volume:
-  - ContainerDir: /config
-    HostDir: /mnt/disks/SSD/appdata/apache-php/
-    Mode: rw
-  - ContainerDir: /web
-    HostDir: /mnt/disks/SSD/www/
-    Mode: rw
-  - ContainerDir: /logs
-    HostDir: /mnt/disks/SSD/appdata/apache-php/logs/
-    Mode: rw
-  - ContainerDir: /etc/localtime
-    HostDir: /etc/localtime
-    Mode: ro
 Icon: https://raw.githubusercontent.com/chvb/docker-templates/master/chvb/img/apache-php.png
 Keywords:
 - apache-php

@@ -4,7 +4,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    BACKUP FOLDER:
+    backupfolder:
       Default: ''
       Description: Optional, only used if DELETE_TS is set to 2  /backup
       Display: always
@@ -15,7 +15,7 @@ Config:
       Target: /backup
       Type: Path
       value: ''
-    CONFIG FOLDER:
+    configfolder:
       Default: /mnt/user/appdata/post-recording
       Description: Configuration folder /config
       Display: always
@@ -26,7 +26,7 @@ Config:
       Target: /config
       Type: Path
       value: ''
-    WATCH FOLDER:
+    watchfolder:
       Default: ''
       Description: This location contains .ts files that need converting /watch
       Display: always
@@ -39,7 +39,7 @@ Config:
       value: ''
   Port: {}
   Variable:
-    CONVERSION_FORMAT:
+    conversion_format:
       Default: mkv
       Description: mkv or mp4
       Display: always
@@ -50,7 +50,7 @@ Config:
       Target: CONVERSION_FORMAT
       Type: Variable
       value: mkv
-    DELETE_TS:
+    delete_ts:
       Default: '1'
       Description: Remove the original .ts recording file. 0 = Yes, 1 = No, 2 = Move
         to backup directory
@@ -62,7 +62,7 @@ Config:
       Target: DELETE_TS
       Type: Variable
       value: '1'
-    NVIDIA_VISIBLE_DEVICES:
+    nvidia_visible_devices:
       Default: ''
       Description: "GPU UUID retrieved from Nvidia plugin settings\r\n"
       Display: always
@@ -73,7 +73,7 @@ Config:
       Target: NVIDIA_VISIBLE_DEVICES
       Type: Variable
       value: ''
-    PGID:
+    pgid:
       Default: ''
       Description: 'Container Variable: PGID'
       Display: always
@@ -84,7 +84,7 @@ Config:
       Target: PGID
       Type: Variable
       value: '100'
-    POST_PROCESS:
+    post_process:
       Default: comchap
       Description: "comchap or comcut\r\ndefault: comchap"
       Display: always
@@ -95,7 +95,7 @@ Config:
       Target: POST_PROCESS
       Type: Variable
       value: comchap
-    PUID:
+    puid:
       Default: ''
       Description: 'Container Variable: PUID'
       Display: always
@@ -106,7 +106,7 @@ Config:
       Target: PUID
       Type: Variable
       value: '99'
-    SOURCE_EXT:
+    source_ext:
       Default: ts
       Description: Source file extension, default .ts
       Display: always
@@ -117,7 +117,7 @@ Config:
       Target: SOURCE_EXT
       Type: Variable
       value: ts
-    SUBTITLES:
+    subtitles:
       Default: '0'
       Description: Extract subtitles to .srt. 0= Yes, 1 = No
       Display: always
@@ -128,7 +128,7 @@ Config:
       Target: SUBTITLES
       Type: Variable
       value: '0'
-    UMASK:
+    umask:
       Default: ''
       Description: 'Container Variable: UMASK'
       Display: always

@@ -6,29 +6,6 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Storage Disk 1:
-      Default: /mnt/disk1
-      Description: Set this and add more disks to report storage usage.
-      Display: advanced
-      Mask: 'false'
-      Mode: ro
-      Name: Storage Disk 1
-      Required: 'false'
-      Target: /storage/1
-      Type: Path
-      value: ''
-    Users:
-      Default: /var/run/utmp
-      Description: 'Container Path: /var/run/utmp - This allows counting logged in
-        users on unRAID.'
-      Display: advanced
-      Mask: 'false'
-      Mode: ro
-      Name: Users
-      Required: 'false'
-      Target: /var/run/utmp
-      Type: Path
-      value: /var/run/utmp
     appdata:
       Default: /mnt/user/appdata/Notifiarr/
       Description: 'Container Path: /config'
@@ -40,8 +17,31 @@ Config:
       Target: /config
       Type: Path
       value: ''
+    storagedisk1:
+      Default: /mnt/disk1
+      Description: Set this and add more disks to report storage usage.
+      Display: advanced
+      Mask: 'false'
+      Mode: ro
+      Name: Storage Disk 1
+      Required: 'false'
+      Target: /storage/1
+      Type: Path
+      value: ''
+    users:
+      Default: /var/run/utmp
+      Description: 'Container Path: /var/run/utmp - This allows counting logged in
+        users on unRAID.'
+      Display: advanced
+      Mask: 'false'
+      Mode: ro
+      Name: Users
+      Required: 'false'
+      Target: /var/run/utmp
+      Type: Path
+      value: /var/run/utmp
   Port:
-    WebPort:
+    webport:
       Default: ''
       Description: 'Container Port: 5454 - Port only needs exposure when not reverse
         proxying this application.'
@@ -54,7 +54,7 @@ Config:
       Type: Port
       value: '5454'
   Variable:
-    App Log File:
+    applogfile:
       Default: /config/app.log
       Description: 'Container Variable: DN_LOG_FILE'
       Display: advanced
@@ -64,7 +64,7 @@ Config:
       Target: DN_LOG_FILE
       Type: Variable
       value: ''
-    Notifiarr API Key:
+    notifiarrapikey:
       Default: ''
       Description: 'Container Variable: DN_API_KEY - API key from notifiarr.com'
       Display: always
@@ -74,7 +74,7 @@ Config:
       Target: DN_API_KEY
       Type: Variable
       value: ''
-    Plex Token:
+    plextoken:
       Default: ''
       Description: 'Container Variable: DN_PLEX_TOKEN - This is YOUR token from your
         plex session, see https://bit.ly/3y4cjRe'
@@ -85,7 +85,7 @@ Config:
       Target: DN_PLEX_TOKEN
       Type: Variable
       value: ''
-    Plex URL:
+    plexurl:
       Default: ''
       Description: 'Container Variable: DN_PLEX_URL - URL for your Plex server'
       Display: always
@@ -95,7 +95,7 @@ Config:
       Target: DN_PLEX_URL
       Type: Variable
       value: ''
-    Web Log File:
+    weblogfile:
       Default: /config/http.log
       Description: 'Container Variable: DN_HTTP_LOG'
       Display: advanced

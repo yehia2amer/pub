@@ -8,7 +8,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Backup Dir:
+    backupdir:
       Default: ''
       Description: "OPTIONAL: Set a host path for backups. &lt;br&gt;\r\nContainer\
         \ Path: /config/backup"
@@ -20,7 +20,7 @@ Config:
       Target: /config/backup
       Type: Path
       value: ''
-    Config Dir:
+    configdir:
       Default: /mnt/user/appdata/mediawiki-edge
       Description: 'Container Path: /config'
       Display: always-hide
@@ -31,7 +31,7 @@ Config:
       Target: /config
       Type: Path
       value: ''
-    File Uploads Dir:
+    fileuploadsdir:
       Default: ''
       Description: "OPTIONAL: Set a host path for file uploads. &lt;br&gt;\r\nContainer\
         \ Path: /config/assets"
@@ -44,7 +44,7 @@ Config:
       Type: Path
       value: ''
   Port:
-    Host Port 1:
+    hostport1:
       Default: '80'
       Description: 'Container Port: 80'
       Display: always-hide
@@ -56,7 +56,7 @@ Config:
       Type: Port
       value: '9090'
   Variable:
-    Allow Mediawiki Upgrades:
+    allowmediawikiupgrades:
       Default: disable
       Description: "Allow MediaWiki to automatically be upgraded with new docker images.&lt;/br&gt;\r\
         \nSet 'enable' to allow upgrades."
@@ -68,7 +68,7 @@ Config:
       Target: UPGRADE_MEDIAWIKI
       Type: Variable
       value: ''
-    Backup On Start:
+    backuponstart:
       Default: 'false'
       Description: "OPTIONS:&lt;br&gt;\r\nwiki = Backup mediawiki&lt;br&gt;\r\ndata\
         \ = Backup database if you're using the internal MySQL add-on or SQLite&lt;br&gt;\r\
@@ -83,7 +83,7 @@ Config:
       Target: BACKUP_MEDIAWIKI
       Type: Variable
       value: ''
-    Install MySQL/MariaDB:
+    installmysqlmariadb:
       Default: 'false'
       Description: 'OPTIONAL: Set ''true'' to install built in MySQL/MariaDB'
       Display: always-hide
@@ -94,7 +94,7 @@ Config:
       Target: MYSQL_INSTALL_OPTION
       Type: Variable
       value: ''
-    Key 1:
+    key1:
       Default: '99'
       Description: 'Container Variable: PUID'
       Display: advanced-hide
@@ -105,7 +105,7 @@ Config:
       Target: PUID
       Type: Variable
       value: '99'
-    Key 2:
+    key2:
       Default: '100'
       Description: 'Container Variable: PGID'
       Display: advanced-hide
@@ -116,7 +116,7 @@ Config:
       Target: PGID
       Type: Variable
       value: '100'
-    MySQL Root Password:
+    mysqlrootpassword:
       Default: ROOT_ACCESS_PASSWORD
       Description: "Default: ROOT_ACCESS_PASSWORD&lt;br&gt;\r\nOnce the database has\
         \ been initialized this can not be used to change the password.&lt;br&gt;\r\

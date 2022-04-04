@@ -4,7 +4,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    ServerFiles:
+    serverfiles:
       Default: ''
       Description: 'Container Path: /serverdata/serverfiles'
       Display: always
@@ -15,7 +15,7 @@ Config:
       Target: /serverdata/serverfiles
       Type: Path
       value: /mnt/cache/appdata/americasarmy-pg
-    SteamCMD:
+    steamcmd:
       Default: ''
       Description: 'Container Path: /serverdata/steamcmd'
       Display: always
@@ -27,7 +27,7 @@ Config:
       Type: Path
       value: /mnt/user/appdata/steamcmd
   Port:
-    UDP1 - Game Port:
+    udp1-gameport:
       Default: ''
       Description: UDP Gameport (if you need another port, please delete this entry
         and create a new UDP Port with the required port number, also don't forget
@@ -40,7 +40,7 @@ Config:
       Target: '7778'
       Type: Port
       value: '7778'
-    UDP2 - Game Port:
+    udp2-gameport:
       Default: ''
       Description: UDP Gameport (if you need another port, please delete this entry
         and create a new UDP Port with the required port number, also don't forget
@@ -53,7 +53,7 @@ Config:
       Target: '8778'
       Type: Port
       value: '8778'
-    UDP3 - Steam Query Port:
+    udp3-steamqueryport:
       Default: ''
       Description: UDP Queryport (if you need another port, please delete this entry
         and create a new UDP Port with the required port number, also don't forget
@@ -67,7 +67,7 @@ Config:
       Type: Port
       value: '27015'
   Variable:
-    GAME_ID:
+    game_id:
       Default: ''
       Description: "The GAME_ID that the container download at startup.\r\nIf you\
         \ want to install a static or beta version of the game change the value to:\
@@ -81,18 +81,7 @@ Config:
       Target: GAME_ID
       Type: Variable
       value: '203300'
-    GID:
-      Default: ''
-      Description: 'Container Variable: GID'
-      Display: advanced-hide
-      Mask: 'false'
-      Mode: ''
-      Name: GID
-      Required: 'true'
-      Target: GID
-      Type: Variable
-      value: '100'
-    Game Parameters:
+    gameparameters:
       Default: ''
       Description: Enter your start up commands for the server.
       Display: always
@@ -103,7 +92,18 @@ Config:
       Target: GAME_PARAMS
       Type: Variable
       value: -port=7778 -SAP=8778 -SQP=27015 -aauregion=1 -log=Server.log
-    Server Name:
+    gid:
+      Default: ''
+      Description: 'Container Variable: GID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: GID
+      Required: 'true'
+      Target: GID
+      Type: Variable
+      value: '100'
+    servername:
       Default: ''
       Description: 'Container Variable: SRV_NAME'
       Display: always
@@ -114,7 +114,7 @@ Config:
       Target: SRV_NAME
       Type: Variable
       value: Army Docker
-    Steam-Password:
+    steam-password:
       Default: ''
       Description: 'Your Steam password goes here if you want to install a game that
         needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
@@ -127,7 +127,7 @@ Config:
       Target: PASSWRD
       Type: Variable
       value: ''
-    Steam-Username:
+    steam-username:
       Default: ''
       Description: 'Your Steam username goes here if you want to install a game that
         needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
@@ -140,7 +140,7 @@ Config:
       Target: USERNAME
       Type: Variable
       value: ''
-    UID:
+    uid:
       Default: ''
       Description: 'Container Variable: UID'
       Display: advanced-hide
@@ -151,7 +151,7 @@ Config:
       Target: UID
       Type: Variable
       value: '99'
-    Validate Installation:
+    validateinstallation:
       Default: ''
       Description: Set the Variable to 'true' if you want to validate the installation
         otherwise leave it blank.

@@ -5,7 +5,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Appdata:
+    appdata:
       Default: /mnt/user/appdata/pterodactyl/
       Description: Appdata
       Display: always
@@ -16,7 +16,7 @@ Config:
       Target: /data
       Type: Path
       value: /mnt/user/appdata/pterodactyl/
-    Game Data:
+    gamedata:
       Default: /mnt/user/pterodactyl-node/
       Description: 'Container Path: /etc/pterodactyl'
       Display: always
@@ -27,7 +27,7 @@ Config:
       Target: /etc/pterodactyl
       Type: Path
       value: /mnt/user/pterodactyl-node/
-    Shared data:
+    shareddata:
       Default: /mnt/user/pterodactyl-node/data
       Description: 'Container Path: /mnt/user/pterodactyl-node/data'
       Display: always
@@ -39,7 +39,7 @@ Config:
       Type: Path
       value: /mnt/user/pterodactyl-node/data
   Port:
-    Port:
+    port:
       Default: '8000'
       Description: Port
       Display: always
@@ -51,18 +51,7 @@ Config:
       Type: Port
       value: '8001'
   Variable:
-    DEBUG:
-      Default: false|true
-      Description: APP_DEBUG
-      Display: always
-      Mask: 'false'
-      Mode: ''
-      Name: DEBUG
-      Required: 'false'
-      Target: APP_DEBUG
-      Type: Variable
-      value: 'false'
-    Database Hostname or IP:
+    databasehostnameorip:
       Default: mariadb
       Description: Database Hostname or IP.
       Display: always
@@ -73,7 +62,7 @@ Config:
       Target: DB_HOST
       Type: Variable
       value: mariadb
-    Database Name:
+    databasename:
       Default: pterodactyl
       Description: Database Name
       Display: always
@@ -84,7 +73,7 @@ Config:
       Target: DB_DATABASE
       Type: Variable
       value: pterodactyl
-    Database Password:
+    databasepassword:
       Default: password
       Description: Database Password
       Display: always
@@ -95,7 +84,7 @@ Config:
       Target: DB_PASSWORD
       Type: Variable
       value: pterodactyl
-    Database Port:
+    databaseport:
       Default: '3306'
       Description: Database Port
       Display: always
@@ -106,7 +95,7 @@ Config:
       Target: DB_PORT
       Type: Variable
       value: '3306'
-    Database Username:
+    databaseusername:
       Default: pterodactyl
       Description: Database Username
       Display: always
@@ -117,7 +106,18 @@ Config:
       Target: DB_USERNAME
       Type: Variable
       value: pterodactyl
-    Timezone:
+    debug:
+      Default: false|true
+      Description: APP_DEBUG
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DEBUG
+      Required: 'false'
+      Target: APP_DEBUG
+      Type: Variable
+      value: 'false'
+    timezone:
       Default: UTC
       Description: Timezone
       Display: always

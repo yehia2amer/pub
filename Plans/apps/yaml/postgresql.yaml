@@ -6,23 +6,26 @@ CategoryList: &id001
 Config:
   Device: {}
   Label: {}
-  Path: {}
+  Path:
+    postgresql:
+      Mode: rw
+      Name: postgresql
+      Target: /var/lib/postgresql
+      value: /mnt/cache/appdata/postgresql
   Port: {}
   Variable:
-    DB_NAME:
+    db_name:
       Name: DB_NAME
+      Target: DB_NAME
       value: gitlabhq_production
-    DB_PASS:
+    db_pass:
       Name: DB_PASS
+      Target: DB_PASS
       value: password
-    DB_USER:
+    db_user:
       Name: DB_USER
+      Target: DB_USER
       value: gitlab
-Data:
-  Volume:
-    ContainerDir: /var/lib/postgresql
-    HostDir: /mnt/cache/appdata/postgresql
-    Mode: rw
 GitHub: https://github.com/sameersbn/docker-postgresql
 Icon: https://www.iconattitude.com/icons/open_icon_library/apps/png/256/postgresql.png
 Keywords:

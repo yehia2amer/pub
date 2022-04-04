@@ -7,7 +7,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Config Path:
+    configpath:
       Default: /mnt/cache/appdata/rclone/config/
       Description: The path where the .rclone.conf file is
       Display: always
@@ -20,7 +20,7 @@ Config:
       value: ''
   Port: {}
   Variable:
-    RCLONE_CONFIG_PASS:
+    rclone_config_pass:
       Default: ''
       Description: The password for the .rclone.conf pass (if specified when creating
         the config file)
@@ -32,7 +32,7 @@ Config:
       Target: RCLONE_CONFIG_PASS
       Type: Variable
       value: ''
-    RCLONE_MOUNT_OPTIONS:
+    rclone_mount_options:
       Default: --read-only
       Description: 'Extra mount options that can be used, see: https://rclone.org/commands/rclone_mount/
         . E.g.: --read-only --buffer-size=1G --max-read-ahead=200M --acd-templink-threshold=0
@@ -46,7 +46,7 @@ Config:
       Target: RCLONE_MOUNT_OPTIONS
       Type: Variable
       value: ''
-    RCLONE_REMOTE_MOUNT:
+    rclone_remote_mount:
       Default: ''
       Description: The destination that the data should be backed up to (must be the
         same name as specified in .rclone.conf. E.g. <em>AmazonEncrypted:<SubPath></em>)

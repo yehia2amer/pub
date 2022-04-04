@@ -6,7 +6,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Config Directory:
+    configdirectory:
       Default: /mnt/user/appdata/nginx-proxy-manager
       Description: 'This is where the application stores its configuration, log and
         any files needing persistency.&lt;br&gt;Container path: /config'
@@ -19,7 +19,7 @@ Config:
       Type: Path
       value: ''
   Port:
-    HTTP Port:
+    httpport:
       Default: '1880'
       Description: Port used to serve HTTP requests.&lt;br&gt;&lt;b&gt;NOTE:&lt;/b&gt;
         Your router should be configured to forward port &lt;i&gt;80&lt;/i&gt; to
@@ -35,7 +35,7 @@ Config:
       Target: '8080'
       Type: Port
       value: ''
-    HTTPs Port:
+    httpsport:
       Default: '18443'
       Description: Port used to serve HTTPs requests.&lt;br&gt;&lt;b&gt;NOTE:&lt;/b&gt;
         Your router should be configured to forward port &lt;i&gt;443&lt;/i&gt; to
@@ -51,7 +51,7 @@ Config:
       Target: '4443'
       Type: Port
       value: ''
-    Web UI Port:
+    webuiport:
       Default: '7818'
       Description: Port used to access the web interface of the application.&lt;br&gt;&lt;b&gt;NOTE:&lt;/b&gt;
         This applies only when &lt;i&gt;Network Type&lt;/i&gt; is set to &lt;i&gt;Bridge&lt;/i&gt;.  For
@@ -65,7 +65,7 @@ Config:
       Type: Port
       value: ''
   Variable:
-    Disable IPv6:
+    disableipv6:
       Default: '0'
       Description: When set to '1', IPv6 support is disabled.
       Display: advanced
@@ -76,7 +76,7 @@ Config:
       Target: DISABLE_IPV6
       Type: Variable
       value: ''
-    Group ID:
+    groupid:
       Default: '100'
       Description: ID of the group the application runs as.
       Display: advanced-hide
@@ -87,7 +87,7 @@ Config:
       Target: GROUP_ID
       Type: Variable
       value: ''
-    Niceness (priority):
+    niceness(priority):
       Default: ''
       Description: Priority at which the application should run.  A niceness value
         of -20 is the highest priority and 19 is the lowest priority.&lt;br&gt;&lt;b&gt;NOTE:&lt;/b&gt;
@@ -102,7 +102,7 @@ Config:
       Target: APP_NICENESS
       Type: Variable
       value: ''
-    Umask:
+    umask:
       Default: '000'
       Description: Mask that controls how file permissions are set for newly created
         files. The value of the mask is in octal notation.
@@ -114,7 +114,7 @@ Config:
       Target: UMASK
       Type: Variable
       value: ''
-    User ID:
+    userid:
       Default: '99'
       Description: ID of the user the application runs as.
       Display: advanced-hide

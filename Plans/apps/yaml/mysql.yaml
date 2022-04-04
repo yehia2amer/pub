@@ -6,26 +6,30 @@ CategoryList: &id001
 Config:
   Device: {}
   Label: {}
-  Path: {}
+  Path:
+    mysql:
+      Mode: rw
+      Name: mysql
+      Target: /var/lib/mysql
+      value: /mnt/user/appdata/mysql
   Port: {}
   Variable:
-    MYSQL_DATABASE:
+    mysql_database:
       Name: MYSQL_DATABASE
+      Target: MYSQL_DATABASE
       value: owncloud
-    MYSQL_PASSWORD:
+    mysql_password:
       Name: MYSQL_PASSWORD
+      Target: MYSQL_PASSWORD
       value: mysql_password
-    MYSQL_ROOT_PASSWORD:
+    mysql_root_password:
       Name: MYSQL_ROOT_PASSWORD
+      Target: MYSQL_ROOT_PASSWORD
       value: root_password
-    MYSQL_USER:
+    mysql_user:
       Name: MYSQL_USER
+      Target: MYSQL_USER
       value: mysql_user
-Data:
-  Volume:
-    ContainerDir: /var/lib/mysql
-    HostDir: /mnt/user/appdata/mysql
-    Mode: rw
 GitHub: https://github.com/docker-library/mysql/tree/master/5.7/
 Icon: https://raw.githubusercontent.com/docker-library/docs/master/mysql/logo.png
 Keywords:

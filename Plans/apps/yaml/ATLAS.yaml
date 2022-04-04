@@ -4,7 +4,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    ServerFiles:
+    serverfiles:
       Default: ''
       Description: 'Container Path: /serverdata/serverfiles'
       Display: always
@@ -15,7 +15,7 @@ Config:
       Target: /serverdata/serverfiles
       Type: Path
       value: /mnt/cache/appdata/atlas
-    SteamCMD:
+    steamcmd:
       Default: ''
       Description: 'Container Path: /serverdata/steamcmd'
       Display: always
@@ -27,7 +27,7 @@ Config:
       Type: Path
       value: /mnt/cache/appdata/steamcmd
   Port:
-    TCP1 - RCON Port:
+    tcp1-rconport:
       Default: ''
       Description: 'Container Port: 32330'
       Display: always
@@ -38,7 +38,7 @@ Config:
       Target: '32330'
       Type: Port
       value: '32330'
-    TCP2 - Seamless Port:
+    tcp2-seamlessport:
       Default: ''
       Description: 'Container Port: 27000'
       Display: always
@@ -49,7 +49,7 @@ Config:
       Target: '27000'
       Type: Port
       value: '27000'
-    TCP3 - Redis Server:
+    tcp3-redisserver:
       Default: ''
       Description: 'Container Port: 6379'
       Display: always
@@ -60,7 +60,7 @@ Config:
       Target: '6379'
       Type: Port
       value: '6379'
-    UDP1 - Query Port:
+    udp1-queryport:
       Default: ''
       Description: 'Container Port: 57550'
       Display: always
@@ -71,7 +71,7 @@ Config:
       Target: '57550'
       Type: Port
       value: '57550'
-    UDP2 - Game Port 1:
+    udp2-gameport1:
       Default: ''
       Description: 'Container Port: 5750'
       Display: always
@@ -82,7 +82,7 @@ Config:
       Target: '5750'
       Type: Port
       value: '5750'
-    UDP3 - Game Porta 2:
+    udp3-gameporta2:
       Default: ''
       Description: 'Container Port: 5751'
       Display: always
@@ -94,7 +94,7 @@ Config:
       Type: Port
       value: '5751'
   Variable:
-    Extra Game Parameters:
+    extragameparameters:
       Default: ''
       Description: 'Container Variable: GAME_PARAMS_EXTRA'
       Display: always
@@ -105,7 +105,7 @@ Config:
       Target: GAME_PARAMS_EXTRA
       Type: Variable
       value: -log -server -NoBattlEye
-    GAME_ID:
+    game_id:
       Default: ''
       Description: "The GAME_ID that the container download at startup.\r\n(https://developer.valvesoftware.com/wiki/Dedicated_Servers_List)"
       Display: always
@@ -116,18 +116,7 @@ Config:
       Target: GAME_ID
       Type: Variable
       value: '1006030'
-    GID:
-      Default: ''
-      Description: 'Container Variable: GID'
-      Display: advanced-hide
-      Mask: 'false'
-      Mode: ''
-      Name: GID
-      Required: 'true'
-      Target: GID
-      Type: Variable
-      value: '100'
-    Game Parameters:
+    gameparameters:
       Default: ''
       Description: Enter your start up commands for the server.
       Display: always
@@ -138,7 +127,18 @@ Config:
       Target: GAME_PARAMS
       Type: Variable
       value: ?ServerX=0?ServerY=0?AltSaveDirectoryName=00?MaxPlayers=50?ReservedPlayerSlots=10?QueryPort=57550?Port=5750
-    Map Name:
+    gid:
+      Default: ''
+      Description: 'Container Variable: GID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: GID
+      Required: 'true'
+      Target: GID
+      Type: Variable
+      value: '100'
+    mapname:
       Default: ''
       Description: Standard Map Name
       Display: always
@@ -149,7 +149,7 @@ Config:
       Target: MAP_NAME
       Type: Variable
       value: Ocean
-    Redis Enabled:
+    redisenabled:
       Default: ''
       Description: If you've set up a external Redis server leave this blank, to enable
         the built in Redis server enter 'yes' (without quotes).
@@ -161,7 +161,7 @@ Config:
       Target: ENA_REDIS
       Type: Variable
       value: 'yes'
-    Steam-Password:
+    steam-password:
       Default: ''
       Description: 'Your Steam password goes here if you want to install a game that
         needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
@@ -174,7 +174,7 @@ Config:
       Target: PASSWRD
       Type: Variable
       value: ''
-    Steam-Username:
+    steam-username:
       Default: ''
       Description: 'Your Steam username goes here if you want to install a game that
         needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
@@ -187,7 +187,7 @@ Config:
       Target: USERNAME
       Type: Variable
       value: ''
-    UID:
+    uid:
       Default: ''
       Description: 'Container Variable: UID'
       Display: advanced-hide
@@ -198,7 +198,7 @@ Config:
       Target: UID
       Type: Variable
       value: '99'
-    Validate Installation:
+    validateinstallation:
       Default: ''
       Description: Set the Variable to 'true' if you want to validate the installation
         otherwise leave it blank.

@@ -5,7 +5,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Host Path for /config:
+    hostpathforconfig:
       Default: ''
       Description: 'Container Path: /config'
       Display: always-hide
@@ -16,7 +16,7 @@ Config:
       Target: /config
       Type: Path
       value: ''
-    Host Path for /downloads-ama:
+    hostpathfordownloads-ama:
       Default: /mnt/user
       Description: Container Path for downloads library...
       Display: always-hide
@@ -29,7 +29,7 @@ Config:
       value: ''
   Port: {}
   Variable:
-    Album Type Filter:
+    albumtypefilter:
       Default: ''
       Description: 'Filter Types: COMPILE, SINGLE, ALBUM, EP (this is a '', '' separated
         list of Album Types to skip)'
@@ -41,7 +41,7 @@ Config:
       Target: ALBUM_TYPE_FILTER
       Type: Variable
       value: ''
-    Artist Fan Count:
+    artistfancount:
       Default: '1000000'
       Description: Minimum number of fans required for processing
       Display: always
@@ -52,7 +52,7 @@ Config:
       Target: FAN_COUNT
       Type: Variable
       value: ''
-    Artist Related Count:
+    artistrelatedcount:
       Default: '20'
       Description: Maximum number of related artists to import per artist (20 is max)
       Display: always
@@ -63,7 +63,7 @@ Config:
       Target: RELATED_COUNT
       Type: Variable
       value: ''
-    Complete My Artists:
+    completemyartists:
       Default: 'false'
       Description: 'true = enabled :: Eanabling this will add artist id''s found in
         the library directory that are currently not in your list. This will then
@@ -77,7 +77,7 @@ Config:
       Target: COMPLETE_MY_ARTISTS
       Type: Variable
       value: ''
-    Conversion Bitrate:
+    conversionbitrate:
       Default: '320'
       Description: FLAC -> OPUS/AAC/MP3 will be converted using this bitrate
       Display: always
@@ -88,7 +88,7 @@ Config:
       Target: BITRATE
       Type: Variable
       value: ''
-    DL Client ARL Token:
+    dlclientarltoken:
       Default: ''
       Description: 'User token for dl client, for instructions to obtain token: https://notabug.org/RemixDevs/DeezloaderRemix/wiki/Login+via+userToken'
       Display: always
@@ -99,7 +99,7 @@ Config:
       Target: ARL_TOKEN
       Type: Variable
       value: ''
-    Download Concurrency:
+    downloadconcurrency:
       Default: '1'
       Description: Controls download concurrency
       Display: always
@@ -110,7 +110,7 @@ Config:
       Target: CONCURRENT_DOWNLOADS
       Type: Variable
       value: ''
-    Download Mode:
+    downloadmode:
       Default: artist
       Description: 'artist or discography :: artist mode downloads all albums listed
         as that artist, discography downloads all albums listed as that artist and
@@ -123,7 +123,7 @@ Config:
       Target: MODE
       Type: Variable
       value: ''
-    Enable Automatic Script Start:
+    enableautomaticscriptstart:
       Default: 'true'
       Description: 'true = Enabled :: Runs script automatically on startup'
       Display: always
@@ -134,7 +134,7 @@ Config:
       Target: AUTOSTART
       Type: Variable
       value: ''
-    File Permissions:
+    filepermissions:
       Default: '666'
       Description: Based on chmod linux permissions
       Display: always
@@ -145,7 +145,7 @@ Config:
       Target: FILE_PERMISSIONS
       Type: Variable
       value: ''
-    Folder Permissions:
+    folderpermissions:
       Default: '766'
       Description: Based on chmod linux permissions
       Display: always
@@ -156,7 +156,7 @@ Config:
       Target: FOLDER_PERMISSIONS
       Type: Variable
       value: ''
-    Force Convert:
+    forceconvert:
       Default: 'false'
       Description: 'true = enabled :: This will convert lossy MP3 to desired target
         format (exluding FLAC/ALAC, ALAC setting will convert to AAC)'
@@ -168,7 +168,7 @@ Config:
       Target: FORCECONVERT
       Type: Variable
       value: ''
-    Format:
+    format:
       Default: FLAC
       Description: 'SET TO: ALAC or FLAC or AAC or MP3 or OPUS'
       Display: always
@@ -179,7 +179,7 @@ Config:
       Target: FORMAT
       Type: Variable
       value: ''
-    Lidarr API Key:
+    lidarrapikey:
       Default: ''
       Description: ONLY used if Lidarr List Import is enabled...
       Display: always
@@ -190,7 +190,7 @@ Config:
       Target: LIDARR_API_KEY
       Type: Variable
       value: ''
-    Lidarr List Import:
+    lidarrlistimport:
       Default: 'false'
       Description: 'true = enabled :: imports artist list from lidarr'
       Display: always
@@ -201,7 +201,7 @@ Config:
       Target: LIDARR_LIST_IMPORT
       Type: Variable
       value: ''
-    Lidarr Url:
+    lidarrurl:
       Default: http://x.x.x.x:8686
       Description: ONLY used if Lidarr List Import is enabled...
       Display: always
@@ -212,7 +212,7 @@ Config:
       Target: LIDARR_URL
       Type: Variable
       value: ''
-    Music Embedded Cover Quality:
+    musicembeddedcoverquality:
       Default: '80'
       Description: Controls the quality of the cover image compression in percentage,
         100 = no compression
@@ -224,7 +224,7 @@ Config:
       Target: EMBEDDED_COVER_QUALITY
       Type: Variable
       value: ''
-    Music Post Process Threads:
+    musicpostprocessthreads:
       Default: '1'
       Description: Controls number of threads used for Format conversion and replaygain
         tagging
@@ -236,7 +236,7 @@ Config:
       Target: POSTPROCESSTHREADS
       Type: Variable
       value: ''
-    Music Replaygain Tagging:
+    musicreplaygaintagging:
       Default: 'false'
       Description: 'true = enabled :: Scans and analyzes files to add replaygain tags
         to song metadata'
@@ -248,7 +248,7 @@ Config:
       Target: REPLAYGAIN
       Type: Variable
       value: ''
-    Music Require Quality:
+    musicrequirequality:
       Default: 'false'
       Description: 'true = enabled :: Requires all downloaded files match target file
         extension (mp3 or flac) when enabled'
@@ -260,7 +260,7 @@ Config:
       Target: REQUIRE_QUALITY
       Type: Variable
       value: ''
-    PGID:
+    pgid:
       Default: '100'
       Description: 'Container Variable: PGID'
       Display: advanced-hide
@@ -271,18 +271,7 @@ Config:
       Target: PGID
       Type: Variable
       value: ''
-    PUID:
-      Default: '99'
-      Description: 'Container Variable: PUID'
-      Display: advanced-hide
-      Mask: 'false'
-      Mode: ''
-      Name: PUID
-      Required: 'false'
-      Target: PUID
-      Type: Variable
-      value: ''
-    Plex Library Name:
+    plexlibraryname:
       Default: Music
       Description: This must exactly match the name of the Plex Library that contains
         the Lidarr Media Folder data
@@ -294,7 +283,7 @@ Config:
       Target: PLEXLIBRARYNAME
       Type: Variable
       value: ''
-    Plex Scan Notifications:
+    plexscannotifications:
       Default: 'false'
       Description: 'true = enabled :: Plex must have a Music library added and also
         be configured with the /downloads-ama directory'
@@ -306,7 +295,7 @@ Config:
       Target: NOTIFYPLEX
       Type: Variable
       value: ''
-    Plex Token:
+    plextoken:
       Default: ''
       Description: ONLY used if NOTIFYPLEX is enabled...
       Display: always
@@ -317,7 +306,7 @@ Config:
       Target: PLEXTOKEN
       Type: Variable
       value: ''
-    Plex Url:
+    plexurl:
       Default: http://x.x.x.x:32400
       Description: ONLY used if NOTIFYPLEX is enabled...
       Display: always
@@ -328,7 +317,18 @@ Config:
       Target: PLEXURL
       Type: Variable
       value: ''
-    Related Artist:
+    puid:
+      Default: '99'
+      Description: 'Container Variable: PUID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: PUID
+      Required: 'false'
+      Target: PUID
+      Type: Variable
+      value: ''
+    relatedartist:
       Default: 'false'
       Description: 'true = enabled :: Enabling this lets the script crawl your artist
         list for related artists and process them'
@@ -340,7 +340,7 @@ Config:
       Target: RELATED_ARTIST
       Type: Variable
       value: ''
-    Related Artist -> Related Artist (loop):
+    relatedartist-relatedartist(loop):
       Default: 'false'
       Description: 'true = enabled :: Enabling this lets the script crawl your related
         artists for additional related artists and process them accordingly :: WARNING
@@ -353,7 +353,7 @@ Config:
       Target: RELATED_ARTIST_RELATED
       Type: Variable
       value: ''
-    Remove Artsit Without Image:
+    removeartsitwithoutimage:
       Default: 'false'
       Description: 'true = enabled :: Enabling this will prevent downloading albums
         from artists with default image (non-unique)'
@@ -365,7 +365,7 @@ Config:
       Target: IGNORE_ARTIST_WITHOUT_IMAGE
       Type: Variable
       value: ''
-    Script Interval:
+    scriptinterval:
       Default: 15m
       Description: '#s or #m or #h or #d :: s = seconds, m = minutes, h = hours, d
         = days :: Amount of time between each script run, when AUTOSTART is enabled'

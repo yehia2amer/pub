@@ -5,26 +5,14 @@ CategoryList: &id001
 Config:
   Device: {}
   Label: {}
-  Path: {}
+  Path:
+    onlyofficedocumentserver:
+      Mode: rw
+      Name: fonts
+      Target: /usr/share/fonts/
+      value: /mnt/user/appdata/onlyofficeds/fonts
   Port: {}
   Variable: {}
-Data:
-  Volume:
-  - ContainerDir: /var/log/onlyoffice
-    HostDir: /mnt/user/appdata/onlyofficeds/logs
-    Mode: rw
-  - ContainerDir: /var/www/onlyoffice/Data
-    HostDir: /mnt/user/appdata/onlyofficeds/Data
-    Mode: rw
-  - ContainerDir: /var/lib/onlyoffice
-    HostDir: /mnt/user/appdata/onlyofficeds/lib
-    Mode: rw
-  - ContainerDir: /var/lib/postgresql
-    HostDir: /mnt/user/appdata/onlyofficeds/database
-    Mode: rw
-  - ContainerDir: /usr/share/fonts/
-    HostDir: /mnt/user/appdata/onlyofficeds/fonts
-    Mode: rw
 GitHub: https://github.com/SiwatINC/unraid-ca-repository
 Icon: https://raw.githubusercontent.com/SiwatINC/unraid-ca-repository/master/icons/onlyoffice.png
 Keywords:

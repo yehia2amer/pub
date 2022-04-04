@@ -5,20 +5,14 @@ CategoryList: &id001
 Config:
   Device: {}
   Label: {}
-  Path: {}
+  Path:
+    kerio-connect:
+      Mode: rw
+      Name: backup
+      Target: /backup
+      value: /mnt/user/Backup/KerioConnect
   Port: {}
   Variable: {}
-Data:
-  Volume:
-  - ContainerDir: /opt/kerio
-    HostDir: /mnt/user/appdata/KerioConnect
-    Mode: rw
-  - ContainerDir: /kerio_store
-    HostDir: /mnt/user/KerioConnect/mailstore
-    Mode: rw
-  - ContainerDir: /backup
-    HostDir: /mnt/user/Backup/KerioConnect
-    Mode: rw
 Icon: https://raw.githubusercontent.com/chvb/docker-templates/master/chvb/img/kerioconnect.png
 Keywords:
 - kerio-connect

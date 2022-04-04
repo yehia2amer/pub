@@ -4,7 +4,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Backup directory:
+    backupdirectory:
       Default: ''
       Description: 'Container Path: /home/dsmr/app/backups'
       Display: always
@@ -16,7 +16,7 @@ Config:
       Type: Path
       value: /mnt/user/appdata/dsmr-reader/backups
   Port:
-    WEB UI Port:
+    webuiport:
       Default: ''
       Description: 'Container Port: 80'
       Display: always
@@ -28,7 +28,7 @@ Config:
       Type: Port
       value: '7777'
   Variable:
-    DATABASE HOST (Adjust to your UNRAID host IP):
+    databasehost(adjusttoyourunraidhostip):
       Default: '[IP]'
       Description: "Container Variable: DJANGO_DATABASE_HOST\r\n"
       Display: always
@@ -39,7 +39,7 @@ Config:
       Target: DJANGO_DATABASE_HOST
       Type: Variable
       value: ''
-    DATABASE NAME:
+    databasename:
       Default: dsmrreader
       Description: 'Container Variable: DJANGO_DATABASE_NAME'
       Display: advanced
@@ -50,7 +50,7 @@ Config:
       Target: DJANGO_DATABASE_NAME
       Type: Variable
       value: dsmrdb
-    DATABASE PORT:
+    databaseport:
       Default: '5432'
       Description: 'Container Variable: DJANGO_DATABASE_PORT'
       Display: advanced
@@ -61,7 +61,7 @@ Config:
       Target: DJANGO_DATABASE_PORT
       Type: Variable
       value: '5432'
-    DATALOGGER MODE (change if P1 port is on this machine to STANDALONE):
+    dataloggermode(changeifp1portisonthismachinetostandalone):
       Default: receiver|standalone
       Description: 'Container Variable: DATALOGGER_MODE'
       Display: always
@@ -72,7 +72,7 @@ Config:
       Target: DATALOGGER_MODE
       Type: Variable
       value: receiver
-    DATALOGGER SERIAL BAUDRATE:
+    dataloggerserialbaudrate:
       Default: '|115200'
       Description: Optional - required if setting DATALOGGER MODE to standalone!
       Display: always
@@ -83,7 +83,7 @@ Config:
       Target: DATALOGGER_SERIAL_BAUDRATE
       Type: Variable
       value: ''
-    DATALOGGER SERIAL PORT:
+    dataloggerserialport:
       Default: '|/dev/ttyUSB0'
       Description: Optional - required if setting DATALOGGER MODE to standalone!
       Display: always
@@ -94,7 +94,7 @@ Config:
       Target: DATALOGGER_SERIAL_PORT
       Type: Variable
       value: ''
-    DATALOGGER SLEEP TIME (seconds):
+    dataloggersleeptime(seconds):
       Default: '5'
       Description: 'Container Variable: DATALOGGER_SLEEP'
       Display: advanced
@@ -105,7 +105,7 @@ Config:
       Target: DATALOGGER_SLEEP
       Type: Variable
       value: '10'
-    PGID:
+    pgid:
       Default: ''
       Description: 'Container Variable: PGID'
       Display: advanced
@@ -116,7 +116,7 @@ Config:
       Target: PGID
       Type: Variable
       value: '100'
-    PUID:
+    puid:
       Default: ''
       Description: 'Container Variable: PUID'
       Display: advanced
@@ -127,7 +127,7 @@ Config:
       Target: PUID
       Type: Variable
       value: '99'
-    Supervisor Group:
+    supervisorgroup:
       Default: users
       Description: Group of which the supervisor should be part, important for file
         permissions!
@@ -139,7 +139,7 @@ Config:
       Target: SD_GROUP
       Type: Variable
       value: users
-    Supervisor User:
+    supervisoruser:
       Default: nobody
       Description: User of which the supervisor should be part, important for file
         permissions!
@@ -151,7 +151,7 @@ Config:
       Target: SD_USER
       Type: Variable
       value: nobody
-    VIRTUAL_HOST:
+    virtual_host:
       Default: ''
       Description: 'Container Variable: VIRTUAL_HOST'
       Display: advanced
@@ -162,7 +162,7 @@ Config:
       Target: VIRTUAL_HOST
       Type: Variable
       value: localhost
-    WEBUI ADMIN PASSWORD:
+    webuiadminpassword:
       Default: dsmrreader
       Description: 'Container Variable: DSMRREADER_ADMIN_PASSWORD'
       Display: always
@@ -173,7 +173,7 @@ Config:
       Target: DSMRREADER_ADMIN_PASSWORD
       Type: Variable
       value: ''
-    WEBUI ADMIN USERNAME:
+    webuiadminusername:
       Default: ''
       Description: 'Container Variable: DSMRREADER_ADMIN_USER'
       Display: always

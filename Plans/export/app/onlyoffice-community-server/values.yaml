@@ -1,17 +1,17 @@
 env:
-  Default Database Name: onlyoffice
-  Default Mail Server Database Password ( For Mail Server Container with External Database ): Isadmin123
-  Default Mail Server Database User ( For Mail Server Container with External Database ): mail_admin
-  Default OnlyOffice Database Password: onlyoffice_pass
-  Default OnlyOffice Database Username: onlyoffice_user
-  'Mail Server API Host - Read Description for Changes ----&gt; ': ''
-  Mail Server API Port ( For Mail Server Container with External Database ): '8081'
-  'Mail Server Database Host - Read Description for Changes ----&gt; ': ''
-  Mail Server Database Name ( For Mail Server Container with External Database ): onlyoffice_mailserver
-  Mail Server External MySQL Port ( For Mail Server Container with External Database ): '3306'
-  'MySQL Host - Read Description for Changes ----&gt; ': localhost
-  'Onlyoffice Document Server - Read Description for Changes ----&gt; ': ''
-  Root Password for MySQL ( Default password is 'my-secret-pw' ): my-secret-pw
+  DOCUMENT_SERVER_PORT_80_TCP_ADDR: ''
+  MAIL_SERVER_API_HOST: ''
+  MAIL_SERVER_API_PORT: '8081'
+  MAIL_SERVER_DB_HOST: ''
+  MAIL_SERVER_DB_NAME: onlyoffice_mailserver
+  MAIL_SERVER_DB_PASS: Isadmin123
+  MAIL_SERVER_DB_PORT: '3306'
+  MAIL_SERVER_DB_USER: mail_admin
+  MYSQL_SERVER_DB_NAME: onlyoffice
+  MYSQL_SERVER_HOST: localhost
+  MYSQL_SERVER_PASS: onlyoffice_pass
+  MYSQL_SERVER_ROOT_PASSWORD: my-secret-pw
+  MYSQL_SERVER_USER: onlyoffice_user
 image:
   pullPolicy: IfNotPresent
   repository: xternet/unraid-onlyoffice-community-server

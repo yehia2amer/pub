@@ -13,40 +13,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Host /proc:
-      Default: /proc
-      Description: 'Container Path: /host/proc'
-      Display: advanced
-      Mask: 'false'
-      Mode: ro
-      Name: Host /proc
-      Required: 'true'
-      Target: /host/proc
-      Type: Path
-      value: /proc
-    Host /sys:
-      Default: /sys
-      Description: 'Container Path: /host/sys'
-      Display: advanced
-      Mask: 'false'
-      Mode: ro
-      Name: Host /sys
-      Required: 'true'
-      Target: /host/sys
-      Type: Path
-      value: /sys
-    Netdata Override:
-      Default: /mnt/user/appdata/netdata/override
-      Description: 'Container Path: /etc/netdata'
-      Display: always
-      Mask: 'false'
-      Mode: rw
-      Name: Netdata Override
-      Required: 'false'
-      Target: /etc/netdata
-      Type: Path
-      value: /mnt/user/appdata/netdata/override
-    doker.sock:
+    doker-sock:
       Default: /var/run/docker.sock
       Description: 'Container Path: /var/run/docker.sock'
       Display: advanced
@@ -57,8 +24,41 @@ Config:
       Target: /var/run/docker.sock
       Type: Path
       value: /var/run/docker.sock
+    hostproc:
+      Default: /proc
+      Description: 'Container Path: /host/proc'
+      Display: advanced
+      Mask: 'false'
+      Mode: ro
+      Name: Host /proc
+      Required: 'true'
+      Target: /host/proc
+      Type: Path
+      value: /proc
+    hostsys:
+      Default: /sys
+      Description: 'Container Path: /host/sys'
+      Display: advanced
+      Mask: 'false'
+      Mode: ro
+      Name: Host /sys
+      Required: 'true'
+      Target: /host/sys
+      Type: Path
+      value: /sys
+    netdataoverride:
+      Default: /mnt/user/appdata/netdata/override
+      Description: 'Container Path: /etc/netdata'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Netdata Override
+      Required: 'false'
+      Target: /etc/netdata
+      Type: Path
+      value: /mnt/user/appdata/netdata/override
   Port:
-    Netdata Web UI Port:
+    netdatawebuiport:
       Default: '19999'
       Description: Netdata Web UI Port
       Display: always
@@ -70,7 +70,7 @@ Config:
       Type: Port
       value: '19999'
   Variable:
-    Anonymous Statistics:
+    anonymousstatistics:
       Default: ''
       Description: Set to 1 to disable anonymous statistics.
       Display: always
@@ -81,7 +81,7 @@ Config:
       Target: DO_NOT_TRACK
       Type: Variable
       value: ''
-    Docker PGID:
+    dockerpgid:
       Default: '281'
       Description: Host docker user gid. Required for container name resolution.
       Display: advanced
@@ -92,7 +92,7 @@ Config:
       Target: PGID
       Type: Variable
       value: '281'
-    NVIDIA_VISIBLE_DEVICES:
+    nvidia_visible_devices:
       Default: all
       Description: 'Valid options: 0,1,2, GPU-fef8089b, all, none, void'
       Display: advanced

@@ -4,7 +4,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Config:
+    config:
       Default: ''
       Description: 'Container Path: /config'
       Display: always
@@ -16,18 +16,7 @@ Config:
       Type: Path
       value: /mnt/user/appdata/KID
   Port:
-    VNC Port:
-      Default: '4900'
-      Description: 'VNC Port: 5900'
-      Display: always
-      Mask: 'false'
-      Mode: tcp
-      Name: VNC Port
-      Required: 'false'
-      Target: '5900'
-      Type: Port
-      value: '4900'
-    noVNC Port:
+    novncport:
       Default: '4686'
       Description: 'noVNC Port: 8080'
       Display: always
@@ -38,8 +27,19 @@ Config:
       Target: '8080'
       Type: Port
       value: '4686'
+    vncport:
+      Default: '4900'
+      Description: 'VNC Port: 5900'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: VNC Port
+      Required: 'false'
+      Target: '5900'
+      Type: Port
+      value: '4900'
   Variable:
-    PAGE_TITLE:
+    page_title:
       Default: KID
       Description: 'Container Variable: PAGE_TITLE'
       Display: always
@@ -50,7 +50,7 @@ Config:
       Target: PAGE_TITLE
       Type: Variable
       value: KID
-    PATH_PREFIX:
+    path_prefix:
       Default: /
       Description: 'Container Variable: noVNC PATH_PREFIX'
       Display: always
@@ -61,7 +61,7 @@ Config:
       Target: noVNC PATH_PREFIX
       Type: Variable
       value: /
-    PGID:
+    pgid:
       Default: '100'
       Description: 'Container Variable: PGID'
       Display: always
@@ -72,7 +72,7 @@ Config:
       Target: PGID
       Type: Variable
       value: '100'
-    PUID:
+    puid:
       Default: '99'
       Description: 'Container Variable: PUID'
       Display: always
@@ -83,7 +83,7 @@ Config:
       Target: PUID
       Type: Variable
       value: '99'
-    RECON_DELAY:
+    recon_delay:
       Default: '20'
       Description: 'Container Variable: RECON_DELAY'
       Display: always
@@ -94,7 +94,7 @@ Config:
       Target: RECON_DELAY
       Type: Variable
       value: '20'
-    ROOT_PASSWORD:
+    root_password:
       Default: admin
       Description: 'Container Variable: ROOT_PASSWORD'
       Display: always
@@ -105,7 +105,7 @@ Config:
       Target: ROOT_PASSWORD
       Type: Variable
       value: admin
-    SCR_HEIGHT:
+    scr_height:
       Default: '900'
       Description: 'Container Variable: SCR_HEIGHT'
       Display: always
@@ -116,7 +116,7 @@ Config:
       Target: SCR_HEIGHT
       Type: Variable
       value: '900'
-    SCR_WIDTH:
+    scr_width:
       Default: '1600'
       Description: 'Container Variable: SCR_WIDTH'
       Display: always
@@ -127,7 +127,7 @@ Config:
       Target: SCR_WIDTH
       Type: Variable
       value: '1600'
-    VNC_RESIZE:
+    vnc_resize:
       Default: scale
       Description: "Container Variable: VNC_RESIZE\r\n\r\nremote = rescale remote\
         \ desktop\r\nscale = stretch remote desktop\r\noff = disable resize"

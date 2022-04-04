@@ -8,7 +8,7 @@ Config:
   Path: {}
   Port: {}
   Variable:
-    IPAM_DATABASE_HOST:
+    ipam_database_host:
       Default: 127.0.0.1
       Description: 'MySQL database host (Default: 127.0.0.1)'
       Display: always-hide
@@ -19,7 +19,7 @@ Config:
       Target: IPAM_DATABASE_HOST
       Type: Variable
       value: 127.0.0.1
-    IPAM_DATABASE_NAME:
+    ipam_database_name:
       Default: phpipam
       Description: 'MySQL database name (Default: phpipam)'
       Display: always-hide
@@ -30,7 +30,7 @@ Config:
       Target: IPAM_DATABASE_NAME
       Type: Variable
       value: phpipam
-    IPAM_DATABASE_PASS:
+    ipam_database_pass:
       Default: phpipamadmin
       Description: 'MySQL database password (Default: phpipamadmin)'
       Display: always-hide
@@ -41,7 +41,7 @@ Config:
       Target: IPAM_DATABASE_PASS
       Type: Variable
       value: phpipamadmin
-    IPAM_DATABASE_PORT:
+    ipam_database_port:
       Default: '3306'
       Description: 'MySQL database port (Default: 3306)'
       Display: always-hide
@@ -52,7 +52,7 @@ Config:
       Target: IPAM_DATABASE_PORT
       Type: Variable
       value: '3306'
-    IPAM_DATABASE_USER:
+    ipam_database_user:
       Default: phpipam
       Description: 'MySQL database user (Default: phpipam)'
       Display: always-hide
@@ -63,7 +63,7 @@ Config:
       Target: IPAM_DATABASE_USER
       Type: Variable
       value: phpipam
-    IPAM_DATABASE_WEBHOST:
+    ipam_database_webhost:
       Default: localhost
       Description: 'MySQL allowed hosts (Default: localhost)'
       Display: advanced
@@ -74,7 +74,7 @@ Config:
       Target: IPAM_DATABASE_WEBHOST
       Type: Variable
       value: localhost
-    IPAM_GMAPS_API_KEY:
+    ipam_gmaps_api_key:
       Default: ''
       Description: Google Maps and Geocode API Key
       Display: advanced
@@ -85,7 +85,7 @@ Config:
       Target: IPAM_GMAPS_API_KEY
       Type: Variable
       value: ''
-    PROXY_ENABLED:
+    proxy_enabled:
       Default: 'false'
       Description: 'Use proxy (Default: false)'
       Display: advanced
@@ -96,7 +96,7 @@ Config:
       Target: PROXY_ENABLED
       Type: Variable
       value: 'false'
-    PROXY_PASS:
+    proxy_pass:
       Default: PASSWORD
       Description: Proxy password
       Display: advanced
@@ -107,7 +107,7 @@ Config:
       Target: PROXY_PASS
       Type: Variable
       value: PASSWORD
-    PROXY_PORT:
+    proxy_port:
       Default: '8080'
       Description: 'Proxy port (Default: 8080)'
       Display: advanced
@@ -118,7 +118,7 @@ Config:
       Target: PROXY_PORT
       Type: Variable
       value: '8080'
-    PROXY_SERVER:
+    proxy_server:
       Default: myproxy.something.com
       Description: 'Proxy server (Default: myproxy.something.com)'
       Display: advanced
@@ -129,18 +129,7 @@ Config:
       Target: PROXY_SERVER
       Type: Variable
       value: myproxy.something.com
-    PROXY_USER:
-      Default: USERNAME
-      Description: Proxy username
-      Display: advanced
-      Mask: 'false'
-      Mode: ''
-      Name: PROXY_USER
-      Required: 'false'
-      Target: PROXY_USER
-      Type: Variable
-      value: USERNAME
-    PROXY_USE_AUTH:
+    proxy_use_auth:
       Default: 'false'
       Description: 'Proxy authentication (Default: false)'
       Display: advanced
@@ -151,7 +140,18 @@ Config:
       Target: PROXY_USE_AUTH
       Type: Variable
       value: 'false'
-    SCAN_INTERVAL:
+    proxy_user:
+      Default: USERNAME
+      Description: Proxy username
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PROXY_USER
+      Required: 'false'
+      Target: PROXY_USER
+      Type: Variable
+      value: USERNAME
+    scan_interval:
       Default: 1h
       Description: 'Network discovery job interval = 5m,10m,15m,30m,1h,2h,4h,6h,12h
         (default: 1h) [CRON Container only]'

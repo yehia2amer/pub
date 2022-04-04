@@ -16,7 +16,7 @@ Config:
       value: ''
   Label: {}
   Path:
-    Config:
+    config:
       Default: ''
       Description: 'Container Path: /opt/ozw/config'
       Display: always
@@ -28,7 +28,18 @@ Config:
       Type: Path
       value: /mnt/user/appdata/ozw
   Port:
-    Web UI Port:
+    ozw-adminport:
+      Default: ''
+      Description: Port used by ozw-admin GUI to access the instance
+      Display: advanced
+      Mask: 'false'
+      Mode: tcp
+      Name: ozw-admin Port
+      Required: 'false'
+      Target: '1983'
+      Type: Port
+      value: ''
+    webuiport:
       Default: '7800'
       Description: Port used to access the web-based ozw-admin instance in the container
         (when using allinone image)
@@ -40,19 +51,8 @@ Config:
       Target: '7800'
       Type: Port
       value: '7800'
-    ozw-admin Port:
-      Default: ''
-      Description: Port used by ozw-admin GUI to access the instance
-      Display: advanced
-      Mask: 'false'
-      Mode: tcp
-      Name: ozw-admin Port
-      Required: 'false'
-      Target: '1983'
-      Type: Port
-      value: ''
   Variable:
-    MQTT Host:
+    mqtthost:
       Default: ''
       Description: IP Address of the MQTT Host
       Display: always
@@ -63,7 +63,7 @@ Config:
       Target: MQTT_SERVER
       Type: Variable
       value: ''
-    MQTT Password:
+    mqttpassword:
       Default: ''
       Description: Password to (optionally) authenticate with MQTT
       Display: advanced
@@ -74,7 +74,7 @@ Config:
       Target: MQTT_PASSWORD
       Type: Variable
       value: ''
-    MQTT Port:
+    mqttport:
       Default: '1883'
       Description: The port to access the MQTT Host on. Defaults to 1883
       Display: advanced
@@ -85,7 +85,7 @@ Config:
       Target: MQTT_PORT
       Type: Variable
       value: ''
-    MQTT User:
+    mqttuser:
       Default: ''
       Description: Username to (optionally) authenticate with MQTT
       Display: advanced
@@ -96,7 +96,7 @@ Config:
       Target: MQTT_USERNAME
       Type: Variable
       value: ''
-    USB Path:
+    usbpath:
       Default: ''
       Description: Path to the USB stick/serial device for your z-wave controller
         in the container. This should be the same value as USB Z-Wave Device.
@@ -108,7 +108,7 @@ Config:
       Target: USB_PATH
       Type: Variable
       value: ''
-    Zwave Network Key:
+    zwavenetworkkey:
       Default: ''
       Description: Network key for the Z-Wave network. Not required if no devices
         are securely included.

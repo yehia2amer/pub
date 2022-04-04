@@ -5,30 +5,34 @@ CategoryList: &id001
 Config:
   Device: {}
   Label: {}
-  Path: {}
+  Path:
+    google-cloud-storage-backup:
+      Mode: ro
+      Name: Backup path
+      Target: /data/backup
+      value: /mnt/user/backup
   Port: {}
   Variable:
-    ACCESS_KEY:
+    access_key:
       Name: ACCESS_KEY
+      Target: ACCESS_KEY
       value: 'Container Variable: ACCESS_KEY'
-    CRON_SCHEDULE:
+    cron_schedule:
       Name: CRON_SCHEDULE
+      Target: CRON_SCHEDULE
       value: 0 * * * *
-    GCSOPTIONS:
+    gcsoptions:
       Name: GCSOPTIONS
+      Target: GCSOPTIONS
       value: ''
-    GCSPATH:
+    gcspath:
       Name: GCSPATH
+      Target: GCSPATH
       value: gs://mybucket/
-    SECRET_KEY:
+    secret_key:
       Name: SECRET_KEY
+      Target: SECRET_KEY
       value: 'Container Variable: SECRET_KEY'
-Data:
-  Volume:
-    ContainerDir: /data/backup
-    HostDir: /mnt/user/backup
-    Mode: ro
-    Name: Backup path
 GitHub: https://github.com/vinid223/GcloudStorage-docker
 Icon: https://i.imgur.com/jdjTCs8.png
 Keywords:

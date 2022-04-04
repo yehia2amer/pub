@@ -9,7 +9,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    OpenVPN Config:
+    openvpnconfig:
       Default: /mnt/user/appdata/openvpn-aio-client
       Description: 'Container Path: /etc/openvpn'
       Display: always
@@ -21,7 +21,7 @@ Config:
       Type: Path
       value: /mnt/user/appdata/openvpn-aio-client
   Port:
-    DNS Server TCP:
+    dnsservertcp:
       Default: '8153'
       Description: 'Container Port: 53'
       Display: always
@@ -32,7 +32,7 @@ Config:
       Target: '53'
       Type: Port
       value: '8153'
-    DNS Server UDP:
+    dnsserverudp:
       Default: '8153'
       Description: 'Container Port: 53'
       Display: always
@@ -43,7 +43,7 @@ Config:
       Target: '53'
       Type: Port
       value: '8153'
-    HTTP Proxy to TOR:
+    httpproxytotor:
       Default: '8119'
       Description: 'Container Port: 8119'
       Display: always
@@ -54,7 +54,7 @@ Config:
       Target: '8119'
       Type: Port
       value: '8119'
-    HTTP Proxy to VPN:
+    httpproxytovpn:
       Default: '8118'
       Description: 'Container Port: 8118'
       Display: always
@@ -65,7 +65,7 @@ Config:
       Target: '8118'
       Type: Port
       value: '8118'
-    Socks5 proxy to TOR:
+    socks5proxytotor:
       Default: '9119'
       Description: 'Container Port: 9119'
       Display: always
@@ -76,7 +76,7 @@ Config:
       Target: '9119'
       Type: Port
       value: '9119'
-    Socks5 proxy to VPN:
+    socks5proxytovpn:
       Default: '9118'
       Description: 'Container Port: 9118'
       Display: always
@@ -88,18 +88,7 @@ Config:
       Type: Port
       value: '9118'
   Variable:
-    DNS_SERVERS:
-      Default: 127.2.2.2
-      Description: 'Container Variable: DNS_SERVERS'
-      Display: always
-      Mask: 'false'
-      Mode: ''
-      Name: DNS_SERVERS
-      Required: 'false'
-      Target: DNS_SERVERS
-      Type: Variable
-      value: 127.2.2.2
-    DNS_SERVER_PORT:
+    dns_server_port:
       Default: '53'
       Description: 'Container Variable: DNS_SERVER_PORT'
       Display: advanced-hide
@@ -110,7 +99,18 @@ Config:
       Target: DNS_SERVER_PORT
       Type: Variable
       value: '53'
-    HOST_NETWORK:
+    dns_servers:
+      Default: 127.2.2.2
+      Description: 'Container Variable: DNS_SERVERS'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: DNS_SERVERS
+      Required: 'false'
+      Target: DNS_SERVERS
+      Type: Variable
+      value: 127.2.2.2
+    host_network:
       Default: 192.168.1.0/24
       Description: 'Container Variable: HOST_NETWORK'
       Display: always
@@ -121,7 +121,7 @@ Config:
       Target: HOST_NETWORK
       Type: Variable
       value: 192.168.1.0/24
-    HTTP_PROXY_PORT:
+    http_proxy_port:
       Default: '8118'
       Description: 'Container Variable: HTTP_PROXY_PORT'
       Display: advanced-hide
@@ -132,7 +132,7 @@ Config:
       Target: HTTP_PROXY_PORT
       Type: Variable
       value: '8118'
-    SOCKS_PROXY_PORT:
+    socks_proxy_port:
       Default: '9118'
       Description: 'Container Variable: SOCKS_PROXY_PORT'
       Display: advanced-hide
@@ -143,7 +143,7 @@ Config:
       Target: SOCKS_PROXY_PORT
       Type: Variable
       value: '9118'
-    TOR_HTTP_PORT:
+    tor_http_port:
       Default: '8119'
       Description: 'Container Variable: TOR_HTTP_PORT'
       Display: advanced-hide
@@ -154,7 +154,7 @@ Config:
       Target: TOR_HTTP_PORT
       Type: Variable
       value: '8119'
-    TOR_SOCKS_PORT:
+    tor_socks_port:
       Default: '9119'
       Description: 'Container Variable: TOR_SOCKS_PORT'
       Display: advanced-hide

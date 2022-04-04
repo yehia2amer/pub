@@ -6,7 +6,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Client Plugins:
+    clientplugins:
       Default: /mnt/user/appdata/mattermost/client/plugins/
       Description: Client Plugins Path
       Display: always
@@ -17,7 +17,7 @@ Config:
       Target: /mattermost/client/plugins
       Type: Path
       value: /mnt/user/appdata/mattermost/client/plugins/
-    Config:
+    config:
       Default: /mnt/user/appdata/mattermost/config/
       Description: Config Path
       Display: always
@@ -28,7 +28,7 @@ Config:
       Target: /mattermost/config
       Type: Path
       value: /mnt/user/appdata/mattermost/config/
-    Data:
+    data:
       Default: /mnt/user/appdata/mattermost/data/
       Description: Data Path
       Display: always
@@ -39,7 +39,7 @@ Config:
       Target: /mattermost/data
       Type: Path
       value: /mnt/user/appdata/mattermost/data/
-    Logs:
+    logs:
       Default: /mnt/user/appdata/mattermost/logs/
       Description: Logs Path
       Display: always
@@ -50,7 +50,7 @@ Config:
       Target: /mattermost/logs
       Type: Path
       value: /mnt/user/appdata/mattermost/logs/
-    Plugins:
+    plugins:
       Default: /mnt/user/appdata/mattermost/plugins/
       Description: Plugins Path
       Display: always
@@ -62,7 +62,7 @@ Config:
       Type: Path
       value: /mnt/user/appdata/mattermost/plugins/
   Port:
-    Gossip Port TCP:
+    gossipporttcp:
       Default: '8074'
       Description: The port used for the gossip protocol.
       Display: always
@@ -73,7 +73,7 @@ Config:
       Target: '8074'
       Type: Port
       value: '8074'
-    Gossip Port UDP:
+    gossipportudp:
       Default: '8074'
       Description: The port used for the gossip protocol.
       Display: always
@@ -84,7 +84,7 @@ Config:
       Target: '8074'
       Type: Port
       value: '8074'
-    Listen Address:
+    listenaddress:
       Default: '8067'
       Description: The address the Mattermost server will listen on to expose performance
         metrics.
@@ -97,7 +97,7 @@ Config:
       Type: Port
       value: '8067'
   Variable:
-    APP_HOST:
+    app_host:
       Default: IP OR HOSTNAME
       Description: Application host address
       Display: always
@@ -108,7 +108,7 @@ Config:
       Target: APP_HOST
       Type: Variable
       value: IP OR HOSTNAME
-    DATASOURCE:
+    datasource:
       Default: MM_USERNAME:MM_PASSWORD@tcp(DB_HOST:DB_PORT_NUMBER)/MM_DBNAME?charset=utf8mb4,utf8&amp;readTimeout=30s&amp;writeTimeout=30s
       Description: 'Edit This Change MM_USERNAME, MM_PASSWORD, DB_HOST, DB_PORT_NUMBER
         To your database configuration '
@@ -120,7 +120,7 @@ Config:
       Target: MM_SQLSETTINGS_DATASOURCE
       Type: Variable
       value: MM_USERNAME:MM_PASSWORD@tcp(DB_HOST:DB_PORT_NUMBER)/MM_DBNAME?charset=utf8mb4,utf8&readTimeout=30s&writeTimeout=30s
-    MM_SQLSETTINGS_DRIVERNAME:
+    mm_sqlsettings_drivername:
       Default: mysql
       Description: 'Container Variable: MM_SQLSETTINGS_DRIVERNAME'
       Display: advanced
@@ -131,7 +131,7 @@ Config:
       Target: MM_SQLSETTINGS_DRIVERNAME
       Type: Variable
       value: mysql
-    Streaming Port:
+    streamingport:
       Default: '8075'
       Description: The port used for streaming data between servers.
       Display: always

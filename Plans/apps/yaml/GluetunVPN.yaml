@@ -17,18 +17,7 @@ Config:
       Type: Path
       value: /mnt/user/appdata/gluetun
   Port:
-    HTTPPROXY_PORT:
-      Default: '8888'
-      Description: Internal port number for the HTTP proxy to listen on
-      Display: always
-      Mask: 'false'
-      Mode: tcp
-      Name: HTTPPROXY_PORT
-      Required: 'true'
-      Target: '8888'
-      Type: Port
-      value: '8888'
-    HTTP_CONTROL_SERVER_PORT:
+    http_control_server_port:
       Default: '8000'
       Description: 'Container Port: 8000'
       Display: advanced
@@ -39,8 +28,19 @@ Config:
       Target: '8000'
       Type: Port
       value: '8000'
+    httpproxy_port:
+      Default: '8888'
+      Description: Internal port number for the HTTP proxy to listen on
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: HTTPPROXY_PORT
+      Required: 'true'
+      Target: '8888'
+      Type: Port
+      value: '8888'
   Variable:
-    BLOCK_ADS:
+    block_ads:
       Default: on|off
       Description: 'OPTIONAL: Block ads hostnames and IPs with Unbound'
       Display: always
@@ -51,7 +51,7 @@ Config:
       Target: BLOCK_ADS
       Type: Variable
       value: 'off'
-    BLOCK_MALICIOUS:
+    block_malicious:
       Default: on|off
       Description: 'OPTIONAL: Block malicious hostnames and IPs with Unbound'
       Display: always
@@ -62,7 +62,7 @@ Config:
       Target: BLOCK_MALICIOUS
       Type: Variable
       value: 'on'
-    BLOCK_SURVEILLANCE:
+    block_surveillance:
       Default: on|off
       Description: 'OPTIONAL: Block surveillance hostnames and IPs with Unbound'
       Display: always
@@ -73,7 +73,7 @@ Config:
       Target: BLOCK_SURVEILLANCE
       Type: Variable
       value: 'off'
-    CITY:
+    city:
       Default: ''
       Description: 'OPTIONAL: Comma separated list of VPN cities. https://github.com/qdm12/gluetun/wiki'
       Display: always
@@ -84,7 +84,7 @@ Config:
       Target: CITY
       Type: Variable
       value: ''
-    COUNTRY:
+    country:
       Default: ''
       Description: 'OPTIONAL: Comma separated list of VPN countries. https://github.com/qdm12/gluetun/wiki'
       Display: always
@@ -95,7 +95,7 @@ Config:
       Target: COUNTRY
       Type: Variable
       value: ''
-    DNS_KEEP_NAMESERVER:
+    dns_keep_nameserver:
       Default: on|off
       Description: 'OPTIONAL: Keep the nameservers in /etc/resolv.conf untouched,
         but disabled DNS blocking features'
@@ -107,7 +107,7 @@ Config:
       Target: DNS_KEEP_NAMESERVER
       Type: Variable
       value: 'on'
-    DNS_PLAINTEXT_ADDRESS:
+    dns_plaintext_address:
       Default: ''
       Description: 'OPTIONAL: IP address to use as DNS resolver if DOT is off'
       Display: always
@@ -118,7 +118,7 @@ Config:
       Target: DNS_PLAINTEXT_ADDRESS
       Type: Variable
       value: ''
-    DNS_UPDATE_PERIOD:
+    dns_update_period:
       Default: 24h
       Description: 'OPTIONAL: Period to update block lists and cryptographic files
         and restart Unbound. Set to 0 to deactivate updates. i.e. 0, 30s, 5m, 24h'
@@ -130,7 +130,7 @@ Config:
       Target: DNS_UPDATE_PERIOD
       Type: Variable
       value: 24h
-    DOT:
+    dot:
       Default: on|off
       Description: '(Recommended: on) Activate DNS over TLS with Unbound'
       Display: always
@@ -141,7 +141,7 @@ Config:
       Target: DOT
       Type: Variable
       value: 'on'
-    DOT_CACHING:
+    dot_caching:
       Default: on|off
       Description: 'OPTIONAL: Unbound caching'
       Display: always
@@ -152,7 +152,7 @@ Config:
       Target: DOT_CACHING
       Type: Variable
       value: 'on'
-    DOT_IPV6:
+    dot_ipv6:
       Default: on|off
       Description: 'OPTIONAL: DNS IPv6 resolution'
       Display: always
@@ -163,7 +163,7 @@ Config:
       Target: DOT_IPV6
       Type: Variable
       value: 'off'
-    DOT_PRIVATE_ADDRESS:
+    dot_private_address:
       Default: 127.0.0.1/8,10.0.0.0/8,172.16.0.0/12,192.168.0.0/16,169.254.0.0/16,::1/128,fc00::/7,fe80::/10,::ffff:7f00:1/104,::ffff:a00:0/104,::ffff:a9fe:0/112,::ffff:ac10:0/108,::ffff:c0a8:0/112
       Description: All private CIDRs ranges. Comma separated list of CIDRs or single
         IP addresses Unbound won't resolve to. Note that the default setting prevents
@@ -176,7 +176,7 @@ Config:
       Target: DOT_PRIVATE_ADDRESS
       Type: Variable
       value: 127.0.0.1/8,10.0.0.0/8,172.16.0.0/12,192.168.0.0/16,169.254.0.0/16,::1/128,fc00::/7,fe80::/10,::ffff:7f00:1/104,::ffff:a00:0/104,::ffff:a9fe:0/112,::ffff:ac10:0/108,::ffff:c0a8:0/112
-    DOT_PROVIDERS:
+    dot_providers:
       Default: cloudflare|google|quad9|quadrant|cleanbrowsing
       Description: Comma delimited list of DNS over TLS providers
       Display: always
@@ -187,7 +187,7 @@ Config:
       Target: DOT_PROVIDERS
       Type: Variable
       value: cloudflare
-    DOT_VALIDATION_LOGLEVEL:
+    dot_validation_loglevel:
       Default: 0|1|2
       Description: 'OPTIONAL: Unbound validation log level'
       Display: always
@@ -198,7 +198,7 @@ Config:
       Target: DOT_VALIDATION_LOGLEVEL
       Type: Variable
       value: '0'
-    DOT_VERBOSITY:
+    dot_verbosity:
       Default: 0|1|2|3|4|5
       Description: 'OPTIONAL: Unbound verbosity level'
       Display: always
@@ -209,7 +209,7 @@ Config:
       Target: DOT_VERBOSITY
       Type: Variable
       value: '1'
-    DOT_VERBOSITY_DETAILS:
+    dot_verbosity_details:
       Default: 0|1|2|3|4
       Description: 'OPTIONAL: Unbound details verbosity level'
       Display: always
@@ -220,7 +220,7 @@ Config:
       Target: DOT_VERBOSITY_DETAILS
       Type: Variable
       value: '0'
-    ENABLE_HTTPPROXY_STEALTH:
+    enable_httpproxy_stealth:
       Default: off|on
       Description: 'OPTIONAL: Stealth mode means HTTP proxy headers are not added
         to your requests'
@@ -232,7 +232,7 @@ Config:
       Target: HTTPPROXY_STEALTH
       Type: Variable
       value: 'off'
-    FIREWALL:
+    firewall:
       Default: on|off
       Description: Turn on or off the container built-in firewall. You should turn
         off for debugging purposes only.
@@ -244,7 +244,7 @@ Config:
       Target: FIREWALL
       Type: Variable
       value: 'on'
-    FIREWALL_DEBUG:
+    firewall_debug:
       Default: off|on
       Description: 'OPTIONAL: Prints every firewall related command. You should use
         it for debugging purposes only.'
@@ -256,7 +256,7 @@ Config:
       Target: FIREWALL_DEBUG
       Type: Variable
       value: 'off'
-    FIREWALL_INPUT_PORTS:
+    firewall_input_ports:
       Default: ''
       Description: 'OPTIONAL: Comma separated list of ports to allow through the default
         interface. This seems needed for Unraid containers and Kubernetes sidecars.'
@@ -268,7 +268,7 @@ Config:
       Target: FIREWALL_INPUT_PORTS
       Type: Variable
       value: ''
-    FIREWALL_OUTBOUND_SUBNETS:
+    firewall_outbound_subnets:
       Default: ''
       Description: 'OPTIONAL: You first need to set your LAN CIDR in FIREWALL_OUTBOUND_SUBNETS.
         For example with FIREWALL_OUTBOUND_SUBNETS=192.168.1.0/24'
@@ -280,7 +280,7 @@ Config:
       Target: FIREWALL_OUTBOUND_SUBNETS
       Type: Variable
       value: ''
-    FIREWALL_VPN_INPUT_PORTS:
+    firewall_vpn_input_ports:
       Default: ''
       Description: 'OPTIONAL: Comma separated list of ports to allow from the VPN
         server side (useful for vyprvpn port forwarding)'
@@ -292,7 +292,7 @@ Config:
       Target: FIREWALL_VPN_INPUT_PORTS
       Type: Variable
       value: ''
-    HEALTH_ADDRESS_TO_PING:
+    health_address_to_ping:
       Default: github.com
       Description: 'OPTIONAL: Address used to check tunnel health'
       Display: advanced
@@ -303,7 +303,7 @@ Config:
       Target: HEALTH_ADDRESS_TO_PING
       Type: Variable
       value: github.com
-    HEALTH_SERVER_ADDRESS:
+    health_server_address:
       Default: 127.0.0.1:9999
       Description: 'OPTIONAL: Internal Health Server Listening Addroess'
       Display: advanced
@@ -314,7 +314,7 @@ Config:
       Target: HEALTH_SERVER_ADDRESS
       Type: Variable
       value: 127.0.0.1:9999
-    HEALTH_VPN_DURATION_ADDITION:
+    health_vpn_duration_addition:
       Default: 5s
       Description: 'OPTIONAL: Subsequent health check duration in seconds.'
       Display: advanced
@@ -325,7 +325,7 @@ Config:
       Target: HEALTH_VPN_DURATION_ADDITION
       Type: Variable
       value: 5s
-    HEALTH_VPN_DURATION_INITIAL:
+    health_vpn_duration_initial:
       Default: 6s
       Description: 'OPTIONAL: Initial health check duration in seconds.'
       Display: advanced
@@ -336,51 +336,7 @@ Config:
       Target: HEALTH_VPN_DURATION_INITIAL
       Type: Variable
       value: 6s
-    HTTPPROXY:
-      Default: off|on
-      Description: 'OPTIONAL: Enable the internal HTTP proxy'
-      Display: always
-      Mask: 'false'
-      Mode: ''
-      Name: HTTPPROXY
-      Required: 'false'
-      Target: HTTPPROXY
-      Type: Variable
-      value: 'off'
-    HTTPPROXY_LOG:
-      Default: off|on
-      Description: 'OPTIONAL: Logs every tunnel requests'
-      Display: always
-      Mask: 'false'
-      Mode: ''
-      Name: HTTPPROXY_LOG
-      Required: 'false'
-      Target: HTTPPROXY_LOG
-      Type: Variable
-      value: 'off'
-    HTTPPROXY_PASSWORD:
-      Default: ''
-      Description: 'OPTIONAL: Password to use to connect to the HTTP proxy'
-      Display: always
-      Mask: 'true'
-      Mode: ''
-      Name: HTTPPROXY_PASSWORD
-      Required: 'false'
-      Target: HTTPPROXY_PASSWORD
-      Type: Variable
-      value: ''
-    HTTPPROXY_USER:
-      Default: ''
-      Description: 'OPTIONAL: Username to use to connect to the HTTP proxy'
-      Display: always
-      Mask: 'false'
-      Mode: ''
-      Name: HTTPPROXY_USER
-      Required: 'false'
-      Target: HTTPPROXY_USER
-      Type: Variable
-      value: ''
-    HTTP_CONTROL_SERVER_LOG:
+    http_control_server_log:
       Default: on|off
       Description: 'OPTIONAL: Enable logging of HTTP requests'
       Display: advanced
@@ -391,7 +347,51 @@ Config:
       Target: HTTP_CONTROL_SERVER_LOG
       Type: Variable
       value: 'on'
-    LOG_LEVEL:
+    httpproxy:
+      Default: off|on
+      Description: 'OPTIONAL: Enable the internal HTTP proxy'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: HTTPPROXY
+      Required: 'false'
+      Target: HTTPPROXY
+      Type: Variable
+      value: 'off'
+    httpproxy_log:
+      Default: off|on
+      Description: 'OPTIONAL: Logs every tunnel requests'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: HTTPPROXY_LOG
+      Required: 'false'
+      Target: HTTPPROXY_LOG
+      Type: Variable
+      value: 'off'
+    httpproxy_password:
+      Default: ''
+      Description: 'OPTIONAL: Password to use to connect to the HTTP proxy'
+      Display: always
+      Mask: 'true'
+      Mode: ''
+      Name: HTTPPROXY_PASSWORD
+      Required: 'false'
+      Target: HTTPPROXY_PASSWORD
+      Type: Variable
+      value: ''
+    httpproxy_user:
+      Default: ''
+      Description: 'OPTIONAL: Username to use to connect to the HTTP proxy'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: HTTPPROXY_USER
+      Required: 'false'
+      Target: HTTPPROXY_USER
+      Type: Variable
+      value: ''
+    log_level:
       Default: info
       Description: 'OPTIONAL: Container Variable: LOG_LEVEL'
       Display: always
@@ -402,7 +402,7 @@ Config:
       Target: LOG_LEVEL
       Type: Variable
       value: info
-    OPENVPN_AUTH:
+    openvpn_auth:
       Default: ''
       Description: 'OPTIONAL: Specify a custom auth algorithm to use. i.e. sha256'
       Display: always
@@ -413,7 +413,7 @@ Config:
       Target: OPENVPN_AUTH
       Type: Variable
       value: ''
-    OPENVPN_CIPHER:
+    openvpn_cipher:
       Default: ''
       Description: 'OPTIONAL: Specify one or more custom ciphers to use'
       Display: always
@@ -424,7 +424,7 @@ Config:
       Target: OPENVPN_CIPHER
       Type: Variable
       value: ''
-    OPENVPN_CUSTOM_CONFIG:
+    openvpn_custom_config:
       Default: ''
       Description: 'OPTIONAL: The path to your OpenVPN configuration file. This implies
         VPN_SERVICE_PROVIDER=custom'
@@ -436,7 +436,7 @@ Config:
       Target: OPENVPN_CUSTOM_CONFIG
       Type: Variable
       value: ''
-    OPENVPN_FLAGS:
+    openvpn_flags:
       Default: ''
       Description: 'OPTIONAL: Space delimited OpenVPN flags to pass to openvpn'
       Display: always
@@ -447,7 +447,7 @@ Config:
       Target: OPENVPN_FLAGS
       Type: Variable
       value: ''
-    OPENVPN_INTERFACE:
+    openvpn_interface:
       Default: tun0
       Description: 'OPTIONAL: Specify a custom network interface name to use'
       Display: always
@@ -458,7 +458,7 @@ Config:
       Target: OPENVPN_INTERFACE
       Type: Variable
       value: tun0
-    OPENVPN_IPV6:
+    openvpn_ipv6:
       Default: off|on
       Description: 'OPTIONAL: Enable tunneling of IPv6 (only for Mullvad)'
       Display: always
@@ -469,7 +469,7 @@ Config:
       Target: OPENVPN_IPV6
       Type: Variable
       value: 'off'
-    OPENVPN_PASSWORD:
+    openvpn_password:
       Default: ''
       Description: 'Container Variable: OPENVPN_PASSWORD (Optional for Mullvad)'
       Display: always
@@ -480,7 +480,7 @@ Config:
       Target: OPENVPN_PASSWORD
       Type: Variable
       value: ''
-    OPENVPN_PORT:
+    openvpn_port:
       Default: ''
       Description: 'OPTIONAL: Custom OpenVPN server endpoint port to use'
       Display: always
@@ -491,7 +491,7 @@ Config:
       Target: OPENVPN_PORT
       Type: Variable
       value: ''
-    OPENVPN_PROTOCOL:
+    openvpn_protocol:
       Default: udp|tcp
       Description: 'OPTIONAL: Container Variable: OPENVPN_PROTOCOL'
       Display: always
@@ -502,7 +502,7 @@ Config:
       Target: OPENVPN_PROTOCOL
       Type: Variable
       value: udp
-    OPENVPN_ROOT:
+    openvpn_root:
       Default: no|yes
       Description: 'OPTIONAL: Run OpenVPN as root'
       Display: always
@@ -513,7 +513,7 @@ Config:
       Target: OPENVPN_ROOT
       Type: Variable
       value: 'no'
-    OPENVPN_TARGET_IP:
+    openvpn_target_ip:
       Default: ''
       Description: 'OPTIONAL: Specify a target VPN IP address to use'
       Display: always
@@ -524,7 +524,7 @@ Config:
       Target: OPENVPN_TARGET_IP
       Type: Variable
       value: ''
-    OPENVPN_USER:
+    openvpn_user:
       Default: ''
       Description: 'Container Variable: OPENVPN_USER'
       Display: always
@@ -535,7 +535,7 @@ Config:
       Target: OPENVPN_USER
       Type: Variable
       value: ''
-    OPENVPN_VERBOSITY:
+    openvpn_verbosity:
       Default: 0|1|2|3|4|5|6
       Description: 'OPTIONAL: OpenVPN verbosity level'
       Display: always
@@ -546,7 +546,7 @@ Config:
       Target: OPENVPN_VERBOSITY
       Type: Variable
       value: '1'
-    OPENVPN_VERSION:
+    openvpn_version:
       Default: 2.5|2.4
       Description: 'OPTIONAL: Set the OpenVPN version to run'
       Display: always
@@ -557,7 +557,7 @@ Config:
       Target: OPENVPN_VERSION
       Type: Variable
       value: '2.5'
-    PGID:
+    pgid:
       Default: ''
       Description: 'Container Variable: PGID'
       Display: advanced
@@ -568,7 +568,7 @@ Config:
       Target: PGID
       Type: Variable
       value: '1000'
-    PUBLICIP_FILE:
+    publicip_file:
       Default: /gluetun/ip
       Description: 'OPTIONAL: Filepath to store the public IP address assigned'
       Display: advanced
@@ -579,7 +579,7 @@ Config:
       Target: PUBLICIP_FILE
       Type: Variable
       value: /gluetun/ip
-    PUBLICIP_PERIOD:
+    publicip_period:
       Default: 12h
       Description: 'OPTIONAL: Period to check for public IP address. Set to 0 to disable.'
       Display: advanced
@@ -590,7 +590,7 @@ Config:
       Target: PUBLICIP_PERIOD
       Type: Variable
       value: 12h
-    PUID:
+    puid:
       Default: ''
       Description: 'Container Variable: PUID'
       Display: advanced
@@ -601,7 +601,7 @@ Config:
       Target: PUID
       Type: Variable
       value: '1000'
-    REGION:
+    region:
       Default: ''
       Description: 'OPTIONAL: Comma separated list of VPN regions. https://github.com/qdm12/gluetun/wiki'
       Display: always
@@ -612,7 +612,7 @@ Config:
       Target: REGION
       Type: Variable
       value: ''
-    SERVER_HOSTNAME:
+    server_hostname:
       Default: ''
       Description: 'OPTIONAL: Comma separated list of server hostnames. https://github.com/qdm12/gluetun/wiki'
       Display: always
@@ -623,7 +623,7 @@ Config:
       Target: SERVER_HOSTNAME
       Type: Variable
       value: ''
-    SHADOWSOCKS:
+    shadowsocks:
       Default: off|on
       Description: 'OPTIONAL: Enable the internal Shadowsocks proxy'
       Display: always
@@ -634,7 +634,7 @@ Config:
       Target: SHADOWSOCKS
       Type: Variable
       value: 'off'
-    SHADOWSOCKS_CIPHER:
+    shadowsocks_cipher:
       Default: chacha20-ietf-poly1305|aes-128-gcm|aes-256-gcm
       Description: 'OPTIONAL: Cipher to use for Shadowsocks'
       Display: always
@@ -645,7 +645,7 @@ Config:
       Target: SHADOWSOCKS_CIPHER
       Type: Variable
       value: chacha20-ietf-poly1305
-    SHADOWSOCKS_LISTENING_ADDRESS:
+    shadowsocks_listening_address:
       Default: :8388
       Description: 'OPTIONAL: Port number for the HTTP proxy to listen on'
       Display: always
@@ -656,7 +656,7 @@ Config:
       Target: :8388
       Type: Variable
       value: :8388
-    SHADOWSOCKS_LOG:
+    shadowsocks_log:
       Default: off|on
       Description: 'OPTIONAL: Enable Shadowsocks logging'
       Display: always
@@ -667,7 +667,7 @@ Config:
       Target: SHADOWSOCKS_LOG
       Type: Variable
       value: 'off'
-    SHADOWSOCKS_PASSWORD:
+    shadowsocks_password:
       Default: ''
       Description: 'OPTIONAL: Password to use to connect to Shadowsocks'
       Display: always
@@ -678,7 +678,7 @@ Config:
       Target: SHADOWSOCKS_PASSWORD
       Type: Variable
       value: ''
-    TIMEZONE:
+    timezone:
       Default: ''
       Description: Specify a timezone to use to have correct log times. i.e. Europe/London
       Display: always
@@ -689,7 +689,7 @@ Config:
       Target: TZ
       Type: Variable
       value: ''
-    UNBLOCK:
+    unblock:
       Default: ''
       Description: 'OPTIONAL: Comma separated list of domain names to leave unblocked
         with Unbound. i.e. domain1.com,x.domain2.co.uk'
@@ -701,7 +701,7 @@ Config:
       Target: UNBLOCK
       Type: Variable
       value: ''
-    UPDATER_PERIOD:
+    updater_period:
       Default: '0'
       Description: 'OPTIONAL: Period to update all VPN servers information in memory
         and to /gluetun/servers.json. Set to 0 to disable. This does a burst of DNS
@@ -715,7 +715,7 @@ Config:
       Target: UPDATER_PERIOD
       Type: Variable
       value: '0'
-    VERSION_INFORMATION:
+    version_information:
       Default: on|off
       Description: 'OPTIONAL: Filepath to store the public IP address assigned'
       Display: advanced
@@ -726,7 +726,7 @@ Config:
       Target: VERSION_INFORMATION
       Type: Variable
       value: 'on'
-    VPN_SERVICE_PROVIDER:
+    vpn_service_provider:
       Default: private internet access|cyberghost|expressvpn|fastestvpn|hidemyass|ipvanish|ivpn|mullvad|nordvpn|perfect
         privacy|privado|privatevpn|protonvpn|purevpn|surfshark|torguard|vpn unlimited|vyprvpn|wevpn|windscribe|custom
       Description: VPN Service Provider
@@ -738,7 +738,7 @@ Config:
       Target: VPNSP
       Type: Variable
       value: private internet access
-    VPN_TYPE:
+    vpn_type:
       Default: openvpn|wireguard
       Description: VPN Type. Default is OpenVPN. Note not all providers support Wireguard.
       Display: always
@@ -749,7 +749,7 @@ Config:
       Target: VPN_TYPE
       Type: Variable
       value: openvpn
-    WIREGUARD_ADDRESS:
+    wireguard_address:
       Default: ''
       Description: Wireguard IP network in the format xx.xx.xx.xx/xx. Wireguard interface
         address, only required if VPN_TYPE=wireguard. Note this is usually specific
@@ -762,7 +762,7 @@ Config:
       Target: WIREGUARD_ADDRESS
       Type: Variable
       value: ''
-    WIREGUARD_ENDPOINT_IP:
+    wireguard_endpoint_ip:
       Default: ''
       Description: 'Only for VPN_SERVICE_PROVIDER=custom and VPN_TYPE=wireguard: Wireguard
         server endpoint IP address'
@@ -774,7 +774,7 @@ Config:
       Target: WIREGUARD_ENDPOINT_IP
       Type: Variable
       value: ''
-    WIREGUARD_ENDPOINT_PORT:
+    wireguard_endpoint_port:
       Default: '51820'
       Description: 'OPTIONAL (required for VPN_SERVICE_PROVIDER=custom): Wireguard
         custom server endpoint port to use'
@@ -786,7 +786,7 @@ Config:
       Target: WIREGUARD_ENDPOINT_PORT
       Type: Variable
       value: ''
-    WIREGUARD_INTERFACE:
+    wireguard_interface:
       Default: wg0
       Description: 'OPTIONAL: Specify a custom network interface name to use'
       Display: always
@@ -797,7 +797,7 @@ Config:
       Target: WIREGUARD_INTERFACE
       Type: Variable
       value: wg0
-    WIREGUARD_PRESHARED_KEY:
+    wireguard_preshared_key:
       Default: ''
       Description: 'OPTINAL: 32 bytes pre-shared key in base64 format'
       Display: always
@@ -808,7 +808,7 @@ Config:
       Target: WIREGUARD_PRESHARED_KEY
       Type: Variable
       value: ''
-    WIREGUARD_PRIVATE_KEY:
+    wireguard_private_key:
       Default: ''
       Description: 'OPTINAL: 32 bytes private key in base64 format'
       Display: always
@@ -819,7 +819,7 @@ Config:
       Target: WIREGUARD_PRIVATE_KEY
       Type: Variable
       value: ''
-    WIREGUARD_PUBLIC_KEY:
+    wireguard_public_key:
       Default: ''
       Description: 'Only for VPN_SERVICE_PROVIDER=custom and VPN_TYPE=wireguard: Wireguard
         server public key'

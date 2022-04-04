@@ -4,7 +4,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    ServerFiles:
+    serverfiles:
       Default: ''
       Description: ''
       Display: always
@@ -16,7 +16,7 @@ Config:
       Type: Path
       value: /mnt/cache/appdata/ioquake3
   Port:
-    TCP - WebConsole:
+    tcp-webconsole:
       Default: ''
       Description: 'WebConsole (by default, you can connect to the ioquake3 console
         by opening your browser and go to HOSTIP:9021 - eg: 192.168.1.1:9029 - or
@@ -29,7 +29,7 @@ Config:
       Target: '8080'
       Type: Port
       value: '9029'
-    UDP - Game Port:
+    udp-gameport:
       Default: ''
       Description: Game Port (If you want to change the game port please click on
         more settings here in the template, change the port, then delete this entry
@@ -43,7 +43,7 @@ Config:
       Type: Port
       value: '27960'
   Variable:
-    GAME_PARAMS:
+    game_params:
       Default: ''
       Description: The startup parameters for the server (only change if you know
         what you are doing!)
@@ -55,7 +55,7 @@ Config:
       Target: GAME_PARAMS
       Type: Variable
       value: +set dedicated 2 +set sv_allowDownload 1 +set com_hunkmegs 64
-    GID:
+    gid:
       Default: ''
       Description: ''
       Display: advanced-hide
@@ -66,51 +66,7 @@ Config:
       Target: GID
       Type: Variable
       value: '100'
-    Patch URL:
-      Default: ''
-      Description: Only change if you know what you're doing!
-      Display: advanced
-      Mask: 'false'
-      Mode: ''
-      Name: Patch URL
-      Required: 'true'
-      Target: DL_URL_PATCH
-      Type: Variable
-      value: https://files.ioquake3.org/quake3-latest-pk3s.zip
-    Q3_MAP:
-      Default: ''
-      Description: The initial map wich the server would start.
-      Display: always
-      Mask: 'false'
-      Mode: ''
-      Name: Q3_MAP
-      Required: 'true'
-      Target: Q3_MAP
-      Type: Variable
-      value: q3dm1
-    UID:
-      Default: ''
-      Description: ''
-      Display: advanced-hide
-      Mask: 'false'
-      Mode: ''
-      Name: UID
-      Required: 'true'
-      Target: UID
-      Type: Variable
-      value: '99'
-    UMASK:
-      Default: ''
-      Description: ''
-      Display: advanced
-      Mask: 'false'
-      Mode: ''
-      Name: UMASK
-      Required: 'true'
-      Target: UMASK
-      Type: Variable
-      value: '000'
-    ioquake 3 Base Port:
+    ioquake3baseport:
       Default: ''
       Description: Base Port
       Display: advanced
@@ -121,7 +77,7 @@ Config:
       Target: IOQ3_PORT
       Type: Variable
       value: '27960'
-    ioquake3 Download URL:
+    ioquake3downloadurl:
       Default: ''
       Description: Only change if you know what you're doing!
       Display: advanced
@@ -132,6 +88,50 @@ Config:
       Target: DL_URL
       Type: Variable
       value: https://files.ioquake3.org/Linux.zip
+    patchurl:
+      Default: ''
+      Description: Only change if you know what you're doing!
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Patch URL
+      Required: 'true'
+      Target: DL_URL_PATCH
+      Type: Variable
+      value: https://files.ioquake3.org/quake3-latest-pk3s.zip
+    q3_map:
+      Default: ''
+      Description: The initial map wich the server would start.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Q3_MAP
+      Required: 'true'
+      Target: Q3_MAP
+      Type: Variable
+      value: q3dm1
+    uid:
+      Default: ''
+      Description: ''
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: UID
+      Required: 'true'
+      Target: UID
+      Type: Variable
+      value: '99'
+    umask:
+      Default: ''
+      Description: ''
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: UMASK
+      Required: 'true'
+      Target: UMASK
+      Type: Variable
+      value: '000'
 ExtraParams: --restart=unless-stopped
 Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/ioquake3.png
 Keywords:

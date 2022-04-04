@@ -5,7 +5,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Config:
+    config:
       Default: /mnt/user/appdata/ffmpeg
       Description: Config
       Display: always
@@ -16,7 +16,7 @@ Config:
       Target: /config
       Type: Path
       value: /mnt/user/appdata/ffmpeg
-    Copy:
+    copy:
       Default: ''
       Description: Copy
       Display: always
@@ -27,7 +27,7 @@ Config:
       Target: /copy
       Type: Path
       value: ''
-    Output:
+    output:
       Default: ''
       Description: Output
       Display: always
@@ -38,7 +38,7 @@ Config:
       Target: /output
       Type: Path
       value: ''
-    Watch:
+    watch:
       Default: ''
       Description: Watch
       Display: always
@@ -51,40 +51,7 @@ Config:
       value: ''
   Port: {}
   Variable:
-    Output format:
-      Default: mkv
-      Description: Format of output file.
-      Display: always
-      Mask: 'false'
-      Mode: ''
-      Name: Output format
-      Required: 'false'
-      Target: output_format
-      Type: Variable
-      value: mkv
-    Parameters:
-      Default: -map 0;-vcodec copy;-scodec copy;-acodec ac3;-b:a 640k
-      Description: Parameters for FFmpeg
-      Display: always
-      Mask: 'false'
-      Mode: ''
-      Name: Parameters
-      Required: 'false'
-      Target: parameters
-      Type: Variable
-      value: -map 0;-vcodec copy;-scodec copy;-acodec ac3;-b:a 640k
-    Script to be executed:
-      Default: encode.sh
-      Description: encode.sh or mkvdts2ac3.sh
-      Display: always
-      Mask: 'false'
-      Mode: ''
-      Name: Script to be executed
-      Required: 'true'
-      Target: script
-      Type: Variable
-      value: encode.sh
-    mkvdts2ac3 parameters:
+    mkvdts2ac3parameters:
       Default: --compress none;-d;-n;-w /output;--new
       Description: Parameters for mkvdts2ac3
       Display: always
@@ -95,6 +62,39 @@ Config:
       Target: mkvdts2ac3_params
       Type: Variable
       value: --compress none;-d;-n;-w /output;--new
+    outputformat:
+      Default: mkv
+      Description: Format of output file.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Output format
+      Required: 'false'
+      Target: output_format
+      Type: Variable
+      value: mkv
+    parameters:
+      Default: -map 0;-vcodec copy;-scodec copy;-acodec ac3;-b:a 640k
+      Description: Parameters for FFmpeg
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Parameters
+      Required: 'false'
+      Target: parameters
+      Type: Variable
+      value: -map 0;-vcodec copy;-scodec copy;-acodec ac3;-b:a 640k
+    scripttobeexecuted:
+      Default: encode.sh
+      Description: encode.sh or mkvdts2ac3.sh
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Script to be executed
+      Required: 'true'
+      Target: script
+      Type: Variable
+      value: encode.sh
 Icon: https://ih1.redbubble.net/image.998316046.6121/pp,840x830-pad,1000x1000,f8f8f8.jpg
 Keywords:
 - ffmpeg-mkvdts2ac3

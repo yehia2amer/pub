@@ -5,7 +5,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Host Path for /config:
+    hostpathforconfig:
       Default: ''
       Description: 'Container Path: /config'
       Display: always-hide
@@ -18,7 +18,7 @@ Config:
       value: ''
   Port: {}
   Variable:
-    Enable Automatic Script Start:
+    enableautomaticscriptstart:
       Default: 'true'
       Description: 'true = Enabled :: Runs script automatically on startup'
       Display: always
@@ -29,7 +29,7 @@ Config:
       Target: AUTOSTART
       Type: Variable
       value: ''
-    End Client Compatibility:
+    endclientcompatibility:
       Default: plex
       Description: 'plex or emby or jellyfin :: Select the appropriate client for
         maximum compatibility'
@@ -41,7 +41,7 @@ Config:
       Target: EndClient
       Type: Variable
       value: ''
-    Extras Audio Language:
+    extrasaudiolanguage:
       Default: en
       Description: Set the primary desired language, if not found, fallback to next
         langauge in the list... (this is a ',' separated list of ISO 639-1 language
@@ -54,7 +54,7 @@ Config:
       Target: LANGUAGES
       Type: Variable
       value: ''
-    Extras File Permissions:
+    extrasfilepermissions:
       Default: '644'
       Description: Based on chmod linux permissions
       Display: always
@@ -65,7 +65,7 @@ Config:
       Target: FilePermissions
       Type: Variable
       value: ''
-    Extras Folder Permissions:
+    extrasfolderpermissions:
       Default: '755'
       Description: Based on chmod linux permissions
       Display: always
@@ -76,7 +76,7 @@ Config:
       Target: FolderPermissions
       Type: Variable
       value: ''
-    Extras Format:
+    extrasformat:
       Default: --format bestvideo[vcodec*=avc1]+bestaudio[ext=m4a]
       Description: For guidence, please see youtube-dl documentation
       Display: always
@@ -87,7 +87,7 @@ Config:
       Target: videoformat
       Type: Variable
       value: ''
-    Extras Subtitle Langauge:
+    extrassubtitlelangauge:
       Default: en
       Description: 'Desired Language Code :: For guidence, please see youtube-dl documentation'
       Display: always
@@ -98,7 +98,7 @@ Config:
       Target: subtitlelanguage
       Type: Variable
       value: ''
-    Extras Type:
+    extrastype:
       Default: all
       Description: 'all or trailers :: all downloads all available videos (trailers,
         clips, featurettes, etc...) :: trailers only downloads trailers'
@@ -110,7 +110,7 @@ Config:
       Target: extrastype
       Type: Variable
       value: ''
-    PGID:
+    pgid:
       Default: '100'
       Description: 'Container Variable: GROUP_ID'
       Display: advanced-hide
@@ -121,18 +121,7 @@ Config:
       Target: PGID
       Type: Variable
       value: ''
-    PUID:
-      Default: '99'
-      Description: 'Container Variable: USER_ID'
-      Display: advanced-hide
-      Mask: 'false'
-      Mode: ''
-      Name: PUID
-      Required: 'false'
-      Target: PUID
-      Type: Variable
-      value: ''
-    Prefer Existing Trailer:
+    preferexistingtrailer:
       Default: 'false'
       Description: 'true = enabled :: Checks for existing trailer file, and skips
         it if found'
@@ -144,7 +133,18 @@ Config:
       Target: PREFER_EXISTING
       Type: Variable
       value: ''
-    Radarr API Key:
+    puid:
+      Default: '99'
+      Description: 'Container Variable: USER_ID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: PUID
+      Required: 'false'
+      Target: PUID
+      Type: Variable
+      value: ''
+    radarrapikey:
       Default: ''
       Description: Radarr API Key
       Display: always
@@ -155,7 +155,7 @@ Config:
       Target: RadarrAPIkey
       Type: Variable
       value: ''
-    Radarr Url:
+    radarrurl:
       Default: http://127.0.0.1:7878
       Description: Set domain or IP to your Radarr instance including port. If using
         reverse proxy, do not use a trailing slash. Ensure you specify http/s...
@@ -167,7 +167,7 @@ Config:
       Target: RadarrUrl
       Type: Variable
       value: ''
-    Script Interval:
+    scriptinterval:
       Default: 1h
       Description: '#s or #m or #h or #d :: s = seconds, m = minutes, h = hours, d
         = days :: Amount of time between each script run, when AUTOSTART is enabled'
@@ -179,7 +179,7 @@ Config:
       Target: SCRIPTINTERVAL
       Type: Variable
       value: ''
-    Single Trailer:
+    singletrailer:
       Default: 'true'
       Description: 'true = enabled :: Only downloads the first available trailer,
         does not apply to other extras type'
@@ -191,7 +191,7 @@ Config:
       Target: SINGLETRAILER
       Type: Variable
       value: ''
-    Use Folders:
+    usefolders:
       Default: 'false'
       Description: 'true = enabled :: Creates subfolders within the movie folder for
         extras'

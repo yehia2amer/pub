@@ -4,17 +4,14 @@ CategoryList: &id001
 Config:
   Device: {}
   Label: {}
-  Path: {}
+  Path:
+    couchdb-v2-x:
+      Mode: rw
+      Name: couchdb
+      Target: /usr/local/etc/couchdb
+      value: /mnt/user/appdata/couchdb/config
   Port: {}
   Variable: {}
-Data:
-  Volume:
-  - ContainerDir: /opt/couchdb/data
-    HostDir: /mnt/user/appdata/couchdb/data
-    Mode: rw
-  - ContainerDir: /usr/local/etc/couchdb
-    HostDir: /mnt/user/appdata/couchdb/config
-    Mode: rw
 GitHub: https://github.com/apache/docker-couchdb
 Icon: https://couchdb.apache.org/image/couch@2x.png
 Keywords:

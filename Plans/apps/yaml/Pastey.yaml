@@ -5,7 +5,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    AppData:
+    appdata:
       Default: /mnt/user/appdata/pastey
       Description: 'Container Path: /app/data'
       Display: always
@@ -17,7 +17,7 @@ Config:
       Type: Path
       value: /mnt/user/appdata/pastey
   Port:
-    Web Interface:
+    webinterface:
       Default: '5000'
       Description: 'Container Port: 5000'
       Display: always
@@ -29,7 +29,7 @@ Config:
       Type: Port
       value: '5000'
   Variable:
-    PASTEY_BEHIND_PROXY:
+    pastey_behind_proxy:
       Default: 'False'
       Description: 'Inform Pastey if it is behind a reverse proxy (nginx, etc.). If
         this is the case, it will rely on HTTP headers X-Real-IP or X-Forwarded-For.
@@ -42,7 +42,7 @@ Config:
       Target: PASTEY_BEHIND_PROXY
       Type: Variable
       value: 'False'
-    PASTEY_GUESS_THRESHOLD:
+    pastey_guess_threshold:
       Default: '0.20'
       Description: Threshold for automatic language detection guesses. If a result
         is below this value, it is treated as Plaintext.
@@ -54,7 +54,7 @@ Config:
       Target: PASTEY_GUESS_THRESHOLD
       Type: Variable
       value: '0.20'
-    PASTEY_RATE_LIMIT:
+    pastey_rate_limit:
       Default: 5/hour
       Description: Rate limit for pasting, for non-whitelisted users.
       Display: always
@@ -65,7 +65,7 @@ Config:
       Target: PASTEY_RATE_LIMIT
       Type: Variable
       value: 5/hour
-    PASTEY_RECENT_PASTES:
+    pastey_recent_pastes:
       Default: '10'
       Description: Number of recent pastes to show on the home page.
       Display: always
@@ -76,7 +76,7 @@ Config:
       Target: PASTEY_RECENT_PASTES
       Type: Variable
       value: '10'
-    PASTEY_RESTRICT_PASTING:
+    pastey_restrict_pasting:
       Default: 'False'
       Description: Enable/disable restricting of pasting to whitelisted users.
       Display: always
@@ -87,7 +87,7 @@ Config:
       Target: PASTEY_RESTRICT_PASTING
       Type: Variable
       value: 'False'
-    PASTEY_RESTRICT_RAW_PASTING:
+    pastey_restrict_raw_pasting:
       Default: 'True'
       Description: Enable/disable restricting of pasting via /raw to whitelisted users.
       Display: always
@@ -98,7 +98,7 @@ Config:
       Target: PASTEY_RESTRICT_RAW_PASTING
       Type: Variable
       value: 'True'
-    PASTEY_USE_WHITELIST:
+    pastey_use_whitelist:
       Default: 'True'
       Description: Enable/disable whitelisting for admin tasks (view recent, delete,
         config).
@@ -110,7 +110,7 @@ Config:
       Target: PASTEY_USE_WHITELIST
       Type: Variable
       value: 'True'
-    PASTEY_WHITELIST_CIDR:
+    pastey_whitelist_cidr:
       Default: ''
       Description: List of whitelisted IP addresses or networks (in CIDR format).
       Display: always

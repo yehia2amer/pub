@@ -17,7 +17,7 @@ Config:
       value: /mnt/user/appdata/weatherflow2mqtt
   Port: {}
   Variable:
-    DEBUG:
+    debug:
       Default: 'False'
       Description: ' Set this to True to enable more debug data in the Container Log.
         Default is False'
@@ -29,7 +29,7 @@ Config:
       Target: DEBUG
       Type: Variable
       value: 'False'
-    ELEVATION:
+    elevation:
       Default: '0'
       Description: Set the hight above sea level for where the station is placed.
         This is used when calculating some of the sensor values. Station elevation
@@ -43,7 +43,7 @@ Config:
       Target: ELEVATION
       Type: Variable
       value: ''
-    FORECAST_INTERVAL:
+    forecast_interval:
       Default: '30'
       Description: The interval in minutes, between updates of the Forecast data.
         Default value is 30 minutes.
@@ -55,7 +55,7 @@ Config:
       Target: FORECAST_INTERVAL
       Type: Variable
       value: '30'
-    Language:
+    language:
       Default: en
       Description: "Use this to set the language for Wind Direction cardinals and\
         \ other sensors with text strings as state value. These strings will then\
@@ -70,7 +70,7 @@ Config:
       Target: LANGUAGE
       Type: Variable
       value: en
-    MQTT_DEBUG:
+    mqtt_debug:
       Default: 'False'
       Description: Set this to True, to get some more mqtt debugging messages in the
         Container log file. Default value is False
@@ -82,7 +82,7 @@ Config:
       Target: MQTT_DEBUG
       Type: Variable
       value: 'False'
-    MQTT_HOST:
+    mqtt_host:
       Default: ''
       Description: The IP address of your mqtt server. Even though you have the MQTT
         Server on the same machine as this Container, don't use 127.0.0.1 as this
@@ -96,7 +96,7 @@ Config:
       Target: MQTT_HOST
       Type: Variable
       value: ''
-    MQTT_PASSWORD:
+    mqtt_password:
       Default: ''
       Description: The password used to connect to the mqtt server. Leave blank to
         use Anonymous connection. Default value is blank
@@ -108,7 +108,7 @@ Config:
       Target: MQTT_PASSWORD
       Type: Variable
       value: ''
-    MQTT_PORT:
+    mqtt_port:
       Default: '1883'
       Description: The Port for your mqtt server. Default value is 1883
       Display: always
@@ -119,7 +119,7 @@ Config:
       Target: MQTT_PORT
       Type: Variable
       value: '1883'
-    MQTT_USERNAME:
+    mqtt_username:
       Default: ''
       Description: The username used to connect to the mqtt server. Leave blank to
         use Anonymous connection. Default value is blank
@@ -131,7 +131,7 @@ Config:
       Target: MQTT_USERNAME
       Type: Variable
       value: ''
-    RAPID_WIND_INTERVAL:
+    rapid_wind_interval:
       Default: '0'
       Description: ' The weather stations delivers wind speed and bearing every 2
         seconds. If you don''t want to update the HA sensors so often, you can set
@@ -145,7 +145,7 @@ Config:
       Target: RAPID_WIND_INTERVAL
       Type: Variable
       value: '0'
-    STATION_ID:
+    station_id:
       Default: ''
       Description: Enter your Station ID for your WeatherFlow Station. Default value
         is blank.
@@ -157,7 +157,7 @@ Config:
       Target: STATION_ID
       Type: Variable
       value: '68196'
-    STATION_TOKEN:
+    station_token:
       Default: ''
       Description: Enter your personal access Token to allow retrieval of data. If
         you don't have the token login with your account and create the token. NOTE
@@ -170,7 +170,7 @@ Config:
       Target: STATION_TOKEN
       Type: Variable
       value: ''
-    Unit System:
+    unitsystem:
       Default: metric
       Description: Enter imperial or metric. This will determine the unit system used
         when displaying the values. Default is metric
@@ -182,7 +182,7 @@ Config:
       Target: UNIT_SYSTEM
       Type: Variable
       value: 'imperial '
-    WF_HOST:
+    wf_host:
       Default: 0.0.0.0
       Description: Unless you have a very special IP setup or the Weatherflow hub
         is on a different network, you should not change this. Default is 0.0.0.0
@@ -194,7 +194,7 @@ Config:
       Target: WF_HOST
       Type: Variable
       value: 0.0.0.0
-    WF_PORT:
+    wf_port:
       Default: '50222'
       Description: Weatherflow always broadcasts on port 50222/udp, so don't change
         this. Default is 50222

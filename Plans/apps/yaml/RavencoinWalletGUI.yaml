@@ -4,7 +4,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Storage:
+    storage:
       Default: /mnt/user/appdata/RavencoinWallet/
       Description: 'This location contains files from your host that need to be accessible
         by the application.&lt;br&gt;Container path: /storage/.raven'
@@ -17,7 +17,7 @@ Config:
       Type: Path
       value: ''
   Port:
-    P2P Port:
+    p2pport:
       Default: '8767'
       Description: Port used by P2P
       Display: advanced-hide
@@ -28,7 +28,7 @@ Config:
       Target: '8767'
       Type: Port
       value: ''
-    VNC Port for GUI:
+    vncportforgui:
       Default: '5900'
       Description: Port used to access the application's GUI via the VNC protocol.  Optional
         if no VNC client is used.
@@ -40,7 +40,7 @@ Config:
       Target: '5900'
       Type: Port
       value: ''
-    WEB Port for GUI:
+    webportforgui:
       Default: '5800'
       Description: Port used to access the application's GUI via the web interface.
       Display: advanced-hide
@@ -52,7 +52,7 @@ Config:
       Type: Port
       value: ''
   Variable:
-    Bootstrap:
+    bootstrap:
       Default: '0'
       Description: Improve synchronization speed for fresh install
       Display: advanced
@@ -63,7 +63,7 @@ Config:
       Target: BOOTSTRAP
       Type: Variable
       value: ''
-    Display Height:
+    displayheight:
       Default: '768'
       Description: Height (in pixels) of the application's window.
       Display: advanced
@@ -74,7 +74,7 @@ Config:
       Target: DISPLAY_HEIGHT
       Type: Variable
       value: ''
-    Display Width:
+    displaywidth:
       Default: '1280'
       Description: Width (in pixels) of the application's window.
       Display: advanced
@@ -85,7 +85,7 @@ Config:
       Target: DISPLAY_WIDTH
       Type: Variable
       value: ''
-    ENABLE CJK FONT:
+    enablecjkfont:
       Default: '0'
       Description: ENABLE_CJK_FONT for japanese or chinese character support.
       Display: advanced
@@ -96,7 +96,7 @@ Config:
       Target: ENABLE_CJK_FONT
       Type: Variable
       value: ''
-    Extra x11vnc Options:
+    extrax11vncoptions:
       Default: ''
       Description: 'Extra options to pass to the x11vnc server running in the Docker
         container.&lt;br&gt;&lt;span style=''color: red;''&gt;&lt;b&gt;Warning:&lt;/b&gt;&lt;/span&gt;
@@ -109,7 +109,7 @@ Config:
       Target: X11VNC_EXTRA_OPTS
       Type: Variable
       value: ''
-    Group ID:
+    groupid:
       Default: '100'
       Description: ID of the group the application runs as.
       Display: advanced-hide
@@ -120,7 +120,7 @@ Config:
       Target: GROUP_ID
       Type: Variable
       value: ''
-    Niceness (priority):
+    niceness(priority):
       Default: ''
       Description: Priority at which the application should run.  A niceness value
         of -20 is the highest priority and 19 is the lowest priority.&lt;br&gt;&lt;b&gt;NOTE:&lt;/b&gt;
@@ -135,7 +135,7 @@ Config:
       Target: APP_NICENESS
       Type: Variable
       value: ''
-    Secure Connection:
+    secureconnection:
       Default: '0'
       Description: 'Whether or not an encrypted connection should be used to access
         the application''s GUI.  Set to &lt;i&gt;&lt;b&gt;1&lt;/b&gt;&lt;/i&gt; to
@@ -152,7 +152,7 @@ Config:
       Target: SECURE_CONNECTION
       Type: Variable
       value: ''
-    Umask:
+    umask:
       Default: '000'
       Description: Mask that controls how file permissions are set for newly created
         files. The value of the mask is in octal notation.
@@ -164,7 +164,7 @@ Config:
       Target: UMASK
       Type: Variable
       value: ''
-    User ID:
+    userid:
       Default: '99'
       Description: ID of the user the application runs as.
       Display: advanced-hide

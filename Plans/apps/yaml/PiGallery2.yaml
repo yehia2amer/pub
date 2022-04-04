@@ -13,7 +13,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Config:
+    config:
       Default: /mnt/user/appdata/PiGalery/config
       Description: "Stock the config set in the AdminPanel.\r\n(Can be change with\
         \ file.)"
@@ -25,29 +25,6 @@ Config:
       Target: /app/data/config
       Type: Path
       value: /mnt/user/appdata/PiGallery2/config
-    Image:
-      Default: ''
-      Description: Where is stock in the docker all the image.
-      Display: always
-      Mask: 'false'
-      Mode: ro
-      Name: Image
-      Required: 'true'
-      Target: /app/data/images/
-      Type: Path
-      value: /mnt/user/PiGallery2Data/
-    Tmp:
-      Default: /mnt/user/appdata/PiGalery/tmp
-      Description: "Where is stock all the temporaru file.\r\nSuch has thumbnails\
-        \ and other."
-      Display: always
-      Mask: 'false'
-      Mode: rw
-      Name: Tmp
-      Required: 'true'
-      Target: /app/data/tmp
-      Type: Path
-      value: /mnt/user/appdata/PiGallery2/tpm
     db:
       Default: /mnt/user/appdata/PiGalery/db
       Description: "The dataBase if set to sql and not using mysql.\r\n(Keep it even\
@@ -60,8 +37,31 @@ Config:
       Target: /app/data/db
       Type: Path
       value: /mnt/user/appdata/PiGallery2/db
+    image:
+      Default: ''
+      Description: Where is stock in the docker all the image.
+      Display: always
+      Mask: 'false'
+      Mode: ro
+      Name: Image
+      Required: 'true'
+      Target: /app/data/images/
+      Type: Path
+      value: /mnt/user/PiGallery2Data/
+    tmp:
+      Default: /mnt/user/appdata/PiGalery/tmp
+      Description: "Where is stock all the temporaru file.\r\nSuch has thumbnails\
+        \ and other."
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Tmp
+      Required: 'true'
+      Target: /app/data/tmp
+      Type: Path
+      value: /mnt/user/appdata/PiGallery2/tpm
   Port:
-    Port:
+    port:
       Default: '80'
       Description: ''
       Display: always

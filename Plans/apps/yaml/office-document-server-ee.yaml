@@ -5,29 +5,18 @@ Config:
   Device: {}
   Label: {}
   Path:
-    /var/lib/rabbitmq:
-      Default: ''
-      Description: 'Container Path: /var/lib/rabbitmq'
+    mountedfolderfordatabase:
+      Default: /mnt/user/appdata/onlyoffice/DocumentServer/db
+      Description: 'Container Path: /var/lib/postgresql'
       Display: always
       Mask: 'false'
       Mode: rw
-      Name: /var/lib/rabbitmq
+      Name: Mounted folder for database
       Required: 'false'
-      Target: /var/lib/rabbitmq
+      Target: /var/lib/postgresql
       Type: Path
-      value: /mnt/user/appdata/onlyoffice/DocumentServer/rabbitmq
-    /var/lib/redis:
-      Default: ''
-      Description: 'Container Path: /var/lib/redis'
-      Display: always
-      Mask: 'false'
-      Mode: rw
-      Name: /var/lib/redis
-      Required: 'false'
-      Target: /var/lib/redis
-      Type: Path
-      value: /mnt/user/appdata/onlyoffice/DocumentServer/redis
-    Mounted folder for data files ( SSL certificates can be added in the /cert subfolder ):
+      value: /mnt/user/appdata/onlyoffice/DocumentServer/db
+    mountedfolderfordatafiles(sslcertificatescanbeaddedinthecertsubfolder):
       Default: /mnt/user/appdata/onlyoffice/DocumentServer/data
       Description: 'Container Path: /var/www/onlyoffice/Data'
       Display: always
@@ -39,18 +28,7 @@ Config:
       Target: /var/www/onlyoffice/Data
       Type: Path
       value: /mnt/user/appdata/onlyoffice/DocumentServer/data
-    Mounted folder for database:
-      Default: /mnt/user/appdata/onlyoffice/DocumentServer/db
-      Description: 'Container Path: /var/lib/postgresql'
-      Display: always
-      Mask: 'false'
-      Mode: rw
-      Name: Mounted folder for database
-      Required: 'false'
-      Target: /var/lib/postgresql
-      Type: Path
-      value: /mnt/user/appdata/onlyoffice/DocumentServer/db
-    Mounted folder for file cache:
+    mountedfolderforfilecache:
       Default: /mnt/user/appdata/onlyoffice/DocumentServer/lib
       Description: 'Container Path: /var/lib/onlyoffice'
       Display: always
@@ -61,7 +39,7 @@ Config:
       Target: /var/lib/onlyoffice
       Type: Path
       value: /mnt/user/appdata/onlyoffice/DocumentServer/lib
-    Mounted folder for logs:
+    mountedfolderforlogs:
       Default: /mnt/user/appdata/onlyoffice/DocumentServer/logs
       Description: 'Container Path: /var/log/onlyoffice'
       Display: always
@@ -72,7 +50,7 @@ Config:
       Target: /var/log/onlyoffice
       Type: Path
       value: /mnt/user/appdata/onlyoffice/DocumentServer/logs
-    Mounted folder for unsaved files:
+    mountedfolderforunsavedfiles:
       Default: /mnt/user/appdata/onlyoffice/DocumentServer/forgotten
       Description: 'Container Path: /var/lib/onlyoffice/documentserver/App_Data/cache/files/forgotten'
       Display: always
@@ -83,7 +61,7 @@ Config:
       Target: /var/lib/onlyoffice/documentserver/App_Data/cache/files/forgotten
       Type: Path
       value: /mnt/user/appdata/onlyoffice/DocumentServer/forgotten
-    Mounted folder where you can add your custom fonts:
+    mountedfolderwhereyoucanaddyourcustomfonts:
       Default: /mnt/user/appdata/onlyoffice/DocumentServer/fonts
       Description: 'Container Path: /usr/share/fonts/truetype/custom'
       Display: always
@@ -94,8 +72,30 @@ Config:
       Target: /usr/share/fonts/truetype/custom
       Type: Path
       value: /mnt/user/appdata/onlyoffice/DocumentServer/fonts
+    varlibrabbitmq:
+      Default: ''
+      Description: 'Container Path: /var/lib/rabbitmq'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: /var/lib/rabbitmq
+      Required: 'false'
+      Target: /var/lib/rabbitmq
+      Type: Path
+      value: /mnt/user/appdata/onlyoffice/DocumentServer/rabbitmq
+    varlibredis:
+      Default: ''
+      Description: 'Container Path: /var/lib/redis'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: /var/lib/redis
+      Required: 'false'
+      Target: /var/lib/redis
+      Type: Path
+      value: /mnt/user/appdata/onlyoffice/DocumentServer/redis
   Port:
-    HTTP Port:
+    httpport:
       Default: '8082'
       Description: 'Container Port: 80'
       Display: always
@@ -106,7 +106,7 @@ Config:
       Target: '80'
       Type: Port
       value: '8082'
-    HTTPS Port:
+    httpsport:
       Default: '4432'
       Description: 'Container Port: 443'
       Display: always
@@ -118,7 +118,7 @@ Config:
       Type: Port
       value: '4432'
   Variable:
-    Secret name:
+    secretname:
       Default: ''
       Description: 'Secret name: *****'
       Display: always
@@ -129,7 +129,7 @@ Config:
       Target: JWT_SECRET
       Type: Variable
       value: mySecret
-    Secret true/false:
+    secrettruefalse:
       Default: ''
       Description: 'Secret on/off: ON'
       Display: always

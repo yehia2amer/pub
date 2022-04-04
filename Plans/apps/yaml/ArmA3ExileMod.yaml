@@ -4,7 +4,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Profiles:
+    profiles:
       Default: ''
       Description: /serverdata/.local/share
       Display: always
@@ -15,7 +15,7 @@ Config:
       Target: /serverdata/.local/share
       Type: Path
       value: /mnt/cache/appdata/arma3exilemod/profiles
-    ServerFiles:
+    serverfiles:
       Default: ''
       Description: 'Container Path: /serverdata/serverfiles'
       Display: always
@@ -26,7 +26,7 @@ Config:
       Target: /serverdata/serverfiles
       Type: Path
       value: /mnt/cache/appdata/arma3exilemod/gamefiles
-    SteamCMD:
+    steamcmd:
       Default: ''
       Description: 'Container Path: /serverdata/steamcmd'
       Display: always
@@ -38,7 +38,7 @@ Config:
       Type: Path
       value: /mnt/user/appdata/steamcmd
   Port:
-    TCP GamePort:
+    tcpgameport:
       Default: ''
       Description: TCP Gameport (if you need another port, please delete this entry
         and create a new TCP Port with the required port number, also don't forget
@@ -53,7 +53,7 @@ Config:
       Target: '2302'
       Type: Port
       value: '2302'
-    TCP MariaDB:
+    tcpmariadb:
       Default: ''
       Description: Not required, only if you want to connect to the database from
         outside. Delete if you allready have a MariaDB container running.
@@ -65,7 +65,7 @@ Config:
       Target: '3306'
       Type: Port
       value: '3306'
-    UDP BattlEye Traffic:
+    udpbattleyetraffic:
       Default: ''
       Description: UDP Game Port +4
       Display: always
@@ -76,7 +76,7 @@ Config:
       Target: '2306'
       Type: Port
       value: '2306'
-    UDP Game Port:
+    udpgameport:
       Default: ''
       Description: Same as TCP Game Port
       Display: always
@@ -87,7 +87,7 @@ Config:
       Target: '2302'
       Type: Port
       value: '2302'
-    UDP Steam Master Port:
+    udpsteammasterport:
       Default: ''
       Description: UDP Game Port +2
       Display: always
@@ -98,7 +98,7 @@ Config:
       Target: '2304'
       Type: Port
       value: '2304'
-    UDP Steam Querry Port:
+    udpsteamquerryport:
       Default: ''
       Description: UDP Game Port +1
       Display: always
@@ -109,7 +109,7 @@ Config:
       Target: '2303'
       Type: Port
       value: '2303'
-    UDP VON Port:
+    udpvonport:
       Default: ''
       Description: UDP Game Port +3
       Display: always
@@ -121,7 +121,7 @@ Config:
       Type: Port
       value: '2305'
   Variable:
-    ExileMod Server URL:
+    exilemodserverurl:
       Default: ''
       Description: Change only if you know what you are doing!
       Display: advanced
@@ -132,7 +132,7 @@ Config:
       Target: EXILEMOD_SERVER_URL
       Type: Variable
       value: http://www.exilemod.com/ExileServer-1.0.4a.zip
-    GAME_ID:
+    game_id:
       Default: ''
       Description: "The GAME_ID that the container download at startup.\r\n(https://developer.valvesoftware.com/wiki/Dedicated_Servers_List)"
       Display: always
@@ -143,7 +143,7 @@ Config:
       Target: GAME_ID
       Type: Variable
       value: '233780'
-    GAME_PARAMS:
+    game_params:
       Default: ''
       Description: "Enter your start up commands for the server.\r\nNote: To change\
         \ the Port of the server please click on 'Show more settings' button, don't\
@@ -156,7 +156,7 @@ Config:
       Target: GAME_PARAMS
       Type: Variable
       value: ''
-    GAME_PORT:
+    game_port:
       Default: ''
       Description: 'Container Variable: GAME_PORT'
       Display: advanced
@@ -167,7 +167,7 @@ Config:
       Target: GAME_PORT
       Type: Variable
       value: '2302'
-    GID:
+    gid:
       Default: ''
       Description: 'Container Variable: GID'
       Display: advanced-hide
@@ -178,7 +178,7 @@ Config:
       Target: GID
       Type: Variable
       value: '100'
-    MariaDB Root Password:
+    mariadbrootpassword:
       Default: ''
       Description: Enter the preffered root password of the database.
       Display: always
@@ -189,7 +189,7 @@ Config:
       Target: MARIA_DB_ROOT_PWD
       Type: Variable
       value: ExileMod
-    Steam-Password:
+    steam-password:
       Default: ''
       Description: 'Your Steam password goes here if you want to install a game that
         needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
@@ -202,7 +202,7 @@ Config:
       Target: PASSWRD
       Type: Variable
       value: ''
-    Steam-Username:
+    steam-username:
       Default: ''
       Description: 'Your Steam username goes here if you want to install a game that
         needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
@@ -215,7 +215,7 @@ Config:
       Target: USERNAME
       Type: Variable
       value: ''
-    UID:
+    uid:
       Default: ''
       Description: 'Container Variable: UID'
       Display: advanced-hide
@@ -226,7 +226,7 @@ Config:
       Target: UID
       Type: Variable
       value: '99'
-    Validate Installation:
+    validateinstallation:
       Default: ''
       Description: Set the Variable to 'true' if you want to validate the installation
         otherwise leave it blank.
@@ -238,7 +238,7 @@ Config:
       Target: VALIDATE
       Type: Variable
       value: ''
-    Workshop Item Manual Installation:
+    workshopitemmanualinstallation:
       Default: ''
       Description: "Please set to 'true' (without quotes) if you want to install the\
         \ Workshopcontent for ExileMod manually since the account you specified above\

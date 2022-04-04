@@ -4,17 +4,6 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Mount Path:
-      Default: ''
-      Description: 'Container Path: /UNRAID'
-      Display: always
-      Mask: 'false'
-      Mode: rw
-      Name: Mount Path
-      Required: 'true'
-      Target: /UNRAID
-      Type: Path
-      value: /mnt/user
     appdata:
       Default: ''
       Description: 'Container Path: /root'
@@ -26,8 +15,19 @@ Config:
       Target: /root
       Type: Path
       value: /mnt/user/appdata/cloudcmd
+    mountpath:
+      Default: ''
+      Description: 'Container Path: /UNRAID'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Mount Path
+      Required: 'true'
+      Target: /UNRAID
+      Type: Path
+      value: /mnt/user
   Port:
-    Port:
+    port:
       Default: '8765'
       Description: 'Container Port: 8000'
       Display: always
@@ -39,7 +39,7 @@ Config:
       Type: Port
       value: '8765'
   Variable:
-    HOME - Dont Change!:
+    home-dontchange!:
       Default: ''
       Description: 'Container Variable: HOME'
       Display: advanced

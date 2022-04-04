@@ -4,7 +4,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    doker.sock:
+    doker-sock:
       Default: /var/run/docker.sock
       Description: 'Container Path: /var/run/docker.sock'
       Display: always
@@ -39,7 +39,7 @@ Config:
       value: /sys
   Port: {}
   Variable:
-    Do Not Track:
+    donottrack:
       Default: '0'
       Description: "Set to 1 to stop anonymous tracking\r\n( https://docs.netdata.cloud/docs/anonymous-statistics/#opt-out\
         \ )"
@@ -51,7 +51,7 @@ Config:
       Target: DO_NOT_TRACK
       Type: Variable
       value: '0'
-    PGID:
+    pgid:
       Default: '281'
       Description: "If you want to have your container names resolved by netdata it\
         \ needs to have access to docker group. To achive that just add environment\

@@ -4,17 +4,18 @@ CategoryList: &id001
 Config:
   Device: {}
   Label: {}
-  Path: {}
+  Path:
+    nodelink:
+      Mode: rw
+      Name: config
+      Target: /config
+      value: path to config
   Port: {}
   Variable:
-    UMASK:
+    umask:
       Name: UMASK
+      Target: UMASK
       value: '000'
-Data:
-  Volume:
-    ContainerDir: /config
-    HostDir: path to config
-    Mode: rw
 ExtraParams: -i
 GitHub: https://github.com/jcreynolds/docker-templates
 Icon: https://raw.githubusercontent.com/jcreynolds/docker-templates/master/Icons/NodeLink.png

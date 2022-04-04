@@ -4,7 +4,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Clip directory:
+    clipdirectory:
       Default: /mnt/user/appdata/unifi-protect-backup/clips
       Description: ONLY USED WITH LOCAL RCLONE REMOTE
       Display: always
@@ -15,7 +15,7 @@ Config:
       Target: /data
       Type: Path
       value: /mnt/user/appdata/unifi-protect-backup/clips
-    Config:
+    config:
       Default: /mnt/user/appdata/unifi-protect-backup
       Description: Location of rclone configuration files
       Display: always
@@ -28,7 +28,7 @@ Config:
       value: /mnt/user/appdata/unifi-protect-backup
   Port: {}
   Variable:
-    Clip retention period:
+    clipretentionperiod:
       Default: 7d
       Description: How long should event clips be backed up for. Format as per the
         `--max-age` argument of `rclone` (https://rclone.org/filtering/#max-age-don-t-transfer-any-file-older-than-this)
@@ -40,7 +40,7 @@ Config:
       Target: RCLONE_RETENTION
       Type: Variable
       value: ''
-    Ignore Cameras:
+    ignorecameras:
       Default: ''
       Description: IDs of the cameras you want unifi-protect-backup to ignore. A list
         of camera IDs will be appear at the start of the log
@@ -52,7 +52,7 @@ Config:
       Target: IGNORE_CAMERAS
       Type: Variable
       value: ''
-    Logging Verbosity:
+    loggingverbosity:
       Default: v
       Description: More `v`s = more verbost logging
       Display: always
@@ -63,75 +63,7 @@ Config:
       Target: VERBOSITY
       Type: Variable
       value: ''
-    TimeZone:
-      Default: UTC
-      Description: TimeZone for the container refer to https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-        for a list of possible timezones
-      Display: always
-      Mask: 'false'
-      Mode: ''
-      Name: TimeZone
-      Required: 'true'
-      Target: TZ
-      Type: Variable
-      value: ''
-    UniFi Protect address:
-      Default: ''
-      Description: Address of Unifi Protect instance
-      Display: always
-      Mask: 'false'
-      Mode: ''
-      Name: UniFi Protect address
-      Required: 'true'
-      Target: UFP_ADDRESS
-      Type: Variable
-      value: ''
-    UniFi Protect password:
-      Default: ''
-      Description: Password for Unifi Protect user
-      Display: always
-      Mask: 'true'
-      Mode: ''
-      Name: UniFi Protect password
-      Required: 'true'
-      Target: UFP_PASSWORD
-      Type: Variable
-      value: ''
-    UniFi Protect port:
-      Default: '443'
-      Description: Port of Unifi Protect instance
-      Display: always
-      Mask: 'false'
-      Mode: ''
-      Name: UniFi Protect port
-      Required: 'true'
-      Target: UFP_PORT
-      Type: Variable
-      value: ''
-    UniFi Protect username:
-      Default: ''
-      Description: Username to login to Unifi Protect instance
-      Display: always
-      Mask: 'false'
-      Mode: ''
-      Name: UniFi Protect username
-      Required: 'true'
-      Target: UFP_USERNAME
-      Type: Variable
-      value: ''
-    Verify SSL certificate:
-      Default: 'false'
-      Description: Set to false if your UniFi protect instances doesn't have a valid
-        SSL certificate
-      Display: always
-      Mask: 'false'
-      Mode: ''
-      Name: Verify SSL certificate
-      Required: 'true'
-      Target: UFP_SSL_VERIFY
-      Type: Variable
-      value: ''
-    rclone args:
+    rcloneargs:
       Default: ''
       Description: Optional arguments which are directly passed to `rclone rcat`.
         See the `rclone` documentation for the full set of arguments it supports (https://rclone.org/docs/)
@@ -143,7 +75,7 @@ Config:
       Target: RCLONE_ARGS
       Type: Variable
       value: ''
-    rclone destination:
+    rclonedestination:
       Default: ''
       Description: '`rclone` destination path in the format {rclone remote}:{path
         on remote}. E.g.`gdrive:/backups/unifi_protect`'
@@ -153,6 +85,74 @@ Config:
       Name: rclone destination
       Required: 'true'
       Target: RCLONE_DESTINATION
+      Type: Variable
+      value: ''
+    timezone:
+      Default: UTC
+      Description: TimeZone for the container refer to https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+        for a list of possible timezones
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: TimeZone
+      Required: 'true'
+      Target: TZ
+      Type: Variable
+      value: ''
+    unifiprotectaddress:
+      Default: ''
+      Description: Address of Unifi Protect instance
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: UniFi Protect address
+      Required: 'true'
+      Target: UFP_ADDRESS
+      Type: Variable
+      value: ''
+    unifiprotectpassword:
+      Default: ''
+      Description: Password for Unifi Protect user
+      Display: always
+      Mask: 'true'
+      Mode: ''
+      Name: UniFi Protect password
+      Required: 'true'
+      Target: UFP_PASSWORD
+      Type: Variable
+      value: ''
+    unifiprotectport:
+      Default: '443'
+      Description: Port of Unifi Protect instance
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: UniFi Protect port
+      Required: 'true'
+      Target: UFP_PORT
+      Type: Variable
+      value: ''
+    unifiprotectusername:
+      Default: ''
+      Description: Username to login to Unifi Protect instance
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: UniFi Protect username
+      Required: 'true'
+      Target: UFP_USERNAME
+      Type: Variable
+      value: ''
+    verifysslcertificate:
+      Default: 'false'
+      Description: Set to false if your UniFi protect instances doesn't have a valid
+        SSL certificate
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Verify SSL certificate
+      Required: 'true'
+      Target: UFP_SSL_VERIFY
       Type: Variable
       value: ''
 Keywords:

@@ -4,7 +4,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Config:
+    config:
       Default: /mnt/user/appdata/shinobi/config
       Description: Shinobi config working directory
       Display: always
@@ -15,62 +15,7 @@ Config:
       Target: /config
       Type: Path
       value: ''
-    Database:
-      Default: /mnt/user/appdata/shinobi/database
-      Description: Shinobi Mysql directory
-      Display: advanced
-      Mask: 'false'
-      Mode: rw
-      Name: Database
-      Required: 'false'
-      Target: /var/lib/mysql
-      Type: Path
-      value: ''
-    Localtime:
-      Default: /etc/localtime
-      Description: 'Container Path: /etc/localtime'
-      Display: advanced
-      Mask: 'false'
-      Mode: ro
-      Name: Localtime
-      Required: 'false'
-      Target: /etc/localtime
-      Type: Path
-      value: ''
-    Plugins:
-      Default: /mnt/user/appdata/shinobi/plugins
-      Description: 'Container Path: /usr/src/app/store'
-      Display: advanced
-      Mask: 'false'
-      Mode: rw
-      Name: Plugins
-      Required: 'false'
-      Target: /home/Shinobi/plugins
-      Type: Path
-      value: ''
-    Streams:
-      Default: /dev/shm/Shinobi/streams
-      Description: Streams cache
-      Display: advanced
-      Mask: 'false'
-      Mode: rw
-      Name: Streams
-      Required: 'false'
-      Target: /dev/shm/Shinobi/streams
-      Type: Path
-      value: ''
-    Videos:
-      Default: /mnt/user/appdata/shinobi/videos
-      Description: Stored Videos location
-      Display: always
-      Mask: 'false'
-      Mode: rw
-      Name: Videos
-      Required: 'false'
-      Target: /home/Shinobi/videos
-      Type: Path
-      value: ''
-    customAutoLoad:
+    customautoload:
       Default: /mnt/user/appdata/shinobi/customAutoLoad
       Description: customAutoLoad elements
       Display: advanced
@@ -81,8 +26,63 @@ Config:
       Target: /home/Shinobi/libs/customAutoLoad
       Type: Path
       value: ''
+    database:
+      Default: /mnt/user/appdata/shinobi/database
+      Description: Shinobi Mysql directory
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: Database
+      Required: 'false'
+      Target: /var/lib/mysql
+      Type: Path
+      value: ''
+    localtime:
+      Default: /etc/localtime
+      Description: 'Container Path: /etc/localtime'
+      Display: advanced
+      Mask: 'false'
+      Mode: ro
+      Name: Localtime
+      Required: 'false'
+      Target: /etc/localtime
+      Type: Path
+      value: ''
+    plugins:
+      Default: /mnt/user/appdata/shinobi/plugins
+      Description: 'Container Path: /usr/src/app/store'
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: Plugins
+      Required: 'false'
+      Target: /home/Shinobi/plugins
+      Type: Path
+      value: ''
+    streams:
+      Default: /dev/shm/Shinobi/streams
+      Description: Streams cache
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: Streams
+      Required: 'false'
+      Target: /dev/shm/Shinobi/streams
+      Type: Path
+      value: ''
+    videos:
+      Default: /mnt/user/appdata/shinobi/videos
+      Description: Stored Videos location
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Videos
+      Required: 'false'
+      Target: /home/Shinobi/videos
+      Type: Path
+      value: ''
   Port:
-    WebUI:
+    webui:
       Default: ''
       Description: 'Container Port: 8080'
       Display: always
@@ -94,7 +94,7 @@ Config:
       Type: Port
       value: ''
   Variable:
-    Nvidia GPU Capabilities:
+    nvidiagpucapabilities:
       Default: ''
       Description: Should be 'all'
       Display: advanced
@@ -104,7 +104,7 @@ Config:
       Target: NVIDIA_DRIVER_CAPABILITIES
       Type: Variable
       value: ''
-    Nvidia GPU Devices:
+    nvidiagpudevices:
       Default: ''
       Description: GPU ID - Only if using an Nvidia GPU
       Display: advanced

@@ -77,40 +77,6 @@ Config:
       Type: Port
       value: '8940'
   Variable:
-    NVIDIA_DRIVER_CAPABILITIES:
-      Default: compute,utility
-      Description: 'Driver features to load.  See: https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/user-guide.html#driver-capabilities'
-      Display: always-hide
-      Mask: 'false'
-      Mode: ''
-      Name: NVIDIA_DRIVER_CAPABILITIES
-      Required: 'false'
-      Target: NVIDIA_DRIVER_CAPABILITIES
-      Type: Variable
-      value: all
-    NVIDIA_VISIBLE_DEVICES:
-      Default: all
-      Description: 'GPU(s) to use in container. See: https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/user-guide.html#gpu-enumeration'
-      Display: always-hide
-      Mask: 'false'
-      Mode: ''
-      Name: NVIDIA_VISIBLE_DEVICES
-      Required: 'false'
-      Target: NVIDIA_VISIBLE_DEVICES
-      Type: Variable
-      value: '0'
-    OPENCL_GPU:
-      Default: ''
-      Description: OpenCL GPU type.  Leave blank if you have no GPU. Use exactly 'nvidia'
-        if you have a supported Nvidia GPU. AMD and iPU not currently supported.
-      Display: always-hide
-      Mask: 'false'
-      Mode: ''
-      Name: OPENCL_GPU
-      Required: 'false'
-      Target: OPENCL_GPU
-      Type: Variable
-      value: ''
     blockchains:
       Default: mmx
       Description: The blockchain to farm.  Leave set to 'mmx'.
@@ -146,6 +112,40 @@ Config:
       Target: mode
       Type: Variable
       value: fullnode
+    nvidia_driver_capabilities:
+      Default: compute,utility
+      Description: 'Driver features to load.  See: https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/user-guide.html#driver-capabilities'
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: NVIDIA_DRIVER_CAPABILITIES
+      Required: 'false'
+      Target: NVIDIA_DRIVER_CAPABILITIES
+      Type: Variable
+      value: all
+    nvidia_visible_devices:
+      Default: all
+      Description: 'GPU(s) to use in container. See: https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/user-guide.html#gpu-enumeration'
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: NVIDIA_VISIBLE_DEVICES
+      Required: 'false'
+      Target: NVIDIA_VISIBLE_DEVICES
+      Type: Variable
+      value: '0'
+    opencl_gpu:
+      Default: ''
+      Description: OpenCL GPU type.  Leave blank if you have no GPU. Use exactly 'nvidia'
+        if you have a supported Nvidia GPU. AMD and iPU not currently supported.
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: OPENCL_GPU
+      Required: 'false'
+      Target: OPENCL_GPU
+      Type: Variable
+      value: ''
     plots_dir:
       Default: /plots1
       Description: 'A colon-separated list of all in-container paths (defined above)

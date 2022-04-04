@@ -5,7 +5,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    ServerFiles:
+    serverfiles:
       Default: ''
       Description: 'Container Path: /serverdata/serverfiles'
       Display: always
@@ -16,7 +16,7 @@ Config:
       Target: /serverdata/serverfiles
       Type: Path
       value: /mnt/cache/appdata/alienswarm
-    SteamCMD:
+    steamcmd:
       Default: ''
       Description: 'Container Path: /serverdata/steamcmd'
       Display: always
@@ -28,7 +28,7 @@ Config:
       Type: Path
       value: /mnt/user/appdata/steamcmd
   Port:
-    TCP - RCON Port:
+    tcp-rconport:
       Default: ''
       Description: TCP RCON Port (not required)
       Display: always
@@ -39,7 +39,7 @@ Config:
       Target: '27015'
       Type: Port
       value: '27015'
-    UDP - Game Port:
+    udp-gameport:
       Default: ''
       Description: UDP Gameport (if you need another port, please delete this entry
         and create a new UDP Port with the required port number, also don't forget
@@ -53,7 +53,7 @@ Config:
       Type: Port
       value: '27015'
   Variable:
-    GAME_ID:
+    game_id:
       Default: ''
       Description: "The GAME_ID that the container download at startup.\r\n(https://developer.valvesoftware.com/wiki/Dedicated_Servers_List)"
       Display: always
@@ -64,7 +64,7 @@ Config:
       Target: GAME_ID
       Type: Variable
       value: '635'
-    GAME_NAME:
+    game_name:
       Default: ''
       Description: Game name to start (is connected to the GAME_PARAMS).
       Display: always
@@ -75,7 +75,7 @@ Config:
       Target: GAME_NAME
       Type: Variable
       value: swarm
-    GAME_PARAMS:
+    game_params:
       Default: ''
       Description: Enter your start up commands for the server.
       Display: always
@@ -86,7 +86,7 @@ Config:
       Target: GAME_PARAMS
       Type: Variable
       value: +map lobby -maxplayers 4 +exec server.cfg
-    GAME_PORT:
+    game_port:
       Default: ''
       Description: 'Container Variable: GAME_PORT'
       Display: advanced
@@ -97,7 +97,7 @@ Config:
       Target: GAME_PORT
       Type: Variable
       value: '27015'
-    GID:
+    gid:
       Default: ''
       Description: 'Container Variable: GID'
       Display: advanced-hide
@@ -108,7 +108,7 @@ Config:
       Target: GID
       Type: Variable
       value: '100'
-    Steam-Password:
+    steam-password:
       Default: ''
       Description: 'Your Steam password goes here if you want to install a game that
         needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
@@ -121,7 +121,7 @@ Config:
       Target: PASSWRD
       Type: Variable
       value: ''
-    Steam-Username:
+    steam-username:
       Default: ''
       Description: 'Your Steam username goes here if you want to install a game that
         needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
@@ -134,7 +134,7 @@ Config:
       Target: USERNAME
       Type: Variable
       value: ''
-    UID:
+    uid:
       Default: ''
       Description: 'Container Variable: UID'
       Display: advanced-hide
@@ -145,7 +145,7 @@ Config:
       Target: UID
       Type: Variable
       value: '99'
-    Validate Installation:
+    validateinstallation:
       Default: ''
       Description: Set the Variable to 'true' if you want to validate the installation
         otherwise leave it blank.

@@ -4,7 +4,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    ServerFiles:
+    serverfiles:
       Default: ''
       Description: Server Path
       Display: always
@@ -16,7 +16,7 @@ Config:
       Type: Path
       value: /mnt/cache/appdata/zandronum
   Port:
-    UDP - GamePort:
+    udp-gameport:
       Default: ''
       Description: Server Game Port (If you need another port please delete this entry
         and create a new UDP port with the preferred port number - also don't forget
@@ -30,18 +30,7 @@ Config:
       Type: Port
       value: '10666'
   Variable:
-    GID:
-      Default: ''
-      Description: 'Container Variable: GID'
-      Display: advanced-hide
-      Mask: 'false'
-      Mode: ''
-      Name: GID
-      Required: 'true'
-      Target: GID
-      Type: Variable
-      value: '100'
-    Game Parameters:
+    gameparameters:
       Default: ''
       Description: 'Enter your start up commands for the server (eg: if you have more
         wad files in your ''wads'' folder append: ''-iwad DOOM2.WAD'' - without quotes
@@ -54,7 +43,18 @@ Config:
       Target: GAME_PARAMS
       Type: Variable
       value: -host 16 -exec server.cfg
-    UID:
+    gid:
+      Default: ''
+      Description: 'Container Variable: GID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: GID
+      Required: 'true'
+      Target: GID
+      Type: Variable
+      value: '100'
+    uid:
       Default: ''
       Description: 'Container Variable: UID'
       Display: advanced-hide

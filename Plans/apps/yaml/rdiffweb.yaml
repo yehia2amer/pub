@@ -7,20 +7,14 @@ CategoryList: &id001
 Config:
   Device: {}
   Label: {}
-  Path: {}
+  Path:
+    rdiffweb:
+      Mode: rw
+      Name: restores
+      Target: /restores
+      value: /mnt/cache/appdata/rdiffweb/restores
   Port: {}
   Variable: {}
-Data:
-  Volume:
-  - ContainerDir: /etc/rdiffweb
-    HostDir: /mnt/cache/appdata/rdiffweb/config
-    Mode: rw
-  - ContainerDir: /backups
-    HostDir: /mnt/disk2/rdiff-backup/
-    Mode: ro
-  - ContainerDir: /restores
-    HostDir: /mnt/cache/appdata/rdiffweb/restores
-    Mode: rw
 GitHub: https://github.com/jshridha/docker-rdiffweb/
 Icon: ''
 Keywords:

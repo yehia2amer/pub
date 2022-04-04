@@ -6,7 +6,7 @@ Config:
   Label: {}
   Path: {}
   Port:
-    ' GraphQL interface':
+    graphqlinterface:
       Default: ''
       Description: ' GraphQL interface'
       Display: always
@@ -17,7 +17,7 @@ Config:
       Target: '8000'
       Type: Port
       value: '8000'
-    GraphQL WebSocket:
+    graphqlwebsocket:
       Default: ''
       Description: GraphQL WebSocket server
       Display: always
@@ -28,7 +28,7 @@ Config:
       Target: '8001'
       Type: Port
       value: '8001'
-    JSON-RPC:
+    json-rpc:
       Default: ''
       Description: JSON-RPC admin server.
       Display: always
@@ -40,18 +40,7 @@ Config:
       Type: Port
       value: '8020'
   Variable:
-    GRAPH_LOG:
-      Default: info
-      Description: log level
-      Display: advanced
-      Mask: 'false'
-      Mode: ''
-      Name: GRAPH_LOG
-      Required: 'false'
-      Target: GRAPH_LOG
-      Type: Variable
-      value: info
-    ethereum node url:
+    ethereumnodeurl:
       Default: mainnet:http://localhost:8545
       Description: ethereum node url
       Display: always
@@ -62,7 +51,18 @@ Config:
       Target: ethereum
       Type: Variable
       value: mainnet:http://localhost:8545
-    ipfs url:
+    graph_log:
+      Default: info
+      Description: log level
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: GRAPH_LOG
+      Required: 'false'
+      Target: GRAPH_LOG
+      Type: Variable
+      value: info
+    ipfsurl:
       Default: ipfs:5001
       Description: 'Container Variable: ipfs'
       Display: always
@@ -73,50 +73,6 @@ Config:
       Target: ipfs
       Type: Variable
       value: localhost:5001
-    postgres host:
-      Default: localhost
-      Description: postgres_host
-      Display: always
-      Mask: 'false'
-      Mode: ''
-      Name: postgres host
-      Required: 'true'
-      Target: postgres_host
-      Type: Variable
-      value: localhost
-    postgres password:
-      Default: PASSWORD
-      Description: postgres password
-      Display: always
-      Mask: 'true'
-      Mode: ''
-      Name: postgres password
-      Required: 'true'
-      Target: postgres_pass
-      Type: Variable
-      value: dsmrreader
-    postgres port:
-      Default: '5732'
-      Description: postgres port
-      Display: always-hide
-      Mask: 'false'
-      Mode: ''
-      Name: postgres port
-      Required: 'true'
-      Target: postgres_port
-      Type: Variable
-      value: '5732'
-    postgres user:
-      Default: USERNAME
-      Description: postgre user
-      Display: always
-      Mask: 'false'
-      Mode: ''
-      Name: postgres user
-      Required: 'true'
-      Target: postgres_user
-      Type: Variable
-      value: dsmrreader
     postgres_db:
       Default: graph-node
       Description: postgres db name
@@ -128,6 +84,50 @@ Config:
       Target: postgres_db
       Type: Variable
       value: graph-node
+    postgreshost:
+      Default: localhost
+      Description: postgres_host
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: postgres host
+      Required: 'true'
+      Target: postgres_host
+      Type: Variable
+      value: localhost
+    postgrespassword:
+      Default: PASSWORD
+      Description: postgres password
+      Display: always
+      Mask: 'true'
+      Mode: ''
+      Name: postgres password
+      Required: 'true'
+      Target: postgres_pass
+      Type: Variable
+      value: dsmrreader
+    postgresport:
+      Default: '5732'
+      Description: postgres port
+      Display: always-hide
+      Mask: 'false'
+      Mode: ''
+      Name: postgres port
+      Required: 'true'
+      Target: postgres_port
+      Type: Variable
+      value: '5732'
+    postgresuser:
+      Default: USERNAME
+      Description: postgre user
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: postgres user
+      Required: 'true'
+      Target: postgres_user
+      Type: Variable
+      value: dsmrreader
 Icon: https://storage.googleapis.com/graph-web/favicon.png
 Keywords:
 - graph-node

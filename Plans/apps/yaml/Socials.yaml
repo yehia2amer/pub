@@ -4,20 +4,22 @@ CategoryList: &id001
 Config:
   Device: {}
   Label: {}
-  Path: {}
+  Path:
+    socials:
+      Mode: rw
+      Name: people
+      Target: /app/people
+      value: /mnt/user/appdata/socials
   Port: {}
   Variable:
-    LOG_LEVEL:
+    log_level:
       Name: LOG_LEVEL
+      Target: LOG_LEVEL
       value: info
-    UMASK:
+    umask:
       Name: UMASK
+      Target: UMASK
       value: '000'
-Data:
-  Volume:
-    ContainerDir: /app/people
-    HostDir: /mnt/user/appdata/socials
-    Mode: rw
 Icon: https://raw.githubusercontent.com/diamkil/docker-templates/master/diamkil/images/diamkil.png
 Keywords:
 - socials

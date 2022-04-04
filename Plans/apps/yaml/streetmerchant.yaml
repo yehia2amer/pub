@@ -4,7 +4,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Log Path:
+    logpath:
       Default: /mnt/user/appdata/streetmerchant/logs
       Description: 'This is where log files will be written if an error occurs. '
       Display: advanced-hide
@@ -16,7 +16,7 @@ Config:
       Type: Path
       value: /mnt/user/appdata/streetmerchant/logs
   Port:
-    Web Interface Port:
+    webinterfaceport:
       Default: '7279'
       Description: This is Web UI port you can access via a web browser.
       Display: always-hide
@@ -28,7 +28,7 @@ Config:
       Type: Port
       value: '7279'
   Variable:
-    AUTO_ADD_TO_CART:
+    auto_add_to_cart:
       Default: 'false'
       Description: "Future Feature. Not available yet.\r\n\r\nEnable auto add to cart\
         \ on support stores, default: true"
@@ -40,7 +40,7 @@ Config:
       Target: AUTO_ADD_TO_CART
       Type: Variable
       value: 'false'
-    BESTBUY_API_KEY:
+    bestbuy_api_key:
       Default: ''
       Description: Set an optional API key for faster Bestbuy checking via JSON
       Display: advanced-hide
@@ -51,7 +51,7 @@ Config:
       Target: BESTBUY_API_KEY
       Type: Variable
       value: ''
-    BROWSER_TRUSTED:
+    browser_trusted:
       Default: 'true'
       Description: Skip Chromium Sandbox. Set to true for containerized environments,
       Display: advanced-hide
@@ -62,19 +62,7 @@ Config:
       Target: BROWSER_TRUSTED
       Type: Variable
       value: 'true'
-    COUNTRY:
-      Default: usa
-      Description: "Supported country you want to be scraped\tOnly used with nvidia-api,\
-        \ default: usa\r\n\r\nhttps://jef.codes/streetmerchant/reference/filter/#supported-countries"
-      Display: advanced-hide
-      Mask: 'false'
-      Mode: ''
-      Name: COUNTRY
-      Required: 'false'
-      Target: COUNTRY
-      Type: Variable
-      value: usa
-    Console Verbosity:
+    consoleverbosity:
       Default: info
       Description: "The console output verbosity.  \r\n\r\nNote: This is not logged\
         \ to the system logger."
@@ -86,7 +74,19 @@ Config:
       Target: LOG_LEVEL
       Type: Variable
       value: info
-    EMAIL_PASSWORD:
+    country:
+      Default: usa
+      Description: "Supported country you want to be scraped\tOnly used with nvidia-api,\
+        \ default: usa\r\n\r\nhttps://jef.codes/streetmerchant/reference/filter/#supported-countries"
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: COUNTRY
+      Required: 'false'
+      Target: COUNTRY
+      Type: Variable
+      value: usa
+    email_password:
       Default: ''
       Description: "Email password. (See below for Gmail MFA users)\r\n\r\nIf you\
         \ use Gmail and have multi-factor authentication (MFA), you will need to create\
@@ -99,7 +99,7 @@ Config:
       Target: EMAIL_PASSWORD
       Type: Variable
       value: ''
-    EMAIL_TO:
+    email_to:
       Default: ''
       Description: Destination Email. Defaults to username if not set. Can be comma
         separated
@@ -111,7 +111,7 @@ Config:
       Target: EMAIL_TO
       Type: Variable
       value: ''
-    EMAIL_USERNAME:
+    email_username:
       Default: ''
       Description: Email address
       Display: always-hide
@@ -122,7 +122,7 @@ Config:
       Target: EMAIL_USERNAME
       Type: Variable
       value: ''
-    HEADLESS:
+    headless:
       Default: 'true'
       Description: 'Puppeteer to run headless or not. Debugging related, default:
         true'
@@ -134,19 +134,7 @@ Config:
       Target: HEADLESS
       Type: Variable
       value: 'true'
-    INCOGNITO:
-      Default: 'false'
-      Description: 'Puppeteer to run incognito or not. Debugging related, default:
-        false'
-      Display: advanced-hide
-      Mask: 'false'
-      Mode: ''
-      Name: INCOGNITO
-      Required: 'true'
-      Target: INCOGNITO
-      Type: Variable
-      value: 'false'
-    IN_STOCK_WAIT_TIME:
+    in_stock_wait_time:
       Default: '0'
       Description: Time to wait between requests to the same link if it has that card
         in stock. In seconds
@@ -158,7 +146,19 @@ Config:
       Target: IN_STOCK_WAIT_TIME
       Type: Variable
       value: '0'
-    LOW_BANDWIDTH:
+    incognito:
+      Default: 'false'
+      Description: 'Puppeteer to run incognito or not. Debugging related, default:
+        false'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: INCOGNITO
+      Required: 'true'
+      Target: INCOGNITO
+      Type: Variable
+      value: 'false'
+    low_bandwidth:
       Default: 'true'
       Description: 'Blocks images/fonts to reduce traffic. Disables ad blocker, default:
         false'
@@ -170,7 +170,7 @@ Config:
       Target: LOW_BANDWIDTH
       Type: Variable
       value: 'true'
-    PAGE_BACKOFF_MAX:
+    page_backoff_max:
       Default: '3600000'
       Description: Maximum backoff time between retrying requests for the same store
         when a forbidden response is received. (ms)
@@ -182,7 +182,7 @@ Config:
       Target: PAGE_BACKOFF_MAX
       Type: Variable
       value: '3600000'
-    PAGE_BACKOFF_MIN:
+    page_backoff_min:
       Default: '10000'
       Description: Minimum backoff time between retrying requests for the same store
         when a forbidden response is received (ms)
@@ -194,7 +194,7 @@ Config:
       Target: PAGE_BACKOFF_MIN
       Type: Variable
       value: '10000'
-    PAGE_SLEEP_MAX:
+    page_sleep_max:
       Default: '10000'
       Description: Maximum sleep time between queries of the same product page. In
         milliseconds,
@@ -206,7 +206,7 @@ Config:
       Target: PAGE_SLEEP_MAX
       Type: Variable
       value: '10000'
-    PAGE_SLEEP_MIN:
+    page_sleep_min:
       Default: '5000'
       Description: Minimum sleep time between queries of the same product page. In
         milliseconds,
@@ -218,7 +218,7 @@ Config:
       Target: PAGE_SLEEP_MIN
       Type: Variable
       value: '5000'
-    PAGE_TIMEOUT:
+    page_timeout:
       Default: '30000'
       Description: 'Navigation Timeout in milliseconds. 0 for infinite, default: 30000'
       Display: advanced-hide
@@ -229,7 +229,7 @@ Config:
       Target: PAGE_TIMEOUT
       Type: Variable
       value: '30000'
-    PHONE_CARRIER:
+    phone_carrier:
       Default: ''
       Description: "Supported carriers for SMS. E.g.: att or att,verizon,google, email\
         \ configuration required. If multiple phone numbers are listed, enter a carrier\
@@ -242,7 +242,7 @@ Config:
       Target: PHONE_CARRIER
       Type: Variable
       value: ''
-    PHONE_NUMBER:
+    phone_number:
       Default: ''
       Description: '10 digit phone number(s). E.g.: 1234567890 or 1234567890,0987654321,11112223333,
         email configuration required.  '
@@ -254,7 +254,7 @@ Config:
       Target: PHONE_NUMBER
       Type: Variable
       value: ''
-    PROXY_ADDRESS:
+    proxy_address:
       Default: ''
       Description: The IP address or domain name of your proxy
       Display: always-hide
@@ -265,7 +265,7 @@ Config:
       Target: PROXY_ADDRESS
       Type: Variable
       value: ''
-    PROXY_PORT:
+    proxy_port:
       Default: '80'
       Description: TCP Port number on which the proxy is listening for connections
       Display: always-hide
@@ -276,7 +276,7 @@ Config:
       Target: PROXY_PORT
       Type: Variable
       value: '80'
-    PROXY_PROTOCOL:
+    proxy_protocol:
       Default: ''
       Description: http or socks5
       Display: always-hide
@@ -287,7 +287,7 @@ Config:
       Target: PROXY_PROTOCOL
       Type: Variable
       value: ''
-    PUSHBULLET:
+    pushbullet:
       Default: ''
       Description: API key
       Display: always-hide
@@ -298,7 +298,7 @@ Config:
       Target: PUSHBULLET
       Type: Variable
       value: ''
-    SCREENSHOT:
+    screenshot:
       Default: 'true'
       Description: Capture screenshot of page if the product is in stock.
       Display: always-hide
@@ -309,7 +309,7 @@ Config:
       Target: SCREENSHOT
       Type: Variable
       value: 'true'
-    SHOW_ONLY_BRANDS:
+    show_only_brands:
       Default: ''
       Description: "Filter to show specified brands. Comma separated, e.g.: evga,zotac\r\
         \n\r\nhttps://jef.codes/streetmerchant/reference/filter/"
@@ -321,7 +321,7 @@ Config:
       Target: SHOW_ONLY_BRANDS
       Type: Variable
       value: ''
-    SHOW_ONLY_MODELS:
+    show_only_models:
       Default: ''
       Description: "Filter to show specified models\tBoth supported formats are comma\
         \ separated"
@@ -333,7 +333,7 @@ Config:
       Target: SHOW_ONLY_MODELS
       Type: Variable
       value: ''
-    SHOW_ONLY_SERIES:
+    show_only_series:
       Default: ''
       Description: "Filter to show specified series. Comma separated, e.g.: 3080,ryzen5900\r\
         \n\r\nhttps://jef.codes/streetmerchant/reference/filter/"
@@ -345,7 +345,7 @@ Config:
       Target: SHOW_ONLY_SERIES
       Type: Variable
       value: ''
-    SMTP_ADDRESS:
+    smtp_address:
       Default: ''
       Description: IP Address or FQDN of SMTP server
       Display: advanced-hide
@@ -356,7 +356,7 @@ Config:
       Target: SMTP_ADDRESS
       Type: Variable
       value: ''
-    SMTP_PORT:
+    smtp_port:
       Default: '25'
       Description: TCP Port number on which the smtp server is listening for connections.
       Display: advanced-hide
@@ -367,7 +367,7 @@ Config:
       Target: SMTP_PORT
       Type: Variable
       value: '25'
-    STORES:
+    stores:
       Default: ''
       Description: "Supported stores you want to be scraped. Default: amazon,bestbuy.\
         \ Comma separated, can include PAGE_SLEEP_MIN and PAGE_SLEEP_MAX values. E.g.:\
@@ -380,7 +380,7 @@ Config:
       Target: STORES
       Type: Variable
       value: ''
-    TELEGRAM_ACCESS_TOKEN:
+    telegram_access_token:
       Default: ''
       Description: Access token
       Display: always-hide
@@ -391,7 +391,7 @@ Config:
       Target: TELEGRAM_ACCESS_TOKEN
       Type: Variable
       value: ''
-    TELEGRAM_CHAT_ID:
+    telegram_chat_id:
       Default: ''
       Description: 'Chat ID. Can be comma separated, e.g.: 123456789,987654321'
       Display: always-hide
@@ -402,7 +402,7 @@ Config:
       Target: TELEGRAM_CHAT_ID
       Type: Variable
       value: ''
-    TWITTER_ACCESS_TOKEN_KEY:
+    twitter_access_token_key:
       Default: ''
       Description: 'Container Variable: TWITTER_ACCESS_TOKEN_KEY'
       Display: always-hide
@@ -413,7 +413,7 @@ Config:
       Target: TWITTER_ACCESS_TOKEN_KEY
       Type: Variable
       value: ''
-    TWITTER_ACCESS_TOKEN_SECRET:
+    twitter_access_token_secret:
       Default: ''
       Description: Twitter Token Secret
       Display: always-hide
@@ -424,7 +424,7 @@ Config:
       Target: TWITTER_ACCESS_TOKEN_SECRET
       Type: Variable
       value: ''
-    TWITTER_CONSUMER_KEY:
+    twitter_consumer_key:
       Default: ''
       Description: Twitter Consumer Key
       Display: always-hide
@@ -435,7 +435,7 @@ Config:
       Target: TWITTER_CONSUMER_KEY
       Type: Variable
       value: ''
-    TWITTER_CONSUMER_SECRET:
+    twitter_consumer_secret:
       Default: ''
       Description: Twitter Consumer Secret
       Display: always
@@ -446,7 +446,7 @@ Config:
       Target: TWITTER_CONSUMER_SECRET
       Type: Variable
       value: ''
-    TWITTER_TWEET_TAGS:
+    twitter_tweet_tags:
       Default: ''
       Description: 'List of hashtags to append to the tweet message, e.g.: #nvidia
         #nvidiastock'
@@ -458,7 +458,7 @@ Config:
       Target: TWITTER_TWEET_TAGS
       Type: Variable
       value: ''
-    WEB_PORT:
+    web_port:
       Default: '7239'
       Description: "This must be synchronized with the Web Interface Port values.\r\
         \n\r\nThis is the internal port the container should serve the web interface\

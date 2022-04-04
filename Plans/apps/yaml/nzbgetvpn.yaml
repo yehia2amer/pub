@@ -4,17 +4,6 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Downloads Path:
-      Default: ''
-      Description: Path for /downloads
-      Display: always
-      Mask: 'false'
-      Mode: rw
-      Name: Downloads Path
-      Required: 'true'
-      Target: /downloads
-      Type: Path
-      value: ''
     config:
       Default: /mnt/user/appdata/nzbgetvpn/
       Description: config path of nzbgetvpn
@@ -26,8 +15,19 @@ Config:
       Target: /config
       Type: Path
       value: /mnt/user/appdata/nzbgetvpn/
+    downloadspath:
+      Default: ''
+      Description: Path for /downloads
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Downloads Path
+      Required: 'true'
+      Target: /downloads
+      Type: Path
+      value: ''
   Port:
-    WEBUI_PORT_HTTP:
+    webui_port_http:
       Default: '6789'
       Description: Port used to access NZBGet (HTTP) remotely
       Display: always
@@ -38,7 +38,7 @@ Config:
       Target: '6789'
       Type: Port
       value: '6789'
-    WEBUI_PORT_HTTPS:
+    webui_port_https:
       Default: '6791'
       Description: Port used to access NZBGet (HTTPS) remotely
       Display: always
@@ -50,7 +50,7 @@ Config:
       Type: Port
       value: '6791'
   Variable:
-    ADDITIONAL_PORTS:
+    additional_ports:
       Default: ''
       Description: Additional ports for routing other containers through this one
       Display: advanced
@@ -61,7 +61,7 @@ Config:
       Target: ADDITIONAL_PORTS
       Type: Variable
       value: ''
-    ENABLE_SSL:
+    enable_ssl:
       Default: 'yes'
       Description: Let the container handle SSL (yes/no)?
       Display: always
@@ -72,7 +72,7 @@ Config:
       Target: ENABLE_SSL
       Type: Variable
       value: 'yes'
-    HEALTH_CHECK_HOST:
+    health_check_host:
       Default: one.one.one.one
       Description: Host used to check if connection is up
       Display: advanced
@@ -83,7 +83,7 @@ Config:
       Target: HEALTH_CHECK_HOST
       Type: Variable
       value: one.one.one.one
-    HEALTH_CHECK_INTERVAL:
+    health_check_interval:
       Default: '300'
       Description: Interval in seconds between connection check
       Display: advanced
@@ -94,7 +94,7 @@ Config:
       Target: HEALTH_CHECK_INTERVAL
       Type: Variable
       value: '300'
-    HEALTH_CHECK_SILENT:
+    health_check_silent:
       Default: '1'
       Description: 1 supresses the 'Network is up' message
       Display: advanced
@@ -105,7 +105,7 @@ Config:
       Target: HEALTH_CHECK_SILENT
       Type: Variable
       value: '1'
-    INSTALL_PYTHON3:
+    install_python3:
       Default: 'no'
       Description: Set to 'yes' to install Python3
       Display: advanced
@@ -116,7 +116,7 @@ Config:
       Target: INSTALL_PYTHON3
       Type: Variable
       value: 'no'
-    LAN_NETWORK:
+    lan_network:
       Default: 192.168.0.0/24
       Description: Your local network address in CIDR notation
       Display: always
@@ -127,7 +127,7 @@ Config:
       Target: LAN_NETWORK
       Type: Variable
       value: 192.168.0.0/24
-    NAME_SERVERS:
+    name_servers:
       Default: 1.1.1.1,1.0.0.1
       Description: DNS used by the container
       Display: advanced
@@ -138,7 +138,7 @@ Config:
       Target: NAME_SERVERS
       Type: Variable
       value: 1.1.1.1,1.0.0.1
-    PGID:
+    pgid:
       Default: '100'
       Description: The GID applied to the /config and /downloads
       Display: always
@@ -149,7 +149,7 @@ Config:
       Target: PGID
       Type: Variable
       value: '100'
-    PUID:
+    puid:
       Default: '99'
       Description: The UID applied to the /config and /downloads
       Display: always
@@ -160,7 +160,7 @@ Config:
       Target: PUID
       Type: Variable
       value: '99'
-    UMASK:
+    umask:
       Default: '002'
       Description: umask used by the container
       Display: advanced
@@ -171,7 +171,7 @@ Config:
       Target: UMASK
       Type: Variable
       value: '002'
-    VPN_ENABLED:
+    vpn_enabled:
       Default: 'yes'
       Description: Enable VPN? yes/no
       Display: always
@@ -182,7 +182,7 @@ Config:
       Target: VPN_ENABLED
       Type: Variable
       value: 'yes'
-    VPN_PASSWORD:
+    vpn_password:
       Default: ''
       Description: Password used to authenticate to the VPN (OpenVPN only)
       Display: always
@@ -193,7 +193,7 @@ Config:
       Target: VPN_PASSWORD
       Type: Variable
       value: ''
-    VPN_TYPE:
+    vpn_type:
       Default: openvpn
       Description: openvpn / wireguard?
       Display: always
@@ -204,7 +204,7 @@ Config:
       Target: VPN_TYPE
       Type: Variable
       value: openvpn
-    VPN_USERNAME:
+    vpn_username:
       Default: ''
       Description: Username used to authenticate to the VPN (OpenVPN only)
       Display: always
@@ -215,7 +215,7 @@ Config:
       Target: VPN_USERNAME
       Type: Variable
       value: ''
-    WEBUI_PASSWORD:
+    webui_password:
       Default: tegbzn6789
       Description: Password used to connect to the WebUI
       Display: always
@@ -226,7 +226,7 @@ Config:
       Target: WEBUI_PASSWORD
       Type: Variable
       value: tegbzn6789
-    WEBUI_USERNAME:
+    webui_username:
       Default: nzbget
       Description: Username used to connect to the WebUI
       Display: always

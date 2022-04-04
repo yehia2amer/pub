@@ -4,18 +4,6 @@ Config:
   Device: {}
   Label: {}
   Path:
-    /mnt:
-      Default: /mnt/user/
-      Description: 'This location contains files from your host that need to be accessible
-        by the application.&lt;br&gt;Container path: /mnt'
-      Display: always
-      Mask: 'false'
-      Mode: rw
-      Name: /mnt
-      Required: 'true'
-      Target: /mnt
-      Type: Path
-      value: /mnt/user/
     config:
       Default: /mnt/user/appdata/Javinizer/config
       Description: 'This location contains files from your host that need to be accessible
@@ -40,8 +28,20 @@ Config:
       Target: /logs
       Type: Path
       value: /mnt/user/appdata/Javinizer/logs
+    mnt:
+      Default: /mnt/user/
+      Description: 'This location contains files from your host that need to be accessible
+        by the application.&lt;br&gt;Container path: /mnt'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: /mnt
+      Required: 'true'
+      Target: /mnt
+      Type: Path
+      value: /mnt/user/
   Port:
-    Port for GUI:
+    portforgui:
       Default: '8600'
       Description: Port used to access the application's GUI
       Display: always

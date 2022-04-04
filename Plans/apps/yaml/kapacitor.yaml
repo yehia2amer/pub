@@ -4,17 +4,6 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Host Path 1:
-      Default: ''
-      Description: 'Container Path: /var/lib/kapacitor'
-      Display: always
-      Mask: 'false'
-      Mode: rw
-      Name: Host Path 1
-      Required: 'false'
-      Target: /var/lib/kapacitor
-      Type: Path
-      value: /mnt/user/appdata/kapacitor
     config:
       Default: ''
       Description: 'Container Path: /etc/kapacitor/kapacitor.conf'
@@ -26,8 +15,19 @@ Config:
       Target: /etc/kapacitor/kapacitor.conf
       Type: Path
       value: /mnt/user/appdata/kapacitor/kapacitor.conf
+    hostpath1:
+      Default: ''
+      Description: 'Container Path: /var/lib/kapacitor'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Host Path 1
+      Required: 'false'
+      Target: /var/lib/kapacitor
+      Type: Path
+      value: /mnt/user/appdata/kapacitor
   Port:
-    Web GUI:
+    webgui:
       Default: ''
       Description: 'Container Port: 9092'
       Display: always

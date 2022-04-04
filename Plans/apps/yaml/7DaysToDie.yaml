@@ -4,7 +4,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    ServerFiles:
+    serverfiles:
       Default: ''
       Description: 'Container Path: /serverdata/serverfiles'
       Display: always
@@ -15,7 +15,7 @@ Config:
       Target: /serverdata/serverfiles
       Type: Path
       value: /mnt/cache/appdata/7dtd
-    SteamCMD:
+    steamcmd:
       Default: ''
       Description: 'Container Path: /serverdata/steamcmd'
       Display: always
@@ -27,7 +27,7 @@ Config:
       Type: Path
       value: /mnt/user/appdata/steamcmd
   Port:
-    TCP - Game details:
+    tcp-gamedetails:
       Default: ''
       Description: 'Container Port: 26900'
       Display: always
@@ -38,7 +38,7 @@ Config:
       Target: '26900'
       Type: Port
       value: '26900'
-    TCP2 - Web base control:
+    tcp2-webbasecontrol:
       Default: ''
       Description: 'Container Port: 8080'
       Display: always
@@ -49,7 +49,7 @@ Config:
       Target: '8080'
       Type: Port
       value: '8080'
-    TCP3 - Web Panel:
+    tcp3-webpanel:
       Default: ''
       Description: 'Container Port: 8082'
       Display: always
@@ -60,7 +60,7 @@ Config:
       Target: '8082'
       Type: Port
       value: '8082'
-    UDP1 - Steam Master server:
+    udp1-steammasterserver:
       Default: ''
       Description: 'Container Port: 26900'
       Display: always
@@ -71,7 +71,7 @@ Config:
       Target: '26900'
       Type: Port
       value: '26900'
-    UDP2 - Steam Communications:
+    udp2-steamcommunications:
       Default: ''
       Description: 'Container Port: 26901'
       Display: always
@@ -82,7 +82,7 @@ Config:
       Target: '26901'
       Type: Port
       value: '26901'
-    UDP3 - RakNet:
+    udp3-raknet:
       Default: ''
       Description: 'Container Port: 26902'
       Display: always
@@ -93,7 +93,7 @@ Config:
       Target: '26902'
       Type: Port
       value: '26902'
-    UDP4 - UNET:
+    udp4-unet:
       Default: ''
       Description: 'Container Port: '
       Display: always
@@ -104,7 +104,7 @@ Config:
       Target: '26903'
       Type: Port
       value: '26903'
-    UDP5 - Registering at server list:
+    udp5-registeringatserverlist:
       Default: ''
       Description: Should be in the range 27015 - 27030, don't forget to set also
         a different Container Port if you change this value.
@@ -117,7 +117,7 @@ Config:
       Type: Port
       value: '27015'
   Variable:
-    BepInEx:
+    bepinex:
       Default: ''
       Description: If you want to enable BepInEx set this variable to 'true' (without
         quotes).
@@ -129,7 +129,7 @@ Config:
       Target: ENABLE_BEPINEX
       Type: Variable
       value: 'false'
-    GAME_ID:
+    game_id:
       Default: ''
       Description: "The GAME_ID that the container download at startup.\r\n(https://developer.valvesoftware.com/wiki/Dedicated_Servers_List)\r\
         \nIf you want to use a static version of the game and not always the latest\
@@ -143,7 +143,7 @@ Config:
       Target: GAME_ID
       Type: Variable
       value: '294420'
-    GAME_PARAMS:
+    game_params:
       Default: ''
       Description: Enter your start up commands for the server.
       Display: always
@@ -154,7 +154,7 @@ Config:
       Target: GAME_PARAMS
       Type: Variable
       value: -logfile 7DaysToDie_Data/output_log.txt $@
-    GID:
+    gid:
       Default: ''
       Description: 'Container Variable: GID'
       Display: advanced-hide
@@ -165,7 +165,7 @@ Config:
       Target: GID
       Type: Variable
       value: '100'
-    Serverconfig:
+    serverconfig:
       Default: ''
       Description: Please change if your serverconfigfile has another name.
       Display: always
@@ -176,7 +176,7 @@ Config:
       Target: SERVERCONFIG
       Type: Variable
       value: serverconfig.xml
-    Steam-Password:
+    steam-password:
       Default: ''
       Description: 'Your Steam password goes here if you want to install a game that
         needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
@@ -189,7 +189,7 @@ Config:
       Target: PASSWRD
       Type: Variable
       value: ''
-    Steam-Username:
+    steam-username:
       Default: ''
       Description: 'Your Steam username goes here if you want to install a game that
         needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
@@ -202,7 +202,7 @@ Config:
       Target: USERNAME
       Type: Variable
       value: ''
-    UID:
+    uid:
       Default: ''
       Description: 'Container Variable: UID'
       Display: advanced-hide
@@ -213,7 +213,7 @@ Config:
       Target: UID
       Type: Variable
       value: '99'
-    Validate Installation:
+    validateinstallation:
       Default: ''
       Description: Set the Variable to 'true' if you want to validate the installation
         otherwise leave it blank.

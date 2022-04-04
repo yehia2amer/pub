@@ -5,7 +5,7 @@ Config:
   Label: {}
   Path: {}
   Port:
-    LDAP port:
+    ldapport:
       Default: '2389'
       Description: 'Container Port: 2389'
       Display: always
@@ -17,18 +17,7 @@ Config:
       Type: Port
       value: ''
   Variable:
-    Plex Token:
-      Default: ''
-      Description: 'Container Variable: TOKEN'
-      Display: always
-      Mask: 'true'
-      Mode: ''
-      Name: Plex Token
-      Required: 'true'
-      Target: TOKEN
-      Type: Variable
-      value: ''
-    Plex machine identifier:
+    plexmachineidentifier:
       Default: ''
       Description: 'Container Variable: MACHINEID'
       Display: always
@@ -39,7 +28,7 @@ Config:
       Target: MACHINEID
       Type: Variable
       value: ''
-    Plex servername:
+    plexservername:
       Default: ''
       Description: 'Container Variable: SERVERNAME'
       Display: always
@@ -48,6 +37,17 @@ Config:
       Name: Plex servername
       Required: 'true'
       Target: SERVERNAME
+      Type: Variable
+      value: ''
+    plextoken:
+      Default: ''
+      Description: 'Container Variable: TOKEN'
+      Display: always
+      Mask: 'true'
+      Mode: ''
+      Name: Plex Token
+      Required: 'true'
+      Target: TOKEN
       Type: Variable
       value: ''
 Icon: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/plex_ldap.png

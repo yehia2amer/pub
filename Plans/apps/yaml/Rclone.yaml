@@ -7,7 +7,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Config Path:
+    configpath:
       Default: /mnt/cache/appdata/rclone/config/
       Description: The path to where the .rclone.conf file is
       Display: always
@@ -18,7 +18,7 @@ Config:
       Target: /config
       Type: Path
       value: ''
-    Data Path:
+    datapath:
       Default: ''
       Description: The path to the data which should be backed up by Rclone
       Display: always
@@ -31,7 +31,7 @@ Config:
       value: ''
   Port: {}
   Variable:
-    Cron Schedule:
+    cronschedule:
       Default: 0 * * * *
       Description: 'A custom cron schedule which will override the default value of:
         0 * * * * (hourly)'
@@ -43,7 +43,7 @@ Config:
       Target: CRON_SCHEDULE
       Type: Variable
       value: ''
-    Sync Command:
+    synccommand:
       Default: ''
       Description: 'A custom rclone command which will override the default value
         of: rclone sync /data $SYNC_DESTINATION:/$SYNC_DESTINATION_SUBPATH'
@@ -55,7 +55,7 @@ Config:
       Target: SYNC_COMMAND
       Type: Variable
       value: ''
-    Sync Destination:
+    syncdestination:
       Default: ''
       Description: The destination that the data should be backed up to (must be the
         same name as specified in .rclone.conf)
@@ -67,7 +67,7 @@ Config:
       Target: SYNC_DESTINATION
       Type: Variable
       value: ''
-    Sync Destination Subpath:
+    syncdestinationsubpath:
       Default: ''
       Description: If the data should be backed up to a subpath on the destionation
         (will automaticly be created if it does not exist)

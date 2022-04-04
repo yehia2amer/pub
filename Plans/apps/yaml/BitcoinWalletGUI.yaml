@@ -4,7 +4,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Bitcoin Blockchain Path:
+    bitcoinblockchainpath:
       Default: ''
       Description: 'Container Path: /headless/.zcash/'
       Display: always
@@ -16,18 +16,7 @@ Config:
       Type: Path
       value: /mnt/user/BitcoinWallet/
   Port:
-    VNC port:
-      Default: ''
-      Description: 'Container Port: 5901'
-      Display: always
-      Mask: 'false'
-      Mode: tcp
-      Name: VNC port
-      Required: 'false'
-      Target: '5901'
-      Type: Port
-      value: '5905'
-    noVNC port:
+    novncport:
       Default: ''
       Description: 'Container Port: 6901'
       Display: always
@@ -38,8 +27,19 @@ Config:
       Target: '6901'
       Type: Port
       value: '6901'
+    vncport:
+      Default: ''
+      Description: 'Container Port: 5901'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: VNC port
+      Required: 'false'
+      Target: '5901'
+      Type: Port
+      value: '5905'
   Variable:
-    VNC only:
+    vnconly:
       Default: ''
       Description: 'Container Variable: VNC_VIEW_ONLY'
       Display: always
@@ -50,7 +50,7 @@ Config:
       Target: VNC_VIEW_ONLY
       Type: Variable
       value: 'false'
-    VNC password:
+    vncpassword:
       Default: ''
       Description: 'Container Variable:  VNC_PW'
       Display: always
@@ -61,7 +61,7 @@ Config:
       Target: VNC_PW
       Type: Variable
       value: vncpassword
-    VNC resolution:
+    vncresolution:
       Default: ''
       Description: 'Container Variable: VNC_RESOLUTION'
       Display: always

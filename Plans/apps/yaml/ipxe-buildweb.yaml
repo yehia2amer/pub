@@ -5,18 +5,6 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Logs:
-      Default: /mnt/user/appdata/iPXE-buildweb/logs
-      Description: 'This location contains logs file from container. Container path:
-        /logs'
-      Display: always-hide
-      Mask: 'false'
-      Mode: rw
-      Name: Logs
-      Required: 'true'
-      Target: /logs
-      Type: Path
-      value: ''
     cache:
       Default: /mnt/user/appdata/iPXE-buildweb/cache
       Description: 'This location contains logs file from container. Container path:
@@ -53,8 +41,20 @@ Config:
       Target: /ipxe-buildweb
       Type: Path
       value: ''
+    logs:
+      Default: /mnt/user/appdata/iPXE-buildweb/logs
+      Description: 'This location contains logs file from container. Container path:
+        /logs'
+      Display: always-hide
+      Mask: 'false'
+      Mode: rw
+      Name: Logs
+      Required: 'true'
+      Target: /logs
+      Type: Path
+      value: ''
   Port:
-    WEB Port:
+    webport:
       Default: '8081'
       Description: Port used to access the web interface.
       Display: advanced-hide

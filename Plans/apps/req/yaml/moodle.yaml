@@ -5,18 +5,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    MoodlePath:
-      Default: /mnt/user/appdata/moodle/
-      Description: MoodlePath
-      Display: always
-      Mask: 'false'
-      Mode: rw
-      Name: MoodlePath
-      Required: 'true'
-      Target: /bitnami/moodle
-      Type: Path
-      value: /mnt/user/appdata/moodle/
-    Moodledata:
+    moodledata:
       Default: /mnt/user/appdata/moodle/data/
       Description: Moodledata
       Display: always
@@ -27,8 +16,19 @@ Config:
       Target: /bitnami/moodledata
       Type: Path
       value: /mnt/user/appdata/moodle/data/
+    moodlepath:
+      Default: /mnt/user/appdata/moodle/
+      Description: MoodlePath
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: MoodlePath
+      Required: 'true'
+      Target: /bitnami/moodle
+      Type: Path
+      value: /mnt/user/appdata/moodle/
   Port:
-    HTTP:
+    http:
       Default: '8080'
       Description: HTTP
       Display: always
@@ -39,7 +39,7 @@ Config:
       Target: '8080'
       Type: Port
       value: '8080'
-    HTTPs:
+    https:
       Default: '8443'
       Description: HTTPs (Not needed if you use reverse proxy)
       Display: always
@@ -51,7 +51,7 @@ Config:
       Type: Port
       value: '8443'
   Variable:
-    ALLOW_EMPTY_PASSWORD:
+    allow_empty_password:
       Default: no|yes
       Description: It can be used to allow blank passwords.
       Display: advanced
@@ -62,7 +62,7 @@ Config:
       Target: ALLOW_EMPTY_PASSWORD
       Type: Variable
       value: 'no'
-    Database Name:
+    databasename:
       Default: bitnami_moodle
       Description: Database Name
       Display: always
@@ -73,7 +73,7 @@ Config:
       Target: MOODLE_DATABASE_NAME
       Type: Variable
       value: bitnami_moodle
-    Database Password:
+    databasepassword:
       Default: ''
       Description: Database Password
       Display: always
@@ -84,7 +84,7 @@ Config:
       Target: MOODLE_DATABASE_PASSWORD
       Type: Variable
       value: ''
-    Database User:
+    databaseuser:
       Default: bn_moodle
       Description: Database User
       Display: always
@@ -95,7 +95,7 @@ Config:
       Target: MOODLE_DATABASE_USER
       Type: Variable
       value: bn_moodle
-    MariaDB Database Port:
+    mariadbdatabaseport:
       Default: '3306'
       Description: MariaDB Database Port
       Display: always
@@ -106,7 +106,7 @@ Config:
       Target: MOODLE_DATABASE_PORT_NUMBER
       Type: Variable
       value: '3306'
-    MariaDB Hostname or IP:
+    mariadbhostnameorip:
       Default: mariadb
       Description: MariaDB Hostname or IP
       Display: always
@@ -117,7 +117,7 @@ Config:
       Target: MOODLE_DATABASE_HOST
       Type: Variable
       value: mariadb
-    Moodle Password:
+    moodlepassword:
       Default: bitnami
       Description: Default Moodle Password
       Display: always
@@ -128,7 +128,7 @@ Config:
       Target: MOODLE_PASSWORD
       Type: Variable
       value: bitnami
-    Moodle Username:
+    moodleusername:
       Default: user
       Description: Default Moodle Username
       Display: always
@@ -139,7 +139,7 @@ Config:
       Target: MOODLE_USERNAME
       Type: Variable
       value: user
-    PHP_MEMORY_LIMIT:
+    php_memory_limit:
       Default: 256M
       Description: PHP_MEMORY_LIMIT
       Display: always
@@ -150,7 +150,7 @@ Config:
       Target: PHP_MEMORY_LIMIT
       Type: Variable
       value: 256M
-    SMTP_HOST:
+    smtp_host:
       Default: ''
       Description: SMTP host
       Display: always
@@ -161,7 +161,7 @@ Config:
       Target: SMTP_HOST
       Type: Variable
       value: ''
-    SMTP_PASSWORD:
+    smtp_password:
       Default: ''
       Description: SMTP account password
       Display: always
@@ -172,7 +172,7 @@ Config:
       Target: SMTP_PASSWORD
       Type: Variable
       value: ''
-    SMTP_PORT:
+    smtp_port:
       Default: ''
       Description: SMTP port
       Display: always
@@ -183,7 +183,7 @@ Config:
       Target: SMTP_PORT
       Type: Variable
       value: ''
-    SMTP_PROTOCOL:
+    smtp_protocol:
       Default: ''
       Description: SMTP protocol
       Display: always
@@ -194,7 +194,7 @@ Config:
       Target: SMTP_PROTOCOL
       Type: Variable
       value: ''
-    SMTP_USER:
+    smtp_user:
       Default: ''
       Description: SMTP account user
       Display: always

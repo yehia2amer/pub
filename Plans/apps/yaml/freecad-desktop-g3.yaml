@@ -6,7 +6,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Internal Share:
+    internalshare:
       Default: ''
       Description: Path to a share from your host to be able to work within the container.
       Display: always
@@ -18,18 +18,7 @@ Config:
       Type: Path
       value: ''
   Port:
-    WebUI (VNC):
-      Default: ''
-      Description: ''
-      Display: always
-      Mask: 'false'
-      Mode: tcp
-      Name: WebUI (VNC)
-      Required: 'false'
-      Target: '5901'
-      Type: Port
-      value: '5901'
-    WebUI (noVNC):
+    webui(novnc):
       Default: ''
       Description: ''
       Display: always
@@ -40,8 +29,19 @@ Config:
       Target: '6901'
       Type: Port
       value: '6901'
+    webui(vnc):
+      Default: ''
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI (VNC)
+      Required: 'false'
+      Target: '5901'
+      Type: Port
+      value: '5901'
   Variable:
-    VNC_PW:
+    vnc_pw:
       Default: ''
       Description: The VNC/noVNC password.
       Display: advanced
@@ -52,7 +52,7 @@ Config:
       Target: VNC_PW
       Type: Variable
       value: unraid
-    VNC_RESOLUTION:
+    vnc_resolution:
       Default: ''
       Description: The VNC/noVNC resolution.
       Display: advanced

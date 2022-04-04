@@ -6,32 +6,38 @@ CategoryList: &id001
 Config:
   Device: {}
   Label: {}
-  Path: {}
+  Path:
+    unraid-api:
+      Mode: rw
+      Name: config
+      Target: /app/config
+      value: /mnt/user/appdata/Unraid-API
   Port: {}
   Variable:
-    KeyStorage:
+    keystorage:
       Name: KeyStorage
+      Target: KeyStorage
       value: config
-    MQTTBaseTopic:
+    mqttbasetopic:
       Name: MQTTBaseTopic
+      Target: MQTTBaseTopic
       value: homeassistant
-    MQTTBroker:
+    mqttbroker:
       Name: MQTTBroker
+      Target: MQTTBroker
       value: hassio
-    MQTTPass:
+    mqttpass:
       Name: MQTTPass
+      Target: MQTTPass
       value: pass
-    MQTTPort:
+    mqttport:
       Name: MQTTPort
+      Target: MQTTPort
       value: '1883'
-    MQTTUser:
+    mqttuser:
       Name: MQTTUser
+      Target: MQTTUser
       value: mqtt
-Data:
-  Volume:
-    ContainerDir: /app/config
-    HostDir: /mnt/user/appdata/Unraid-API
-    Mode: rw
 Icon: https://raw.githubusercontent.com/ElectricBrainUK/UnraidAPI/master/static/icon.png
 Keywords:
 - unraid-api

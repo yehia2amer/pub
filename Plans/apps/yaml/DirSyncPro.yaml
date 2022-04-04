@@ -7,7 +7,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Data Directory:
+    datadirectory:
       Default: ''
       Description: Data directory for the container
       Display: always
@@ -18,7 +18,7 @@ Config:
       Target: /dirsyncpro
       Type: Path
       value: /mnt/cache/appdata/dirsyncpro
-    Source Directory - Read Only:
+    sourcedirectory-readonly:
       Default: ''
       Description: You can change the Acces Mode from Read Only to Read/Write if you
         want to sync files back and forth.
@@ -31,7 +31,7 @@ Config:
       Type: Path
       value: /
   Port:
-    Webinterface Port:
+    webinterfaceport:
       Default: ''
       Description: 'Container Port: 8080'
       Display: always
@@ -43,7 +43,7 @@ Config:
       Type: Port
       value: '8080'
   Variable:
-    CMD File:
+    cmdfile:
       Default: ''
       Description: 'Please be sure to put the CMD file in the main directory of the
         Docker and only specify it without the extension for example if the file is
@@ -56,7 +56,7 @@ Config:
       Target: CMD_FILE
       Type: Variable
       value: ''
-    CMD Mode:
+    cmdmode:
       Default: ''
       Description: Set to 'true' (without quotes) if you want to enable the command
         line mode without the GUI, otherwise leave blank.
@@ -68,7 +68,7 @@ Config:
       Target: CMD_MODE
       Type: Variable
       value: ''
-    CryFS Blocksize:
+    cryfsblocksize:
       Default: '32768'
       Description: Set your blocksize for the encryped files in bytes (262144 Byte
         = 256 KiB)
@@ -80,7 +80,7 @@ Config:
       Target: CRYFS_BLOCKSIZE
       Type: Variable
       value: '262144'
-    CryFS Extra Parameters:
+    cryfsextraparameters:
       Default: ''
       Description: 'Extra parameters for CrFS if needed (eg: ''--unmount-idle 30''
         without quotes)'
@@ -92,7 +92,7 @@ Config:
       Target: CRYFS_EXTRA_PARAMETERS
       Type: Variable
       value: ''
-    CryFS Password:
+    cryfspassword:
       Default: ''
       Description: Password for the Encryption/Decryption.
       Display: always
@@ -103,7 +103,7 @@ Config:
       Target: CRYFS_PWD
       Type: Variable
       value: ''
-    DirSyncPro Download URL:
+    dirsyncprodownloadurl:
       Default: ''
       Description: Change only if you know what you are doing
       Display: advanced
@@ -114,7 +114,7 @@ Config:
       Target: DL_URL
       Type: Variable
       value: https://sourceforge.net/projects/directorysync/files/DirSync Pro (stable)/1.53/DirSyncPro-1.53-Linux.tar.gz
-    Enable CryFS Encryption:
+    enablecryfsencryption:
       Default: ''
       Description: Set to 'true' (without quotes) if you want to enable CryFS encryption.
       Display: always
@@ -125,7 +125,7 @@ Config:
       Target: CRYFS
       Type: Variable
       value: ''
-    Extra Start Parameters:
+    extrastartparameters:
       Default: ''
       Description: 'Set extra start parameters for DirSyncPro if needed otherwise
         leave empty (eg: ''-schedule'' to start the schedule engine automatically
@@ -139,7 +139,7 @@ Config:
       Target: START_PARAMS
       Type: Variable
       value: ''
-    GID:
+    gid:
       Default: ''
       Description: 'Container Variable: GID'
       Display: advanced-hide
@@ -150,7 +150,7 @@ Config:
       Target: GID
       Type: Variable
       value: '100'
-    Remote Adress:
+    remoteadress:
       Default: ''
       Description: "Server to connect and eventually the subdirectory (for ftp: '192.168.0.1'\
         \ or for webdav: 'https://nextcloud.host.com/remote.php/webdav' without quotes)\r\
@@ -164,7 +164,7 @@ Config:
       Target: REMOTE_DIR
       Type: Variable
       value: ''
-    Remote Password:
+    remotepassword:
       Default: ''
       Description: Password for the share (must be provided if ftp or webdav is used)
       Display: always
@@ -175,7 +175,7 @@ Config:
       Target: REMOTE_PWD
       Type: Variable
       value: ''
-    Remote Type:
+    remotetype:
       Default: ''
       Description: "Valid options are: local, smb (is removed in the latest version,\
         \ please use Unassigned Devices Plugin in Unraid and mount the share with\
@@ -190,7 +190,7 @@ Config:
       Target: REMOTE_TYPE
       Type: Variable
       value: local
-    Remote Username:
+    remoteusername:
       Default: ''
       Description: Username for the share (must be provided if ftp or webdav is used)
       Display: always
@@ -201,7 +201,7 @@ Config:
       Target: REMOTE_USER
       Type: Variable
       value: ''
-    Runtime Name:
+    runtimename:
       Default: ''
       Description: 'Container Variable: RUNTIME_NAME'
       Display: advanced-hide
@@ -212,7 +212,7 @@ Config:
       Target: RUNTIME_NAME
       Type: Variable
       value: basicjre
-    UID:
+    uid:
       Default: ''
       Description: 'Container Variable: UID'
       Display: advanced-hide

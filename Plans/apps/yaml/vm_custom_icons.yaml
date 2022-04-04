@@ -26,7 +26,7 @@ Config:
       Target: /config
       Type: Path
       value: /mnt/user/appdata/vm_custom_icons
-    vm manager icon location:
+    vmmanagericonlocation:
       Default: ''
       Description: location on server where Unraid stores vm icons (dont change this)
       Display: advanced
@@ -39,7 +39,7 @@ Config:
       value: /usr/local/emhttp/plugins/dynamix.vm.manager/templates/images
   Port: {}
   Variable:
-    Clear all icons &amp; redownload above on each start:
+    clearallicons&amp;redownloadaboveoneachstart:
       Default: no|yes
       Description: 'set to yes to delete all vm icons. and redownload the above from
         github on every run of container '
@@ -51,7 +51,7 @@ Config:
       Target: delete
       Type: Variable
       value: 'no'
-    Enable sucess tune on icon load:
+    enablesucesstuneoniconload:
       Default: no|yes
       Description: Enable tune on sucess. (you must have a beep speaker)
       Display: always
@@ -62,29 +62,7 @@ Config:
       Target: tune
       Type: Variable
       value: 'no'
-    Keep Stock VM Icons:
-      Default: yes|no
-      Description: set to no to remove stock unraid vm icons
-      Display: always
-      Mask: 'false'
-      Mode: ''
-      Name: Keep Stock VM Icons
-      Required: 'false'
-      Target: stock
-      Type: Variable
-      value: 'yes'
-    Time to wait before exit:
-      Default: 30 seconds|1 minute|2 minutes|5 minutes|10 minutes
-      Description: 'Time to wait before stopping container after syncing icons '
-      Display: advanced
-      Mask: 'false'
-      Mode: ''
-      Name: Time to wait before exit
-      Required: 'false'
-      Target: sleeptimehuman
-      Type: Variable
-      value: 30 seconds
-    freebsd icons:
+    freebsdicons:
       Default: yes|no
       Description: select yes or no to download freebsd vm icons
       Display: always
@@ -95,7 +73,18 @@ Config:
       Target: freebsd
       Type: Variable
       value: 'yes'
-    linux icons:
+    keepstockvmicons:
+      Default: yes|no
+      Description: set to no to remove stock unraid vm icons
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Keep Stock VM Icons
+      Required: 'false'
+      Target: stock
+      Type: Variable
+      value: 'yes'
+    linuxicons:
       Default: yes|no
       Description: select yes or no to download linux vm icons
       Display: always
@@ -106,7 +95,7 @@ Config:
       Target: linux
       Type: Variable
       value: 'yes'
-    macos vm icons:
+    macosvmicons:
       Default: yes|no
       Description: select yes or no to download macos vm icons
       Display: always
@@ -117,7 +106,7 @@ Config:
       Target: macos
       Type: Variable
       value: 'yes'
-    other os  icons:
+    otherosicons:
       Default: yes|no
       Description: select yes or no to download other vm icons
       Display: always
@@ -128,7 +117,18 @@ Config:
       Target: other
       Type: Variable
       value: 'yes'
-    windows icons:
+    timetowaitbeforeexit:
+      Default: 30 seconds|1 minute|2 minutes|5 minutes|10 minutes
+      Description: 'Time to wait before stopping container after syncing icons '
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Time to wait before exit
+      Required: 'false'
+      Target: sleeptimehuman
+      Type: Variable
+      value: 30 seconds
+    windowsicons:
       Default: yes|no
       Description: select yes or no to download windows vm icons
       Display: always

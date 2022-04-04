@@ -6,7 +6,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Appdata:
+    appdata:
       Default: /mnt/user/appdata/bitnami-openldap
       Description: 'Container Path: /bitnami/openldap/data'
       Display: advanced
@@ -17,7 +17,7 @@ Config:
       Target: /bitnami/openldap/
       Type: Path
       value: ''
-    Certs folder path:
+    certsfolderpath:
       Default: ''
       Description: Path to your certificates e.g. if you're using SWAG it would be
         /mnt/user/appdata/swag/keys
@@ -29,7 +29,7 @@ Config:
       Target: /opt/bitnami/openldap/certs/
       Type: Path
       value: ''
-    LDAP_CUSTOM_LDIF_DIR:
+    ldap_custom_ldif_dir:
       Default: /mnt/user/appdata/bitnami-openldap/ldifs
       Description: Location of a directory that contains LDIF files that should be
         used to bootstrap the database. Only files ending in .ldif will be used. Default
@@ -44,7 +44,7 @@ Config:
       Target: /ldifs
       Type: Path
       value: ''
-    LDAP_CUSTOM_SCHEMA_FILE:
+    ldap_custom_schema_file:
       Default: /mnt/user/appdata/bitnami-openldap/custom.ldif
       Description: Location of a custom internal schema file that could not be added
         as custom ldif file (i.e. containing some structuralObjectClass). Default
@@ -58,18 +58,7 @@ Config:
       Type: Path
       value: ''
   Port:
-    HTTPS_PORT:
-      Default: '1636'
-      Description: 'Container Port: 1636'
-      Display: always
-      Mask: 'false'
-      Mode: tcp
-      Name: HTTPS_PORT
-      Required: 'true'
-      Target: '1636'
-      Type: Port
-      value: '1636'
-    HTTP_PORT:
+    http_port:
       Default: '1389'
       Description: 'Container Port: 1389'
       Display: always
@@ -80,8 +69,19 @@ Config:
       Target: '1389'
       Type: Port
       value: '1389'
+    https_port:
+      Default: '1636'
+      Description: 'Container Port: 1636'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: HTTPS_PORT
+      Required: 'true'
+      Target: '1636'
+      Type: Port
+      value: '1636'
   Variable:
-    LDAP_ADMIN_PASSWORD:
+    ldap_admin_password:
       Default: adminpassword
       Description: 'Container Variable: LDAP_ADMIN_PASSWORD'
       Display: always
@@ -92,7 +92,7 @@ Config:
       Target: LDAP_ADMIN_PASSWORD
       Type: Variable
       value: ''
-    LDAP_ADMIN_USERNAME:
+    ldap_admin_username:
       Default: admin
       Description: 'Container Variable: LDAP_ADMIN_USERNAME'
       Display: always
@@ -103,7 +103,7 @@ Config:
       Target: LDAP_ADMIN_USERNAME
       Type: Variable
       value: ''
-    LDAP_ALLOW_ANON_BINDING:
+    ldap_allow_anon_binding:
       Default: 'yes'
       Description: 'Allow anonymous bindings to the LDAP server. Default: yes'
       Display: advanced
@@ -114,7 +114,7 @@ Config:
       Target: LDAP_ALLOW_ANON_BINDING
       Type: Variable
       value: ''
-    LDAP_CONFIG_ADMIN_ENABLED:
+    ldap_config_admin_enabled:
       Default: 'no'
       Description: 'Whether to create a configuration admin user. Default: no.'
       Display: advanced
@@ -125,7 +125,7 @@ Config:
       Target: LDAP_CONFIG_ADMIN_ENABLED
       Type: Variable
       value: ''
-    LDAP_CONFIG_ADMIN_PASSWORD:
+    ldap_config_admin_password:
       Default: configpassword
       Description: 'LDAP configuration admin password. Default: configpassword.'
       Display: advanced
@@ -136,7 +136,7 @@ Config:
       Target: LDAP_CONFIG_ADMIN_PASSWORD
       Type: Variable
       value: ''
-    LDAP_CONFIG_ADMIN_USERNAME:
+    ldap_config_admin_username:
       Default: admin
       Description: 'LDAP configuration admin user. This is separate from LDAP_ADMIN_USERNAME.
         Default: admin.'
@@ -148,7 +148,7 @@ Config:
       Target: LDAP_CONFIG_ADMIN_USERNAME
       Type: Variable
       value: ''
-    LDAP_ENABLE_TLS:
+    ldap_enable_tls:
       Default: 'no'
       Description: Whether to enable TLS for traffic or not. Defaults to no
       Display: always
@@ -159,7 +159,7 @@ Config:
       Target: LDAP_ENABLE_TLS
       Type: Variable
       value: ''
-    LDAP_EXTRA_SCHEMAS:
+    ldap_extra_schemas:
       Default: cosine, inetorgperson, nis
       Description: 'Extra schemas to add, among OpenLDAP''s distributed schemas. Default:
         cosine, inetorgperson, nis'
@@ -171,7 +171,7 @@ Config:
       Target: LDAP_EXTRA_SCHEMAS
       Type: Variable
       value: ''
-    LDAP_GROUP:
+    ldap_group:
       Default: readers
       Description: 'Group used to group created users. Default: readers'
       Display: always
@@ -182,7 +182,7 @@ Config:
       Target: LDAP_GROUP
       Type: Variable
       value: ''
-    LDAP_PASSWORDS:
+    ldap_passwords:
       Default: password1,password2
       Description: 'Comma separated list of passwords to use for LDAP users. Default:
         password1,password2'
@@ -194,7 +194,7 @@ Config:
       Target: LDAP_PASSWORDS
       Type: Variable
       value: ''
-    LDAP_ROOT:
+    ldap_root:
       Default: dc=example,dc=org
       Description: 'LDAP database root node of the LDAP tree. Default: dc=example,dc=org'
       Display: always
@@ -205,7 +205,7 @@ Config:
       Target: LDAP_ROOT
       Type: Variable
       value: ''
-    LDAP_SKIP_DEFAULT_TREE:
+    ldap_skip_default_tree:
       Default: 'no'
       Description: 'Whether to skip creating the default LDAP tree based on LDAP_USERS,
         LDAP_PASSWORDS, LDAP_USER_DC and LDAP_GROUP. Default: no'
@@ -217,7 +217,7 @@ Config:
       Target: LDAP_SKIP_DEFAULT_TREE
       Type: Variable
       value: ''
-    LDAP_TLS_CA_FILE:
+    ldap_tls_ca_file:
       Default: /opt/bitnami/openldap/certs/openldapCA.crt
       Description: File containing the CA of the certificate. No defaults. (container's
         relative path, e.g. /opt/bitnami/openldap/certs/openldapCA.crt)
@@ -229,7 +229,7 @@ Config:
       Target: LDAP_TLS_CA_FILE
       Type: Variable
       value: ''
-    LDAP_TLS_CERT_FILE:
+    ldap_tls_cert_file:
       Default: /opt/bitnami/openldap/certs/openldap.crt
       Description: File containing the certificate file for the TSL traffic. No defaults.
         (container's relative path, e.g. /opt/bitnami/openldap/certs/openldap.crt)
@@ -241,7 +241,7 @@ Config:
       Target: LDAP_TLS_CERT_FILE
       Type: Variable
       value: ''
-    LDAP_TLS_DH_PARAMS_FILE:
+    ldap_tls_dh_params_file:
       Default: ''
       Description: File containing the DH parameters. No defaults.
       Display: always
@@ -252,7 +252,7 @@ Config:
       Target: LDAP_TLS_DH_PARAMS_FILE
       Type: Variable
       value: ''
-    LDAP_TLS_KEY_FILE:
+    ldap_tls_key_file:
       Default: /opt/bitnami/openldap/certs/openldap.key
       Description: File containing the key for certificate. No defaults. (container's
         relative path, e.g. /opt/bitnami/openldap/certs/openldap.key)
@@ -264,7 +264,7 @@ Config:
       Target: LDAP_TLS_KEY_FILE
       Type: Variable
       value: ''
-    LDAP_ULIMIT_NOFILES:
+    ldap_ulimit_nofiles:
       Default: '1024'
       Description: 'Maximum number of open file descriptors. Default: 1024.'
       Display: advanced
@@ -275,7 +275,18 @@ Config:
       Target: LDAP_ULIMIT_NOFILES
       Type: Variable
       value: ''
-    LDAP_USERS:
+    ldap_user_dc:
+      Default: users
+      Description: 'DC for the users'' organizational unit. Default: users'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: LDAP_USER_DC
+      Required: 'true'
+      Target: LDAP_USER_DC
+      Type: Variable
+      value: ''
+    ldap_users:
       Default: user01,user02
       Description: 'Comma separated list of LDAP users to create in the default LDAP
         tree. Default: user01,user02'
@@ -287,18 +298,7 @@ Config:
       Target: LDAP_USERS
       Type: Variable
       value: ''
-    LDAP_USER_DC:
-      Default: users
-      Description: 'DC for the users'' organizational unit. Default: users'
-      Display: always
-      Mask: 'false'
-      Mode: ''
-      Name: LDAP_USER_DC
-      Required: 'true'
-      Target: LDAP_USER_DC
-      Type: Variable
-      value: ''
-    Log debug:
+    logdebug:
       Default: 'false'
       Description: Turn on debug info in logs
       Display: advanced

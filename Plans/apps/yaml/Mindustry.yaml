@@ -4,7 +4,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    ServerFiles:
+    serverfiles:
       Default: ''
       Description: 'Container Path: /mindustry'
       Display: always
@@ -16,7 +16,7 @@ Config:
       Type: Path
       value: /mnt/cache/appdata/mindustry
   Port:
-    TCP - Gameport:
+    tcp-gameport:
       Default: ''
       Description: 'Container Port: 6567'
       Display: always
@@ -27,7 +27,7 @@ Config:
       Target: '6567'
       Type: Port
       value: '6567'
-    UDP - Gameport:
+    udp-gameport:
       Default: ''
       Description: 'Container Port: 6567'
       Display: always
@@ -39,7 +39,7 @@ Config:
       Type: Port
       value: '6567'
   Variable:
-    Extra Game Parameters:
+    extragameparameters:
       Default: ''
       Description: Extra startup Parameters if needed (leave empty if not needed)
       Display: always
@@ -50,18 +50,7 @@ Config:
       Target: GAME_PARAMS
       Type: Variable
       value: ''
-    GID:
-      Default: ''
-      Description: 'Container Variable: GID'
-      Display: advanced-hide
-      Mask: 'false'
-      Mode: ''
-      Name: GID
-      Required: 'true'
-      Target: GID
-      Type: Variable
-      value: '100'
-    Game Version:
+    gameversion:
       Default: ''
       Description: "Preferred game version goes here (set to \u2018latest\u2019 to\
         \ download the latest and check on every startup if there is a newer version\
@@ -74,7 +63,18 @@ Config:
       Target: GAME_V
       Type: Variable
       value: latest
-    Server Name:
+    gid:
+      Default: ''
+      Description: 'Container Variable: GID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: GID
+      Required: 'true'
+      Target: GID
+      Type: Variable
+      value: '100'
+    servername:
       Default: ''
       Description: Servername goes here
       Display: always
@@ -85,7 +85,7 @@ Config:
       Target: SRV_NAME
       Type: Variable
       value: DockerMindustry
-    UID:
+    uid:
       Default: ''
       Description: 'Container Variable: UID'
       Display: advanced-hide
@@ -96,7 +96,7 @@ Config:
       Target: UID
       Type: Variable
       value: '99'
-    UMASK:
+    umask:
       Default: ''
       Description: "Permissions for newly created files. Don\u2019t change unless\
         \ you are knowing what you are doing!"

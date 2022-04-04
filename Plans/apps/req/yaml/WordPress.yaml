@@ -17,7 +17,7 @@ Config:
       Type: Path
       value: /mnt/user/appdata/wordpress
   Port:
-    Container port:
+    containerport:
       Default: ''
       Description: Connects to internal port 80 (Ex. 8080:80)
       Display: always
@@ -29,7 +29,7 @@ Config:
       Type: Port
       value: '8080'
   Variable:
-    WORDPRESS_DB_HOST:
+    wordpress_db_host:
       Default: ''
       Description: "External database container hostname and port \r\n&lt;br&gt;ex.\
         \ 192.168.1.100:8080"
@@ -41,7 +41,7 @@ Config:
       Target: WORDPRESS_DB_HOST
       Type: Variable
       value: ''
-    WORDPRESS_DB_NAME:
+    wordpress_db_name:
       Default: ''
       Description: The WORDPRESS_DB_NAME needs to already exist on the given DB server;
         it will not be created by the wordpress container.
@@ -53,7 +53,7 @@ Config:
       Target: WORDPRESS_DB_NAME
       Type: Variable
       value: ''
-    WORDPRESS_DB_PASSWORD:
+    wordpress_db_password:
       Default: ''
       Description: External database password
       Display: always
@@ -64,7 +64,7 @@ Config:
       Target: WORDPRESS_DB_PASSWORD
       Type: Variable
       value: ''
-    WORDPRESS_DB_USER:
+    wordpress_db_user:
       Default: ''
       Description: External database user
       Display: always

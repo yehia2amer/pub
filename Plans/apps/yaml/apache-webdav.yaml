@@ -4,7 +4,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Config:
+    config:
       Default: ''
       Description: 'Container Path: /var/lib/dav'
       Display: always
@@ -15,7 +15,7 @@ Config:
       Target: /var/lib/dav
       Type: Path
       value: /mnt/user/appdata/webdav
-    WebDAV Share:
+    webdavshare:
       Default: ''
       Description: 'Container Path: /var/lib/dav/data'
       Display: always
@@ -27,7 +27,7 @@ Config:
       Type: Path
       value: /mnt/user/webdav
   Port:
-    Webserver Port:
+    webserverport:
       Default: ''
       Description: 'Container Port: 80'
       Display: always
@@ -39,7 +39,7 @@ Config:
       Type: Port
       value: '8384'
   Variable:
-    Authentication:
+    authentication:
       Default: ''
       Description: Apache authentication type to use. This can be Basic (best choice
         for HTTPS) or Digest (best choice for HTTP). The default is Basic.
@@ -51,7 +51,7 @@ Config:
       Target: AUTH_TYPE
       Type: Variable
       value: Basic
-    Base URL:
+    baseurl:
       Default: ''
       Description: The URL path for WebDAV (eg, if set to /webdav then clients should
         connect to example.com/webdav). The default is /.
@@ -63,7 +63,7 @@ Config:
       Target: LOCATION
       Type: Variable
       value: /
-    Domains:
+    domains:
       Default: ''
       Description: Comma-separated list of domains (eg, example.com,www.example.com).
         The first is set as the ServerName, and the rest (if any) are set as ServerAlias.
@@ -76,7 +76,7 @@ Config:
       Target: SERVER_NAMES
       Type: Variable
       value: localhost
-    Enable SSL:
+    enablessl:
       Default: ''
       Description: Set to selfsigned to generate a self-signed certificate and enable
         Apache's SSL module. If you specify SERVER_NAMES, the first domain is set
@@ -89,7 +89,7 @@ Config:
       Target: SSL_CERT
       Type: Variable
       value: ''
-    Group ID:
+    groupid:
       Default: ''
       Description: 'Container Variable: PGID'
       Display: advanced-hide
@@ -100,7 +100,7 @@ Config:
       Target: PGID
       Type: Variable
       value: '100'
-    Login Title:
+    logintitle:
       Default: ''
       Description: The string will appear in the password dialog provided by browsers.
       Display: always
@@ -111,7 +111,7 @@ Config:
       Target: REALM
       Type: Variable
       value: WebDAV-Login
-    Password:
+    password:
       Default: ''
       Description: Authenticate with this password (and the username above). Will
         be ignored if /user.passwd is present.
@@ -123,7 +123,7 @@ Config:
       Target: PASSWORD
       Type: Variable
       value: ''
-    Public methods:
+    publicmethods:
       Default: ''
       Description: Comma-separated list of HTTP request methods (eg, GET,POST,OPTIONS,PROPFIND)
         which can be used without login. The default is to disallow any anonymous
@@ -134,29 +134,6 @@ Config:
       Name: Public methods
       Required: 'false'
       Target: ANONYMOUS_METHODS
-      Type: Variable
-      value: ''
-    User ID:
-      Default: ''
-      Description: 'Container Variable: PUID'
-      Display: advanced-hide
-      Mask: 'false'
-      Mode: ''
-      Name: User ID
-      Required: 'false'
-      Target: PUID
-      Type: Variable
-      value: '99'
-    Username:
-      Default: ''
-      Description: Authenticate with this username (and the password below). Will
-        be ignored if /user.passwd is present.
-      Display: always
-      Mask: 'false'
-      Mode: ''
-      Name: Username
-      Required: 'false'
-      Target: USERNAME
       Type: Variable
       value: ''
     umask:
@@ -170,6 +147,29 @@ Config:
       Target: PUMASK
       Type: Variable
       value: '0000'
+    userid:
+      Default: ''
+      Description: 'Container Variable: PUID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: User ID
+      Required: 'false'
+      Target: PUID
+      Type: Variable
+      value: '99'
+    username:
+      Default: ''
+      Description: Authenticate with this username (and the password below). Will
+        be ignored if /user.passwd is present.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Username
+      Required: 'false'
+      Target: USERNAME
+      Type: Variable
+      value: ''
 ExtraParams: --memory=1G
 Icon: https://raw.githubusercontent.com/mgutt/unraid-docker-templates/main/mgutt/images/webdav-powered-by-apache.png
 Keywords:

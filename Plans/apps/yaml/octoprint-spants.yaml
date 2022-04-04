@@ -38,17 +38,6 @@ Config:
       Type: Path
       value: /mnt/user/appdata/octoprint
   Port:
-    WebUI:
-      Default: '5000'
-      Description: ''
-      Display: always
-      Mask: 'false'
-      Mode: tcp
-      Name: WebUI
-      Required: 'true'
-      Target: '5000'
-      Type: Port
-      value: '5002'
     snapshot:
       Default: ''
       Description: ''
@@ -71,8 +60,19 @@ Config:
       Target: '80'
       Type: Port
       value: '5003'
+    webui:
+      Default: '5000'
+      Description: ''
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'true'
+      Target: '5000'
+      Type: Port
+      value: '5002'
   Variable:
-    CAMERA_DEV:
+    camera_dev:
       Default: ''
       Description: ''
       Display: always
@@ -83,7 +83,7 @@ Config:
       Target: CAMERA_DEV
       Type: Variable
       value: /dev/video0
-    ENABLE_MJPG_STREAMER:
+    enable_mjpg_streamer:
       Default: ''
       Description: ''
       Display: always
@@ -94,7 +94,7 @@ Config:
       Target: ENABLE_MJPG_STREAMER
       Type: Variable
       value: 'true'
-    MJPG_STREAMER_INPUT:
+    mjpg_streamer_input:
       Default: ''
       Description: ''
       Display: always

@@ -7,7 +7,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    DJANGO_MEDIA_ROOT:
+    django_media_root:
       Default: ''
       Description: Path to uploaded files
       Display: always
@@ -18,7 +18,7 @@ Config:
       Target: /home/wger/media
       Type: Path
       value: "/mnt/user/appdata/wger/media\n    "
-    DJANGO_STATIC_ROOT:
+    django_static_root:
       Default: ''
       Description: DJANGO_STATIC_ROOT
       Display: always
@@ -30,7 +30,7 @@ Config:
       Type: Path
       value: "/mnt/user/appdata/wger/static\n    "
   Port:
-    PORT:
+    port:
       Default: '8000'
       Description: 'WebUI port: 8000'
       Display: always
@@ -42,7 +42,7 @@ Config:
       Type: Port
       value: "8555\n    "
   Variable:
-    ALLOW_GUEST_USERS:
+    allow_guest_users:
       Default: 'True'
       Description: 'Default: True'
       Display: always
@@ -53,7 +53,7 @@ Config:
       Target: ALLOW_GUEST_USERS
       Type: Variable
       value: ''
-    ALLOW_REGISTRATION:
+    allow_registration:
       Default: 'True'
       Description: 'Default: True'
       Display: always
@@ -64,7 +64,7 @@ Config:
       Target: ALLOW_REGISTRATION
       Type: Variable
       value: ''
-    DJANGO_CACHE_BACKEND:
+    django_cache_backend:
       Default: ''
       Description: "Leave blank for no cache. Otherwise use this example for redis:\
         \ django_redis.cache.RedisCache\r\n"
@@ -76,7 +76,7 @@ Config:
       Target: DJANGO_CACHE_BACKEND
       Type: Variable
       value: ''
-    DJANGO_CACHE_CLIENT_CLASS:
+    django_cache_client_class:
       Default: django_redis.client.DefaultClient
       Description: 'Container Variable: DJANGO_CACHE_CLIENT_CLASS'
       Display: advanced-hide
@@ -87,7 +87,7 @@ Config:
       Target: DJANGO_CACHE_CLIENT_CLASS
       Type: Variable
       value: "django_redis.client.DefaultClient\n    "
-    DJANGO_CACHE_LOCATION:
+    django_cache_location:
       Default: ''
       Description: 'Ex: redis://127.0.0.1:6379/1'
       Display: advanced-hide
@@ -98,7 +98,7 @@ Config:
       Target: DJANGO_CACHE_LOCATION
       Type: Variable
       value: ''
-    DJANGO_CACHE_TIMEOUT:
+    django_cache_timeout:
       Default: ''
       Description: in seconds
       Display: advanced-hide
@@ -109,7 +109,7 @@ Config:
       Target: DJANGO_CACHE_TIMEOUT
       Type: Variable
       value: ''
-    DJANGO_DB_DATABASE:
+    django_db_database:
       Default: wger
       Description: Database Name
       Display: always
@@ -120,7 +120,7 @@ Config:
       Target: DJANGO_DB_DATABASE
       Type: Variable
       value: "wger\n    "
-    DJANGO_DB_ENGINE:
+    django_db_engine:
       Default: django.db.backends.postgresql
       Description: Database Engine
       Display: always
@@ -131,7 +131,7 @@ Config:
       Target: DJANGO_DB_ENGINE
       Type: Variable
       value: "\n        django.db.backends.postgresql\n    "
-    DJANGO_DB_HOST:
+    django_db_host:
       Default: ''
       Description: Database host
       Display: always
@@ -142,7 +142,7 @@ Config:
       Target: DJANGO_DB_HOST
       Type: Variable
       value: ''
-    DJANGO_DB_PASSWORD:
+    django_db_password:
       Default: ''
       Description: Database password
       Display: always
@@ -153,7 +153,7 @@ Config:
       Target: DJANGO_DB_PASSWORD
       Type: Variable
       value: ''
-    DJANGO_DB_PORT:
+    django_db_port:
       Default: '5432'
       Description: Database port
       Display: always
@@ -164,7 +164,7 @@ Config:
       Target: DJANGO_DB_PORT
       Type: Variable
       value: "5432\n    "
-    DJANGO_DB_USER:
+    django_db_user:
       Default: wger
       Description: Database User
       Display: always
@@ -175,7 +175,7 @@ Config:
       Target: DJANGO_DB_USER
       Type: Variable
       value: "wger\n    "
-    EMAIL_HOST:
+    email_host:
       Default: ''
       Description: EMAIL_HOST
       Display: always
@@ -186,7 +186,7 @@ Config:
       Target: EMAIL_HOST
       Type: Variable
       value: ''
-    EMAIL_HOST_PASSWORD:
+    email_host_password:
       Default: ''
       Description: EMAIL_HOST_PASSWORD
       Display: always
@@ -197,7 +197,7 @@ Config:
       Target: EMAIL_HOST_PASSWORD
       Type: Variable
       value: ''
-    EMAIL_HOST_USER:
+    email_host_user:
       Default: ''
       Description: EMAIL_HOST_USER
       Display: always
@@ -208,7 +208,7 @@ Config:
       Target: EMAIL_HOST_USER
       Type: Variable
       value: ''
-    EMAIL_PORT:
+    email_port:
       Default: ''
       Description: EMAIL_PORT
       Display: always
@@ -219,7 +219,7 @@ Config:
       Target: EMAIL_PORT
       Type: Variable
       value: ''
-    EMAIL_USE_SSL:
+    email_use_ssl:
       Default: 'False'
       Description: 'EMAIL_USE_SSL: True/False; Default: False'
       Display: always
@@ -230,7 +230,7 @@ Config:
       Target: EMAIL_USE_SSL
       Type: Variable
       value: "False\n    "
-    EMAIL_USE_TLS:
+    email_use_tls:
       Default: 'False'
       Description: 'EMAIL_USE_TLS: True/False; Default: False'
       Display: always
@@ -241,7 +241,7 @@ Config:
       Target: EMAIL_USE_TLS
       Type: Variable
       value: "True\n    "
-    ENABLE_EMAIL:
+    enable_email:
       Default: 'False'
       Description: 'Enable SMTP email setting: True/False; Default False'
       Display: always
@@ -252,7 +252,7 @@ Config:
       Target: ENABLE_EMAIL
       Type: Variable
       value: "False\n    "
-    FROM_EMAIL:
+    from_email:
       Default: ''
       Description: FROM_EMAIL
       Display: always
@@ -263,7 +263,7 @@ Config:
       Target: FROM_EMAIL
       Type: Variable
       value: ''
-    NOCAPTCHA:
+    nocaptcha:
       Default: 'false'
       Description: "NOCAPTCHA: true/false\r\nDefault: false"
       Display: advanced
@@ -274,7 +274,7 @@ Config:
       Target: NOCAPTCHA
       Type: Variable
       value: "False\n    "
-    RECAPTCHA_PRIVATE_KEY:
+    recaptcha_private_key:
       Default: ''
       Description: RECAPTCHA_PRIVATE_KEY
       Display: advanced
@@ -285,7 +285,7 @@ Config:
       Target: RECAPTCHA_PRIVATE_KEY
       Type: Variable
       value: ''
-    RECAPTCHA_PUBLIC_KEY:
+    recaptcha_public_key:
       Default: ''
       Description: RECAPTCHA_PUBLIC_KEY
       Display: advanced
@@ -296,7 +296,7 @@ Config:
       Target: RECAPTCHA_PUBLIC_KEY
       Type: Variable
       value: ''
-    SECRET_KEY:
+    secret_key:
       Default: ''
       Description: Must be 50 characters
       Display: always
@@ -307,7 +307,7 @@ Config:
       Target: SECRET_KEY
       Type: Variable
       value: ''
-    SITE_URL:
+    site_url:
       Default: ''
       Description: 'SITE_URL: ex. http://www.my-local-gym.com'
       Display: always
@@ -318,7 +318,7 @@ Config:
       Target: SITE_URL
       Type: Variable
       value: ''
-    TIME_ZONE:
+    time_zone:
       Default: US/Central
       Description: Time Zone
       Display: always

@@ -7,7 +7,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Main Configuration Path:
+    mainconfigurationpath:
       Default: ''
       Description: Configuration directory
       Display: always
@@ -18,7 +18,7 @@ Config:
       Target: /debian-mirror/config
       Type: Path
       value: /mnt/user/appdata/debian-apt-mirror/config
-    Main Data Path:
+    maindatapath:
       Default: ''
       Description: 'Keep in mind that the mirror can consume very much space (stable
         main contrib non-free: Will need about 200GB of hard drive space!) - you can
@@ -33,7 +33,7 @@ Config:
       Type: Path
       value: /mnt/user/appdata/debian-apt-mirror/data
   Port:
-    Mirror http port:
+    mirrorhttpport:
       Default: ''
       Description: Main http port
       Display: always
@@ -45,7 +45,7 @@ Config:
       Type: Port
       value: '980'
   Variable:
-    Apache2 Port in Container:
+    apache2portincontainer:
       Default: ''
       Description: If you change this value you also have to delete the old port mapping
         and create a new one with the appropriate port mapping.
@@ -57,7 +57,7 @@ Config:
       Target: APACHE2_PORT
       Type: Variable
       value: '980'
-    DATA_PERM:
+    data_perm:
       Default: ''
       Description: ''
       Display: advanced
@@ -68,7 +68,7 @@ Config:
       Target: DATA_PERM
       Type: Variable
       value: '770'
-    Force update on start:
+    forceupdateonstart:
       Default: false|true
       Description: Force update from the packages on every start/restart of the container.
       Display: always
@@ -79,7 +79,7 @@ Config:
       Target: FORCE_UPDATE
       Type: Variable
       value: 'false'
-    GID:
+    gid:
       Default: ''
       Description: ''
       Display: advanced
@@ -90,7 +90,7 @@ Config:
       Target: GID
       Type: Variable
       value: '100'
-    UID:
+    uid:
       Default: ''
       Description: ''
       Display: advanced
@@ -101,7 +101,7 @@ Config:
       Target: UID
       Type: Variable
       value: '99'
-    UMASK:
+    umask:
       Default: ''
       Description: ''
       Display: advanced

@@ -6,7 +6,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Host Path for /config:
+    hostpathforconfig:
       Default: ''
       Description: 'Container Path: /config'
       Display: always-hide
@@ -17,7 +17,7 @@ Config:
       Target: /config
       Type: Path
       value: ''
-    Host Path for /downloads-ambd:
+    hostpathfordownloads-ambd:
       Default: /mnt/user
       Description: Container Path for downloads...
       Display: always-hide
@@ -28,7 +28,7 @@ Config:
       Target: /downloads-ambd
       Type: Path
       value: ''
-    Host Path for /library-ambd:
+    hostpathforlibrary-ambd:
       Default: /mnt/user
       Description: Container Path for completed library...
       Display: always-hide
@@ -41,7 +41,7 @@ Config:
       value: ''
   Port: {}
   Variable:
-    DL Client ARL Token:
+    dlclientarltoken:
       Default: ''
       Description: 'User token for dl client, for instructions to obtain token: https://notabug.org/RemixDevs/DeezloaderRemix/wiki/Login+via+userToken'
       Display: always
@@ -52,7 +52,7 @@ Config:
       Target: ARL_TOKEN
       Type: Variable
       value: ''
-    Download Concurrency:
+    downloadconcurrency:
       Default: '1'
       Description: Controls download concurrency
       Display: always
@@ -63,7 +63,7 @@ Config:
       Target: CONCURRENT_DOWNLOADS
       Type: Variable
       value: ''
-    Enable Automatic Script Start:
+    enableautomaticscriptstart:
       Default: 'true'
       Description: 'true = Enabled :: Runs script automatically on startup'
       Display: always
@@ -74,7 +74,7 @@ Config:
       Target: AUTOSTART
       Type: Variable
       value: ''
-    File Permissions:
+    filepermissions:
       Default: '666'
       Description: Based on chmod linux permissions
       Display: always
@@ -85,7 +85,7 @@ Config:
       Target: FILE_PERMISSIONS
       Type: Variable
       value: ''
-    Folder Permissions:
+    folderpermissions:
       Default: '766'
       Description: Based on chmod linux permissions
       Display: always
@@ -96,7 +96,7 @@ Config:
       Target: FOLDER_PERMISSIONS
       Type: Variable
       value: ''
-    Format:
+    format:
       Default: '320'
       Description: 'SET TO: FLAC or 320 or 128'
       Display: always
@@ -107,7 +107,7 @@ Config:
       Target: QUALITY
       Type: Variable
       value: ''
-    Music Embedded Cover Quality:
+    musicembeddedcoverquality:
       Default: '95'
       Description: Controls the quality of the cover image compression in percentage,
         100 = no compression
@@ -119,7 +119,7 @@ Config:
       Target: EMBEDDED_COVER_QUALITY
       Type: Variable
       value: ''
-    PGID:
+    pgid:
       Default: '100'
       Description: 'Container Variable: PGID'
       Display: advanced-hide
@@ -130,18 +130,7 @@ Config:
       Target: PGID
       Type: Variable
       value: ''
-    PUID:
-      Default: '99'
-      Description: 'Container Variable: PUID'
-      Display: advanced-hide
-      Mask: 'false'
-      Mode: ''
-      Name: PUID
-      Required: 'false'
-      Target: PUID
-      Type: Variable
-      value: ''
-    Plex Library Name:
+    plexlibraryname:
       Default: Music
       Description: This must exactly match the name of the Plex Library that contains
         the Lidarr Media Folder data
@@ -153,7 +142,7 @@ Config:
       Target: PLEXLIBRARYNAME
       Type: Variable
       value: ''
-    Plex Scan Notifications:
+    plexscannotifications:
       Default: 'false'
       Description: 'true = enabled :: Plex must have a Music library added and also
         be configured with the /downloads-ama directory'
@@ -165,7 +154,7 @@ Config:
       Target: NOTIFYPLEX
       Type: Variable
       value: ''
-    Plex Token:
+    plextoken:
       Default: ''
       Description: ONLY used if NOTIFYPLEX is enabled...
       Display: always
@@ -176,7 +165,7 @@ Config:
       Target: PLEXTOKEN
       Type: Variable
       value: ''
-    Plex Url:
+    plexurl:
       Default: http://x.x.x.x:32400
       Description: ONLY used if NOTIFYPLEX is enabled...
       Display: always
@@ -187,7 +176,18 @@ Config:
       Target: PLEXURL
       Type: Variable
       value: ''
-    Script Interval:
+    puid:
+      Default: '99'
+      Description: 'Container Variable: PUID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: PUID
+      Required: 'false'
+      Target: PUID
+      Type: Variable
+      value: ''
+    scriptinterval:
       Default: 15m
       Description: '#s or #m or #h or #d :: s = seconds, m = minutes, h = hours, d
         = days :: Amount of time between each script run, when AUTOSTART is enabled'

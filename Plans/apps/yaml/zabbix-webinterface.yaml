@@ -8,7 +8,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    SSL Certificate:
+    sslcertificate:
       Default: ''
       Description: "The volume allows to enable HTTPS for the Zabbix web interface.\
         \ The volume must contains two files ssl.crt, ssl.key and dhparam.pem prepared\
@@ -25,7 +25,7 @@ Config:
       value: /mnt/cache/appdata/zabbix-web
   Port: {}
   Variable:
-    Database IP:
+    databaseip:
       Default: ''
       Description: Your Database Host IP goes here. (I recommend you to install MariaDB
         from Linuxserver.io but you can use any MySQL compatible database server).
@@ -37,7 +37,7 @@ Config:
       Target: DB_SERVER_HOST
       Type: Variable
       value: ''
-    Database Name:
+    databasename:
       Default: ''
       Description: Databasename goes here (You have to create it first inside your
         database).
@@ -49,7 +49,7 @@ Config:
       Target: MYSQL_DATABASE
       Type: Variable
       value: zabbix
-    Database Password:
+    databasepassword:
       Default: ''
       Description: Database password goes here (You have to create it first inside
         your database).
@@ -61,7 +61,7 @@ Config:
       Target: MYSQL_PASSWORD
       Type: Variable
       value: ''
-    Database Port:
+    databaseport:
       Default: ''
       Description: Your Database Host Port goes here.
       Display: always
@@ -72,7 +72,7 @@ Config:
       Target: DB_SERVER_PORT
       Type: Variable
       value: ''
-    Database Username:
+    databaseusername:
       Default: ''
       Description: Database username goes here (You have to create it first inside
         your database).
@@ -84,7 +84,7 @@ Config:
       Target: MYSQL_USER
       Type: Variable
       value: ''
-    Name of the Zabbix Server:
+    nameofthezabbixserver:
       Default: ''
       Description: The name of the server that will show up in the webgui.
       Display: always
@@ -95,7 +95,7 @@ Config:
       Target: ZBX_SERVER_NAME
       Type: Variable
       value: ZabbixServer
-    PHP Timezone:
+    phptimezone:
       Default: ''
       Description: 'Your timezone goes here (you can find a list of timezones at:
         https://www.php.net/manual/en/timezones.php )'
@@ -107,7 +107,7 @@ Config:
       Target: PHP_TZ
       Type: Variable
       value: Europe/London
-    Zabbix Server IP:
+    zabbixserverip:
       Default: ''
       Description: Your Zabbix Server IP goes here.
       Display: always
@@ -118,7 +118,7 @@ Config:
       Target: ZBX_SERVER_HOST
       Type: Variable
       value: ''
-    Zabbix Server Port:
+    zabbixserverport:
       Default: ''
       Description: Your Zabbix Server Port goes here.
       Display: always

@@ -4,7 +4,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Download:
+    download:
       Default: /mnt/user/T_Media/Torrent/
       Description: 'Container Path: /mnt/user/T_Media/Torrent/'
       Display: always
@@ -15,7 +15,7 @@ Config:
       Target: /mnt/user/T_Media/Torrent/
       Type: Path
       value: /mnt/user/T_Media/Torrent/
-    Host Path 2:
+    hostpath2:
       Default: path for downloads
       Description: 'Container Path: /data'
       Display: always
@@ -26,7 +26,7 @@ Config:
       Target: /data
       Type: Path
       value: /mnt/user/T_Media/Torrent/
-    Watch Folder:
+    watchfolder:
       Default: /mnt/user/T_Media/Torrent/watch/
       Description: 'Container Path: /watch'
       Display: always
@@ -38,7 +38,7 @@ Config:
       Type: Path
       value: /mnt/user/T_Media/Torrent/watch/
   Port:
-    Host Port 1:
+    hostport1:
       Default: '9091'
       Description: 'Container Port: 9091'
       Display: always
@@ -50,7 +50,7 @@ Config:
       Type: Port
       value: '9091'
   Variable:
-    GLOBAL_APPLY_PERMISSIONS:
+    global_apply_permissions:
       Default: true|false
       Description: Apply permsissions Globally on Transmissions files / Folders
       Display: always
@@ -61,7 +61,7 @@ Config:
       Target: GLOBAL_APPLY_PERMISSIONS
       Type: Variable
       value: 'false'
-    Key 2:
+    key2:
       Default: vpn username
       Description: 'Container Variable: OPENVPN_USERNAME'
       Display: always
@@ -72,7 +72,7 @@ Config:
       Target: OPENVPN_USERNAME
       Type: Variable
       value: VPN_USER
-    Key 3:
+    key3:
       Default: vpn password
       Description: 'Container Variable: VPN_PASSWORD'
       Display: always
@@ -83,7 +83,7 @@ Config:
       Target: OPENVPN_PASSWORD
       Type: Variable
       value: VPN_PASSWORD
-    LOCAL_NETWORK:
+    local_network:
       Default: ''
       Description: 'Container Variable: LOCAL_NETWORK'
       Display: always
@@ -94,7 +94,7 @@ Config:
       Target: LOCAL_NETWORK
       Type: Variable
       value: 192.168.0.0/24
-    OPENVPN_CONFIG:
+    openvpn_config:
       Default: au_melbourne|au_sydney|brazil|ca_north_York|ca_toronto|denmark|finland|france|germany|hong_kong|india|ireland|israel|italy|japan|mexico|netherlands|new_zealand|norway|romania|singapore|sweden|switzerland|turkey|uk_london|uk_southampton|us_california|us_east|us_florida|us_midwest|us_new_york_city|us_seattle|us_silicon_valley|us_texas|us_west|default|
       Description: OPENVPN_CONFIG
       Display: always
@@ -105,18 +105,7 @@ Config:
       Target: OPENVPN_CONFIG
       Type: Variable
       value: switzerland
-    OPENVPN_PROVIDER:
-      Default: ANONINE|BTGUARD|CRYPTOSTORM|CUSTOM|FROOT|FROSTVPN|GIGANEWS|HIDEME|HIDEMYASS|INTEGRITYVPN|IPREDATOR|IPVANISH|IVACY|IVPN|NEWSHOSTING|NORDVPN|OVPN|PIA|PRIVATEVPN|PRIVADO|PROXPN|PUREVPN|RA4W|SLICKVPN|SMARTVPNTIGER|TORGUARD|TUNNELBEAR|USENETSERVER|WINDSCRIBE|VPNHT|VPNBOOK|VPNTUNNEL|VPNUNLIMITED|VYPRVPN|
-      Description: 'Container Variable: OPENVPN_PROVIDER'
-      Display: always
-      Mask: 'false'
-      Mode: ''
-      Name: OPENVPN_PROVIDER
-      Required: 'false'
-      Target: OPENVPN_PROVIDER
-      Type: Variable
-      value: PIA
-    OpenVPN_OPTIONS:
+    openvpn_options:
       Default: ''
       Description: --inactive 3600 --ping 10 --ping-exit 60 --restart=always
       Display: always
@@ -127,7 +116,18 @@ Config:
       Target: OPENVPN_OPTS
       Type: Variable
       value: --inactive 3600 --ping 10 --ping-exit 60 --mute-replay-warnings
-    PGID:
+    openvpn_provider:
+      Default: ANONINE|BTGUARD|CRYPTOSTORM|CUSTOM|FROOT|FROSTVPN|GIGANEWS|HIDEME|HIDEMYASS|INTEGRITYVPN|IPREDATOR|IPVANISH|IVACY|IVPN|NEWSHOSTING|NORDVPN|OVPN|PIA|PRIVATEVPN|PRIVADO|PROXPN|PUREVPN|RA4W|SLICKVPN|SMARTVPNTIGER|TORGUARD|TUNNELBEAR|USENETSERVER|WINDSCRIBE|VPNHT|VPNBOOK|VPNTUNNEL|VPNUNLIMITED|VYPRVPN|
+      Description: 'Container Variable: OPENVPN_PROVIDER'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: OPENVPN_PROVIDER
+      Required: 'false'
+      Target: OPENVPN_PROVIDER
+      Type: Variable
+      value: PIA
+    pgid:
       Default: ''
       Description: 'Container Variable: PGID'
       Display: always
@@ -138,7 +138,7 @@ Config:
       Target: PGID
       Type: Variable
       value: '100'
-    PIA_OPENVPN_CONFIG_BUNDLE=openvpn-tcp-nextgen:
+    pia_openvpn_config_bundle=openvpn-tcp-nextgen:
       Default: openvpn-tcp|openvpn|openvpn-strong|openvpn-strong-tcp
       Description: testing openvpn-tcp-nextgen
       Display: always
@@ -149,7 +149,7 @@ Config:
       Target: PIA_OPENVPN_CONFIG_BUNDLE
       Type: Variable
       value: openvpn-tcp
-    PUID:
+    puid:
       Default: ''
       Description: 'Container Variable: PUID'
       Display: always
@@ -160,7 +160,7 @@ Config:
       Target: PUID
       Type: Variable
       value: '99'
-    RATIO_LIMIT_ENABLED:
+    ratio_limit_enabled:
       Default: true|false
       Description: Enable Ratio Limits
       Display: always
@@ -171,51 +171,7 @@ Config:
       Target: TRANSMISSION_RATIO_LIMIT_ENABLED
       Type: Variable
       value: 'true'
-    TRANSMISSION_CACHE_SIZE_MB:
-      Default: '10'
-      Description: 'Container Variable: TRANSMISSION_CACHE_SIZE_MB'
-      Display: always
-      Mask: 'false'
-      Mode: ''
-      Name: TRANSMISSION_CACHE_SIZE_MB
-      Required: 'false'
-      Target: TRANSMISSION_CACHE_SIZE_MB
-      Type: Variable
-      value: '10'
-    TRANSMISSION_DOWNLOAD_QUEUE_SIZE:
-      Default: '10'
-      Description: 'Container Variable: TRANSMISSION_DOWNLOAD_QUEUE_SIZE'
-      Display: always
-      Mask: 'false'
-      Mode: ''
-      Name: TRANSMISSION_DOWNLOAD_QUEUE_SIZE
-      Required: 'false'
-      Target: TRANSMISSION_DOWNLOAD_QUEUE_SIZE
-      Type: Variable
-      value: '15'
-    TRANSMISSION_INCOMPLETE_DIR:
-      Default: /downloads/incomplete
-      Description: 'Container Variable: TRANSMISSION_INCOMPLETE_DIR'
-      Display: always
-      Mask: 'false'
-      Mode: ''
-      Name: TRANSMISSION_INCOMPLETE_DIR
-      Required: 'false'
-      Target: TRANSMISSION_INCOMPLETE_DIR
-      Type: Variable
-      value: /downloads/incomplete
-    TRANSMISSION_RPC_AUTHENTICATION_REQUIRED:
-      Default: true|false
-      Description: 'Container Variable: TRANSMISSION_RPC_AUTHENTICATION_REQUIRED'
-      Display: always
-      Mask: 'false'
-      Mode: ''
-      Name: TRANSMISSION_RPC_AUTHENTICATION_REQUIRED
-      Required: 'false'
-      Target: TRANSMISSION_RPC_AUTHENTICATION_REQUIRED
-      Type: Variable
-      value: 'true'
-    Trans_Option_Download Dir:
+    trans_option_downloaddir:
       Default: ''
       Description: 'Container Variable: TRANSMISSION_DOWNLOAD_DIR'
       Display: always
@@ -226,7 +182,40 @@ Config:
       Target: TRANSMISSION_DOWNLOAD_DIR
       Type: Variable
       value: /downloads
-    Transmission_Password:
+    transmission_cache_size_mb:
+      Default: '10'
+      Description: 'Container Variable: TRANSMISSION_CACHE_SIZE_MB'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: TRANSMISSION_CACHE_SIZE_MB
+      Required: 'false'
+      Target: TRANSMISSION_CACHE_SIZE_MB
+      Type: Variable
+      value: '10'
+    transmission_download_queue_size:
+      Default: '10'
+      Description: 'Container Variable: TRANSMISSION_DOWNLOAD_QUEUE_SIZE'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: TRANSMISSION_DOWNLOAD_QUEUE_SIZE
+      Required: 'false'
+      Target: TRANSMISSION_DOWNLOAD_QUEUE_SIZE
+      Type: Variable
+      value: '15'
+    transmission_incomplete_dir:
+      Default: /downloads/incomplete
+      Description: 'Container Variable: TRANSMISSION_INCOMPLETE_DIR'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: TRANSMISSION_INCOMPLETE_DIR
+      Required: 'false'
+      Target: TRANSMISSION_INCOMPLETE_DIR
+      Type: Variable
+      value: /downloads/incomplete
+    transmission_password:
       Default: password
       Description: 'Container Variable: RPC_PASSWORD'
       Display: always
@@ -237,7 +226,18 @@ Config:
       Target: TRANSMISSION_RPC_PASSWORD
       Type: Variable
       value: TRANS_PASSWORD
-    Transmission_Username:
+    transmission_rpc_authentication_required:
+      Default: true|false
+      Description: 'Container Variable: TRANSMISSION_RPC_AUTHENTICATION_REQUIRED'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: TRANSMISSION_RPC_AUTHENTICATION_REQUIRED
+      Required: 'false'
+      Target: TRANSMISSION_RPC_AUTHENTICATION_REQUIRED
+      Type: Variable
+      value: 'true'
+    transmission_username:
       Default: admin
       Description: 'Container Variable: RPC_USERNAME'
       Display: always
@@ -248,7 +248,7 @@ Config:
       Target: TRANSMISSION_RPC_USERNAME
       Type: Variable
       value: TRANS_USER
-    WEB_GUI:
+    web_gui:
       Default: transmission-web-control|kettu|combustion
       Description: Web UI Options
       Display: always
@@ -259,7 +259,7 @@ Config:
       Target: TRANSMISSION_WEB_UI
       Type: Variable
       value: transmission-web-control
-    WebProxy:
+    webproxy:
       Default: 'false'
       Description: 'Container Path: WEBPROXY_ENABLED'
       Display: always

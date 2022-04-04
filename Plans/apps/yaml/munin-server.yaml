@@ -5,32 +5,22 @@ CategoryList: &id001
 Config:
   Device: {}
   Label: {}
-  Path: {}
+  Path:
+    munin-server:
+      Mode: ro
+      Name: sys
+      Target: /sys
+      value: /sys
   Port: {}
   Variable:
-    ALLOWED_HOSTS:
+    allowed_hosts:
       Name: ALLOWED_HOSTS
+      Target: ALLOWED_HOSTS
       value: 127.0.0.1/32
-    HOSTNAME:
+    hostname:
       Name: HOSTNAME
+      Target: HOSTNAME
       value: unRAID
-Data:
-  Volume:
-  - ContainerDir: /etc/munin/munin-conf.d
-    HostDir: /mnt/user/appdata/munin-server/conf
-    Mode: rw
-  - ContainerDir: /var/cache/munin/www
-    HostDir: /mnt/user/appdata/munin-server/www
-    Mode: rw
-  - ContainerDir: /var/lib/munin
-    HostDir: /mnt/user/appdata/munin-server/rrd
-    Mode: rw
-  - ContainerDir: /rootfs
-    HostDir: /
-    Mode: ro
-  - ContainerDir: /sys
-    HostDir: /sys
-    Mode: ro
 Icon: https://raw.githubusercontent.com/shaf/unraid-docker-templates/master/shaf/images/munin-icon.png
 Keywords:
 - munin-server

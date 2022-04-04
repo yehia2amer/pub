@@ -8,7 +8,7 @@ Config:
   Path: {}
   Port: {}
   Variable:
-    (Optional) Server ID:
+    (optional)serverid:
       Default: ''
       Description: 'Input a Ookla Speedtest server ID to use for your tests. This
         will use this server for every test. '
@@ -20,7 +20,7 @@ Config:
       Target: SPEEDTEST_SERVER_ID
       Type: Variable
       value: ''
-    InfluxDB Address:
+    influxdbaddress:
       Default: ''
       Description: "Container Variable: INFLUX_DB_ADDRESS\r\nIP or Hostname of Influx\
         \ DB"
@@ -32,7 +32,7 @@ Config:
       Target: INFLUX_DB_ADDRESS
       Type: Variable
       value: influxdb
-    InfluxDB Database Name:
+    influxdbdatabasename:
       Default: ''
       Description: "Container Variable: INFLUX_DB_DATABASE\r\nIf the database doesn't\
         \ exist, it will be created. "
@@ -44,7 +44,7 @@ Config:
       Target: INFLUX_DB_DATABASE
       Type: Variable
       value: speedtest
-    InfluxDB Pass:
+    influxdbpass:
       Default: ''
       Description: 'Container Variable: INFLUX_DB_PASSWORD'
       Display: always
@@ -55,7 +55,7 @@ Config:
       Target: INFLUX_DB_PASSWORD
       Type: Variable
       value: ''
-    InfluxDB Port:
+    influxdbport:
       Default: '8086'
       Description: 'Container Variable: INFLUX_DB_PORT'
       Display: always
@@ -66,7 +66,7 @@ Config:
       Target: INFLUX_DB_PORT
       Type: Variable
       value: '8086'
-    InfluxDB Tags:
+    influxdbtags:
       Default: isp, external_ip, server_id, server_name, server_location, speedtest_url
       Description: Tags to be added to the datasets. See https://github.com/breadlysm/speedtest-to-influxdb#tag-options.
         Tags must be comma seperated
@@ -78,7 +78,7 @@ Config:
       Target: INFLUX_DB_TAGS
       Type: Variable
       value: isp, external_ip, server_id, server_name, server_location, speedtest_url
-    InfluxDB User:
+    influxdbuser:
       Default: ''
       Description: 'Container Variable: INFLUX_DB_USER'
       Display: always
@@ -89,7 +89,7 @@ Config:
       Target: INFLUX_DB_USER
       Type: Variable
       value: ''
-    Log Level:
+    loglevel:
       Default: info
       Description: 'Options are: ''info'' or ''debug'' '
       Display: advanced
@@ -100,7 +100,7 @@ Config:
       Target: LOG_TYPE
       Type: Variable
       value: info
-    Ping Interval:
+    pinginterval:
       Default: '60'
       Description: 'Interval is in seconds. This is how often your latency will be
         checked. '
@@ -112,7 +112,7 @@ Config:
       Target: PING_INTERVAL
       Type: Variable
       value: '60'
-    Ping Servers:
+    pingservers:
       Default: 1.1.1.1, 8.8.8.8
       Description: 'hostnames or domains to use to test ping. On every ping interval,
         all servers input will be tested. Must be comma seperated. '
@@ -124,7 +124,7 @@ Config:
       Target: PING_TARGETS
       Type: Variable
       value: 1.1.1.1, 8.8.8.8
-    Test Interval:
+    testinterval:
       Default: '150'
       Description: 'How often should speed be tested, in minutes. Default is set at
         2:30 as I like to see changes over time at different times of day. '

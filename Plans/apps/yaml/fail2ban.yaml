@@ -5,17 +5,6 @@ Config:
   Device: {}
   Label: {}
   Path:
-    LOG_FILE:
-      Default: ''
-      Description: 'Container Path: /var/log'
-      Display: always
-      Mask: 'false'
-      Mode: rw
-      Name: LOG_FILE
-      Required: 'false'
-      Target: /var/log
-      Type: Path
-      value: /var/log
     data:
       Default: ''
       Description: 'Container Path: /data'
@@ -27,6 +16,17 @@ Config:
       Target: /data
       Type: Path
       value: /mnt/user/appdata/fail2ban
+    log_file:
+      Default: ''
+      Description: 'Container Path: /var/log'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: LOG_FILE
+      Required: 'false'
+      Target: /var/log
+      Type: Path
+      value: /var/log
   Port: {}
   Variable: {}
 ExtraParams: --cap-add=NET_ADMIN --cap-add=NET_RAW

@@ -10,7 +10,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    CONFIG_PATH:
+    config_path:
       Default: ''
       Description: 'Container Path: /config'
       Display: always
@@ -21,7 +21,7 @@ Config:
       Target: /config
       Type: Path
       value: /mnt/user/appdata/amongusdiscord/
-    LOG_PATH:
+    log_path:
       Default: ''
       Description: The path where the bot will store it's log files
       Display: always
@@ -33,7 +33,7 @@ Config:
       Type: Path
       value: /mnt/user/appdata/amongusdiscord/log_path
   Port:
-    PORT:
+    port:
       Default: '8123'
       Description: The port the Bot will use for incoming Socket.io communications
         from the capture client. Defaults to 8123. You must specify more (comma-delimited
@@ -48,7 +48,7 @@ Config:
       Type: Port
       value: '8123'
   Variable:
-    DISCORD_BOT_TOKEN:
+    discord_bot_token:
       Default: ''
       Description: The Bot Token used by the bot to authenticate with Discord.
       Display: always
@@ -59,7 +59,7 @@ Config:
       Target: DISCORD_BOT_TOKEN
       Type: Variable
       value: ''
-    DISCORD_BOT_TOKEN_2:
+    discord_bot_token_2:
       Default: ''
       Description: ' (Optional) A second Bot Token to be used to distribute the mute/deafen
         requests to Discord. If you play in larger groups of 8+ people, this is recommended
@@ -72,7 +72,7 @@ Config:
       Target: DISCORD_BOT_TOKEN_2
       Type: Variable
       value: ''
-    HOST:
+    host:
       Default: http://au.yourdomain.com:8123
       Description: 'The externally-accessible URL for this instance of the discord
         bot. For example, http://test.com:8123 (NOTE: The EXTERNAL PORT of the bot
@@ -88,7 +88,7 @@ Config:
       Target: HOST
       Type: Variable
       value: ''
-    NUM_SHARDS:
+    num_shards:
       Default: ''
       Description: How many total bot shard instances you'll be running in your current
         stack.

@@ -17,18 +17,7 @@ Config:
       Type: Path
       value: /mnt/user/appdata/rcon-web-admin/db/
   Port:
-    webUI:
-      Default: ''
-      Description: 'Container Port: 4326'
-      Display: always
-      Mask: 'false'
-      Mode: tcp
-      Name: webUI
-      Required: 'false'
-      Target: '4326'
-      Type: Port
-      value: '4326'
-    websocket access from UI:
+    websocketaccessfromui:
       Default: ''
       Description: 'Container Port: 4327'
       Display: always
@@ -39,8 +28,19 @@ Config:
       Target: '4327'
       Type: Port
       value: '4327'
+    webui:
+      Default: ''
+      Description: 'Container Port: 4326'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: webUI
+      Required: 'false'
+      Target: '4326'
+      Type: Port
+      value: '4326'
   Variable:
-    RWA_ADMIN:
+    rwa_admin:
       Default: ''
       Description: 'Container Variable: RWA_ADMIN'
       Display: always
@@ -51,7 +51,7 @@ Config:
       Target: RWA_ADMIN
       Type: Variable
       value: 'TRUE'
-    RWA_ENV:
+    rwa_env:
       Default: ''
       Description: 'Container Variable: RWA_ENV'
       Display: advanced
@@ -62,7 +62,7 @@ Config:
       Target: RWA_ENV
       Type: Variable
       value: 'False'
-    RWA_PASSWORD:
+    rwa_password:
       Default: ''
       Description: 'Container Variable: RWA_PASSWORD'
       Display: always
@@ -73,7 +73,7 @@ Config:
       Target: RWA_PASSWORD
       Type: Variable
       value: admin
-    RWA_USERNAME:
+    rwa_username:
       Default: ''
       Description: 'Container Variable: RWA_USERNAME'
       Display: always

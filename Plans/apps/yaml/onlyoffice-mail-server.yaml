@@ -7,7 +7,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Mounted Certs Folder:
+    mountedcertsfolder:
       Default: /mnt/user/appdata/onlyoffice/MailServer/data/certs
       Description: 'Container Path: /etc/pki/tls/mailserver'
       Display: always
@@ -18,7 +18,7 @@ Config:
       Target: /etc/pki/tls/mailserver
       Type: Path
       value: /mnt/user/appdata/onlyoffice/MailServer/data/certs
-    Mounted Logs Folder:
+    mountedlogsfolder:
       Default: /mnt/user/appdata/onlyoffice/MailServer/logs
       Description: 'Container Path: /var/log'
       Display: always
@@ -29,7 +29,7 @@ Config:
       Target: /var/log
       Type: Path
       value: /mnt/user/appdata/onlyoffice/MailServer/logs
-    Mounted Mail Data:
+    mountedmaildata:
       Default: /mnt/user/appdata/onlyoffice/MailServer/data
       Description: 'Container Path: /var/vmail'
       Display: always
@@ -40,7 +40,7 @@ Config:
       Target: /var/vmail
       Type: Path
       value: /mnt/user/appdata/onlyoffice/MailServer/data
-    Mounted MySQL Data:
+    mountedmysqldata:
       Default: /mnt/user/appdata/onlyoffice/MailServer/mysql
       Description: 'Container Path: /var/lib/mysql'
       Display: always
@@ -53,7 +53,7 @@ Config:
       value: /mnt/user/appdata/onlyoffice/MailServer/mysql
   Port: {}
   Variable:
-    Default Mail Server Database Name:
+    defaultmailserverdatabasename:
       Default: onlyoffice_mailserver
       Description: 'Container Variable: MYSQL_SERVER_DB_NAME'
       Display: always
@@ -64,7 +64,7 @@ Config:
       Target: MYSQL_SERVER_DB_NAME
       Type: Variable
       value: onlyoffice_mailserver
-    MySQL Host - Read Description for Changes ----&gt;:
+    mysqlhost-readdescriptionforchanges----&gt;:
       Default: onlyoffice-mysql-server
       Description: 'Container Variable: onlyoffice-mysql-server &lt;----&gt; For database
         hosted on another server use the external IP ( internet IP ).'
@@ -76,7 +76,7 @@ Config:
       Target: MYSQL_SERVER
       Type: Variable
       value: onlyoffice-mysql-server
-    MySQL Port:
+    mysqlport:
       Default: '3306'
       Description: 'Container Variable: MYSQL_SERVER_PORT'
       Display: always
@@ -87,7 +87,7 @@ Config:
       Target: MYSQL_SERVER_PORT
       Type: Variable
       value: '3306'
-    Root Password for MySQL ( Default password is 'Isadmin123' ):
+    rootpasswordformysql(defaultpasswordis'isadmin123'):
       Default: Isadmin123
       Description: 'Container Variable: MYSQL_ROOT_PASSWD'
       Display: always
@@ -98,7 +98,7 @@ Config:
       Target: MYSQL_ROOT_PASSWD
       Type: Variable
       value: Isadmin123
-    Root User for MySQL ( Default is 'mail_admin' ):
+    rootuserformysql(defaultis'mail_admin'):
       Default: mail_admin
       Description: 'Container Variable: MYSQL_ROOT_USER'
       Display: always

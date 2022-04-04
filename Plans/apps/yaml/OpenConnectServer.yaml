@@ -18,7 +18,7 @@ Config:
       Type: Path
       value: /mnt/cache/appdata/openconnect/
   Port:
-    4443/tcp:
+    4443tcp:
       Default: '4443'
       Description: 'Container Port: 4443/tcp'
       Display: always
@@ -29,7 +29,7 @@ Config:
       Target: '4443'
       Type: Port
       value: '4443'
-    4443/udp:
+    4443udp:
       Default: '4443'
       Description: 'Container Port: 4443/udp'
       Display: always
@@ -41,7 +41,7 @@ Config:
       Type: Port
       value: '4443'
   Variable:
-    CA_CN:
+    ca_cn:
       Default: VPN CA
       Description: Name of CA for generated certs
       Display: always
@@ -52,7 +52,7 @@ Config:
       Target: CA_CN
       Type: Variable
       value: VPN CA
-    CA_DAYS:
+    ca_days:
       Default: '9999'
       Description: Days CA cert is valid for generated certs
       Display: always
@@ -63,7 +63,7 @@ Config:
       Target: CA_DAYS
       Type: Variable
       value: '9999'
-    CA_ORG:
+    ca_org:
       Default: OCSERV
       Description: Organization of CA for generated certs
       Display: always
@@ -74,7 +74,7 @@ Config:
       Target: CA_ORG
       Type: Variable
       value: OCSERV
-    DNS_SERVERS:
+    dns_servers:
       Default: 8.8.8.8,37.235.1.174,8.8.4.4,37.235.1.177
       Description: 'Container Variable: DNS_SERVERS'
       Display: always
@@ -85,7 +85,7 @@ Config:
       Target: DNS_SERVERS
       Type: Variable
       value: 8.8.8.8,37.235.1.174,8.8.4.4,37.235.1.177
-    LISTEN_PORT:
+    listen_port:
       Default: '4443'
       Description: 'Container Variable: LISTEN_PORT'
       Display: always
@@ -96,7 +96,7 @@ Config:
       Target: LISTEN_PORT
       Type: Variable
       value: '4443'
-    POWER_USER:
+    power_user:
       Default: 'no'
       Description: 'Container Variable: POWER_USER'
       Display: advanced
@@ -107,7 +107,7 @@ Config:
       Target: POWER_USER
       Type: Variable
       value: 'no'
-    SPLIT_DNS_DOMAINS:
+    split_dns_domains:
       Default: ''
       Description: 'Container Variable: SPLIT_DNS_DOMAINS'
       Display: advanced
@@ -118,7 +118,7 @@ Config:
       Target: SPLIT_DNS_DOMAINS
       Type: Variable
       value: ''
-    SRV_CN:
+    srv_cn:
       Default: vpn.example.com
       Description: Name of server for generated certs
       Display: always
@@ -129,7 +129,7 @@ Config:
       Target: SRV_CN
       Type: Variable
       value: vpn.example.com
-    SRV_DAYS:
+    srv_days:
       Default: '9999'
       Description: Days server cert is valid for generated certs
       Display: always
@@ -140,7 +140,7 @@ Config:
       Target: SRV_DAYS
       Type: Variable
       value: '9999'
-    SRV_ORG:
+    srv_org:
       Default: My Company
       Description: Organization of server for generated certs
       Display: always
@@ -151,7 +151,7 @@ Config:
       Target: SRV_ORG
       Type: Variable
       value: My Company
-    TUNNEL_MODE:
+    tunnel_mode:
       Default: all
       Description: 'Container Variable: TUNNEL_MODE'
       Display: advanced
@@ -162,7 +162,7 @@ Config:
       Target: TUNNEL_MODE
       Type: Variable
       value: all
-    TUNNEL_ROUTES:
+    tunnel_routes:
       Default: ''
       Description: 'Container Variable: TUNNEL_ROUTES'
       Display: advanced

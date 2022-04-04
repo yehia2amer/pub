@@ -4,7 +4,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    ServerFiles:
+    serverfiles:
       Default: ''
       Description: 'Container Path: /serverdata/serverfiles'
       Display: always
@@ -16,7 +16,7 @@ Config:
       Type: Path
       value: /mnt/cache/appdata/planetaryannihilation
   Port:
-    TCP - Server Port:
+    tcp-serverport:
       Default: ''
       Description: TCP Serverport (if you need another port, please delete this entry
         and create a new TCP Port with the required port number, also don't forget
@@ -29,7 +29,7 @@ Config:
       Target: '20545'
       Type: Port
       value: '20545'
-    UDP - LAN Beacon:
+    udp-lanbeacon:
       Default: ''
       Description: 'Container Port: 8192'
       Display: always
@@ -41,7 +41,7 @@ Config:
       Type: Port
       value: '8192'
   Variable:
-    Extra Startup Parameters:
+    extrastartupparameters:
       Default: ''
       Description: Extra startup parameters, if not needed leave it blank.
       Display: always
@@ -52,7 +52,7 @@ Config:
       Target: GAME_PARAMS
       Type: Variable
       value: ''
-    GAME_PORT:
+    game_port:
       Default: '20545'
       Description: 'Container Variable: GAME_PORT'
       Display: advanced
@@ -63,18 +63,7 @@ Config:
       Target: GAME_PORT
       Type: Variable
       value: '20545'
-    GID:
-      Default: ''
-      Description: 'Container Variable: GID'
-      Display: advanced-hide
-      Mask: 'false'
-      Mode: ''
-      Name: GID
-      Required: 'true'
-      Target: GID
-      Type: Variable
-      value: '100'
-    Game Mode:
+    gamemode:
       Default: ''
       Description: For the standard Planetary Annihilation fill in 'lobby', for the
         extension Planetary Annihilation Titans fill in 'PAExpansion1:lobby' (without
@@ -87,7 +76,7 @@ Config:
       Target: GAME_MODE
       Type: Variable
       value: lobby
-    Game Stream:
+    gamestream:
       Default: ''
       Description: Choose between 'stable' and 'PTE' (without quotes)
       Display: always
@@ -98,7 +87,18 @@ Config:
       Target: GAME_STREAM
       Type: Variable
       value: stable
-    Maximum Players:
+    gid:
+      Default: ''
+      Description: 'Container Variable: GID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: GID
+      Required: 'true'
+      Target: GID
+      Type: Variable
+      value: '100'
+    maximumplayers:
       Default: ''
       Description: Enter the maximum players on the server.
       Display: always
@@ -109,7 +109,7 @@ Config:
       Target: MAX_PLAYERS
       Type: Variable
       value: '12'
-    Server Name:
+    servername:
       Default: ''
       Description: Here goes the name of you PA Server
       Display: always
@@ -120,7 +120,7 @@ Config:
       Target: SERVER_NAME
       Type: Variable
       value: DockerServer
-    Server Password:
+    serverpassword:
       Default: ''
       Description: Here goes the Password of the Server
       Display: always
@@ -131,7 +131,7 @@ Config:
       Target: SERVER_PWD
       Type: Variable
       value: Docker
-    UID:
+    uid:
       Default: ''
       Description: 'Container Variable: UID'
       Display: advanced-hide
@@ -142,7 +142,7 @@ Config:
       Target: UID
       Type: Variable
       value: '99'
-    Update on start:
+    updateonstart:
       Default: ''
       Description: Set to 'true' (withoute quotes) if you want to check for updates,
         otherwise leave it blank.
@@ -154,18 +154,7 @@ Config:
       Target: UPDATE_ON_START
       Type: Variable
       value: ''
-    Your PA Account Password:
-      Default: ''
-      Description: Your PA password goes here
-      Display: always
-      Mask: 'false'
-      Mode: ''
-      Name: Your PA Account Password
-      Required: 'true'
-      Target: PA_ACC_PWD
-      Type: Variable
-      value: ''
-    Your PA Account name:
+    yourpaaccountname:
       Default: ''
       Description: 'Your PA account name goes here, if you don''t have one got to
         this link: https://service.planetaryannihilation.net/user/LinkSteam?TitleId=4
@@ -176,6 +165,17 @@ Config:
       Name: Your PA Account name
       Required: 'true'
       Target: PA_ACC_NAME
+      Type: Variable
+      value: ''
+    yourpaaccountpassword:
+      Default: ''
+      Description: Your PA password goes here
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Your PA Account Password
+      Required: 'true'
+      Target: PA_ACC_PWD
       Type: Variable
       value: ''
 ExtraParams: --restart=unless-stopped

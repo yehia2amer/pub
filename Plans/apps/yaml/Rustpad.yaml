@@ -6,7 +6,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Storage (database):
+    storage(database):
       Default: ''
       Description: This is the location for the SQLite DB file.
       Display: always
@@ -18,7 +18,7 @@ Config:
       Type: Path
       value: /mnt/user/appdata/rustpad
   Port:
-    WebUI:
+    webui:
       Default: ''
       Description: ''
       Display: always
@@ -30,7 +30,7 @@ Config:
       Type: Port
       value: '3030'
   Variable:
-    EXPIRY_DAYS:
+    expiry_days:
       Default: ''
       Description: The number of days that inactive documents are kept in memory before
         being garbage collected by the server (default 1).
@@ -42,7 +42,7 @@ Config:
       Target: EXPIRY_DAYS
       Type: Variable
       value: '1'
-    RUST_LOG:
+    rust_log:
       Default: ''
       Description: Directives that control application logging. (error/warn/info/debug/trace)
       Display: advanced
@@ -53,7 +53,7 @@ Config:
       Target: RUST_LOG
       Type: Variable
       value: info
-    SQLITE_URI:
+    sqlite_uri:
       Default: ''
       Description: A SQLite connection string used for persistence.
       Display: advanced

@@ -7,44 +7,54 @@ CategoryList: &id001
 Config:
   Device: {}
   Label: {}
-  Path: {}
+  Path:
+    gitlab:
+      Mode: rw
+      Name: data
+      Target: /home/git/data
+      value: /mnt/user/appdata/gitlab
   Port: {}
   Variable:
-    GITLAB_BACKUPS:
-      Name: GITLAB_BACKUPS
-      value: daily
-    GITLAB_BACKUP_EXPIRY:
+    gitlab_backup_expiry:
       Name: GITLAB_BACKUP_EXPIRY
+      Target: GITLAB_BACKUP_EXPIRY
       value: '2419200'
-    GITLAB_EMAIL:
+    gitlab_backups:
+      Name: GITLAB_BACKUPS
+      Target: GITLAB_BACKUPS
+      value: daily
+    gitlab_email:
       Name: GITLAB_EMAIL
+      Target: GITLAB_EMAIL
       value: example@example.com
-    GITLAB_HOST:
+    gitlab_host:
       Name: GITLAB_HOST
+      Target: GITLAB_HOST
       value: localhost
-    GITLAB_HTTPS:
+    gitlab_https:
       Name: GITLAB_HTTPS
+      Target: GITLAB_HTTPS
       value: 'false'
-    GITLAB_PORT:
+    gitlab_port:
       Name: GITLAB_PORT
+      Target: GITLAB_PORT
       value: '10080'
-    GITLAB_SSH_PORT:
+    gitlab_ssh_port:
       Name: GITLAB_SSH_PORT
+      Target: GITLAB_SSH_PORT
       value: '10020'
-    SMTP_PASS:
+    smtp_pass:
       Name: SMTP_PASS
+      Target: SMTP_PASS
       value: gmailpassword
-    SMTP_USER:
+    smtp_user:
       Name: SMTP_USER
+      Target: SMTP_USER
       value: gitlabEmail@gmail.com
-    SSL_SELF_SIGNED:
+    ssl_self_signed:
       Name: SSL_SELF_SIGNED
+      Target: SSL_SELF_SIGNED
       value: 'false'
-Data:
-  Volume:
-    ContainerDir: /home/git/data
-    HostDir: /mnt/user/appdata/gitlab
-    Mode: rw
 ExtraParams: --link postgresql:postgresql --link redis:redisio
 GitHub: https://github.com/sameersbn/docker-gitlab
 Icon: https://avatars.githubusercontent.com/u/1086321

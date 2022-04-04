@@ -6,7 +6,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    App Data/Database (SQLite):
+    appdatadatabase(sqlite):
       Default: /mnt/user/appdata/directus/database/
       Description: Only needed for SQLite environments
       Display: always
@@ -17,7 +17,7 @@ Config:
       Target: /directus/database/
       Type: Path
       value: /mnt/user/appdata/directus/database/
-    App Data/Extensions:
+    appdataextensions:
       Default: /mnt/user/appdata/directus/extensions/
       Description: 'Container Path: /directus/extensions/'
       Display: always
@@ -28,7 +28,7 @@ Config:
       Target: /directus/extensions/
       Type: Path
       value: /mnt/user/appdata/directus/extensions/
-    App Data/Uploads:
+    appdatauploads:
       Default: /mnt/user/appdata/directus/uploads/
       Description: "Container Path: /directus/uploads/\r\n\r\nThis is where your files\
         \ get stored you upload to and manage within Directus"
@@ -41,7 +41,7 @@ Config:
       Type: Path
       value: /mnt/user/appdata/directus/uploads/
   Port:
-    WebUI:
+    webui:
       Default: '8055'
       Description: 'Container Port: 8055'
       Display: always
@@ -53,7 +53,7 @@ Config:
       Type: Port
       value: '8055'
   Variable:
-    Admin Email:
+    adminemail:
       Default: admin@example.com
       Description: The Direcuts Admin User Account. Feel free to change this to your
         email address.
@@ -65,7 +65,7 @@ Config:
       Target: ADMIN_EMAIL
       Type: Variable
       value: ''
-    Admin Password:
+    adminpassword:
       Default: ''
       Description: "The Direcuts Admin User Account. Feel free to pass your desired\
         \ password here,\r\notherwise a default password will be generated on first\
@@ -78,7 +78,7 @@ Config:
       Target: ADMIN_PASSWORD
       Type: Variable
       value: ''
-    Database:
+    database:
       Default: ''
       Description: What database client to use. One of pg or postgres, mysql, oracledb,
         mssql, or sqlite3.
@@ -90,7 +90,7 @@ Config:
       Target: DB_CLIENT
       Type: Variable
       value: ''
-    Database Filename:
+    databasefilename:
       Default: ''
       Description: Where to read/write the SQLite database. Required when using sqlite3.
       Display: advanced
@@ -101,7 +101,7 @@ Config:
       Target: DB_FILENAME
       Type: Variable
       value: ''
-    Database Host:
+    databasehost:
       Default: ''
       Description: Database host. Required when using pg, mysql, oracledb, or mssql.
       Display: always
@@ -112,7 +112,7 @@ Config:
       Target: DB_HOST
       Type: Variable
       value: ''
-    Database Name:
+    databasename:
       Default: ''
       Description: Database name. Required when using pg, mysql, oracledb, or mssql.
       Display: always
@@ -123,7 +123,7 @@ Config:
       Target: DB_DATABASE
       Type: Variable
       value: ''
-    Database Password:
+    databasepassword:
       Default: ''
       Description: Database user's password. Required when using pg, mysql, oracledb,
         or mssql.
@@ -135,7 +135,7 @@ Config:
       Target: DB_PASSWORD
       Type: Variable
       value: ''
-    Database Port:
+    databaseport:
       Default: ''
       Description: Database port. Required when using pg, mysql, oracledb, or mssql.
       Display: always
@@ -146,7 +146,7 @@ Config:
       Target: DB_PORT
       Type: Variable
       value: ''
-    Database User:
+    databaseuser:
       Default: ''
       Description: Database user. Required when using pg, mysql, oracledb, or mssql.
       Display: always
@@ -157,7 +157,7 @@ Config:
       Target: DB_USER
       Type: Variable
       value: ''
-    KEY:
+    key:
       Default: ''
       Description: Unique identifier for the project.
       Display: always
@@ -168,7 +168,7 @@ Config:
       Target: KEY
       Type: Variable
       value: ''
-    PGID:
+    pgid:
       Default: '100'
       Description: 'Container Variable: PGID'
       Display: advanced
@@ -179,18 +179,7 @@ Config:
       Target: PGID
       Type: Variable
       value: '100'
-    PUID:
-      Default: '99'
-      Description: 'Container Variable: PUID'
-      Display: advanced
-      Mask: 'false'
-      Mode: ''
-      Name: PUID
-      Required: 'true'
-      Target: PUID
-      Type: Variable
-      value: '99'
-    Postgres Connection String:
+    postgresconnectionstring:
       Default: ''
       Description: When using pg, you can submit a connection string instead of individual
         properties. Using this will ignore any of the other connection settings.
@@ -202,7 +191,18 @@ Config:
       Target: DB_CONNECTION_STRING
       Type: Variable
       value: ''
-    SECRET:
+    puid:
+      Default: '99'
+      Description: 'Container Variable: PUID'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PUID
+      Required: 'true'
+      Target: PUID
+      Type: Variable
+      value: '99'
+    secret:
       Default: ''
       Description: Secret string for the project.
       Display: always
@@ -213,7 +213,7 @@ Config:
       Target: SECRET
       Type: Variable
       value: ''
-    TZ:
+    tz:
       Default: ''
       Description: Set your Time Zone here (e.g. Europe/Berlin)
       Display: advanced
@@ -224,7 +224,7 @@ Config:
       Target: TZ
       Type: Variable
       value: ''
-    UMASK:
+    umask:
       Default: '002'
       Description: 'Container Variable: UMASK'
       Display: advanced

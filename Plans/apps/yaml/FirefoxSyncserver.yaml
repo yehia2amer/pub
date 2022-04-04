@@ -4,7 +4,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    sync db location:
+    syncdblocation:
       Default: /mnt/user/appdata/ff-syncserver/db/
       Description: Location where durable sqllite db is stored for sync data.
       Display: always
@@ -16,7 +16,7 @@ Config:
       Type: Path
       value: ''
   Port:
-    Listening on:
+    listeningon:
       Default: '5000'
       Description: 'Container Port: 5000'
       Display: always
@@ -28,7 +28,7 @@ Config:
       Type: Port
       value: '5000'
   Variable:
-    Allow new users:
+    allownewusers:
       Default: 'true'
       Description: 'Container Variable: SYNCSERVER_ALLOW_NEW_USERS'
       Display: always
@@ -39,7 +39,7 @@ Config:
       Target: SYNCSERVER_ALLOW_NEW_USERS
       Type: Variable
       value: ''
-    Enable batch uploads:
+    enablebatchuploads:
       Default: 'true'
       Description: 'Container Variable: SYNCSERVER_BATCH_UPLOAD_ENABLED'
       Display: advanced
@@ -50,7 +50,7 @@ Config:
       Target: SYNCSERVER_BATCH_UPLOAD_ENABLED
       Type: Variable
       value: 'true'
-    Force WSGI:
+    forcewsgi:
       Default: 'true'
       Description: 'Container Variable: SYNCSERVER_FORCE_WSGI_ENVIRON'
       Display: advanced
@@ -61,7 +61,7 @@ Config:
       Target: SYNCSERVER_FORCE_WSGI_ENVIRON
       Type: Variable
       value: 'false'
-    Port:
+    port:
       Default: '5000'
       Description: 'Container Variable: PORT'
       Display: always
@@ -72,7 +72,7 @@ Config:
       Target: PORT
       Type: Variable
       value: '5000'
-    SQLlite URI:
+    sqlliteuri:
       Default: sqlite:////data/syncserver.db
       Description: Container path to where sqllite db lives
       Display: always-hide
@@ -83,7 +83,7 @@ Config:
       Target: SYNCSERVER_SQLURI
       Type: Variable
       value: sqlite:////data/syncserver.db
-    Syncserver Public URL:
+    syncserverpublicurl:
       Default: http://&lt;URL&gt;:5000
       Description: 'Replace &lt;URL&gt; in SYNCSERVER_PUBLIC_URL with your URL (For
         which the SSL certificate was also issued) '
@@ -95,7 +95,7 @@ Config:
       Target: SYNCSERVER_PUBLIC_URL
       Type: Variable
       value: ''
-    Syncserver secret:
+    syncserversecret:
       Default: '&lt;KEY&gt;'
       Description: "Replace &lt;KEY&gt; with some random hex like the output of \r\
         \n\r\nhead -c 20 /dev/urandom | sha1sum | awk '{print $1}'."

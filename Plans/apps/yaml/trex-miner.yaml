@@ -5,7 +5,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Config:
+    config:
       Default: ''
       Description: 'Container Path: /config'
       Display: always
@@ -17,7 +17,7 @@ Config:
       Type: Path
       value: /mnt/user/appdata/trex
   Port:
-    WebUI:
+    webui:
       Default: ''
       Description: 'Container Port: 4067'
       Display: always
@@ -29,39 +29,6 @@ Config:
       Type: Port
       value: '4067'
   Variable:
-    Server:
-      Default: ''
-      Description: URL of the mining pool
-      Display: always
-      Mask: 'false'
-      Mode: ''
-      Name: Server
-      Required: 'true'
-      Target: SERVER
-      Type: Variable
-      value: ''
-    Wallet address:
-      Default: ''
-      Description: Username/Wallet address
-      Display: always
-      Mask: 'false'
-      Mode: ''
-      Name: Wallet address
-      Required: 'true'
-      Target: WALLET
-      Type: Variable
-      value: ''
-    Worker Name:
-      Default: ''
-      Description: Worker name
-      Display: always
-      Mask: 'false'
-      Mode: ''
-      Name: Worker Name
-      Required: 'false'
-      Target: WORKER
-      Type: Variable
-      value: ''
     algorithm:
       Default: ethash
       Description: Specify the hash algorithm
@@ -73,7 +40,29 @@ Config:
       Target: ALGO
       Type: Variable
       value: ethash
-    webUI Password:
+    server:
+      Default: ''
+      Description: URL of the mining pool
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Server
+      Required: 'true'
+      Target: SERVER
+      Type: Variable
+      value: ''
+    walletaddress:
+      Default: ''
+      Description: Username/Wallet address
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Wallet address
+      Required: 'true'
+      Target: WALLET
+      Type: Variable
+      value: ''
+    webuipassword:
       Default: ''
       Description: Must be 8-64 characters long, without spaces, and must contain
         at least one digit, lowercase, and uppercase letters.
@@ -83,6 +72,17 @@ Config:
       Name: webUI Password
       Required: 'true'
       Target: API_PASSWORD
+      Type: Variable
+      value: ''
+    workername:
+      Default: ''
+      Description: Worker name
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Worker Name
+      Required: 'false'
+      Target: WORKER
       Type: Variable
       value: ''
 ExtraParams: --runtime=nvidia

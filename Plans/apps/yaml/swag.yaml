@@ -5,7 +5,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Appdata:
+    appdata:
       Default: ''
       Description: All the config files including the webroot reside here.
       Display: advanced
@@ -17,7 +17,7 @@ Config:
       Type: Path
       value: ''
   Port:
-    'Port: 80':
+    port80:
       Default: '80'
       Description: Http port (required for http validation and http - https redirect)
       Display: always
@@ -28,7 +28,7 @@ Config:
       Target: '80'
       Type: Port
       value: ''
-    WebUI:
+    webui:
       Default: '443'
       Description: Https port
       Display: always
@@ -40,7 +40,7 @@ Config:
       Type: Port
       value: ''
   Variable:
-    CERTPROVIDER:
+    certprovider:
       Default: ''
       Description: Optionally define the cert provider. Set to `zerossl` for ZeroSSL
         certs (requires existing ZeroSSL account(https://app.zerossl.com/signup) and
@@ -53,7 +53,7 @@ Config:
       Target: CERTPROVIDER
       Type: Variable
       value: ''
-    DNSPLUGIN:
+    dnsplugin:
       Default: cloudflare
       Description: Required if `VALIDATION` is set to `dns`. Options are `aliyun`,
         `cloudflare`, `cloudxns`, `cpanel`, `desec`, `digitalocean`, `directadmin`,
@@ -69,7 +69,7 @@ Config:
       Target: DNSPLUGIN
       Type: Variable
       value: ''
-    DUCKDNSTOKEN:
+    duckdnstoken:
       Default: ''
       Description: Required if `VALIDATION` is set to `duckdns`. Retrieve your token
         from https://www.duckdns.org
@@ -80,7 +80,7 @@ Config:
       Target: DUCKDNSTOKEN
       Type: Variable
       value: ''
-    EMAIL:
+    email:
       Default: ''
       Description: Optional e-mail address used for cert expiration notifications
         (Required for ZeroSSL).
@@ -91,7 +91,7 @@ Config:
       Target: EMAIL
       Type: Variable
       value: ''
-    EXTRA_DOMAINS:
+    extra_domains:
       Default: ''
       Description: Additional fully qualified domain names (comma separated, no spaces)
         ie. `extradomain.com,subdomain.anotherdomain.org,*.anotherdomain.org`
@@ -102,7 +102,7 @@ Config:
       Target: EXTRA_DOMAINS
       Type: Variable
       value: ''
-    ONLY_SUBDOMAINS:
+    only_subdomains:
       Default: 'false'
       Description: If you wish to get certs only for certain subdomains, but not the
         main domain (main domain may be hosted on another machine and cannot be validated),
@@ -114,7 +114,7 @@ Config:
       Target: ONLY_SUBDOMAINS
       Type: Variable
       value: ''
-    PGID:
+    pgid:
       Default: '100'
       Description: 'Container Variable: PGID'
       Display: advanced
@@ -124,7 +124,7 @@ Config:
       Target: PGID
       Type: Variable
       value: ''
-    PROPAGATION:
+    propagation:
       Default: ''
       Description: Optionally override (in seconds) the default propagation time for
         the dns plugins.
@@ -135,7 +135,7 @@ Config:
       Target: PROPAGATION
       Type: Variable
       value: ''
-    PUID:
+    puid:
       Default: '99'
       Description: 'Container Variable: PUID'
       Display: advanced
@@ -145,7 +145,7 @@ Config:
       Target: PUID
       Type: Variable
       value: ''
-    STAGING:
+    staging:
       Default: 'false'
       Description: Set to `true` to retrieve certs in staging mode. Rate limits will
         be much higher, but the resulting cert will not pass the browser's security
@@ -157,7 +157,7 @@ Config:
       Target: STAGING
       Type: Variable
       value: ''
-    SUBDOMAINS:
+    subdomains:
       Default: www,
       Description: Subdomains you'd like the cert to cover (comma separated, no spaces)
         ie. `www,ftp,cloud`. For a wildcard cert, set this _exactly_ to `wildcard`
@@ -169,7 +169,7 @@ Config:
       Target: SUBDOMAINS
       Type: Variable
       value: ''
-    UMASK:
+    umask:
       Default: '022'
       Description: 'Container Variable: UMASK'
       Display: advanced
@@ -179,7 +179,7 @@ Config:
       Target: UMASK
       Type: Variable
       value: ''
-    URL:
+    url:
       Default: yourdomain.url
       Description: Top url you have control over (`customdomain.com` if you own it,
         or `customsubdomain.ddnsprovider.com` if dynamic dns).
@@ -190,7 +190,7 @@ Config:
       Target: URL
       Type: Variable
       value: ''
-    VALIDATION:
+    validation:
       Default: http
       Description: Certbot validation method to use, options are `http`, `dns` or
         `duckdns` (`dns` method also requires `DNSPLUGIN` variable set) (`duckdns`

@@ -5,23 +5,18 @@ CategoryList: &id001
 Config:
   Device: {}
   Label: {}
-  Path: {}
+  Path:
+    mediaelch:
+      Mode: rw
+      Name: shows
+      Target: /shows
+      value: /mnt/user
   Port: {}
   Variable:
-    UMASK:
+    umask:
       Name: UMASK
+      Target: UMASK
       value: '000'
-Data:
-  Volume:
-  - ContainerDir: /config/xdg/config/kvibes
-    HostDir: /mnt/cache/appdata/config
-    Mode: rw
-  - ContainerDir: /movies
-    HostDir: /mnt/user/
-    Mode: rw
-  - ContainerDir: /shows
-    HostDir: /mnt/user
-    Mode: rw
 Icon: https://www.kvibes.de/img/mediaelch/icon.png
 Keywords:
 - mediaelch

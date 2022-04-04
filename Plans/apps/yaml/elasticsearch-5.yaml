@@ -4,20 +4,22 @@ CategoryList: &id001
 Config:
   Device: {}
   Label: {}
-  Path: {}
+  Path:
+    elasticsearch-5:
+      Mode: rw
+      Name: data
+      Target: /usr/share/elasticsearch/data
+      value: /mnt/cache/appdata/elasticsearch5/data
   Port: {}
   Variable:
-    ES_JAVA_OPTS:
-      Name: ES_JAVA_OPTS
-      value: -Xms512M -Xmx512M
-    discovery.type:
+    discovery-type:
       Name: discovery.type
+      Target: discovery.type
       value: single-node
-Data:
-  Volume:
-    ContainerDir: /usr/share/elasticsearch/data
-    HostDir: /mnt/cache/appdata/elasticsearch5/data
-    Mode: rw
+    es_java_opts:
+      Name: ES_JAVA_OPTS
+      Target: ES_JAVA_OPTS
+      value: -Xms512M -Xmx512M
 ExtraParams: --ulimit nofile=262144:262144
 Icon: https://www.elastic.co/static/images/elastic-logo-200.png
 Keywords:

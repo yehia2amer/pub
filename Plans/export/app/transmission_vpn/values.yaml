@@ -1,22 +1,22 @@
 env:
   GLOBAL_APPLY_PERMISSIONS: 'false'
-  Key 2: VPN_USER
-  Key 3: VPN_PASSWORD
   LOCAL_NETWORK: 192.168.0.0/24
   OPENVPN_CONFIG: switzerland
+  OPENVPN_OPTS: --inactive 3600 --ping 10 --ping-exit 60 --mute-replay-warnings
+  OPENVPN_PASSWORD: VPN_PASSWORD
   OPENVPN_PROVIDER: PIA
-  OpenVPN_OPTIONS: --inactive 3600 --ping 10 --ping-exit 60 --mute-replay-warnings
-  PIA_OPENVPN_CONFIG_BUNDLE=openvpn-tcp-nextgen: openvpn-tcp
-  RATIO_LIMIT_ENABLED: 'true'
+  OPENVPN_USERNAME: VPN_USER
+  PIA_OPENVPN_CONFIG_BUNDLE: openvpn-tcp
   TRANSMISSION_CACHE_SIZE_MB: '10'
+  TRANSMISSION_DOWNLOAD_DIR: /downloads
   TRANSMISSION_DOWNLOAD_QUEUE_SIZE: '15'
   TRANSMISSION_INCOMPLETE_DIR: /downloads/incomplete
+  TRANSMISSION_RATIO_LIMIT_ENABLED: 'true'
   TRANSMISSION_RPC_AUTHENTICATION_REQUIRED: 'true'
-  Trans_Option_Download Dir: /downloads
-  Transmission_Password: TRANS_PASSWORD
-  Transmission_Username: TRANS_USER
-  WEB_GUI: transmission-web-control
-  WebProxy: 'false'
+  TRANSMISSION_RPC_PASSWORD: TRANS_PASSWORD
+  TRANSMISSION_RPC_USERNAME: TRANS_USER
+  TRANSMISSION_WEB_UI: transmission-web-control
+  WEBPROXY_ENABLED: 'false'
 image:
   pullPolicy: IfNotPresent
   repository: haugene/transmission-openvpn

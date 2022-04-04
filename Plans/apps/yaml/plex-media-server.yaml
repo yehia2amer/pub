@@ -6,32 +6,29 @@ CategoryList: &id001
 Config:
   Device: {}
   Label: {}
-  Path: {}
+  Path:
+    plex-media-server:
+      Mode: rw
+      Name: data
+      Target: /data
   Port: {}
   Variable:
-    PLEX_CLAIM:
+    plex_claim:
       Name: PLEX_CLAIM
+      Target: PLEX_CLAIM
       value: Insert Token from https://plex.tv/claim
-    PLEX_GID:
+    plex_gid:
       Name: PLEX_GID
+      Target: PLEX_GID
       value: '100'
-    PLEX_UID:
+    plex_uid:
       Name: PLEX_UID
+      Target: PLEX_UID
       value: '99'
-    VERSION:
+    version:
       Name: VERSION
+      Target: VERSION
       value: latest
-Data:
-  Volume:
-  - ContainerDir: /config
-    HostDir: ''
-    Mode: rw
-  - ContainerDir: /transcode
-    HostDir: ''
-    Mode: rw
-  - ContainerDir: /data
-    HostDir: ''
-    Mode: rw
 Icon: https://raw.githubusercontent.com/plexinc/pms-docker/master/img/plex-server.png
 Keywords:
 - plex-media-server

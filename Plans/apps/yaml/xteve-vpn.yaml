@@ -5,7 +5,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Config:
+    config:
       Default: ''
       Description: 'Container Path: /home/xteve/conf'
       Display: always
@@ -16,7 +16,7 @@ Config:
       Target: /config
       Type: Path
       value: /mnt/cache/appdata/xteve-vpn/
-    Temp Directory:
+    tempdirectory:
       Default: ''
       Description: 'Container Path: /temp/xteve'
       Display: always
@@ -28,7 +28,7 @@ Config:
       Type: Path
       value: /tmp/xteve
   Port:
-    'Host Port: xTeVe':
+    hostportxteve:
       Default: '34400'
       Description: 'xTeVe Port: 34400'
       Display: always
@@ -40,7 +40,7 @@ Config:
       Type: Port
       value: '34400'
   Variable:
-    Container Debug:
+    containerdebug:
       Default: true|false
       Description: 'Container Variable: DEBUG'
       Display: advanced
@@ -51,7 +51,7 @@ Config:
       Target: DEBUG
       Type: Variable
       value: 'false'
-    Create TUN Device:
+    createtundevice:
       Default: true|false
       Description: 'Container Variable: CREATE_TUN_DEVICE'
       Display: advanced
@@ -62,7 +62,7 @@ Config:
       Target: CREATE_TUN_DEVICE
       Type: Variable
       value: 'true'
-    Local Network:
+    localnetwork:
       Default: ''
       Description: 'Container Variable: LOCAL_NETWORK 192.168.0.0/24'
       Display: always
@@ -73,7 +73,7 @@ Config:
       Target: LOCAL_NETWORK
       Type: Variable
       value: ''
-    Name servers:
+    nameservers:
       Default: ''
       Description: 'Container Variable: NAME_SERVERS'
       Display: always
@@ -84,52 +84,7 @@ Config:
       Target: NAME_SERVERS
       Type: Variable
       value: 8.8.8.8,8.8.4.4
-    OpenVPN Password:
-      Default: '**None**'
-      Description: 'Container Variable: OPENVPN_PASSWORD'
-      Display: always
-      Mask: 'false'
-      Mode: ''
-      Name: OpenVPN Password
-      Required: 'false'
-      Target: OPENVPN_PASSWORD
-      Type: Variable
-      value: ''
-    OpenVPN Protocol (udp|tcp):
-      Default: udp|tcp
-      Description: 'Container Variable: OPENVPN_PROTOCOL - Not needed if provider
-        is custom'
-      Display: always
-      Mask: 'false'
-      Mode: ''
-      Name: OpenVPN Protocol (udp|tcp)
-      Required: 'false'
-      Target: OPENVPN_PROTOCOL
-      Type: Variable
-      value: udp
-    OpenVPN Provider:
-      Default: '**None**|PIA|SURFSHARK|VYPRVPN|CUSTOM'
-      Description: 'Container Variable: OPENVPN_PROVIDER'
-      Display: always
-      Mask: 'false'
-      Mode: ''
-      Name: OpenVPN Provider
-      Required: 'true'
-      Target: OPENVPN_PROVIDER
-      Type: Variable
-      value: SURFSHARK
-    OpenVPN Username:
-      Default: '**None**'
-      Description: 'Container Variable: OPENVPN_USERNAME'
-      Display: always
-      Mask: 'false'
-      Mode: ''
-      Name: OpenVPN Username
-      Required: 'false'
-      Target: OPENVPN_USERNAME
-      Type: Variable
-      value: ''
-    OpenVPN config file:
+    openvpnconfigfile:
       Default: CA Montreal|CA Toronto|CA Vancouver|UK London|UK Manchester|UK Glasgow|South
         Africa|uk-gla.prod.surfshark.com_udp|uk-lon-mp001.prod.surfshark.com|uk-lon.prod.surfshark.com|uk-lon-st002.prod.surfshark.com|uk-lon-st003.prod.surfshark.com|uk-lon-st004.prod.surfshark.com|uk-lon-st005.prod.surfshark.com|uk-man.prod.surfshark.com|ca-mon.prod.surfshark.com|ca-tor.prod.surfshark.com|ca-van.prod.surfshark.com|za-jnb.prod.surfshark.com
       Description: 'Container Variable: OPENVPN_CONFIG - Not needed if provider is
@@ -142,7 +97,7 @@ Config:
       Target: OPENVPN_CONFIG
       Type: Variable
       value: ca-tor.prod.surfshark.com
-    OpenVPN custom options:
+    openvpncustomoptions:
       Default: ''
       Description: 'Container Variable: OPENVPN_OPTIONS'
       Display: advanced
@@ -153,7 +108,52 @@ Config:
       Target: OPENVPN_OPTIONS
       Type: Variable
       value: ''
-    PGID:
+    openvpnpassword:
+      Default: '**None**'
+      Description: 'Container Variable: OPENVPN_PASSWORD'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: OpenVPN Password
+      Required: 'false'
+      Target: OPENVPN_PASSWORD
+      Type: Variable
+      value: ''
+    openvpnprotocol(udptcp):
+      Default: udp|tcp
+      Description: 'Container Variable: OPENVPN_PROTOCOL - Not needed if provider
+        is custom'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: OpenVPN Protocol (udp|tcp)
+      Required: 'false'
+      Target: OPENVPN_PROTOCOL
+      Type: Variable
+      value: udp
+    openvpnprovider:
+      Default: '**None**|PIA|SURFSHARK|VYPRVPN|CUSTOM'
+      Description: 'Container Variable: OPENVPN_PROVIDER'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: OpenVPN Provider
+      Required: 'true'
+      Target: OPENVPN_PROVIDER
+      Type: Variable
+      value: SURFSHARK
+    openvpnusername:
+      Default: '**None**'
+      Description: 'Container Variable: OPENVPN_USERNAME'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: OpenVPN Username
+      Required: 'false'
+      Target: OPENVPN_USERNAME
+      Type: Variable
+      value: ''
+    pgid:
       Default: ''
       Description: 'Container Variable: PGID'
       Display: always
@@ -164,7 +164,7 @@ Config:
       Target: PGID
       Type: Variable
       value: '100'
-    PUID:
+    puid:
       Default: ''
       Description: 'Container Variable: PUID'
       Display: always
@@ -175,7 +175,7 @@ Config:
       Target: PUID
       Type: Variable
       value: '99'
-    Timezone:
+    timezone:
       Default: ''
       Description: 'Container Variable: TZ'
       Display: always
@@ -186,7 +186,7 @@ Config:
       Target: TZ
       Type: Variable
       value: Africa/Johannesburg
-    xTeVe API:
+    xteveapi:
       Default: 0|1
       Description: 'Container Variable: XTEVE_API'
       Display: advanced
@@ -197,7 +197,7 @@ Config:
       Target: XTEVE_API
       Type: Variable
       value: '1'
-    xTeVe Branch:
+    xtevebranch:
       Default: master|beta
       Description: optional set to beta
       Display: advanced
@@ -208,7 +208,7 @@ Config:
       Target: XTEVE_BRANCH
       Type: Variable
       value: master
-    xTeVe Debug:
+    xtevedebug:
       Default: 0|1|2|3
       Description: optional set debug 0-3
       Display: advanced
@@ -219,7 +219,7 @@ Config:
       Target: XTEVE_DEBUG
       Type: Variable
       value: '0'
-    xTeVe Port:
+    xteveport:
       Default: '34400'
       Description: 'Container Variable: XTEVE_PORT (tells xTeVe which port its on))'
       Display: advanced

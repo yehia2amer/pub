@@ -6,7 +6,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Host Path for /config:
+    hostpathforconfig:
       Default: ''
       Description: 'Container Path: /config'
       Display: always-hide
@@ -17,7 +17,7 @@ Config:
       Target: /config
       Type: Path
       value: ''
-    Host Path for /downloads-atd:
+    hostpathfordownloads-atd:
       Default: /mnt/user
       Description: Container Path for downloads library...
       Display: always-hide
@@ -30,7 +30,7 @@ Config:
       value: ''
   Port: {}
   Variable:
-    'Both: CountryCode':
+    bothcountrycode:
       Default: US
       Description: Set to Tidal Region, same region as your account
       Display: always
@@ -41,7 +41,7 @@ Config:
       Target: CountryCode
       Type: Variable
       value: ''
-    'Both: Enable Automatic Script Start':
+    bothenableautomaticscriptstart:
       Default: 'true'
       Description: 'true = Enabled :: Runs script automatically on startup'
       Display: always
@@ -52,7 +52,7 @@ Config:
       Target: AutoStart
       Type: Variable
       value: ''
-    'Both: Lidarr API Key':
+    bothlidarrapikey:
       Default: ''
       Description: 'REQUIRED: Lidarr API Key, enables ATD to connect to Lidarr...'
       Display: always
@@ -63,7 +63,7 @@ Config:
       Target: LidarrApiKey
       Type: Variable
       value: ''
-    'Both: Lidarr Url':
+    bothlidarrurl:
       Default: http://x.x.x.x:8686
       Description: 'REQUIRED: Lidarr URL, Lidarr provides artist list for processing
         with ATD...'
@@ -75,7 +75,7 @@ Config:
       Target: LidarrUrl
       Type: Variable
       value: ''
-    'Both: Musicbrainz Mirror URL':
+    bothmusicbrainzmirrorurl:
       Default: https://musicbrainz.org
       Description: 'OPTIONAL :: Only change if using a different mirror'
       Display: advanced-hide
@@ -86,7 +86,7 @@ Config:
       Target: MusicbrainzMirror
       Type: Variable
       value: ''
-    'Both: Musicbrainz Rate Limit':
+    bothmusicbrainzratelimit:
       Default: '1'
       Description: 'OPTIONAL: musicbrainz rate limit, musicbrainz allows only 1 connection
         per second, max setting is 10 :: Set to 101 to disable limit'
@@ -98,7 +98,7 @@ Config:
       Target: MusicbrainzRateLimit
       Type: Variable
       value: ''
-    'Both: Script Interval':
+    bothscriptinterval:
       Default: 15m
       Description: '#s or #m or #h or #d :: s = seconds, m = minutes, h = hours, d
         = days :: Amount of time between each script run, when AUTOSTART is enabled'
@@ -110,7 +110,7 @@ Config:
       Target: ScriptInterval
       Type: Variable
       value: ''
-    'Both: Script Mode':
+    bothscriptmode:
       Default: both
       Description: 'REQUIRED: set to: music or video or both :: both downloads music
         and videos, the others set the download to the desired media type'
@@ -122,7 +122,7 @@ Config:
       Target: ScriptMode
       Type: Variable
       value: ''
-    FilePermisssions:
+    filepermisssions:
       Default: '666'
       Description: File Permissions (chmod)
       Display: always
@@ -133,7 +133,7 @@ Config:
       Target: FilePermisssions
       Type: Variable
       value: ''
-    FolderPermissions:
+    folderpermissions:
       Default: '777'
       Description: Folder Permissions (chmod)
       Display: always
@@ -144,7 +144,7 @@ Config:
       Target: FolderPermissions
       Type: Variable
       value: ''
-    'Music: Compilations':
+    musiccompilations:
       Default: 'false'
       Description: 'false = disabled; true = enabled :: Enabling this downloads compilations
         the Artist Appears On...'
@@ -156,7 +156,7 @@ Config:
       Target: Compilations
       Type: Variable
       value: ''
-    'Music: Replaygain Tagging':
+    musicreplaygaintagging:
       Default: 'false'
       Description: 'true = enabled :: Scans and analyzes files to add replaygain tags
         to song metadata'
@@ -168,7 +168,7 @@ Config:
       Target: EnableReplayGain
       Type: Variable
       value: ''
-    'Music: RequireQuality':
+    musicrequirequality:
       Default: 'false'
       Description: 'false = disabled; true = enabled :: Enabling requires the downloads
         to match the expected file type (.flac or .m4a)...'
@@ -180,7 +180,7 @@ Config:
       Target: RequireQuality
       Type: Variable
       value: ''
-    'Music: WantedQuality':
+    musicwantedquality:
       Default: FLAC
       Description: 'FLAC or 320 or 128 :: Maxium Quality :: FLAC (CD quality 16bit),
         320 (320 kbps AAC), 128 (128 kbps AAC)'
@@ -192,7 +192,7 @@ Config:
       Target: WantedQuality
       Type: Variable
       value: ''
-    PGID:
+    pgid:
       Default: '100'
       Description: 'Container Variable: PGID'
       Display: advanced-hide
@@ -203,7 +203,7 @@ Config:
       Target: PGID
       Type: Variable
       value: ''
-    PUID:
+    puid:
       Default: '99'
       Description: 'Container Variable: PUID'
       Display: advanced-hide

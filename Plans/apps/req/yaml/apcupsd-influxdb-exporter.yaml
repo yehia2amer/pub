@@ -6,7 +6,7 @@ Config:
   Path: {}
   Port: {}
   Variable:
-    APCUPSD_HOST:
+    apcupsd_host:
       Default: localhost
       Description: address of host running apcupsd
       Display: always
@@ -17,7 +17,7 @@ Config:
       Target: APCUPSD_HOST
       Type: Variable
       value: 10.13.13.15
-    Debugging Output:
+    debuggingoutput:
       Default: 'false'
       Description: Set this variable to true to see the output in the docker log.
       Display: advanced
@@ -28,7 +28,7 @@ Config:
       Target: VERBOSE
       Type: Variable
       value: 'false'
-    HOSTNAME:
+    hostname:
       Default: unraid
       Description: host you want the measurements to show up as in influxdb
       Display: always
@@ -39,7 +39,7 @@ Config:
       Target: HOSTNAME
       Type: Variable
       value: panthro
-    INFLUXDB_DATABASE:
+    influxdb_database:
       Default: apcupsd
       Description: influxdb database name to store values
       Display: advanced
@@ -50,7 +50,7 @@ Config:
       Target: INFLUXDB_DATABASE
       Type: Variable
       value: apcupsd
-    INFLUXDB_HOST:
+    influxdb_host:
       Default: localhost
       Description: ip address of influxdb
       Display: always
@@ -61,7 +61,7 @@ Config:
       Target: INFLUXDB_HOST
       Type: Variable
       value: 10.13.13.15
-    INFLUXDB_PASSWORD:
+    influxdb_password:
       Default: ''
       Description: Password for Influxdb
       Display: advanced-hide
@@ -72,7 +72,7 @@ Config:
       Target: INFLUXDB_PASSWORD
       Type: Variable
       value: ''
-    INFLUXDB_PORT:
+    influxdb_port:
       Default: '8086'
       Description: 'Container Variable: INFLUXDB_PORT'
       Display: advanced
@@ -83,7 +83,7 @@ Config:
       Target: INFLUXDB_PORT
       Type: Variable
       value: '8086'
-    INFLUXDB_USER:
+    influxdb_user:
       Default: ''
       Description: User name for Influxdb
       Display: advanced-hide
@@ -94,7 +94,7 @@ Config:
       Target: INFLUXDB_USER
       Type: Variable
       value: ''
-    WATTS:
+    watts:
       Default: ''
       Description: If your UPS doesn't have the NOMPOWER metric then specify the rated
         watts so that the load percentage can be used to calculate the current watts

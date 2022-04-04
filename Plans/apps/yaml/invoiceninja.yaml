@@ -5,7 +5,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Logo:
+    logo:
       Default: /mnt/user/appdata/invoiceninja/logo
       Description: 'Container Path: /var/www/app/public/logo'
       Display: advanced
@@ -16,7 +16,7 @@ Config:
       Target: /var/www/app/public/logo
       Type: Path
       value: ''
-    Storage:
+    storage:
       Default: /mnt/user/appdata/invoiceninja/storage
       Description: 'Container Path: /var/www/app/storage'
       Display: advanced
@@ -28,7 +28,7 @@ Config:
       Type: Path
       value: ''
   Port:
-    HTTP Port:
+    httpport:
       Default: '8000'
       Description: 'Container Port: 80'
       Display: always
@@ -39,7 +39,7 @@ Config:
       Target: '80'
       Type: Port
       value: ''
-    HTTPS Port:
+    httpsport:
       Default: '8443'
       Description: 'Container Port: 443'
       Display: always
@@ -51,7 +51,7 @@ Config:
       Type: Port
       value: ''
   Variable:
-    APP_ENV:
+    app_env:
       Default: production
       Description: 'Container Variable: APP_ENV'
       Display: advanced
@@ -61,7 +61,7 @@ Config:
       Target: APP_ENV
       Type: Variable
       value: ''
-    APP_KEY:
+    app_key:
       Default: SomeRandom32CharacterLongAlphanumericString
       Description: 'Container Variable: APP_KEY'
       Display: always
@@ -71,7 +71,7 @@ Config:
       Target: APP_KEY
       Type: Variable
       value: ''
-    APP_URL:
+    app_url:
       Default: https://invoice.domain.com
       Description: 'Container Variable: APP_URL'
       Display: always
@@ -81,17 +81,7 @@ Config:
       Target: APP_URL
       Type: Variable
       value: ''
-    DB_STRICT:
-      Default: 'false'
-      Description: 'Container Variable: DB_STRICT'
-      Display: always
-      Mask: 'false'
-      Name: DB_STRICT
-      Required: 'false'
-      Target: DB_STRICT
-      Type: Variable
-      value: ''
-    Database Host:
+    databasehost:
       Default: unraidIP:port
       Description: 'Container Variable: DB_HOST'
       Display: always
@@ -101,7 +91,7 @@ Config:
       Target: DB_HOST
       Type: Variable
       value: ''
-    Database Name:
+    databasename:
       Default: ninja
       Description: 'Container Variable: DB_DATABASE'
       Display: always
@@ -111,7 +101,7 @@ Config:
       Target: DB_DATABASE
       Type: Variable
       value: ''
-    Database Password:
+    databasepassword:
       Default: ninja
       Description: 'Container Variable: DB_PASSWORD'
       Display: always
@@ -121,7 +111,7 @@ Config:
       Target: DB_PASSWORD
       Type: Variable
       value: ''
-    Database Type:
+    databasetype:
       Default: mysql
       Description: 'Container Variable: DB_TYPE'
       Display: always
@@ -131,7 +121,7 @@ Config:
       Target: DB_TYPE
       Type: Variable
       value: ''
-    Database username:
+    databaseusername:
       Default: ninja
       Description: 'Container Variable: DB_USERNAME'
       Display: always
@@ -141,7 +131,17 @@ Config:
       Target: DB_USERNAME
       Type: Variable
       value: ''
-    Debug Mode:
+    db_strict:
+      Default: 'false'
+      Description: 'Container Variable: DB_STRICT'
+      Display: always
+      Mask: 'false'
+      Name: DB_STRICT
+      Required: 'false'
+      Target: DB_STRICT
+      Type: Variable
+      value: ''
+    debugmode:
       Default: '0'
       Description: 'Container Variable: APP_DEBUG'
       Display: advanced
@@ -151,7 +151,7 @@ Config:
       Target: APP_DEBUG
       Type: Variable
       value: ''
-    MAIL_DRIVER:
+    mail_driver:
       Default: smtp
       Description: 'Container Variable: MAIL_DRIVER'
       Display: always
@@ -161,7 +161,7 @@ Config:
       Target: MAIL_DRIVER
       Type: Variable
       value: ''
-    MAIL_ENCRYPTION:
+    mail_encryption:
       Default: tls
       Description: 'Container Variable: MAIL_ENCRYPTION'
       Display: always
@@ -171,7 +171,7 @@ Config:
       Target: MAIL_ENCRYPTION
       Type: Variable
       value: ''
-    MAIL_FROM_ADDRESS:
+    mail_from_address:
       Default: invoice@example.com
       Description: 'Container Variable: MAIL_FROM_ADDRESS'
       Display: always
@@ -181,7 +181,7 @@ Config:
       Target: MAIL_FROM_ADDRESS
       Type: Variable
       value: ''
-    MAIL_FROM_NAME:
+    mail_from_name:
       Default: Invoice Department
       Description: 'Container Variable: MAIL_FROM_NAME'
       Display: always
@@ -191,7 +191,7 @@ Config:
       Target: MAIL_FROM_NAME
       Type: Variable
       value: ''
-    MAIL_HOST:
+    mail_host:
       Default: smtp.example.com
       Description: 'Container Variable: MAIL_HOST'
       Display: always
@@ -201,7 +201,7 @@ Config:
       Target: MAIL_HOST
       Type: Variable
       value: ''
-    MAIL_PASSWORD:
+    mail_password:
       Default: SUPERSECRETEMAILPASSWORD
       Description: 'Container Variable: MAIL_PASSWORD'
       Display: always
@@ -211,7 +211,7 @@ Config:
       Target: MAIL_PASSWORD
       Type: Variable
       value: ''
-    MAIL_PORT:
+    mail_port:
       Default: '587'
       Description: 'Container Variable: MAIL_PORT'
       Display: always
@@ -221,7 +221,7 @@ Config:
       Target: MAIL_PORT
       Type: Variable
       value: ''
-    MAIL_USERNAME:
+    mail_username:
       Default: johndoe@example.com
       Description: 'Container Variable: MAIL_USERNAME'
       Display: always

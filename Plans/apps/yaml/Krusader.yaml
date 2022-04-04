@@ -5,7 +5,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Container Path:
+    containerpath:
       Default: ''
       Description: 'Container Path: /krusader'
       Display: always
@@ -16,7 +16,7 @@ Config:
       Target: /krusader
       Type: Path
       value: /mnt/cache/appdata/krusader
-    Data Path:
+    datapath:
       Default: ''
       Description: Main data path to your unRAID shares (if you want to get access
         to a disk mounted through UnassignedDevices change the Host Path to '/mnt',
@@ -31,7 +31,7 @@ Config:
       Type: Path
       value: /mnt/user
   Port:
-    TCP - VNC Port:
+    tcp-vncport:
       Default: ''
       Description: noVNC Port
       Display: always
@@ -43,7 +43,7 @@ Config:
       Type: Port
       value: '8080'
   Variable:
-    Custom Resolution Height:
+    customresolutionheight:
       Default: ''
       Description: Enter the preferred resolution height
       Display: advanced
@@ -54,7 +54,7 @@ Config:
       Target: CUSTOM_RES_H
       Type: Variable
       value: '768'
-    Custom Resolution Width:
+    customresolutionwidth:
       Default: ''
       Description: Enter the preferred resolution width
       Display: advanced
@@ -65,18 +65,7 @@ Config:
       Target: CUSTOM_RES_W
       Type: Variable
       value: '1280'
-    Local Scaling:
-      Default: ''
-      Description: Delete this value if you don't want local scaling.
-      Display: advanced
-      Mask: 'false'
-      Mode: ''
-      Name: Local Scaling
-      Required: 'true'
-      Target: NOVNC_RESIZE
-      Type: Variable
-      value: remote
-    Locales - Language:
+    locales-language:
       Default: ''
       Description: 'Enter your prefered locales, you can find a full list of supported
         languages in: ''/usr/share/i18n/SUPPORTED'' simply open up a console from
@@ -90,7 +79,18 @@ Config:
       Target: USER_LOCALES
       Type: Variable
       value: en_US.UTF-8 UTF-8
-    Run as root:
+    localscaling:
+      Default: ''
+      Description: Delete this value if you don't want local scaling.
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Local Scaling
+      Required: 'true'
+      Target: NOVNC_RESIZE
+      Type: Variable
+      value: remote
+    runasroot:
       Default: false|true
       Description: Set this variable to 'true' if you want to run Krusader as root
         to edit system files (please remember you have to also change the Data Path

@@ -6,7 +6,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Data Path:
+    datapath:
       Default: ''
       Description: 'Your configuration is located in ''.../conf/'' (WARNING: change
         the main configurations via the variables here and not the files which say
@@ -20,7 +20,7 @@ Config:
       Type: Path
       value: /mnt/cache/appdata/inspircd
   Port:
-    TCP1 - Clients, Plaintext:
+    tcp1-clients,plaintext:
       Default: ''
       Description: TCP Clients Connection Port (Unencrypted)
       Display: always
@@ -31,7 +31,7 @@ Config:
       Target: '6667'
       Type: Port
       value: '6667'
-    TCP2 - Clients, TLS:
+    tcp2-clients,tls:
       Default: ''
       Description: TCP Clients Connection Port (Encrypted)
       Display: always
@@ -42,7 +42,7 @@ Config:
       Target: '6697'
       Type: Port
       value: '6697'
-    TCP3 - Server, Plaintext:
+    tcp3-server,plaintext:
       Default: ''
       Description: TCP Server Port (Unencrypted - You don't have to forward this port
         if you use this as a standalone IRC Server)
@@ -54,7 +54,7 @@ Config:
       Target: '7000'
       Type: Port
       value: '7000'
-    TCP4 - Server, TLS:
+    tcp4-server,tls:
       Default: ''
       Description: TCP Server Port (Encrypted - You don't have to forward this port
         if you use this as a standalone IRC Server)
@@ -67,7 +67,7 @@ Config:
       Type: Port
       value: '7001'
   Variable:
-    Admin Email:
+    adminemail:
       Default: ''
       Description: E-mail shown by the /admin command
       Display: always
@@ -78,7 +78,7 @@ Config:
       Target: INSP_ADMIN_EMAIL
       Type: Variable
       value: jonny.english@example.com
-    Admin Name:
+    adminname:
       Default: ''
       Description: Name showed by the /admin command
       Display: always
@@ -89,7 +89,7 @@ Config:
       Target: INSP_ADMIN_NAME
       Type: Variable
       value: Jonny English
-    Admin Nick:
+    adminnick:
       Default: ''
       Description: Nick showed by the /admin command
       Display: always
@@ -100,7 +100,7 @@ Config:
       Target: INSP_ADMIN_NICK
       Type: Variable
       value: MI5
-    Certificate - Certificate Expiration:
+    certificate-certificateexpiration:
       Default: ''
       Description: Duration until the certificate expires
       Display: always
@@ -111,7 +111,7 @@ Config:
       Target: INSP_TLS_DURATION
       Type: Variable
       value: '365'
-    Certificate - City Name:
+    certificate-cityname:
       Default: ''
       Description: City name
       Display: always
@@ -122,7 +122,7 @@ Config:
       Target: INSP_TLS_LOC
       Type: Variable
       value: Example City
-    Certificate - Contry:
+    certificate-contry:
       Default: ''
       Description: 'Country Code by ISO 3166-1 (to get the country code visit: https://en.wikipedia.org/wiki/ISO_3166-1)'
       Display: always
@@ -133,7 +133,7 @@ Config:
       Target: INSP_TLS_COUNTRY
       Type: Variable
       value: XZ
-    Certificate - Mail Adress:
+    certificate-mailadress:
       Default: ''
       Description: Mail address represented in the certificate
       Display: always
@@ -144,7 +144,7 @@ Config:
       Target: INSP_TLS_MAIL
       Type: Variable
       value: nomail@example.com
-    Certificate - Name:
+    certificate-name:
       Default: ''
       Description: Common name of the certificate
       Display: always
@@ -155,7 +155,7 @@ Config:
       Target: INSP_TLS_CN
       Type: Variable
       value: irc.example.com
-    Certificate - Organisation:
+    certificate-organisation:
       Default: ''
       Description: Organisation name
       Display: always
@@ -166,7 +166,7 @@ Config:
       Target: INSP_TLS_ORG
       Type: Variable
       value: Example IRC Network
-    Certificate - State:
+    certificate-state:
       Default: ''
       Description: State name
       Display: always
@@ -177,7 +177,7 @@ Config:
       Target: INSP_TLS_STATE
       Type: Variable
       value: Example State
-    Certificate - Unit Responsible:
+    certificate-unitresponsible:
       Default: ''
       Description: Unit responsible for the service
       Display: always
@@ -188,7 +188,7 @@ Config:
       Target: INSP_TLS_UNIT
       Type: Variable
       value: Server Admins
-    Connection Password:
+    connectionpassword:
       Default: ''
       Description: "Password either as plaintext, or hash value - if you don't want\
         \ a password leave this variable empty\r\n(Make sure you escape special chars\
@@ -201,7 +201,7 @@ Config:
       Target: INSP_CONNECT_PASSWORD
       Type: Variable
       value: ''
-    Connection Password Hashing algorithm:
+    connectionpasswordhashingalgorithm:
       Default: ''
       Description: Hashing algorithm for the Connection Password  - if you don't entered
         a password leave this variable empty (e.g. hmac-sha256, hmac-md5, hmac-ripemd160,
@@ -214,7 +214,7 @@ Config:
       Target: INSP_CONNECT_HASH
       Type: Variable
       value: ''
-    DATA_PERM:
+    data_perm:
       Default: ''
       Description: 'Container Variable: DATA_PERM'
       Display: advanced
@@ -225,7 +225,7 @@ Config:
       Target: DATA_PERM
       Type: Variable
       value: '770'
-    DNSBLs:
+    dnsbls:
       Default: ''
       Description: Set to no to disable DNSBLs (DNS-based block list - set to 'yes'
         or 'no')
@@ -237,7 +237,7 @@ Config:
       Target: INSP_ENABLE_DNSBL
       Type: Variable
       value: 'yes'
-    Domainname:
+    domainname:
       Default: ''
       Description: Suffix used behind the server name (in this format '.example.com')
       Display: always
@@ -248,7 +248,7 @@ Config:
       Target: INSP_NET_SUFFIX
       Type: Variable
       value: .example.com
-    GID:
+    gid:
       Default: ''
       Description: 'Container Variable: GID'
       Display: advanced-hide
@@ -259,7 +259,7 @@ Config:
       Target: GID
       Type: Variable
       value: '100'
-    IRC Network Name:
+    ircnetworkname:
       Default: ''
       Description: Name advertised as network name
       Display: always
@@ -270,7 +270,7 @@ Config:
       Target: INSP_NET_NAME
       Type: Variable
       value: InspIRCD
-    Operator Host:
+    operatorhost:
       Default: ''
       Description: Hosts allowed to oper up (If you don't want to connect OP's from
         outside change for example to '*@localhost' or what your hostname matches
@@ -283,7 +283,7 @@ Config:
       Target: INSP_OPER_HOST
       Type: Variable
       value: '*@*'
-    Operator Name:
+    operatorname:
       Default: ''
       Description: Oper name
       Display: always
@@ -294,7 +294,7 @@ Config:
       Target: INSP_OPER_NAME
       Type: Variable
       value: oper
-    Operator Password Hash:
+    operatorpasswordhash:
       Default: ''
       Description: 'Hash value for your oper password hash (to generate a password
         hash create the server without the hash, connect to the InspIRCd and type
@@ -307,7 +307,7 @@ Config:
       Target: INSP_OPER_PASSWORD_HASH
       Type: Variable
       value: ''
-    Operator Password Hashing algorithm:
+    operatorpasswordhashingalgorithm:
       Default: ''
       Description: Hashing algorithm for the Operator Password - if you don't entered
         a password leave this variable empty (e.g. hmac-sha256, hmac-md5, hmac-ripemd160,
@@ -320,7 +320,7 @@ Config:
       Target: INSP_OPER_HASH
       Type: Variable
       value: hmac-sha256
-    Operator SSL Only:
+    operatorsslonly:
       Default: ''
       Description: Allow oper up only while using TLS (set to 'yes' or 'no')
       Display: always
@@ -331,7 +331,7 @@ Config:
       Target: INSP_OPER_SSLONLY
       Type: Variable
       value: 'yes'
-    Services - CIDR Allow Mask:
+    services-cidrallowmask:
       Default: ''
       Description: CIDR of services source IP (If you run your Services on the same
         Network as your IRCd you don't have to fill in this value)
@@ -343,7 +343,7 @@ Config:
       Target: INSP_SERVICES_ALLOWMASK
       Type: Variable
       value: ''
-    Services - Connection Address:
+    services-connectionaddress:
       Default: ''
       Description: Specify the IP Address from where the Services are connecting (if
         you run Anope on the same Unraid machine it is usually the IP address of Unraid)
@@ -355,7 +355,7 @@ Config:
       Target: INSP_SERVICES_IPADDR
       Type: Variable
       value: ''
-    Services - Hidden:
+    services-hidden:
       Default: ''
       Description: 'Hide services from /MAP and /LINKS (valid options are: ''yes''
         or ''no'', change only if you know what you are doing!)'
@@ -367,7 +367,7 @@ Config:
       Target: INSP_SERVICES_HIDDEN
       Type: Variable
       value: 'no'
-    Services - Password:
+    services-password:
       Default: ''
       Description: Password send by this server and send by the services
       Display: advanced
@@ -378,7 +378,7 @@ Config:
       Target: INSP_SERVICES_PASSWORD
       Type: Variable
       value: ''
-    Services - TLS:
+    services-tls:
       Default: ''
       Description: Turn on TLS encryption for the Services link (this is be no proble
         if you connect it to your internal network since it only talks internally
@@ -391,7 +391,7 @@ Config:
       Target: INSP_SERVICES_TLS_ON
       Type: Variable
       value: 'no'
-    UID:
+    uid:
       Default: ''
       Description: 'Container Variable: UID'
       Display: advanced-hide
@@ -402,7 +402,7 @@ Config:
       Target: UID
       Type: Variable
       value: '99'
-    UMASK:
+    umask:
       Default: ''
       Description: 'Container Variable: UMASK'
       Display: advanced

@@ -6,7 +6,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Config:
+    config:
       Default: ''
       Description: 'Container Path: /etc/mysql/conf.d'
       Display: always-hide
@@ -17,7 +17,7 @@ Config:
       Target: /etc/mysql/conf.d
       Type: Path
       value: /mnt/user/appdata/mariadb-official/config
-    Data:
+    data:
       Default: ''
       Description: 'Recommened: For better performance replace /mnt/user against /mnt/cache.
         Note: This requires appdata share caching set to Prefer or Only!'
@@ -30,7 +30,7 @@ Config:
       Type: Path
       value: /mnt/user/appdata/mariadb-official/data
   Port:
-    Port:
+    port:
       Default: ''
       Description: 'Container Port: 3306'
       Display: always
@@ -42,7 +42,7 @@ Config:
       Type: Port
       value: '3306'
   Variable:
-    Database Name:
+    databasename:
       Default: ''
       Description: This variable allows you to specify the name of a database to be
         created on image startup.
@@ -54,7 +54,7 @@ Config:
       Target: MARIADB_DATABASE
       Type: Variable
       value: dbname_here
-    Database Password:
+    databasepassword:
       Default: ''
       Description: 'Container Variable: MARIADB_PASSWORD'
       Display: always
@@ -65,7 +65,7 @@ Config:
       Target: MARIADB_PASSWORD
       Type: Variable
       value: ''
-    Database User:
+    databaseuser:
       Default: ''
       Description: 'Container Variable: MARIADB_USER'
       Display: always
@@ -76,7 +76,7 @@ Config:
       Target: MARIADB_USER
       Type: Variable
       value: dbuser_here
-    Generate Random Password:
+    generaterandompassword:
       Default: ''
       Description: Set to yes, to generate a random root password. The generated password
         will be printed to the logs (Docker &gt; MariaDB Icon &gt; Logs).
@@ -88,7 +88,7 @@ Config:
       Target: MARIADB_RANDOM_ROOT_PASSWORD
       Type: Variable
       value: 'Yes'
-    Root Password:
+    rootpassword:
       Default: ''
       Description: Generate Random Password must be empty if you like to set your
         own Root Password!

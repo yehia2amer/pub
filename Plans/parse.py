@@ -191,15 +191,82 @@ for n in afList:
             if var["Name"] and not var["Name"] in blacklistedenvs :
               n["Config"]["Variable"][var["Name"]] = {}
               n["Config"]["Variable"][var["Name"]]["Name"] = var["Name"]
+              n["Config"]["Variable"][var["Name"]]["Target"] = var["Name"]
               n["Config"]["Variable"][var["Name"]]["value"] = var["Value"]
         elif isinstance(n["Environment"]["Variable"], dict) and not "Name" in n["Environment"]["Variable"] and not "Value" in n["Environment"]["Variable"]:
           for name, value in n["Environment"]["Variable"].items():
             if name and not name in blacklistedenvs:
               n["Config"]["Variable"][name] = {}
               n["Config"]["Variable"][name]["Name"] = name
+              n["Config"]["Variable"][name]["Target"] = value["name"]
               n["Config"]["Variable"][name]["value"] = value["Value"]
-      
+              
       n.pop("Environment", "")
+      
+      varstore = {}
+      for name, value in n["Config"]["Variable"].items():
+        store = value
+
+        name = name.lower()
+        for char in invalid:
+          name = name.replace(char, '')
+        name = name.replace('.', '-')
+        varstore[name] = value
+        
+      n["Config"].pop("Variable", "")
+      n["Config"]["Variable"] = varstore
+              
+      if ( "Data" in n.keys() and n["Data"] ) and isinstance(n["Data"], dict) and ( "Volume" in n["Data"].keys() and n["Data"]["Volume"] ):
+        if isinstance(n["Data"]["Volume"], dict):
+          store = n["Data"]["Volume"]
+          n["Data"].pop("Volume", "")
+          n["Data"]["Volume"] = [store]
+        if isinstance(n["Data"]["Volume"], list):
+          for var in n["Data"]["Volume"]:
+            if not "Name" in var.keys():
+              var["Name"] = os.path.basename(os.path.normpath(var["ContainerDir"]))
+            label = n["Name"].lower()
+            for char in invalid:
+              label = label.replace(char, '')
+            label = label.replace('.', '-')
+            n["Config"]["Path"][label] = {}
+            n["Config"]["Path"][label]["Name"] = var["Name"]
+            
+            if "HostDir" in var.keys() and var["HostDir"]:
+              n["Config"]["Path"][label]["value"] = var["HostDir"]
+            n["Config"]["Path"][label]["Target"] = var["ContainerDir"]
+            if "Mode" in var.keys() and var["Mode"]:
+              n["Config"]["Path"][label]["Mode"] = var["Mode"]
+
+      n.pop("Data", "")
+      
+      pathstore = {}
+      for name, value in n["Config"]["Path"].items():
+        store = value
+
+        name = name.lower()
+        for char in invalid:
+          name = name.replace(char, '')
+        name = name.replace('.', '-')
+        pathstore[name] = value
+        
+      n["Config"].pop("Path", "")
+      n["Config"]["Path"] = pathstore
+      
+      ## TODO: Parse ports
+      
+      portstore = {}
+      for name, value in n["Config"]["Port"].items():
+        store = value
+
+        name = name.lower()
+        for char in invalid:
+          name = name.replace(char, '')
+        name = name.replace('.', '-')
+        portstore[name] = value
+        
+      n["Config"].pop("Port", "")
+      n["Config"]["Port"] = portstore
       
       globals()['%s' % tmp] = n
       
@@ -367,8 +434,8 @@ for name, app in combinedfree.items():
   
 
   for name, value in app["Config"]["Variable"].items():
-    if not name in blacklistedenvs:
-      valuesyaml["env"][name] = value["value"]
+    if not name in blacklistedenvs and not value["Target"] in blacklistedenvs:
+      valuesyaml["env"][value["Target"]] = value["value"]
 
   valuesyamlString = yaml.dump(valuesyaml)
   valuesyamlFile = open("./export/"+"app/"+tmpname+"/values.yaml", "w")

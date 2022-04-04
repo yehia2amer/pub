@@ -4,19 +4,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    /TVH:
-      Default: ''
-      Description: "/mnt/user/appdata/tvheadend/data/\r\nin case move to TVHeadend\
-        \ is enabled u need to mount this.\r\n"
-      Display: always
-      Mask: 'false'
-      Mode: rw
-      Name: /TVH
-      Required: 'false'
-      Target: /TVH
-      Type: Path
-      value: ''
-    /config:
+    config:
       Default: ''
       Description: "/mnt/user/appdata/owi2plex/_config/\r\nconfig and cron setting\r\
         \n"
@@ -28,7 +16,7 @@ Config:
       Target: /config
       Type: Path
       value: ''
-    /owi2plex:
+    owi2plex:
       Default: ''
       Description: "/mnt/user/appdata/owi2plex/\r\noutput folder\r\n"
       Display: always
@@ -37,6 +25,18 @@ Config:
       Name: /owi2plex
       Required: 'true'
       Target: /owi2plex
+      Type: Path
+      value: ''
+    tvh:
+      Default: ''
+      Description: "/mnt/user/appdata/tvheadend/data/\r\nin case move to TVHeadend\
+        \ is enabled u need to mount this.\r\n"
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: /TVH
+      Required: 'false'
+      Target: /TVH
       Type: Path
       value: ''
   Port: {}

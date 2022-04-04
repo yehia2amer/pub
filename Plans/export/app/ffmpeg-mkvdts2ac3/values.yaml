@@ -1,8 +1,8 @@
 env:
-  Output format: mkv
-  Parameters: -map 0;-vcodec copy;-scodec copy;-acodec ac3;-b:a 640k
-  Script to be executed: encode.sh
-  mkvdts2ac3 parameters: --compress none;-d;-n;-w /output;--new
+  mkvdts2ac3_params: --compress none;-d;-n;-w /output;--new
+  output_format: mkv
+  parameters: -map 0;-vcodec copy;-scodec copy;-acodec ac3;-b:a 640k
+  script: encode.sh
 image:
   pullPolicy: IfNotPresent
   repository: snoopy86/ffmpeg

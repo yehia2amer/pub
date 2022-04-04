@@ -4,7 +4,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Rust Server Directory:
+    rustserverdirectory:
       Default: /mnt/user/appdata/Rust-Server/
       Description: Mapping Directory
       Display: advanced
@@ -16,7 +16,7 @@ Config:
       Type: Path
       value: /mnt/user/appdata/Rust-Server/
   Port:
-    Rcon Port:
+    rconport:
       Default: '28016'
       Description: 'Container Port: '
       Display: advanced
@@ -27,7 +27,7 @@ Config:
       Target: '28016'
       Type: Port
       value: '28016'
-    Rust Port TCP:
+    rustporttcp:
       Default: '28015'
       Description: TCP
       Display: advanced
@@ -38,7 +38,7 @@ Config:
       Target: '28015'
       Type: Port
       value: '28015'
-    Rust Port UDP:
+    rustportudp:
       Default: '28015'
       Description: UDP
       Display: advanced
@@ -49,7 +49,7 @@ Config:
       Target: '28015'
       Type: Port
       value: '28015'
-    Web Port:
+    webport:
       Default: '8080'
       Description: Web host for Rcon
       Display: advanced
@@ -61,7 +61,7 @@ Config:
       Type: Port
       value: '8080'
   Variable:
-    (ADVANCED) Extra Startup Arguments:
+    (advanced)extrastartuparguments:
       Default: ''
       Description: 'Extra rust arguments to be applied when starting up server. '
       Display: always
@@ -72,7 +72,7 @@ Config:
       Target: ARGUMENTS
       Type: Variable
       value: ''
-    Announce 1:
+    announce1:
       Default: ''
       Description: "Leave BLANK to disable announcements.  &lt;/br&gt;\r\nEnter announcement\
         \ in order 1-5. &lt;/br&gt;\r\nNot all announcements must be filled "
@@ -84,7 +84,7 @@ Config:
       Target: ANNOUNCE1
       Type: Variable
       value: ''
-    Announce 2:
+    announce2:
       Default: ''
       Description: ANNOUNCEMENT 2
       Display: always
@@ -95,7 +95,7 @@ Config:
       Target: ANNOUNCE2
       Type: Variable
       value: ''
-    Announce 3:
+    announce3:
       Default: ''
       Description: ANNOUNCEMENT 3
       Display: always
@@ -106,7 +106,7 @@ Config:
       Target: ANNOUNCE3
       Type: Variable
       value: ''
-    Announce 4:
+    announce4:
       Default: ''
       Description: ANNOUNCEMENT 4
       Display: always
@@ -117,7 +117,7 @@ Config:
       Target: ANNOUNCE4
       Type: Variable
       value: ''
-    Announce 5:
+    announce5:
       Default: ''
       Description: ANNOUNCEMENT 5
       Display: always
@@ -128,7 +128,7 @@ Config:
       Target: ANNOUNCE5
       Type: Variable
       value: ''
-    Announce Delay:
+    announcedelay:
       Default: '8'
       Description: Delay in minutes between each announcement.
       Display: advanced
@@ -139,7 +139,7 @@ Config:
       Target: ANNOUNCE_DELAY
       Type: Variable
       value: '8'
-    Auto Maintenance:
+    automaintenance:
       Default: '1'
       Description: "1 = Yes &lt;/br&gt;\r\n0 = No &lt;/br&gt;\r\nAutomatically updates\
         \ server/oxide and manages wipes.  &lt;/br&gt;\r\nWill notify players before\
@@ -152,7 +152,7 @@ Config:
       Target: AUTO
       Type: Variable
       value: '1'
-    Auto Wipe:
+    autowipe:
       Default: ''
       Description: "Leave (BLANK) for no server wipes.  &lt;/br&gt;\r\nEnter the amount\
         \ of days until server wipes. &lt;/br&gt;\r\nExample.. 7 will wipe the server\
@@ -166,7 +166,7 @@ Config:
       Target: WIPEDAYS
       Type: Variable
       value: ''
-    Banner URL:
+    bannerurl:
       Default: ''
       Description: Banner must be 512x256 PNG
       Display: always
@@ -177,7 +177,7 @@ Config:
       Target: BANNER
       Type: Variable
       value: ''
-    Map Seed:
+    mapseed:
       Default: '0'
       Description: "0 = Randomises the map terrain etc..  &lt;/br&gt;\r\nOr enter\
         \ your own value if you want a consistent map on each wipe."
@@ -189,7 +189,7 @@ Config:
       Target: MAPSEED
       Type: Variable
       value: '0'
-    Map Size:
+    mapsize:
       Default: medium
       Description: "tiny | small &lt;/br&gt;\r\nmedium | large &lt;/br&gt;\r\nmassive"
       Display: always
@@ -200,7 +200,7 @@ Config:
       Target: MAPSIZE
       Type: Variable
       value: medium
-    Max Players:
+    maxplayers:
       Default: '100'
       Description: 'Max amount of players that can join. '
       Display: always
@@ -211,7 +211,7 @@ Config:
       Target: PLAYERS
       Type: Variable
       value: '50'
-    Oxide Plugin:
+    oxideplugin:
       Default: '0'
       Description: "1 = Enabled &lt;/br&gt;\r\n0 = Disable &lt;/br&gt; \r\nBe able\
         \ to install plugins from Oxide. "
@@ -223,19 +223,7 @@ Config:
       Target: OXIDE
       Type: Variable
       value: '0'
-    PVE:
-      Default: '0'
-      Description: "1 = Enabled  (Player Vs Entities) &lt;/br&gt;\r\n0 = Disabled\
-        \ (Player Vs Player) "
-      Display: always
-      Mask: 'false'
-      Mode: ''
-      Name: PVE
-      Required: 'true'
-      Target: PVE
-      Type: Variable
-      value: '0'
-    Performance:
+    performance:
       Default: '1'
       Description: "1 = Resource Friendly (Optimized)  &lt;/br&gt;\r\n2 = Original\
         \ (Rust Default Settings) &lt;/br&gt;\r\n3 = Competitive (Resource Gobbler)"
@@ -247,7 +235,7 @@ Config:
       Target: PERFORMANCE
       Type: Variable
       value: '1'
-    Port Forward Rcon:
+    portforwardrcon:
       Default: '28016'
       Description: Match this port with (Rcon Port)
       Display: advanced
@@ -258,7 +246,7 @@ Config:
       Target: PORTFORWARD_RCON
       Type: Variable
       value: '28016'
-    Port Forward Rust:
+    portforwardrust:
       Default: '28015'
       Description: Match this port with (Rust Port)
       Display: advanced
@@ -269,7 +257,7 @@ Config:
       Target: PORTFORWARD_RUST
       Type: Variable
       value: '28015'
-    Port Forward Web:
+    portforwardweb:
       Default: '8080'
       Description: Match this port with (Web Port)
       Display: advanced
@@ -280,7 +268,7 @@ Config:
       Target: PORTFORWARD_WEB
       Type: Variable
       value: '8080'
-    Public:
+    public:
       Default: '1'
       Description: "1 = Yes &lt;/br&gt; \r\n0 = No &lt;/br&gt;\r\nBe accessible online.\
         \ &lt;/br&gt;\r\nWill automatically port forward your router. (UPnP) "
@@ -292,7 +280,19 @@ Config:
       Target: PUBLIC
       Type: Variable
       value: '1'
-    Rcon Password:
+    pve:
+      Default: '0'
+      Description: "1 = Enabled  (Player Vs Entities) &lt;/br&gt;\r\n0 = Disabled\
+        \ (Player Vs Player) "
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: PVE
+      Required: 'true'
+      Target: PVE
+      Type: Variable
+      value: '0'
+    rconpassword:
       Default: changeme
       Description: "Password to access Rcon (Remote Console) &lt;/br&gt;\r\nLeave\
         \ blank for unsecure login (Not Recommended) "
@@ -304,7 +304,7 @@ Config:
       Target: PASSWORD
       Type: Variable
       value: server
-    Save Intervals:
+    saveintervals:
       Default: '300'
       Description: 'Value is in seconds. '
       Display: advanced
@@ -315,7 +315,7 @@ Config:
       Target: SAVE_INTERVAL
       Type: Variable
       value: '300'
-    Server Description:
+    serverdescription:
       Default: ''
       Description: "The information about the server. &lt;/br&gt;\r\nThis will be\
         \ shown when this server is selected in rust server list. &lt;/br&gt;\r\n\
@@ -328,7 +328,7 @@ Config:
       Target: DESCRIPTION
       Type: Variable
       value: ''
-    Server Folder Name:
+    serverfoldername:
       Default: Server-1
       Description: Server folder name,  e.g My-server-name
       Display: advanced
@@ -339,7 +339,7 @@ Config:
       Target: IDENTITY
       Type: Variable
       value: My-server-name
-    Server Name:
+    servername:
       Default: ''
       Description: "Enter the server name. &lt;/br&gt;\r\nThis is the name that will\
         \ show up in Rust server list. "
@@ -351,7 +351,7 @@ Config:
       Target: NAME
       Type: Variable
       value: My Rust Server
-    Server Release:
+    serverrelease:
       Default: public
       Description: "public = (Latest update)  &lt;/br&gt;\r\nprerelease = (Under development)"
       Display: always
@@ -362,7 +362,7 @@ Config:
       Target: RELEASE
       Type: Variable
       value: public
-    Wipe Date On Title:
+    wipedateontitle:
       Default: '0'
       Description: "1 = Enabled &lt;/br&gt;\r\n0 = Disabled &lt;/br&gt;\r\nWill show\
         \ the the server wiped date in the server name. "

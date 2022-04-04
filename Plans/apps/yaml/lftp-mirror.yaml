@@ -4,32 +4,37 @@ CategoryList: &id001
 Config:
   Device: {}
   Label: {}
-  Path: {}
+  Path:
+    lftp-mirror:
+      Mode: rw
+      Name: config
+      Target: /config
   Port: {}
   Variable:
-    HOST:
+    host:
       Name: HOST
+      Target: HOST
       value: ''
-    LFTP_FILES:
+    lftp_files:
       Name: LFTP_FILES
+      Target: LFTP_FILES
       value: '1'
-    LFTP_PARTS:
+    lftp_parts:
       Name: LFTP_PARTS
+      Target: LFTP_PARTS
       value: '1'
-    PORT:
+    port:
       Name: PORT
+      Target: PORT
       value: '22'
-    REMOTE_DIR:
+    remote_dir:
       Name: REMOTE_DIR
+      Target: REMOTE_DIR
       value: ''
-    USERNAME:
+    username:
       Name: USERNAME
+      Target: USERNAME
       value: ''
-Data:
-  Volume:
-    ContainerDir: /config
-    HostDir: ''
-    Mode: rw
 Icon: /plugins/dynamix.docker.manager/images/question.png
 Keywords:
 - lftp-mirror

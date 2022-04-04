@@ -5,7 +5,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Host Path for /config:
+    hostpathforconfig:
       Default: ''
       Description: 'Container Path: /config'
       Display: always-hide
@@ -17,7 +17,7 @@ Config:
       Type: Path
       value: ''
   Port:
-    Host Port for 8080:
+    hostportfor8080:
       Default: '8080'
       Description: 'Container Port: 8080'
       Display: always-hide
@@ -28,7 +28,7 @@ Config:
       Target: '8080'
       Type: Port
       value: ''
-    Host Port for 9090:
+    hostportfor9090:
       Default: '9090'
       Description: 'Container Port: 9090'
       Display: always-hide
@@ -40,7 +40,7 @@ Config:
       Type: Port
       value: ''
   Variable:
-    'Audio Post Processor: Beets Tagging':
+    audiopostprocessorbeetstagging:
       Default: 'false'
       Description: 'TRUE = ENABLED :: Enables tagging with Beets'
       Display: always-hide
@@ -51,7 +51,7 @@ Config:
       Target: AUDIO_BEETS
       Type: Variable
       value: ''
-    'Audio Post Processor: Detect Single File Albums':
+    audiopostprocessordetectsinglefilealbums:
       Default: 'TRUE'
       Description: 'TRUE = ENABLED :: Detects single file albums and mark download
         as failed if detected'
@@ -63,7 +63,7 @@ Config:
       Target: AUDIO_DSFA
       Type: Variable
       value: ''
-    'Audio Post Processor: Replaygain FLAC tagging':
+    audiopostprocessorreplaygainflactagging:
       Default: 'FALSE'
       Description: TRUE = ENABLED, adds replaygain tags for compatible players (FLAC
         ONLY)
@@ -75,7 +75,7 @@ Config:
       Target: AUDIO_REPLAYGAIN
       Type: Variable
       value: ''
-    'Audio Post Processor: Require Audio Quality Match':
+    audiopostprocessorrequireaudioqualitymatch:
       Default: 'false'
       Description: 'true = ENABLED :: Verifies files match desired Target Format file
         extension'
@@ -87,7 +87,7 @@ Config:
       Target: RequireAudioQualityMatch
       Type: Variable
       value: ''
-    'Audio Post Processor: Target Format':
+    audiopostprocessortargetformat:
       Default: FLAC
       Description: FLAC or OPUS or MP3 or AAC or ALAC - converts lossless FLAC files
         to set format
@@ -99,7 +99,7 @@ Config:
       Target: AUDIO_FORMAT
       Type: Variable
       value: ''
-    'Audio Post Processor: Target Format Bitrate':
+    audiopostprocessortargetformatbitrate:
       Default: '320'
       Description: Set to desired bitrate when converting to OPUS/MP3/FDK-AAC/AAC
         format types
@@ -111,7 +111,7 @@ Config:
       Target: AUDIO_BITRATE
       Type: Variable
       value: ''
-    'Audio Post Processor: Verify Downloaded Tracks':
+    audiopostprocessorverifydownloadedtracks:
       Default: 'TRUE'
       Description: TRUE = ENABLED, Verifies FLAC/MP3 files for errors (fixes MP3's,
         deletes bad FLAC files)
@@ -123,7 +123,7 @@ Config:
       Target: AUDIO_VERIFY
       Type: Variable
       value: ''
-    NVIDIA_DRIVER_CAPABILITIES:
+    nvidia_driver_capabilities:
       Default: all
       Description: NVIDIA_DRIVER_CAPABILITIES
       Display: advanced-hide
@@ -134,7 +134,7 @@ Config:
       Target: NVIDIA_DRIVER_CAPABILITIES
       Type: Variable
       value: ''
-    NVIDIA_VISIBLE_DEVICES:
+    nvidia_visible_devices:
       Default: ''
       Description: NVIDIA_VISIBLE_DEVICES
       Display: always
@@ -145,7 +145,7 @@ Config:
       Target: NVIDIA_VISIBLE_DEVICES
       Type: Variable
       value: ''
-    PGID:
+    pgid:
       Default: '100'
       Description: 'Container Variable: PGID'
       Display: advanced-hide
@@ -156,7 +156,7 @@ Config:
       Target: PGID
       Type: Variable
       value: ''
-    PUID:
+    puid:
       Default: '99'
       Description: 'Container Variable: PUID'
       Display: advanced-hide
@@ -167,7 +167,7 @@ Config:
       Target: PUID
       Type: Variable
       value: ''
-    'Video Post Processor: Audio/Subtitle Language':
+    videopostprocessoraudiosubtitlelanguage:
       Default: eng
       Description: 'Default: eng :: Set to required language (ISO 639-2 language code),
         if not found, will mark as failed'
@@ -179,7 +179,7 @@ Config:
       Target: VIDEO_LANG
       Type: Variable
       value: ''
-    'Video Post Processor: Encode with Sickbeard MP4 Automator (SMA)':
+    videopostprocessorencodewithsickbeardmp4automator(sma):
       Default: 'FALSE'
       Description: 'TRUE = Enabled :: Uses SMA to process incoming video files'
       Display: always-hide
@@ -190,7 +190,7 @@ Config:
       Target: VIDEO_SMA
       Type: Variable
       value: ''
-    'Video Post Processor: Process with MKV Cleaner':
+    videopostprocessorprocesswithmkvcleaner:
       Default: 'false'
       Description: 'TRUE = Enabled :: Uses MKVToolNix to remove unwanted audio/subtitle
         streams and sets UND audio language based on Required Audio/Subtitle Language
@@ -203,7 +203,7 @@ Config:
       Target: VIDEO_MKVCLEANER
       Type: Variable
       value: ''
-    'Video Post Processor: Require Audio/Subtitle Language':
+    videopostprocessorrequireaudiosubtitlelanguage:
       Default: 'true'
       Description: true = enabled, disables/enables checking video audio/subtitle
         language based on VIDEO_LANG setting
@@ -215,7 +215,7 @@ Config:
       Target: RequireLanguage
       Type: Variable
       value: ''
-    'Video Post Processor: Tag with Sickbeard MP4 Automator (SMA)':
+    videopostprocessortagwithsickbeardmp4automator(sma):
       Default: 'TRUE'
       Description: 'TRUE = Enabled :: Uses SMA to Tag MP4 files (Enabled SMA process:
         manual.py -a; Disabled SMA Process: manual.py -nt)'

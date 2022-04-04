@@ -5,18 +5,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    GS Server Configuration Folder:
-      Default: /mnt/user/appdata/gsdock
-      Description: Holds settings.tix and users.tix config files
-      Display: always
-      Mask: 'false'
-      Mode: rw
-      Name: GS Server Configuration Folder
-      Required: 'true'
-      Target: /config
-      Type: Path
-      value: /mnt/user/appdata/gsdock
-    GoodSync Connect Backups Data Path:
+    goodsyncconnectbackupsdatapath:
       Default: /mnt/user
       Description: Holds backup data. Should place this outside of appdata, in a dedicated
         backups share
@@ -28,19 +17,19 @@ Config:
       Target: /data
       Type: Path
       value: /mnt/user
-  Port:
-    GSTP Port:
-      Default: '33333'
-      Description: For Goodsync Connect protocol
-      Display: advanced
+    gsserverconfigurationfolder:
+      Default: /mnt/user/appdata/gsdock
+      Description: Holds settings.tix and users.tix config files
+      Display: always
       Mask: 'false'
-      Mode: tcp
-      Name: GSTP Port
+      Mode: rw
+      Name: GS Server Configuration Folder
       Required: 'true'
-      Target: '33333'
-      Type: Port
-      value: '33333'
-    GoodSync Broadcast 1:
+      Target: /config
+      Type: Path
+      value: /mnt/user/appdata/gsdock
+  Port:
+    goodsyncbroadcast1:
       Default: '33338'
       Description: GoodSync Broadcast 1
       Display: advanced
@@ -51,7 +40,7 @@ Config:
       Target: '33338'
       Type: Port
       value: '33338'
-    GoodSync Broadcast 2:
+    goodsyncbroadcast2:
       Default: '33339'
       Description: GoodSync Broadcast 2
       Display: advanced
@@ -62,7 +51,18 @@ Config:
       Target: '33339'
       Type: Port
       value: '33339'
-    WebUI Port:
+    gstpport:
+      Default: '33333'
+      Description: For Goodsync Connect protocol
+      Display: advanced
+      Mask: 'false'
+      Mode: tcp
+      Name: GSTP Port
+      Required: 'true'
+      Target: '33333'
+      Type: Port
+      value: '33333'
+    webuiport:
       Default: '11000'
       Description: WebUI Configuration can be accessed through this port. Credentials
         are same as GS Connect credentials.
@@ -75,7 +75,7 @@ Config:
       Type: Port
       value: '11000'
   Variable:
-    GS_ID:
+    gs_id:
       Default: unraid
       Description: (optional) GS Server Name. Will be container ID if blank.
       Display: always
@@ -86,7 +86,7 @@ Config:
       Target: GS_ID
       Type: Variable
       value: unraid
-    GS_PWD:
+    gs_pwd:
       Default: ''
       Description: GoodSync Connect Password
       Display: always
@@ -97,7 +97,7 @@ Config:
       Target: GS_PWD
       Type: Variable
       value: ''
-    GS_USER:
+    gs_user:
       Default: ''
       Description: GoodSync Connect Username
       Display: always
@@ -108,7 +108,7 @@ Config:
       Target: GS_USER
       Type: Variable
       value: ''
-    PGID:
+    pgid:
       Default: '100'
       Description: GID for permissions. Do not change unless you know what you're
         doing.
@@ -120,7 +120,7 @@ Config:
       Target: PGID
       Type: Variable
       value: '100'
-    PUID:
+    puid:
       Default: '99'
       Description: UID for permissions. Do not change unless you know what you're
         doing.

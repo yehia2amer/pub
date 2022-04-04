@@ -6,7 +6,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    FILES_LOCATION:
+    files_location:
       Default: ''
       Description: 'Container Path: /var/webdav/public'
       Display: always
@@ -18,7 +18,7 @@ Config:
       Type: Path
       value: /mnt/user/location/of/files/
   Port:
-    HTTP_PORT:
+    http_port:
       Default: '8234'
       Description: 'Container Port: 80'
       Display: always
@@ -30,7 +30,7 @@ Config:
       Type: Port
       value: '8080'
   Variable:
-    Group ID:
+    groupid:
       Default: ''
       Description: 'Container Variable: PGID'
       Display: advanced-hide
@@ -41,39 +41,6 @@ Config:
       Target: PGID
       Type: Variable
       value: '100'
-    User ID:
-      Default: ''
-      Description: 'Container Variable: PUID'
-      Display: advanced-hide
-      Mask: 'false'
-      Mode: ''
-      Name: User ID
-      Required: 'false'
-      Target: PUID
-      Type: Variable
-      value: '99'
-    WEBDAV_PASSWORD:
-      Default: ''
-      Description: 'Container Variable: WEBDAV_PASSWORD'
-      Display: always
-      Mask: 'false'
-      Mode: ''
-      Name: WEBDAV_PASSWORD
-      Required: 'false'
-      Target: WEBDAV_PASSWORD
-      Type: Variable
-      value: PASSWORD
-    WEBDAV_USERNAME:
-      Default: ''
-      Description: 'Container Variable: WEBDAV_USERNAME'
-      Display: always
-      Mask: 'false'
-      Mode: ''
-      Name: WEBDAV_USERNAME
-      Required: 'false'
-      Target: WEBDAV_USERNAME
-      Type: Variable
-      value: USERNAME
     umask:
       Default: '0000'
       Description: 'Container Variable: PUMASK'
@@ -85,6 +52,39 @@ Config:
       Target: PUMASK
       Type: Variable
       value: '0000'
+    userid:
+      Default: ''
+      Description: 'Container Variable: PUID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: User ID
+      Required: 'false'
+      Target: PUID
+      Type: Variable
+      value: '99'
+    webdav_password:
+      Default: ''
+      Description: 'Container Variable: WEBDAV_PASSWORD'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: WEBDAV_PASSWORD
+      Required: 'false'
+      Target: WEBDAV_PASSWORD
+      Type: Variable
+      value: PASSWORD
+    webdav_username:
+      Default: ''
+      Description: 'Container Variable: WEBDAV_USERNAME'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: WEBDAV_USERNAME
+      Required: 'false'
+      Target: WEBDAV_USERNAME
+      Type: Variable
+      value: USERNAME
 Icon: https://camo.githubusercontent.com/ea0e36ac93ea7197dc50aa83adbd3269f7434e6f9a2aed50594cb5c7dc7aaaf3/687474703a2f2f73616272652e696f2f696d672f6c6f676f2e706e67
 Keywords:
 - webdav

@@ -8,7 +8,7 @@ Config:
   Label: {}
   Path: {}
   Port:
-    MB_PORT:
+    mb_port:
       Default: '8080'
       Description: ' (string) Defaults to 8080 - Port where the service will listen. '
       Display: always
@@ -20,7 +20,7 @@ Config:
       Type: Port
       value: '8085'
   Variable:
-    API_KEY:
+    api_key:
       Default: ''
       Description: 'Container Variable: MB_KEY'
       Display: always
@@ -31,7 +31,7 @@ Config:
       Target: MB_KEY
       Type: Variable
       value: OTRmNWYwN2Q0M2Q4MGM3ZDY4NzJlYTIyODFhYjA5NTU.OxrrQ_6G4gvArMZ2KPz0mtUsDjjgy44Uy83QW_ajLaP52Ts6Z85PR8i8WuG2ywqebBPNm7cHu8P3tlWGHXGAwA
-    MB_ADDRESS:
+    mb_address:
       Default: 0.0.0.1
       Description: '- (string) Defaults to 0.0.0.0 - Address where the service will
         listen. '
@@ -43,7 +43,7 @@ Config:
       Target: MB_ADDRESS
       Type: Variable
       value: 0.0.0.0
-    MB_BASICAUTH_PASS:
+    mb_basicauth_pass:
       Default: ''
       Description: (string) The Basic Authentication username and password that every
         request must use. Recommended for sitautions where the boxes are publicly
@@ -56,7 +56,7 @@ Config:
       Target: MB_BASICAUTH_PASS
       Type: Variable
       value: ''
-    MB_BASICAUTH_USER:
+    mb_basicauth_user:
       Default: ''
       Description: (string) The Basic Authentication username and password that every
         request must use. Recommended for sitautions where the boxes are publicly
@@ -69,7 +69,7 @@ Config:
       Target: MB_BASICAUTH_USER
       Type: Variable
       value: ''
-    MB_DISABLE_CORS:
+    mb_disable_cors:
       Default: 'false'
       Description: '(bool) Defaults to false - If true will turn off CORS support
         for the box. '
@@ -81,7 +81,7 @@ Config:
       Target: MB_DISABLE_CORS
       Type: Variable
       value: 'false'
-    MB_DOWNLOAD_TIMEOUT_SECONDS:
+    mb_download_timeout_seconds:
       Default: '60'
       Description: '(integer) Default to 60. Timeout in seconds that Facebox will
         use when it downloads files, for example to download the state file. '
@@ -93,7 +93,7 @@ Config:
       Target: MB_DOWNLOAD_TIMEOUT_SECONDS
       Type: Variable
       value: '60'
-    MB_FACEBOX_DISABLE_RECOGNITION:
+    mb_facebox_disable_recognition:
       Default: ' false'
       Description: '(bool) Defaults to false - If you only need face detection, the
         recognition algorithms can be disabled by setting this variable to true, saving
@@ -107,7 +107,7 @@ Config:
       Target: MB_FACEBOX_DISABLE_RECOGNITION
       Type: Variable
       value: ' false'
-    MB_FACEBOX_INDEX_REFRESH_SECONDS:
+    mb_facebox_index_refresh_seconds:
       Default: '2'
       Description: '(integer) Defaults to 2 - Number of seconds that Facebox will
         wait to update the index for new data, or changes in the data. Facebox will
@@ -122,7 +122,7 @@ Config:
       Target: MB_FACEBOX_INDEX_REFRESH_SECONDS
       Type: Variable
       value: '2'
-    MB_FACEBOX_READ_ONLY:
+    mb_facebox_read_only:
       Default: 'false'
       Description: '(bool) Defaults to false - If true Facebox will be read only.
         Teaching and updating state will be disabled. Be sure to provide MB_FACEBOX_STATE_URL
@@ -135,7 +135,7 @@ Config:
       Target: MB_FACEBOX_READ_ONLY
       Type: Variable
       value: 'false'
-    MB_FACEBOX_REDIS:
+    mb_facebox_redis:
       Default: ''
       Description: '- (string) Redis host and port for example my_redis:6379. If this
         option is present Facebox state will be synced by Redis,'
@@ -147,7 +147,7 @@ Config:
       Target: MB_FACEBOX_REDIS
       Type: Variable
       value: ''
-    MB_FACEBOX_REDIS_DB:
+    mb_facebox_redis_db:
       Default: ''
       Description: 'Redis DB - (string) Optional Redis database to connect to. '
       Display: always
@@ -158,7 +158,7 @@ Config:
       Target: MB_FACEBOX_REDIS_DB
       Type: Variable
       value: ''
-    MB_FACEBOX_REDIS_PASSWORD:
+    mb_facebox_redis_password:
       Default: ''
       Description: 'Redis Password - (string) Optional Redis password. '
       Display: advanced
@@ -169,7 +169,7 @@ Config:
       Target: MB_FACEBOX_REDIS_PASSWORD
       Type: Variable
       value: ''
-    MB_FACEBOX_STATE_POLL_SECONDS:
+    mb_facebox_state_poll_seconds:
       Default: '0'
       Description: '(integer) Default to 0 (No polling). If this variable is set,
         Facebox would poll the MB_FACEBOX_STATE_URL for changes on the file, based
@@ -184,7 +184,7 @@ Config:
       Target: 'MB_FACEBOX_STATE_POLL_SECONDS '
       Type: Variable
       value: '0'
-    MB_FACEBOX_STATE_URL:
+    mb_facebox_state_url:
       Default: ''
       Description: '(string) URL to a .facebox state file to initialize the box with.
         Useful for spinning up many instances of Facebox with the same state. '

@@ -5,17 +5,6 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Host Path 2:
-      Default: ''
-      Description: 'Container Path: /var/www/html/php.ini'
-      Display: always
-      Mask: 'false'
-      Mode: ro
-      Name: Host Path 2
-      Required: 'false'
-      Target: /var/www/html/php.ini
-      Type: Path
-      value: /mnt/user/appdata/DVWA/php.ini
     config:
       Default: ''
       Description: 'Container Path: /var/www/html/config/'
@@ -27,18 +16,18 @@ Config:
       Target: /var/www/html/config/
       Type: Path
       value: /mnt/user/appdata/DVWA/config
-  Port:
-    Host Port 1:
-      Default: '8088'
-      Description: 'Container Port: 80'
+    hostpath2:
+      Default: ''
+      Description: 'Container Path: /var/www/html/php.ini'
       Display: always
       Mask: 'false'
-      Mode: tcp
-      Name: Host Port 1
+      Mode: ro
+      Name: Host Path 2
       Required: 'false'
-      Target: '80'
-      Type: Port
-      value: '8088'
+      Target: /var/www/html/php.ini
+      Type: Path
+      value: /mnt/user/appdata/DVWA/php.ini
+  Port:
     db:
       Default: ''
       Description: 'Container Port: 5432'
@@ -50,6 +39,17 @@ Config:
       Target: '5432'
       Type: Port
       value: '5432'
+    hostport1:
+      Default: '8088'
+      Description: 'Container Port: 80'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Host Port 1
+      Required: 'false'
+      Target: '80'
+      Type: Port
+      value: '8088'
   Variable: {}
 Icon: https://github.com/natcoso9955/unRAID-docker/raw/master/icons/dvwa-logo-2.png
 Keywords:

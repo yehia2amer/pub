@@ -5,7 +5,7 @@ Config:
   Label: {}
   Path: {}
   Port:
-    WebUI Port:
+    webuiport:
       Default: '3000'
       Description: 'Container Port: 8080'
       Display: always
@@ -16,7 +16,7 @@ Config:
       Target: '8080'
       Type: Port
       value: ''
-    WebUI SSL Port:
+    webuisslport:
       Default: '3443'
       Description: 'Container Port: 8443'
       Display: advanced
@@ -28,7 +28,7 @@ Config:
       Type: Port
       value: ''
   Variable:
-    CITY:
+    city:
       Default: ''
       Description: 'City name to be used as certificate '
       Display: advanced
@@ -38,7 +38,7 @@ Config:
       Target: CITY
       Type: Variable
       value: ''
-    COUNTRY_CODE:
+    country_code:
       Default: ''
       Description: 'Country code to be used as certificate '
       Display: advanced
@@ -48,7 +48,7 @@ Config:
       Target: COUNTRY_CODE
       Type: Variable
       value: ''
-    Enable Lets Encrypt:
+    enableletsencrypt:
       Default: 'false'
       Description: Enables Let's Encrypt certificate instead of self-signed certificates
       Display: advanced
@@ -58,17 +58,7 @@ Config:
       Target: LETS_ENCRYPT_ENABLED
       Type: Variable
       value: ''
-    KEYSTORE_PASS:
-      Default: ''
-      Description: '''.keystore''/.jks'' store password'
-      Display: advanced
-      Mask: 'true'
-      Name: KEYSTORE_PASS
-      Required: 'true'
-      Target: KEYSTORE_PASS
-      Type: Variable
-      value: ''
-    KEY_PASS:
+    key_pass:
       Default: ''
       Description: Private key password &lt;ref:KEYSTORE_PASS&gt;
       Display: advanced
@@ -78,7 +68,17 @@ Config:
       Target: KEY_PASS
       Type: Variable
       value: ''
-    ORGANISATION:
+    keystore_pass:
+      Default: ''
+      Description: '''.keystore''/.jks'' store password'
+      Display: advanced
+      Mask: 'true'
+      Name: KEYSTORE_PASS
+      Required: 'true'
+      Target: KEYSTORE_PASS
+      Type: Variable
+      value: ''
+    organisation:
       Default: ''
       Description: 'Organisation name to be used as certificate '
       Display: advanced
@@ -88,7 +88,7 @@ Config:
       Target: ORGANISATION
       Type: Variable
       value: ''
-    ORGANISATION_UNIT:
+    organisation_unit:
       Default: ''
       Description: 'Organisation unit to be used as certificate '
       Display: advanced
@@ -98,7 +98,7 @@ Config:
       Target: ORGANISATION_UNIT
       Type: Variable
       value: ''
-    PUBLIC_DNS:
+    public_dns:
       Default: ''
       Description: ' DNS domain to be used as certificate '
       Display: advanced
@@ -108,7 +108,7 @@ Config:
       Target: PUBLIC_DNS
       Type: Variable
       value: ''
-    STATE:
+    state:
       Default: ''
       Description: ' State name to be used as certificate '
       Display: advanced

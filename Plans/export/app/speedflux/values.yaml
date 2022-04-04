@@ -1,15 +1,15 @@
 env:
-  (Optional) Server ID: ''
-  InfluxDB Address: influxdb
-  InfluxDB Database Name: speedtest
-  InfluxDB Pass: ''
-  InfluxDB Port: '8086'
-  InfluxDB Tags: isp, external_ip, server_id, server_name, server_location, speedtest_url
-  InfluxDB User: ''
-  Log Level: info
-  Ping Interval: '60'
-  Ping Servers: 1.1.1.1, 8.8.8.8
-  Test Interval: '150'
+  INFLUX_DB_ADDRESS: influxdb
+  INFLUX_DB_DATABASE: speedtest
+  INFLUX_DB_PASSWORD: ''
+  INFLUX_DB_PORT: '8086'
+  INFLUX_DB_TAGS: isp, external_ip, server_id, server_name, server_location, speedtest_url
+  INFLUX_DB_USER: ''
+  LOG_TYPE: info
+  PING_INTERVAL: '60'
+  PING_TARGETS: 1.1.1.1, 8.8.8.8
+  SPEEDTEST_INTERVAL: '150'
+  SPEEDTEST_SERVER_ID: ''
 image:
   pullPolicy: IfNotPresent
   repository: ghcr.io/breadlysm/speedflux

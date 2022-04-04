@@ -7,7 +7,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Bitcoin Data:
+    bitcoindata:
       Default: /mnt/user/bitcoin/core
       Description: Bitcoin Core data directory. Read only.
       Display: always
@@ -18,7 +18,7 @@ Config:
       Target: /data/.bitcoin/
       Type: Path
       value: /mnt/user/bitcoin/core/
-    Data:
+    data:
       Default: /mnt/user/bitcoin/electrs
       Description: Database storage. Requires at least 50 GiB free disk.
       Display: always
@@ -30,7 +30,7 @@ Config:
       Type: Path
       value: /mnt/user/bitcoin/electrs/
   Port:
-    Electrum TCP:
+    electrumtcp:
       Default: '50001'
       Description: Port to listen for incoming client connections
       Display: always
@@ -42,7 +42,7 @@ Config:
       Type: Port
       value: '50001'
   Variable:
-    Core RPC Address:
+    corerpcaddress:
       Default: 192.168.1.1:8332
       Description: Address for Bitcoin Core RPC.
       Display: always
@@ -52,7 +52,7 @@ Config:
       Target: ELECTRS_DAEMON_RPC_ADDR
       Type: Variable
       value: ''
-    TCP Bind:
+    tcpbind:
       Default: 0.0.0.0:50001
       Description: Subnet to accept connections from, and port to listen on. Port
         must match above.

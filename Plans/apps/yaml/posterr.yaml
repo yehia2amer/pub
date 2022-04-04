@@ -4,17 +4,6 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Custom:
-      Default: ''
-      Description: 'Container Path: /usr/src/app/public/custom'
-      Display: always
-      Mask: 'false'
-      Mode: rw
-      Name: Custom
-      Required: 'false'
-      Target: /usr/src/app/public/custom
-      Type: Path
-      value: /mnt/user/appdata/posterr/custom
     config:
       Default: ''
       Description: appdata for Posterr config files
@@ -26,6 +15,17 @@ Config:
       Target: /usr/src/app/config
       Type: Path
       value: /mnt/user/appdata/posterr
+    custom:
+      Default: ''
+      Description: 'Container Path: /usr/src/app/public/custom'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Custom
+      Required: 'false'
+      Target: /usr/src/app/public/custom
+      Type: Path
+      value: /mnt/user/appdata/posterr/custom
   Port:
     port:
       Default: ''
@@ -39,7 +39,7 @@ Config:
       Type: Port
       value: '9876'
   Variable:
-    BASEPATH:
+    basepath:
       Default: ''
       Description: ''
       Display: always
@@ -50,7 +50,7 @@ Config:
       Target: BASEPATH
       Type: Variable
       value: ''
-    TZ:
+    tz:
       Default: ''
       Description: Your local timezone
       Display: always

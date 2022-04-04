@@ -4,7 +4,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Host Path 1:
+    hostpath1:
       Default: /mnt/user/appdata/minecraftpe
       Description: 'Container Path: /srv/nukkit/'
       Display: always
@@ -16,7 +16,7 @@ Config:
       Type: Path
       value: /mnt/user/appdata/minecraftpe
   Port:
-    Host Port 1:
+    hostport1:
       Default: '19132'
       Description: 'Container Port: 19132'
       Display: always
@@ -28,18 +28,7 @@ Config:
       Type: Port
       value: '19132'
   Variable:
-    LC_ALL:
-      Default: en_US.UTF-8
-      Description: 'Container Variable: LC_ALL'
-      Display: always
-      Mask: 'false'
-      Mode: ''
-      Name: LC_ALL
-      Required: 'true'
-      Target: LC_ALL
-      Type: Variable
-      value: en_US.UTF-8
-    Language:
+    language:
       Default: en_US.UTF-8
       Description: 'Container Variable: LANGUAGE'
       Display: always
@@ -50,7 +39,18 @@ Config:
       Target: LANGUAGE
       Type: Variable
       value: en_US.UTF-8
-    Time Zone:
+    lc_all:
+      Default: en_US.UTF-8
+      Description: 'Container Variable: LC_ALL'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: LC_ALL
+      Required: 'true'
+      Target: LC_ALL
+      Type: Variable
+      value: en_US.UTF-8
+    timezone:
       Default: ''
       Description: 'Container Variable: TZ'
       Display: always

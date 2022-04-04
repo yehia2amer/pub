@@ -4,7 +4,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Appdata Config Path:
+    appdataconfigpath:
       Default: /mnt/user/appdata/qbit_manage
       Description: 'Container Path: /config'
       Display: advanced-hide
@@ -15,7 +15,7 @@ Config:
       Target: /config
       Type: Path
       value: /mnt/user/appdata/qbit_manage
-    Root_Dir:
+    root_dir:
       Default: /mnt/user
       Description: 'Container Path: /Same/path/as/qbittorrent/downloads/'
       Display: always
@@ -28,7 +28,7 @@ Config:
       value: /mnt/user
   Port: {}
   Variable:
-    QBT_CAT_UPDATE:
+    qbt_cat_update:
       Default: False|True
       Description: "Use this if you would like to update your categories.\t"
       Display: always-hide
@@ -39,7 +39,7 @@ Config:
       Target: QBT_CAT_UPDATE
       Type: Variable
       value: 'False'
-    QBT_CONFIG:
+    qbt_config:
       Default: config.yml
       Description: 'This is used if you want to use a different name for your config.yml.
         Example: tv.yml'
@@ -51,7 +51,7 @@ Config:
       Target: QBT_CONFIG
       Type: Variable
       value: config.yml
-    QBT_CROSS_SEED:
+    qbt_cross_seed:
       Default: False|True
       Description: Use this after running cross-seed script to add torrents from the
         cross-seed output folder to qBittorrent
@@ -63,7 +63,7 @@ Config:
       Target: QBT_CROSS_SEED
       Type: Variable
       value: 'False'
-    QBT_DIVIDER:
+    qbt_divider:
       Default: '='
       Description: "Character that divides the sections (Default: '=')\t"
       Display: advanced-hide
@@ -74,7 +74,7 @@ Config:
       Target: QBT_DIVIDER
       Type: Variable
       value: '='
-    QBT_DRY_RUN:
+    qbt_dry_run:
       Default: False|True
       Description: "If you would like to see what is gonna happen but not actually\
         \ move/delete or tag/categorize anything.\t"
@@ -86,7 +86,18 @@ Config:
       Target: QBT_DRY_RUN
       Type: Variable
       value: 'False'
-    QBT_LOGFILE:
+    qbt_log_level:
+      Default: INFO
+      Description: "Change the ouput log level.\t"
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: QBT_LOG_LEVEL
+      Required: 'false'
+      Target: QBT_LOG_LEVEL
+      Type: Variable
+      value: INFO
+    qbt_logfile:
       Default: activity.log
       Description: 'This is used if you want to use a different name for your log
         file. Example: tv.log'
@@ -98,18 +109,7 @@ Config:
       Target: QBT_LOGFILE
       Type: Variable
       value: activity.log
-    QBT_LOG_LEVEL:
-      Default: INFO
-      Description: "Change the ouput log level.\t"
-      Display: advanced-hide
-      Mask: 'false'
-      Mode: ''
-      Name: QBT_LOG_LEVEL
-      Required: 'false'
-      Target: QBT_LOG_LEVEL
-      Type: Variable
-      value: INFO
-    QBT_RECHECK:
+    qbt_recheck:
       Default: False|True
       Description: "Recheck paused torrents sorted by lowest size. Resume if Completed.\t"
       Display: always-hide
@@ -120,7 +120,7 @@ Config:
       Target: QBT_RECHECK
       Type: Variable
       value: 'False'
-    QBT_REM_ORPHANED:
+    qbt_rem_orphaned:
       Default: False|True
       Description: "Use this if you would like to remove orphaned files from your\
         \ root_dir directory that are not referenced by any torrents. It will scan\
@@ -135,7 +135,7 @@ Config:
       Target: QBT_REM_ORPHANED
       Type: Variable
       value: 'False'
-    QBT_REM_UNREGISTERED:
+    qbt_rem_unregistered:
       Default: False|True
       Description: "Use this if you would like to remove unregistered torrents. (It\
         \ will the delete data &amp; torrent if it is not being cross-seeded, otherwise\
@@ -148,7 +148,7 @@ Config:
       Target: QBT_REM_UNREGISTERED
       Type: Variable
       value: 'False'
-    QBT_RUN:
+    qbt_run:
       Default: False|True
       Description: Run without the scheduler. Script will exit after completion.
       Display: always-hide
@@ -159,7 +159,7 @@ Config:
       Target: QBT_RUN
       Type: Variable
       value: 'False'
-    QBT_SCHEDULE:
+    qbt_schedule:
       Default: '30'
       Description: Schedule to run every x minutes. (Default set to 30)
       Display: always-hide
@@ -170,7 +170,7 @@ Config:
       Target: QBT_SCHEDULE
       Type: Variable
       value: '30'
-    QBT_SKIP_RECYCLE:
+    qbt_skip_recycle:
       Default: False|True
       Description: "Use this to skip emptying the Reycle Bin folder (/root_dir/.RecycleBin).\t"
       Display: always-hide
@@ -181,7 +181,7 @@ Config:
       Target: QBT_SKIP_RECYCLE
       Type: Variable
       value: 'False'
-    QBT_TAG_NOHARDLINKS:
+    qbt_tag_nohardlinks:
       Default: False|True
       Description: "Use this to tag any torrents that do not have any hard links associated\
         \ with any of the files. This is useful for those that use Sonarr/Radarr that\
@@ -197,7 +197,7 @@ Config:
       Target: QBT_TAG_NOHARDLINKS
       Type: Variable
       value: 'False'
-    QBT_TAG_UPDATE:
+    qbt_tag_update:
       Default: False|True
       Description: "Use this if you would like to update your tags. (Only adds tags\
         \ to untagged torrents)\t"
@@ -209,7 +209,7 @@ Config:
       Target: QBT_TAG_UPDATE
       Type: Variable
       value: 'False'
-    QBT_WIDTH:
+    qbt_width:
       Default: '100'
       Description: "Screen Width (Default: 100)\t"
       Display: advanced-hide

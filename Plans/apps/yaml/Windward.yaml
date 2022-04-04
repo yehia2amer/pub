@@ -4,7 +4,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    ServerFiles:
+    serverfiles:
       Default: ''
       Description: 'Container Path: /windward'
       Display: always
@@ -16,7 +16,7 @@ Config:
       Type: Path
       value: /mnt/cache/appdata/windward
   Port:
-    TCP - Game Port:
+    tcp-gameport:
       Default: ''
       Description: TCP Game Port (If you need another port delete this entry and create
         a new one with the required TCP port - also don't forget to change the port
@@ -30,7 +30,7 @@ Config:
       Type: Port
       value: '5127'
   Variable:
-    Force Update:
+    forceupdate:
       Default: ''
       Description: Set to 'true' (without quotes) to force a update of WWServer.exe
         otherwise leave empty.
@@ -42,18 +42,7 @@ Config:
       Target: FORCE_UPDATE
       Type: Variable
       value: ''
-    GID:
-      Default: ''
-      Description: 'Container Variable: GID'
-      Display: advanced-hide
-      Mask: 'false'
-      Mode: ''
-      Name: GID
-      Required: 'true'
-      Target: GID
-      Type: Variable
-      value: '100'
-    Game Parameters:
+    gameparameters:
       Default: ''
       Description: Enter your start up commands for the server.
       Display: always
@@ -64,7 +53,18 @@ Config:
       Target: GAME_PARAMS
       Type: Variable
       value: -name "Docker Windward" -world "World" -tcp 5127 -public
-    SteamID:
+    gid:
+      Default: ''
+      Description: 'Container Variable: GID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: GID
+      Required: 'true'
+      Target: GID
+      Type: Variable
+      value: '100'
+    steamid:
       Default: ''
       Description: Admin SteamID (leave empty if you don't know your SteamID yet,
         connect to the server once and the ID will show up in the log enter it here
@@ -77,7 +77,7 @@ Config:
       Target: ADMIN
       Type: Variable
       value: ''
-    UID:
+    uid:
       Default: ''
       Description: 'Container Variable: UID'
       Display: advanced-hide

@@ -15,7 +15,7 @@ Config:
       value: ''
   Label: {}
   Path:
-    Borg Cache:
+    borgcache:
       Default: /mnt/disks/borg_backup/cache
       Description: 'Container Path: /root/.cache/borg'
       Display: always
@@ -26,7 +26,7 @@ Config:
       Target: /root/.cache/borg
       Type: Path
       value: ''
-    Borg Keys:
+    borgkeys:
       Default: /mnt/user/appdata/borgmatic/borg_keys
       Description: 'Container Path: /root/.config/borg'
       Display: always
@@ -37,18 +37,7 @@ Config:
       Target: /root/.config/borg
       Type: Path
       value: ''
-    Borg Repo (Backup Destination):
-      Default: /mnt/disks/borg_backup/repo
-      Description: 'Container Path: /mnt/borg-repository'
-      Display: always
-      Mask: 'false'
-      Mode: rw,slave
-      Name: Borg Repo (Backup Destination)
-      Required: 'true'
-      Target: /mnt/borg-repository
-      Type: Path
-      value: ''
-    Borgmatic Config:
+    borgmaticconfig:
       Default: /mnt/user/appdata/borgmatic/config
       Description: 'Container Path: /etc/borgmatic.d'
       Display: always
@@ -59,7 +48,18 @@ Config:
       Target: /etc/borgmatic.d
       Type: Path
       value: ''
-    Flash Drive (Read-only Backup Source):
+    borgrepo(backupdestination):
+      Default: /mnt/disks/borg_backup/repo
+      Description: 'Container Path: /mnt/borg-repository'
+      Display: always
+      Mask: 'false'
+      Mode: rw,slave
+      Name: Borg Repo (Backup Destination)
+      Required: 'true'
+      Target: /mnt/borg-repository
+      Type: Path
+      value: ''
+    flashdrive(read-onlybackupsource):
       Default: /boot
       Description: 'Container Path: /boot'
       Display: always
@@ -70,7 +70,7 @@ Config:
       Target: /boot
       Type: Path
       value: ''
-    Fuse mount point:
+    fusemountpoint:
       Default: /mnt/borg
       Description: 'Container Path: /mnt/fuse'
       Display: always
@@ -81,7 +81,7 @@ Config:
       Target: /mnt/fuse
       Type: Path
       value: ''
-    SSH Keys:
+    sshkeys:
       Default: /mnt/user/appdata/borgmatic/ssh_keys
       Description: 'Container Path: /root/.ssh'
       Display: always
@@ -92,7 +92,7 @@ Config:
       Target: /root/.ssh
       Type: Path
       value: ''
-    User Shares (Read-only Backup Source):
+    usershares(read-onlybackupsource):
       Default: /mnt/user
       Description: 'Container Path: /mnt/user'
       Display: always
@@ -105,7 +105,7 @@ Config:
       value: ''
   Port: {}
   Variable:
-    PGID:
+    pgid:
       Default: '100'
       Description: GID for permissions.  Do not change unless you know what you're
         doing.
@@ -117,7 +117,7 @@ Config:
       Target: PGID
       Type: Variable
       value: ''
-    PUID:
+    puid:
       Default: '99'
       Description: UID for permissions.  Do not change unless you know what you're
         doing.
@@ -129,7 +129,7 @@ Config:
       Target: PUID
       Type: Variable
       value: ''
-    TZ:
+    tz:
       Default: America/New_York
       Description: 'Container Variable: TZ'
       Display: always

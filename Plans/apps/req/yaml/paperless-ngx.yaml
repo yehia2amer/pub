@@ -4,7 +4,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Consumption:
+    consumption:
       Default: ''
       Description: "Container Path: /usr/src/paperless/consume . \r\nFiles placed\
         \ here will be consumed by paperless."
@@ -16,7 +16,7 @@ Config:
       Target: /usr/src/paperless/consume
       Type: Path
       value: ''
-    Data:
+    data:
       Default: /mnt/user/appdata/paperless-ngx/data
       Description: "Container Path: /usr/src/paperless/data . \r\nThis contains the\
         \ paperless database. Should be in appdata."
@@ -28,7 +28,7 @@ Config:
       Target: /usr/src/paperless/data
       Type: Path
       value: ''
-    Export:
+    export:
       Default: ''
       Description: "Container Path: /usr/src/paperless/export . \r\nLocation for files\
         \ used by the exporter utility.\r\nSee https://paperless-ngx.readthedocs.io/en/latest/administration.html#document-exporter"
@@ -40,7 +40,7 @@ Config:
       Target: /usr/src/paperless/export
       Type: Path
       value: ''
-    Media:
+    media:
       Default: ''
       Description: "Container Path: /usr/src/paperless/media . \r\nThis is where your\
         \ consumed documents and thumbnails are stored."
@@ -53,7 +53,7 @@ Config:
       Type: Path
       value: ''
   Port:
-    Port:
+    port:
       Default: '8000'
       Description: 'Container Port: 8000'
       Display: always
@@ -65,7 +65,7 @@ Config:
       Type: Port
       value: ''
   Variable:
-    PAPERLESS_CONSUMER_POLLING:
+    paperless_consumer_polling:
       Default: '0'
       Description: 'Container Variable: PAPERLESS_CONSUMER_POLLING . If set to a value
         n greater than 0, inotify is disabled and the directory is polled every n
@@ -79,7 +79,7 @@ Config:
       Target: PAPERLESS_CONSUMER_POLLING
       Type: Variable
       value: ''
-    PAPERLESS_FILENAME_FORMAT:
+    paperless_filename_format:
       Default: '{created}-{correspondent}-{title}'
       Description: 'Container Variable: PAPERLESS_FILENAME_FORMAT . Changes the filenames
         paperless uses to store documents in the media directory. Setting none disables
@@ -94,7 +94,7 @@ Config:
       Target: PAPERLESS_FILENAME_FORMAT
       Type: Variable
       value: ''
-    PAPERLESS_IGNORE_DATES:
+    paperless_ignore_dates:
       Default: ''
       Description: 'Container Variable: PAPERLESS_IGNORE_DATES . Comma separated list
         of dates supported by dateparser that should be ignored when extracting the
@@ -107,7 +107,7 @@ Config:
       Target: PAPERLESS_IGNORE_DATES
       Type: Variable
       value: ''
-    PAPERLESS_OCR_LANGUAGE:
+    paperless_ocr_language:
       Default: eng
       Description: 'Container Variable: PAPERLESS_OCR_LANGUAGE . The default language
         to use for OCR. Set this to the language most of your documents are written
@@ -122,7 +122,7 @@ Config:
       Target: PAPERLESS_OCR_LANGUAGE
       Type: Variable
       value: ''
-    PAPERLESS_OCR_LANGUAGES:
+    paperless_ocr_languages:
       Default: ''
       Description: 'Container Variable: PAPERLESS_OCR_LANGUAGES . Additional languages
         to install for text recognition. The container installs English, German, Italian,
@@ -136,7 +136,7 @@ Config:
       Target: PAPERLESS_OCR_LANGUAGES
       Type: Variable
       value: ''
-    PAPERLESS_REDIS:
+    paperless_redis:
       Default: redis://[REPLACE-WITH-IP]:6379
       Description: 'Container Variable: PAPERLESS_REDIS . This is required for processing
         scheduled tasks such as email fetching, index optimization and for training
@@ -149,7 +149,7 @@ Config:
       Target: PAPERLESS_REDIS
       Type: Variable
       value: ''
-    PAPERLESS_SECRET_KEY:
+    paperless_secret_key:
       Default: e11fl1oa-*ytql8p)(06fbj4ukrlo+n7k&q5+$1md7i+mge=ee
       Description: 'Container Variable: PAPERLESS_SECRET_KEY . Paperless uses this
         to make session tokens. If you expose paperless on the internet, you need
@@ -162,7 +162,7 @@ Config:
       Target: PAPERLESS_SECRET_KEY
       Type: Variable
       value: ''
-    PAPERLESS_TIME_ZONE:
+    paperless_time_zone:
       Default: America/Los_Angeles
       Description: 'Container Variable: PAPERLESS_TIME_ZONE . Use this variable to
         set a timezone for the Paperless Docker containers. If not specified, defaults
@@ -175,7 +175,7 @@ Config:
       Target: PAPERLESS_TIME_ZONE
       Type: Variable
       value: ''
-    PGID:
+    pgid:
       Default: '100'
       Description: 'Container Variable: USERMAP_GID'
       Display: advanced
@@ -186,7 +186,7 @@ Config:
       Target: USERMAP_GID
       Type: Variable
       value: ''
-    PUID:
+    puid:
       Default: '99'
       Description: 'Container Variable: USERMAP_UID'
       Display: advanced

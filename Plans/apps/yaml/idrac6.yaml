@@ -5,7 +5,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Libraries:
+    libraries:
       Default: /mnt/user/appdata/idrac/app
       Description: Libraries downloaded from your iDRAC instance will be stored here.
         Add a volume to cache those files for a faster container startup.
@@ -17,7 +17,7 @@ Config:
       Target: /app
       Type: Path
       value: ''
-    Screenshots:
+    screenshots:
       Default: /mnt/user/appdata/idrac/screenshots
       Description: 'Container Path: /screenshots'
       Display: advanced
@@ -28,7 +28,7 @@ Config:
       Target: /screenshots
       Type: Path
       value: ''
-    Virtual media:
+    virtualmedia:
       Default: /mnt/user/appdata/idrac/vmedia
       Description: Can be used to allow virtual media to be mounted.
       Display: advanced
@@ -40,7 +40,7 @@ Config:
       Type: Path
       value: ''
   Port:
-    WebUI:
+    webui:
       Default: '5800'
       Description: web interface port
       Display: always
@@ -52,29 +52,7 @@ Config:
       Type: Port
       value: ''
   Variable:
-    PGID:
-      Default: ''
-      Description: PGID
-      Display: advanced
-      Mask: 'false'
-      Mode: ''
-      Name: PGID
-      Required: 'false'
-      Target: GROUP_ID
-      Type: Variable
-      value: '100'
-    PUID:
-      Default: ''
-      Description: PUID
-      Display: advanced
-      Mask: 'false'
-      Mode: ''
-      Name: PUID
-      Required: 'false'
-      Target: USER_ID
-      Type: Variable
-      value: '99'
-    idrac host:
+    idrachost:
       Default: ''
       Description: Host for your iDRAC instance. Make sure your instance is reachable
         with https://IDRAC_HOST;. See IDRAC_PORT for using custom ports. HTTPS is
@@ -87,7 +65,7 @@ Config:
       Target: IDRAC_HOST
       Type: Variable
       value: ''
-    idrac password:
+    idracpassword:
       Default: calvin
       Description: Password for your iDRAC instance.
       Display: always
@@ -98,7 +76,7 @@ Config:
       Target: IDRAC_PASSWORD
       Type: Variable
       value: ''
-    idrac port:
+    idracport:
       Default: '443'
       Description: The optional port for the web interface.
       Display: advanced-hide
@@ -109,7 +87,7 @@ Config:
       Target: IDRAC_PORT;
       Type: Variable
       value: ''
-    idrac user:
+    idracuser:
       Default: root
       Description: Username for your iDRAC instance.
       Display: always
@@ -120,7 +98,7 @@ Config:
       Target: IDRAC_USER
       Type: Variable
       value: ''
-    keyboard fix:
+    keyboardfix:
       Default: false|true
       Description: If you have issues with keyboard input, try setting this to true.
       Display: advanced-hide
@@ -131,6 +109,28 @@ Config:
       Target: IDRAC_KEYCODE_HACK
       Type: Variable
       value: 'false'
+    pgid:
+      Default: ''
+      Description: PGID
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PGID
+      Required: 'false'
+      Target: GROUP_ID
+      Type: Variable
+      value: '100'
+    puid:
+      Default: ''
+      Description: PUID
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PUID
+      Required: 'false'
+      Target: USER_ID
+      Type: Variable
+      value: '99'
 Icon: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/idrac6.png
 Keywords:
 - idrac6

@@ -4,7 +4,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Database Location:
+    databaselocation:
       Default: /mnt/user/appdata/recipes/data
       Description: 'Container Path: /data'
       Display: always
@@ -15,7 +15,7 @@ Config:
       Target: /data
       Type: Path
       value: /mnt/user/appdata/recipes/data
-    Media Location:
+    medialocation:
       Default: /mnt/user/appdata/recipes/media
       Description: 'Container Path: /opt/recipes/mediafiles/'
       Display: always
@@ -27,7 +27,7 @@ Config:
       Type: Path
       value: /mnt/user/appdata/recipes/media
   Port:
-    Port:
+    port:
       Default: '8154'
       Description: 'Container Port: 8080'
       Display: always
@@ -39,7 +39,7 @@ Config:
       Type: Port
       value: '8154'
   Variable:
-    Allowed Hosts:
+    allowedhosts:
       Default: '*'
       Description: Either * for all, or specific domains/subdomains, etc.
       Display: always
@@ -50,7 +50,7 @@ Config:
       Target: ALLOWED_HOSTS
       Type: Variable
       value: '*'
-    Comment System:
+    commentsystem:
       Default: '1'
       Description: Enables or disables the comment system.
       Display: always
@@ -61,7 +61,7 @@ Config:
       Target: COMMENT_PREF_DEFAULT
       Type: Variable
       value: '1'
-    Database:
+    database:
       Default: /data/recipes.db
       Description: Name of SQLite database, or the name of your PostgreSQL database
         if you are using that.
@@ -73,7 +73,7 @@ Config:
       Target: POSTGRES_DB
       Type: Variable
       value: /data/recipes.db
-    Database Engine:
+    databaseengine:
       Default: django.db.backends.sqlite3
       Description: 'Either SQLite (default for unRAID) or PostgreSQL with: django.db.backends.postgresql'
       Display: always
@@ -84,7 +84,7 @@ Config:
       Target: DB_ENGINE
       Type: Variable
       value: django.db.backends.sqlite3
-    Debug Mode:
+    debugmode:
       Default: '0'
       Description: Debug mode disabled (default) or enabled.
       Display: advanced
@@ -95,7 +95,7 @@ Config:
       Target: DEBUG
       Type: Variable
       value: '0'
-    PostgreSQL Host:
+    postgresqlhost:
       Default: ''
       Description: Host for PostgreSQL, should you choose to use it.
       Display: advanced
@@ -106,7 +106,7 @@ Config:
       Target: POSTGRES_HOST
       Type: Variable
       value: ''
-    PostgreSQL Password:
+    postgresqlpassword:
       Default: ''
       Description: Password for PostgreSQL should you choose to use it.
       Display: advanced
@@ -117,7 +117,7 @@ Config:
       Target: POSTGRES_PASSWORD
       Type: Variable
       value: ''
-    PostgreSQL Port:
+    postgresqlport:
       Default: '5432'
       Description: Port for PostgreSQL server shouldy you choose to use it.
       Display: advanced
@@ -128,7 +128,7 @@ Config:
       Target: POSTGRES_PORT
       Type: Variable
       value: '5432'
-    PostgreSQL User:
+    postgresqluser:
       Default: ''
       Description: User for PostgreSQL should you choose to use it.
       Display: advanced
@@ -139,7 +139,7 @@ Config:
       Target: POSTGRES_USER
       Type: Variable
       value: ''
-    Secret Key:
+    secretkey:
       Default: ''
       Description: Randomly generate a secret key please.
       Display: always
@@ -150,7 +150,7 @@ Config:
       Target: SECRET_KEY
       Type: Variable
       value: ''
-    Serve Gunicorn Meida:
+    servegunicornmeida:
       Default: '1'
       Description: Enables serving media files directly from Gunicorn.
       Display: advanced
@@ -161,7 +161,7 @@ Config:
       Target: GUNICORN_MEDIA
       Type: Variable
       value: '1'
-    Shopping List Min Refresh:
+    shoppinglistminrefresh:
       Default: '5'
       Description: Minimum shopping list refresh interval.
       Display: always
@@ -172,7 +172,7 @@ Config:
       Target: SHOPPING_MIN_AUTOSYNC_INTERVAL
       Type: Variable
       value: '5'
-    Timezone:
+    timezone:
       Default: America/New_York
       Description: 'Timezone in TZ format. See here: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones'
       Display: always

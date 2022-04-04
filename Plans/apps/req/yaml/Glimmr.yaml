@@ -5,7 +5,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    UserData Location:
+    userdatalocation:
       Default: ''
       Description: Where to store HueData config.
       Display: always
@@ -17,7 +17,7 @@ Config:
       Type: Path
       value: /mnt/user/appdata/glimmr/
   Port:
-    DreamScreen Communication:
+    dreamscreencommunication:
       Default: '8888'
       Description: DreamScreen emulation port.
       Display: always
@@ -27,27 +27,7 @@ Config:
       Target: '8888'
       Type: Port
       value: '8888'
-    Hue SSDP Discovery:
-      Default: '1900'
-      Description: Hue Bridge discovery port.
-      Display: always
-      Mode: udp
-      Name: Hue SSDP Discovery
-      Required: 'true'
-      Target: '1900'
-      Type: Port
-      value: '1900'
-    Hue Streaming:
-      Default: '2100'
-      Description: Hue Bridge streaming port.
-      Display: always
-      Mode: udp
-      Name: Hue Streaming
-      Required: 'true'
-      Target: '2100'
-      Type: Port
-      value: '2100'
-    Hue/Nanoleaf MDNS Discovery:
+    huenanoleafmdnsdiscovery:
       Default: '5353'
       Description: MDNS Discovery Port
       Display: always
@@ -57,7 +37,27 @@ Config:
       Target: '5353'
       Type: Port
       value: '5353'
-    Lifx Communication:
+    huessdpdiscovery:
+      Default: '1900'
+      Description: Hue Bridge discovery port.
+      Display: always
+      Mode: udp
+      Name: Hue SSDP Discovery
+      Required: 'true'
+      Target: '1900'
+      Type: Port
+      value: '1900'
+    huestreaming:
+      Default: '2100'
+      Description: Hue Bridge streaming port.
+      Display: always
+      Mode: udp
+      Name: Hue Streaming
+      Required: 'true'
+      Target: '2100'
+      Type: Port
+      value: '2100'
+    lifxcommunication:
       Default: '56700'
       Description: Port used for Lifx communication.
       Display: always
@@ -67,7 +67,7 @@ Config:
       Target: '56700'
       Type: Port
       value: '56700'
-    NanoLeaf Communication:
+    nanoleafcommunication:
       Default: '60222'
       Description: DreamScreen emulation port.
       Display: always
@@ -77,7 +77,7 @@ Config:
       Target: '60222'
       Type: Port
       value: '60222'
-    Web UI:
+    webui:
       Default: '80'
       Description: Web UI port.
       Display: always

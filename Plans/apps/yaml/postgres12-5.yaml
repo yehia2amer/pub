@@ -6,7 +6,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Database Storage Path:
+    databasestoragepath:
       Default: /mnt/cache/appdata/postgres
       Description: This is where Postgres will store it's data.
       Display: always
@@ -18,7 +18,7 @@ Config:
       Type: Path
       value: /mnt/cache/appdata/dsmrdb/data/
   Port:
-    Web Interface Port:
+    webinterfaceport:
       Default: '5432'
       Description: This is Postgres TCP connection port.
       Display: always-hide
@@ -30,7 +30,7 @@ Config:
       Type: Port
       value: '5432'
   Variable:
-    POSTGRES_DB:
+    postgres_db:
       Default: ''
       Description: 'Container Variable: POSTGRES_DB'
       Display: always
@@ -41,7 +41,7 @@ Config:
       Target: POSTGRES_DB
       Type: Variable
       value: dsmrdb
-    POSTGRES_PASSWORD:
+    postgres_password:
       Default: ''
       Description: 'Container Variable: POSTGRES_PASSWORD'
       Display: always
@@ -52,7 +52,7 @@ Config:
       Target: POSTGRES_PASSWORD
       Type: Variable
       value: dsmrreader
-    POSTGRES_USER:
+    postgres_user:
       Default: ''
       Description: 'Container Variable: POSTGRES_USER'
       Display: always

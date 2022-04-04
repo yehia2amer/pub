@@ -8,7 +8,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Mounted Folder for MySQL Database:
+    mountedfolderformysqldatabase:
       Default: /mnt/user/appdata/onlyoffice/mysql/data
       Description: 'Container Path: /var/lib/mysql'
       Display: always
@@ -19,7 +19,7 @@ Config:
       Target: /var/lib/mysql
       Type: Path
       value: /mnt/user/appdata/onlyoffice/mysql/data
-    Mounted MySQL Logs:
+    mountedmysqllogs:
       Default: /mnt/user/appdata/onlyoffice/mysql/logs
       Description: 'Container Path: /var/log/mysql'
       Display: always
@@ -30,19 +30,7 @@ Config:
       Target: /var/log/mysql
       Type: Path
       value: /mnt/user/appdata/onlyoffice/mysql/logs
-    Onlyoffice MySQL Config (onlyoffice.cnf created before mysql container is started ):
-      Default: /mnt/user/appdata/onlyoffice/mysql/conf.d
-      Description: 'Container Path: /etc/mysql/conf.d'
-      Display: always
-      Mask: 'false'
-      Mode: rw
-      Name: Onlyoffice MySQL Config (onlyoffice.cnf created before mysql container
-        is started )
-      Required: 'false'
-      Target: /etc/mysql/conf.d
-      Type: Path
-      value: /mnt/user/appdata/onlyoffice/mysql/conf.d
-    Onlyoffice entrypoint for MySQL database setup ( setup.sql created before mysql container is started ):
+    onlyofficeentrypointformysqldatabasesetup(setup-sqlcreatedbeforemysqlcontainerisstarted):
       Default: /mnt/user/appdata/onlyoffice/mysql/initdb
       Description: 'Container Path: /docker-entrypoint-initdb.d'
       Display: always
@@ -54,8 +42,20 @@ Config:
       Target: /docker-entrypoint-initdb.d
       Type: Path
       value: /mnt/user/appdata/onlyoffice/mysql/initdb
+    onlyofficemysqlconfig(onlyoffice-cnfcreatedbeforemysqlcontainerisstarted):
+      Default: /mnt/user/appdata/onlyoffice/mysql/conf.d
+      Description: 'Container Path: /etc/mysql/conf.d'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Onlyoffice MySQL Config (onlyoffice.cnf created before mysql container
+        is started )
+      Required: 'false'
+      Target: /etc/mysql/conf.d
+      Type: Path
+      value: /mnt/user/appdata/onlyoffice/mysql/conf.d
   Port:
-    MySQL Port:
+    mysqlport:
       Default: '3306'
       Description: 'Container Port: 3306'
       Display: always
@@ -67,7 +67,7 @@ Config:
       Type: Port
       value: '3306'
   Variable:
-    Default OnlyOffice Community Server MySQL Database:
+    defaultonlyofficecommunityservermysqldatabase:
       Default: onlyoffice
       Description: 'Container Variable: MYSQL_DATABASE'
       Display: always
@@ -78,7 +78,7 @@ Config:
       Target: MYSQL_DATABASE
       Type: Variable
       value: onlyoffice
-    MySQL root password ( match the root password with the one in the setup.sql script ):
+    mysqlrootpassword(matchtherootpasswordwiththeoneinthesetup-sqlscript):
       Default: my-secret-pw
       Description: 'Container Variable: MYSQL_ROOT_PASSWORD'
       Display: always

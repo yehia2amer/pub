@@ -4,7 +4,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Data:
+    data:
       Default: ''
       Description: 'Container Path: /opt/iobroker'
       Display: always
@@ -15,7 +15,7 @@ Config:
       Target: /opt/iobroker
       Type: Path
       value: /mnt/user/appdata/iobroker/data
-    Scripts:
+    scripts:
       Default: ''
       Description: 'Container Path: /opt/userscripts'
       Display: always
@@ -27,7 +27,7 @@ Config:
       Type: Path
       value: /mnt/user/appdata/iobroker/scripts
   Port:
-    CoAP Port (Shelly):
+    coapport(shelly):
       Default: ''
       Description: 'Container Port: 5683'
       Display: always
@@ -38,73 +38,7 @@ Config:
       Target: '5683'
       Type: Port
       value: '5683'
-    HomeMatic Port:
-      Default: ''
-      Description: 'Container Port: 2001'
-      Display: always
-      Mask: 'false'
-      Mode: tcp
-      Name: HomeMatic Port
-      Required: 'false'
-      Target: '2001'
-      Type: Port
-      value: '2001'
-    MQTT Port:
-      Default: ''
-      Description: 'Container Port: 1883'
-      Display: always
-      Mask: 'false'
-      Mode: tcp
-      Name: MQTT Port
-      Required: 'false'
-      Target: '1883'
-      Type: Port
-      value: '1883'
-    MQTT SSL Port:
-      Default: ''
-      Description: 'Container Port: 8883'
-      Display: always
-      Mask: 'false'
-      Mode: tcp
-      Name: MQTT SSL Port
-      Required: 'false'
-      Target: '8883'
-      Type: Port
-      value: '8883'
-    Node-RED Port:
-      Default: ''
-      Description: 'Container Port: 1880'
-      Display: always
-      Mask: 'false'
-      Mode: tcp
-      Name: Node-RED Port
-      Required: 'false'
-      Target: '1880'
-      Type: Port
-      value: '1880'
-    Socket.IO Port:
-      Default: ''
-      Description: 'Container Port: 8284'
-      Display: always
-      Mask: 'false'
-      Mode: tcp
-      Name: Socket.IO Port
-      Required: 'false'
-      Target: '8284'
-      Type: Port
-      value: '8284'
-    WebUI Port:
-      Default: ''
-      Description: 'Container Port: 8081'
-      Display: advanced-hide
-      Mask: 'false'
-      Mode: tcp
-      Name: WebUI Port
-      Required: 'false'
-      Target: '8081'
-      Type: Port
-      value: '8081'
-    flot Port:
+    flotport:
       Default: ''
       Description: flot adapter
       Display: always
@@ -115,8 +49,74 @@ Config:
       Target: '8282'
       Type: Port
       value: '8282'
+    homematicport:
+      Default: ''
+      Description: 'Container Port: 2001'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: HomeMatic Port
+      Required: 'false'
+      Target: '2001'
+      Type: Port
+      value: '2001'
+    mqttport:
+      Default: ''
+      Description: 'Container Port: 1883'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: MQTT Port
+      Required: 'false'
+      Target: '1883'
+      Type: Port
+      value: '1883'
+    mqttsslport:
+      Default: ''
+      Description: 'Container Port: 8883'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: MQTT SSL Port
+      Required: 'false'
+      Target: '8883'
+      Type: Port
+      value: '8883'
+    node-redport:
+      Default: ''
+      Description: 'Container Port: 1880'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Node-RED Port
+      Required: 'false'
+      Target: '1880'
+      Type: Port
+      value: '1880'
+    socket-ioport:
+      Default: ''
+      Description: 'Container Port: 8284'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Socket.IO Port
+      Required: 'false'
+      Target: '8284'
+      Type: Port
+      value: '8284'
+    webuiport:
+      Default: ''
+      Description: 'Container Port: 8081'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI Port
+      Required: 'false'
+      Target: '8081'
+      Type: Port
+      value: '8081'
   Variable:
-    GID:
+    gid:
       Default: ''
       Description: 'Container Variable: SETGID'
       Display: advanced-hide
@@ -127,7 +127,7 @@ Config:
       Target: SETGID
       Type: Variable
       value: '100'
-    UID:
+    uid:
       Default: ''
       Description: 'Container Variable: SETUID'
       Display: advanced-hide
@@ -138,7 +138,7 @@ Config:
       Target: SETUID
       Type: Variable
       value: '99'
-    USB Devices:
+    usbdevices:
       Default: ''
       Description: 'Sets relevant permissions on mounted devices like '
       Display: always

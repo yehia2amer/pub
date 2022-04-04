@@ -5,7 +5,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    FSM Config:
+    fsmconfig:
       Default: ''
       Description: (can be left as it is)
       Display: always
@@ -16,7 +16,7 @@ Config:
       Target: /opt/factorio/config
       Type: Path
       value: /mnt/user/appdata/fsm_config
-    FSM Mods:
+    fsmmods:
       Default: ''
       Description: (can be left as it is)
       Display: always
@@ -27,7 +27,7 @@ Config:
       Target: /opt/factorio/mods
       Type: Path
       value: /mnt/user/appdata/fsm_mods
-    FSM Saves:
+    fsmsaves:
       Default: ''
       Description: ''
       Display: always
@@ -39,18 +39,7 @@ Config:
       Type: Path
       value: /mnt/user/appdata/fsm_saves/
   Port:
-    FSM Port:
-      Default: ''
-      Description: (check if Port is already used by other Contrainer)
-      Display: always
-      Mask: 'false'
-      Mode: tcp
-      Name: FSM Port
-      Required: 'false'
-      Target: '80'
-      Type: Port
-      value: '8888'
-    Factorio Port:
+    factorioport:
       Default: ''
       Description: ''
       Display: always
@@ -61,6 +50,17 @@ Config:
       Target: '34197'
       Type: Port
       value: '34197'
+    fsmport:
+      Default: ''
+      Description: (check if Port is already used by other Contrainer)
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: FSM Port
+      Required: 'false'
+      Target: '80'
+      Type: Port
+      value: '8888'
   Variable: {}
 Icon: https://raw.githubusercontent.com/lordfiSh/unraid-docker-images/main/images/factorio-server-manager.png
 Keywords:

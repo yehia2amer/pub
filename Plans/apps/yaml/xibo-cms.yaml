@@ -4,7 +4,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Backup:
+    backup:
       Default: /mnt/user/appdata/cms/backup
       Description: 'Container Path: /var/www/backup'
       Display: always
@@ -15,18 +15,7 @@ Config:
       Target: /var/www/backup
       Type: Path
       value: ''
-    Custom Theme:
-      Default: /mnt/user/appdata/cms/web/theme/custom
-      Description: 'Container Path: /var/www/cms/web/theme/custom'
-      Display: always
-      Mask: 'false'
-      Mode: rw
-      Name: Custom Theme
-      Required: 'false'
-      Target: /var/www/cms/web/theme/custom
-      Type: Path
-      value: ''
-    Custom files:
+    customfiles:
       Default: /mnt/user/appdata/cms/custom
       Description: 'Container Path: /var/www/cms/custom'
       Display: always
@@ -37,7 +26,18 @@ Config:
       Target: /var/www/cms/custom
       Type: Path
       value: ''
-    Library:
+    customtheme:
+      Default: /mnt/user/appdata/cms/web/theme/custom
+      Description: 'Container Path: /var/www/cms/web/theme/custom'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Custom Theme
+      Required: 'false'
+      Target: /var/www/cms/web/theme/custom
+      Type: Path
+      value: ''
+    library:
       Default: /mnt/user/appdata/cms/library
       Description: 'Container Path: /var/www/cms/library'
       Display: always
@@ -48,7 +48,7 @@ Config:
       Target: /var/www/cms/library
       Type: Path
       value: ''
-    Userscritps:
+    userscritps:
       Default: /mnt/user/appdata/cms/web/userscripts
       Description: 'Container Path: /var/www/cms/web/userscripts'
       Display: always
@@ -60,7 +60,7 @@ Config:
       Type: Path
       value: ''
   Port:
-    WebUI:
+    webui:
       Default: '8976'
       Description: 'Container Port: 80'
       Display: always
@@ -72,29 +72,7 @@ Config:
       Type: Port
       value: ''
   Variable:
-    CMS Alias:
-      Default: none
-      Description: 'Container Variable: CMS_ALIAS'
-      Display: always
-      Mask: 'false'
-      Mode: ''
-      Name: CMS Alias
-      Required: 'false'
-      Target: CMS_ALIAS
-      Type: Variable
-      value: ''
-    CMS Server name:
-      Default: localhost
-      Description: 'Container Variable: CMS_SERVER_NAME'
-      Display: always
-      Mask: 'false'
-      Mode: ''
-      Name: CMS Server name
-      Required: 'false'
-      Target: CMS_SERVER_NAME
-      Type: Variable
-      value: ''
-    CMS_APACHE_MAX_CONNECTIONS_PER_CHILD:
+    cms_apache_max_connections_per_child:
       Default: '300'
       Description: 'Container Variable: CMS_APACHE_MAX_CONNECTIONS_PER_CHILD'
       Display: always
@@ -105,7 +83,7 @@ Config:
       Target: CMS_APACHE_MAX_CONNECTIONS_PER_CHILD
       Type: Variable
       value: ''
-    CMS_APACHE_MAX_REQUEST_WORKERS:
+    cms_apache_max_request_workers:
       Default: '60'
       Description: 'Container Variable: CMS_APACHE_MAX_REQUEST_WORKERS'
       Display: always
@@ -116,7 +94,7 @@ Config:
       Target: CMS_APACHE_MAX_REQUEST_WORKERS
       Type: Variable
       value: ''
-    CMS_APACHE_MAX_SPARE_SERVERS:
+    cms_apache_max_spare_servers:
       Default: '10'
       Description: 'Container Variable: CMS_APACHE_MAX_SPARE_SERVERS'
       Display: always
@@ -127,7 +105,7 @@ Config:
       Target: CMS_APACHE_MAX_SPARE_SERVERS
       Type: Variable
       value: ''
-    CMS_APACHE_MIN_SPARE_SERVERS:
+    cms_apache_min_spare_servers:
       Default: '5'
       Description: 'Container Variable: CMS_APACHE_MIN_SPARE_SERVERS'
       Display: always
@@ -138,7 +116,7 @@ Config:
       Target: CMS_APACHE_MIN_SPARE_SERVERS
       Type: Variable
       value: ''
-    CMS_APACHE_START_SERVERS:
+    cms_apache_start_servers:
       Default: '2'
       Description: 'Container Variable: CMS_APACHE_START_SERVERS'
       Display: always
@@ -149,7 +127,7 @@ Config:
       Target: CMS_APACHE_START_SERVERS
       Type: Variable
       value: ''
-    CMS_APACHE_TIMEOUT:
+    cms_apache_timeout:
       Default: '30'
       Description: 'Container Variable: CMS_APACHE_TIMEOUT'
       Display: always
@@ -160,7 +138,7 @@ Config:
       Target: CMS_APACHE_TIMEOUT
       Type: Variable
       value: ''
-    CMS_SMTP_FROM_LINE_OVERRIDE:
+    cms_smtp_from_line_override:
       Default: 'YES'
       Description: 'Container Variable: CMS_SMTP_FROM_LINE_OVERRIDE'
       Display: always
@@ -171,7 +149,29 @@ Config:
       Target: CMS_SMTP_FROM_LINE_OVERRIDE
       Type: Variable
       value: ''
-    Database:
+    cmsalias:
+      Default: none
+      Description: 'Container Variable: CMS_ALIAS'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: CMS Alias
+      Required: 'false'
+      Target: CMS_ALIAS
+      Type: Variable
+      value: ''
+    cmsservername:
+      Default: localhost
+      Description: 'Container Variable: CMS_SERVER_NAME'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: CMS Server name
+      Required: 'false'
+      Target: CMS_SERVER_NAME
+      Type: Variable
+      value: ''
+    database:
       Default: cms
       Description: 'Container Variable: MYSQL_DATABASE'
       Display: always
@@ -182,29 +182,7 @@ Config:
       Target: MYSQL_DATABASE
       Type: Variable
       value: ''
-    Database Password:
-      Default: cmspassword
-      Description: 'Container Variable: MYSQL_PASSWORD'
-      Display: always
-      Mask: 'true'
-      Mode: ''
-      Name: Database Password
-      Required: 'false'
-      Target: MYSQL_PASSWORD
-      Type: Variable
-      value: ''
-    Database User:
-      Default: cms
-      Description: 'Container Variable: MYSQL_USER'
-      Display: always
-      Mask: 'false'
-      Mode: ''
-      Name: Database User
-      Required: 'false'
-      Target: MYSQL_USER
-      Type: Variable
-      value: ''
-    Database backup:
+    databasebackup:
       Default: 'true'
       Description: 'Container Variable: MYSQL_BACKUP_ENABLED'
       Display: always
@@ -215,7 +193,7 @@ Config:
       Target: MYSQL_BACKUP_ENABLED
       Type: Variable
       value: ''
-    Database host:
+    databasehost:
       Default: unraidIP
       Description: 'Container Variable: MYSQL_HOST'
       Display: always
@@ -226,7 +204,29 @@ Config:
       Target: MYSQL_HOST
       Type: Variable
       value: ''
-    Datapase port:
+    databasepassword:
+      Default: cmspassword
+      Description: 'Container Variable: MYSQL_PASSWORD'
+      Display: always
+      Mask: 'true'
+      Mode: ''
+      Name: Database Password
+      Required: 'false'
+      Target: MYSQL_PASSWORD
+      Type: Variable
+      value: ''
+    databaseuser:
+      Default: cms
+      Description: 'Container Variable: MYSQL_USER'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Database User
+      Required: 'false'
+      Target: MYSQL_USER
+      Type: Variable
+      value: ''
+    datapaseport:
       Default: '3306'
       Description: 'Container Variable: MYSQL_PORT'
       Display: always
@@ -237,7 +237,7 @@ Config:
       Target: MYSQL_PORT
       Type: Variable
       value: ''
-    PHP Max Execution time:
+    phpmaxexecutiontime:
       Default: '300'
       Description: 'Container Variable: CMS_PHP_MAX_EXECUTION_TIME'
       Display: always
@@ -248,7 +248,7 @@ Config:
       Target: CMS_PHP_MAX_EXECUTION_TIME
       Type: Variable
       value: ''
-    PHP Max upload filesize:
+    phpmaxuploadfilesize:
       Default: 2G
       Description: 'Container Variable: CMS_PHP_UPLOAD_MAX_FILESIZE'
       Display: always
@@ -259,7 +259,7 @@ Config:
       Target: CMS_PHP_UPLOAD_MAX_FILESIZE
       Type: Variable
       value: ''
-    PHP Memory limit:
+    phpmemorylimit:
       Default: 256M
       Description: 'Container Variable: CMS_PHP_MEMORY_LIMIT'
       Display: always
@@ -270,7 +270,7 @@ Config:
       Target: CMS_PHP_MEMORY_LIMIT
       Type: Variable
       value: ''
-    PHP Post max size:
+    phppostmaxsize:
       Default: 2G
       Description: 'Container Variable: CMS_PHP_POST_MAX_SIZE'
       Display: always
@@ -281,7 +281,7 @@ Config:
       Target: CMS_PHP_POST_MAX_SIZE
       Type: Variable
       value: ''
-    PHP Session max lifetime:
+    phpsessionmaxlifetime:
       Default: '1440'
       Description: 'Container Variable: CMS_PHP_SESSION_GC_MAXLIFETIME'
       Display: always
@@ -292,7 +292,7 @@ Config:
       Target: CMS_PHP_SESSION_GC_MAXLIFETIME
       Type: Variable
       value: ''
-    SMTP Hostname:
+    smtphostname:
       Default: none
       Description: 'Container Variable: CMS_SMTP_HOSTNAME'
       Display: always
@@ -303,7 +303,7 @@ Config:
       Target: CMS_SMTP_HOSTNAME
       Type: Variable
       value: ''
-    SMTP Password:
+    smtppassword:
       Default: password
       Description: 'Container Variable: CMS_SMTP_PASSWORD'
       Display: always
@@ -314,7 +314,7 @@ Config:
       Target: CMS_SMTP_PASSWORD
       Type: Variable
       value: ''
-    SMTP Rewrite domain:
+    smtprewritedomain:
       Default: gmail.com
       Description: 'Container Variable: CMS_SMTP_REWRITE_DOMAIN'
       Display: always
@@ -325,18 +325,7 @@ Config:
       Target: CMS_SMTP_REWRITE_DOMAIN
       Type: Variable
       value: ''
-    SMTP STARTTLS:
-      Default: 'YES'
-      Description: 'Container Variable: CMS_SMTP_USE_STARTTLS'
-      Display: always
-      Mask: 'false'
-      Mode: ''
-      Name: SMTP STARTTLS
-      Required: 'false'
-      Target: CMS_SMTP_USE_STARTTLS
-      Type: Variable
-      value: ''
-    SMTP Server:
+    smtpserver:
       Default: smtp.gmail.com:587
       Description: 'Container Variable: CMS_SMTP_SERVER'
       Display: always
@@ -347,7 +336,18 @@ Config:
       Target: CMS_SMTP_SERVER
       Type: Variable
       value: ''
-    SMTP TLS:
+    smtpstarttls:
+      Default: 'YES'
+      Description: 'Container Variable: CMS_SMTP_USE_STARTTLS'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: SMTP STARTTLS
+      Required: 'false'
+      Target: CMS_SMTP_USE_STARTTLS
+      Type: Variable
+      value: ''
+    smtptls:
       Default: 'YES'
       Description: 'Container Variable: CMS_SMTP_USE_TLS'
       Display: always
@@ -358,7 +358,7 @@ Config:
       Target: CMS_SMTP_USE_TLS
       Type: Variable
       value: ''
-    SMTP Username:
+    smtpusername:
       Default: username
       Description: 'Container Variable: CMS_SMTP_USERNAME'
       Display: always
@@ -369,7 +369,7 @@ Config:
       Target: CMS_SMTP_USERNAME
       Type: Variable
       value: ''
-    XMR Host:
+    xmrhost:
       Default: unraidIP:port
       Description: 'Container Variable: XMR_HOST'
       Display: always

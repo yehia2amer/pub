@@ -5,18 +5,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    /etc/localtime (for syncing with host clock):
-      Default: /etc/localtime
-      Description: 'Container Path: /etc/localtime'
-      Display: always
-      Mask: 'false'
-      Mode: ro
-      Name: /etc/localtime (for syncing with host clock)
-      Required: 'false'
-      Target: /etc/localtime
-      Type: Path
-      value: ''
-    borg cache; see borg docs for additional info:
+    borgcache;seeborgdocsforadditionalinfo:
       Default: /mnt/user/appdata/borg-mysql-backup/.borg/cache
       Description: 'Container Path: /root/.cache/borg'
       Display: always
@@ -27,7 +16,7 @@ Config:
       Target: /root/.cache/borg
       Type: Path
       value: ''
-    borg config; see borg docs for additional info:
+    borgconfig;seeborgdocsforadditionalinfo:
       Default: /mnt/user/appdata/borg-mysql-backup/.borg/config
       Description: 'Container Path: /root/.config/borg'
       Display: always
@@ -38,7 +27,7 @@ Config:
       Target: /root/.config/borg
       Type: Path
       value: ''
-    config location:
+    configlocation:
       Default: /mnt/user/appdata/borg-mysql-backup
       Description: 'Container Path: /config'
       Display: advanced-hide
@@ -49,7 +38,18 @@ Config:
       Target: /config
       Type: Path
       value: ''
-    local borg repo location:
+    etclocaltime(forsyncingwithhostclock):
+      Default: /etc/localtime
+      Description: 'Container Path: /etc/localtime'
+      Display: always
+      Mask: 'false'
+      Mode: ro
+      Name: /etc/localtime (for syncing with host clock)
+      Required: 'false'
+      Target: /etc/localtime
+      Type: Path
+      value: ''
+    localborgrepolocation:
       Default: ''
       Description: 'Container Path: /backup'
       Display: always
@@ -60,7 +60,7 @@ Config:
       Target: /backup
       Type: Path
       value: ''
-    scripts' logs:
+    scripts'logs:
       Default: /mnt/user/appdata/borg-mysql-backup/logs
       Description: 'Container Path: /var/log'
       Display: always
@@ -73,18 +73,7 @@ Config:
       value: ''
   Port: {}
   Variable:
-    Host identifier:
-      Default: unraid
-      Description: 'Container Variable: HOST_ID'
-      Display: always
-      Mask: 'false'
-      Mode: ''
-      Name: Host identifier
-      Required: 'true'
-      Target: HOST_ID
-      Type: Variable
-      value: ''
-    borg create options:
+    borgcreateoptions:
       Default: --compression zlib,5
       Description: 'Container Variable: CREATE_OPTS'
       Display: always
@@ -95,7 +84,7 @@ Config:
       Target: CREATE_OPTS
       Type: Variable
       value: ''
-    borg prune options:
+    borgpruneoptions:
       Default: --keep-daily=7 --keep-weekly=4 --keep-monthly=3 --keep-within=3d
       Description: 'Container Variable: PRUNE_OPTS'
       Display: always
@@ -106,7 +95,7 @@ Config:
       Target: PRUNE_OPTS
       Type: Variable
       value: ''
-    borg remote path:
+    borgremotepath:
       Default: borg1
       Description: 'Container Variable: BORG_REMOTE_PATH'
       Display: always
@@ -117,7 +106,7 @@ Config:
       Target: BORG_REMOTE_PATH
       Type: Variable
       value: ''
-    borg repo passphrase (both remote &amp; local):
+    borgrepopassphrase(bothremote&amp;local):
       Default: ''
       Description: 'Container Variable: BORG_PASSPHRASE'
       Display: always
@@ -128,7 +117,7 @@ Config:
       Target: BORG_PASSPHRASE
       Type: Variable
       value: ''
-    common opts for all borg commands:
+    commonoptsforallborgcommands:
       Default: --lock-wait 18000
       Description: 'Container Variable: COMMON_OPTS'
       Display: always
@@ -137,6 +126,17 @@ Config:
       Name: common opts for all borg commands
       Required: 'false'
       Target: COMMON_OPTS
+      Type: Variable
+      value: ''
+    hostidentifier:
+      Default: unraid
+      Description: 'Container Variable: HOST_ID'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Host identifier
+      Required: 'true'
+      Target: HOST_ID
       Type: Variable
       value: ''
 Icon: ''

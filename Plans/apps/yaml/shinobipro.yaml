@@ -6,40 +6,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    LOCAL TIME:
-      Default: ''
-      Description: 'Container Path: /etc/localtime'
-      Display: advanced
-      Mask: 'false'
-      Mode: ro
-      Name: LOCAL TIME
-      Required: 'false'
-      Target: /etc/localtime
-      Type: Path
-      value: /etc/localtime
-    TIMEZONE:
-      Default: ''
-      Description: 'Container Path: /usr/share/zoneinfo/'
-      Display: advanced
-      Mask: 'false'
-      Mode: ro
-      Name: TIMEZONE
-      Required: 'false'
-      Target: /usr/share/zoneinfo/
-      Type: Path
-      value: /usr/share/zoneinfo/
-    Temporary Streams:
-      Default: ''
-      Description: Temporary Streams
-      Display: advanced
-      Mask: 'false'
-      Mode: rw
-      Name: Temporary Streams
-      Required: 'false'
-      Target: /dev/shm/streams
-      Type: Path
-      value: /dev/shm/shinobi
-    appdata location:
+    appdatalocation:
       Default: /mnt/user/appdata/shinobipro
       Description: /config
       Display: advanced
@@ -50,7 +17,7 @@ Config:
       Target: /config
       Type: Path
       value: /mnt/user/appdata/shinobipro
-    customautoload modules:
+    customautoloadmodules:
       Default: ''
       Description: 'Container Path: /opt/shinobi/libs/customAutoLoad'
       Display: advanced
@@ -61,7 +28,18 @@ Config:
       Target: /opt/shinobi/libs/customAutoLoad
       Type: Path
       value: /mnt/user/appdata/shinobipro/customautoload
-    maria db database location:
+    localtime:
+      Default: ''
+      Description: 'Container Path: /etc/localtime'
+      Display: advanced
+      Mask: 'false'
+      Mode: ro
+      Name: LOCAL TIME
+      Required: 'false'
+      Target: /etc/localtime
+      Type: Path
+      value: /etc/localtime
+    mariadbdatabaselocation:
       Default: ''
       Description: /var/lib/mysql
       Display: advanced
@@ -72,7 +50,29 @@ Config:
       Target: /var/lib/mysql
       Type: Path
       value: /mnt/user/appdata/shinobipro/database
-    video storage location:
+    temporarystreams:
+      Default: ''
+      Description: Temporary Streams
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: Temporary Streams
+      Required: 'false'
+      Target: /dev/shm/streams
+      Type: Path
+      value: /dev/shm/shinobi
+    timezone:
+      Default: ''
+      Description: 'Container Path: /usr/share/zoneinfo/'
+      Display: advanced
+      Mask: 'false'
+      Mode: ro
+      Name: TIMEZONE
+      Required: 'false'
+      Target: /usr/share/zoneinfo/
+      Type: Path
+      value: /usr/share/zoneinfo/
+    videostoragelocation:
       Default: ''
       Description: /opt/shinobi/videos
       Display: always
@@ -84,7 +84,7 @@ Config:
       Type: Path
       value: /mnt/user/cctv/
   Port:
-    Web port:
+    webport:
       Default: ''
       Description: 'Container Port: 8080'
       Display: always
@@ -96,29 +96,7 @@ Config:
       Type: Port
       value: '8080'
   Variable:
-    '****Nvidia build only  -- Driver capabilities':
-      Default: ''
-      Description: If using tag :nvidia  -- set to   all
-      Display: always
-      Mask: 'false'
-      Mode: ''
-      Name: '****Nvidia build only  -- Driver capabilities'
-      Required: 'false'
-      Target: NVIDIA_DRIVER_CAPABILITIES
-      Type: Variable
-      value: ''
-    '****Nvidia build only -- GPU ID':
-      Default: ''
-      Description: add gpu id (from nvidia unraid plugin)
-      Display: always
-      Mask: 'false'
-      Mode: ''
-      Name: '****Nvidia build only -- GPU ID'
-      Required: 'false'
-      Target: NVIDIA_VISIBLE_DEVICES
-      Type: Variable
-      value: ''
-    MYSQL_DATABASE:
+    mysql_database:
       Default: ''
       Description: MYSQL_DATABASE NAME
       Display: advanced
@@ -129,7 +107,7 @@ Config:
       Target: MYSQL_DATABASE
       Type: Variable
       value: ccio
-    MYSQL_HOST:
+    mysql_host:
       Default: ''
       Description: MYSQL_HOST leave as localhost for container built in mariadb
       Display: advanced
@@ -140,7 +118,7 @@ Config:
       Target: MYSQL_HOST
       Type: Variable
       value: localhost
-    MYSQL_PASSWORD:
+    mysql_password:
       Default: ''
       Description: MYSQL_PASSWORD default none for internal mariadb
       Display: advanced
@@ -151,7 +129,7 @@ Config:
       Target: MYSQL_PASSWORD
       Type: Variable
       value: ''
-    MYSQL_PORT:
+    mysql_port:
       Default: ''
       Description: MYSQL_PORT  standard port 3306
       Display: advanced
@@ -162,7 +140,7 @@ Config:
       Target: MYSQL_PORT
       Type: Variable
       value: '3306'
-    MYSQL_ROOT_PASSWORD:
+    mysql_root_password:
       Default: ''
       Description: MYSQL_ROOT_PASSWORD
       Display: advanced
@@ -173,7 +151,7 @@ Config:
       Target: MYSQL_ROOT_PASSWORD
       Type: Variable
       value: ''
-    MYSQL_ROOT_USER:
+    mysql_root_user:
       Default: ''
       Description: MYSQL_ROOT_USER
       Display: advanced
@@ -184,7 +162,7 @@ Config:
       Target: MYSQL_ROOT_USER
       Type: Variable
       value: root
-    MYSQL_USER:
+    mysql_user:
       Default: ''
       Description: MYSQL_USER
       Display: advanced
@@ -195,7 +173,29 @@ Config:
       Target: MYSQL_USER
       Type: Variable
       value: majesticflame
-    password for superuser:
+    nvidiabuildonly--drivercapabilities:
+      Default: ''
+      Description: If using tag :nvidia  -- set to   all
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: '****Nvidia build only  -- Driver capabilities'
+      Required: 'false'
+      Target: NVIDIA_DRIVER_CAPABILITIES
+      Type: Variable
+      value: ''
+    nvidiabuildonly--gpuid:
+      Default: ''
+      Description: add gpu id (from nvidia unraid plugin)
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: '****Nvidia build only -- GPU ID'
+      Required: 'false'
+      Target: NVIDIA_VISIBLE_DEVICES
+      Type: Variable
+      value: ''
+    passwordforsuperuser:
       Default: ''
       Description: 'Container Variable: ADMIN_PASSWORD'
       Display: always
@@ -206,7 +206,7 @@ Config:
       Target: ADMIN_PASSWORD
       Type: Variable
       value: password
-    username for superuser:
+    usernameforsuperuser:
       Default: ''
       Description: 'Container Variable: ADMIN_USER'
       Display: always

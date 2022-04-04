@@ -4,7 +4,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Gladys Dev Folder:
+    gladysdevfolder:
       Default: /dev
       Description: 'Container Path: /dev'
       Display: advanced-hide
@@ -15,7 +15,7 @@ Config:
       Target: /dev
       Type: Path
       value: /dev
-    Gladys Docker Folder:
+    gladysdockerfolder:
       Default: /var/run/docker.sock
       Description: 'Container Path: /var/run/docker.sock'
       Display: advanced-hide
@@ -26,7 +26,7 @@ Config:
       Target: /var/run/docker.sock
       Type: Path
       value: /var/run/docker.sock
-    Gladys lib folder:
+    gladyslibfolder:
       Default: /mnt/user/appdata/Gladys
       Description: 'Container Path: /var/lib/gladysassistant'
       Display: advanced-hide
@@ -37,7 +37,7 @@ Config:
       Target: /var/lib/gladysassistant
       Type: Path
       value: /mnt/user/appdata/Gladys
-    Gladys uDev Folder:
+    gladysudevfolder:
       Default: /run/udev
       Description: 'Container Path: /run/udev'
       Display: advanced-hide
@@ -50,7 +50,7 @@ Config:
       value: /run/udev
   Port: {}
   Variable:
-    DB File path:
+    dbfilepath:
       Default: /var/lib/gladysassistant/gladys-production.db
       Description: 'Container Variable: SQLITE_FILE_PATH'
       Display: advanced-hide
@@ -61,7 +61,7 @@ Config:
       Target: SQLITE_FILE_PATH
       Type: Variable
       value: /var/lib/gladysassistant/gladys-production.db
-    Environement:
+    environement:
       Default: production
       Description: 'Container Variable: NODE_ENV'
       Display: advanced-hide
@@ -72,18 +72,6 @@ Config:
       Target: NODE_ENV
       Type: Variable
       value: production
-    Time Zone:
-      Default: Europe/Paris
-      Description: Visit https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-        to get the right one
-      Display: always
-      Mask: 'false'
-      Mode: ''
-      Name: Time Zone
-      Required: 'true'
-      Target: TZ
-      Type: Variable
-      value: Europe/Paris
     server-port:
       Default: '80'
       Description: 'Container Variable: SERVER_PORT'
@@ -95,6 +83,18 @@ Config:
       Target: SERVER_PORT
       Type: Variable
       value: '8006'
+    timezone:
+      Default: Europe/Paris
+      Description: Visit https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+        to get the right one
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Time Zone
+      Required: 'true'
+      Target: TZ
+      Type: Variable
+      value: Europe/Paris
 ExtraParams: --restart=always --log-opt max-size=10m
 Icon: https://gladysassistant.com/en/img/external/github-gladys-logo.png
 Keywords:

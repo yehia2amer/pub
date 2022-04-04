@@ -4,7 +4,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    /dev/kvm:
+    devkvm:
       Default: ''
       Description: 'Container Path: /dev/kvm'
       Display: always
@@ -15,17 +15,6 @@ Config:
       Target: /dev/kvm
       Type: Path
       value: /dev/kvm
-    RootFolder:
-      Default: ''
-      Description: 'Container Path: /root'
-      Display: always
-      Mask: 'false'
-      Mode: rw
-      Name: RootFolder
-      Required: 'false'
-      Target: /root
-      Type: Path
-      value: /mnt/user/appdata/vman/root
     images:
       Default: ''
       Description: 'Container Path: /var/lib/libvirt/images'
@@ -48,8 +37,19 @@ Config:
       Target: /var/run/libvirt/libvirt-sock
       Type: Path
       value: /var/run/libvirt/libvirt-sock
+    rootfolder:
+      Default: ''
+      Description: 'Container Path: /root'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: RootFolder
+      Required: 'false'
+      Target: /root
+      Type: Path
+      value: /mnt/user/appdata/vman/root
   Port:
-    WEBGUI:
+    webgui:
       Default: ''
       Description: 'Container Port: 80'
       Display: always
@@ -61,7 +61,7 @@ Config:
       Type: Port
       value: '8185'
   Variable:
-    HOSTS:
+    hosts:
       Default: ''
       Description: 'Container Variable: HOSTS'
       Display: always

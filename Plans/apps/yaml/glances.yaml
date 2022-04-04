@@ -6,17 +6,14 @@ CategoryList: &id001
 Config:
   Device: {}
   Label: {}
-  Path: {}
+  Path:
+    glances:
+      Mode: ro
+      Name: docker.sock
+      Target: /var/run/docker.sock
+      value: /var/run/docker.sock
   Port: {}
   Variable: {}
-Data:
-  Volume:
-  - ContainerDir: /mnt
-    HostDir: /mnt
-    Mode: ro
-  - ContainerDir: /var/run/docker.sock
-    HostDir: /var/run/docker.sock
-    Mode: ro
 ExtraParams: --pid=host
 GitHub: https://github.com/nicolargo/glances
 Icon: https://github.com/nicolargo/glances/raw/master/glances/outputs/static/images/glances.png

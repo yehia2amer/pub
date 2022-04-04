@@ -4,23 +4,18 @@ CategoryList: &id001
 Config:
   Device: {}
   Label: {}
-  Path: {}
+  Path:
+    moviegrabber:
+      Mode: rw
+      Name: media
+      Target: /media
+      value: /mnt/user
   Port: {}
   Variable:
-    UMASK:
+    umask:
       Name: UMASK
+      Target: UMASK
       value: '000'
-Data:
-  Volume:
-  - ContainerDir: /config
-    HostDir: /mnt/user/appdata/config
-    Mode: rw
-  - ContainerDir: /data
-    HostDir: /mnt/user/appdata/data
-    Mode: rw
-  - ContainerDir: /media
-    HostDir: /mnt/user
-    Mode: rw
 GitHub: https://github.com/binhex/arch-moviegrabber
 Icon: https://raw.githubusercontent.com/binhex/docker-templates/master/binhex/images/moviegrabber-icon.png
 Keywords:

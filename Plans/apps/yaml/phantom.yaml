@@ -5,26 +5,30 @@ CategoryList: &id001
 Config:
   Device: {}
   Label: {}
-  Path: {}
+  Path:
+    phantom:
+      Mode: rw
+      Name: config
+      Target: /config
+      value: /mnt/user/appdata/config
   Port: {}
   Variable:
-    CLEANUP_TIMEOUT:
+    cleanup_timeout:
       Name: CLEANUP_TIMEOUT
+      Target: CLEANUP_TIMEOUT
       value: '60'
-    REMOTE_MINECRAFT_IP:
+    remote_minecraft_ip:
       Name: REMOTE_MINECRAFT_IP
+      Target: REMOTE_MINECRAFT_IP
       value: ''
-    REMOTE_MINECRAFT_PORT:
+    remote_minecraft_port:
       Name: REMOTE_MINECRAFT_PORT
+      Target: REMOTE_MINECRAFT_PORT
       value: '19132'
-    UMASK:
+    umask:
       Name: UMASK
+      Target: UMASK
       value: '000'
-Data:
-  Volume:
-    ContainerDir: /config
-    HostDir: /mnt/user/appdata/config
-    Mode: rw
 GitHub: https://github.com/binhex/arch-phantom
 Icon: https://raw.githubusercontent.com/binhex/docker-templates/master/binhex/images/phantom-icon.png
 Keywords:

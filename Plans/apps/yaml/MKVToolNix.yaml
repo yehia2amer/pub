@@ -4,7 +4,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Config Directory:
+    configdirectory:
       Default: /mnt/user/appdata/mkvtoolnix
       Description: 'This is where the application stores its configuration, log and
         any files needing persistency.&lt;br&gt;Container path: /config'
@@ -16,7 +16,7 @@ Config:
       Target: /config
       Type: Path
       value: ''
-    Storage:
+    storage:
       Default: /mnt/user
       Description: 'This location contains files from your host that need to be accessible
         by the application.&lt;br&gt;Container path: /storage'
@@ -29,7 +29,7 @@ Config:
       Type: Path
       value: ''
   Port:
-    VNC Port for GUI:
+    vncportforgui:
       Default: '7905'
       Description: Port used to access the application's GUI via the VNC protocol.  Optional
         if no VNC client is used.&lt;br&gt;&lt;b&gt;NOTE:&lt;/b&gt; This applies only
@@ -43,7 +43,7 @@ Config:
       Target: '5900'
       Type: Port
       value: ''
-    WEB Port for GUI:
+    webportforgui:
       Default: '7805'
       Description: Port used to access the application's GUI via the web interface.&lt;br&gt;&lt;b&gt;NOTE:&lt;/b&gt;
         This applies only when &lt;i&gt;Network Type&lt;/i&gt; is set to &lt;i&gt;Bridge&lt;/i&gt;.  For
@@ -57,7 +57,7 @@ Config:
       Type: Port
       value: ''
   Variable:
-    Display Height:
+    displayheight:
       Default: '768'
       Description: Height (in pixels) of the application's window.
       Display: advanced
@@ -68,7 +68,7 @@ Config:
       Target: DISPLAY_HEIGHT
       Type: Variable
       value: ''
-    Display Width:
+    displaywidth:
       Default: '1280'
       Description: Width (in pixels) of the application's window.
       Display: advanced
@@ -79,7 +79,7 @@ Config:
       Target: DISPLAY_WIDTH
       Type: Variable
       value: ''
-    Extra x11vnc Options:
+    extrax11vncoptions:
       Default: ''
       Description: 'Extra options to pass to the x11vnc server running in the Docker
         container.&lt;br&gt;&lt;span style=''color: red;''&gt;&lt;b&gt;Warning:&lt;/b&gt;&lt;/span&gt;
@@ -92,7 +92,7 @@ Config:
       Target: X11VNC_EXTRA_OPTS
       Type: Variable
       value: ''
-    Group ID:
+    groupid:
       Default: '100'
       Description: ID of the group the application runs as.
       Display: advanced-hide
@@ -103,7 +103,7 @@ Config:
       Target: GROUP_ID
       Type: Variable
       value: ''
-    Niceness (priority):
+    niceness(priority):
       Default: ''
       Description: Priority at which the application should run.  A niceness value
         of -20 is the highest priority and 19 is the lowest priority.&lt;br&gt;&lt;b&gt;NOTE:&lt;/b&gt;
@@ -118,7 +118,7 @@ Config:
       Target: APP_NICENESS
       Type: Variable
       value: ''
-    Secure Connection:
+    secureconnection:
       Default: '0'
       Description: 'Whether or not an encrypted connection should be used to access
         the application''s GUI.  Set to &lt;i&gt;&lt;b&gt;1&lt;/b&gt;&lt;/i&gt; to
@@ -135,7 +135,7 @@ Config:
       Target: SECURE_CONNECTION
       Type: Variable
       value: ''
-    Umask:
+    umask:
       Default: '000'
       Description: Mask that controls how file permissions are set for newly created
         files. The value of the mask is in octal notation.
@@ -147,7 +147,7 @@ Config:
       Target: UMASK
       Type: Variable
       value: ''
-    User ID:
+    userid:
       Default: '99'
       Description: ID of the user the application runs as.
       Display: advanced-hide

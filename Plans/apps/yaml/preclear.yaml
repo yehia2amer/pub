@@ -5,44 +5,26 @@ CategoryList: &id001
 Config:
   Device: {}
   Label: {}
-  Path: {}
+  Path:
+    preclear:
+      Mode: rw
+      Name: config
+      Target: /config
+      value: /mnt/user/appdata/config
   Port: {}
   Variable:
-    UMASK:
+    umask:
       Name: UMASK
+      Target: UMASK
       value: '000'
-    VNC_PASSWORD:
+    vnc_password:
       Name: VNC_PASSWORD
+      Target: VNC_PASSWORD
       value: ''
-    WEBPAGE_TITLE:
+    webpage_title:
       Name: WEBPAGE_TITLE
+      Target: WEBPAGE_TITLE
       value: Preclear
-Data:
-  Volume:
-  - ContainerDir: /unraid/config/disk.cfg
-    HostDir: /boot/config/disk.cfg
-    Mode: ro
-  - ContainerDir: /unraid/config/super.dat
-    HostDir: /boot/config/super.dat
-    Mode: ro
-  - ContainerDir: /unraid/emhttp/disks.ini
-    HostDir: /var/local/emhttp/disks.ini
-    Mode: ro
-  - ContainerDir: /unraid/mdcmd
-    HostDir: /usr/local/sbin/mdcmd
-    Mode: ro
-  - ContainerDir: /unraid/disk/by-id
-    HostDir: /dev/disk/by-id
-    Mode: ro
-  - ContainerDir: /unraid/config/plugins/dynamix
-    HostDir: /boot/config/plugins/dynamix
-    Mode: ro
-  - ContainerDir: /unraid/ssmtp/ssmtp.conf
-    HostDir: /etc/ssmtp/ssmtp.conf
-    Mode: ro
-  - ContainerDir: /config
-    HostDir: /mnt/user/appdata/config
-    Mode: rw
 GitHub: https://github.com/binhex/arch-preclear
 Icon: https://raw.githubusercontent.com/binhex/docker-templates/master/binhex/images/preclear-icon.png
 Keywords:

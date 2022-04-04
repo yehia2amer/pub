@@ -4,7 +4,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Container Path:
+    containerpath:
       Default: ''
       Description: 'Container Path: /stun-turn'
       Display: always
@@ -16,7 +16,7 @@ Config:
       Type: Path
       value: /mnt/cache/appdata/stun-turn-server
   Port:
-    TCP Port:
+    tcpport:
       Default: ''
       Description: TCP Port
       Display: always
@@ -27,7 +27,7 @@ Config:
       Target: '5349'
       Type: Port
       value: '5349'
-    UDP Ports:
+    udpports:
       Default: ''
       Description: UDP Port
       Display: always
@@ -39,7 +39,7 @@ Config:
       Type: Port
       value: '5349'
   Variable:
-    Certificate File Name:
+    certificatefilename:
       Default: ''
       Description: Name of the certification file (leave empty if the server should
         create one or replace it with your own).
@@ -51,7 +51,7 @@ Config:
       Target: CERT_FILE
       Type: Variable
       value: cert.pem
-    Certificate Generation - Country:
+    certificategeneration-country:
       Default: ''
       Description: 'Country code for your certificate if the server should create
         one (two letters eg: ''US'' without quotes - also plase look under the ''Show
@@ -64,7 +64,7 @@ Config:
       Target: CA_COUNTRY
       Type: Variable
       value: ''
-    Certificate Generation - Key Length:
+    certificategeneration-keylength:
       Default: ''
       Description: Enter your preferred key length (the higher the value the longer
         it takes to generate the certificate).
@@ -76,7 +76,7 @@ Config:
       Target: CERT_LENGTH
       Type: Variable
       value: '2048'
-    Certificate Generation - Locality:
+    certificategeneration-locality:
       Default: ''
       Description: Specify your locality.
       Display: advanced
@@ -87,7 +87,7 @@ Config:
       Target: CA_LOCALITY
       Type: Variable
       value: None
-    Certificate Generation - Organization:
+    certificategeneration-organization:
       Default: ''
       Description: Specify your organiszation.
       Display: advanced
@@ -98,7 +98,7 @@ Config:
       Target: CA_ORGANIZATION
       Type: Variable
       value: None
-    Certificate Generation - State or Province:
+    certificategeneration-stateorprovince:
       Default: ''
       Description: Specify your state or province.
       Display: advanced
@@ -109,7 +109,7 @@ Config:
       Target: CA_STATE_PROV
       Type: Variable
       value: None
-    Certificate Generation - Valid Days:
+    certificategeneration-validdays:
       Default: ''
       Description: Specify how long that the certificate should be valid in days.
       Display: advanced
@@ -120,7 +120,7 @@ Config:
       Target: CERT_VALID_DAYS
       Type: Variable
       value: '3650'
-    Cipher List:
+    cipherlist:
       Default: ''
       Description: Allowed OpenSSL cipher list for TLS/DTLS connections (only change
         if you know what you are doing).
@@ -132,7 +132,7 @@ Config:
       Target: CIPHER_LIST
       Type: Variable
       value: ECDHE-RSA-AES256-GCM-SHA512:DHE-RSA-AES256-GCM-SHA512:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-SHA384
-    Command Line Password:
+    commandlinepassword:
       Default: ''
       Description: Enter your CLI password or leave empty if you want that the server
         creates a random one (please note that you have to manually enable the console
@@ -146,7 +146,7 @@ Config:
       Target: CLI_PASSWORD
       Type: Variable
       value: ''
-    DATA_PERM:
+    data_perm:
       Default: ''
       Description: 'Container Variable: DATA_PERM'
       Display: advanced
@@ -157,7 +157,7 @@ Config:
       Target: DATA_PERM
       Type: Variable
       value: '770'
-    Diffie-Hellman Key File Name:
+    diffie-hellmankeyfilename:
       Default: ''
       Description: "Name of the Diffie\u2013Hellman key file (leave empty if the server\
         \ should create one or replace it with your own - also plase look under the\
@@ -171,7 +171,7 @@ Config:
       Target: DH_FILE
       Type: Variable
       value: dhparam.pem
-    "Diffie\u2013Hellman Key Length":
+    "diffie\u2013hellmankeylength":
       Default: ''
       Description: Enter your preferred key length (the higher the value the longer
         it takes to generate the key).
@@ -183,7 +183,7 @@ Config:
       Target: DH_LENGTH
       Type: Variable
       value: '2048'
-    Display Secrets in log:
+    displaysecretsinlog:
       Default: ''
       Description: Display your secrets in the log (set to 'true' or leave empty to
         disable it).
@@ -195,7 +195,7 @@ Config:
       Target: DISPLAY_SECRETS
       Type: Variable
       value: 'true'
-    Extra Startup Parameters:
+    extrastartupparameters:
       Default: ''
       Description: 'Here you can enter your Extra Startup Parameters if needed (you
         can get a full list of commands from here: https://github.com/coturn/coturn/wiki/turnserver)'
@@ -207,7 +207,7 @@ Config:
       Target: EXTRA_PARAMS
       Type: Variable
       value: ''
-    GID:
+    gid:
       Default: ''
       Description: 'Container Variable: GID'
       Display: advanced
@@ -218,7 +218,7 @@ Config:
       Target: GID
       Type: Variable
       value: '100'
-    Listening IP:
+    listeningip:
       Default: ''
       Description: Specify the listening port (only change if you know what you are
         doing).
@@ -230,7 +230,7 @@ Config:
       Target: LISTENING_IP
       Type: Variable
       value: 0.0.0.0
-    Maximum bps:
+    maximumbps:
       Default: ''
       Description: Max bytes-per-second bandwidth a TURN session is allowed to handle
         (input and output network streams are treated separately). Anything above
@@ -244,7 +244,7 @@ Config:
       Target: MAX_BPS
       Type: Variable
       value: '0'
-    Port Variable:
+    portvariable:
       Default: ''
       Description: If you change this variable you have to create two new port forwardings
         with the corresponding ports one for TCP and one for UDP.
@@ -256,7 +256,7 @@ Config:
       Target: PORT
       Type: Variable
       value: '5349'
-    Private Key File Name:
+    privatekeyfilename:
       Default: ''
       Description: Name of the private key file (leave empty if the server should
         create one or replace it with your own).
@@ -268,7 +268,7 @@ Config:
       Target: PRIVKEY_FILE
       Type: Variable
       value: privkey.pem
-    Realm:
+    realm:
       Default: ''
       Description: 'Your hostname (eg: ''example.org'' without quotes).'
       Display: always
@@ -279,7 +279,7 @@ Config:
       Target: REALM
       Type: Variable
       value: ''
-    Static Secret:
+    staticsecret:
       Default: ''
       Description: Create your own secret and enter it here or leave empty and the
         server creats a secret that is stored into 'secret.txt' in the main directory
@@ -293,7 +293,7 @@ Config:
       Target: SECRET
       Type: Variable
       value: ''
-    Total Quota:
+    totalquota:
       Default: ''
       Description: 'Total allocations quota: global limit on concurrent allocations
         (only change if you know what you are doing).'
@@ -305,7 +305,7 @@ Config:
       Target: TOTAL_QUOTA
       Type: Variable
       value: '100'
-    UID:
+    uid:
       Default: ''
       Description: 'Container Variable: UID'
       Display: advanced
@@ -316,7 +316,7 @@ Config:
       Target: UID
       Type: Variable
       value: '99'
-    UMASK:
+    umask:
       Default: ''
       Description: 'Container Variable: 000'
       Display: advanced

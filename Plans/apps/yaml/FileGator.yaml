@@ -7,18 +7,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Storage (config file):
-      Default: ''
-      Description: This is the configuration file.
-      Display: always
-      Mask: 'false'
-      Mode: ro
-      Name: Storage (config file)
-      Required: 'false'
-      Target: /var/www/localhost/filegator/configuration.php
-      Type: Path
-      value: /mnt/user/appdata/filegator/config_file/configuration.php
-    Storage (config):
+    storage(config):
       Default: ''
       Description: This is the location for the configuration files.
       Display: always
@@ -29,7 +18,18 @@ Config:
       Target: /config
       Type: Path
       value: /mnt/user/appdata/filegator/config
-    Storage (data):
+    storage(configfile):
+      Default: ''
+      Description: This is the configuration file.
+      Display: always
+      Mask: 'false'
+      Mode: ro
+      Name: Storage (config file)
+      Required: 'false'
+      Target: /var/www/localhost/filegator/configuration.php
+      Type: Path
+      value: /mnt/user/appdata/filegator/config_file/configuration.php
+    storage(data):
       Default: ''
       Description: This is the location for all the personal information.
       Display: always
@@ -41,7 +41,7 @@ Config:
       Type: Path
       value: /mnt/user/appdata/filegator/data
   Port:
-    WebUI (HTTP):
+    webui(http):
       Default: ''
       Description: ''
       Display: always
@@ -52,7 +52,7 @@ Config:
       Target: '80'
       Type: Port
       value: '8048'
-    WebUI (HTTPS):
+    webui(https):
       Default: ''
       Description: ''
       Display: always
@@ -64,7 +64,7 @@ Config:
       Type: Port
       value: '8049'
   Variable:
-    PGID:
+    pgid:
       Default: ''
       Description: ''
       Display: advanced
@@ -75,7 +75,7 @@ Config:
       Target: PGID
       Type: Variable
       value: '1000'
-    PUID:
+    puid:
       Default: ''
       Description: ''
       Display: advanced
@@ -86,7 +86,7 @@ Config:
       Target: PUID
       Type: Variable
       value: '1000'
-    TZ:
+    tz:
       Default: ''
       Description: ''
       Display: advanced

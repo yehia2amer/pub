@@ -4,20 +4,14 @@ CategoryList: &id001
 Config:
   Device: {}
   Label: {}
-  Path: {}
+  Path:
+    dvblink:
+      Mode: rw
+      Name: DVBLink
+      Target: /opt/DVBLink
+      value: /mnt/user/appdata/DVBLink/data
   Port: {}
   Variable: {}
-Data:
-  Volume:
-  - ContainerDir: /recordings
-    HostDir: /mnt/user/Recordings
-    Mode: rw
-  - ContainerDir: /usr/local/bin/dvblink
-    HostDir: /mnt/user/appdata/DVBLink/config
-    Mode: rw
-  - ContainerDir: /opt/DVBLink
-    HostDir: /mnt/user/appdata/DVBLink/data
-    Mode: rw
 Icon: https://raw.githubusercontent.com/chvb/docker-templates/master/chvb/img/dvblink.jpg
 Keywords:
 - dvblink

@@ -4,56 +4,70 @@ CategoryList: &id001
 Config:
   Device: {}
   Label: {}
-  Path: {}
+  Path:
+    minecraftserver:
+      Mode: rw
+      Name: config
+      Target: /config
+      value: /mnt/user/appdata/config
   Port: {}
   Variable:
-    CREATE_BACKUP_HOURS:
+    create_backup_hours:
       Name: CREATE_BACKUP_HOURS
+      Target: CREATE_BACKUP_HOURS
       value: '12'
-    CUSTOM_JAR_PATH:
+    custom_jar_path:
       Name: CUSTOM_JAR_PATH
+      Target: CUSTOM_JAR_PATH
       value: /config/minecraft/minecraft_server.jar
-    ENABLE_WEBUI_AUTH:
+    enable_webui_auth:
       Name: ENABLE_WEBUI_AUTH
+      Target: ENABLE_WEBUI_AUTH
       value: 'yes'
-    ENABLE_WEBUI_CONSOLE:
+    enable_webui_console:
       Name: ENABLE_WEBUI_CONSOLE
+      Target: ENABLE_WEBUI_CONSOLE
       value: 'yes'
-    JAVA_INITIAL_HEAP_SIZE:
+    java_initial_heap_size:
       Name: JAVA_INITIAL_HEAP_SIZE
+      Target: JAVA_INITIAL_HEAP_SIZE
       value: 512M
-    JAVA_MAX_HEAP_SIZE:
+    java_max_heap_size:
       Name: JAVA_MAX_HEAP_SIZE
+      Target: JAVA_MAX_HEAP_SIZE
       value: 1024M
-    JAVA_MAX_THREADS:
+    java_max_threads:
       Name: JAVA_MAX_THREADS
+      Target: JAVA_MAX_THREADS
       value: '1'
-    JAVA_VERSION:
+    java_version:
       Name: JAVA_VERSION
+      Target: JAVA_VERSION
       value: latest
-    PURGE_BACKUP_DAYS:
+    purge_backup_days:
       Name: PURGE_BACKUP_DAYS
+      Target: PURGE_BACKUP_DAYS
       value: '14'
-    STARTUP_CMD:
+    startup_cmd:
       Name: STARTUP_CMD
+      Target: STARTUP_CMD
       value: ''
-    UMASK:
+    umask:
       Name: UMASK
+      Target: UMASK
       value: '000'
-    WEBUI_CONSOLE_TITLE:
+    webui_console_title:
       Name: WEBUI_CONSOLE_TITLE
+      Target: WEBUI_CONSOLE_TITLE
       value: Minecraft Java
-    WEBUI_PASS:
+    webui_pass:
       Name: WEBUI_PASS
+      Target: WEBUI_PASS
       value: ''
-    WEBUI_USER:
+    webui_user:
       Name: WEBUI_USER
+      Target: WEBUI_USER
       value: admin
-Data:
-  Volume:
-    ContainerDir: /config
-    HostDir: /mnt/user/appdata/config
-    Mode: rw
 GitHub: https://github.com/binhex/arch-minecraftserver
 Icon: https://raw.githubusercontent.com/binhex/docker-templates/master/binhex/images/minecraftserver-icon.png
 Keywords:

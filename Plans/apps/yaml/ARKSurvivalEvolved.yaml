@@ -4,7 +4,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    ServerFiles:
+    serverfiles:
       Default: ''
       Description: 'Container Path: /serverdata/serverfiles'
       Display: always
@@ -15,7 +15,7 @@ Config:
       Target: /serverdata/serverfiles
       Type: Path
       value: /mnt/cache/appdata/ark-se
-    SteamCMD:
+    steamcmd:
       Default: ''
       Description: 'Container Path: /serverdata/steamcmd'
       Display: always
@@ -27,7 +27,7 @@ Config:
       Type: Path
       value: /mnt/user/appdata/steamcmd
   Port:
-    RCON TCP:
+    rcontcp:
       Default: ''
       Description: 'Container Port: 27020'
       Display: always
@@ -38,7 +38,7 @@ Config:
       Target: '27020'
       Type: Port
       value: '27020'
-    UDP 1:
+    udp1:
       Default: ''
       Description: UDP Gameport (if you need another port, please delete this entry
         and create a new UDP Port with the required port number, also don't forget
@@ -51,7 +51,7 @@ Config:
       Target: '7777'
       Type: Port
       value: '7777'
-    UDP 2:
+    udp2:
       Default: ''
       Description: 'Container Port: 7778'
       Display: always
@@ -62,7 +62,7 @@ Config:
       Target: '7778'
       Type: Port
       value: '7778'
-    UDP Steam:
+    udpsteam:
       Default: ''
       Description: 'Container Port: 27015'
       Display: always
@@ -74,7 +74,7 @@ Config:
       Type: Port
       value: '27015'
   Variable:
-    Extra Game Parameters:
+    extragameparameters:
       Default: ''
       Description: 'Type in your Extra Game Parameters seperated with a space and
         - (eg: -DisableDeathSpectator -UseBattlEye)'
@@ -86,7 +86,7 @@ Config:
       Target: GAME_PARAMS_EXTRA
       Type: Variable
       value: -server -log
-    GAME_ID:
+    game_id:
       Default: ''
       Description: "The GAME_ID that the container download at startup.\r\nIf you\
         \ want to install a static or beta version of the game change the value to:\
@@ -100,18 +100,7 @@ Config:
       Target: GAME_ID
       Type: Variable
       value: '376030'
-    GID:
-      Default: ''
-      Description: 'Container Variable: GID'
-      Display: advanced-hide
-      Mask: 'false'
-      Mode: ''
-      Name: GID
-      Required: 'true'
-      Target: GID
-      Type: Variable
-      value: '100'
-    Game Parameters:
+    gameparameters:
       Default: ''
       Description: 'Enter your game parameters seperated with ? and start with a ?
         (don''t put spaces in between eg: ?MaxPlayers=40?FastDecayUnsnappedCoreStructures=true)'
@@ -123,7 +112,18 @@ Config:
       Target: GAME_PARAMS
       Type: Variable
       value: ''
-    Map:
+    gid:
+      Default: ''
+      Description: 'Container Variable: GID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: GID
+      Required: 'true'
+      Target: GID
+      Type: Variable
+      value: '100'
+    map:
       Default: TheIsland
       Description: 'Container Variable: MAP'
       Display: always-hide
@@ -134,7 +134,7 @@ Config:
       Target: MAP
       Type: Variable
       value: TheIsland
-    Server Admin Password:
+    serveradminpassword:
       Default: ''
       Description: Leave empty if you want to use the settings from GameUserSettings.ini
         (this field accepts no spaces)
@@ -146,7 +146,7 @@ Config:
       Target: SRV_ADMIN_PWD
       Type: Variable
       value: ''
-    Server Name:
+    servername:
       Default: ''
       Description: Leave empty if you want to use the settings from GameUserSettings.ini
         (this field accepts no spaces)
@@ -158,7 +158,7 @@ Config:
       Target: SERVER_NAME
       Type: Variable
       value: ''
-    Server Password:
+    serverpassword:
       Default: ''
       Description: Leave empty if you want to use the settings from GameUserSettings.ini
         (this field accepts no spaces)
@@ -170,7 +170,7 @@ Config:
       Target: SRV_PWD
       Type: Variable
       value: ''
-    Steam-Password:
+    steam-password:
       Default: ''
       Description: 'Your Steam password goes here if you want to install a game that
         needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
@@ -183,7 +183,7 @@ Config:
       Target: PASSWRD
       Type: Variable
       value: ''
-    Steam-Username:
+    steam-username:
       Default: ''
       Description: 'Your Steam username goes here if you want to install a game that
         needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
@@ -196,7 +196,7 @@ Config:
       Target: USERNAME
       Type: Variable
       value: ''
-    UID:
+    uid:
       Default: ''
       Description: 'Container Variable: UID'
       Display: advanced-hide
@@ -207,7 +207,7 @@ Config:
       Target: UID
       Type: Variable
       value: '99'
-    Validate Installation:
+    validateinstallation:
       Default: ''
       Description: Set the Variable to 'true' if you want to validate the installation
         otherwise leave it blank.

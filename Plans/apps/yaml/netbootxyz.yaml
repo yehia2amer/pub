@@ -13,7 +13,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Appdata:
+    appdata:
       Default: ''
       Description: Storage for boot menu files and web application config
       Display: advanced
@@ -24,7 +24,7 @@ Config:
       Target: /config
       Type: Path
       value: ''
-    'Path: /assets':
+    pathassets:
       Default: ''
       Description: Storage for NETBOOT.XYZ bootable assets (live CDs and other files)
       Display: always
@@ -36,7 +36,7 @@ Config:
       Type: Path
       value: ''
   Port:
-    'Port: 69':
+    port69:
       Default: '69'
       Description: TFTP Port.
       Display: always
@@ -47,7 +47,7 @@ Config:
       Target: '69'
       Type: Port
       value: ''
-    'Port: 80':
+    port80:
       Default: '8080'
       Description: NGINX server for hosting assets.
       Display: always
@@ -58,7 +58,7 @@ Config:
       Target: '80'
       Type: Port
       value: ''
-    WebUI:
+    webui:
       Default: '3000'
       Description: Web configuration interface.
       Display: always
@@ -70,7 +70,7 @@ Config:
       Type: Port
       value: ''
   Variable:
-    MENU_VERSION:
+    menu_version:
       Default: 1.9.9
       Description: Specify a specific version of boot files you want to use from NETBOOT.XYZ
         (unset pulls latest)
@@ -81,7 +81,7 @@ Config:
       Target: MENU_VERSION
       Type: Variable
       value: ''
-    PGID:
+    pgid:
       Default: '100'
       Description: 'Container Variable: PGID'
       Display: advanced
@@ -91,7 +91,7 @@ Config:
       Target: PGID
       Type: Variable
       value: ''
-    PORT_RANGE:
+    port_range:
       Default: 30000:30010
       Description: Specify the port range tftp will use for data transfers (see Wikipedia)(https://en.wikipedia.org/wiki/Trivial_File_Transfer_Protocol#Details)
       Display: always
@@ -101,7 +101,7 @@ Config:
       Target: PORT_RANGE
       Type: Variable
       value: ''
-    PUID:
+    puid:
       Default: '99'
       Description: 'Container Variable: PUID'
       Display: advanced
@@ -111,7 +111,7 @@ Config:
       Target: PUID
       Type: Variable
       value: ''
-    SUBFOLDER:
+    subfolder:
       Default: /
       Description: Specify a sobfolder if running this behind a reverse proxy (IE
         /proxy/)
@@ -122,7 +122,7 @@ Config:
       Target: SUBFOLDER
       Type: Variable
       value: ''
-    UMASK:
+    umask:
       Default: '022'
       Description: 'Container Variable: UMASK'
       Display: advanced

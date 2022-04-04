@@ -6,7 +6,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    AppData Config Path:
+    appdataconfigpath:
       Default: /mnt/user/appdata/jitsi/web/
       Description: IMPORTENT Change to /mnt/user/appdata/jitsi/web/
       Display: always
@@ -17,7 +17,7 @@ Config:
       Target: /config
       Type: Path
       value: /mnt/user/appdata/jitsi/web/
-    LetsEncrypt:
+    letsencrypt:
       Default: /mnt/user/appdata/jitsi/web/letsencrypt/
       Description: 'Container Path: /etc/letsencrypt'
       Display: always
@@ -28,7 +28,7 @@ Config:
       Target: /etc/letsencrypt
       Type: Path
       value: /mnt/user/appdata/jitsi/web/letsencrypt/
-    Transcripts:
+    transcripts:
       Default: /mnt/user/appdata/jitsi/transcripts/
       Description: 'Container Path: /usr/share/jitsi-meet/transcripts'
       Display: always
@@ -40,7 +40,7 @@ Config:
       Type: Path
       value: /mnt/user/appdata/jitsi/transcripts/
   Port:
-    HTTP:
+    http:
       Default: '80'
       Description: HTTP
       Display: always
@@ -51,7 +51,7 @@ Config:
       Target: '80'
       Type: Port
       value: '8000'
-    HTTPS:
+    https:
       Default: '443'
       Description: HTTPS
       Display: always
@@ -63,7 +63,7 @@ Config:
       Type: Port
       value: '4443'
   Variable:
-    DISABLE_HTTPS:
+    disable_https:
       Default: '1'
       Description: Handle TLS connections outside of this setup
       Display: always
@@ -74,7 +74,7 @@ Config:
       Target: DISABLE_HTTPS
       Type: Variable
       value: '1'
-    ENABLE_AUTH:
+    enable_auth:
       Default: '1'
       Description: 'Enable authentication: 0 OR 1'
       Display: always
@@ -85,7 +85,7 @@ Config:
       Target: ENABLE_AUTH
       Type: Variable
       value: '1'
-    ENABLE_GUESTS:
+    enable_guests:
       Default: '1'
       Description: 'Enable guest access: 0 OR 1'
       Display: always
@@ -96,7 +96,7 @@ Config:
       Target: ENABLE_GUESTS
       Type: Variable
       value: '1'
-    ENABLE_HTTP_REDIRECT:
+    enable_http_redirect:
       Default: '0'
       Description: 'Redirect HTTP traffic to HTTPS (necessary for Let''s Encrypt):
         0 OR 1'
@@ -108,7 +108,7 @@ Config:
       Target: ENABLE_HTTP_REDIRECT
       Type: Variable
       value: '1'
-    ENABLE_LETSENCRYPT:
+    enable_letsencrypt:
       Default: '0'
       Description: 'Enable Let''s Encrypt certificate generation: 0 OR 1'
       Display: always
@@ -119,7 +119,7 @@ Config:
       Target: ENABLE_LETSENCRYPT
       Type: Variable
       value: '1'
-    ENABLE_RECORDING:
+    enable_recording:
       Default: '1'
       Description: Enable recording conference to local disk
       Display: always
@@ -130,7 +130,7 @@ Config:
       Target: ENABLE_RECORDING
       Type: Variable
       value: '1'
-    ENABLE_TRANSCRIPTIONS:
+    enable_transcriptions:
       Default: '1'
       Description: Enable Jigasi transcription in a conference
       Display: always
@@ -141,7 +141,7 @@ Config:
       Target: ENABLE_TRANSCRIPTIONS
       Type: Variable
       value: '1'
-    ETHERPAD_URL_BASE:
+    etherpad_url_base:
       Default: http://etherpad.meet.jitsi:9001
       Description: Set etherpad-lite URL
       Display: always
@@ -152,7 +152,7 @@ Config:
       Target: ETHERPAD_URL_BASE
       Type: Variable
       value: http://etherpad.meet.jitsi:9001
-    JIBRI_BREWERY_MUC:
+    jibri_brewery_muc:
       Default: jibribrewery
       Description: MUC name for the Jibri pool
       Display: always
@@ -163,7 +163,7 @@ Config:
       Target: JIBRI_BREWERY_MUC
       Type: Variable
       value: jibribrewery
-    JIBRI_PENDING_TIMEOUT:
+    jibri_pending_timeout:
       Default: '90'
       Description: MUC connection timeout
       Display: always
@@ -174,7 +174,7 @@ Config:
       Target: JIBRI_PENDING_TIMEOUT
       Type: Variable
       value: '90'
-    JIBRI_RECORDER_PASSWORD:
+    jibri_recorder_password:
       Default: passw0rd
       Description: Internal recorder password for Jibri client connections
       Display: always
@@ -185,7 +185,7 @@ Config:
       Target: JIBRI_RECORDER_PASSWORD
       Type: Variable
       value: passw0rd
-    JIBRI_RECORDER_USER:
+    jibri_recorder_user:
       Default: recorder
       Description: Internal recorder user for Jibri client connections
       Display: always
@@ -196,7 +196,7 @@ Config:
       Target: JIBRI_RECORDER_USER
       Type: Variable
       value: recorder
-    JIBRI_XMPP_PASSWORD:
+    jibri_xmpp_password:
       Default: passw0rd
       Description: Internal password for Jibri client connections.
       Display: always
@@ -207,7 +207,7 @@ Config:
       Target: JIBRI_XMPP_PASSWORD
       Type: Variable
       value: passw0rd
-    JIBRI_XMPP_USER:
+    jibri_xmpp_user:
       Default: jibri
       Description: Internal user for Jibri client connections.
       Display: always
@@ -218,7 +218,7 @@ Config:
       Target: JIBRI_XMPP_USER
       Type: Variable
       value: jibri
-    JICOFO_AUTH_USER:
+    jicofo_auth_user:
       Default: focus
       Description: XMPP user for Jicofo client connections
       Display: always
@@ -229,7 +229,7 @@ Config:
       Target: JICOFO_AUTH_USER
       Type: Variable
       value: focus
-    LETSENCRYPT_DOMAIN:
+    letsencrypt_domain:
       Default: meet.example.com
       Description: Domain for which to generate the certificate
       Display: always
@@ -240,7 +240,7 @@ Config:
       Target: LETSENCRYPT_DOMAIN
       Type: Variable
       value: meet.example.com
-    LETSENCRYPT_EMAIL:
+    letsencrypt_email:
       Default: alice@atlanta.net
       Description: "E-Mail for receiving important account notifications (mandatory)\
         \ \t"
@@ -252,7 +252,7 @@ Config:
       Target: LETSENCRYPT_EMAIL
       Type: Variable
       value: user@example.com
-    PUBLIC_URL:
+    public_url:
       Default: https://meet.example.com
       Description: Public URL for the web service
       Display: always
@@ -263,7 +263,7 @@ Config:
       Target: PUBLIC_URL
       Type: Variable
       value: https://meet.example.com
-    XMPP_BOSH_URL_BASE:
+    xmpp_bosh_url_base:
       Default: http://xmpp.meet.jitsi:5280
       Description: Internal XMPP server URL for BOSH module
       Display: always
@@ -274,7 +274,7 @@ Config:
       Target: XMPP_BOSH_URL_BASE
       Type: Variable
       value: http://xmpp.meet.jitsi:5280
-    XMPP_DOMAIN:
+    xmpp_domain:
       Default: meet.jitsi
       Description: Internal XMPP domain
       Display: always
@@ -285,7 +285,7 @@ Config:
       Target: XMPP_DOMAIN
       Type: Variable
       value: meet.jitsi
-    XMPP_GUEST_DOMAIN:
+    xmpp_guest_domain:
       Default: guest.meet.jitsi
       Description: XMPP domain for unauthenticated users
       Display: always
@@ -296,7 +296,7 @@ Config:
       Target: XMPP_GUEST_DOMAIN
       Type: Variable
       value: guest.meet.jitsi
-    XMPP_MUC_DOMAIN:
+    xmpp_muc_domain:
       Default: muc.meet.jitsi
       Description: XMPP domain for the MUC
       Display: always
@@ -307,7 +307,7 @@ Config:
       Target: XMPP_MUC_DOMAIN
       Type: Variable
       value: muc.meet.jitsi
-    XMPP_RECORDER_DOMAIN:
+    xmpp_recorder_domain:
       Default: recorder.meet.jitsi
       Description: Domain for the jibri recorder
       Display: always

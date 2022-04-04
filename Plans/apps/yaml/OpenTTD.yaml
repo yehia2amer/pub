@@ -4,7 +4,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    ServerFiles:
+    serverfiles:
       Default: ''
       Description: 'Container Path: /serverdata/serverfiles'
       Display: always
@@ -16,7 +16,7 @@ Config:
       Type: Path
       value: /mnt/cache/appdata/openttd
   Port:
-    TCP - Game Port:
+    tcp-gameport:
       Default: ''
       Description: 'Container Port: 3979'
       Display: always
@@ -27,7 +27,7 @@ Config:
       Target: '3979'
       Type: Port
       value: '3979'
-    TCP - WebConsole:
+    tcp-webconsole:
       Default: ''
       Description: 'WebConsole (by default, you can connect to the OpenTTD console
         by opening your browser and go to HOSTIP:9015 - eg: 192.168.1.1:9015 - or
@@ -40,7 +40,7 @@ Config:
       Target: '8080'
       Type: Port
       value: '9015'
-    UDP - Game Port:
+    udp-gameport:
       Default: ''
       Description: 'Container Port: 3979'
       Display: always
@@ -52,7 +52,7 @@ Config:
       Type: Port
       value: '3979'
   Variable:
-    GAME_PARAMS:
+    game_params:
       Default: ''
       Description: 'To load the last autosavegame you MUST specifie the following
         in the GAME_PARAMETERS variable: ''-g /serverdata/serverfiles/.local/share/openttd/save/autosave/autosave0.sav'''
@@ -64,18 +64,7 @@ Config:
       Target: GAME_PARAMS
       Type: Variable
       value: ''
-    GID:
-      Default: ''
-      Description: 'Container Variable: GID'
-      Display: advanced-hide
-      Mask: 'false'
-      Mode: ''
-      Name: GID
-      Required: 'true'
-      Target: GID
-      Type: Variable
-      value: '100'
-    Game Version to Install:
+    gameversiontoinstall:
       Default: ''
       Description: 'Define the prefered game version (eg: ''1.10.3'' without quotes)
         or set to ''latest'' (without quotes) to pull the newest build.'
@@ -87,7 +76,18 @@ Config:
       Target: GAME_VERSION
       Type: Variable
       value: latest
-    OpenGFX Version:
+    gid:
+      Default: ''
+      Description: 'Container Variable: GID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: GID
+      Required: 'true'
+      Target: GID
+      Type: Variable
+      value: '100'
+    opengfxversion:
       Default: ''
       Description: 'Define the prefered OpenGFX version (eg: ''0.6.0'' without quotes)
         or set to ''latest'' (without quotes) to pull the newest build.'
@@ -99,7 +99,7 @@ Config:
       Target: GFX_PK_V
       Type: Variable
       value: latest
-    UID:
+    uid:
       Default: ''
       Description: 'Container Variable: UID'
       Display: advanced-hide

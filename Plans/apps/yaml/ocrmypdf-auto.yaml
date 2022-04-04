@@ -4,7 +4,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Config Directory:
+    configdirectory:
       Default: /mnt/user/appdata/ocrmypdf-auto
       Description: 'Config/appdata directory. &lt;em&gt;Container path: &lt;code&gt;/config&lt;/code&gt;&lt;/em&gt;'
       Display: always
@@ -15,7 +15,7 @@ Config:
       Target: /config
       Type: Path
       value: /mnt/user/appdata/ocrmypdf-auto
-    Input Directory:
+    inputdirectory:
       Default: ''
       Description: 'Input directory from which to process files for OCR. &lt;em&gt;Container
         path: &lt;code&gt;/input&lt;/code&gt;&lt;/em&gt;'
@@ -27,7 +27,7 @@ Config:
       Target: /input
       Type: Path
       value: ''
-    Output Directory:
+    outputdirectory:
       Default: ''
       Description: 'Output directory to which post-OCR files will be written. &lt;em&gt;Container
         path: &lt;code&gt;/output&lt;/code&gt;&lt;/em&gt;'
@@ -41,7 +41,7 @@ Config:
       value: ''
   Port: {}
   Variable:
-    Action On Success:
+    actiononsuccess:
       Default: NOTHING
       Description: 'Controls the action (if any) to perform after successful OCR processing:
         &lt;br /&gt; &lt;code&gt;NOTHING&lt;/code&gt; - (Default) Do nothing. Input
@@ -58,7 +58,7 @@ Config:
       Target: OCR_ACTION_ON_SUCCESS
       Type: Variable
       value: NOTHING
-    Additional Languages:
+    additionallanguages:
       Default: ''
       Description: 'Additional languages (besides English) to install, given as a
         space-separated list of language abbreviations. All available languages can
@@ -73,7 +73,7 @@ Config:
       Target: OCR_LANGUAGES
       Type: Variable
       value: ''
-    GID Override:
+    gidoverride:
       Default: '100'
       Description: Set the primary GID that the OCR tools will run with. unRAID standard
         is 100.
@@ -85,7 +85,7 @@ Config:
       Target: USERMAP_GID
       Type: Variable
       value: '100'
-    Notify URL:
+    notifyurl:
       Default: ''
       Description: 'On a successful completion, a POST will be made to the given URL,
         with a JSON payload of &lt;code&gt;{''pdf'': ''/output/doc.pdf'', ''txt'':
@@ -101,7 +101,7 @@ Config:
       Target: OCR_NOTIFY_URL
       Type: Variable
       value: ''
-    Output Mode:
+    outputmode:
       Default: MIRROR_TREE
       Description: 'Controls the output directory layout: &lt;br /&gt; &lt;code&gt;MIRROR_TREE&lt;/code&gt;
         - (Default) Mirror the directory structure of the input directory, i.e. for
@@ -117,7 +117,7 @@ Config:
       Target: OCR_OUTPUT_MODE
       Type: Variable
       value: MIRROR_TREE
-    Process Existing on Startup:
+    processexistingonstartup:
       Default: '0'
       Description: Set to &lt;code&gt;1&lt;/code&gt; to enable processing of any files
         in the input directory when the container is launched. &lt;br/&gt; Set to
@@ -131,7 +131,7 @@ Config:
       Target: OCR_PROCESS_EXISTING_ON_START
       Type: Variable
       value: '0'
-    UID Override:
+    uidoverride:
       Default: '99'
       Description: Set the UID that the OCR tools will run as. unRAID standard is
         99.
@@ -143,7 +143,7 @@ Config:
       Target: USERMAP_UID
       Type: Variable
       value: '99'
-    Verbosity:
+    verbosity:
       Default: ''
       Description: Control the verbosity of debug logging. Accepts python &lt;code&gt;logging&lt;/code&gt;
         levels, e.g. &lt;code&gt;warn&lt;/code&gt; (Default), &lt;code&gt;info&lt;/code&gt;,

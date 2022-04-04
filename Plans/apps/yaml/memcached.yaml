@@ -5,7 +5,7 @@ Config:
   Label: {}
   Path: {}
   Port:
-    Port:
+    port:
       Default: '11211'
       Description: Port
       Display: always
@@ -17,18 +17,7 @@ Config:
       Type: Port
       value: '11211'
   Variable:
-    Memcache Password:
-      Default: ''
-      Description: 'Memcache Password if you want authentication '
-      Display: always
-      Mask: 'false'
-      Mode: ''
-      Name: Memcache Password
-      Required: 'false'
-      Target: MEMCACHED_PASSWORD
-      Type: Variable
-      value: ''
-    Memcached Username:
+    memcachedusername:
       Default: ''
       Description: 'Memcached Username if you want authentication '
       Display: always
@@ -37,6 +26,17 @@ Config:
       Name: Memcached Username
       Required: 'false'
       Target: MEMCACHED_USERNAME
+      Type: Variable
+      value: ''
+    memcachepassword:
+      Default: ''
+      Description: 'Memcache Password if you want authentication '
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Memcache Password
+      Required: 'false'
+      Target: MEMCACHED_PASSWORD
       Type: Variable
       value: ''
 Icon: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/memcached.png

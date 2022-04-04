@@ -4,41 +4,50 @@ CategoryList: &id001
 Config:
   Device: {}
   Label: {}
-  Path: {}
+  Path:
+    minecraftbedrockserver:
+      Mode: rw
+      Name: config
+      Target: /config
+      value: /mnt/user/appdata/config
   Port: {}
   Variable:
-    CREATE_BACKUP_HOURS:
+    create_backup_hours:
       Name: CREATE_BACKUP_HOURS
+      Target: CREATE_BACKUP_HOURS
       value: '12'
-    ENABLE_WEBUI_AUTH:
+    enable_webui_auth:
       Name: ENABLE_WEBUI_AUTH
+      Target: ENABLE_WEBUI_AUTH
       value: 'yes'
-    ENABLE_WEBUI_CONSOLE:
+    enable_webui_console:
       Name: ENABLE_WEBUI_CONSOLE
+      Target: ENABLE_WEBUI_CONSOLE
       value: 'yes'
-    PURGE_BACKUP_DAYS:
+    purge_backup_days:
       Name: PURGE_BACKUP_DAYS
+      Target: PURGE_BACKUP_DAYS
       value: '14'
-    STARTUP_CMD:
+    startup_cmd:
       Name: STARTUP_CMD
+      Target: STARTUP_CMD
       value: ''
-    UMASK:
+    umask:
       Name: UMASK
+      Target: UMASK
       value: '000'
-    WEBUI_CONSOLE_TITLE:
+    webui_console_title:
       Name: WEBUI_CONSOLE_TITLE
+      Target: WEBUI_CONSOLE_TITLE
       value: Minecraft Bedrock
-    WEBUI_PASS:
+    webui_pass:
       Name: WEBUI_PASS
+      Target: WEBUI_PASS
       value: ''
-    WEBUI_USER:
+    webui_user:
       Name: WEBUI_USER
+      Target: WEBUI_USER
       value: admin
-Data:
-  Volume:
-    ContainerDir: /config
-    HostDir: /mnt/user/appdata/config
-    Mode: rw
 GitHub: https://github.com/binhex/arch-minecraftbedrockserver
 Icon: https://raw.githubusercontent.com/binhex/docker-templates/master/binhex/images/minecraftbedrockserver-icon.png
 Keywords:

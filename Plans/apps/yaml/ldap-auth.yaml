@@ -7,7 +7,7 @@ Config:
   Label: {}
   Path: {}
   Port:
-    'Port: 9000':
+    port9000:
       Default: '9000'
       Description: the port for ldap login page
       Display: always
@@ -18,7 +18,7 @@ Config:
       Target: '9000'
       Type: Port
       value: ''
-    WebUI:
+    webui:
       Default: '8888'
       Description: the port for ldap auth daemon
       Display: always
@@ -30,7 +30,7 @@ Config:
       Type: Port
       value: ''
   Variable:
-    CERTFILE:
+    certfile:
       Default: ''
       Description: Point this to a certificate file to enable HTTP over SSL (HTTPS)
         for the ldap auth daemon
@@ -41,7 +41,7 @@ Config:
       Target: CERTFILE
       Type: Variable
       value: ''
-    FERNETKEY:
+    fernetkey:
       Default: ''
       Description: Optionally define a custom fernet key, has to be base64-encoded
         32-byte (only needed if container is frequently recreated, or if using multi-node
@@ -53,7 +53,7 @@ Config:
       Target: FERNETKEY
       Type: Variable
       value: ''
-    KEYFILE:
+    keyfile:
       Default: ''
       Description: Point this to the private key file, matching the certificate file
         referred to in CERTFILE
@@ -64,7 +64,7 @@ Config:
       Target: KEYFILE
       Type: Variable
       value: ''
-    PGID:
+    pgid:
       Default: '100'
       Description: 'Container Variable: PGID'
       Display: advanced
@@ -74,7 +74,7 @@ Config:
       Target: PGID
       Type: Variable
       value: ''
-    PUID:
+    puid:
       Default: '99'
       Description: 'Container Variable: PUID'
       Display: advanced
@@ -84,7 +84,7 @@ Config:
       Target: PUID
       Type: Variable
       value: ''
-    UMASK:
+    umask:
       Default: '022'
       Description: 'Container Variable: UMASK'
       Display: advanced

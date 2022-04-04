@@ -7,7 +7,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Appdata:
+    appdata:
       Default: ''
       Description: Contains the db itself and all assorted settings.
       Display: advanced
@@ -19,7 +19,7 @@ Config:
       Type: Path
       value: ''
   Port:
-    WebUI:
+    webui:
       Default: '3306'
       Description: Mariadb listens on this port.
       Display: always
@@ -31,7 +31,7 @@ Config:
       Type: Port
       value: ''
   Variable:
-    MYSQL_DATABASE:
+    mysql_database:
       Default: USER_DB_NAME
       Description: Specify the name of a database to be created on image startup.
       Display: always
@@ -41,7 +41,7 @@ Config:
       Target: MYSQL_DATABASE
       Type: Variable
       value: ''
-    MYSQL_PASSWORD:
+    mysql_password:
       Default: DATABASE_PASSWORD
       Description: Set this to the password you want to use for you MYSQL_USER (minimum
         4 characters).
@@ -52,7 +52,7 @@ Config:
       Target: MYSQL_PASSWORD
       Type: Variable
       value: ''
-    MYSQL_ROOT_PASSWORD:
+    mysql_root_password:
       Default: ROOT_ACCESS_PASSWORD
       Description: Set this to root password for installation (minimum 4 characters).
       Display: always
@@ -62,7 +62,7 @@ Config:
       Target: MYSQL_ROOT_PASSWORD
       Type: Variable
       value: ''
-    MYSQL_USER:
+    mysql_user:
       Default: MYSQL_USER
       Description: This user will have superuser access to the database specified
         by MYSQL_DATABASE (do not use root here).
@@ -73,7 +73,7 @@ Config:
       Target: MYSQL_USER
       Type: Variable
       value: ''
-    PGID:
+    pgid:
       Default: '100'
       Description: 'Container Variable: PGID'
       Display: advanced
@@ -83,7 +83,7 @@ Config:
       Target: PGID
       Type: Variable
       value: ''
-    PUID:
+    puid:
       Default: '99'
       Description: 'Container Variable: PUID'
       Display: advanced
@@ -93,7 +93,7 @@ Config:
       Target: PUID
       Type: Variable
       value: ''
-    REMOTE_SQL:
+    remote_sql:
       Default: http://URL1/your.sql,https://URL2/your.sql
       Description: Set this to ingest sql files from an http/https endpoint (comma
         seperated array).
@@ -104,7 +104,7 @@ Config:
       Target: REMOTE_SQL
       Type: Variable
       value: ''
-    UMASK:
+    umask:
       Default: '022'
       Description: 'Container Variable: UMASK'
       Display: advanced

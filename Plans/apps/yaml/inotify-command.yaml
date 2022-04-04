@@ -4,23 +4,21 @@ CategoryList: &id001
 Config:
   Device: {}
   Label: {}
-  Path: {}
+  Path:
+    inotify-command:
+      Mode: rw
+      Name: dir1
+      Target: /dir1
   Port: {}
   Variable:
-    GMAP:
+    gmap:
       Name: GMAP
+      Target: GMAP
       value: users:100
-    UMAP:
+    umap:
       Name: UMAP
+      Target: UMAP
       value: nobody:99:100
-Data:
-  Volume:
-  - ContainerDir: /config
-    HostDir: ''
-    Mode: rw
-  - ContainerDir: /dir1
-    HostDir: ''
-    Mode: rw
 GitHub: https://github.com/coppit/docker-inotify-command
 Icon: https://raw.githubusercontent.com/coppit/docker-inotify-command/master/terminal-icon.png
 Keywords:

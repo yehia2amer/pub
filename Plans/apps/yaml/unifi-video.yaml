@@ -5,17 +5,14 @@ CategoryList: &id001
 Config:
   Device: {}
   Label: {}
-  Path: {}
+  Path:
+    unifi-video:
+      Mode: rw
+      Name: videos
+      Target: /var/lib/unifi-video/videos
+      value: /mnt/user/UnfiVideoShareForStorage
   Port: {}
   Variable: {}
-Data:
-  Volume:
-  - ContainerDir: /var/lib/unifi-video
-    HostDir: /mnt/cache/appdata/unifi-video/
-    Mode: rw
-  - ContainerDir: /var/lib/unifi-video/videos
-    HostDir: /mnt/user/UnfiVideoShareForStorage
-    Mode: rw
 Icon: https://i.imgur.com/dD9ub3n.png
 Keywords:
 - unifi-video

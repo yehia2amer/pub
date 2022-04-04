@@ -4,7 +4,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    ServerFiles:
+    serverfiles:
       Default: ''
       Description: 'Container Path: /serverdata/serverfiles'
       Display: always
@@ -15,7 +15,7 @@ Config:
       Target: /serverdata/serverfiles
       Type: Path
       value: /mnt/cache/appdata/rust
-    SteamCMD:
+    steamcmd:
       Default: ''
       Description: 'Container Path: /serverdata/steamcmd'
       Display: always
@@ -27,7 +27,7 @@ Config:
       Type: Path
       value: /mnt/user/appdata/steamcmd
   Port:
-    UDP:
+    udp:
       Default: ''
       Description: UDP Gameport (if you need another port, please delete this entry
         and create a new UDP Port with the required port number, also don't forget
@@ -41,7 +41,7 @@ Config:
       Type: Port
       value: '28015'
   Variable:
-    Enable Oxide Mod:
+    enableoxidemod:
       Default: ''
       Description: Set to 'true' (without quotes) to enable Oxide Mod, otherwise leave
         empty (the container will check on every start/restart if there is a newer
@@ -54,7 +54,7 @@ Config:
       Target: OXIDE_MOD
       Type: Variable
       value: ''
-    GAME_ID:
+    game_id:
       Default: ''
       Description: 'The GAME_ID that the container downloads at startup. If you want
         to use a beta version of the game enter this: ''258550 -beta staging'' or
@@ -67,7 +67,7 @@ Config:
       Target: GAME_ID
       Type: Variable
       value: '258550'
-    GAME_PORT:
+    game_port:
       Default: ''
       Description: Game port on which the server is running (has to match the port
         mapping in your container).
@@ -79,18 +79,7 @@ Config:
       Target: GAME_PORT
       Type: Variable
       value: '28015'
-    GID:
-      Default: ''
-      Description: 'Container Variable: GID'
-      Display: advanced-hide
-      Mask: 'false'
-      Mode: ''
-      Name: GID
-      Required: 'true'
-      Target: GID
-      Type: Variable
-      value: '100'
-    Game Parameters:
+    gameparameters:
       Default: ''
       Description: 'Enter here your extra game startup parameters if needed starting
         with (eg: ''+rcon.port 27016 +rcon.password YOURPASSWORD'' don''t forget to
@@ -104,7 +93,18 @@ Config:
       Target: GAME_PARAMS
       Type: Variable
       value: +server.maxplayers 10
-    Server Description:
+    gid:
+      Default: ''
+      Description: 'Container Variable: GID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: GID
+      Required: 'true'
+      Target: GID
+      Type: Variable
+      value: '100'
+    serverdescription:
       Default: ''
       Description: Server Description goes here
       Display: always
@@ -115,7 +115,7 @@ Config:
       Target: SERVER_DISCRIPTION
       Type: Variable
       value: Simple Unraid Rust Docker Server
-    Server Name:
+    servername:
       Default: ''
       Description: Name of the Server goes here
       Display: always
@@ -126,7 +126,7 @@ Config:
       Target: SERVER_NAME
       Type: Variable
       value: RustDockerServer
-    Steam-Password:
+    steam-password:
       Default: ''
       Description: 'Your Steam password goes here if you want to install a game that
         needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
@@ -139,7 +139,7 @@ Config:
       Target: PASSWRD
       Type: Variable
       value: ''
-    Steam-Username:
+    steam-username:
       Default: ''
       Description: 'Your Steam password goes here if you want to install a game that
         needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
@@ -152,7 +152,7 @@ Config:
       Target: USERNAME
       Type: Variable
       value: ''
-    UID:
+    uid:
       Default: ''
       Description: 'Container Variable: UID'
       Display: advanced-hide
@@ -163,7 +163,7 @@ Config:
       Target: UID
       Type: Variable
       value: '99'
-    Validate Installation:
+    validateinstallation:
       Default: ''
       Description: Set the Variable to 'true' if you want to validate the installation
         otherwise leave it blank.

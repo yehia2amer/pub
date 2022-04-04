@@ -8,7 +8,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Database:
+    database:
       Default: /mnt/user/appdata/derbynet_server/data/
       Description: 'Container Path: /var/lib/derbynet'
       Display: always
@@ -20,7 +20,7 @@ Config:
       Type: Path
       value: /mnt/cache/appdata/derbynet_server/data
   Port:
-    Secure Webserver Port (Self Signed Certs):
+    securewebserverport(selfsignedcerts):
       Default: '8051'
       Description: 'The docker has a secure webportal but the certificates are self
         signed.  '
@@ -32,7 +32,7 @@ Config:
       Target: '443'
       Type: Port
       value: '8051'
-    Webserver Port:
+    webserverport:
       Default: '8050'
       Description: 'Container Port: 80'
       Display: always
@@ -44,7 +44,7 @@ Config:
       Type: Port
       value: '8050'
   Variable:
-    PGID:
+    pgid:
       Default: '100'
       Description: 'Container Variable: PGID'
       Display: advanced
@@ -55,18 +55,7 @@ Config:
       Target: PGID
       Type: Variable
       value: '100'
-    PUID:
-      Default: '99'
-      Description: 'Container Variable: PUID'
-      Display: advanced
-      Mask: 'false'
-      Mode: ''
-      Name: PUID
-      Required: 'true'
-      Target: PUID
-      Type: Variable
-      value: '99'
-    Photo Password:
+    photopassword:
       Default: flashbulb
       Description: "You can upload photos to the web server via HTTP, using the Photo\
         \ role. The default password for the Photo role is \u201Cflashbulb.\u201D\r\
@@ -80,7 +69,18 @@ Config:
       Target: PHOTO_PASSWORD
       Type: Variable
       value: flashbulb
-    Race Coordinator Password:
+    puid:
+      Default: '99'
+      Description: 'Container Variable: PUID'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PUID
+      Required: 'true'
+      Target: PUID
+      Type: Variable
+      value: '99'
+    racecoordinatorpassword:
       Default: doyourbest
       Description: "RaceCoordinator, password default is \u201Cdoyourbest\u201D \r\
         \n\r\nThis role can do anything at all."
@@ -92,7 +92,7 @@ Config:
       Target: RACE_COORD_PASSWORD
       Type: Variable
       value: doyourbest
-    Race Crew Password:
+    racecrewpassword:
       Default: murphy
       Description: "RaceCrew, password \u201Cmurphy\u201D (as in Don Murphy, not Murphy\u2019\
         s Law): this role can do things\r\nlike check racers in, but not erase the\
@@ -105,7 +105,7 @@ Config:
       Target: RACE_CREW_PASSWORD
       Type: Variable
       value: murphy
-    Timer Password:
+    timerpassword:
       Default: ''
       Description: "The Timer role is intended for use by the derby-timer.jar program\
         \ running on the remote timer device connected to the track (raspberrypi).\

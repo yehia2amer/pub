@@ -6,7 +6,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    App FMD2 Internal DB:
+    appfmd2internaldb:
       Default: /mnt/user/appdata/fmd2-wine/data
       Description: 'Container Path: /app/FMD2/data'
       Display: always
@@ -17,7 +17,7 @@ Config:
       Target: /app/FMD2/data
       Type: Path
       value: /mnt/user/appdata/fmd2-wine/data
-    App LUA Modules Path:
+    appluamodulespath:
       Default: /mnt/user/appdata/fmd2-wine/lua
       Description: 'Container Path: /app/FMD2/lua'
       Display: always
@@ -28,18 +28,7 @@ Config:
       Target: /app/FMD2/lua
       Type: Path
       value: /mnt/user/appdata/fmd2-wine/lua
-    App Wine Config:
-      Default: /mnt/user/appdata/fmd2-wine/wine
-      Description: 'Container Path: /config/.wine'
-      Display: always
-      Mask: 'false'
-      Mode: rw
-      Name: App Wine Config
-      Required: 'true'
-      Target: /config/.wine
-      Type: Path
-      value: /mnt/user/appdata/fmd2-wine/wine
-    App userdata:
+    appuserdata:
       Default: /mnt/user/appdata/fmd2-wine/userdata
       Description: 'Container Path: /app/FMD2/userdata'
       Display: always
@@ -50,7 +39,18 @@ Config:
       Target: /app/FMD2/userdata
       Type: Path
       value: /mnt/user/appdata/fmd2-wine/userdata
-    Download Directory:
+    appwineconfig:
+      Default: /mnt/user/appdata/fmd2-wine/wine
+      Description: 'Container Path: /config/.wine'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: App Wine Config
+      Required: 'true'
+      Target: /config/.wine
+      Type: Path
+      value: /mnt/user/appdata/fmd2-wine/wine
+    downloaddirectory:
       Default: ''
       Description: 'Container Path: /downloads'
       Display: always
@@ -62,7 +62,7 @@ Config:
       Type: Path
       value: ''
   Port:
-    WebUI:
+    webui:
       Default: '6080'
       Description: 'Container Port: 6080'
       Display: always
@@ -74,7 +74,7 @@ Config:
       Type: Port
       value: '6080'
   Variable:
-    PGID:
+    pgid:
       Default: '100'
       Description: 'Container Variable: PGID'
       Display: advanced
@@ -85,7 +85,7 @@ Config:
       Target: PGID
       Type: Variable
       value: '100'
-    PUID:
+    puid:
       Default: '99'
       Description: 'Container Variable: PUID'
       Display: advanced
@@ -96,7 +96,7 @@ Config:
       Target: PUID
       Type: Variable
       value: '99'
-    TZ:
+    tz:
       Default: ''
       Description: Set your Time Zone here (e.g. Europe/Berlin)
       Display: advanced
@@ -107,7 +107,7 @@ Config:
       Target: TZ
       Type: Variable
       value: ''
-    UMASK:
+    umask:
       Default: '002'
       Description: 'Container Variable: UMASK'
       Display: advanced

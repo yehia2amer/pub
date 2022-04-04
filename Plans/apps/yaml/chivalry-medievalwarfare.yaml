@@ -4,7 +4,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    ServerFiles:
+    serverfiles:
       Default: ''
       Description: 'Container Path: /serverdata/serverfiles'
       Display: always
@@ -15,7 +15,7 @@ Config:
       Target: /serverdata/serverfiles
       Type: Path
       value: /mnt/cache/appdata/chivalrymw
-    SteamCMD:
+    steamcmd:
       Default: ''
       Description: 'Container Path: /serverdata/steamcmd'
       Display: always
@@ -27,7 +27,7 @@ Config:
       Type: Path
       value: /mnt/user/appdata/steamcmd
   Port:
-    UDP1 - GamePort:
+    udp1-gameport:
       Default: ''
       Description: UDP Gameport (if you need another port, please delete this entry
         and create a new UDP Port with the required port number, also don't forget
@@ -40,7 +40,7 @@ Config:
       Target: '7000'
       Type: Port
       value: '7000'
-    UDP2 - GameQueryPort:
+    udp2-gamequeryport:
       Default: ''
       Description: UDP Gamequeryport (if you need another port, please delete this
         entry and create a new UDP Port with the required port number, also don't
@@ -53,7 +53,7 @@ Config:
       Target: '7010'
       Type: Port
       value: '7010'
-    UDP3 - SteamQueryPort:
+    udp3-steamqueryport:
       Default: ''
       Description: UDP Steamqueryport (if you need another port, please delete this
         entry and create a new UDP Port with the required port number, also don't
@@ -67,7 +67,7 @@ Config:
       Type: Port
       value: '27015'
   Variable:
-    Extra Game Parameters:
+    extragameparameters:
       Default: ''
       Description: 'Type in your Extra Game Parameters seperated with a space and
         - (eg: -seekfreeloadingserver)'
@@ -79,7 +79,7 @@ Config:
       Target: GAME_PARAMS_EXTRA
       Type: Variable
       value: -seekfreeloadingserver
-    GAME_ID:
+    game_id:
       Default: ''
       Description: "The GAME_ID that the container download at startup.\r\n(https://developer.valvesoftware.com/wiki/Dedicated_Servers_List)"
       Display: always
@@ -90,18 +90,7 @@ Config:
       Target: GAME_ID
       Type: Variable
       value: '220070'
-    GID:
-      Default: ''
-      Description: 'Container Variable: GID'
-      Display: advanced-hide
-      Mask: 'false'
-      Mode: ''
-      Name: GID
-      Required: 'true'
-      Target: GID
-      Type: Variable
-      value: '100'
-    Game Parameters:
+    gameparameters:
       Default: ''
       Description: 'Enter your game parameters seperated with ? and start with a ?
         (don''t put spaces in between eg: ?port=7000?queryport=7010)'
@@ -113,7 +102,18 @@ Config:
       Target: GAME_PARAMS
       Type: Variable
       value: ?port=7000?queryport=7010
-    Map:
+    gid:
+      Default: ''
+      Description: 'Container Variable: GID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: GID
+      Required: 'true'
+      Target: GID
+      Type: Variable
+      value: '100'
+    map:
       Default: aocffa-moor_p
       Description: 'Map name (eg: ''aocffa-arena3_p'', ''aocffa-hillside_p'', ''aocffa-battlegrounds_v3_p'')'
       Display: always-hide
@@ -124,7 +124,7 @@ Config:
       Target: MAP
       Type: Variable
       value: aocffa-moor_p
-    Server Admin Password:
+    serveradminpassword:
       Default: ''
       Description: Server Admin Password (can't be empty)
       Display: always
@@ -135,7 +135,7 @@ Config:
       Target: ADMIN_PWD
       Type: Variable
       value: adminDocker
-    Steam-Password:
+    steam-password:
       Default: ''
       Description: 'Your Steam password goes here if you want to install a game that
         needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
@@ -148,7 +148,7 @@ Config:
       Target: PASSWRD
       Type: Variable
       value: ''
-    Steam-Username:
+    steam-username:
       Default: ''
       Description: 'Your Steam username goes here if you want to install a game that
         needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
@@ -161,7 +161,7 @@ Config:
       Target: USERNAME
       Type: Variable
       value: ''
-    UID:
+    uid:
       Default: ''
       Description: 'Container Variable: UID'
       Display: advanced-hide
@@ -172,7 +172,7 @@ Config:
       Target: UID
       Type: Variable
       value: '99'
-    Validate Installation:
+    validateinstallation:
       Default: ''
       Description: Set the Variable to 'true' if you want to validate the installation
         otherwise leave it blank.

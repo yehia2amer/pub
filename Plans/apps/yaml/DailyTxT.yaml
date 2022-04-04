@@ -7,7 +7,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Storage (data):
+    storage(data):
       Default: ''
       Description: ''
       Display: always
@@ -19,7 +19,7 @@ Config:
       Type: Path
       value: /mnt/user/appdata/dailytxt
   Port:
-    WebUI:
+    webui:
       Default: ''
       Description: ''
       Display: always
@@ -31,7 +31,7 @@ Config:
       Type: Port
       value: '8765'
   Variable:
-    ALLOW_REGISTRATION:
+    allow_registration:
       Default: ''
       Description: Enables or disables registration for new users. (True/False)
       Display: advanced
@@ -42,7 +42,7 @@ Config:
       Target: ALLOW_REGISTRATION
       Type: Variable
       value: 'True'
-    DATA_INDENT:
+    data_indent:
       Default: ''
       Description: Use this if you want the JSON log file to be indented. Makes it
         easier to compare the files.
@@ -54,7 +54,7 @@ Config:
       Target: DATA_INDENT
       Type: Variable
       value: '2'
-    JWT_EXP_DAYS:
+    jwt_exp_days:
       Default: ''
       Description: After how many days the JWT token will expire and you have to re-login.
         (default 30 days)
@@ -66,7 +66,7 @@ Config:
       Target: JWT_EXP_DAYS
       Type: Variable
       value: '7'
-    PORT:
+    port:
       Default: ''
       Description: Used to pass the number of the port to the nginx 'default.conf'
         file, from inside the container.
@@ -78,7 +78,7 @@ Config:
       Target: PORT
       Type: Variable
       value: '8765'
-    SECRET_KEY:
+    secret_key:
       Default: ''
       Description: 'Generate secret key, by running the following cmd from unRAID
         Terminal: ''openssl rand -base64 32''.'

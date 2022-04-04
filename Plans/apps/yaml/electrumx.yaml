@@ -7,7 +7,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Data:
+    data:
       Default: /mnt/user/bitcoin/electrumx/
       Description: Database Storage
       Display: always
@@ -19,7 +19,7 @@ Config:
       Type: Path
       value: /mnt/user/bitcoin/electrumx/
   Port:
-    RPC:
+    rpc:
       Default: '8000'
       Description: ElectrumX RPC
       Display: always
@@ -30,7 +30,7 @@ Config:
       Target: '8000'
       Type: Port
       value: '8000'
-    SSL:
+    ssl:
       Default: '50002'
       Description: Electrum SSL
       Display: always
@@ -41,7 +41,7 @@ Config:
       Target: '50002'
       Type: Port
       value: '50002'
-    TCP:
+    tcp:
       Default: '50001'
       Description: Electrum TCP
       Display: always
@@ -52,7 +52,7 @@ Config:
       Target: '50001'
       Type: Port
       value: '50001'
-    WSS:
+    wss:
       Default: '50004'
       Description: Electrum WSS
       Display: always
@@ -64,7 +64,7 @@ Config:
       Type: Port
       value: '50004'
   Variable:
-    Banner File:
+    bannerfile:
       Default: /data/banner.txt
       Description: Place a text file to be displayed to clients in the data directory
         above
@@ -76,7 +76,7 @@ Config:
       Target: BANNER_FILE
       Type: Variable
       value: /data/banner.txt
-    Coin:
+    coin:
       Default: BitcoinSegwit
       Description: 'Container Variable: COIN'
       Display: always
@@ -87,7 +87,7 @@ Config:
       Target: COIN
       Type: Variable
       value: BitcoinSegwit
-    Core RPC:
+    corerpc:
       Default: user:pass@host:8332
       Description: Bitcoin RPC (Auth and Address)
       Display: always
@@ -98,7 +98,7 @@ Config:
       Target: DAEMON_URL
       Type: Variable
       value: user:pass@host:8332
-    Donation Address:
+    donationaddress:
       Default: bc1q5g4e6auucmwzj5cwfc7870yn4cg0dselhpn47p
       Description: Your Bitcoin address to display to clients for donations
       Display: always
@@ -109,7 +109,7 @@ Config:
       Target: DONATION_ADDRESS
       Type: Variable
       value: bc1q5g4e6auucmwzj5cwfc7870yn4cg0dselhpn47p
-    Report Services:
+    reportservices:
       Default: ssl://my.electrum.duckdns.org:50002,wss://my.electrum.duckdns.org:50004
       Description: Optionally advertise FQDNs where your ElectrumX is available
       Display: always
@@ -120,7 +120,7 @@ Config:
       Target: REPORT_SERVICES
       Type: Variable
       value: ''
-    Services:
+    services:
       Default: tcp://:50001,ssl://:50002,wss://:50004,rpc://
       Description: Services and ports to bind. Must match ports above.
       Display: always

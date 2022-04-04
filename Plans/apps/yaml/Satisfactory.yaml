@@ -5,7 +5,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    ServerFiles:
+    serverfiles:
       Default: ''
       Description: ''
       Display: always
@@ -16,7 +16,7 @@ Config:
       Target: /serverdata/serverfiles
       Type: Path
       value: /mnt/cache/appdata/satisfactory
-    SteamCMD:
+    steamcmd:
       Default: ''
       Description: ''
       Display: always
@@ -28,7 +28,7 @@ Config:
       Type: Path
       value: /mnt/user/appdata/steamcmd
   Port:
-    UDP 1 - Game Port:
+    udp1-gameport:
       Default: ''
       Description: 'UDP Game Port (if you need another port, please delete this entry
         and create a new UDP Port with the required port number, also don''t forget
@@ -41,7 +41,7 @@ Config:
       Target: '7777'
       Type: Port
       value: '7777'
-    UDP 2 - Server Query Port:
+    udp2-serverqueryport:
       Default: ''
       Description: 'UDP Query Port (if you need another port, please delete this entry
         and create a new UDP Port with the required port number, also don''t forget
@@ -54,7 +54,7 @@ Config:
       Target: '15777'
       Type: Port
       value: '15777'
-    UDP 3 - Beacon Port:
+    udp3-beaconport:
       Default: ''
       Description: 'UDP Beacon Port (if you need another port, please delete this
         entry and create a new UDP Port with the required port number, also don''t
@@ -68,7 +68,7 @@ Config:
       Type: Port
       value: '15000'
   Variable:
-    GAME_ID:
+    game_id:
       Default: ''
       Description: "The GAME_ID that the container download at startup.\r\nIf you\
         \ want to install a static or beta version of the game change the value to:\
@@ -82,18 +82,7 @@ Config:
       Target: GAME_ID
       Type: Variable
       value: '1690800'
-    GID:
-      Default: ''
-      Description: ''
-      Display: advanced-hide
-      Mask: 'false'
-      Mode: ''
-      Name: GID
-      Required: 'true'
-      Target: GID
-      Type: Variable
-      value: '100'
-    Game Parameters:
+    gameparameters:
       Default: ''
       Description: 'Type in your Extra Game Parameters seperated with a space and
         - (if you need for example other ports add: ''-Port=7778 -ServerQueryPort=15778
@@ -106,7 +95,18 @@ Config:
       Target: GAME_PARAMS
       Type: Variable
       value: -log -unattended -multihome=0.0.0.0
-    Steam-Password:
+    gid:
+      Default: ''
+      Description: ''
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: GID
+      Required: 'true'
+      Target: GID
+      Type: Variable
+      value: '100'
+    steam-password:
       Default: ''
       Description: 'Your Steam password goes here if you want to install a game that
         needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
@@ -119,7 +119,7 @@ Config:
       Target: PASSWRD
       Type: Variable
       value: ''
-    Steam-Username:
+    steam-username:
       Default: ''
       Description: 'Your Steam username goes here if you want to install a game that
         needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
@@ -132,7 +132,7 @@ Config:
       Target: USERNAME
       Type: Variable
       value: ''
-    UID:
+    uid:
       Default: ''
       Description: ''
       Display: advanced-hide
@@ -143,7 +143,7 @@ Config:
       Target: UID
       Type: Variable
       value: '99'
-    UMASK:
+    umask:
       Default: ''
       Description: ''
       Display: advanced
@@ -154,7 +154,7 @@ Config:
       Target: UMASK
       Type: Variable
       value: '0000'
-    Validate Installation:
+    validateinstallation:
       Default: ''
       Description: Set the Variable to 'true' if you want to validate the installation
         otherwise leave it blank.

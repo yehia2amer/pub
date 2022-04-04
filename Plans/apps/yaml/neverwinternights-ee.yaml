@@ -4,7 +4,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    ServerFiles:
+    serverfiles:
       Default: ''
       Description: 'Container Path: /nwnee'
       Display: always
@@ -16,7 +16,7 @@ Config:
       Type: Path
       value: /mnt/cache/appdata/nwnee
   Port:
-    UDP - Game Port:
+    udp-gameport:
       Default: ''
       Description: UDP Game Port
       Display: always
@@ -28,7 +28,7 @@ Config:
       Type: Port
       value: '5121'
   Variable:
-    Admin Password:
+    adminpassword:
       Default: ''
       Description: Set the password required to remotely administer the game. Currently
         unused.
@@ -40,7 +40,7 @@ Config:
       Target: APWD
       Type: Variable
       value: adminDocker
-    Autosave Intervall:
+    autosaveintervall:
       Default: ''
       Description: Set how frequently (in minutes) to autosave.  0 disables autosave.
       Display: always
@@ -51,7 +51,7 @@ Config:
       Target: AUTO_SAV_I
       Type: Variable
       value: '5'
-    Connection Password:
+    connectionpassword:
       Default: ''
       Description: Set the password required by players to join the game.
       Display: always
@@ -62,7 +62,7 @@ Config:
       Target: PPW
       Type: Variable
       value: Docker
-    Difficulty:
+    difficulty:
       Default: ''
       Description: Set difficutly (1 = easy, 2 = normal, 3 = D&amp;D hardcore, 4 =
         very difficult)
@@ -74,7 +74,7 @@ Config:
       Target: DIFF
       Type: Variable
       value: '1'
-    Enforce Item Level Restriction:
+    enforceitemlevelrestriction:
       Default: ''
       Description: Set enforcing item level restriction (0 = don't enforce item level
         restrictions, 1 = do enforce item level restrictions)
@@ -86,7 +86,7 @@ Config:
       Target: ILR
       Type: Variable
       value: '0'
-    Enforce Legal Characters:
+    enforcelegalcharacters:
       Default: ''
       Description: Set enforcing legal characters (0 = don't enforce legal characters,
         1 = do enforce legal characters)
@@ -98,7 +98,7 @@ Config:
       Target: ELC
       Type: Variable
       value: '0'
-    Extra Startup Parameters:
+    extrastartupparameters:
       Default: ''
       Description: 'Enter your extra game startup parameters if needed here (eg: ''-dmpassword
         supersecretpassword -quiet'' without quotes).'
@@ -110,7 +110,7 @@ Config:
       Target: GAME_PARAMS
       Type: Variable
       value: ''
-    GID:
+    gid:
       Default: ''
       Description: 'Container Variable: GID'
       Display: advanced-hide
@@ -121,7 +121,7 @@ Config:
       Target: GID
       Type: Variable
       value: '100'
-    Log Level:
+    loglevel:
       Default: ''
       Description: Set the log level (from 2=only fatal errors to 7=very verbose)
       Display: always
@@ -132,7 +132,7 @@ Config:
       Target: LOG_LVL
       Type: Variable
       value: '4'
-    Maximum Character Level:
+    maximumcharacterlevel:
       Default: ''
       Description: Set the maximum character level allowed by the server.
       Display: always
@@ -143,7 +143,7 @@ Config:
       Target: MAXLEVEL
       Type: Variable
       value: '40'
-    Maximum Clients:
+    maximumclients:
       Default: ''
       Description: Set the maximum number of connections to the game server.
       Display: always
@@ -154,7 +154,7 @@ Config:
       Target: MAX_CLIENTS
       Type: Variable
       value: '4'
-    Minimum Character Level:
+    minimumcharacterlevel:
       Default: ''
       Description: Set the minimum character level required by the server.
       Display: always
@@ -165,7 +165,7 @@ Config:
       Target: MINLEVEL
       Type: Variable
       value: '1'
-    Module Name:
+    modulename:
       Default: ''
       Description: Enter the module name to load here (located in your serverdirectory
         'Neverwinter Nights/modules' without the .mod extension)
@@ -177,7 +177,7 @@ Config:
       Target: MOD_NAME
       Type: Variable
       value: ''
-    Multiple Parties Allowed:
+    multiplepartiesallowed:
       Default: ''
       Description: Set if one or more parties are allowed (0 = allow only one party,
         1 = allow multiple parties)
@@ -189,18 +189,7 @@ Config:
       Target: ONEPARTY
       Type: Variable
       value: '0'
-    PVP Mode:
-      Default: ''
-      Description: Set wich PVP mode do you want (0 = none, 1 = party, 2 = full)
-      Display: always
-      Mask: 'false'
-      Mode: ''
-      Name: PVP Mode
-      Required: 'true'
-      Target: PVP
-      Type: Variable
-      value: '0'
-    Player Pause:
+    playerpause:
       Default: ''
       Description: Set if a player or DM can pause the game (0 = game can only be
         paused by DM, 1 = game can by paused by players)
@@ -212,7 +201,7 @@ Config:
       Target: PAUSEAPLAY
       Type: Variable
       value: '0'
-    Public Server:
+    publicserver:
       Default: ''
       Description: Set if you want to list the game publicly (0 = do not list server
         with the matching service. 1 = list server with the matching service).
@@ -224,7 +213,18 @@ Config:
       Target: PUBLIC_SRV
       Type: Variable
       value: '0'
-    Restart Module If Server Becomes Empty:
+    pvpmode:
+      Default: ''
+      Description: Set wich PVP mode do you want (0 = none, 1 = party, 2 = full)
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: PVP Mode
+      Required: 'true'
+      Target: PVP
+      Type: Variable
+      value: '0'
+    restartmoduleifserverbecomesempty:
       Default: ''
       Description: Restart module if server becomes empty (0 = module state is persistant
         as long as server is running, 1 = module state is reset when the server becomes
@@ -237,18 +237,7 @@ Config:
       Target: RLD_W_E
       Type: Variable
       value: '0'
-    Server Name:
-      Default: ''
-      Description: Set the name this server appears as in the mulitplayer game listing.
-      Display: always
-      Mask: 'false'
-      Mode: ''
-      Name: Server Name
-      Required: 'true'
-      Target: SRV_NAME
-      Type: Variable
-      value: Docker NWNEE
-    Servercharacters Only:
+    servercharactersonly:
       Default: ''
       Description: Set if local or server characters (0 = local characters only. 1
         = server characters only)
@@ -260,7 +249,18 @@ Config:
       Target: SERVERVAULT
       Type: Variable
       value: '0'
-    UID:
+    servername:
+      Default: ''
+      Description: Set the name this server appears as in the mulitplayer game listing.
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Server Name
+      Required: 'true'
+      Target: SRV_NAME
+      Type: Variable
+      value: Docker NWNEE
+    uid:
       Default: ''
       Description: 'Container Variable: UID'
       Display: advanced-hide
@@ -271,7 +271,7 @@ Config:
       Target: UID
       Type: Variable
       value: '99'
-    UMASK:
+    umask:
       Default: ''
       Description: 'Container Variable: UMASK'
       Display: advanced

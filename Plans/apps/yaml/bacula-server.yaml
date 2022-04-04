@@ -655,7 +655,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Apache log path:
+    apachelogpath:
       Default: /mnt/user/appdata/bacula-server/log/apache2
       Description: Path where webserver logs will be stored
       Display: always
@@ -666,7 +666,7 @@ Config:
       Target: /var/log/apache2
       Type: Path
       value: ''
-    Bacula config path:
+    baculaconfigpath:
       Default: /mnt/user/appdata/bacula-server/etc
       Description: Bacula Configuration path
       Display: always
@@ -677,7 +677,7 @@ Config:
       Target: /opt/bacula/etc
       Type: Path
       value: ''
-    Bacula log path:
+    baculalogpath:
       Default: /mnt/user/appdata/bacula-server/log/bacula
       Description: Path where bacula's logs will be stored on Host disk
       Display: always
@@ -688,7 +688,7 @@ Config:
       Target: /opt/bacula/log
       Type: Path
       value: ''
-    Bacula storage path:
+    baculastoragepath:
       Default: ''
       Description: Path where backups will be stored on Host disk
       Display: always
@@ -699,7 +699,7 @@ Config:
       Target: /mnt/bacula
       Type: Path
       value: ''
-    Bacula working directory:
+    baculaworkingdirectory:
       Default: /mnt/user/appdata/bacula-server/working
       Description: Path where sqlite3 db will be stored
       Display: always
@@ -710,7 +710,7 @@ Config:
       Target: /opt/bacula/working
       Type: Path
       value: ''
-    Baculum config:
+    baculumconfig:
       Default: /mnt/user/appdata/bacula-server/baculum
       Description: Path where WEB Interface configuration will be stored
       Display: always
@@ -722,7 +722,7 @@ Config:
       Type: Path
       value: ''
   Port:
-    Bacula Storage Port:
+    baculastorageport:
       Default: '9103'
       Description: Clients connects to sending backups
       Display: always
@@ -733,7 +733,7 @@ Config:
       Target: '9103'
       Type: Port
       value: '9103'
-    Bacula WEB Port:
+    baculawebport:
       Default: '9095'
       Description: Bacula WEB Port
       Display: always
@@ -745,7 +745,7 @@ Config:
       Type: Port
       value: '9095'
   Variable:
-    IP Address:
+    ipaddress:
       Default: ''
       Description: If You set bridge network, You should type in Unraid Host IP Address.
         This IP is sending to clients, which could connect to storage server using
@@ -758,7 +758,7 @@ Config:
       Target: SD_Host
       Type: Variable
       value: ''
-    TimeZone:
+    timezone:
       Default: Europe/Warsaw
       Description: Set Your Timezone
       Display: always
@@ -769,18 +769,7 @@ Config:
       Target: TZ
       Type: Variable
       value: Europe/Warsaw
-    WEB User Password:
-      Default: difficult
-      Description: WebUI Password
-      Display: always
-      Mask: 'true'
-      Mode: ''
-      Name: WEB User Password
-      Required: 'false'
-      Target: WEB_Password
-      Type: Variable
-      value: difficult
-    WEB Username:
+    webusername:
       Default: admin
       Description: WebUI Username
       Display: always
@@ -791,6 +780,17 @@ Config:
       Target: WEB_User
       Type: Variable
       value: admin
+    webuserpassword:
+      Default: difficult
+      Description: WebUI Password
+      Display: always
+      Mask: 'true'
+      Mode: ''
+      Name: WEB User Password
+      Required: 'false'
+      Target: WEB_Password
+      Type: Variable
+      value: difficult
 Icon: https://raw.githubusercontent.com/vrx-666/unraid-xml/master/img/bacula.png
 Keywords:
 - bacula-server

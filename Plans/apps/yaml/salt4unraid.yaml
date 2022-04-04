@@ -4,7 +4,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Docker socket:
+    dockersocket:
       Default: ''
       Description: 'Container Path: /var/run/docker.sock'
       Display: advanced
@@ -15,7 +15,7 @@ Config:
       Target: /var/run/docker.sock
       Type: Path
       value: /var/run/docker.sock
-    Path to qemu images:
+    pathtoqemuimages:
       Default: ''
       Description: 'Container Path: /mnt/user/domains'
       Display: always
@@ -26,7 +26,7 @@ Config:
       Target: /mnt/user/domains
       Type: Path
       value: /mnt/user/domains
-    Salt config directory:
+    saltconfigdirectory:
       Default: ''
       Description: 'Container Path: /etc/salt/'
       Display: always
@@ -37,7 +37,7 @@ Config:
       Target: /etc/salt/
       Type: Path
       value: /mnt/user/appdata/salt4unraid/etc
-    Salt data directory:
+    saltdatadirectory:
       Default: ''
       Description: 'Container Path: /srv'
       Display: always
@@ -48,7 +48,7 @@ Config:
       Target: /srv
       Type: Path
       value: /mnt/user/appdata/salt4unraid/srv
-    Virtualisation passthrough:
+    virtualisationpassthrough:
       Default: ''
       Description: 'Container Path: /var/run/libvirt/libvirt-sock'
       Display: advanced
@@ -60,29 +60,7 @@ Config:
       Type: Path
       value: /var/run/libvirt/libvirt-sock
   Port:
-    Salt publish port:
-      Default: ''
-      Description: 'Container Port: 4505'
-      Display: advanced
-      Mask: 'false'
-      Mode: tcp
-      Name: Salt publish port
-      Required: 'false'
-      Target: '4505'
-      Type: Port
-      value: '4505'
-    Salt request server port:
-      Default: ''
-      Description: 'Container Port: 4506'
-      Display: advanced
-      Mask: 'false'
-      Mode: tcp
-      Name: Salt request server port
-      Required: 'false'
-      Target: '4506'
-      Type: Port
-      value: '4506'
-    Saltgui web/api port:
+    saltguiwebapiport:
       Default: '3333'
       Description: 'Container Port: 3333'
       Display: always
@@ -93,8 +71,30 @@ Config:
       Target: '3333'
       Type: Port
       value: '3333'
+    saltpublishport:
+      Default: ''
+      Description: 'Container Port: 4505'
+      Display: advanced
+      Mask: 'false'
+      Mode: tcp
+      Name: Salt publish port
+      Required: 'false'
+      Target: '4505'
+      Type: Port
+      value: '4505'
+    saltrequestserverport:
+      Default: ''
+      Description: 'Container Port: 4506'
+      Display: advanced
+      Mask: 'false'
+      Mode: tcp
+      Name: Salt request server port
+      Required: 'false'
+      Target: '4506'
+      Type: Port
+      value: '4506'
   Variable:
-    API password:
+    apipassword:
       Default: ''
       Description: 'Container Variable: SALT_PASSWORD'
       Display: always
@@ -105,7 +105,7 @@ Config:
       Target: SALT_PASSWORD
       Type: Variable
       value: salty
-    Salt loglevel:
+    saltloglevel:
       Default: ''
       Description: 'Container Variable: SALT_LOGLEVEL'
       Display: advanced

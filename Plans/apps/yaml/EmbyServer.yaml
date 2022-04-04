@@ -6,20 +6,18 @@ CategoryList: &id001
 Config:
   Device: {}
   Label: {}
-  Path: {}
+  Path:
+    embyserver:
+      Mode: rw
+      Name: mnt
+      Target: /mnt
+      value: /mnt
   Port: {}
   Variable:
-    GIDLIST:
+    gidlist:
       Name: GIDLIST
+      Target: GIDLIST
       value: '2'
-Data:
-  Volume:
-  - ContainerDir: /config
-    HostDir: /mnt/cache/appdata/emby/
-    Mode: rw
-  - ContainerDir: /mnt
-    HostDir: /mnt
-    Mode: rw
 Icon: https://raw.githubusercontent.com/MediaBrowser/Emby.Resources/master/images/Logos/logoicon.png
 Keywords:
 - embyserver

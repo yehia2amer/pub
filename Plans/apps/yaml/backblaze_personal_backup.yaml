@@ -8,7 +8,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Config:
+    config:
       Default: /mnt/user/appdata/backblaze_personal_backup/
       Description: 'Container Path: /config/'
       Display: always
@@ -19,7 +19,7 @@ Config:
       Target: /config/
       Type: Path
       value: /mnt/user/appdata/backblaze_personal_backup/
-    Storage to back up:
+    storagetobackup:
       Default: /mnt/user/
       Description: This will be exposed to the Backblaze Client as drive D and therefore
         be backed up
@@ -32,7 +32,7 @@ Config:
       Type: Path
       value: /mnt/user/
   Port:
-    Http VNC GUI:
+    httpvncgui:
       Default: '5800'
       Description: Port used to access the application's GUI via the web interface.
       Display: always
@@ -43,7 +43,7 @@ Config:
       Target: '5800'
       Type: Port
       value: '5800'
-    VNC:
+    vnc:
       Default: '5900'
       Description: Port used to access the application's GUI via the VNC protocol.
         Optional if no VNC client is used.
@@ -56,7 +56,7 @@ Config:
       Type: Port
       value: '5900'
   Variable:
-    Display Height:
+    displayheight:
       Default: '473'
       Description: Height (in pixels) of the virtual screen's window.
       Display: always
@@ -67,7 +67,7 @@ Config:
       Target: DISPLAY_HEIGHT
       Type: Variable
       value: '473'
-    Display Width:
+    displaywidth:
       Default: '657'
       Description: Width (in pixels) of the virtual screen's window.
       Display: always
@@ -78,7 +78,7 @@ Config:
       Target: DISPLAY_WIDTH
       Type: Variable
       value: '657'
-    ENABLE_CJK_FONT:
+    enable_cjk_font:
       Default: ''
       Description: "When set to 1, open-source computer font WenQuanYi Zen Hei is\
         \ installed. This font contains a large range of Chinese/Japanese/Korean characters.\t"
@@ -90,7 +90,7 @@ Config:
       Target: ENABLE_CJK_FONT
       Type: Variable
       value: ''
-    Encryption:
+    encryption:
       Default: '0'
       Description: "When set to 1, an encrypted connection is used to access the application's\
         \ GUI (either via a web browser or VNC client). See the Security section \r\
@@ -103,7 +103,7 @@ Config:
       Target: SECURE_CONNECTION
       Type: Variable
       value: '0'
-    Timezone:
+    timezone:
       Default: Etc/UTC
       Description: "Timezone of the container. Timezone can also be set by mapping\
         \ /etc/localtime between the host and the container.\t"
@@ -115,7 +115,7 @@ Config:
       Target: TZ
       Type: Variable
       value: Etc/UTC
-    VNC Password:
+    vncpassword:
       Default: ''
       Description: Password needed to connect to the application's GUI. See the VNC
         Password section in the README for more details.
@@ -127,7 +127,7 @@ Config:
       Target: VNC_PASSWORD
       Type: Variable
       value: ''
-    X11VNC_EXTRA_OPTS:
+    x11vnc_extra_opts:
       Default: ''
       Description: 'Extra options to pass to the x11vnc server running in the Docker
         container. WARNING: For advanced users. Do not use unless you know what you

@@ -7,17 +7,14 @@ CategoryList: &id001
 Config:
   Device: {}
   Label: {}
-  Path: {}
+  Path:
+    signum-node-testnet-vpn:
+      Mode: rw
+      Name: db
+      Target: /db
+      value: /mnt/user/appdata/signum-node-testnet-VPN/db
   Port: {}
   Variable: {}
-Data:
-  Volume:
-  - ContainerDir: /conf
-    HostDir: /mnt/user/appdata/signum-node-testnet-VPN/conf
-    Mode: rw
-  - ContainerDir: /db
-    HostDir: /mnt/user/appdata/signum-node-testnet-VPN/db
-    Mode: rw
 ExtraParams: --memory=2g --net=container:binhex-delugevpn --init
 GitHub: https://github.com/signum-network/signum-node
 Icon: https://raw.githubusercontent.com/signum-network/signum-node/main/resources/images/signum_overlay_logo.ico

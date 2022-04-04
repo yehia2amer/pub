@@ -17,7 +17,7 @@ Config:
   Label: {}
   Path: {}
   Port:
-    WebUI:
+    webui:
       Default: ''
       Description: Used for basic monitoring over http/https built into PhoenixMiner
       Display: always
@@ -29,7 +29,18 @@ Config:
       Type: Port
       value: '5450'
   Variable:
-    AMD Driver Version:
+    additionalphoenixminerarguments:
+      Default: ''
+      Description: Additional PhoenixMiner arguments
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Additional PhoenixMiner Arguments
+      Required: 'false'
+      Target: ADDITIONAL
+      Type: Variable
+      value: ''
+    amddriverversion:
       Default: ''
       Description: Leave this variable alone unless you have a reason to change to
         a different driver version. Options for AMD are '18.20', '20.20', '20.45',
@@ -45,18 +56,7 @@ Config:
       Target: DRIVERV
       Type: Variable
       value: '20.20'
-    Additional PhoenixMiner Arguments:
-      Default: ''
-      Description: Additional PhoenixMiner arguments
-      Display: always
-      Mask: 'false'
-      Mode: ''
-      Name: Additional PhoenixMiner Arguments
-      Required: 'false'
-      Target: ADDITIONAL
-      Type: Variable
-      value: ''
-    Nvidia Driver Capabilities:
+    nvidiadrivercapabilities:
       Default: ''
       Description: Please leave this set to the default option of 'all' if you aren't
         sure what to put here. This value can be left in the template even if you
@@ -69,7 +69,7 @@ Config:
       Target: NVIDIA_DRIVER_CAPABILITIES
       Type: Variable
       value: all
-    Nvidia Visible Devices:
+    nvidiavisibledevices:
       Default: ''
       Description: 'Nvidia Only: Enter your GPU UUID here (only required if you plan
         to mine with an Nvidia GPU otherwise leave this empty. Don''t forget to add
@@ -82,7 +82,7 @@ Config:
       Target: NVIDIA_VISIBLE_DEVICES
       Type: Variable
       value: ''
-    Pool Address:
+    pooladdress:
       Default: asia1.ethermine.org:4444
       Description: Address for your mining pool
       Display: always
@@ -93,7 +93,7 @@ Config:
       Target: POOL
       Type: Variable
       value: asia1.ethermine.org:4444
-    Pool Password:
+    poolpassword:
       Default: x
       Description: Most pools just use 'x' as password, some pools treat this variable
         as a worker ID
@@ -105,7 +105,7 @@ Config:
       Target: PASSWORD
       Type: Variable
       value: x
-    'Safety: Resume Temperature':
+    safetyresumetemperature:
       Default: '80'
       Description: PhoenixMiner will resume mining on a GPU if it hits this temperature
         after being paused (only works if privileged mode is enabled)
@@ -117,7 +117,7 @@ Config:
       Target: TSTART
       Type: Variable
       value: '80'
-    'Safety: Stop Temperature':
+    safetystoptemperature:
       Default: '85'
       Description: PhoenixMiner will pause mining on a GPU if it hits this temperature
         (only works if privileged mode is enabled)
@@ -129,7 +129,7 @@ Config:
       Target: TSTOP
       Type: Variable
       value: '85'
-    'Safety: Target Temperature':
+    safetytargettemperature:
       Default: '75'
       Description: Target temperature for fans (only works if privileged mode is enabled)
       Display: always
@@ -140,7 +140,7 @@ Config:
       Target: TT
       Type: Variable
       value: '75'
-    Wallet Address:
+    walletaddress:
       Default: '0xe037C6245910EbBbA720514835d31B385D76927f'
       Description: Wallet address for receiving mined coin
       Display: always

@@ -4,7 +4,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    ServerFiles:
+    serverfiles:
       Default: ''
       Description: 'Container Path: /serverdata/serverfiles'
       Display: always
@@ -16,7 +16,7 @@ Config:
       Type: Path
       value: /mnt/cache/appdata/minecraft
   Port:
-    TCP - Game Port:
+    tcp-gameport:
       Default: ''
       Description: 'Container Port: 25565'
       Display: always
@@ -27,7 +27,7 @@ Config:
       Target: '25565'
       Type: Port
       value: '25565'
-    TCP - WebConsole:
+    tcp-webconsole:
       Default: ''
       Description: 'WebConsole (by default, you can connect to the Minecraft console
         by opening your browser and go to HOSTIP:9011 - eg: 192.168.1.1:9011 - or
@@ -40,7 +40,7 @@ Config:
       Target: '8080'
       Type: Port
       value: '9011'
-    TCP2 - RCON:
+    tcp2-rcon:
       Default: ''
       Description: Not required if not needed
       Display: always
@@ -52,7 +52,7 @@ Config:
       Type: Port
       value: '25575'
   Variable:
-    Accept EULA:
+    accepteula:
       Default: 'false'
       Description: 'Head over to: https://account.mojang.com/documents/minecraft_eula
         to read the EULA. (If you accept the EULA change the value to ''true'' without
@@ -65,7 +65,7 @@ Config:
       Target: ACCEPT_EULA
       Type: Variable
       value: 'false'
-    Extra Game Parameters:
+    extragameparameters:
       Default: ''
       Description: Enter your extra startup parameters otherwise leave blank!
       Display: always
@@ -76,7 +76,7 @@ Config:
       Target: GAME_PARAMS
       Type: Variable
       value: ''
-    Extra JVM Parameters:
+    extrajvmparameters:
       Default: ''
       Description: Enter your extra startup parameters for the JVM otherwise leave
         blank! (Only change if you know what you are doing!!!)
@@ -88,18 +88,7 @@ Config:
       Target: EXTRA_JVM_PARAMS
       Type: Variable
       value: ''
-    GID:
-      Default: ''
-      Description: 'Container Variable: GID'
-      Display: advanced-hide
-      Mask: 'false'
-      Mode: ''
-      Name: GID
-      Required: 'true'
-      Target: GID
-      Type: Variable
-      value: '100'
-    Game version:
+    gameversion:
       Default: ''
       Description: If you set the variable GAME_V to 'latest' the container will check
         on every restart if there is a newer version available (if set to 'latest'
@@ -113,7 +102,18 @@ Config:
       Target: GAME_V
       Type: Variable
       value: latest
-    Runtime Name:
+    gid:
+      Default: ''
+      Description: 'Container Variable: GID'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: GID
+      Required: 'true'
+      Target: GID
+      Type: Variable
+      value: '100'
+    runtimename:
       Default: ''
       Description: 'Enter your prefered Runtime: ''basicjre''=jre8, ''jre11''=jre11,
         ''jre15''=jre15, ''jre16''=jre16, ''jre17''=jre17 Don''t change unless you
@@ -127,7 +127,7 @@ Config:
       Target: RUNTIME_NAME
       Type: Variable
       value: jre17
-    Serverfile name:
+    serverfilename:
       Default: ''
       Description: Enter your executable jar file (Minecraft Serverfile) withouat
         the .jar extension.
@@ -139,7 +139,7 @@ Config:
       Target: JAR_NAME
       Type: Variable
       value: server
-    UID:
+    uid:
       Default: ''
       Description: 'Container Variable: UID'
       Display: advanced-hide
@@ -150,7 +150,7 @@ Config:
       Target: UID
       Type: Variable
       value: '99'
-    XMS Size:
+    xmssize:
       Default: ''
       Description: Enter your XMS size in MB (XMS=The initial and minimum heap size.
         It is recommended to set the minimum heap size equivalent to the maximum heap
@@ -163,7 +163,7 @@ Config:
       Target: XMS_SIZE
       Type: Variable
       value: '1024'
-    XMX Size:
+    xmxsize:
       Default: ''
       Description: Enter your XMX size in MB (XMX=The maximum heap size. The performance
         will decrease if the max heap value is set lower than the amount of live data.

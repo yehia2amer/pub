@@ -4,29 +4,30 @@ CategoryList: &id001
 Config:
   Device: {}
   Label: {}
-  Path: {}
+  Path:
+    minidlna:
+      Mode: rw
+      Name: media
+      Target: /media
+      value: /mnt/user
   Port: {}
   Variable:
-    SCAN_ON_BOOT:
+    scan_on_boot:
       Name: SCAN_ON_BOOT
+      Target: SCAN_ON_BOOT
       value: 'no'
-    SCHEDULE_SCAN_DAYS:
+    schedule_scan_days:
       Name: SCHEDULE_SCAN_DAYS
+      Target: SCHEDULE_SCAN_DAYS
       value: '06'
-    SCHEDULE_SCAN_HOURS:
+    schedule_scan_hours:
       Name: SCHEDULE_SCAN_HOURS
+      Target: SCHEDULE_SCAN_HOURS
       value: '02'
-    UMASK:
+    umask:
       Name: UMASK
+      Target: UMASK
       value: '000'
-Data:
-  Volume:
-  - ContainerDir: /config
-    HostDir: /mnt/user/appdata/config
-    Mode: rw
-  - ContainerDir: /media
-    HostDir: /mnt/user
-    Mode: rw
 GitHub: https://github.com/binhex/arch-minidlna
 Icon: https://raw.githubusercontent.com/binhex/docker-templates/master/binhex/images/minidlna-icon.png
 Keywords:

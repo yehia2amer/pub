@@ -6,7 +6,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    Library:
+    library:
       Default: /mnt/user/Photos
       Description: This is where your PhotoStructure Library will be stored. It needs
         to have sufficient free space to hold preview images, and transcoded videos.
@@ -18,7 +18,7 @@ Config:
       Target: /ps/library
       Type: Path
       value: /mnt/user/Photos
-    Logs:
+    logs:
       Default: /mnt/user/appdata/photostructure/logs
       Description: 'Logfiles will be written into this directory. Set environment
         variable '
@@ -30,7 +30,7 @@ Config:
       Target: /ps/logs
       Type: Path
       value: /mnt/user/appdata/photostructure/logs
-    System config:
+    systemconfig:
       Default: /mnt/user/appdata/photostructure/config
       Description: System configuration is written into this directory.
       Display: advanced
@@ -41,7 +41,7 @@ Config:
       Target: /ps/config
       Type: Path
       value: /mnt/user/appdata/photostructure/config
-    Temp/Scratch disk:
+    tempscratchdisk:
       Default: /mnt/cache/appdata/photostructure/tmp
       Description: This needs to be fast, local disk.
       Display: advanced
@@ -53,7 +53,7 @@ Config:
       Type: Path
       value: /mnt/cache/appdata/photostructure/tmp
   Port:
-    Web UI:
+    webui:
       Default: ''
       Description: Port to access the HTTP UI. Can be modified by setting the PS_HTTP_PORT
         environment variable.
@@ -66,7 +66,7 @@ Config:
       Type: Port
       value: '1787'
   Variable:
-    Group ID:
+    groupid:
       Default: ''
       Description: 'This is the groupid that PhotoStructure will run under. '
       Display: always
@@ -77,7 +77,7 @@ Config:
       Target: PGID
       Type: Variable
       value: ''
-    Logging level:
+    logginglevel:
       Default: error
       Description: Valid values are debug, info, warn, and error. Default is error,
         which (should be) quiet.
@@ -89,7 +89,7 @@ Config:
       Target: PS_LOG_LEVEL
       Type: Variable
       value: ''
-    TZ:
+    tz:
       Default: TZ
       Description: "Setting the default timezone helps PhotoStructure infer captured-at\
         \ time for assets that are missing timezone metadata.\r\n\r\n"
@@ -101,7 +101,7 @@ Config:
       Target: TZ
       Type: Variable
       value: ''
-    User ID:
+    userid:
       Default: ''
       Description: "This is the userid that PhotoStructure will run under, instead\
         \ of the default of root (userid 0).\r\n\r\nFiles copied into your library\

@@ -4,7 +4,7 @@ Config:
   Device: {}
   Label: {}
   Path:
-    ServerFiles:
+    serverfiles:
       Default: ''
       Description: 'Container Path: /serverdata/serverfiles'
       Display: always
@@ -15,7 +15,7 @@ Config:
       Target: /serverdata/serverfiles
       Type: Path
       value: /mnt/cache/appdata/projectzomboid
-    SteamCMD:
+    steamcmd:
       Default: ''
       Description: 'Container Path: /serverdata/steamcmd'
       Display: always
@@ -27,7 +27,7 @@ Config:
       Type: Path
       value: /mnt/user/appdata/steamcmd
   Port:
-    TCP - Player Ports:
+    tcp-playerports:
       Default: ''
       Description: 'Every player that connects to your server need''s it''s own port
         (if you don''t need that many ports you can also delete this entry and create
@@ -40,7 +40,7 @@ Config:
       Target: 16262-16326
       Type: Port
       value: 16262-16326
-    TCP - RCON Port:
+    tcp-rconport:
       Default: ''
       Description: Not required
       Display: always
@@ -51,7 +51,7 @@ Config:
       Target: '27015'
       Type: Port
       value: '27015'
-    UDP - Game Port:
+    udp-gameport:
       Default: ''
       Description: UDP Gameport (if you need another port, please delete this entry
         and create a new UDP Port with the required port number, also don't forget
@@ -65,7 +65,7 @@ Config:
       Type: Port
       value: '16261'
   Variable:
-    Admin Password:
+    adminpassword:
       Default: ''
       Description: Initial Admin password, change bevor the first start!
       Display: advanced
@@ -76,7 +76,7 @@ Config:
       Target: ADMIN_PWD
       Type: Variable
       value: adminDocker
-    GAME_ID:
+    game_id:
       Default: ''
       Description: "The GAME_ID that the container download at startup.\r\nIf you\
         \ want to install a static or beta version of the game change the value to:\
@@ -90,7 +90,7 @@ Config:
       Target: GAME_ID
       Type: Variable
       value: '380870'
-    GAME_PARAMS:
+    game_params:
       Default: ''
       Description: Enter your extra start up commands for the server if needed.
       Display: always
@@ -101,7 +101,7 @@ Config:
       Target: GAME_PARAMS
       Type: Variable
       value: ''
-    GID:
+    gid:
       Default: ''
       Description: 'Container Variable: GID'
       Display: advanced-hide
@@ -112,7 +112,7 @@ Config:
       Target: GID
       Type: Variable
       value: '100'
-    Steam-Password:
+    steam-password:
       Default: ''
       Description: 'Your Steam password goes here if you want to install a game that
         needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
@@ -125,7 +125,7 @@ Config:
       Target: PASSWRD
       Type: Variable
       value: ''
-    Steam-Username:
+    steam-username:
       Default: ''
       Description: 'Your Steam username goes here if you want to install a game that
         needs a valid account, otherwise leave it blank (ATTENTION: You have to disable
@@ -138,7 +138,7 @@ Config:
       Target: USERNAME
       Type: Variable
       value: ''
-    UID:
+    uid:
       Default: ''
       Description: 'Container Variable: UID'
       Display: advanced-hide
@@ -149,7 +149,7 @@ Config:
       Target: UID
       Type: Variable
       value: '99'
-    Validate Installation:
+    validateinstallation:
       Default: ''
       Description: Set the Variable to 'true' if you want to validate the installation
         otherwise leave it blank.

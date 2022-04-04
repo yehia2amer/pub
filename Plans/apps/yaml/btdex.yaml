@@ -5,26 +5,22 @@ CategoryList: &id001
 Config:
   Device: {}
   Label: {}
-  Path: {}
+  Path:
+    btdex:
+      Mode: rw
+      Name: cache
+      Target: /opt/btdex/cache
+      value: /mnt/user/appdata/btdex/cache
   Port: {}
   Variable:
-    DISPLAY_HEIGHT:
+    display_height:
       Name: DISPLAY_HEIGHT
+      Target: DISPLAY_HEIGHT
       value: 800|900|1050
-    DISPLAY_WIDTH:
+    display_width:
       Name: DISPLAY_WIDTH
+      Target: DISPLAY_WIDTH
       value: 1440|1680
-Data:
-  Volume:
-  - ContainerDir: /opt/btdex/.config/btdex
-    HostDir: /mnt/user/appdata/btdex/config
-    Mode: rw
-  - ContainerDir: /opt/btdex/plots
-    HostDir: /mnt/user/Media
-    Mode: rw
-  - ContainerDir: /opt/btdex/cache
-    HostDir: /mnt/user/appdata/btdex/cache
-    Mode: rw
 GitHub: https://github.com/furritos/docker-btdex
 Icon: https://github.com/paulpoco/docker-templates/raw/master/paulpoco/images/btdex.png
 Keywords:
