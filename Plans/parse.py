@@ -171,6 +171,7 @@ for n in afList:
         
       if "Network" in n.keys() and n["Network"] == "host":
         n["Requires"] = n["Requires"]+" App uses hostnetworking (autoadd)"
+      n.pop("Network", "")
         
       if "Networking" in n.keys() and n["Networking"] and "Mode" in n["Networking"].keys() and n["Networking"]["Mode"] and n["Networking"]["Mode"] == "host":
         n["Requires"] = n["Requires"]+" App uses hostnetworking (autoadd)"
@@ -284,7 +285,7 @@ for n in afList:
       n["Config"]["Path"] = pathstore
       
 
-      ## TODO merge port settings
+
       if ( "Networking" in n.keys() and n["Networking"] ) and isinstance(n["Networking"], dict) and ( "Publish" in n["Networking"].keys() and n["Networking"]["Publish"] and isinstance(n["Networking"]["Publish"], dict) ) and ( "Port" in n["Networking"]["Publish"].keys() and n["Networking"]["Publish"]["Port"] ):
         if isinstance(n["Networking"]["Publish"]["Port"], dict):
           store = n["Networking"]["Publish"]["Port"]
@@ -310,23 +311,76 @@ for n in afList:
               n["Config"]["Port"][label]["Target"] = n["Config"]["Port"][label]["ContainerPort"]
             if "HostPort" in n["Config"]["Port"][label].keys() and n["Config"]["Port"][label]["HostPort"]:
               n["Config"]["Port"][label]["value"] = n["Config"]["Port"][label]["HostPort"]
-            if "Target" not in n["Config"]["Port"][label].keys() and "value" not in n["Config"]["Port"][label].keys():
-              n["Config"]["Port"].pop(label, "")
+
       
       n.pop("Networking", "")
       
+      cleanedPorts = {}
+      for name, value in n["Config"]["Port"].items():
+        goodTarget = False
+        goodvalue = False
+        
+        if "value" in value.keys() and value["value"]:
+          cleanTarget0 = value["value"].split("-")[0]
+          try:
+            value["value"] = int(cleanTarget0)
+            goodvalue = True
+          except:
+            value.pop("value", "")
+            goodvalue = False
+        
+        if "value" not in value.keys() or not value["value"]:
+          if "Default" in value.keys() and not value["Default"]:
+            try:
+              value["value"] = int(value["Default"])
+            except:
+              continue
+            
+          elif "Target" in value.keys() and value["Target"]:
+            try:
+              value["value"] = int(value["Target"])
+            except:
+              continue
+        
+        if "Target" in value.keys() and value["Target"]:
+          cleanTarget2 = value["Target"].split("-")[0]
+          try:
+            value["Target"] = int(cleanTarget2)
+            goodTarget = True
+          except:
+            value.pop("Target", "")
+            goodTarget = False
+
+            
+        if goodTarget or goodvalue:
+          cleanedPorts[name] = value
+          
+
+      n["Config"]["Port"] = cleanedPorts
+
+      
       portstore = {}
+      ## TODO flag expected main container
+      mainport = ""
+      if "WebUI" in n.keys() and n["WebUI"] and "[PORT:"  in n["WebUI"]:
+        stripped = n["WebUI"].split("[PORT:", 1)[1]
+        stripped = stripped.split("]/", 1)[0]
+        for char in invalid:
+          mainport = stripped.replace(char, '')
       for name, value in n["Config"]["Port"].items():
         store = value
+        mainset = False
         
         if len(n["Config"]["Port"]) == 1:
           name = "main"
+        elif mainport and "Target" in value.keys() and value["Target"] == mainport:     
+          name = "main"
+
         name = name.lower()
         for char in invalid:
           name = name.replace(char, '')
         name = name.replace('.', '-')
         portstore[name] = value
-        
       n["Config"].pop("Port", "")
       n["Config"]["Port"] = portstore
       
@@ -450,7 +504,7 @@ for name, app in combinedfree.items():
     r = requests.get(url, allow_redirects=True)
 
     open("./export/"+"app/"+tmpname+"/icon.png", 'wb').write(r.content)
-  except :
+  except:
     continue
     
   # readme.md
@@ -513,22 +567,32 @@ for name, app in combinedfree.items():
       valuesyaml["persistence"][name]["readOnly"] = True
       
   valuesyaml["service"] = {}
-  for name, value in app["Config"]["Port"].items():
-    valuesyaml["service"][name] = {}
-    valuesyaml["service"][name]["enabled"] = True
-
-    valuesyaml["service"][name]["ports"] = {}
-    valuesyaml["service"][name]["ports"][name] = {}
-    valuesyaml["service"][name]["ports"][name]["enabled"] = True
-    valuesyaml["service"][name]["ports"][name]["protocol"] = value["Mode"].upper()
-    if "value" in value.keys() and value["value"]:
-      valuesyaml["service"][name]["ports"][name]["port"] = value["value"]
-    else:
-      valuesyaml["service"][name]["ports"][name]["port"] = value["Target"]
-    if "Target" in value.keys() and value["Target"]:
-      valuesyaml["service"][name]["ports"][name]["targetPort"] = value["Target"]
-    else: 
-      valuesyaml["service"][name]["ports"][name]["targetPort"] = value["value"]
+  
+  if len(n["Config"]["Port"]) == 0:
+    valuesyaml["service"]["main"] = {}
+    valuesyaml["service"]["main"]["enabled"] = False
+    valuesyaml["service"]["main"]["ports"]["main"] = {}
+    valuesyaml["service"]["main"]["ports"]["main"]["enabled"] = False
+  else:
+    for name, value in app["Config"]["Port"].items():
+      valuesyaml["service"][name] = {}
+      valuesyaml["service"][name]["enabled"] = True
+    
+      valuesyaml["service"][name]["ports"] = {}
+      valuesyaml["service"][name]["ports"][name] = {}
+      valuesyaml["service"][name]["ports"][name]["enabled"] = True
+      valuesyaml["service"][name]["ports"][name]["protocol"] = value["Mode"].upper()
+      if "value" in value.keys() and value["value"]:
+        valuesyaml["service"][name]["ports"][name]["port"] = value["value"]
+      else:
+        valuesyaml["service"][name]["ports"][name]["port"] = value["Target"]
+      if "Target" in value.keys() and value["Target"]:
+        valuesyaml["service"][name]["ports"][name]["targetPort"] = value["Target"]
+      else: 
+        valuesyaml["service"][name]["ports"][name]["targetPort"] = value["value"]
+        
+  if not app["Config"]["Port"]["main"]
+    raise Exception("App does not have a main port set: " app["name"] )
 
   valuesyamlString = yaml.dump(valuesyaml)
   valuesyamlFile = open("./export/"+"app/"+tmpname+"/values.yaml", "w")

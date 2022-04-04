@@ -29,7 +29,7 @@ Config:
       Type: Path
       value: /mnt/user/appdata/lighttpd/www
   Port:
-    http:
+    main:
       Default: '8081'
       Description: 'Container Port: 80'
       Display: always
@@ -37,20 +37,9 @@ Config:
       Mode: tcp
       Name: http
       Required: 'true'
-      Target: '80'
+      Target: 80
       Type: Port
-      value: '8081'
-    https:
-      Default: ''
-      Description: 'Container Port: 443'
-      Display: always
-      Mask: 'false'
-      Mode: tcp
-      Name: https
-      Required: 'false'
-      Target: '443'
-      Type: Port
-      value: ''
+      value: 8081
   Variable: {}
 ExtraParams: -t
 GitHub: https://github.com/llalon/docker-templates
@@ -59,7 +48,6 @@ Keywords:
 - lighttpd
 - Network-Web
 Name: lighttpd
-Network: bridge
 Overview: Web server optimized for speed-critical environments while remaining standards-compliant,
   secure and flexible.
 Privileged: 'false'

@@ -14,19 +14,11 @@ persistence:
     enabled: true
     mountPath: /opt/ozw/config
 service:
-  ozw-adminport:
+  main:
     enabled: true
     ports:
-      ozw-adminport:
+      main:
         enabled: true
-        port: '1983'
+        port: 7800
         protocol: TCP
-        targetPort: '1983'
-  webuiport:
-    enabled: true
-    ports:
-      webuiport:
-        enabled: true
-        port: '7800'
-        protocol: TCP
-        targetPort: '7800'
+        targetPort: 7800

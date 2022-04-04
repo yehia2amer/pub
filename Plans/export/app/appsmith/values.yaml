@@ -8,19 +8,11 @@ persistence:
     enabled: true
     mountPath: /appsmith-stacks
 service:
-  supervisorport:
+  main:
     enabled: true
     ports:
-      supervisorport:
+      main:
         enabled: true
-        port: '9001'
+        port: 8182
         protocol: TCP
-        targetPort: '9001'
-  webuiport:
-    enabled: true
-    ports:
-      webuiport:
-        enabled: true
-        port: '8182'
-        protocol: TCP
-        targetPort: '80'
+        targetPort: 80

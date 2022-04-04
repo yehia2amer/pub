@@ -19,19 +19,7 @@ Config:
       Type: Path
       value: /mnt/user/appdata/nexus-data
   Port:
-    dockerregistry:
-      Default: ''
-      Description: "Port for Docker Registry (if any), usually 5000\r\n\r\nSee README\
-        \ for setup."
-      Display: always
-      Mask: 'false'
-      Mode: tcp
-      Name: Docker Registry
-      Required: 'false'
-      Target: '5000'
-      Type: Port
-      value: ''
-    webgui:
+    main:
       Default: '8081'
       Description: Web GUI Port
       Display: always
@@ -39,9 +27,9 @@ Config:
       Mode: tcp
       Name: Web GUI
       Required: 'true'
-      Target: '8081'
+      Target: 8081
       Type: Port
-      value: '8081'
+      value: 8081
   Variable: {}
 ExtraParams: --restart=unless-stopped --ulimit nofile=65536:65536
 Icon: https://github.com/jslay88/unraid_apps/raw/master/templates/icons/NexusOSS.png
@@ -52,7 +40,6 @@ Keywords:
 - Network-Proxy
 - Network-Management
 Name: nexusoss
-Network: bridge
 Overview: "Nexus Repository OSS\r\n"
 PostArgs: ''
 Privileged: 'false'

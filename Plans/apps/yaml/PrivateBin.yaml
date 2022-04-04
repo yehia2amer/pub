@@ -15,18 +15,7 @@ Config:
       Target: /srv/data
       Type: Path
       value: ''
-  Port:
-    main:
-      Default: ''
-      Description: 'Container Port: 80'
-      Display: always
-      Mask: 'false'
-      Mode: tcp
-      Name: WebUI
-      Required: 'null'
-      Target: '8080'
-      Type: Port
-      value: ''
+  Port: {}
   Variable: {}
 ExtraParams: --read-only
 Icon: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/privatebin.png
@@ -34,7 +23,6 @@ Keywords:
 - privatebin
 - Other
 Name: privatebin
-Network: bridge
 Official: true
 Overview: A minimalist, open source online pastebin where the server has zero knowledge
   of pasted data. Data is encrypted/decrypted in the browser using 256 bits AES.

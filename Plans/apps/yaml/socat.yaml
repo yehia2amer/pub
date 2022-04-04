@@ -11,18 +11,7 @@ Config:
   Label: {}
   Path: {}
   Port:
-    forwardingport:
-      Default: '100'
-      Description: The port to redirect / forward TCP4 connections to
-      Display: always
-      Mask: 'false'
-      Mode: tcp
-      Name: Forwarding port
-      Required: 'true'
-      Target: PGID
-      Type: Port
-      value: ''
-    listeningport:
+    main:
       Default: '443'
       Description: The port to listen for TCP4 connections
       Display: always
@@ -30,9 +19,9 @@ Config:
       Mode: tcp
       Name: Listening port
       Required: 'true'
-      Target: '443'
+      Target: 443
       Type: Port
-      value: ''
+      value: 443
   Variable: {}
 ExtraParams: --expose 443
 Icon: https://raw.githubusercontent.com/tynor88/docker-templates/master/images/socat_small.png

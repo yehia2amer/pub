@@ -5,19 +5,11 @@ image:
   tag: latest
 persistence: {}
 service:
-  forwardingport:
+  main:
     enabled: true
     ports:
-      forwardingport:
+      main:
         enabled: true
-        port: PGID
+        port: 443
         protocol: TCP
-        targetPort: PGID
-  listeningport:
-    enabled: true
-    ports:
-      listeningport:
-        enabled: true
-        port: '443'
-        protocol: TCP
-        targetPort: '443'
+        targetPort: 443

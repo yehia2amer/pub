@@ -17,18 +17,7 @@ Config:
       Type: Path
       value: /mnt/user/appdata/appsmith
   Port:
-    supervisorport:
-      Default: ''
-      Description: 'Container Port: 9001'
-      Display: advanced
-      Mask: 'false'
-      Mode: tcp
-      Name: Supervisor Port
-      Required: 'false'
-      Target: '9001'
-      Type: Port
-      value: ''
-    webuiport:
+    main:
       Default: ''
       Description: 'Container Port: 80'
       Display: always
@@ -36,9 +25,9 @@ Config:
       Mode: tcp
       Name: WebUI Port
       Required: 'true'
-      Target: '80'
+      Target: 80
       Type: Port
-      value: '8182'
+      value: 8182
   Variable: {}
 Icon: https://github.com/hussainalhaddad/docker-templates/raw/master/appsmith/appsmith.png
 Keywords:
@@ -46,7 +35,6 @@ Keywords:
 - Productivity
 - Tools-Utilities
 Name: appsmith
-Network: bridge
 Official: true
 Overview: Quickly build any custom business software with pre-built UI widgets that
   connect to any data source. Control everything with JavaScript.

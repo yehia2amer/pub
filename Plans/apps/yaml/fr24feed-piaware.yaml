@@ -50,7 +50,7 @@ Config:
       Type: Path
       value: /mnt/user/appdata/fr24feed-piaware/piaware.conf
   Port:
-    fr24feedadminhttpport:
+    main:
       Default: '8754'
       Description: 'Container Port: 8754'
       Display: advanced
@@ -58,20 +58,9 @@ Config:
       Mode: tcp
       Name: fr24feed Admin HTTP Port
       Required: 'false'
-      Target: '8754'
+      Target: 8754
       Type: Port
-      value: ''
-    httpport:
-      Default: ''
-      Description: 'Container Port: 8080'
-      Display: always
-      Mask: 'false'
-      Mode: tcp
-      Name: HTTP Port
-      Required: 'false'
-      Target: '8080'
-      Type: Port
-      value: ''
+      value: 8754
   Variable: {}
 Icon: https://github.com/FoxxMD/unraid-docker-templates/raw/master/icons/flightaware.jpg
 Keywords:
@@ -79,7 +68,6 @@ Keywords:
 - Network-Web
 - Other
 Name: fr24feed-piaware
-Network: bridge
 Overview: "All-in-one image for feeding FlightRadar24/FlightAware ADS-B/MLAT data\
   \ with an RTL-SDR device and local web server for displaying aircraft positions\
   \ on a map.[br][br]\r\n"

@@ -26,18 +26,7 @@ Config:
       Target: /data
       Type: Path
       value: ''
-  Port:
-    main:
-      Default: ''
-      Description: 'Container Port: 80'
-      Display: always
-      Mask: 'false'
-      Mode: tcp
-      Name: Port
-      Required: 'false'
-      Target: '80'
-      Type: Port
-      value: ''
+  Port: {}
   Variable:
     pgid:
       Default: '100'
@@ -66,7 +55,6 @@ Keywords:
 - lemur-cfssl
 - Tools-Utilities
 Name: lemur-cfssl
-Network: bridge
 Overview: "Lemur manages TLS certificate creation. While not able to issue certificates\
   \ itself, Lemur acts as a broker between CAs and environments providing a central\
   \ portal for developers to issue TLS certificates with 'sane' defaults.\r\n"

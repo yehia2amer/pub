@@ -81,18 +81,7 @@ Config:
       Target: /home/Shinobi/videos
       Type: Path
       value: ''
-  Port:
-    main:
-      Default: ''
-      Description: 'Container Port: 8080'
-      Display: always
-      Mask: 'false'
-      Mode: tcp
-      Name: WebUI
-      Required: 'true'
-      Target: '8080'
-      Type: Port
-      value: ''
+  Port: {}
   Variable:
     nvidiagpucapabilities:
       Default: ''
@@ -119,7 +108,6 @@ Keywords:
 - shinobi-pro-cctv
 - HomeAutomation
 Name: shinobi-pro-cctv
-Network: bridge
 Overview: 'Shinobi Docker from official Dockerhub repo. Note to use GPU for hardware
   encoding or Object detection: 1. add `--runtime=nvidia` in Extra Parameters.  2.
   Add Nvidia GPU Devices variables ID & Driver capabilities in advanced'

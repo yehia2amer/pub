@@ -11,19 +11,11 @@ persistence:
     enabled: true
     mountPath: /var/www/localhost/htdocs
 service:
-  http:
+  main:
     enabled: true
     ports:
-      http:
+      main:
         enabled: true
-        port: '8081'
+        port: 8081
         protocol: TCP
-        targetPort: '80'
-  https:
-    enabled: true
-    ports:
-      https:
-        enabled: true
-        port: '443'
-        protocol: TCP
-        targetPort: '443'
+        targetPort: 80
