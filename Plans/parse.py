@@ -151,7 +151,7 @@ for n in afList:
         
       n["Keywords"] = []
       n["Keywords"].append(tmp)
-      n["Keywords"].append(n["CategoryList"])
+      n["Keywords"] = n["Keywords"]+n["CategoryList"]
       
       if not "Requires" in n.keys():
         n["Requires"] = ""
