@@ -1,7 +1,12 @@
 BindTime: 'true'
-CategoryList:
+CategoryList: &id001
 - Productivity
-ChangeLogPresent: true
+Config:
+  Device: {}
+  Label: {}
+  Path: {}
+  Port: {}
+  Variable: {}
 Data:
   Volume:
     ContainerDir: /usr/local/var/lib/couchdb
@@ -11,7 +16,8 @@ GitHub: https://github.com/docker-library/official-images/blob/master/library/co
 Icon: https://couchdb.apache.org/image/couch@2x.png
 Keywords:
 - couchdb-offical-docker-v1-x
-Name: CouchDB-Offical-Docker-v1.x
+- *id001
+Name: couchdb-offical-docker-v1-x
 Networking:
   Mode: bridge
   Publish:
@@ -29,5 +35,5 @@ Repository: couchdb
 Requires: ''
 Sources:
 - https://hub.docker.com/_/couchdb/
-TemplateURL: https://raw.githubusercontent.com/spants/unraidtemplates/master/Spants/CouchDB-v1.x.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:5984]/_utils

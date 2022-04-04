@@ -1,6 +1,6 @@
 CAComment: This template is set up to use a custom network. You may have to adjust
   the network or IP address etc to match your system
-CategoryList:
+CategoryList: &id001
 - GameServers
 Config:
   Device: {}
@@ -121,17 +121,17 @@ ExtraParams: --hostname='SteamHeadlessSecondary' --add-host='SteamHeadlessSecond
 Icon: https://raw.githubusercontent.com/Josh5/docker-steam-headless/master/images/steam-icon.png
 Keywords:
 - steam-headless-secondary
+- *id001
 Name: steam-headless-secondary
 Network: br0
 Overview: "Headless Steam Service (Secondary)\r\n"
 PostArgs: ''
 Privileged: 'true'
-Project: https://store.steampowered.com/
 Registry: https://hub.docker.com/r/josh5/steam-headless
-Repository: josh5/steam-headless:latest
+Repository: josh5/steam-headless
 Requires: '**Steam Headless**'
 Sources:
 - https://store.steampowered.com/
 - https://hub.docker.com/r/josh5/steam-headless
-TemplateURL: https://raw.githubusercontent.com/Josh5/unraid-docker-templates/master/josh5/steam-headless-secondary.xml
+Tag: latest
 WebUI: ''

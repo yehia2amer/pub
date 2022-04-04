@@ -1,0 +1,21 @@
+env:
+  Custom Resolution Height: '768'
+  Custom Resolution Width: '1280'
+  Local Scaling: remote
+  Locales - Language: en_US.UTF-8 UTF-8
+  Run as root: 'false'
+image:
+  pullPolicy: IfNotPresent
+  repository: ich777/krusader
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

@@ -1,0 +1,20 @@
+env:
+  Cron Schedule: ''
+  Sync Command: ''
+  Sync Destination: ''
+  Sync Destination Subpath: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: tynor88/rclone
+  tag: dev
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

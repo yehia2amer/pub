@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Productivity
 - Other
 Config:
@@ -32,6 +32,7 @@ Config:
 Icon: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/searx.png
 Keywords:
 - searx
+- *id001
 Name: searx
 Network: bridge
 Official: true
@@ -39,14 +40,11 @@ Overview: Searx is a free internet metasearch engine which aggregates results fr
   more than 70 search services. Users are neither tracked nor profiled. Additionally,
   searx can be used over Tor for online anonymity.
 Privileged: 'false'
-Project: https://github.com/asciimoo/searx
 Registry: https://hub.docker.com/r/searx/searx/
-Repository: searx/searx:latest
+Repository: searx/searx
 Requires: ''
 Sources:
 - https://github.com/asciimoo/searx
 - https://hub.docker.com/r/searx/searx/
-TemplateURL: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/searx.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:8080]/
-topPerforming: 5.455
-topTrending: -0.12099999999999955

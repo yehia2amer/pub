@@ -1,0 +1,23 @@
+env:
+  GAME_ID: '317670'
+  GAME_NAME: nmrih
+  GAME_PARAMS: +map nmo_broadway -maxplayers 8
+  GAME_PORT: '27015'
+  Steam-Password: ''
+  Steam-Username: ''
+  Validate Installation: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: ich777/steamcmd
+  tag: nomoreroominhell
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

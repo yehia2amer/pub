@@ -1,0 +1,26 @@
+env:
+  Additional XMRig Arguments: '--no-color '
+  Coin: monero
+  Donation %: '1'
+  Donation to: lnxd-fee
+  GPU Driver Version: ''
+  Nvidia Driver Capabilities: all
+  Nvidia Visible Devices: ''
+  Pool: xmr-au1.nanopool.org:14444
+  Wallet: 84e8UJvXHDGVfE5HZDQfhn3Kh3RGJKebz31G7D4H24TLPMe9x7bQLBw8iyBhNx9USXB8MhvhBe3DyVW1LcuVAf4jBiADNLw
+  Worker name: Unraid
+image:
+  pullPolicy: IfNotPresent
+  repository: lnxd/xmrig
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

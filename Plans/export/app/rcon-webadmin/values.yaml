@@ -1,0 +1,20 @@
+env:
+  RWA_ADMIN: 'TRUE'
+  RWA_ENV: 'False'
+  RWA_PASSWORD: admin
+  RWA_USERNAME: admin
+image:
+  pullPolicy: IfNotPresent
+  repository: itzg/rcon
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

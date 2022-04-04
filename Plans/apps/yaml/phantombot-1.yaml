@@ -1,6 +1,6 @@
 CAComment: This template is set up to use a custom network. You may have to adjust
   the network or IP address etc to match your system
-CategoryList:
+CategoryList: &id001
 - GameServers
 Config:
   Device: {}
@@ -111,7 +111,8 @@ Config:
 Icon: https://phantombot.github.io/PhantomBot/common/images/logo.png
 Keywords:
 - phantombot-1
-Name: PhantomBot-1
+- *id001
+Name: phantombot-1
 Network: br0
 Overview: "PhantomBot is a Twitch chat bot powered by Java. PhantomBot has many modern\
   \ features out of the box such as a built-in webpanel, enhanced moderation, games,\
@@ -120,12 +121,11 @@ Overview: "PhantomBot is a Twitch chat bot powered by Java. PhantomBot has many 
   \ StreamLabs and StreamElements!\r\n"
 PostArgs: ''
 Privileged: 'true'
-Project: https://github.com/phantombot/PhantomBot
 Registry: https://hub.docker.com/r/gmt2001/phantombot-stable
-Repository: ghcr.io/phantombot/phantombot:latest
+Repository: ghcr.io/phantombot/phantombot
 Requires: ''
 Sources:
 - https://github.com/phantombot/PhantomBot
 - https://hub.docker.com/r/gmt2001/phantombot-stable
-TemplateURL: https://raw.githubusercontent.com/ItJustFox/unraidtemplate/master/PhantomBot/phantombot.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:25000]/

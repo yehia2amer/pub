@@ -1,0 +1,19 @@
+env:
+  Host Key 1: '000'
+  Host Key 2: '99'
+  Host Key 3: '100'
+image:
+  pullPolicy: IfNotPresent
+  repository: jassycliq/android-studio-projector
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

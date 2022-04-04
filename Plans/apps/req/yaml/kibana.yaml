@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Tools-Utilities
 - Other
 Config:
@@ -32,6 +32,7 @@ Config:
 Icon: https://raw.githubusercontent.com/cschanot/docker-templates/main/images/kibana.png
 Keywords:
 - kibana
+- *id001
 Name: kibana
 Network: bridge
 Networking:
@@ -41,12 +42,11 @@ Overview: "Kibana gives shape to any kind of data \u2014 structured and unstruct
   \ \u2014 indexed in Elasticsearch.  \r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://www.elastic.co/kibana
 Registry: https://hub.docker.com/_/kibana/
-Repository: kibana:7.12.0
+Repository: kibana
 Requires: ElasticSearch installed
 Sources:
 - https://www.elastic.co/kibana
 - https://hub.docker.com/_/kibana/
-TemplateURL: https://raw.githubusercontent.com/cschanot/docker-templates/master/kibana.xml
+Tag: 7.12.0
 WebUI: http://[IP]:[PORT:5601]

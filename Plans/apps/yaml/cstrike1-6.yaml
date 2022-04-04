@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - GameServers
 Config:
   Device: {}
@@ -171,7 +171,8 @@ ExtraParams: --restart=unless-stopped
 Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/cs1.6.png
 Keywords:
 - cstrike1-6
-Name: CStrike1.6
+- *id001
+Name: cstrike1-6
 Network: bridge
 Networking:
   Mode: bridge
@@ -179,12 +180,12 @@ Overview: "This Docker will download and install SteamCMD. It will also install 
   \ 1.6 and run it.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://www.steampowered.com/
 Registry: https://hub.docker.com/r/ich777/steamcmd/
-Repository: ich777/steamcmd:cstrike1.6
+Repository: ich777/steamcmd
 Requires: ''
 Sources:
 - https://www.steampowered.com/
 - https://hub.docker.com/r/ich777/steamcmd/
+Tag: cstrike1.6
 WebUI: ''
 caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/CStrike1.6.xml

@@ -1,5 +1,5 @@
 Beta: 'true'
-CategoryList:
+CategoryList: &id001
 - GameServers
 Config:
   Device: {}
@@ -215,7 +215,8 @@ ExtraParams: --restart=unless-stopped
 Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/pixark.png
 Keywords:
 - pixark
-Name: PIXARK
+- *id001
+Name: pixark
 Network: bridge
 Networking:
   Mode: bridge
@@ -223,12 +224,11 @@ Overview: "This Docker will download and install SteamCMD. It will also install 
   \ and run it (a normal server startup of PIXARK can take a long time!).\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://pixark.snail.com/
 Registry: https://hub.docker.com/r/ich777/steamcmd/
-Repository: ich777/steamcmd:pixark
+Repository: ich777/steamcmd
 Requires: ''
 Sources:
 - https://pixark.snail.com/
 - https://hub.docker.com/r/ich777/steamcmd/
-TemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/PIXARK.xml
+Tag: pixark
 WebUI: ''

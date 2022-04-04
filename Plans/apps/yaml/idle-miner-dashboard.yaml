@@ -1,24 +1,25 @@
 Beta: 'true'
 BindTime: 'true'
-CategoryList:
+CategoryList: &id001
 - HomeAutomation
 - Tools-Utilities
 - Crypto
-ChangeLogPresent: true
+Config:
+  Device: {}
+  Label: {}
+  Path: {}
+  Port: {}
+  Variable: {}
 Data:
   Volume:
     ContainerDir: /app/config
     HostDir: /mnt/user/appdata/IdleMinerDashboard
     Mode: rw
-Environment:
-  Variable:
-    Mode: ''
-    Name: REACT_APP_APIKEY
-    Value: REPLACEME!!!!1!
 Icon: https://raw.githubusercontent.com/ElectricBrainUK/IdleMiner/master/electron/assets/appIcon.png
 Keywords:
 - idle-miner-dashboard
-Name: Idle-Miner-Dashboard
+- *id001
+Name: idle-miner-dashboard
 Networking:
   Mode: bridge
   Publish:
@@ -37,5 +38,5 @@ Repository: electricbrainuk/idleminerdashboard
 Requires: ''
 Sources:
 - https://hub.docker.com/repository/docker/electricbrainuk/idleminerdashboard
-TemplateURL: https://raw.githubusercontent.com/ElectricBrainUK/docker-templates/master/idle-miner-dashboard.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:3000]

@@ -1,0 +1,22 @@
+env:
+  Database Name: ''
+  Database Password: ''
+  Database Port: ''
+  Database Provider: ''
+  Database Server: ''
+  Database User: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: axelander/openbudgeteer
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

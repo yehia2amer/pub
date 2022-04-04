@@ -1,0 +1,17 @@
+env:
+  Host Key 1: https://domain.com/api/v1
+image:
+  pullPolicy: IfNotPresent
+  repository: vikunja/frontend
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

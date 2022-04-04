@@ -1,21 +1,23 @@
 BindTime: 'true'
-CategoryList:
+CategoryList: &id001
 - Network-DNS
-ChangeLogPresent: true
+Config:
+  Device: {}
+  Label: {}
+  Path: {}
+  Port: {}
+  Variable: {}
 Data:
   Volume:
     ContainerDir: /config
     HostDir: ''
     Mode: rw
-Environment:
-  Variable:
-    Name: ''
-    Value: ''
 GitHub: https://github.com/coppit/docker-no-ip
 Icon: https://raw.githubusercontent.com/coppit/docker-no-ip/master/no-ip-hernandito.png
 Keywords:
 - noip
-Name: NoIp
+- *id001
+Name: noip
 Networking:
   Mode: bridge
   Publish:
@@ -28,14 +30,11 @@ Overview: 'No-Ip is a dynamic DNS service, with a free tier supporting up to thr
 
   '
 Privileged: 'false'
-Project: https://www.noip.com/
 Registry: https://hub.docker.com/r/coppit/no-ip/
 Repository: coppit/no-ip
 Requires: ''
 Sources:
 - https://www.noip.com/
 - https://hub.docker.com/r/coppit/no-ip/
-TemplateURL: https://raw.githubusercontent.com/coppit/docker-templates/master/coppit/no-ip.xml
+Tag: latest
 WebUI: ''
-topPerforming: 0.452
-topTrending: -0.917

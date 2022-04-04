@@ -1,8 +1,17 @@
 BindTime: 'true'
-CategoryList:
+CategoryList: &id001
 - MediaServer-Video
 - MediaServer-Music
 - MediaServer-Photos
+Config:
+  Device: {}
+  Label: {}
+  Path: {}
+  Port: {}
+  Variable:
+    GIDLIST:
+      Name: GIDLIST
+      value: '2'
 Data:
   Volume:
   - ContainerDir: /config
@@ -11,18 +20,11 @@ Data:
   - ContainerDir: /mnt
     HostDir: /mnt
     Mode: rw
-Environment:
-  Variable:
-  - Name: UID
-    Value: '2'
-  - Name: GID
-    Value: '2'
-  - Name: GIDLIST
-    Value: '2'
 Icon: https://raw.githubusercontent.com/MediaBrowser/Emby.Resources/master/images/Logos/logoicon.png
 Keywords:
 - embyserver
-Name: EmbyServer
+- *id001
+Name: embyserver
 Networking:
   Mode: host
   Publish:
@@ -38,11 +40,9 @@ Overview: 'Emby Server is a home media server built on top of other popular open
   '
 Privileged: 'false'
 Registry: https://registry.hub.docker.com/r/emby/embyserver/
-Repository: emby/embyserver:latest
+Repository: emby/embyserver
 Requires: ''
 Sources:
 - https://registry.hub.docker.com/r/emby/embyserver/
-TemplateURL: https://raw.githubusercontent.com/MediaBrowser/Emby.Build/master/unraid-templates/emby/EmbyServer.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:8096]/
-topPerforming: 0.283
-topTrending: -3.243

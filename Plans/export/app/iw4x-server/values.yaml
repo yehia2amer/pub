@@ -1,0 +1,24 @@
+env:
+  DATA_PERM: '770'
+  Force Update: ''
+  GAME_PORT: '28960'
+  IW4x DLC Download URL: https://iw4x-my.sharepoint.com/:u:/g/personal/emosewaj_iw4x_onmicrosoft_com/EYnWYmCXExpEvn-bL2262Q0BSy0jVZF0FXslvpJEDPE5Fw?e=gPx8RF&download=1
+  Main IW4x Download URL: https://dss0.cc/updater/iw4x_files.zip
+  Startup Parameters: +exec server.cfg +sv_maxclients 12 +set fs_game mods/bots +set
+    playlistFilename playlists.info
+  UMASK: '000'
+image:
+  pullPolicy: IfNotPresent
+  repository: ich777/iw4x-server
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

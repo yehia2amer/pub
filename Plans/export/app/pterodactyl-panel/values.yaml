@@ -1,0 +1,23 @@
+env:
+  DEBUG: 'false'
+  Database Hostname or IP: mariadb
+  Database Name: pterodactyl
+  Database Password: pterodactyl
+  Database Port: '3306'
+  Database Username: pterodactyl
+  Timezone: Europe/London
+image:
+  pullPolicy: IfNotPresent
+  repository: ccarney16/pterodactyl-panel
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

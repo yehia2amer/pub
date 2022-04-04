@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Security
 - Tools-Utilities
 Config:
@@ -44,6 +44,7 @@ ExtraParams: --restart unless-stopped
 Icon: https://raw.githubusercontent.com/ibracorp/app-logos/main/docker/docker-logo.png
 Keywords:
 - dockersocket
+- *id001
 Name: dockersocket
 Network: bridge
 Networking:
@@ -51,12 +52,11 @@ Networking:
 Overview: This is a security-enhanced proxy for the Docker Socket.
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/Tecnativa/docker-socket-proxy
 Registry: https://hub.docker.com/r/tecnativa/docker-socket-proxy
-Repository: ghcr.io/tecnativa/docker-socket-proxy:latest
+Repository: ghcr.io/tecnativa/docker-socket-proxy
 Requires: ''
 Sources:
 - https://github.com/Tecnativa/docker-socket-proxy
 - https://hub.docker.com/r/tecnativa/docker-socket-proxy
-TemplateURL: https://raw.githubusercontent.com/ibracorp/unraid-templates/master/docker-socket-proxy/docker-socket-proxy.xml
+Tag: latest
 WebUI: ''

@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Productivity
 - Tools-Utilities
 - Other
@@ -165,7 +165,8 @@ Config:
 Icon: https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/icons/openeats.png
 Keywords:
 - openeats
-Name: OpenEats
+- *id001
+Name: openeats
 Network: bridge
 Networking:
   Mode: bridge
@@ -173,14 +174,11 @@ Overview: "OpenEats is a recipe management site that allows users to create, sha
   \ and store their personal collection of recipes.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/open-eats/OpenEats
 Registry: https://hub.docker.com/r/bramblegb/openeats/
 Repository: bramblegb/openeats
 Requires: MySQL / MariaDB installed
 Sources:
 - https://github.com/open-eats/OpenEats
 - https://hub.docker.com/r/bramblegb/openeats/
-TemplateURL: https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/openeats.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:80]
-topPerforming: 2.714
-topTrending: -9.727

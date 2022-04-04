@@ -1,0 +1,19 @@
+env:
+  AdminEmail: admin@test.fr
+  AdminPassword: changeme
+  UnraidIP: 192.168.0.59
+image:
+  pullPolicy: IfNotPresent
+  repository: seafileltd/seafile
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

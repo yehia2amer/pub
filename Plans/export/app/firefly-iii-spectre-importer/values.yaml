@@ -1,0 +1,20 @@
+env:
+  Firefly-III Personal Access Token: ''
+  Firefly-III URL: http://192.168.0.10:8080
+  SPECTRE_APP_ID: ''
+  SPECTRE_SECRET: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: fireflyiii/spectre-importer
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

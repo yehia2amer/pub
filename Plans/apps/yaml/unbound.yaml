@@ -1,5 +1,5 @@
 Beta: 'true'
-CategoryList:
+CategoryList: &id001
 - Network-DNS
 Config:
   Device: {}
@@ -43,6 +43,7 @@ Config:
 Icon: https://raw.githubusercontent.com/kutzilla/unraid-templates/master/images/unbound.png
 Keywords:
 - unbound
+- *id001
 Name: unbound
 Network: bridge
 Networking:
@@ -53,13 +54,11 @@ Overview: 'Unbound is a validating, recursive, and caching DNS resolver.  It can
   or you can create custom DNS Records for your local network.'
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/kutzilla/unbound-docker
 Registry: https://hub.docker.com/r/kutzilla/unbound
-Repository: kutzilla/unbound:latest
+Repository: kutzilla/unbound
 Requires: ''
 Sources:
 - https://github.com/kutzilla/unbound-docker
 - https://hub.docker.com/r/kutzilla/unbound
-TemplateURL: https://raw.githubusercontent.com/kutzilla/unraid-templates/master/apps/unbound.xml
+Tag: latest
 WebUI: ''
-topTrending: -34.997

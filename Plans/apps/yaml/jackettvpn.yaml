@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Downloaders
 - Tools-Utilities
 Config:
@@ -198,20 +198,18 @@ ExtraParams: --restart unless-stopped
 Icon: https://raw.githubusercontent.com/DyonR/docker-templates/master/Icons/jackettvpn/jackettvpn-icon.png
 Keywords:
 - jackettvpn
+- *id001
 Name: jackettvpn
 Network: bridge
 Overview: Docker container which runs the latest headless Jackett Server while connecting
   to WireGuard or OpenVPN with iptables killswitch to prevent IP leakage when the
   tunnel goes down.
 Privileged: 'true'
-Project: https://github.com/Jackett/Jackett
 Registry: https://hub.docker.com/r/dyonr/jackettvpn
 Repository: dyonr/jackettvpn
 Requires: ''
 Sources:
 - https://github.com/Jackett/Jackett
 - https://hub.docker.com/r/dyonr/jackettvpn
-TemplateURL: https://raw.githubusercontent.com/DyonR/docker-templates/master/Templates/jackettvpn/jackettvpn-template.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:9117]/
-topPerforming: 1.565
-topTrending: -3.0639999999999996

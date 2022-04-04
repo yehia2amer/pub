@@ -1,0 +1,30 @@
+env:
+  'Audio Post Processor: Beets Tagging': ''
+  'Audio Post Processor: Detect Single File Albums': ''
+  'Audio Post Processor: Replaygain FLAC tagging': ''
+  'Audio Post Processor: Require Audio Quality Match': ''
+  'Audio Post Processor: Target Format': ''
+  'Audio Post Processor: Target Format Bitrate': ''
+  'Audio Post Processor: Verify Downloaded Tracks': ''
+  NVIDIA_DRIVER_CAPABILITIES: ''
+  NVIDIA_VISIBLE_DEVICES: ''
+  'Video Post Processor: Audio/Subtitle Language': ''
+  'Video Post Processor: Encode with Sickbeard MP4 Automator (SMA)': ''
+  'Video Post Processor: Process with MKV Cleaner': ''
+  'Video Post Processor: Require Audio/Subtitle Language': ''
+  'Video Post Processor: Tag with Sickbeard MP4 Automator (SMA)': ''
+image:
+  pullPolicy: IfNotPresent
+  repository: randomninjaatk/sabnzbd-extended
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

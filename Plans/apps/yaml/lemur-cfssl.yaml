@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Tools-Utilities
 Config:
   Device: {}
@@ -64,12 +64,12 @@ Config:
 Icon: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/lemur-cfssl.png
 Keywords:
 - lemur-cfssl
+- *id001
 Name: lemur-cfssl
 Network: bridge
 Overview: "Lemur manages TLS certificate creation. While not able to issue certificates\
   \ itself, Lemur acts as a broker between CAs and environments providing a central\
   \ portal for developers to issue TLS certificates with 'sane' defaults.\r\n"
-Project: https://github.com/Netflix/lemur
 Registry: https://hub.docker.com/r/halianelf/lemur/
 RepoShort: Selfhosters
 Repository: halianelf/lemur
@@ -77,5 +77,5 @@ Requires: ''
 Sources:
 - https://github.com/Netflix/lemur
 - https://hub.docker.com/r/halianelf/lemur/
-TemplateURL: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/lemur-cfssl.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:80]

@@ -1,0 +1,20 @@
+env:
+  IP Address: ''
+  TimeZone: Europe/Warsaw
+  WEB User Password: difficult
+  WEB Username: admin
+image:
+  pullPolicy: IfNotPresent
+  repository: pwa666/bacula-server
+  tag: 11-sqlite3-latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

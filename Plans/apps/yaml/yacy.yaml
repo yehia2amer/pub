@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Tools-Utilities
 - Network-Web
 Config:
@@ -44,6 +44,7 @@ ExtraParams: --log-opt max-size=200m --log-opt max-file=2
 Icon: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/yacy.png
 Keywords:
 - yacy
+- *id001
 Name: yacy
 Network: bridge
 Official: true
@@ -52,14 +53,11 @@ Overview: "YaCy decentralized search engine (https://yacy.net)[br][br][b][u][spa
   \ [B][u]yacy[/B][/u][/b]\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://yacy.net/
 Registry: https://hub.docker.com/r/yacy/yacy_search_server/
-Repository: yacy/yacy_search_server:latest
+Repository: yacy/yacy_search_server
 Requires: ''
 Sources:
 - https://yacy.net/
 - https://hub.docker.com/r/yacy/yacy_search_server/
-TemplateURL: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/yacy.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:8090]/
-topPerforming: 0.972
-topTrending: -6.5649999999999995

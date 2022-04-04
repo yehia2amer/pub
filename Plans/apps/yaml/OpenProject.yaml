@@ -1,6 +1,6 @@
 CAComment: This template is set up to use a custom network. You may have to adjust
   the network or IP address etc to match your system
-CategoryList:
+CategoryList: &id001
 - Productivity
 Config:
   Device: {}
@@ -44,7 +44,8 @@ Config:
 Icon: https://avatars2.githubusercontent.com/u/1756674?s=400&amp;v=4
 Keywords:
 - openproject
-Name: OpenProject
+- *id001
+Name: openproject
 Network: br0
 Networking:
   Mode: br0
@@ -53,12 +54,11 @@ Overview: OpenProject is a web-based project management system for location-inde
   team collaboration.
 PostArgs: ''
 Privileged: 'false'
-Project: http://openproject.org
 Registry: https://hub.docker.com/u/openproject
-Repository: openproject/community:12
+Repository: openproject/community
 Requires: ''
 Sources:
 - http://openproject.org
 - https://hub.docker.com/u/openproject
-TemplateURL: https://raw.githubusercontent.com/maschhoff/docker/master/unraid%20xml/my-OpenProject.xml
+Tag: '12'
 WebUI: http://[IP]:8080

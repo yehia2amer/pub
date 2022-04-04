@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Security
 Config:
   Device: {}
@@ -54,6 +54,7 @@ ExtraParams: --init --log-opt max-size=5m --log-opt max-file=2
 Icon: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/blueiris.png
 Keywords:
 - blueiris
+- *id001
 Name: blueiris
 Network: bridge
 Overview: Blue Iris video security software runs on a PC and can provide recording
@@ -61,14 +62,11 @@ Overview: Blue Iris video security software runs on a PC and can provide recordi
   and powerful enough to safeguard your family, property and valuables at home or
   work.
 Privileged: 'true'
-Project: https://hub.docker.com/r/jshridha/blueiris/
 Registry: https://hub.docker.com/r/jshridha/blueiris/
-Repository: jshridha/blueiris:gpu
+Repository: jshridha/blueiris
 Requires: ''
 Sources:
 - https://hub.docker.com/r/jshridha/blueiris/
 - https://hub.docker.com/r/jshridha/blueiris/
-TemplateURL: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/blueiris.xml
+Tag: gpu
 WebUI: http://[IP]:[PORT:8080]/
-topPerforming: 2.018
-topTrending: -1.443

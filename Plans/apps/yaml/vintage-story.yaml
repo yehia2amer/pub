@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - GameServers
 Config:
   Device: {}
@@ -67,7 +67,8 @@ ExtraParams: --restart=unless-stopped
 Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/vintagestory.png
 Keywords:
 - vintage-story
-Name: Vintage-Story
+- *id001
+Name: vintage-story
 Network: bridge
 Networking:
   Mode: bridge
@@ -75,12 +76,12 @@ Overview: "This is a Basic Vintage Story Server it will download and install Vin
   \ Story Server and run it.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://www.vintagestory.at/
 Registry: https://hub.docker.com/r/ich777/vintagestory/
 Repository: ich777/vintagestory
 Requires: ''
 Sources:
 - https://www.vintagestory.at/
 - https://hub.docker.com/r/ich777/vintagestory/
+Tag: latest
 WebUI: ''
 caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/Vintage-Story.xml

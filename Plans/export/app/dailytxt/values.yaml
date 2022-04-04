@@ -1,0 +1,21 @@
+env:
+  ALLOW_REGISTRATION: 'True'
+  DATA_INDENT: '2'
+  JWT_EXP_DAYS: '7'
+  PORT: '8765'
+  SECRET_KEY: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: phitux/dailytxt
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

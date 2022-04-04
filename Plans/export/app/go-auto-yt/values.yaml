@@ -1,0 +1,19 @@
+env:
+  Group ID ( PGID ): '1000'
+  User File Creation MASK ( UMASK ): '0022'
+  User Identifier ( PUID ): '1000'
+image:
+  pullPolicy: IfNotPresent
+  repository: xiovv/go-auto-yt
+  tag: stable
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

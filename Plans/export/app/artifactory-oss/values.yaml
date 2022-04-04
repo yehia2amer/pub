@@ -1,0 +1,17 @@
+env:
+  EXTRA_JAVA_OPTIONS: -Xms512m -Xmx4g
+image:
+  pullPolicy: IfNotPresent
+  repository: docker.bintray.io/jfrog/artifactory-oss
+  tag: 6.23.7
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

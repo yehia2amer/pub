@@ -1,8 +1,7 @@
-CategoryList:
+CategoryList: &id001
 - Tools-Utilities
 - Network-Web
 - Network-Management
-ChangeLogPresent: true
 Config:
   Device: {}
   Label: {}
@@ -99,6 +98,7 @@ GitHub: https://github.com/linuxserver/docker-ldap-auth#application-setup
 Icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/ldap-auth-logo.png
 Keywords:
 - ldap-auth
+- *id001
 Name: ldap-auth
 Network: bridge
 Overview: "Ldap-auth(https://github.com/nginxinc/nginx-ldap-auth) software is for\
@@ -109,14 +109,12 @@ Overview: "Ldap-auth(https://github.com/nginxinc/nginx-ldap-auth) software is fo
   \ Access Protocol (LDAP) authentication server (OpenLDAP or Microsoft Windows Active\
   \ Directory 2003 and 2012)."
 Privileged: 'false'
-Project: https://github.com/nginxinc/nginx-ldap-auth
-ReadMe: https://github.com/linuxserver/docker-ldap-auth#readme
 Registry: https://github.com/orgs/linuxserver/packages/container/package/ldap-auth
 Repository: lscr.io/linuxserver/ldap-auth
 Requires: ''
 Sources:
 - https://github.com/nginxinc/nginx-ldap-auth
 - https://github.com/orgs/linuxserver/packages/container/package/ldap-auth
-TemplateURL: https://raw.githubusercontent.com/linuxserver/templates/master/unraid/ldap-auth.xml
+- https://github.com/linuxserver/docker-ldap-auth#readme
+Tag: latest
 WebUI: http://[IP]:[PORT:9000]
-topTrending: -0.054000000000000006

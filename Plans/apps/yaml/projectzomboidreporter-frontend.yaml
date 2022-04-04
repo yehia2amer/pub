@@ -1,27 +1,17 @@
-CategoryList:
+CategoryList: &id001
 - GameServers
 Config:
   Device: {}
   Label: {}
   Path: {}
-  Port:
-    frontend port:
-      Default: '3000'
-      Description: 'Container Port: 3000'
-      Display: advanced-hide
-      Mask: 'false'
-      Mode: tcp
-      Name: frontend port
-      Required: 'true'
-      Target: '3000'
-      Type: Port
-      value: '3000'
+  Port: {}
   Variable: {}
 ExtraParams: --restart=always
 Icon: https://github.com/natcoso9955/unRAID-docker/raw/master/icons/projectzomboid-template.png
 Keywords:
 - projectzomboidreporter-frontend
-Name: ProjectZomboidReporter-Frontend
+- *id001
+Name: projectzomboidreporter-frontend
 Network: bridge
 Networking:
   Mode: bridge
@@ -29,12 +19,11 @@ Overview: This is the frontend template used in the Project Zomboid Reporter. Al
   visuals used in the final Reporter are pulled from here.
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/ChrisAshtear/Zomboid-Server-Stats-Reporter/
 Registry: https://hub.docker.com/r/chrisashtear/zomboid-reporter-frontend/
 Repository: chrisashtear/zomboid-reporter-frontend
 Requires: ''
 Sources:
 - https://github.com/ChrisAshtear/Zomboid-Server-Stats-Reporter/
 - https://hub.docker.com/r/chrisashtear/zomboid-reporter-frontend/
-TemplateURL: https://raw.githubusercontent.com/natcoso9955/unRAID-docker/master/ProjectZomboidReporter-Frontend_unraid.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:3000]/

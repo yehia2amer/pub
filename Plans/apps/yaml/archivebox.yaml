@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Tools-Utilities
 Config:
   Device: {}
@@ -32,20 +32,18 @@ ExtraParams: -it
 Icon: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/archivebox.png
 Keywords:
 - archivebox
+- *id001
 Name: archivebox
 Network: bridge
 Official: true
 Overview: "The self-hosted internet archiver. \r\n"
 PostArgs: server --quick-init 0.0.0.0:8000
 Privileged: 'false'
-Project: https://archivebox.io/
 Registry: https://hub.docker.com/r/archivebox/archivebox/
-Repository: archivebox/archivebox:latest
+Repository: archivebox/archivebox
 Requires: ''
 Sources:
 - https://archivebox.io/
 - https://hub.docker.com/r/archivebox/archivebox/
-TemplateURL: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/archivebox.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:8000]/
-topPerforming: 10.525
-topTrending: -6.496

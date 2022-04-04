@@ -58,7 +58,7 @@ Branch:
   Tag: nvidia
   TagDescription: This is the NVidia Ubuntu build, full Cuda support, built with the
     nightly FFmpeg and weighs in at 1.4GB
-CategoryList:
+CategoryList: &id001
 - MediaApp-Other
 Config:
   Device: {}
@@ -109,7 +109,8 @@ Config:
 Icon: https://github.com/OFark/Compressarr/raw/master/Compressarr/wwwroot/android-chrome-192x192.png
 Keywords:
 - compressarr
-Name: Compressarr
+- *id001
+Name: compressarr
 Networking:
   Mode: bridge
 Overview: 'Compressarr is an application to take a filtered set of media from Radarr
@@ -118,13 +119,11 @@ Overview: 'Compressarr is an application to take a filtered set of media from Ra
 
   '
 Privileged: 'false'
-Project: https://github.com/OFark/Compressarr
 Registry: https://registry.hub.docker.com/r/ofark/compressarr/
 Repository: ofark/compressarr
 Requires: ''
 Sources:
 - https://github.com/OFark/Compressarr
 - https://registry.hub.docker.com/r/ofark/compressarr/
-TemplateURL: https://raw.githubusercontent.com/OFark/docker-templates/master/OFark/Compressarr.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:80]/
-topTrending: -21.240000000000002

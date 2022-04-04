@@ -1,0 +1,18 @@
+env:
+  REDIS_PORT_6379_TCP_ADDR: ''
+  REDIS_PORT_6379_TCP_PORT: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: audreyt/ethercalc
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

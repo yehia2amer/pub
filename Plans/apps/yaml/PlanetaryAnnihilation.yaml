@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - GameServers
 Config:
   Device: {}
@@ -182,19 +182,20 @@ ExtraParams: --restart=unless-stopped
 Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/pa.png
 Keywords:
 - planetaryannihilation
-Name: PlanetaryAnnihilation
+- *id001
+Name: planetaryannihilation
 Network: bridge
 Networking:
   Mode: bridge
 Overview: "This Docker will download and install Planetary Annihilation.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://www.steampowered.com/
 Registry: https://hub.docker.com/r/ich777/planetaryannihilationserver
 Repository: ich777/planetaryannihilationserver
 Requires: ''
 Sources:
 - https://www.steampowered.com/
 - https://hub.docker.com/r/ich777/planetaryannihilationserver
+Tag: latest
 WebUI: ''
 caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/PlanetaryAnnihilation.xml

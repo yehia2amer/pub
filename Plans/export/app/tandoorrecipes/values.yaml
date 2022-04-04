@@ -1,0 +1,29 @@
+env:
+  Allowed Hosts: '*'
+  Comment System: '1'
+  Database: /data/recipes.db
+  Database Engine: django.db.backends.sqlite3
+  Debug Mode: '0'
+  PostgreSQL Host: ''
+  PostgreSQL Password: ''
+  PostgreSQL Port: '5432'
+  PostgreSQL User: ''
+  Secret Key: ''
+  Serve Gunicorn Meida: '1'
+  Shopping List Min Refresh: '5'
+  Timezone: America/New_York
+image:
+  pullPolicy: IfNotPresent
+  repository: vabene1111/recipes
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

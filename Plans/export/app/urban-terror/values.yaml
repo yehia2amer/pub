@@ -1,0 +1,19 @@
+env:
+  Check for Updates: 'true'
+  Extra Start Parameters: ''
+  Umask: '000'
+image:
+  pullPolicy: IfNotPresent
+  repository: ich777/urbanterror
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

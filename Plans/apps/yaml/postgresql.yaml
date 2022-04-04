@@ -1,25 +1,33 @@
 BindTime: 'true'
-CategoryList:
+CategoryList: &id001
 - Network-Management
 - Productivity
 - Tools-Utilities
+Config:
+  Device: {}
+  Label: {}
+  Path: {}
+  Port: {}
+  Variable:
+    DB_NAME:
+      Name: DB_NAME
+      value: gitlabhq_production
+    DB_PASS:
+      Name: DB_PASS
+      value: password
+    DB_USER:
+      Name: DB_USER
+      value: gitlab
 Data:
   Volume:
     ContainerDir: /var/lib/postgresql
     HostDir: /mnt/cache/appdata/postgresql
     Mode: rw
-Environment:
-  Variable:
-  - Name: DB_NAME
-    Value: gitlabhq_production
-  - Name: DB_USER
-    Value: gitlab
-  - Name: DB_PASS
-    Value: password
 GitHub: https://github.com/sameersbn/docker-postgresql
 Icon: https://www.iconattitude.com/icons/open_icon_library/apps/png/256/postgresql.png
 Keywords:
 - postgresql
+- *id001
 Name: postgresql
 Networking:
   Mode: bridge
@@ -33,8 +41,6 @@ Repository: sameersbn/postgresql
 Requires: ''
 Sources:
 - https://registry.hub.docker.com/r/sameersbn/postgresql/
-TemplateURL: https://raw.githubusercontent.com/jshridha/templates/master/Bungy/postgresql.xml
+Tag: latest
 Version: fb527477
 WebUI: ''
-topPerforming: 0.416
-topTrending: -0.16199999999999998

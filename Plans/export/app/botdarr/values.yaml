@@ -1,0 +1,23 @@
+env:
+  COMMAND_PREFIX: ''
+  RADARR_DEFAULT_PROFILE: ''
+  RADARR_PATH: ''
+  RADARR_TOKEN: ''
+  RADARR_URL: ''
+  TELEGRAM_PRIVATE_CHANNELS: ''
+  TELEGRAM_TOKEN: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: shayaantx/botdarr
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

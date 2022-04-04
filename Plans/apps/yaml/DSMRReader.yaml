@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - HomeAutomation
 Config:
   Device: {}
@@ -187,7 +187,8 @@ Config:
 Icon: https://raw.githubusercontent.com/Flight777/unraid_justworks_templates/main/images/dsmrreader/dsmrreader.png
 Keywords:
 - dsmrreader
-Name: DSMRReader
+- *id001
+Name: dsmrreader
 Network: bridge
 Networking:
   Mode: bridge
@@ -195,14 +196,11 @@ Overview: "&lt;b&gt;DSMR protocol reader for smart energy meters. Stores data re
   \ and visualizes energy use.&lt;/b&gt;\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/xirixiz/dsmr-reader-docker
 Registry: https://hub.docker.com/r/xirixiz/dsmr-reader-docker
 Repository: xirixiz/dsmr-reader-docker
 Requires: ''
 Sources:
 - https://github.com/xirixiz/dsmr-reader-docker
 - https://hub.docker.com/r/xirixiz/dsmr-reader-docker
-TemplateURL: https://raw.githubusercontent.com/Flight777/unraid_justworks_templates/master/jw_dsmrreader.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:80]
-topPerforming: 0.726
-topTrending: -1.854

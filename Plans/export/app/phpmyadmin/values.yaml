@@ -1,0 +1,20 @@
+env:
+  MYSQL_HOST: 192.168.70.99
+  MYSQL_PASSWORD: root
+  MYSQL_PORT: '3306'
+  MYSQL_USER: root
+image:
+  pullPolicy: IfNotPresent
+  repository: phpmyadmin/phpmyadmin
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

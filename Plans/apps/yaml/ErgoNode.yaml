@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Other
 Config:
   Device: {}
@@ -58,19 +58,19 @@ ExtraParams: ' -e MAX_HEAP=3G  --restart unless-stopped'
 Icon: https://ergoplatform.org/img/uploads/1762.png
 Keywords:
 - ergonode
-Name: ErgoNode
+- *id001
+Name: ergonode
 Network: bridge
 Networking:
   Mode: bridge
 Overview: "Allows you to run a ERGO node on your unRAID server using the\r\n"
 PostArgs: ' --mainnet -c /etc/myergo.conf'
 Privileged: 'false'
-Project: https://github.com/Mrlafontaine/Unraid-ErgoNode
 Registry: https://hub.docker.com/r/ergoplatform/ergo
 Repository: ergoplatform/ergo
 Requires: ''
 Sources:
 - https://github.com/Mrlafontaine/Unraid-ErgoNode
 - https://hub.docker.com/r/ergoplatform/ergo
-TemplateURL: https://raw.githubusercontent.com/Mrlafontaine/Unraid-ErgoNode/master/ergonode.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:9053]/panel

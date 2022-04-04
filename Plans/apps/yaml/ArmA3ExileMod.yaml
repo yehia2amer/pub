@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - GameServers
 Config:
   Device: {}
@@ -258,7 +258,8 @@ ExtraParams: --restart=unless-stopped
 Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/arma3exilemod.png
 Keywords:
 - arma3exilemod
-Name: ArmA3ExileMod
+- *id001
+Name: arma3exilemod
 Network: bridge
 Networking:
   Mode: bridge
@@ -266,12 +267,12 @@ Overview: "This Docker will download and install SteamCMD. It will also install 
   \ III including ExileMod and run it.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: http://www.exilemod.com/
 Registry: https://hub.docker.com/r/ich777/steamcmd/
-Repository: ich777/steamcmd:arma3exilemod
+Repository: ich777/steamcmd
 Requires: ''
 Sources:
 - http://www.exilemod.com/
 - https://hub.docker.com/r/ich777/steamcmd/
+Tag: arma3exilemod
 WebUI: ''
 caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/ArmA3ExileMod.xml

@@ -1,0 +1,18 @@
+env:
+  DBNAME: data/tasmobackup
+  DBTYPE: sqlite
+image:
+  pullPolicy: IfNotPresent
+  repository: danmed/tasmobackupv1
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

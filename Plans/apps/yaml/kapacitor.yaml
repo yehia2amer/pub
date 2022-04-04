@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Tools-Utilities
 Config:
   Device: {}
@@ -42,6 +42,7 @@ Config:
 Icon: https://github.com/natcoso9955/unRAID-docker/raw/master/icons/influx_logo.png
 Keywords:
 - kapacitor
+- *id001
 Name: kapacitor
 Network: bridge
 Networking:
@@ -51,12 +52,11 @@ Overview: "Kapacitor is a native data processing engine for InfluxDB 1.x and is 
   \ integrated component in the InfluxDB 2.0 platform.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://www.influxdata.com/time-series-platform/kapacitor/
 Registry: https://hub.docker.com/_/kapacitor/
 Repository: kapacitor
 Requires: ''
 Sources:
 - https://www.influxdata.com/time-series-platform/kapacitor/
 - https://hub.docker.com/_/kapacitor/
-TemplateURL: https://raw.githubusercontent.com/natcoso9955/unRAID-docker/master/kapacitor_unraid.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:9092]/

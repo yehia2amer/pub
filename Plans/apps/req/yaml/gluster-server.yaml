@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Drivers
 - Tools-Utilities
 - Other
@@ -78,7 +78,8 @@ Config:
 Icon: https://github.com/testdasi/gluster-server/raw/main/gluster.png
 Keywords:
 - gluster-server
-Name: Gluster-Server
+- *id001
+Name: gluster-server
 Network: host
 Networking:
   Mode: host
@@ -88,12 +89,11 @@ Overview: "A docker running gluster server. This allows me to use a folder in th
   \n"
 PostArgs: ''
 Privileged: 'true'
-Project: https://github.com/testdasi/gluster-server
 Registry: https://registry.hub.docker.com/r/testdasi/gluster-server/
-Repository: testdasi/gluster-server:latest
+Repository: testdasi/gluster-server
 Requires: ' App uses hostnetworking (autoadd)'
 Sources:
 - https://github.com/testdasi/gluster-server
 - https://registry.hub.docker.com/r/testdasi/gluster-server/
-TemplateURL: https://raw.githubusercontent.com/testdasi/testdasi-unraid-repo/master/gluster-server.xml
+Tag: latest
 WebUI: ''

@@ -1,15 +1,21 @@
-CategoryList:
+CategoryList: &id001
 - MediaServer-Video
 - MediaServer-Music
 - MediaServer-Other
+Config:
+  Device: {}
+  Label: {}
+  Path: {}
+  Port: {}
+  Variable: {}
 Icon: https://i.imgur.com/hatCnm0.png
 Keywords:
 - airconnect
-Name: AirConnect
+- *id001
+Name: airconnect
 Network: host
 Overview: "AirConnect container for turning Chromecast into Airplay targets\r\n"
 Privileged: 'false'
-Project: https://github.com/philippe44/AirConnect
 Registry: https://hub.docker.com/r/1activegeek/airconnect/
 RepoShort: Selfhosters
 Repository: 1activegeek/airconnect
@@ -17,6 +23,4 @@ Requires: ' App uses hostnetworking (autoadd)'
 Sources:
 - https://github.com/philippe44/AirConnect
 - https://hub.docker.com/r/1activegeek/airconnect/
-TemplateURL: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/airconnect.xml
-topPerforming: 9.337
-topTrending: 1.2129999999999992
+Tag: latest

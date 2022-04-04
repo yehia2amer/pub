@@ -1,0 +1,24 @@
+env:
+  Action On Success: NOTHING
+  Additional Languages: ''
+  GID Override: '100'
+  Notify URL: ''
+  Output Mode: MIRROR_TREE
+  Process Existing on Startup: '0'
+  UID Override: '99'
+  Verbosity: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: cmccambridge/ocrmypdf-auto
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

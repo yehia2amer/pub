@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Other
 - Network-Web
 Config:
@@ -78,7 +78,8 @@ Config:
 Icon: https://s.w.org/style/images/about/WordPress-logotype-wmark.png
 Keywords:
 - wordpress
-Name: WordPress
+- *id001
+Name: wordpress
 Network: bridge
 Networking:
   Mode: bridge
@@ -87,12 +88,11 @@ Overview: "WordPress is a free and open source blogging tool and a content manag
   \ system (CMS) based on PHP and MySQL, which runs on a web hosting service.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://wordpress.org/
 Registry: https://hub.docker.com/_/wordpress/
 Repository: wordpress
 Requires: MariaDB / MySQL database installed
 Sources:
 - https://wordpress.org/
 - https://hub.docker.com/_/wordpress/
-TemplateURL: https://raw.githubusercontent.com/Kru-x/unraid-docker-templates/master/Kru-x/wordpress.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:8080]/

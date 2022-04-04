@@ -1,0 +1,20 @@
+env:
+  Photo Password: flashbulb
+  Race Coordinator Password: doyourbest
+  Race Crew Password: murphy
+  Timer Password: '555'
+image:
+  pullPolicy: IfNotPresent
+  repository: mitchellriley/derbynet_server
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

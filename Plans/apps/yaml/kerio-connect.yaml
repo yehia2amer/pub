@@ -1,8 +1,13 @@
 BindTime: 'true'
-CategoryList:
+CategoryList: &id001
 - Network-Web
 - Network-Other
-ChangeLogPresent: true
+Config:
+  Device: {}
+  Label: {}
+  Path: {}
+  Port: {}
+  Variable: {}
 Data:
   Volume:
   - ContainerDir: /opt/kerio
@@ -14,11 +19,11 @@ Data:
   - ContainerDir: /backup
     HostDir: /mnt/user/Backup/KerioConnect
     Mode: rw
-Environment: "\n  "
 Icon: https://raw.githubusercontent.com/chvb/docker-templates/master/chvb/img/kerioconnect.png
 Keywords:
 - kerio-connect
-Name: Kerio-Connect
+- *id001
+Name: kerio-connect
 Networking:
   Mode: bridge
   Publish:
@@ -77,14 +82,12 @@ Networking:
 Overview: Kerio Connect is Mail/Groupware like Microsoft Exchange, but running on
   Linux. More Informations under www.kerio.com/connect
 Privileged: 'false'
-Project: http://kerio.com
 Registry: https://hub.docker.com/r/chvb/docker-kerio-connect/
 Repository: chvb/docker-kerio-connect
 Requires: ''
 Sources:
 - http://kerio.com
 - https://hub.docker.com/r/chvb/docker-kerio-connect/
-TemplateURL: https://raw.githubusercontent.com/chvb/docker-templates/master/chvb/kerio-connect.xml
+Tag: latest
 Version: '1.0'
 WebUI: https://[IP]:[PORT:4040]/
-topTrending: -0.44000000000000006

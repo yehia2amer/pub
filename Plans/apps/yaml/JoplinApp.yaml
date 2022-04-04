@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Productivity
 Config:
   Device: {}
@@ -75,7 +75,8 @@ Config:
 Icon: https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/icons/joplin.png
 Keywords:
 - joplinapp
-Name: JoplinApp
+- *id001
+Name: joplinapp
 Network: bridge
 Networking:
   Mode: bridge
@@ -83,13 +84,11 @@ Overview: "This container allows you to have a working Joplin desktop app, reach
   \ via a http noVNC that can be placed behind a reverse proxy.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/acaranta/docker-joplin
 Registry: https://hub.docker.com/r/acaranta/docker-joplin/
 Repository: acaranta/docker-joplin
 Requires: ''
 Sources:
 - https://github.com/acaranta/docker-joplin
 - https://hub.docker.com/r/acaranta/docker-joplin/
-TemplateURL: https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/joplinapp.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:5800]
-topTrending: -10.747

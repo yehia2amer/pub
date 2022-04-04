@@ -1,5 +1,5 @@
 Beta: 'true'
-CategoryList:
+CategoryList: &id001
 - Downloaders
 - MediaApp-Video
 Config:
@@ -79,6 +79,7 @@ ExtraParams: --restart=unless-stopped
 Icon: https://raw.githubusercontent.com/Fallenbagel/jellyseerr/main/public/android-chrome-512x512.png
 Keywords:
 - jellyseerr
+- *id001
 Name: jellyseerr
 Network: bridge
 Overview: "Jellyseerr is a free and open source fork of Overseerr for managing requests\
@@ -86,12 +87,11 @@ Overview: "Jellyseerr is a free and open source fork of Overseerr for managing r
   \ Radarr, and Jellyfin!\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/Fallenbagel/jellyseerr
 Registry: https://hub.docker.com/r/fallenbagel/jellyseerr/
-Repository: fallenbagel/jellyseerr:latest
+Repository: fallenbagel/jellyseerr
 Requires: ''
 Sources:
 - https://github.com/Fallenbagel/jellyseerr
 - https://hub.docker.com/r/fallenbagel/jellyseerr/
-TemplateURL: https://raw.githubusercontent.com/xWeegix/templates/master/jellyseerr_template.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:5055]/

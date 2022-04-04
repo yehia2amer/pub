@@ -1,0 +1,19 @@
+env:
+  Force Update: ''
+  Game Parameters: -name "Docker Windward" -world "World" -tcp 5127 -public
+  SteamID: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: ich777/windward
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

@@ -1,0 +1,21 @@
+env:
+  ACCESS_KEY: 'Container Variable: ACCESS_KEY'
+  CRON_SCHEDULE: 0 * * * *
+  GCSOPTIONS: ''
+  GCSPATH: gs://mybucket/
+  SECRET_KEY: 'Container Variable: SECRET_KEY'
+image:
+  pullPolicy: IfNotPresent
+  repository: vinid223/gcloud-storage-backup
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

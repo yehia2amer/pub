@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - GameServers
 Config:
   Device: {}
@@ -144,7 +144,8 @@ ExtraParams: --restart unless-stopped
 Icon: https://raw.githubusercontent.com/simonsickle/docker-templates/1b833decd2a915f58be222f08682fef8f4a31a0b/images/geyser.png
 Keywords:
 - geysermc
-Name: GeyserMC
+- *id001
+Name: geysermc
 Network: host
 Networking:
   Mode: host
@@ -154,12 +155,11 @@ Overview: GeyserMC is a translation layer to allow bedrock and pocket edition ve
   have been warned.
 PostArgs: ''
 Privileged: 'false'
-Project: https://git.nefald.fr/docker/geyser
 Registry: https://hub.docker.com/r/nefald/geysermc
 Repository: nefald/geysermc
 Requires: ' App uses hostnetworking (autoadd)'
 Sources:
 - https://git.nefald.fr/docker/geyser
 - https://hub.docker.com/r/nefald/geysermc
-TemplateURL: https://raw.githubusercontent.com/simonsickle/docker-templates/master/simonsickle/geysermc.xml
+Tag: latest
 WebUI: ''

@@ -1,27 +1,35 @@
 BindTime: 'true'
-CategoryList:
+CategoryList: &id001
 - Network-DNS
-ChangeLogPresent: true
+Config:
+  Device: {}
+  Label: {}
+  Path: {}
+  Port: {}
+  Variable:
+    APIKEY:
+      Name: APIKEY
+      value: ''
+    DOMAIN:
+      Name: DOMAIN
+      value: ''
+    HOSTNAME:
+      Name: HOSTNAME
+      value: ''
+    PUSHBULLET_ACCESS_TOKEN:
+      Name: PUSHBULLET_ACCESS_TOKEN
+      value: ''
 Data:
   Volume:
     ContainerDir: /config
     HostDir: ''
     Mode: rw
-Environment:
-  Variable:
-  - Name: DOMAIN
-    Value: ''
-  - Name: HOSTNAME
-    Value: ''
-  - Name: APIKEY
-    Value: ''
-  - Name: PUSHBULLET_ACCESS_TOKEN
-    Value: ''
 GitHub: https://github.com/tynor88/docker-unoeuro-dns
 Icon: https://raw.githubusercontent.com/tynor88/docker-templates/master/images/unoeuro_small.png
 Keywords:
 - unoeurodns
-Name: UnoEuroDNS
+- *id001
+Name: unoeurodns
 Networking:
   Mode: bridge
   Publish:
@@ -37,5 +45,5 @@ Repository: tynor88/unoeuro-dns
 Requires: ''
 Sources:
 - https://hub.docker.com/r/tynor88/unoeuro-dns
-TemplateURL: https://raw.githubusercontent.com/tynor88/docker-templates/master/tynor88/unoeuro-dns.xml
+Tag: latest
 WebUI: ''

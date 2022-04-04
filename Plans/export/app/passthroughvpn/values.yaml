@@ -1,0 +1,28 @@
+env:
+  ADDITIONAL_PORTS: ''
+  HEALTH_CHECK_HOST: one.one.one.one
+  HEALTH_CHECK_INTERVAL: '300'
+  HEALTH_CHECK_SILENT: '1'
+  LAN_NETWORK: 192.168.0.0/24
+  NAME_SERVERS: 1.1.1.1,1.0.0.1
+  RESTART_CONTAINER: 'no'
+  UMASK: '002'
+  VPN_ENABLED: 'yes'
+  VPN_PASSWORD: ''
+  VPN_TYPE: openvpn
+  VPN_USERNAME: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: dyonr/passthroughvpn
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

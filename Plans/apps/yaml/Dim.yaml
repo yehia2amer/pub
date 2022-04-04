@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - MediaApp-Video
 Config:
   Device:
@@ -53,7 +53,8 @@ Config:
 Icon: https://raw.githubusercontent.com/Dusk-Labs/dim/master/ui/public/static/textLogoBlack512.png
 Keywords:
 - dim
-Name: Dim
+- *id001
+Name: dim
 Network: bridge
 Networking:
   Mode: bridge
@@ -62,12 +63,11 @@ Overview: Dim is a self-hosted media manager. With minimal setup, Dim will organ
   anywhere
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/Dusk-Labs/dim
 Registry: https://github.com/Dusk-Labs/dim/pkgs/container/dim
-Repository: ghcr.io/dusk-labs/dim:dev
+Repository: ghcr.io/dusk-labs/dim
 Requires: ''
 Sources:
 - https://github.com/Dusk-Labs/dim
 - https://github.com/Dusk-Labs/dim/pkgs/container/dim
-TemplateURL: https://raw.githubusercontent.com/MyFaith/unraid-templates/master/dim/dim.xml
+Tag: dev
 WebUI: http://[IP]:[PORT:8000]

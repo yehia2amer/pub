@@ -1,0 +1,25 @@
+env:
+  EXTRA_GAME_PARAMS: ;autosaveenabled 1;addadmin 76561197963117432
+  GAME_ID: '405100'
+  GAME_PORT: '12871'
+  Maxplayers: '50'
+  QUERY_PORT: '12881'
+  Server Name: Hurtworld Docker
+  Steam-Password: ''
+  Steam-Username: ''
+  Validate Installation: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: ich777/steamcmd
+  tag: hurtworld
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

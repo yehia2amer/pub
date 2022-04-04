@@ -1,9 +1,15 @@
 BindTime: 'true'
-CategoryList:
+CategoryList: &id001
 - Cloud
 - Network-Web
 - Productivity
 - Tools-Utilities
+Config:
+  Device: {}
+  Label: {}
+  Path: {}
+  Port: {}
+  Variable: {}
 Data:
   Volume:
   - ContainerDir: /etc/rdiffweb
@@ -15,11 +21,11 @@ Data:
   - ContainerDir: /restores
     HostDir: /mnt/cache/appdata/rdiffweb/restores
     Mode: rw
-Environment: ''
 GitHub: https://github.com/jshridha/docker-rdiffweb/
 Icon: ''
 Keywords:
 - rdiffweb
+- *id001
 Name: rdiffweb
 Networking:
   Mode: bridge
@@ -35,5 +41,5 @@ Repository: jshridha/rdiffweb
 Requires: ''
 Sources:
 - https://hub.docker.com/r/jshridha/rdiffweb/~/dockerfile/
-TemplateURL: https://raw.githubusercontent.com/jshridha/templates/master/Bungy/rdiffweb.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:8080]

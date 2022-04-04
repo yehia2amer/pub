@@ -1,6 +1,5 @@
-CategoryList:
+CategoryList: &id001
 - Tools-Utilities
-ChangeLogPresent: true
 Config:
   Device: {}
   Label: {}
@@ -162,7 +161,8 @@ Config:
 Icon: https://raw.githubusercontent.com/jlesage/docker-templates/master/jlesage/images/mediainfo-icon.png
 Keywords:
 - mediainfo
-Name: MediaInfo
+- *id001
+Name: mediainfo
 Network: bridge
 Networking:
   Mode: bridge
@@ -171,14 +171,11 @@ Overview: 'MediaInfo is a convenient unified display of the most relevant techni
 
   '
 Privileged: 'false'
-Project: https://mediaarea.net/en/MediaInfo
 Registry: https://hub.docker.com/r/jlesage/mediainfo/
 Repository: jlesage/mediainfo
 Requires: ''
 Sources:
 - https://mediaarea.net/en/MediaInfo
 - https://hub.docker.com/r/jlesage/mediainfo/
-TemplateURL: https://raw.githubusercontent.com/jlesage/docker-templates/master/jlesage/mediainfo.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:5800]
-topPerforming: 1.258
-topTrending: -0.9100000000000001

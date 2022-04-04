@@ -1,0 +1,17 @@
+env:
+  SUPERUSER_PASSWORD: Password
+image:
+  pullPolicy: IfNotPresent
+  repository: phlak/mumble
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

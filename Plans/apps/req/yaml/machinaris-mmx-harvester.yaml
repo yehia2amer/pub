@@ -1,5 +1,5 @@
 Beta: 'true'
-CategoryList:
+CategoryList: &id001
 - Crypto
 Config:
   Device: {}
@@ -141,6 +141,7 @@ ExtraParams: -h $HOSTNAME
 Icon: https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/logos/mmx.png
 Keywords:
 - machinaris-mmx-harvester
+- *id001
 Name: machinaris-mmx-harvester
 Network: bridge
 Networking:
@@ -150,12 +151,11 @@ Overview: "On a secondary Unraid system, allows for harvesting of local MMX (NOT
   \ not support aarch64.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/guydavis/machinaris
 Registry: https://hub.docker.com/repository/docker/guydavis/machinaris-mmx-harvester
 Repository: ghcr.io/guydavis/machinaris-mmx
 Requires: Machinaris.  See the description for full details
 Sources:
 - https://github.com/guydavis/machinaris
 - https://hub.docker.com/repository/docker/guydavis/machinaris-mmx-harvester
-TemplateURL: https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/machinaris-mmx-harvester.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:8926]/

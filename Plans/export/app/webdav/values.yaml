@@ -1,0 +1,21 @@
+env:
+  Group ID: '100'
+  User ID: '99'
+  WEBDAV_PASSWORD: PASSWORD
+  WEBDAV_USERNAME: USERNAME
+  umask: '0000'
+image:
+  pullPolicy: IfNotPresent
+  repository: ck98/webdav-nginx
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - GameServers
 - Tools-Utilities
 Config:
@@ -87,7 +87,8 @@ Config:
 Icon: https://github.com/natcoso9955/unRAID-docker/raw/master/icons/rcon-webadmin.png
 Keywords:
 - rcon-webadmin
-Name: RCON-WebAdmin
+- *id001
+Name: rcon-webadmin
 Network: bridge
 Networking:
   Mode: bridge
@@ -95,12 +96,11 @@ Overview: "Out of the box, RCON Web Admin can check users for high ping, VAC sta
   \ or filter the chat for you around the clock.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/rcon-web-admin/rcon-web-admin
 Registry: https://hub.docker.com/r/itzg/rcon/
 Repository: itzg/rcon
 Requires: ''
 Sources:
 - https://github.com/rcon-web-admin/rcon-web-admin
 - https://hub.docker.com/r/itzg/rcon/
-TemplateURL: https://raw.githubusercontent.com/natcoso9955/unRAID-docker/master/rcon-webadmin_unraid.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:4326]/

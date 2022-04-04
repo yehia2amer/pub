@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Cloud
 - Network-Management
 - Productivity
@@ -33,7 +33,8 @@ GitHub: https://github.com/docker/distribution-library-image
 Icon: https://github.com/juusujanar/unraid-templates/raw/master/img/DockerRegistry-logo.png
 Keywords:
 - dockerregistry
-Name: DockerRegistry
+- *id001
+Name: dockerregistry
 Network: bridge
 Official: true
 Overview: 'Docker Registry is used to store and distribute Docker images using HTTP
@@ -42,12 +43,11 @@ Overview: 'Docker Registry is used to store and distribute Docker images using H
 
   '
 Privileged: 'false'
-Project: https://github.com/distribution/distribution
 Registry: https://registry.hub.docker.com/_/registry/
-Repository: registry:2
+Repository: registry
 Requires: ''
 Sources:
 - https://github.com/distribution/distribution
 - https://registry.hub.docker.com/_/registry/
-TemplateURL: https://raw.githubusercontent.com/juusujanar/unraid-templates/master/DockerRegistry.xml
+Tag: '2'
 WebUI: ''

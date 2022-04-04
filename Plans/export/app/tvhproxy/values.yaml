@@ -1,0 +1,18 @@
+env:
+  Tuner Count: '4'
+  TvHeadend URL: http://username:password@tvheadendip:9981
+image:
+  pullPolicy: IfNotPresent
+  repository: chvb/docker-tvhproxy
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

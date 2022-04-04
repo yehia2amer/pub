@@ -1,0 +1,22 @@
+env:
+  CLIENT_ID: ''
+  CODE: ''
+  CRON: ''
+  GRIVE_PARAMS: ''
+  PERMISSIONS: ''
+  SECRET: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: agusalex/grive2
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

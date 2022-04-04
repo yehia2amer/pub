@@ -1,0 +1,19 @@
+env:
+  CAMERA_DEV: /dev/video0
+  ENABLE_MJPG_STREAMER: 'true'
+  MJPG_STREAMER_INPUT: -y -n -r 640x480
+image:
+  pullPolicy: IfNotPresent
+  repository: octoprint/octoprint
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

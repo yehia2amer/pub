@@ -1,0 +1,30 @@
+env:
+  'Both: CountryCode': ''
+  'Both: Enable Automatic Script Start': ''
+  'Both: Lidarr API Key': ''
+  'Both: Lidarr Url': ''
+  'Both: Musicbrainz Mirror URL': ''
+  'Both: Musicbrainz Rate Limit': ''
+  'Both: Script Interval': ''
+  'Both: Script Mode': ''
+  FilePermisssions: ''
+  FolderPermissions: ''
+  'Music: Compilations': ''
+  'Music: Replaygain Tagging': ''
+  'Music: RequireQuality': ''
+  'Music: WantedQuality': ''
+image:
+  pullPolicy: IfNotPresent
+  repository: randomninjaatk/atd
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

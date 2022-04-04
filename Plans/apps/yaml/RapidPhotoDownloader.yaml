@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - MediaApp-Photos
 - Productivity
 - Tools-Utilities
@@ -124,19 +124,20 @@ ExtraParams: --restart=unless-stopped
 Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/rapidphotodownloader.png
 Keywords:
 - rapidphotodownloader
-Name: RapidPhotoDownloader
+- *id001
+Name: rapidphotodownloader
 Network: bridge
 Networking:
   Mode: bridge
 Overview: "This Docker will download and install Rapid Photo Downloader.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://www.damonlynch.net/rapid/
 Registry: https://hub.docker.com/r/ich777/rapidphotodownloader/
 Repository: ich777/rapidphotodownloader
 Requires: ''
 Sources:
 - https://www.damonlynch.net/rapid/
 - https://hub.docker.com/r/ich777/rapidphotodownloader/
+Tag: latest
 WebUI: http://[IP]:[PORT:8080]/vnc.html?autoconnect=true
 caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/RapidPhotoDownloader.xml

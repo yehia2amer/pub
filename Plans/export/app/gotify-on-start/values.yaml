@@ -1,0 +1,21 @@
+env:
+  Gotify App Token: ''
+  Gotify Message: Server is now Online!
+  Gotify Message Title: Startup Complete
+  Gotify Priority: '5'
+  Gotify Server URL: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: ich777/gotify-on-start
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

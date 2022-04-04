@@ -649,9 +649,8 @@ Branch:
     value: ''
   Tag: 9.6-sqlite3-latest
   TagDescription: version 9.6 with sqlite3
-CategoryList:
+CategoryList: &id001
 - Backup
-ChangeLogPresent: true
 Config:
   Device: {}
   Label: {}
@@ -795,8 +794,9 @@ Config:
 Icon: https://raw.githubusercontent.com/vrx-666/unraid-xml/master/img/bacula.png
 Keywords:
 - bacula-server
+- *id001
 MinVer: '6.8'
-Name: Bacula-Server
+Name: bacula-server
 Network: bridge
 Networking:
   Mode: bridge
@@ -806,11 +806,11 @@ Overview: 'Bacula is a network Client/Server based backup program. This app cont
 
   '
 PostArgs: ''
-ReadMe: https://forums.unraid.net/topic/115560-support-bacula-server/
 Registry: https://hub.docker.com/r/pwa666/bacula-server
-Repository: pwa666/bacula-server:11-sqlite3-latest
+Repository: pwa666/bacula-server
 Requires: ''
 Sources:
 - https://hub.docker.com/r/pwa666/bacula-server
-TemplateURL: https://raw.githubusercontent.com/vrx-666/unraid-xml/master/my-bacula-server.xml
+- https://forums.unraid.net/topic/115560-support-bacula-server/
+Tag: 11-sqlite3-latest
 WebUI: http://[IP]:[PORT:9095]/

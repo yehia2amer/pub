@@ -1,38 +1,42 @@
 Beta: 'true'
 BindTime: 'true'
-CategoryList:
+CategoryList: &id001
 - HomeAutomation
 - Tools-Utilities
-ChangeLogPresent: true
+Config:
+  Device: {}
+  Label: {}
+  Path: {}
+  Port: {}
+  Variable:
+    KeyStorage:
+      Name: KeyStorage
+      value: config
+    MQTTBaseTopic:
+      Name: MQTTBaseTopic
+      value: homeassistant
+    MQTTBroker:
+      Name: MQTTBroker
+      value: hassio
+    MQTTPass:
+      Name: MQTTPass
+      value: pass
+    MQTTPort:
+      Name: MQTTPort
+      value: '1883'
+    MQTTUser:
+      Name: MQTTUser
+      value: mqtt
 Data:
   Volume:
     ContainerDir: /app/config
     HostDir: /mnt/user/appdata/Unraid-API
     Mode: rw
-Environment:
-  Variable:
-  - Mode: ''
-    Name: MQTTBroker
-    Value: hassio
-  - Mode: ''
-    Name: MQTTPort
-    Value: '1883'
-  - Mode: ''
-    Name: MQTTUser
-    Value: mqtt
-  - Mode: ''
-    Name: MQTTPass
-    Value: pass
-  - Mode: ''
-    Name: MQTTBaseTopic
-    Value: homeassistant
-  - Mode: ''
-    Name: KeyStorage
-    Value: config
 Icon: https://raw.githubusercontent.com/ElectricBrainUK/UnraidAPI/master/static/icon.png
 Keywords:
 - unraid-api
-Name: Unraid-API
+- *id001
+Name: unraid-api
 Networking:
   Mode: bridge
   Publish:
@@ -50,7 +54,5 @@ Repository: electricbrainuk/unraidapi
 Requires: ''
 Sources:
 - https://cloud.docker.com/repository/docker/electricbrainuk/unraidapi
-TemplateURL: https://raw.githubusercontent.com/ElectricBrainUK/docker-templates/master/unraid-api.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:80]
-topPerforming: 6.964
-topTrending: -1.798

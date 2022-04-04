@@ -1,0 +1,21 @@
+env:
+  Radarr API Key: ''
+  Radarr Profile ID: ''
+  Radarr Server 2 API Key: ''
+  'Radarr Server 2 URL ': ''
+  Radarr URL: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: dmanius/radarrsync-docker
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

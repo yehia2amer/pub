@@ -1,7 +1,12 @@
 BindTime: 'true'
-CategoryList:
+CategoryList: &id001
 - MediaServer-Video
-ChangeLogPresent: true
+Config:
+  Device: {}
+  Label: {}
+  Path: {}
+  Port: {}
+  Variable: {}
 Data:
   Volume:
   - ContainerDir: /recordings
@@ -13,11 +18,11 @@ Data:
   - ContainerDir: /opt/DVBLink
     HostDir: /mnt/user/appdata/DVBLink/data
     Mode: rw
-Environment: "\n  "
 Icon: https://raw.githubusercontent.com/chvb/docker-templates/master/chvb/img/dvblink.jpg
 Keywords:
 - dvblink
-Name: DVBLink
+- *id001
+Name: dvblink
 Networking:
   Mode: bridge
   Publish:
@@ -34,14 +39,12 @@ Networking:
 Overview: DVBLink need to enjoy your favorite channels and recordings within your
   home network and on the go!
 Privileged: 'false'
-Project: http://dvblogic.com
 Registry: https://hub.docker.com/r/chvb/docker-dvblink/
 Repository: chvb/docker-dvblink
 Requires: ''
 Sources:
 - http://dvblogic.com
 - https://hub.docker.com/r/chvb/docker-dvblink/
-TemplateURL: https://raw.githubusercontent.com/chvb/docker-templates/master/chvb/DVBLink.xml
+Tag: latest
 Version: '1.0'
 WebUI: http://[IP]:[PORT:39876]/
-topTrending: -0.6639999999999999

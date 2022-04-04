@@ -1,0 +1,18 @@
+env:
+  Default OnlyOffice Community Server MySQL Database: onlyoffice
+  MySQL root password ( match the root password with the one in the setup.sql script ): my-secret-pw
+image:
+  pullPolicy: IfNotPresent
+  repository: xternet/onlyoffice-mysql-5.7
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

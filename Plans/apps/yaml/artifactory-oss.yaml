@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Productivity
 - Tools-Utilities
 Config:
@@ -44,7 +44,8 @@ ExtraParams: --ulimit nofile=32000:40000 --ulimit nproc=65535
 Icon: https://i.imgur.com/aYdPHTy.png
 Keywords:
 - artifactory-oss
-Name: Artifactory-OSS
+- *id001
+Name: artifactory-oss
 Network: bridge
 Networking:
   Mode: bridge
@@ -54,12 +55,11 @@ Overview: "JFrog\u2019s Artifactory open source project was created to speed up 
   \ efficiently."
 PostArgs: ''
 Privileged: 'true'
-Project: https://jfrog.com/
 Registry: https://registry.hub.docker.com/r/docker.bintray.io/jfrog/artifactory-oss
-Repository: docker.bintray.io/jfrog/artifactory-oss:6.23.7
+Repository: docker.bintray.io/jfrog/artifactory-oss
 Requires: ''
 Sources:
 - https://jfrog.com/
 - https://registry.hub.docker.com/r/docker.bintray.io/jfrog/artifactory-oss
-TemplateURL: https://raw.githubusercontent.com/frakman1/docker-templates/master/tynor88/artifactory-oss.xml
+Tag: 6.23.7
 WebUI: http://[IP]:[PORT:8181]/

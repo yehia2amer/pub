@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - GameServers
 Config:
   Device: {}
@@ -78,7 +78,8 @@ ExtraParams: --restart=unless-stopped
 Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/terraria-tshock.png
 Keywords:
 - terraria-tshock
-Name: Terraria-TShock
+- *id001
+Name: terraria-tshock
 Network: bridge
 Networking:
   Mode: bridge
@@ -86,14 +87,12 @@ Overview: "This Docker will download and install Terraria and the TShock MOD and
   \ it. SERVER PASSWORD: Docker\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://tshock.co/
 Registry: https://hub.docker.com/r/ich777/terrariaserver
-Repository: ich777/terrariaserver:tshock
+Repository: ich777/terrariaserver
 Requires: ''
 Sources:
 - https://tshock.co/
 - https://hub.docker.com/r/ich777/terrariaserver
+Tag: tshock
 WebUI: http://[IP]:[PORT:8080]/
 caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/Terraria-TShock.xml
-topPerforming: 3.679
-topTrending: -1.0660000000000003

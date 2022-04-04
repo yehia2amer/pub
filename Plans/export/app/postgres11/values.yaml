@@ -1,0 +1,19 @@
+env:
+  POSTGRES_DB: ''
+  POSTGRES_PASSWORD: ''
+  POSTGRES_USER: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: registry.hub.docker.com/library/postgres
+  tag: '11'
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

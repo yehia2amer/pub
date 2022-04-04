@@ -1,0 +1,23 @@
+env:
+  Encryption Method: ''
+  Mail Server Hostname: ''
+  MySQL Host: ''
+  MySQL Postfix Database Name: ''
+  MySQL Postfix Password: ''
+  MySQL Postfix Username: ''
+  RSPAMD Password: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: malfurious/mailserver
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

@@ -1,0 +1,18 @@
+env:
+  API password: salty
+  Salt loglevel: warning
+image:
+  pullPolicy: IfNotPresent
+  repository: lubeda/salt4unraid
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

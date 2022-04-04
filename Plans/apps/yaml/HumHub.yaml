@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Network-Web
 Config:
   Device: {}
@@ -31,7 +31,8 @@ Config:
 Icon: https://raw.githubusercontent.com/SiwatINC/unraid-ca-repository/master/icons/humhub.jpg
 Keywords:
 - humhub
-Name: HumHub
+- *id001
+Name: humhub
 Network: bridge
 Networking:
   Mode: bridge
@@ -42,9 +43,9 @@ Overview: HumHub is a free social network software and framework built to give y
 PostArgs: ''
 Privileged: 'false'
 Registry: https://ghcr.io/siwatinc/humhub
-Repository: ghcr.io/siwatinc/humhub:latest
+Repository: ghcr.io/siwatinc/humhub
 Requires: ''
 Sources:
 - https://ghcr.io/siwatinc/humhub
-TemplateURL: https://raw.githubusercontent.com/SiwatINC/unraid-ca-repository/master/docker-template/humhub.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:80]/

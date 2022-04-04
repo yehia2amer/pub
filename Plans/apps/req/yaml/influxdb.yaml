@@ -1,18 +1,24 @@
 BindTime: 'true'
-CategoryList:
+CategoryList: &id001
 - Network-Management
 - Tools-Utilities
+Config:
+  Device: {}
+  Label: {}
+  Path: {}
+  Port: {}
+  Variable: {}
 Data:
   Volume:
     ContainerDir: /var/lib/influxdb
     HostDir: /mnt/user/appdata/influxdb
     Mode: rw
-Environment: "\n  "
 GitHub: https://github.com/influxdata/influxdb
 Icon: https://raw.githubusercontent.com/pootzko/InfluxData.Net/master/nuget-icon.png
 Keywords:
 - influxdb
-Name: Influxdb
+- *id001
+Name: influxdb
 Networking:
   Mode: bridge
   Publish:
@@ -27,12 +33,11 @@ Official: true
 Overview: InfluxDB is an open source time series database with no external dependencies.
   It's useful for recording metrics, events, and performing analytics.
 Privileged: 'false'
-Project: https://influxdata.com/
 Registry: https://hub.docker.com/_/influxdb/
-Repository: influxdb:latest
+Repository: influxdb
 Requires: ' Influxdb (autoadd)'
 Sources:
 - https://influxdata.com/
 - https://hub.docker.com/_/influxdb/
-TemplateURL: https://raw.githubusercontent.com/atribe/unRAID-docker/master/influxdb.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:8083]/

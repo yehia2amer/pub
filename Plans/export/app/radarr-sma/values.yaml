@@ -1,0 +1,18 @@
+env:
+  NVIDIA_DRIVER_CAPABILITIES: ''
+  NVIDIA_VISIBLE_DEVICES: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: randomninjaatk/radarr-sma
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - GameServers
 Config:
   Device: {}
@@ -88,20 +88,19 @@ ExtraParams: --cap-add=NET_ADMIN --restart=unless-stopped
 Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/xlinkkai.png
 Keywords:
 - xlink-kai-evolution
-Name: XLink-Kai-Evolution
+- *id001
+Name: xlink-kai-evolution
 Network: host
 Networking:
   Mode: host
 Overview: "This Docker will download and install XLink Kai: Evolution.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://www.teamxlink.co.uk/
 Registry: https://hub.docker.com/r/ich777/xlinkkaievolution/
 Repository: ich777/xlinkkaievolution
 Requires: ' App uses hostnetworking (autoadd)'
 Sources:
 - https://www.teamxlink.co.uk/
 - https://hub.docker.com/r/ich777/xlinkkaievolution/
-TemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/XLink-Kai-Evolution.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:34522]
-topTrending: -2.717

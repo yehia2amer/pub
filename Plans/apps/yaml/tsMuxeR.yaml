@@ -1,6 +1,5 @@
-CategoryList:
+CategoryList: &id001
 - MediaApp-Video
-ChangeLogPresent: true
 Config:
   Device: {}
   Label: {}
@@ -162,7 +161,8 @@ Config:
 Icon: https://raw.githubusercontent.com/jlesage/docker-templates/master/jlesage/images/tsmuxer-icon.png
 Keywords:
 - tsmuxer
-Name: tsMuxeR
+- *id001
+Name: tsmuxer
 Network: bridge
 Networking:
   Mode: bridge
@@ -170,14 +170,11 @@ Overview: 'tsMuxer is a Transport Stream muxer. Remux/mux elementary streams, EV
 
   '
 Privileged: 'false'
-Project: http://forum.doom9.org/showthread.php?t=168539
 Registry: https://hub.docker.com/r/jlesage/tsmuxer/
 Repository: jlesage/tsmuxer
 Requires: ''
 Sources:
 - http://forum.doom9.org/showthread.php?t=168539
 - https://hub.docker.com/r/jlesage/tsmuxer/
-TemplateURL: https://raw.githubusercontent.com/jlesage/docker-templates/master/jlesage/tsmuxer.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:5800]
-topPerforming: 0.132
-topTrending: -20.988999999999997

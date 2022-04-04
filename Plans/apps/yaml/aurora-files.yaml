@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Cloud
 - Tools-Utilities
 - Network-FTP
@@ -6,34 +6,23 @@ Config:
   Device: {}
   Label: {}
   Path: {}
-  Port:
-    WebUI:
-      Default: ''
-      Description: ''
-      Display: always
-      Mask: 'false'
-      Mode: tcp
-      Name: WebUI
-      Required: 'false'
-      Target: '80'
-      Type: Port
-      value: '80'
+  Port: {}
   Variable: {}
 Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/webmail-lite-files_200x200.png
 Keywords:
 - aurora-files
-Name: Aurora-Files
+- *id001
+Name: aurora-files
 Network: bridge
 Official: true
 Overview: "DESCRIPTION\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/afterlogic/docker-aurora-files
 Registry: https://hub.docker.com/r/afterlogic/docker-aurora-files
 Repository: afterlogic/docker-aurora-files
 Requires: ''
 Sources:
 - https://github.com/afterlogic/docker-aurora-files
 - https://hub.docker.com/r/afterlogic/docker-aurora-files
-TemplateURL: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/master/templates/Aurora-Files.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:80]/

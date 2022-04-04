@@ -1,30 +1,39 @@
 BindTime: 'true'
-CategoryList:
+CategoryList: &id001
 - Backup
 - Cloud
-ChangeLogPresent: true
+Config:
+  Device: {}
+  Label: {}
+  Path: {}
+  Port: {}
+  Variable:
+    ACCESS_KEY:
+      Name: ACCESS_KEY
+      value: 'Container Variable: ACCESS_KEY'
+    CRON_SCHEDULE:
+      Name: CRON_SCHEDULE
+      value: 0 * * * *
+    GCSOPTIONS:
+      Name: GCSOPTIONS
+      value: ''
+    GCSPATH:
+      Name: GCSPATH
+      value: gs://mybucket/
+    SECRET_KEY:
+      Name: SECRET_KEY
+      value: 'Container Variable: SECRET_KEY'
 Data:
   Volume:
     ContainerDir: /data/backup
     HostDir: /mnt/user/backup
     Mode: ro
     Name: Backup path
-Environment:
-  Variable:
-  - Name: ACCESS_KEY
-    Value: 'Container Variable: ACCESS_KEY'
-  - Name: SECRET_KEY
-    Value: 'Container Variable: SECRET_KEY'
-  - Name: GCSPATH
-    Value: gs://mybucket/
-  - Name: GCSOPTIONS
-    Value: ''
-  - Name: CRON_SCHEDULE
-    Value: 0 * * * *
 GitHub: https://github.com/vinid223/GcloudStorage-docker
 Icon: https://i.imgur.com/jdjTCs8.png
 Keywords:
 - google-cloud-storage-backup
+- *id001
 Name: google-cloud-storage-backup
 Networking:
   Mode: bridge
@@ -37,4 +46,4 @@ Repository: vinid223/gcloud-storage-backup
 Requires: ''
 Sources:
 - https://hub.docker.com/r/vinid223/gcloud-storage-backup
-TemplateURL: https://raw.githubusercontent.com/vinid223/unraid-docker-templates/master/vinid223/gcloud-backup-docker.xml
+Tag: latest

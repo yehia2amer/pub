@@ -1,9 +1,8 @@
 BaseImage: https://hub.docker.com/_/alpine/
 Beta: 'true'
-CategoryList:
+CategoryList: &id001
 - Backup
 - Cloud
-ChangeLogPresent: true
 Config:
   Device: {}
   Label: {}
@@ -64,7 +63,8 @@ ExtraParams: --cap-add SYS_ADMIN --device /dev/fuse --security-opt apparmor:unco
 Icon: https://raw.githubusercontent.com/tynor88/docker-templates/master/images/rclone_small.png
 Keywords:
 - rclone-mount
-Name: Rclone-mount
+- *id001
+Name: rclone-mount
 Network: bridge
 Networking:
   Mode: bridge
@@ -73,14 +73,11 @@ Overview: 'Docker for Rclone FUSE mount feature (exposable to host and other doc
 
   '
 Privileged: 'false'
-Project: http://rclone.org/
 Registry: https://hub.docker.com/r/tynor88/rclone-mount/
-Repository: tynor88/rclone-mount:dev
+Repository: tynor88/rclone-mount
 Requires: ''
 Sources:
 - http://rclone.org/
 - https://hub.docker.com/r/tynor88/rclone-mount/
-TemplateURL: https://raw.githubusercontent.com/tynor88/docker-templates/master/tynor88/rclone-mount.xml
+Tag: dev
 WebUI: ''
-topPerforming: 0.626
-topTrending: -0.7839999999999999

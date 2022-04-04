@@ -1,0 +1,19 @@
+env:
+  HTTP: '80'
+  HTTP_PORT: '80'
+  SERVER: 192.168.0.266
+image:
+  pullPolicy: IfNotPresent
+  repository: treyyoder/quakejs
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

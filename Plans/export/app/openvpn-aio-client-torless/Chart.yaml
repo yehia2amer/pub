@@ -1,0 +1,37 @@
+annotations:
+  truecharts.org/SCALE-support: 'true'
+  truecharts.org/catagories: &id001
+    - Security
+    - Network-Web
+    - Network-DNS
+    - Network-Proxy
+    - Network-VPN
+    - Network-Other
+  truecharts.org/grade: U
+apiVersion: v2
+appVersion: 0.0.1
+dependencies:
+- name: common
+  repository: https://library-charts.truecharts.org
+  version: 9.2.6
+deprecated: false
+description: "An \"all-in-one\" docker for all your private browsing needs (including\
+  \ OpenVPN client with nftables kill switch ; Socks5 + HTTP proxy to the VPN ; DNS\
+  \ server to DoT (DNS-over-TLS) services). It's the same as OpenVPN AIO Client docker\
+  \ but without TOR. \r\n"
+home: https://github.com/truecharts/apps/tree/master/charts/stable/openvpn-aio-client-torless
+icon: https://truecharts.org/_static/img/appicons/openvpn-aio-client-torless.png
+keywords:
+- openvpn-aio-client-torless
+- *id001
+kubeVersion: '>=1.16.0-0'
+maintainers:
+- email: info@truecharts.org
+  name: TrueCharts
+  url: https://truecharts.org
+name: openvpn-aio-client-torless
+sources:
+- https://github.com/testdasi/openvpn-client-aio
+- https://registry.hub.docker.com/r/testdasi/openvpn-client-aio/
+type: application
+version: 0.0.1

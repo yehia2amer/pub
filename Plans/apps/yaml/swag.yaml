@@ -1,7 +1,6 @@
-CategoryList:
+CategoryList: &id001
 - Tools-Utilities
 - Network-Web
-ChangeLogPresent: true
 Config:
   Device: {}
   Label: {}
@@ -209,6 +208,7 @@ GitHub: https://github.com/linuxserver/docker-swag#application-setup
 Icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/linuxserver-ls-logo.png
 Keywords:
 - swag
+- *id001
 Name: swag
 Network: bridge
 Overview: "SWAG - Secure Web Application Gateway (formerly known as letsencrypt, no\
@@ -217,13 +217,12 @@ Overview: "SWAG - Secure Web Application Gateway (formerly known as letsencrypt,
   \ certificate generation and renewal processes (Let's Encrypt and ZeroSSL). It also\
   \ contains fail2ban for intrusion prevention."
 Privileged: 'false'
-Project: https://linuxserver.io
-ReadMe: https://github.com/linuxserver/docker-swag#readme
 Registry: https://github.com/orgs/linuxserver/packages/container/package/swag
 Repository: lscr.io/linuxserver/swag
 Requires: ''
 Sources:
 - https://linuxserver.io
 - https://github.com/orgs/linuxserver/packages/container/package/swag
-TemplateURL: https://raw.githubusercontent.com/linuxserver/templates/master/unraid/swag.xml
+- https://github.com/linuxserver/docker-swag#readme
+Tag: latest
 WebUI: http://[IP]:[PORT:80]

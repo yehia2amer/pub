@@ -1,0 +1,19 @@
+env:
+  NVIDIA_DRIVER_CAPABILITIES: all
+  NVIDIA_VISIBLE_DEVICES: ''
+  VNC_PASSWD: '123456'
+image:
+  pullPolicy: IfNotPresent
+  repository: patrickstigler/obs-ndi
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

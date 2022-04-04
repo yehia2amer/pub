@@ -3,7 +3,7 @@ Branch:
   Tag: canary
   TagDescription: Most recent Android Studio Canary (currently only Canary works since
     Projector relies on JDK 11)
-CategoryList:
+CategoryList: &id001
 - Productivity
 Config:
   Device: {}
@@ -69,7 +69,8 @@ Config:
 Icon: https://raw.githubusercontent.com/JetBrains/projector-docker/master/static/projector-user/DemoProject/src/pj.png
 Keywords:
 - androidstudio
-Name: AndroidStudio
+- *id001
+Name: androidstudio
 Network: bridge
 Networking:
   Mode: bridge
@@ -81,6 +82,5 @@ Repository: jassycliq/android-studio-projector
 Requires: ''
 Sources:
 - https://hub.docker.com/repository/docker/jassycliq/android-studio-projector
-TemplateURL: https://raw.githubusercontent.com/jassycliq/Unraid-AndroidStudio-Projector/master/AndroidStudioProjector.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:8887]/?notSecureWarning=false
-topTrending: -3.914999999999999

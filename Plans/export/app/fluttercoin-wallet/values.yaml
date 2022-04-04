@@ -1,0 +1,21 @@
+env:
+  Custom Screen Height: '768'
+  Custom Screen Width: '1024'
+  DATA_PERM: '770'
+  Extra Startup Parameters: -bind=0.0.0.0
+  UMASK: '000'
+image:
+  pullPolicy: IfNotPresent
+  repository: ich777/fluttercoin
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

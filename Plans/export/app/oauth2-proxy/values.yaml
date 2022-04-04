@@ -1,0 +1,16 @@
+env: {}
+image:
+  pullPolicy: IfNotPresent
+  repository: quay.io/oauth2-proxy/oauth2-proxy
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

@@ -1,0 +1,21 @@
+env:
+  TG_API_HASH: ' '
+  TG_API_ID: ' '
+  TG_AUTHORIZED_USER_ID: ' '
+  TG_BOT_TOKEN: ''
+  TG_PROGRESS_DOWNLOAD: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: jsavargas/telethon_downloader
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

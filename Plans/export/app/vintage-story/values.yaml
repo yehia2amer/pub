@@ -1,0 +1,17 @@
+env:
+  Extra Startup Parameters: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: ich777/vintagestory
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

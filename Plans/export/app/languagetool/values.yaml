@@ -1,0 +1,19 @@
+env:
+  Java heap size Max: 512m
+  Java heap size Min: 256m
+  langtool ngrams: /ngrams
+image:
+  pullPolicy: IfNotPresent
+  repository: erikvl87/languagetool
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

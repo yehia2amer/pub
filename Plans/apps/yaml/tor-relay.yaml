@@ -1,6 +1,6 @@
 CAComment: This template is set up to use a custom network. You may have to adjust
   the network or IP address etc to match your system
-CategoryList:
+CategoryList: &id001
 - Network-Other
 Config:
   Device: {}
@@ -78,6 +78,7 @@ ExtraParams: --init
 Icon: https://clipartart.com/images/tor-browser-icon-clipart-9.png
 Keywords:
 - tor-relay
+- *id001
 Name: tor-relay
 Network: br0
 Networking:
@@ -88,13 +89,11 @@ Overview: 'This docker image will install the latest current stable version of T
   '
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/maschhoff/docker/tree/master/tor-relay
 Registry: https://registry.hub.docker.com/r/doudou34/tor-server
 Repository: doudou34/tor-server
 Requires: ''
 Sources:
 - https://github.com/maschhoff/docker/tree/master/tor-relay
 - https://registry.hub.docker.com/r/doudou34/tor-server
-TemplateURL: https://raw.githubusercontent.com/maschhoff/docker/master/unraid%20xml/my-tor-relay.xml
+Tag: latest
 WebUI: ''
-topTrending: -5.776

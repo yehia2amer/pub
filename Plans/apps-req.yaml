@@ -1,5 +1,5 @@
 2fauth:
-  CategoryList:
+  CategoryList: &id001
   - Cloud
   - Security
   - Tools-Utilities
@@ -112,23 +112,23 @@
   Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/2fauth.png
   Keywords:
   - 2fauth
-  Name: 2FAuth
+  - *id001
+  Name: 2fauth
   Network: bridge
   Official: true
   Overview: "DESCRIPTION\r\n"
   PostArgs: ''
   Privileged: 'false'
-  Project: https://github.com/Bubka/2FAuth
   Registry: https://hub.docker.com/r/2fauth/2fauth
   Repository: 2fauth/2fauth
   Requires: Redis server
   Sources:
   - https://github.com/Bubka/2FAuth
   - https://hub.docker.com/r/2fauth/2fauth
-  TemplateURL: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/master/templates/2FAuth.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:8000]
 adguard-exporter:
-  CategoryList:
+  CategoryList: &id002
   - Tools-Utilities
   Config:
     Device: {}
@@ -238,6 +238,7 @@ adguard-exporter:
   Icon: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/prometheus.png
   Keywords:
   - adguard-exporter
+  - *id002
   Name: adguard-exporter
   Network: bridge
   Networking:
@@ -245,17 +246,16 @@ adguard-exporter:
   Overview: Docker AdGuard Exporter for Prometheus.
   PostArgs: ''
   Privileged: 'false'
-  Project: https://github.com/ebrianne/adguard-exporter
   Registry: https://hub.docker.com/r/ebrianne/adguard-exporter
-  Repository: ebrianne/adguard-exporter:latest
+  Repository: ebrianne/adguard-exporter
   Requires: ' exporter app (autoadd)'
   Sources:
   - https://github.com/ebrianne/adguard-exporter
   - https://hub.docker.com/r/ebrianne/adguard-exporter
-  TemplateURL: https://raw.githubusercontent.com/tquizzle/Docker-xml/master/docker-adguard-prom-exporter.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:9617]/metrics
 admidio:
-  CategoryList:
+  CategoryList: &id003
   - Productivity
   - Tools-Utilities
   Config:
@@ -324,34 +324,40 @@ admidio:
   Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/admidio2.png
   Keywords:
   - admidio
-  Name: Admidio
+  - *id003
+  Name: admidio
   Network: bridge
   Official: true
   Overview: "DESCRIPTION\r\n"
   PostArgs: ''
   Privileged: 'false'
-  Project: https://github.com/Admidio/admidio
   Registry: https://hub.docker.com/r/admidio/admidio
   Repository: admidio/admidio
   Requires: MySQL, PostgreSQL
   Sources:
   - https://github.com/Admidio/admidio
   - https://hub.docker.com/r/admidio/admidio
-  TemplateURL: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/master/templates/Admidio.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:8080]
 airconnect:
-  CategoryList:
+  CategoryList: &id004
   - MediaServer-Video
   - MediaServer-Music
   - MediaServer-Other
+  Config:
+    Device: {}
+    Label: {}
+    Path: {}
+    Port: {}
+    Variable: {}
   Icon: https://i.imgur.com/hatCnm0.png
   Keywords:
   - airconnect
-  Name: AirConnect
+  - *id004
+  Name: airconnect
   Network: host
   Overview: "AirConnect container for turning Chromecast into Airplay targets\r\n"
   Privileged: 'false'
-  Project: https://github.com/philippe44/AirConnect
   Registry: https://hub.docker.com/r/1activegeek/airconnect/
   RepoShort: Selfhosters
   Repository: 1activegeek/airconnect
@@ -359,11 +365,9 @@ airconnect:
   Sources:
   - https://github.com/philippe44/AirConnect
   - https://hub.docker.com/r/1activegeek/airconnect/
-  TemplateURL: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/airconnect.xml
-  topPerforming: 9.337
-  topTrending: 1.2129999999999992
+  Tag: latest
 alpaca-to-influxdb:
-  CategoryList:
+  CategoryList: &id005
   - Downloaders
   - Tools-Utilities
   Config:
@@ -419,6 +423,7 @@ alpaca-to-influxdb:
   Icon: ''
   Keywords:
   - alpaca-to-influxdb
+  - *id005
   Name: alpaca-to-influxdb
   Network: bridge
   Networking:
@@ -430,14 +435,14 @@ alpaca-to-influxdb:
   PostArgs: ''
   Privileged: 'false'
   Registry: https://hub.docker.com/r/nixoninnes/binance-to-influxdb
-  Repository: nixoninnes/alpaca-to-influxdb:latest
+  Repository: nixoninnes/alpaca-to-influxdb
   Requires: ' Influxdb (autoadd)'
   Sources:
   - https://hub.docker.com/r/nixoninnes/binance-to-influxdb
-  TemplateURL: https://raw.githubusercontent.com/NixonInnes/unraid-builds-xml/master/alpaca-to-influxdb.xml
+  Tag: latest
   WebUI: ''
 antennas:
-  CategoryList:
+  CategoryList: &id006
   - Tools-Utilities
   - MediaApp-Other
   Config:
@@ -471,6 +476,7 @@ antennas:
   Icon: https://raw.githubusercontent.com/yayitazale/unraid-templates/main/antennas.png
   Keywords:
   - antennas
+  - *id006
   Name: antennas
   Network: bridge
   Networking:
@@ -480,7 +486,6 @@ antennas:
     '
   PostArgs: ''
   Privileged: 'false'
-  Project: https://github.com/TheJF/antennas
   Registry: https://hub.docker.com/r/thejf/antennas/
   Repository: thejf/antennas
   Requires: '<br>&nbsp;&nbsp;&nbsp;&nbsp;To run this container, first create a config.yml
@@ -490,12 +495,10 @@ antennas:
   Sources:
   - https://github.com/TheJF/antennas
   - https://hub.docker.com/r/thejf/antennas/
-  TemplateURL: https://raw.githubusercontent.com/yayitazale/unraid-templates/master/yayitazale/antennas.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:5004]
-  topPerforming: 1.061
-  topTrending: -2.3040000000000003
 apcupsd-influxdb-exporter:
-  CategoryList:
+  CategoryList: &id007
   - Tools-Utilities
   Config:
     Device: {}
@@ -607,6 +610,7 @@ apcupsd-influxdb-exporter:
   Icon: ''
   Keywords:
   - apcupsd-influxdb-exporter
+  - *id007
   Name: apcupsd-influxdb-exporter
   Network: bridge
   Networking:
@@ -615,19 +619,16 @@ apcupsd-influxdb-exporter:
     of apcaccess, it then sends the data to influxdb.
   PostArgs: ''
   Privileged: 'false'
-  Project: https://github.com/atribe/apcupsd-influxdb-exporter
   Registry: https://cloud.docker.com/repository/docker/atribe/apcupsd-influxdb-exporter
   Repository: atribe/apcupsd-influxdb-exporter
   Requires: ' Influxdb (autoadd) exporter app (autoadd)'
   Sources:
   - https://github.com/atribe/apcupsd-influxdb-exporter
   - https://cloud.docker.com/repository/docker/atribe/apcupsd-influxdb-exporter
-  TemplateURL: https://raw.githubusercontent.com/atribe/unRAID-docker/master/apcupsd-influxdb-exporter.xml
+  Tag: latest
   WebUI: ''
-  topPerforming: 0.98
-  topTrending: -0.954
 awtrix2:
-  CategoryList:
+  CategoryList: &id008
   - Drivers
   - MediaServer-Other
   Config:
@@ -740,7 +741,8 @@ awtrix2:
   Icon: https://avatars.githubusercontent.com/u/38006982?s=200&amp;v=4
   Keywords:
   - awtrix2
-  Name: Awtrix2
+  - *id008
+  Name: awtrix2
   Network: host
   Networking:
     Mode: host
@@ -748,19 +750,16 @@ awtrix2:
     \n"
   PostArgs: ''
   Privileged: 'false'
-  Project: https://awtrixdocs.blueforcer.de/
   Registry: https://hub.docker.com/r/whyet/awtrix2
   Repository: whyet/awtrix2
   Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://awtrixdocs.blueforcer.de/
   - https://hub.docker.com/r/whyet/awtrix2
-  TemplateURL: https://raw.githubusercontent.com/L1cardo/Unraid-Templates/master/awtrix2/awtrix2.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:7000]
-  topPerforming: 4.604
-  topTrending: -6.805000000000001
 binance-to-influxdb:
-  CategoryList:
+  CategoryList: &id009
   - Downloaders
   - Tools-Utilities
   Config:
@@ -794,6 +793,7 @@ binance-to-influxdb:
   Icon: ''
   Keywords:
   - binance-to-influxdb
+  - *id009
   Name: binance-to-influxdb
   Network: bridge
   Networking:
@@ -805,16 +805,15 @@ binance-to-influxdb:
   PostArgs: ''
   Privileged: 'false'
   Registry: https://registry.hub.docker.com/r/nixoninnes/binance-to-influxdb
-  Repository: nixoninnes/binance-to-influxdb:latest
+  Repository: nixoninnes/binance-to-influxdb
   Requires: ' Influxdb (autoadd)'
   Sources:
   - https://registry.hub.docker.com/r/nixoninnes/binance-to-influxdb
-  TemplateURL: https://raw.githubusercontent.com/NixonInnes/unraid-builds-xml/master/binance-to-influxdb.xml
+  Tag: latest
   WebUI: ''
 bind9:
-  CategoryList:
+  CategoryList: &id010
   - Network-DNS
-  ChangeLogPresent: true
   Config:
     Device: {}
     Label: {}
@@ -890,7 +889,8 @@ bind9:
   Icon: https://raw.githubusercontent.com/vrx-666/unraid-xml/master/img/bind.png
   Keywords:
   - bind9
-  Name: Bind9
+  - *id010
+  Name: bind9
   Network: host
   Networking:
     Mode: bridge
@@ -899,19 +899,17 @@ bind9:
     password by docker variables.'
   PostArgs: ''
   Privileged: 'false'
-  Project: https://www.isc.org/bind/
   Registry: https://hub.docker.com/r/pwa666/bind9
-  Repository: pwa666/bind9:latest
+  Repository: pwa666/bind9
   Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://www.isc.org/bind/
   - https://hub.docker.com/r/pwa666/bind9
-  TemplateURL: https://raw.githubusercontent.com/vrx-666/unraid-xml/master/my-bind9.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:10000]/
-  topTrending: -20.910000000000004
 channelsdvr_intel:
   BindTime: 'true'
-  CategoryList:
+  CategoryList: &id011
   - MediaServer-Video
   Config:
     Device: {}
@@ -990,6 +988,7 @@ channelsdvr_intel:
   Icon: https://github.com/timstephens24/docker-templates/raw/master/img/channels-logo.png
   Keywords:
   - channelsdvr_intel
+  - *id011
   Name: channelsdvr_intel
   Network: host
   Networking:
@@ -999,18 +998,17 @@ channelsdvr_intel:
     '
   PostArgs: ''
   Privileged: 'false'
-  Project: https://getchannels.com/dvr
   Registry: https://registry.hub.docker.com/r/timstephens24/channels-dvr
   Repository: timstephens24/channels-dvr
   Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://getchannels.com/dvr
   - https://registry.hub.docker.com/r/timstephens24/channels-dvr
-  TemplateURL: https://raw.githubusercontent.com/timstephens24/docker-templates/master/timstephens24/ChannelsDVR_Intel.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:8089]
 channelsdvr_nvidia:
   BindTime: 'true'
-  CategoryList:
+  CategoryList: &id012
   - MediaServer-Video
   Config:
     Device: {}
@@ -1111,6 +1109,7 @@ channelsdvr_nvidia:
   Icon: https://github.com/timstephens24/docker-templates/raw/master/img/channels-logo.png
   Keywords:
   - channelsdvr_nvidia
+  - *id012
   Name: channelsdvr_nvidia
   Network: host
   Networking:
@@ -1120,17 +1119,16 @@ channelsdvr_nvidia:
     '
   PostArgs: ''
   Privileged: 'false'
-  Project: https://getchannels.com/dvr
   Registry: https://registry.hub.docker.com/r/timstephens24/channels-dvr
   Repository: timstephens24/channels-dvr
   Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://getchannels.com/dvr
   - https://registry.hub.docker.com/r/timstephens24/channels-dvr
-  TemplateURL: https://raw.githubusercontent.com/timstephens24/docker-templates/master/timstephens24/ChannelsDVR_NVIDIA.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:8089]
 chia:
-  CategoryList:
+  CategoryList: &id013
   - Tools-Utilities
   - Other
   - Network-Web
@@ -1277,6 +1275,7 @@ chia:
   Icon: https://raw.githubusercontent.com/PartitionPixel/unraid-templates/main/PartitionPixel/chia-icon.png
   Keywords:
   - chia
+  - *id013
   Name: chia
   Network: host
   Networking:
@@ -1286,17 +1285,16 @@ chia:
     server into a XCH / cryptocurrency farming rig.
   PostArgs: ''
   Privileged: 'false'
-  Project: https://www.chia.net/
   Registry: https://github.com/orgs/chia-network/packages/container/package/chia
   Repository: ghcr.io/chia-network/chia
   Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://www.chia.net/
   - https://github.com/orgs/chia-network/packages/container/package/chia
-  TemplateURL: https://raw.githubusercontent.com/PartitionPixel/unraid-templates/master/PartitionPixel/chia.xml
+  Tag: latest
   WebUI: ''
 coturn:
-  CategoryList:
+  CategoryList: &id014
   - Network-Voip
   Config:
     Device: {}
@@ -1373,6 +1371,7 @@ coturn:
   Icon: https://raw.githubusercontent.com/xthursdayx/docker-templates/master/xthursdayx/images/webrtc-icon.png
   Keywords:
   - coturn
+  - *id014
   Name: coturn
   Network: host
   Networking:
@@ -1381,19 +1380,16 @@ coturn:
     It can be used as a general-purpose network traffic TURN server and gateway, too.
   PostArgs: -c /coturn/turnserver.conf
   Privileged: 'false'
-  Project: https://github.com/coturn/coturn
   Registry: https://hub.docker.com/r/instrumentisto/coturn/
   Repository: instrumentisto/coturn
   Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://github.com/coturn/coturn
   - https://hub.docker.com/r/instrumentisto/coturn/
-  TemplateURL: https://raw.githubusercontent.com/xthursdayx/docker-templates/master/xthursdayx/coturn.xml
+  Tag: latest
   WebUI: ''
-  topPerforming: 0.181
-  topTrending: -3.725
 cryptgeon:
-  CategoryList:
+  CategoryList: &id015
   - Cloud
   - Productivity
   - Security
@@ -1442,25 +1438,24 @@ cryptgeon:
   Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/cryptgeon.png
   Keywords:
   - cryptgeon
+  - *id015
   Name: cryptgeon
   Network: bridge
   Overview: "DESCRIPTION\r\n"
   PostArgs: ''
   Privileged: 'false'
-  Project: https://github.com/cupcakearmy/cryptgeon
   Registry: https://hub.docker.com/r/cupcakearmy/cryptgeon
   Repository: cupcakearmy/cryptgeon
   Requires: "\u2022 Memcached \r<br>\u2022 HTTPS certificate (NPM/Nginx)"
   Sources:
   - https://github.com/cupcakearmy/cryptgeon
   - https://hub.docker.com/r/cupcakearmy/cryptgeon
-  TemplateURL: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/master/templates/cryptgeon.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:5000]
 daapd:
-  CategoryList:
+  CategoryList: &id016
   - MediaApp-Music
   - MediaServer-Music
-  ChangeLogPresent: true
   Config:
     Device: {}
     Label: {}
@@ -1523,25 +1518,24 @@ daapd:
   Icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/linuxserver-ls-logo.png
   Keywords:
   - daapd
+  - *id016
   Name: daapd
   Network: host
   Overview: Daapd(https://owntone.github.io/owntone-server/) (iTunes) media server
     with support for AirPlay devices, Apple Remote (and compatibles), Chromecast,
     MPD and internet radio.
   Privileged: 'false'
-  Project: https://owntone.github.io/owntone-server/
-  ReadMe: https://github.com/linuxserver/docker-daapd#readme
   Registry: https://github.com/orgs/linuxserver/packages/container/package/daapd
   Repository: lscr.io/linuxserver/daapd
   Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://owntone.github.io/owntone-server/
   - https://github.com/orgs/linuxserver/packages/container/package/daapd
-  TemplateURL: https://raw.githubusercontent.com/linuxserver/templates/master/unraid/daapd.xml
+  - https://github.com/linuxserver/docker-daapd#readme
+  Tag: latest
   WebUI: http://[IP]:[PORT:3689]
-  topTrending: -0.9359999999999999
 deepstack-ui:
-  CategoryList:
+  CategoryList: &id017
   - HomeAutomation
   - Tools-Utilities
   - Other
@@ -1631,6 +1625,7 @@ deepstack-ui:
   Icon: https://raw.githubusercontent.com/n8detar/docker-templates/master/n8detar/images/deepstack-ui.png
   Keywords:
   - deepstack-ui
+  - *id017
   Name: deepstack-ui
   Network: bridge
   Networking:
@@ -1642,19 +1637,16 @@ deepstack-ui:
     \ robmarkcole.\r\n"
   PostArgs: ''
   Privileged: 'false'
-  Project: https://github.com/robmarkcole/deepstack-ui
   Registry: https://hub.docker.com/r/robmarkcole/deepstack-ui
   Repository: robmarkcole/deepstack-ui
   Requires: Deepstack
   Sources:
   - https://github.com/robmarkcole/deepstack-ui
   - https://hub.docker.com/r/robmarkcole/deepstack-ui
-  TemplateURL: https://raw.githubusercontent.com/n8detar/docker-templates/master/n8detar/deepstack-ui.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:8501]
-  topPerforming: 1.32
-  topTrending: -3.8889999999999993
 elastiflow:
-  CategoryList:
+  CategoryList: &id018
   - Network-Management
   Config:
     Device: {}
@@ -1874,7 +1866,8 @@ elastiflow:
   Icon: https://raw.githubusercontent.com/qubex22/unraid-templates/main/elastiflow/elastiflow.png
   Keywords:
   - elastiflow
-  Name: Elastiflow
+  - *id018
+  Name: elastiflow
   Network: host
   Networking:
     Mode: host
@@ -1883,19 +1876,75 @@ elastiflow:
     \ increased performance and security.\r\n"
   PostArgs: ''
   Privileged: 'false'
-  Project: https://www.elastiflow.com/
   Registry: https://registry.hub.docker.com/r/elastiflow/flow-collector
-  Repository: elastiflow/flow-collector:5.3.4
+  Repository: elastiflow/flow-collector
   Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://www.elastiflow.com/
   - https://registry.hub.docker.com/r/elastiflow/flow-collector
-  TemplateURL: https://raw.githubusercontent.com/qubex22/unraid-templates/master/elastiflow/elastiflow.xml
+  Tag: 5.3.4
   WebUI: ''
 emoncms:
   BindTime: 'true'
-  CategoryList:
+  CategoryList: &id019
   - Productivity
+  Config:
+    Device: {}
+    Label: {}
+    Path: {}
+    Port: {}
+    Variable:
+      MQTT_BASETOPIC:
+        Name: MQTT_BASETOPIC
+        value: emon
+      MQTT_ENABLED:
+        Name: MQTT_ENABLED
+        value: 'false'
+      MQTT_HOST:
+        Name: MQTT_HOST
+        value: 127.0.0.1
+      MQTT_PASSWORD:
+        Name: MQTT_PASSWORD
+        value: mqtt
+      MQTT_USER:
+        Name: MQTT_USER
+        value: mqtt
+      MYSQL_DATABASE:
+        Name: MYSQL_DATABASE
+        value: emoncms
+      MYSQL_HOST:
+        Name: MYSQL_HOST
+        value: ''
+      MYSQL_PASSWORD:
+        Name: MYSQL_PASSWORD
+        value: ''
+      MYSQL_PORT:
+        Name: MYSQL_PORT
+        value: '3306'
+      MYSQL_RANDOM_ROOT_PASSWORD:
+        Name: MYSQL_RANDOM_ROOT_PASSWORD
+        value: 'yes'
+      MYSQL_USER:
+        Name: MYSQL_USER
+        value: emoncms
+      PHPFINA_DIR:
+        Name: PHPFINA_DIR
+        value: /var/opt/emoncms/phpfina/
+      PHPTIMESERIES_DIR:
+        Name: PHPTIMESERIES_DIR
+        value: /var/opt/emoncms/phptimeseries/
+      REDIS_ENABLED:
+        Name: REDIS_ENABLED
+        value: 'false'
+      REDIS_HOST:
+        Name: REDIS_HOST
+        value: 127.0.0.1
+      REDIS_PORT:
+        Name: REDIS_PORT
+        value: '6379'
+      REDIS_PREFIX:
+        Name: REDIS_PREFIX
+        value: '''emoncms'''
   Data:
     Volume:
     - ContainerDir: /var/opt/emoncms/phpfina/
@@ -1904,46 +1953,11 @@ emoncms:
     - ContainerDir: /var/opt/emoncms/phptimeseries/
       HostDir: /mnt/user/appdata/emoncms/phptimeseries/phpfina
       Mode: rw
-  Environment:
-    Variable:
-    - Name: MYSQL_HOST
-      Value: ''
-    - Name: MYSQL_PORT
-      Value: '3306'
-    - Name: MYSQL_USER
-      Value: emoncms
-    - Name: MYSQL_PASSWORD
-      Value: ''
-    - Name: MYSQL_DATABASE
-      Value: emoncms
-    - Name: MYSQL_RANDOM_ROOT_PASSWORD
-      Value: 'yes'
-    - Name: REDIS_ENABLED
-      Value: 'false'
-    - Name: REDIS_HOST
-      Value: 127.0.0.1
-    - Name: REDIS_PORT
-      Value: '6379'
-    - Name: REDIS_PREFIX
-      Value: '''emoncms'''
-    - Name: MQTT_ENABLED
-      Value: 'false'
-    - Name: MQTT_HOST
-      Value: 127.0.0.1
-    - Name: MQTT_USER
-      Value: mqtt
-    - Name: MQTT_PASSWORD
-      Value: mqtt
-    - Name: MQTT_BASETOPIC
-      Value: emon
-    - Name: PHPFINA_DIR
-      Value: /var/opt/emoncms/phpfina/
-    - Name: PHPTIMESERIES_DIR
-      Value: /var/opt/emoncms/phptimeseries/
   Icon: https://emoncms.org/Modules/site/emoncms_front.png
   Keywords:
   - emoncms
-  Name: Emoncms
+  - *id019
+  Name: emoncms
   Networking:
     Mode: bridge
     Publish:
@@ -1961,9 +1975,8 @@ emoncms:
   Requires: MySQL / Redis Installed
   Sources:
   - https://registry.hub.docker.com/r/snoopy86/emoncms-docker
-  TemplateURL: https://raw.githubusercontent.com/snoopy86/docker-repo/master/snoopy/emoncms.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:80]/
-  topTrending: -2.0519999999999996
 ersatztv:
   Beta: 'true'
   Branch:
@@ -1977,7 +1990,7 @@ ersatztv:
     TagDescription: develop release + vaapi
   - Tag: develop-nvidia
     TagDescription: develop release + nvidia
-  CategoryList:
+  CategoryList: &id020
   - MediaApp-Video
   Config:
     Device: {}
@@ -2022,26 +2035,24 @@ ersatztv:
   Icon: https://raw.githubusercontent.com/RandomNinjaAtk/unraid-templates/master/randomninjaatk/img/ersatztv.png
   Keywords:
   - ersatztv
-  Name: ErsatzTV
+  - *id020
+  Name: ersatztv
   Network: host
   Overview: 'Stream custom live channels using your own media.
 
     '
   PostArgs: ''
   Privileged: 'false'
-  Project: https://github.com/jasongdove/ErsatzTV
   Registry: https://hub.docker.com/r/jasongdove/ersatztv
   Repository: jasongdove/ersatztv
   Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://github.com/jasongdove/ErsatzTV
   - https://hub.docker.com/r/jasongdove/ersatztv
-  TemplateURL: https://raw.githubusercontent.com/RandomNinjaAtk/unraid-templates/master/randomninjaatk/ersatztv.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:8409]
-  topPerforming: 7.886
-  topTrending: -0.7079999999999993
 filerun-ofi:
-  CategoryList:
+  CategoryList: &id021
   - Cloud
   - MediaApp-Video
   - MediaApp-Music
@@ -2149,24 +2160,24 @@ filerun-ofi:
   Icon: https://www.filerun.com/images/logo.png
   Keywords:
   - filerun-ofi
-  Name: Filerun-ofi
+  - *id021
+  Name: filerun-ofi
   Network: bridge
   Overview: FileRun is a self-hosted Google Drive alternative. It is a full featured
     web based file manager with an easy to use user interface. It is great for managing
     your photo, movie, audio collection, or sharing files with your family and friends.
   PostArgs: ''
   Privileged: 'false'
-  Project: https://github.com/filerun
   Registry: https://hub.docker.com/r/filerun/filerun
-  Repository: filerun/filerun:latest
+  Repository: filerun/filerun
   Requires: A DataBase
   Sources:
   - https://github.com/filerun
   - https://hub.docker.com/r/filerun/filerun
-  TemplateURL: https://raw.githubusercontent.com/ItJustFox/unraidtemplate/master/filerun/filerun.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:80]
 flexconnect:
-  CategoryList:
+  CategoryList: &id022
   - Tools
   Config:
     Device: {}
@@ -2199,7 +2210,8 @@ flexconnect:
   Icon: https://github.com/d8ahazard/Phlex/raw/master/img/android-icon-144x144.png
   Keywords:
   - flexconnect
-  Name: FlexConnect
+  - *id022
+  Name: flexconnect
   Network: host
   Networking:
     Mode: host
@@ -2208,21 +2220,19 @@ flexconnect:
     purposes only.
   PostArgs: ''
   Privileged: 'false'
-  Project: https://github.com/d8ahazard/FlexConnect
   Registry: https://hub.docker.com/r/digitalhigh/flexconnect
   Repository: digitalhigh/flexconnect
   Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://github.com/d8ahazard/FlexConnect
   - https://hub.docker.com/r/digitalhigh/flexconnect
-  TemplateURL: https://raw.githubusercontent.com/d8ahazard/unraid-repository/master/docker-template/flexconnect.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:5667]
-  topTrending: 0.0050000000000000044
 fogproject:
   CAComment: Note that this container appears to have been abandonded and is only
     installing a very old version of FOG.  While functional, do not expect updates
     to happen to this app
-  CategoryList:
+  CategoryList: &id023
   - Network-Other
   Config:
     Device: {}
@@ -2321,6 +2331,7 @@ fogproject:
   Icon: https://raw.githubusercontent.com/Mudislander/docker-templates/master/img/fogproject_icon.png
   Keywords:
   - fogproject
+  - *id023
   Name: fogproject
   Network: host
   Networking:
@@ -2329,21 +2340,17 @@ fogproject:
     Linux distributions.
   PostArgs: ''
   Privileged: 'true'
-  Project: https://fogproject.org/
   Registry: https://hub.docker.com/r/mudislander/fogproject//Dockerfile/
   Repository: mudislander/fogproject
   Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://fogproject.org/
   - https://hub.docker.com/r/mudislander/fogproject//Dockerfile/
-  TemplateURL: https://raw.githubusercontent.com/Mudislander/docker-templates/master/fogproject.xml
-  topPerforming: 0.686
-  topTrending: -6.257
+  Tag: latest
 foundryvtt:
   BindTime: 'true'
-  CategoryList:
+  CategoryList: &id024
   - GameServers
-  ChangeLogPresent: true
   Config:
     Device: {}
     Label: {}
@@ -2408,7 +2415,8 @@ foundryvtt:
   Icon: https://raw.githubusercontent.com/fithwum/files-for-dockers/master/icons/d20.png
   Keywords:
   - foundryvtt
-  Name: FoundryVTT
+  - *id024
+  Name: foundryvtt
   Network: host
   Networking:
     Mode: host
@@ -2417,19 +2425,16 @@ foundryvtt:
     \ of foundryvtt from https://foundryvtt.com[br][br]\r\n"
   PostArgs: ''
   Privileged: 'false'
-  Project: https://foundryvtt.com/
   Registry: https://hub.docker.com/r/fithwum/foundry_vtt/
   Repository: fithwum/foundry_vtt
   Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://foundryvtt.com/
   - https://hub.docker.com/r/fithwum/foundry_vtt/
-  TemplateURL: https://raw.githubusercontent.com/fithwum/files-for-dockers/master/templates/FoundryVTT_alpine_unraid.xml
+  Tag: latest
   WebUI: ''
-  topPerforming: 3.639
-  topTrending: -3.962
 gerbera:
-  CategoryList:
+  CategoryList: &id025
   - Tools-Utilities
   - MediaServer-Video
   - MediaServer-Music
@@ -2487,24 +2492,23 @@ gerbera:
   Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/gerbera_200x200.png
   Keywords:
   - gerbera
-  Name: Gerbera
+  - *id025
+  Name: gerbera
   Network: host
   Official: true
   Overview: "DESCRIPTION\r\n"
   PostArgs: ''
   Privileged: 'false'
-  Project: https://github.com/gerbera/gerbera
   Registry: https://hub.docker.com/r/gerbera/gerbera
   Repository: gerbera/gerbera
   Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://github.com/gerbera/gerbera
   - https://hub.docker.com/r/gerbera/gerbera
-  TemplateURL: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/master/templates/Gerbera.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:49494]
-  topTrending: -0.419
 geysermc:
-  CategoryList:
+  CategoryList: &id026
   - GameServers
   Config:
     Device: {}
@@ -2650,7 +2654,8 @@ geysermc:
   Icon: https://raw.githubusercontent.com/simonsickle/docker-templates/1b833decd2a915f58be222f08682fef8f4a31a0b/images/geyser.png
   Keywords:
   - geysermc
-  Name: GeyserMC
+  - *id026
+  Name: geysermc
   Network: host
   Networking:
     Mode: host
@@ -2660,17 +2665,16 @@ geysermc:
     you have been warned.
   PostArgs: ''
   Privileged: 'false'
-  Project: https://git.nefald.fr/docker/geyser
   Registry: https://hub.docker.com/r/nefald/geysermc
   Repository: nefald/geysermc
   Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://git.nefald.fr/docker/geyser
   - https://hub.docker.com/r/nefald/geysermc
-  TemplateURL: https://raw.githubusercontent.com/simonsickle/docker-templates/master/simonsickle/geysermc.xml
+  Tag: latest
   WebUI: ''
 gladys-assistant:
-  CategoryList:
+  CategoryList: &id027
   - HomeAutomation
   Config:
     Device: {}
@@ -2771,7 +2775,8 @@ gladys-assistant:
   Icon: https://gladysassistant.com/en/img/external/github-gladys-logo.png
   Keywords:
   - gladys-assistant
-  Name: Gladys-Assistant
+  - *id027
+  Name: gladys-assistant
   Network: host
   Networking:
     Mode: host
@@ -2782,18 +2787,17 @@ gladys-assistant:
     \n"
   PostArgs: ''
   Privileged: 'true'
-  Project: https://gladysassistant.com/
   Registry: https://hub.docker.com/r/gladysassistant/gladys/
-  Repository: gladysassistant/gladys:v4
+  Repository: gladysassistant/gladys
   Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://gladysassistant.com/
   - https://hub.docker.com/r/gladysassistant/gladys/
-  TemplateURL: https://raw.githubusercontent.com/GladysAssistant/unraid-gladys-templates/master/Gladys/Gladys.xml
+  Tag: v4
   WebUI: http://[IP]:[PORT:8006]
 glimmr:
   BindTime: 'true'
-  CategoryList:
+  CategoryList: &id028
   - Tools
   Config:
     Device: {}
@@ -2886,24 +2890,24 @@ glimmr:
   Icon: https://github.com/d8ahazard/unraid-repository/blob/master/img/glimmr_icon.png?raw=true
   Keywords:
   - glimmr
-  Name: Glimmr
+  - *id028
+  Name: glimmr
   Network: host
   Networking:
     Mode: bridge
   Overview: Glimmr synchronizes your Hue Lights, nanoleaf panels, and lifx bulbs with
     a DreamScreen controller.
   Privileged: 'false'
-  Project: https://github.com/d8ahazard/glimmr
   Registry: https://registry.hub.docker.com/r/digitalhigh/glimmr
   Repository: digitalhigh/glimmr
   Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://github.com/d8ahazard/glimmr
   - https://registry.hub.docker.com/r/digitalhigh/glimmr
-  TemplateURL: https://raw.githubusercontent.com/d8ahazard/unraid-repository/master/docker-template/glimmr.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:80]
 gluster-server:
-  CategoryList:
+  CategoryList: &id029
   - Drivers
   - Tools-Utilities
   - Other
@@ -2983,7 +2987,8 @@ gluster-server:
   Icon: https://github.com/testdasi/gluster-server/raw/main/gluster.png
   Keywords:
   - gluster-server
-  Name: Gluster-Server
+  - *id029
+  Name: gluster-server
   Network: host
   Networking:
     Mode: host
@@ -2993,17 +2998,16 @@ gluster-server:
     \n"
   PostArgs: ''
   Privileged: 'true'
-  Project: https://github.com/testdasi/gluster-server
   Registry: https://registry.hub.docker.com/r/testdasi/gluster-server/
-  Repository: testdasi/gluster-server:latest
+  Repository: testdasi/gluster-server
   Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://github.com/testdasi/gluster-server
   - https://registry.hub.docker.com/r/testdasi/gluster-server/
-  TemplateURL: https://raw.githubusercontent.com/testdasi/testdasi-unraid-repo/master/gluster-server.xml
+  Tag: latest
   WebUI: ''
 grafana-unraid-stack:
-  CategoryList:
+  CategoryList: &id030
   - Productivity
   - Tools-Utilities
   - Other
@@ -3214,7 +3218,8 @@ grafana-unraid-stack:
   Icon: https://raw.githubusercontent.com/testdasi/grafana-unraid-stack-base/master/grafana-unraid-stack.png
   Keywords:
   - grafana-unraid-stack
-  Name: Grafana-Unraid-Stack
+  - *id030
+  Name: grafana-unraid-stack
   Network: host
   Networking:
     Mode: host
@@ -3222,20 +3227,17 @@ grafana-unraid-stack:
     \ (Grafana - Influxdb - Telegraf - Loki - Promtail).\r\n"
   PostArgs: ''
   Privileged: 'true'
-  Project: https://github.com/testdasi/grafana-unraid-stack
   Registry: https://registry.hub.docker.com/r/testdasi/grafana-unraid-stack/
-  Repository: testdasi/grafana-unraid-stack:latest
+  Repository: testdasi/grafana-unraid-stack
   Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://github.com/testdasi/grafana-unraid-stack
   - https://registry.hub.docker.com/r/testdasi/grafana-unraid-stack/
-  TemplateURL: https://raw.githubusercontent.com/testdasi/testdasi-unraid-repo/master/grafana-unraid-stack.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:3006]/
-  topPerforming: 3.564
-  topTrending: -7.519
 gsdock:
   Beta: 'true'
-  CategoryList:
+  CategoryList: &id031
   - Backup
   Config:
     Device: {}
@@ -3371,6 +3373,7 @@ gsdock:
   Icon: https://lh5.ggpht.com/wKQx6--IZ50yitxPX24gbsO2rrehdaGNw9J4rHceHlwNPFrNY7CfCO3UDQub7GrsQr4=w300
   Keywords:
   - gsdock
+  - *id031
   Name: gsdock
   Network: host
   Networking:
@@ -3383,12 +3386,10 @@ gsdock:
   Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://hub.docker.com/r/shrmn/gsdock/
-  TemplateURL: https://raw.githubusercontent.com/shrmnk/docker-templates/master/shrmn/gsdock.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:11000]/
-  topPerforming: 0.235
-  topTrending: -0.754
 hddtemp:
-  CategoryList:
+  CategoryList: &id032
   - Tools-Utilities
   Config:
     Device: {}
@@ -3443,8 +3444,9 @@ hddtemp:
   Icon: https://github.com/atribe/unRAID-docker/raw/master/icons/hddtemp.png
   Keywords:
   - hddtemp
+  - *id032
   MinVer: ''
-  Name: HDDTemp
+  Name: hddtemp
   Network: host
   Networking:
     Mode: host
@@ -3453,21 +3455,17 @@ hddtemp:
     it's hdd temp plugin.
   PostArgs: ''
   Privileged: 'true'
-  Project: https://hub.docker.com/r/drewster727/hddtemp-docker/
   Registry: https://hub.docker.com/r/drewster727/hddtemp-docker/
   Repository: drewster727/hddtemp-docker
   Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://hub.docker.com/r/drewster727/hddtemp-docker/
   - https://hub.docker.com/r/drewster727/hddtemp-docker/
-  TemplateURL: https://raw.githubusercontent.com/atribe/unRAID-docker/master/hddtemp.xml
+  Tag: latest
   WebUI: ''
-  topPerforming: 10.128
-  topTrending: 8.062000000000001
 homeassistant:
-  CategoryList:
+  CategoryList: &id033
   - Other
-  ChangeLogPresent: true
   Config:
     Device:
       /path/to/device:
@@ -3539,6 +3537,7 @@ homeassistant:
   Icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/homeassistant-logo.png
   Keywords:
   - homeassistant
+  - *id033
   Name: homeassistant
   Network: host
   Overview: Home Assistant Core(https://www.home-assistant.io/) - Open source home
@@ -3546,33 +3545,38 @@ homeassistant:
     of tinkerers and DIY enthusiasts. Perfect to run on a Raspberry Pi or a local
     server.
   Privileged: 'false'
-  Project: https://www.home-assistant.io/
-  ReadMe: https://github.com/linuxserver/docker-homeassistant#readme
   Registry: https://github.com/orgs/linuxserver/packages/container/package/homeassistant
   Repository: lscr.io/linuxserver/homeassistant
   Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://www.home-assistant.io/
   - https://github.com/orgs/linuxserver/packages/container/package/homeassistant
+  - https://github.com/linuxserver/docker-homeassistant#readme
+  Tag: latest
   WebUI: http://[IP]:[PORT:8123]
   caTemplateURL: https://raw.githubusercontent.com/linuxserver/templates/master/unraid/homeassistant.xml
-  topTrending: -15.504000000000001
 influxdb:
   BindTime: 'true'
-  CategoryList:
+  CategoryList: &id034
   - Network-Management
   - Tools-Utilities
+  Config:
+    Device: {}
+    Label: {}
+    Path: {}
+    Port: {}
+    Variable: {}
   Data:
     Volume:
       ContainerDir: /var/lib/influxdb
       HostDir: /mnt/user/appdata/influxdb
       Mode: rw
-  Environment: "\n  "
   GitHub: https://github.com/influxdata/influxdb
   Icon: https://raw.githubusercontent.com/pootzko/InfluxData.Net/master/nuget-icon.png
   Keywords:
   - influxdb
-  Name: Influxdb
+  - *id034
+  Name: influxdb
   Networking:
     Mode: bridge
     Publish:
@@ -3587,17 +3591,16 @@ influxdb:
   Overview: InfluxDB is an open source time series database with no external dependencies.
     It's useful for recording metrics, events, and performing analytics.
   Privileged: 'false'
-  Project: https://influxdata.com/
   Registry: https://hub.docker.com/_/influxdb/
-  Repository: influxdb:latest
+  Repository: influxdb
   Requires: ' Influxdb (autoadd)'
   Sources:
   - https://influxdata.com/
   - https://hub.docker.com/_/influxdb/
-  TemplateURL: https://raw.githubusercontent.com/atribe/unRAID-docker/master/influxdb.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:8083]/
 jfa-go:
-  CategoryList:
+  CategoryList: &id035
   - Tools-Utilities
   Config:
     Device: {}
@@ -3653,6 +3656,7 @@ jfa-go:
   Icon: https://raw.githubusercontent.com/hrfee/jfa-go/main/images/jfa-go-icon.png
   Keywords:
   - jfa-go
+  - *id035
   Name: jfa-go
   Network: bridge
   Networking:
@@ -3662,18 +3666,16 @@ jfa-go:
     \ much easier to manage.\r\n"
   PostArgs: ''
   Privileged: 'false'
-  Project: https://github.com/hrfee/jfa-go
   Registry: https://hub.docker.com/r/hrfee/jfa-go/
   Repository: hrfee/jfa-go
   Requires: Jellyfin or Emby
   Sources:
   - https://github.com/hrfee/jfa-go
   - https://hub.docker.com/r/hrfee/jfa-go/
-  TemplateURL: https://raw.githubusercontent.com/n8detar/docker-templates/master/n8detar/jfa-go.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:8056]/
-  topTrending: -12.544
 kibana:
-  CategoryList:
+  CategoryList: &id036
   - Tools-Utilities
   - Other
   Config:
@@ -3707,6 +3709,7 @@ kibana:
   Icon: https://raw.githubusercontent.com/cschanot/docker-templates/main/images/kibana.png
   Keywords:
   - kibana
+  - *id036
   Name: kibana
   Network: bridge
   Networking:
@@ -3716,42 +3719,30 @@ kibana:
     \ \u2014 indexed in Elasticsearch.  \r\n"
   PostArgs: ''
   Privileged: 'false'
-  Project: https://www.elastic.co/kibana
   Registry: https://hub.docker.com/_/kibana/
-  Repository: kibana:7.12.0
+  Repository: kibana
   Requires: ElasticSearch installed
   Sources:
   - https://www.elastic.co/kibana
   - https://hub.docker.com/_/kibana/
-  TemplateURL: https://raw.githubusercontent.com/cschanot/docker-templates/master/kibana.xml
+  Tag: 7.12.0
   WebUI: http://[IP]:[PORT:5601]
 lg-connector:
-  CategoryList:
+  CategoryList: &id037
   - HomeAutomation
   Config:
     Device: {}
     Label: {}
-    Path:
-      Appdata:
-        Default: ''
-        Description: 'Container Path: /config'
-        Display: always
-        Mask: 'false'
-        Mode: rw
-        Name: Appdata
-        Required: 'false'
-        Target: /config
-        Type: Path
-        value: ''
+    Path: {}
     Port: {}
     Variable: {}
   Icon: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/lg-connector.png
   Keywords:
   - lg-connector
+  - *id037
   Name: lg-connector
   Network: host
   Overview: "Connector for LG devices with SmartThings\r\n"
-  Project: https://github.com/fison67/LG-Connector
   RecommendedDate: 1638334800
   RecommendedRaw: 12/1/2021
   RecommendedReason:
@@ -3760,17 +3751,15 @@ lg-connector:
   RecommendedWho: zeta_cartel_CFO
   Registry: https://hub.docker.com/r/fison67/lg-connector/
   RepoShort: Selfhosters
-  Repository: fison67/lg-connector:0.0.3
+  Repository: fison67/lg-connector
   Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://github.com/fison67/LG-Connector
   - https://hub.docker.com/r/fison67/lg-connector/
-  TemplateURL: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/lg-connector.xml
+  Tag: 0.0.3
   WebUI: http://[IP]:[PORT:30020]/
-  topPerforming: 13.787
-  topTrending: 7.541
 logicaldoc-ce:
-  CategoryList:
+  CategoryList: &id038
   - Productivity
   Config:
     Device: {}
@@ -3858,23 +3847,22 @@ logicaldoc-ce:
   Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/logicaldoc-ce_200x200.png
   Keywords:
   - logicaldoc-ce
-  Name: LogicalDOC-CE
+  - *id038
+  Name: logicaldoc-ce
   Network: bridge
   Overview: "DESCRIPTION\r\n"
   PostArgs: ''
   Privileged: 'false'
-  Project: https://github.com/logicaldoc/logicaldoc-ce
   Registry: https://hub.docker.com/r/logicaldoc/logicaldoc-ce
   Repository: logicaldoc/logicaldoc-ce
   Requires: '- External DB (MySQL, MariaDB, PosgreSQL, MSSQL or Oracle)'
   Sources:
   - https://github.com/logicaldoc/logicaldoc-ce
   - https://hub.docker.com/r/logicaldoc/logicaldoc-ce
-  TemplateURL: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/master/templates/LogicalDOC-CE.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:8080]
-  topTrending: -4.1770000000000005
 lomorage:
-  CategoryList:
+  CategoryList: &id039
   - Backup
   - MediaApp-Video
   - MediaApp-Photos
@@ -3923,7 +3911,8 @@ lomorage:
   Icon: https://lomorage.com/img/logo.png
   Keywords:
   - lomorage
-  Name: Lomorage
+  - *id039
+  Name: lomorage
   Network: host
   Networking:
     Mode: host
@@ -3934,17 +3923,16 @@ lomorage:
     and enjoy the moments.
   PostArgs: '8000'
   Privileged: 'false'
-  Project: https://github.com/lomorage/lomo-docker
   Registry: https://hub.docker.com/r/lomorage/amd64-lomorage
   Repository: lomorage/amd64-lomorage
   Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://github.com/lomorage/lomo-docker
   - https://hub.docker.com/r/lomorage/amd64-lomorage
-  TemplateURL: https://raw.githubusercontent.com/lomorage/unraid-template/master/lomo-backend.xml
+  Tag: latest
   WebUI: ''
 machinaris:
-  CategoryList:
+  CategoryList: &id040
   - Crypto
   Config:
     Device: {}
@@ -4118,6 +4106,7 @@ machinaris:
   Icon: https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/machinaris.png
   Keywords:
   - machinaris
+  - *id040
   Name: machinaris
   Network: host
   Networking:
@@ -4126,17 +4115,16 @@ machinaris:
     manager, log monitor, and a simple WebUI for Unraid.
   PostArgs: ''
   Privileged: 'false'
-  Project: https://github.com/guydavis/machinaris
   Registry: https://hub.docker.com/repository/docker/guydavis/machinaris
   Repository: ghcr.io/guydavis/machinaris
   Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://github.com/guydavis/machinaris
   - https://hub.docker.com/repository/docker/guydavis/machinaris
-  TemplateURL: https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/machinaris.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:8926]/
 machinaris-btcgreen:
-  CategoryList:
+  CategoryList: &id041
   - Crypto
   Config:
     Device: {}
@@ -4314,6 +4302,7 @@ machinaris-btcgreen:
   Icon: https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/logos/btcgreen.png
   Keywords:
   - machinaris-btcgreen
+  - *id041
   Name: machinaris-btcgreen
   Network: bridge
   Networking:
@@ -4322,17 +4311,16 @@ machinaris-btcgreen:
     \ alongside Chia. \r\n"
   PostArgs: ''
   Privileged: 'false'
-  Project: https://github.com/guydavis/machinaris
   Registry: https://hub.docker.com/repository/docker/guydavis/machinaris-btcgreen
   Repository: ghcr.io/guydavis/machinaris-btcgreen
   Requires: Machinaris.  See the description for full details
   Sources:
   - https://github.com/guydavis/machinaris
   - https://hub.docker.com/repository/docker/guydavis/machinaris-btcgreen
-  TemplateURL: https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/machinaris-btcgreen.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:8926]/
 machinaris-btcgreen-harvester:
-  CategoryList:
+  CategoryList: &id042
   - Crypto
   Config:
     Device: {}
@@ -4473,6 +4461,7 @@ machinaris-btcgreen-harvester:
   Icon: https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/logos/btcgreen.png
   Keywords:
   - machinaris-btcgreen-harvester
+  - *id042
   Name: machinaris-btcgreen-harvester
   Network: bridge
   Networking:
@@ -4481,17 +4470,16 @@ machinaris-btcgreen-harvester:
     \  Connects to the main Machinaris application.\r\n"
   PostArgs: ''
   Privileged: 'false'
-  Project: https://github.com/guydavis/machinaris
   Registry: https://hub.docker.com/repository/docker/guydavis/machinaris-btcgreen-harvester
   Repository: ghcr.io/guydavis/machinaris-btcgreen
   Requires: Machinaris.  See the description for full details
   Sources:
   - https://github.com/guydavis/machinaris
   - https://hub.docker.com/repository/docker/guydavis/machinaris-btcgreen-harvester
-  TemplateURL: https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/machinaris-btcgreen-harvester.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:8926]/
 machinaris-cactus:
-  CategoryList:
+  CategoryList: &id043
   - Crypto
   Config:
     Device: {}
@@ -4669,6 +4657,7 @@ machinaris-cactus:
   Icon: https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/logos/cactus.png
   Keywords:
   - machinaris-cactus
+  - *id043
   Name: machinaris-cactus
   Network: bridge
   Networking:
@@ -4677,17 +4666,16 @@ machinaris-cactus:
     \ alongside Chia. \r\n"
   PostArgs: ''
   Privileged: 'false'
-  Project: https://github.com/guydavis/machinaris
   Registry: https://hub.docker.com/repository/docker/guydavis/machinaris-cactus
   Repository: ghcr.io/guydavis/machinaris-cactus
   Requires: Machinaris.  See the description for full details
   Sources:
   - https://github.com/guydavis/machinaris
   - https://hub.docker.com/repository/docker/guydavis/machinaris-cactus
-  TemplateURL: https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/machinaris-cactus.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:8926]/
 machinaris-cactus-harvester:
-  CategoryList:
+  CategoryList: &id044
   - Crypto
   Config:
     Device: {}
@@ -4828,6 +4816,7 @@ machinaris-cactus-harvester:
   Icon: https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/logos/cactus.png
   Keywords:
   - machinaris-cactus-harvester
+  - *id044
   Name: machinaris-cactus-harvester
   Network: bridge
   Networking:
@@ -4836,17 +4825,16 @@ machinaris-cactus-harvester:
     \  Connects to the main Machinaris application.\r\n"
   PostArgs: ''
   Privileged: 'false'
-  Project: https://github.com/guydavis/machinaris
   Registry: https://hub.docker.com/repository/docker/guydavis/machinaris-cactus-harvester
   Repository: ghcr.io/guydavis/machinaris-cactus
   Requires: Machinaris.  See the description for full details
   Sources:
   - https://github.com/guydavis/machinaris
   - https://hub.docker.com/repository/docker/guydavis/machinaris-cactus-harvester
-  TemplateURL: https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/machinaris-cactus-harvester.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:8926]/
 machinaris-chives:
-  CategoryList:
+  CategoryList: &id045
   - Crypto
   Config:
     Device: {}
@@ -5024,6 +5012,7 @@ machinaris-chives:
   Icon: https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/logos/chives.png
   Keywords:
   - machinaris-chives
+  - *id045
   Name: machinaris-chives
   Network: bridge
   Networking:
@@ -5032,17 +5021,16 @@ machinaris-chives:
     \ alongside Chia. \r\n"
   PostArgs: ''
   Privileged: 'false'
-  Project: https://github.com/guydavis/machinaris
   Registry: https://hub.docker.com/repository/docker/guydavis/machinaris-chives
   Repository: ghcr.io/guydavis/machinaris-chives
   Requires: Machinaris.  See the description for full details
   Sources:
   - https://github.com/guydavis/machinaris
   - https://hub.docker.com/repository/docker/guydavis/machinaris-chives
-  TemplateURL: https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/machinaris-chives.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:8926]/
 machinaris-chives-harvester:
-  CategoryList:
+  CategoryList: &id046
   - Crypto
   Config:
     Device: {}
@@ -5184,6 +5172,7 @@ machinaris-chives-harvester:
   Icon: https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/logos/chives.png
   Keywords:
   - machinaris-chives-harvester
+  - *id046
   Name: machinaris-chives-harvester
   Network: bridge
   Networking:
@@ -5192,17 +5181,16 @@ machinaris-chives-harvester:
     \ CHIA) plots.  Connects to the main Machinaris application.\r\n"
   PostArgs: ''
   Privileged: 'false'
-  Project: https://github.com/guydavis/machinaris
   Registry: https://hub.docker.com/repository/docker/guydavis/machinaris-chives-harvester
   Repository: ghcr.io/guydavis/machinaris-chives
   Requires: Machinaris.  See the description for full details
   Sources:
   - https://github.com/guydavis/machinaris
   - https://hub.docker.com/repository/docker/guydavis/machinaris-chives-harvester
-  TemplateURL: https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/machinaris-chives-harvester.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:8926]/
 machinaris-cryptodoge:
-  CategoryList:
+  CategoryList: &id047
   - Crypto
   Config:
     Device: {}
@@ -5380,6 +5368,7 @@ machinaris-cryptodoge:
   Icon: https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/logos/cryptodoge.png
   Keywords:
   - machinaris-cryptodoge
+  - *id047
   Name: machinaris-cryptodoge
   Network: bridge
   Networking:
@@ -5388,17 +5377,16 @@ machinaris-cryptodoge:
     \ alongside Chia. \r\n"
   PostArgs: ''
   Privileged: 'false'
-  Project: https://github.com/guydavis/machinaris
   Registry: https://hub.docker.com/repository/docker/guydavis/machinaris-cryptodoge
   Repository: ghcr.io/guydavis/machinaris-cryptodoge
   Requires: Machinaris.  See the description for full details
   Sources:
   - https://github.com/guydavis/machinaris
   - https://hub.docker.com/repository/docker/guydavis/machinaris-cryptodoge
-  TemplateURL: https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/machinaris-cryptodoge.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:8926]/
 machinaris-cryptodoge-harvester:
-  CategoryList:
+  CategoryList: &id048
   - Crypto
   Config:
     Device: {}
@@ -5539,6 +5527,7 @@ machinaris-cryptodoge-harvester:
   Icon: https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/logos/cryptodoge.png
   Keywords:
   - machinaris-cryptodoge-harvester
+  - *id048
   Name: machinaris-cryptodoge-harvester
   Network: bridge
   Networking:
@@ -5547,17 +5536,16 @@ machinaris-cryptodoge-harvester:
     \  Connects to the main Machinaris application.\r\n"
   PostArgs: ''
   Privileged: 'false'
-  Project: https://github.com/guydavis/machinaris
   Registry: https://hub.docker.com/repository/docker/guydavis/machinaris-cryptodoge-harvester
   Repository: ghcr.io/guydavis/machinaris-cryptodoge
   Requires: Machinaris.  See the description for full details
   Sources:
   - https://github.com/guydavis/machinaris
   - https://hub.docker.com/repository/docker/guydavis/machinaris-cryptodoge-harvester
-  TemplateURL: https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/machinaris-cryptodoge-harvester.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:8926]/
 machinaris-flax:
-  CategoryList:
+  CategoryList: &id049
   - Crypto
   Config:
     Device: {}
@@ -5735,6 +5723,7 @@ machinaris-flax:
   Icon: https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/logos/flax.png
   Keywords:
   - machinaris-flax
+  - *id049
   Name: machinaris-flax
   Network: bridge
   Networking:
@@ -5743,17 +5732,16 @@ machinaris-flax:
     \ alongside Chia. \r\n"
   PostArgs: ''
   Privileged: 'false'
-  Project: https://github.com/guydavis/machinaris
   Registry: https://hub.docker.com/repository/docker/guydavis/machinaris-flax
   Repository: ghcr.io/guydavis/machinaris-flax
   Requires: Machinaris.  See the description for full details
   Sources:
   - https://github.com/guydavis/machinaris
   - https://hub.docker.com/repository/docker/guydavis/machinaris-flax
-  TemplateURL: https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/machinaris-flax.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:8926]/
 machinaris-flax-harvester:
-  CategoryList:
+  CategoryList: &id050
   - Crypto
   Config:
     Device: {}
@@ -5894,6 +5882,7 @@ machinaris-flax-harvester:
   Icon: https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/logos/flax.png
   Keywords:
   - machinaris-flax-harvester
+  - *id050
   Name: machinaris-flax-harvester
   Network: bridge
   Networking:
@@ -5902,17 +5891,16 @@ machinaris-flax-harvester:
     \  Connects to the main Machinaris application.\r\n"
   PostArgs: ''
   Privileged: 'false'
-  Project: https://github.com/guydavis/machinaris
   Registry: https://hub.docker.com/repository/docker/guydavis/machinaris-flax-harvester
   Repository: ghcr.io/guydavis/machinaris-flax
   Requires: Machinaris.  See the description for full details
   Sources:
   - https://github.com/guydavis/machinaris
   - https://hub.docker.com/repository/docker/guydavis/machinaris-flax-harvester
-  TemplateURL: https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/machinaris-flax-harvester.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:8926]/
 machinaris-flora:
-  CategoryList:
+  CategoryList: &id051
   - Crypto
   Config:
     Device: {}
@@ -6090,6 +6078,7 @@ machinaris-flora:
   Icon: https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/logos/flora.png
   Keywords:
   - machinaris-flora
+  - *id051
   Name: machinaris-flora
   Network: bridge
   Networking:
@@ -6098,17 +6087,16 @@ machinaris-flora:
     \ alongside Chia. \r\n"
   PostArgs: ''
   Privileged: 'false'
-  Project: https://github.com/guydavis/machinaris
   Registry: https://hub.docker.com/repository/docker/guydavis/machinaris-flora
   Repository: ghcr.io/guydavis/machinaris-flora
   Requires: Machinaris.  See the description for full details
   Sources:
   - https://github.com/guydavis/machinaris
   - https://hub.docker.com/repository/docker/guydavis/machinaris-flora
-  TemplateURL: https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/machinaris-flora.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:8926]/
 machinaris-flora-harvester:
-  CategoryList:
+  CategoryList: &id052
   - Crypto
   Config:
     Device: {}
@@ -6249,6 +6237,7 @@ machinaris-flora-harvester:
   Icon: https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/logos/flora.png
   Keywords:
   - machinaris-flora-harvester
+  - *id052
   Name: machinaris-flora-harvester
   Network: bridge
   Networking:
@@ -6257,17 +6246,16 @@ machinaris-flora-harvester:
     \  Connects to the main Machinaris application.\r\n"
   PostArgs: ''
   Privileged: 'false'
-  Project: https://github.com/guydavis/machinaris
   Registry: https://hub.docker.com/repository/docker/guydavis/machinaris-flora-harvester
   Repository: ghcr.io/guydavis/machinaris-flora
   Requires: Machinaris.  See the description for full details
   Sources:
   - https://github.com/guydavis/machinaris
   - https://hub.docker.com/repository/docker/guydavis/machinaris-flora-harvester
-  TemplateURL: https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/machinaris-flora-harvester.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:8926]/
 machinaris-hddcoin:
-  CategoryList:
+  CategoryList: &id053
   - Crypto
   Config:
     Device: {}
@@ -6445,6 +6433,7 @@ machinaris-hddcoin:
   Icon: https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/logos/hddcoin.png
   Keywords:
   - machinaris-hddcoin
+  - *id053
   Name: machinaris-hddcoin
   Network: bridge
   Networking:
@@ -6453,17 +6442,16 @@ machinaris-hddcoin:
     \ alongside Chia. \r\n"
   PostArgs: ''
   Privileged: 'false'
-  Project: https://github.com/guydavis/machinaris
   Registry: https://hub.docker.com/repository/docker/guydavis/machinaris-hddcoin
   Repository: ghcr.io/guydavis/machinaris-hddcoin
   Requires: Machinaris.  See the description for full details
   Sources:
   - https://github.com/guydavis/machinaris
   - https://hub.docker.com/repository/docker/guydavis/machinaris-hddcoin
-  TemplateURL: https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/machinaris-hddcoin.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:8926]/
 machinaris-hddcoin-harvester:
-  CategoryList:
+  CategoryList: &id054
   - Crypto
   Config:
     Device: {}
@@ -6604,6 +6592,7 @@ machinaris-hddcoin-harvester:
   Icon: https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/logos/hddcoin.png
   Keywords:
   - machinaris-hddcoin-harvester
+  - *id054
   Name: machinaris-hddcoin-harvester
   Network: bridge
   Networking:
@@ -6612,17 +6601,16 @@ machinaris-hddcoin-harvester:
     \  Connects to the main Machinaris application.\r\n"
   PostArgs: ''
   Privileged: 'false'
-  Project: https://github.com/guydavis/machinaris
   Registry: https://hub.docker.com/repository/docker/guydavis/machinaris-hddcoin-harvester
   Repository: ghcr.io/guydavis/machinaris-hddcoin
   Requires: Machinaris.  See the description for full details
   Sources:
   - https://github.com/guydavis/machinaris
   - https://hub.docker.com/repository/docker/guydavis/machinaris-hddcoin-harvester
-  TemplateURL: https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/machinaris-hddcoin-harvester.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:8926]/
 machinaris-maize:
-  CategoryList:
+  CategoryList: &id055
   - Crypto
   Config:
     Device: {}
@@ -6800,6 +6788,7 @@ machinaris-maize:
   Icon: https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/logos/maize.png
   Keywords:
   - machinaris-maize
+  - *id055
   Name: machinaris-maize
   Network: bridge
   Networking:
@@ -6808,17 +6797,16 @@ machinaris-maize:
     \ alongside Chia. \r\n"
   PostArgs: ''
   Privileged: 'false'
-  Project: https://github.com/guydavis/machinaris
   Registry: https://hub.docker.com/repository/docker/guydavis/machinaris-maize
   Repository: ghcr.io/guydavis/machinaris-maize
   Requires: Machinaris.  See the description for full details
   Sources:
   - https://github.com/guydavis/machinaris
   - https://hub.docker.com/repository/docker/guydavis/machinaris-maize
-  TemplateURL: https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/machinaris-maize.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:8926]/
 machinaris-maize-harvester:
-  CategoryList:
+  CategoryList: &id056
   - Crypto
   Config:
     Device: {}
@@ -6959,6 +6947,7 @@ machinaris-maize-harvester:
   Icon: https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/logos/maize.png
   Keywords:
   - machinaris-maize-harvester
+  - *id056
   Name: machinaris-maize-harvester
   Network: bridge
   Networking:
@@ -6967,18 +6956,17 @@ machinaris-maize-harvester:
     \  Connects to the main Machinaris application.\r\n"
   PostArgs: ''
   Privileged: 'false'
-  Project: https://github.com/guydavis/machinaris
   Registry: https://hub.docker.com/repository/docker/guydavis/machinaris-maize-harvester
   Repository: ghcr.io/guydavis/machinaris-maize
   Requires: Machinaris.  See the description for full details
   Sources:
   - https://github.com/guydavis/machinaris
   - https://hub.docker.com/repository/docker/guydavis/machinaris-maize-harvester
-  TemplateURL: https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/machinaris-maize-harvester.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:8926]/
 machinaris-mmx:
   Beta: 'true'
-  CategoryList:
+  CategoryList: &id057
   - Crypto
   Config:
     Device: {}
@@ -7165,6 +7153,7 @@ machinaris-mmx:
   Icon: https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/logos/mmx.png
   Keywords:
   - machinaris-mmx
+  - *id057
   Name: machinaris-mmx
   Network: bridge
   Networking:
@@ -7173,18 +7162,17 @@ machinaris-mmx:
     \ alongside Chia. x86_64 required, MMX does not support aarch64.\r\n"
   PostArgs: ''
   Privileged: 'false'
-  Project: https://github.com/guydavis/machinaris
   Registry: https://hub.docker.com/repository/docker/guydavis/machinaris-mmx
   Repository: ghcr.io/guydavis/machinaris-mmx
   Requires: Machinaris.  See the description for full details
   Sources:
   - https://github.com/guydavis/machinaris
   - https://hub.docker.com/repository/docker/guydavis/machinaris-mmx
-  TemplateURL: https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/machinaris-mmx.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:8926]/
 machinaris-mmx-harvester:
   Beta: 'true'
-  CategoryList:
+  CategoryList: &id058
   - Crypto
   Config:
     Device: {}
@@ -7326,6 +7314,7 @@ machinaris-mmx-harvester:
   Icon: https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/logos/mmx.png
   Keywords:
   - machinaris-mmx-harvester
+  - *id058
   Name: machinaris-mmx-harvester
   Network: bridge
   Networking:
@@ -7335,17 +7324,16 @@ machinaris-mmx-harvester:
     \ MMX does not support aarch64.\r\n"
   PostArgs: ''
   Privileged: 'false'
-  Project: https://github.com/guydavis/machinaris
   Registry: https://hub.docker.com/repository/docker/guydavis/machinaris-mmx-harvester
   Repository: ghcr.io/guydavis/machinaris-mmx
   Requires: Machinaris.  See the description for full details
   Sources:
   - https://github.com/guydavis/machinaris
   - https://hub.docker.com/repository/docker/guydavis/machinaris-mmx-harvester
-  TemplateURL: https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/machinaris-mmx-harvester.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:8926]/
 machinaris-nchain:
-  CategoryList:
+  CategoryList: &id059
   - Crypto
   Config:
     Device: {}
@@ -7523,6 +7511,7 @@ machinaris-nchain:
   Icon: https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/logos/nchain.png
   Keywords:
   - machinaris-nchain
+  - *id059
   Name: machinaris-nchain
   Network: bridge
   Networking:
@@ -7531,17 +7520,16 @@ machinaris-nchain:
     \ alongside Chia. \r\n"
   PostArgs: ''
   Privileged: 'false'
-  Project: https://github.com/guydavis/machinaris
   Registry: https://hub.docker.com/repository/docker/guydavis/machinaris-nchain
   Repository: ghcr.io/guydavis/machinaris-nchain
   Requires: Machinaris.  See the description for full details
   Sources:
   - https://github.com/guydavis/machinaris
   - https://hub.docker.com/repository/docker/guydavis/machinaris-nchain
-  TemplateURL: https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/machinaris-nchain.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:8926]/
 machinaris-nchain-harvester:
-  CategoryList:
+  CategoryList: &id060
   - Crypto
   Config:
     Device: {}
@@ -7682,6 +7670,7 @@ machinaris-nchain-harvester:
   Icon: https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/logos/nchain.png
   Keywords:
   - machinaris-nchain-harvester
+  - *id060
   Name: machinaris-nchain-harvester
   Network: bridge
   Networking:
@@ -7690,17 +7679,16 @@ machinaris-nchain-harvester:
     \  Connects to the main Machinaris application.\r\n"
   PostArgs: ''
   Privileged: 'false'
-  Project: https://github.com/guydavis/machinaris
   Registry: https://hub.docker.com/repository/docker/guydavis/machinaris-nchain-harvester
   Repository: ghcr.io/guydavis/machinaris-nchain
   Requires: Machinaris.  See the description for full details
   Sources:
   - https://github.com/guydavis/machinaris
   - https://hub.docker.com/repository/docker/guydavis/machinaris-nchain-harvester
-  TemplateURL: https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/machinaris-nchain-harvester.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:8926]/
 machinaris-shibgreen:
-  CategoryList:
+  CategoryList: &id061
   - Crypto
   Config:
     Device: {}
@@ -7878,6 +7866,7 @@ machinaris-shibgreen:
   Icon: https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/logos/shibgreen.png
   Keywords:
   - machinaris-shibgreen
+  - *id061
   Name: machinaris-shibgreen
   Network: bridge
   Networking:
@@ -7886,17 +7875,16 @@ machinaris-shibgreen:
     \ alongside Chia. \r\n"
   PostArgs: ''
   Privileged: 'false'
-  Project: https://github.com/guydavis/machinaris
   Registry: https://hub.docker.com/repository/docker/guydavis/machinaris-shibgreen
   Repository: ghcr.io/guydavis/machinaris-shibgreen
   Requires: Machinaris.  See the description for full details
   Sources:
   - https://github.com/guydavis/machinaris
   - https://hub.docker.com/repository/docker/guydavis/machinaris-shibgreen
-  TemplateURL: https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/machinaris-shibgreen.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:8926]/
 machinaris-shibgreen-harvester:
-  CategoryList:
+  CategoryList: &id062
   - Crypto
   Config:
     Device: {}
@@ -8037,6 +8025,7 @@ machinaris-shibgreen-harvester:
   Icon: https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/logos/shibgreen.png
   Keywords:
   - machinaris-shibgreen-harvester
+  - *id062
   Name: machinaris-shibgreen-harvester
   Network: bridge
   Networking:
@@ -8045,18 +8034,17 @@ machinaris-shibgreen-harvester:
     \  Connects to the main Machinaris application.\r\n"
   PostArgs: ''
   Privileged: 'false'
-  Project: https://github.com/guydavis/machinaris
   Registry: https://hub.docker.com/repository/docker/guydavis/machinaris-shibgreen-harvester
   Repository: ghcr.io/guydavis/machinaris-shibgreen
   Requires: Machinaris.  See the description for full details
   Sources:
   - https://github.com/guydavis/machinaris
   - https://hub.docker.com/repository/docker/guydavis/machinaris-shibgreen-harvester
-  TemplateURL: https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/machinaris-shibgreen-harvester.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:8926]/
 machinaris-silicoin:
   Beta: 'true'
-  CategoryList:
+  CategoryList: &id063
   - Crypto
   Config:
     Device: {}
@@ -8234,6 +8222,7 @@ machinaris-silicoin:
   Icon: https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/logos/silicoin.png
   Keywords:
   - machinaris-silicoin
+  - *id063
   Name: machinaris-silicoin
   Network: bridge
   Networking:
@@ -8242,18 +8231,17 @@ machinaris-silicoin:
     \ alongside Chia. \r\n"
   PostArgs: ''
   Privileged: 'false'
-  Project: https://github.com/guydavis/machinaris
   Registry: https://hub.docker.com/repository/docker/guydavis/machinaris-silicoin
   Repository: ghcr.io/guydavis/machinaris-silicoin
   Requires: Machinaris.  See the description for full details
   Sources:
   - https://github.com/guydavis/machinaris
   - https://hub.docker.com/repository/docker/guydavis/machinaris-silicoin
-  TemplateURL: https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/machinaris-silicoin.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:8926]/
 machinaris-silicoin-harvester:
   Beta: 'true'
-  CategoryList:
+  CategoryList: &id064
   - Crypto
   Config:
     Device: {}
@@ -8394,6 +8382,7 @@ machinaris-silicoin-harvester:
   Icon: https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/logos/silicoin.png
   Keywords:
   - machinaris-silicoin-harvester
+  - *id064
   Name: machinaris-silicoin-harvester
   Network: bridge
   Networking:
@@ -8402,17 +8391,16 @@ machinaris-silicoin-harvester:
     \  Connects to the main Machinaris application.\r\n"
   PostArgs: ''
   Privileged: 'false'
-  Project: https://github.com/guydavis/machinaris
   Registry: https://hub.docker.com/repository/docker/guydavis/machinaris-silicoin-harvester
   Repository: ghcr.io/guydavis/machinaris-silicoin
   Requires: Machinaris.  See the description for full details
   Sources:
   - https://github.com/guydavis/machinaris
   - https://hub.docker.com/repository/docker/guydavis/machinaris-silicoin-harvester
-  TemplateURL: https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/machinaris-silicoin-harvester.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:8926]/
 machinaris-staicoin:
-  CategoryList:
+  CategoryList: &id065
   - Crypto
   Config:
     Device: {}
@@ -8590,6 +8578,7 @@ machinaris-staicoin:
   Icon: https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/logos/staicoin.png
   Keywords:
   - machinaris-staicoin
+  - *id065
   Name: machinaris-staicoin
   Network: bridge
   Networking:
@@ -8598,17 +8587,16 @@ machinaris-staicoin:
     \ alongside Chia. \r\n"
   PostArgs: ''
   Privileged: 'false'
-  Project: https://github.com/guydavis/machinaris
   Registry: https://hub.docker.com/repository/docker/guydavis/machinaris-staicoin
   Repository: ghcr.io/guydavis/machinaris-staicoin
   Requires: Machinaris.  See the description for full details
   Sources:
   - https://github.com/guydavis/machinaris
   - https://hub.docker.com/repository/docker/guydavis/machinaris-staicoin
-  TemplateURL: https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/machinaris-staicoin.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:8926]/
 machinaris-staicoin-harvester:
-  CategoryList:
+  CategoryList: &id066
   - Crypto
   Config:
     Device: {}
@@ -8749,6 +8737,7 @@ machinaris-staicoin-harvester:
   Icon: https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/logos/staicoin.png
   Keywords:
   - machinaris-staicoin-harvester
+  - *id066
   Name: machinaris-staicoin-harvester
   Network: bridge
   Networking:
@@ -8757,17 +8746,16 @@ machinaris-staicoin-harvester:
     \  Connects to the main Machinaris application.\r\n"
   PostArgs: ''
   Privileged: 'false'
-  Project: https://github.com/guydavis/machinaris
   Registry: https://hub.docker.com/repository/docker/guydavis/machinaris-staicoin-harvester
   Repository: ghcr.io/guydavis/machinaris-staicoin
   Requires: Machinaris.  See the description for full details
   Sources:
   - https://github.com/guydavis/machinaris
   - https://hub.docker.com/repository/docker/guydavis/machinaris-staicoin-harvester
-  TemplateURL: https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/machinaris-staicoin-harvester.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:8926]/
 machinaris-stor:
-  CategoryList:
+  CategoryList: &id067
   - Crypto
   Config:
     Device: {}
@@ -8945,6 +8933,7 @@ machinaris-stor:
   Icon: https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/logos/stor.png
   Keywords:
   - machinaris-stor
+  - *id067
   Name: machinaris-stor
   Network: bridge
   Networking:
@@ -8953,17 +8942,16 @@ machinaris-stor:
     \ alongside Chia. \r\n"
   PostArgs: ''
   Privileged: 'false'
-  Project: https://github.com/guydavis/machinaris
   Registry: https://hub.docker.com/repository/docker/guydavis/machinaris-stor
   Repository: ghcr.io/guydavis/machinaris-stor
   Requires: Machinaris.  See the description for full details
   Sources:
   - https://github.com/guydavis/machinaris
   - https://hub.docker.com/repository/docker/guydavis/machinaris-stor
-  TemplateURL: https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/machinaris-stor.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:8926]/
 machinaris-stor-harvester:
-  CategoryList:
+  CategoryList: &id068
   - Crypto
   Config:
     Device: {}
@@ -9104,6 +9092,7 @@ machinaris-stor-harvester:
   Icon: https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/logos/stor.png
   Keywords:
   - machinaris-stor-harvester
+  - *id068
   Name: machinaris-stor-harvester
   Network: bridge
   Networking:
@@ -9112,17 +9101,16 @@ machinaris-stor-harvester:
     \  Connects to the main Machinaris application.\r\n"
   PostArgs: ''
   Privileged: 'false'
-  Project: https://github.com/guydavis/machinaris
   Registry: https://hub.docker.com/repository/docker/guydavis/machinaris-stor-harvester
   Repository: ghcr.io/guydavis/machinaris-stor
   Requires: Machinaris.  See the description for full details
   Sources:
   - https://github.com/guydavis/machinaris
   - https://hub.docker.com/repository/docker/guydavis/machinaris-stor-harvester
-  TemplateURL: https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/machinaris-stor-harvester.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:8926]/
 macinabox:
-  CategoryList:
+  CategoryList: &id069
   - Tools-Utilities
   - Other
   Config:
@@ -9309,6 +9297,7 @@ macinabox:
   Icon: https://raw.githubusercontent.com/SpaceinvaderOne/Docker-Templates-Unraid/master/spaceinvaderone/docker_icons/Macinabox.png
   Keywords:
   - macinabox
+  - *id069
   MinVer: 6.7.0
   Name: macinabox
   Network: bridge
@@ -9321,7 +9310,6 @@ macinabox:
     \n"
   PostArgs: ''
   Privileged: 'true'
-  Project: https://github.com/SpaceinvaderOne/Macinabox
   Registry: https://hub.docker.com/r/spaceinvaderone/macinabox
   Repository: spaceinvaderone/macinabox
   Requires: " Usercripts plugin\r<br> vm_custom_icons (0ptional for the correct icons\
@@ -9329,15 +9317,12 @@ macinabox:
   Sources:
   - https://github.com/SpaceinvaderOne/Macinabox
   - https://hub.docker.com/r/spaceinvaderone/macinabox
-  TemplateURL: https://raw.githubusercontent.com/SpaceinvaderOne/Docker-Templates-Unraid/master/spaceinvaderone/macinabox.xml
+  Tag: latest
   WebUI: ''
-  topPerforming: 2.31
-  topTrending: -3.7600000000000002
 minecraft:
   BindTime: 'true'
-  CategoryList:
+  CategoryList: &id070
   - GameServers
-  ChangeLogPresent: true
   Config:
     Device: {}
     Label: {}
@@ -9426,7 +9411,8 @@ minecraft:
   Icon: https://raw.githubusercontent.com/fithwum/files-for-dockers/master/icons/Minecraft.png
   Keywords:
   - minecraft
-  Name: Minecraft
+  - *id070
+  Name: minecraft
   Network: host
   Networking:
     Mode: host
@@ -9435,18 +9421,16 @@ minecraft:
     in the folder.
   PostArgs: ''
   Privileged: 'false'
-  Project: https://www.minecraft.net/en-us/
   Registry: https://hub.docker.com/r/fithwum/minecraft/
   Repository: fithwum/minecraft
   Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://www.minecraft.net/en-us/
   - https://hub.docker.com/r/fithwum/minecraft/
-  TemplateURL: https://raw.githubusercontent.com/fithwum/files-for-dockers/master/templates/minecraft_server_unraid.xml
+  Tag: latest
   WebUI: ''
-  topTrending: -6.205
 monitorss-bot:
-  CategoryList:
+  CategoryList: &id071
   - Network-Messenger
   Config:
     Device: {}
@@ -9501,13 +9485,13 @@ monitorss-bot:
   Icon: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/monitorss.png
   Keywords:
   - monitorss-bot
+  - *id071
   Name: monitorss-bot
   Network: bridge
   Overview: 'Discord RSS bot (formerly known as Discord.RSS) with customizable feeds.
 
     '
   Privileged: 'false'
-  Project: https://github.com/synzen/MonitoRSS
   Registry: https://hub.docker.com/r/synzen/monitorss
   RepoShort: Selfhosters
   Repository: synzen/monitorss
@@ -9515,11 +9499,9 @@ monitorss-bot:
   Sources:
   - https://github.com/synzen/MonitoRSS
   - https://hub.docker.com/r/synzen/monitorss
-  TemplateURL: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/monitorss-bot.xml
-  topPerforming: 1.02
-  topTrending: -0.69
+  Tag: latest
 moodle:
-  CategoryList:
+  CategoryList: &id072
   - Productivity
   - Network-Web
   Config:
@@ -9729,27 +9711,24 @@ moodle:
   Icon: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/moodle.png
   Keywords:
   - moodle
+  - *id072
   Name: moodle
   Network: bridge
   Overview: Moodle is a very popular open source learning management solution (LMS)
     for the delivery of elearning courses and programs.
   Privileged: 'false'
-  Project: https://moodle.org
   Registry: https://hub.docker.com/r/bitnami/moodle/
-  Repository: bitnami/moodle:latest
+  Repository: bitnami/moodle
   Requires: MariaDB / MySQL installed
   Sources:
   - https://moodle.org
   - https://hub.docker.com/r/bitnami/moodle/
-  TemplateURL: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/moodle.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:8080]/
-  topPerforming: 2.189
-  topTrending: -6.698
 mymediaforalexa:
-  CategoryList:
+  CategoryList: &id073
   - HomeAutomation
   - MediaServer-Music
-  ChangeLogPresent: true
   Config:
     Device: {}
     Label: {}
@@ -9805,7 +9784,8 @@ mymediaforalexa:
   Icon: https://raw.githubusercontent.com/itimpi/MyMediaForAlexa/master/MyMediaForAlexa.png
   Keywords:
   - mymediaforalexa
-  Name: MyMediaForAlexa
+  - *id073
+  Name: mymediaforalexa
   Network: host
   Networking:
     Mode: host
@@ -9825,12 +9805,10 @@ mymediaforalexa:
   Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://hub.docker.com/r/bizmodeller/mymediaforalexa/~/dockerfile/
-  TemplateURL: https://raw.githubusercontent.com/itimpi/Unraid-CA-Templates/master/MyMediaForAlexa.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:52051]
-  topPerforming: 0.717
-  topTrending: -0.45499999999999996
 myst:
-  CategoryList:
+  CategoryList: &id074
   - Network-VPN
   Config:
     Device: {}
@@ -9864,23 +9842,22 @@ myst:
   Icon: https://raw.githubusercontent.com/locus313/unraid-docker-templates/main/templates/img/myst.png
   Keywords:
   - myst
+  - *id074
   Name: myst
   Network: host
   Overview: "Mysterium Node - decentralized VPN built on blockchain\r\n"
   PostArgs: service --agreed-terms-and-conditions
   Privileged: 'false'
-  Project: https://github.com/mysteriumnetwork/node
   Registry: https://hub.docker.com/r/mysteriumnetwork/myst/
   Repository: mysteriumnetwork/myst
   Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://github.com/mysteriumnetwork/node
   - https://hub.docker.com/r/mysteriumnetwork/myst/
-  TemplateURL: https://raw.githubusercontent.com/locus313/unraid-docker-templates/master/templates/myst.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:4449]
-  topTrending: -52.725
 neo4j:
-  CategoryList:
+  CategoryList: &id075
   - Tools-Utilities
   Config:
     Device: {}
@@ -9935,6 +9912,7 @@ neo4j:
   Icon: https://raw.githubusercontent.com/Data-Monkey/docker-templates/master/Data-Monkey/img/neo4j.png
   Keywords:
   - neo4j
+  - *id075
   Name: neo4j
   Network: host
   Networking:
@@ -9943,20 +9921,19 @@ neo4j:
   Overview: Neo4j is a highly scalable, robust native graph database.
   PostArgs: ''
   Privileged: 'false'
-  Project: https://neo4j.com/
   Registry: https://hub.docker.com/_/neo4j/
   Repository: neo4j
   Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://neo4j.com/
   - https://hub.docker.com/_/neo4j/
-  TemplateURL: https://raw.githubusercontent.com/Data-Monkey/docker-templates/master/Data-Monkey/neo4j.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:7474]/
   changes: "\n[center] [b]Data-Monkey:[/b] neo4j [/center]\n\n[center][font size=4]Change\
     \ Log[/font][/center]\n\n[font size=3]2020.03.07[/font]\n- some cosmetic changes\n\
     \n[font size=3]2018.03.25[/font]\n- Initial release of the neo4j template\n  "
 netbox:
-  CategoryList:
+  CategoryList: &id076
   - Tools-Utilities
   - Network-Management
   Config:
@@ -10045,6 +10022,7 @@ netbox:
   Icon: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/netbox.png
   Keywords:
   - netbox
+  - *id076
   Name: netbox
   Network: bridge
   Overview: IP address management (IPAM) and data center infrastructure management
@@ -10052,19 +10030,16 @@ netbox:
     [br] Postgres required
   PostArgs: ''
   Privileged: 'false'
-  Project: https://github.com/netbox-community/netbox
   Registry: https://hub.docker.com/r/pitkley/netbox
-  Repository: pitkley/netbox:latest
+  Repository: pitkley/netbox
   Requires: Postgres container installed
   Sources:
   - https://github.com/netbox-community/netbox
   - https://hub.docker.com/r/pitkley/netbox
-  TemplateURL: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/netbox.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:8000]/
-  topPerforming: 0.158
-  topTrending: -0.252
 netdata:
-  CategoryList:
+  CategoryList: &id077
   - Tools-Utilities
   Config:
     Device: {}
@@ -10137,6 +10112,7 @@ netdata:
   Icon: https://raw.githubusercontent.com/Data-Monkey/docker-templates/master/Data-Monkey/img/netdata.png
   Keywords:
   - netdata
+  - *id077
   Name: netdata
   Network: host
   Networking:
@@ -10145,7 +10121,6 @@ netdata:
   Overview: "[b]Real-time performance monitoring, done right! [/b][br]&amp;#xD;\r\n"
   PostArgs: ''
   Privileged: 'false'
-  Project: https://docs.netdata.cloud/
   RecommendedDate: 1614574800
   RecommendedRaw: 3/1/2021
   RecommendedReason:
@@ -10157,7 +10132,7 @@ netdata:
   Sources:
   - https://docs.netdata.cloud/
   - https://hub.docker.com/r/netdata/netdata
-  TemplateURL: https://raw.githubusercontent.com/Data-Monkey/docker-templates/master/Data-Monkey/netdata.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:19999]
   changes: "\n[center] [b]Data-Monkey:[/b] Netdata [/center]\n    \n[center][font\
     \ size=4]Change Log[/font][/center]\n[font size=3]2020.05.02[/font]    \n- removed\
@@ -10173,8 +10148,6 @@ netdata:
     [font size=3]2016.06.06[/font]\n- added config mapping\n- added \"log rotation\"\
     \ for 6.2\n\n[font size=3]2016.06.03[/font]\n- Initial release of the netdata\
     \ template\n    \n    \n  "
-  topPerforming: 0.49
-  topTrending: -1.204
 netdata-glibc:
   Branch:
   - Tag: latest
@@ -10185,7 +10158,7 @@ netdata-glibc:
     TagDescription: Built using netdata/netdata:v1.33.1
   - Tag: v1.32.1
     TagDescription: Built using netdata/netdata:v1.32.1
-  CategoryList:
+  CategoryList: &id078
   - Tools-Utilities
   Config:
     Device: {}
@@ -10285,6 +10258,7 @@ netdata-glibc:
   Icon: https://raw.githubusercontent.com/netdata/netdata/master/web/gui/dashboard/images/ms-icon-310x310.png
   Keywords:
   - netdata-glibc
+  - *id078
   Name: netdata-glibc
   Network: bridge
   Overview: '[b]Netdata with Nvidia GPU monitoring in a container.[/b] An automated
@@ -10294,20 +10268,17 @@ netdata-glibc:
     for another reason) turn on Advanced View and remove ''--runtime=nvidia'' from
     Extra Parameters, and remove NVIDIA_VISIBLE_DEVICES or set it to ''void''.'
   Privileged: 'false'
-  Project: https://github.com/D34DC3N73R/netdata-glibc
   Registry: https://hub.docker.com/r/d34dc3n73r/netdata-glibc
   Repository: d34dc3n73r/netdata-glibc
   Requires: nVidia Unraid plugin and an nVidia GPU
   Sources:
   - https://github.com/D34DC3N73R/netdata-glibc
   - https://hub.docker.com/r/d34dc3n73r/netdata-glibc
-  TemplateURL: https://raw.githubusercontent.com/D34DC3N73R/unraid-templates/master/netdata-glibc.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:19999]
-  topPerforming: 3.703
-  topTrending: 1.3339999999999996
 networkmanager:
   Beta: 'true'
-  CategoryList:
+  CategoryList: &id079
   - Productivity
   - Tools-Utilities
   Config:
@@ -10409,7 +10380,8 @@ networkmanager:
   Icon: https://raw.githubusercontent.com/Sander0542/docker-templates/main/sander0542/icons/NetworkManager.png
   Keywords:
   - networkmanager
-  Name: NetworkManager
+  - *id079
+  Name: networkmanager
   Network: bridge
   Networking:
     Mode: bridge
@@ -10418,41 +10390,29 @@ networkmanager:
     the ports that are used and the services that are running on them.
   PostArgs: ''
   Privileged: 'false'
-  Project: https://github.com/Sander0542/Network-Manager
   Registry: https://hub.docker.com/r/sander0542/network-manager
   Repository: sander0542/network-manager
   Requires: MySQL
   Sources:
   - https://github.com/Sander0542/Network-Manager
   - https://hub.docker.com/r/sander0542/network-manager
-  TemplateURL: https://raw.githubusercontent.com/Sander0542/docker-templates/master/sander0542/NetworkManager.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:9000]
 nps-client:
-  CategoryList:
+  CategoryList: &id080
   - Tools-Utilities
   - Network-Other
   Config:
     Device: {}
     Label: {}
-    Path:
-      Config path:
-        Default: ''
-        Description: 'In roder to start npc client, make sure to place your ''npc.conf''
-          file to this path '
-        Display: always
-        Mask: 'false'
-        Mode: rw
-        Name: Config path
-        Required: 'true'
-        Target: /conf
-        Type: Path
-        value: /mnt/user/appdata/nps-client
+    Path: {}
     Port: {}
     Variable: {}
   ExtraParams: --restart always
   Icon: https://raw.githubusercontent.com/L1cardo/Unraid-Templates/main/nps-client/nps-client-icon.png
   Keywords:
   - nps-client
+  - *id080
   Name: nps-client
   Network: host
   Networking:
@@ -10461,41 +10421,28 @@ nps-client:
     with a powerful web management terminal.
   PostArgs: -config=/conf/npc.conf
   Privileged: 'false'
-  Project: https://github.com/ehang-io/nps
   Registry: https://hub.docker.com/r/ffdfgdfg/npc
   Repository: ffdfgdfg/npc
   Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://github.com/ehang-io/nps
   - https://hub.docker.com/r/ffdfgdfg/npc
-  TemplateURL: https://raw.githubusercontent.com/L1cardo/Unraid-Templates/master/nps-client/nps-client.xml
+  Tag: latest
   WebUI: ''
-  topPerforming: 0.928
-  topTrending: -0.8989999999999999
 ntopng:
-  CategoryList:
+  CategoryList: &id081
   - Security
   - Network-Management
   Config:
     Device: {}
     Label: {}
-    Path:
-      AppData Config Path:
-        Default: ''
-        Description: Container path to /var/lib/redis to persist data
-        Display: advanced-hide
-        Mask: 'false'
-        Mode: rw
-        Name: AppData Config Path
-        Required: 'true'
-        Target: /var/lib/redis
-        Type: Path
-        value: /mnt/user/appdata/ntopng
+    Path: {}
     Port: {}
     Variable: {}
   Icon: https://raw.githubusercontent.com/cschanot/docker-templates/main/images/ntopng-icon-150x150.png
   Keywords:
   - ntopng
+  - *id081
   Name: ntopng
   Network: host
   Networking:
@@ -10503,19 +10450,16 @@ ntopng:
   Overview: "High-Speed Web-based Traffic Analysis and Flow Collection \r\n"
   PostArgs: -i eth0 --http-port 0.0.0.0:3000
   Privileged: 'false'
-  Project: https://www.ntop.org/
   Registry: https://hub.docker.com/r/ntop/ntopng/
-  Repository: ntop/ntopng:stable
+  Repository: ntop/ntopng
   Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://www.ntop.org/
   - https://hub.docker.com/r/ntop/ntopng/
-  TemplateURL: https://raw.githubusercontent.com/cschanot/docker-templates/master/ntopng.xml
+  Tag: stable
   WebUI: http://[IP]:[PORT:3000]/
-  topPerforming: 3.594
-  topTrending: 1.0999999999999996
 nut-influxdb-exporter:
-  CategoryList:
+  CategoryList: &id082
   - Tools-Utilities
   Config:
     Device: {}
@@ -10671,6 +10615,7 @@ nut-influxdb-exporter:
   Icon: https://raw.githubusercontent.com/kiwimato/nut-influxdb-exporter/master/assets/nut.png
   Keywords:
   - nut-influxdb-exporter
+  - *id082
   Name: nut-influxdb-exporter
   Network: bridge
   Networking:
@@ -10679,19 +10624,16 @@ nut-influxdb-exporter:
     a Python script and then send the results to InfluxDB for storage.
   PostArgs: ''
   Privileged: 'false'
-  Project: https://github.com/kiwimato/nut-influxdb-exporter
   Registry: https://hub.docker.com/r/maihai/nut-influxdb-exporter
   Repository: maihai/nut-influxdb-exporter
   Requires: ' Influxdb (autoadd) exporter app (autoadd)'
   Sources:
   - https://github.com/kiwimato/nut-influxdb-exporter
   - https://hub.docker.com/r/maihai/nut-influxdb-exporter
-  TemplateURL: https://raw.githubusercontent.com/kiwimato/nut-influxdb-exporter/master/nut-influxdb-exporter.xml
+  Tag: latest
   WebUI: ''
-  topPerforming: 1.832
-  topTrending: -1.26
 onetimesecret:
-  CategoryList:
+  CategoryList: &id083
   - Productivity
   - Security
   - Tools-Utilities
@@ -10815,7 +10757,8 @@ onetimesecret:
   Icon: https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/icons/onetimesecret.png
   Keywords:
   - onetimesecret
-  Name: OneTimeSecret
+  - *id083
+  Name: onetimesecret
   Network: bridge
   Networking:
     Mode: bridge
@@ -10823,18 +10766,16 @@ onetimesecret:
     \ features.\r\n"
   PostArgs: ''
   Privileged: 'false'
-  Project: https://github.com/siw36/onetimesecret
   Registry: https://hub.docker.com/r/siw36/onetimesecret/
   Repository: siw36/onetimesecret
   Requires: Redis container installed
   Sources:
   - https://github.com/siw36/onetimesecret
   - https://hub.docker.com/r/siw36/onetimesecret/
-  TemplateURL: https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/onetimesecret.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:7143]
-  topTrending: -0.6020000000000003
 openeats:
-  CategoryList:
+  CategoryList: &id084
   - Productivity
   - Tools-Utilities
   - Other
@@ -11001,7 +10942,8 @@ openeats:
   Icon: https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/icons/openeats.png
   Keywords:
   - openeats
-  Name: OpenEats
+  - *id084
+  Name: openeats
   Network: bridge
   Networking:
     Mode: bridge
@@ -11009,21 +10951,17 @@ openeats:
     \ and store their personal collection of recipes.\r\n"
   PostArgs: ''
   Privileged: 'false'
-  Project: https://github.com/open-eats/OpenEats
   Registry: https://hub.docker.com/r/bramblegb/openeats/
   Repository: bramblegb/openeats
   Requires: MySQL / MariaDB installed
   Sources:
   - https://github.com/open-eats/OpenEats
   - https://hub.docker.com/r/bramblegb/openeats/
-  TemplateURL: https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/openeats.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:80]
-  topPerforming: 2.714
-  topTrending: -9.727
 paperless-ngx:
-  CategoryList:
+  CategoryList: &id085
   - Productivity
-  ChangeLogPresent: true
   Config:
     Device: {}
     Label: {}
@@ -11225,6 +11163,7 @@ paperless-ngx:
   Icon: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/paperless.png
   Keywords:
   - paperless-ngx
+  - *id085
   Name: paperless-ngx
   Network: bridge
   Official: true
@@ -11235,7 +11174,6 @@ paperless-ngx:
 
     '
   Privileged: 'false'
-  Project: https://github.com/paperless-ngx/paperless-ngx
   Registry: https://github.com/paperless-ngx/paperless-ngx/pkgs/container/paperless-ngx
   RepoShort: Selfhosters
   Repository: ghcr.io/paperless-ngx/paperless-ngx
@@ -11243,10 +11181,10 @@ paperless-ngx:
   Sources:
   - https://github.com/paperless-ngx/paperless-ngx
   - https://github.com/paperless-ngx/paperless-ngx/pkgs/container/paperless-ngx
-  TemplateURL: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/paperless-ngx.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:8000]
 passbolt-ce:
-  CategoryList:
+  CategoryList: &id086
   - Productivity
   - Security
   - Tools-Utilities
@@ -11359,22 +11297,22 @@ passbolt-ce:
   Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/passbolt.png
   Keywords:
   - passbolt-ce
-  Name: Passbolt-CE
+  - *id086
+  Name: passbolt-ce
   Network: bridge
   Overview: "DESCRIPTION\r\n"
   PostArgs: ''
   Privileged: 'false'
-  Project: https://github.com/passbolt/passbolt_docker
   Registry: https://hub.docker.com/r/passbolt/passbolt/
-  Repository: passbolt/passbolt:latest-ce
+  Repository: passbolt/passbolt
   Requires: Database (MariaDB, MySQL)
   Sources:
   - https://github.com/passbolt/passbolt_docker
   - https://hub.docker.com/r/passbolt/passbolt/
-  TemplateURL: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/master/templates/Passbolt-CE.xml
+  Tag: latest-ce
   WebUI: https://[IP]:[PORT:443]
 passbolt-pro:
-  CategoryList:
+  CategoryList: &id087
   - Productivity
   - Security
   - Tools-Utilities
@@ -11498,22 +11436,22 @@ passbolt-pro:
   Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/passbolt.png
   Keywords:
   - passbolt-pro
-  Name: Passbolt-PRO
+  - *id087
+  Name: passbolt-pro
   Network: bridge
   Overview: "DESCRIPTION\r\n"
   PostArgs: ''
   Privileged: 'false'
-  Project: https://github.com/passbolt/passbolt_docker
   Registry: https://hub.docker.com/r/passbolt/passbolt/
-  Repository: passbolt/passbolt:latest-pro
+  Repository: passbolt/passbolt
   Requires: Database (MariaDB, MySQL)
   Sources:
   - https://github.com/passbolt/passbolt_docker
   - https://hub.docker.com/r/passbolt/passbolt/
-  TemplateURL: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/master/templates/Passbolt-PRO.xml
+  Tag: latest-pro
   WebUI: https://[IP]:[PORT:443]
 passwordpusher:
-  CategoryList:
+  CategoryList: &id088
   - Productivity
   - Security
   - Tools-Utilities
@@ -11548,7 +11486,8 @@ passwordpusher:
   Icon: https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/icons/passwordpusher.png
   Keywords:
   - passwordpusher
-  Name: PasswordPusher
+  - *id088
+  Name: passwordpusher
   Network: bridge
   Networking:
     Mode: bridge
@@ -11557,19 +11496,16 @@ passwordpusher:
     Links to passwords expire after a certain number of views and/or time has passed.
   PostArgs: ''
   Privileged: 'false'
-  Project: https://github.com/pglombardo/PasswordPusher
   Registry: https://hub.docker.com/r/pglombardo/pwpush-postgres/
   Repository: pglombardo/pwpush-postgres
   Requires: Postgres container installed
   Sources:
   - https://github.com/pglombardo/PasswordPusher
   - https://hub.docker.com/r/pglombardo/pwpush-postgres/
-  TemplateURL: https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/passwordpusherpostgresql.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:5100]
-  topPerforming: 1.231
-  topTrending: -45.149
 pastefy:
-  CategoryList:
+  CategoryList: &id089
   - Cloud
   - Productivity
   - Tools-Utilities
@@ -11681,22 +11617,22 @@ pastefy:
   Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/pastefy.png
   Keywords:
   - pastefy
-  Name: Pastefy
+  - *id089
+  Name: pastefy
   Network: bridge
   Overview: "DESCRIPTION\r\n"
   PostArgs: ''
   Privileged: 'false'
-  Project: https://github.com/interaapps/pastefy
   Registry: https://hub.docker.com/r/interaapps/pastefy
   Repository: interaapps/pastefy
   Requires: MySQL
   Sources:
   - https://github.com/interaapps/pastefy
   - https://hub.docker.com/r/interaapps/pastefy
-  TemplateURL: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/master/templates/Pastefy.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:80]
 phpservermonitor:
-  CategoryList:
+  CategoryList: &id090
   - Tools-Utilities
   Config:
     Device: {}
@@ -11840,7 +11776,8 @@ phpservermonitor:
   Icon: https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/icons/phpservermon.png
   Keywords:
   - phpservermonitor
-  Name: PHPServerMonitor
+  - *id090
+  Name: phpservermonitor
   Network: bridge
   Networking:
     Mode: bridge
@@ -11850,19 +11787,16 @@ phpservermonitor:
     or MariaDB.
   PostArgs: ''
   Privileged: 'false'
-  Project: https://github.com/phpservermon/phpservermon
   Registry: https://hub.docker.com/r/benoitpodwinski/phpservermon/
   Repository: benoitpodwinski/phpservermon
   Requires: MySQL / MariaDB installed
   Sources:
   - https://github.com/phpservermon/phpservermon
   - https://hub.docker.com/r/benoitpodwinski/phpservermon/
-  TemplateURL: https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/phpservermon.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:80]
-  topPerforming: 0.428
-  topTrending: 0.204
 planka:
-  CategoryList:
+  CategoryList: &id091
   - Productivity
   Config:
     Device: {}
@@ -11951,23 +11885,21 @@ planka:
   Icon: https://raw.githubusercontent.com/C4ArtZ/Unraid-Templates/master/templates/icons/planka.png
   Keywords:
   - planka
+  - *id091
   Name: planka
   Network: bridge
   Overview: "A Trello-like kanban board built with React and Redux.\r"
   Privileged: 'false'
-  Project: https://github.com/plankanban/planka
   Registry: https://hub.docker.com/r/meltyshev/planka/
   Repository: meltyshev/planka
   Requires: Postgres database
   Sources:
   - https://github.com/plankanban/planka
   - https://hub.docker.com/r/meltyshev/planka/
-  TemplateURL: https://raw.githubusercontent.com/C4ArtZ/Unraid-Templates/master/templates/planka.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:1337]
-  topPerforming: 2.036
-  topTrending: -47.257
 plex-meta-manager:
-  CategoryList:
+  CategoryList: &id092
   - Tools-Utilities
   Config:
     Device: {}
@@ -12022,7 +11954,8 @@ plex-meta-manager:
   Icon: https://metamanager.wiki/en/latest/_static/pmm.png
   Keywords:
   - plex-meta-manager
-  Name: Plex-Meta-Manager
+  - *id092
+  Name: plex-meta-manager
   Network: host
   Networking:
     Mode: host
@@ -12031,23 +11964,20 @@ plex-meta-manager:
     '
   PostArgs: ''
   Privileged: 'false'
-  Project: https://github.com/meisnate12/Plex-Meta-Manager/wiki/
   Registry: https://hub.docker.com/r/meisnate12/plex-meta-manager/
   Repository: meisnate12/plex-meta-manager
   Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://github.com/meisnate12/Plex-Meta-Manager/wiki/
   - https://hub.docker.com/r/meisnate12/plex-meta-manager/
-  TemplateURL: https://raw.githubusercontent.com/Data-Monkey/docker-templates/master/Data-Monkey/plex-meta-manager.xml
+  Tag: latest
   WebUI: ''
   changes: ''
-  topPerforming: 1.427
-  topTrending: -35.898
 pornvault:
   CAComment: There are some complications in getting this app to work.  See <a href=https://forums.unraid.net/topic/102829-support-c4artz-templates/page/3/?tab=comments#comment-1070413
     target=_blank>HERE</a> for more information.  This app *may* eventually be removed
     from CA due to this
-  CategoryList:
+  CategoryList: &id093
   - Cloud
   - MediaApp-Video
   - MediaApp-Photos
@@ -12116,24 +12046,22 @@ pornvault:
   Icon: https://raw.githubusercontent.com/C4ArtZ/Unraid-Templates/master/templates/icons/porn-vault.png
   Keywords:
   - pornvault
-  Name: PornVault
+  - *id093
+  Name: pornvault
   Network: bridge
   Overview: "\U0001F48B Manage your ever-growing porn collection. Using Vue &amp;\
     \ GraphQL\r\n"
   Privileged: 'false'
-  Project: https://github.com/porn-vault/porn-vault
   Registry: https://hub.docker.com/r/leadwolf/porn-vault/
-  Repository: leadwolf/porn-vault:0.25.0-alpine
+  Repository: leadwolf/porn-vault
   Requires: ElasticSearch installed
   Sources:
   - https://github.com/porn-vault/porn-vault
   - https://hub.docker.com/r/leadwolf/porn-vault/
-  TemplateURL: https://raw.githubusercontent.com/C4ArtZ/Unraid-Templates/master/templates/porn-vault.xml
+  Tag: 0.25.0-alpine
   WebUI: http://[IP]:[PORT:3000]
-  topPerforming: 0.208
-  topTrending: -3.8869999999999996
 projectzomboidreporter-api:
-  CategoryList:
+  CategoryList: &id094
   - GameServers
   Config:
     Device: {}
@@ -12222,7 +12150,8 @@ projectzomboidreporter-api:
   Icon: https://github.com/natcoso9955/unRAID-docker/raw/master/icons/projectzomboid-api.png
   Keywords:
   - projectzomboidreporter-api
-  Name: ProjectZomboidReporter-API
+  - *id094
+  Name: projectzomboidreporter-api
   Network: bridge
   Networking:
     Mode: bridge
@@ -12230,17 +12159,16 @@ projectzomboidreporter-api:
     \ pass to the main reporter.\r\n"
   PostArgs: ''
   Privileged: 'false'
-  Project: https://github.com/ChrisAshtear/Zomboid-Server-Stats-Reporter/
   Registry: https://hub.docker.com/r/chrisashtear/zomboid-reporter-backend/
   Repository: chrisashtear/zomboid-reporter-backend
   Requires: MySQL
   Sources:
   - https://github.com/ChrisAshtear/Zomboid-Server-Stats-Reporter/
   - https://hub.docker.com/r/chrisashtear/zomboid-reporter-backend/
-  TemplateURL: https://raw.githubusercontent.com/natcoso9955/unRAID-docker/master/ProjectZomboidReporter-API_unraid.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:3001]/
 projectzomboidreporter-ingester:
-  CategoryList:
+  CategoryList: &id095
   - GameServers
   Config:
     Device: {}
@@ -12318,7 +12246,8 @@ projectzomboidreporter-ingester:
   Icon: https://github.com/natcoso9955/unRAID-docker/raw/master/icons/projectzomboid-ingest.png
   Keywords:
   - projectzomboidreporter-ingester
-  Name: ProjectZomboidReporter-Ingester
+  - *id095
+  Name: projectzomboidreporter-ingester
   Network: bridge
   Networking:
     Mode: bridge
@@ -12326,17 +12255,16 @@ projectzomboidreporter-ingester:
     \ files and uploads them to the SQL database for the API to access.\r\n"
   PostArgs: ''
   Privileged: 'false'
-  Project: https://github.com/ChrisAshtear/Zomboid-Server-Stats-Reporter/
   Registry: https://hub.docker.com/r/chrisashtear/zomboid-reporter/
   Repository: chrisashtear/zomboid-reporter
   Requires: Project Zomboid
   Sources:
   - https://github.com/ChrisAshtear/Zomboid-Server-Stats-Reporter/
   - https://hub.docker.com/r/chrisashtear/zomboid-reporter/
-  TemplateURL: https://raw.githubusercontent.com/natcoso9955/unRAID-docker/master/ProjectZomboidReporter-Ingester_unraid.xml
+  Tag: latest
   WebUI: ''
 projectzomboidreporter-web:
-  CategoryList:
+  CategoryList: &id096
   - GameServers
   Config:
     Device: {}
@@ -12370,7 +12298,8 @@ projectzomboidreporter-web:
   Icon: https://github.com/natcoso9955/unRAID-docker/raw/master/icons/projectzomboid-web.png
   Keywords:
   - projectzomboidreporter-web
-  Name: ProjectZomboidReporter-Web
+  - *id096
+  Name: projectzomboidreporter-web
   Network: bridge
   Networking:
     Mode: bridge
@@ -12379,17 +12308,16 @@ projectzomboidreporter-web:
     \n"
   PostArgs: ''
   Privileged: 'true'
-  Project: https://github.com/ChrisAshtear/Zomboid-Server-Stats-Reporter/
   Registry: https://hub.docker.com/r/chrisashtear/zomboid-reporter-nginx/
   Repository: chrisashtear/zomboid-reporter-nginx
   Requires: ProjectZomboidReporter-API<br>  ProjectZomboidReporter-Frontend
   Sources:
   - https://github.com/ChrisAshtear/Zomboid-Server-Stats-Reporter/
   - https://hub.docker.com/r/chrisashtear/zomboid-reporter-nginx/
-  TemplateURL: https://raw.githubusercontent.com/natcoso9955/unRAID-docker/master/ProjectZomboidReporter-Web_unraid.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:80]/
 prometheus-qbittorrent-exporter:
-  CategoryList:
+  CategoryList: &id097
   - Tools-Utilities
   Config:
     Device: {}
@@ -12455,6 +12383,7 @@ prometheus-qbittorrent-exporter:
   Icon: https://raw.githubusercontent.com/MasterEvarior/unraid-templates/main/prometheus-qbittorrent-exporter/prometheus.png
   Keywords:
   - prometheus-qbittorrent-exporter
+  - *id097
   Name: prometheus-qbittorrent-exporter
   Network: bridge
   Networking:
@@ -12463,17 +12392,16 @@ prometheus-qbittorrent-exporter:
     format.
   PostArgs: ''
   Privileged: 'false'
-  Project: https://github.com/esanchezm/prometheus-qbittorrent-exporter
   Registry: https://hub.docker.com/r/esanchezm/prometheus-qbittorrent-exporter/
   Repository: esanchezm/prometheus-qbittorrent-exporter
   Requires: ' exporter app (autoadd)'
   Sources:
   - https://github.com/esanchezm/prometheus-qbittorrent-exporter
   - https://hub.docker.com/r/esanchezm/prometheus-qbittorrent-exporter/
-  TemplateURL: https://raw.githubusercontent.com/MasterEvarior/unraid-templates/master/prometheus-qbittorrent-exporter/prometheus-qbittorrent-exporter.xml
+  Tag: latest
   WebUI: ''
 pterodactyl-deamons:
-  CategoryList:
+  CategoryList: &id098
   - GameServers
   Config:
     Device: {}
@@ -12607,7 +12535,8 @@ pterodactyl-deamons:
   Icon: https://avatars.githubusercontent.com/u/16179146?s=200&amp;v=4
   Keywords:
   - pterodactyl-deamons
-  Name: Pterodactyl-Deamons
+  - *id098
+  Name: pterodactyl-deamons
   Network: bridge
   Official: true
   Overview: "Pterodactyl\xAE is a free, open-source game server management panel built\
@@ -12616,17 +12545,16 @@ pterodactyl-deamons:
     \ UI to end users.\r\n"
   PostArgs: ''
   Privileged: 'true'
-  Project: https://github.com/pterodactyl
   Registry: https://ghcr.io/pterodactyl/wings
-  Repository: ghcr.io/pterodactyl/wings:latest
+  Repository: ghcr.io/pterodactyl/wings
   Requires: Pterodactyl-Panel.
   Sources:
   - https://github.com/pterodactyl
   - https://ghcr.io/pterodactyl/wings
-  TemplateURL: https://raw.githubusercontent.com/ItJustFox/unraidtemplate/master/Pterodactyl/ptreodactyldeamons.xml
+  Tag: latest
   WebUI: ''
 pterodactyl-panel:
-  CategoryList:
+  CategoryList: &id099
   - GameServers
   Config:
     Device: {}
@@ -12759,7 +12687,8 @@ pterodactyl-panel:
   Icon: https://avatars.githubusercontent.com/u/16179146?s=200&amp;v=4
   Keywords:
   - pterodactyl-panel
-  Name: Pterodactyl-Panel
+  - *id099
+  Name: pterodactyl-panel
   Network: bridge
   Official: true
   Overview: "Pterodactyl\xAE is a free, open-source game server management panel built\
@@ -12768,17 +12697,16 @@ pterodactyl-panel:
     \ UI to end users.\r\n"
   PostArgs: ''
   Privileged: 'false'
-  Project: https://github.com/pterodactyl
   Registry: https://ghcr.io/pterodactyl/panel
-  Repository: ghcr.io/pterodactyl/panel:latest
+  Repository: ghcr.io/pterodactyl/panel
   Requires: Pterodactyl-Deamons.
   Sources:
   - https://github.com/pterodactyl
   - https://ghcr.io/pterodactyl/panel
-  TemplateURL: https://raw.githubusercontent.com/ItJustFox/unraidtemplate/master/Pterodactyl/ptreodactylpanel.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:80]/
 roonserver:
-  CategoryList:
+  CategoryList: &id100
   - MediaServer-Music
   Config:
     Device: {}
@@ -12834,7 +12762,8 @@ roonserver:
   Icon: https://raw.githubusercontent.com/xthursdayx/docker-templates/master/xthursdayx/images/roon-icon.png
   Keywords:
   - roonserver
-  Name: RoonServer
+  - *id100
+  Name: roonserver
   Network: host
   Networking:
     Mode: host
@@ -12845,21 +12774,17 @@ roonserver:
     \ which provide control functionality."
   PostArgs: ''
   Privileged: 'false'
-  Project: https://roonlabs.com/
   Registry: https://hub.docker.com/r/steefdebruijn/docker-roonserver/
   Repository: steefdebruijn/docker-roonserver
   Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://roonlabs.com/
   - https://hub.docker.com/r/steefdebruijn/docker-roonserver/
-  TemplateURL: https://raw.githubusercontent.com/xthursdayx/docker-templates/master/xthursdayx/roonserver.xml
+  Tag: latest
   WebUI: ''
-  topPerforming: 2.858
-  topTrending: -5.719999999999999
 rust-server:
-  CategoryList:
+  CategoryList: &id101
   - GameServers
-  ChangeLogPresent: true
   Config:
     Device: {}
     Label: {}
@@ -13240,7 +13165,8 @@ rust-server:
   Icon: https://orig00.deviantart.net/f0bf/f/2014/018/9/6/rust___icon_by_blagoicons-d72pie6.png
   Keywords:
   - rust-server
-  Name: Rust-Server
+  - *id101
+  Name: rust-server
   Network: host
   Networking:
     Mode: host
@@ -13252,12 +13178,10 @@ rust-server:
   Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://hub.docker.com/r/mdarkness1988/rust-server
-  TemplateURL: https://raw.githubusercontent.com/mdarkness1988/rust-server-template/master/Rust-Server.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:8080]/
-  topPerforming: 4.031
-  topTrending: 0.6409999999999996
 rw-photonix:
-  CategoryList:
+  CategoryList: &id102
   - MediaApp-Photos
   - MediaServer-Photos
   Config:
@@ -13506,6 +13430,7 @@ rw-photonix:
   Icon: https://photonix.org/docs/img/favicon.png
   Keywords:
   - rw-photonix
+  - *id102
   Name: rw-photonix
   Network: bridge
   Overview: "Photonix is a photo management application that streamlines the process\
@@ -13520,14 +13445,11 @@ rw-photonix:
   Requires: '**PostgreSQL** database *and* **redis** cache'
   Sources:
   - https://hub.docker.com/r/photonixapp/photonix/
-  TemplateURL: https://raw.githubusercontent.com/rufuswilson/unraid-templates/master/rw-photonix.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:80]/
-  topPerforming: 3.612
-  topTrending: -19.848999999999997
 sagetvopen-sagetv-opendct:
-  CategoryList:
+  CategoryList: &id103
   - MediaServer-Video
-  ChangeLogPresent: true
   Config:
     Device: {}
     Label: {}
@@ -13593,6 +13515,7 @@ sagetvopen-sagetv-opendct:
   Icon: https://raw.githubusercontent.com/OpenSageTV/sagetv-dockers/master/resources/SageTVOS_icon.png
   Keywords:
   - sagetvopen-sagetv-opendct
+  - *id103
   Name: sagetvopen-sagetv-opendct
   Network: host
   Networking:
@@ -13600,24 +13523,22 @@ sagetvopen-sagetv-opendct:
   Official: true
   Overview: "An open source digital cable tuner network encoder for SageTV\r"
   Privileged: 'true'
-  Project: https://github.com/enternoescape/opendct
   Registry: https://hub.docker.com/r/sagetvopen/sagetv-opendct/
   Repository: sagetvopen/sagetv-opendct
   Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://github.com/enternoescape/opendct
   - https://hub.docker.com/r/sagetvopen/sagetv-opendct/
-  TemplateURL: https://raw.githubusercontent.com/OpenSageTV/unRAID/master/sagetv-opendct/sagetv-opendct.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:9091]/
 sagetvopen-sagetv-server-java11:
-  CategoryList:
+  CategoryList: &id104
   - MediaApp-Video
   - MediaApp-Music
   - MediaApp-Photos
   - MediaServer-Video
   - MediaServer-Music
   - MediaServer-Photos
-  ChangeLogPresent: true
   Config:
     Device: {}
     Label: {}
@@ -13859,6 +13780,7 @@ sagetvopen-sagetv-server-java11:
   Icon: https://raw.githubusercontent.com/OpenSageTV/sagetv-dockers/master/resources/SageTVOS_icon.png
   Keywords:
   - sagetvopen-sagetv-server-java11
+  - *id104
   Name: sagetvopen-sagetv-server-java11
   Network: host
   Networking:
@@ -13866,24 +13788,22 @@ sagetvopen-sagetv-server-java11:
   Official: true
   Overview: "SageTV is an Open Source PVR and Media Player\r"
   Privileged: 'true'
-  Project: https://github.com/google/sagetv
   Registry: https://hub.docker.com/r/sagetvopen/sagetv-server-java11/
   Repository: sagetvopen/sagetv-server-java11
   Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://github.com/google/sagetv
   - https://hub.docker.com/r/sagetvopen/sagetv-server-java11/
-  TemplateURL: https://raw.githubusercontent.com/OpenSageTV/unRAID/master/sagetv-server/sagetv-server-java11.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:8080]/
 sagetvopen-sagetv-server-java16:
-  CategoryList:
+  CategoryList: &id105
   - MediaApp-Video
   - MediaApp-Music
   - MediaApp-Photos
   - MediaServer-Video
   - MediaServer-Music
   - MediaServer-Photos
-  ChangeLogPresent: true
   Config:
     Device: {}
     Label: {}
@@ -14125,6 +14045,7 @@ sagetvopen-sagetv-server-java16:
   Icon: https://raw.githubusercontent.com/OpenSageTV/sagetv-dockers/master/resources/SageTVOS_icon.png
   Keywords:
   - sagetvopen-sagetv-server-java16
+  - *id105
   Name: sagetvopen-sagetv-server-java16
   Network: host
   Networking:
@@ -14132,24 +14053,22 @@ sagetvopen-sagetv-server-java16:
   Official: true
   Overview: "SageTV is an Open Source PVR and Media Player\r"
   Privileged: 'true'
-  Project: https://github.com/google/sagetv
   Registry: https://hub.docker.com/r/sagetvopen/sagetv-server-java16/
   Repository: sagetvopen/sagetv-server-java16
   Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://github.com/google/sagetv
   - https://hub.docker.com/r/sagetvopen/sagetv-server-java16/
-  TemplateURL: https://raw.githubusercontent.com/OpenSageTV/unRAID/master/sagetv-server/sagetv-server-java16.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:8080]/
 sagetvopen-sagetv-server-java8:
-  CategoryList:
+  CategoryList: &id106
   - MediaApp-Video
   - MediaApp-Music
   - MediaApp-Photos
   - MediaServer-Video
   - MediaServer-Music
   - MediaServer-Photos
-  ChangeLogPresent: true
   Config:
     Device: {}
     Label: {}
@@ -14391,6 +14310,7 @@ sagetvopen-sagetv-server-java8:
   Icon: https://raw.githubusercontent.com/OpenSageTV/sagetv-dockers/master/resources/SageTVOS_icon.png
   Keywords:
   - sagetvopen-sagetv-server-java8
+  - *id106
   Name: sagetvopen-sagetv-server-java8
   Network: host
   Networking:
@@ -14398,24 +14318,22 @@ sagetvopen-sagetv-server-java8:
   Official: true
   Overview: "SageTV is an Open Source PVR and Media Player\r"
   Privileged: 'true'
-  Project: https://github.com/google/sagetv
   Registry: https://hub.docker.com/r/sagetvopen/sagetv-server-java8/
   Repository: sagetvopen/sagetv-server-java8
   Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://github.com/google/sagetv
   - https://hub.docker.com/r/sagetvopen/sagetv-server-java8/
-  TemplateURL: https://raw.githubusercontent.com/OpenSageTV/unRAID/master/sagetv-server/sagetv-server-java8.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:8080]/
 sagetvopen-sagetv-server-opendct-java11:
-  CategoryList:
+  CategoryList: &id107
   - MediaApp-Video
   - MediaApp-Music
   - MediaApp-Photos
   - MediaServer-Video
   - MediaServer-Music
   - MediaServer-Photos
-  ChangeLogPresent: true
   Config:
     Device: {}
     Label: {}
@@ -14712,6 +14630,7 @@ sagetvopen-sagetv-server-opendct-java11:
   Icon: https://raw.githubusercontent.com/OpenSageTV/sagetv-dockers/master/resources/SageTVOS_icon.png
   Keywords:
   - sagetvopen-sagetv-server-opendct-java11
+  - *id107
   Name: sagetvopen-sagetv-server-opendct-java11
   Network: host
   Networking:
@@ -14719,24 +14638,22 @@ sagetvopen-sagetv-server-opendct-java11:
   Official: true
   Overview: "SageTV is an Open Source PVR and Media Player\r"
   Privileged: 'true'
-  Project: https://github.com/google/sagetv
   Registry: https://hub.docker.com/r/sagetvopen/sagetv-server-opendct-java11/
   Repository: sagetvopen/sagetv-server-opendct-java11
   Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://github.com/google/sagetv
   - https://hub.docker.com/r/sagetvopen/sagetv-server-opendct-java11/
-  TemplateURL: https://raw.githubusercontent.com/OpenSageTV/unRAID/master/sagetv-server/sagetv-server-opendct-java11.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:8080]/
 sagetvopen-sagetv-server-opendct-java16:
-  CategoryList:
+  CategoryList: &id108
   - MediaApp-Video
   - MediaApp-Music
   - MediaApp-Photos
   - MediaServer-Video
   - MediaServer-Music
   - MediaServer-Photos
-  ChangeLogPresent: true
   Config:
     Device: {}
     Label: {}
@@ -15033,6 +14950,7 @@ sagetvopen-sagetv-server-opendct-java16:
   Icon: https://raw.githubusercontent.com/OpenSageTV/sagetv-dockers/master/resources/SageTVOS_icon.png
   Keywords:
   - sagetvopen-sagetv-server-opendct-java16
+  - *id108
   Name: sagetvopen-sagetv-server-opendct-java16
   Network: host
   Networking:
@@ -15040,24 +14958,22 @@ sagetvopen-sagetv-server-opendct-java16:
   Official: true
   Overview: "SageTV is an Open Source PVR and Media Player\r"
   Privileged: 'true'
-  Project: https://github.com/google/sagetv
   Registry: https://hub.docker.com/r/sagetvopen/sagetv-server-opendct-java16/
   Repository: sagetvopen/sagetv-server-opendct-java16
   Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://github.com/google/sagetv
   - https://hub.docker.com/r/sagetvopen/sagetv-server-opendct-java16/
-  TemplateURL: https://raw.githubusercontent.com/OpenSageTV/unRAID/master/sagetv-server/sagetv-server-opendct-java16.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:8080]/
 sagetvopen-sagetv-server-opendct-java8:
-  CategoryList:
+  CategoryList: &id109
   - MediaApp-Video
   - MediaApp-Music
   - MediaApp-Photos
   - MediaServer-Video
   - MediaServer-Music
   - MediaServer-Photos
-  ChangeLogPresent: true
   Config:
     Device: {}
     Label: {}
@@ -15354,6 +15270,7 @@ sagetvopen-sagetv-server-opendct-java8:
   Icon: https://raw.githubusercontent.com/OpenSageTV/sagetv-dockers/master/resources/SageTVOS_icon.png
   Keywords:
   - sagetvopen-sagetv-server-opendct-java8
+  - *id109
   Name: sagetvopen-sagetv-server-opendct-java8
   Network: host
   Networking:
@@ -15361,17 +15278,16 @@ sagetvopen-sagetv-server-opendct-java8:
   Official: true
   Overview: "SageTV is an Open Source PVR and Media Player\r"
   Privileged: 'true'
-  Project: https://github.com/google/sagetv
   Registry: https://hub.docker.com/r/sagetvopen/sagetv-server-opendct-java8/
   Repository: sagetvopen/sagetv-server-opendct-java8
   Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://github.com/google/sagetv
   - https://hub.docker.com/r/sagetvopen/sagetv-server-opendct-java8/
-  TemplateURL: https://raw.githubusercontent.com/OpenSageTV/unRAID/master/sagetv-server/sagetv-server-opendct-java8.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:8080]/
 scrypted:
-  CategoryList:
+  CategoryList: &id110
   - HomeAutomation
   Config:
     Device: {}
@@ -15404,6 +15320,7 @@ scrypted:
   Icon: https://raw.githubusercontent.com/PTRFRLL/unraid-templates/master/scrypted/icon.png
   Keywords:
   - scrypted
+  - *id110
   Name: scrypted
   Network: host
   Networking:
@@ -15411,18 +15328,16 @@ scrypted:
   Overview: Scrypted Home Automation
   PostArgs: ''
   Privileged: 'false'
-  Project: https://github.com/koush/scrypted
   Registry: https://hub.docker.com/r/koush/scrypted/
   Repository: koush/scrypted
   Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://github.com/koush/scrypted
   - https://hub.docker.com/r/koush/scrypted/
-  TemplateURL: https://raw.githubusercontent.com/PTRFRLL/unraid-templates/master/scrypted/scrypted.xml
+  Tag: latest
   WebUI: https://[IP]:[PORT:9443]/
-  topTrending: -37.403000000000006
 sharry:
-  CategoryList:
+  CategoryList: &id111
   - Cloud
   - Productivity
   - Tools-Utilities
@@ -15458,23 +15373,22 @@ sharry:
   Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/sharry2.png
   Keywords:
   - sharry
-  Name: Sharry
+  - *id111
+  Name: sharry
   Network: bridge
   Overview: "DESCRIPTION\r\n"
   PostArgs: -- /opt/sharry.conf
   Privileged: 'false'
-  Project: https://github.com/eikek/sharry
   Registry: https://hub.docker.com/r/eikek0/sharry
   Repository: eikek0/sharry
   Requires: External DB (PostgreSQL, MariaDB/MySQL)
   Sources:
   - https://github.com/eikek/sharry
   - https://hub.docker.com/r/eikek0/sharry
-  TemplateURL: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/master/templates/Sharry.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:9090]
-  topTrending: 2.128
 sia:
-  CategoryList:
+  CategoryList: &id112
   - Cloud
   - Other
   Config:
@@ -15519,8 +15433,9 @@ sia:
   Icon: https://i.imgur.com/XiSQgV4.png
   Keywords:
   - sia
+  - *id112
   MinVer: 6.5.1
-  Name: Sia
+  Name: sia
   Network: host
   Networking:
     Mode: host
@@ -15530,49 +15445,33 @@ sia:
     than traditional cloud storage providers. [Block-chain] [BTC-Token]
   PostArgs: ''
   Privileged: 'false'
-  Project: https://sia.tech/
   Registry: https://hub.docker.com/r/mtlynch/sia/
   Repository: mtlynch/sia
   Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://sia.tech/
   - https://hub.docker.com/r/mtlynch/sia/
-  TemplateURL: https://raw.githubusercontent.com/Jcloud67/Docker-Templates/master/Sia-coin.xml
+  Tag: latest
   WebUI: ''
-  topPerforming: 0.014
-  topTrending: -0.207
 speedtestforinfluxdb:
   CAComment: Technically this app is deprecated (retired) and has been replaced.  See
     <a href=https://github.com/barrycarey/Speedtest-for-InfluxDB-and-Grafana/issues/46#issuecomment-933066819
     target=_blank>here</a>.  This app itself though is not being deprecated within
     Apps for the time being
-  CategoryList:
+  CategoryList: &id113
   - Cloud
   - Network-Web
   Config:
     Device: {}
     Label: {}
-    Path:
-      Config File:
-        Default: /mnt/user/appdata/speedtest-influxdb/config.ini
-        Description: "Download the config.ini file from https://github.com/barrycarey/Speedtest-for-InfluxDB-and-Grafana/blob/master/config.ini\
-          \ and copy it to /mnt/user/appdata/speedtest-influxdb/config.ini\r\nCOPY\
-          \ THE FILE BEFORE YOU START THE CONTAINER. IF YOU DON'T AN EMPTY DIRECTORY\
-          \ WILL BE CREATED INSTEAD."
-        Display: always
-        Mask: 'false'
-        Mode: rw
-        Name: Config File
-        Required: 'true'
-        Target: /src/config.ini
-        Type: Path
-        value: /mnt/user/appdata/speedtest-influxdb/config.ini
+    Path: {}
     Port: {}
     Variable: {}
   Icon: ''
   Keywords:
   - speedtestforinfluxdb
-  Name: SpeedtestforInfluxDB
+  - *id113
+  Name: speedtestforinfluxdb
   Network: bridge
   Networking:
     Mode: bridge
@@ -15581,19 +15480,16 @@ speedtestforinfluxdb:
     before you start the container.
   PostArgs: ''
   Privileged: 'false'
-  Project: https://github.com/barrycarey/speedtest-for-influxdb-and-grafana
   Registry: https://hub.docker.com/r/barrycarey/speedtest-for-influxdb-and-grafana
   Repository: barrycarey/speedtest-for-influxdb-and-grafana
   Requires: ' Influxdb (autoadd)'
   Sources:
   - https://github.com/barrycarey/speedtest-for-influxdb-and-grafana
   - https://hub.docker.com/r/barrycarey/speedtest-for-influxdb-and-grafana
-  TemplateURL: https://raw.githubusercontent.com/atribe/unRAID-docker/master/speedtest-influxdb.xml
+  Tag: latest
   WebUI: ''
-  topPerforming: 0.016
-  topTrending: -1.767
 steam-headless:
-  CategoryList:
+  CategoryList: &id114
   - GameServers
   Config:
     Device: {}
@@ -15763,14 +15659,14 @@ steam-headless:
   Icon: https://raw.githubusercontent.com/Josh5/docker-steam-headless/master/images/steam-icon.png
   Keywords:
   - steam-headless
+  - *id114
   Name: steam-headless
   Network: host
   Overview: "Headless Steam Service\r\n"
   PostArgs: ''
   Privileged: 'true'
-  Project: https://store.steampowered.com/
   Registry: https://hub.docker.com/r/josh5/steam-headless
-  Repository: josh5/steam-headless:latest
+  Repository: josh5/steam-headless
   Requires: "\r<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Nvidia-Driver\
     \ plugin** (nVidia Support)\r<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Radeon-TOP\
     \ plugin** (AMD Support)\r<br>&nbsp;&nbsp;&nbsp;&nbsp; App uses hostnetworking\
@@ -15778,12 +15674,12 @@ steam-headless:
   Sources:
   - https://store.steampowered.com/
   - https://hub.docker.com/r/josh5/steam-headless
-  TemplateURL: https://raw.githubusercontent.com/Josh5/unraid-docker-templates/master/josh5/steam-headless.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:8083]/
 steam-headless-secondary:
   CAComment: This template is set up to use a custom network. You may have to adjust
     the network or IP address etc to match your system
-  CategoryList:
+  CategoryList: &id115
   - GameServers
   Config:
     Device: {}
@@ -15905,24 +15801,23 @@ steam-headless-secondary:
   Icon: https://raw.githubusercontent.com/Josh5/docker-steam-headless/master/images/steam-icon.png
   Keywords:
   - steam-headless-secondary
+  - *id115
   Name: steam-headless-secondary
   Network: br0
   Overview: "Headless Steam Service (Secondary)\r\n"
   PostArgs: ''
   Privileged: 'true'
-  Project: https://store.steampowered.com/
   Registry: https://hub.docker.com/r/josh5/steam-headless
-  Repository: josh5/steam-headless:latest
+  Repository: josh5/steam-headless
   Requires: '**Steam Headless**'
   Sources:
   - https://store.steampowered.com/
   - https://hub.docker.com/r/josh5/steam-headless
-  TemplateURL: https://raw.githubusercontent.com/Josh5/unraid-docker-templates/master/josh5/steam-headless-secondary.xml
+  Tag: latest
   WebUI: ''
 szurubooru-api:
-  CategoryList:
+  CategoryList: &id116
   - MediaServer-Photos
-  ChangeLogPresent: true
   Config:
     Device: {}
     Label: {}
@@ -15998,6 +15893,7 @@ szurubooru-api:
   Icon: https://github.com/FoxxMD/unraid-docker-templates/raw/master/szurubooru.png
   Keywords:
   - szurubooru-api
+  - *id116
   Name: szurubooru-api
   Network: bridge
   Networking:
@@ -16006,19 +15902,16 @@ szurubooru-api:
     and medium communities
   PostArgs: ''
   Privileged: 'false'
-  Project: https://github.com/rr-/szurubooru
   Registry: https://hub.docker.com/r/szurubooru/server
-  Repository: szurubooru/server:latest
+  Repository: szurubooru/server
   Requires: Postgres 11 installed
   Sources:
   - https://github.com/rr-/szurubooru
   - https://hub.docker.com/r/szurubooru/server
-  TemplateURL: https://raw.githubusercontent.com/FoxxMD/unraid-docker-templates/master/foxxmd/szurubooru-api.xml
+  Tag: latest
   WebUI: ''
-  topPerforming: 0.776
-  topTrending: -26.067
 szurubooru-client:
-  CategoryList:
+  CategoryList: &id117
   - MediaApp-Photos
   Config:
     Device: {}
@@ -16075,6 +15968,7 @@ szurubooru-client:
   Icon: https://github.com/FoxxMD/unraid-docker-templates/raw/master/szurubooru.png
   Keywords:
   - szurubooru-client
+  - *id117
   Name: szurubooru-client
   Network: bridge
   Networking:
@@ -16083,19 +15977,16 @@ szurubooru-client:
     medium communities
   PostArgs: ''
   Privileged: 'false'
-  Project: https://github.com/rr-/szurubooru
   Registry: https://hub.docker.com/r/szurubooru/client
-  Repository: szurubooru/client:latest
+  Repository: szurubooru/client
   Requires: zurubooru-api installed
   Sources:
   - https://github.com/rr-/szurubooru
   - https://hub.docker.com/r/szurubooru/client
-  TemplateURL: https://raw.githubusercontent.com/FoxxMD/unraid-docker-templates/master/foxxmd/szurubooru-client.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:80]/
-  topPerforming: 0.75
-  topTrending: -26.825
 tailscale:
-  CategoryList:
+  CategoryList: &id118
   - Network-VPN
   Config:
     Device: {}
@@ -16129,32 +16020,30 @@ tailscale:
   Icon: https://raw.githubusercontent.com/deasmi/unraid-tailscale/master/logo.png
   Keywords:
   - tailscale
-  Name: Tailscale
+  - *id118
+  Name: tailscale
   Network: host
   Networking:
     Mode: host
   Overview: "Private networks made easy\r\n"
   PostArgs: ''
   Privileged: 'true'
-  Project: https://github.com/deasmi/unraid-tailscale
   RecommendedDate: 1635739200
   RecommendedRaw: 11/1/2021
   RecommendedReason:
     en_US: With over 335K downloads to date, Tailscale is this month's CA Spotlight
       container
   Registry: https://hub.docker.com/repository/docker/deasmi/unraid-tailscale
-  Repository: deasmi/unraid-tailscale:latest
+  Repository: deasmi/unraid-tailscale
   Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://github.com/deasmi/unraid-tailscale
   - https://hub.docker.com/repository/docker/deasmi/unraid-tailscale
-  TemplateURL: https://raw.githubusercontent.com/deasmi/unraid-ca/master/unraid-tailscale.xml
+  Tag: latest
   WebUI: ''
-  topPerforming: 7.888
-  topTrending: -11.882
 taskcafe:
   Beta: 'true'
-  CategoryList:
+  CategoryList: &id119
   - Tools-Utilities
   Config:
     Device: {}
@@ -16220,7 +16109,8 @@ taskcafe:
   Icon: https://raw.githubusercontent.com/cheesemarathon/docker-templates/master/images/taskcafe.png
   Keywords:
   - taskcafe
-  Name: Taskcafe
+  - *id119
+  Name: taskcafe
   Network: bridge
   Networking:
     Mode: bridge
@@ -16228,22 +16118,18 @@ taskcafe:
   Overview: 'A free and open source alternative project management tool.
 
     '
-  Project: https://github.com/JordanKnott/taskcafe
   Registry: https://hub.docker.com/r/taskcafe/taskcafe
   Repository: taskcafe/taskcafe
   Requires: Postgres container installed
   Sources:
   - https://github.com/JordanKnott/taskcafe
   - https://hub.docker.com/r/taskcafe/taskcafe
-  TemplateURL: https://raw.githubusercontent.com/cheesemarathon/docker-templates/master/cheesemarathon/task-cafe.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:3333]/
-  topPerforming: 2.003
-  topTrending: -6.784000000000001
 teamspeak-alpine:
   BindTime: 'true'
-  CategoryList:
+  CategoryList: &id120
   - Network-Voip
-  ChangeLogPresent: true
   Config:
     Device: {}
     Label: {}
@@ -16330,6 +16216,7 @@ teamspeak-alpine:
   Icon: https://raw.githubusercontent.com/fithwum/files-for-dockers/master/icons/Ts3Icon.png
   Keywords:
   - teamspeak-alpine
+  - *id120
   Name: teamspeak-alpine
   Network: host
   Networking:
@@ -16342,21 +16229,18 @@ teamspeak-alpine:
     \ and discuss things.[br][br]\r\n"
   PostArgs: ''
   Privileged: 'false'
-  Project: https://www.teamspeak.com/
   Registry: https://hub.docker.com/r/fithwum/teamspeak-alpine/
   Repository: fithwum/teamspeak-alpine
   Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://www.teamspeak.com/
   - https://hub.docker.com/r/fithwum/teamspeak-alpine/
-  TemplateURL: https://raw.githubusercontent.com/fithwum/files-for-dockers/master/templates/ts3server_alpine_unraid.xml
+  Tag: latest
   WebUI: ''
-  topTrending: -2.2049999999999996
 teamspeak3-simple:
   BindTime: 'true'
-  CategoryList:
+  CategoryList: &id121
   - Network-Voip
-  ChangeLogPresent: true
   Config:
     Device: {}
     Label: {}
@@ -16432,7 +16316,8 @@ teamspeak3-simple:
   Icon: https://raw.githubusercontent.com/fithwum/files-for-dockers/master/icons/Ts3Icon.png
   Keywords:
   - teamspeak3-simple
-  Name: TeamSpeak3-Simple
+  - *id121
+  Name: teamspeak3-simple
   Network: host
   Networking:
     Mode: host
@@ -16444,18 +16329,16 @@ teamspeak3-simple:
     \ and discuss things.[br][br]\r\n"
   PostArgs: ''
   Privileged: 'false'
-  Project: https://www.teamspeak.com/
   Registry: https://hub.docker.com/r/fithwum/teamspeak3/
   Repository: fithwum/teamspeak3
   Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://www.teamspeak.com/
   - https://hub.docker.com/r/fithwum/teamspeak3/
-  TemplateURL: https://raw.githubusercontent.com/fithwum/files-for-dockers/master/templates/ts3server-basic_alpine_unraid.xml
+  Tag: latest
   WebUI: ''
-  topTrending: -1.9610000000000003
 telegraf:
-  CategoryList:
+  CategoryList: &id122
   - Tools-Utilities
   Config:
     Device: {}
@@ -16598,6 +16481,7 @@ telegraf:
   Icon: https://github.com/atribe/unRAID-docker/raw/master/icons/telegraf.png
   Keywords:
   - telegraf
+  - *id122
   Name: telegraf
   Network: host
   Official: true
@@ -16605,16 +16489,15 @@ telegraf:
     \ server for storage. From InfluxDB you would typically use something like Grafana\
     \ to plot the data.[br]\r\n"
   Privileged: 'true'
-  Project: https://github.com/influxdata/telegraf
   Registry: https://hub.docker.com/_/telegraf/
-  Repository: telegraf:latest
+  Repository: telegraf
   Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://github.com/influxdata/telegraf
   - https://hub.docker.com/_/telegraf/
-  TemplateURL: https://raw.githubusercontent.com/atribe/unRAID-docker/master/telegraf.xml
+  Tag: latest
 trackmania-evosc:
-  CategoryList:
+  CategoryList: &id123
   - GameServers
   Config:
     Device: {}
@@ -16736,21 +16619,21 @@ trackmania-evosc:
   Icon: https://raw.githubusercontent.com/L4stIdi0t/Unraid-template/master/TrackMania2020-Server/logoTM.png
   Keywords:
   - trackmania-evosc
-  Name: TrackMania-EvoSC
+  - *id123
+  Name: trackmania-evosc
   Network: bridge
   Networking:
     Mode: bridge
   Overview: "A modern server controller for the game Trackmania (TM\xB2, 2020).\r\n"
   PostArgs: ''
   Privileged: 'false'
-  Project: https://github.com/EvoTM/EvoSC
   Registry: https://hub.docker.com/r/evotm/evosc
-  Repository: evotm/evosc:latest
+  Repository: evotm/evosc
   Requires: MySQL / MariaDB installed, aswell as a TrackMania server
   Sources:
   - https://github.com/EvoTM/EvoSC
   - https://hub.docker.com/r/evotm/evosc
-  TemplateURL: https://raw.githubusercontent.com/L4stIdi0t/Unraid-template/master/TrackMania-EvoSC/TrackMania-EvoSC.xml
+  Tag: latest
   WebUI: ''
 tuyagateway:
   Branch:
@@ -16758,7 +16641,7 @@ tuyagateway:
     TagDescription: Latest stable release of TuyaGateway.
   - Tag: beta
     TagDescription: Latest beta release of TuyaGateway. Use with caution!
-  CategoryList:
+  CategoryList: &id124
   - Tools-Utilities
   - HomeAutomation
   - Other
@@ -16826,11 +16709,11 @@ tuyagateway:
   Icon: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/tuyagateway.png
   Keywords:
   - tuyagateway
+  - *id124
   Name: tuyagateway
   Network: host
   Overview: This is the official TuyaGateway 2.0 Docker
   Privileged: 'false'
-  Project: https://github.com/TradeFace/tuyagateway
   Registry: https://registry.hub.docker.com/r/tradeface/tuyagateway/
   RepoShort: Selfhosters
   Repository: tradeface/tuyagateway
@@ -16838,10 +16721,9 @@ tuyagateway:
   Sources:
   - https://github.com/TradeFace/tuyagateway
   - https://registry.hub.docker.com/r/tradeface/tuyagateway/
-  TemplateURL: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/tuyagateway.xml
-  topTrending: -3.635
+  Tag: latest
 unifiprotect:
-  CategoryList:
+  CategoryList: &id125
   - Network-Other
   Config:
     Device: {}
@@ -16875,24 +16757,24 @@ unifiprotect:
   Icon: https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/icons/unifiprotect.png
   Keywords:
   - unifiprotect
-  Name: UniFiProtect
+  - *id125
+  Name: unifiprotect
   Network: host
   Networking:
     Mode: host
   Overview: "Run UniFi Protect in Docker on x86 hardware. \r\n"
   PostArgs: ''
   Privileged: 'false'
-  Project: https://github.com/markdegrootnl/unifi-protect-x86
   Registry: https://hub.docker.com/r/markdegroot/unifi-protect-x86/
   Repository: markdegroot/unifi-protect-x86
   Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://github.com/markdegrootnl/unifi-protect-x86
   - https://hub.docker.com/r/markdegroot/unifi-protect-x86/
-  TemplateURL: https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/unifiprotect.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:7080]
 void:
-  CategoryList:
+  CategoryList: &id126
   - Cloud
   - Productivity
   - Tools-Utilities
@@ -16950,22 +16832,22 @@ void:
   Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/void.png
   Keywords:
   - void
-  Name: Void
+  - *id126
+  Name: void
   Network: bridge
   Overview: "DESCRIPTION\r\n"
   PostArgs: ''
   Privileged: 'false'
-  Project: https://github.com/AlphaNecron/Void/
   Registry: https://hub.docker.com/r/alphanecron/void
-  Repository: alphanecron/void:v0
+  Repository: alphanecron/void
   Requires: PostgreSQL
   Sources:
   - https://github.com/AlphaNecron/Void/
   - https://hub.docker.com/r/alphanecron/void
-  TemplateURL: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/master/templates/Void.xml
+  Tag: v0
   WebUI: http://[IP]:[PORT:3000]
 weatherflow2mqtt:
-  CategoryList:
+  CategoryList: &id127
   - HomeAutomation
   Config:
     Device: {}
@@ -17178,6 +17060,7 @@ weatherflow2mqtt:
   Icon: https://raw.githubusercontent.com/simonsickle/docker-templates/master/images/mqtt-logo.png
   Keywords:
   - weatherflow2mqtt
+  - *id127
   Name: weatherflow2mqtt
   Network: host
   Networking:
@@ -17189,54 +17072,42 @@ weatherflow2mqtt:
     \n"
   PostArgs: ''
   Privileged: 'false'
-  Project: https://github.com/briis/hass-weatherflow2mqtt
   Registry: https://hub.docker.com/r/briis/weatherflow2mqtt
-  Repository: briis/weatherflow2mqtt:latest
+  Repository: briis/weatherflow2mqtt
   Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://github.com/briis/hass-weatherflow2mqtt
   - https://hub.docker.com/r/briis/weatherflow2mqtt
-  TemplateURL: https://raw.githubusercontent.com/simonsickle/docker-templates/master/simonsickle/weatherflow2mqtt.xml
+  Tag: latest
   WebUI: ''
 whatsapp-analyzer:
-  CategoryList:
+  CategoryList: &id128
   - Tools-Utilities
   Config:
     Device: {}
     Label: {}
     Path: {}
-    Port:
-      WebUI:
-        Default: ''
-        Description: ''
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: WebUI
-        Required: 'false'
-        Target: '5000'
-        Type: Port
-        value: '8000'
+    Port: {}
     Variable: {}
   Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/whatsapp-analyzer_200x200.png
   Keywords:
   - whatsapp-analyzer
-  Name: WhatsApp-Analyzer
+  - *id128
+  Name: whatsapp-analyzer
   Network: bridge
   Overview: "DESCRIPTION\r\n"
   PostArgs: ''
   Privileged: 'false'
-  Project: https://github.com/Dineshkarthik/Whatsapp-analyzer
   Registry: https://hub.docker.com/r/dineshkarthik/whatsapp-analyzer
   Repository: dineshkarthik/whatsapp-analyzer
   Requires: '- Python 3.6+ (host)'
   Sources:
   - https://github.com/Dineshkarthik/Whatsapp-analyzer
   - https://hub.docker.com/r/dineshkarthik/whatsapp-analyzer
-  TemplateURL: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/master/templates/WhatsApp-Analyzer.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:5000]
 wordpress:
-  CategoryList:
+  CategoryList: &id129
   - Other
   - Network-Web
   Config:
@@ -17316,7 +17187,8 @@ wordpress:
   Icon: https://s.w.org/style/images/about/WordPress-logotype-wmark.png
   Keywords:
   - wordpress
-  Name: WordPress
+  - *id129
+  Name: wordpress
   Network: bridge
   Networking:
     Mode: bridge
@@ -17325,17 +17197,16 @@ wordpress:
     \ system (CMS) based on PHP and MySQL, which runs on a web hosting service.\r\n"
   PostArgs: ''
   Privileged: 'false'
-  Project: https://wordpress.org/
   Registry: https://hub.docker.com/_/wordpress/
   Repository: wordpress
   Requires: MariaDB / MySQL database installed
   Sources:
   - https://wordpress.org/
   - https://hub.docker.com/_/wordpress/
-  TemplateURL: https://raw.githubusercontent.com/Kru-x/unraid-docker-templates/master/Kru-x/wordpress.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:8080]/
 xlink-kai-evolution:
-  CategoryList:
+  CategoryList: &id130
   - GameServers
   Config:
     Device: {}
@@ -17425,25 +17296,24 @@ xlink-kai-evolution:
   Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/xlinkkai.png
   Keywords:
   - xlink-kai-evolution
-  Name: XLink-Kai-Evolution
+  - *id130
+  Name: xlink-kai-evolution
   Network: host
   Networking:
     Mode: host
   Overview: "This Docker will download and install XLink Kai: Evolution.\r\n"
   PostArgs: ''
   Privileged: 'false'
-  Project: https://www.teamxlink.co.uk/
   Registry: https://hub.docker.com/r/ich777/xlinkkaievolution/
   Repository: ich777/xlinkkaievolution
   Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://www.teamxlink.co.uk/
   - https://hub.docker.com/r/ich777/xlinkkaievolution/
-  TemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/XLink-Kai-Evolution.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:34522]
-  topTrending: -2.717
 xteve_dnsforge:
-  CategoryList:
+  CategoryList: &id131
   - Downloaders
   - MediaServer-Video
   - Network-Proxy
@@ -17533,6 +17403,7 @@ xteve_dnsforge:
   Icon: https://avatars0.githubusercontent.com/u/53275662?s=460&amp;v=4
   Keywords:
   - xteve_dnsforge
+  - *id131
   Name: xteve_dnsforge
   Network: host
   Networking:
@@ -17542,14 +17413,14 @@ xteve_dnsforge:
   PostArgs: ''
   Privileged: 'false'
   Registry: https://hub.docker.com/r/dnsforge/xteve
-  Repository: dnsforge/xteve:latest
+  Repository: dnsforge/xteve
   Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://hub.docker.com/r/dnsforge/xteve
-  TemplateURL: https://raw.githubusercontent.com/alturismo/unraid_templates/master/my-dnsforge_xteve.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:34400]/web/
 xteve_g2g_owi:
-  CategoryList:
+  CategoryList: &id132
   - Downloaders
   - Tools-Utilities
   Config:
@@ -17627,6 +17498,7 @@ xteve_g2g_owi:
   Icon: https://avatars0.githubusercontent.com/u/53275662?s=460&amp;v=4
   Keywords:
   - xteve_g2g_owi
+  - *id132
   Name: xteve_g2g_owi
   Network: host
   Networking:
@@ -17634,19 +17506,16 @@ xteve_g2g_owi:
   Overview: "xteve, guide2go, owi2plex in one docker with cron\r\n"
   PostArgs: ''
   Privileged: 'false'
-  Project: https://github.com/alturismo/xteve_g2g_owi/
   Registry: https://hub.docker.com/r/alturismo/xteve_g2g_owi
   Repository: alturismo/xteve_g2g_owi
   Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://github.com/alturismo/xteve_g2g_owi/
   - https://hub.docker.com/r/alturismo/xteve_g2g_owi
-  TemplateURL: https://raw.githubusercontent.com/alturismo/unraid_templates/master/my-xteve_g2g_owi.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:34400]/web/
-  topPerforming: 4.326
-  topTrending: 2.4859999999999998
 xteve_guide2go:
-  CategoryList:
+  CategoryList: &id133
   - Downloaders
   - Network-Proxy
   Config:
@@ -17715,6 +17584,7 @@ xteve_guide2go:
   Icon: https://avatars0.githubusercontent.com/u/53275662?s=460&amp;v=4
   Keywords:
   - xteve_guide2go
+  - *id133
   Name: xteve_guide2go
   Network: host
   Networking:
@@ -17722,24 +17592,21 @@ xteve_guide2go:
   Overview: "xteve, guide2go in one docker with cron\r\n"
   PostArgs: ''
   Privileged: 'false'
-  Project: https://github.com/alturismo/xteve_guide2go
   Registry: https://hub.docker.com/r/alturismo/xteve_guide2go
   Repository: alturismo/xteve_guide2go
   Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://github.com/alturismo/xteve_guide2go
   - https://hub.docker.com/r/alturismo/xteve_guide2go
-  TemplateURL: https://raw.githubusercontent.com/alturismo/unraid_templates/master/my-xteve_guide2go.xml
+  Tag: latest
   WebUI: http://[IP]:[PORT:34400]/web/
-  topPerforming: 1.821
-  topTrending: -0.9469999999999998
 zabbix-agent:
   Branch:
   - Tag: 5.0-alpine-latest
     TagDescription: version 5.0
   - Tag: alpine-4.4-latest
     TagDescription: version 4.4
-  CategoryList:
+  CategoryList: &id134
   - Network-Management
   Config:
     Device: {}
@@ -17794,6 +17661,7 @@ zabbix-agent:
   Icon: https://raw.githubusercontent.com/vrx-666/unraid-xml/master/img/zabbix.jpg
   Keywords:
   - zabbix-agent
+  - *id134
   Name: zabbix-agent
   Network: host
   Networking:
@@ -17804,21 +17672,19 @@ zabbix-agent:
   PostArgs: ''
   Privileged: 'true'
   Registry: https://hub.docker.com/r/zabbix/zabbix-agent
-  Repository: zabbix/zabbix-agent:latest
+  Repository: zabbix/zabbix-agent
   Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://hub.docker.com/r/zabbix/zabbix-agent
-  TemplateURL: https://raw.githubusercontent.com/vrx-666/unraid-xml/master/my-zabbix-agent.xml
+  Tag: latest
   WebUI: ''
-  topPerforming: 0.741
-  topTrending: -0.6769999999999999
 zabbix-agent2:
   Branch:
   - Tag: 5.0-alpine-latest
     TagDescription: version 5.0
   - Tag: alpine-4.4-latest
     TagDescription: version 4.4
-  CategoryList:
+  CategoryList: &id135
   - Network-Management
   Config:
     Device: {}
@@ -17873,6 +17739,7 @@ zabbix-agent2:
   Icon: https://raw.githubusercontent.com/vrx-666/unraid-xml/master/img/zabbix.jpg
   Keywords:
   - zabbix-agent2
+  - *id135
   Name: zabbix-agent2
   Network: host
   Networking:
@@ -17883,16 +17750,14 @@ zabbix-agent2:
   PostArgs: ''
   Privileged: 'true'
   Registry: https://hub.docker.com/r/zabbix/zabbix-agent
-  Repository: zabbix/zabbix-agent2:latest
+  Repository: zabbix/zabbix-agent2
   Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://hub.docker.com/r/zabbix/zabbix-agent
-  TemplateURL: https://raw.githubusercontent.com/vrx-666/unraid-xml/master/my-zabbix-agent2.xml
+  Tag: latest
   WebUI: ''
-  topPerforming: 2.058
-  topTrending: -10.835
 zipline:
-  CategoryList:
+  CategoryList: &id136
   - Cloud
   - Productivity
   - Tools-Utilities
@@ -18073,17 +17938,17 @@ zipline:
   Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/zipline.png
   Keywords:
   - zipline
-  Name: Zipline
+  - *id136
+  Name: zipline
   Network: bridge
   Overview: "DESCRIPTION\r\n"
   PostArgs: ''
   Privileged: 'false'
-  Project: https://github.com/diced/zipline
   Registry: https://hub.docker.com/r/diced/zipline
-  Repository: diced/zipline:trunk
+  Repository: diced/zipline
   Requires: PostgreSQL (database)
   Sources:
   - https://github.com/diced/zipline
   - https://hub.docker.com/r/diced/zipline
-  TemplateURL: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/master/templates/Zipline.xml
+  Tag: trunk
   WebUI: http://[IP]:[PORT:3000]

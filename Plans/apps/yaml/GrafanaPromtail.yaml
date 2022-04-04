@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Tools-Utilities
 - Network-Other
 Config:
@@ -43,7 +43,8 @@ Config:
 Icon: https://github.com/natcoso9955/unRAID-docker/raw/master/icons/loki.png
 Keywords:
 - grafanapromtail
-Name: GrafanaPromtail
+- *id001
+Name: grafanapromtail
 Network: bridge
 Networking:
   Mode: bridge
@@ -58,7 +59,5 @@ Repository: grafana/promtail
 Requires: ''
 Sources:
 - https://hub.docker.com/r/grafana/promtail/
-TemplateURL: https://raw.githubusercontent.com/natcoso9955/unRAID-docker/master/grafana_loki_promtail_unraid.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:9080]
-topPerforming: 3.165
-topTrending: -1.205

@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - GameServers
 Config:
   Device: {}
@@ -286,7 +286,8 @@ ExtraParams: --restart=unless-stopped
 Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/nwnee.png
 Keywords:
 - neverwinternights-ee
-Name: NeverwinterNights-EE
+- *id001
+Name: neverwinternights-ee
 Network: bridge
 Networking:
   Mode: bridge
@@ -295,13 +296,12 @@ Overview: "This Docker will download and install Neverwinter Nights: Enhanced Ed
   \n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://www.beamdog.com/games/neverwinter-nights-enhanced/
 Registry: https://hub.docker.com/r/ich777/nwnee-server/
 Repository: ich777/nwnee-server
 Requires: ''
 Sources:
 - https://www.beamdog.com/games/neverwinter-nights-enhanced/
 - https://hub.docker.com/r/ich777/nwnee-server/
+Tag: latest
 WebUI: ''
 caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/NeverWinterNights-EE.xml
-topTrending: -1.1679999999999997

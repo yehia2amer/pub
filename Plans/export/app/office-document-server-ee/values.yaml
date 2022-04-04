@@ -1,0 +1,18 @@
+env:
+  Secret name: mySecret
+  Secret true/false: 'true'
+image:
+  pullPolicy: IfNotPresent
+  repository: onlyoffice/documentserver-ee
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

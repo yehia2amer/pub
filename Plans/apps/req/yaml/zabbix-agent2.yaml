@@ -3,7 +3,7 @@ Branch:
   TagDescription: version 5.0
 - Tag: alpine-4.4-latest
   TagDescription: version 4.4
-CategoryList:
+CategoryList: &id001
 - Network-Management
 Config:
   Device: {}
@@ -58,6 +58,7 @@ Config:
 Icon: https://raw.githubusercontent.com/vrx-666/unraid-xml/master/img/zabbix.jpg
 Keywords:
 - zabbix-agent2
+- *id001
 Name: zabbix-agent2
 Network: host
 Networking:
@@ -68,11 +69,9 @@ Overview: "This container is just official Zabbix Agent image. Any Zabbix Server
 PostArgs: ''
 Privileged: 'true'
 Registry: https://hub.docker.com/r/zabbix/zabbix-agent
-Repository: zabbix/zabbix-agent2:latest
+Repository: zabbix/zabbix-agent2
 Requires: ' App uses hostnetworking (autoadd)'
 Sources:
 - https://hub.docker.com/r/zabbix/zabbix-agent
-TemplateURL: https://raw.githubusercontent.com/vrx-666/unraid-xml/master/my-zabbix-agent2.xml
+Tag: latest
 WebUI: ''
-topPerforming: 2.058
-topTrending: -10.835

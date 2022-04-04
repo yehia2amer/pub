@@ -1,6 +1,6 @@
 CAComment: This template is set up to use a custom network. You may have to adjust
   the network or IP address etc to match your system
-CategoryList:
+CategoryList: &id001
 - Other
 - MediaApp-Music
 - MediaServer-Music
@@ -46,21 +46,19 @@ Config:
 Icon: https://github.com/maschhoff/docker/raw/master/mopidy/mopidy.png
 Keywords:
 - mopidy
-Name: Mopidy
+- *id001
+Name: mopidy
 Network: br0
 Networking:
   Mode: br0
 Overview: "Mopidy is an extensible music server written in Python.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/maschhoff/docker/tree/master/mopidy
 Registry: https://hub.docker.com/r/knex666/mopidy
 Repository: knex666/mopidy
 Requires: ''
 Sources:
 - https://github.com/maschhoff/docker/tree/master/mopidy
 - https://hub.docker.com/r/knex666/mopidy
-TemplateURL: https://raw.githubusercontent.com/maschhoff/docker/master/unraid%20xml/my-mopidy.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:6680]/iris/
-topPerforming: 1.567
-topTrending: -2.5969999999999995

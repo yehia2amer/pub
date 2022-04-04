@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - HomeAutomation
 Config:
   Device: {}
@@ -210,6 +210,7 @@ ExtraParams: --restart unless-stopped
 Icon: https://raw.githubusercontent.com/simonsickle/docker-templates/master/images/mqtt-logo.png
 Keywords:
 - weatherflow2mqtt
+- *id001
 Name: weatherflow2mqtt
 Network: host
 Networking:
@@ -220,12 +221,11 @@ Overview: "This project monitors the UDP socket (50222) from a WeatherFlow Hub, 
   \ entity that WeatherFlow sends out, if you have MQTT Discovery enabled.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/briis/hass-weatherflow2mqtt
 Registry: https://hub.docker.com/r/briis/weatherflow2mqtt
-Repository: briis/weatherflow2mqtt:latest
+Repository: briis/weatherflow2mqtt
 Requires: ' App uses hostnetworking (autoadd)'
 Sources:
 - https://github.com/briis/hass-weatherflow2mqtt
 - https://hub.docker.com/r/briis/weatherflow2mqtt
-TemplateURL: https://raw.githubusercontent.com/simonsickle/docker-templates/master/simonsickle/weatherflow2mqtt.xml
+Tag: latest
 WebUI: ''

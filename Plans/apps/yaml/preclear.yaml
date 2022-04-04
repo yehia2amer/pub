@@ -1,7 +1,22 @@
 BindTime: 'true'
-CategoryList:
+CategoryList: &id001
 - Productivity
 - Tools-Utilities
+Config:
+  Device: {}
+  Label: {}
+  Path: {}
+  Port: {}
+  Variable:
+    UMASK:
+      Name: UMASK
+      value: '000'
+    VNC_PASSWORD:
+      Name: VNC_PASSWORD
+      value: ''
+    WEBPAGE_TITLE:
+      Name: WEBPAGE_TITLE
+      value: Preclear
 Data:
   Volume:
   - ContainerDir: /unraid/config/disk.cfg
@@ -28,23 +43,12 @@ Data:
   - ContainerDir: /config
     HostDir: /mnt/user/appdata/config
     Mode: rw
-Environment:
-  Variable:
-  - Name: WEBPAGE_TITLE
-    Value: Preclear
-  - Name: VNC_PASSWORD
-    Value: ''
-  - Name: UMASK
-    Value: '000'
-  - Name: PUID
-    Value: '0'
-  - Name: PGID
-    Value: '0'
 GitHub: https://github.com/binhex/arch-preclear
 Icon: https://raw.githubusercontent.com/binhex/docker-templates/master/binhex/images/preclear-icon.png
 Keywords:
 - preclear
-Name: binhex-preclear
+- *id001
+Name: preclear
 Networking:
   Mode: bridge
   Publish:
@@ -57,15 +61,12 @@ Overview: A utility to "burn-in" a new disk, before adding it to your array has 
   before adding it to your array.  When a special "signature" is detected, the lengthy
   "clearing" step otherwise performed by unRAID is skipped.
 Privileged: 'true'
-Project: https://forums.unraid.net/topic/2732-preclear_disksh-a-new-utility-to-burn-in-and-pre-clear-disks-for-quick-add/
-ReadMe: https://github.com/binhex/documentation
 Registry: https://registry.hub.docker.com/r/binhex/arch-preclear/
 Repository: binhex/arch-preclear
 Requires: ''
 Sources:
 - https://forums.unraid.net/topic/2732-preclear_disksh-a-new-utility-to-burn-in-and-pre-clear-disks-for-quick-add/
 - https://registry.hub.docker.com/r/binhex/arch-preclear/
-TemplateURL: https://raw.githubusercontent.com/binhex/docker-templates/master/binhex/preclear.xml
+- https://github.com/binhex/documentation
+Tag: latest
 WebUI: http://[IP]:[PORT:6080]/vnc.html?resize=remote&host=[IP]&port=[PORT:6080]&autoconnect=1
-topPerforming: 5.86
-topTrending: -1.702

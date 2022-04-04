@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - HomeAutomation
 - Tools-Utilities
 - Other
@@ -88,6 +88,7 @@ Config:
 Icon: https://raw.githubusercontent.com/n8detar/docker-templates/master/n8detar/images/deepstack-ui.png
 Keywords:
 - deepstack-ui
+- *id001
 Name: deepstack-ui
 Network: bridge
 Networking:
@@ -99,14 +100,11 @@ Overview: "UI for working with Deepstack. Allows uploading an image and performi
   \n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/robmarkcole/deepstack-ui
 Registry: https://hub.docker.com/r/robmarkcole/deepstack-ui
 Repository: robmarkcole/deepstack-ui
 Requires: Deepstack
 Sources:
 - https://github.com/robmarkcole/deepstack-ui
 - https://hub.docker.com/r/robmarkcole/deepstack-ui
-TemplateURL: https://raw.githubusercontent.com/n8detar/docker-templates/master/n8detar/deepstack-ui.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:8501]
-topPerforming: 1.32
-topTrending: -3.8889999999999993

@@ -1,26 +1,16 @@
-CategoryList:
+CategoryList: &id001
 - Other
 Config:
   Device: {}
   Label: {}
   Path: {}
-  Port:
-    Port of the UI:
-      Default: '3612'
-      Description: 'Container Port: 3000'
-      Display: always
-      Mask: 'false'
-      Mode: tcp
-      Name: Port of the UI
-      Required: 'true'
-      Target: '3000'
-      Type: Port
-      value: '3612'
+  Port: {}
   Variable: {}
 Icon: https://raw.githubusercontent.com/Kippenhof/docker-templates/main/pictures/win11react.png
 Keywords:
 - win11-in-react
-Name: Win11-in-React
+- *id001
+Name: win11-in-react
 Network: bridge
 Networking:
   Mode: bridge
@@ -32,5 +22,5 @@ Repository: blueedge/win11react
 Requires: ''
 Sources:
 - https://hub.docker.com/r/blueedge/win11react/
-TemplateURL: https://raw.githubusercontent.com/Kippenhof/docker-templates/master/win11react.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:3000]

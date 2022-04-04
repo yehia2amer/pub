@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Tools-Utilities
 Config:
   Device: {}
@@ -64,7 +64,8 @@ Config:
 Icon: https://github.com/SonarSource/sonarqube/raw/master/server/sonar-docs/src/images/sonarqube-icon.png
 Keywords:
 - sonarqube
-Name: SonarQube
+- *id001
+Name: sonarqube
 Network: bridge
 Networking:
   Mode: bridge
@@ -73,12 +74,11 @@ Overview: "SonarQube is an open source platform for continuous inspection of cod
   \ quality.   \r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/SonarSource/sonarqube
 Registry: https://hub.docker.com/_/sonarqube/
 Repository: sonarqube
 Requires: ''
 Sources:
 - https://github.com/SonarSource/sonarqube
 - https://hub.docker.com/_/sonarqube/
-TemplateURL: https://raw.githubusercontent.com/Frooodle/unraid-templates/master/sonarqube.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:9000]

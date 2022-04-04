@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - HomeAutomation
 - Productivity
 - Tools-Utilities
@@ -78,7 +78,8 @@ ExtraParams: '--runtime=nvidia '
 Icon: https://raw.githubusercontent.com/corgan2222/unraid-templates/main/img/compreface-gpu.png
 Keywords:
 - compreface-gpu
-Name: CompreFace-GPU
+- *id001
+Name: compreface-gpu
 Network: bridge
 Networking:
   Mode: bridge
@@ -86,12 +87,11 @@ Overview: "[b]CompreFace is a leading free and open-source face recognition syst
   \ [/b]  [br] \r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/exadel-inc/CompreFace
 Registry: https://hub.docker.com/r/exadel/compreface/
-Repository: exadel/compreface:0.6.1-mobilenet-gpu
+Repository: exadel/compreface
 Requires: ''
 Sources:
 - https://github.com/exadel-inc/CompreFace
 - https://hub.docker.com/r/exadel/compreface/
-TemplateURL: https://raw.githubusercontent.com/corgan2222/unraid-templates/master/CompreFace-GPU/CompreFace-GPU.xml
+Tag: 0.6.1-mobilenet-gpu
 WebUI: http://[IP]:[PORT:80]

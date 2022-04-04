@@ -1,18 +1,26 @@
 BindTime: 'true'
-CategoryList:
+CategoryList: &id001
 - Network-Messenger
 - Productivity
-Environment:
+Config:
+  Device: {}
+  Label: {}
+  Path: {}
+  Port: {}
   Variable:
-  - Name: COMMUNITY_NAME
-    Value: myslackteam
-  - Name: SLACK_URL
-    Value: myslackteam.slack.com
-  - Name: SLACK_TOKEN
-    Value: Enter YOur slack token here
+    COMMUNITY_NAME:
+      Name: COMMUNITY_NAME
+      value: myslackteam
+    SLACK_TOKEN:
+      Name: SLACK_TOKEN
+      value: Enter YOur slack token here
+    SLACK_URL:
+      Name: SLACK_URL
+      value: myslackteam.slack.com
 Icon: https://raw.githubusercontent.com/ninthwalker/docker-templates/master/brentsflix/images/slack-square.png
 Keywords:
 - slack-invite
+- *id001
 Name: slack-invite
 Networking:
   Mode: bridge
@@ -23,17 +31,15 @@ Networking:
       Protocol: tcp
 Overview: Creates a simple webpage for Slack invite signups
 Privileged: 'false'
-Project: httpss://github.com/ninthwalker/slack-invite
 Registry: https://hub.docker.com/r/ninthwalker/slack-invite/
 Repository: ninthwalker/slack-invite
 Requires: ''
 Sources:
 - httpss://github.com/ninthwalker/slack-invite
 - https://hub.docker.com/r/ninthwalker/slack-invite/
-TemplateURL: https://raw.githubusercontent.com/ninthwalker/docker-templates/master/Ninthwalker/slack-invite.xml
+Tag: latest
 Version: '1.0'
 WebUI: http://[IP]:[PORT:7879]/
 changes: "\n  [center][img width='460px' src='https://raw.githubusercontent.com/ninthwalker/docker-templates/master/brentsflix/images/slack-square.png'][/center]\n\
   \  [center][font size=4]slack-invite Changelog[/font][/center]\n  [b]03MAR2017:[/b]\
   \ Initial unRAID Template release[br]\n"
-topTrending: -0.301

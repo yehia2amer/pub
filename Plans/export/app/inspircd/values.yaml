@@ -1,0 +1,44 @@
+env:
+  Admin Email: jonny.english@example.com
+  Admin Name: Jonny English
+  Admin Nick: MI5
+  Certificate - Certificate Expiration: '365'
+  Certificate - City Name: Example City
+  Certificate - Contry: XZ
+  Certificate - Mail Adress: nomail@example.com
+  Certificate - Name: irc.example.com
+  Certificate - Organisation: Example IRC Network
+  Certificate - State: Example State
+  Certificate - Unit Responsible: Server Admins
+  Connection Password: ''
+  Connection Password Hashing algorithm: ''
+  DATA_PERM: '770'
+  DNSBLs: 'yes'
+  Domainname: .example.com
+  IRC Network Name: InspIRCD
+  Operator Host: '*@*'
+  Operator Name: oper
+  Operator Password Hash: ''
+  Operator Password Hashing algorithm: hmac-sha256
+  Operator SSL Only: 'yes'
+  Services - CIDR Allow Mask: ''
+  Services - Connection Address: ''
+  Services - Hidden: 'no'
+  Services - Password: ''
+  Services - TLS: 'no'
+  UMASK: '000'
+image:
+  pullPolicy: IfNotPresent
+  repository: ich777/inspircd
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

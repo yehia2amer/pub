@@ -1,0 +1,21 @@
+env:
+  Input Directory: ''
+  Output Directory: ''
+  Output Format: ''
+  Quality Preset: ''
+  Quantization Parameter: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: ghcr.io/siwatinc/h265ize
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

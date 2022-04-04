@@ -1,7 +1,18 @@
 BindTime: 'true'
-CategoryList:
+CategoryList: &id001
 - Tools-Utilities
-ChangeLogPresent: true
+Config:
+  Device: {}
+  Label: {}
+  Path: {}
+  Port: {}
+  Variable:
+    GMAP:
+      Name: GMAP
+      value: users:100
+    UMAP:
+      Name: UMAP
+      value: nobody:99:100
 Data:
   Volume:
   - ContainerDir: /config
@@ -10,16 +21,11 @@ Data:
   - ContainerDir: /dir1
     HostDir: ''
     Mode: rw
-Environment:
-  Variable:
-  - Name: UMAP
-    Value: nobody:99:100
-  - Name: GMAP
-    Value: users:100
 GitHub: https://github.com/coppit/docker-inotify-command
 Icon: https://raw.githubusercontent.com/coppit/docker-inotify-command/master/terminal-icon.png
 Keywords:
 - inotify-command
+- *id001
 Name: inotify-command
 Networking:
   Mode: bridge
@@ -35,7 +41,5 @@ Repository: coppit/inotify-command
 Requires: ''
 Sources:
 - https://hub.docker.com/r/coppit/inotify-command/
-TemplateURL: https://raw.githubusercontent.com/coppit/docker-templates/master/coppit/inotify-command.xml
+Tag: latest
 WebUI: ''
-topPerforming: 0.848
-topTrending: 0.595

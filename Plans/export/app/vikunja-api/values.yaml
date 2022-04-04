@@ -1,0 +1,21 @@
+env:
+  Database Host: 192.168.1.100
+  Database Name: vikunja
+  Database Password: password
+  Database Type: mysql
+  Database User: root
+image:
+  pullPolicy: IfNotPresent
+  repository: vikunja/api
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

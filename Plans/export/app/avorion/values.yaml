@@ -1,0 +1,23 @@
+env:
+  GAME_ID: '565060'
+  GAME_PARAMS: ''
+  Galaxy Name: AvorionDocker
+  Steam-Password: ''
+  Steam-Username: ''
+  UMASK: '000'
+  Validate Installation: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: ich777/steamcmd
+  tag: avorion
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - GameServers
 Config:
   Device: {}
@@ -148,7 +148,8 @@ ExtraParams: --restart=unless-stopped
 Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/starmade.png
 Keywords:
 - starmade
-Name: StarMade
+- *id001
+Name: starmade
 Network: bridge
 Networking:
   Mode: bridge
@@ -156,12 +157,12 @@ Overview: "This container will download and install a StarMade Dedicated Server.
   \ will also install a basic server.cfg at the first startup.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://www.star-made.org/
 Registry: https://hub.docker.com/r/ich777/starmade-server/
 Repository: ich777/starmade-server
 Requires: ''
 Sources:
 - https://www.star-made.org/
 - https://hub.docker.com/r/ich777/starmade-server/
+Tag: latest
 WebUI: ''
 caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/Starmade.xml

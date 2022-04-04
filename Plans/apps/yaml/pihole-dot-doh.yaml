@@ -1,6 +1,6 @@
 CAComment: This template is set up to use a custom network. You may have to adjust
   the network or IP address etc to match your system
-CategoryList:
+CategoryList: &id001
 - Security
 - Other
 - Network-DNS
@@ -201,7 +201,8 @@ ExtraParams: --cap-add=NET_ADMIN --restart=unless-stopped
 Icon: https://raw.githubusercontent.com/nzzane/pihole-base-buster-plus/master/pi_hole_bw.png
 Keywords:
 - pihole-dot-doh
-Name: Pihole-DoT-DoH
+- *id001
+Name: pihole-dot-doh
 Network: br0
 Networking:
   Mode: bridge
@@ -209,14 +210,11 @@ Overview: "Pi-Hole - let's block those pesky ads! Now with DNS-over-HTTPS and DN
   \ pihole.doh!\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://docs.pi-hole.net/guides/dns-over-https/
 Registry: https://hub.docker.com/r/flippinturt/pihole-dot-doh/
-Repository: flippinturt/pihole-dot-doh:latest
+Repository: flippinturt/pihole-dot-doh
 Requires: ''
 Sources:
 - https://docs.pi-hole.net/guides/dns-over-https/
 - https://hub.docker.com/r/flippinturt/pihole-dot-doh/
-TemplateURL: https://raw.githubusercontent.com/nzzane/nzzane-unraid-repo/master/PiHole-DotDoH.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:80]/admin
-topPerforming: 4.171
-topTrending: -17.402

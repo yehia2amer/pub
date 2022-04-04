@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Network
 Config:
   Device: {}
@@ -331,7 +331,8 @@ ExtraParams: --restart=unless-stopped
 Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/stun-turn.png
 Keywords:
 - stun-turn-server
-Name: Stun-Turn-Server
+- *id001
+Name: stun-turn-server
 Network: bridge
 Networking:
   Mode: bridge
@@ -344,6 +345,6 @@ Repository: ich777/stun-turn-server
 Requires: ''
 Sources:
 - https://hub.docker.com/r/ich777/stun-turn-server
+Tag: latest
 WebUI: ''
 caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/Stun-Turn-Server.xml
-topTrending: -3.5770000000000004

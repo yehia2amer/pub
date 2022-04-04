@@ -1,0 +1,19 @@
+env:
+  Host: ''
+  Protocol: https
+  Shared Secret: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: drone/drone-runner-docker
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

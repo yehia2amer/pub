@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Tools-Utilities
 - Other
 - Network-Other
@@ -104,7 +104,8 @@ ExtraParams: --user=99:100 --memory=2G
 Icon: https://github.com/mgutt/unraid-docker-templates/raw/main/mgutt/images/mariadb.png
 Keywords:
 - mariadb-official
-Name: MariaDB-Official
+- *id001
+Name: mariadb-official
 Network: bridge
 Networking:
   Mode: bridge
@@ -113,12 +114,11 @@ Overview: "Official MariaDB database container. It allows to set a database and 
   \ without using the console.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://mariadb.org/
 Registry: https://hub.docker.com/_/mariadb
 Repository: mariadb
 Requires: ''
 Sources:
 - https://mariadb.org/
 - https://hub.docker.com/_/mariadb
-TemplateURL: https://raw.githubusercontent.com/mgutt/unraid-docker-templates/master/mgutt/MariaDB-Official.xml
+Tag: latest
 WebUI: ''

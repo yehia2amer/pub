@@ -1,0 +1,26 @@
+env:
+  Extra Startup Parameters: ''
+  GAME_PORT: '20545'
+  Game Mode: lobby
+  Game Stream: stable
+  Maximum Players: '12'
+  Server Name: DockerServer
+  Server Password: Docker
+  Update on start: ''
+  Your PA Account Password: ''
+  Your PA Account name: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: ich777/planetaryannihilationserver
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

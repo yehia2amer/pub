@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Network-VPN
 Config:
   Device: {}
@@ -32,26 +32,24 @@ ExtraParams: --cap-add=NET_ADMIN --hostname=unraid
 Icon: https://raw.githubusercontent.com/deasmi/unraid-tailscale/master/logo.png
 Keywords:
 - tailscale
-Name: Tailscale
+- *id001
+Name: tailscale
 Network: host
 Networking:
   Mode: host
 Overview: "Private networks made easy\r\n"
 PostArgs: ''
 Privileged: 'true'
-Project: https://github.com/deasmi/unraid-tailscale
 RecommendedDate: 1635739200
 RecommendedRaw: 11/1/2021
 RecommendedReason:
   en_US: With over 335K downloads to date, Tailscale is this month's CA Spotlight
     container
 Registry: https://hub.docker.com/repository/docker/deasmi/unraid-tailscale
-Repository: deasmi/unraid-tailscale:latest
+Repository: deasmi/unraid-tailscale
 Requires: ' App uses hostnetworking (autoadd)'
 Sources:
 - https://github.com/deasmi/unraid-tailscale
 - https://hub.docker.com/repository/docker/deasmi/unraid-tailscale
-TemplateURL: https://raw.githubusercontent.com/deasmi/unraid-ca/master/unraid-tailscale.xml
+Tag: latest
 WebUI: ''
-topPerforming: 7.888
-topTrending: -11.882

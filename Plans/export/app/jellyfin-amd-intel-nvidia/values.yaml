@@ -1,0 +1,18 @@
+env:
+  Nvidia Driver Capabilities: all
+  Nvidia Visible Devices: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: ich777/jellyfin
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

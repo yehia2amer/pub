@@ -1,0 +1,26 @@
+env:
+  MAGNETICOD_ADDRESS: 0.0.0.0
+  MAGNETICOD_INTERVAL: '1'
+  MAGNETICOD_LEECHES: '50'
+  MAGNETICOD_NEIGHBORS: '1000'
+  MAGNETICOD_PORT: '0'
+  MAGNETICOD_VERBOSE: ''
+  MAGNETICOW_ADDRESS: 0.0.0.0
+  MAGNETICOW_PASSWORD: magnetico
+  MAGNETICOW_USERNAME: magnetico
+  MAGNETICOW_VERBOSE: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: dyonr/magnetico-environment
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

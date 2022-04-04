@@ -1,0 +1,22 @@
+env:
+  ElasticSearch: http://IP:9200
+  ElasticSearch Password: verysecret
+  Redis: IP
+  TA Password: verysecret
+  TA Username: tubearchivist
+  Time Zone: America/New_York
+image:
+  pullPolicy: IfNotPresent
+  repository: bbilly1/tubearchivist
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

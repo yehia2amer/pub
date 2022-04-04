@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - MediaApp-Photos
 - MediaServer-Video
 - MediaServer-Photos
@@ -118,7 +118,8 @@ ExtraParams: --stop-timeout=120
 Icon: https://photostructure.com/img/logo-circle-gradient-256.png
 Keywords:
 - photostructure
-Name: PhotoStructure
+- *id001
+Name: photostructure
 Network: bridge
 Networking:
   Mode: bridge
@@ -128,15 +129,12 @@ Overview: '[b]PhotoStructure is your new home for all your photos and videos.[/b
   '
 PostArgs: ''
 Privileged: 'false'
-Project: https://photostructure.com/
 Registry: https://hub.docker.com/r/photostructure/server/
 RepoShort: PhotoStructure
-Repository: photostructure/server:stable
+Repository: photostructure/server
 Requires: ''
 Sources:
 - https://photostructure.com/
 - https://hub.docker.com/r/photostructure/server/
-TemplateURL: https://raw.githubusercontent.com/photostructure/unraid-template/master/photostructure/photostructure.xml
+Tag: stable
 WebUI: http://[IP]:[PORT:1787]
-topPerforming: 1.591
-topTrending: -4.705

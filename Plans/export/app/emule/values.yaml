@@ -1,0 +1,23 @@
+env:
+  EMULE_CAP_DOWNLOAD: '1000000'
+  EMULE_CAP_UPLOAD: '1000000'
+  EMULE_LANGUAGE: '1033'
+  EMULE_MAX_UPLOAD: '100000'
+  EMULE_NICK: eMule_DOCKER
+  EMULE_RECONNECT: '1'
+  EMULE_UPDATE_FROM_SERVER: '1'
+image:
+  pullPolicy: IfNotPresent
+  repository: reimashi/emule
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

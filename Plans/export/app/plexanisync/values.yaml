@@ -1,0 +1,23 @@
+env:
+  ANI_TOKEN: ''
+  ANI_USERNAME: ''
+  PLEX_SECTION: ''
+  PLEX_TOKEN: ''
+  PLEX_URL: ''
+  SETTINGS_FILE: ''
+  SKIP_LIST_UPDATE: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: mizz141/plexanisync-mizz141
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

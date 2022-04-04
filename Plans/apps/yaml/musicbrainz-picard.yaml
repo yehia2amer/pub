@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - MediaApp-Music
 Config:
   Device: {}
@@ -86,19 +86,17 @@ Config:
 Icon: https://raw.githubusercontent.com/RandomNinjaAtk/unraid-templates/master/randomninjaatk/img/picard.png
 Keywords:
 - musicbrainz-picard
-Name: MusicBrainz-Picard
+- *id001
+Name: musicbrainz-picard
 Network: bridge
 Overview: Picard is a cross-platform music tagger written in Python.
 PostArgs: ''
 Privileged: 'false'
-Project: https://picard.musicbrainz.org/
 Registry: https://hub.docker.com/r/mikenye/picard
 Repository: mikenye/picard
 Requires: ''
 Sources:
 - https://picard.musicbrainz.org/
 - https://hub.docker.com/r/mikenye/picard
-TemplateURL: https://raw.githubusercontent.com/RandomNinjaAtk/unraid-templates/master/randomninjaatk/picard.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:5800]
-topPerforming: 2.457
-topTrending: -7.7090000000000005

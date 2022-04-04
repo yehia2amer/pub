@@ -1,0 +1,33 @@
+env:
+  Admin Password: adminDocker
+  EPICSETTINGS: 'false'
+  Enable Mod Launcher: ''
+  Extra Startup Parmeters: ''
+  GAME_ID: '402370'
+  GAME_MODE: Creative
+  GAME_PORT: '3724'
+  HOMEKINGDOM: '4'
+  Homeserver: 'true'
+  LOGINSERVER: 'true'
+  Max Players: '150'
+  QUERYPORT: '27020'
+  Server Password: Docker
+  Servrname: DockerServer
+  Steam-Password: ''
+  Steam-Username: ''
+  Validate Installation: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: ich777/steamcmd
+  tag: wurmunlimited
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

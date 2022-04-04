@@ -1,0 +1,17 @@
+env:
+  TIMECRON: '300'
+image:
+  pullPolicy: IfNotPresent
+  repository: patrickstigler/docker-fetchmail
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

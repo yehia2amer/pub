@@ -1,0 +1,24 @@
+env:
+  Extra Game Parameters: -log -server -NoBattlEye
+  GAME_ID: '1006030'
+  Game Parameters: ?ServerX=0?ServerY=0?AltSaveDirectoryName=00?MaxPlayers=50?ReservedPlayerSlots=10?QueryPort=57550?Port=5750
+  Map Name: Ocean
+  Redis Enabled: 'yes'
+  Steam-Password: ''
+  Steam-Username: ''
+  Validate Installation: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: ich777/steamcmd
+  tag: atlas
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

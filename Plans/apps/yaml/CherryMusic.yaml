@@ -1,8 +1,13 @@
 BindTime: 'true'
-CategoryList:
+CategoryList: &id001
 - Cloud
 - MediaServer-Music
-ChangeLogPresent: true
+Config:
+  Device: {}
+  Label: {}
+  Path: {}
+  Port: {}
+  Variable: {}
 Data:
   Volume:
   - ContainerDir: /root/.config/cherrymusic
@@ -11,12 +16,12 @@ Data:
   - ContainerDir: /music
     HostDir: /mnt/user/Media/Music
     Mode: ro
-Environment: ''
 GitHub: https://github.com/noinip/cherrymusic
 Icon: https://raw.githubusercontent.com/noinip/cherrymusic-1/master/res/img/cherrymusic_logo_big.png
 Keywords:
 - cherrymusic
-Name: CherryMusic
+- *id001
+Name: cherrymusic
 Networking:
   Mode: bridge
   Publish:
@@ -31,6 +36,5 @@ Repository: pinion/cherrymusic
 Requires: ''
 Sources:
 - https://registry.hub.docker.com/r/pinion/cherrymusic/
-TemplateURL: https://raw.githubusercontent.com/noinip/container-templates/master/pinion/cherrymusic.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:8070]/
-topTrending: -0.43399999999999994

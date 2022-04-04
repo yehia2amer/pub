@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - GameServers
 Config:
   Device: {}
@@ -77,19 +77,20 @@ ExtraParams: --restart=unless-stopped
 Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/cs2d.png
 Keywords:
 - counterstrike2d
-Name: CounterStrike2D
+- *id001
+Name: counterstrike2d
 Network: bridge
 Networking:
   Mode: bridge
 Overview: "This Docker will download and install CounterStrike 2D.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://www.steampowered.com/
 Registry: https://hub.docker.com/r/ich777/cs2dserver/
 Repository: ich777/cs2dserver
 Requires: ''
 Sources:
 - https://www.steampowered.com/
 - https://hub.docker.com/r/ich777/cs2dserver/
+Tag: latest
 WebUI: ''
 caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/CounterStrike2D.xml

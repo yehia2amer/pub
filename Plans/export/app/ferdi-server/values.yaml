@@ -1,0 +1,37 @@
+env:
+  APP_URL: ''
+  CONNECT_WITH_FRANZ: 'true'
+  DATA_DIR: /data
+  DB_CONNECTION: sqlite
+  DB_DATABASE: ferdi
+  DB_HOST: 127.0.0.1
+  DB_PASSWORD: password
+  DB_PORT: '3306'
+  DB_SSL: 'false'
+  DB_USER: root
+  IS_CREATION_ENABLED: 'true'
+  IS_DASHBOARD_ENABLED: 'true'
+  IS_REGISTRATION_ENABLED: 'true'
+  MAIL_CONNECTION: smtp
+  MAIL_PASSWORD: password
+  MAIL_SENDER: noreply@getferdi.com
+  MAIL_SSL: 'false'
+  MAIL_USERNAME: username
+  NODE_ENV: development
+  SMTP_HOST: 127.0.0.1
+  SMTP_PORT: '2525'
+image:
+  pullPolicy: IfNotPresent
+  repository: getferdi/ferdi-server
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

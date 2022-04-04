@@ -1,5 +1,5 @@
 Beta: 'true'
-CategoryList:
+CategoryList: &id001
 - Tools-Utilities
 Config:
   Device: {}
@@ -65,7 +65,8 @@ Config:
 Icon: https://raw.githubusercontent.com/cheesemarathon/docker-templates/master/images/taskcafe.png
 Keywords:
 - taskcafe
-Name: Taskcafe
+- *id001
+Name: taskcafe
 Network: bridge
 Networking:
   Mode: bridge
@@ -73,14 +74,11 @@ Official: true
 Overview: 'A free and open source alternative project management tool.
 
   '
-Project: https://github.com/JordanKnott/taskcafe
 Registry: https://hub.docker.com/r/taskcafe/taskcafe
 Repository: taskcafe/taskcafe
 Requires: Postgres container installed
 Sources:
 - https://github.com/JordanKnott/taskcafe
 - https://hub.docker.com/r/taskcafe/taskcafe
-TemplateURL: https://raw.githubusercontent.com/cheesemarathon/docker-templates/master/cheesemarathon/task-cafe.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:3333]/
-topPerforming: 2.003
-topTrending: -6.784000000000001

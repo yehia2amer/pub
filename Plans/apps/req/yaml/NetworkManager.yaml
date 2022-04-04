@@ -1,5 +1,5 @@
 Beta: 'true'
-CategoryList:
+CategoryList: &id001
 - Productivity
 - Tools-Utilities
 Config:
@@ -100,7 +100,8 @@ Config:
 Icon: https://raw.githubusercontent.com/Sander0542/docker-templates/main/sander0542/icons/NetworkManager.png
 Keywords:
 - networkmanager
-Name: NetworkManager
+- *id001
+Name: networkmanager
 Network: bridge
 Networking:
   Mode: bridge
@@ -109,12 +110,11 @@ Overview: With this Docker you can manage the used hosts in your networks. It su
   the ports that are used and the services that are running on them.
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/Sander0542/Network-Manager
 Registry: https://hub.docker.com/r/sander0542/network-manager
 Repository: sander0542/network-manager
 Requires: MySQL
 Sources:
 - https://github.com/Sander0542/Network-Manager
 - https://hub.docker.com/r/sander0542/network-manager
-TemplateURL: https://raw.githubusercontent.com/Sander0542/docker-templates/master/sander0542/NetworkManager.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:9000]

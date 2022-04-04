@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - GameServers
 Config:
   Device: {}
@@ -167,7 +167,8 @@ ExtraParams: --restart=unless-stopped
 Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/aaprovinggrounds.png
 Keywords:
 - americasarmy-pg
-Name: AmericasArmy-PG
+- *id001
+Name: americasarmy-pg
 Network: bridge
 Networking:
   Mode: bridge
@@ -175,12 +176,11 @@ Overview: "This Docker will download and install SteamCMD. It will also install 
   \ Army: Proving Grounds and run it.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://www.americasarmy.com/
 Registry: https://hub.docker.com/r/ich777/steamcmd/
-Repository: ich777/steamcmd:aaprovinggrounds
+Repository: ich777/steamcmd
 Requires: ''
 Sources:
 - https://www.americasarmy.com/
 - https://hub.docker.com/r/ich777/steamcmd/
-TemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/AmericasArmy-ProvingGrounds.xml
+Tag: aaprovinggrounds
 WebUI: ''

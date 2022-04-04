@@ -1,0 +1,23 @@
+env:
+  DNS_SERVERS: 127.2.2.2
+  DNS_SERVER_PORT: '53'
+  HOST_NETWORK: 192.168.1.0/24
+  HTTP_PROXY_PORT: '8118'
+  SOCKS_PROXY_PORT: '9118'
+  TOR_HTTP_PORT: '8119'
+  TOR_SOCKS_PORT: '9119'
+image:
+  pullPolicy: IfNotPresent
+  repository: testdasi/openvpn-client-aio
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

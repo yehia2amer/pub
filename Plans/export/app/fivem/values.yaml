@@ -1,0 +1,22 @@
+env:
+  ConfigFile: server.cfg
+  FiveM Artifacts Server Adress: https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master/
+  Manual Updates: ''
+  Server Key: ''
+  Server Name: ''
+  Start Variables: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: ich777/fivemserver
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Network-DNS
 Config:
   Device: {}
@@ -32,7 +32,8 @@ ExtraParams: --cap-add=NET_ADMIN
 Icon: https://raw.githubusercontent.com/testdasi/simple-dns-doh/master/DNS-icon.png
 Keywords:
 - dns-doh-companion
-Name: DNS-DoH-companion
+- *id001
+Name: dns-doh-companion
 Network: bridge
 Networking:
   Mode: bridge
@@ -40,12 +41,11 @@ Overview: "A very simple DNS server to connect to DNS-over-HTTPS service. This i
   \ similar to my other Pihole-with-DoH docker, without Pihole.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://developers.cloudflare.com/1.1.1.1/dns-over-https/cloudflared-proxy/
 Registry: https://hub.docker.com/r/testdasi/simple-dns-doh/
-Repository: testdasi/simple-dns-doh:latest
+Repository: testdasi/simple-dns-doh
 Requires: ''
 Sources:
 - https://developers.cloudflare.com/1.1.1.1/dns-over-https/cloudflared-proxy/
 - https://hub.docker.com/r/testdasi/simple-dns-doh/
-TemplateURL: https://raw.githubusercontent.com/testdasi/testdasi-unraid-repo/master/dns-doh-companion.xml
+Tag: latest
 WebUI: ''

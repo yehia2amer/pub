@@ -1,0 +1,36 @@
+env:
+  LDAP_ADMIN_PASSWORD: ''
+  LDAP_ADMIN_USERNAME: ''
+  LDAP_ALLOW_ANON_BINDING: ''
+  LDAP_CONFIG_ADMIN_ENABLED: ''
+  LDAP_CONFIG_ADMIN_PASSWORD: ''
+  LDAP_CONFIG_ADMIN_USERNAME: ''
+  LDAP_ENABLE_TLS: ''
+  LDAP_EXTRA_SCHEMAS: ''
+  LDAP_GROUP: ''
+  LDAP_PASSWORDS: ''
+  LDAP_ROOT: ''
+  LDAP_SKIP_DEFAULT_TREE: ''
+  LDAP_TLS_CA_FILE: ''
+  LDAP_TLS_CERT_FILE: ''
+  LDAP_TLS_DH_PARAMS_FILE: ''
+  LDAP_TLS_KEY_FILE: ''
+  LDAP_ULIMIT_NOFILES: ''
+  LDAP_USERS: ''
+  LDAP_USER_DC: ''
+  Log debug: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: bitnami/openldap
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

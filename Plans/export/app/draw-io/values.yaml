@@ -1,0 +1,25 @@
+env:
+  CITY: ''
+  COUNTRY_CODE: ''
+  Enable Lets Encrypt: ''
+  KEYSTORE_PASS: ''
+  KEY_PASS: ''
+  ORGANISATION: ''
+  ORGANISATION_UNIT: ''
+  PUBLIC_DNS: ''
+  STATE: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: jgraph/drawio
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

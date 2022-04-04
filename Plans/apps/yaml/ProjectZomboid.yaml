@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - GameServers
 Config:
   Device: {}
@@ -165,7 +165,8 @@ ExtraParams: --restart=unless-stopped
 Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/projectzomboid.png
 Keywords:
 - projectzomboid
-Name: ProjectZomboid
+- *id001
+Name: projectzomboid
 Network: bridge
 Networking:
   Mode: bridge
@@ -173,12 +174,12 @@ Overview: "This Docker will download and install SteamCMD. It will also install 
   \ Zomboid and run it.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://www.steampowered.com/
 Registry: https://hub.docker.com/r/ich777/steamcmd/
-Repository: ich777/steamcmd:projectzomboid
+Repository: ich777/steamcmd
 Requires: ''
 Sources:
 - https://www.steampowered.com/
 - https://hub.docker.com/r/ich777/steamcmd/
+Tag: projectzomboid
 WebUI: ''
 caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/ProjectZomboid.xml

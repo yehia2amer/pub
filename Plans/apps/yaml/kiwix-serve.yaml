@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Productivity
 Config:
   Device: {}
@@ -42,20 +42,18 @@ Config:
 Icon: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/kiwix.png
 Keywords:
 - kiwix-serve
+- *id001
 Name: kiwix-serve
 Network: bridge
 Overview: Kiwix enables you to have the whole Wikipedia at hand wherever you go! [br]Remove
   download link after download complete.[/br]
 PostArgs: '*.zim'
 Privileged: 'false'
-Project: https://www.kiwix.org/
 Registry: https://hub.docker.com/r/kiwix/kiwix-serve/
-Repository: kiwix/kiwix-serve:latest
+Repository: kiwix/kiwix-serve
 Requires: ''
 Sources:
 - https://www.kiwix.org/
 - https://hub.docker.com/r/kiwix/kiwix-serve/
-TemplateURL: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/kiwix-serve.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:80]
-topPerforming: 8.113
-topTrending: 4.375

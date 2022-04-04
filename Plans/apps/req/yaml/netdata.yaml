@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Tools-Utilities
 Config:
   Device: {}
@@ -71,6 +71,7 @@ ExtraParams: --cap-add SYS_PTRACE --security-opt apparmor=unconfined --log-opt m
 Icon: https://raw.githubusercontent.com/Data-Monkey/docker-templates/master/Data-Monkey/img/netdata.png
 Keywords:
 - netdata
+- *id001
 Name: netdata
 Network: host
 Networking:
@@ -79,7 +80,6 @@ Official: true
 Overview: "[b]Real-time performance monitoring, done right! [/b][br]&amp;#xD;\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://docs.netdata.cloud/
 RecommendedDate: 1614574800
 RecommendedRaw: 3/1/2021
 RecommendedReason:
@@ -91,7 +91,7 @@ Requires: ' App uses hostnetworking (autoadd)'
 Sources:
 - https://docs.netdata.cloud/
 - https://hub.docker.com/r/netdata/netdata
-TemplateURL: https://raw.githubusercontent.com/Data-Monkey/docker-templates/master/Data-Monkey/netdata.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:19999]
 changes: "\n[center] [b]Data-Monkey:[/b] Netdata [/center]\n    \n[center][font size=4]Change\
   \ Log[/font][/center]\n[font size=3]2020.05.02[/font]    \n- removed config dir.\
@@ -106,5 +106,3 @@ changes: "\n[center] [b]Data-Monkey:[/b] Netdata [/center]\n    \n[center][font 
   \ to transalate docker IDs to names\n    \n[font size=3]2016.06.06[/font]\n- added\
   \ config mapping\n- added \"log rotation\" for 6.2\n\n[font size=3]2016.06.03[/font]\n\
   - Initial release of the netdata template\n    \n    \n  "
-topPerforming: 0.49
-topTrending: -1.204

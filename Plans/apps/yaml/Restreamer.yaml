@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Network-Other
 - MediaApp-Video
 - Productivity
@@ -56,7 +56,8 @@ ExtraParams: --restart=unless-stopped
 Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/restreamer.png
 Keywords:
 - restreamer
-Name: Restreamer
+- *id001
+Name: restreamer
 Network: bridge
 Networking:
   Mode: bridge
@@ -68,14 +69,12 @@ Overview: "Datarhei/Restreamer allows smart free video streaming in real time. S
   \n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://datarhei.github.io/restreamer/
 Registry: https://hub.docker.com/r/datarhei/restreamer
 Repository: datarhei/restreamer
 Requires: ''
 Sources:
 - https://datarhei.github.io/restreamer/
 - https://hub.docker.com/r/datarhei/restreamer
+Tag: latest
 WebUI: http://[IP]:[PORT:8080]
 caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/Restreamer.xml
-topPerforming: 1.365
-topTrending: 0.15399999999999991

@@ -1,0 +1,32 @@
+env:
+  Enable Automatic Script Start: ''
+  Lidarr API Key: ''
+  Lidarr Url: ''
+  Music Videos Country Code: ''
+  Music Videos File Permissions: ''
+  Music Videos Filter Match: ''
+  Music Videos Folder Permissions: ''
+  Music Videos Require Match: ''
+  Music Videos Source Connection: ''
+  Music Videos Subtitle Langauge: ''
+  Music Videos Use Folders: ''
+  Music Videos Use Video Folders: ''
+  Music Videos Write NFO: ''
+  Musicbrainz Mirror URL: ''
+  Musicbrainz Rate Limit: ''
+  Script Interval: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: randomninjaatk/amvd
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

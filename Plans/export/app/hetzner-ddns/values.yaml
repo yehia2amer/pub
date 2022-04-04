@@ -1,0 +1,19 @@
+env:
+  API Token: my-secret-api-token
+  Record Type: A
+  Zone Name: example.com
+image:
+  pullPolicy: IfNotPresent
+  repository: kutzilla/hetzner-ddns
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

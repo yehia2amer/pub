@@ -1,0 +1,20 @@
+env:
+  GOKAPI_LENGTH_ID: '10'
+  GOKAPI_MAX_FILESIZE: '5'
+  GOKAPI_PASSWORD: unraid
+  GOKAPI_USERNAME: unraid
+image:
+  pullPolicy: IfNotPresent
+  repository: f0rc3/gokapi
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

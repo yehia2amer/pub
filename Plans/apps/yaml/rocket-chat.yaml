@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Network-Messenger
 Config:
   Device: {}
@@ -53,7 +53,8 @@ Config:
 Icon: https://raw.githubusercontent.com/fanningert/unraid-docker-templates/master/fanningert/icons/rocketchat.png
 Keywords:
 - rocket-chat
-Name: Rocket.Chat
+- *id001
+Name: rocket-chat
 Network: bridge
 Networking:
   Mode: bridge
@@ -67,7 +68,5 @@ Repository: library/rocket.chat
 Requires: ''
 Sources:
 - https://hub.docker.com/r/library/rocket.chat/
-TemplateURL: https://raw.githubusercontent.com/fanningert/unraid-docker-templates/master/fanningert/rocketchat.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:3000]
-topPerforming: 0.198
-topTrending: -0.5109999999999999

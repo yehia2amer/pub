@@ -1,0 +1,17 @@
+env:
+  Key 1: /tmp/metabase.db
+image:
+  pullPolicy: IfNotPresent
+  repository: metabase/metabase
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

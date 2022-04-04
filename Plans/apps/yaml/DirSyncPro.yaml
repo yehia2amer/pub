@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Backup
 - Network-Other
 - Productivity
@@ -227,7 +227,8 @@ ExtraParams: --restart=unless-stopped --cap-add SYS_ADMIN --cap-add DAC_READ_SEA
 Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/dirsyncpro.png
 Keywords:
 - dirsyncpro
-Name: DirSyncPro
+- *id001
+Name: dirsyncpro
 Network: bridge
 Networking:
   Mode: bridge
@@ -235,14 +236,12 @@ Overview: "This Docker will download and install the Runtime and also DirSyncPro
   \ optional encryption by CryFS.\r\n"
 PostArgs: ''
 Privileged: 'true'
-Project: https://www.dirsyncpro.org/
 Registry: https://hub.docker.com/r/ich777/dirsyncpro/
 Repository: ich777/dirsyncpro
 Requires: ''
 Sources:
 - https://www.dirsyncpro.org/
 - https://hub.docker.com/r/ich777/dirsyncpro/
+Tag: latest
 WebUI: http://[IP]:[PORT:8080]/vnc.html?autoconnect=true
 caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/DirSyncPro.xml
-topPerforming: 2.625
-topTrending: -8.566

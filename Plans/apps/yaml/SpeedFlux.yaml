@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Tools-Utilities
 - Network-Management
 - Network-Other
@@ -139,7 +139,8 @@ Config:
 Icon: https://user-images.githubusercontent.com/3665468/119735610-974a0500-be4a-11eb-9149-dd12ceee03df.png
 Keywords:
 - speedflux
-Name: SpeedFlux
+- *id001
+Name: speedflux
 Network: bridge
 Networking:
   Mode: bridge
@@ -147,12 +148,11 @@ Overview: "This tool will continuosly run Speedtests at the chosen interval and 
   \ the data to InfluxDB. &lt;br&gt;\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/breadlysm/speedtest-to-influxdb
 Registry: https://github.com/users/breadlysm/packages/container/package/speedflux
-Repository: ghcr.io/breadlysm/speedflux:latest
+Repository: ghcr.io/breadlysm/speedflux
 Requires: ''
 Sources:
 - https://github.com/breadlysm/speedtest-to-influxdb
 - https://github.com/users/breadlysm/packages/container/package/speedflux
-TemplateURL: https://raw.githubusercontent.com/breadlysm/Breads-unraid-templates/master/speedflux-unraid.xml
+Tag: latest
 WebUI: ''

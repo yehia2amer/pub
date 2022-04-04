@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Productivity
 - Tools-Utilities
 - Network-Other
@@ -44,17 +44,17 @@ Config:
 Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/sqlite3.png
 Keywords:
 - sqlite-web
-Name: SQLite-Web
+- *id001
+Name: sqlite-web
 Network: bridge
 Overview: "DESCRIPTION\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/coleifer/sqlite-web
 Registry: https://hub.docker.com/r/coleifer/sqlite-web
 Repository: coleifer/sqlite-web
 Requires: ''
 Sources:
 - https://github.com/coleifer/sqlite-web
 - https://hub.docker.com/r/coleifer/sqlite-web
-TemplateURL: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/master/templates/SQLite-Web.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:8080]

@@ -1,6 +1,6 @@
 CAComment: This template is set up to use a custom network. You may have to adjust
   the network or IP address etc to match your system
-CategoryList:
+CategoryList: &id001
 - Tools-Utilities
 - Other
 - Network-Web
@@ -105,7 +105,8 @@ ExtraParams: --memory=1G --no-healthcheck
 Icon: https://nginxproxymanager.com/icon.png
 Keywords:
 - nginx-proxy-manager-official
-Name: Nginx-Proxy-Manager-Official
+- *id001
+Name: nginx-proxy-manager-official
 Network: br0
 Networking:
   Mode: br0
@@ -114,14 +115,11 @@ Overview: "Nginx Proxy Manager (NPM) allows adding proxy hosts through a passwor
   \ They are renewed by NPM automatically.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://nginxproxymanager.com/
 Registry: https://hub.docker.com/r/jc21/nginx-proxy-manager
 Repository: jc21/nginx-proxy-manager
 Requires: ''
 Sources:
 - https://nginxproxymanager.com/
 - https://hub.docker.com/r/jc21/nginx-proxy-manager
-TemplateURL: https://raw.githubusercontent.com/mgutt/unraid-docker-templates/master/mgutt/Nginx-Proxy-Manager-Official.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:81]
-topPerforming: 0.683
-topTrending: -5.728

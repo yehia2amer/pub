@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - HomeAutomation
 - Tools-Utilities
 Config:
@@ -58,21 +58,20 @@ ExtraParams: --restart=unless-stopped
 Icon: https://github.com/ich777/docker-templates/raw/master/ich777/images/magicmirror2.png
 Keywords:
 - magicmirror-2
-Name: MagicMirror-2
+- *id001
+Name: magicmirror-2
 Network: bridge
 Networking:
   Mode: bridge
 Overview: "This Container will download and install MagicMirror\xB2.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://magicmirror.builders/
 Registry: https://hub.docker.com/r/ich777/magic-mirror2
 Repository: ich777/magic-mirror2
 Requires: ''
 Sources:
 - https://magicmirror.builders/
 - https://hub.docker.com/r/ich777/magic-mirror2
+Tag: latest
 WebUI: http://[IP]:[PORT:8080]/
 caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/MagicMirror-2.xml
-topPerforming: 7.569
-topTrending: -6.566999999999999

@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - GameServers
 Config:
   Device: {}
@@ -149,7 +149,8 @@ ExtraParams: --restart=unless-stopped
 Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/dayofinfamy.png
 Keywords:
 - dayofinfamy
-Name: DayOfInfamy
+- *id001
+Name: dayofinfamy
 Network: bridge
 Networking:
   Mode: bridge
@@ -157,12 +158,12 @@ Overview: "This Docker will download and install SteamCMD. It will also install 
   \ Of Infamy and run it.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://www.steampowered.com/
 Registry: https://hub.docker.com/r/ich777/steamcmd/
-Repository: ich777/steamcmd:dayofinfamy
+Repository: ich777/steamcmd
 Requires: ''
 Sources:
 - https://www.steampowered.com/
 - https://hub.docker.com/r/ich777/steamcmd/
+Tag: dayofinfamy
 WebUI: ''
 caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/DayOfInfamy.xml

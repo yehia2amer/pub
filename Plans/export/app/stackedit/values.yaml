@@ -1,0 +1,17 @@
+env:
+  ROOT_URL: /
+image:
+  pullPolicy: IfNotPresent
+  repository: qmcgaw/stackedit
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

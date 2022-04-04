@@ -1,0 +1,19 @@
+env:
+  youtubedl_interval: 12h
+  youtubedl_quality: 1080p
+  youtubedl_webui: 'true'
+image:
+  pullPolicy: IfNotPresent
+  repository: jeeaaasustest/youtube-dl
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

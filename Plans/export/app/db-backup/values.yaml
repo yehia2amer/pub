@@ -1,0 +1,29 @@
+env:
+  Key 1: GZ
+  Key 10: 'TRUE'
+  Key 11: 'TRUE'
+  Key 12: 'FALSE'
+  Key 14: 'false'
+  Key 2: <Database_Type>
+  Key 3: <DATABASE_IP>
+  Key 4: root
+  Key 5: <DATABASE_PASSWORD>
+  Key 6: '3306'
+  Key 7: '1440'
+  Key 8: '0300'
+  Key 9: '10080'
+image:
+  pullPolicy: IfNotPresent
+  repository: tiredofit/db-backup
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

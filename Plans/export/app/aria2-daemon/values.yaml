@@ -1,0 +1,39 @@
+env:
+  Aria2 - BT Load Saved Metadata: 'false'
+  Aria2 - BT Min Crypto Level: plain
+  Aria2 - BT Require Crypto: 'false'
+  Aria2 - Continue: 'true'
+  Aria2 - DHT Listen Port (aria2.conf): '6881'
+  Aria2 - Disable IPv6: 'true'
+  Aria2 - Enable DHT: 'true'
+  Aria2 - Force Save: 'true'
+  Aria2 - Listen Port (aria2.conf): '6889'
+  Aria2 - LogLevel: notice
+  Aria2 - Max Concurrent Downloads: '5'
+  Aria2 - Max Connection Per Server: '10'
+  Aria2 - Max Download Limit: '0'
+  Aria2 - Max Overall Download Limit: '0'
+  Aria2 - Min Split Size: 10M
+  Aria2 - Save Session Interval: '10'
+  Aria2 - Secret: YOUR_SECRET_CODE
+  Aria2 - Seed Ratio: '1'
+  Aria2 - Seed Time: '0'
+  Aria2 - Split: '5'
+  Aria2 BT Save Metadata: 'false'
+  Group ID: '100'
+  User ID: '99'
+image:
+  pullPolicy: IfNotPresent
+  repository: fanningert/aria2-daemon
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

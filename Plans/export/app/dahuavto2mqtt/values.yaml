@@ -1,0 +1,24 @@
+env:
+  DAHUA_VTO_HOST: 192.168.1.210
+  DAHUA_VTO_PASSWORD: ''
+  DAHUA_VTO_USERNAME: admin
+  MQTT_BROKER_HOST: 192.168.1.2
+  MQTT_BROKER_PASSWORD: MQTT optional password
+  MQTT_BROKER_PORT: '1883'
+  MQTT_BROKER_TOPIC_PREFIX: DahuaVTO
+  MQTT_BROKER_USERNAME: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: ronnieroller/dahuavto2mqtt
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

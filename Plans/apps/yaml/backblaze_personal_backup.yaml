@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Backup
 - Cloud
 - Network-Other
@@ -144,13 +144,13 @@ ExtraParams: --init
 Icon: https://www.backblaze.com/pics/cloud-blaze.png
 Keywords:
 - backblaze_personal_backup
-Name: Backblaze_Personal_Backup
+- *id001
+Name: backblaze_personal_backup
 Network: bridge
 Overview: "This Docker container runs the Backblaze personal backup client via WINE,\
   \ so that you can back up your files with the separation and portability capabilities\
   \ of Docker on Linux.\r\n"
 Privileged: 'false'
-Project: https://github.com/JonathanTreffler/backblaze-personal-wine-container
 Registry: https://hub.docker.com/r/tessypowder/backblaze-personal-wine
 RepoShort: Selfhosters
 Repository: tessypowder/backblaze-personal-wine
@@ -158,5 +158,5 @@ Requires: ''
 Sources:
 - https://github.com/JonathanTreffler/backblaze-personal-wine-container
 - https://hub.docker.com/r/tessypowder/backblaze-personal-wine
-TemplateURL: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/backblaze.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:5800]/

@@ -1,6 +1,6 @@
 CAComment: This template is set up to use a custom network. You may have to adjust
   the network or IP address etc to match your system
-CategoryList:
+CategoryList: &id001
 - Other
 - MediaServer-Music
 Config:
@@ -34,21 +34,19 @@ Config:
 Icon: https://www.mu-podcast.com/images/icecast_logo.png
 Keywords:
 - icecast
-Name: Icecast
+- *id001
+Name: icecast
 Network: br0
 Networking:
   Mode: br0
 Overview: "Icecast for Mopidy http stream\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/maschhoff/docker/tree/master/icecast
 Registry: https://hub.docker.com/r/infiniteproject/icecast/
 Repository: infiniteproject/icecast
 Requires: ''
 Sources:
 - https://github.com/maschhoff/docker/tree/master/icecast
 - https://hub.docker.com/r/infiniteproject/icecast/
-TemplateURL: https://raw.githubusercontent.com/maschhoff/docker/master/unraid%20xml/my-icecast.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:8000]/
-topPerforming: 1.681
-topTrending: 0.41200000000000014

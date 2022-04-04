@@ -1,26 +1,16 @@
-CategoryList:
+CategoryList: &id001
 - Network-Management
 - Tools-Utilities
 Config:
   Device: {}
   Label: {}
   Path: {}
-  Port:
-    Host Port 1:
-      Default: '6580'
-      Description: 'Container Port: 80'
-      Display: always
-      Mask: 'false'
-      Mode: tcp
-      Name: Host Port 1
-      Required: 'true'
-      Target: '80'
-      Type: Port
-      value: '6580'
+  Port: {}
   Variable: {}
 Icon: https://raw.githubusercontent.com/digiblur/unraid-docker-templates/master/images/speedtest_icon.png
 Keywords:
 - speedtest
+- *id001
 MinVer: ''
 Name: speedtest
 Network: bridge
@@ -34,7 +24,5 @@ Repository: adolfintel/speedtest
 Requires: ''
 Sources:
 - https://hub.docker.com/r/adolfintel/speedtest/
-TemplateURL: https://raw.githubusercontent.com/digiblur/unraid-docker-templates/master/speedtest.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:80]
-topPerforming: 1.977
-topTrending: -0.7630000000000001

@@ -1,0 +1,19 @@
+env:
+  Allow Mediawiki Upgrades: ''
+  Key 1: '99'
+  Key 2: '100'
+image:
+  pullPolicy: IfNotPresent
+  repository: d8sychain/mediawiki
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

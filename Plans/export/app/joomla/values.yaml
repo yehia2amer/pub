@@ -1,0 +1,20 @@
+env:
+  Database Name: joomla
+  Database password: MySql_1a4B00MER
+  Database user: Joomla
+  mysql database host: 192.168.178.104:3307
+image:
+  pullPolicy: IfNotPresent
+  repository: joomla
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

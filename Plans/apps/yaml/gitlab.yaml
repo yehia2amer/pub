@@ -1,41 +1,56 @@
 BindTime: 'true'
-CategoryList:
+CategoryList: &id001
 - Cloud
 - Network-Web
 - Productivity
 - Tools-Utilities
+Config:
+  Device: {}
+  Label: {}
+  Path: {}
+  Port: {}
+  Variable:
+    GITLAB_BACKUPS:
+      Name: GITLAB_BACKUPS
+      value: daily
+    GITLAB_BACKUP_EXPIRY:
+      Name: GITLAB_BACKUP_EXPIRY
+      value: '2419200'
+    GITLAB_EMAIL:
+      Name: GITLAB_EMAIL
+      value: example@example.com
+    GITLAB_HOST:
+      Name: GITLAB_HOST
+      value: localhost
+    GITLAB_HTTPS:
+      Name: GITLAB_HTTPS
+      value: 'false'
+    GITLAB_PORT:
+      Name: GITLAB_PORT
+      value: '10080'
+    GITLAB_SSH_PORT:
+      Name: GITLAB_SSH_PORT
+      value: '10020'
+    SMTP_PASS:
+      Name: SMTP_PASS
+      value: gmailpassword
+    SMTP_USER:
+      Name: SMTP_USER
+      value: gitlabEmail@gmail.com
+    SSL_SELF_SIGNED:
+      Name: SSL_SELF_SIGNED
+      value: 'false'
 Data:
   Volume:
     ContainerDir: /home/git/data
     HostDir: /mnt/user/appdata/gitlab
     Mode: rw
-Environment:
-  Variable:
-  - Name: GITLAB_HOST
-    Value: localhost
-  - Name: GITLAB_EMAIL
-    Value: example@example.com
-  - Name: GITLAB_SSH_PORT
-    Value: '10020'
-  - Name: GITLAB_PORT
-    Value: '10080'
-  - Name: GITLAB_HTTPS
-    Value: 'false'
-  - Name: SSL_SELF_SIGNED
-    Value: 'false'
-  - Name: SMTP_USER
-    Value: gitlabEmail@gmail.com
-  - Name: SMTP_PASS
-    Value: gmailpassword
-  - Name: GITLAB_BACKUPS
-    Value: daily
-  - Name: GITLAB_BACKUP_EXPIRY
-    Value: '2419200'
 ExtraParams: --link postgresql:postgresql --link redis:redisio
 GitHub: https://github.com/sameersbn/docker-gitlab
 Icon: https://avatars.githubusercontent.com/u/1086321
 Keywords:
 - gitlab
+- *id001
 Name: gitlab
 Networking:
   Mode: bridge
@@ -60,7 +75,5 @@ Repository: sameersbn/gitlab
 Requires: ''
 Sources:
 - https://registry.hub.docker.com/r/sameersbn/gitlab/
-TemplateURL: https://raw.githubusercontent.com/jshridha/templates/master/Bungy/gitlab.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:80]/
-topPerforming: 0.393
-topTrending: -0.006000000000000005

@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Productivity
 - Network-Voip
 - Network-Messenger
@@ -321,19 +321,17 @@ Config:
 Icon: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/jitsi.png
 Keywords:
 - jitsi-web
+- *id001
 Name: jitsi-web
 Network: bridge
 Overview: Jitsi Meet's web interface image
 PostArgs: ''
 Privileged: 'false'
-Project: https://jitsi.org/
 Registry: https://hub.docker.com/r/jitsi/web/
-Repository: jitsi/web:latest
+Repository: jitsi/web
 Requires: ''
 Sources:
 - https://jitsi.org/
 - https://hub.docker.com/r/jitsi/web/
-TemplateURL: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/jitsi-web.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:80]/
-topPerforming: 0.124
-topTrending: -4.872000000000001

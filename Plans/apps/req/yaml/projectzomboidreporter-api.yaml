@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - GameServers
 Config:
   Device: {}
@@ -87,7 +87,8 @@ ExtraParams: --restart=always
 Icon: https://github.com/natcoso9955/unRAID-docker/raw/master/icons/projectzomboid-api.png
 Keywords:
 - projectzomboidreporter-api
-Name: ProjectZomboidReporter-API
+- *id001
+Name: projectzomboidreporter-api
 Network: bridge
 Networking:
   Mode: bridge
@@ -95,12 +96,11 @@ Overview: "This api is used to access your project zomboid data stored in sql to
   \ to the main reporter.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/ChrisAshtear/Zomboid-Server-Stats-Reporter/
 Registry: https://hub.docker.com/r/chrisashtear/zomboid-reporter-backend/
 Repository: chrisashtear/zomboid-reporter-backend
 Requires: MySQL
 Sources:
 - https://github.com/ChrisAshtear/Zomboid-Server-Stats-Reporter/
 - https://hub.docker.com/r/chrisashtear/zomboid-reporter-backend/
-TemplateURL: https://raw.githubusercontent.com/natcoso9955/unRAID-docker/master/ProjectZomboidReporter-API_unraid.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:3001]/

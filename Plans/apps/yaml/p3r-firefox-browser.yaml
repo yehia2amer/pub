@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Productivity
 Config:
   Device: {}
@@ -87,16 +87,16 @@ ExtraParams: --shm-size=2g
 Icon: https://raw.githubusercontent.com/P3R-CO/unraid/master/Firefox-P3R-256px.png
 Keywords:
 - p3r-firefox-browser
-Name: P3R-Firefox-Browser
+- *id001
+Name: p3r-firefox-browser
 Network: bridge
 Overview: "Firefox Browser in a forwarded X11 container.\r\n"
 Privileged: 'true'
-Project: https://github.com/P3R-CO/firefox-container
 Registry: https://hub.docker.com/repository/docker/p3rco/firefox
-Repository: p3rco/firefox:latest
+Repository: p3rco/firefox
 Requires: ''
 Sources:
 - https://github.com/P3R-CO/firefox-container
 - https://hub.docker.com/repository/docker/p3rco/firefox
-TemplateURL: https://raw.githubusercontent.com/P3R-CO/unraid/master/firefox.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:5800]/

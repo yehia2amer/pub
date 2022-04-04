@@ -1,0 +1,21 @@
+env:
+  GAME_ID: '361580'
+  GAME_PARAMS: ''
+  Steam-Password: ''
+  Steam-Username: ''
+  Validate Installation: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: ich777/steamcmd
+  tag: wreckfest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

@@ -1,6 +1,6 @@
 CAComment: This template is set up to use a custom network. You may have to adjust
   the network or IP address etc to match your system
-CategoryList:
+CategoryList: &id001
 - Network-Other
 Config:
   Device: {}
@@ -176,7 +176,8 @@ Config:
 Icon: https://raw.githubusercontent.com/MarkusMcNugen/docker-templates/master/openconnect/ocserv-icon.png
 Keywords:
 - openconnectserver
-Name: OpenConnectServer
+- *id001
+Name: openconnectserver
 Network: br0
 Networking:
   Mode: br0
@@ -194,7 +195,5 @@ Repository: markusmcnugen/openconnect
 Requires: ''
 Sources:
 - https://hub.docker.com/r/markusmcnugen/ocserv/
-TemplateURL: https://raw.githubusercontent.com/MarkusMcNugen/docker-templates/master/openconnect/openconnect-template.xml
+Tag: latest
 WebUI: ''
-topPerforming: 0.495
-topTrending: -11.198

@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - GameServers
 Config:
   Device: {}
@@ -188,7 +188,8 @@ ExtraParams: --restart=unless-stopped
 Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/chivalrymw.png
 Keywords:
 - chivalry-medievalwarfare
-Name: Chivalry-MedievalWarfare
+- *id001
+Name: chivalry-medievalwarfare
 Network: bridge
 Networking:
   Mode: bridge
@@ -196,12 +197,11 @@ Overview: "This Docker will download and install SteamCMD. It will also install 
   \ Medieval Warfare and run it.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://www.steampowered.com/
 Registry: https://hub.docker.com/r/ich777/steamcmd/
-Repository: ich777/steamcmd:chivalrymw
+Repository: ich777/steamcmd
 Requires: ''
 Sources:
 - https://www.steampowered.com/
 - https://hub.docker.com/r/ich777/steamcmd/
-TemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/Chivalry-MedievalWarfare.xml
+Tag: chivalrymw
 WebUI: ''

@@ -1,0 +1,20 @@
+env:
+  Custom Screen Height: '768'
+  Custom Screen Width: '1024'
+  DATA_PERM: '770'
+  UMASK: '000'
+image:
+  pullPolicy: IfNotPresent
+  repository: ich777/enpass
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

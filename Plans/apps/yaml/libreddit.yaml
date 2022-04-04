@@ -1,39 +1,26 @@
-CategoryList:
+CategoryList: &id001
 - Network-Web
 Config:
   Device: {}
   Label: {}
   Path: {}
-  Port:
-    Port:
-      Default: '8080'
-      Description: 'Container Port: 8080'
-      Display: always
-      Mask: 'false'
-      Mode: tcp
-      Name: Port
-      Required: 'false'
-      Target: '8080'
-      Type: Port
-      value: '8080'
+  Port: {}
   Variable: {}
 ExtraParams: --restart=always
 Icon: https://raw.githubusercontent.com/Joshndroid/joshndroid-unraid-docker-templates/main/icons/libreddit.png
 Keywords:
 - libreddit
+- *id001
 Name: libreddit
 Network: bridge
 Overview: Alternative private front-end to Reddit
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/spikecodes/libreddit
 Registry: https://hub.docker.com/r/spikecodes/libreddit/
 Repository: spikecodes/libreddit
 Requires: ''
 Sources:
 - https://github.com/spikecodes/libreddit
 - https://hub.docker.com/r/spikecodes/libreddit/
-TemplateURL: https://raw.githubusercontent.com/Joshndroid/joshndroid-unraid-docker-templates/master/templates/libreddit.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:8080]/
-topPerforming: 0.639
-topTrending: -36.114

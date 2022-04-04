@@ -1,22 +1,25 @@
 Beta: 'true'
 BindTime: 'true'
-CategoryList:
+CategoryList: &id001
 - Cloud
 - Productivity
 - Tools-Utilities
+Config:
+  Device: {}
+  Label: {}
+  Path: {}
+  Port: {}
+  Variable: {}
 Data:
   Volume:
     ContainerDir: /data
     HostDir: path to gogs data
     Mode: rw
-Environment:
-  Variable:
-    Name: RUN_CROND
-    Value: 'true'
 GitHub: https://github.com/quimnut/unraid-docker-templates/
 Icon: https://raw.githubusercontent.com/quimnut/unraid-docker-templates/master/quimnut/gogs.png
 Keywords:
 - gogs
+- *id001
 Name: gogs
 Networking:
   Mode: bridge
@@ -36,7 +39,5 @@ Repository: gogs/gogs
 Requires: ''
 Sources:
 - https://hub.docker.com/r/gogs/gogs/
-TemplateURL: https://raw.githubusercontent.com/quimnut/unraid-docker-templates/master/quimnut/gogs.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:3000]/
-topPerforming: 0.324
-topTrending: -0.069

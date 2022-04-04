@@ -1,0 +1,22 @@
+env:
+  API Key: ''
+  Cloudflare Proxy: ''
+  Domain: ''
+  Email: ''
+  IPv6/IPv4 records: ''
+  Subdomain (Optional): ''
+image:
+  pullPolicy: IfNotPresent
+  repository: oznu/cloudflare-ddns
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

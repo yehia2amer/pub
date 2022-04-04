@@ -1,0 +1,17 @@
+env:
+  Download: http://download.kiwix.org/zim/wikipedia_en_chemistry_nopic.zim
+image:
+  pullPolicy: IfNotPresent
+  repository: kiwix/kiwix-serve
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

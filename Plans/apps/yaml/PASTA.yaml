@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - MediaApp-Other
 - Tools-Utilities
 - Other
@@ -6,29 +6,18 @@ Config:
   Device: {}
   Label: {}
   Path: {}
-  Port:
-    WebUI:
-      Default: ''
-      Description: 'Container Port: 80'
-      Display: always
-      Mask: 'false'
-      Mode: tcp
-      Name: WebUI
-      Required: 'true'
-      Target: '80'
-      Type: Port
-      value: ''
+  Port: {}
   Variable: {}
 Icon: https://www.pastatool.com/images/android-chrome-512.png
 Keywords:
 - pasta
-Name: PASTA
+- *id001
+Name: pasta
 Network: bridge
 Overview: 'PASTA - Audio and Subtitle Track Changer for Plex [br]
 
   '
 Privileged: 'false'
-Project: https://github.com/cglatot/pasta
 Registry: https://hub.docker.com/r/cglatot/pasta
 RepoShort: Selfhosters
 Repository: cglatot/pasta
@@ -36,7 +25,5 @@ Requires: ''
 Sources:
 - https://github.com/cglatot/pasta
 - https://hub.docker.com/r/cglatot/pasta
-TemplateURL: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/pasta.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:80]/
-topPerforming: 4.778
-topTrending: -13.353000000000002

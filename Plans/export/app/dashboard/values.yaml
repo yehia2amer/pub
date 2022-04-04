@@ -1,0 +1,18 @@
+env:
+  Cloudflare Purge Token (Optional): ''
+  Cloudflare Zone ID (Optional): ''
+image:
+  pullPolicy: IfNotPresent
+  repository: phntxx/dashboard
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

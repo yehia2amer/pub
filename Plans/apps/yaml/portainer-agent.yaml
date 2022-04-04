@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Tools-Utilities
 - Network-Management
 Config:
@@ -43,18 +43,18 @@ Config:
 Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/portainer-ce_200x200.png
 Keywords:
 - portainer-agent
-Name: Portainer-Agent
+- *id001
+Name: portainer-agent
 Network: bridge
 Official: true
 Overview: "DESCRIPTION\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/portainer/agent
 Registry: https://hub.docker.com/r/portainer/agent
 Repository: portainer/agent
 Requires: ''
 Sources:
 - https://github.com/portainer/agent
 - https://hub.docker.com/r/portainer/agent
-TemplateURL: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/master/templates/Portainer-Agent.xml
+Tag: latest
 WebUI: ''

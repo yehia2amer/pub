@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - GameServers
 Config:
   Device: {}
@@ -87,7 +87,8 @@ Config:
 Icon: https://raw.githubusercontent.com/L4stIdi0t/Unraid-template/master/TrackMania2020-Server/logoTM.png
 Keywords:
 - trackmania2020-server
-Name: TrackMania2020-Server
+- *id001
+Name: trackmania2020-server
 Network: bridge
 Networking:
   Mode: bridge
@@ -95,12 +96,11 @@ Overview: "This will run a TrackMania 2020 server. You can also install the EvoS
   \ to get an admin interface in the game.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/EvoTM/docker-trackmania
 Registry: https://hub.docker.com/r/evotm/trackmania
-Repository: evotm/trackmania:latest
+Repository: evotm/trackmania
 Requires: ''
 Sources:
 - https://github.com/EvoTM/docker-trackmania
 - https://hub.docker.com/r/evotm/trackmania
-TemplateURL: https://raw.githubusercontent.com/L4stIdi0t/Unraid-template/master/TrackMania2020-Server/TrackMania2020-Server.xml
+Tag: latest
 WebUI: ''

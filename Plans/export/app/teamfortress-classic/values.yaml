@@ -1,0 +1,24 @@
+env:
+  GAME_ID: 90 +app_set_config '90 mod tfc'
+  GAME_MOD: 90 mod tfc
+  GAME_NAME: tfc
+  GAME_PARAMS: -secure +maxplayers 32 +map 2fort
+  GAME_PORT: '27015'
+  Steam-Password: ''
+  Steam-Username: ''
+  Validate Installation: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: ich777/steamcmd
+  tag: tf
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

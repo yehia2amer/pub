@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - MediaServer-Music
 Config:
   Device: {}
@@ -87,7 +87,8 @@ Config:
 Icon: https://raw.githubusercontent.com/thetarkus/docker-templates/master/images/funkwhale-logo-500.png
 Keywords:
 - funkwhale-all-in-one
-Name: Funkwhale-all-in-one
+- *id001
+Name: funkwhale-all-in-one
 Network: bridge
 Networking:
   Mode: bridge
@@ -95,14 +96,11 @@ Overview: "Funkwhale is a community-driven project that lets you listen and shar
   \ music and audio within a decentralised, open network.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://funkwhale.audio/
 Registry: https://hub.docker.com/r/funkwhale/all-in-one/
-Repository: funkwhale/all-in-one:latest
+Repository: funkwhale/all-in-one
 Requires: ''
 Sources:
 - https://funkwhale.audio/
 - https://hub.docker.com/r/funkwhale/all-in-one/
-TemplateURL: https://raw.githubusercontent.com/ptchernegovski/Unraid-Templates/master/Funkwhale%20AIO/Funkwhale%20AIO.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:3030]/
-topPerforming: 1.102
-topTrending: -2.4459999999999997

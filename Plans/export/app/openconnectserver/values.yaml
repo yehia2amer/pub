@@ -1,0 +1,28 @@
+env:
+  CA_CN: VPN CA
+  CA_DAYS: '9999'
+  CA_ORG: OCSERV
+  DNS_SERVERS: 8.8.8.8,37.235.1.174,8.8.4.4,37.235.1.177
+  LISTEN_PORT: '4443'
+  POWER_USER: 'no'
+  SPLIT_DNS_DOMAINS: ''
+  SRV_CN: vpn.example.com
+  SRV_DAYS: '9999'
+  SRV_ORG: My Company
+  TUNNEL_MODE: all
+  TUNNEL_ROUTES: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: markusmcnugen/openconnect
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

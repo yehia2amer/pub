@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Tools-Utilities
 Config:
   Device: {}
@@ -54,13 +54,13 @@ ExtraParams: --restart unless-stopped
 Icon: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/speedtest-tracker.png
 Keywords:
 - speedtest-tracker
+- *id001
 Name: speedtest-tracker
 Network: bridge
 Overview: This program runs a speedtest check every hour and graphs the results. The
   back-end is written in Laravel and the front-end uses React. It uses the speedtest-cli
   package to get the data and uses Chart.js to plot the results.
 Privileged: 'false'
-Project: https://hub.docker.com/r/henrywhitaker3/speedtest-tracker
 Registry: https://hub.docker.com/r/henrywhitaker3/speedtest-tracker/
 RepoShort: Selfhosters
 Repository: henrywhitaker3/speedtest-tracker
@@ -68,7 +68,5 @@ Requires: ''
 Sources:
 - https://hub.docker.com/r/henrywhitaker3/speedtest-tracker
 - https://hub.docker.com/r/henrywhitaker3/speedtest-tracker/
-TemplateURL: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/speedtest-tracker.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:80]/
-topPerforming: 4.691
-topTrending: -8.628

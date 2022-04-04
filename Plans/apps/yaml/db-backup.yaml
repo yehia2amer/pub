@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Backup
 Config:
   Device: {}
@@ -164,6 +164,7 @@ Config:
 Icon: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/db-backup.png
 Keywords:
 - db-backup
+- *id001
 Name: db-backup
 Network: bridge
 Overview: Backup Multiple DB Servers (Influx, Maria/Mysql/Mongo/Postgres/Redis/Rethink)
@@ -171,13 +172,10 @@ Overview: Backup Multiple DB Servers (Influx, Maria/Mysql/Mongo/Postgres/Redis/R
   backup-now
 PostArgs: ''
 Privileged: 'false'
-Project: https://hub.docker.com/r/tiredofit/db-backup/
 Registry: https://hub.docker.com/r/tiredofit/db-backup/
-Repository: tiredofit/db-backup:latest
+Repository: tiredofit/db-backup
 Requires: ''
 Sources:
 - https://hub.docker.com/r/tiredofit/db-backup/
 - https://hub.docker.com/r/tiredofit/db-backup/
-TemplateURL: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/db-backup.xml
-topPerforming: 0.316
-topTrending: -1.03
+Tag: latest

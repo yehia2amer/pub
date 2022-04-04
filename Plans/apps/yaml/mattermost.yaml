@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Productivity
 - Network-Voip
 - Network-Messenger
@@ -145,6 +145,7 @@ Config:
 Icon: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/mattermost.png
 Keywords:
 - mattermost
+- *id001
 Name: mattermost
 Network: bridge
 Official: true
@@ -152,14 +153,11 @@ Overview: "Mattermost a flexible, open source messaging platform that enables se
   \ team collaboration.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://mattermost.com/
 Registry: https://hub.docker.com/r/mattermost/mattermost-team-edition/
-Repository: mattermost/mattermost-team-edition:master
+Repository: mattermost/mattermost-team-edition
 Requires: ''
 Sources:
 - https://mattermost.com/
 - https://hub.docker.com/r/mattermost/mattermost-team-edition/
-TemplateURL: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/mattermost.xml
+Tag: master
 WebUI: http://[IP]:[PORT:8065]/
-topPerforming: 0.527
-topTrending: -3.9859999999999998

@@ -1,6 +1,5 @@
-CategoryList:
+CategoryList: &id001
 - MediaApp-Video
-ChangeLogPresent: true
 Config:
   Device: {}
   Label: {}
@@ -162,7 +161,8 @@ Config:
 Icon: https://raw.githubusercontent.com/jlesage/docker-templates/master/jlesage/images/avidemux-icon.png
 Keywords:
 - avidemux
-Name: Avidemux
+- *id001
+Name: avidemux
 Network: bridge
 Networking:
   Mode: bridge
@@ -173,14 +173,11 @@ Overview: 'Avidemux is a free video editor designed for simple cutting, filterin
 
   '
 Privileged: 'false'
-Project: http://avidemux.org/
 Registry: https://hub.docker.com/r/jlesage/avidemux/
 Repository: jlesage/avidemux
 Requires: ''
 Sources:
 - http://avidemux.org/
 - https://hub.docker.com/r/jlesage/avidemux/
-TemplateURL: https://raw.githubusercontent.com/jlesage/docker-templates/master/jlesage/avidemux.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:5800]
-topPerforming: 0.211
-topTrending: -1.9159999999999997

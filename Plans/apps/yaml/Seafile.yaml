@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Cloud
 - MediaApp-Video
 - MediaApp-Music
@@ -73,7 +73,8 @@ Config:
 Icon: https://raw.githubusercontent.com/ItJustFox/unraidtemplate/main/seafiles/t%C3%A9l%C3%A9chargement.png
 Keywords:
 - seafile
-Name: SeaFile
+- *id001
+Name: seafile
 Network: bridge
 Overview: Seafile is an open source enterprise file sync and share platform with high
   reliability and performance. Seafile provides similar feature set to Dropbox, Google
@@ -83,14 +84,11 @@ Overview: Seafile is an open source enterprise file sync and share platform with
   a user-friendly web interface for accessing files in a web browser.
 PostArgs: ''
 Privileged: 'false'
-Project: https://www.seafile.com
 Registry: https://hub.docker.com/r/seafileltd/seafile
 Repository: seafileltd/seafile
 Requires: ''
 Sources:
 - https://www.seafile.com
 - https://hub.docker.com/r/seafileltd/seafile
-TemplateURL: https://raw.githubusercontent.com/ItJustFox/unraidtemplate/master/seafiles/seafiles.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:80]
-topPerforming: 0.553
-topTrending: -0.1409999999999999

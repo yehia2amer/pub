@@ -1,9 +1,26 @@
 BindTime: 'true'
-CategoryList:
+CategoryList: &id001
 - MediaServer-Video
 - MediaServer-Music
 - MediaServer-Photos
-ChangeLogPresent: true
+Config:
+  Device: {}
+  Label: {}
+  Path: {}
+  Port: {}
+  Variable:
+    PLEX_CLAIM:
+      Name: PLEX_CLAIM
+      value: Insert Token from https://plex.tv/claim
+    PLEX_GID:
+      Name: PLEX_GID
+      value: '100'
+    PLEX_UID:
+      Name: PLEX_UID
+      value: '99'
+    VERSION:
+      Name: VERSION
+      value: latest
 Data:
   Volume:
   - ContainerDir: /config
@@ -15,20 +32,11 @@ Data:
   - ContainerDir: /data
     HostDir: ''
     Mode: rw
-Environment:
-  Variable:
-  - Name: PLEX_CLAIM
-    Value: Insert Token from https://plex.tv/claim
-  - Name: PLEX_UID
-    Value: '99'
-  - Name: PLEX_GID
-    Value: '100'
-  - Name: VERSION
-    Value: latest
 Icon: https://raw.githubusercontent.com/plexinc/pms-docker/master/img/plex-server.png
 Keywords:
 - plex-media-server
-Name: Plex-Media-Server
+- *id001
+Name: plex-media-server
 Networking:
   Mode: host
   Publish: ''
@@ -37,7 +45,6 @@ Overview: '[b]Plex Media Server[/b][br][br]
 
   '
 Privileged: 'false'
-Project: https://plex.tv/
 Registry: https://hub.docker.com/r/plexinc/pms-docker/
 RepoShort: Plex
 Repository: plexinc/pms-docker
@@ -45,7 +52,5 @@ Requires: ''
 Sources:
 - https://plex.tv/
 - https://hub.docker.com/r/plexinc/pms-docker/
-TemplateURL: https://raw.githubusercontent.com/plexinc/pms-docker/master/plex-unRAID.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:32400]/web
-topPerforming: 1.036
-topTrending: -0.938

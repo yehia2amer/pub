@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Productivity
 - Network-Voip
 - Network-Messenger
@@ -122,19 +122,17 @@ Config:
 Icon: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/matrix.png
 Keywords:
 - matrix
+- *id001
 Name: matrix
 Network: bridge
 Overview: Docker Image for the matrix chat server.
 PostArgs: ''
 Privileged: 'false'
-Project: https://hub.docker.com/r/avhost/docker-matrix
 Registry: https://hub.docker.com/r/avhost/docker-matrix/
-Repository: avhost/docker-matrix:latest
+Repository: avhost/docker-matrix
 Requires: ''
 Sources:
 - https://hub.docker.com/r/avhost/docker-matrix
 - https://hub.docker.com/r/avhost/docker-matrix/
-TemplateURL: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/matrix.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:8008]
-topPerforming: 0.115
-topTrending: -0.128

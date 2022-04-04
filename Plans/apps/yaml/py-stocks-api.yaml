@@ -1,26 +1,16 @@
-CategoryList:
+CategoryList: &id001
 - Tools-Utilities
 Config:
   Device: {}
   Label: {}
   Path: {}
-  Port:
-    Port:
-      Default: ''
-      Description: 'Container Port: 8000'
-      Display: always
-      Mask: 'false'
-      Mode: tcp
-      Name: Port
-      Required: 'false'
-      Target: '8000'
-      Type: Port
-      value: '8787'
+  Port: {}
   Variable: {}
 ExtraParams: --restart=always
 Icon: ''
 Keywords:
 - py-stocks-api
+- *id001
 Name: py-stocks-api
 Network: bridge
 Networking:
@@ -28,12 +18,11 @@ Networking:
 Overview: "A minimal stocks API wrapper of Yfinance.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/patrickstigler/py-stocks
 Registry: https://hub.docker.com/r/patrickstigler/py-stocks-api
-Repository: patrickstigler/py-stocks-api:latest
+Repository: patrickstigler/py-stocks-api
 Requires: ''
 Sources:
 - https://github.com/patrickstigler/py-stocks
 - https://hub.docker.com/r/patrickstigler/py-stocks-api
-TemplateURL: https://raw.githubusercontent.com/patrickstigler/unraid_app_templates/master/py-stocks-api/py-stocks-api.xml
+Tag: latest
 WebUI: http://[IP]:[PORT]

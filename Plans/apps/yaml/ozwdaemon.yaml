@@ -1,7 +1,6 @@
-CategoryList:
+CategoryList: &id001
 - HomeAutomation
 - Network-Other
-ChangeLogPresent: true
 Config:
   Device:
     USB Z-Wave Device:
@@ -124,6 +123,7 @@ Config:
 Icon: https://github.com/FoxxMD/unraid-docker-templates/raw/master/icons/zwave.png
 Keywords:
 - ozwdaemon
+- *id001
 Name: ozwdaemon
 Network: bridge
 Networking:
@@ -133,14 +133,11 @@ Overview: "Container for running the OpenZWave MQTT Adapter (for Home Assistant 
   \ the new Z-Wave Integration)\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/OpenZWave/qt-openzwave
 Registry: https://hub.docker.com/r/openzwave/ozwdaemon/
-Repository: openzwave/ozwdaemon:allinone-latest
+Repository: openzwave/ozwdaemon
 Requires: ''
 Sources:
 - https://github.com/OpenZWave/qt-openzwave
 - https://hub.docker.com/r/openzwave/ozwdaemon/
-TemplateURL: https://raw.githubusercontent.com/FoxxMD/unraid-docker-templates/master/foxxmd/ozwdaemon.xml
+Tag: allinone-latest
 WebUI: http://[IP]:[PORT:7800]/vnc.html
-topPerforming: 0.11
-topTrending: -27.73

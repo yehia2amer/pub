@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Tools-Utilities
 - Network-Management
 Config:
@@ -98,6 +98,7 @@ Config:
 Icon: https://secure.gravatar.com/avatar/c4cadc82a16e67018f57f1fc2547caa4.jpg
 Keywords:
 - splunk
+- *id001
 Name: splunk
 Network: bridge
 Networking:
@@ -106,14 +107,11 @@ Overview: "This is a Dockerfile for Splunk designed for OpenShift and unRAID bas
   \ on Alpine Linux - https://www.splunk.com\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://www.splunk.com/
 Registry: https://hub.docker.com/r/atunnecliffe/splunk
 Repository: atunnecliffe/splunk
 Requires: ''
 Sources:
 - https://www.splunk.com/
 - https://hub.docker.com/r/atunnecliffe/splunk
-TemplateURL: https://raw.githubusercontent.com/andrew207/splunk/master/splunkunraid.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:8000}
-topPerforming: 2.043
-topTrending: -0.7389999999999999

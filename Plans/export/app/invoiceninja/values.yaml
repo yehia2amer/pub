@@ -1,0 +1,34 @@
+env:
+  APP_ENV: ''
+  APP_KEY: ''
+  APP_URL: ''
+  DB_STRICT: ''
+  Database Host: ''
+  Database Name: ''
+  Database Password: ''
+  Database Type: ''
+  Database username: ''
+  Debug Mode: ''
+  MAIL_DRIVER: ''
+  MAIL_ENCRYPTION: ''
+  MAIL_FROM_ADDRESS: ''
+  MAIL_FROM_NAME: ''
+  MAIL_HOST: ''
+  MAIL_PASSWORD: ''
+  MAIL_PORT: ''
+  MAIL_USERNAME: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: anojht/invoiceninja
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

@@ -1,0 +1,18 @@
+env:
+  GMAP: users:100
+  UMAP: nobody:99:100
+image:
+  pullPolicy: IfNotPresent
+  repository: coppit/inotify-command
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

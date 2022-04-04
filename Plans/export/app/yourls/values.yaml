@@ -1,0 +1,24 @@
+env:
+  MariaDB Database Name: ''
+  MariaDB Host and Port: ''
+  MariaDB Password: ''
+  YOURLS_HOURS_OFFSET: ''
+  YOURLS_PASS: ''
+  YOURLS_PRIVATE: ''
+  YOURLS_USER: ''
+  url: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: yourls
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

@@ -1,26 +1,15 @@
-CategoryList:
+CategoryList: &id001
 - Tools-Utilities
 Config:
   Device: {}
   Label: {}
-  Path:
-    Host Path 1:
-      Default: ''
-      Description: "Container Path: /config\r\n\r\nThis should contain a file named\
-        \ .ddns.yml"
-      Display: always
-      Mask: 'false'
-      Mode: rw
-      Name: Host Path 1
-      Required: 'true'
-      Target: /config
-      Type: Path
-      value: /mnt/user/appdata/ddns
+  Path: {}
   Port: {}
   Variable: {}
 Icon: https://i.imgur.com/NFr4J1k.png
 Keywords:
 - ddns
+- *id001
 Name: ddns
 Network: bridge
 Networking:
@@ -28,13 +17,11 @@ Networking:
 Overview: "Personal DDNS client with Digital Ocean Networking DNS as backend.\r\n"
 PostArgs: -conf-file /config/.ddns.yml
 Privileged: 'false'
-Project: https://github.com/skibish/ddns
 Registry: https://hub.docker.com/r/ronnieroller/ddns
 Repository: ronnieroller/ddns
 Requires: ''
 Sources:
 - https://github.com/skibish/ddns
 - https://hub.docker.com/r/ronnieroller/ddns
-TemplateURL: https://raw.githubusercontent.com/rroller/unraid-templates/master/ronnieroller.com/ddns.xml
+Tag: latest
 WebUI: ''
-topTrending: -0.786

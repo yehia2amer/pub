@@ -1,0 +1,22 @@
+env:
+  blockchains: chia
+  controller_host: ''
+  farmer_address: ''
+  mode: harvester
+  plots_dir: /plots1
+  worker_address: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: ghcr.io/guydavis/machinaris
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

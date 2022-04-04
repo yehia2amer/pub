@@ -1,0 +1,31 @@
+env:
+  Container Debug: 'false'
+  Create TUN Device: 'true'
+  Local Network: ''
+  Name servers: 8.8.8.8,8.8.4.4
+  OpenVPN Password: ''
+  OpenVPN Protocol (udp|tcp): udp
+  OpenVPN Provider: SURFSHARK
+  OpenVPN Username: ''
+  OpenVPN config file: ca-tor.prod.surfshark.com
+  OpenVPN custom options: ''
+  Timezone: Africa/Johannesburg
+  xTeVe API: '1'
+  xTeVe Branch: master
+  xTeVe Debug: '0'
+  xTeVe Port: '34400'
+image:
+  pullPolicy: IfNotPresent
+  repository: brycelarge/xteve-vpn
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

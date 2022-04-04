@@ -1,5 +1,5 @@
 BaseImage: phusion/baseimage:0.11
-CategoryList:
+CategoryList: &id001
 - Other
 Config:
   Device: {}
@@ -56,7 +56,8 @@ ExtraParams: --log-opt max-size=50m --log-opt max-file=1
 Icon: https://github.com/dlandon/docker.templates/raw/master/z80pack.png
 Keywords:
 - z80pack
-Name: Z80Pack
+- *id001
+Name: z80pack
 Network: bridge
 Networking:
   Mode: bridge
@@ -67,12 +68,11 @@ Overview: 'Z80Pack is an emulator for emulating CP/M 1, CP/M 2, CP/M 3, and MP/M
 
   '
 Privileged: 'false'
-Project: http://www.autometer.de/unix4fun/z80pack/index.html
 Registry: https://registry.hub.docker.com/r/dlandon/z80pack/
 Repository: dlandon/z80pack
 Requires: ''
 Sources:
 - http://www.autometer.de/unix4fun/z80pack/index.html
 - https://registry.hub.docker.com/r/dlandon/z80pack/
-TemplateURL: https://raw.githubusercontent.com/dlandon/docker.templates/master/Z80Pack.xml
+Tag: latest
 WebUI: https://[IP]:[PORT:4200]/

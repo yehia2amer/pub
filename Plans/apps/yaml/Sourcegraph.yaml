@@ -1,5 +1,5 @@
 BindTime: 'true'
-CategoryList:
+CategoryList: &id001
 - Backup
 - Cloud
 - Network-Web
@@ -72,7 +72,8 @@ GitHub: https://github.com/sourcegraph/sourcegraph
 Icon: https://github.com/sourcegraph/themes/raw/master/icon.png
 Keywords:
 - sourcegraph
-Name: Sourcegraph
+- *id001
+Name: sourcegraph
 Network: bridge
 Networking:
   Mode: bridge
@@ -80,11 +81,9 @@ Official: true
 Overview: Sourcegraph docker image.
 Privileged: 'false'
 Registry: https://hub.docker.com/r/sourcegraph/server/
-Repository: sourcegraph/server:3.10.0
+Repository: sourcegraph/server
 Requires: ''
 Sources:
 - https://hub.docker.com/r/sourcegraph/server/
-TemplateURL: https://raw.githubusercontent.com/frakman1/docker-templates/master/tynor88/sourcegraph.xml
+Tag: 3.10.0
 WebUI: http://[IP]:[PORT:7080]
-topPerforming: 0.876
-topTrending: -2.1790000000000003

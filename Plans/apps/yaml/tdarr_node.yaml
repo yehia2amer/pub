@@ -1,5 +1,5 @@
 Beta: 'true'
-CategoryList:
+CategoryList: &id001
 - Productivity
 - MediaApp-Video
 Config:
@@ -132,6 +132,7 @@ Config:
 Icon: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/tdarr.png
 Keywords:
 - tdarr_node
+- *id001
 Name: tdarr_node
 Network: bridge
 Overview: "(tdarr server required separately) Tdarr V2 is a distributed transcoding\
@@ -140,7 +141,6 @@ Overview: "(tdarr server required separately) Tdarr V2 is a distributed transcod
   \ and so on. Put your spare hardware to use with Tdarr Nodes for Windows, Linux\
   \ (including Linux arm) and macOS. \r\n"
 Privileged: 'false'
-Project: https://github.com/HaveAGitGat/Tdarr
 Registry: https://hub.docker.com/r/haveagitgat/tdarr_node/
 RepoShort: Selfhosters
 Repository: ghcr.io/haveagitgat/tdarr_node
@@ -148,5 +148,5 @@ Requires: ''
 Sources:
 - https://github.com/HaveAGitGat/Tdarr
 - https://hub.docker.com/r/haveagitgat/tdarr_node/
-TemplateURL: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/tdarr_node.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:8265]

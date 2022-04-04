@@ -1,0 +1,23 @@
+env:
+  ANIME_FORMAT: ''
+  FILEBOT_ACTION: copy
+  FILEBOT_LANG: en
+  MOVIE_FORMAT: ''
+  MUSIC_FORMAT: ''
+  SERIE_FORMAT: ''
+  WEBUI_PORT: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: imthai/qbittorrent-filebot
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

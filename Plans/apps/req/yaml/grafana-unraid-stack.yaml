@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Productivity
 - Tools-Utilities
 - Other
@@ -209,7 +209,8 @@ Config:
 Icon: https://raw.githubusercontent.com/testdasi/grafana-unraid-stack-base/master/grafana-unraid-stack.png
 Keywords:
 - grafana-unraid-stack
-Name: Grafana-Unraid-Stack
+- *id001
+Name: grafana-unraid-stack
 Network: host
 Networking:
   Mode: host
@@ -217,14 +218,11 @@ Overview: "Meet Gus! He has everything you need to start monitoring Unraid in st
   \ (Grafana - Influxdb - Telegraf - Loki - Promtail).\r\n"
 PostArgs: ''
 Privileged: 'true'
-Project: https://github.com/testdasi/grafana-unraid-stack
 Registry: https://registry.hub.docker.com/r/testdasi/grafana-unraid-stack/
-Repository: testdasi/grafana-unraid-stack:latest
+Repository: testdasi/grafana-unraid-stack
 Requires: ' App uses hostnetworking (autoadd)'
 Sources:
 - https://github.com/testdasi/grafana-unraid-stack
 - https://registry.hub.docker.com/r/testdasi/grafana-unraid-stack/
-TemplateURL: https://raw.githubusercontent.com/testdasi/testdasi-unraid-repo/master/grafana-unraid-stack.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:3006]/
-topPerforming: 3.564
-topTrending: -7.519

@@ -1,0 +1,18 @@
+env:
+  --user: ${UID}:${GID}
+  EXTRA_JAVA_OPTIONS: -Xms512m -Xmx2g -Xss256k -XX:+UseG1GC
+image:
+  pullPolicy: IfNotPresent
+  repository: releases-docker.jfrog.io/jfrog/artifactory-jcr
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

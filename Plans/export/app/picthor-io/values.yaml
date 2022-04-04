@@ -1,0 +1,23 @@
+env:
+  PICTHOR_CACHE_DIR: /root/picthor/cache
+  PostgreSQL database: ''
+  PostgreSQL host: ''
+  PostgreSQL password: ''
+  PostgreSQL port: ''
+  PostgreSQL username: ''
+  Web address: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: picthorio/picthor-io
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

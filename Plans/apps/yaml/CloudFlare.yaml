@@ -1,25 +1,32 @@
 BindTime: 'true'
-CategoryList:
+CategoryList: &id001
 - Network-DNS
-ChangeLogPresent: true
+Config:
+  Device: {}
+  Label: {}
+  Path: {}
+  Port: {}
+  Variable:
+    CF_API:
+      Name: CF_API
+      value: a1b2c3d4e5
+    CF_EMAIL:
+      Name: CF_EMAIL
+      value: your@cloudflare_email.com
+    CF_HOST:
+      Name: CF_HOST
+      value: sub.domain.com
 Data:
   Volume:
     ContainerDir: ''
     HostDir: ''
     Mode: ''
-Environment:
-  Variable:
-  - Name: CF_EMAIL
-    Value: your@cloudflare_email.com
-  - Name: CF_HOST
-    Value: sub.domain.com
-  - Name: CF_API
-    Value: a1b2c3d4e5
 GitHub: https://github.com/macexx/cloudflare-ddns
 Icon: https://i.imgur.com/PKa3Sm2.png
 Keywords:
 - cloudflare
-Name: CloudFlare
+- *id001
+Name: cloudflare
 Networking:
   Mode: bridge
   Publish:
@@ -38,5 +45,5 @@ Repository: mace/cloudflare-ddns
 Requires: ''
 Sources:
 - https://registry.hub.docker.com/r/mace/cloudflare-ddns/
-TemplateURL: https://raw.githubusercontent.com/macexx/docker-templates/master/macexx/cloudflare-ddns.xml
+Tag: latest
 WebUI: ''

@@ -1,6 +1,5 @@
-CategoryList:
+CategoryList: &id001
 - Other
-ChangeLogPresent: true
 Config:
   Device: {}
   Label: {}
@@ -93,7 +92,8 @@ Config:
 Icon: https://github.com/angelics/unraid-docker-ravencoin-p2p/raw/master/icon.png
 Keywords:
 - ravencoinp2p
-Name: RavencoinP2P
+- *id001
+Name: ravencoinp2p
 Network: bridge
 Networking:
   Mode: bridge
@@ -103,11 +103,10 @@ Overview: 'The Ravencoin project is launched based on the hard work and continuo
 
   '
 Privileged: 'false'
-Project: https://github.com/RavenProject/Ravencoin
 Registry: https://hub.docker.com/r/angelics/unraid-docker-ravencoin-p2p
 Repository: angelics/unraid-docker-ravencoin-p2p
 Requires: ''
 Sources:
 - https://github.com/RavenProject/Ravencoin
 - https://hub.docker.com/r/angelics/unraid-docker-ravencoin-p2p
-TemplateURL: https://raw.githubusercontent.com/angelics/unraid-docker-template/master/ravencoinp2p.xml
+Tag: latest

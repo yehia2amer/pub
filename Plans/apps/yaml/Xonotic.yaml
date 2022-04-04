@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - GameServers
 Config:
   Device: {}
@@ -88,7 +88,8 @@ ExtraParams: --restart=unless-stopped
 Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/xonotic.png
 Keywords:
 - xonotic
-Name: Xonotic
+- *id001
+Name: xonotic
 Network: bridge
 Networking:
   Mode: bridge
@@ -96,14 +97,12 @@ Overview: "This Docker will download and install the preferred version of Xonoti
   \n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://www.xonotic.org/
 Registry: https://hub.docker.com/r/ich777/xonotic/
 Repository: ich777/xonotic
 Requires: ''
 Sources:
 - https://www.xonotic.org/
 - https://hub.docker.com/r/ich777/xonotic/
+Tag: latest
 WebUI: ''
 caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/Xonotic.xml
-topPerforming: 0.183
-topTrending: -2.241

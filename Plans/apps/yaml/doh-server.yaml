@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Network-Other
 Config:
   Device: {}
@@ -44,20 +44,20 @@ ExtraParams: --restart=unless-stopped
 Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/DoH.png
 Keywords:
 - doh-server
-Name: DoH-Server
+- *id001
+Name: doh-server
 Network: bridge
 Networking:
   Mode: bridge
 Overview: "This is a simple DoH Server for Unraid.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://hub.docker.com/r/ich777/doh-server
 Registry: https://hub.docker.com/r/ich777/doh-server
 Repository: ich777/doh-server
 Requires: ''
 Sources:
 - https://hub.docker.com/r/ich777/doh-server
 - https://hub.docker.com/r/ich777/doh-server
+Tag: latest
 WebUI: ''
 caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/DoH-Server.xml
-topTrending: -5.361

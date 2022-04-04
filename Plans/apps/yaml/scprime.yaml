@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Cloud
 - Crypto
 Config:
@@ -82,6 +82,7 @@ ExtraParams: --restart unless-stopped
 Icon: https://raw.githubusercontent.com/rythmik/docker-templates/main/rythmik/images/scprime-icon.png
 Keywords:
 - scprime
+- *id001
 Name: scprime
 Network: bridge
 Networking:
@@ -93,12 +94,11 @@ Overview: "ScPrime is a cryptocurrency project targeting public cloud services w
   \ redundancy.\r\n"
 PostArgs: -M gctwh
 Privileged: 'false'
-Project: https://scpri.me
 Registry: https://hub.docker.com/r/scprime/scprime
 Repository: scprime/scprime
 Requires: ''
 Sources:
 - https://scpri.me
 - https://hub.docker.com/r/scprime/scprime
-TemplateURL: https://raw.githubusercontent.com/rythmik/docker-templates/master/rythmik/scprime/scprime.xml
+Tag: latest
 WebUI: ''

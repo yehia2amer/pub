@@ -1,0 +1,43 @@
+env:
+  Enable Automatic Script Start: ''
+  Lidarr API Key: ''
+  Lidarr Remote Path Mapping: ''
+  Lidarr Url: ''
+  Music Album Type Filter: ''
+  Music Concurrency: ''
+  Music Download Bitrate: ''
+  Music Download Client ARL Token: ''
+  Music Download Format: ''
+  Music Download Mode: ''
+  Music Embedded Cover Quality: ''
+  Music File Permissions: ''
+  Music Folder Permissions: ''
+  Music Force Convert: ''
+  Music List Type: ''
+  Music Match Distance: ''
+  Music Post Process Threads: ''
+  Music Replaygain Tagging: ''
+  Music Require Quality: ''
+  Music Search Type: ''
+  Musicbrainz Mirror URL: ''
+  Musicbrainz Rate Limit: ''
+  Plex Library Name: ''
+  Plex Scan Notifications: ''
+  Plex Token: ''
+  Plex Url: ''
+  Script Interval: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: randomninjaatk/amd
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

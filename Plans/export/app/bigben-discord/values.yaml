@@ -1,0 +1,18 @@
+env:
+  BOT_TOKEN: ' '
+  DATABASE_URL: postgres://username:password@localhost:5432/database
+image:
+  pullPolicy: IfNotPresent
+  repository: kippenhof/bigbendiscord
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

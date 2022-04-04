@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Downloaders
 Config:
   Device: {}
@@ -197,18 +197,17 @@ ExtraParams: --restart unless-stopped
 Icon: https://raw.githubusercontent.com/DyonR/docker-templates/master/Icons/sabnzbdvpn/sabnzbdvpn-icon-256.png
 Keywords:
 - sabnzbdvpn
+- *id001
 Name: sabnzbdvpn
 Network: bridge
 Overview: Docker container which runs the SABnzbd while connecting to WireGuard or
   OpenVPN with iptables killswitch to prevent IP leakage when the tunnel goes down.
 Privileged: 'true'
-Project: https://github.com/sabnzbd/sabnzbd
 Registry: https://hub.docker.com/r/dyonr/sabnzbdvpn
 Repository: dyonr/sabnzbdvpn
 Requires: ''
 Sources:
 - https://github.com/sabnzbd/sabnzbd
 - https://hub.docker.com/r/dyonr/sabnzbdvpn
-TemplateURL: https://raw.githubusercontent.com/DyonR/docker-templates/master/Templates/sabnzbdvpn/sabnzbdvpn-template.xml
+Tag: latest
 WebUI: https://[IP]:[PORT:8443]/
-topTrending: -13.796000000000001

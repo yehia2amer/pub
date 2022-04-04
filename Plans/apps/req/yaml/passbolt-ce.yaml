@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Productivity
 - Security
 - Tools-Utilities
@@ -111,17 +111,17 @@ Config:
 Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/passbolt.png
 Keywords:
 - passbolt-ce
-Name: Passbolt-CE
+- *id001
+Name: passbolt-ce
 Network: bridge
 Overview: "DESCRIPTION\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/passbolt/passbolt_docker
 Registry: https://hub.docker.com/r/passbolt/passbolt/
-Repository: passbolt/passbolt:latest-ce
+Repository: passbolt/passbolt
 Requires: Database (MariaDB, MySQL)
 Sources:
 - https://github.com/passbolt/passbolt_docker
 - https://hub.docker.com/r/passbolt/passbolt/
-TemplateURL: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/master/templates/Passbolt-CE.xml
+Tag: latest-ce
 WebUI: https://[IP]:[PORT:443]

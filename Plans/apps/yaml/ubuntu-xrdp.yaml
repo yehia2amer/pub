@@ -1,6 +1,12 @@
 BindTime: 'true'
-CategoryList:
+CategoryList: &id001
 - Productivity
+Config:
+  Device: {}
+  Label: {}
+  Path: {}
+  Port: {}
+  Variable: {}
 Data:
   Volume:
   - ContainerDir: /home/ubuntu/.config
@@ -9,14 +15,11 @@ Data:
   - ContainerDir: /home/ubuntu/unraid
     HostDir: ''
     Mode: rw
-Environment:
-  Variable:
-    Name: ''
-    Value: ''
 Icon: https://findicons.com/files/icons/1008/quiet/256/ubuntu.png
 Keywords:
 - ubuntu-xrdp
-Name: Ubuntu-xrdp
+- *id001
+Name: ubuntu-xrdp
 Networking:
   Mode: bridge
   Publish:
@@ -37,7 +40,5 @@ Repository: snoopy86/desktop-dockers
 Requires: ''
 Sources:
 - https://registry.hub.docker.com/r/snoopy86/desktop-dockers/
-TemplateURL: https://raw.githubusercontent.com/snoopy86/docker-repo/master/snoopy/ubuntu-xrdp.xml
+Tag: latest
 WebUI: ''
-topPerforming: 0.857
-topTrending: -0.484

@@ -1,0 +1,21 @@
+env:
+  Disable IPv6: '0'
+  EMAIL: ''
+  Enable additional variables: '0'
+  OR_PORT: '9393'
+  PT_PORT: '9292'
+image:
+  pullPolicy: IfNotPresent
+  repository: thetorproject/obfs4-bridge
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

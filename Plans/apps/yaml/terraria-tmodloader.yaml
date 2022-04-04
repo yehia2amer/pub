@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - GameServers
 Config:
   Device: {}
@@ -90,7 +90,8 @@ ExtraParams: --restart=unless-stopped
 Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/terraria-tmodloader.png
 Keywords:
 - terraria-tmodloader
-Name: Terraria-tModloader
+- *id001
+Name: terraria-tmodloader
 Network: bridge
 Networking:
   Mode: bridge
@@ -98,14 +99,12 @@ Overview: "This Docker will download and install Terraria and the tModloader and
   \ it. SERVER PASSWORD: Docker\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://tmodloader.net//
 Registry: https://hub.docker.com/r/ich777/terrariaserver
-Repository: ich777/terrariaserver:tmodloader
+Repository: ich777/terrariaserver
 Requires: ''
 Sources:
 - https://tmodloader.net//
 - https://hub.docker.com/r/ich777/terrariaserver
+Tag: tmodloader
 WebUI: http://[IP]:[PORT:8080]/
 caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/Terraria-tModloader.xml
-topPerforming: 1.873
-topTrending: -2.699

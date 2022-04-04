@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - MediaServer-Video
 - MediaServer-Music
 - MediaServer-Photos
@@ -66,7 +66,8 @@ Config:
 Icon: https://www.universalmediaserver.com/assets/img/logo.png
 Keywords:
 - universal-media-server
-Name: Universal-Media-Server
+- *id001
+Name: universal-media-server
 Network: bridge
 Networking:
   Mode: bridge
@@ -77,13 +78,11 @@ Overview: "Universal Media Server is a DLNA-compliant UPnP Media Server. It is c
   \ file-compatibility.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://www.universalmediaserver.com/
 Registry: https://hub.docker.com/r/universalmediaserver/ums
 Repository: universalmediaserver/ums
 Requires: ''
 Sources:
 - https://www.universalmediaserver.com/
 - https://hub.docker.com/r/universalmediaserver/ums
-TemplateURL: https://raw.githubusercontent.com/hussainalhaddad/docker-templates/master/Universal-Media-Server/Universal-Media-Server.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:9001]
-topTrending: -1.261

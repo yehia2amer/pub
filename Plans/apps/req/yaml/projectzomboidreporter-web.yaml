@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - GameServers
 Config:
   Device: {}
@@ -32,7 +32,8 @@ ExtraParams: --restart=always
 Icon: https://github.com/natcoso9955/unRAID-docker/raw/master/icons/projectzomboid-web.png
 Keywords:
 - projectzomboidreporter-web
-Name: ProjectZomboidReporter-Web
+- *id001
+Name: projectzomboidreporter-web
 Network: bridge
 Networking:
   Mode: bridge
@@ -41,12 +42,11 @@ Overview: "This is an nginx server with a custom conf applied. It will grab comb
   \n"
 PostArgs: ''
 Privileged: 'true'
-Project: https://github.com/ChrisAshtear/Zomboid-Server-Stats-Reporter/
 Registry: https://hub.docker.com/r/chrisashtear/zomboid-reporter-nginx/
 Repository: chrisashtear/zomboid-reporter-nginx
 Requires: ProjectZomboidReporter-API<br>  ProjectZomboidReporter-Frontend
 Sources:
 - https://github.com/ChrisAshtear/Zomboid-Server-Stats-Reporter/
 - https://hub.docker.com/r/chrisashtear/zomboid-reporter-nginx/
-TemplateURL: https://raw.githubusercontent.com/natcoso9955/unRAID-docker/master/ProjectZomboidReporter-Web_unraid.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:80]/

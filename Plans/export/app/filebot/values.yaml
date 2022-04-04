@@ -1,0 +1,45 @@
+env:
+  'Automated Media Center: Action': ''
+  'Automated Media Center: Anime Format': ''
+  'Automated Media Center: Artwork': ''
+  'Automated Media Center: Conflict Resolution': ''
+  'Automated Media Center: Custom Options': ''
+  'Automated Media Center: Input Directory': ''
+  'Automated Media Center: Input Stable Time': ''
+  'Automated Media Center: Install Packages': ''
+  'Automated Media Center: Interval': ''
+  'Automated Media Center: Language': ''
+  'Automated Media Center: Match Mode': ''
+  'Automated Media Center: Movie Format': ''
+  'Automated Media Center: Music Format': ''
+  'Automated Media Center: Output Directory': ''
+  'Automated Media Center: Process Music': ''
+  'Automated Media Center: Subtitle Languages': ''
+  'Automated Media Center: TV Series Format': ''
+  Custom Options: ''
+  Display Height: ''
+  Display Width: ''
+  Extra x11vnc Options: ''
+  Group ID: ''
+  Niceness (priority): ''
+  OpenSubtitles Password: ''
+  OpenSubtitles Username: ''
+  Secure Connection: ''
+  Umask: ''
+  Use FileBot Beta Version: ''
+  User ID: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: jlesage/filebot
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

@@ -1,0 +1,17 @@
+env:
+  bootstrapChecks: 'true'
+image:
+  pullPolicy: IfNotPresent
+  repository: sonarqube
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

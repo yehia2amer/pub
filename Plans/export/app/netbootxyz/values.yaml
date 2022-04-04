@@ -1,0 +1,20 @@
+env:
+  MENU_VERSION: ''
+  PORT_RANGE: ''
+  SUBFOLDER: ''
+  UMASK: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: lscr.io/linuxserver/netbootxyz
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

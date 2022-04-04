@@ -1,0 +1,24 @@
+env:
+  Accept EULA: 'false'
+  Extra Game Parameters: ''
+  Extra JVM Parameters: ''
+  Game version: latest
+  Runtime Name: jre17
+  Serverfile name: server
+  XMS Size: '1024'
+  XMX Size: '1024'
+image:
+  pullPolicy: IfNotPresent
+  repository: ich777/minecraftbasicserver
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

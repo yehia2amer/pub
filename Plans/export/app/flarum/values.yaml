@@ -1,0 +1,26 @@
+env:
+  DB_HOST: ''
+  DB_NAME: flarum
+  DB_PASSWORD: password
+  DB_PORT: '3306'
+  DB_USER: flarum
+  FLARUM_BASE_URL: http://<IP>:8000
+  FLARUM_FORUM_TITLE: Flarum Dockerized
+  MEMORY_LIMIT: 256M
+  OPCACHE_MEM_SIZE: '128'
+  UPLOAD_MAX_SIZE: 16M
+image:
+  pullPolicy: IfNotPresent
+  repository: crazymax/flarum
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

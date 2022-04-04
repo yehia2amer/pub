@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Cloud
 - MediaApp-Video
 - MediaApp-Music
@@ -106,19 +106,19 @@ Config:
 Icon: https://www.filerun.com/images/logo.png
 Keywords:
 - filerun-ofi
-Name: Filerun-ofi
+- *id001
+Name: filerun-ofi
 Network: bridge
 Overview: FileRun is a self-hosted Google Drive alternative. It is a full featured
   web based file manager with an easy to use user interface. It is great for managing
   your photo, movie, audio collection, or sharing files with your family and friends.
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/filerun
 Registry: https://hub.docker.com/r/filerun/filerun
-Repository: filerun/filerun:latest
+Repository: filerun/filerun
 Requires: A DataBase
 Sources:
 - https://github.com/filerun
 - https://hub.docker.com/r/filerun/filerun
-TemplateURL: https://raw.githubusercontent.com/ItJustFox/unraidtemplate/master/filerun/filerun.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:80]

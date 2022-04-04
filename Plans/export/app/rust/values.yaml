@@ -1,0 +1,25 @@
+env:
+  Enable Oxide Mod: ''
+  GAME_ID: '258550'
+  GAME_PORT: '28015'
+  Game Parameters: +server.maxplayers 10
+  Server Description: Simple Unraid Rust Docker Server
+  Server Name: RustDockerServer
+  Steam-Password: ''
+  Steam-Username: ''
+  Validate Installation: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: ich777/steamcmd
+  tag: rust
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

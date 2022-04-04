@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Productivity
 - Other
 Config:
@@ -43,7 +43,8 @@ Config:
 Icon: https://raw.githubusercontent.com/xthursdayx/docker-templates/master/xthursdayx/images/searxng-icon.png
 Keywords:
 - searxng
-Name: SearXNG
+- *id001
+Name: searxng
 Network: bridge
 Networking:
   Mode: bridge
@@ -53,14 +54,11 @@ Overview: "SearXNG is a free internet metasearch engine which aggregates results
   \ SearXNG can be used over Tor for online anonymity.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/searxng/searxng
 Registry: https://hub.docker.com/r/searxng/searxng
 Repository: searxng/searxng
 Requires: ''
 Sources:
 - https://github.com/searxng/searxng
 - https://hub.docker.com/r/searxng/searxng
-TemplateURL: https://raw.githubusercontent.com/xthursdayx/docker-templates/master/xthursdayx/searxng.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:8080]/
-topPerforming: 14.825
-topTrending: -30.868

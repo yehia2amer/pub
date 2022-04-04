@@ -1,0 +1,21 @@
+env:
+  NEKO_EPR: 52000-52100
+  NEKO_NAT1TO1: 192.168.1.x
+  NEKO_PASSWORD: ChangeMePls-<3
+  NEKO_PASSWORD_ADMIN: ChangeMeAlsoPls_:)
+  NEKO_SCREEN: 1920x1080@30
+image:
+  pullPolicy: IfNotPresent
+  repository: m1k1o/neko
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

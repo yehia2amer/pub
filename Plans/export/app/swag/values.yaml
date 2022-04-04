@@ -1,0 +1,28 @@
+env:
+  CERTPROVIDER: ''
+  DNSPLUGIN: ''
+  DUCKDNSTOKEN: ''
+  EMAIL: ''
+  EXTRA_DOMAINS: ''
+  ONLY_SUBDOMAINS: ''
+  PROPAGATION: ''
+  STAGING: ''
+  SUBDOMAINS: ''
+  UMASK: ''
+  URL: ''
+  VALIDATION: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: lscr.io/linuxserver/swag
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

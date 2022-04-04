@@ -1,25 +1,15 @@
-CategoryList:
+CategoryList: &id001
 - Other
 Config:
   Device: {}
   Label: {}
   Path: {}
-  Port:
-    port:
-      Default: ''
-      Description: ''
-      Display: always
-      Mask: 'false'
-      Mode: tcp
-      Name: port
-      Required: 'false'
-      Target: '8080'
-      Type: Port
-      value: '9100'
+  Port: {}
   Variable: {}
 Icon: https://raw.githubusercontent.com/SpaceinvaderOne/Docker-Templates-Unraid/master/spaceinvaderone/docker_icons/log4_vun_icon.png
 Keywords:
 - log4j-testing-vulnerable
+- *id001
 Name: log4j-testing-vulnerable
 Network: bridge
 Overview: A testing container vulerable to log4j. This is to be used with the log4j-scan
@@ -31,5 +21,5 @@ Repository: spaceinvaderone/log4shell-testing-vulnerable
 Requires: ''
 Sources:
 - https://registry.hub.docker.com/r/spaceinvaderone/log4shell-testing-vulnerable
-TemplateURL: https://raw.githubusercontent.com/SpaceinvaderOne/Docker-Templates-Unraid/master/spaceinvaderone/log4j-testing-vulnerable.xml
+Tag: latest
 WebUI: ''

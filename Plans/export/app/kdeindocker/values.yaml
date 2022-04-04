@@ -1,0 +1,23 @@
+env:
+  PAGE_TITLE: KID
+  PATH_PREFIX: /
+  RECON_DELAY: '20'
+  ROOT_PASSWORD: admin
+  SCR_HEIGHT: '900'
+  SCR_WIDTH: '1600'
+  VNC_RESIZE: scale
+image:
+  pullPolicy: IfNotPresent
+  repository: msjpq/firefox-vnc
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

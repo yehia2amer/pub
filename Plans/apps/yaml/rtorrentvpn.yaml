@@ -1,6 +1,81 @@
 BindTime: 'true'
-CategoryList:
+CategoryList: &id001
 - Downloaders
+Config:
+  Device: {}
+  Label: {}
+  Path: {}
+  Port: {}
+  Variable:
+    DEBUG:
+      Name: DEBUG
+      value: 'false'
+    ENABLE_AUTODL_IRSSI:
+      Name: ENABLE_AUTODL_IRSSI
+      value: 'no'
+    ENABLE_PRIVOXY:
+      Name: ENABLE_PRIVOXY
+      value: 'no'
+    ENABLE_RPC2:
+      Name: ENABLE_RPC2
+      value: 'yes'
+    ENABLE_RPC2_AUTH:
+      Name: ENABLE_RPC2_AUTH
+      value: 'yes'
+    ENABLE_WEBUI_AUTH:
+      Name: ENABLE_WEBUI_AUTH
+      value: 'yes'
+    LAN_NETWORK:
+      Name: LAN_NETWORK
+      value: 192.168.1.0/24
+    NAME_SERVERS:
+      Name: NAME_SERVERS
+      value: 84.200.69.80,37.235.1.174,1.1.1.1,37.235.1.177,84.200.70.40,1.0.0.1
+    PHP_TZ:
+      Name: PHP_TZ
+      value: UTC
+    RPC2_PASS:
+      Name: RPC2_PASS
+      value: ''
+    RPC2_USER:
+      Name: RPC2_USER
+      value: admin
+    STRICT_PORT_FORWARD:
+      Name: STRICT_PORT_FORWARD
+      value: 'yes'
+    UMASK:
+      Name: UMASK
+      value: '000'
+    VPN_CLIENT:
+      Name: VPN_CLIENT
+      value: openvpn|wireguard
+    VPN_ENABLED:
+      Name: VPN_ENABLED
+      value: 'yes'
+    VPN_INPUT_PORTS:
+      Name: VPN_INPUT_PORTS
+      value: ''
+    VPN_OPTIONS:
+      Name: VPN_OPTIONS
+      value: ''
+    VPN_OUTPUT_PORTS:
+      Name: VPN_OUTPUT_PORTS
+      value: ''
+    VPN_PASS:
+      Name: VPN_PASS
+      value: vpn password
+    VPN_PROV:
+      Name: VPN_PROV
+      value: pia|airvpn|custom
+    VPN_USER:
+      Name: VPN_USER
+      value: vpn username
+    WEBUI_PASS:
+      Name: WEBUI_PASS
+      value: ''
+    WEBUI_USER:
+      Name: WEBUI_USER
+      value: admin
 Data:
   Volume:
   - ContainerDir: /config
@@ -9,64 +84,13 @@ Data:
   - ContainerDir: /data
     HostDir: /mnt/user/appdata/data
     Mode: rw
-Environment:
-  Variable:
-  - Name: VPN_ENABLED
-    Value: 'yes'
-  - Name: VPN_USER
-    Value: vpn username
-  - Name: VPN_PASS
-    Value: vpn password
-  - Name: VPN_PROV
-    Value: pia|airvpn|custom
-  - Name: VPN_CLIENT
-    Value: openvpn|wireguard
-  - Name: VPN_OPTIONS
-    Value: ''
-  - Name: STRICT_PORT_FORWARD
-    Value: 'yes'
-  - Name: ENABLE_PRIVOXY
-    Value: 'no'
-  - Name: ENABLE_AUTODL_IRSSI
-    Value: 'no'
-  - Name: ENABLE_RPC2
-    Value: 'yes'
-  - Name: ENABLE_RPC2_AUTH
-    Value: 'yes'
-  - Name: ENABLE_WEBUI_AUTH
-    Value: 'yes'
-  - Name: RPC2_USER
-    Value: admin
-  - Name: RPC2_PASS
-    Value: ''
-  - Name: WEBUI_USER
-    Value: admin
-  - Name: WEBUI_PASS
-    Value: ''
-  - Name: LAN_NETWORK
-    Value: 192.168.1.0/24
-  - Name: NAME_SERVERS
-    Value: 84.200.69.80,37.235.1.174,1.1.1.1,37.235.1.177,84.200.70.40,1.0.0.1
-  - Name: VPN_INPUT_PORTS
-    Value: ''
-  - Name: VPN_OUTPUT_PORTS
-    Value: ''
-  - Name: DEBUG
-    Value: 'false'
-  - Name: PHP_TZ
-    Value: UTC
-  - Name: UMASK
-    Value: '000'
-  - Name: PUID
-    Value: '99'
-  - Name: PGID
-    Value: '100'
 ExtraParams: --sysctl="net.ipv4.conf.all.src_valid_mark=1"
 GitHub: https://github.com/binhex/arch-rtorrentvpn
 Icon: https://raw.githubusercontent.com/binhex/docker-templates/master/binhex/images/rtorrent-icon.png
 Keywords:
 - rtorrentvpn
-Name: binhex-rtorrentvpn
+- *id001
+Name: rtorrentvpn
 Networking:
   Mode: bridge
   Publish:
@@ -93,15 +117,12 @@ Overview: 'rTorrent is a quick and efficient BitTorrent client that uses, and is
 
   '
 Privileged: 'true'
-Project: https://github.com/rakshasa/rtorrent
-ReadMe: https://github.com/binhex/documentation
 Registry: https://registry.hub.docker.com/r/binhex/arch-rtorrentvpn/
 Repository: binhex/arch-rtorrentvpn
 Requires: ''
 Sources:
 - https://github.com/rakshasa/rtorrent
 - https://registry.hub.docker.com/r/binhex/arch-rtorrentvpn/
-TemplateURL: https://raw.githubusercontent.com/binhex/docker-templates/master/binhex/rtorrentvpn.xml
+- https://github.com/binhex/documentation
+Tag: latest
 WebUI: http://[IP]:[PORT:9080]/
-topPerforming: 1.024
-topTrending: -2.906

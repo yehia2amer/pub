@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - GameServers
 Config:
   Device: {}
@@ -170,7 +170,8 @@ ExtraParams: --restart=unless-stopped
 Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/redm.png
 Keywords:
 - redm
-Name: RedM
+- *id001
+Name: redm
 Network: bridge
 Networking:
   Mode: bridge
@@ -184,12 +185,11 @@ Overview: "With this Docker you can run RedM (Red Dead Redemption 2 MOD SERVER) 
   \ here: https://keymaster.fivem.net/) and your prefered Server Name.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://redm.gg/
 Registry: https://hub.docker.com/r/ich777/redmserver/
 Repository: ich777/redmserver
 Requires: ''
 Sources:
 - https://redm.gg/
 - https://hub.docker.com/r/ich777/redmserver/
-TemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/RedM.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:8080]/

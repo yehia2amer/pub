@@ -1,6 +1,6 @@
 CAComment: This template is set up to use a custom network. You may have to adjust
   the network or IP address etc to match your system
-CategoryList:
+CategoryList: &id001
 - MediaServer-Video
 - MediaServer-Music
 - MediaServer-Books
@@ -115,7 +115,8 @@ Config:
 Icon: https://i.imgur.com/Pcals31.png
 Keywords:
 - serviio
-Name: Serviio
+- *id001
+Name: serviio
 Network: ibraproxy
 Networking:
   Mode: ibraproxy
@@ -123,14 +124,11 @@ Overview: "Serviio is a freeware media server designed to let users stream music
   \ video, or image files to DLNA compliant televisions, Blu-ray players, game consoles,\
   \ and Android or Windows Mobile devices on a home network.\r\n"
 Privileged: 'false'
-Project: https://serviio.org/
 Registry: https://hub.docker.com/r/riftbit/serviio
 Repository: riftbit/serviio
 Requires: ''
 Sources:
 - https://serviio.org/
 - https://hub.docker.com/r/riftbit/serviio
-TemplateURL: https://raw.githubusercontent.com/ibracorp/unraid-templates/master/serviio/serviio.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:23423]/console
-topPerforming: 0.279
-topTrending: -0.8330000000000001

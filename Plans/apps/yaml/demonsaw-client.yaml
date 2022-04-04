@@ -1,7 +1,13 @@
 Beta: 'true'
 BindTime: 'true'
-CategoryList:
+CategoryList: &id001
 - Other
+Config:
+  Device: {}
+  Label: {}
+  Path: {}
+  Port: {}
+  Variable: {}
 Data:
   Volume:
   - ContainerDir: /nobody/share
@@ -14,7 +20,8 @@ GitHub: https://github.com/miketweaver/demonsaw-client
 Icon: https://cdn.rawgit.com/miketweaver/demonsaw-client/master/Demonsaw-Logo-with-text.png
 Keywords:
 - demonsaw-client
-Name: DemonSaw-Client
+- *id001
+Name: demonsaw-client
 Networking:
   Mode: bridge
   Publish:
@@ -29,6 +36,5 @@ Repository: bashninja/demonsaw-client
 Requires: ''
 Sources:
 - https://hub.docker.com/r/bashninja/demonsaw-client/
-TemplateURL: https://raw.githubusercontent.com/miketweaver/docker-templates/master/bashninja/demonsaw-client.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:8080]
-topTrending: -0.897

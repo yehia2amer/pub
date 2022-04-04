@@ -1,0 +1,19 @@
+env:
+  Frigate RTSP Password: enterpassword
+  NVIDIA_DRIVER_CAPABILITIES: compute,utility,video
+  NVIDIA_VISIBLE_DEVICES: YOUR-GPU-UUID
+image:
+  pullPolicy: IfNotPresent
+  repository: blakeblackshear/frigate
+  tag: stable-amd64nvidia
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

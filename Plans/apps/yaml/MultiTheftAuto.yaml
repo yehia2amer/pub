@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - GameServers
 Config:
   Device: {}
@@ -135,7 +135,8 @@ ExtraParams: --restart=unless-stopped
 Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/mta.png
 Keywords:
 - multitheftauto
-Name: MultiTheftAuto
+- *id001
+Name: multitheftauto
 Network: bridge
 Networking:
   Mode: bridge
@@ -143,12 +144,12 @@ Overview: "This Docker will download and install Multi Theft Auto SERVERNAME: Do
   \ MTA Server SERVERPASSWORD: Docker.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://www.minecraft.net/
 Registry: https://hub.docker.com/r/ich777/mtaserver/
 Repository: ich777/mtaserver
 Requires: ''
 Sources:
 - https://www.minecraft.net/
 - https://hub.docker.com/r/ich777/mtaserver/
+Tag: latest
 WebUI: http://[IP]:[PORT:22005]/
 caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/MultiTheftAuto.xml

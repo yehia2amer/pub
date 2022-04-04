@@ -1,24 +1,26 @@
 BindTime: 'true'
-CategoryList:
+CategoryList: &id001
 - MediaApp
+Config:
+  Device: {}
+  Label: {}
+  Path: {}
+  Port: {}
+  Variable:
+    UMASK:
+      Name: UMASK
+      value: '000'
 Data:
   Volume:
     ContainerDir: /config
     HostDir: path to config
     Mode: rw
-Environment:
-  Variable:
-  - Name: UMASK
-    Value: '000'
-  - Name: PUID
-    Value: '99'
-  - Name: PGID
-    Value: '100'
 GitHub: https://github.com/jcreynolds/docker-templates
 Icon: https://github.com/d8ahazard/Phlex/raw/master/img/android-icon-144x144.png
 Keywords:
 - flextv
-Name: FlexTV
+- *id001
+Name: flextv
 Networking:
   Mode: bridge
   Publish:
@@ -31,13 +33,11 @@ Networking:
       Protocol: tcp
 Overview: A super-sexy voice interface for the Plex HTPC.
 Privileged: 'false'
-Project: https://github.com/d8ahazard/FlexTV
 Registry: https://registry.hub.docker.com/r/jcreynolds/flextv/
 Repository: jcreynolds/flextv
 Requires: ''
 Sources:
 - https://github.com/d8ahazard/FlexTV
 - https://registry.hub.docker.com/r/jcreynolds/flextv/
-TemplateURL: https://raw.githubusercontent.com/jcreynolds/docker-templates/master/FlexTV.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:80]
-topTrending: -11.367

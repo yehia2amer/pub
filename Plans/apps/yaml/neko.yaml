@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - MediaApp-Video
 Config:
   Device: {}
@@ -87,6 +87,7 @@ ExtraParams: --shm-size="2gb"
 Icon: https://raw.githubusercontent.com/Kippenhof/docker-templates/main/pictures/neko-logo.svg
 Keywords:
 - neko
+- *id001
 Name: neko
 Network: bridge
 Networking:
@@ -96,11 +97,9 @@ Overview: "Neko is an Open-Source self-hosted Alternative to rabb.it(deprecated)
 PostArgs: ''
 Privileged: 'false'
 Registry: https://hub.docker.com/r/m1k1o/neko/
-Repository: m1k1o/neko:latest
+Repository: m1k1o/neko
 Requires: ''
 Sources:
 - https://hub.docker.com/r/m1k1o/neko/
-TemplateURL: https://raw.githubusercontent.com/Kippenhof/docker-templates/master/neko.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:8080]
-topPerforming: 10.431
-topTrending: -9.477000000000002

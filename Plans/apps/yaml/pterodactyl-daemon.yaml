@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - GameServers
 - Network-Management
 Config:
@@ -77,6 +77,7 @@ ExtraParams: --privileged=true --restart=unless-stopped
 Icon: https://raw.githubusercontent.com/ibracorp/unraid-templates/master/icons/pterodactyl-panel.png
 Keywords:
 - pterodactyl-daemon
+- *id001
 Name: pterodactyl-daemon
 Network: bridge
 Networking:
@@ -87,14 +88,11 @@ Overview: "Pterodactyl is an open-source game server management panel built with
   \ users.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://pterodactyl.io/
 Registry: https://hub.docker.com/r/ccarney16/pterodactyl-daemon
-Repository: ccarney16/pterodactyl-daemon:latest
+Repository: ccarney16/pterodactyl-daemon
 Requires: ''
 Sources:
 - https://pterodactyl.io/
 - https://hub.docker.com/r/ccarney16/pterodactyl-daemon
-TemplateURL: https://raw.githubusercontent.com/ibracorp/unraid-templates/master/pterodactyl-daemon/pterodactyl-daemon.xml
+Tag: latest
 WebUI: ''
-topPerforming: 1.008
-topTrending: -0.22599999999999998

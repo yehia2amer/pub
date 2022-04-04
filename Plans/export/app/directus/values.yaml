@@ -1,0 +1,29 @@
+env:
+  Admin Email: ''
+  Admin Password: ''
+  Database: ''
+  Database Filename: ''
+  Database Host: ''
+  Database Name: ''
+  Database Password: ''
+  Database Port: ''
+  Database User: ''
+  KEY: ''
+  Postgres Connection String: ''
+  SECRET: ''
+  UMASK: '002'
+image:
+  pullPolicy: IfNotPresent
+  repository: directus/directus
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

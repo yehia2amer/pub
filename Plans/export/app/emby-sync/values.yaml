@@ -1,0 +1,19 @@
+env:
+  API Key: ''
+  Default room: ''
+  Emby server: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: lastelement21/emby-sync
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

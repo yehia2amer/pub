@@ -1,0 +1,19 @@
+env:
+  AUTH_METHOD: puredb
+  PASSIVE_PORT_RANGE: 30000:30009
+  SECURE_MODE: 'true'
+image:
+  pullPolicy: IfNotPresent
+  repository: crazymax/pure-ftpd
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

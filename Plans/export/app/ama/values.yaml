@@ -1,0 +1,44 @@
+env:
+  Album Type Filter: ''
+  Artist Fan Count: ''
+  Artist Related Count: ''
+  Complete My Artists: ''
+  Conversion Bitrate: ''
+  DL Client ARL Token: ''
+  Download Concurrency: ''
+  Download Mode: ''
+  Enable Automatic Script Start: ''
+  File Permissions: ''
+  Folder Permissions: ''
+  Force Convert: ''
+  Format: ''
+  Lidarr API Key: ''
+  Lidarr List Import: ''
+  Lidarr Url: ''
+  Music Embedded Cover Quality: ''
+  Music Post Process Threads: ''
+  Music Replaygain Tagging: ''
+  Music Require Quality: ''
+  Plex Library Name: ''
+  Plex Scan Notifications: ''
+  Plex Token: ''
+  Plex Url: ''
+  Related Artist: ''
+  Related Artist -> Related Artist (loop): ''
+  Remove Artsit Without Image: ''
+  Script Interval: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: randomninjaatk/ama
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

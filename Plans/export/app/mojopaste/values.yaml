@@ -1,0 +1,17 @@
+env:
+  PASTE_ENABLE_CHARTS: '0'
+image:
+  pullPolicy: IfNotPresent
+  repository: jhthorsen/mojopaste
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

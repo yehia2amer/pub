@@ -1,0 +1,21 @@
+env:
+  GitHub Client ID: ''
+  GitHub Client Secret: ''
+  Host: ''
+  Protocol: ''
+  Shared Secret: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: drone/drone
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

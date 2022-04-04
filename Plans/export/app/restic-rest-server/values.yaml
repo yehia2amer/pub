@@ -1,0 +1,17 @@
+env:
+  Additional rest-server options: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: restic/rest-server
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

@@ -1,27 +1,17 @@
-CategoryList:
+CategoryList: &id001
 - Productivity
 - Tools-Utilities
 Config:
   Device: {}
   Label: {}
-  Path:
-    Appdata:
-      Default: ''
-      Description: 'Container Path: /usr/src/app/config/'
-      Display: always
-      Mask: 'false'
-      Mode: rw
-      Name: Appdata
-      Required: 'false'
-      Target: /usr/src/app/config/
-      Type: Path
-      value: /mnt/user/appdata/cachet-url-monitor/
+  Path: {}
   Port: {}
   Variable: {}
 Icon: https://i.imgur.com/dSBbxqj.png
 Keywords:
 - cachet-url-monitor
-Name: Cachet-URL-Monitor
+- *id001
+Name: cachet-url-monitor
 Network: bridge
 Networking:
   Mode: bridge
@@ -30,14 +20,11 @@ Overview: Python plugin for cachet that monitors an URL, verifying it's response
   applied to the request response. Check the Docker Hub link for instructions. IBRACORP
   video (on YouTube) will be out soon, too.
 Privileged: 'false'
-Project: https://pypi.python.org/pypi/cachet-url-monitor
 Registry: https://hub.docker.com/r/mtakaki/cachet-url-monitor
 Repository: mtakaki/cachet-url-monitor
 Requires: ''
 Sources:
 - https://pypi.python.org/pypi/cachet-url-monitor
 - https://hub.docker.com/r/mtakaki/cachet-url-monitor
-TemplateURL: https://raw.githubusercontent.com/ibracorp/unraid-templates/master/cachet-url-monitor/cachet-url-monitor.xml
+Tag: latest
 WebUI: ''
-topPerforming: 0.306
-topTrending: -1.6059999999999999

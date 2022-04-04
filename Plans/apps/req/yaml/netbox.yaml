@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Tools-Utilities
 - Network-Management
 Config:
@@ -87,6 +87,7 @@ Config:
 Icon: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/netbox.png
 Keywords:
 - netbox
+- *id001
 Name: netbox
 Network: bridge
 Overview: IP address management (IPAM) and data center infrastructure management (DCIM)
@@ -94,14 +95,11 @@ Overview: IP address management (IPAM) and data center infrastructure management
   Postgres required
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/netbox-community/netbox
 Registry: https://hub.docker.com/r/pitkley/netbox
-Repository: pitkley/netbox:latest
+Repository: pitkley/netbox
 Requires: Postgres container installed
 Sources:
 - https://github.com/netbox-community/netbox
 - https://hub.docker.com/r/pitkley/netbox
-TemplateURL: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/netbox.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:8000]/
-topPerforming: 0.158
-topTrending: -0.252

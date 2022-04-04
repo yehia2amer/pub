@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Tools-Utilities
 Config:
   Device: {}
@@ -119,6 +119,7 @@ Config:
 Icon: https://www.mirantis.com/wp-content/uploads/2017/02/image01.png
 Keywords:
 - salt4unraid
+- *id001
 Name: salt4unraid
 Network: bridge
 Networking:
@@ -127,12 +128,11 @@ Overview: Salt is an orchestration and remote execution tool for linux, MacOs an
   Windows systems.
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/lubeda/salt4gui
 Registry: https://hub.docker.com/repository/docker/lubeda/salt4unraid
 Repository: lubeda/salt4unraid
 Requires: ''
 Sources:
 - https://github.com/lubeda/salt4gui
 - https://hub.docker.com/repository/docker/lubeda/salt4unraid
-TemplateURL: https://raw.githubusercontent.com/lubeda/unraid-templates/master/salt4unraid/template.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:3333]

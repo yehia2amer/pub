@@ -1,0 +1,19 @@
+env:
+  Miner Host: unraid.local
+  Miner Port: '5450'
+  Server Name: Unraid
+image:
+  pullPolicy: IfNotPresent
+  repository: lnxd/phoenixstats
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

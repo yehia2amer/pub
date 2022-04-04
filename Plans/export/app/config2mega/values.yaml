@@ -1,0 +1,19 @@
+env:
+  Email: ''
+  Password: ''
+  Remote Folder: Unraid/flash/config
+image:
+  pullPolicy: IfNotPresent
+  repository: hussainalhaddad/config2mega
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

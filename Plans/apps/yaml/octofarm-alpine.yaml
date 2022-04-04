@@ -3,7 +3,7 @@ Branch:
   TagDescription: Latest stable release of OctoFarm.
 - Tag: alpine-dev
   TagDescription: Latest semi-stable development release of OctoFarm. Use with caution!
-CategoryList:
+CategoryList: &id001
 - Tools-Utilities
 Config:
   Device: {}
@@ -69,7 +69,8 @@ Config:
 Icon: https://github.com/NotExpectedYet/OctoFarm/raw/master/views/android-chrome-512x512.png
 Keywords:
 - octofarm-alpine
-Name: OctoFarm-Alpine
+- *id001
+Name: octofarm-alpine
 Network: bridge
 Networking:
   Mode: bridge
@@ -79,14 +80,11 @@ Overview: 'OctoFarm is a web server and client combination for unifying multiple
   '
 PostArgs: ''
 Privileged: 'false'
-Project: https://octofarm.net/
 Registry: https://hub.docker.com/r/octofarm/octofarm/
-Repository: octofarm/octofarm:alpine-latest
+Repository: octofarm/octofarm
 Requires: ''
 Sources:
 - https://octofarm.net/
 - https://hub.docker.com/r/octofarm/octofarm/
-TemplateURL: https://raw.githubusercontent.com/NotExpectedYet/OctoFarm-UnRaid-Template/master/octofarm/octofarm-alpine.xml
+Tag: alpine-latest
 WebUI: http://[IP]:[PORT:4000]
-topPerforming: 1.422
-topTrending: -14.762

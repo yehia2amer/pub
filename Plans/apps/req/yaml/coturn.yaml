@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Network-Voip
 Config:
   Device: {}
@@ -75,6 +75,7 @@ Config:
 Icon: https://raw.githubusercontent.com/xthursdayx/docker-templates/master/xthursdayx/images/webrtc-icon.png
 Keywords:
 - coturn
+- *id001
 Name: coturn
 Network: host
 Networking:
@@ -83,14 +84,11 @@ Overview: Coturn TURN Server is a VoIP media traffic NAT traversal server and ga
   It can be used as a general-purpose network traffic TURN server and gateway, too.
 PostArgs: -c /coturn/turnserver.conf
 Privileged: 'false'
-Project: https://github.com/coturn/coturn
 Registry: https://hub.docker.com/r/instrumentisto/coturn/
 Repository: instrumentisto/coturn
 Requires: ' App uses hostnetworking (autoadd)'
 Sources:
 - https://github.com/coturn/coturn
 - https://hub.docker.com/r/instrumentisto/coturn/
-TemplateURL: https://raw.githubusercontent.com/xthursdayx/docker-templates/master/xthursdayx/coturn.xml
+Tag: latest
 WebUI: ''
-topPerforming: 0.181
-topTrending: -3.725

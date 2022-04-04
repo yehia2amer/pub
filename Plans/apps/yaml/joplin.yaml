@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Productivity
 Config:
   Device: {}
@@ -97,6 +97,7 @@ Config:
 Icon: https://github.com/Muwahhidun/logo/blob/main/joplin%20logo.png?raw=true
 Keywords:
 - joplin
+- *id001
 Name: joplin
 Network: bridge
 Networking:
@@ -106,12 +107,11 @@ Overview: "At this point, this server allows you to sync any Joplin client with 
   \ as you would do with Dropbox, OneDrive, etc.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://joplinapp.org/
 Registry: https://hub.docker.com/r/joplin/server
-Repository: joplin/server:latest
+Repository: joplin/server
 Requires: ''
 Sources:
 - https://joplinapp.org/
 - https://hub.docker.com/r/joplin/server
-TemplateURL: https://raw.githubusercontent.com/Muwahhidun/unraid-docker-templates/master/my-joplin.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:8443]

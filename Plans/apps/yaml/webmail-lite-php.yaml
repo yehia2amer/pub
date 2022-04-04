@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Cloud
 - Productivity
 - Network-Management
@@ -6,35 +6,23 @@ Config:
   Device: {}
   Label: {}
   Path: {}
-  Port:
-    WebUI:
-      Default: ''
-      Description: ''
-      Display: always
-      Mask: 'false'
-      Mode: tcp
-      Name: WebUI
-      Required: 'false'
-      Target: '80'
-      Type: Port
-      value: '80'
+  Port: {}
   Variable: {}
 Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/webmail-lite-files_200x200.png
 Keywords:
 - webmail-lite-php
-Name: Webmail-Lite-PHP
+- *id001
+Name: webmail-lite-php
 Network: bridge
 Official: true
 Overview: "DESCRIPTION\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/afterlogic/webmail-lite
 Registry: https://hub.docker.com/r/afterlogic/docker-webmail-lite
 Repository: afterlogic/docker-webmail-lite
 Requires: ''
 Sources:
 - https://github.com/afterlogic/webmail-lite
 - https://hub.docker.com/r/afterlogic/docker-webmail-lite
-TemplateURL: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/master/templates/Webmail-Lite-PHP.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:80]/
-topTrending: 1.11

@@ -1,0 +1,18 @@
+env:
+  Mono DB: mongodb://mongo:27017/rocketchat
+  Rocket.Chat URL: http://localhost:3000
+image:
+  pullPolicy: IfNotPresent
+  repository: library/rocket.chat
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

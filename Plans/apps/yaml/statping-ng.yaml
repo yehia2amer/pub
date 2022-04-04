@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Network-Web
 - Network-Management
 Config:
@@ -33,7 +33,8 @@ ExtraParams: --user 99:100
 Icon: https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/icons/statping.png
 Keywords:
 - statping-ng
-Name: Statping-ng
+- *id001
+Name: statping-ng
 Network: bridge
 Networking:
   Mode: bridge
@@ -41,13 +42,11 @@ Overview: "Statping-ng aims to be an updated drop-in replacement of statping aft
   \ development stopped on the original fork.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/statping-ng/statping-ng
 Registry: https://hub.docker.com/r/adamboutcher/statping-ng
 Repository: adamboutcher/statping-ng
 Requires: ''
 Sources:
 - https://github.com/statping-ng/statping-ng
 - https://hub.docker.com/r/adamboutcher/statping-ng
-TemplateURL: https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/statping-ng.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:8080]/
-topTrending: -2.4799999999999995

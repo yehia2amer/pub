@@ -1,0 +1,23 @@
+env:
+  GAME_ID: '232290'
+  GAME_NAME: dod
+  GAME_PARAMS: -secure +maxplayers 24 +map dod_kalt
+  GAME_PORT: '27015'
+  Steam-Password: ''
+  Steam-Username: ''
+  Validate Installation: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: ich777/steamcmd
+  tag: dods
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

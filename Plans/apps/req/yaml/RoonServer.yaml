@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - MediaServer-Music
 Config:
   Device: {}
@@ -54,7 +54,8 @@ ExtraParams: --restart unless-stopped
 Icon: https://raw.githubusercontent.com/xthursdayx/docker-templates/master/xthursdayx/images/roon-icon.png
 Keywords:
 - roonserver
-Name: RoonServer
+- *id001
+Name: roonserver
 Network: host
 Networking:
   Mode: host
@@ -65,14 +66,11 @@ Overview: "Docker image for running Roon Server. Roon Server is a software packa
   \ which provide control functionality."
 PostArgs: ''
 Privileged: 'false'
-Project: https://roonlabs.com/
 Registry: https://hub.docker.com/r/steefdebruijn/docker-roonserver/
 Repository: steefdebruijn/docker-roonserver
 Requires: ' App uses hostnetworking (autoadd)'
 Sources:
 - https://roonlabs.com/
 - https://hub.docker.com/r/steefdebruijn/docker-roonserver/
-TemplateURL: https://raw.githubusercontent.com/xthursdayx/docker-templates/master/xthursdayx/roonserver.xml
+Tag: latest
 WebUI: ''
-topPerforming: 2.858
-topTrending: -5.719999999999999

@@ -1,0 +1,24 @@
+env:
+  BEACON_PORT: '15000'
+  GAME_ID: '629800'
+  GAME_PARAMS: ''
+  GAME_PORT: '7777'
+  QUERY_PORT: '27015'
+  Steam-Password: ''
+  Steam-Username: ''
+  Validate Installation: 'false'
+image:
+  pullPolicy: IfNotPresent
+  repository: ich777/steamcmd
+  tag: mordhau
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

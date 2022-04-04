@@ -1,9 +1,14 @@
 BaseImage: linuxserver/lazylibrarian
 Beta: 'true'
 BindTime: 'true'
-CategoryList:
+CategoryList: &id001
 - MediaApp-Books
-ChangeLogPresent: true
+Config:
+  Device: {}
+  Label: {}
+  Path: {}
+  Port: {}
+  Variable: {}
 Data:
   Volume:
   - ContainerDir: /config
@@ -18,17 +23,10 @@ Data:
   - ContainerDir: /magazines
     HostDir: ''
     Mode: rw
-Environment:
-  Variable:
-  - Mode: ''
-    Name: PUID
-    Value: '99'
-  - Mode: ''
-    Name: PGID
-    Value: '100'
 Icon: https://raw.githubusercontent.com/thraxis/docker-templates/master/thraxis/img/lazylibrarian-calibre-icon.png
 Keywords:
 - lazylibrarian-calibre
+- *id001
 Name: lazylibrarian-calibre
 Networking:
   Mode: bridge
@@ -42,14 +40,11 @@ Overview: 'LazyLibrarian is a program to follow authors and grab metadata for al
 
   '
 Privileged: 'false'
-Project: https://github.com/DobyTang/LazyLibrarian/
 Registry: https://hub.docker.com/r/thraxis/lazylibrarian-calibre/
 Repository: thraxis/lazylibrarian-calibre
 Requires: ''
 Sources:
 - https://github.com/DobyTang/LazyLibrarian/
 - https://hub.docker.com/r/thraxis/lazylibrarian-calibre/
-TemplateURL: https://raw.githubusercontent.com/Thraxis/docker-templates/master/thraxis/lazylibrarian-calibre.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:5299]/
-topPerforming: 0.078
-topTrending: -0.8560000000000001

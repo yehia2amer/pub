@@ -1,0 +1,17 @@
+env:
+  APT Packages: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: ghcr.io/siwatinc/ubuntu-playground
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

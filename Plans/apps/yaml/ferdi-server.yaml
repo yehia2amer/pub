@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Network-Messenger
 Config:
   Device: {}
@@ -274,19 +274,18 @@ ExtraParams: --restart unless-stopped
 Icon: https://raw.githubusercontent.com/xthursdayx/docker-templates/master/xthursdayx/images/ferdi-icon.png
 Keywords:
 - ferdi-server
+- *id001
 Name: ferdi-server
 Network: bridge
 Overview: "Ferdi is a hard-fork of Franz, a messaging app for WhatsApp, Slack, Telegram,\
   \ HipChat, Hangouts and many many more.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/getferdi/server
 Registry: https://github.com/getferdi/ferdi-server
-Repository: getferdi/ferdi-server:latest
+Repository: getferdi/ferdi-server
 Requires: ''
 Sources:
 - https://github.com/getferdi/server
 - https://github.com/getferdi/ferdi-server
-TemplateURL: https://raw.githubusercontent.com/xthursdayx/docker-templates/master/xthursdayx/ferdi-server.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:3333]/
-topTrending: -1.5270000000000001

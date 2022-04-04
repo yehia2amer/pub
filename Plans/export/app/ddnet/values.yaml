@@ -1,0 +1,17 @@
+env:
+  ConfigFile: autoexec.cfg
+image:
+  pullPolicy: IfNotPresent
+  repository: ich777/ddnetserver
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

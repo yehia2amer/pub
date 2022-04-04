@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Productivity
 Config:
   Device: {}
@@ -31,7 +31,8 @@ Config:
 Icon: https://github.com/hussainalhaddad/docker-templates/raw/master/nocodb/logo.png
 Keywords:
 - nocodb
-Name: NocoDB
+- *id001
+Name: nocodb
 Network: bridge
 Networking:
   Mode: bridge
@@ -40,12 +41,11 @@ Overview: "NocoDB is an open source #NoCode platform that turns any database int
   \ a smart spreadsheet.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://www.nocodb.com/
 Registry: https://hub.docker.com/r/nocodb/nocodb
-Repository: nocodb/nocodb:latest
+Repository: nocodb/nocodb
 Requires: ''
 Sources:
 - https://www.nocodb.com/
 - https://hub.docker.com/r/nocodb/nocodb
-TemplateURL: https://raw.githubusercontent.com/hussainalhaddad/docker-templates/master/nocodb/nocodb.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:8080]

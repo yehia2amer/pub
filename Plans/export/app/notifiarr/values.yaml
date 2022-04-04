@@ -1,0 +1,21 @@
+env:
+  App Log File: ''
+  Notifiarr API Key: ''
+  Plex Token: ''
+  Plex URL: ''
+  Web Log File: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: golift/notifiarr
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

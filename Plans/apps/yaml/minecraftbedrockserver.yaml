@@ -1,40 +1,50 @@
 BindTime: 'true'
-CategoryList:
+CategoryList: &id001
 - GameServers
+Config:
+  Device: {}
+  Label: {}
+  Path: {}
+  Port: {}
+  Variable:
+    CREATE_BACKUP_HOURS:
+      Name: CREATE_BACKUP_HOURS
+      value: '12'
+    ENABLE_WEBUI_AUTH:
+      Name: ENABLE_WEBUI_AUTH
+      value: 'yes'
+    ENABLE_WEBUI_CONSOLE:
+      Name: ENABLE_WEBUI_CONSOLE
+      value: 'yes'
+    PURGE_BACKUP_DAYS:
+      Name: PURGE_BACKUP_DAYS
+      value: '14'
+    STARTUP_CMD:
+      Name: STARTUP_CMD
+      value: ''
+    UMASK:
+      Name: UMASK
+      value: '000'
+    WEBUI_CONSOLE_TITLE:
+      Name: WEBUI_CONSOLE_TITLE
+      value: Minecraft Bedrock
+    WEBUI_PASS:
+      Name: WEBUI_PASS
+      value: ''
+    WEBUI_USER:
+      Name: WEBUI_USER
+      value: admin
 Data:
   Volume:
     ContainerDir: /config
     HostDir: /mnt/user/appdata/config
     Mode: rw
-Environment:
-  Variable:
-  - Name: CREATE_BACKUP_HOURS
-    Value: '12'
-  - Name: PURGE_BACKUP_DAYS
-    Value: '14'
-  - Name: ENABLE_WEBUI_CONSOLE
-    Value: 'yes'
-  - Name: ENABLE_WEBUI_AUTH
-    Value: 'yes'
-  - Name: WEBUI_USER
-    Value: admin
-  - Name: WEBUI_PASS
-    Value: ''
-  - Name: WEBUI_CONSOLE_TITLE
-    Value: Minecraft Bedrock
-  - Name: STARTUP_CMD
-    Value: ''
-  - Name: UMASK
-    Value: '000'
-  - Name: PUID
-    Value: '99'
-  - Name: PGID
-    Value: '100'
 GitHub: https://github.com/binhex/arch-minecraftbedrockserver
 Icon: https://raw.githubusercontent.com/binhex/docker-templates/master/binhex/images/minecraftbedrockserver-icon.png
 Keywords:
 - minecraftbedrockserver
-Name: binhex-minecraftbedrockserver
+- *id001
+Name: minecraftbedrockserver
 Networking:
   Mode: bridge
   Publish:
@@ -63,15 +73,12 @@ Overview: "Minecraft is a sandbox video game created by Swedish game developer M
   \ must acquire resources to build the world and maintain health, and a creative\
   \ mode, where players have unlimited resources to build with."
 Privileged: 'false'
-Project: https://www.minecraft.net/en-us/download/server/bedrock
-ReadMe: https://github.com/binhex/documentation
 Registry: https://registry.hub.docker.com/r/binhex/arch-minecraftbedrockserver/
 Repository: binhex/arch-minecraftbedrockserver
 Requires: ''
 Sources:
 - https://www.minecraft.net/en-us/download/server/bedrock
 - https://registry.hub.docker.com/r/binhex/arch-minecraftbedrockserver/
-TemplateURL: https://raw.githubusercontent.com/binhex/docker-templates/master/binhex/minecraftbedrockserver.xml
+- https://github.com/binhex/documentation
+Tag: latest
 WebUI: http://[IP]:[PORT:8222]/
-topPerforming: 0.736
-topTrending: -5.892

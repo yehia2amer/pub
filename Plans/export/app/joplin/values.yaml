@@ -1,0 +1,23 @@
+env:
+  APP_BASE_URL: https://joplin.youdomain.ru
+  DB_CLIENT: pg
+  POSTGRES_DATABASE: joplin_db
+  POSTGRES_HOST: 192.168.1.7
+  POSTGRES_PASSWORD: joplin_password
+  POSTGRES_PORT: '5432'
+  POSTGRES_USER: joplin_user
+image:
+  pullPolicy: IfNotPresent
+  repository: joplin/server
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

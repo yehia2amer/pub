@@ -1,9 +1,8 @@
 BaseImage: quay.io/justcontainers/base-alpine
 Beta: 'true'
-CategoryList:
+CategoryList: &id001
 - Backup
 - Cloud
-ChangeLogPresent: true
 Config:
   Device: {}
   Label: {}
@@ -83,21 +82,19 @@ Config:
 Icon: https://raw.githubusercontent.com/tynor88/docker-templates/master/images/rclone_small.png
 Keywords:
 - rclone
-Name: Rclone
+- *id001
+Name: rclone
 Network: bridge
 Networking:
   Mode: bridge
 Overview: Docker for Rclone - a command line program to sync files and directories
   to and from various cloud services.
 Privileged: 'false'
-Project: http://rclone.org/
 Registry: https://hub.docker.com/r/tynor88/rclone/
-Repository: tynor88/rclone:dev
+Repository: tynor88/rclone
 Requires: ''
 Sources:
 - http://rclone.org/
 - https://hub.docker.com/r/tynor88/rclone/
-TemplateURL: https://raw.githubusercontent.com/tynor88/docker-templates/master/tynor88/rclone.xml
+Tag: dev
 WebUI: ''
-topPerforming: 0.246
-topTrending: 0.068

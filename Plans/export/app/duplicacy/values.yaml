@@ -1,0 +1,17 @@
+env:
+  UMASK: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: cr.hotio.dev/hotio/duplicacy
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

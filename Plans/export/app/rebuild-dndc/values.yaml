@@ -1,0 +1,26 @@
+env:
+  CRON Schedule: ''
+  Discord Webhook URL: ''
+  Enable Discord Notifications: ''
+  Master Container Connection Check: ''
+  Master Container Name: ''
+  Ping Count: ''
+  Ping IP: ''
+  Ping IP Alt: ''
+  Run on Startup: ''
+  Sleep Secs: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: eafxx/rebuild-dndc
+  tag: unraid-m
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

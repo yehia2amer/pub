@@ -1,0 +1,29 @@
+env:
+  OC_FILEPATH: /
+  OC_PASS: ''
+  OC_PROTO: https
+  OC_SERVER: ''
+  OC_URLPATH: /owncloud/
+  OC_USER: ''
+  OC_WEBDAV: remote.php/webdav
+  RUN_GID: '100'
+  RUN_INTERVAL: '30'
+  RUN_UID: '99'
+  SILENCE_OUTPUT: '1'
+  SYNC_HIDDEN: '0'
+  TRUST_SELFSIGN: '0'
+image:
+  pullPolicy: IfNotPresent
+  repository: dyonr/owncloud-client
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

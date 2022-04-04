@@ -1,0 +1,26 @@
+env:
+  DB_EMBEDDED: 'TRUE'
+  ENABLE_FAIL2BAN: 'FALSE'
+  ENABLE_SSL: 'FALSE'
+  ENABLE_XMPP: 'FALSE'
+  Flash Operator Panel: 'TRUE'
+  INSTALL_ADDITIONAL_MODULES: ''
+  RTP_FINISH: '20000'
+  RTP_START: '18000'
+  TLS_CERT: cert.pem
+  TLS_KEY: key.pem
+image:
+  pullPolicy: IfNotPresent
+  repository: tiredofit/freepbx
+  tag: 15-latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

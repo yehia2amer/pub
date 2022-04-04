@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - GameServers
 Config:
   Device: {}
@@ -214,7 +214,8 @@ ExtraParams: --restart=unless-stopped
 Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/atlas.png
 Keywords:
 - atlas
-Name: ATLAS
+- *id001
+Name: atlas
 Network: bridge
 Networking:
   Mode: bridge
@@ -223,12 +224,11 @@ Overview: "This Docker will download and install SteamCMD. It will also install 
   \ setup, you also can disable it in the variables below).\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://www.steampowered.com/
 Registry: https://hub.docker.com/r/ich777/steamcmd2/
-Repository: ich777/steamcmd:atlas
+Repository: ich777/steamcmd
 Requires: ''
 Sources:
 - https://www.steampowered.com/
 - https://hub.docker.com/r/ich777/steamcmd2/
-TemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/ATLAS.xml
+Tag: atlas
 WebUI: ''

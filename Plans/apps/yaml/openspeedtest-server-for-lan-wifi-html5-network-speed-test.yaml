@@ -1,27 +1,17 @@
-CategoryList:
+CategoryList: &id001
 - Tools-Utilities
 - Network-Web
 Config:
   Device: {}
   Label: {}
   Path: {}
-  Port:
-    port:
-      Default: ''
-      Description: "Access Your SpeedTest WEB GUI via\r\n http://Your-NAS-IP:3000 "
-      Display: always
-      Mask: 'false'
-      Mode: tcp
-      Name: port
-      Required: 'false'
-      Target: '3000'
-      Type: Port
-      value: '3000'
+  Port: {}
   Variable: {}
 Icon: https://raw.githubusercontent.com/openspeedtest/iocage-plugin-OpenSpeedTest-Server/master/openspeedtest.png
 Keywords:
 - openspeedtest-server-for-lan-wifi-html5-network-speed-test
-Name: OpenSpeedTest-Server-For-LAN-WiFI-HTML5-Network-Speed-Test
+- *id001
+Name: openspeedtest-server-for-lan-wifi-html5-network-speed-test
 Network: bridge
 Networking:
   Mode: bridge
@@ -29,14 +19,11 @@ Overview: "OpenSpeedTest-Server Plugin for UNRAID | HTML5 Network Performance Es
   \ Tool.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: http://openspeedtest.com/
 Registry: https://hub.docker.com/repository/docker/openspeedtest/latest
 Repository: openspeedtest/latest
 Requires: ''
 Sources:
 - http://openspeedtest.com/
 - https://hub.docker.com/repository/docker/openspeedtest/latest
-TemplateURL: https://raw.githubusercontent.com/openspeedtest/unraid-docker-plugin/master/openspeedtest-server.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:3000]
-topPerforming: 2.461
-topTrending: -5.138999999999999

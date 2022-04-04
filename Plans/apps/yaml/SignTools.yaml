@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Tools-Utilities
 Config:
   Device: {}
@@ -64,7 +64,8 @@ Config:
 Icon: https://raw.githubusercontent.com/SignTools/SignTools/master/img/logo.png
 Keywords:
 - signtools
-Name: SignTools
+- *id001
+Name: signtools
 Network: bridge
 Networking:
   Mode: proxy
@@ -73,12 +74,11 @@ Overview: "A self-hosted, cross-platform service to sign and install iOS apps, a
   \ without a computer.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/SignTools/SignTools
 Registry: https://hub.docker.com/r/signtools/signtools
 Repository: signtools/signtools
 Requires: ''
 Sources:
 - https://github.com/SignTools/SignTools
 - https://hub.docker.com/r/signtools/signtools
-TemplateURL: https://raw.githubusercontent.com/shaksiwnl/unraid-templates/master/ios-signer-service/ios-signer-service.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:8080]

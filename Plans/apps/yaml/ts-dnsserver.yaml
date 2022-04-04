@@ -1,6 +1,6 @@
 BaseImage: roxedus/base-alpine:latest
 Beta: 'true'
-CategoryList:
+CategoryList: &id001
 - Network-DNS
 Config:
   Device: {}
@@ -66,6 +66,7 @@ Config:
 Icon: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/Technitium.png
 Keywords:
 - ts-dnsserver
+- *id001
 Name: ts-dnsserver
 Network: bridge
 Overview: Technitium DNS Server is an open source tool that can be used for self hosting
@@ -74,7 +75,6 @@ Overview: Technitium DNS Server is an open source tool that can be used for self
   configuration and provides a user friendly web console accessible using any web
   browser.
 Privileged: 'false'
-Project: https://github.com/TechnitiumSoftware/DnsServer
 Registry: https://hub.docker.com/r/roxedus/ts-dnsserver/
 RepoShort: Selfhosters
 Repository: roxedus/ts-dnsserver
@@ -82,7 +82,5 @@ Requires: ''
 Sources:
 - https://github.com/TechnitiumSoftware/DnsServer
 - https://hub.docker.com/r/roxedus/ts-dnsserver/
-TemplateURL: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/ts-dnsserver.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:5380]
-topPerforming: 0.738
-topTrending: -5.955

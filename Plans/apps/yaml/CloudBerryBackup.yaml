@@ -1,6 +1,5 @@
-CategoryList:
+CategoryList: &id001
 - Backup
-ChangeLogPresent: true
 Config:
   Device: {}
   Label: {}
@@ -212,7 +211,8 @@ Config:
 Icon: https://raw.githubusercontent.com/jlesage/docker-templates/master/jlesage/images/cloudberry-backup-icon.png
 Keywords:
 - cloudberrybackup
-Name: CloudBerryBackup
+- *id001
+Name: cloudberrybackup
 Network: bridge
 Networking:
   Mode: bridge
@@ -222,7 +222,6 @@ Overview: 'Backup files and folders to cloud storage of your choice: Amazon S3, 
 
   '
 Privileged: 'false'
-Project: https://www.cloudberrylab.com/backup/linux.aspx
 RecommendedDate: 1612155600
 RecommendedRaw: 2/1/2021
 RecommendedReason:
@@ -234,7 +233,5 @@ Requires: ''
 Sources:
 - https://www.cloudberrylab.com/backup/linux.aspx
 - https://hub.docker.com/r/jlesage/cloudberry-backup/
-TemplateURL: https://raw.githubusercontent.com/jlesage/docker-templates/master/jlesage/cloudberry-backup.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:5800]
-topPerforming: 2.865
-topTrending: -1.13

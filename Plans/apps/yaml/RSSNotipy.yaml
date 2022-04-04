@@ -1,6 +1,6 @@
 CAComment: This template is set up to use a custom network. You may have to adjust
   the network or IP address etc to match your system
-CategoryList:
+CategoryList: &id001
 - Other
 Config:
   Device: {}
@@ -33,7 +33,8 @@ Config:
 Icon: https://image.flaticon.com/icons/png/512/25/25367.png
 Keywords:
 - rssnotipy
-Name: RSSNotipy
+- *id001
+Name: rssnotipy
 Network: br0
 Networking:
   Mode: br0
@@ -42,12 +43,11 @@ Overview: 'RSS search an notification.
   '
 PostArgs: /start.sh
 Privileged: 'false'
-Project: https://github.com/maschhoff/RSSNotipy
 Registry: https://hub.docker.com/repository/docker/knex666/rssnotipy
 Repository: knex666/rssnotipy
 Requires: ''
 Sources:
 - https://github.com/maschhoff/RSSNotipy
 - https://hub.docker.com/repository/docker/knex666/rssnotipy
-TemplateURL: https://raw.githubusercontent.com/maschhoff/docker/master/unraid%20xml/my-RSSNotipy.xml
+Tag: latest
 WebUI: http://[IP]:3247/

@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - MediaApp-Video
 - MediaApp-Other
 - MediaServer-Video
@@ -111,7 +111,8 @@ Config:
 Icon: https://github.com/hussainalhaddad/docker-templates/raw/master/tinymediamanager/icon.png
 Keywords:
 - tinymediamanager3
-Name: TinyMediaManager3
+- *id001
+Name: tinymediamanager3
 Network: bridge
 Networking:
   Mode: bridge
@@ -121,13 +122,11 @@ Overview: tinyMediaManager is a media management tool written in Java/Swing. It 
   will run on Windows, Linux and macOS (and possible more OS).
 PostArgs: ''
 Privileged: 'false'
-Project: https://www.tinymediamanager.org/
 Registry: https://hub.docker.com/r/coolasice1999/tmm
-Repository: romancin/tinymediamanager:latest
+Repository: romancin/tinymediamanager
 Requires: ''
 Sources:
 - https://www.tinymediamanager.org/
 - https://hub.docker.com/r/coolasice1999/tmm
-TemplateURL: https://raw.githubusercontent.com/hussainalhaddad/docker-templates/master/tinymediamanager/tinymediamanager.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:5800]
-topTrending: -65.3

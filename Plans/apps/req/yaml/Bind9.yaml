@@ -1,6 +1,5 @@
-CategoryList:
+CategoryList: &id001
 - Network-DNS
-ChangeLogPresent: true
 Config:
   Device: {}
   Label: {}
@@ -76,7 +75,8 @@ Config:
 Icon: https://raw.githubusercontent.com/vrx-666/unraid-xml/master/img/bind.png
 Keywords:
 - bind9
-Name: Bind9
+- *id001
+Name: bind9
 Network: host
 Networking:
   Mode: bridge
@@ -85,13 +85,11 @@ Overview: 'Bind9 nameserver with Webmin WebUI. Simple lightweight DNS for local 
   by docker variables.'
 PostArgs: ''
 Privileged: 'false'
-Project: https://www.isc.org/bind/
 Registry: https://hub.docker.com/r/pwa666/bind9
-Repository: pwa666/bind9:latest
+Repository: pwa666/bind9
 Requires: ' App uses hostnetworking (autoadd)'
 Sources:
 - https://www.isc.org/bind/
 - https://hub.docker.com/r/pwa666/bind9
-TemplateURL: https://raw.githubusercontent.com/vrx-666/unraid-xml/master/my-bind9.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:10000]/
-topTrending: -20.910000000000004

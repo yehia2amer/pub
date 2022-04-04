@@ -1,0 +1,26 @@
+env:
+  Bootstrap: ''
+  Display Height: ''
+  Display Width: ''
+  ENABLE CJK FONT: ''
+  Extra x11vnc Options: ''
+  Group ID: ''
+  Niceness (priority): ''
+  Secure Connection: ''
+  Umask: ''
+  User ID: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: angelics/unraid-docker-ravencoin-wallet
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - GameServers
 Config:
   Device: {}
@@ -167,19 +167,19 @@ ExtraParams: --hostname='SteamHeadless' --add-host='SteamHeadless:127.0.0.1' --r
 Icon: https://raw.githubusercontent.com/Josh5/docker-steam-headless/master/images/steam-icon.png
 Keywords:
 - steam-headless
+- *id001
 Name: steam-headless
 Network: host
 Overview: "Headless Steam Service\r\n"
 PostArgs: ''
 Privileged: 'true'
-Project: https://store.steampowered.com/
 Registry: https://hub.docker.com/r/josh5/steam-headless
-Repository: josh5/steam-headless:latest
+Repository: josh5/steam-headless
 Requires: "\r<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Nvidia-Driver plugin**\
   \ (nVidia Support)\r<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Radeon-TOP\
   \ plugin** (AMD Support)\r<br>&nbsp;&nbsp;&nbsp;&nbsp; App uses hostnetworking (autoadd)"
 Sources:
 - https://store.steampowered.com/
 - https://hub.docker.com/r/josh5/steam-headless
-TemplateURL: https://raw.githubusercontent.com/Josh5/unraid-docker-templates/master/josh5/steam-headless.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:8083]/

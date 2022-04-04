@@ -1,6 +1,6 @@
 CAComment: This template is set up to use a custom network. You may have to adjust
   the network or IP address etc to match your system
-CategoryList:
+CategoryList: &id001
 - Backup
 - Network-DNS
 Config:
@@ -34,7 +34,8 @@ Config:
 Icon: https://raw.githubusercontent.com/redvex2460/docker-templates/master/redvex2460/images/fogproject.png
 Keywords:
 - fogproject
-Name: FogProject
+- *id001
+Name: fogproject
 Network: br0
 Networking:
   Mode: br0
@@ -43,10 +44,9 @@ Overview: "FOG Project can capture, deploy, and manage Windows, Mac OSX, and var
 PostArgs: ''
 Privileged: 'true'
 Registry: https://github.com/redvex2460/fogproject
-Repository: redvex2460/fogproject:latest
+Repository: redvex2460/fogproject
 Requires: ''
 Sources:
 - https://github.com/redvex2460/fogproject
-TemplateURL: https://raw.githubusercontent.com/redvex2460/docker-templates/master/redvex2460/fogproject.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:80]
-topTrending: -4.094

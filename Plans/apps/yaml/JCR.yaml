@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Productivity
 - Tools-Utilities
 Config:
@@ -65,7 +65,8 @@ Config:
 Icon: https://i.imgur.com/sC4b5wD.png
 Keywords:
 - jcr
-Name: JCR
+- *id001
+Name: jcr
 Network: bridge
 Networking:
   Mode: bridge
@@ -75,12 +76,11 @@ Overview: The JFrog Container Registry is a repository manager, which supports D
   permission control behind a sleek and easy-to-use UI.
 PostArgs: ''
 Privileged: 'true'
-Project: https://jfrog.com/
 Registry: https://registry.hub.docker.com/r/releases-docker.jfrog.io/jfrog/artifactory-jcr
-Repository: releases-docker.jfrog.io/jfrog/artifactory-jcr:latest
+Repository: releases-docker.jfrog.io/jfrog/artifactory-jcr
 Requires: ''
 Sources:
 - https://jfrog.com/
 - https://registry.hub.docker.com/r/releases-docker.jfrog.io/jfrog/artifactory-jcr
-TemplateURL: https://raw.githubusercontent.com/frakman1/docker-templates/master/tynor88/jcr.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:6182]/

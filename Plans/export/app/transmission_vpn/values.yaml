@@ -1,0 +1,34 @@
+env:
+  GLOBAL_APPLY_PERMISSIONS: 'false'
+  Key 2: VPN_USER
+  Key 3: VPN_PASSWORD
+  LOCAL_NETWORK: 192.168.0.0/24
+  OPENVPN_CONFIG: switzerland
+  OPENVPN_PROVIDER: PIA
+  OpenVPN_OPTIONS: --inactive 3600 --ping 10 --ping-exit 60 --mute-replay-warnings
+  PIA_OPENVPN_CONFIG_BUNDLE=openvpn-tcp-nextgen: openvpn-tcp
+  RATIO_LIMIT_ENABLED: 'true'
+  TRANSMISSION_CACHE_SIZE_MB: '10'
+  TRANSMISSION_DOWNLOAD_QUEUE_SIZE: '15'
+  TRANSMISSION_INCOMPLETE_DIR: /downloads/incomplete
+  TRANSMISSION_RPC_AUTHENTICATION_REQUIRED: 'true'
+  Trans_Option_Download Dir: /downloads
+  Transmission_Password: TRANS_PASSWORD
+  Transmission_Username: TRANS_USER
+  WEB_GUI: transmission-web-control
+  WebProxy: 'false'
+image:
+  pullPolicy: IfNotPresent
+  repository: haugene/transmission-openvpn
+  tag: dev
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Tools-Utilities
 Config:
   Device: {}
@@ -107,12 +107,12 @@ Config:
       value: '99'
 Keywords:
 - geoip2influx
+- *id001
 Name: geoip2influx
 Network: bridge
 Overview: "A python script that will parse the nginx access.log and send geolocation\
   \ metrics and log metrics to InfluxDB\r\n"
 Privileged: 'false'
-Project: https://github.com/gilbN/geoip2influx
 Registry: https://hub.docker.com/r/gilbn/geoip2influx/
 RepoShort: Selfhosters
 Repository: gilbn/geoip2influx
@@ -120,5 +120,4 @@ Requires: ''
 Sources:
 - https://github.com/gilbN/geoip2influx
 - https://hub.docker.com/r/gilbn/geoip2influx/
-TemplateURL: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/geoip2influx.xml
-topTrending: -5.643
+Tag: latest

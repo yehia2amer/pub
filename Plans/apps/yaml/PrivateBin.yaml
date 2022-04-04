@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Other
 Config:
   Device: {}
@@ -32,13 +32,13 @@ ExtraParams: --read-only
 Icon: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/privatebin.png
 Keywords:
 - privatebin
-Name: PrivateBin
+- *id001
+Name: privatebin
 Network: bridge
 Official: true
 Overview: A minimalist, open source online pastebin where the server has zero knowledge
   of pasted data. Data is encrypted/decrypted in the browser using 256 bits AES.
 Privileged: 'false'
-Project: https://github.com/PrivateBin/PrivateBin/
 Registry: https://hub.docker.com/r/privatebin/nginx-fpm-alpine/
 RepoShort: Selfhosters
 Repository: privatebin/nginx-fpm-alpine
@@ -46,7 +46,5 @@ Requires: ''
 Sources:
 - https://github.com/PrivateBin/PrivateBin/
 - https://hub.docker.com/r/privatebin/nginx-fpm-alpine/
-TemplateURL: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/privatebin.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:8080]
-topPerforming: 2.541
-topTrending: 0.6849999999999998

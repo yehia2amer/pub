@@ -1,0 +1,27 @@
+env:
+  '****Nvidia build only  -- Driver capabilities': ''
+  '****Nvidia build only -- GPU ID': ''
+  MYSQL_DATABASE: ccio
+  MYSQL_HOST: localhost
+  MYSQL_PASSWORD: ''
+  MYSQL_PORT: '3306'
+  MYSQL_ROOT_PASSWORD: ''
+  MYSQL_ROOT_USER: root
+  MYSQL_USER: majesticflame
+  password for superuser: password
+  username for superuser: admin
+image:
+  pullPolicy: IfNotPresent
+  repository: spaceinvaderone/shinobi_pro_unraid
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - GameServers
 Config:
   Device: {}
@@ -191,7 +191,8 @@ ExtraParams: --restart=unless-stopped
 Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/killingfloor.png
 Keywords:
 - killingfloor
-Name: KillingFloor
+- *id001
+Name: killingfloor
 Network: bridge
 Networking:
   Mode: bridge
@@ -199,12 +200,12 @@ Overview: "This Docker will download and install SteamCMD. It will also install 
   \ Floor and run it.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://www.tripwireinteractive.com/
 Registry: https://hub.docker.com/r/ich777/steamcmd/
-Repository: ich777/steamcmd:killingfloor
+Repository: ich777/steamcmd
 Requires: ''
 Sources:
 - https://www.tripwireinteractive.com/
 - https://hub.docker.com/r/ich777/steamcmd/
+Tag: killingfloor
 WebUI: ''
 caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/KillingFloor.xml

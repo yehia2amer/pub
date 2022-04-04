@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - GameServers
 Config:
   Device: {}
@@ -114,7 +114,8 @@ ExtraParams: --restart=unless-stopped
 Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/openttd.png
 Keywords:
 - openttd
-Name: OpenTTD
+- *id001
+Name: openttd
 Network: bridge
 Networking:
   Mode: bridge
@@ -124,12 +125,12 @@ Overview: "This Docker will download and install the version of OpenTTD that you
   \ build).\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://www.openttd.org/
 Registry: https://hub.docker.com/r/ich777/openttdserver
 Repository: ich777/openttdserver
 Requires: ''
 Sources:
 - https://www.openttd.org/
 - https://hub.docker.com/r/ich777/openttdserver
+Tag: latest
 WebUI: http://[IP]:[PORT:8080]/
 caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/OpenTTD.xml

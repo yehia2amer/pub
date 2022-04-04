@@ -1,0 +1,18 @@
+env:
+  SOLR_CORE: my_core
+  SOLR_PORT_NUMBER: '8983'
+image:
+  pullPolicy: IfNotPresent
+  repository: bitnami/solr
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

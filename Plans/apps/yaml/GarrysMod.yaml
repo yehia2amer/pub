@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - GameServers
 Config:
   Device: {}
@@ -160,7 +160,8 @@ ExtraParams: --restart=unless-stopped
 Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/garrysmod.png
 Keywords:
 - garrysmod
-Name: GarrysMod
+- *id001
+Name: garrysmod
 Network: bridge
 Networking:
   Mode: bridge
@@ -168,12 +169,12 @@ Overview: "This Docker will download and install SteamCMD. It will also install 
   \ Mod and run it.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://www.steampowered.com/
 Registry: https://hub.docker.com/r/ich777/steamcmd/
-Repository: ich777/steamcmd:garrysmod
+Repository: ich777/steamcmd
 Requires: ''
 Sources:
 - https://www.steampowered.com/
 - https://hub.docker.com/r/ich777/steamcmd/
+Tag: garrysmod
 WebUI: ''
 caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/GarrysMod.xml

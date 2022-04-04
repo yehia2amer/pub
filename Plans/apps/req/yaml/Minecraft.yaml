@@ -1,7 +1,6 @@
 BindTime: 'true'
-CategoryList:
+CategoryList: &id001
 - GameServers
-ChangeLogPresent: true
 Config:
   Device: {}
   Label: {}
@@ -90,7 +89,8 @@ Config:
 Icon: https://raw.githubusercontent.com/fithwum/files-for-dockers/master/icons/Minecraft.png
 Keywords:
 - minecraft
-Name: Minecraft
+- *id001
+Name: minecraft
 Network: host
 Networking:
   Mode: host
@@ -99,13 +99,11 @@ Overview: This docker is for running Minecraft vanilla server version 1.18 and j
   the folder.
 PostArgs: ''
 Privileged: 'false'
-Project: https://www.minecraft.net/en-us/
 Registry: https://hub.docker.com/r/fithwum/minecraft/
 Repository: fithwum/minecraft
 Requires: ' App uses hostnetworking (autoadd)'
 Sources:
 - https://www.minecraft.net/en-us/
 - https://hub.docker.com/r/fithwum/minecraft/
-TemplateURL: https://raw.githubusercontent.com/fithwum/files-for-dockers/master/templates/minecraft_server_unraid.xml
+Tag: latest
 WebUI: ''
-topTrending: -6.205

@@ -1,6 +1,12 @@
 BindTime: 'true'
-CategoryList:
+CategoryList: &id001
 - MediaServer-Video
+Config:
+  Device: {}
+  Label: {}
+  Path: {}
+  Port: {}
+  Variable: {}
 Data:
   Volume:
   - ContainerDir: /config
@@ -9,12 +15,12 @@ Data:
   - ContainerDir: /media
     HostDir: /mnt/user/Media
     Mode: rw
-Environment: ''
 GitHub: https://github.com/noinip/docker-pytivo
 Icon: https://pytivo.sourceforge.net/forum/templates/subSilver/images/pytivo.gif
 Keywords:
 - pytivo
-Name: pyTivo
+- *id001
+Name: pytivo
 Networking:
   Mode: host
   Publish:
@@ -35,6 +41,5 @@ Repository: pinion/docker-pytivo
 Requires: ''
 Sources:
 - https://registry.hub.docker.com/r/pinion/docker-pytivo/
-TemplateURL: https://raw.githubusercontent.com/noinip/container-templates/master/pinion/pytivo.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:9032]/
-topTrending: -0.08599999999999997

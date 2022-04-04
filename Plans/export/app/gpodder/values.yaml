@@ -1,0 +1,18 @@
+env:
+  PASSWORD: ''
+  Time Zone: America/New_York
+image:
+  pullPolicy: IfNotPresent
+  repository: xthursdayx/gpodder-docker
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

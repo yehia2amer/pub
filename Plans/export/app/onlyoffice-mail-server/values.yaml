@@ -1,0 +1,21 @@
+env:
+  Default Mail Server Database Name: onlyoffice_mailserver
+  MySQL Host - Read Description for Changes ----&gt;: onlyoffice-mysql-server
+  MySQL Port: '3306'
+  Root Password for MySQL ( Default password is 'Isadmin123' ): Isadmin123
+  Root User for MySQL ( Default is 'mail_admin' ): mail_admin
+image:
+  pullPolicy: IfNotPresent
+  repository: xternet/unraid-onlyoffice-mail-server
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

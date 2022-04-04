@@ -1,0 +1,20 @@
+env:
+  DISCORD_BOT_TOKEN: ''
+  DISCORD_BOT_TOKEN_2: ''
+  HOST: ''
+  NUM_SHARDS: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: denverquane/amongusdiscord
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

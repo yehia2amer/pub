@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Security
 - Network-Proxy
 - Network-VPN
@@ -77,7 +77,8 @@ Config:
 Icon: https://github.com/Flight777/unraid_justworks_templates/blob/main/images/shadowsocks/1200px-Shadowsocks-Logo.svg.png?raw=true
 Keywords:
 - shadowsocks
-Name: Shadowsocks
+- *id001
+Name: shadowsocks
 Network: bridge
 Networking:
   Mode: bridge
@@ -89,14 +90,11 @@ Overview: "A secure SOCKS5 proxy. Shadowsocks is a free and open-source encrypti
   \ Shadowsocks client.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/shadowsocks/shadowsocks-libev/blob/master/docker/alpine/README.md
 Registry: https://hub.docker.com/r/shadowsocks/shadowsocks-libev
 Repository: shadowsocks/shadowsocks-libev
 Requires: ''
 Sources:
 - https://github.com/shadowsocks/shadowsocks-libev/blob/master/docker/alpine/README.md
 - https://hub.docker.com/r/shadowsocks/shadowsocks-libev
-TemplateURL: https://raw.githubusercontent.com/Flight777/unraid_justworks_templates/master/jw_shadowsocks.xml
+Tag: latest
 WebUI: ''
-topPerforming: 0.408
-topTrending: -13.605

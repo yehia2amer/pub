@@ -1,9 +1,14 @@
 BaseImage: lsiobase/alpine.python
 Beta: 'true'
 BindTime: 'true'
-CategoryList:
+CategoryList: &id001
 - Downloaders
-ChangeLogPresent: true
+Config:
+  Device: {}
+  Label: {}
+  Path: {}
+  Port: {}
+  Variable: {}
 Data:
   Volume:
   - ContainerDir: /config
@@ -15,15 +20,10 @@ Data:
   - ContainerDir: /watch
     HostDir: ''
     Mode: rw
-Environment:
-  Variable:
-  - Name: PUID
-    Value: '99'
-  - Name: PGID
-    Value: '100'
 Icon: https://raw.githubusercontent.com/thraxis/docker-templates/master/thraxis/img/transmission-nzbtomedia-icon.png
 Keywords:
 - transmission-nzbtomedia
+- *id001
 Name: transmission-nzbtomedia
 Networking:
   Mode: bridge
@@ -40,14 +40,11 @@ Overview: "Transmission is designed for easy, powerful use. Transmission has the
   \ magnet links, DHT, \xB5TP, UPnP and NAT-PMP port forwarding, webseed support,\
   \ watch directories, tracker editing, global and per-torrent speed limits, and more.[br]\n"
 Privileged: 'false'
-Project: http://www.transmissionbt.com/
 Registry: https://hub.docker.com/r/thraxis/transmission-nzbtomedia/
 Repository: thraxis/transmission-nzbtomedia
 Requires: ''
 Sources:
 - http://www.transmissionbt.com/
 - https://hub.docker.com/r/thraxis/transmission-nzbtomedia/
-TemplateURL: https://raw.githubusercontent.com/Thraxis/docker-templates/master/thraxis/transmission-nzbtomedia.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:9091]/
-topPerforming: 0.786
-topTrending: 0.22599999999999998

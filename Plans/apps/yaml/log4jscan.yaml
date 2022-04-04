@@ -1,32 +1,21 @@
-CategoryList:
+CategoryList: &id001
 - Security
 Config:
   Device: {}
   Label: {}
-  Path:
-    Host Path 1:
-      Default: ''
-      Description: ''
-      Display: always
-      Mask: 'false'
-      Mode: ro
-      Name: Host Path 1
-      Required: 'false'
-      Target: /data
-      Type: Path
-      value: /mnt/user/appdata/log4j-scan
+  Path: {}
   Port: {}
   Variable: {}
 Icon: https://raw.githubusercontent.com/SpaceinvaderOne/Docker-Templates-Unraid/e44f09d9bf826d47339f68a562794d37c1c5cee6/spaceinvaderone/docker_icons/log4jscan_icon.png
 Keywords:
 - log4jscan
+- *id001
 Name: log4jscan
 Network: bridge
 Overview: "A fully automated, accurate, and extensive scanner for finding vulnerable\
   \ log4j hosts\r\n"
 PostArgs: '  --run-all-tests -l /data/urls.txt'
 Privileged: 'false'
-Project: https://github.com/fullhunt/log4j-scan
 RecommendedDate: 1641013200
 RecommendedRaw: 1/1/2022
 RecommendedReason:
@@ -34,10 +23,10 @@ RecommendedReason:
     log4j hosts
 RecommendedWho: SpencerJ
 Registry: https://registry.hub.docker.com/r/spaceinvaderone/log4j-scan
-Repository: spaceinvaderone/log4j-scan:latest
+Repository: spaceinvaderone/log4j-scan
 Requires: ''
 Sources:
 - https://github.com/fullhunt/log4j-scan
 - https://registry.hub.docker.com/r/spaceinvaderone/log4j-scan
-TemplateURL: https://raw.githubusercontent.com/SpaceinvaderOne/Docker-Templates-Unraid/master/spaceinvaderone/log4j-scan.xml
+Tag: latest
 WebUI: ''

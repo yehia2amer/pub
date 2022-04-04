@@ -1,0 +1,23 @@
+env:
+  CONVERSION_FORMAT: mkv
+  DELETE_TS: '1'
+  NVIDIA_VISIBLE_DEVICES: ''
+  POST_PROCESS: comchap
+  SOURCE_EXT: ts
+  SUBTITLES: '0'
+  UMASK: '000'
+image:
+  pullPolicy: IfNotPresent
+  repository: chacawaca/post-recording
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

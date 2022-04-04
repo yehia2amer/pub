@@ -1,0 +1,26 @@
+env:
+  DOCKER_HOST_ADDRESS: 192.168.1.1
+  JVB_AUTH_PASSWORD: passw0rd
+  JVB_AUTH_USER: jvb
+  JVB_BREWERY_MUC: jvbbrewery
+  JVB_ENABLE_APIS: none
+  JVB_STUN_SERVERS: stun.l.google.com:19302, stun1.l.google.com:19302, stun2.l.google.com:19302
+  JVB_TCP_HARVESTER_DISABLED: 'true'
+  XMPP_AUTH_DOMAIN: auth.meet.jitsi
+  XMPP_INTERNAL_MUC_DOMAIN: internal-muc.meet.jitsi
+  XMPP_SERVER: xmpp.meet.jitsi
+image:
+  pullPolicy: IfNotPresent
+  repository: jitsi/jvb
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

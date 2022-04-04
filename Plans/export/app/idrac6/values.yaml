@@ -1,0 +1,21 @@
+env:
+  idrac host: ''
+  idrac password: ''
+  idrac port: ''
+  idrac user: ''
+  keyboard fix: 'false'
+image:
+  pullPolicy: IfNotPresent
+  repository: domistyle/idrac6
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

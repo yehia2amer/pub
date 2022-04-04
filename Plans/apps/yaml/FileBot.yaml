@@ -1,6 +1,5 @@
-CategoryList:
+CategoryList: &id001
 - MediaApp-Other
-ChangeLogPresent: true
 Config:
   Device: {}
   Label: {}
@@ -463,7 +462,8 @@ Config:
 Icon: https://raw.githubusercontent.com/jlesage/docker-templates/master/jlesage/images/filebot-icon.png
 Keywords:
 - filebot
-Name: FileBot
+- *id001
+Name: filebot
 Network: bridge
 Networking:
   Mode: bridge
@@ -472,14 +472,11 @@ Overview: 'FileBot is the ultimate tool for organizing and renaming your movies,
 
   '
 Privileged: 'false'
-Project: http://www.filebot.net/
 Registry: https://hub.docker.com/r/jlesage/filebot/
 Repository: jlesage/filebot
 Requires: ''
 Sources:
 - http://www.filebot.net/
 - https://hub.docker.com/r/jlesage/filebot/
-TemplateURL: https://raw.githubusercontent.com/jlesage/docker-templates/master/jlesage/filebot.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:5800]
-topPerforming: 0.717
-topTrending: -2.5909999999999997

@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Backup
 - Cloud
 Config:
@@ -88,7 +88,8 @@ Config:
 Icon: https://raw.githubusercontent.com/kopia/kopia/master/icons/kopia.svg
 Keywords:
 - kopia
-Name: Kopia
+- *id001
+Name: kopia
 Network: bridge
 Official: true
 Overview: "Kopia is a simple, cross-platform tool for managing encrypted backups in\
@@ -97,7 +98,6 @@ Overview: "Kopia is a simple, cross-platform tool for managing encrypted backups
 PostArgs: server --insecure --htpasswd-file /app/config/htpasswd --address 0.0.0.0:51515
   --server-username=YOUR-USERNAME
 Privileged: 'false'
-Project: https://github.com/kopia/kopia/
 Registry: https://hub.docker.com/r/kopia/kopia/
 RepoShort: Selfhosters
 Repository: kopia/kopia
@@ -105,6 +105,5 @@ Requires: ''
 Sources:
 - https://github.com/kopia/kopia/
 - https://hub.docker.com/r/kopia/kopia/
-TemplateURL: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/kopia.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:51515]
-topTrending: 0.504

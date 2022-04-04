@@ -1,6 +1,63 @@
 BindTime: 'true'
-CategoryList:
+CategoryList: &id001
 - Productivity
+Config:
+  Device: {}
+  Label: {}
+  Path: {}
+  Port: {}
+  Variable:
+    MQTT_BASETOPIC:
+      Name: MQTT_BASETOPIC
+      value: emon
+    MQTT_ENABLED:
+      Name: MQTT_ENABLED
+      value: 'false'
+    MQTT_HOST:
+      Name: MQTT_HOST
+      value: 127.0.0.1
+    MQTT_PASSWORD:
+      Name: MQTT_PASSWORD
+      value: mqtt
+    MQTT_USER:
+      Name: MQTT_USER
+      value: mqtt
+    MYSQL_DATABASE:
+      Name: MYSQL_DATABASE
+      value: emoncms
+    MYSQL_HOST:
+      Name: MYSQL_HOST
+      value: ''
+    MYSQL_PASSWORD:
+      Name: MYSQL_PASSWORD
+      value: ''
+    MYSQL_PORT:
+      Name: MYSQL_PORT
+      value: '3306'
+    MYSQL_RANDOM_ROOT_PASSWORD:
+      Name: MYSQL_RANDOM_ROOT_PASSWORD
+      value: 'yes'
+    MYSQL_USER:
+      Name: MYSQL_USER
+      value: emoncms
+    PHPFINA_DIR:
+      Name: PHPFINA_DIR
+      value: /var/opt/emoncms/phpfina/
+    PHPTIMESERIES_DIR:
+      Name: PHPTIMESERIES_DIR
+      value: /var/opt/emoncms/phptimeseries/
+    REDIS_ENABLED:
+      Name: REDIS_ENABLED
+      value: 'false'
+    REDIS_HOST:
+      Name: REDIS_HOST
+      value: 127.0.0.1
+    REDIS_PORT:
+      Name: REDIS_PORT
+      value: '6379'
+    REDIS_PREFIX:
+      Name: REDIS_PREFIX
+      value: '''emoncms'''
 Data:
   Volume:
   - ContainerDir: /var/opt/emoncms/phpfina/
@@ -9,46 +66,11 @@ Data:
   - ContainerDir: /var/opt/emoncms/phptimeseries/
     HostDir: /mnt/user/appdata/emoncms/phptimeseries/phpfina
     Mode: rw
-Environment:
-  Variable:
-  - Name: MYSQL_HOST
-    Value: ''
-  - Name: MYSQL_PORT
-    Value: '3306'
-  - Name: MYSQL_USER
-    Value: emoncms
-  - Name: MYSQL_PASSWORD
-    Value: ''
-  - Name: MYSQL_DATABASE
-    Value: emoncms
-  - Name: MYSQL_RANDOM_ROOT_PASSWORD
-    Value: 'yes'
-  - Name: REDIS_ENABLED
-    Value: 'false'
-  - Name: REDIS_HOST
-    Value: 127.0.0.1
-  - Name: REDIS_PORT
-    Value: '6379'
-  - Name: REDIS_PREFIX
-    Value: '''emoncms'''
-  - Name: MQTT_ENABLED
-    Value: 'false'
-  - Name: MQTT_HOST
-    Value: 127.0.0.1
-  - Name: MQTT_USER
-    Value: mqtt
-  - Name: MQTT_PASSWORD
-    Value: mqtt
-  - Name: MQTT_BASETOPIC
-    Value: emon
-  - Name: PHPFINA_DIR
-    Value: /var/opt/emoncms/phpfina/
-  - Name: PHPTIMESERIES_DIR
-    Value: /var/opt/emoncms/phptimeseries/
 Icon: https://emoncms.org/Modules/site/emoncms_front.png
 Keywords:
 - emoncms
-Name: Emoncms
+- *id001
+Name: emoncms
 Networking:
   Mode: bridge
   Publish:
@@ -66,6 +88,5 @@ Repository: snoopy86/emoncms-docker
 Requires: MySQL / Redis Installed
 Sources:
 - https://registry.hub.docker.com/r/snoopy86/emoncms-docker
-TemplateURL: https://raw.githubusercontent.com/snoopy86/docker-repo/master/snoopy/emoncms.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:80]/
-topTrending: -2.0519999999999996

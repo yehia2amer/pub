@@ -1,0 +1,20 @@
+env:
+  Discovery Type: single-node
+  ElasticSearch Password: verysecret
+  Java Options: -Xms512m -Xmx512m
+  Xpack Security: 'true'
+image:
+  pullPolicy: IfNotPresent
+  repository: bbilly1/tubearchivist-es
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

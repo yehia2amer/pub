@@ -3,7 +3,7 @@ Branch:
   Repository: cr.hotio.dev/hotio/qbittorrent:release
   Tag: release
   TagDescription: Stable
-CategoryList:
+CategoryList: &id001
 - Downloaders
 Config:
   Device: {}
@@ -125,20 +125,19 @@ ExtraParams: --cap-add=NET_ADMIN --sysctl="net.ipv4.conf.all.src_valid_mark=1" -
 Icon: https://hotio.dev/webhook-avatars/qbittorrent.png
 Keywords:
 - qbittorrent-vpn
+- *id001
 Name: qbittorrent-vpn
 Network: bridge
 Overview: Docker image with qBittorrent and bundled with the alternative VueTorrent
   Web UI, with pre-configured VPN template settings.
 PostArgs: ''
 Privileged: 'false'
-Project: https://hotio.dev/containers/qbittorrent
 Registry: https://hub.docker.com/r/hotio/qbittorrent
 Repository: cr.hotio.dev/hotio/qbittorrent
 Requires: ''
 Sources:
 - https://hotio.dev/containers/qbittorrent
 - https://hub.docker.com/r/hotio/qbittorrent
+Tag: latest
 WebUI: http://[IP]:[PORT:8080]
 caTemplateURL: https://raw.githubusercontent.com/hotio/unraid-templates/master/hotio/qbittorrentvpn.xml
-topPerforming: 3.62
-topTrending: -31.891000000000002

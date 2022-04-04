@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - MediaApp-Photos
 Config:
   Device: {}
@@ -55,6 +55,7 @@ Config:
 Icon: https://github.com/FoxxMD/unraid-docker-templates/raw/master/szurubooru.png
 Keywords:
 - szurubooru-client
+- *id001
 Name: szurubooru-client
 Network: bridge
 Networking:
@@ -63,14 +64,11 @@ Overview: Frontend container for Szurubooru, an image board engine for small and
   communities
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/rr-/szurubooru
 Registry: https://hub.docker.com/r/szurubooru/client
-Repository: szurubooru/client:latest
+Repository: szurubooru/client
 Requires: zurubooru-api installed
 Sources:
 - https://github.com/rr-/szurubooru
 - https://hub.docker.com/r/szurubooru/client
-TemplateURL: https://raw.githubusercontent.com/FoxxMD/unraid-docker-templates/master/foxxmd/szurubooru-client.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:80]/
-topPerforming: 0.75
-topTrending: -26.825

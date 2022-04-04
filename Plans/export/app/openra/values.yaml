@@ -1,0 +1,26 @@
+env:
+  Advertise Online: 'True'
+  Ban IP Adresses: ''
+  Enable Single Player: 'False'
+  ExternalPort: '1234'
+  ListenPort: '1234'
+  Message of the day: Have Fun!!
+  Selected Startup Map: ''
+  Server Mod: ra
+  Server Name: DEDICATED SERVER
+  Server Password: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: rmoriz/openra
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

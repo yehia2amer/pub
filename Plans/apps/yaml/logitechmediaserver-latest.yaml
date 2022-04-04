@@ -1,6 +1,12 @@
 BindTime: 'true'
-CategoryList:
+CategoryList: &id001
 - MediaServer-Music
+Config:
+  Device: {}
+  Label: {}
+  Path: {}
+  Port: {}
+  Variable: {}
 Data:
   Volume:
   - ContainerDir: /config
@@ -12,11 +18,11 @@ Data:
   - ContainerDir: /var/run/dbus
     HostDir: /var/run/dbus
     Mode: rw
-Environment: ''
 Icon: https://i.imgur.com/PoUuA3k.png
 Keywords:
 - logitechmediaserver-latest
-Name: LogitechMediaServer-latest
+- *id001
+Name: logitechmediaserver-latest
 Networking:
   Mode: bridge
   Publish:
@@ -45,7 +51,5 @@ Repository: snoopy86/logitechmediaserver
 Requires: ''
 Sources:
 - https://registry.hub.docker.com/r/snoopy86/logitechmediaserver/
-TemplateURL: https://raw.githubusercontent.com/snoopy86/docker-repo/master/snoopy/logitechmediaserver.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:9000]/
-topPerforming: 0.544
-topTrending: -0.4929999999999999

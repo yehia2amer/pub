@@ -1,0 +1,21 @@
+env:
+  Download Resources: 'true'
+  Extra Game Parameters: ''
+  Force Update: ''
+  Logfile: multitheftauto_linux_x64/mods/deathmatch/logs/server.log
+  Skip Baseconfig: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: ich777/mtaserver
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

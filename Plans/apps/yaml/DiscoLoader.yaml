@@ -3,29 +3,19 @@ Branch:
   TagDescription: The "default image", runs on amd64. (x86, 64bit)
 - Tag: dev
   TagDescription: development version, newer functions but maybe instable.
-CategoryList:
+CategoryList: &id001
 - Downloaders
 Config:
   Device: {}
   Label: {}
-  Path:
-    Config:
-      Default: ''
-      Description: 'Container Path: /app/config'
-      Display: always
-      Mask: 'false'
-      Mode: rw
-      Name: Config
-      Required: 'false'
-      Target: /app/config
-      Type: Path
-      value: /mnt/user/appdata/discoloader/
+  Path: {}
   Port: {}
   Variable: {}
 Icon: https://raw.githubusercontent.com/redvex2460/docker-templates/master/redvex2460/images/discoloader.jpg
 Keywords:
 - discoloader
-Name: DiscoLoader
+- *id001
+Name: discoloader
 Network: bridge
 Networking:
   Mode: bridge
@@ -37,5 +27,5 @@ Repository: redvex2460/discoloader
 Requires: ''
 Sources:
 - https://hub.docker.com/r/redvex2460/discorddownloadmanager
-TemplateURL: https://raw.githubusercontent.com/redvex2460/docker-templates/master/redvex2460/discoloader.xml
+Tag: latest
 WebUI: ''

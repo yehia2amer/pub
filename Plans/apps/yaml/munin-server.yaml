@@ -1,8 +1,19 @@
 BindTime: 'true'
-CategoryList:
+CategoryList: &id001
 - Network-Management
 - Tools-Utilities
-ChangeLogPresent: true
+Config:
+  Device: {}
+  Label: {}
+  Path: {}
+  Port: {}
+  Variable:
+    ALLOWED_HOSTS:
+      Name: ALLOWED_HOSTS
+      value: 127.0.0.1/32
+    HOSTNAME:
+      Name: HOSTNAME
+      value: unRAID
 Data:
   Volume:
   - ContainerDir: /etc/munin/munin-conf.d
@@ -20,15 +31,10 @@ Data:
   - ContainerDir: /sys
     HostDir: /sys
     Mode: ro
-Environment:
-  Variable:
-  - Name: ALLOWED_HOSTS
-    Value: 127.0.0.1/32
-  - Name: HOSTNAME
-    Value: unRAID
 Icon: https://raw.githubusercontent.com/shaf/unraid-docker-templates/master/shaf/images/munin-icon.png
 Keywords:
 - munin-server
+- *id001
 Name: munin-server
 Networking:
   Mode: bridge
@@ -43,14 +49,11 @@ Networking:
 Overview: Primarily provides server stats for your unRAID instance in addition to
   monitoring other servers
 Privileged: 'false'
-Project: http://munin-monitoring.org/
 Registry: https://registry.hub.docker.com/r/shaf/munin-server/
 Repository: shaf/munin-server
 Requires: ''
 Sources:
 - http://munin-monitoring.org/
 - https://registry.hub.docker.com/r/shaf/munin-server/
-TemplateURL: https://raw.githubusercontent.com/shaf/unraid-docker-templates/master/shaf/munin-server.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:80]/
-topPerforming: 1.645
-topTrending: 0.3760000000000001

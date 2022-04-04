@@ -1,0 +1,19 @@
+env:
+  ATL_PROXY_NAME: support.ibracorp.io
+  ATL_PROXY_PORT: '443'
+  ATL_TOMCAT_SCHEME: https
+image:
+  pullPolicy: IfNotPresent
+  repository: atlassian/jira-servicedesk
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

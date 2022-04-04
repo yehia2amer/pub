@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - GameServers
 Config:
   Device: {}
@@ -302,7 +302,8 @@ ExtraParams: --restart=unless-stopped
 Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/wurmunlimited.png
 Keywords:
 - wurmunlimited
-Name: WurmUnlimited
+- *id001
+Name: wurmunlimited
 Network: bridge
 Networking:
   Mode: bridge
@@ -310,12 +311,12 @@ Overview: "This Docker will download and install SteamCMD. It will also install 
   \ Unlimited with or without the Server-ModLauncher and run it.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://www.steampowered.com/
 Registry: https://hub.docker.com/r/ich777/steamcmd/
-Repository: ich777/steamcmd:wurmunlimited
+Repository: ich777/steamcmd
 Requires: ''
 Sources:
 - https://www.steampowered.com/
 - https://hub.docker.com/r/ich777/steamcmd/
+Tag: wurmunlimited
 WebUI: ''
 caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/WurmUnlimited.xml

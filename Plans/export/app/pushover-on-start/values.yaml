@@ -1,0 +1,21 @@
+env:
+  Pushover APP Token: ''
+  Pushover Message: Server is now Online!
+  Pushover Message Title: Startup Complete
+  Pushover Priority: '0'
+  Pushover User Token: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: ich777/pushover-on-start
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

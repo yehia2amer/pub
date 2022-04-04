@@ -1,7 +1,13 @@
 BindTime: 'true'
-CategoryList:
+CategoryList: &id001
 - Productivity
 - Tools
+Config:
+  Device: {}
+  Label: {}
+  Path: {}
+  Port: {}
+  Variable: {}
 Data:
   Volume:
   - ContainerDir: /var/log/onlyoffice
@@ -19,12 +25,12 @@ Data:
   - ContainerDir: /usr/share/fonts/
     HostDir: /mnt/user/appdata/onlyofficeds/fonts
     Mode: rw
-Environment: ''
 GitHub: https://github.com/SiwatINC/unraid-ca-repository
 Icon: https://raw.githubusercontent.com/SiwatINC/unraid-ca-repository/master/icons/onlyoffice.png
 Keywords:
 - onlyofficedocumentserver
-Name: OnlyOfficeDocumentServer
+- *id001
+Name: onlyofficedocumentserver
 Networking:
   Mode: bridge
   Publish:
@@ -43,14 +49,11 @@ Overview: 'ONLYOFFICE Document Server is an online office suite comprising viewe
 
   '
 Privileged: 'false'
-Project: https://www.onlyoffice.com/
 Registry: https://hub.docker.com/r/onlyoffice/documentserver/
 Repository: onlyoffice/documentserver
 Requires: ''
 Sources:
 - https://www.onlyoffice.com/
 - https://hub.docker.com/r/onlyoffice/documentserver/
-TemplateURL: https://raw.githubusercontent.com/SiwatINC/unraid-ca-repository/master/docker-template/onlyoffice_document_server.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:80]
-topPerforming: 1.002
-topTrending: -1.603

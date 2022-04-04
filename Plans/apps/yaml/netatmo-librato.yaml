@@ -1,23 +1,25 @@
 BindTime: 'true'
-CategoryList:
+CategoryList: &id001
 - HomeAutomation
 - Backup
 - Cloud
-ChangeLogPresent: true
+Config:
+  Device: {}
+  Label: {}
+  Path: {}
+  Port: {}
+  Variable: {}
 Data:
   Volume:
     ContainerDir: /config
     HostDir: path to config
     Mode: rw
-Environment:
-  Variable:
-    Name: ''
-    Value: ''
 GitHub: https://github.com/sdesbure/alpine_netatmo_librato
 Icon: https://raw.githubusercontent.com/sdesbure/docker-containers/master/images/netatmo_librato_logo.png
 Keywords:
 - netatmo-librato
-Name: Netatmo-Librato
+- *id001
+Name: netatmo-librato
 Networking:
   Mode: host
 Overview: pushes value from your netatmo thermostat and weather station to librato
@@ -28,4 +30,4 @@ Repository: sdesbure/alpine-netatmo-librato
 Requires: ''
 Sources:
 - https://registry.hub.docker.com/r/sdesbure/alpine-netatmo-librato/
-TemplateURL: https://raw.githubusercontent.com/sdesbure/docker-containers/master/netatmo_librato.xml
+Tag: latest

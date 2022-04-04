@@ -1,9 +1,8 @@
 BaseImage: lsiobase/xenial
 Beta: 'true'
 BindTime: 'true'
-CategoryList:
+CategoryList: &id001
 - Network-Other
-ChangeLogPresent: true
 Config:
   Device: {}
   Label: {}
@@ -93,21 +92,19 @@ GitHub: https://github.com/bashNinja-dockers/docker-pritunl
 Icon: https://cdn.rawgit.com/bashNinja-dockers/docker-pritunl/0cf3b425/logo.png
 Keywords:
 - pritunl
-Name: Pritunl
+- *id001
+Name: pritunl
 Networking:
   Mode: bridge
 Overview: 'Run a Pritunl VPN Server [br][br]
 
   '
 Privileged: 'true'
-Project: https://pritunl.com/
 Registry: https://hub.docker.com/r/bashninja/docker-pritunl/
 Repository: bashninja/docker-pritunl
 Requires: ''
 Sources:
 - https://pritunl.com/
 - https://hub.docker.com/r/bashninja/docker-pritunl/
-TemplateURL: https://raw.githubusercontent.com/miketweaver/docker-templates/master/bashninja/pritunl.xml
+Tag: latest
 WebUI: https://[IP]:[PORT:443]
-topPerforming: 1.03
-topTrending: -2.471

@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - MediaApp-Photos
 - MediaServer-Photos
 Config:
@@ -125,19 +125,19 @@ Config:
 Icon: https://raw.githubusercontent.com/picthor-io/unraid-templates/main/picthor-logo-short-t.png
 Keywords:
 - picthor-io
-Name: picthor.io
+- *id001
+Name: picthor-io
 Network: bridge
 Networking:
   Mode: bridge
 Overview: "&lt;h1&gt;\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/picthor-io/picthor-io-server
 Registry: https://hub.docker.com/r/picthorio/picthor-io
-Repository: picthorio/picthor-io:latest
+Repository: picthorio/picthor-io
 Requires: ''
 Sources:
 - https://github.com/picthor-io/picthor-io-server
 - https://hub.docker.com/r/picthorio/picthor-io
-TemplateURL: https://raw.githubusercontent.com/picthor-io/unraid-templates/master/picthor-io.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:5000]

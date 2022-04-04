@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Tools-Utilities
 Config:
   Device: {}
@@ -109,6 +109,7 @@ Config:
 Icon: ''
 Keywords:
 - apcupsd-influxdb-exporter
+- *id001
 Name: apcupsd-influxdb-exporter
 Network: bridge
 Networking:
@@ -117,14 +118,11 @@ Overview: Docker wrapper for a python script to query apcupsd via a python versi
   of apcaccess, it then sends the data to influxdb.
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/atribe/apcupsd-influxdb-exporter
 Registry: https://cloud.docker.com/repository/docker/atribe/apcupsd-influxdb-exporter
 Repository: atribe/apcupsd-influxdb-exporter
 Requires: ' Influxdb (autoadd) exporter app (autoadd)'
 Sources:
 - https://github.com/atribe/apcupsd-influxdb-exporter
 - https://cloud.docker.com/repository/docker/atribe/apcupsd-influxdb-exporter
-TemplateURL: https://raw.githubusercontent.com/atribe/unRAID-docker/master/apcupsd-influxdb-exporter.xml
+Tag: latest
 WebUI: ''
-topPerforming: 0.98
-topTrending: -0.954

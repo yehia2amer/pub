@@ -1,0 +1,22 @@
+env:
+  GAME_ID: '233780'
+  GAME_PARAMS: -config=server.cfg -mod=
+  GAME_PORT: '2302'
+  Steam-Password: ''
+  Steam-Username: ''
+  Validate Installation: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: ich777/steamcmd
+  tag: arma3
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

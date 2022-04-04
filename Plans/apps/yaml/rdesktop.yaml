@@ -93,9 +93,8 @@ Branch:
   ReadMe: https://github.com/linuxserver/docker-rdesktop/tree/arch-icewm#readme
   Tag: arch-icewm
   TagDescription: IceWM Arch
-CategoryList:
+CategoryList: &id001
 - Other
-ChangeLogPresent: true
 Config:
   Device:
     /dev/dri:
@@ -178,18 +177,18 @@ GitHub: https://github.com/linuxserver/docker-rdesktop#application-setup
 Icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/rdesktop-logo.png
 Keywords:
 - rdesktop
+- *id001
 Name: rdesktop
 Network: bridge
 Overview: Rdesktop(http://xrdp.org/) - Containers containing full desktop environments
   in many popular flavors for Alpine, Ubuntu, Arch, and Fedora accessible via RDP.
 Privileged: 'false'
-Project: http://xrdp.org/
-ReadMe: https://github.com/linuxserver/docker-rdesktop#readme
 Registry: https://github.com/orgs/linuxserver/packages/container/package/rdesktop
 Repository: lscr.io/linuxserver/rdesktop
 Requires: ''
 Sources:
 - http://xrdp.org/
 - https://github.com/orgs/linuxserver/packages/container/package/rdesktop
-TemplateURL: https://raw.githubusercontent.com/linuxserver/templates/master/unraid/rdesktop.xml
+- https://github.com/linuxserver/docker-rdesktop#readme
+Tag: latest
 WebUI: http://[IP]:[PORT:3000]

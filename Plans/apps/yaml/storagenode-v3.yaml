@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Cloud
 - Crypto
 - Other
@@ -93,6 +93,7 @@ ExtraParams: -e SETUP=true --mount type=bind,source="/mnt/user/[your identity di
 Icon: https://raw.githubusercontent.com/dalekseevs/Unraid-Docker-Templates/master/logos/storj-logo-png-transparent.png
 Keywords:
 - storagenode-v3
+- *id001
 Name: storagenode-v3
 Network: bridge
 Networking:
@@ -102,14 +103,11 @@ Overview: "This is official Storj V3 node client. To participate you must first 
   \n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://documentation.storj.io/
 Registry: https://hub.docker.com/r/storjlabs/storagenode
-Repository: storjlabs/storagenode:latest
+Repository: storjlabs/storagenode
 Requires: ''
 Sources:
 - https://documentation.storj.io/
 - https://hub.docker.com/r/storjlabs/storagenode
-TemplateURL: https://raw.githubusercontent.com/dalekseevs/Unraid-Docker-Templates/master/stroragenode-v3.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:14002]/
-topPerforming: 0.61
-topTrending: -0.31300000000000006

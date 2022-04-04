@@ -1,0 +1,20 @@
+env:
+  RPC Host Address: 0.0.0.0
+  SHARE_SIZE: 1TB
+  Storjstat.com Monitor API-Key: ''
+  Wallet Address: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: oreandawe/storjshare-cli
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

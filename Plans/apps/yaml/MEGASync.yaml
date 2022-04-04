@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Network-Other
 - Productivity
 - Tools-Utilities
@@ -115,7 +115,8 @@ ExtraParams: --restart=unless-stopped
 Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/megasync.png
 Keywords:
 - megasync
-Name: MEGASync
+- *id001
+Name: megasync
 Network: bridge
 Networking:
   Mode: bridge
@@ -124,14 +125,12 @@ Overview: "MEGAsync is an intuitive application that enables you to effortlessly
   \ within seconds, you can explore the same documents on your own PC.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://hub.docker.com/r/ich777/doh-server
 Registry: https://hub.docker.com/r/ich777/megasync
 Repository: ich777/megasync
 Requires: ''
 Sources:
 - https://hub.docker.com/r/ich777/doh-server
 - https://hub.docker.com/r/ich777/megasync
+Tag: latest
 WebUI: http://[IP]:[PORT:8080]/vnc.html?autoconnect=true
 caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/MEGASync.xml
-topPerforming: 3.281
-topTrending: -5.546999999999999

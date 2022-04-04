@@ -1,0 +1,19 @@
+env:
+  POSTGRES_DB: dsmrdb
+  POSTGRES_PASSWORD: dsmrreader
+  POSTGRES_USER: dsmrreader
+image:
+  pullPolicy: IfNotPresent
+  repository: postgres
+  tag: 12.5-alpine
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

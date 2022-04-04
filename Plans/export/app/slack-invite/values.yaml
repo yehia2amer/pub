@@ -1,0 +1,19 @@
+env:
+  COMMUNITY_NAME: myslackteam
+  SLACK_TOKEN: Enter YOur slack token here
+  SLACK_URL: myslackteam.slack.com
+image:
+  pullPolicy: IfNotPresent
+  repository: ninthwalker/slack-invite
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Backup
 - MediaApp-Video
 - MediaApp-Music
@@ -84,18 +84,18 @@ ExtraParams: --device=/dev/sr0:/dev/sr0
 Icon: https://raw.githubusercontent.com/rix1337/docker-templates/master/rix1337/ripper.png
 Keywords:
 - ripper
-Name: Ripper
+- *id001
+Name: ripper
 Network: bridge
 Networking:
   Mode: bridge
 Overview: This container will detect optical disks by their type and rip them automatically.
 Privileged: 'true'
-ReadMe: https://github.com/rix1337/docker-ripper#readme
 Registry: https://registry.hub.docker.com/r/rix1337/docker-ripper
-Repository: rix1337/docker-ripper:manual-latest
+Repository: rix1337/docker-ripper
 Requires: ''
 Sources:
 - https://registry.hub.docker.com/r/rix1337/docker-ripper
-TemplateURL: https://raw.githubusercontent.com/rix1337/docker-templates/master/rix1337/ripper.xml
+- https://github.com/rix1337/docker-ripper#readme
+Tag: manual-latest
 WebUI: ''
-topTrending: -0.121

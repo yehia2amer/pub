@@ -1,0 +1,19 @@
+env:
+  CHATID: ''
+  DELAY: '60'
+  TOKEN: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: bokker/rss.to.telegram
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

@@ -1,6 +1,5 @@
-CategoryList:
+CategoryList: &id001
 - MediaApp-Video
-ChangeLogPresent: true
 Config:
   Device: {}
   Label: {}
@@ -162,7 +161,8 @@ Config:
 Icon: https://raw.githubusercontent.com/jlesage/docker-templates/master/jlesage/images/mkvcleaver-icon.png
 Keywords:
 - mkvcleaver
-Name: MKVCleaver
+- *id001
+Name: mkvcleaver
 Network: bridge
 Networking:
   Mode: bridge
@@ -170,14 +170,11 @@ Overview: 'MKVCleaver is a tool for batch extraction of data from MKV files
 
   '
 Privileged: 'false'
-Project: https://blogs.sapib.ca/apps/mkvcleaver/
 Registry: https://hub.docker.com/r/jlesage/mkvcleaver/
 Repository: jlesage/mkvcleaver
 Requires: ''
 Sources:
 - https://blogs.sapib.ca/apps/mkvcleaver/
 - https://hub.docker.com/r/jlesage/mkvcleaver/
-TemplateURL: https://raw.githubusercontent.com/jlesage/docker-templates/master/jlesage/mkvcleaver.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:5800]
-topPerforming: 2.091
-topTrending: 0.3570000000000002

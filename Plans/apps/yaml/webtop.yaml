@@ -93,9 +93,8 @@ Branch:
   ReadMe: https://github.com/linuxserver/docker-webtop/tree/arch-icewm#readme
   Tag: arch-icewm
   TagDescription: IceWM Arch
-CategoryList:
+CategoryList: &id001
 - Tools-Utilities
-ChangeLogPresent: true
 Config:
   Device:
     /dev/dri:
@@ -198,19 +197,19 @@ GitHub: https://github.com/linuxserver/docker-webtop#application-setup
 Icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/webtop-logo.png
 Keywords:
 - webtop
+- *id001
 Name: webtop
 Network: bridge
 Overview: Webtop(https://github.com/linuxserver/gclient) - Alpine, Ubuntu, Fedora,
   and Arch based containers containing full desktop environments in officially supported
   flavors accessible via any modern web browser.
 Privileged: 'false'
-Project: https://github.com/linuxserver/gclient
-ReadMe: https://github.com/linuxserver/docker-webtop#readme
 Registry: https://github.com/orgs/linuxserver/packages/container/package/webtop
 Repository: lscr.io/linuxserver/webtop
 Requires: ''
 Sources:
 - https://github.com/linuxserver/gclient
 - https://github.com/orgs/linuxserver/packages/container/package/webtop
-TemplateURL: https://raw.githubusercontent.com/linuxserver/templates/master/unraid/webtop.xml
+- https://github.com/linuxserver/docker-webtop#readme
+Tag: latest
 WebUI: http://[IP]:[PORT:3000]

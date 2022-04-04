@@ -1,0 +1,25 @@
+env:
+  DATA_PERM: '770'
+  GAME_ID: '17575'
+  GAME_NAME: pvkii
+  GAME_PARAMS: -maxplayers 18 +map bt_island
+  GAME_PORT: '27015'
+  Steam-Password: ''
+  Steam-Username: ''
+  UMASK: '000'
+  Validate Installation: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: ich777/steamcmd
+  tag: pvkii
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

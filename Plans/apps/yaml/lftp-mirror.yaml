@@ -1,32 +1,39 @@
 BindTime: 'true'
-CategoryList:
+CategoryList: &id001
 - Other
+Config:
+  Device: {}
+  Label: {}
+  Path: {}
+  Port: {}
+  Variable:
+    HOST:
+      Name: HOST
+      value: ''
+    LFTP_FILES:
+      Name: LFTP_FILES
+      value: '1'
+    LFTP_PARTS:
+      Name: LFTP_PARTS
+      value: '1'
+    PORT:
+      Name: PORT
+      value: '22'
+    REMOTE_DIR:
+      Name: REMOTE_DIR
+      value: ''
+    USERNAME:
+      Name: USERNAME
+      value: ''
 Data:
   Volume:
     ContainerDir: /config
     HostDir: ''
     Mode: rw
-Environment:
-  Variable:
-  - Name: HOST
-    Value: ''
-  - Name: PORT
-    Value: '22'
-  - Name: USERNAME
-    Value: ''
-  - Name: REMOTE_DIR
-    Value: ''
-  - Name: LFTP_PARTS
-    Value: '1'
-  - Name: LFTP_FILES
-    Value: '1'
-  - Name: PUID
-    Value: '99'
-  - Name: PGID
-    Value: '100'
 Icon: /plugins/dynamix.docker.manager/images/question.png
 Keywords:
 - lftp-mirror
+- *id001
 Name: lftp-mirror
 Networking:
   Mode: bridge
@@ -37,4 +44,4 @@ Repository: gregyankovoy/lftp-mirror
 Requires: ''
 Sources:
 - https://hub.docker.com/r/gregyankovoy/lftp-mirror//Dockerfile/
-TemplateURL: https://raw.githubusercontent.com/GregYankovoy/docker-templates/master/greg/lftp-mirror.xml
+Tag: latest

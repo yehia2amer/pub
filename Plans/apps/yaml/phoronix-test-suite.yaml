@@ -1,6 +1,5 @@
-CategoryList:
+CategoryList: &id001
 - Tools-Utilities
-ChangeLogPresent: true
 Config:
   Device: {}
   Label: {}
@@ -33,7 +32,8 @@ ExtraParams: -it
 Icon: https://raw.githubusercontent.com/BGameiro2000/unraid-ca/master/pts/logo.png
 Keywords:
 - phoronix-test-suite
-Name: Phoronix-Test-Suite
+- *id001
+Name: phoronix-test-suite
 Network: bridge
 Networking:
   Mode: bridge
@@ -42,13 +42,10 @@ Overview: "The Phoronix Test Suite is the most comprehensive testing and benchma
   \ be easily added.\r\n"
 PostArgs: /bin/bash
 Privileged: 'false'
-Project: https://github.com/phoronix-test-suite/phoronix-test-suite
 Registry: https://hub.docker.com/r/phoronix/pts/
 Repository: phoronix/pts
 Requires: ''
 Sources:
 - https://github.com/phoronix-test-suite/phoronix-test-suite
 - https://hub.docker.com/r/phoronix/pts/
-TemplateURL: https://raw.githubusercontent.com/BGameiro2000/unraid-ca/master/pts/pts.xml
-topPerforming: 0.306
-topTrending: -0.137
+Tag: latest

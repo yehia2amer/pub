@@ -1,6 +1,5 @@
-CategoryList:
+CategoryList: &id001
 - Tools-Utilities
-ChangeLogPresent: true
 Config:
   Device: {}
   Label: {}
@@ -162,7 +161,8 @@ Config:
 Icon: https://raw.githubusercontent.com/jlesage/docker-templates/master/jlesage/images/qdirstat-icon.png
 Keywords:
 - qdirstat
-Name: QDirStat
+- *id001
+Name: qdirstat
 Network: bridge
 Networking:
   Mode: bridge
@@ -171,14 +171,11 @@ Overview: 'QDirStat is a graphical application to show where your disk space has
 
   '
 Privileged: 'false'
-Project: https://github.com/shundhammer/qdirstat
 Registry: https://hub.docker.com/r/jlesage/qdirstat/
 Repository: jlesage/qdirstat
 Requires: ''
 Sources:
 - https://github.com/shundhammer/qdirstat
 - https://hub.docker.com/r/jlesage/qdirstat/
-TemplateURL: https://raw.githubusercontent.com/jlesage/docker-templates/master/jlesage/qdirstat.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:5800]
-topPerforming: 3.873
-topTrending: 0.45100000000000007

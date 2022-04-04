@@ -1,6 +1,5 @@
-CategoryList:
+CategoryList: &id001
 - Tools-Utilities
-ChangeLogPresent: true
 Config:
   Device: {}
   Label: {}
@@ -162,7 +161,8 @@ Config:
 Icon: https://raw.githubusercontent.com/jlesage/docker-templates/master/jlesage/images/putty-icon.png
 Keywords:
 - putty
-Name: PuTTY
+- *id001
+Name: putty
 Network: bridge
 Networking:
   Mode: bridge
@@ -173,14 +173,11 @@ Overview: 'PuTTY is a free and open-source terminal emulator, serial console and
 
   '
 Privileged: 'false'
-Project: https://www.putty.org
 Registry: https://hub.docker.com/r/jlesage/putty/
 Repository: jlesage/putty
 Requires: ''
 Sources:
 - https://www.putty.org
 - https://hub.docker.com/r/jlesage/putty/
-TemplateURL: https://raw.githubusercontent.com/jlesage/docker-templates/master/jlesage/putty.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:5800]
-topPerforming: 1.389
-topTrending: -1.305

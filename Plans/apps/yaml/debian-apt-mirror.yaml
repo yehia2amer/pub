@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Network-Other
 - Productivity
 - Tools-Utilities
@@ -116,7 +116,8 @@ ExtraParams: --restart=unless-stopped
 Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/debianpackage.png
 Keywords:
 - debian-apt-mirror
-Name: Debian-APT-Mirror
+- *id001
+Name: debian-apt-mirror
 Network: bridge
 Networking:
   Mode: bridge
@@ -124,12 +125,11 @@ Overview: "This container will run apt-mirror and Apache2. This allows you to cr
   \ a local apt mirror for Debian packages.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://www.debian.org/
 Registry: https://hub.docker.com/r/ich777/debian-mirror
 Repository: ich777/debian-mirror
 Requires: ''
 Sources:
 - https://www.debian.org/
 - https://hub.docker.com/r/ich777/debian-mirror
-TemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/Debian-APT-Mirror.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:980]/

@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Productivity
 Config:
   Device: {}
@@ -237,7 +237,8 @@ Config:
 Icon: https://www.firefly-iii.org/assets/logo/color.png
 Keywords:
 - firefly-iii
-Name: Firefly-III
+- *id001
+Name: firefly-iii
 Network: bridge
 Networking:
   Mode: bridge
@@ -248,14 +249,11 @@ Overview: "\"Firefly III\" is a (self-hosted) manager for your personal finances
   \ reports available.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://firefly-iii.org/
 Registry: https://hub.docker.com/r/fireflyiii/core
-Repository: fireflyiii/core:latest
+Repository: fireflyiii/core
 Requires: ''
 Sources:
 - https://firefly-iii.org/
 - https://hub.docker.com/r/fireflyiii/core
-TemplateURL: https://raw.githubusercontent.com/FunnyPocketBook/docker-templates/master/firefly-iii.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:8080]/
-topPerforming: 12.364
-topTrending: -20.996

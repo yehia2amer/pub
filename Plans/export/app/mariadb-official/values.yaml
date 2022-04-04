@@ -1,0 +1,21 @@
+env:
+  Database Name: dbname_here
+  Database Password: ''
+  Database User: dbuser_here
+  Generate Random Password: 'Yes'
+  Root Password: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: mariadb
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

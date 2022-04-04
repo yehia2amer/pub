@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Tools-Utilities
 Config:
   Device: {}
@@ -111,7 +111,8 @@ ExtraParams: --restart=unless-stopped
 Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/pushover.png
 Keywords:
 - onlinecheckyourserver
-Name: OnlineCheckYourServer
+- *id001
+Name: onlinecheckyourserver
 Network: bridge
 Networking:
   Mode: bridge
@@ -119,13 +120,12 @@ Overview: "This is a simple container that will check if a domain name or IP add
   \ is pingable and send you a message with Pushover if it goes offline.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://hub.docker.com/r/ich777/online-check-pushover
 Registry: https://hub.docker.com/r/ich777/online-check-pushover
 Repository: ich777/online-check-pushover
 Requires: ''
 Sources:
 - https://hub.docker.com/r/ich777/online-check-pushover
 - https://hub.docker.com/r/ich777/online-check-pushover
+Tag: latest
 WebUI: ''
 caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/OnlineCheckYourServer.xml
-topTrending: -3.804

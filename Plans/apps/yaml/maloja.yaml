@@ -1,7 +1,6 @@
 Beta: 'true'
-CategoryList:
+CategoryList: &id001
 - MediaServer-Music
-ChangeLogPresent: true
 Config:
   Device: {}
   Label: {}
@@ -56,6 +55,7 @@ Config:
 Icon: https://github.com/FoxxMD/unraid-docker-templates/raw/master/icons/maloja.png
 Keywords:
 - maloja
+- *id001
 Name: maloja
 Network: bridge
 Networking:
@@ -64,12 +64,11 @@ Overview: "Self-hosted music scrobble database to create personal listening stat
   \ and charts as a substitute for Last.fm / Libre.fm / GNU FM.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://maloja.krateng.ch/
 Registry: https://hub.docker.com/r/krateng/maloja
-Repository: krateng/maloja:latest
+Repository: krateng/maloja
 Requires: ''
 Sources:
 - https://maloja.krateng.ch/
 - https://hub.docker.com/r/krateng/maloja
-TemplateURL: https://raw.githubusercontent.com/FoxxMD/unraid-docker-templates/master/foxxmd/maloja.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:42010]/

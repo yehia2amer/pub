@@ -1,0 +1,19 @@
+env:
+  LC_ALL: en_US.UTF-8
+  Language: en_US.UTF-8
+  Time Zone: America/Denver
+image:
+  pullPolicy: IfNotPresent
+  repository: ixilon/nukkit
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

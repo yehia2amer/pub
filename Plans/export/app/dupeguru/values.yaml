@@ -1,0 +1,24 @@
+env:
+  Display Height: ''
+  Display Width: ''
+  Extra x11vnc Options: ''
+  Group ID: ''
+  Niceness (priority): ''
+  Secure Connection: ''
+  Umask: ''
+  User ID: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: jlesage/dupeguru
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

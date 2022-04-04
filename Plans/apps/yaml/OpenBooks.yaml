@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Downloaders
 - Tools-Utilities
 - MediaApp-Books
@@ -34,17 +34,17 @@ Config:
 Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/openbooks.png
 Keywords:
 - openbooks
-Name: OpenBooks
+- *id001
+Name: openbooks
 Network: bridge
 Overview: "DESCRIPTION\r\n"
 PostArgs: --persist
 Privileged: 'false'
-Project: https://github.com/evan-buss/openbooks
 Registry: https://hub.docker.com/r/evanbuss/openbooks
 Repository: evanbuss/openbooks
 Requires: ''
 Sources:
 - https://github.com/evan-buss/openbooks
 - https://hub.docker.com/r/evanbuss/openbooks
-TemplateURL: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/master/templates/OpenBooks.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:80]

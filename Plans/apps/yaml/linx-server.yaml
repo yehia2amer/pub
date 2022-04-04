@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Cloud
 - Productivity
 - Tools-Utilities
@@ -57,17 +57,17 @@ Config:
 Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/linx-server.png
 Keywords:
 - linx-server
-Name: Linx-Server
+- *id001
+Name: linx-server
 Network: bridge
 Overview: "DESCRIPTION\r\n"
 PostArgs: -config /data/linx-server.conf
 Privileged: 'false'
-Project: https://github.com/ZizzyDizzyMC/linx-server
 Registry: https://hub.docker.com/r/andreimarcu/linx-server
 Repository: andreimarcu/linx-server
 Requires: ''
 Sources:
 - https://github.com/ZizzyDizzyMC/linx-server
 - https://hub.docker.com/r/andreimarcu/linx-server
-TemplateURL: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/master/templates/Linx-Server.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:8080]

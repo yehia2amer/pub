@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Cloud
 - Productivity
 - Tools-Utilities
@@ -179,17 +179,17 @@ Config:
 Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/zipline.png
 Keywords:
 - zipline
-Name: Zipline
+- *id001
+Name: zipline
 Network: bridge
 Overview: "DESCRIPTION\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/diced/zipline
 Registry: https://hub.docker.com/r/diced/zipline
-Repository: diced/zipline:trunk
+Repository: diced/zipline
 Requires: PostgreSQL (database)
 Sources:
 - https://github.com/diced/zipline
 - https://hub.docker.com/r/diced/zipline
-TemplateURL: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/master/templates/Zipline.xml
+Tag: trunk
 WebUI: http://[IP]:[PORT:3000]

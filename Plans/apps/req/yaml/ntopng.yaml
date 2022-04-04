@@ -1,26 +1,16 @@
-CategoryList:
+CategoryList: &id001
 - Security
 - Network-Management
 Config:
   Device: {}
   Label: {}
-  Path:
-    AppData Config Path:
-      Default: ''
-      Description: Container path to /var/lib/redis to persist data
-      Display: advanced-hide
-      Mask: 'false'
-      Mode: rw
-      Name: AppData Config Path
-      Required: 'true'
-      Target: /var/lib/redis
-      Type: Path
-      value: /mnt/user/appdata/ntopng
+  Path: {}
   Port: {}
   Variable: {}
 Icon: https://raw.githubusercontent.com/cschanot/docker-templates/main/images/ntopng-icon-150x150.png
 Keywords:
 - ntopng
+- *id001
 Name: ntopng
 Network: host
 Networking:
@@ -28,14 +18,11 @@ Networking:
 Overview: "High-Speed Web-based Traffic Analysis and Flow Collection \r\n"
 PostArgs: -i eth0 --http-port 0.0.0.0:3000
 Privileged: 'false'
-Project: https://www.ntop.org/
 Registry: https://hub.docker.com/r/ntop/ntopng/
-Repository: ntop/ntopng:stable
+Repository: ntop/ntopng
 Requires: ' App uses hostnetworking (autoadd)'
 Sources:
 - https://www.ntop.org/
 - https://hub.docker.com/r/ntop/ntopng/
-TemplateURL: https://raw.githubusercontent.com/cschanot/docker-templates/master/ntopng.xml
+Tag: stable
 WebUI: http://[IP]:[PORT:3000]/
-topPerforming: 3.594
-topTrending: 1.0999999999999996

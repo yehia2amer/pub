@@ -1,7 +1,13 @@
 BaseImage: ''
 BindTime: 'true'
-CategoryList:
+CategoryList: &id001
 - Tools-System
+Config:
+  Device: {}
+  Label: {}
+  Path: {}
+  Port: {}
+  Variable: {}
 Data:
   Volume:
     ContainerDir: /var/lib/chronograf
@@ -10,7 +16,8 @@ Data:
 Icon: https://raw.githubusercontent.com/Data-Monkey/docker-templates/master/Data-Monkey/img/chronograf.png
 Keywords:
 - chronograf
-Name: Chronograf
+- *id001
+Name: chronograf
 Networking:
   Mode: bridge
   Publish:
@@ -23,14 +30,13 @@ Overview: "Chronograf is InfluxData\u2019s open source web application. Use Chro
   \ with the other components of the TICK stack to visualize your monitoring data\
   \ and easily create alerting and automation rules."
 Privileged: 'false'
-Project: https://www.influxdata.com/time-series-platform/chronograf/
 Registry: https://hub.docker.com/_/chronograf/
 Repository: chronograf
 Requires: ''
 Sources:
 - https://www.influxdata.com/time-series-platform/chronograf/
 - https://hub.docker.com/_/chronograf/
-TemplateURL: https://raw.githubusercontent.com/Data-Monkey/docker-templates/master/Data-Monkey/chronograf.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:8888]/
 changes: "\n    [center] [b]Data-Monkey:[/b] Netdata [/center]\n\n[center][font size=4]Change\
   \ Log[/font][/center]\n\n[font size=3]2018.04.29[/font]\n- Initial release of the\

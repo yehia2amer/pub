@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Network-Other
 - Productivity
 - Tools-Utilities
@@ -137,7 +137,8 @@ ExtraParams: --restart=unless-stopped
 Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/fluttercoin.png
 Keywords:
 - fluttercoin-wallet
-Name: FlutterCoin-Wallet
+- *id001
+Name: fluttercoin-wallet
 Network: bridge
 Networking:
   Mode: bridge
@@ -145,12 +146,12 @@ Overview: "FlutterCoin may be a coin with the tried and true algorithm of scrypt
   \ but it's definitely anything but ordinary.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://fluttercoin.me/
 Registry: https://hub.docker.com/r/ich777/fluttercoin
 Repository: ich777/fluttercoin
 Requires: ''
 Sources:
 - https://fluttercoin.me/
 - https://hub.docker.com/r/ich777/fluttercoin
+Tag: latest
 WebUI: http://[IP]:[PORT:8080]/vnc.html?autoconnect=true
 caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/FlutterCoin-Wallet.xml

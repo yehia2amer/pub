@@ -1,6 +1,21 @@
 BindTime: 'true'
-CategoryList:
+CategoryList: &id001
 - Other
+Config:
+  Device: {}
+  Label: {}
+  Path: {}
+  Port: {}
+  Variable:
+    GUID:
+      Name: GUID
+      value: '100'
+    UMASK:
+      Name: UMASK
+      value: '000'
+    USER_ID:
+      Name: USER_ID
+      value: '0'
 Data:
   Volume:
   - ContainerDir: /media
@@ -9,20 +24,11 @@ Data:
   - ContainerDir: /config
     HostDir: /mnt/cache/appdata/tmm-cli/config/
     Mode: rw
-Environment:
-  Variable:
-  - Name: USER_ID
-    Value: '0'
-  - Name: PUID
-    Value: '99'
-  - Name: GUID
-    Value: '100'
-  - Name: UMASK
-    Value: '000'
 Icon: https://i.imgur.com/M5Io6sF.png
 Keywords:
 - tinymm-cli
-Name: TinyMM-CLI
+- *id001
+Name: tinymm-cli
 Networking:
   Mode: bridge
   Publish:
@@ -36,10 +42,9 @@ Networking:
 Overview: Tiny Media Manager  CLI with Cron.
 Privileged: 'false'
 Registry: https://registry.hub.docker.com/r/coolasice1999/tmm-cli-cronjob/
-Repository: coolasice1999/tmm-cli-cronjob:latest
+Repository: coolasice1999/tmm-cli-cronjob
 Requires: ''
 Sources:
 - https://registry.hub.docker.com/r/coolasice1999/tmm-cli-cronjob/
-TemplateURL: https://raw.githubusercontent.com/hernandito/docker-templates/master/hernando/TinyMM-CLI-Cron.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:5800]
-topTrending: -5.793

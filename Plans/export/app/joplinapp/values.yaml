@@ -1,0 +1,19 @@
+env:
+  DISPLAY_HEIGHT: '768'
+  DISPLAY_WIDTH: '1280'
+  VNC_PASSWORD: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: acaranta/docker-joplin
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

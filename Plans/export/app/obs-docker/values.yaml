@@ -1,0 +1,17 @@
+env:
+  Password: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: cieg/obs-docker
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

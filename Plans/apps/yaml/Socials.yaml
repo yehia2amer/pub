@@ -1,25 +1,28 @@
 BindTime: 'true'
-CategoryList:
+CategoryList: &id001
 - Other
+Config:
+  Device: {}
+  Label: {}
+  Path: {}
+  Port: {}
+  Variable:
+    LOG_LEVEL:
+      Name: LOG_LEVEL
+      value: info
+    UMASK:
+      Name: UMASK
+      value: '000'
 Data:
   Volume:
     ContainerDir: /app/people
     HostDir: /mnt/user/appdata/socials
     Mode: rw
-Environment:
-  Variable:
-  - Name: LOG_LEVEL
-    Value: info
-  - Name: UMASK
-    Value: '000'
-  - Name: PUID
-    Value: '99'
-  - Name: PGID
-    Value: '100'
 Icon: https://raw.githubusercontent.com/diamkil/docker-templates/master/diamkil/images/diamkil.png
 Keywords:
 - socials
-Name: Socials
+- *id001
+Name: socials
 Networking:
   Mode: bridge
   Publish:
@@ -31,12 +34,11 @@ Overview: '[b][u][span style=''color: #E80000;'']Description[/span][/u][/b][br]
 
   '
 Privileged: 'false'
-Project: https://github.com/diamkil/socials
 Registry: https://registry.hub.docker.com/r/diamkil/socials/
-Repository: ghcr.io/diamkil/socials:main
+Repository: ghcr.io/diamkil/socials
 Requires: ''
 Sources:
 - https://github.com/diamkil/socials
 - https://registry.hub.docker.com/r/diamkil/socials/
-TemplateURL: https://raw.githubusercontent.com/diamkil/docker-templates/master/diamkil/socials.xml
+Tag: main
 WebUI: http://[IP]:[PORT:7574]/

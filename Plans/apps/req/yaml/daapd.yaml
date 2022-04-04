@@ -1,7 +1,6 @@
-CategoryList:
+CategoryList: &id001
 - MediaApp-Music
 - MediaServer-Music
-ChangeLogPresent: true
 Config:
   Device: {}
   Label: {}
@@ -64,20 +63,19 @@ GitHub: https://github.com/linuxserver/docker-daapd#application-setup
 Icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/linuxserver-ls-logo.png
 Keywords:
 - daapd
+- *id001
 Name: daapd
 Network: host
 Overview: Daapd(https://owntone.github.io/owntone-server/) (iTunes) media server with
   support for AirPlay devices, Apple Remote (and compatibles), Chromecast, MPD and
   internet radio.
 Privileged: 'false'
-Project: https://owntone.github.io/owntone-server/
-ReadMe: https://github.com/linuxserver/docker-daapd#readme
 Registry: https://github.com/orgs/linuxserver/packages/container/package/daapd
 Repository: lscr.io/linuxserver/daapd
 Requires: ' App uses hostnetworking (autoadd)'
 Sources:
 - https://owntone.github.io/owntone-server/
 - https://github.com/orgs/linuxserver/packages/container/package/daapd
-TemplateURL: https://raw.githubusercontent.com/linuxserver/templates/master/unraid/daapd.xml
+- https://github.com/linuxserver/docker-daapd#readme
+Tag: latest
 WebUI: http://[IP]:[PORT:3689]
-topTrending: -0.9359999999999999

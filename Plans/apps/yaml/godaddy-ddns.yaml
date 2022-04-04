@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Network-Web
 Config:
   Device: {}
@@ -44,7 +44,8 @@ ExtraParams: --restart=always
 Icon: https://rawgit.com/Kru-x/unraid-docker-templates/master/Kru-x/img/GoDaddy.png
 Keywords:
 - godaddy-ddns
-Name: Godaddy-ddns
+- *id001
+Name: godaddy-ddns
 Network: bridge
 Networking:
   Mode: bridge
@@ -59,7 +60,5 @@ Repository: jwater7/godaddy-publicip-updater
 Requires: ''
 Sources:
 - https://hub.docker.com/r/jwater7/godaddy-publicip-updater/
-TemplateURL: https://raw.githubusercontent.com/Kru-x/unraid-docker-templates/master/Kru-x/Godaddy-ddns.xml
+Tag: latest
 WebUI: ''
-topPerforming: 0.778
-topTrending: -2.346

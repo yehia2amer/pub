@@ -1,0 +1,19 @@
+env:
+  ROOT_PWD: Docker!
+  UMASK: '000'
+  USER: Debian
+image:
+  pullPolicy: IfNotPresent
+  repository: 468654/tartube
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

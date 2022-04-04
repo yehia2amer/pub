@@ -1,0 +1,19 @@
+env:
+  Browser Display Height: '1080'
+  Browser Display Width: '1920'
+  VNC Password: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: p3rco/brave
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

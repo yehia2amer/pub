@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Backup
 - Tools-Utilities
 Config:
@@ -54,7 +54,8 @@ Config:
 Icon: ''
 Keywords:
 - qemubackup
-Name: QEMUBackup
+- *id001
+Name: qemubackup
 Network: bridge
 Networking:
   Mode: bridge
@@ -64,13 +65,11 @@ Overview: QEMUBackup is a ASP.NET Core app that facilitates manual backups of QE
   VM's XML. Useful for describing the state of a VM when taking a backup.
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/wbynum/QEMUBackup
 Registry: https://hub.docker.com/r/wbynum/qemubackup
 Repository: wbynum/qemubackup
 Requires: ''
 Sources:
 - https://github.com/wbynum/QEMUBackup
 - https://hub.docker.com/r/wbynum/qemubackup
-TemplateURL: https://raw.githubusercontent.com/wbynum/docker-templates/master/wbynum/QEMUBackup.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:43080]/
-topTrending: -6.883

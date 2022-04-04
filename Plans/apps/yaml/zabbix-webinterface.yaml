@@ -1,6 +1,6 @@
 CAComment: This template is set up to use a custom network. You may have to adjust
   the network or IP address etc to match your system
-CategoryList:
+CategoryList: &id001
 - Network-Other
 - Productivity
 - Tools-System
@@ -132,7 +132,8 @@ Config:
 Icon: https://github.com/Conmyster/unraid-docker-templates/raw/master/zabbix-agent/images/Zabbix-Logo.png
 Keywords:
 - zabbix-webinterface
-Name: Zabbix-Webinterface
+- *id001
+Name: zabbix-webinterface
 Network: br0
 Networking:
   Mode: br0
@@ -141,14 +142,12 @@ Overview: "Zabbix web interface is a part of Zabbix software. It is used to mana
   \ resources under monitoring and view monitoring statistics.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://www.zabbix.com/
 Registry: https://hub.docker.com/r/zabbix/zabbix-web-nginx-mysql/
 Repository: zabbix/zabbix-web-nginx-mysql
 Requires: ''
 Sources:
 - https://www.zabbix.com/
 - https://hub.docker.com/r/zabbix/zabbix-web-nginx-mysql/
+Tag: latest
 WebUI: ''
 caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/Zabbix-Webinterface.xml
-topPerforming: 0.744
-topTrending: -1.8909999999999998

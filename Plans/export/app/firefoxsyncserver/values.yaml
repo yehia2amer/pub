@@ -1,0 +1,23 @@
+env:
+  Allow new users: ''
+  Enable batch uploads: 'true'
+  Force WSGI: 'false'
+  Port: '5000'
+  SQLlite URI: sqlite:////data/syncserver.db
+  Syncserver Public URL: ''
+  Syncserver secret: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: mozilla/syncserver
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

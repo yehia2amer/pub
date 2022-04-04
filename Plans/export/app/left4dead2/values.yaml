@@ -1,0 +1,23 @@
+env:
+  GAME_ID: '222860'
+  GAME_NAME: left4dead2
+  GAME_PARAMS: +maxplayers 8 +map c2m1_highway
+  GAME_PORT: '27015'
+  Steam-Password: ''
+  Steam-Username: ''
+  Validate Installation: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: ich777/steamcmd
+  tag: l4d2
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

@@ -1,0 +1,26 @@
+env:
+  Extra Game Parameters: -server -log
+  GAME_ID: '376030'
+  Game Parameters: ''
+  Map: TheIsland
+  Server Admin Password: ''
+  Server Name: ''
+  Server Password: ''
+  Steam-Password: ''
+  Steam-Username: ''
+  Validate Installation: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: ich777/steamcmd
+  tag: arkse
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

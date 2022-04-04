@@ -1,0 +1,22 @@
+env:
+  PMM_CONFIG: ''
+  PMM_NO_MISSING: ''
+  PMM_RUN: ''
+  PMM_TEST: ''
+  PMM_TIME: ''
+  UMASK: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: lscr.io/linuxserver/plex-meta-manager
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

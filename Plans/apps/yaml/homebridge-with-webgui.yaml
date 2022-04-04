@@ -1,5 +1,5 @@
 BindTime: 'true'
-CategoryList:
+CategoryList: &id001
 - HomeAutomation
 - Tools
 Config:
@@ -47,7 +47,8 @@ GitHub: https://github.com/SiwatINC/unraid-ca-repository
 Icon: https://i1.wp.com/www.deviousweb.com/wp-content/uploads/2017/06/HomeKit.png
 Keywords:
 - homebridge-with-webgui
-Name: HomeBridge-with-webGUI
+- *id001
+Name: homebridge-with-webgui
 Networking:
   Mode: host
 Overview: 'Homebridge with GUI (default user:pass=admin:admin) is a lightweight NodeJS
@@ -57,12 +58,11 @@ Overview: 'Homebridge with GUI (default user:pass=admin:admin) is a lightweight 
 
   '
 Privileged: 'false'
-Project: https://github.com/nfarina/homebridge/
 Registry: https://github.com/SiwatINC/homebridge_gui/pkgs/container/homebridge_gui
 Repository: ghcr.io/siwatinc/homebridge_gui
 Requires: ''
 Sources:
 - https://github.com/nfarina/homebridge/
 - https://github.com/SiwatINC/homebridge_gui/pkgs/container/homebridge_gui
-TemplateURL: https://raw.githubusercontent.com/SiwatINC/unraid-ca-repository/master/docker-template/homebridge_ui.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:8124]

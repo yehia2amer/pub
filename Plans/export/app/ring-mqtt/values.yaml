@@ -1,0 +1,28 @@
+env:
+  BEAMDURATION: '0'
+  DISARMCODE: ''
+  ENABLECAMERAS: 'false'
+  ENABLEMODES: 'false'
+  ENABLEPANIC: 'false'
+  MQTTHOST: ''
+  MQTTPASSWORD: ''
+  MQTTPORT: '1883'
+  MQTTUSER: ''
+  RINGLOCATIONIDS: ''
+  RINGTOKEN: ''
+  SNAPSHOTMODE: disabled
+image:
+  pullPolicy: IfNotPresent
+  repository: tsightler/ring-mqtt
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

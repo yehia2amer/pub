@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Security
 - Network-Web
 - Network-DNS
@@ -169,7 +169,8 @@ ExtraParams: --cap-add=NET_ADMIN
 Icon: https://raw.githubusercontent.com/testdasi/openvpn-client-aio-base/master/openvpn-simple.png
 Keywords:
 - openvpn-aio-client-torless
-Name: OpenVPN-AIO-Client-Torless
+- *id001
+Name: openvpn-aio-client-torless
 Network: bridge
 Networking:
   Mode: bridge
@@ -179,13 +180,11 @@ Overview: "An \"all-in-one\" docker for all your private browsing needs (includi
   \ but without TOR. \r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/testdasi/openvpn-client-aio
 Registry: https://registry.hub.docker.com/r/testdasi/openvpn-client-aio/
-Repository: testdasi/openvpn-client-aio:latest-torless
+Repository: testdasi/openvpn-client-aio
 Requires: ''
 Sources:
 - https://github.com/testdasi/openvpn-client-aio
 - https://registry.hub.docker.com/r/testdasi/openvpn-client-aio/
-TemplateURL: https://raw.githubusercontent.com/testdasi/testdasi-unraid-repo/master/openvpn-aio-client-torless.xml
+Tag: latest-torless
 WebUI: ''
-topTrending: -1.7459999999999996

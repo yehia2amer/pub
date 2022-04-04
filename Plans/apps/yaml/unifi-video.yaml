@@ -1,7 +1,13 @@
 BindTime: 'true'
-CategoryList:
+CategoryList: &id001
 - HomeAutomation
 - Network-Management
+Config:
+  Device: {}
+  Label: {}
+  Path: {}
+  Port: {}
+  Variable: {}
 Data:
   Volume:
   - ContainerDir: /var/lib/unifi-video
@@ -10,11 +16,11 @@ Data:
   - ContainerDir: /var/lib/unifi-video/videos
     HostDir: /mnt/user/UnfiVideoShareForStorage
     Mode: rw
-Environment: ''
 Icon: https://i.imgur.com/dD9ub3n.png
 Keywords:
 - unifi-video
-Name: UniFi-Video
+- *id001
+Name: unifi-video
 Networking:
   Mode: bridge
   Publish:
@@ -58,7 +64,5 @@ Repository: pducharme/unifi-video-controller
 Requires: ''
 Sources:
 - https://registry.hub.docker.com/r/pducharme/unifi-video-controller/
-TemplateURL: https://raw.githubusercontent.com/pducharme/docker-containers/templates/pducharme-repo/UniFi-Video-Controller.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:7080]/manage
-topPerforming: 0.077
-topTrending: -0.8290000000000001

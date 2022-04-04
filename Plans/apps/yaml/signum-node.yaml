@@ -1,8 +1,13 @@
 Beta: 'true'
 BindTime: 'true'
-CategoryList:
+CategoryList: &id001
 - Crypto
-ChangeLogPresent: true
+Config:
+  Device: {}
+  Label: {}
+  Path: {}
+  Port: {}
+  Variable: {}
 Data:
   Volume:
   - ContainerDir: /conf
@@ -16,6 +21,7 @@ GitHub: https://github.com/signum-network/signum-node
 Icon: https://raw.githubusercontent.com/signum-network/signum-node/main/resources/images/signum_overlay_logo.ico
 Keywords:
 - signum-node
+- *id001
 Name: signum-node
 Networking:
   Mode: bridge
@@ -31,12 +37,11 @@ Overview: 'Proof of Commitment - ASIC proof / Energy efficient and sustainable m
 
   '
 Privileged: 'false'
-Project: https://github.com/signum-network/signum-node/
 Registry: https://hub.docker.com/r/signumnetwork/node
-Repository: signumnetwork/node:latest-h2
+Repository: signumnetwork/node
 Requires: ''
 Sources:
 - https://github.com/signum-network/signum-node/
 - https://hub.docker.com/r/signumnetwork/node
-TemplateURL: https://raw.githubusercontent.com/paulpoco/docker-templates/master/paulpoco/signum-node.xml
+Tag: latest-h2
 WebUI: http://[IP]:[PORT:8125]

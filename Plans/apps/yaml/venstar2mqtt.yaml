@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - HomeAutomation
 - Tools-Utilities
 Config:
@@ -66,20 +66,18 @@ Config:
 Icon: https://raw.githubusercontent.com/digiblur/unraid-docker-templates/master/images/venstar2mqtt.png
 Keywords:
 - venstar2mqtt
+- *id001
 Name: venstar2mqtt
 Network: bridge
 Overview: Simple container that allows MQTT to be used to view data and push settings
   to the Venstar Local API Thermostats.  Local API needs to be enabled on the thermostat.  No
   Web UI or appdata folder necessary.
 Privileged: 'false'
-Project: https://github.com/terafin/mqtt-venstar-bridge
 Registry: https://hub.docker.com/r/terafin/mqtt-venstar-bridge/
 Repository: terafin/mqtt-venstar-bridge
 Requires: ''
 Sources:
 - https://github.com/terafin/mqtt-venstar-bridge
 - https://hub.docker.com/r/terafin/mqtt-venstar-bridge/
-TemplateURL: https://raw.githubusercontent.com/digiblur/unraid-docker-templates/master/venstar2mqtt.xml
+Tag: latest
 WebUI: ''
-topPerforming: 0.082
-topTrending: -0.026999999999999996

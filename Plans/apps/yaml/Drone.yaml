@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Productivity
 - Tools-Utilities
 Config:
@@ -99,12 +99,12 @@ ExtraParams: --restart=always
 Icon: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/drone.png
 Keywords:
 - drone
-Name: Drone
+- *id001
+Name: drone
 Network: bridge
 Official: true
 Overview: Drone is a Continuous Integration platform built on Docker
 Privileged: 'false'
-Project: https://github.com/harness/drone
 Registry: https://hub.docker.com/r/drone/drone/
 RepoShort: Selfhosters
 Repository: drone/drone
@@ -112,6 +112,5 @@ Requires: ''
 Sources:
 - https://github.com/harness/drone
 - https://hub.docker.com/r/drone/drone/
-TemplateURL: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/drone.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:80]
-topTrending: -0.6310000000000001

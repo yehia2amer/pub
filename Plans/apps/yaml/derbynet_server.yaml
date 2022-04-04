@@ -1,6 +1,6 @@
 CAComment: This template is set up to use a custom network. You may have to adjust
   the network or IP address etc to match your system
-CategoryList:
+CategoryList: &id001
 - Cloud
 - Tools-Utilities
 - Other
@@ -125,6 +125,7 @@ Config:
 Icon: https://raw.githubusercontent.com/mitchellriley/unraid-docker/master/mitchellriley/images/derbynet_server.png
 Keywords:
 - derbynet_server
+- *id001
 Name: derbynet_server
 Network: plexnet
 Networking:
@@ -134,12 +135,11 @@ Overview: DerbyNet is the new standard in race management software for Pinewood 
   to a web server running on your laptop or in the cloud.
 PostArgs: ''
 Privileged: 'false'
-Project: http://jeffpiazza.github.io/derbynet/
 Registry: https://registry.hub.docker.com/r/mitchellriley/derbynet_server
 Repository: mitchellriley/derbynet_server
 Requires: ''
 Sources:
 - http://jeffpiazza.github.io/derbynet/
 - https://registry.hub.docker.com/r/mitchellriley/derbynet_server
-TemplateURL: https://raw.githubusercontent.com/kiowadriver/unraid-docker/master/mitchellriley/derbynet_server.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:8050]

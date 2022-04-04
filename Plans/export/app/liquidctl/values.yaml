@@ -1,0 +1,19 @@
+env:
+  FANSPEED: 20 40 30 50 35 75 40 100
+  MATCH: kraken
+  PUMPSPEED: 20 50 30 75 35 85 40 100
+image:
+  pullPolicy: IfNotPresent
+  repository: avpnusr/liquidctl
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

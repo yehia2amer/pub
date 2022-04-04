@@ -1,0 +1,19 @@
+env:
+  Extra Game Parameters: ''
+  Game Version: latest
+  UMASK: '0000'
+image:
+  pullPolicy: IfNotPresent
+  repository: ich777/docker-openmw-tes3mp
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

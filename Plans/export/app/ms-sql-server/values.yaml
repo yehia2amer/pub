@@ -1,0 +1,19 @@
+env:
+  ACCEPT_EULA: Y
+  MSSQL_PID: Express
+  SA_PASSWORD: P@$$W0rd2021!.
+image:
+  pullPolicy: IfNotPresent
+  repository: mcr.microsoft.com/mssql/server
+  tag: 2019-latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

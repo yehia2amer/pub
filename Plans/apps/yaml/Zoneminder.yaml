@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - HomeAutomation
 - MediaApp-Video
 - MediaServer-Video
@@ -80,7 +80,8 @@ ExtraParams: --shm-size="5G"
 Icon: https://github.com/dlandon/docker.templates/raw/master/zoneminder.png
 Keywords:
 - zoneminder
-Name: Zoneminder
+- *id001
+Name: zoneminder
 Network: bridge
 Networking:
   Mode: bridge
@@ -99,14 +100,11 @@ Overview: 'Zoneminder is the top Linux video camera security and surveillance so
 
   '
 Privileged: 'false'
-Project: https://zoneminder.com/
 Registry: https://hub.docker.com/r/dlandon/zoneminder.unraid/
 Repository: dlandon/zoneminder.unraid
 Requires: ''
 Sources:
 - https://zoneminder.com/
 - https://hub.docker.com/r/dlandon/zoneminder.unraid/
-TemplateURL: https://raw.githubusercontent.com/dlandon/docker.templates/master/Zoneminder.xml
+Tag: latest
 WebUI: https://[IP]:[PORT:443]/zm
-topPerforming: 9.109
-topTrending: -9.615

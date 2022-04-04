@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Network-Other
 Config:
   Device: {}
@@ -32,19 +32,19 @@ ExtraParams: --tmpfs /srv/unifi-protect/temp -m 2048m
 Icon: https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/icons/unifiprotect.png
 Keywords:
 - unifiprotect
-Name: UniFiProtect
+- *id001
+Name: unifiprotect
 Network: host
 Networking:
   Mode: host
 Overview: "Run UniFi Protect in Docker on x86 hardware. \r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/markdegrootnl/unifi-protect-x86
 Registry: https://hub.docker.com/r/markdegroot/unifi-protect-x86/
 Repository: markdegroot/unifi-protect-x86
 Requires: ' App uses hostnetworking (autoadd)'
 Sources:
 - https://github.com/markdegrootnl/unifi-protect-x86
 - https://hub.docker.com/r/markdegroot/unifi-protect-x86/
-TemplateURL: https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/unifiprotect.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:7080]

@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - HomeAutomation
 Config:
   Device: {}
@@ -108,7 +108,8 @@ Config:
 Icon: https://raw.githubusercontent.com/ivaxor/unraid-ca-docker-templates/main/shinobi.png
 Keywords:
 - shinobi-nvidia
-Name: Shinobi-nvidia
+- *id001
+Name: shinobi-nvidia
 Network: bridge
 Networking:
   Mode: bridge
@@ -116,12 +117,11 @@ Overview: Shinobi Pro - The Next Generation in Open-Source Video Management Soft
   with support for over 6000 IP and USB Cameras
 PostArgs: ''
 Privileged: 'false'
-Project: https://gitlab.com/Shinobi-Systems/Shinobi
 Registry: https://registry.hub.docker.com/r/ivaxor/shinobi
-Repository: ivaxor/shinobi:latest-nvidia
+Repository: ivaxor/shinobi
 Requires: ''
 Sources:
 - https://gitlab.com/Shinobi-Systems/Shinobi
 - https://registry.hub.docker.com/r/ivaxor/shinobi
-TemplateURL: https://raw.githubusercontent.com/ivaxor/unraid-ca-docker-templates/master/shinobi-nvidia.xml
+Tag: latest-nvidia
 WebUI: http://[IP]:[PORT:8080]

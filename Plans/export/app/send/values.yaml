@@ -1,0 +1,25 @@
+env:
+  Base URL: http://192.168.0.100:1443
+  File DIR: /uploads
+  Max Downloads: '100'
+  Max Expire Seconds: '604800'
+  Max File Size: '2147483648'
+  NODE_ENV: production
+  Redis Host: 192.168.0.100
+  Redis Password: password
+  Redis Port: '6379'
+image:
+  pullPolicy: IfNotPresent
+  repository: registry.gitlab.com/timvisee/send
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

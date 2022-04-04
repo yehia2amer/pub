@@ -1,0 +1,19 @@
+env:
+  Default Email: ''
+  Default Password: ''
+  Listen Address: 0.0.0.0
+image:
+  pullPolicy: IfNotPresent
+  repository: dpage/pgadmin4
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

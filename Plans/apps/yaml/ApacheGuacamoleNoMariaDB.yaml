@@ -1,8 +1,7 @@
 CAComment: Default username and password is guacadmin
-CategoryList:
+CategoryList: &id001
 - Network-Management
 - Network-Other
-ChangeLogPresent: true
 Config:
   Device: {}
   Label: {}
@@ -155,7 +154,8 @@ Config:
 Icon: https://i.imgur.com/eflpez4.png
 Keywords:
 - apacheguacamolenomariadb
-Name: ApacheGuacamoleNoMariaDB
+- *id001
+Name: apacheguacamolenomariadb
 Network: bridge
 Networking:
   Mode: bridge
@@ -163,14 +163,11 @@ Overview: "[h3]Apache Guacamole[/h3]Apache Guacamole is a clientless remote desk
   \ gateway. It supports standard protocols like VNC and RDP.[br][br]\r\n"
 PostArgs: ''
 Privileged: 'true'
-Project: https://guacamole.apache.org/
 Registry: https://registry.hub.docker.com/r/jasonbean/guacamole/
-Repository: jasonbean/guacamole:latest-nomariadb
+Repository: jasonbean/guacamole
 Requires: ''
 Sources:
 - https://guacamole.apache.org/
 - https://registry.hub.docker.com/r/jasonbean/guacamole/
-TemplateURL: https://raw.githubusercontent.com/jason-bean/docker-templates/master/jasonbean-repo/Guacamole-nomariadb.xml
+Tag: latest-nomariadb
 WebUI: http://[IP]:[PORT:8080]/
-topPerforming: 0.768
-topTrending: -4.466

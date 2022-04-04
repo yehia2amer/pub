@@ -1,0 +1,21 @@
+env:
+  EULA: 'false'
+  JVM_OPTS: -Xms4096m -Xmx4096m
+  LEVEL: world
+  MOTD: ''
+  OPS: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: goobaroo/ftbskyfactory25
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

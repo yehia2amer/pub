@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Network-Management
 Config:
   Device: {}
@@ -218,7 +218,8 @@ Config:
 Icon: https://raw.githubusercontent.com/qubex22/unraid-templates/main/elastiflow/elastiflow.png
 Keywords:
 - elastiflow
-Name: Elastiflow
+- *id001
+Name: elastiflow
 Network: host
 Networking:
   Mode: host
@@ -227,12 +228,11 @@ Overview: "ElastiFlow\u2122 provides deep insights into your network traffic, fo
   \ increased performance and security.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://www.elastiflow.com/
 Registry: https://registry.hub.docker.com/r/elastiflow/flow-collector
-Repository: elastiflow/flow-collector:5.3.4
+Repository: elastiflow/flow-collector
 Requires: ' App uses hostnetworking (autoadd)'
 Sources:
 - https://www.elastiflow.com/
 - https://registry.hub.docker.com/r/elastiflow/flow-collector
-TemplateURL: https://raw.githubusercontent.com/qubex22/unraid-templates/master/elastiflow/elastiflow.xml
+Tag: 5.3.4
 WebUI: ''

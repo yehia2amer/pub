@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - GameServers
 Config:
   Device: {}
@@ -180,7 +180,8 @@ ExtraParams: --restart=unless-stopped
 Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/mc.png
 Keywords:
 - minecraftbasicserver
-Name: MinecraftBasicServer
+- *id001
+Name: minecraftbasicserver
 Network: bridge
 Networking:
   Mode: bridge
@@ -188,14 +189,12 @@ Overview: "This is a Basic Minecraft Server, with the basic configuration it wil
   \ download and install a Vanilla Minecraft.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://www.minecraft.net/
 Registry: https://hub.docker.com/r/ich777/minecraftbasicserver/
 Repository: ich777/minecraftbasicserver
 Requires: ''
 Sources:
 - https://www.minecraft.net/
 - https://hub.docker.com/r/ich777/minecraftbasicserver/
+Tag: latest
 WebUI: http://[IP]:[PORT:8080]/
 caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/MinecraftBasicServer.xml
-topPerforming: 3.408
-topTrending: -1.7390000000000003

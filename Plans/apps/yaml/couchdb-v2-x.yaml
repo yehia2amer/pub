@@ -1,7 +1,12 @@
 BindTime: 'true'
-CategoryList:
+CategoryList: &id001
 - Productivity
-ChangeLogPresent: true
+Config:
+  Device: {}
+  Label: {}
+  Path: {}
+  Port: {}
+  Variable: {}
 Data:
   Volume:
   - ContainerDir: /opt/couchdb/data
@@ -14,7 +19,8 @@ GitHub: https://github.com/apache/docker-couchdb
 Icon: https://couchdb.apache.org/image/couch@2x.png
 Keywords:
 - couchdb-v2-x
-Name: CouchDB-v2.x
+- *id001
+Name: couchdb-v2-x
 Networking:
   Mode: bridge
   Publish:
@@ -31,7 +37,5 @@ Repository: apache/couchdb
 Requires: ''
 Sources:
 - https://hub.docker.com/r/apache/couchdb/
-TemplateURL: https://raw.githubusercontent.com/spants/unraidtemplates/master/Spants/CouchDB-v2.x.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:5984]/_utils
-topPerforming: 2.408
-topTrending: -0.14000000000000012

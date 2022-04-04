@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Productivity
 - Tools-Utilities
 Config:
@@ -99,7 +99,8 @@ ExtraParams: --restart=unless-stopped --shm-size=2G
 Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/chrome.png
 Keywords:
 - chromium
-Name: Chromium
+- *id001
+Name: chromium
 Network: bridge
 Networking:
   Mode: bridge
@@ -107,14 +108,12 @@ Overview: Chromium is a free and open-source software project developed by the G
   Chromium project.
 PostArgs: ''
 Privileged: 'false'
-Project: https://www.google.com/chrome/
 Registry: https://hub.docker.com/r/ich777/chrome/
 Repository: ich777/chrome
 Requires: ''
 Sources:
 - https://www.google.com/chrome/
 - https://hub.docker.com/r/ich777/chrome/
+Tag: latest
 WebUI: http://[IP]:[PORT:8080]/vnc.html?autoconnect=true
 caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/Chrome.xml
-topPerforming: 7.476
-topTrending: -2.561000000000001

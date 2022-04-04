@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Productivity
 - Network-Voip
 - Network-Messenger
@@ -55,6 +55,7 @@ Config:
 Icon: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/mumble.png
 Keywords:
 - mumble
+- *id001
 Name: mumble
 Network: bridge
 Networking:
@@ -63,14 +64,11 @@ Overview: Mumble is an open source voice communication application[br]Download c
   -O /mnt/user/appdata/mumble/config.ini https://raw.githubusercontent.com/PHLAK/docker-mumble/master/files/config.ini
 PostArgs: ''
 Privileged: 'false'
-Project: https://www.mumble.info/
 Registry: https://hub.docker.com/r/phlak/mumble/
-Repository: phlak/mumble:latest
+Repository: phlak/mumble
 Requires: ''
 Sources:
 - https://www.mumble.info/
 - https://hub.docker.com/r/phlak/mumble/
-TemplateURL: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/mumble.xml
+Tag: latest
 WebUI: ''
-topPerforming: 0.289
-topTrending: -3.006

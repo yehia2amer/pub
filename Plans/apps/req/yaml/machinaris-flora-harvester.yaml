@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Crypto
 Config:
   Device: {}
@@ -139,6 +139,7 @@ ExtraParams: -h $HOSTNAME
 Icon: https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/logos/flora.png
 Keywords:
 - machinaris-flora-harvester
+- *id001
 Name: machinaris-flora-harvester
 Network: bridge
 Networking:
@@ -147,12 +148,11 @@ Overview: "On a secondary Unraid system, allows for harvesting of local Chia plo
   \  Connects to the main Machinaris application.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/guydavis/machinaris
 Registry: https://hub.docker.com/repository/docker/guydavis/machinaris-flora-harvester
 Repository: ghcr.io/guydavis/machinaris-flora
 Requires: Machinaris.  See the description for full details
 Sources:
 - https://github.com/guydavis/machinaris
 - https://hub.docker.com/repository/docker/guydavis/machinaris-flora-harvester
-TemplateURL: https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/machinaris-flora-harvester.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:8926]/

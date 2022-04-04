@@ -1,20 +1,23 @@
 BindTime: 'true'
-CategoryList:
+CategoryList: &id001
 - Tools-Utilities
 - Security
+Config:
+  Device: {}
+  Label: {}
+  Path: {}
+  Port: {}
+  Variable: {}
 Data:
   Volume:
     ContainerDir: /data
     HostDir: /mnt/cache/appdata/frak-gvm/data
     Mode: rw
-Environment:
-  Variable:
-    Name: PASSWORD
-    Value: admin
 GitHub: https://www.github.com/Secure-Compliance-Solutions-LLC/GVM-Docker
 Icon: https://raw.githubusercontent.com/frakman1/unraid-docker-templates/master/openvas/gvm.png
 Keywords:
 - frak-gvm
+- *id001
 Name: frak-gvm
 Networking:
   Mode: bridge
@@ -29,14 +32,11 @@ Overview: OpenVAS is a full-featured vulnerability scanner. Its capabilities inc
   a powerful internal programming language to implement any type of vulnerability
   test.
 Privileged: 'false'
-Project: https://www.openvas.org/
 Registry: https://registry.hub.docker.com/r/securecompliance/gvm/
-Repository: securecompliance/gvm:11.0.1-r3
+Repository: securecompliance/gvm
 Requires: ''
 Sources:
 - https://www.openvas.org/
 - https://registry.hub.docker.com/r/securecompliance/gvm/
-TemplateURL: https://raw.githubusercontent.com/frakman1/docker-templates/master/tynor88/gvm.xml
+Tag: 11.0.1-r3
 WebUI: https://[IP]:[PORT:9392]/
-topPerforming: 1.018
-topTrending: -9.673

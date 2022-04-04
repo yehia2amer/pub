@@ -1,0 +1,17 @@
+env:
+  URL_OF_API_SERVER: http://192.168.50.252:8081
+image:
+  pullPolicy: IfNotPresent
+  repository: dependencytrack/frontend
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

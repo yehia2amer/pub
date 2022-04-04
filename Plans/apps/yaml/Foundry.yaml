@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - GameServers
 Config:
   Device: {}
@@ -450,7 +450,8 @@ Config:
 Icon: https://www.foundryvtt.wiki/fvtt-solid-512.png
 Keywords:
 - foundry
-Name: Foundry
+- *id001
+Name: foundry
 Network: bridge
 Networking:
   Mode: bridge
@@ -458,12 +459,11 @@ Overview: "A secure, reliable, compact, and simple-to-use container for the Foun
   \ Virtual Tabletop using felddy's Dockerhub images.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/felddy/foundryvtt-docker
 Registry: https://hub.docker.com/r/felddy/foundryvtt
-Repository: felddy/foundryvtt:release
+Repository: felddy/foundryvtt
 Requires: ''
 Sources:
 - https://github.com/felddy/foundryvtt-docker
 - https://hub.docker.com/r/felddy/foundryvtt
-TemplateURL: https://raw.githubusercontent.com/silman/unraid_templates/master/foundry/foundry.xml
+Tag: release
 WebUI: http://[IP]:[PORT:30000]

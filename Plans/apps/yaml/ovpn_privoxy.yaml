@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Network-Proxy
 Config:
   Device: {}
@@ -66,21 +66,19 @@ ExtraParams: --cap-add=NET_ADMIN --device /dev/net/tun --sysctl net.ipv6.conf.al
 Icon: https://www.heise.de/download/media/openvpn-22153/openvpn-logo_1-1-30.png
 Keywords:
 - ovpn_privoxy
-Name: OVPN_Privoxy
+- *id001
+Name: ovpn_privoxy
 Network: bridge
 Networking:
   Mode: bridge
 Overview: "openvpn with privoxy in docker with cron\r\n"
 PostArgs: ''
 Privileged: 'true'
-Project: https://github.com/alturismo/ovpn_privoxy
 Registry: https://hub.docker.com/r/alturismo/ovpn_privoxy
 Repository: alturismo/ovpn_privoxy
 Requires: ''
 Sources:
 - https://github.com/alturismo/ovpn_privoxy
 - https://hub.docker.com/r/alturismo/ovpn_privoxy
-TemplateURL: https://raw.githubusercontent.com/alturismo/unraid_templates/master/my-ovpn_privoxy.xml
+Tag: latest
 WebUI: ''
-topPerforming: 1.514
-topTrending: -4.486

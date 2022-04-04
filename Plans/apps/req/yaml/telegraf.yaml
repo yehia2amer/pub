@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Tools-Utilities
 Config:
   Device: {}
@@ -141,6 +141,7 @@ Config:
 Icon: https://github.com/atribe/unRAID-docker/raw/master/icons/telegraf.png
 Keywords:
 - telegraf
+- *id001
 Name: telegraf
 Network: host
 Official: true
@@ -148,11 +149,10 @@ Overview: "Telegraf gathers metrics from your system and sends them to an Influx
   \ server for storage. From InfluxDB you would typically use something like Grafana\
   \ to plot the data.[br]\r\n"
 Privileged: 'true'
-Project: https://github.com/influxdata/telegraf
 Registry: https://hub.docker.com/_/telegraf/
-Repository: telegraf:latest
+Repository: telegraf
 Requires: ' App uses hostnetworking (autoadd)'
 Sources:
 - https://github.com/influxdata/telegraf
 - https://hub.docker.com/_/telegraf/
-TemplateURL: https://raw.githubusercontent.com/atribe/unRAID-docker/master/telegraf.xml
+Tag: latest

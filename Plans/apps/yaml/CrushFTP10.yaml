@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Backup
 - Cloud
 - Network-Web
@@ -133,7 +133,8 @@ Config:
 Icon: https://raw.githubusercontent.com/MarkusMcNugen/docker-templates/master/crushftp10/crushftp.png
 Keywords:
 - crushftp10
-Name: CrushFTP10
+- *id001
+Name: crushftp10
 Network: bridge
 Networking:
   Mode: bridge
@@ -142,14 +143,11 @@ Overview: Share your files securely with FTP, Implicit FTPS, SFTP, HTTP, or HTTP
   for more details.
 PostArgs: ''
 Privileged: 'false'
-Project: https://www.crushftp.com/index.html
 Registry: https://hub.docker.com/r/markusmcnugen/crushftp/
-Repository: markusmcnugen/crushftp:latest
+Repository: markusmcnugen/crushftp
 Requires: ''
 Sources:
 - https://www.crushftp.com/index.html
 - https://hub.docker.com/r/markusmcnugen/crushftp/
-TemplateURL: https://raw.githubusercontent.com/MarkusMcNugen/docker-templates/master/crushftp10/crushftp10-template.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:8080]/
-topPerforming: 10.629
-topTrending: -10.761999999999999

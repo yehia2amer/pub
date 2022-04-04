@@ -1,0 +1,20 @@
+env:
+  ML_DB_HOST: ''
+  ML_DB_NAME: ''
+  ML_DB_PASSWORD: ''
+  ML_DB_USER: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: jackjoe/mailgun_logger
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

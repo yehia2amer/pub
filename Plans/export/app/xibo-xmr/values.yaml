@@ -1,0 +1,21 @@
+env:
+  Debug: ''
+  IPV6 Pub Support: ''
+  IPV6 Res Support: ''
+  Queue poll: ''
+  Queue size: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: xibosignage/xibo-xmr
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

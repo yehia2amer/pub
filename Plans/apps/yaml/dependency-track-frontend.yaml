@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Security
 Config:
   Device: {}
@@ -31,7 +31,8 @@ Config:
 Icon: https://github.com/DependencyTrack/dependency-track/raw/master/docs/touch-icon.png
 Keywords:
 - dependency-track-frontend
-Name: Dependency-Track-FrontEnd
+- *id001
+Name: dependency-track-frontend
 Network: bridge
 Networking:
   Mode: bridge
@@ -43,7 +44,5 @@ Repository: dependencytrack/frontend
 Requires: ''
 Sources:
 - https://registry.hub.docker.com/r/dependencytrack/frontend
-TemplateURL: https://raw.githubusercontent.com/Frooodle/unraid-templates/master/dependency-track-frontend.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:8080]
-topPerforming: 4.362
-topTrending: -0.673

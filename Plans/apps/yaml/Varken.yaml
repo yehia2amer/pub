@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Tools-Utilities
 - Network-Management
 Config:
@@ -32,7 +32,8 @@ Config:
 Icon: https://raw.githubusercontent.com/benderstwin/docker-templates/master/images/varken.png
 Keywords:
 - varken
-Name: Varken
+- *id001
+Name: varken
 Network: bridge
 Networking:
   Mode: bridge
@@ -40,13 +41,10 @@ Overview: "Varken requires influxdb and grafana.  Deploy those containers first.
   \n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/Boerderij/Varken
 Registry: https://hub.docker.com/r/boerderij/varken/
 Repository: boerderij/varken
 Requires: ''
 Sources:
 - https://github.com/Boerderij/Varken
 - https://hub.docker.com/r/boerderij/varken/
-TemplateURL: https://raw.githubusercontent.com/benderstwin/docker-templates/master/Bender-Varken.xml
-topPerforming: 0.033
-topTrending: -1.4380000000000002
+Tag: latest

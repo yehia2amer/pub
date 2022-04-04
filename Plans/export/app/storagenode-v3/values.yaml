@@ -1,0 +1,21 @@
+env:
+  Allocated Storage: 8TB
+  Bandwidth: ''
+  Email address: ''
+  Internet Address: my.ddns.com:28969
+  Wallet Address: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: storjlabs/storagenode
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

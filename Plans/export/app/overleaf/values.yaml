@@ -1,0 +1,30 @@
+env:
+  SHARELATEX_ADMIN_EMAIL: ''
+  SHARELATEX_ALLOW_ANONYMOUS_READ_AND_WRITE_SHARING: ''
+  SHARELATEX_ALLOW_PUBLIC_ACCESS: ''
+  SHARELATEX_APP_NAME: ''
+  SHARELATEX_BEHIND_PROXY: ''
+  SHARELATEX_MONGO_URL: ''
+  SHARELATEX_NAV_TITLE: ''
+  SHARELATEX_REDIS_HOST: ''
+  SHARELATEX_REDIS_PASS: ''
+  SHARELATEX_REDIS_PORT: ''
+  SHARELATEX_RESTRICT_INVITES_TO_EXISTING_ACCOUNTS: ''
+  SHARELATEX_SECURE_COOKIE: ''
+  SHARELATEX_SESSION_SECRET: ''
+  SHARELATEX_SITE_URL: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: sharelatex/sharelatex
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

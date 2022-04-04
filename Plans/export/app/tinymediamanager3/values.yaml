@@ -1,0 +1,22 @@
+env:
+  "DISPLAY_HEIGHT\t": '768'
+  DISPLAY_WIDTH: '1280'
+  GROUP_ID: '100'
+  KEEP_APP_RUNNING: '1'
+  Timezone: Asia/Bahrain
+  USER_ID: '1000'
+image:
+  pullPolicy: IfNotPresent
+  repository: romancin/tinymediamanager
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

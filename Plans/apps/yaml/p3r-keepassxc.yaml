@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Security
 - Tools-Utilities
 Config:
@@ -54,17 +54,16 @@ Config:
 Icon: https://raw.githubusercontent.com/P3R-CO/unraid/master/KeePassXC-P3R-256px.png
 Keywords:
 - p3r-keepassxc
-Name: P3R-KeePassXC
+- *id001
+Name: p3r-keepassxc
 Network: bridge
 Overview: "KeePassXC in a container.  Keep your passwords safe!\r\n"
 Privileged: 'false'
-Project: https://github.com/P3R-CO/keepassxc-container
 Registry: https://hub.docker.com/repository/docker/p3rco/keepassxc
-Repository: p3rco/keepassxc:latest
+Repository: p3rco/keepassxc
 Requires: ''
 Sources:
 - https://github.com/P3R-CO/keepassxc-container
 - https://hub.docker.com/repository/docker/p3rco/keepassxc
-TemplateURL: https://raw.githubusercontent.com/P3R-CO/unraid/master/keepassxc.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:5800]/
-topTrending: -1.9559999999999995

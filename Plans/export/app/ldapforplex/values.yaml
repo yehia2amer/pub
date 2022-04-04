@@ -1,0 +1,19 @@
+env:
+  Plex Token: ''
+  Plex machine identifier: ''
+  Plex servername: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: starbix/plex-ldap
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

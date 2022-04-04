@@ -1,0 +1,17 @@
+env:
+  User password: flame_password
+image:
+  pullPolicy: IfNotPresent
+  repository: pawelmalak/flame
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

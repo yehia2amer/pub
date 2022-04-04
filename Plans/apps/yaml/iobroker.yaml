@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - HomeAutomation
 Config:
   Device: {}
@@ -153,6 +153,7 @@ ExtraParams: '--no-healthcheck '
 Icon: https://raw.githubusercontent.com/mgutt/unraid-docker-templates/main/mgutt/images/iobroker.png
 Keywords:
 - iobroker
+- *id001
 Name: iobroker
 Network: bridge
 Networking:
@@ -161,14 +162,11 @@ Overview: ioBroker is an Open Source IoT platform (Fog computing) which has the 
   to manage your IoT system through an graphical interface.
 PostArgs: ''
 Privileged: 'false'
-Project: https://www.iobroker.net/
 Registry: https://hub.docker.com/r/buanet/iobroker/
 Repository: buanet/iobroker
 Requires: ''
 Sources:
 - https://www.iobroker.net/
 - https://hub.docker.com/r/buanet/iobroker/
-TemplateURL: https://raw.githubusercontent.com/mgutt/unraid-docker-templates/master/mgutt/iobroker.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:8081]/
-topPerforming: 1.719
-topTrending: 0.29700000000000015

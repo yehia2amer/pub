@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - GameServers
 - Other
 - Network-Web
@@ -6,23 +6,13 @@ Config:
   Device: {}
   Label: {}
   Path: {}
-  Port:
-    Port:
-      Default: ''
-      Description: 'Container Port: 80'
-      Display: always
-      Mask: 'false'
-      Mode: tcp
-      Name: Port
-      Required: 'false'
-      Target: '80'
-      Type: Port
-      value: '8008'
+  Port: {}
   Variable: {}
 ExtraParams: --restart=always
 Icon: https://github.com/ASKJR/quiz-game/raw/master/public/img/icons/android-chrome-maskable-192x192.png
 Keywords:
 - quiz-game
+- *id001
 Name: quiz-game
 Network: bridge
 Networking:
@@ -35,12 +25,11 @@ Overview: Test your General Knowledge in different types of topics. This game is
   only the top 10 results will be displayed
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/ASKJR/quiz-game
 Registry: https://registry.hub.docker.com/r/patrickstigler/quiz-game
 Repository: patrickstigler/quiz-game
 Requires: ''
 Sources:
 - https://github.com/ASKJR/quiz-game
 - https://registry.hub.docker.com/r/patrickstigler/quiz-game
-TemplateURL: https://raw.githubusercontent.com/patrickstigler/unraid_app_templates/master/quiz-game/quiz-game.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:80]/

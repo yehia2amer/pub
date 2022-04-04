@@ -1,0 +1,27 @@
+env:
+  API_KEY: ''
+  MB_ADDRESS: 0.0.0.0
+  MB_BASICAUTH_PASS: ''
+  MB_BASICAUTH_USER: ''
+  MB_DISABLE_CORS: 'false'
+  MB_DOWNLOAD_TIMEOUT_SECONDS: '60'
+  MB_TAGBOX_INDEX_REFRESH_SECONDS: ''
+  MB_TAGBOX_ONLY_CUSTOM_TAGS: 'false'
+  MB_TAGBOX_READ_ONLY: 'false'
+  MB_TAGBOX_STATE_POLL_SECONDS: ''
+  MB_TAGBOX_STATE_URL: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: machinebox/tagbox
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

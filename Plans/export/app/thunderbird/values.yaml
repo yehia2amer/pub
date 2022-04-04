@@ -1,0 +1,22 @@
+env:
+  Custom Screen Height: '768'
+  Custom Screen Width: '1280'
+  Extra Parameters: ''
+  Preferred Thunderbird Language: en-US
+  Preferred Thunderbird Version: latest
+  Umask: '000'
+image:
+  pullPolicy: IfNotPresent
+  repository: ich777/thunderbird
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

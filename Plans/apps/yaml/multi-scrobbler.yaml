@@ -1,8 +1,7 @@
 Beta: 'true'
-CategoryList:
+CategoryList: &id001
 - Network-Web
 - MediaServer-Music
-ChangeLogPresent: true
 Config:
   Device: {}
   Label: {}
@@ -45,6 +44,7 @@ Config:
 Icon: https://github.com/FoxxMD/unraid-docker-templates/raw/master/icons/multi-scrobbler.png
 Keywords:
 - multi-scrobbler
+- *id001
 Name: multi-scrobbler
 Network: bridge
 Networking:
@@ -54,10 +54,9 @@ Overview: "Track your music listening history from many sources and record to ma
 PostArgs: ''
 Privileged: 'false'
 Registry: https://hub.docker.com/repository/docker/foxxmd/multi-scrobbler
-Repository: foxxmd/multi-scrobbler:latest
+Repository: foxxmd/multi-scrobbler
 Requires: ''
 Sources:
 - https://hub.docker.com/repository/docker/foxxmd/multi-scrobbler
-TemplateURL: https://raw.githubusercontent.com/FoxxMD/unraid-docker-templates/master/foxxmd/multi-scrobbler.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:9078]/
-topTrending: -1.041

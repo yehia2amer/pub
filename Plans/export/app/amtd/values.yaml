@@ -1,0 +1,30 @@
+env:
+  Enable Automatic Script Start: ''
+  End Client Compatibility: ''
+  Extras Audio Language: ''
+  Extras File Permissions: ''
+  Extras Folder Permissions: ''
+  Extras Format: ''
+  Extras Subtitle Langauge: ''
+  Extras Type: ''
+  Prefer Existing Trailer: ''
+  Radarr API Key: ''
+  Radarr Url: ''
+  Script Interval: ''
+  Single Trailer: ''
+  Use Folders: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: randomninjaatk/amtd
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

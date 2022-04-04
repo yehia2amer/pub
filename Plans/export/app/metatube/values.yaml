@@ -1,0 +1,20 @@
+env:
+  DEBUG: 'False'
+  LOG: 'False'
+  LOG_LEVEL: '10'
+  SOCKET_LOG: 'False'
+image:
+  pullPolicy: IfNotPresent
+  repository: jvt038/metatube
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

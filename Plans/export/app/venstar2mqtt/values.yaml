@@ -1,0 +1,21 @@
+env:
+  MQTT Password: ''
+  MQTT Topic Prefix: venstar2mqtt
+  MQTT URL: ''
+  MQTT Username: ''
+  Venstar Host IP: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: terafin/mqtt-venstar-bridge
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

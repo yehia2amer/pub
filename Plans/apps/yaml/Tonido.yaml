@@ -1,6 +1,12 @@
 BindTime: 'true'
-CategoryList:
+CategoryList: &id001
 - Cloud
+Config:
+  Device: {}
+  Label: {}
+  Path: {}
+  Port: {}
+  Variable: {}
 Data:
   Volume:
   - ContainerDir: /config
@@ -12,7 +18,8 @@ Data:
 Icon: https://i.imgur.com/i2obdi6.png
 Keywords:
 - tonido
-Name: Tonido
+- *id001
+Name: tonido
 Networking:
   Mode: bridge
   Publish:
@@ -28,7 +35,5 @@ Repository: captinsano/tonido
 Requires: ''
 Sources:
 - https://registry.hub.docker.com/r/captinsano/tonido/
-TemplateURL: https://raw.githubusercontent.com/CaptInsano/docker-containers/templates/Capt.Insano/Tonido.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:10001]/
-topPerforming: 0.659
-topTrending: -0.7869999999999999

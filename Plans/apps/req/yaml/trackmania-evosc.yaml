@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - GameServers
 Config:
   Device: {}
@@ -120,19 +120,19 @@ ExtraParams: --restart=unless-stopped
 Icon: https://raw.githubusercontent.com/L4stIdi0t/Unraid-template/master/TrackMania2020-Server/logoTM.png
 Keywords:
 - trackmania-evosc
-Name: TrackMania-EvoSC
+- *id001
+Name: trackmania-evosc
 Network: bridge
 Networking:
   Mode: bridge
 Overview: "A modern server controller for the game Trackmania (TM\xB2, 2020).\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/EvoTM/EvoSC
 Registry: https://hub.docker.com/r/evotm/evosc
-Repository: evotm/evosc:latest
+Repository: evotm/evosc
 Requires: MySQL / MariaDB installed, aswell as a TrackMania server
 Sources:
 - https://github.com/EvoTM/EvoSC
 - https://hub.docker.com/r/evotm/evosc
-TemplateURL: https://raw.githubusercontent.com/L4stIdi0t/Unraid-template/master/TrackMania-EvoSC/TrackMania-EvoSC.xml
+Tag: latest
 WebUI: ''

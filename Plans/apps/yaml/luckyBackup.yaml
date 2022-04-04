@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Backup
 Config:
   Device: {}
@@ -123,7 +123,8 @@ ExtraParams: --restart=unless-stopped
 Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/luckybackup.png
 Keywords:
 - luckybackup
-Name: luckyBackup
+- *id001
+Name: luckybackup
 Network: bridge
 Networking:
   Mode: bridge
@@ -131,14 +132,12 @@ Overview: "LuckyBackup is a very user-friendly GUI backup program. It uses rsync
   \ a backend and transfers over only changes made rather than all data.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://sourceforge.net/projects/luckybackup/
 Registry: https://hub.docker.com/r/ich777/luckybackup/
 Repository: ich777/luckybackup
 Requires: ''
 Sources:
 - https://sourceforge.net/projects/luckybackup/
 - https://hub.docker.com/r/ich777/luckybackup/
+Tag: latest
 WebUI: http://[IP]:[PORT:8080]/vnc.html?autoconnect=true
 caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/luckyBackup.xml
-topPerforming: 1.019
-topTrending: -16.705000000000002

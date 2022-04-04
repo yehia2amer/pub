@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Tools-Utilities
 Config:
   Device: {}
@@ -142,7 +142,8 @@ Config:
 Icon: https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/icons/phpservermon.png
 Keywords:
 - phpservermonitor
-Name: PHPServerMonitor
+- *id001
+Name: phpservermonitor
 Network: bridge
 Networking:
   Mode: bridge
@@ -151,14 +152,11 @@ Overview: PHP Server Monitor checks whether your websites and servers are up and
   Pushover, Telegram and Jabber notifications. Requires MySQL or MariaDB.
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/phpservermon/phpservermon
 Registry: https://hub.docker.com/r/benoitpodwinski/phpservermon/
 Repository: benoitpodwinski/phpservermon
 Requires: MySQL / MariaDB installed
 Sources:
 - https://github.com/phpservermon/phpservermon
 - https://hub.docker.com/r/benoitpodwinski/phpservermon/
-TemplateURL: https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/phpservermon.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:80]
-topPerforming: 0.428
-topTrending: 0.204

@@ -1,0 +1,23 @@
+env:
+  Keycloak Admin Password: password
+  Keycloak Admin User: admin
+  Postgres Database Hostname or IP: 192.168.1.100
+  Postgres Database Name: keyclock
+  Postgres Database Password: password
+  Postgres Database Port: '5432'
+  Postgres Database User: keyclock
+image:
+  pullPolicy: IfNotPresent
+  repository: bitnami/keycloak
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

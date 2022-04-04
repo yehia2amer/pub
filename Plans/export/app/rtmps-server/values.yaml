@@ -1,0 +1,19 @@
+env:
+  Group ID: '100'
+  SSL Certificate Domain: rtmp-server.loc
+  User ID: '99'
+image:
+  pullPolicy: IfNotPresent
+  repository: jamiephonic/rtmps-hls-server
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

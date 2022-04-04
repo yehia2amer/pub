@@ -1,12 +1,18 @@
-CategoryList:
+CategoryList: &id001
 - Cloud
 - Network-Web
+Config:
+  Device: {}
+  Label: {}
+  Path: {}
+  Port: {}
+  Variable: {}
 Data: ''
-Environment: ''
 Icon: https://raw.githubusercontent.com/JmzTaylor/homelab_proxy/550bdb77f0750a4d0e91169e81fb02fc3495b42a/www/img/Icon.png
 Keywords:
 - jmzhomeproxy
-Name: JmzHomeProxy
+- *id001
+Name: jmzhomeproxy
 Network: bridge
 Networking:
   Mode: bridge
@@ -19,12 +25,11 @@ Overview: "Proxy is in quotes because I couldn't think of a better name. There i
   \ use dashboard for all your self-hosted services.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/JmzTaylor/homelab_proxy/
 Registry: https://hub.docker.com/u/jmzsoftware
 Repository: jmzsoftware/jmzhomelabproxy
 Requires: ''
 Sources:
 - https://github.com/JmzTaylor/homelab_proxy/
 - https://hub.docker.com/u/jmzsoftware
-TemplateURL: https://raw.githubusercontent.com/JmzTaylor/homelab_proxy_unraid/master/homelab_proxy.xml
+Tag: latest
 WebUI: http://[iP]:[PORT:8080]/

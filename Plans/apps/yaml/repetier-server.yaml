@@ -1,23 +1,12 @@
 CAComment: This template is set up to use a custom network. You may have to adjust
   the network or IP address etc to match your system
-CategoryList:
+CategoryList: &id001
 - HomeAutomation
 - Tools-Utilities
 - MediaServer-Other
 - Network-Web
 Config:
-  Device:
-    Host Device 1:
-      Default: ''
-      Description: 'Container Device: '
-      Display: always
-      Mask: 'false'
-      Mode: ''
-      Name: Host Device 1
-      Required: 'false'
-      Target: ''
-      Type: Device
-      value: /dev/ttyUSB0
+  Device: {}
   Label: {}
   Path: {}
   Port: {}
@@ -25,20 +14,19 @@ Config:
 Icon: https://brands.home-assistant.io/_/repetier/logo.png
 Keywords:
 - repetier-server
-Name: Repetier-Server
+- *id001
+Name: repetier-server
 Network: br0
 Networking:
   Mode: br0
 Overview: "Repetier server:\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://www.repetier-server.com/
 Registry: https://hub.docker.com/repository/docker/codeluxe1/repetier-server
 Repository: codeluxe1/repetier-server
 Requires: ''
 Sources:
 - https://www.repetier-server.com/
 - https://hub.docker.com/repository/docker/codeluxe1/repetier-server
-TemplateURL: https://raw.githubusercontent.com/Adidasdaniel98/RepetierDocker/master/repetier.xml
+Tag: latest
 WebUI: http://[IP:3344]
-topTrending: -7.3629999999999995

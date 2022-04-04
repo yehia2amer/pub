@@ -1,6 +1,12 @@
 BindTime: 'true'
-CategoryList:
+CategoryList: &id001
 - Other
+Config:
+  Device: {}
+  Label: {}
+  Path: {}
+  Port: {}
+  Variable: {}
 Data:
   Volume:
   - ContainerDir: /config
@@ -9,15 +15,10 @@ Data:
   - ContainerDir: /opt/log
     HostDir: ''
     Mode: rw
-Environment:
-  Variable:
-  - Name: PUID
-    Value: '99'
-  - Name: PGID
-    Value: '100'
 Icon: https://raw.githubusercontent.com/gregyankovoy/docker-templates/master/greg/img/goaccess-logo.png
 Keywords:
 - goaccess
+- *id001
 Name: goaccess
 Networking:
   Mode: bridge
@@ -36,7 +37,5 @@ Repository: gregyankovoy/goaccess
 Requires: ''
 Sources:
 - https://hub.docker.com/r/gregyankovoy/goaccess/dockerfile
-TemplateURL: https://raw.githubusercontent.com/GregYankovoy/docker-templates/master/greg/goaccess.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:7889]/
-topPerforming: 1.962
-topTrending: -2.075

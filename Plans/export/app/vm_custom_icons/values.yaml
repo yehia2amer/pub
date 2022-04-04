@@ -1,0 +1,25 @@
+env:
+  Clear all icons &amp; redownload above on each start: 'no'
+  Enable sucess tune on icon load: 'no'
+  Keep Stock VM Icons: 'yes'
+  Time to wait before exit: 30 seconds
+  freebsd icons: 'yes'
+  linux icons: 'yes'
+  macos vm icons: 'yes'
+  other os  icons: 'yes'
+  windows icons: 'yes'
+image:
+  pullPolicy: IfNotPresent
+  repository: spaceinvaderone/vm_custom_icons
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

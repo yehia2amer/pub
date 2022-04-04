@@ -1,0 +1,21 @@
+env:
+  Bootstrap: ''
+  Group ID: ''
+  Niceness (priority): ''
+  Umask: ''
+  User ID: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: angelics/unraid-docker-ravencoin-p2p
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

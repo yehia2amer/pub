@@ -1,0 +1,19 @@
+env:
+  Mongo Container Name: ''
+  PASSWORD: password
+  USERNAME: username
+image:
+  pullPolicy: IfNotPresent
+  repository: ulisses1478/mongo-express
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

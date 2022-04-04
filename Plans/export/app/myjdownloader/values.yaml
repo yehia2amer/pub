@@ -1,0 +1,20 @@
+env:
+  MYJD_DEVICE_NAME: Unraid
+  MYJD_PASSWORD: ''
+  MYJD_USER: ''
+  XDG_DOWNLOAD_DIR: /mnt/user/downloads/
+image:
+  pullPolicy: IfNotPresent
+  repository: jaymoulin/jdownloader
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

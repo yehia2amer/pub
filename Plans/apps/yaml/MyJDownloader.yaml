@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Downloaders
 Config:
   Device: {}
@@ -98,7 +98,8 @@ ExtraParams: --restart unless-stopped
 Icon: https://github.com/hussainalhaddad/docker-templates/raw/master/myjdownloader/logo.png
 Keywords:
 - myjdownloader
-Name: MyJDownloader
+- *id001
+Name: myjdownloader
 Network: bridge
 Networking:
   Mode: bridge
@@ -107,14 +108,11 @@ Overview: This image allows you to have JDownloader 2 easily installed and contr
   here!
 PostArgs: ''
 Privileged: 'false'
-Project: https://jdownloader.org/home/index
 Registry: https://hub.docker.com/r/jaymoulin/jdownloader
 Repository: jaymoulin/jdownloader
 Requires: ''
 Sources:
 - https://jdownloader.org/home/index
 - https://hub.docker.com/r/jaymoulin/jdownloader
-TemplateURL: https://raw.githubusercontent.com/hussainalhaddad/docker-templates/master/myjdownloader/myjdownloader.xml
+Tag: latest
 WebUI: ''
-topPerforming: 0.219
-topTrending: -0.965

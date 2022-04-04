@@ -1,0 +1,30 @@
+env:
+  Encryption Method: ''
+  IMAPS: ''
+  Mail Server Name: ''
+  MySQL Host: ''
+  MySQL Postfixadmin Database: ''
+  MySQL Postfixadmin Password: ''
+  MySQL Postfixadmin Username: ''
+  MySQL Roundcube Database: ''
+  MySQL Roundcube Password: ''
+  MySQL Roundcube Username: ''
+  Postfixadmin Listening Port: ''
+  Roundcube Listening Port: ''
+  Roundcube Setup Installer: ''
+  SMTPS: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: malfurious/roundcube-postfixadmin
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

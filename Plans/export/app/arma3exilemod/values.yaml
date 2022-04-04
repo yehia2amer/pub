@@ -1,0 +1,25 @@
+env:
+  ExileMod Server URL: http://www.exilemod.com/ExileServer-1.0.4a.zip
+  GAME_ID: '233780'
+  GAME_PARAMS: ''
+  GAME_PORT: '2302'
+  MariaDB Root Password: ExileMod
+  Steam-Password: ''
+  Steam-Username: ''
+  Validate Installation: ''
+  Workshop Item Manual Installation: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: ich777/steamcmd
+  tag: arma3exilemod
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

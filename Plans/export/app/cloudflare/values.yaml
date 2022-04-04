@@ -1,0 +1,19 @@
+env:
+  CF_API: a1b2c3d4e5
+  CF_EMAIL: your@cloudflare_email.com
+  CF_HOST: sub.domain.com
+image:
+  pullPolicy: IfNotPresent
+  repository: mace/cloudflare-ddns
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

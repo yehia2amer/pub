@@ -1,0 +1,28 @@
+env:
+  DATABASE HOST (Adjust to your UNRAID host IP): ''
+  DATABASE NAME: dsmrdb
+  DATABASE PORT: '5432'
+  DATALOGGER MODE (change if P1 port is on this machine to STANDALONE): receiver
+  DATALOGGER SERIAL BAUDRATE: ''
+  DATALOGGER SERIAL PORT: ''
+  DATALOGGER SLEEP TIME (seconds): '10'
+  Supervisor Group: users
+  Supervisor User: nobody
+  VIRTUAL_HOST: localhost
+  WEBUI ADMIN PASSWORD: ''
+  WEBUI ADMIN USERNAME: admin
+image:
+  pullPolicy: IfNotPresent
+  repository: xirixiz/dsmr-reader-docker
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

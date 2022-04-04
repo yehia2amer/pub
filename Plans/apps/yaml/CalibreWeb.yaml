@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - MediaApp-Books
 - MediaServer-Books
 Config:
@@ -77,7 +77,8 @@ Config:
 Icon: https://raw.githubusercontent.com/fanningert/unraid-docker-templates/master/fanningert/icons/calibreweb.png
 Keywords:
 - calibreweb
-Name: CalibreWeb
+- *id001
+Name: calibreweb
 Network: bridge
 Networking:
   Mode: bridge
@@ -90,7 +91,5 @@ Repository: technosoft2000/calibre-web
 Requires: ''
 Sources:
 - https://registry.hub.docker.com/r/technosoft2000/calibre-web/
-TemplateURL: https://raw.githubusercontent.com/fanningert/unraid-docker-templates/master/fanningert/CalibreWeb.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:8083]
-topPerforming: 1.863
-topTrending: -0.7869999999999999

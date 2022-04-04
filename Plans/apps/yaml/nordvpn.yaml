@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Security
 - Network-DNS
 - Network-VPN
@@ -93,6 +93,7 @@ ExtraParams: --device /dev/net/tun --cap-add=NET_ADMIN
 Icon: https://raw.githubusercontent.com/josopu/unraid-template/main/nordvpn.png
 Keywords:
 - nordvpn
+- *id001
 Name: nordvpn
 Network: bridge
 Networking:
@@ -101,14 +102,11 @@ Overview: "Official NordVPN client in a docker container; it makes routing traff
   \ through the NordVPN network easy.\r"
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/bubuntux/nordvpn
 Registry: https://hub.docker.com/r/bubuntux/nordvpn/
 Repository: bubuntux/nordvpn
 Requires: ''
 Sources:
 - https://github.com/bubuntux/nordvpn
 - https://hub.docker.com/r/bubuntux/nordvpn/
-TemplateURL: https://raw.githubusercontent.com/josopu/unraid-template/master/nordvpn.xml
+Tag: latest
 WebUI: ''
-topPerforming: 0.408
-topTrending: -3.2720000000000002

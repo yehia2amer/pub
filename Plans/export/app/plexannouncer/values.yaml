@@ -1,0 +1,20 @@
+env:
+  Discord Webhook URL: ''
+  Plex Server URL: ''
+  Plex Webhook Token: ''
+  Updated Libraries: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: tenasi/plexannouncer
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

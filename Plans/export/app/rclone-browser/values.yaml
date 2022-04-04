@@ -1,0 +1,20 @@
+env:
+  CLEAN_TMP_DIR: '1'
+  GROUP_ID: '1000'
+  KEEP_APP_RUNNING: '1'
+  USER_ID: '1000'
+image:
+  pullPolicy: IfNotPresent
+  repository: romancin/rclonebrowser
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

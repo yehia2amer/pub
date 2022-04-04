@@ -1,0 +1,22 @@
+env:
+  Database: ''
+  Hosts: ''
+  TubeSync Debugging: 'False'
+  TubeSync WebUI Password: ''
+  TubeSync WebUI Username: ''
+  TubeSync Workers: '2'
+image:
+  pullPolicy: IfNotPresent
+  repository: ghcr.io/meeb/tubesync
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

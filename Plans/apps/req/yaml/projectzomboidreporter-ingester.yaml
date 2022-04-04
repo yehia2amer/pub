@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - GameServers
 Config:
   Device: {}
@@ -76,7 +76,8 @@ ExtraParams: --restart=always
 Icon: https://github.com/natcoso9955/unRAID-docker/raw/master/icons/projectzomboid-ingest.png
 Keywords:
 - projectzomboidreporter-ingester
-Name: ProjectZomboidReporter-Ingester
+- *id001
+Name: projectzomboidreporter-ingester
 Network: bridge
 Networking:
   Mode: bridge
@@ -84,12 +85,11 @@ Overview: "This is the ingester which grabs statiscs from your Project Zomboid s
   \ files and uploads them to the SQL database for the API to access.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/ChrisAshtear/Zomboid-Server-Stats-Reporter/
 Registry: https://hub.docker.com/r/chrisashtear/zomboid-reporter/
 Repository: chrisashtear/zomboid-reporter
 Requires: Project Zomboid
 Sources:
 - https://github.com/ChrisAshtear/Zomboid-Server-Stats-Reporter/
 - https://hub.docker.com/r/chrisashtear/zomboid-reporter/
-TemplateURL: https://raw.githubusercontent.com/natcoso9955/unRAID-docker/master/ProjectZomboidReporter-Ingester_unraid.xml
+Tag: latest
 WebUI: ''

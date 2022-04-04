@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Cloud
 - Productivity
 - Network-Messenger
@@ -33,6 +33,7 @@ Config:
 Icon: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/element-web.png
 Keywords:
 - element-web
+- *id001
 Name: element-web
 Network: bridge
 Overview: Open, secure and interoperable communication for work and home. Used to
@@ -40,11 +41,9 @@ Overview: Open, secure and interoperable communication for work and home. Used t
   [/br]wget -O /mnt/user/appdata/element-web/config/config.json https://raw.githubusercontent.com/vector-im/element-web/develop/element.io/app/config.json
 Privileged: 'false'
 Registry: https://hub.docker.com/r/vectorim/element-web/
-Repository: vectorim/element-web:latest
+Repository: vectorim/element-web
 Requires: ''
 Sources:
 - https://hub.docker.com/r/vectorim/element-web/
-TemplateURL: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/element-web.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:80]
-topPerforming: 1.263
-topTrending: -26.58

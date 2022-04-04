@@ -1,37 +1,26 @@
-CategoryList:
+CategoryList: &id001
 - Tools-Utilities
 - Other
 Config:
   Device: {}
   Label: {}
   Path: {}
-  Port:
-    WebUI:
-      Default: ''
-      Description: ''
-      Display: always
-      Mask: 'false'
-      Mode: tcp
-      Name: WebUI
-      Required: 'false'
-      Target: '80'
-      Type: Port
-      value: '8084'
+  Port: {}
   Variable: {}
 Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/newyearcountdownclock.png
 Keywords:
 - newyearcountdownclock
-Name: NewYearCountdownClock
+- *id001
+Name: newyearcountdownclock
 Network: bridge
 Overview: "DESCRIPTION\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/modem7/Docker-NewYearCountdown
 Registry: https://hub.docker.com/r/modem7/newyearcountdown
 Repository: modem7/newyearcountdown
 Requires: ''
 Sources:
 - https://github.com/modem7/Docker-NewYearCountdown
 - https://hub.docker.com/r/modem7/newyearcountdown
-TemplateURL: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/master/templates/NewYearCountdownClock.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:80]

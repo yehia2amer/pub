@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Productivity
 - Tools-Utilities
 - Other
@@ -66,7 +66,8 @@ Config:
 Icon: https://avatars.githubusercontent.com/u/11618900?s=120&amp;v=4
 Keywords:
 - docker-in-docker-dind
-Name: Docker-in-Docker-DinD
+- *id001
+Name: docker-in-docker-dind
 Network: bridge
 Networking:
   Mode: bridge
@@ -77,12 +78,11 @@ Overview: "Unraid template for the official Docker-in-Docker (aka DinD) image. B
   \ is NOT a start-it-and-forget-it set up so PLEASE READ THE NOTES.\r\n"
 PostArgs: ''
 Privileged: 'true'
-Project: https://github.com/docker-library/docker
 Registry: https://registry.hub.docker.com/_/docker
-Repository: docker:dind
+Repository: docker
 Requires: ''
 Sources:
 - https://github.com/docker-library/docker
 - https://registry.hub.docker.com/_/docker
-TemplateURL: https://raw.githubusercontent.com/testdasi/testdasi-unraid-repo/master/docker-in-docker-dind.xml
+Tag: dind
 WebUI: ''

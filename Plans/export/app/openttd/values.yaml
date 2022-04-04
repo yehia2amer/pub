@@ -1,0 +1,19 @@
+env:
+  GAME_PARAMS: ''
+  Game Version to Install: latest
+  OpenGFX Version: latest
+image:
+  pullPolicy: IfNotPresent
+  repository: ich777/openttdserver
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

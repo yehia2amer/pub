@@ -1,0 +1,19 @@
+env:
+  EXPIRY_DAYS: '1'
+  RUST_LOG: info
+  SQLITE_URI: sqlite:///persist/rustpad_db.db
+image:
+  pullPolicy: IfNotPresent
+  repository: ekzhang/rustpad
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

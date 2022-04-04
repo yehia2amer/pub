@@ -1,6 +1,6 @@
 CAComment: This template is set up to use a custom network. You may have to adjust
   the network or IP address etc to match your system
-CategoryList:
+CategoryList: &id001
 - GameServers
 - Productivity
 - MediaApp-Video
@@ -70,6 +70,7 @@ ExtraParams: --runtime=nvidia
 Icon: https://obsproject.com/assets/images/new_icon_small-r.png
 Keywords:
 - obs-ndi
+- *id001
 Name: obs-ndi
 Network: br0
 Networking:
@@ -80,12 +81,11 @@ Overview: "This container is based on bb12489/gui-docker &amp;amp;amp; bb12489/d
   \ it to the unraid app store.&amp;#xD;\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/patrickstigler/docker-obs-ndi
 Registry: https://hub.docker.com/r/patrickstigler/obs-ndi
 Repository: patrickstigler/obs-ndi
 Requires: ''
 Sources:
 - https://github.com/patrickstigler/docker-obs-ndi
 - https://hub.docker.com/r/patrickstigler/obs-ndi
-TemplateURL: https://raw.githubusercontent.com/patrickstigler/unraid_app_templates/master/obs-ndi/obs-ndi.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:5901]/

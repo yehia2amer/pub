@@ -1,28 +1,18 @@
 CAComment: This template is set up to use a custom network. You may have to adjust
   the network or IP address etc to match your system
-CategoryList:
+CategoryList: &id001
 - HomeAutomation
 - Tools-Utilities
 Config:
   Device: {}
   Label: {}
   Path: {}
-  Port:
-    WebUI:
-      Default: '3000'
-      Description: 'Container Port: 3000'
-      Display: always
-      Mask: 'false'
-      Mode: tcp
-      Name: WebUI
-      Required: 'false'
-      Target: '3000'
-      Type: Port
-      value: '3000'
+  Port: {}
   Variable: {}
 Icon: https://i.imgur.com/r0aWv9M.jpg
 Keywords:
 - tasmocompiler
+- *id001
 Name: tasmocompiler
 Network: llamaproxy
 Networking:
@@ -31,12 +21,11 @@ Overview: "TasmoCompiler is a simple web GUI which allows you to compile fantast
   \ Tasmota firmware with your own settings\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/benzino77/tasmocompiler
 Registry: https://hub.docker.com/r/benzino77/tasmocompiler
 Repository: benzino77/tasmocompiler
 Requires: ''
 Sources:
 - https://github.com/benzino77/tasmocompiler
 - https://hub.docker.com/r/benzino77/tasmocompiler
-TemplateURL: https://raw.githubusercontent.com/oldcrazyeye/unraid-templates/master/tasmocompiler.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:3000]

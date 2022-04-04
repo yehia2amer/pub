@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Downloaders
 - MediaApp-Other
 Config:
@@ -88,19 +88,18 @@ ExtraParams: --restart=unless-stopped
 Icon: https://raw.githubusercontent.com/xthursdayx/docker-templates/master/xthursdayx/images/gpodder-icon.png
 Keywords:
 - gpodder
-Name: gPodder
+- *id001
+Name: gpodder
 Network: bridge
 Overview: "gPodder is a simple, open source podcast client written in Python using\
   \ GTK+. In development since 2005 with a proven, mature codebase.&amp;#xD;\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://gpodder.github.io/
 Registry: https://hub.docker.com/r/xthursdayx/gpodder-docker/
-Repository: xthursdayx/gpodder-docker:latest
+Repository: xthursdayx/gpodder-docker
 Requires: ''
 Sources:
 - https://gpodder.github.io/
 - https://hub.docker.com/r/xthursdayx/gpodder-docker/
-TemplateURL: https://raw.githubusercontent.com/xthursdayx/docker-templates/master/xthursdayx/gpodder.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:3000]
-topTrending: -4.12

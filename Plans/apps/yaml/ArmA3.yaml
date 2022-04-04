@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - GameServers
 Config:
   Device: {}
@@ -208,7 +208,8 @@ ExtraParams: --restart=unless-stopped
 Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/armaiii.png
 Keywords:
 - arma3
-Name: ArmA3
+- *id001
+Name: arma3
 Network: bridge
 Networking:
   Mode: bridge
@@ -216,12 +217,12 @@ Overview: "This Docker will download and install SteamCMD. It will also install 
   \ III and run it.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://arma3.com/
 Registry: https://hub.docker.com/r/ich777/steamcmd/
-Repository: ich777/steamcmd:arma3
+Repository: ich777/steamcmd
 Requires: ''
 Sources:
 - https://arma3.com/
 - https://hub.docker.com/r/ich777/steamcmd/
+Tag: arma3
 WebUI: ''
 caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/ArmAIII.xml

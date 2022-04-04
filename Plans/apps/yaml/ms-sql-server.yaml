@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Cloud
 - Productivity
 - Tools-Utilities
@@ -90,19 +90,19 @@ ExtraParams: --restart=always
 Icon: https://img.icons8.com/color/96/000000/microsoft-sql-server.png
 Keywords:
 - ms-sql-server
-Name: MS-SQL-Server
+- *id001
+Name: ms-sql-server
 Network: bridge
 Networking:
   Mode: bridge
 Overview: You have to accept the EULA with "Y" as parameter.
 PostArgs: ''
 Privileged: 'false'
-Project: https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-setup?view=sql-server-ver15
 Registry: https://hub.docker.com/_/microsoft-mssql-server
-Repository: mcr.microsoft.com/mssql/server:2019-latest
+Repository: mcr.microsoft.com/mssql/server
 Requires: ''
 Sources:
 - https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-setup?view=sql-server-ver15
 - https://hub.docker.com/_/microsoft-mssql-server
-TemplateURL: https://raw.githubusercontent.com/patrickstigler/unraid_app_templates/master/mssql-server/mssql-server.xml
+Tag: 2019-latest
 WebUI: ''

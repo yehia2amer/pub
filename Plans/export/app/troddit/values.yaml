@@ -1,0 +1,21 @@
+env:
+  CLIENT_ID: ''
+  CLIENT_SECRET: ''
+  NEXTAUTH_SECRET: ''
+  NEXTAUTH_URL: ''
+  REDDIT_REDIRECT: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: bsyed/troddit
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

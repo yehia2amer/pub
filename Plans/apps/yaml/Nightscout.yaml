@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Cloud
 Config:
   Device: {}
@@ -154,7 +154,8 @@ Config:
 Icon: https://avatars2.githubusercontent.com/u/7661012?s=200&amp;v=4
 Keywords:
 - nightscout
-Name: Nightscout
+- *id001
+Name: nightscout
 Network: bridge
 Networking:
   Mode: bridge
@@ -164,14 +165,11 @@ Overview: "Allows the installation of Nightscout, a remote CGM monitoring system
   \ to issue warnings etc. This is mainly useful to diabetics.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/nightscout/cgm-remote-monitor
 Registry: https://registry.hub.docker.com/r/nightscout/cgm-remote-monitor-travis
-Repository: nightscout/cgm-remote-monitor-travis:latest
+Repository: nightscout/cgm-remote-monitor-travis
 Requires: ''
 Sources:
 - https://github.com/nightscout/cgm-remote-monitor
 - https://registry.hub.docker.com/r/nightscout/cgm-remote-monitor-travis
-TemplateURL: https://raw.githubusercontent.com/opal06/unraid_docker_templates/master/Nightscout_template.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:1337]
-topPerforming: 0.255
-topTrending: -0.16099999999999998

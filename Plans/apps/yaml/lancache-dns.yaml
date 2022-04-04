@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Network-DNS
 - Network-Proxy
 Config:
@@ -43,7 +43,8 @@ Config:
 Icon: https://raw.githubusercontent.com/redvex2460/docker-templates/master/redvex2460/images/lancache.png
 Keywords:
 - lancache-dns
-Name: Lancache-DNS
+- *id001
+Name: lancache-dns
 Network: bridge
 Networking:
   Mode: bridge
@@ -52,14 +53,11 @@ Overview: "This docker container provides DNS entries for caching services to be
   \ in conjunction with a container.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: http://lancache.net
 Registry: https://github.com/lancachenet/lancache-dns
-Repository: lancachenet/lancache-dns:latest
+Repository: lancachenet/lancache-dns
 Requires: ''
 Sources:
 - http://lancache.net
 - https://github.com/lancachenet/lancache-dns
-TemplateURL: https://raw.githubusercontent.com/redvex2460/docker-templates/master/redvex2460/lancache-dns.xml
+Tag: latest
 WebUI: ''
-topPerforming: 2.09
-topTrending: -1.3650000000000002

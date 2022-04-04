@@ -1,0 +1,24 @@
+env:
+  GAME_ID: 90 +app_set_config '90 mod dod'
+  GAME_MOD: 90 mod dod
+  GAME_NAME: dod
+  GAME_PARAMS: +map dod_avalanche +maxplayer 24
+  GAME_PORT: '27015'
+  Steam-Password: ''
+  Steam-Username: ''
+  Validate Installation: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: ich777/steamcmd
+  tag: dodclassic
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

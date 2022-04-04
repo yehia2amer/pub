@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Network
 - Network-DNS
 Config:
@@ -43,7 +43,8 @@ Config:
 Icon: https://raw.githubusercontent.com/SiwatINC/unraid-ca-repository/master/icons/adguard.png
 Keywords:
 - adguard-home
-Name: AdGuard-Home
+- *id001
+Name: adguard-home
 Network: bridge
 Networking:
   Mode: bridge
@@ -58,7 +59,5 @@ Repository: adguard/adguardhome
 Requires: ''
 Sources:
 - https://registry.hub.docker.com/r/adguard/adguardhome
-TemplateURL: https://raw.githubusercontent.com/SiwatINC/unraid-ca-repository/master/docker-template/adguard_home.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:3000]/
-topPerforming: 1.051
-topTrending: -4.583

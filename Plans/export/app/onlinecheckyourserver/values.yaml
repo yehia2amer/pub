@@ -1,0 +1,25 @@
+env:
+  Host: google.com
+  Ping Interval: '300'
+  Ping Timeout: '10'
+  Pushover APP Token: ''
+  Pushover Message: google.com is offline!
+  Pushover Message Title: Online Check
+  Pushover Priority: '0'
+  Pushover User Token: ''
+  Retry after Fail: '3600'
+image:
+  pullPolicy: IfNotPresent
+  repository: ich777/online-check-pushover
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

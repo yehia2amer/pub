@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - GameServers
 Config:
   Device: {}
@@ -105,7 +105,8 @@ ExtraParams: --restart=unless-stopped
 Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/openmwtes3mp.png
 Keywords:
 - openmw-tes3mp
-Name: OpenMW-TES3MP
+- *id001
+Name: openmw-tes3mp
 Network: bridge
 Networking:
   Mode: bridge
@@ -114,12 +115,12 @@ Overview: "TES3MP is a project adding multiplayer functionality to OpenMW, a fre
   \ Elder Scrolls III: Morrowind\".\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://tes3mp.com/
 Registry: https://hub.docker.com/r/ich777/docker-openmw-tes3mp/
 Repository: ich777/docker-openmw-tes3mp
 Requires: ''
 Sources:
 - https://tes3mp.com/
 - https://hub.docker.com/r/ich777/docker-openmw-tes3mp/
+Tag: latest
 WebUI: ''
 caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/OpenMW-TES3MP.xml

@@ -1,0 +1,18 @@
+env:
+  Default Profile: ''
+  VNC Password: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: p3rco/openrgb
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Productivity
 - Tools-Utilities
 Config:
@@ -107,7 +107,8 @@ ExtraParams: --restart=unless-stopped
 Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/krusader.png
 Keywords:
 - krusader
-Name: Krusader
+- *id001
+Name: krusader
 Network: bridge
 Networking:
   Mode: bridge
@@ -120,14 +121,12 @@ Overview: "Krusader is an advanced orthodox file manager for KDE and other deskt
   \ batch renaming, etc.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://krusader.org/
 Registry: https://hub.docker.com/r/ich777/krusader
 Repository: ich777/krusader
 Requires: ''
 Sources:
 - https://krusader.org/
 - https://hub.docker.com/r/ich777/krusader
+Tag: latest
 WebUI: http://[IP]:[PORT:8080]/vnc.html?autoconnect=true
 caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/Krusader.xml
-topPerforming: 13.665
-topTrending: -6.204000000000001

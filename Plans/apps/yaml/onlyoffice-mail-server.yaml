@@ -1,6 +1,6 @@
 CAComment: This template is set up to use a custom network. You may have to adjust
   the network or IP address etc to match your system
-CategoryList:
+CategoryList: &id001
 - Tools-Utilities
 - Network-Other
 Config:
@@ -114,6 +114,7 @@ ExtraParams: -h yourdomain.com -p 25:25 -p 465:465 -p 143:143 -p 993:993 -p 110:
 Icon: https://raw.githubusercontent.com/AMJidovu/unraid-repository/master/img/onlyoffice-ce-ds.jpg
 Keywords:
 - onlyoffice-mail-server
+- *id001
 Name: onlyoffice-mail-server
 Network: onlyoffice
 Networking:
@@ -121,13 +122,11 @@ Networking:
 Overview: "OnlyOffice Mail Server for external mail. \r\n"
 PostArgs: ''
 Privileged: 'true'
-Project: https://www.onlyoffice.com/
 Registry: https://hub.docker.com/repository/docker/xternet/unraid-onlyoffice-mail-server
 Repository: xternet/unraid-onlyoffice-mail-server
 Requires: ''
 Sources:
 - https://www.onlyoffice.com/
 - https://hub.docker.com/repository/docker/xternet/unraid-onlyoffice-mail-server
-TemplateURL: https://raw.githubusercontent.com/AMJidovu/unraid-repository/master/unraid-ca-repo/onlyoffice-mail-server.xml
+Tag: latest
 WebUI: ''
-topTrending: -2.88

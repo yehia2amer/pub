@@ -1,18 +1,24 @@
 BindTime: 'true'
-CategoryList:
+CategoryList: &id001
 - Network-Proxy
 - Network-Other
 - Tools-Utilities
+Config:
+  Device: {}
+  Label: {}
+  Path: {}
+  Port: {}
+  Variable: {}
 Data:
   Volume:
     ContainerDir: /var/cache/apt-cacher-ng
     HostDir: /mnt/user/appdata/apt-cacher-ng
     Mode: rw
-Environment: "\n  "
 GitHub: https://github.com/sameersbn/docker-apt-cacher-ng
 Icon: https://github.com/atribe/unRAID-docker/raw/master/icons/apt-cacher.png
 Keywords:
 - apt-cacher-ng
+- *id001
 Name: apt-cacher-ng
 Networking:
   Mode: bridge
@@ -25,14 +31,11 @@ Overview: Apt-Cacher NG is a caching proxy, specialized for package files from L
   distributors, primarily for Debian (and Debian based) distributions but not limited
   to those.
 Privileged: 'false'
-Project: https://www.unix-ag.uni-kl.de/~bloch/acng/
 Registry: https://hub.docker.com/r/sameersbn/apt-cacher-ng/
 Repository: sameersbn/apt-cacher-ng
 Requires: ''
 Sources:
 - https://www.unix-ag.uni-kl.de/~bloch/acng/
 - https://hub.docker.com/r/sameersbn/apt-cacher-ng/
-TemplateURL: https://raw.githubusercontent.com/atribe/unRAID-docker/master/apt-cacher-ng.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:3142]/
-topPerforming: 0.745
-topTrending: 0.16600000000000004

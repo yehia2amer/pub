@@ -1,0 +1,16 @@
+env: {}
+image:
+  pullPolicy: IfNotPresent
+  repository: signumnetwork/node
+  tag: latest-h2
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

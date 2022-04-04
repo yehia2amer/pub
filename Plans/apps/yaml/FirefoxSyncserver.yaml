@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Cloud
 Config:
   Device: {}
@@ -110,21 +110,19 @@ Config:
 Icon: https://github.com/jflo/ffsync-unraid/raw/main/Firefox_Sync_logo.png
 Keywords:
 - firefoxsyncserver
-Name: FirefoxSyncserver
+- *id001
+Name: firefoxsyncserver
 Network: bridge
 Networking:
   Mode: bridge
 Overview: Template for running Mozilla's official Syncserver image.
 PostArgs: ''
 Privileged: 'false'
-Project: https://mozilla-services.readthedocs.io/en/latest/howtos/run-sync-1.5.html
 Registry: https://hub.docker.com/r/mozilla/syncserver
-Repository: mozilla/syncserver:latest
+Repository: mozilla/syncserver
 Requires: ''
 Sources:
 - https://mozilla-services.readthedocs.io/en/latest/howtos/run-sync-1.5.html
 - https://hub.docker.com/r/mozilla/syncserver
-TemplateURL: https://raw.githubusercontent.com/jflo/ffsync-unraid/master/ffsync-template.xml
+Tag: latest
 WebUI: ''
-topPerforming: 0.19
-topTrending: -1.4080000000000001

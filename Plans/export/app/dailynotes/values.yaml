@@ -1,0 +1,17 @@
+env:
+  Prevent Signups?: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: m0ngr31/dailynotes
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

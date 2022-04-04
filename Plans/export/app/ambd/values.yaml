@@ -1,0 +1,28 @@
+env:
+  DL Client ARL Token: ''
+  Download Concurrency: ''
+  Enable Automatic Script Start: ''
+  File Permissions: ''
+  Folder Permissions: ''
+  Format: ''
+  Music Embedded Cover Quality: ''
+  Plex Library Name: ''
+  Plex Scan Notifications: ''
+  Plex Token: ''
+  Plex Url: ''
+  Script Interval: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: randomninjaatk/ambd
+  tag: amd64
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

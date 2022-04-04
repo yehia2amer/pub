@@ -1,0 +1,18 @@
+env:
+  LANCACHE_IP: Please enter IP of Lancache-Docker
+  USE_GENERIC_CACHE: 'true'
+image:
+  pullPolicy: IfNotPresent
+  repository: lancachenet/lancache-dns
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

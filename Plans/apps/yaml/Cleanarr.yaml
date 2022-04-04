@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - MediaApp-Other
 Config:
   Device: {}
@@ -77,7 +77,8 @@ Config:
 Icon: https://raw.githubusercontent.com/Alphacosmos/unraid-templetes/main/Images/plex-library-cleaner.ico
 Keywords:
 - cleanarr
-Name: Cleanarr
+- *id001
+Name: cleanarr
 Network: bridge
 Networking:
   Mode: bridge
@@ -85,14 +86,11 @@ Overview: A simple UI to help find and delete duplicate and sample files from yo
   Plex server.
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/se1exin/cleanarr
 Registry: https://hub.docker.com/r/selexin/cleanarr/
 Repository: selexin/cleanarr
 Requires: ''
 Sources:
 - https://github.com/se1exin/cleanarr
 - https://hub.docker.com/r/selexin/cleanarr/
-TemplateURL: https://raw.githubusercontent.com/Alphacosmos/unraid-templetes/master/Cleanarr.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:80]/
-topPerforming: 3.471
-topTrending: -43.971000000000004

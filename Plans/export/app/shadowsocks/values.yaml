@@ -1,0 +1,20 @@
+env:
+  Connection Timeout (seconds): '300'
+  'DNS Addresses (comma seperated, default: google)': 8.8.8.8,8.8.4.4
+  Encryption Method: chacha20-ietf-poly1305
+  Shadowsocks Password (for connecting later): ''
+image:
+  pullPolicy: IfNotPresent
+  repository: shadowsocks/shadowsocks-libev
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

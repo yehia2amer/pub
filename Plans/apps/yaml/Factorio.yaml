@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - GameServers
 Config:
   Device: {}
@@ -54,7 +54,8 @@ ExtraParams: --restart=unless-stopped
 Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/factorio.png
 Keywords:
 - factorio
-Name: Factorio
+- *id001
+Name: factorio
 Network: bridge
 Networking:
   Mode: bridge
@@ -62,14 +63,12 @@ Overview: "This Docker Container will download the latest stable release of the 
   \ generate the map and you're ready to play.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://www.factorio.com/
 Registry: https://hub.docker.com/r/factoriotools/factorio/
-Repository: factoriotools/factorio:stable
+Repository: factoriotools/factorio
 Requires: ''
 Sources:
 - https://www.factorio.com/
 - https://hub.docker.com/r/factoriotools/factorio/
+Tag: stable
 WebUI: ''
 caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/Factorio.xml
-topPerforming: 0.936
-topTrending: -4.771

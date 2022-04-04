@@ -1,0 +1,25 @@
+env:
+  Database IP: ''
+  Database Name: zabbix
+  Database Password: ''
+  Database Port: ''
+  Database Username: ''
+  Name of the Zabbix Server: ZabbixServer
+  PHP Timezone: Europe/London
+  Zabbix Server IP: ''
+  Zabbix Server Port: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: zabbix/zabbix-web-nginx-mysql
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

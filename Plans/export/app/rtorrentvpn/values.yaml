@@ -1,0 +1,39 @@
+env:
+  DEBUG: 'false'
+  ENABLE_AUTODL_IRSSI: 'no'
+  ENABLE_PRIVOXY: 'no'
+  ENABLE_RPC2: 'yes'
+  ENABLE_RPC2_AUTH: 'yes'
+  ENABLE_WEBUI_AUTH: 'yes'
+  LAN_NETWORK: 192.168.1.0/24
+  NAME_SERVERS: 84.200.69.80,37.235.1.174,1.1.1.1,37.235.1.177,84.200.70.40,1.0.0.1
+  PHP_TZ: UTC
+  RPC2_PASS: ''
+  RPC2_USER: admin
+  STRICT_PORT_FORWARD: 'yes'
+  UMASK: '000'
+  VPN_CLIENT: openvpn|wireguard
+  VPN_ENABLED: 'yes'
+  VPN_INPUT_PORTS: ''
+  VPN_OPTIONS: ''
+  VPN_OUTPUT_PORTS: ''
+  VPN_PASS: vpn password
+  VPN_PROV: pia|airvpn|custom
+  VPN_USER: vpn username
+  WEBUI_PASS: ''
+  WEBUI_USER: admin
+image:
+  pullPolicy: IfNotPresent
+  repository: binhex/arch-rtorrentvpn
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

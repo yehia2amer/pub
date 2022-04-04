@@ -1,28 +1,18 @@
 CAComment: This template is set up to use a custom network. You may have to adjust
   the network or IP address etc to match your system
-CategoryList:
+CategoryList: &id001
 - Tools-Utilities
 - Network-Management
 Config:
   Device: {}
   Label: {}
-  Path:
-    Host Path 1:
-      Default: ''
-      Description: 'Container Path: /shortipy/data'
-      Display: always
-      Mask: 'false'
-      Mode: rw
-      Name: Host Path 1
-      Required: 'false'
-      Target: /shortipy/data
-      Type: Path
-      value: /mnt/user/appdata/shortipy
+  Path: {}
   Port: {}
   Variable: {}
 Icon: https://image.flaticon.com/icons/png/512/1828/1828108.png
 Keywords:
 - shortipy
+- *id001
 Name: shortipy
 Network: br0
 Networking:
@@ -30,13 +20,11 @@ Networking:
 Overview: URL Shortener in python based on flask
 PostArgs: /start.sh
 Privileged: 'false'
-Project: https://github.com/maschhoff/shortipy
 Registry: https://hub.docker.com/repository/docker/knex666/shortipy
 Repository: knex666/shortipy
 Requires: ''
 Sources:
 - https://github.com/maschhoff/shortipy
 - https://hub.docker.com/repository/docker/knex666/shortipy
-TemplateURL: https://raw.githubusercontent.com/maschhoff/docker/master/unraid%20xml/my-shortipy.xml
+Tag: latest
 WebUI: http://[IP]:4321/
-topTrending: -3.636

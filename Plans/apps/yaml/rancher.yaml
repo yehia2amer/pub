@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Network-Management
 Config:
   Device: {}
@@ -42,6 +42,7 @@ Config:
 Icon: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/rancher.png
 Keywords:
 - rancher
+- *id001
 Name: rancher
 Network: bridge
 Official: true
@@ -53,15 +54,12 @@ Overview: A container management platform built for organizations that deploy co
   pi cluster, vms running k3os, etc.) Perfect for running and managing the apps that
   you'd rather not go down while maintaining your server.
 Privileged: 'false'
-Project: https://github.com/rancher/rancher
 Registry: https://hub.docker.com/r/rancher/rancher
 RepoShort: Selfhosters
-Repository: rancher/rancher:latest
+Repository: rancher/rancher
 Requires: ''
 Sources:
 - https://github.com/rancher/rancher
 - https://hub.docker.com/r/rancher/rancher
-TemplateURL: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/rancher.xml
+Tag: latest
 WebUI: https://[IP]:[PORT:443]
-topPerforming: 2.439
-topTrending: -5.026

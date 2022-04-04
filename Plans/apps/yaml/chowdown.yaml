@@ -1,20 +1,21 @@
 BindTime: 'true'
-CategoryList:
+CategoryList: &id001
 - Other
+Config:
+  Device: {}
+  Label: {}
+  Path: {}
+  Port: {}
+  Variable: {}
 Data:
   Volume:
     ContainerDir: /config
     HostDir: ''
     Mode: rw
-Environment:
-  Variable:
-  - Name: PUID
-    Value: '99'
-  - Name: PGID
-    Value: '100'
 Icon: https://raw.githubusercontent.com/gregyankovoy/docker-templates/master/greg/img/chowdown-logo.png
 Keywords:
 - chowdown
+- *id001
 Name: chowdown
 Networking:
   Mode: bridge
@@ -30,7 +31,5 @@ Repository: gregyankovoy/chowdown
 Requires: ''
 Sources:
 - https://hub.docker.com/r/gregyankovoy/chowdown/Dockerfile/
-TemplateURL: https://raw.githubusercontent.com/GregYankovoy/docker-templates/master/greg/chowdown.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:4000]/
-topPerforming: 2.43
-topTrending: -0.44599999999999973

@@ -1,14 +1,20 @@
 CAComment: This template is set up to use a custom network. You may have to adjust
   the network or IP address etc to match your system
-CategoryList:
+CategoryList: &id001
 - GameServers
 - Network-Other
+Config:
+  Device: {}
+  Label: {}
+  Path: {}
+  Port: {}
+  Variable: {}
 Data: ''
-Environment: ''
 Icon: https://intinor.com/wp-content/uploads/2017/01/RTMP.png
 Keywords:
 - rtmpserver
-Name: RTMPServer
+- *id001
+Name: rtmpserver
 Network: br0
 Networking:
   Mode: br0
@@ -19,14 +25,11 @@ Overview: "This Docker image can be used to create a video streaming server that
   \ base images.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/TareqAlqutami/rtmp-hls-server
 Registry: https://hub.docker.com/r/alqutami/rtmp-hls
 Repository: alqutami/rtmp-hls
 Requires: ''
 Sources:
 - https://github.com/TareqAlqutami/rtmp-hls-server
 - https://hub.docker.com/r/alqutami/rtmp-hls
-TemplateURL: https://raw.githubusercontent.com/maschhoff/docker/master/unraid%20xml/my-RTMPServer.xml
+Tag: latest
 WebUI: http://[IP]:8080/stats
-topPerforming: 2.455
-topTrending: -1.1749999999999998

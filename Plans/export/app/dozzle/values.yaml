@@ -1,0 +1,23 @@
+env:
+  Base URL: ''
+  Disable Analytics: ''
+  Log Level: ''
+  Log Tailsize: ''
+  Password: ''
+  Secret Key: ''
+  Username: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: amir20/dozzle
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

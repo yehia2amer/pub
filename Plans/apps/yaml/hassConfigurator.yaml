@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - HomeAutomation
 Config:
   Device: {}
@@ -42,21 +42,19 @@ Config:
 Icon: https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Home_Assistant_Logo.svg/2000px-Home_Assistant_Logo.svg.png
 Keywords:
 - hassconfigurator
-Name: hassConfigurator
+- *id001
+Name: hassconfigurator
 Network: bridge
 Networking:
   Mode: bridge
 Overview: Home Assistant online configurator container from https://github.com/danielperna84/hass-configurator
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/danielperna84/hass-configurator
 Registry: https://hub.docker.com/r/causticlab/hass-configurator-docker//Dockerfile/
-Repository: causticlab/hass-configurator-docker:x86_64
+Repository: causticlab/hass-configurator-docker
 Requires: ''
 Sources:
 - https://github.com/danielperna84/hass-configurator
 - https://hub.docker.com/r/causticlab/hass-configurator-docker//Dockerfile/
-TemplateURL: https://raw.githubusercontent.com/RazorSiM/docker-templates/master/hass-configurator.xml
+Tag: x86_64
 WebUI: http://[IP]:[PORT:3218]
-topPerforming: 0.919
-topTrending: -1.049

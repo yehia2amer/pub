@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - GameServers
 Config:
   Device: {}
@@ -170,7 +170,8 @@ ExtraParams: --restart=unless-stopped
 Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/fivem.png
 Keywords:
 - fivem
-Name: FiveM
+- *id001
+Name: fivem
 Network: bridge
 Networking:
   Mode: bridge
@@ -183,14 +184,12 @@ Overview: "With this Docker you can run FiveM (GTA V MOD SERVER) it will automat
   \ here: https://keymaster.fivem.net/) and your prefered Server Name.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://fivem.net/
 Registry: https://hub.docker.com/r/ich777/fivemserver/
 Repository: ich777/fivemserver
 Requires: ''
 Sources:
 - https://fivem.net/
 - https://hub.docker.com/r/ich777/fivemserver/
+Tag: latest
 WebUI: http://[IP]:[PORT:8080]/
 caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/FiveM.xml
-topPerforming: 2.039
-topTrending: -3.017

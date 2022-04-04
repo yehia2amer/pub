@@ -1,0 +1,24 @@
+env:
+  GRAPH_LOG: info
+  ethereum node url: mainnet:http://localhost:8545
+  ipfs url: localhost:5001
+  postgres host: localhost
+  postgres password: dsmrreader
+  postgres port: '5732'
+  postgres user: dsmrreader
+  postgres_db: graph-node
+image:
+  pullPolicy: IfNotPresent
+  repository: graphprotocol/graph-node
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

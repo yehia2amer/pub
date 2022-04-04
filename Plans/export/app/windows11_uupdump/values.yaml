@@ -1,0 +1,19 @@
+env:
+  Custom script name: uup_download_linux.sh
+  Default or Custom: default
+  Name for ISO image: Window11_Insiders.iso
+image:
+  pullPolicy: IfNotPresent
+  repository: spaceinvaderone/windows11_insider
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

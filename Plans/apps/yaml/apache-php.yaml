@@ -1,6 +1,12 @@
 BindTime: 'true'
-CategoryList:
+CategoryList: &id001
 - Network-Web
+Config:
+  Device: {}
+  Label: {}
+  Path: {}
+  Port: {}
+  Variable: {}
 Data:
   Volume:
   - ContainerDir: /config
@@ -15,14 +21,11 @@ Data:
   - ContainerDir: /etc/localtime
     HostDir: /etc/localtime
     Mode: ro
-Environment:
-  Variable:
-    Name: ''
-    Value: ''
 Icon: https://raw.githubusercontent.com/chvb/docker-templates/master/chvb/img/apache-php.png
 Keywords:
 - apache-php
-Name: Apache-PHP
+- *id001
+Name: apache-php
 Networking:
   Mode: bridge
   Publish:
@@ -43,7 +46,5 @@ Repository: chvb/docker-apache-php
 Requires: ''
 Sources:
 - https://hub.docker.com/r/chvb/docker-apache-php/
-TemplateURL: https://raw.githubusercontent.com/chvb/docker-templates/master/chvb/apache-php.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:80]/
-topPerforming: 1.1
-topTrending: -2.84

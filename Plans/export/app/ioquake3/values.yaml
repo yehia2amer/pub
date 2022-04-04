@@ -1,0 +1,22 @@
+env:
+  GAME_PARAMS: +set dedicated 2 +set sv_allowDownload 1 +set com_hunkmegs 64
+  Patch URL: https://files.ioquake3.org/quake3-latest-pk3s.zip
+  Q3_MAP: q3dm1
+  UMASK: '000'
+  ioquake 3 Base Port: '27960'
+  ioquake3 Download URL: https://files.ioquake3.org/Linux.zip
+image:
+  pullPolicy: IfNotPresent
+  repository: ich777/ioquake3
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

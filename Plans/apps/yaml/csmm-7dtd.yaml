@@ -1,5 +1,5 @@
 Beta: 'true'
-CategoryList:
+CategoryList: &id001
 - GameServers
 - Network-Other
 - Productivity
@@ -173,7 +173,8 @@ ExtraParams: --restart=unless-stopped
 Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/csmm.png
 Keywords:
 - csmm-7dtd
-Name: CSMM-7DtD
+- *id001
+Name: csmm-7dtd
 Network: bridge
 Networking:
   Mode: bridge
@@ -181,13 +182,12 @@ Overview: "This Docker will install and download CSMM for 7DtD (CatalysmsServerM
   \n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://www.csmm.app/
 Registry: https://hub.docker.com/r/ich777/csmm-7dtd/
 Repository: ich777/csmm-7dtd
 Requires: ''
 Sources:
 - https://www.csmm.app/
 - https://hub.docker.com/r/ich777/csmm-7dtd/
+Tag: latest
 WebUI: http://[IP]:[PORT:1337]/
 caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/CSMM-7DtD.xml
-topTrending: 0.026000000000000245

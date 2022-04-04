@@ -4,7 +4,7 @@ Branch:
 - Tag: p7zip
   TagDescription: YACReaderLibraryServer compiled with p7zip - see Docker Support
     for more information
-CategoryList:
+CategoryList: &id001
 - MediaServer-Other
 Config:
   Device: {}
@@ -82,21 +82,19 @@ ExtraParams: --restart unless-stopped
 Icon: https://raw.githubusercontent.com/xthursdayx/docker-templates/master/xthursdayx/images/yacreader-icon.png
 Keywords:
 - yacreaderlibraryserver
-Name: YACReaderLibraryServer
+- *id001
+Name: yacreaderlibraryserver
 Network: bridge
 Networking:
   Mode: bridge
 Overview: "Headless version of the YACReaderLibraryServer.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://www.yacreader.com
 Registry: https://hub.docker.com/r/xthursdayx/yacreaderlibrary-server-docker/
 Repository: xthursdayx/yacreaderlibrary-server-docker
 Requires: ''
 Sources:
 - https://www.yacreader.com
 - https://hub.docker.com/r/xthursdayx/yacreaderlibrary-server-docker/
-TemplateURL: https://raw.githubusercontent.com/xthursdayx/docker-templates/master/xthursdayx/yacserver.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:8080]
-topPerforming: 2.032
-topTrending: -6.584

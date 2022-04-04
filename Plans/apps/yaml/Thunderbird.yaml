@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Productivity
 - Tools-Utilities
 Config:
@@ -123,7 +123,8 @@ ExtraParams: --restart=unless-stopped --shm-size=2G
 Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/thunderbird.png
 Keywords:
 - thunderbird
-Name: Thunderbird
+- *id001
+Name: thunderbird
 Network: bridge
 Networking:
   Mode: bridge
@@ -131,14 +132,12 @@ Overview: "This container will download and install Thunderbird in the preferred
   \ and language.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://www.thunderbird.net/
 Registry: https://hub.docker.com/r/ich777/thunderbird/
 Repository: ich777/thunderbird
 Requires: ''
 Sources:
 - https://www.thunderbird.net/
 - https://hub.docker.com/r/ich777/thunderbird/
+Tag: latest
 WebUI: http://[IP]:[PORT:8080]/vnc.html?autoconnect=true
 caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/Thunderbird.xml
-topPerforming: 11.421
-topTrending: -5.3870000000000005

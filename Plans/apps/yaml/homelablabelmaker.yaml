@@ -1,26 +1,16 @@
-CategoryList:
+CategoryList: &id001
 - Tools-Utilities
 - Other
 Config:
   Device: {}
   Label: {}
   Path: {}
-  Port:
-    WebUI:
-      Default: '2020'
-      Description: 'Container Port: 80'
-      Display: always
-      Mask: 'false'
-      Mode: tcp
-      Name: WebUI
-      Required: 'false'
-      Target: '80'
-      Type: Port
-      value: '2020'
+  Port: {}
   Variable: {}
 Icon: https://github.com/DavidSpek/homelablabelmaker/raw/master/Docker%20Files/Caddy%20Label%20Maker%20Logo.png
 Keywords:
 - homelablabelmaker
+- *id001
 Name: homelablabelmaker
 Network: bridge
 Networking:
@@ -29,14 +19,11 @@ Overview: DIY tool to create and print labels for Dell Poweredge and HP Proliant
   caddies.
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/DavidSpek/homelablabelmaker
 Registry: https://hub.docker.com/r/davidspek/homelablabelmaker/
 Repository: davidspek/homelablabelmaker
 Requires: ''
 Sources:
 - https://github.com/DavidSpek/homelablabelmaker
 - https://hub.docker.com/r/davidspek/homelablabelmaker/
-TemplateURL: https://raw.githubusercontent.com/DavidSpek/homelablabelmaker/master/Docker%20Files/homelablabelmaker.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:80]
-topPerforming: 1.862
-topTrending: -2.26

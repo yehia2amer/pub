@@ -1,0 +1,22 @@
+env:
+  Allow Mediawiki Upgrades: ''
+  Backup On Start: ''
+  Install MySQL/MariaDB: ''
+  Key 1: '99'
+  Key 2: '100'
+  MySQL Root Password: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: d8sychain/mediawiki
+  tag: edge
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

@@ -1,5 +1,5 @@
 BaseImage: phusion/baseimage:0.11
-CategoryList:
+CategoryList: &id001
 - Cloud
 - Network-Other
 - Productivity
@@ -92,7 +92,8 @@ ExtraParams: --log-opt max-size=50m --log-opt max-file=1 --sysctl=net.core.somax
 Icon: https://github.com/dlandon/docker.templates/raw/master/owncloud.png
 Keywords:
 - owncloud
-Name: ownCloud
+- *id001
+Name: owncloud
 Network: bridge
 Networking:
   Mode: bridge
@@ -100,14 +101,11 @@ Overview: "OwnCloud provides universal access to your files via the web, your co
   \ or your mobile devices \u2014 wherever you are. Mariadb is built into the image.\
   \ Built with php 7.3, 7.4, and 7.5 (selectable), mariadb 10.3 and nginx 1.18[br]\n"
 Privileged: 'true'
-Project: https://owncloud.org/
 Registry: https://registry.hub.docker.com/r/dlandon//owncloud/
 Repository: dlandon/owncloud
 Requires: ''
 Sources:
 - https://owncloud.org/
 - https://registry.hub.docker.com/r/dlandon//owncloud/
-TemplateURL: https://raw.githubusercontent.com/dlandon/docker.templates/master/ownCloud.xml
+Tag: latest
 WebUI: https://[IP]:[PORT:443]/
-topPerforming: 0.966
-topTrending: -1.2830000000000001

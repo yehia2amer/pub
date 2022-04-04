@@ -1,0 +1,26 @@
+env:
+  Company email address: ''
+  Database Name: ''
+  Database Password: ''
+  Database Username: ''
+  Default Company Name: personal
+  LOCALE: US_EN
+  Login Email address: ''
+  Login Password: ''
+  MySql Database IP:Port: ''
+  Setup Account: 'true'
+image:
+  pullPolicy: IfNotPresent
+  repository: akaunting/akaunting
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Network-Web
 Config:
   Device: {}
@@ -42,7 +42,8 @@ Config:
 Icon: https://raw.githubusercontent.com/SiwatINC/unraid-ca-repository/master/icons/pagespeed_32dp.png
 Keywords:
 - nginxpagespeed
-Name: NGINXPageSpeed
+- *id001
+Name: nginxpagespeed
 Network: bridge
 Networking:
   Mode: bridge
@@ -55,6 +56,5 @@ Repository: ghcr.io/siwatinc/nginx-pagespeed
 Requires: ''
 Sources:
 - https://ghcr.io/siwatinc/nginx-pagespeed
-TemplateURL: https://raw.githubusercontent.com/SiwatINC/unraid-ca-repository/master/docker-template/nginxpagespeed.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:80]/
-topTrending: -1.093

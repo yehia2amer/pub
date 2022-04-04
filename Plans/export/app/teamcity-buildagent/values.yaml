@@ -1,0 +1,19 @@
+env:
+  AGENT_NAME: Phil Coulson
+  DOCKER_IN_DOCKER: start
+  SERVER_URL: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: jetbrains/teamcity-agent
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

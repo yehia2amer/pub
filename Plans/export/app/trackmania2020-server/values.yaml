@@ -1,0 +1,19 @@
+env:
+  MASTER_LOGIN: ''
+  MASTER_PASSWORD: ''
+  XMLRPC_ALLOWREMOTE: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: evotm/trackmania
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

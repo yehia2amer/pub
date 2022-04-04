@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Productivity
 - Tools-Utilities
 Config:
@@ -122,18 +122,19 @@ ExtraParams: --restart=unless-stopped --shm-size=2G
 Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/chromium.png
 Keywords:
 - ungoogled-chromium
-Name: Ungoogled-Chromium
+- *id001
+Name: ungoogled-chromium
 Network: bridge
 Overview: "Ungoogled-Chromium is a lightweight approach to removing Google web service\
   \ dependency from the Chromium project web browser.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://www.google.com/chrome/
 Registry: https://hub.docker.com/r/ich777/ungoogled-chromium/
 Repository: ich777/ungoogled-chromium
 Requires: ''
 Sources:
 - https://www.google.com/chrome/
 - https://hub.docker.com/r/ich777/ungoogled-chromium/
+Tag: latest
 WebUI: http://[IP]:[PORT:8080]/vnc.html?autoconnect=true
 caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/Ungoogled-Chromium.xml

@@ -1,38 +1,38 @@
 BindTime: 'true'
-CategoryList:
+CategoryList: &id001
 - HomeAutomation
+Config:
+  Device: {}
+  Label: {}
+  Path: {}
+  Port: {}
+  Variable:
+    UMASK:
+      Name: UMASK
+      value: '000'
 Data:
   Volume:
     ContainerDir: /config
     HostDir: path to config
     Mode: rw
-Environment:
-  Variable:
-  - Name: UMASK
-    Value: '000'
-  - Name: PUID
-    Value: '99'
-  - Name: PGID
-    Value: '100'
 ExtraParams: -i
 GitHub: https://github.com/jcreynolds/docker-templates
 Icon: https://raw.githubusercontent.com/jcreynolds/docker-templates/master/Icons/NodeLink.png
 Keywords:
 - nodelink
-Name: NodeLink
+- *id001
+Name: nodelink
 Networking:
   Mode: host
   Publish: "\n    "
 Overview: NodeLink is a Node Server which creates nodes (virtual devices) within the
   ISY.
 Privileged: 'false'
-Project: http://automationshack.com/wp/nodelink/
 Registry: https://registry.hub.docker.com/r/jcreynolds/nodelink/
 Repository: jcreynolds/nodelink
 Requires: ''
 Sources:
 - http://automationshack.com/wp/nodelink/
 - https://registry.hub.docker.com/r/jcreynolds/nodelink/
-TemplateURL: https://raw.githubusercontent.com/jcreynolds/docker-templates/master/NodeLink.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:8090]
-topTrending: -1.476

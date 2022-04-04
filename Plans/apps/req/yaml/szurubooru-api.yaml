@@ -1,6 +1,5 @@
-CategoryList:
+CategoryList: &id001
 - MediaServer-Photos
-ChangeLogPresent: true
 Config:
   Device: {}
   Label: {}
@@ -76,6 +75,7 @@ Config:
 Icon: https://github.com/FoxxMD/unraid-docker-templates/raw/master/szurubooru.png
 Keywords:
 - szurubooru-api
+- *id001
 Name: szurubooru-api
 Network: bridge
 Networking:
@@ -84,14 +84,11 @@ Overview: Backend API container for Szurubooru, an image board engine for small 
   medium communities
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/rr-/szurubooru
 Registry: https://hub.docker.com/r/szurubooru/server
-Repository: szurubooru/server:latest
+Repository: szurubooru/server
 Requires: Postgres 11 installed
 Sources:
 - https://github.com/rr-/szurubooru
 - https://hub.docker.com/r/szurubooru/server
-TemplateURL: https://raw.githubusercontent.com/FoxxMD/unraid-docker-templates/master/foxxmd/szurubooru-api.xml
+Tag: latest
 WebUI: ''
-topPerforming: 0.776
-topTrending: -26.067

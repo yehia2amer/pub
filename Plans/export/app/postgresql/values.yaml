@@ -1,0 +1,19 @@
+env:
+  DB_NAME: gitlabhq_production
+  DB_PASS: password
+  DB_USER: gitlab
+image:
+  pullPolicy: IfNotPresent
+  repository: sameersbn/postgresql
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

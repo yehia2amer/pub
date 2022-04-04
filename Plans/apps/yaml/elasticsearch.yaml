@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Other
 - Tools-Utilities
 Config:
@@ -55,6 +55,7 @@ ExtraParams: --ulimit nofile=262144:262144 -u 1000
 Icon: https://raw.githubusercontent.com/d8sychain/unraid-ca-templates/master/images/elasticsearch.png
 Keywords:
 - elasticsearch
+- *id001
 Name: elasticsearch
 Network: bridge
 Networking:
@@ -64,14 +65,11 @@ Overview: "This Elasticsearch docker version is built from the official Elastics
   \ purpose for use with Nextcloud. [br]\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://www.elastic.co/
 Registry: https://hub.docker.com/r/d8sychain/elasticsearch
 Repository: d8sychain/elasticsearch
 Requires: ''
 Sources:
 - https://www.elastic.co/
 - https://hub.docker.com/r/d8sychain/elasticsearch
-TemplateURL: https://raw.githubusercontent.com/d8sychain/unraid-ca-templates/master/templates/elasticsearch.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:9200]/
-topPerforming: 2.596
-topTrending: -13.558

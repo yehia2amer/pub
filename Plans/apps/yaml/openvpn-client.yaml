@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Network-VPN
 Config:
   Device:
@@ -32,7 +32,8 @@ ExtraParams: --cap-add=NET_ADMIN --dns=8.8.8.8 --sysctl net.ipv6.conf.all.disabl
 Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/openvpn-client.png
 Keywords:
 - openvpn-client
-Name: OpenVPN-Client
+- *id001
+Name: openvpn-client
 Network: bridge
 Networking:
   Mode: bridge
@@ -41,12 +42,12 @@ Overview: "This OpenVPN container was designed to be started first to provide a 
   \ for further help here: https://github.com/ich777/docker-openvpn-client\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/ich777/docker-openvpn-client
 Registry: https://hub.docker.com/r/ich777/openvpn-client/
 Repository: ich777/openvpn-client
 Requires: ''
 Sources:
 - https://github.com/ich777/docker-openvpn-client
 - https://hub.docker.com/r/ich777/openvpn-client/
+Tag: latest
 WebUI: ''
 caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/OpenVPN-Client.xml

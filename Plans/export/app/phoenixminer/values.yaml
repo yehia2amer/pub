@@ -1,0 +1,26 @@
+env:
+  AMD Driver Version: '20.20'
+  Additional PhoenixMiner Arguments: ''
+  Nvidia Driver Capabilities: all
+  Nvidia Visible Devices: ''
+  Pool Address: asia1.ethermine.org:4444
+  Pool Password: x
+  'Safety: Resume Temperature': '80'
+  'Safety: Stop Temperature': '85'
+  'Safety: Target Temperature': '75'
+  Wallet Address: '0xe037C6245910EbBbA720514835d31B385D76927f'
+image:
+  pullPolicy: IfNotPresent
+  repository: lnxd/phoenixminer
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

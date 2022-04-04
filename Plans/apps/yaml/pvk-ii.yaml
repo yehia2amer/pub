@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - GameServers
 Config:
   Device: {}
@@ -182,7 +182,8 @@ ExtraParams: --restart=unless-stopped
 Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/pvkii.png
 Keywords:
 - pvk-ii
-Name: PVK-II
+- *id001
+Name: pvk-ii
 Network: bridge
 Networking:
   Mode: bridge
@@ -190,12 +191,12 @@ Overview: "This Docker will download and install SteamCMD. It will also install 
   \ Vikings &amp; Knights 2 and run it.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://www.steampowered.com/
 Registry: https://hub.docker.com/r/ich777/steamcmd/
-Repository: ich777/steamcmd:pvkii
+Repository: ich777/steamcmd
 Requires: ''
 Sources:
 - https://www.steampowered.com/
 - https://hub.docker.com/r/ich777/steamcmd/
+Tag: pvkii
 WebUI: ''
 caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/PVK-II.xml

@@ -1,0 +1,25 @@
+env:
+  CSMM Download URL: https://github.com/CatalysmsServerManager/7-days-to-die-server-manager/archive/master.zip
+  Database Backup Interval: '90'
+  Dicord Bot Token: ''
+  Discord Client ID: ''
+  Discord Client Secret: ''
+  Force Update: ''
+  Hostname: ''
+  Log Level: info
+  Steam API Key: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: ich777/csmm-7dtd
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

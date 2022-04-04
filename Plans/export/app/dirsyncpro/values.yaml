@@ -1,0 +1,30 @@
+env:
+  CMD File: ''
+  CMD Mode: ''
+  CryFS Blocksize: '262144'
+  CryFS Extra Parameters: ''
+  CryFS Password: ''
+  DirSyncPro Download URL: https://sourceforge.net/projects/directorysync/files/DirSync
+    Pro (stable)/1.53/DirSyncPro-1.53-Linux.tar.gz
+  Enable CryFS Encryption: ''
+  Extra Start Parameters: ''
+  Remote Adress: ''
+  Remote Password: ''
+  Remote Type: local
+  Remote Username: ''
+  Runtime Name: basicjre
+image:
+  pullPolicy: IfNotPresent
+  repository: ich777/dirsyncpro
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

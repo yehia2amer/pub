@@ -1,0 +1,18 @@
+env:
+  APP_CLEAN_INTERVAL: 10m
+  APP_DEBUG: 'false'
+image:
+  pullPolicy: IfNotPresent
+  repository: x1unix/go-playground
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

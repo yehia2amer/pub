@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Cloud
 Config:
   Device: {}
@@ -174,7 +174,8 @@ ExtraParams: --memory=1G
 Icon: https://raw.githubusercontent.com/mgutt/unraid-docker-templates/main/mgutt/images/webdav-powered-by-apache.png
 Keywords:
 - apache-webdav
-Name: Apache-WebDAV
+- *id001
+Name: apache-webdav
 Network: bridge
 Networking:
   Mode: bridge
@@ -184,13 +185,11 @@ Overview: "Very simple WebDAV server based on Apache. You need a WebDAV client t
   \n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://httpd.apache.org/docs/2.4/mod/mod_dav.html
 Registry: https://github.com/mgutt/docker-apachewebdav
 Repository: apachewebdav/apachewebdav
 Requires: ''
 Sources:
 - https://httpd.apache.org/docs/2.4/mod/mod_dav.html
 - https://github.com/mgutt/docker-apachewebdav
-TemplateURL: https://raw.githubusercontent.com/mgutt/unraid-docker-templates/master/mgutt/Apache-WebDAV.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:80]/
-topTrending: -39.401

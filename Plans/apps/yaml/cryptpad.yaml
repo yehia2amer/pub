@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Productivity
 - Security
 Config:
@@ -98,6 +98,7 @@ Config:
 Icon: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/cryptpad.png
 Keywords:
 - cryptpad
+- *id001
 Name: cryptpad
 Network: bridge
 Overview: CryptPad is the Zero Knowledge realtime collaborative editor.[br]mkdir -p
@@ -105,14 +106,11 @@ Overview: CryptPad is the Zero Knowledge realtime collaborative editor.[br]mkdir
   https://raw.githubusercontent.com/xwiki-labs/cryptpad/main/config/config.example.js
 PostArgs: ''
 Privileged: 'false'
-Project: https://cryptpad.fr/
 Registry: https://hub.docker.com/r/promasu/cryptpad/
-Repository: promasu/cryptpad:latest
+Repository: promasu/cryptpad
 Requires: ''
 Sources:
 - https://cryptpad.fr/
 - https://hub.docker.com/r/promasu/cryptpad/
-TemplateURL: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/cryptpad.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:3000]/
-topPerforming: 8.802
-topTrending: 2.8009999999999993

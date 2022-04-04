@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - GameServers
 Config:
   Device: {}
@@ -160,7 +160,8 @@ ExtraParams: --restart=unless-stopped
 Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/hl2dm.png
 Keywords:
 - halflife2deathmatch
-Name: HalfLife2DeathMatch
+- *id001
+Name: halflife2deathmatch
 Network: bridge
 Networking:
   Mode: bridge
@@ -168,12 +169,12 @@ Overview: "This Docker will download and install SteamCMD. It will also install 
   \ DeathMatch and run it.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://www.steampowered.com/
 Registry: https://hub.docker.com/r/ich777/steamcmd/
-Repository: ich777/steamcmd:hl2dm
+Repository: ich777/steamcmd
 Requires: ''
 Sources:
 - https://www.steampowered.com/
 - https://hub.docker.com/r/ich777/steamcmd/
+Tag: hl2dm
 WebUI: ''
 caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/HalfLife2DeathMatch.xml

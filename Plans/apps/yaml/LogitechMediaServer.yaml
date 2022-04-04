@@ -1,5 +1,5 @@
 BaseImage: phusion/baseimage:0.11
-CategoryList:
+CategoryList: &id001
 - MediaServer-Music
 Config:
   Device: {}
@@ -100,7 +100,8 @@ ExtraParams: --log-opt max-size=50m --log-opt max-file=1
 Icon: https://github.com/dlandon/docker.templates/raw/master/logitechmediaserver.png
 Keywords:
 - logitechmediaserver
-Name: LogitechMediaServer
+- *id001
+Name: logitechmediaserver
 Network: bridge
 Networking:
   Mode: bridge
@@ -115,7 +116,5 @@ Repository: dlandon/logitechmediaserver
 Requires: ''
 Sources:
 - https://registry.hub.docker.com/r/dlandon/logitechmediaserver/
-TemplateURL: https://raw.githubusercontent.com/dlandon/docker.templates/master/LogitechMediaServer.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:9000]/
-topPerforming: 0.714
-topTrending: -5.3580000000000005

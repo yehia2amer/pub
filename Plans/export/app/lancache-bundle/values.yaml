@@ -1,0 +1,46 @@
+env:
+  CACHE_DISK_SIZE: 2000g
+  CACHE_MAX_AGE: 150d
+  CACHE_MEM_SIZE: 500m
+  DISABLE_ARENANET: ''
+  DISABLE_BLIZZARD: ''
+  DISABLE_CITYOFHEROES: ''
+  DISABLE_DAYBREAK: ''
+  DISABLE_EPICGAMES: ''
+  DISABLE_FRONTIER: ''
+  DISABLE_HIREZ: ''
+  DISABLE_NEVERWINTER: ''
+  DISABLE_NEXUSMODS: ''
+  DISABLE_NINTENDO: ''
+  DISABLE_ORIGIN: ''
+  DISABLE_RENEGADEX: ''
+  DISABLE_RIOT: ''
+  DISABLE_ROCKSTAR: ''
+  DISABLE_SONY: ''
+  DISABLE_STEAM: ''
+  DISABLE_TESO: ''
+  DISABLE_TWITCH: ''
+  DISABLE_UPLAY: ''
+  DISABLE_WARFRAME: ''
+  DISABLE_WARGAMING: ''
+  DISABLE_WSUS: ''
+  DISABLE_XBOXLIVE: ''
+  DNS_BIND_IP: 192.168.1.202
+  LANCACHE_IP: 192.168.1.202
+  UPSTREAM_DNS: 1.1.1.1
+  USE_GENERIC_CACHE: 'true'
+image:
+  pullPolicy: IfNotPresent
+  repository: josh5/lancache-bundle
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

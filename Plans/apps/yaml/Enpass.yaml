@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Network-Other
 - Productivity
 - Tools-Utilities
@@ -100,7 +100,8 @@ ExtraParams: --restart=unless-stopped
 Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/enpass.png
 Keywords:
 - enpass
-Name: Enpass
+- *id001
+Name: enpass
 Network: bridge
 Networking:
   Mode: bridge
@@ -108,7 +109,6 @@ Overview: "Enpass is a cross-platform password management app to securely store 
   \ and other credentials in a virtual vault locked with a master password.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://www.enpass.io/
 RecommendedDate: 1627790400
 RecommendedRaw: 8/1/2021
 RecommendedReason:
@@ -121,6 +121,6 @@ Requires: ''
 Sources:
 - https://www.enpass.io/
 - https://hub.docker.com/r/ich777/enpass
+Tag: latest
 WebUI: http://[IP]:[PORT:8080]/vnc.html?autoconnect=true
 caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/Enpass.xml
-topTrending: -16.678

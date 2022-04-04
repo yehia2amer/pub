@@ -1,0 +1,23 @@
+env:
+  Custom Resolution Height: '1000'
+  Custom Resolution Width: '1800'
+  DATA_PERM: '770'
+  DEV_LOG_OUTPUT: ''
+  Locales: en_US.UTF-8 UTF-8
+  Root Password: ''
+  UMASK: '0000'
+image:
+  pullPolicy: IfNotPresent
+  repository: ich777/debian-bullseye
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

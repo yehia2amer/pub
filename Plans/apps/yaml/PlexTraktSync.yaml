@@ -1,28 +1,18 @@
-CategoryList:
+CategoryList: &id001
 - Tools-Utilities
 - MediaApp-Other
 Config:
   Device: {}
   Label: {}
-  Path:
-    Appdata:
-      Default: /mnt/user/appdata/plextraktsync
-      Description: 'Container Path: /app/config'
-      Display: always
-      Mask: 'false'
-      Mode: rw
-      Name: Appdata
-      Required: 'true'
-      Target: /app/config
-      Type: Path
-      value: /mnt/user/appdata/plextraktsync
+  Path: {}
   Port: {}
   Variable: {}
 ExtraParams: -it
 Icon: https://raw.githubusercontent.com/ibracorp/app-logos/main/plex_trakt_sync/plex_trakt_sync.png
 Keywords:
 - plextraktsync
-Name: PlexTraktSync
+- *id001
+Name: plextraktsync
 Network: bridge
 Networking:
   Mode: bridge
@@ -31,12 +21,11 @@ Overview: "This project adds a two-way-sync between trakt.tv and Plex Media Serv
   \ unlike the Plex app provided by Trakt.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/Taxel/PlexTraktSync
 Registry: https://ghcr.io/taxel/plextraktsync
-Repository: ghcr.io/taxel/plextraktsync:latest
+Repository: ghcr.io/taxel/plextraktsync
 Requires: ''
 Sources:
 - https://github.com/Taxel/PlexTraktSync
 - https://ghcr.io/taxel/plextraktsync
-TemplateURL: https://raw.githubusercontent.com/ibracorp/unraid-templates/master/plextraktsync/plextraktsync.xml
+Tag: latest
 WebUI: ''

@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Cloud
 - Other
 Config:
@@ -76,7 +76,8 @@ Config:
 Icon: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/sia.png
 Keywords:
 - sia-daemon
-Name: Sia-Daemon
+- *id001
+Name: sia-daemon
 Network: bridge
 Overview: Sia is a decentralized cloud storage platform that radically alters the
   landscape of cloud storage. By leveraging smart contracts, client-side encryption,
@@ -86,12 +87,11 @@ Overview: Sia is a decentralized cloud storage platform that radically alters th
   price. And since there is no barrier to entry for hosts, anyone with spare storage
   capacity can join the network and start making money.
 Privileged: 'false'
-Project: https://github.com/siafoundation/siad
 Registry: https://github.com/SiaFoundation/siad/pkgs/container/siad
 RepoShort: Selfhosters
-Repository: ghcr.io/siafoundation/siad:master
+Repository: ghcr.io/siafoundation/siad
 Requires: ''
 Sources:
 - https://github.com/siafoundation/siad
 - https://github.com/SiaFoundation/siad/pkgs/container/siad
-TemplateURL: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/siad.xml
+Tag: master

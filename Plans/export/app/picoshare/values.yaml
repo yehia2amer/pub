@@ -1,0 +1,18 @@
+env:
+  PORT: '3001'
+  PS_SHARED_SECRET: somesecretpass
+image:
+  pullPolicy: IfNotPresent
+  repository: mtlynch/picoshare
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

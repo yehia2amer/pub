@@ -1,26 +1,16 @@
-CategoryList:
+CategoryList: &id001
 - Other
 Config:
   Device: {}
   Label: {}
   Path: {}
-  Port:
-    Host Port 1:
-      Default: ''
-      Description: 'Container Port: 6080'
-      Display: always
-      Mask: 'false'
-      Mode: tcp
-      Name: Host Port 1
-      Required: 'false'
-      Target: '6080'
-      Type: Port
-      value: '6080'
+  Port: {}
   Variable: {}
 Icon: https://duckduckgo.com/i/333122ce.png
 Keywords:
 - android-8-0
-Name: Android-8.0
+- *id001
+Name: android-8-0
 Network: bridge
 Networking:
   Mode: bridge
@@ -34,6 +24,5 @@ Repository: ulisses1478/docker-android
 Requires: ''
 Sources:
 - https://registry.hub.docker.com/r/ulisses1478/docker-android
-TemplateURL: https://raw.githubusercontent.com/Ulisses1478/templates-unraid/master/android8.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:6080]
-topTrending: -2.5749999999999997

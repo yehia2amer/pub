@@ -1,5 +1,5 @@
 Beta: 'true'
-CategoryList:
+CategoryList: &id001
 - Network-DNS
 Config:
   Device: {}
@@ -44,6 +44,7 @@ Config:
 Icon: https://raw.githubusercontent.com/kutzilla/unraid-templates/master/images/hetzner-ddns.png
 Keywords:
 - hetzner-ddns
+- *id001
 Name: hetzner-ddns
 Network: bridge
 Networking:
@@ -52,12 +53,11 @@ Overview: This Docker image will allow you to use the Hetzner DNS Service (https
   as a Dynamic DNS (DDNS) Provider.
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/kutzilla/docker-hetzner-ddns
 Registry: https://hub.docker.com/r/kutzilla/hetzner-ddns
-Repository: kutzilla/hetzner-ddns:latest
+Repository: kutzilla/hetzner-ddns
 Requires: ''
 Sources:
 - https://github.com/kutzilla/docker-hetzner-ddns
 - https://hub.docker.com/r/kutzilla/hetzner-ddns
-TemplateURL: https://raw.githubusercontent.com/kutzilla/unraid-templates/master/apps/hetzner-ddns.xml
+Tag: latest
 WebUI: ''

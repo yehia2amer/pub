@@ -1,0 +1,21 @@
+env:
+  GRAYLOG_HTTP_EXTERNAL_URI: ''
+  GRAYLOG_PASSWORD_SECRET: ''
+  GRAYLOG_ROOT_PASSWORD_SHA2: ''
+  List of Elasticsearch hosts Graylog should connect to: ''
+  MongoDB connection string: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: graylog/graylog
+  tag: '3.1'
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

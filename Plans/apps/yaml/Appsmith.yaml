@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Productivity
 - Tools-Utilities
 Config:
@@ -43,7 +43,8 @@ Config:
 Icon: https://github.com/hussainalhaddad/docker-templates/raw/master/appsmith/appsmith.png
 Keywords:
 - appsmith
-Name: Appsmith
+- *id001
+Name: appsmith
 Network: bridge
 Networking:
   Mode: bridge
@@ -52,12 +53,11 @@ Overview: Quickly build any custom business software with pre-built UI widgets t
   connect to any data source. Control everything with JavaScript.
 PostArgs: ''
 Privileged: 'false'
-Project: https://www.appsmith.com/
 Registry: https://hub.docker.com/r/appsmith/appsmith-ce
 Repository: appsmith/appsmith-ce
 Requires: ''
 Sources:
 - https://www.appsmith.com/
 - https://hub.docker.com/r/appsmith/appsmith-ce
-TemplateURL: https://raw.githubusercontent.com/hussainalhaddad/docker-templates/master/appsmith/appsmith.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:80]

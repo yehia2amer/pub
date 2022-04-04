@@ -1,0 +1,21 @@
+env:
+  influx_db: telegraf
+  influx_password: ''
+  influx_skip_db_creation: 'false'
+  influx_url: http://localhost:8086
+  telegraf_hostname: myhostname
+image:
+  pullPolicy: IfNotPresent
+  repository: theoriginalbrian/intel-gpu-telegraf
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

@@ -1,0 +1,23 @@
+env:
+  Display Height: '473'
+  Display Width: '657'
+  ENABLE_CJK_FONT: ''
+  Encryption: '0'
+  Timezone: Etc/UTC
+  VNC Password: ''
+  X11VNC_EXTRA_OPTS: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: tessypowder/backblaze-personal-wine
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

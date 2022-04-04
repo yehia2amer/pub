@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Network-Other
 Config:
   Device: {}
@@ -66,7 +66,8 @@ ExtraParams: --restart=unless-stopped --cap-add=NET_ADMIN --sysctl net.ipv4.ip_u
 Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/DoH-Client.png
 Keywords:
 - doh-client
-Name: DoH-Client
+- *id001
+Name: doh-client
 Network: bridge
 Networking:
   Mode: bridge
@@ -80,6 +81,6 @@ Repository: ich777/doh-client
 Requires: ''
 Sources:
 - https://hub.docker.com/r/ich777/doh-client
+Tag: latest
 WebUI: ''
 caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/DoH-Client.xml
-topTrending: 5.758

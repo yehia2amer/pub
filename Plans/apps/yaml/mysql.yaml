@@ -1,27 +1,36 @@
 BindTime: 'true'
-CategoryList:
+CategoryList: &id001
 - Network-Management
 - Productivity
 - Tools-Utilities
+Config:
+  Device: {}
+  Label: {}
+  Path: {}
+  Port: {}
+  Variable:
+    MYSQL_DATABASE:
+      Name: MYSQL_DATABASE
+      value: owncloud
+    MYSQL_PASSWORD:
+      Name: MYSQL_PASSWORD
+      value: mysql_password
+    MYSQL_ROOT_PASSWORD:
+      Name: MYSQL_ROOT_PASSWORD
+      value: root_password
+    MYSQL_USER:
+      Name: MYSQL_USER
+      value: mysql_user
 Data:
   Volume:
     ContainerDir: /var/lib/mysql
     HostDir: /mnt/user/appdata/mysql
     Mode: rw
-Environment:
-  Variable:
-  - Name: MYSQL_ROOT_PASSWORD
-    Value: root_password
-  - Name: MYSQL_DATABASE
-    Value: owncloud
-  - Name: MYSQL_USER
-    Value: mysql_user
-  - Name: MYSQL_PASSWORD
-    Value: mysql_password
 GitHub: https://github.com/docker-library/mysql/tree/master/5.7/
 Icon: https://raw.githubusercontent.com/docker-library/docs/master/mysql/logo.png
 Keywords:
 - mysql
+- *id001
 Name: mysql
 Networking:
   Mode: bridge
@@ -40,4 +49,4 @@ Repository: mysql
 Requires: ''
 Sources:
 - https://registry.hub.docker.com/_/mysql/
-TemplateURL: https://raw.githubusercontent.com/jshridha/templates/master/Bungy/mysql.xml
+Tag: latest

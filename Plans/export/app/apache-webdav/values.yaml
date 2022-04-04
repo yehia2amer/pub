@@ -1,0 +1,27 @@
+env:
+  Authentication: Basic
+  Base URL: /
+  Domains: localhost
+  Enable SSL: ''
+  Group ID: '100'
+  Login Title: WebDAV-Login
+  Password: ''
+  Public methods: ''
+  User ID: '99'
+  Username: ''
+  umask: '0000'
+image:
+  pullPolicy: IfNotPresent
+  repository: apachewebdav/apachewebdav
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

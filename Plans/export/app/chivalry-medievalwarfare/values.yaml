@@ -1,0 +1,24 @@
+env:
+  Extra Game Parameters: -seekfreeloadingserver
+  GAME_ID: '220070'
+  Game Parameters: ?port=7000?queryport=7010
+  Map: aocffa-moor_p
+  Server Admin Password: adminDocker
+  Steam-Password: ''
+  Steam-Username: ''
+  Validate Installation: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: ich777/steamcmd
+  tag: chivalrymw
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

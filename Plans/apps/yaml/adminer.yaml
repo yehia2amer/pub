@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Tools-Utilities
 Config:
   Device: {}
@@ -40,6 +40,7 @@ Config:
 Icon: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/adminer.png
 Keywords:
 - adminer
+- *id001
 Name: adminer
 Network: bridge
 Official: true
@@ -48,7 +49,6 @@ Overview: "Adminer (formerly phpMinAdmin) is a full-featured database management
   \ deploy to the target server. Adminer is available for MySQL, PostgreSQL, SQLite,\
   \ MS SQL, Oracle, Firebird, SimpleDB, Elasticsearch and MongoDB.\r\n"
 Privileged: 'false'
-Project: https://github.com/vrana/adminer
 Registry: http://hub.docker.com/_/adminer/
 RepoShort: Selfhosters
 Repository: adminer
@@ -56,5 +56,5 @@ Requires: ''
 Sources:
 - https://github.com/vrana/adminer
 - http://hub.docker.com/_/adminer/
-TemplateURL: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/adminer.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:8080]

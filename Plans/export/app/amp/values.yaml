@@ -1,0 +1,22 @@
+env:
+  AMP License: ''
+  Module: ADS
+  Nightly Builds: ''
+  Password: password
+  Timezone: America/Detroit
+  Username: admin
+image:
+  pullPolicy: IfNotPresent
+  repository: mitchtalmadge/amp-dockerized
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Productivity
 - Tools-Utilities
 - Other
@@ -46,8 +46,9 @@ Config:
 Icon: https://www.cacti.net/images/cacti.png
 Keywords:
 - cacti
+- *id001
 MinVer: 6.4.1
-Name: Cacti
+Name: cacti
 Network: bridge
 Networking:
   Mode: bridge
@@ -57,14 +58,11 @@ Overview: "Cacti is a complete network graphing solution designed to harness the
   \ is the version I run and can test.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/QuantumObject/docker-cacti
 Registry: https://hub.docker.com/r/quantumobject/docker-cacti/
 Repository: quantumobject/docker-cacti
 Requires: ''
 Sources:
 - https://github.com/QuantumObject/docker-cacti
 - https://hub.docker.com/r/quantumobject/docker-cacti/
-TemplateURL: https://raw.githubusercontent.com/Jcloud67/Docker-Templates/master/Cacti.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:80]/cacti
-topPerforming: 1.827
-topTrending: -1.919

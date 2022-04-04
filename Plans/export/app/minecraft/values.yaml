@@ -1,0 +1,24 @@
+env:
+  EULA: 'true'
+  MOTD: My Unraid Minecraft Server
+  Memory: 1G
+  Minecraft Version: 1.17.1
+  Mode: survival
+  OPS: ''
+  Seed: ''
+  Type: vanilla
+image:
+  pullPolicy: IfNotPresent
+  repository: itzg/minecraft-server
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

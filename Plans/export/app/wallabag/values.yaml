@@ -1,0 +1,19 @@
+env:
+  Domain: http://<IP>:6500
+  Public User Registration: 'false'
+  Secret: LongRandomSecretHere
+image:
+  pullPolicy: IfNotPresent
+  repository: wallabag/wallabag
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

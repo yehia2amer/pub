@@ -1,0 +1,16 @@
+env: {}
+image:
+  pullPolicy: IfNotPresent
+  repository: dreamcat4/pipework
+  tag: 1.1.3
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

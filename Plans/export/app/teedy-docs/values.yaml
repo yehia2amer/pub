@@ -1,0 +1,17 @@
+env:
+  DOCS_BASE_URL: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: sismics/docs
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

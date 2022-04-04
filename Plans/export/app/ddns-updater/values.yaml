@@ -1,0 +1,31 @@
+env:
+  BACKUP_DIRECTORY: /updater/data/backup
+  BACKUP_PERIOD: '0'
+  HEALTH_SERVER_ADDRESS: 127.0.0.1:9999
+  HTTP_TIMEOUT: 10s
+  LOG_CALLER: hidden
+  LOG_LEVEL: info
+  PUBLICIPV4_HTTP_PROVIDERS: all
+  PUBLICIPV6_HTTP_PROVIDERS: all
+  PUBLICIP_DNS_PROVIDERS: all
+  PUBLICIP_DNS_TIMEOUT: 3s
+  PUBLICIP_FETCHERS: all
+  PUBLICIP_HTTP_PROVIDERS: all
+  ROOT_URL: /
+  SHOUTRRR_ADDRESSES: ''
+  UPDATE_COOLDOWN_PERIOD: 5m
+image:
+  pullPolicy: IfNotPresent
+  repository: qmcgaw/ddns-updater
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

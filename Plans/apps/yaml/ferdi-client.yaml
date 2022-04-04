@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Productivity
 - Tools-Utilities
 Config:
@@ -99,7 +99,8 @@ ExtraParams: --restart=unless-stopped --shm-size=2G
 Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/ferdi.png
 Keywords:
 - ferdi-client
-Name: Ferdi-Client
+- *id001
+Name: ferdi-client
 Network: bridge
 Networking:
   Mode: bridge
@@ -110,13 +111,12 @@ Overview: "Ferdi is a destkop app that helps you organize how you use your favou
   \ your existing Franz account so you can continue right where you left off.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://getferdi.com/
 Registry: https://hub.docker.com/r/ich777/ferdi-client/
 Repository: ich777/ferdi-client
 Requires: ''
 Sources:
 - https://getferdi.com/
 - https://hub.docker.com/r/ich777/ferdi-client/
+Tag: latest
 WebUI: http://[IP]:[PORT:8080]/vnc.html?autoconnect=true
 caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/Ferdi-Client.xml
-topTrending: -8.075

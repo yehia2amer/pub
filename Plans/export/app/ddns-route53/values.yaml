@@ -1,0 +1,26 @@
+env:
+  DDNSR53_CREDENTIALS_ACCESSKEYID: ABCDEFGHIJKLMNO123456
+  DDNSR53_CREDENTIALS_SECRETACCESSKEY: abcdefgh123456IJKLMN+OPQRS7890+ABCDEFGH
+  DDNSR53_ROUTE53_HOSTEDZONEID: ABCEEFG123456789
+  DDNSR53_ROUTE53_RECORDSSET_0_NAME: ddns.example.com.
+  DDNSR53_ROUTE53_RECORDSSET_0_TTL: '300'
+  DDNSR53_ROUTE53_RECORDSSET_0_TYPE: A
+  LOG_JSON: 'false'
+  LOG_LEVEL: info
+  MAX_RETRIES: '3'
+  SCHEDULE: '*/30 * * * *'
+image:
+  pullPolicy: IfNotPresent
+  repository: crazymax/ddns-route53
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

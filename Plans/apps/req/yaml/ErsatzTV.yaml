@@ -10,7 +10,7 @@ Branch:
   TagDescription: develop release + vaapi
 - Tag: develop-nvidia
   TagDescription: develop release + nvidia
-CategoryList:
+CategoryList: &id001
 - MediaApp-Video
 Config:
   Device: {}
@@ -55,21 +55,19 @@ Config:
 Icon: https://raw.githubusercontent.com/RandomNinjaAtk/unraid-templates/master/randomninjaatk/img/ersatztv.png
 Keywords:
 - ersatztv
-Name: ErsatzTV
+- *id001
+Name: ersatztv
 Network: host
 Overview: 'Stream custom live channels using your own media.
 
   '
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/jasongdove/ErsatzTV
 Registry: https://hub.docker.com/r/jasongdove/ersatztv
 Repository: jasongdove/ersatztv
 Requires: ' App uses hostnetworking (autoadd)'
 Sources:
 - https://github.com/jasongdove/ErsatzTV
 - https://hub.docker.com/r/jasongdove/ersatztv
-TemplateURL: https://raw.githubusercontent.com/RandomNinjaAtk/unraid-templates/master/randomninjaatk/ersatztv.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:8409]
-topPerforming: 7.886
-topTrending: -0.7079999999999993

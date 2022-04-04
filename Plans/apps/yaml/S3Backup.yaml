@@ -1,26 +1,35 @@
 BindTime: 'true'
-CategoryList:
+CategoryList: &id001
 - Backup
 - Cloud
-ChangeLogPresent: true
-Data: "\n  "
-Environment:
+Config:
+  Device: {}
+  Label: {}
+  Path: {}
+  Port: {}
   Variable:
-  - Name: ACCESS_KEY
-    Value: Your AWS Access key
-  - Name: SECRET_KEY
-    Value: Your AWS Access secret
-  - Name: S3PATH
-    Value: s3://mybucket/
-  - Name: S3CMDPARAMS
-    Value: ''
-  - Name: CRON_SCHEDULE
-    Value: 0 * * * *
+    ACCESS_KEY:
+      Name: ACCESS_KEY
+      value: Your AWS Access key
+    CRON_SCHEDULE:
+      Name: CRON_SCHEDULE
+      value: 0 * * * *
+    S3CMDPARAMS:
+      Name: S3CMDPARAMS
+      value: ''
+    S3PATH:
+      Name: S3PATH
+      value: s3://mybucket/
+    SECRET_KEY:
+      Name: SECRET_KEY
+      value: Your AWS Access secret
+Data: "\n  "
 GitHub: https://github.com/joch/docker-s3backup
 Icon: https://i.imgur.com/NqyrUIy.png
 Keywords:
 - s3backup
-Name: S3Backup
+- *id001
+Name: s3backup
 Networking:
   Mode: bridge
 Overview: A simple way to backup important files to Amazon S3 and Glacier.
@@ -30,6 +39,4 @@ Repository: joch/s3backup
 Requires: ''
 Sources:
 - https://registry.hub.docker.com/r/joch/s3backup/
-TemplateURL: https://raw.githubusercontent.com/joch/unraid-docker-templates/master/joch/s3backup.xml
-topPerforming: 0.193
-topTrending: -0.643
+Tag: latest

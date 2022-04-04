@@ -1,0 +1,17 @@
+env:
+  Host Key 1: America/Chicago
+image:
+  pullPolicy: IfNotPresent
+  repository: xavierh/goaccess-for-nginxproxymanager
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Security
 - Tools-Utilities
 Config:
@@ -33,6 +33,7 @@ ExtraParams: --cap-add=NET_ADMIN --cap-add=NET_RAW
 Icon: https://raw.githubusercontent.com/FrankM77/docker-fail2ban/master/Fail2ban_logo.png
 Keywords:
 - fail2ban
+- *id001
 Name: fail2ban
 Network: bridge
 Networking:
@@ -40,12 +41,11 @@ Networking:
 Overview: "Fail2ban container \r\n"
 PostArgs: ''
 Privileged: 'true'
-Project: http://www.fail2ban.org/wiki/index.php/Main_Page
 Registry: https://hub.docker.com/r/crazymax/fail2ban
-Repository: crazymax/fail2ban:latest
+Repository: crazymax/fail2ban
 Requires: ''
 Sources:
 - http://www.fail2ban.org/wiki/index.php/Main_Page
 - https://hub.docker.com/r/crazymax/fail2ban
-TemplateURL: https://raw.githubusercontent.com/FrankM77/unraid-templates/master/fail2ban/fail2ban/fail2ban_template.xml
+Tag: latest
 WebUI: ''

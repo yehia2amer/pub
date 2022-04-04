@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Network-Other
 - Crypto
 Config:
@@ -33,7 +33,8 @@ Config:
 Icon: https://raw.githubusercontent.com/BigManDave/dogecoin-docker/main/icon.png
 Keywords:
 - doge-node
-Name: Doge-Node
+- *id001
+Name: doge-node
 Network: bridge
 Networking:
   Mode: bridge
@@ -41,12 +42,11 @@ Overview: "Support the Dogecoin network by hosting your own node! This template 
   \ a full Dogecoin Core node based on Ubuntu.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://dogecoin.com/
 Registry: https://hub.docker.com/r/bigmandave/doge-node
 Repository: bigmandave/doge-node
 Requires: ''
 Sources:
 - https://dogecoin.com/
 - https://hub.docker.com/r/bigmandave/doge-node
-TemplateURL: https://raw.githubusercontent.com/BigManDave/unraid-templates/master/doge-node.xml
+Tag: latest
 WebUI: ''

@@ -1,0 +1,23 @@
+env:
+  CLIENTID: ''
+  CLIENTSECRET: ''
+  Component: ''
+  DATABASE_REDIS: ''
+  DATABASE_URI: ''
+  REDIRECTURI: ''
+  TOKEN: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: synzen/monitorss
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

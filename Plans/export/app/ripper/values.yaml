@@ -1,0 +1,19 @@
+env:
+  Web Path Prefix: ''
+  Web UI Password: ''
+  Web UI Username: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: rix1337/docker-ripper
+  tag: manual-latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

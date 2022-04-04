@@ -1,0 +1,19 @@
+env:
+  custom: default
+  silent: 'no'
+  time: '98'
+image:
+  pullPolicy: IfNotPresent
+  repository: spaceinvaderone/beep_music_converter
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

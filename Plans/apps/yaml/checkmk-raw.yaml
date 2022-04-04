@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Network-Management
 - Productivity
 - Tools-Utilities
@@ -45,7 +45,8 @@ ExtraParams: --restart=unless-stopped
 Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/checkmk.png
 Keywords:
 - checkmk-raw
-Name: Checkmk-RAW
+- *id001
+Name: checkmk-raw
 Network: bridge
 Networking:
   Mode: bridge
@@ -54,14 +55,12 @@ Overview: "This is the official container of checkmk. Checkmk is a leading tool 
   \ Open Source and Enterprise.  \r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://checkmk.com/
 Registry: https://hub.docker.com/r/checkmk/check-mk-raw/
 Repository: checkmk/check-mk-raw
 Requires: ''
 Sources:
 - https://checkmk.com/
 - https://hub.docker.com/r/checkmk/check-mk-raw/
+Tag: latest
 WebUI: http://[IP]:[PORT:5000]//cmk/check_mk/
 caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/Checkmk-RAW.xml
-topPerforming: 5.168
-topTrending: 1.8370000000000002

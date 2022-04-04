@@ -1,0 +1,23 @@
+env:
+  CyberSEC: 'False'
+  DNS: 1.1.1.1,1.0.0.1
+  LAN net: ''
+  Location: ''
+  NordVPN passwd: ''
+  NordVPN user: ''
+  Technology: NordLynx
+image:
+  pullPolicy: IfNotPresent
+  repository: bubuntux/nordvpn
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

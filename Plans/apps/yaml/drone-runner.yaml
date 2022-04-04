@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Productivity
 - Tools-Utilities
 Config:
@@ -55,12 +55,12 @@ ExtraParams: --volume=/var/run/docker.sock:/var/run/docker.sock --restart=always
 Icon: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/drone.png
 Keywords:
 - drone-runner
-Name: Drone-Runner
+- *id001
+Name: drone-runner
 Network: bridge
 Official: true
 Overview: Drone is a Continuous Integration platform built on Docker
 Privileged: 'false'
-Project: https://github.com/drone-runners/drone-runner-docker
 Registry: https://hub.docker.com/r/drone/drone-runner-docker
 RepoShort: Selfhosters
 Repository: drone/drone-runner-docker
@@ -68,5 +68,4 @@ Requires: ''
 Sources:
 - https://github.com/drone-runners/drone-runner-docker
 - https://hub.docker.com/r/drone/drone-runner-docker
-TemplateURL: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/drone-runner-docker.xml
-topTrending: -0.9700000000000002
+Tag: latest

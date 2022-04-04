@@ -1,6 +1,5 @@
-CategoryList:
+CategoryList: &id001
 - MediaApp-Video
-ChangeLogPresent: true
 Config:
   Device: {}
   Label: {}
@@ -162,7 +161,8 @@ Config:
 Icon: https://raw.githubusercontent.com/jlesage/docker-templates/master/jlesage/images/mkvtoolnix-icon.png
 Keywords:
 - mkvtoolnix
-Name: MKVToolNix
+- *id001
+Name: mkvtoolnix
 Network: bridge
 Networking:
   Mode: bridge
@@ -170,14 +170,11 @@ Overview: 'MKVToolNix is a set of tools to create, alter and inspect Matroska fi
 
   '
 Privileged: 'false'
-Project: https://mkvtoolnix.download/
 Registry: https://hub.docker.com/r/jlesage/mkvtoolnix/
 Repository: jlesage/mkvtoolnix
 Requires: ''
 Sources:
 - https://mkvtoolnix.download/
 - https://hub.docker.com/r/jlesage/mkvtoolnix/
-TemplateURL: https://raw.githubusercontent.com/jlesage/docker-templates/master/jlesage/mkvtoolnix.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:5800]
-topPerforming: 0.518
-topTrending: -3.684

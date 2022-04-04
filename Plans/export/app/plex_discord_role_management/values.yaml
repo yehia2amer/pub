@@ -1,0 +1,33 @@
+env:
+  DEBUG_MODE: ''
+  Default Discord Bot Prefix: ''
+  Discord Bot Token: ''
+  Host Machine IP: ''
+  Second Sonarr API Key: ''
+  Second Sonarr IP Address: ''
+  Second Sonarr Port: ''
+  Sonarr API Key: ''
+  Sonarr IP Address: ''
+  Sonarr Port: ''
+  Tautulli API Key: ''
+  Tautulli IP Address: ''
+  Tautulli Port: ''
+  Third Sonarr API Key: ''
+  Third Sonarr IP Address: ''
+  Third Sonarr Port: ''
+  Webhook Port Override: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: cyaondanet/plex_discord_role_management
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

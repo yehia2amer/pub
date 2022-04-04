@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Tools-Utilities
 - Network-FTP
 Config:
@@ -87,6 +87,7 @@ Config:
 Icon: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/pure-ftpd.png
 Keywords:
 - pure-ftpd
+- *id001
 Name: pure-ftpd
 Network: bridge
 Overview: Pure-FTPd is a free (BSD), secure, production-quality and standard-conformant
@@ -94,14 +95,11 @@ Overview: Pure-FTPd is a free (BSD), secure, production-quality and standard-con
   -d /home/admin -m"[/br]
 PostArgs: ''
 Privileged: 'false'
-Project: https://www.pureftpd.org/project/pure-ftpd/
 Registry: https://hub.docker.com/r/crazymax/pure-ftpd/
-Repository: crazymax/pure-ftpd:latest
+Repository: crazymax/pure-ftpd
 Requires: ''
 Sources:
 - https://www.pureftpd.org/project/pure-ftpd/
 - https://hub.docker.com/r/crazymax/pure-ftpd/
-TemplateURL: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/pure-ftpd.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:2100]/
-topPerforming: 0.015
-topTrending: -0.484

@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Cloud
 - Productivity
 - Tools-Utilities
@@ -81,6 +81,7 @@ Config:
 Icon: https://raw.githubusercontent.com/d8sychain/unraid-ca-templates/master/images/mediawiki.png
 Keywords:
 - mediawiki
+- *id001
 Name: mediawiki
 Network: bridge
 Networking:
@@ -89,14 +90,11 @@ Overview: MediaWiki with WYSIWYG VisualEditor extension and Parsoid service. Bui
   with Alpine, S6-overlay, NGINX, PHP-FPM with PHP 7.3, NodeJS, along with other extensions.
 PostArgs: ''
 Privileged: 'false'
-Project: https://www.mediawiki.org
 Registry: https://hub.docker.com/r/d8sychain/mediawiki/
 Repository: d8sychain/mediawiki
 Requires: ''
 Sources:
 - https://www.mediawiki.org
 - https://hub.docker.com/r/d8sychain/mediawiki/
-TemplateURL: https://raw.githubusercontent.com/d8sychain/unraid-ca-templates/master/templates/mediawiki.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:80]
-topPerforming: 3.832
-topTrending: 1.8849999999999998

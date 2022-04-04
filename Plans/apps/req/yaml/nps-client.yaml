@@ -1,28 +1,17 @@
-CategoryList:
+CategoryList: &id001
 - Tools-Utilities
 - Network-Other
 Config:
   Device: {}
   Label: {}
-  Path:
-    Config path:
-      Default: ''
-      Description: 'In roder to start npc client, make sure to place your ''npc.conf''
-        file to this path '
-      Display: always
-      Mask: 'false'
-      Mode: rw
-      Name: Config path
-      Required: 'true'
-      Target: /conf
-      Type: Path
-      value: /mnt/user/appdata/nps-client
+  Path: {}
   Port: {}
   Variable: {}
 ExtraParams: --restart always
 Icon: https://raw.githubusercontent.com/L1cardo/Unraid-Templates/main/nps-client/nps-client-icon.png
 Keywords:
 - nps-client
+- *id001
 Name: nps-client
 Network: host
 Networking:
@@ -31,14 +20,11 @@ Overview: a lightweight, high-performance, powerful intranet penetration proxy s
   with a powerful web management terminal.
 PostArgs: -config=/conf/npc.conf
 Privileged: 'false'
-Project: https://github.com/ehang-io/nps
 Registry: https://hub.docker.com/r/ffdfgdfg/npc
 Repository: ffdfgdfg/npc
 Requires: ' App uses hostnetworking (autoadd)'
 Sources:
 - https://github.com/ehang-io/nps
 - https://hub.docker.com/r/ffdfgdfg/npc
-TemplateURL: https://raw.githubusercontent.com/L1cardo/Unraid-Templates/master/nps-client/nps-client.xml
+Tag: latest
 WebUI: ''
-topPerforming: 0.928
-topTrending: -0.8989999999999999

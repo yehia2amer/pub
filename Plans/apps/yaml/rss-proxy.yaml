@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Cloud
 - Tools-Utilities
 - Network-Web
@@ -6,34 +6,22 @@ Config:
   Device: {}
   Label: {}
   Path: {}
-  Port:
-    WebUI:
-      Default: ''
-      Description: ''
-      Display: always
-      Mask: 'false'
-      Mode: tcp
-      Name: WebUI
-      Required: 'false'
-      Target: '3000'
-      Type: Port
-      value: '3000'
+  Port: {}
   Variable: {}
 Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/rss-proxy.png
 Keywords:
 - rss-proxy
-Name: RSS-Proxy
+- *id001
+Name: rss-proxy
 Network: bridge
 Overview: "DESCRIPTION\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/damoeb/rss-proxy
 Registry: https://hub.docker.com/r/damoeb/rss-proxy
 Repository: damoeb/rss-proxy
 Requires: ''
 Sources:
 - https://github.com/damoeb/rss-proxy
 - https://hub.docker.com/r/damoeb/rss-proxy
-TemplateURL: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/master/templates/RSS-Proxy.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:3000]
-topTrending: -3.5479999999999996

@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - GameServers
 Config:
   Device: {}
@@ -90,7 +90,8 @@ ExtraParams: --restart=unless-stopped
 Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/terraria.png
 Keywords:
 - terraria
-Name: Terraria
+- *id001
+Name: terraria
 Network: bridge
 Networking:
   Mode: bridge
@@ -98,14 +99,12 @@ Overview: "This Docker will download and install Terraria and run it. SERVER PAS
   \ Docker\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://terraria.org/
 Registry: https://hub.docker.com/r/ich777/terrariaserver/
 Repository: ich777/terrariaserver
 Requires: ''
 Sources:
 - https://terraria.org/
 - https://hub.docker.com/r/ich777/terrariaserver/
+Tag: latest
 WebUI: http://[IP]:[PORT:8080]/
 caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/Terraria.xml
-topPerforming: 1.523
-topTrending: -3.0740000000000007

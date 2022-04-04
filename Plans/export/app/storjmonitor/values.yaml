@@ -1,0 +1,25 @@
+env:
+  Custom node-directory name: Node_
+  Delete log files: 'FALSE'
+  Number of extra nodes: '0'
+  Number of log files to keep (days): '7'
+  RPCADDRESS: 0.0.0.0
+  SHARE_SIZE: 100GB
+  Storjstat.com API-Key: ''
+  Tunneling Required: 'FALSE'
+  Wallet Address: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: zugz/r8mystorj
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

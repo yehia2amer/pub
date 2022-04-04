@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Downloaders
 - MediaApp-Video
 - MediaServer-Video
@@ -138,6 +138,7 @@ Config:
 Icon: https://raw.githubusercontent.com/meeb/tubesync/main/tubesync/common/static/images/tubesync.png
 Keywords:
 - tubesync
+- *id001
 Name: tubesync
 Network: bridge
 Overview: "TubeSync is a PVR (personal video recorder) for YouTube. Or, like Sonarr\
@@ -146,12 +147,11 @@ Overview: "TubeSync is a PVR (personal video recorder) for YouTube. Or, like Son
   \ server once media is downloaded.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/meeb/tubesync
 Registry: https://registry.hub.docker.com/r/ghcr.io/meeb/tubesync
-Repository: ghcr.io/meeb/tubesync:latest
+Repository: ghcr.io/meeb/tubesync
 Requires: ''
 Sources:
 - https://github.com/meeb/tubesync
 - https://registry.hub.docker.com/r/ghcr.io/meeb/tubesync
-TemplateURL: https://raw.githubusercontent.com/n8detar/docker-templates/master/n8detar/tubesync.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:4848]/

@@ -1,0 +1,19 @@
+env:
+  RCLONE_CONFIG_PASS: ''
+  RCLONE_MOUNT_OPTIONS: ''
+  RCLONE_REMOTE_MOUNT: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: tynor88/rclone-mount
+  tag: dev
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

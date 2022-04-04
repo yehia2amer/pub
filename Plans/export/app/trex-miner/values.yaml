@@ -1,0 +1,21 @@
+env:
+  Server: ''
+  Wallet address: ''
+  Worker Name: ''
+  algorithm: ethash
+  webUI Password: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: ptrfrll/nv-docker-trex
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

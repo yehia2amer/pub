@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Tools-Utilities
 - Network-Management
 Config:
@@ -43,7 +43,8 @@ Config:
 Icon: https://github.com/natcoso9955/unRAID-docker/raw/master/icons/loki.png
 Keywords:
 - grafanaloki
-Name: GrafanaLoki
+- *id001
+Name: grafanaloki
 Network: bridge
 Networking:
   Mode: bridge
@@ -51,14 +52,11 @@ Official: true
 Overview: "Loki: like Prometheus, but for logs.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://grafana.com/oss/loki/
 Registry: https://hub.docker.com/r/grafana/loki/
 Repository: grafana/loki
 Requires: ''
 Sources:
 - https://grafana.com/oss/loki/
 - https://hub.docker.com/r/grafana/loki/
-TemplateURL: https://raw.githubusercontent.com/natcoso9955/unRAID-docker/master/grafana_loki_unraid.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:3100]/metrics
-topPerforming: 3.421
-topTrending: -1.1389999999999998

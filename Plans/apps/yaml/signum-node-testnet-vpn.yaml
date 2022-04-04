@@ -2,9 +2,14 @@ Beta: 'true'
 BindTime: 'true'
 CAComment: This app is setup by default to communicate to a VPN via the binhex-delugevpn
   container
-CategoryList:
+CategoryList: &id001
 - Crypto
-ChangeLogPresent: true
+Config:
+  Device: {}
+  Label: {}
+  Path: {}
+  Port: {}
+  Variable: {}
 Data:
   Volume:
   - ContainerDir: /conf
@@ -18,7 +23,8 @@ GitHub: https://github.com/signum-network/signum-node
 Icon: https://raw.githubusercontent.com/signum-network/signum-node/main/resources/images/signum_overlay_logo.ico
 Keywords:
 - signum-node-testnet-vpn
-Name: signum-node-testnet-VPN
+- *id001
+Name: signum-node-testnet-vpn
 Networking:
   Mode: none
   Publish:
@@ -36,12 +42,11 @@ Overview: 'Proof of Commitment - ASIC proof / Energy efficient and sustainable m
 
   '
 Privileged: 'false'
-Project: https://github.com/signum-network/signum-node/
 Registry: https://hub.docker.com/r/signumnetwork/node
-Repository: paulpoco/node:v3.4.0-alpha2
+Repository: paulpoco/node
 Requires: ''
 Sources:
 - https://github.com/signum-network/signum-node/
 - https://hub.docker.com/r/signumnetwork/node
-TemplateURL: https://raw.githubusercontent.com/paulpoco/docker-templates/master/paulpoco/signum-node-testnet-VPN.xml
+Tag: v3.4.0-alpha2
 WebUI: http://[IP]:[PORT:6876]

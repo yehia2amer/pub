@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - GameServers
 Config:
   Device: {}
@@ -80,7 +80,8 @@ ExtraParams: --restart=unless-stopped
 Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/ddnet.png
 Keywords:
 - ddnet
-Name: DDNet
+- *id001
+Name: ddnet
 Network: bridge
 Networking:
   Mode: bridge
@@ -89,12 +90,11 @@ Overview: "This Docker will download and install a simple DDNet Dedicated server
   \ the Server Name and the RCON Password in the autoexec.cfg).\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://ddnet.tw/
 Registry: https://hub.docker.com/r/ich777/ddnetserver/
 Repository: ich777/ddnetserver
 Requires: ''
 Sources:
 - https://ddnet.tw/
 - https://hub.docker.com/r/ich777/ddnetserver/
-TemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/DDNet.xml
+Tag: latest
 WebUI: ''

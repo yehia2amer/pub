@@ -1,0 +1,24 @@
+env:
+  Delay add  (optional): ''
+  Disable Search: ''
+  Disable Traktarr Update on Restart: ''
+  Enable Blacklist: ''
+  Enable Notifications: ''
+  Run now: ''
+  Sort: ''
+  Traktarr GitHub Branch: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: eafxx/traktarr
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

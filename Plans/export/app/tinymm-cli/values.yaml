@@ -1,0 +1,19 @@
+env:
+  GUID: '100'
+  UMASK: '000'
+  USER_ID: '0'
+image:
+  pullPolicy: IfNotPresent
+  repository: coolasice1999/tmm-cli-cronjob
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

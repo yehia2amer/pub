@@ -1,0 +1,17 @@
+env:
+  Url for the Web Frontend (needs kitchenowl-web container): http://localhost:8123
+image:
+  pullPolicy: IfNotPresent
+  repository: tombursch/kitchenowl
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

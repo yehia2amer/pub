@@ -1,5 +1,5 @@
 Beta: 'true'
-CategoryList:
+CategoryList: &id001
 - Backup
 - Cloud
 Config:
@@ -88,6 +88,7 @@ Config:
 Icon: https://raw.githubusercontent.com/what-name/unraid-templates/main/static/s3-icon.png
 Keywords:
 - s3sync
+- *id001
 Name: s3sync
 Network: bridge
 Networking:
@@ -97,13 +98,11 @@ Overview: "This application backs up every folder mounted at `/data/` to a given
   \ Secret Keys.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/what-name/docker-s3sync
 Registry: https://hub.docker.com/repository/docker/whatname/docker-s3sync
 Repository: whatname/docker-s3sync
 Requires: ''
 Sources:
 - https://github.com/what-name/docker-s3sync
 - https://hub.docker.com/repository/docker/whatname/docker-s3sync
-TemplateURL: https://raw.githubusercontent.com/what-name/unraid-templates/master/s3sync.xml
+Tag: latest
 WebUI: ''
-topTrending: -21.524

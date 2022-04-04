@@ -3,8 +3,10 @@ import yaml
 import os
 import string
 import shutil
+import requests
 
 invalid = '<>:"/\|?*$ '
+blacklistedenvs = ["UID", "GID", "PUID", "PGID", "TZ"]
 
 my_dir = './apps'
 for root, dirs, files in os.walk(my_dir, topdown=False):
@@ -28,6 +30,8 @@ shutil.rmtree('./export', ignore_errors=True)
 
 os.mkdir("./apps")
 os.mkdir("./export")
+os.mkdir("./export/app")
+os.mkdir("./export/images")
 os.mkdir("./apps/yaml")
 os.mkdir("./apps/json")
 os.mkdir("./apps/req/")
@@ -66,6 +70,7 @@ for n in afList:
     if tmp in n.keys():
       tmp = tmp+"-duplicate-3"
     print(tmp)
+    n["Name"] = tmp
     if ( tmp not in paths ) :
       n.pop("downloads", "")
       n.pop("downloadtrend", "")
@@ -85,6 +90,10 @@ for n in afList:
       n.pop("LastUpdate", "")
       n.pop("LastUpdateScan", "")
       n.pop("Repo", "")
+      n.pop("topPerforming", "")
+      n.pop("topTrending", "")
+      n.pop("TemplateURL", "")
+      n.pop("ChangeLogPresent", "")
       
       if "Overview" in n.keys() and n["Overview"]:
         ovlist = n["Overview"].splitlines(keepends=True)
@@ -114,8 +123,19 @@ for n in afList:
       if "Registry" in n.keys() and n["Registry"]:
         n["Sources"].append(n["Registry"])
         
+      if "Github" in n.keys() and n["Github"]:
+        n["Sources"].append(n["Github"])
+        
+      if "ReadMe" in n.keys() and n["ReadMe"]:
+        n["Sources"].append(n["ReadMe"])
+        
+      n.pop("Project", "")
+      n.pop("Github", "")
+      n.pop("ReadMe", "")
+        
       n["Keywords"] = []
       n["Keywords"].append(tmp)
+      n["Keywords"].append(n["CategoryList"])
       
       if not "Requires" in n.keys():
         n["Requires"] = ""
@@ -133,29 +153,53 @@ for n in afList:
       if "Network" in n.keys() and n["Network"] == "host":
         n["Requires"] = n["Requires"]+" App uses hostnetworking (autoadd)"
       
-      if "Config" in n.keys() and n["Config"]:
-        hold = {}
-        hold["Port"] = {}
-        hold["Variable"] = {}
-        hold["Path"] = {}
-        hold["Device"] = {}
-        hold["Label"] = {}
-        if isinstance(n["Config"], list):
-          for a in n["Config"]:
-            name = a["@attributes"]["Name"]
-            type = a["@attributes"]["Type"]
-            a.update(a["@attributes"])
-            a.pop("@attributes", "")
-            hold[type][name] = a
-        else:
-            name = n["Config"]["@attributes"]["Name"]
-            type = n["Config"]["@attributes"]["Type"]
-            n["Config"].update(n["Config"]["@attributes"])
-            n["Config"].pop("@attributes", "")
-            hold[type][name] = n["Config"]
-        n.pop("Config", "")
-        n["Config"] = hold
+      dockersplit = n["Repository"].split(":", 1)
+      n["Repository"] = dockersplit[0]
+      if len(dockersplit) == 2:
+        n["Tag"] = dockersplit[1]
+      else:
+        n["Tag"] = "latest"
+
+      if not "Config" in n.keys() or not n["Config"]:
+        n["Config"] = {}
+      
+      hold = {}
+      hold["Port"] = {}
+      hold["Variable"] = {}
+      hold["Path"] = {}
+      hold["Device"] = {}
+      hold["Label"] = {}
+      if isinstance(n["Config"], list):
+        for a in n["Config"]:
+          name = a["@attributes"]["Name"]
+          type = a["@attributes"]["Type"]
+          a.update(a["@attributes"])
+          a.pop("@attributes", "")
+          hold[type][name] = a
+      elif "@attributes" in n["Config"].keys() and not n["Config"]["@attributes"]:
+          name = n["Config"]["@attributes"]["Name"]
+          type = n["Config"]["@attributes"]["Type"]
+          n["Config"].update(n["Config"]["@attributes"])
+          n["Config"].pop("@attributes", "")
+          hold[type][name] = n["Config"]
+      n.pop("Config", "")
+      n["Config"] = hold
         
+      if ( "Environment" in n.keys() and n["Environment"] ) and isinstance(n["Environment"], dict) and ( "Variable" in n["Environment"].keys() and n["Environment"]["Variable"] ):
+        if isinstance(n["Environment"]["Variable"], list):
+          for var in n["Environment"]["Variable"]:
+            if var["Name"] and not var["Name"] in blacklistedenvs :
+              n["Config"]["Variable"][var["Name"]] = {}
+              n["Config"]["Variable"][var["Name"]]["Name"] = var["Name"]
+              n["Config"]["Variable"][var["Name"]]["value"] = var["Value"]
+        elif isinstance(n["Environment"]["Variable"], dict) and not "Name" in n["Environment"]["Variable"] and not "Value" in n["Environment"]["Variable"]:
+          for name, value in n["Environment"]["Variable"].items():
+            if name and not name in blacklistedenvs:
+              n["Config"]["Variable"][name] = {}
+              n["Config"]["Variable"][name]["Name"] = name
+              n["Config"]["Variable"][name]["value"] = value["Value"]
+      
+      n.pop("Environment", "")
       
       globals()['%s' % tmp] = n
       
@@ -246,6 +290,50 @@ for name, app in combinedfree.items():
     tmpname = tmpname.replace(char, '')
     
   print(tmpname)
+
+  os.mkdir("./export/"+"app/"+tmpname)
+  os.mkdir("./export/"+"images/"+tmpname)
+
+  # Handle Image Mirror
+  
+  shutil.copyfile('./example/Dockerfile', "./export/"+"images/"+tmpname+"/Dockerfile")
+  shutil.copyfile('./example/PLATFORM', "./export/"+"images/"+tmpname+"/PLATFORM")
+  
+  with open("./export/"+"images/"+tmpname+"/Dockerfile", "r") as f:
+      lines = f.readlines()
+  with open("./export/"+"images/"+tmpname+"/Dockerfile", "w") as f:
+      for line in lines:
+          if "example" in line:
+            line = "FROM "+app["Repository"]+":"+app["Tag"]
+            f.write(line+"\n")
+          else:
+            f.write(line)
+  
+  # Handle icon
+  
+  try:
+    url = app["Icon"]
+    r = requests.get(url, allow_redirects=True)
+
+    open("./export/"+"app/"+tmpname+"/icon.png", 'wb').write(r.content)
+  except :
+    continue
+    
+  # readme.md
+  
+  open("./export/"+"app/"+tmpname+"/readme.md", mode='a').close()
+  
+  # Handle helmingore
+  
+  shutil.copyfile('./example/.helmignore', "./export/"+"app/"+tmpname+"/.helmignore")
+  
+  # Handle common template
+  
+  os.mkdir("./export/"+"app/"+tmpname+"/templates")
+  shutil.copyfile('./example/common.yaml', "./export/"+"app/"+tmpname+"/templates/common.yaml")
+  
+  # Handle Chart.yaml
+  
   appchartyaml["name"] = tmpname
   appchartyaml["annotations"]["truecharts.org/catagories"] = app["CategoryList"]
   appchartyaml["description"] = app["Overview"]
@@ -254,15 +342,15 @@ for name, app in combinedfree.items():
   appchartyaml["home"] = "https://github.com/truecharts/apps/tree/master/charts/stable/"+tmpname
   appchartyaml["icon"] = "https://truecharts.org/_static/img/appicons/"+tmpname+".png"
   
-  os.mkdir("./export/"+tmpname)
+
   appyamlString = yaml.dump(appchartyaml)
-  appyamlFile = open("./export/"+tmpname+"/Chart.yaml", "w")
+  appyamlFile = open("./export/"+"app/"+tmpname+"/Chart.yaml", "w")
   appyamlFile.write(appyamlString)
   appyamlFile.close()
   
-  with open("./export/"+tmpname+"/Chart.yaml", "r") as f:
+  with open("./export/"+"app/"+tmpname+"/Chart.yaml", "r") as f:
       lines = f.readlines()
-  with open("./export/"+tmpname+"/Chart.yaml", "w") as f:
+  with open("./export/"+"app/"+tmpname+"/Chart.yaml", "w") as f:
       for line in lines:
           if line.strip("\n") == "  truecharts.org/catagories:":
             f.write("  truecharts.org/catagories: | \n")
@@ -270,4 +358,20 @@ for name, app in combinedfree.items():
             f.write("  "+line)
           else:
               f.write(line)
+  
+  # Handle values.yaml
+  
+  valuesyaml["image"]["repository"] = app["Repository"]
+  valuesyaml["image"]["tag"] = app["Tag"]
+  valuesyaml["env"] = {}
+  
+
+  for name, value in app["Config"]["Variable"].items():
+    if not name in blacklistedenvs:
+      valuesyaml["env"][name] = value["value"]
+
+  valuesyamlString = yaml.dump(valuesyaml)
+  valuesyamlFile = open("./export/"+"app/"+tmpname+"/values.yaml", "w")
+  valuesyamlFile.write(valuesyamlString)
+  valuesyamlFile.close()
   

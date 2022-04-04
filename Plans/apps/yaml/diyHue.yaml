@@ -1,6 +1,6 @@
 CAComment: This template is set up to use a custom network. You may have to adjust
   the network or IP address etc to match your system
-CategoryList:
+CategoryList: &id001
 - HomeAutomation
 Config:
   Device: {}
@@ -89,7 +89,8 @@ GitHub: https://github.com/mariusmotea/diyHue
 Icon: https://raw.githubusercontent.com/cheesemarathon/docker-templates/master/images/diyhue.png
 Keywords:
 - diyhue
-Name: diyHue
+- *id001
+Name: diyhue
 Network: br0
 Networking:
   Mode: br0
@@ -100,11 +101,9 @@ Overview: 'diyHue emulates a Phillips Hue bridge allowing you to controll other 
   '
 Privileged: 'false'
 Registry: https://hub.docker.com/r/diyhue/core/
-Repository: diyhue/core:latest
+Repository: diyhue/core
 Requires: ''
 Sources:
 - https://hub.docker.com/r/diyhue/core/
-TemplateURL: https://raw.githubusercontent.com/cheesemarathon/docker-templates/master/cheesemarathon/diyhue.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:80]
-topPerforming: 0.042
-topTrending: -0.307

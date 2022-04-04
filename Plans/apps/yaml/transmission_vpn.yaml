@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Downloaders
 Config:
   Device: {}
@@ -275,7 +275,8 @@ ExtraParams: ' --cap-add=NET_ADMIN --restart=always --log-opt max-size=50m --log
 Icon: https://raw.githubusercontent.com/activ/docker-templates/master/activ/images/transmission-icon.png
 Keywords:
 - transmission_vpn
-Name: Transmission_VPN
+- *id001
+Name: transmission_vpn
 Network: bridge
 Networking:
   Mode: bridge
@@ -283,14 +284,11 @@ Overview: "Transmission is a full-featured \u200BBitTorrent client for Linux, OS
   \ Unix and Windows.[br]\r\n"
 PostArgs: ''
 Privileged: 'true'
-Project: https://github.com/haugene/docker-transmission-openvpn
 Registry: https://hub.docker.com/r/haugene/transmission-openvpn/
-Repository: haugene/transmission-openvpn:dev
+Repository: haugene/transmission-openvpn
 Requires: ''
 Sources:
 - https://github.com/haugene/docker-transmission-openvpn
 - https://hub.docker.com/r/haugene/transmission-openvpn/
-TemplateURL: https://raw.githubusercontent.com/clowrym/docker-templates/master/Transmission_VPN.xml
+Tag: dev
 WebUI: http://[IP]:[PORT:9091]/
-topPerforming: 0.868
-topTrending: -1.544

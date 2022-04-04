@@ -1,0 +1,36 @@
+env:
+  Admin Password: adminDocker
+  Autosave Intervall: '5'
+  Connection Password: Docker
+  Difficulty: '1'
+  Enforce Item Level Restriction: '0'
+  Enforce Legal Characters: '0'
+  Extra Startup Parameters: ''
+  Log Level: '4'
+  Maximum Character Level: '40'
+  Maximum Clients: '4'
+  Minimum Character Level: '1'
+  Module Name: ''
+  Multiple Parties Allowed: '0'
+  PVP Mode: '0'
+  Player Pause: '0'
+  Public Server: '0'
+  Restart Module If Server Becomes Empty: '0'
+  Server Name: Docker NWNEE
+  Servercharacters Only: '0'
+  UMASK: '000'
+image:
+  pullPolicy: IfNotPresent
+  repository: ich777/nwnee-server
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

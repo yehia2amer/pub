@@ -1,6 +1,6 @@
 CAComment: This template is set up to use a custom network. You may have to adjust
   the network or IP address etc to match your system
-CategoryList:
+CategoryList: &id001
 - Other
 Config:
   Device: {}
@@ -55,6 +55,7 @@ Config:
 Icon: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/quakejs.png
 Keywords:
 - quakejs
+- *id001
 Name: quakejs
 Network: br0
 Overview: 'QuakeJS is a port of ioquake3 to JavaScript with the help of Emscripten.[br]IMPORTANT
@@ -63,14 +64,11 @@ Overview: 'QuakeJS is a port of ioquake3 to JavaScript with the help of Emscript
   USE BRIDGE I''M NOT RESPONSABLE FOR UNRAID CONFLICTING WITH PORT 80 FOR THIS DOCKER[/B]'
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/treyyoder/quakejs-docker
 Registry: https://hub.docker.com/r/treyyoder/quakejs/
-Repository: treyyoder/quakejs:latest
+Repository: treyyoder/quakejs
 Requires: ''
 Sources:
 - https://github.com/treyyoder/quakejs-docker
 - https://hub.docker.com/r/treyyoder/quakejs/
-TemplateURL: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/quakejs.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:80]/
-topPerforming: 0.178
-topTrending: -0.10499999999999998

@@ -1,0 +1,23 @@
+env:
+  Database IP: ''
+  Database Name: zabbix
+  Database Password: ''
+  Database Port: ''
+  Database Username: ''
+  Debuglevel: '3'
+  Zabbix Modules: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: zabbix/zabbix-server-mysql
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

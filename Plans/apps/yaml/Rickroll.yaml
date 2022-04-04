@@ -1,26 +1,16 @@
-CategoryList:
+CategoryList: &id001
 - Other
 Config:
   Device: {}
   Label: {}
   Path: {}
-  Port:
-    Web Port:
-      Default: '7344'
-      Description: 'Container Port: 80'
-      Display: always
-      Mask: 'false'
-      Mode: tcp
-      Name: Web Port
-      Required: 'false'
-      Target: '80'
-      Type: Port
-      value: '7344'
+  Port: {}
   Variable: {}
 Icon: https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/icons/rickroll.png
 Keywords:
 - rickroll
-Name: Rickroll
+- *id001
+Name: rickroll
 Network: bridge
 Networking:
   Mode: bridge
@@ -28,7 +18,6 @@ Overview: Self-hosted Rickrolls. Image is based on Nginx stable alpine, and all 
   content is local to the container.
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/modem7/docker-rickroll
 RecommendedDate: 1648785600
 RecommendedRaw: 4/1/2022
 RecommendedReason:
@@ -39,6 +28,5 @@ Requires: ''
 Sources:
 - https://github.com/modem7/docker-rickroll
 - https://hub.docker.com/r/modem7/docker-rickroll
-TemplateURL: https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/rickroll.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:80]
-topTrending: -39.484

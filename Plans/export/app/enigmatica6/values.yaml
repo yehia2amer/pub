@@ -1,0 +1,20 @@
+env:
+  EULA: 'false'
+  MAX_RAM: 5G
+  MOTD: ''
+  OPS: ''
+image:
+  pullPolicy: IfNotPresent
+  repository: goobaroo/enigmatica6
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

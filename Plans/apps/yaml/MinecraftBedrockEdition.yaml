@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - GameServers
 Config:
   Device: {}
@@ -102,21 +102,20 @@ ExtraParams: --restart=unless-stopped
 Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/bedrock.png
 Keywords:
 - minecraftbedrockedition
-Name: MinecraftBedrockEdition
+- *id001
+Name: minecraftbedrockedition
 Network: bridge
 Networking:
   Mode: bridge
 Overview: "This is a Basic Minecraft Bedrock Edition Server.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://www.minecraft.net/
 Registry: https://hub.docker.com/r/ich777/minecraftbedrockserver/
 Repository: ich777/minecraftbedrockserver
 Requires: ''
 Sources:
 - https://www.minecraft.net/
 - https://hub.docker.com/r/ich777/minecraftbedrockserver/
+Tag: latest
 WebUI: http://[IP]:[PORT:8080]/
 caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/MinecraftBedrockEdition.xml
-topPerforming: 2.031
-topTrending: -3.2609999999999997

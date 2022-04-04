@@ -1,5 +1,5 @@
 Beta: 'true'
-CategoryList:
+CategoryList: &id001
 - GameServers
 Config:
   Device: {}
@@ -161,7 +161,8 @@ ExtraParams: --restart=unless-stopped
 Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/alienswarm.png
 Keywords:
 - alienswarm
-Name: AlienSwarm
+- *id001
+Name: alienswarm
 Network: bridge
 Networking:
   Mode: bridge
@@ -169,12 +170,12 @@ Overview: "This Docker will download and install SteamCMD. It will also install 
   \ Swarm and run it.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://www.steampowered.com/
 Registry: https://hub.docker.com/r/ich777/steamcmd/
-Repository: ich777/steamcmd:alienswarm
+Repository: ich777/steamcmd
 Requires: ''
 Sources:
 - https://www.steampowered.com/
 - https://hub.docker.com/r/ich777/steamcmd/
+Tag: alienswarm
 WebUI: ''
 caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/AlienSwarm.xml

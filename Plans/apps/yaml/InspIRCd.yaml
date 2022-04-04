@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Network-Other
 - Productivity
 - Tools-Utilities
@@ -417,7 +417,8 @@ ExtraParams: --hostname=irc --restart=unless-stopped
 Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/inspircd.png
 Keywords:
 - inspircd
-Name: InspIRCd
+- *id001
+Name: inspircd
 Network: bridge
 Networking:
   Mode: bridge
@@ -425,12 +426,11 @@ Overview: "InspIRCd is a modular Internet Relay Chat (IRC) server written in C++
   \n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://www.inspircd.org/
 Registry: https://hub.docker.com/r/ich777/inspircd
 Repository: ich777/inspircd
 Requires: ''
 Sources:
 - https://www.inspircd.org/
 - https://hub.docker.com/r/ich777/inspircd
-TemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/InspIRCD.xml
+Tag: latest
 WebUI: ''

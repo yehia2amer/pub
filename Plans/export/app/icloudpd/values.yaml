@@ -1,0 +1,29 @@
+env:
+  Apple ID: your@appleid.com
+  Authentication Type: 2FA
+  Command Line Options: ''
+  Directory Permissions: '777'
+  File Permissions: '666'
+  Notification Type: ''
+  Prowl API Key: ''
+  Pushbullet API Key: ''
+  Synchronisation Interval (seconds): '86400'
+  Telegram Chat ID: ''
+  Telegram Token: ''
+  Time Zone: Europe/London
+  UMASK: '000'
+image:
+  pullPolicy: IfNotPresent
+  repository: boredazfcuk/icloudpd
+  tag: latest
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

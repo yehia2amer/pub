@@ -1,0 +1,18 @@
+env:
+  GAME_PARAMS: -config serverconfig.txt
+  Preferred Terraria version: 1.4.3.6
+image:
+  pullPolicy: IfNotPresent
+  repository: ich777/terrariaserver
+  tag: tmodloader
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+service:
+  main:
+    ports:
+      main:
+        port: 9117
+        targetPort: 9117
+    protocol: HTTP

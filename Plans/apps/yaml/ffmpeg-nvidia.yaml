@@ -1,11 +1,17 @@
-CategoryList:
+CategoryList: &id001
 - Tools-Utilities
+Config:
+  Device: {}
+  Label: {}
+  Path: {}
+  Port: {}
+  Variable: {}
 Data: ''
-Environment: ''
 ExtraParams: -ti --entrypoint bash --runtime=nvidia
 Icon: https://raw.githubusercontent.com/qubex22/unraid-templates/main/ffmpeg-nvidia/ffmpeg.png
 Keywords:
 - ffmpeg-nvidia
+- *id001
 Name: ffmpeg-nvidia
 Network: bridge
 Networking:
@@ -14,12 +20,11 @@ Networking:
 Overview: "Dockerized ffmpeg with nvidia HW support.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/jrottenberg/ffmpeg
 Registry: https://hub.docker.com/r/jrottenberg/ffmpeg
-Repository: jrottenberg/ffmpeg:4.2-nvidia
+Repository: jrottenberg/ffmpeg
 Requires: ''
 Sources:
 - https://github.com/jrottenberg/ffmpeg
 - https://hub.docker.com/r/jrottenberg/ffmpeg
-TemplateURL: https://raw.githubusercontent.com/qubex22/unraid-templates/master/ffmpeg-nvidia/ffmpeg-nvidia.xml
+Tag: 4.2-nvidia
 WebUI: ''

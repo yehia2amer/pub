@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Backup
 Config:
   Device: {}
@@ -111,19 +111,20 @@ ExtraParams: --restart=unless-stopped
 Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/unmined.png
 Keywords:
 - unmined-gui
-Name: uNmINeD-GUI
+- *id001
+Name: unmined-gui
 Network: bridge
 Overview: "uNmINeD-GUI is an easy to use and fast Minecraft world viewer and mapper\
   \ tool. It can read Minecraft Java and Bedrock Edition world files and renders a\
   \ browseable 2D overview map that you can export.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://unmined.net/
 Registry: https://hub.docker.com/r/ich777/unmined/
 Repository: ich777/unmined
 Requires: ''
 Sources:
 - https://unmined.net/
 - https://hub.docker.com/r/ich777/unmined/
+Tag: latest
 WebUI: http://[IP]:[PORT:8080]/vnc.html?autoconnect=true
 caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/uNmINeD-GUI.xml

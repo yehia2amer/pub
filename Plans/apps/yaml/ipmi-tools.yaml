@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Productivity
 - Tools-Utilities
 - Network-Management
@@ -66,7 +66,8 @@ Config:
 Icon: https://github.com/EdwardChamberlain/unraid-templates/blob/main/assets/server_icon.png?raw=true
 Keywords:
 - ipmi-tools
-Name: IPMI-Tools
+- *id001
+Name: ipmi-tools
 Network: bridge
 Networking:
   Mode: bridge
@@ -75,13 +76,11 @@ Overview: This is a container with a webGUI to manage a Dell servers fan speeds 
   variables or enter them in the webGUI at runtime.
 PostArgs: ''
 Privileged: 'false'
-Project: https://github.com/EdwardChamberlain/IPMI-Fan-Controller
 Registry: https://hub.docker.com/r/edchamberlain/ipmi-tools
 Repository: edchamberlain/ipmi-tools
 Requires: ''
 Sources:
 - https://github.com/EdwardChamberlain/IPMI-Fan-Controller
 - https://hub.docker.com/r/edchamberlain/ipmi-tools
-TemplateURL: https://raw.githubusercontent.com/EdwardChamberlain/unraid-templates/master/ipmi-tools.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:80]/
-topTrending: -18.292

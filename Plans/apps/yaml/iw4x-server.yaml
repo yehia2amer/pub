@@ -1,5 +1,5 @@
 Beta: 'true'
-CategoryList:
+CategoryList: &id001
 - GameServers
 Config:
   Device: {}
@@ -149,19 +149,20 @@ ExtraParams: --restart=unless-stopped
 Icon: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/iw4x.png
 Keywords:
 - iw4x-server
-Name: IW4x-Server
+- *id001
+Name: iw4x-server
 Network: bridge
 Networking:
   Mode: bridge
 Overview: "This Docker will download and install a simple IW4x Server.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://iw4x.org/
 Registry: https://hub.docker.com/r/ich777/iw4x-server/
 Repository: ich777/iw4x-server
 Requires: ''
 Sources:
 - https://iw4x.org/
 - https://hub.docker.com/r/ich777/iw4x-server/
+Tag: latest
 WebUI: ''
 caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/IW4x-Server.xml

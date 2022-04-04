@@ -1,38 +1,26 @@
-CategoryList:
+CategoryList: &id001
 - Productivity
 Config:
   Device: {}
   Label: {}
   Path: {}
-  Port:
-    Port:
-      Default: '3001'
-      Description: ''
-      Display: always
-      Mask: 'false'
-      Mode: tcp
-      Name: Port
-      Required: 'false'
-      Target: '3001'
-      Type: Port
-      value: ''
+  Port: {}
   Variable: {}
 ExtraParams: --env-file=/mnt/cache/appdata/standardnotes-web/.env
 Icon: https://raw.githubusercontent.com/xthursdayx/docker-templates/master/xthursdayx/images/standardnotes-web-icon.png
 Keywords:
 - standardnotes-web
+- *id001
 Name: standardnotes-web
 Network: bridge
 Overview: "A safe and private place for your life's work.\r\n"
 PostArgs: ''
 Privileged: 'false'
-Project: https://standardnotes.org/
 Registry: https://hub.docker.com/r/standardnotes/web
-Repository: standardnotes/web:stable
+Repository: standardnotes/web
 Requires: ''
 Sources:
 - https://standardnotes.org/
 - https://hub.docker.com/r/standardnotes/web
-TemplateURL: https://raw.githubusercontent.com/xthursdayx/docker-templates/master/xthursdayx/standardnotes-web.xml
+Tag: stable
 WebUI: http://[IP]:[3001]
-topTrending: 8.815000000000001

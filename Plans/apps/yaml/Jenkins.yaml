@@ -1,4 +1,4 @@
-CategoryList:
+CategoryList: &id001
 - Productivity
 - Tools-Utilities
 Config:
@@ -32,13 +32,13 @@ Config:
 Icon: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/jenkins.png
 Keywords:
 - jenkins
-Name: Jenkins
+- *id001
+Name: jenkins
 Network: bridge
 Official: true
 Overview: The leading open source automation server, Jenkins provides hundreds of
   plugins to support building, deploying and automating any project.
 Privileged: 'false'
-Project: https://www.jenkins.io/
 Registry: https://hub.docker.com/r/jenkins/jenkins/
 RepoShort: Selfhosters
 Repository: jenkins/jenkins
@@ -46,7 +46,5 @@ Requires: ''
 Sources:
 - https://www.jenkins.io/
 - https://hub.docker.com/r/jenkins/jenkins/
-TemplateURL: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/jenkins.xml
+Tag: latest
 WebUI: http://[IP]:[PORT:8080]/
-topPerforming: 2.401
-topTrending: -2.141
