@@ -11,6 +11,14 @@ Config:
       Name: archive
       Target: /archive
   Port:
+    main:
+      ContainerPort: '10090'
+      HostPort: '10090'
+      Mode: tcp
+      Name: tcp-port-1
+      Protocol: tcp
+      Target: 10090
+      value: 10090
     tcp-port-0:
       ContainerPort: '8090'
       HostPort: '8090'
@@ -19,14 +27,6 @@ Config:
       Protocol: tcp
       Target: 8090
       value: 8090
-    tcp-port-1:
-      ContainerPort: '10090'
-      HostPort: '10090'
-      Mode: tcp
-      Name: tcp-port-1
-      Protocol: tcp
-      Target: 10090
-      value: 10090
   Variable: {}
 Icon: https://raw.githubusercontent.com/coppit/docker-xeoma/master/xeoma.png
 Keywords:

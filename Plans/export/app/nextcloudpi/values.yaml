@@ -8,14 +8,6 @@ persistence:
     enabled: true
     mountPath: /data
 service:
-  httpswebport:
-    enabled: true
-    ports:
-      httpswebport:
-        enabled: true
-        port: 443
-        protocol: TCP
-        targetPort: 443
   httpwebport:
     enabled: true
     ports:
@@ -24,6 +16,14 @@ service:
         port: 80
         protocol: TCP
         targetPort: 80
+  main:
+    enabled: true
+    ports:
+      main:
+        enabled: true
+        port: 443
+        protocol: TCP
+        targetPort: 443
   panelwebport:
     enabled: true
     ports:

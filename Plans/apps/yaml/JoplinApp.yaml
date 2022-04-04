@@ -16,6 +16,17 @@ Config:
       Type: Path
       value: /mnt/user/appdata/joplinapp
   Port:
+    main:
+      Default: ''
+      Description: 'Container Port: 5800'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Web Port
+      Required: 'false'
+      Target: 5800
+      Type: Port
+      value: 5800
     webclipperport:
       Default: '41184'
       Description: Likely can't be used unless you have an advanced use case.
@@ -27,17 +38,6 @@ Config:
       Target: 41184
       Type: Port
       value: 41184
-    webport:
-      Default: ''
-      Description: 'Container Port: 5800'
-      Display: always
-      Mask: 'false'
-      Mode: tcp
-      Name: Web Port
-      Required: 'false'
-      Target: 5800
-      Type: Port
-      value: 5800
   Variable:
     display_height:
       Default: '768'

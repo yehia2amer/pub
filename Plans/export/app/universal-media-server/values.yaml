@@ -11,6 +11,14 @@ persistence:
     enabled: true
     mountPath: /media
 service:
+  main:
+    enabled: true
+    ports:
+      main:
+        enabled: true
+        port: 9001
+        protocol: TCP
+        targetPort: 9001
   port1044:
     enabled: true
     ports:
@@ -27,11 +35,3 @@ service:
         port: 5002
         protocol: TCP
         targetPort: 5002
-  webui:
-    enabled: true
-    ports:
-      webui:
-        enabled: true
-        port: 9001
-        protocol: TCP
-        targetPort: 9001

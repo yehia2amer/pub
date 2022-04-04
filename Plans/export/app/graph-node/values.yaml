@@ -13,14 +13,6 @@ image:
   tag: latest
 persistence: {}
 service:
-  graphqlinterface:
-    enabled: true
-    ports:
-      graphqlinterface:
-        enabled: true
-        port: 8000
-        protocol: TCP
-        targetPort: 8000
   graphqlwebsocket:
     enabled: true
     ports:
@@ -37,3 +29,11 @@ service:
         port: 8020
         protocol: TCP
         targetPort: 8020
+  main:
+    enabled: true
+    ports:
+      main:
+        enabled: true
+        port: 8000
+        protocol: TCP
+        targetPort: 8000

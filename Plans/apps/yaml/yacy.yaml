@@ -17,17 +17,6 @@ Config:
       Type: Path
       value: /mnt/user/appdata/yacy/
   Port:
-    http:
-      Default: '8090'
-      Description: HTTP
-      Display: always
-      Mask: 'false'
-      Mode: tcp
-      Name: HTTP
-      Required: 'true'
-      Target: 8090
-      Type: Port
-      value: 8090
     https:
       Default: '8443'
       Description: HTTPs (Not Required if you using reverse proxy)
@@ -39,6 +28,17 @@ Config:
       Target: 8443
       Type: Port
       value: 8443
+    main:
+      Default: '8090'
+      Description: HTTP
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: HTTP
+      Required: 'true'
+      Target: 8090
+      Type: Port
+      value: 8090
   Variable: {}
 ExtraParams: --log-opt max-size=200m --log-opt max-file=2
 Icon: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/yacy.png

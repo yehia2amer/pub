@@ -10,6 +10,14 @@ image:
   tag: latest
 persistence: {}
 service:
+  main:
+    enabled: true
+    ports:
+      main:
+        enabled: true
+        port: 6530
+        protocol: TCP
+        targetPort: 8080
   port52000-52100:
     enabled: true
     ports:
@@ -18,11 +26,3 @@ service:
         port: 52000
         protocol: UDP
         targetPort: 52000
-  webui:
-    enabled: true
-    ports:
-      webui:
-        enabled: true
-        port: 6530
-        protocol: TCP
-        targetPort: 8080

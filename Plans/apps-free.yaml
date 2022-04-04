@@ -324,7 +324,7 @@ adguard-home:
         Target: 53
         Type: Port
         value: 53
-      webui:
+      main:
         Default: '3000'
         Description: Port for the Web UI
         Display: advanced
@@ -2924,6 +2924,17 @@ amule:
         Type: Path
         value: ''
     Port:
+      main:
+        Default: ''
+        Description: ''
+        Display: always
+        Mask: 'false'
+        Mode: tcp
+        Name: WebUI
+        Required: 'false'
+        Target: 4711
+        Type: Port
+        value: 4711
       port(tcp):
         Default: ''
         Description: Client to client transfers
@@ -2946,17 +2957,6 @@ amule:
         Target: 4672
         Type: Port
         value: 4672
-      webui:
-        Default: ''
-        Description: ''
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: WebUI
-        Required: 'false'
-        Target: 4711
-        Type: Port
-        value: 4711
     Variable:
       pgid:
         Default: ''
@@ -3815,7 +3815,7 @@ apache-php:
         Target: /etc/localtime
         value: /etc/localtime
     Port:
-      tcp-port-0:
+      main:
         ContainerPort: '80'
         HostPort: '8005'
         Mode: tcp
@@ -5258,7 +5258,7 @@ aria2-with-ariang:
         Target: 6800
         Type: Port
         value: 6800
-      aria2webuiport:
+      main:
         Default: '80'
         Description: 'Container Port: 80'
         Display: always
@@ -5653,7 +5653,7 @@ aria2webui:
         Target: 6800
         Type: Port
         value: 6800
-      aria2webuiport:
+      main:
         Default: '80'
         Description: 'Container Port: 80'
         Display: always
@@ -7914,6 +7914,19 @@ avidemux:
         Type: Path
         value: ''
     Port:
+      main:
+        Default: '7811'
+        Description: Port used to access the application's GUI via the web interface.&lt;br&gt;&lt;b&gt;NOTE:&lt;/b&gt;
+          This applies only when &lt;i&gt;Network Type&lt;/i&gt; is set to &lt;i&gt;Bridge&lt;/i&gt;.  For
+          other network types, port 5800 should be used instead.
+        Display: advanced-hide
+        Mask: 'false'
+        Mode: tcp
+        Name: WEB Port for GUI
+        Required: 'true'
+        Target: 5800
+        Type: Port
+        value: 5800
       vncportforgui:
         Default: '7911'
         Description: Port used to access the application's GUI via the VNC protocol.  Optional
@@ -7928,19 +7941,6 @@ avidemux:
         Target: 5900
         Type: Port
         value: 5900
-      webportforgui:
-        Default: '7811'
-        Description: Port used to access the application's GUI via the web interface.&lt;br&gt;&lt;b&gt;NOTE:&lt;/b&gt;
-          This applies only when &lt;i&gt;Network Type&lt;/i&gt; is set to &lt;i&gt;Bridge&lt;/i&gt;.  For
-          other network types, port 5800 should be used instead.
-        Display: advanced-hide
-        Mask: 'false'
-        Mode: tcp
-        Name: WEB Port for GUI
-        Required: 'true'
-        Target: 5800
-        Type: Port
-        value: 5800
     Variable:
       displayheight:
         Default: '768'
@@ -8311,7 +8311,7 @@ backblaze_personal_backup:
         Type: Path
         value: /mnt/user/
     Port:
-      httpvncgui:
+      main:
         Default: '5800'
         Description: Port used to access the application's GUI via the web interface.
         Display: always
@@ -9219,7 +9219,7 @@ bitcoinwalletgui:
         Type: Path
         value: /mnt/user/BitcoinWallet/
     Port:
-      novncport:
+      main:
         Default: ''
         Description: 'Container Port: 6901'
         Display: always
@@ -9769,7 +9769,7 @@ blender-desktop-g3:
         Type: Path
         value: ''
     Port:
-      webui(novnc):
+      main:
         Default: ''
         Description: ''
         Display: always
@@ -9852,6 +9852,17 @@ blueiris:
         Type: Path
         value: /mnt/user/appdata/blueiris
     Port:
+      main:
+        Default: '8080'
+        Description: VNC Web Server Port
+        Display: always
+        Mask: 'false'
+        Mode: tcp
+        Name: VNC Web Server Port
+        Required: 'false'
+        Target: 8080
+        Type: Port
+        value: 8080
       vncserverport:
         Default: '5950'
         Description: VNC Server Port
@@ -9863,17 +9874,6 @@ blueiris:
         Target: 5900
         Type: Port
         value: 5950
-      vncwebserverport:
-        Default: '8080'
-        Description: VNC Web Server Port
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: VNC Web Server Port
-        Required: 'false'
-        Target: 8080
-        Type: Port
-        value: 8080
       webserverport:
         Default: '8181'
         Description: Web Server Port
@@ -9994,17 +9994,6 @@ blynk-server:
         Target: 8080
         Type: Port
         value: 8080
-      hostport2:
-        Default: ''
-        Description: 'Container Port: 9443'
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: Host Port 2
-        Required: 'false'
-        Target: 9443
-        Type: Port
-        value: 9443
       hostport3:
         Default: ''
         Description: 'Container Port: 8440'
@@ -10016,6 +10005,17 @@ blynk-server:
         Target: 8440
         Type: Port
         value: 8440
+      main:
+        Default: ''
+        Description: 'Container Port: 9443'
+        Display: always
+        Mask: 'false'
+        Mode: tcp
+        Name: Host Port 2
+        Required: 'false'
+        Target: 9443
+        Type: Port
+        value: 9443
     Variable: {}
   Icon: https://lh3.googleusercontent.com/rTRWfl713otPTrmafsJ3OLb7I30XS1iBSZyP1WXYXKAlwkTMhihdMw_gDv5ogjEtQ1P6
   Keywords:
@@ -11001,6 +11001,17 @@ cacti:
         Type: Path
         value: /mnt/user/appdata/Cacti
     Port:
+      main:
+        Default: '8180'
+        Description: 'Container Port: 80'
+        Display: always
+        Mask: 'false'
+        Mode: tcp
+        Name: webui
+        Required: 'true'
+        Target: 80
+        Type: Port
+        value: 8180
       snmpscanport:
         Default: '161'
         Description: SNMP scan, port 161 UDP
@@ -11012,17 +11023,6 @@ cacti:
         Target: 161
         Type: Port
         value: 161
-      webui:
-        Default: '8180'
-        Description: 'Container Port: 80'
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: webui
-        Required: 'true'
-        Target: 80
-        Type: Port
-        value: 8180
     Variable: {}
   Icon: https://www.cacti.net/images/cacti.png
   Keywords:
@@ -11072,17 +11072,6 @@ caddy:
         Type: Path
         value: ''
     Port:
-      hostportfor8080:
-        Default: '8080'
-        Description: 'Container Port: 8080'
-        Display: always-hide
-        Mask: 'false'
-        Mode: tcp
-        Name: Host Port for 8080
-        Required: 'true'
-        Target: 8080
-        Type: Port
-        value: 8080
       hostportfor8443:
         Default: '8443'
         Description: 'Container Port: 8443'
@@ -11094,6 +11083,17 @@ caddy:
         Target: 8443
         Type: Port
         value: 8443
+      main:
+        Default: '8080'
+        Description: 'Container Port: 8080'
+        Display: always-hide
+        Mask: 'false'
+        Mode: tcp
+        Name: Host Port for 8080
+        Required: 'true'
+        Target: 8080
+        Type: Port
+        value: 8080
     Variable:
       pgid:
         Default: '100'
@@ -12003,7 +12003,7 @@ chromium-desktop-g3:
         Type: Path
         value: ''
     Port:
-      webui(novnc)webui(novnc):
+      main:
         Default: ''
         Description: ''
         Display: always
@@ -12688,6 +12688,19 @@ cloudberrybackup:
         Target: 43211
         Type: Port
         value: 43211
+      main:
+        Default: '7802'
+        Description: Port used to access the application's GUI via the web interface.&lt;br&gt;&lt;b&gt;NOTE:&lt;/b&gt;
+          This applies only when &lt;i&gt;Network Type&lt;/i&gt; is set to &lt;i&gt;Bridge&lt;/i&gt;.  For
+          other network types, port 5800 should be used instead.
+        Display: advanced-hide
+        Mask: 'false'
+        Mode: tcp
+        Name: WEB Port for GUI
+        Required: 'true'
+        Target: 5800
+        Type: Port
+        value: 5800
       vncportforgui:
         Default: '7902'
         Description: Port used to access the application's GUI via the VNC protocol.  Optional
@@ -12702,19 +12715,6 @@ cloudberrybackup:
         Target: 5900
         Type: Port
         value: 5900
-      webportforgui:
-        Default: '7802'
-        Description: Port used to access the application's GUI via the web interface.&lt;br&gt;&lt;b&gt;NOTE:&lt;/b&gt;
-          This applies only when &lt;i&gt;Network Type&lt;/i&gt; is set to &lt;i&gt;Bridge&lt;/i&gt;.  For
-          other network types, port 5800 should be used instead.
-        Display: advanced-hide
-        Mask: 'false'
-        Mode: tcp
-        Name: WEB Port for GUI
-        Required: 'true'
-        Target: 5800
-        Type: Port
-        value: 5800
     Variable:
       cloudberrybackupwebinterfacepassword:
         Default: ''
@@ -14107,134 +14107,6 @@ compreface-gpu:
   - https://hub.docker.com/r/exadel/compreface/
   Tag: 0.6.1-mobilenet-gpu
   WebUI: http://[IP]:[PORT:80]
-compressarr:
-  Branch:
-  - TagDescription: This is the Standard build, limited QSV hardware support, built
-      to be small and light
-  - Config:
-    - '@attributes':
-        Default: '8800'
-        Description: 'Container Port: 80'
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: Host Port 1
-        Required: 'true'
-        Target: '80'
-        Type: Port
-      value: '8800'
-    - '@attributes':
-        Default: ''
-        Description: Nvidia Visible Devices (Optional - Requires Nvidia GPU and Unraid
-          Nvidia build)
-        Display: always
-        Mask: 'false'
-        Mode: ''
-        Name: Nvidia Visible Devices
-        Required: 'false'
-        Target: NVIDIA_VISIBLE_DEVICES
-        Type: Variable
-      value: ''
-    - '@attributes':
-        Default: ''
-        Description: This is where Compressarr will store it's configuration.
-        Mode: rw
-        Name: Config directory
-        Required: 'true'
-        Target: /config
-        Type: Path
-      value: ''
-    - '@attributes':
-        Default: /mnt/user/Media
-        Description: This needs to be the same as the root for Radarr/Sonarr. Create
-          more as required
-        Mode: rw
-        Name: Media directory
-        Required: 'false'
-        Target: /media
-        Type: Path
-      value: /mnt/user/Media
-    - '@attributes':
-        Default: /mnt/user/Media/Compressarr
-        Description: This is an output directory, Radarr/Sonarr needs to see this
-          for importing to work
-        Mode: rw
-        Name: Output directory
-        Required: 'false'
-        Target: /output
-        Type: Path
-      value: /mnt/user/Media/Compressarr
-    ExtraParams: --runtime=nvidia
-    Tag: nvidia
-    TagDescription: This is the NVidia Ubuntu build, full Cuda support, built with
-      the nightly FFmpeg and weighs in at 1.4GB
-  CategoryList:
-  - MediaApp-Other
-  Config:
-    Device: {}
-    Label: {}
-    Path:
-      config:
-        Default: ''
-        Description: This is where Compressarr will store it's configuration.
-        Mode: rw
-        Name: Config directory
-        Required: 'true'
-        Target: /config
-        Type: Path
-        value: ''
-      mediadirectory:
-        Default: /mnt/user/Media
-        Description: This needs to be the same as the root for Radarr/Sonarr. Create
-          more as required
-        Mode: rw
-        Name: Media directory
-        Required: 'false'
-        Target: /media
-        Type: Path
-        value: /mnt/user/Media
-      outputdirectory:
-        Default: /mnt/user/Media/Compressarr
-        Description: This is an output directory, Radarr/Sonarr needs to see this
-          for importing to work
-        Mode: rw
-        Name: Output directory
-        Required: 'false'
-        Target: /output
-        Type: Path
-        value: /mnt/user/Media/Compressarr
-    Port:
-      main:
-        Default: '8800'
-        Description: 'Container Port: 80'
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: Host Port 1
-        Required: 'true'
-        Target: 80
-        Type: Port
-        value: 8800
-    Variable: {}
-  Icon: https://github.com/OFark/Compressarr/raw/master/Compressarr/wwwroot/android-chrome-192x192.png
-  Keywords:
-  - compressarr
-  - MediaApp-Other
-  Name: compressarr
-  Overview: 'Compressarr is an application to take a filtered set of media from Radarr
-    or (eventually) Sonarr and process it with customisable FFmpeg presets. It will
-    even attempt to find the best settings for each video.
-
-    '
-  Privileged: 'false'
-  Registry: https://registry.hub.docker.com/r/ofark/compressarr/
-  Repository: ofark/compressarr
-  Requires: ''
-  Sources:
-  - https://github.com/OFark/Compressarr
-  - https://registry.hub.docker.com/r/ofark/compressarr/
-  Tag: latest
-  WebUI: http://[IP]:[PORT:80]/
 conanexiles:
   Beta: 'true'
   CategoryList:
@@ -15324,6 +15196,17 @@ crafty:
         Type: Path
         value: /mnt/user/appdata/freddy0-Crafty/minecraft_servers
     Port:
+      main:
+        Default: '1800'
+        Description: Port to connect to the Web UI
+        Display: always
+        Mask: 'false'
+        Mode: tcp
+        Name: Web UI Port
+        Required: 'true'
+        Target: 8000
+        Type: Port
+        value: 1800
       minecraftports:
         Default: 25500-25600
         Description: 'Container Port: 25500-25600 yes, 100 ports for 100 possible
@@ -15336,17 +15219,6 @@ crafty:
         Target: 25500
         Type: Port
         value: 25500
-      webuiport:
-        Default: '1800'
-        Description: Port to connect to the Web UI
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: Web UI Port
-        Required: 'true'
-        Target: 8000
-        Type: Port
-        value: 1800
     Variable: {}
   Icon: https://assets.gitlab-static.net/uploads/-/system/project/avatar/14984440/Crafty_Logo.png?
   Keywords:
@@ -15398,6 +15270,19 @@ crashplanpro:
         Type: Path
         value: ''
     Port:
+      main:
+        Default: '7810'
+        Description: Port used to access the application's GUI via the web interface.&lt;br&gt;&lt;b&gt;NOTE:&lt;/b&gt;
+          This applies only when &lt;i&gt;Network Type&lt;/i&gt; is set to &lt;i&gt;Bridge&lt;/i&gt;.  For
+          other network types, port 5800 should be used instead.
+        Display: advanced-hide
+        Mask: 'false'
+        Mode: tcp
+        Name: WEB Port for GUI
+        Required: 'true'
+        Target: 5800
+        Type: Port
+        value: 5800
       vncportforgui:
         Default: '7910'
         Description: Port used to access the application's GUI via the VNC protocol.  Optional
@@ -15412,19 +15297,6 @@ crashplanpro:
         Target: 5900
         Type: Port
         value: 5900
-      webportforgui:
-        Default: '7810'
-        Description: Port used to access the application's GUI via the web interface.&lt;br&gt;&lt;b&gt;NOTE:&lt;/b&gt;
-          This applies only when &lt;i&gt;Network Type&lt;/i&gt; is set to &lt;i&gt;Bridge&lt;/i&gt;.  For
-          other network types, port 5800 should be used instead.
-        Display: advanced-hide
-        Mask: 'false'
-        Mode: tcp
-        Name: WEB Port for GUI
-        Required: 'true'
-        Target: 5800
-        Type: Port
-        value: 5800
     Variable:
       displayheight:
         Default: '768'
@@ -15758,17 +15630,6 @@ crushftp9:
         Target: 9921
         Type: Port
         value: 9921
-      httpport:
-        Default: '8080'
-        Description: Crush HTTP Port 8080
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: HTTP Port
-        Required: 'true'
-        Target: 8080
-        Type: Port
-        value: 8080
       httpport2222:
         Default: '2222'
         Description: 'Crush port 2222 '
@@ -15802,6 +15663,17 @@ crushftp9:
         Target: 9443
         Type: Port
         value: 9443
+      main:
+        Default: '8080'
+        Description: Crush HTTP Port 8080
+        Display: always
+        Mask: 'false'
+        Mode: tcp
+        Name: HTTP Port
+        Required: 'true'
+        Target: 8080
+        Type: Port
+        value: 8080
     Variable:
       crushftpadminuser:
         Default: crushadmin
@@ -15888,7 +15760,7 @@ crypto-exchanges-gateway:
         Type: Path
         value: /mnt/user/appdata/crypto-exchanges-gateway/
     Port:
-      httpport:
+      main:
         Default: '8000'
         Description: HTTP Port
         Display: always
@@ -16002,7 +15874,7 @@ cryptpad:
         Type: Path
         value: /mnt/user/appdata/cryptpad/datastore
     Port:
-      port1:
+      main:
         Default: '3000'
         Description: Port 1
         Display: always
@@ -16248,18 +16120,7 @@ csmm-7dtd:
         Type: Path
         value: /mnt/cache/appdata/csmm-7dtd
     Port:
-      mariadbport:
-        Default: ''
-        Description: Only needed if you want to connect to the database.
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: Maria DB Port
-        Required: 'false'
-        Target: 3306
-        Type: Port
-        value: 3306
-      webport:
+      main:
         Default: ''
         Description: Please note that you should reverse proxy the server trough nginx,
           apache or any other reverse proxy software to your Hostname as filled in
@@ -16272,6 +16133,17 @@ csmm-7dtd:
         Target: 1337
         Type: Port
         value: 1337
+      mariadbport:
+        Default: ''
+        Description: Only needed if you want to connect to the database.
+        Display: always
+        Mask: 'false'
+        Mode: tcp
+        Name: Maria DB Port
+        Required: 'false'
+        Target: 3306
+        Type: Port
+        value: 3306
     Variable:
       csmmdownloadurl:
         Default: ''
@@ -17200,6 +17072,19 @@ czkawka:
         Type: Path
         value: ''
     Port:
+      main:
+        Default: '7821'
+        Description: Port used to access the application's GUI via the web interface.&lt;br&gt;&lt;b&gt;NOTE:&lt;/b&gt;
+          This applies only when &lt;i&gt;Network Type&lt;/i&gt; is set to &lt;i&gt;Bridge&lt;/i&gt;.  For
+          other network types, port 5800 should be used instead.
+        Display: advanced-hide
+        Mask: 'false'
+        Mode: tcp
+        Name: WEB Port for GUI
+        Required: 'true'
+        Target: 5800
+        Type: Port
+        value: 5800
       vncportforgui:
         Default: '7921'
         Description: Port used to access the application's GUI via the VNC protocol.  Optional
@@ -17214,19 +17099,6 @@ czkawka:
         Target: 5900
         Type: Port
         value: 5900
-      webportforgui:
-        Default: '7821'
-        Description: Port used to access the application's GUI via the web interface.&lt;br&gt;&lt;b&gt;NOTE:&lt;/b&gt;
-          This applies only when &lt;i&gt;Network Type&lt;/i&gt; is set to &lt;i&gt;Bridge&lt;/i&gt;.  For
-          other network types, port 5800 should be used instead.
-        Display: advanced-hide
-        Mask: 'false'
-        Mode: tcp
-        Name: WEB Port for GUI
-        Required: 'true'
-        Target: 5800
-        Type: Port
-        value: 5800
     Variable:
       displayheight:
         Default: '768'
@@ -20808,17 +20680,6 @@ dispatch:
         Type: Path
         value: /mnt/user/appdata/dispatch/
     Port:
-      http:
-        Default: '8000'
-        Description: HTTP
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: HTTP
-        Required: 'true'
-        Target: 80
-        Type: Port
-        value: 8000
       https:
         Default: '8443'
         Description: HTTPs (Not Required if you use reverse proxy)
@@ -20830,6 +20691,17 @@ dispatch:
         Target: 443
         Type: Port
         value: 4596
+      main:
+        Default: '8000'
+        Description: HTTP
+        Display: always
+        Mask: 'false'
+        Mode: tcp
+        Name: HTTP
+        Required: 'true'
+        Target: 80
+        Type: Port
+        value: 8000
     Variable: {}
   Icon: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/dispatch.png
   Keywords:
@@ -20901,7 +20773,7 @@ diyhue:
         Target: 443
         Type: Port
         value: 443
-      '80':
+      main:
         Default: '80'
         Description: 'Container Port: 80'
         Display: always
@@ -22227,7 +22099,7 @@ draw-io:
     Label: {}
     Path: {}
     Port:
-      webuiport:
+      main:
         Default: '3000'
         Description: 'Container Port: 8080'
         Display: always
@@ -22376,17 +22248,6 @@ drone:
         Type: Path
         value: ''
     Port:
-      httpport:
-        Default: '80'
-        Description: 'Container Port: 80'
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: HTTP Port
-        Required: 'true'
-        Target: 80
-        Type: Port
-        value: 80
       httpsport:
         Default: '443'
         Description: 'Container Port: 443'
@@ -22398,6 +22259,17 @@ drone:
         Target: 443
         Type: Port
         value: 443
+      main:
+        Default: '80'
+        Description: 'Container Port: 80'
+        Display: always
+        Mask: 'false'
+        Mode: tcp
+        Name: HTTP Port
+        Required: 'true'
+        Target: 80
+        Type: Port
+        value: 80
     Variable:
       githubclientid:
         Default: ''
@@ -22998,6 +22870,19 @@ dupeguru:
         Type: Path
         value: ''
     Port:
+      main:
+        Default: '7801'
+        Description: Port used to access the application's GUI via the web interface.&lt;br&gt;&lt;b&gt;NOTE:&lt;/b&gt;
+          This applies only when &lt;i&gt;Network Type&lt;/i&gt; is set to &lt;i&gt;Bridge&lt;/i&gt;.  For
+          other network types, port 5800 should be used instead.
+        Display: advanced-hide
+        Mask: 'false'
+        Mode: tcp
+        Name: WEB Port for GUI
+        Required: 'true'
+        Target: 5800
+        Type: Port
+        value: 5800
       vncportforgui:
         Default: '7901'
         Description: Port used to access the application's GUI via the VNC protocol.  Optional
@@ -23012,19 +22897,6 @@ dupeguru:
         Target: 5900
         Type: Port
         value: 5900
-      webportforgui:
-        Default: '7801'
-        Description: Port used to access the application's GUI via the web interface.&lt;br&gt;&lt;b&gt;NOTE:&lt;/b&gt;
-          This applies only when &lt;i&gt;Network Type&lt;/i&gt; is set to &lt;i&gt;Bridge&lt;/i&gt;.  For
-          other network types, port 5800 should be used instead.
-        Display: advanced-hide
-        Mask: 'false'
-        Mode: tcp
-        Name: WEB Port for GUI
-        Required: 'true'
-        Target: 5800
-        Type: Port
-        value: 5800
     Variable:
       displayheight:
         Default: '768'
@@ -23272,7 +23144,7 @@ dvblink:
         Target: /opt/DVBLink
         value: /mnt/user/appdata/DVBLink/data
     Port:
-      tcp-port-0:
+      main:
         ContainerPort: '39876'
         HostPort: '39876'
         Mode: tcp
@@ -23356,7 +23228,7 @@ dvwa-web:
         Target: 5432
         Type: Port
         value: 5432
-      hostport1:
+      main:
         Default: '8088'
         Description: 'Container Port: 80'
         Display: always
@@ -23419,7 +23291,7 @@ eco:
         Type: Path
         value: /mnt/user/appdata/steamcmd
     Port:
-      tcp-webport:
+      main:
         Default: '3001'
         Description: TCP Web Port
         Display: always
@@ -23658,6 +23530,17 @@ elasticsearch:
         Type: Path
         value: ''
     Port:
+      main:
+        Default: '9200'
+        Description: Host port exposed for REST HTTP interface.
+        Display: always
+        Mask: 'false'
+        Mode: tcp
+        Name: REST API Port
+        Required: 'true'
+        Target: 9200
+        Type: Port
+        value: 9200
       nodescommunicationport:
         Default: '9300'
         Description: Host port exposed for node communication.
@@ -23669,17 +23552,6 @@ elasticsearch:
         Target: 9300
         Type: Port
         value: 9300
-      restapiport:
-        Default: '9200'
-        Description: Host port exposed for REST HTTP interface.
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: REST API Port
-        Required: 'true'
-        Target: 9200
-        Type: Port
-        value: 9200
     Variable:
       discoverytype:
         Default: single-node
@@ -24272,6 +24144,17 @@ emule:
         Type: Path
         value: ''
     Port:
+      main:
+        Default: ''
+        Description: ''
+        Display: always
+        Mask: 'false'
+        Mode: tcp
+        Name: WebUI
+        Required: 'false'
+        Target: 4711
+        Type: Port
+        value: 4711
       port(tcp):
         Default: ''
         Description: Edonkey network
@@ -24294,17 +24177,6 @@ emule:
         Target: 23733
         Type: Port
         value: 23733
-      webui:
-        Default: ''
-        Description: ''
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: WebUI
-        Required: 'false'
-        Target: 4711
-        Type: Port
-        value: 4711
     Variable:
       emule_cap_download:
         Default: ''
@@ -24835,7 +24707,7 @@ ergonode:
         Type: Path
         value: /mnt/user/appdata/ergo2/data
     Port:
-      nodeswaggerpanel:
+      main:
         Default: ''
         Description: 'Container Port: 9053'
         Display: always
@@ -25141,7 +25013,7 @@ factorioservermanager:
         Target: 34197
         Type: Port
         value: 34197
-      fsmport:
+      main:
         Default: ''
         Description: (check if Port is already used by other Contrainer)
         Display: always
@@ -26284,6 +26156,19 @@ filebot:
         Type: Path
         value: ''
     Port:
+      main:
+        Default: '7813'
+        Description: Port used to access the application's GUI via the web interface.&lt;br&gt;&lt;b&gt;NOTE:&lt;/b&gt;
+          This applies only when &lt;i&gt;Network Type&lt;/i&gt; is set to &lt;i&gt;Bridge&lt;/i&gt;.  For
+          other network types, port 5800 should be used instead.
+        Display: advanced-hide
+        Mask: 'false'
+        Mode: tcp
+        Name: WEB Port for GUI
+        Required: 'true'
+        Target: 5800
+        Type: Port
+        value: 5800
       vncportforgui:
         Default: '7913'
         Description: Port used to access the application's GUI via the VNC protocol.  Optional
@@ -26298,19 +26183,6 @@ filebot:
         Target: 5900
         Type: Port
         value: 5900
-      webportforgui:
-        Default: '7813'
-        Description: Port used to access the application's GUI via the web interface.&lt;br&gt;&lt;b&gt;NOTE:&lt;/b&gt;
-          This applies only when &lt;i&gt;Network Type&lt;/i&gt; is set to &lt;i&gt;Bridge&lt;/i&gt;.  For
-          other network types, port 5800 should be used instead.
-        Display: advanced-hide
-        Mask: 'false'
-        Mode: tcp
-        Name: WEB Port for GUI
-        Required: 'true'
-        Target: 5800
-        Type: Port
-        value: 5800
     Variable:
       automatedmediacenteraction:
         Default: test
@@ -26974,7 +26846,7 @@ filegator:
         Type: Path
         value: /mnt/user/appdata/filegator/config_file/configuration.php
     Port:
-      webui(http):
+      main:
         Default: ''
         Description: ''
         Display: always
@@ -27154,7 +27026,7 @@ firefox-desktop-g3:
         Type: Path
         value: ''
     Port:
-      webui(novnc):
+      main:
         Default: ''
         Description: ''
         Display: always
@@ -27540,7 +27412,7 @@ fivem:
         Type: Path
         value: /mnt/cache/appdata/fivem
     Port:
-      tcp-webconsole:
+      main:
         Default: ''
         Description: 'WebConsole (by default, you can connect to the FiveM console
           by opening your browser and go to HOSTIP:9016 - eg: 192.168.1.1:9016 - or
@@ -28207,7 +28079,7 @@ flextv:
         Target: /config
         value: path to config
     Port:
-      tcp-port-0:
+      main:
         ContainerPort: '80'
         HostPort: '5666'
         Mode: tcp
@@ -28279,6 +28151,17 @@ fluttercoin-wallet:
         Target: 7474
         Type: Port
         value: 7474
+      main:
+        Default: ''
+        Description: TCP noVNC WebGUI Port
+        Display: always
+        Mask: 'false'
+        Mode: tcp
+        Name: WebGUI
+        Required: 'true'
+        Target: 8080
+        Type: Port
+        value: 8080
       peertopeerconnection:
         Default: ''
         Description: TCP Port for Peer to Peer connection
@@ -28290,17 +28173,6 @@ fluttercoin-wallet:
         Target: 7408
         Type: Port
         value: 7408
-      webgui:
-        Default: ''
-        Description: TCP noVNC WebGUI Port
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: WebGUI
-        Required: 'true'
-        Target: 8080
-        Type: Port
-        value: 8080
     Variable:
       customscreenheight:
         Default: ''
@@ -29285,7 +29157,7 @@ freecad-desktop-g3:
         Type: Path
         value: ''
     Port:
-      webui(novnc):
+      main:
         Default: ''
         Description: ''
         Display: always
@@ -29424,17 +29296,6 @@ freepbx:
         Target: 4445
         Type: Port
         value: 4445
-      http:
-        Default: '8150'
-        Description: HTTP
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: HTTP
-        Required: 'false'
-        Target: 80
-        Type: Port
-        value: 8150
       https:
         Default: '4150'
         Description: HTTPs
@@ -29446,6 +29307,17 @@ freepbx:
         Target: 443
         Type: Port
         value: 4150
+      main:
+        Default: '8150'
+        Description: HTTP
+        Display: always
+        Mask: 'false'
+        Mode: tcp
+        Name: HTTP
+        Required: 'false'
+        Target: 80
+        Type: Port
+        value: 8150
       pjsip:
         Default: '5060'
         Description: PJSIP
@@ -29901,7 +29773,7 @@ frigate-nvidia:
         Type: Path
         value: /mnt/user/Media/frigate
     Port:
-      httpport:
+      main:
         Default: ''
         Description: 'Container Port: 5000'
         Display: always
@@ -30775,7 +30647,7 @@ gimp-desktop-g3:
         Type: Path
         value: ''
     Port:
-      webui(novnc):
+      main:
         Default: ''
         Description: ''
         Display: always
@@ -30931,6 +30803,14 @@ gitlab:
         Target: /home/git/data
         value: /mnt/user/appdata/gitlab
     Port:
+      main:
+        ContainerPort: '80'
+        HostPort: '10080'
+        Mode: tcp
+        Name: tcp-port-1
+        Protocol: tcp
+        Target: 80
+        value: 10080
       tcp-port-0:
         ContainerPort: '22'
         HostPort: '10022'
@@ -30939,14 +30819,6 @@ gitlab:
         Protocol: tcp
         Target: 22
         value: 10022
-      tcp-port-1:
-        ContainerPort: '80'
-        HostPort: '10080'
-        Mode: tcp
-        Name: tcp-port-1
-        Protocol: tcp
-        Target: 80
-        value: 10080
       tcp-port-2:
         ContainerPort: '443'
         HostPort: '10443'
@@ -31063,6 +30935,16 @@ gitlab-ce:
         Type: Path
         value: /mnt/cache/appdata/gitlab-ce/log
     Port:
+      main:
+        Default: '9080'
+        Description: This is GitLab's Web UI port you can access via a web browser.
+        Display: always-hide
+        Mode: tcp
+        Name: Web Interface Port (HTTP)
+        Required: 'true'
+        Target: 9080
+        Type: Port
+        value: 9080
       sshport:
         Default: '9022'
         Description: This is GitLab's SSH port.
@@ -31073,16 +30955,6 @@ gitlab-ce:
         Target: 22
         Type: Port
         value: 9022
-      webinterfaceport(http):
-        Default: '9080'
-        Description: This is GitLab's Web UI port you can access via a web browser.
-        Display: always-hide
-        Mode: tcp
-        Name: Web Interface Port (HTTP)
-        Required: 'true'
-        Target: 9080
-        Type: Port
-        value: 9080
       webinterfaceport(https):
         Default: '9443'
         Description: This is GitLab's Web UI SSL port you can access via a web browser.
@@ -31180,7 +31052,7 @@ glauth:
         Target: 636
         Type: Port
         value: 636
-      managementport:
+      main:
         Default: '5555'
         Description: Container Management Port
         Display: always
@@ -31540,6 +31412,14 @@ gogs:
         Target: /data
         value: path to gogs data
     Port:
+      main:
+        ContainerPort: '3000'
+        HostPort: '8930'
+        Mode: tcp
+        Name: tcp-port-1
+        Protocol: tcp
+        Target: 3000
+        value: 8930
       tcp-port-0:
         ContainerPort: '22'
         HostPort: '8922'
@@ -31548,14 +31428,6 @@ gogs:
         Protocol: tcp
         Target: 22
         value: 8922
-      tcp-port-1:
-        ContainerPort: '3000'
-        HostPort: '8930'
-        Mode: tcp
-        Name: tcp-port-1
-        Protocol: tcp
-        Target: 3000
-        value: 8930
     Variable: {}
   GitHub: https://github.com/quimnut/unraid-docker-templates/
   Icon: https://raw.githubusercontent.com/quimnut/unraid-docker-templates/master/quimnut/gogs.png
@@ -32238,17 +32110,6 @@ graph-node:
     Label: {}
     Path: {}
     Port:
-      graphqlinterface:
-        Default: ''
-        Description: ' GraphQL interface'
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: ' GraphQL interface'
-        Required: 'true'
-        Target: 8000
-        Type: Port
-        value: 8000
       graphqlwebsocket:
         Default: ''
         Description: GraphQL WebSocket server
@@ -32271,6 +32132,17 @@ graph-node:
         Target: 8020
         Type: Port
         value: 8020
+      main:
+        Default: ''
+        Description: ' GraphQL interface'
+        Display: always
+        Mask: 'false'
+        Mode: tcp
+        Name: ' GraphQL interface'
+        Required: 'true'
+        Target: 8000
+        Type: Port
+        value: 8000
     Variable:
       ethereumnodeurl:
         Default: mainnet:http://localhost:8545
@@ -32419,7 +32291,7 @@ graylog:
         Target: 12201
         Type: Port
         value: 12201
-      graylogwebinterfaceandrestapi:
+      main:
         Default: '9000'
         Description: 'Container Port: 9000'
         Display: always
@@ -32557,7 +32429,7 @@ gridcoinwalletgui:
         Type: Path
         value: ''
     Port:
-      novncport:
+      main:
         Default: ''
         Description: 'default: 6901'
         Display: always
@@ -33347,6 +33219,17 @@ happypandax:
         Target: 7007
         Type: Port
         value: 7007
+      main:
+        Default: '7008'
+        Description: WebUI
+        Display: always
+        Mask: 'false'
+        Mode: tcp
+        Name: WebUI Port
+        Required: 'true'
+        Target: 7008
+        Type: Port
+        value: 7008
       torrentport:
         Default: '7006'
         Description: HPX_TORRENTPORT
@@ -33358,17 +33241,6 @@ happypandax:
         Target: 7006
         Type: Port
         value: 7006
-      webuiport:
-        Default: '7008'
-        Description: WebUI
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: WebUI Port
-        Required: 'true'
-        Target: 7008
-        Type: Port
-        value: 7008
     Variable:
       autostart_on_boot:
         Default: always
@@ -34043,7 +33915,7 @@ hoobs:
         Target: 51826
         Type: Port
         value: 51826
-      serverport:
+      main:
         Default: '8082'
         Description: ''
         Display: always
@@ -35012,7 +34884,7 @@ inkscape-desktop-g3:
         Type: Path
         value: ''
     Port:
-      webui(novnc):
+      main:
         Default: ''
         Description: ''
         Display: always
@@ -36187,17 +36059,6 @@ invoiceninja:
         Type: Path
         value: ''
     Port:
-      httpport:
-        Default: '8000'
-        Description: 'Container Port: 80'
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: HTTP Port
-        Required: 'false'
-        Target: 80
-        Type: Port
-        value: 80
       httpsport:
         Default: '8443'
         Description: 'Container Port: 443'
@@ -36209,6 +36070,17 @@ invoiceninja:
         Target: 443
         Type: Port
         value: 443
+      main:
+        Default: '8000'
+        Description: 'Container Port: 80'
+        Display: always
+        Mask: 'false'
+        Mode: tcp
+        Name: HTTP Port
+        Required: 'false'
+        Target: 80
+        Type: Port
+        value: 80
     Variable:
       app_env:
         Default: production
@@ -36470,6 +36342,17 @@ iobroker:
         Target: 2001
         Type: Port
         value: 2001
+      main:
+        Default: ''
+        Description: 'Container Port: 8081'
+        Display: advanced-hide
+        Mask: 'false'
+        Mode: tcp
+        Name: WebUI Port
+        Required: 'false'
+        Target: 8081
+        Type: Port
+        value: 8081
       mqttport:
         Default: ''
         Description: 'Container Port: 1883'
@@ -36514,17 +36397,6 @@ iobroker:
         Target: 8284
         Type: Port
         value: 8284
-      webuiport:
-        Default: ''
-        Description: 'Container Port: 8081'
-        Display: advanced-hide
-        Mask: 'false'
-        Mode: tcp
-        Name: WebUI Port
-        Required: 'false'
-        Target: 8081
-        Type: Port
-        value: 8081
     Variable:
       gid:
         Default: ''
@@ -36596,7 +36468,7 @@ ioquake3:
         Type: Path
         value: /mnt/cache/appdata/ioquake3
     Port:
-      tcp-webconsole:
+      main:
         Default: ''
         Description: 'WebConsole (by default, you can connect to the ioquake3 console
           by opening your browser and go to HOSTIP:9021 - eg: 192.168.1.1:9029 - or
@@ -38844,17 +38716,6 @@ jitsi-web:
         Type: Path
         value: /mnt/user/appdata/jitsi/transcripts/
     Port:
-      http:
-        Default: '80'
-        Description: HTTP
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: HTTP
-        Required: 'false'
-        Target: 80
-        Type: Port
-        value: 8000
       https:
         Default: '443'
         Description: HTTPS
@@ -38866,6 +38727,17 @@ jitsi-web:
         Target: 443
         Type: Port
         value: 4443
+      main:
+        Default: '80'
+        Description: HTTP
+        Display: always
+        Mask: 'false'
+        Mode: tcp
+        Name: HTTP
+        Required: 'false'
+        Target: 80
+        Type: Port
+        value: 8000
     Variable:
       disable_https:
         Default: '1'
@@ -39398,6 +39270,17 @@ joplinapp:
         Type: Path
         value: /mnt/user/appdata/joplinapp
     Port:
+      main:
+        Default: ''
+        Description: 'Container Port: 5800'
+        Display: always
+        Mask: 'false'
+        Mode: tcp
+        Name: Web Port
+        Required: 'false'
+        Target: 5800
+        Type: Port
+        value: 5800
       webclipperport:
         Default: '41184'
         Description: Likely can't be used unless you have an advanced use case.
@@ -39409,17 +39292,6 @@ joplinapp:
         Target: 41184
         Type: Port
         value: 41184
-      webport:
-        Default: ''
-        Description: 'Container Port: 5800'
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: Web Port
-        Required: 'false'
-        Target: 5800
-        Type: Port
-        value: 5800
     Variable:
       display_height:
         Default: '768'
@@ -39825,7 +39697,7 @@ kdeindocker:
         Type: Path
         value: /mnt/user/appdata/KID
     Port:
-      novncport:
+      main:
         Default: '4686'
         Description: 'noVNC Port: 8080'
         Display: always
@@ -40095,6 +39967,17 @@ kdenlive-vnc:
         Type: Path
         value: /mnt/user/appdata/kdenlive/
     Port:
+      main:
+        Default: ''
+        Description: 'Container Port: 5800'
+        Display: always
+        Mask: 'false'
+        Mode: tcp
+        Name: WebUI
+        Required: 'true'
+        Target: 5800
+        Type: Port
+        value: 5800
       vncport:
         Default: ''
         Description: 'Container Port: 5900'
@@ -40106,17 +39989,6 @@ kdenlive-vnc:
         Target: 5900
         Type: Port
         value: 5900
-      webui:
-        Default: ''
-        Description: 'Container Port: 5800'
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: WebUI
-        Required: 'true'
-        Target: 5800
-        Type: Port
-        value: 5800
     Variable: {}
   Icon: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/kdenlive.png
   Keywords:
@@ -40205,7 +40077,7 @@ kerio-connect:
         Target: /backup
         value: /mnt/user/Backup/KerioConnect
     Port:
-      tcp-port-0:
+      main:
         ContainerPort: '4040'
         HostPort: '4040'
         Mode: tcp
@@ -42251,7 +42123,7 @@ ldap-auth:
     Label: {}
     Path: {}
     Port:
-      port9000:
+      main:
         Default: '9000'
         Description: the port for ldap login page
         Display: always
@@ -42953,7 +42825,7 @@ librenms:
         Type: Path
         value: /mnt/user/appdata/librenms/
     Port:
-      httpport:
+      main:
         Default: '8000'
         Description: HTTP Port
         Display: always
@@ -44119,7 +43991,7 @@ logitechmediaserver:
         Target: 3483
         Type: Port
         value: 3483
-      webuiport:
+      main:
         Default: '9000'
         Description: 'Container Port: 9000'
         Display: always
@@ -44187,6 +44059,14 @@ logitechmediaserver-latest:
         Target: /var/run/dbus
         value: /var/run/dbus
     Port:
+      main:
+        ContainerPort: '9000'
+        HostPort: '9000'
+        Mode: tcp
+        Name: tcp-port-3
+        Protocol: tcp
+        Target: 9000
+        value: 9000
       tcp-port-0:
         ContainerPort: '3483'
         HostPort: '3483'
@@ -44195,14 +44075,6 @@ logitechmediaserver-latest:
         Protocol: tcp
         Target: 3483
         value: 3483
-      tcp-port-3:
-        ContainerPort: '9000'
-        HostPort: '9000'
-        Mode: tcp
-        Name: tcp-port-3
-        Protocol: tcp
-        Target: 9000
-        value: 9000
       tcp-port-4:
         ContainerPort: '9090'
         HostPort: '9090'
@@ -44527,7 +44399,7 @@ machinaris-chia-harvester:
         Type: Path
         value: ''
     Port:
-      web_port:
+      main:
         Default: '8926'
         Description: Machinaris local web app port.
         Display: advanced-hide
@@ -45443,6 +45315,17 @@ maildev:
     Label: {}
     Path: {}
     Port:
+      main:
+        Default: ''
+        Description: ''
+        Display: always
+        Mask: 'false'
+        Mode: tcp
+        Name: Port (WebUI)
+        Required: 'false'
+        Target: 80
+        Type: Port
+        value: 1080
       port(smtp):
         Default: ''
         Description: ''
@@ -45454,17 +45337,6 @@ maildev:
         Target: 25
         Type: Port
         value: 1025
-      port(webui):
-        Default: ''
-        Description: ''
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: Port (WebUI)
-        Required: 'false'
-        Target: 80
-        Type: Port
-        value: 1080
     Variable: {}
   Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/maildev_200x200.png
   Keywords:
@@ -45701,6 +45573,17 @@ malfurious-mailserver:
         Target: 993
         Type: Port
         value: 993
+      main:
+        Default: '11334'
+        Description: RSPAMD WebGUI Port
+        Display: always
+        Mask: 'false'
+        Mode: tcp
+        Name: RSPAMD WebGUI Port
+        Required: 'true'
+        Target: 11334
+        Type: Port
+        value: 11334
       managesieveport:
         Default: '4190'
         Description: ManageSieve Port
@@ -45712,17 +45595,6 @@ malfurious-mailserver:
         Target: 4190
         Type: Port
         value: 4190
-      rspamdwebguiport:
-        Default: '11334'
-        Description: RSPAMD WebGUI Port
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: RSPAMD WebGUI Port
-        Required: 'true'
-        Target: 11334
-        Type: Port
-        value: 11334
       smtpport:
         Default: '25'
         Description: SMTP Port
@@ -46673,6 +46545,19 @@ mediainfo:
         Type: Path
         value: ''
     Port:
+      main:
+        Default: '7817'
+        Description: Port used to access the application's GUI via the web interface.&lt;br&gt;&lt;b&gt;NOTE:&lt;/b&gt;
+          This applies only when &lt;i&gt;Network Type&lt;/i&gt; is set to &lt;i&gt;Bridge&lt;/i&gt;.  For
+          other network types, port 5800 should be used instead.
+        Display: advanced-hide
+        Mask: 'false'
+        Mode: tcp
+        Name: WEB Port for GUI
+        Required: 'true'
+        Target: 5800
+        Type: Port
+        value: 5800
       vncportforgui:
         Default: '7917'
         Description: Port used to access the application's GUI via the VNC protocol.  Optional
@@ -46687,19 +46572,6 @@ mediainfo:
         Target: 5900
         Type: Port
         value: 5900
-      webportforgui:
-        Default: '7817'
-        Description: Port used to access the application's GUI via the web interface.&lt;br&gt;&lt;b&gt;NOTE:&lt;/b&gt;
-          This applies only when &lt;i&gt;Network Type&lt;/i&gt; is set to &lt;i&gt;Bridge&lt;/i&gt;.  For
-          other network types, port 5800 should be used instead.
-        Display: advanced-hide
-        Mask: 'false'
-        Mode: tcp
-        Name: WEB Port for GUI
-        Required: 'true'
-        Target: 5800
-        Type: Port
-        value: 5800
     Variable:
       displayheight:
         Default: '768'
@@ -48023,6 +47895,19 @@ mkvcleaver:
         Type: Path
         value: ''
     Port:
+      main:
+        Default: '7812'
+        Description: Port used to access the application's GUI via the web interface.&lt;br&gt;&lt;b&gt;NOTE:&lt;/b&gt;
+          This applies only when &lt;i&gt;Network Type&lt;/i&gt; is set to &lt;i&gt;Bridge&lt;/i&gt;.  For
+          other network types, port 5800 should be used instead.
+        Display: advanced-hide
+        Mask: 'false'
+        Mode: tcp
+        Name: WEB Port for GUI
+        Required: 'true'
+        Target: 5800
+        Type: Port
+        value: 5800
       vncportforgui:
         Default: '7912'
         Description: Port used to access the application's GUI via the VNC protocol.  Optional
@@ -48037,19 +47922,6 @@ mkvcleaver:
         Target: 5900
         Type: Port
         value: 5900
-      webportforgui:
-        Default: '7812'
-        Description: Port used to access the application's GUI via the web interface.&lt;br&gt;&lt;b&gt;NOTE:&lt;/b&gt;
-          This applies only when &lt;i&gt;Network Type&lt;/i&gt; is set to &lt;i&gt;Bridge&lt;/i&gt;.  For
-          other network types, port 5800 should be used instead.
-        Display: advanced-hide
-        Mask: 'false'
-        Mode: tcp
-        Name: WEB Port for GUI
-        Required: 'true'
-        Target: 5800
-        Type: Port
-        value: 5800
     Variable:
       displayheight:
         Default: '768'
@@ -48201,6 +48073,19 @@ mkvtoolnix:
         Type: Path
         value: ''
     Port:
+      main:
+        Default: '7805'
+        Description: Port used to access the application's GUI via the web interface.&lt;br&gt;&lt;b&gt;NOTE:&lt;/b&gt;
+          This applies only when &lt;i&gt;Network Type&lt;/i&gt; is set to &lt;i&gt;Bridge&lt;/i&gt;.  For
+          other network types, port 5800 should be used instead.
+        Display: advanced-hide
+        Mask: 'false'
+        Mode: tcp
+        Name: WEB Port for GUI
+        Required: 'true'
+        Target: 5800
+        Type: Port
+        value: 5800
       vncportforgui:
         Default: '7905'
         Description: Port used to access the application's GUI via the VNC protocol.  Optional
@@ -48215,19 +48100,6 @@ mkvtoolnix:
         Target: 5900
         Type: Port
         value: 5900
-      webportforgui:
-        Default: '7805'
-        Description: Port used to access the application's GUI via the web interface.&lt;br&gt;&lt;b&gt;NOTE:&lt;/b&gt;
-          This applies only when &lt;i&gt;Network Type&lt;/i&gt; is set to &lt;i&gt;Bridge&lt;/i&gt;.  For
-          other network types, port 5800 should be used instead.
-        Display: advanced-hide
-        Mask: 'false'
-        Mode: tcp
-        Name: WEB Port for GUI
-        Required: 'true'
-        Target: 5800
-        Type: Port
-        value: 5800
     Variable:
       displayheight:
         Default: '768'
@@ -49657,7 +49529,7 @@ multitheftauto:
         Type: Path
         value: /mnt/cache/appdata/multitheftauto
     Port:
-      tcp-httpport:
+      main:
         Default: ''
         Description: 'Container Port: 22005'
         Display: always
@@ -49880,7 +49752,7 @@ munin-server:
         Target: /sys
         value: /sys
     Port:
-      tcp-port-0:
+      main:
         ContainerPort: '80'
         HostPort: '8888'
         Mode: tcp
@@ -50400,7 +50272,7 @@ necesse:
         Type: Path
         value: /mnt/user/appdata/steamcmd
     Port:
-      tcp-webconsole:
+      main:
         Default: ''
         Description: 'WebConsole (by default, you can connect to the Necesse console
           by opening your browser and go to HOSTIP:9023 - eg: 192.168.1.1:9023 - or
@@ -50513,6 +50385,17 @@ neko:
     Label: {}
     Path: {}
     Port:
+      main:
+        Default: '6530'
+        Description: 'Container Port: 8080'
+        Display: always
+        Mask: 'false'
+        Mode: tcp
+        Name: Web UI
+        Required: 'true'
+        Target: 8080
+        Type: Port
+        value: 6530
       port52000-52100:
         Default: 52000-52100
         Description: Needed for Webrtc Communication
@@ -50524,17 +50407,6 @@ neko:
         Target: 52000
         Type: Port
         value: 52000
-      webui:
-        Default: '6530'
-        Description: 'Container Port: 8080'
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: Web UI
-        Required: 'true'
-        Target: 8080
-        Type: Port
-        value: 6530
     Variable:
       neko_epr:
         Default: 52000-52100
@@ -50880,6 +50752,17 @@ netbootxyz:
         Type: Path
         value: ''
     Port:
+      main:
+        Default: '3000'
+        Description: Web configuration interface.
+        Display: always
+        Mask: 'false'
+        Mode: tcp
+        Name: WebUI
+        Required: 'true'
+        Target: 3000
+        Type: Port
+        value: 3000
       port69:
         Default: '69'
         Description: TFTP Port.
@@ -50902,17 +50785,6 @@ netbootxyz:
         Target: 80
         Type: Port
         value: 80
-      webui:
-        Default: '3000'
-        Description: Web configuration interface.
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: WebUI
-        Required: 'true'
-        Target: 3000
-        Type: Port
-        value: 3000
     Variable:
       menu_version:
         Default: 1.9.9
@@ -51354,17 +51226,6 @@ nextcloudpi:
         Type: Path
         value: /mnt/user/appdata/nextcloudpi
     Port:
-      httpswebport:
-        Default: '443'
-        Description: Secure web port
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: HTTPS web port
-        Required: 'false'
-        Target: 443
-        Type: Port
-        value: 443
       httpwebport:
         Default: '80'
         Description: Non secure web port
@@ -51376,6 +51237,17 @@ nextcloudpi:
         Target: 80
         Type: Port
         value: 80
+      main:
+        Default: '443'
+        Description: Secure web port
+        Display: always
+        Mask: 'false'
+        Mode: tcp
+        Name: HTTPS web port
+        Required: 'false'
+        Target: 443
+        Type: Port
+        value: 443
       panelwebport:
         Default: '4443'
         Description: Port to serve the Nextcloudpi management panel on.
@@ -51483,6 +51355,17 @@ nginx:
         Type: Path
         value: ''
     Port:
+      main:
+        Default: '80'
+        Description: http
+        Display: always
+        Mask: 'false'
+        Mode: tcp
+        Name: WebUI
+        Required: 'true'
+        Target: 80
+        Type: Port
+        value: 80
       port443:
         Default: '443'
         Description: https
@@ -51494,17 +51377,6 @@ nginx:
         Target: 443
         Type: Port
         value: 443
-      webui:
-        Default: '80'
-        Description: http
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: WebUI
-        Required: 'true'
-        Target: 80
-        Type: Port
-        value: 80
     Variable:
       pgid:
         Default: '100'
@@ -51574,17 +51446,6 @@ nginxpagespeed:
         Type: Path
         value: /mnt/user/appdata/nginx-pagespeed
     Port:
-      httpport:
-        Default: '81'
-        Description: Port for the HTTP Protocol
-        Display: advanced
-        Mask: 'false'
-        Mode: tcp
-        Name: HTTP Port
-        Required: 'true'
-        Target: 80
-        Type: Port
-        value: 81
       httpsport:
         Default: '444'
         Description: Port for the HTTPS Protocol (Not enabled by default)
@@ -51596,6 +51457,17 @@ nginxpagespeed:
         Target: 443
         Type: Port
         value: 444
+      main:
+        Default: '81'
+        Description: Port for the HTTP Protocol
+        Display: advanced
+        Mask: 'false'
+        Mode: tcp
+        Name: HTTP Port
+        Required: 'true'
+        Target: 80
+        Type: Port
+        value: 81
     Variable: {}
   Icon: https://raw.githubusercontent.com/SiwatINC/unraid-ca-repository/master/icons/pagespeed_32dp.png
   Keywords:
@@ -52895,6 +52767,17 @@ nvim-server:
         Type: Path
         value: /mnt/user/appdata/nvim-server-workspace
     Port:
+      main:
+        Default: '6080'
+        Description: Port for accessing the Web UI
+        Display: always
+        Mask: 'false'
+        Mode: tcp
+        Name: WEB UI
+        Required: 'false'
+        Target: 3000
+        Type: Port
+        value: 6080
       markdownpreview:
         Default: '8090'
         Description: Port for the Instant Markdown Preview Server
@@ -52906,17 +52789,6 @@ nvim-server:
         Target: 8090
         Type: Port
         value: 8090
-      webui:
-        Default: '6080'
-        Description: Port for accessing the Web UI
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: WEB UI
-        Required: 'false'
-        Target: 3000
-        Type: Port
-        value: 6080
     Variable:
       gid:
         Default: $GID
@@ -53324,7 +53196,7 @@ observium:
         Target: /opt/observium/rrd
         value: /mnt/user/appdata/observium/rrd
     Port:
-      tcp-port-0:
+      main:
         ContainerPort: '8668'
         HostPort: '8668'
         Mode: tcp
@@ -53904,6 +53776,17 @@ octoprint-spants:
         Type: Path
         value: /mnt/user/appdata/octoprint
     Port:
+      main:
+        Default: '5000'
+        Description: ''
+        Display: always
+        Mask: 'false'
+        Mode: tcp
+        Name: WebUI
+        Required: 'true'
+        Target: 5000
+        Type: Port
+        value: 5002
       snapshot:
         Default: ''
         Description: ''
@@ -53926,17 +53809,6 @@ octoprint-spants:
         Target: 80
         Type: Port
         value: 5003
-      webui:
-        Default: '5000'
-        Description: ''
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: WebUI
-        Required: 'true'
-        Target: 5000
-        Type: Port
-        value: 5002
     Variable:
       camera_dev:
         Default: ''
@@ -54086,17 +53958,6 @@ office-document-server-ee:
         Type: Path
         value: /mnt/user/appdata/onlyoffice/DocumentServer/redis
     Port:
-      httpport:
-        Default: '8082'
-        Description: 'Container Port: 80'
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: HTTP Port
-        Required: 'false'
-        Target: 80
-        Type: Port
-        value: 8082
       httpsport:
         Default: '4432'
         Description: 'Container Port: 443'
@@ -54108,6 +53969,17 @@ office-document-server-ee:
         Target: 443
         Type: Port
         value: 4432
+      main:
+        Default: '8082'
+        Description: 'Container Port: 80'
+        Display: always
+        Mask: 'false'
+        Mode: tcp
+        Name: HTTP Port
+        Required: 'false'
+        Target: 80
+        Type: Port
+        value: 8082
     Variable:
       secretname:
         Default: ''
@@ -54311,17 +54183,6 @@ onlyoffice-community-server:
         Type: Path
         value: /mnt/user/appdata/onlyoffice/CommunityServer/logs
     Port:
-      httpport:
-        Default: '8080'
-        Description: 'Container Port: 80'
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: HTTP Port
-        Required: 'true'
-        Target: 80
-        Type: Port
-        value: 8080
       httpsport:
         Default: '4431'
         Description: 'Container Port: 443'
@@ -54333,6 +54194,17 @@ onlyoffice-community-server:
         Target: 443
         Type: Port
         value: 4431
+      main:
+        Default: '8080'
+        Description: 'Container Port: 80'
+        Display: always
+        Mask: 'false'
+        Mode: tcp
+        Name: HTTP Port
+        Required: 'true'
+        Target: 80
+        Type: Port
+        value: 8080
       portforxmpp-compatibleinstantmessagingclient(foronlyofficetalkcorrectwork):
         Default: '5222'
         Description: 'Container Path: 5222'
@@ -55274,7 +55146,7 @@ opengl-desktop-g3:
         Type: Path
         value: ''
     Port:
-      webui(novnc):
+      main:
         Default: ''
         Description: ''
         Display: always
@@ -55951,18 +55823,7 @@ openttd:
         Type: Path
         value: /mnt/cache/appdata/openttd
     Port:
-      tcp-gameport:
-        Default: ''
-        Description: 'Container Port: 3979'
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: TCP - Game Port
-        Required: 'true'
-        Target: 3979
-        Type: Port
-        value: 3979
-      tcp-webconsole:
+      main:
         Default: ''
         Description: 'WebConsole (by default, you can connect to the OpenTTD console
           by opening your browser and go to HOSTIP:9015 - eg: 192.168.1.1:9015 - or
@@ -55975,6 +55836,17 @@ openttd:
         Target: 8080
         Type: Port
         value: 9015
+      tcp-gameport:
+        Default: ''
+        Description: 'Container Port: 3979'
+        Display: always
+        Mask: 'false'
+        Mode: tcp
+        Name: TCP - Game Port
+        Required: 'true'
+        Target: 3979
+        Type: Port
+        value: 3979
       udp-gameport:
         Default: ''
         Description: 'Container Port: 3979'
@@ -56744,6 +56616,17 @@ p3r-brave-browser:
         Type: Path
         value: /mnt/user/appdata/P3R-Brave-Browser/
     Port:
+      main:
+        Default: '5800'
+        Description: 'Container Port: 5800'
+        Display: always
+        Mask: 'false'
+        Mode: tcp
+        Name: Web Port
+        Required: 'true'
+        Target: 5800
+        Type: Port
+        value: 5800
       vncport:
         Default: '5900'
         Description: 'Container Port: 5900'
@@ -56755,17 +56638,6 @@ p3r-brave-browser:
         Target: 5900
         Type: Port
         value: 5900
-      webport:
-        Default: '5800'
-        Description: 'Container Port: 5800'
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: Web Port
-        Required: 'true'
-        Target: 5800
-        Type: Port
-        value: 5800
     Variable:
       browserdisplayheight:
         Default: '1080'
@@ -56846,6 +56718,17 @@ p3r-firefox-browser:
         Type: Path
         value: /mnt/user/appdata/P3R-Firefox-Browser/
     Port:
+      main:
+        Default: '5800'
+        Description: 'Container Port: 5800'
+        Display: always
+        Mask: 'false'
+        Mode: tcp
+        Name: Web Port
+        Required: 'true'
+        Target: 5800
+        Type: Port
+        value: 5800
       vncport:
         Default: '5900'
         Description: 'Container Port: 5900'
@@ -56857,17 +56740,6 @@ p3r-firefox-browser:
         Target: 5900
         Type: Port
         value: 5900
-      webport:
-        Default: '5800'
-        Description: 'Container Port: 5800'
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: Web Port
-        Required: 'true'
-        Target: 5800
-        Type: Port
-        value: 5800
     Variable:
       browserdisplayheight:
         Default: '1080'
@@ -56938,6 +56810,17 @@ p3r-keepassxc:
         Type: Path
         value: /mnt/user/appdata/P3R-KeePassXC/
     Port:
+      main:
+        Default: '5800'
+        Description: 'Container Port: 5800'
+        Display: always
+        Mask: 'false'
+        Mode: tcp
+        Name: Web Port
+        Required: 'true'
+        Target: 5800
+        Type: Port
+        value: 5800
       vncport:
         Default: '5900'
         Description: 'Container Port: 5900'
@@ -56949,17 +56832,6 @@ p3r-keepassxc:
         Target: 5900
         Type: Port
         value: 5900
-      webport:
-        Default: '5800'
-        Description: 'Container Port: 5800'
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: Web Port
-        Required: 'true'
-        Target: 5800
-        Type: Port
-        value: 5800
     Variable:
       vncpassword:
         Default: ''
@@ -57008,17 +56880,6 @@ p3r-lemp-stack:
         Type: Path
         value: /mnt/user/appdata/P3R-LEMP-Stack/
     Port:
-      http:
-        Default: '80'
-        Description: 'Container Port: 80'
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: HTTP
-        Required: 'true'
-        Target: 80
-        Type: Port
-        value: 80
       https:
         Default: '443'
         Description: 'Container Port: 443'
@@ -57030,6 +56891,17 @@ p3r-lemp-stack:
         Target: 443
         Type: Port
         value: 443
+      main:
+        Default: '80'
+        Description: 'Container Port: 80'
+        Display: always
+        Mask: 'false'
+        Mode: tcp
+        Name: HTTP
+        Required: 'true'
+        Target: 80
+        Type: Port
+        value: 80
     Variable: {}
   Icon: https://raw.githubusercontent.com/P3R-CO/unraid/master/LEMP-P3R-256px.png
   Keywords:
@@ -57089,6 +56961,17 @@ p3r-openrgb:
         Type: Path
         value: /sys/bus/i2c/devices/
     Port:
+      main:
+        Default: '5800'
+        Description: 'Container Port: 5800'
+        Display: always
+        Mask: 'false'
+        Mode: tcp
+        Name: Web Port
+        Required: 'true'
+        Target: 5800
+        Type: Port
+        value: 5800
       sdkserverport:
         Default: '6742'
         Description: 'Container Port: 6742'
@@ -57111,17 +56994,6 @@ p3r-openrgb:
         Target: 5900
         Type: Port
         value: 5900
-      webport:
-        Default: '5800'
-        Description: 'Container Port: 5800'
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: Web Port
-        Required: 'true'
-        Target: 5800
-        Type: Port
-        value: 5800
     Variable:
       defaultprofile:
         Default: default.orp
@@ -59729,7 +59601,7 @@ pixelserv-tls:
         Target: 80
         Type: Port
         value: 80
-      https:
+      main:
         Default: '443'
         Description: Webserver - Https
         Display: always
@@ -61388,6 +61260,17 @@ portainer-ce:
         Type: Path
         value: /var/run/docker.sock
     Port:
+      main:
+        Default: ''
+        Description: ''
+        Display: always
+        Mask: 'false'
+        Mode: tcp
+        Name: WebUI
+        Required: 'false'
+        Target: 9000
+        Type: Port
+        value: 9996
       sshtunnel:
         Default: ''
         Description: Used to connect to Edge Agent via SSH.
@@ -61399,17 +61282,6 @@ portainer-ce:
         Target: 8000
         Type: Port
         value: 8000
-      webui:
-        Default: ''
-        Description: ''
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: WebUI
-        Required: 'false'
-        Target: 9000
-        Type: Port
-        value: 9996
     Variable: {}
   Icon: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/portainer-ce_200x200.png
   Keywords:
@@ -61755,6 +61627,17 @@ poste:
         Target: 143
         Type: Port
         value: 143
+      main:
+        Default: '8280'
+        Description: web interface port
+        Display: always
+        Mask: 'false'
+        Mode: tcp
+        Name: Webui
+        Required: 'true'
+        Target: 80
+        Type: Port
+        value: 8280
       pop3port:
         Default: '110'
         Description: POP3
@@ -61777,17 +61660,6 @@ poste:
         Target: 25
         Type: Port
         value: 25
-      webui:
-        Default: '8280'
-        Description: web interface port
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: Webui
-        Required: 'true'
-        Target: 80
-        Type: Port
-        value: 8280
     Variable: {}
   Icon: https://icons.iconarchive.com/icons/paomedia/small-n-flat/96/envelope-icon.png
   Keywords:
@@ -62718,7 +62590,7 @@ pritunl:
         Target: 80
         Type: Port
         value: 80
-      https:
+      main:
         Default: '9700'
         Description: 'Container Port: 443'
         Display: always
@@ -63552,7 +63424,7 @@ pure-ftpd:
         Type: Path
         value: /mnt/user/pure-ftpd/
     Port:
-      ftpport:
+      main:
         Default: '2100'
         Description: FTP port
         Display: always
@@ -63733,6 +63605,19 @@ putty:
         Type: Path
         value: ''
     Port:
+      main:
+        Default: '7816'
+        Description: Port used to access the application's GUI via the web interface.&lt;br&gt;&lt;b&gt;NOTE:&lt;/b&gt;
+          This applies only when &lt;i&gt;Network Type&lt;/i&gt; is set to &lt;i&gt;Bridge&lt;/i&gt;.  For
+          other network types, port 5800 should be used instead.
+        Display: advanced-hide
+        Mask: 'false'
+        Mode: tcp
+        Name: WEB Port for GUI
+        Required: 'true'
+        Target: 5800
+        Type: Port
+        value: 5800
       vncportforgui:
         Default: '7916'
         Description: Port used to access the application's GUI via the VNC protocol.  Optional
@@ -63747,19 +63632,6 @@ putty:
         Target: 5900
         Type: Port
         value: 5900
-      webportforgui:
-        Default: '7816'
-        Description: Port used to access the application's GUI via the web interface.&lt;br&gt;&lt;b&gt;NOTE:&lt;/b&gt;
-          This applies only when &lt;i&gt;Network Type&lt;/i&gt; is set to &lt;i&gt;Bridge&lt;/i&gt;.  For
-          other network types, port 5800 should be used instead.
-        Display: advanced-hide
-        Mask: 'false'
-        Mode: tcp
-        Name: WEB Port for GUI
-        Required: 'true'
-        Target: 5800
-        Type: Port
-        value: 5800
     Variable:
       disablerestartsessiondialogwindow:
         Default: '0'
@@ -64273,6 +64145,17 @@ pyload-ng:
         Type: Path
         value: ''
     Port:
+      main:
+        Default: '8000'
+        Description: Allows HTTP access to the application
+        Display: always
+        Mask: 'false'
+        Mode: tcp
+        Name: WebUI
+        Required: 'true'
+        Target: 8000
+        Type: Port
+        value: 8000
       port9666:
         Default: '9666'
         Description: Click'n'Load port.
@@ -64284,17 +64167,6 @@ pyload-ng:
         Target: 9666
         Type: Port
         value: 9666
-      webui:
-        Default: '8000'
-        Description: Allows HTTP access to the application
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: WebUI
-        Required: 'true'
-        Target: 8000
-        Type: Port
-        value: 8000
     Variable:
       pgid:
         Default: '100'
@@ -64875,6 +64747,19 @@ qdirstat:
         Type: Path
         value: ''
     Port:
+      main:
+        Default: '7815'
+        Description: Port used to access the application's GUI via the web interface.&lt;br&gt;&lt;b&gt;NOTE:&lt;/b&gt;
+          This applies only when &lt;i&gt;Network Type&lt;/i&gt; is set to &lt;i&gt;Bridge&lt;/i&gt;.  For
+          other network types, port 5800 should be used instead.
+        Display: advanced-hide
+        Mask: 'false'
+        Mode: tcp
+        Name: WEB Port for GUI
+        Required: 'true'
+        Target: 5800
+        Type: Port
+        value: 5800
       vncportforgui:
         Default: '7915'
         Description: Port used to access the application's GUI via the VNC protocol.  Optional
@@ -64889,19 +64774,6 @@ qdirstat:
         Target: 5900
         Type: Port
         value: 5900
-      webportforgui:
-        Default: '7815'
-        Description: Port used to access the application's GUI via the web interface.&lt;br&gt;&lt;b&gt;NOTE:&lt;/b&gt;
-          This applies only when &lt;i&gt;Network Type&lt;/i&gt; is set to &lt;i&gt;Bridge&lt;/i&gt;.  For
-          other network types, port 5800 should be used instead.
-        Display: advanced-hide
-        Mask: 'false'
-        Mode: tcp
-        Name: WEB Port for GUI
-        Required: 'true'
-        Target: 5800
-        Type: Port
-        value: 5800
     Variable:
       displayheight:
         Default: '768'
@@ -65120,17 +64992,6 @@ qflood:
         Type: Path
         value: ''
     Port:
-      hostportfor3000:
-        Default: '3000'
-        Description: 'Container Port: 3000'
-        Display: always-hide
-        Mask: 'false'
-        Mode: tcp
-        Name: Host Port for 3000
-        Required: 'true'
-        Target: 3000
-        Type: Port
-        value: 3000
       hostportfor8080:
         Default: '8080'
         Description: 'Container Port: 8080'
@@ -65142,6 +65003,17 @@ qflood:
         Target: 8080
         Type: Port
         value: 8080
+      main:
+        Default: '3000'
+        Description: 'Container Port: 3000'
+        Display: always-hide
+        Mask: 'false'
+        Mode: tcp
+        Name: Host Port for 3000
+        Required: 'true'
+        Target: 3000
+        Type: Port
+        value: 3000
     Variable:
       flood_auth:
         Default: false|true
@@ -66255,6 +66127,17 @@ ravencoinwalletgui:
         Type: Path
         value: ''
     Port:
+      main:
+        Default: '5800'
+        Description: Port used to access the application's GUI via the web interface.
+        Display: advanced-hide
+        Mask: 'false'
+        Mode: tcp
+        Name: WEB Port for GUI
+        Required: 'true'
+        Target: 5800
+        Type: Port
+        value: 5800
       p2pport:
         Default: '8767'
         Description: Port used by P2P
@@ -66278,17 +66161,6 @@ ravencoinwalletgui:
         Target: 5900
         Type: Port
         value: 5900
-      webportforgui:
-        Default: '5800'
-        Description: Port used to access the application's GUI via the web interface.
-        Display: advanced-hide
-        Mask: 'false'
-        Mode: tcp
-        Name: WEB Port for GUI
-        Required: 'true'
-        Target: 5800
-        Type: Port
-        value: 5800
     Variable:
       bootstrap:
         Default: '0'
@@ -66565,7 +66437,7 @@ rclone-browser:
         Type: Path
         value: ''
     Port:
-      webui(1):
+      main:
         Default: ''
         Description: Port for noVNC.
         Display: always
@@ -66763,6 +66635,17 @@ rcon-webadmin:
         Type: Path
         value: /mnt/user/appdata/rcon-web-admin/db/
     Port:
+      main:
+        Default: ''
+        Description: 'Container Port: 4326'
+        Display: always
+        Mask: 'false'
+        Mode: tcp
+        Name: webUI
+        Required: 'false'
+        Target: 4326
+        Type: Port
+        value: 4326
       websocketaccessfromui:
         Default: ''
         Description: 'Container Port: 4327'
@@ -66774,17 +66657,6 @@ rcon-webadmin:
         Target: 4327
         Type: Port
         value: 4327
-      webui:
-        Default: ''
-        Description: 'Container Port: 4326'
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: webUI
-        Required: 'false'
-        Target: 4326
-        Type: Port
-        value: 4326
     Variable:
       rwa_admin:
         Default: ''
@@ -67464,7 +67336,7 @@ redm:
         Type: Path
         value: /mnt/cache/appdata/redm
     Port:
-      tcp-webconsole:
+      main:
         Default: ''
         Description: 'WebConsole (by default, you can connect to the RedM console
           by opening your browser and go to HOSTIP:9016 - eg: 192.168.1.1:9016 - or
@@ -69049,17 +68921,6 @@ rstudio:
         Type: Path
         value: /mnt/user
     Port:
-      hostport1:
-        Default: '8787'
-        Description: 'Container Port: 8787'
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: Host Port 1
-        Required: 'false'
-        Target: 8787
-        Type: Port
-        value: 8787
       hostport2:
         Default: '3838'
         Description: Required for shiny server
@@ -69071,6 +68932,17 @@ rstudio:
         Target: 3838
         Type: Port
         value: 3838
+      main:
+        Default: '8787'
+        Description: 'Container Port: 8787'
+        Display: always
+        Mask: 'false'
+        Mode: tcp
+        Name: Host Port 1
+        Required: 'false'
+        Target: 8787
+        Type: Port
+        value: 8787
     Variable:
       addshinyserver:
         Default: ''
@@ -69201,7 +69073,7 @@ rtmps-server:
         Type: Path
         value: /mnt/user/appdata/rtmp-server
     Port:
-      players&amp;statsport:
+      main:
         Default: '8080'
         Description: The port used to access the built in players and stats page.
         Display: always
@@ -69849,17 +69721,6 @@ sabnzbd-extended:
         Type: Path
         value: ''
     Port:
-      hostportfor8080:
-        Default: '8080'
-        Description: 'Container Port: 8080'
-        Display: always-hide
-        Mask: 'false'
-        Mode: tcp
-        Name: Host Port for 8080
-        Required: 'true'
-        Target: 8080
-        Type: Port
-        value: 8080
       hostportfor9090:
         Default: '9090'
         Description: 'Container Port: 9090'
@@ -69871,6 +69732,17 @@ sabnzbd-extended:
         Target: 9090
         Type: Port
         value: 9090
+      main:
+        Default: '8080'
+        Description: 'Container Port: 8080'
+        Display: always-hide
+        Mask: 'false'
+        Mode: tcp
+        Name: Host Port for 8080
+        Required: 'true'
+        Target: 8080
+        Type: Port
+        value: 8080
     Variable:
       audiopostprocessorbeetstagging:
         Default: 'false'
@@ -70143,7 +70015,7 @@ salt4unraid:
         Type: Path
         value: /var/run/libvirt/libvirt-sock
     Port:
-      saltguiwebapiport:
+      main:
         Default: '3333'
         Description: 'Container Port: 3333'
         Display: always
@@ -71339,7 +71211,7 @@ serviio:
         Target: 23524
         Type: Port
         value: 23524
-      webui:
+      main:
         Default: '23423'
         Description: "WEBUI PORT\r\nAccess by going to http://IP:23423/console"
         Display: always
@@ -72365,7 +72237,7 @@ shinysdr:
         Type: Path
         value: /mnt/user/appdata/shinysdr/config/
     Port:
-      http:
+      main:
         Default: ''
         Description: 'Container Port: 8100'
         Display: always
@@ -72703,6 +72575,14 @@ signum-node:
         Target: /db
         value: /mnt/user/appdata/signum-node/db
     Port:
+      main:
+        ContainerPort: '8125'
+        HostPort: '8125'
+        Mode: tcp
+        Name: tcp-port-1
+        Protocol: tcp
+        Target: 8125
+        value: 8125
       tcp-port-0:
         ContainerPort: '8123'
         HostPort: '8123'
@@ -72711,14 +72591,6 @@ signum-node:
         Protocol: tcp
         Target: 8123
         value: 8123
-      tcp-port-1:
-        ContainerPort: '8125'
-        HostPort: '8125'
-        Mode: tcp
-        Name: tcp-port-1
-        Protocol: tcp
-        Target: 8125
-        value: 8125
     Variable: {}
   ExtraParams: --init
   GitHub: https://github.com/signum-network/signum-node
@@ -73891,7 +73763,7 @@ sourcegraph:
         Target: 3370
         Type: Port
         value: 3370
-      webinterfaceport(http):
+      main:
         Default: '7080'
         Description: This is SourceGraph's Web UI port you can access via a web browser.
         Display: always-hide
@@ -74223,6 +74095,17 @@ splunk:
         Target: 9997
         Type: Port
         value: 9997
+      main:
+        Default: '8000'
+        Description: HTTP Web UI
+        Display: always
+        Mask: 'false'
+        Mode: tcp
+        Name: Web
+        Required: 'true'
+        Target: 8000
+        Type: Port
+        value: 8000
       management:
         Default: '8089'
         Description: HTTPS API
@@ -74234,17 +74117,6 @@ splunk:
         Target: 8089
         Type: Port
         value: 8089
-      web:
-        Default: '8000'
-        Description: HTTP Web UI
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: Web
-        Required: 'true'
-        Target: 8000
-        Type: Port
-        value: 8000
     Variable:
       adminpassword:
         Default: changeme2019
@@ -75407,7 +75279,7 @@ storagenode-v3:
     Label: {}
     Path: {}
     Port:
-      dashboardport:
+      main:
         Default: '14002'
         Description: The port to access web dashboard
         Display: always
@@ -77060,7 +76932,7 @@ swag:
         Type: Path
         value: ''
     Port:
-      port80:
+      main:
         Default: '80'
         Description: Http port (required for http validation and http - https redirect)
         Display: always
@@ -79330,18 +79202,7 @@ terraria:
         Type: Path
         value: /mnt/cache/appdata/terraria
     Port:
-      tcp:
-        Default: ''
-        Description: 'Container Port: 7777'
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: TCP
-        Required: 'true'
-        Target: 7777
-        Type: Port
-        value: 7777
-      tcp-webconsole:
+      main:
         Default: ''
         Description: 'WebConsole (by default, you can connect to the Terraria console
           by opening your browser and go to HOSTIP:9012 - eg: 192.168.1.1:9012 - or
@@ -79354,6 +79215,17 @@ terraria:
         Target: 8080
         Type: Port
         value: 9012
+      tcp:
+        Default: ''
+        Description: 'Container Port: 7777'
+        Display: always
+        Mask: 'false'
+        Mode: tcp
+        Name: TCP
+        Required: 'true'
+        Target: 7777
+        Type: Port
+        value: 7777
     Variable:
       game_params:
         Default: ''
@@ -79438,18 +79310,7 @@ terraria-tmodloader:
         Type: Path
         value: /mnt/cache/appdata/terraria-tmodloader
     Port:
-      tcp:
-        Default: ''
-        Description: 'Container Port: 7777'
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: TCP
-        Required: 'true'
-        Target: 7777
-        Type: Port
-        value: 7777
-      tcp-webconsole:
+      main:
         Default: ''
         Description: 'WebConsole (by default, you can connect to the Terraria console
           by opening your browser and go to HOSTIP:9013 - eg: 192.168.1.1:9013 - or
@@ -79462,6 +79323,17 @@ terraria-tmodloader:
         Target: 8080
         Type: Port
         value: 9013
+      tcp:
+        Default: ''
+        Description: 'Container Port: 7777'
+        Display: always
+        Mask: 'false'
+        Mode: tcp
+        Name: TCP
+        Required: 'true'
+        Target: 7777
+        Type: Port
+        value: 7777
     Variable:
       game_params:
         Default: ''
@@ -79546,18 +79418,7 @@ terraria-tshock:
         Type: Path
         value: /mnt/cache/appdata/terraria-tshock
     Port:
-      tcp:
-        Default: ''
-        Description: 'Container Port: 7777'
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: TCP
-        Required: 'true'
-        Target: 7777
-        Type: Port
-        value: 7777
-      tcp-webconsole:
+      main:
         Default: ''
         Description: 'WebConsole (by default, you can connect to the Terraria console
           by opening your browser and go to HOSTIP:9014 - eg: 192.168.1.1:9014 - or
@@ -79570,6 +79431,17 @@ terraria-tshock:
         Target: 8080
         Type: Port
         value: 9014
+      tcp:
+        Default: ''
+        Description: 'Container Port: 7777'
+        Display: always
+        Mask: 'false'
+        Mode: tcp
+        Name: TCP
+        Required: 'true'
+        Target: 7777
+        Type: Port
+        value: 7777
     Variable:
       game_params:
         Default: ''
@@ -80039,7 +79911,7 @@ tinymm-cli:
         Target: /config
         value: /mnt/cache/appdata/tmm-cli/config/
     Port:
-      tcp-port-0:
+      main:
         ContainerPort: '5800'
         HostPort: '5800'
         Mode: tcp
@@ -80124,6 +79996,17 @@ tixati:
         Target: 10844
         Type: Port
         value: 10844
+      main:
+        Default: '5801'
+        Description: Port used to access the web interface.
+        Display: advanced-hide
+        Mask: 'false'
+        Mode: tcp
+        Name: WEB Port
+        Required: 'true'
+        Target: 5800
+        Type: Port
+        value: 5800
       vncportforgui:
         Default: '5901'
         Description: Port used to access the application's GUI via the VNC protocol.  Optional
@@ -80136,17 +80019,6 @@ tixati:
         Target: 5900
         Type: Port
         value: 5900
-      webport:
-        Default: '5801'
-        Description: Port used to access the web interface.
-        Display: advanced-hide
-        Mask: 'false'
-        Mode: tcp
-        Name: WEB Port
-        Required: 'true'
-        Target: 5800
-        Type: Port
-        value: 5800
     Variable:
       displayheight:
         Default: '768'
@@ -80946,7 +80818,7 @@ transmission-nzbtomedia:
         Name: watch
         Target: /watch
     Port:
-      tcp-port-0:
+      main:
         ContainerPort: '9091'
         HostPort: '9091'
         Mode: tcp
@@ -81275,7 +81147,7 @@ ts-dnsserver:
         Target: 53
         Type: Port
         value: 53
-      webui:
+      main:
         Default: '5380'
         Description: 'Container Port: '
         Display: always
@@ -81361,6 +81233,19 @@ tsmuxer:
         Type: Path
         value: ''
     Port:
+      main:
+        Default: '7808'
+        Description: Port used to access the application's GUI via the web interface.&lt;br&gt;&lt;b&gt;NOTE:&lt;/b&gt;
+          This applies only when &lt;i&gt;Network Type&lt;/i&gt; is set to &lt;i&gt;Bridge&lt;/i&gt;.  For
+          other network types, port 5800 should be used instead.
+        Display: advanced-hide
+        Mask: 'false'
+        Mode: tcp
+        Name: WEB Port for GUI
+        Required: 'true'
+        Target: 5800
+        Type: Port
+        value: 5800
       vncportforgui:
         Default: '7908'
         Description: Port used to access the application's GUI via the VNC protocol.  Optional
@@ -81375,19 +81260,6 @@ tsmuxer:
         Target: 5900
         Type: Port
         value: 5900
-      webportforgui:
-        Default: '7808'
-        Description: Port used to access the application's GUI via the web interface.&lt;br&gt;&lt;b&gt;NOTE:&lt;/b&gt;
-          This applies only when &lt;i&gt;Network Type&lt;/i&gt; is set to &lt;i&gt;Bridge&lt;/i&gt;.  For
-          other network types, port 5800 should be used instead.
-        Display: advanced-hide
-        Mask: 'false'
-        Mode: tcp
-        Name: WEB Port for GUI
-        Required: 'true'
-        Target: 5800
-        Type: Port
-        value: 5800
     Variable:
       displayheight:
         Default: '768'
@@ -82401,6 +82273,17 @@ unifi-controller:
         Type: Path
         value: ''
     Port:
+      main:
+        Default: '8443'
+        Description: Unifi web admin port
+        Display: always
+        Mask: 'false'
+        Mode: tcp
+        Name: WebUI
+        Required: 'true'
+        Target: 8443
+        Type: Port
+        value: 8443
       port10001:
         Default: '10001'
         Description: Required for AP discovery
@@ -82489,17 +82372,6 @@ unifi-controller:
         Target: 8880
         Type: Port
         value: 8880
-      webui:
-        Default: '8443'
-        Description: Unifi web admin port
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: WebUI
-        Required: 'true'
-        Target: 8443
-        Type: Port
-        value: 8443
     Variable:
       mem_limit:
         Default: '1024'
@@ -82763,6 +82635,14 @@ unifi-video:
         Target: /var/lib/unifi-video/videos
         value: /mnt/user/UnfiVideoShareForStorage
     Port:
+      main:
+        ContainerPort: '7080'
+        HostPort: '7080'
+        Mode: tcp
+        Name: tcp-port-3
+        Protocol: tcp
+        Target: 7080
+        value: 7080
       tcp-port-0:
         ContainerPort: '1935'
         HostPort: '1935'
@@ -82779,14 +82659,6 @@ unifi-video:
         Protocol: tcp
         Target: 6666
         value: 6666
-      tcp-port-3:
-        ContainerPort: '7080'
-        HostPort: '7080'
-        Mode: tcp
-        Name: tcp-port-3
-        Protocol: tcp
-        Target: 7080
-        value: 7080
       tcp-port-4:
         ContainerPort: '7442'
         HostPort: '7442'
@@ -82893,6 +82765,17 @@ universal-media-server:
         Type: Path
         value: ''
     Port:
+      main:
+        Default: ''
+        Description: 'Container Port: 9001'
+        Display: always
+        Mask: 'false'
+        Mode: tcp
+        Name: WebUI
+        Required: 'true'
+        Target: 9001
+        Type: Port
+        value: 9001
       port1044:
         Default: ''
         Description: 'Container Port: 1044'
@@ -82915,17 +82798,6 @@ universal-media-server:
         Target: 5002
         Type: Port
         value: 5002
-      webui:
-        Default: ''
-        Description: 'Container Port: 9001'
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: WebUI
-        Required: 'true'
-        Target: 9001
-        Type: Port
-        value: 9001
     Variable: {}
   Icon: https://www.universalmediaserver.com/assets/img/logo.png
   Keywords:
@@ -83110,7 +82982,7 @@ unms:
         Target: 80
         Type: Port
         value: 6080
-      hostport2:
+      main:
         Default: '6443'
         Description: 'Container Port: 443'
         Display: always
@@ -85884,6 +85756,17 @@ wireguard-easy:
         Type: Path
         value: /mnt/user/appdata/wireguard-easy
     Port:
+      main:
+        Default: ''
+        Description: ''
+        Display: always
+        Mask: 'false'
+        Mode: tcp
+        Name: Port (WebUI)
+        Required: 'false'
+        Target: 51821
+        Type: Port
+        value: 51821
       port(vpn):
         Default: ''
         Description: ''
@@ -85895,17 +85778,6 @@ wireguard-easy:
         Target: 51820
         Type: Port
         value: 51820
-      port(webui):
-        Default: ''
-        Description: ''
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: Port (WebUI)
-        Required: 'false'
-        Target: 51821
-        Type: Port
-        value: 51821
     Variable:
       password:
         Default: ''
@@ -86137,7 +86009,7 @@ wreckfest:
         Type: Path
         value: /mnt/user/appdata/steamcmd
     Port:
-      tcp-webconsole:
+      main:
         Default: ''
         Description: 'WebConsole (by default, you can connect to the Wreckfest console
           by opening your browser and go to HOSTIP:9028 - eg: 192.168.1.1:9028 - or
@@ -86673,6 +86545,14 @@ xeoma:
         Name: archive
         Target: /archive
     Port:
+      main:
+        ContainerPort: '10090'
+        HostPort: '10090'
+        Mode: tcp
+        Name: tcp-port-1
+        Protocol: tcp
+        Target: 10090
+        value: 10090
       tcp-port-0:
         ContainerPort: '8090'
         HostPort: '8090'
@@ -86681,14 +86561,6 @@ xeoma:
         Protocol: tcp
         Target: 8090
         value: 8090
-      tcp-port-1:
-        ContainerPort: '10090'
-        HostPort: '10090'
-        Mode: tcp
-        Name: tcp-port-1
-        Protocol: tcp
-        Target: 10090
-        value: 10090
     Variable: {}
   Icon: https://raw.githubusercontent.com/coppit/docker-xeoma/master/xeoma.png
   Keywords:
@@ -87738,17 +87610,6 @@ yacy:
         Type: Path
         value: /mnt/user/appdata/yacy/
     Port:
-      http:
-        Default: '8090'
-        Description: HTTP
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: HTTP
-        Required: 'true'
-        Target: 8090
-        Type: Port
-        value: 8090
       https:
         Default: '8443'
         Description: HTTPs (Not Required if you using reverse proxy)
@@ -87760,6 +87621,17 @@ yacy:
         Target: 8443
         Type: Port
         value: 8443
+      main:
+        Default: '8090'
+        Description: HTTP
+        Display: always
+        Mask: 'false'
+        Mode: tcp
+        Name: HTTP
+        Required: 'true'
+        Target: 8090
+        Type: Port
+        value: 8090
     Variable: {}
   ExtraParams: --log-opt max-size=200m --log-opt max-file=2
   Icon: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/yacy.png
@@ -88434,7 +88306,7 @@ zcashwalletgui:
         Type: Path
         value: /mnt/user/appdata/Zcashwallet/
     Port:
-      novncport:
+      main:
         Default: ''
         Description: 'Container Port: 6901'
         Display: always
@@ -88718,7 +88590,7 @@ zoneminder:
         Type: Path
         value: /mnt/user/appdata/Zoneminder/data
     Port:
-      webuiport:
+      main:
         Default: '8443'
         Description: ''
         Display: always

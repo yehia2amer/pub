@@ -19,14 +19,6 @@ persistence:
     mountPath: /etc/localtime
     readOnly: true
 service:
-  lansyncport(tcp):
-    enabled: true
-    ports:
-      lansyncport(tcp):
-        enabled: true
-        port: 17500
-        protocol: TCP
-        targetPort: 17500
   lansyncport(udp):
     enabled: true
     ports:
@@ -34,4 +26,12 @@ service:
         enabled: true
         port: 17500
         protocol: UDP
+        targetPort: 17500
+  main:
+    enabled: true
+    ports:
+      lansyncport(tcp):
+        enabled: true
+        port: 17500
+        protocol: TCP
         targetPort: 17500

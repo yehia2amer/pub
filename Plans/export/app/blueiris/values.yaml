@@ -8,6 +8,14 @@ persistence:
     enabled: true
     mountPath: /home/wineuser/prefix
 service:
+  main:
+    enabled: true
+    ports:
+      main:
+        enabled: true
+        port: 8080
+        protocol: TCP
+        targetPort: 8080
   vncserverport:
     enabled: true
     ports:
@@ -16,14 +24,6 @@ service:
         port: 5950
         protocol: TCP
         targetPort: 5900
-  vncwebserverport:
-    enabled: true
-    ports:
-      vncwebserverport:
-        enabled: true
-        port: 8080
-        protocol: TCP
-        targetPort: 8080
   webserverport:
     enabled: true
     ports:

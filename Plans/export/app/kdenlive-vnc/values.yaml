@@ -8,6 +8,14 @@ persistence:
     enabled: true
     mountPath: /sharedContent
 service:
+  main:
+    enabled: true
+    ports:
+      main:
+        enabled: true
+        port: 5800
+        protocol: TCP
+        targetPort: 5800
   vncport:
     enabled: true
     ports:
@@ -16,11 +24,3 @@ service:
         port: 5900
         protocol: TCP
         targetPort: 5900
-  webui:
-    enabled: true
-    ports:
-      webui:
-        enabled: true
-        port: 5800
-        protocol: TCP
-        targetPort: 5800

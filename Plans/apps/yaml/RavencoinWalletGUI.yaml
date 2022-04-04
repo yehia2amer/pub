@@ -17,6 +17,17 @@ Config:
       Type: Path
       value: ''
   Port:
+    main:
+      Default: '5800'
+      Description: Port used to access the application's GUI via the web interface.
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: tcp
+      Name: WEB Port for GUI
+      Required: 'true'
+      Target: 5800
+      Type: Port
+      value: 5800
     p2pport:
       Default: '8767'
       Description: Port used by P2P
@@ -40,17 +51,6 @@ Config:
       Target: 5900
       Type: Port
       value: 5900
-    webportforgui:
-      Default: '5800'
-      Description: Port used to access the application's GUI via the web interface.
-      Display: advanced-hide
-      Mask: 'false'
-      Mode: tcp
-      Name: WEB Port for GUI
-      Required: 'true'
-      Target: 5800
-      Type: Port
-      value: 5800
   Variable:
     bootstrap:
       Default: '0'

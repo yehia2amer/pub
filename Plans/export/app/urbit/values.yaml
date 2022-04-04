@@ -8,6 +8,14 @@ persistence:
     enabled: true
     mountPath: /urbit
 service:
+  main:
+    enabled: true
+    ports:
+      webinterfaceport:
+        enabled: true
+        port: 80
+        protocol: TCP
+        targetPort: 8088
   udpamesport:
     enabled: true
     ports:
@@ -16,11 +24,3 @@ service:
         port: 34343
         protocol: UDP
         targetPort: 34343
-  webinterfaceport:
-    enabled: true
-    ports:
-      webinterfaceport:
-        enabled: true
-        port: 80
-        protocol: TCP
-        targetPort: 8088

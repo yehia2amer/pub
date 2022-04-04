@@ -19,17 +19,6 @@ Config:
       Type: Path
       value: /mnt/user/appdata/nextcloudpi
   Port:
-    httpswebport:
-      Default: '443'
-      Description: Secure web port
-      Display: always
-      Mask: 'false'
-      Mode: tcp
-      Name: HTTPS web port
-      Required: 'false'
-      Target: 443
-      Type: Port
-      value: 443
     httpwebport:
       Default: '80'
       Description: Non secure web port
@@ -41,6 +30,17 @@ Config:
       Target: 80
       Type: Port
       value: 80
+    main:
+      Default: '443'
+      Description: Secure web port
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: HTTPS web port
+      Required: 'false'
+      Target: 443
+      Type: Port
+      value: 443
     panelwebport:
       Default: '4443'
       Description: Port to serve the Nextcloudpi management panel on.

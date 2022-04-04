@@ -16,14 +16,6 @@ service:
         port: 30303
         protocol: UDP
         targetPort: 30303
-  json-rpchttp:
-    enabled: true
-    ports:
-      json-rpchttp:
-        enabled: true
-        port: 8545
-        protocol: TCP
-        targetPort: 8545
   json-rpcweb-socket:
     enabled: true
     ports:
@@ -40,3 +32,11 @@ service:
         port: 30303
         protocol: TCP
         targetPort: 30303
+  main:
+    enabled: true
+    ports:
+      json-rpchttp:
+        enabled: true
+        port: 8545
+        protocol: TCP
+        targetPort: 8545

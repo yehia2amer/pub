@@ -12,6 +12,14 @@ persistence:
     enabled: true
     mountPath: /var/lib/docker
 service:
+  main:
+    enabled: true
+    ports:
+      tlstcpport:
+        enabled: true
+        port: 2376
+        protocol: TCP
+        targetPort: 2376
   non-tlstcpport:
     enabled: true
     ports:
@@ -20,11 +28,3 @@ service:
         port: 2375
         protocol: TCP
         targetPort: 2375
-  tlstcpport:
-    enabled: true
-    ports:
-      tlstcpport:
-        enabled: true
-        port: 2376
-        protocol: TCP
-        targetPort: 2376

@@ -18,14 +18,6 @@ persistence:
     enabled: true
     mountPath: /config
 service:
-  jvb_port:
-    enabled: true
-    ports:
-      jvb_port:
-        enabled: true
-        port: 10000
-        protocol: UDP
-        targetPort: 10000
   jvb_tcp_port:
     enabled: true
     ports:
@@ -34,3 +26,11 @@ service:
         port: 4443
         protocol: TCP
         targetPort: 4443
+  main:
+    enabled: true
+    ports:
+      jvb_port:
+        enabled: true
+        port: 10000
+        protocol: UDP
+        targetPort: 10000

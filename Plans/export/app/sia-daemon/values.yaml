@@ -10,14 +10,6 @@ persistence:
     enabled: true
     mountPath: /sia-data
 service:
-  gatewayport:
-    enabled: true
-    ports:
-      gatewayport:
-        enabled: true
-        port: 9981
-        protocol: TCP
-        targetPort: 9981
   hostrhp2port:
     enabled: true
     ports:
@@ -34,3 +26,11 @@ service:
         port: 9983
         protocol: TCP
         targetPort: 9983
+  main:
+    enabled: true
+    ports:
+      gatewayport:
+        enabled: true
+        port: 9981
+        protocol: TCP
+        targetPort: 9981

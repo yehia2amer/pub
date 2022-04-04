@@ -19,6 +19,17 @@ Config:
       Type: Path
       value: /mnt/user/appdata/kdenlive/
   Port:
+    main:
+      Default: ''
+      Description: 'Container Port: 5800'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'true'
+      Target: 5800
+      Type: Port
+      value: 5800
     vncport:
       Default: ''
       Description: 'Container Port: 5900'
@@ -30,17 +41,6 @@ Config:
       Target: 5900
       Type: Port
       value: 5900
-    webui:
-      Default: ''
-      Description: 'Container Port: 5800'
-      Display: always
-      Mask: 'false'
-      Mode: tcp
-      Name: WebUI
-      Required: 'true'
-      Target: 5800
-      Type: Port
-      value: 5800
   Variable: {}
 Icon: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/kdenlive.png
 Keywords:

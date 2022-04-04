@@ -14,6 +14,14 @@ persistence:
     enabled: true
     mountPath: /minecraft_servers
 service:
+  main:
+    enabled: true
+    ports:
+      main:
+        enabled: true
+        port: 1800
+        protocol: TCP
+        targetPort: 8000
   minecraftports:
     enabled: true
     ports:
@@ -22,11 +30,3 @@ service:
         port: 25500
         protocol: TCP
         targetPort: 25500
-  webuiport:
-    enabled: true
-    ports:
-      webuiport:
-        enabled: true
-        port: 1800
-        protocol: TCP
-        targetPort: 8000

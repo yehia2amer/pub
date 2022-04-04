@@ -37,14 +37,6 @@ persistence:
     enabled: true
     mountPath: /usr/share/jitsi-meet/transcripts
 service:
-  http:
-    enabled: true
-    ports:
-      http:
-        enabled: true
-        port: 8000
-        protocol: TCP
-        targetPort: 80
   https:
     enabled: true
     ports:
@@ -53,3 +45,11 @@ service:
         port: 4443
         protocol: TCP
         targetPort: 443
+  main:
+    enabled: true
+    ports:
+      main:
+        enabled: true
+        port: 8000
+        protocol: TCP
+        targetPort: 80

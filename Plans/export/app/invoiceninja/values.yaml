@@ -29,14 +29,6 @@ persistence:
     enabled: true
     mountPath: /var/www/app/storage
 service:
-  httpport:
-    enabled: true
-    ports:
-      httpport:
-        enabled: true
-        port: 80
-        protocol: TCP
-        targetPort: 80
   httpsport:
     enabled: true
     ports:
@@ -45,3 +37,11 @@ service:
         port: 443
         protocol: TCP
         targetPort: 443
+  main:
+    enabled: true
+    ports:
+      main:
+        enabled: true
+        port: 80
+        protocol: TCP
+        targetPort: 80

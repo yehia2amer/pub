@@ -14,6 +14,14 @@ persistence:
     enabled: true
     mountPath: /data
 service:
+  main:
+    enabled: true
+    ports:
+      tcp:
+        enabled: true
+        port: 50001
+        protocol: TCP
+        targetPort: 50001
   rpc:
     enabled: true
     ports:
@@ -30,14 +38,6 @@ service:
         port: 50002
         protocol: TCP
         targetPort: 50002
-  tcp:
-    enabled: true
-    ports:
-      tcp:
-        enabled: true
-        port: 50001
-        protocol: TCP
-        targetPort: 50001
   wss:
     enabled: true
     ports:

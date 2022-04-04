@@ -95,17 +95,6 @@ Config:
       Type: Path
       value: /mnt/user/appdata/onlyoffice/DocumentServer/redis
   Port:
-    httpport:
-      Default: '8082'
-      Description: 'Container Port: 80'
-      Display: always
-      Mask: 'false'
-      Mode: tcp
-      Name: HTTP Port
-      Required: 'false'
-      Target: 80
-      Type: Port
-      value: 8082
     httpsport:
       Default: '4432'
       Description: 'Container Port: 443'
@@ -117,6 +106,17 @@ Config:
       Target: 443
       Type: Port
       value: 4432
+    main:
+      Default: '8082'
+      Description: 'Container Port: 80'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: HTTP Port
+      Required: 'false'
+      Target: 80
+      Type: Port
+      value: 8082
   Variable:
     secretname:
       Default: ''

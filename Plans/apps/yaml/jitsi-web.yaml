@@ -40,17 +40,6 @@ Config:
       Type: Path
       value: /mnt/user/appdata/jitsi/transcripts/
   Port:
-    http:
-      Default: '80'
-      Description: HTTP
-      Display: always
-      Mask: 'false'
-      Mode: tcp
-      Name: HTTP
-      Required: 'false'
-      Target: 80
-      Type: Port
-      value: 8000
     https:
       Default: '443'
       Description: HTTPS
@@ -62,6 +51,17 @@ Config:
       Target: 443
       Type: Port
       value: 4443
+    main:
+      Default: '80'
+      Description: HTTP
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: HTTP
+      Required: 'false'
+      Target: 80
+      Type: Port
+      value: 8000
   Variable:
     disable_https:
       Default: '1'

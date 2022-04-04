@@ -14,14 +14,6 @@ persistence:
     enabled: true
     mountPath: /data
 service:
-  http:
-    enabled: true
-    ports:
-      http:
-        enabled: true
-        port: 2080
-        protocol: TCP
-        targetPort: 80
   https:
     enabled: true
     ports:
@@ -30,3 +22,11 @@ service:
         port: 2443
         protocol: TCP
         targetPort: 443
+  main:
+    enabled: true
+    ports:
+      http:
+        enabled: true
+        port: 2080
+        protocol: TCP
+        targetPort: 80

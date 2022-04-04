@@ -20,6 +20,17 @@ Config:
       Type: Path
       value: /mnt/user/appdata/Cacti
   Port:
+    main:
+      Default: '8180'
+      Description: 'Container Port: 80'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: webui
+      Required: 'true'
+      Target: 80
+      Type: Port
+      value: 8180
     snmpscanport:
       Default: '161'
       Description: SNMP scan, port 161 UDP
@@ -31,17 +42,6 @@ Config:
       Target: 161
       Type: Port
       value: 161
-    webui:
-      Default: '8180'
-      Description: 'Container Port: 80'
-      Display: always
-      Mask: 'false'
-      Mode: tcp
-      Name: webui
-      Required: 'true'
-      Target: 80
-      Type: Port
-      value: 8180
   Variable: {}
 Icon: https://www.cacti.net/images/cacti.png
 Keywords:

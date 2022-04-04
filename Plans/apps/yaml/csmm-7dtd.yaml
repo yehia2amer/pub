@@ -20,18 +20,7 @@ Config:
       Type: Path
       value: /mnt/cache/appdata/csmm-7dtd
   Port:
-    mariadbport:
-      Default: ''
-      Description: Only needed if you want to connect to the database.
-      Display: always
-      Mask: 'false'
-      Mode: tcp
-      Name: Maria DB Port
-      Required: 'false'
-      Target: 3306
-      Type: Port
-      value: 3306
-    webport:
+    main:
       Default: ''
       Description: Please note that you should reverse proxy the server trough nginx,
         apache or any other reverse proxy software to your Hostname as filled in above.
@@ -43,6 +32,17 @@ Config:
       Target: 1337
       Type: Port
       value: 1337
+    mariadbport:
+      Default: ''
+      Description: Only needed if you want to connect to the database.
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Maria DB Port
+      Required: 'false'
+      Target: 3306
+      Type: Port
+      value: 3306
   Variable:
     csmmdownloadurl:
       Default: ''

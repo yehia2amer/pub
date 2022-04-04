@@ -22,6 +22,14 @@ persistence:
     enabled: true
     mountPath: /enigma
 service:
+  main:
+    enabled: true
+    ports:
+      roundcubeport:
+        enabled: true
+        port: 8888
+        protocol: TCP
+        targetPort: 8888
   postfixadminport:
     enabled: true
     ports:
@@ -30,11 +38,3 @@ service:
         port: 8080
         protocol: TCP
         targetPort: 8080
-  roundcubeport:
-    enabled: true
-    ports:
-      roundcubeport:
-        enabled: true
-        port: 8888
-        protocol: TCP
-        targetPort: 8888

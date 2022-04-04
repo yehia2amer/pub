@@ -11,6 +11,14 @@ persistence:
     enabled: true
     mountPath: /config
 service:
+  main:
+    enabled: true
+    ports:
+      main:
+        enabled: true
+        port: 8443
+        protocol: TCP
+        targetPort: 8443
   port10001:
     enabled: true
     ports:
@@ -75,11 +83,3 @@ service:
         port: 8880
         protocol: TCP
         targetPort: 8880
-  webui:
-    enabled: true
-    ports:
-      webui:
-        enabled: true
-        port: 8443
-        protocol: TCP
-        targetPort: 8443

@@ -17,6 +17,14 @@ persistence:
     enabled: true
     mountPath: /config
 service:
+  main:
+    enabled: true
+    ports:
+      main:
+        enabled: true
+        port: 5800
+        protocol: TCP
+        targetPort: 5800
   vncportforgui:
     enabled: true
     ports:
@@ -25,11 +33,3 @@ service:
         port: 5900
         protocol: TCP
         targetPort: 5900
-  webportforgui:
-    enabled: true
-    ports:
-      webportforgui:
-        enabled: true
-        port: 5800
-        protocol: TCP
-        targetPort: 5800

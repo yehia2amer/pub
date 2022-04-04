@@ -11,6 +11,14 @@ persistence:
     enabled: true
     mountPath: /serverdata/serverfiles
 service:
+  main:
+    enabled: true
+    ports:
+      main:
+        enabled: true
+        port: 9015
+        protocol: TCP
+        targetPort: 8080
   tcp-gameport:
     enabled: true
     ports:
@@ -19,14 +27,6 @@ service:
         port: 3979
         protocol: TCP
         targetPort: 3979
-  tcp-webconsole:
-    enabled: true
-    ports:
-      tcp-webconsole:
-        enabled: true
-        port: 9015
-        protocol: TCP
-        targetPort: 8080
   udp-gameport:
     enabled: true
     ports:

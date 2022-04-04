@@ -27,6 +27,17 @@ Config:
       Type: Path
       value: /mnt/user/appdata/nvim-server-workspace
   Port:
+    main:
+      Default: '6080'
+      Description: Port for accessing the Web UI
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WEB UI
+      Required: 'false'
+      Target: 3000
+      Type: Port
+      value: 6080
     markdownpreview:
       Default: '8090'
       Description: Port for the Instant Markdown Preview Server
@@ -38,17 +49,6 @@ Config:
       Target: 8090
       Type: Port
       value: 8090
-    webui:
-      Default: '6080'
-      Description: Port for accessing the Web UI
-      Display: always
-      Mask: 'false'
-      Mode: tcp
-      Name: WEB UI
-      Required: 'false'
-      Target: 3000
-      Type: Port
-      value: 6080
   Variable:
     gid:
       Default: $GID

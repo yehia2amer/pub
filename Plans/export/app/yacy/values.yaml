@@ -8,14 +8,6 @@ persistence:
     enabled: true
     mountPath: /opt/yacy_search_server/DATA
 service:
-  http:
-    enabled: true
-    ports:
-      http:
-        enabled: true
-        port: 8090
-        protocol: TCP
-        targetPort: 8090
   https:
     enabled: true
     ports:
@@ -24,3 +16,11 @@ service:
         port: 8443
         protocol: TCP
         targetPort: 8443
+  main:
+    enabled: true
+    ports:
+      main:
+        enabled: true
+        port: 8090
+        protocol: TCP
+        targetPort: 8090

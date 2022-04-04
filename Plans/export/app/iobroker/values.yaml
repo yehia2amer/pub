@@ -38,6 +38,14 @@ service:
         port: 2001
         protocol: TCP
         targetPort: 2001
+  main:
+    enabled: true
+    ports:
+      main:
+        enabled: true
+        port: 8081
+        protocol: TCP
+        targetPort: 8081
   mqttport:
     enabled: true
     ports:
@@ -70,11 +78,3 @@ service:
         port: 8284
         protocol: TCP
         targetPort: 8284
-  webuiport:
-    enabled: true
-    ports:
-      webuiport:
-        enabled: true
-        port: 8081
-        protocol: TCP
-        targetPort: 8081

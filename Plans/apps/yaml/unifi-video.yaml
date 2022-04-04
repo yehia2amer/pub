@@ -12,6 +12,14 @@ Config:
       Target: /var/lib/unifi-video/videos
       value: /mnt/user/UnfiVideoShareForStorage
   Port:
+    main:
+      ContainerPort: '7080'
+      HostPort: '7080'
+      Mode: tcp
+      Name: tcp-port-3
+      Protocol: tcp
+      Target: 7080
+      value: 7080
     tcp-port-0:
       ContainerPort: '1935'
       HostPort: '1935'
@@ -28,14 +36,6 @@ Config:
       Protocol: tcp
       Target: 6666
       value: 6666
-    tcp-port-3:
-      ContainerPort: '7080'
-      HostPort: '7080'
-      Mode: tcp
-      Name: tcp-port-3
-      Protocol: tcp
-      Target: 7080
-      value: 7080
     tcp-port-4:
       ContainerPort: '7442'
       HostPort: '7442'

@@ -8,6 +8,14 @@ persistence:
     enabled: true
     mountPath: /config
 service:
+  main:
+    enabled: true
+    ports:
+      main:
+        enabled: true
+        port: 8180
+        protocol: TCP
+        targetPort: 80
   snmpscanport:
     enabled: true
     ports:
@@ -16,11 +24,3 @@ service:
         port: 161
         protocol: UDP
         targetPort: 161
-  webui:
-    enabled: true
-    ports:
-      webui:
-        enabled: true
-        port: 8180
-        protocol: TCP
-        targetPort: 80

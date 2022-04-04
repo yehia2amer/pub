@@ -16,6 +16,14 @@ persistence:
     enabled: true
     mountPath: /serverdata/steamcmd
 service:
+  main:
+    enabled: true
+    ports:
+      udp1-game:
+        enabled: true
+        port: 7707
+        protocol: UDP
+        targetPort: 7707
   tcp1-masterserverbrowser:
     enabled: true
     ports:
@@ -32,14 +40,6 @@ service:
         port: 8075
         protocol: TCP
         targetPort: 8075
-  udp1-game:
-    enabled: true
-    ports:
-      udp1-game:
-        enabled: true
-        port: 7707
-        protocol: UDP
-        targetPort: 7707
   udp2-query:
     enabled: true
     ports:

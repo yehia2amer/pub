@@ -12,6 +12,14 @@ Config:
       Target: /db
       value: /mnt/user/appdata/signum-node/db
   Port:
+    main:
+      ContainerPort: '8125'
+      HostPort: '8125'
+      Mode: tcp
+      Name: tcp-port-1
+      Protocol: tcp
+      Target: 8125
+      value: 8125
     tcp-port-0:
       ContainerPort: '8123'
       HostPort: '8123'
@@ -20,14 +28,6 @@ Config:
       Protocol: tcp
       Target: 8123
       value: 8123
-    tcp-port-1:
-      ContainerPort: '8125'
-      HostPort: '8125'
-      Mode: tcp
-      Name: tcp-port-1
-      Protocol: tcp
-      Target: 8125
-      value: 8125
   Variable: {}
 ExtraParams: --init
 GitHub: https://github.com/signum-network/signum-node

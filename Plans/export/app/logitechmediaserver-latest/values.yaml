@@ -8,6 +8,14 @@ persistence:
     enabled: true
     mountPath: /var/run/dbus
 service:
+  main:
+    enabled: true
+    ports:
+      main:
+        enabled: true
+        port: 9000
+        protocol: TCP
+        targetPort: 9000
   tcp-port-0:
     enabled: true
     ports:
@@ -16,14 +24,6 @@ service:
         port: 3483
         protocol: TCP
         targetPort: 3483
-  tcp-port-3:
-    enabled: true
-    ports:
-      tcp-port-3:
-        enabled: true
-        port: 9000
-        protocol: TCP
-        targetPort: 9000
   tcp-port-4:
     enabled: true
     ports:

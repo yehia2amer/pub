@@ -9,6 +9,14 @@ persistence:
     enabled: true
     mountPath: /config
 service:
+  main:
+    enabled: true
+    ports:
+      main:
+        enabled: true
+        port: 9200
+        protocol: TCP
+        targetPort: 9200
   nodescommunicationport:
     enabled: true
     ports:
@@ -17,11 +25,3 @@ service:
         port: 9300
         protocol: TCP
         targetPort: 9300
-  restapiport:
-    enabled: true
-    ports:
-      restapiport:
-        enabled: true
-        port: 9200
-        protocol: TCP
-        targetPort: 9200

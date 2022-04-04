@@ -15,6 +15,14 @@ persistence:
     enabled: true
     mountPath: /assets
 service:
+  main:
+    enabled: true
+    ports:
+      main:
+        enabled: true
+        port: 3000
+        protocol: TCP
+        targetPort: 3000
   port69:
     enabled: true
     ports:
@@ -31,11 +39,3 @@ service:
         port: 80
         protocol: TCP
         targetPort: 80
-  webui:
-    enabled: true
-    ports:
-      webui:
-        enabled: true
-        port: 3000
-        protocol: TCP
-        targetPort: 3000

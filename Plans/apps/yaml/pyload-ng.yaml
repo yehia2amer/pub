@@ -34,6 +34,17 @@ Config:
       Type: Path
       value: ''
   Port:
+    main:
+      Default: '8000'
+      Description: Allows HTTP access to the application
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'true'
+      Target: 8000
+      Type: Port
+      value: 8000
     port9666:
       Default: '9666'
       Description: Click'n'Load port.
@@ -45,17 +56,6 @@ Config:
       Target: 9666
       Type: Port
       value: 9666
-    webui:
-      Default: '8000'
-      Description: Allows HTTP access to the application
-      Display: always
-      Mask: 'false'
-      Mode: tcp
-      Name: WebUI
-      Required: 'true'
-      Target: 8000
-      Type: Port
-      value: 8000
   Variable:
     pgid:
       Default: '100'

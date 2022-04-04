@@ -40,6 +40,17 @@ Config:
       Type: Path
       value: /mnt/user/appdata/freddy0-Crafty/minecraft_servers
   Port:
+    main:
+      Default: '1800'
+      Description: Port to connect to the Web UI
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Web UI Port
+      Required: 'true'
+      Target: 8000
+      Type: Port
+      value: 1800
     minecraftports:
       Default: 25500-25600
       Description: 'Container Port: 25500-25600 yes, 100 ports for 100 possible Servers'
@@ -51,17 +62,6 @@ Config:
       Target: 25500
       Type: Port
       value: 25500
-    webuiport:
-      Default: '1800'
-      Description: Port to connect to the Web UI
-      Display: always
-      Mask: 'false'
-      Mode: tcp
-      Name: Web UI Port
-      Required: 'true'
-      Target: 8000
-      Type: Port
-      value: 1800
   Variable: {}
 Icon: https://assets.gitlab-static.net/uploads/-/system/project/avatar/14984440/Crafty_Logo.png?
 Keywords:

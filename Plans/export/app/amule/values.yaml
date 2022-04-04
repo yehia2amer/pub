@@ -16,6 +16,14 @@ persistence:
     enabled: true
     mountPath: /temp
 service:
+  main:
+    enabled: true
+    ports:
+      main:
+        enabled: true
+        port: 4711
+        protocol: TCP
+        targetPort: 4711
   port(tcp):
     enabled: true
     ports:
@@ -32,11 +40,3 @@ service:
         port: 4672
         protocol: UDP
         targetPort: 4672
-  webui:
-    enabled: true
-    ports:
-      webui:
-        enabled: true
-        port: 4711
-        protocol: TCP
-        targetPort: 4711

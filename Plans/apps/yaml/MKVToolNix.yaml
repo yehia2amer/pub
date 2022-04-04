@@ -29,6 +29,19 @@ Config:
       Type: Path
       value: ''
   Port:
+    main:
+      Default: '7805'
+      Description: Port used to access the application's GUI via the web interface.&lt;br&gt;&lt;b&gt;NOTE:&lt;/b&gt;
+        This applies only when &lt;i&gt;Network Type&lt;/i&gt; is set to &lt;i&gt;Bridge&lt;/i&gt;.  For
+        other network types, port 5800 should be used instead.
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: tcp
+      Name: WEB Port for GUI
+      Required: 'true'
+      Target: 5800
+      Type: Port
+      value: 5800
     vncportforgui:
       Default: '7905'
       Description: Port used to access the application's GUI via the VNC protocol.  Optional
@@ -43,19 +56,6 @@ Config:
       Target: 5900
       Type: Port
       value: 5900
-    webportforgui:
-      Default: '7805'
-      Description: Port used to access the application's GUI via the web interface.&lt;br&gt;&lt;b&gt;NOTE:&lt;/b&gt;
-        This applies only when &lt;i&gt;Network Type&lt;/i&gt; is set to &lt;i&gt;Bridge&lt;/i&gt;.  For
-        other network types, port 5800 should be used instead.
-      Display: advanced-hide
-      Mask: 'false'
-      Mode: tcp
-      Name: WEB Port for GUI
-      Required: 'true'
-      Target: 5800
-      Type: Port
-      value: 5800
   Variable:
     displayheight:
       Default: '768'

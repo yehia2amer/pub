@@ -20,6 +20,14 @@ persistence:
     enabled: true
     mountPath: /serverdata/steamcmd
 service:
+  main:
+    enabled: true
+    ports:
+      udp:
+        enabled: true
+        port: 27015
+        protocol: UDP
+        targetPort: 27015
   tcprcon:
     enabled: true
     ports:
@@ -27,12 +35,4 @@ service:
         enabled: true
         port: 27015
         protocol: TCP
-        targetPort: 27015
-  udp:
-    enabled: true
-    ports:
-      udp:
-        enabled: true
-        port: 27015
-        protocol: UDP
         targetPort: 27015

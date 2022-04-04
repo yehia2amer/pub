@@ -18,6 +18,14 @@ persistence:
     enabled: true
     mountPath: /home/git/data
 service:
+  main:
+    enabled: true
+    ports:
+      main:
+        enabled: true
+        port: 10080
+        protocol: TCP
+        targetPort: 80
   tcp-port-0:
     enabled: true
     ports:
@@ -26,14 +34,6 @@ service:
         port: 10022
         protocol: TCP
         targetPort: 22
-  tcp-port-1:
-    enabled: true
-    ports:
-      tcp-port-1:
-        enabled: true
-        port: 10080
-        protocol: TCP
-        targetPort: 80
   tcp-port-2:
     enabled: true
     ports:

@@ -44,14 +44,6 @@ persistence:
     enabled: true
     mountPath: /var/log/nginx
 service:
-  dnsudpport:
-    enabled: true
-    ports:
-      dnsudpport:
-        enabled: true
-        port: 53
-        protocol: UDP
-        targetPort: 53
   httpport:
     enabled: true
     ports:
@@ -68,3 +60,11 @@ service:
         port: 443
         protocol: TCP
         targetPort: 443
+  main:
+    enabled: true
+    ports:
+      dnsudpport:
+        enabled: true
+        port: 53
+        protocol: UDP
+        targetPort: 53

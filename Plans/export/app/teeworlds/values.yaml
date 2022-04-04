@@ -9,6 +9,14 @@ persistence:
     enabled: true
     mountPath: /serverdata/serverfiles/
 service:
+  main:
+    enabled: true
+    ports:
+      udp:
+        enabled: true
+        port: 8303
+        protocol: UDP
+        targetPort: 8303
   tcp:
     enabled: true
     ports:
@@ -16,12 +24,4 @@ service:
         enabled: true
         port: 8303
         protocol: TCP
-        targetPort: 8303
-  udp:
-    enabled: true
-    ports:
-      udp:
-        enabled: true
-        port: 8303
-        protocol: UDP
         targetPort: 8303

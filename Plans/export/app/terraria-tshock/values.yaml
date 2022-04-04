@@ -9,6 +9,14 @@ persistence:
     enabled: true
     mountPath: /serverdata/serverfiles
 service:
+  main:
+    enabled: true
+    ports:
+      main:
+        enabled: true
+        port: 9014
+        protocol: TCP
+        targetPort: 8080
   tcp:
     enabled: true
     ports:
@@ -17,11 +25,3 @@ service:
         port: 7777
         protocol: TCP
         targetPort: 7777
-  tcp-webconsole:
-    enabled: true
-    ports:
-      tcp-webconsole:
-        enabled: true
-        port: 9014
-        protocol: TCP
-        targetPort: 8080

@@ -14,6 +14,14 @@ Config:
       Target: /home/git/data
       value: /mnt/user/appdata/gitlab
   Port:
+    main:
+      ContainerPort: '80'
+      HostPort: '10080'
+      Mode: tcp
+      Name: tcp-port-1
+      Protocol: tcp
+      Target: 80
+      value: 10080
     tcp-port-0:
       ContainerPort: '22'
       HostPort: '10022'
@@ -22,14 +30,6 @@ Config:
       Protocol: tcp
       Target: 22
       value: 10022
-    tcp-port-1:
-      ContainerPort: '80'
-      HostPort: '10080'
-      Mode: tcp
-      Name: tcp-port-1
-      Protocol: tcp
-      Target: 80
-      value: 10080
     tcp-port-2:
       ContainerPort: '443'
       HostPort: '10443'

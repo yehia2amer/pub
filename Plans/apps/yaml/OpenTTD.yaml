@@ -16,18 +16,7 @@ Config:
       Type: Path
       value: /mnt/cache/appdata/openttd
   Port:
-    tcp-gameport:
-      Default: ''
-      Description: 'Container Port: 3979'
-      Display: always
-      Mask: 'false'
-      Mode: tcp
-      Name: TCP - Game Port
-      Required: 'true'
-      Target: 3979
-      Type: Port
-      value: 3979
-    tcp-webconsole:
+    main:
       Default: ''
       Description: 'WebConsole (by default, you can connect to the OpenTTD console
         by opening your browser and go to HOSTIP:9015 - eg: 192.168.1.1:9015 - or
@@ -40,6 +29,17 @@ Config:
       Target: 8080
       Type: Port
       value: 9015
+    tcp-gameport:
+      Default: ''
+      Description: 'Container Port: 3979'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: TCP - Game Port
+      Required: 'true'
+      Target: 3979
+      Type: Port
+      value: 3979
     udp-gameport:
       Default: ''
       Description: 'Container Port: 3979'

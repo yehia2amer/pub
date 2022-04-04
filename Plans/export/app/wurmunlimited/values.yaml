@@ -28,6 +28,14 @@ persistence:
     enabled: true
     mountPath: /serverdata/steamcmd
 service:
+  main:
+    enabled: true
+    ports:
+      upd1:
+        enabled: true
+        port: 8766
+        protocol: UDP
+        targetPort: 8766
   tcp1:
     enabled: true
     ports:
@@ -52,11 +60,3 @@ service:
         port: 27020
         protocol: UDP
         targetPort: 27020
-  upd1:
-    enabled: true
-    ports:
-      upd1:
-        enabled: true
-        port: 8766
-        protocol: UDP
-        targetPort: 8766

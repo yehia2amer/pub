@@ -16,18 +16,7 @@ Config:
       Type: Path
       value: /mnt/cache/appdata/terraria-tshock
   Port:
-    tcp:
-      Default: ''
-      Description: 'Container Port: 7777'
-      Display: always
-      Mask: 'false'
-      Mode: tcp
-      Name: TCP
-      Required: 'true'
-      Target: 7777
-      Type: Port
-      value: 7777
-    tcp-webconsole:
+    main:
       Default: ''
       Description: 'WebConsole (by default, you can connect to the Terraria console
         by opening your browser and go to HOSTIP:9014 - eg: 192.168.1.1:9014 - or
@@ -40,6 +29,17 @@ Config:
       Target: 8080
       Type: Port
       value: 9014
+    tcp:
+      Default: ''
+      Description: 'Container Port: 7777'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: TCP
+      Required: 'true'
+      Target: 7777
+      Type: Port
+      value: 7777
   Variable:
     game_params:
       Default: ''

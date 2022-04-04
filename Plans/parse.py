@@ -367,6 +367,8 @@ for n in afList:
         stripped = stripped.split("]/", 1)[0]
         for char in invalid:
           mainport = stripped.replace(char, '')
+        mainport = ''.join(filter(str.isdigit, mainport))
+        mainport = int(mainport)
       for name, value in n["Config"]["Port"].items():
         store = value
         mainset = False
@@ -568,9 +570,10 @@ for name, app in combinedfree.items():
       
   valuesyaml["service"] = {}
   
-  if len(n["Config"]["Port"]) == 0:
+  if len(app["Config"]["Port"]) == 0:
     valuesyaml["service"]["main"] = {}
     valuesyaml["service"]["main"]["enabled"] = False
+    valuesyaml["service"]["main"]["ports"] = {}
     valuesyaml["service"]["main"]["ports"]["main"] = {}
     valuesyaml["service"]["main"]["ports"]["main"]["enabled"] = False
   else:
@@ -591,8 +594,14 @@ for name, app in combinedfree.items():
       else: 
         valuesyaml["service"][name]["ports"][name]["targetPort"] = value["value"]
         
-  if not app["Config"]["Port"]["main"]:
-    raise Exception("App does not have a main port set: "+app["name"] )
+  if "main" not in  valuesyaml["service"].keys() or not valuesyaml["service"]["main" ]:
+      placeholder = next(iter(valuesyaml["service"]))
+      valuesyaml["service"]["main"] = valuesyaml["service"][placeholder]
+      valuesyaml["service"].pop(placeholder, "")
+      
+        
+  if  "main" not in  valuesyaml["service"].keys() or not valuesyaml["service"]["main" ]:
+    raise Exception("App does not have a main port set: "+app["Name"] )
 
   valuesyamlString = yaml.dump(valuesyaml)
   valuesyamlFile = open("./export/"+"app/"+tmpname+"/values.yaml", "w")

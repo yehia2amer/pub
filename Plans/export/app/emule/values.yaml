@@ -15,6 +15,14 @@ persistence:
     enabled: true
     mountPath: /data
 service:
+  main:
+    enabled: true
+    ports:
+      main:
+        enabled: true
+        port: 4711
+        protocol: TCP
+        targetPort: 4711
   port(tcp):
     enabled: true
     ports:
@@ -31,11 +39,3 @@ service:
         port: 23733
         protocol: TCP
         targetPort: 23733
-  webui:
-    enabled: true
-    ports:
-      webui:
-        enabled: true
-        port: 4711
-        protocol: TCP
-        targetPort: 4711

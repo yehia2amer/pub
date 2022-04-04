@@ -5,6 +5,14 @@ image:
   tag: latest
 persistence: {}
 service:
+  main:
+    enabled: true
+    ports:
+      main:
+        enabled: true
+        port: 1080
+        protocol: TCP
+        targetPort: 80
   port(smtp):
     enabled: true
     ports:
@@ -13,11 +21,3 @@ service:
         port: 1025
         protocol: TCP
         targetPort: 25
-  port(webui):
-    enabled: true
-    ports:
-      port(webui):
-        enabled: true
-        port: 1080
-        protocol: TCP
-        targetPort: 80

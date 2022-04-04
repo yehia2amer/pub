@@ -15,6 +15,14 @@ persistence:
     enabled: true
     mountPath: /workspace
 service:
+  main:
+    enabled: true
+    ports:
+      main:
+        enabled: true
+        port: 6080
+        protocol: TCP
+        targetPort: 3000
   markdownpreview:
     enabled: true
     ports:
@@ -23,11 +31,3 @@ service:
         port: 8090
         protocol: TCP
         targetPort: 8090
-  webui:
-    enabled: true
-    ports:
-      webui:
-        enabled: true
-        port: 6080
-        protocol: TCP
-        targetPort: 3000

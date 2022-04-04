@@ -29,6 +29,17 @@ Config:
       Type: Path
       value: ''
   Port:
+    main:
+      Default: ''
+      Description: 'Container Port: 9001'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: WebUI
+      Required: 'true'
+      Target: 9001
+      Type: Port
+      value: 9001
     port1044:
       Default: ''
       Description: 'Container Port: 1044'
@@ -51,17 +62,6 @@ Config:
       Target: 5002
       Type: Port
       value: 5002
-    webui:
-      Default: ''
-      Description: 'Container Port: 9001'
-      Display: always
-      Mask: 'false'
-      Mode: tcp
-      Name: WebUI
-      Required: 'true'
-      Target: 9001
-      Type: Port
-      value: 9001
   Variable: {}
 Icon: https://www.universalmediaserver.com/assets/img/logo.png
 Keywords:

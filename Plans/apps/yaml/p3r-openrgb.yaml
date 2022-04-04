@@ -39,6 +39,17 @@ Config:
       Type: Path
       value: /sys/bus/i2c/devices/
   Port:
+    main:
+      Default: '5800'
+      Description: 'Container Port: 5800'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Web Port
+      Required: 'true'
+      Target: 5800
+      Type: Port
+      value: 5800
     sdkserverport:
       Default: '6742'
       Description: 'Container Port: 6742'
@@ -61,17 +72,6 @@ Config:
       Target: 5900
       Type: Port
       value: 5900
-    webport:
-      Default: '5800'
-      Description: 'Container Port: 5800'
-      Display: always
-      Mask: 'false'
-      Mode: tcp
-      Name: Web Port
-      Required: 'true'
-      Target: 5800
-      Type: Port
-      value: 5800
   Variable:
     defaultprofile:
       Default: default.orp

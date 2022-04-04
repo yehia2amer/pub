@@ -16,17 +16,6 @@ Config:
       Type: Path
       value: /mnt/user/appdata/dispatch/
   Port:
-    http:
-      Default: '8000'
-      Description: HTTP
-      Display: always
-      Mask: 'false'
-      Mode: tcp
-      Name: HTTP
-      Required: 'true'
-      Target: 80
-      Type: Port
-      value: 8000
     https:
       Default: '8443'
       Description: HTTPs (Not Required if you use reverse proxy)
@@ -38,6 +27,17 @@ Config:
       Target: 443
       Type: Port
       value: 4596
+    main:
+      Default: '8000'
+      Description: HTTP
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: HTTP
+      Required: 'true'
+      Target: 80
+      Type: Port
+      value: 8000
   Variable: {}
 Icon: https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/dispatch.png
 Keywords:
