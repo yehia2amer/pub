@@ -10,6 +10,12 @@ persistence:
   logs-folder:
     enabled: true
     mountPath: /data/logs
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   https-port:
     enabled: true

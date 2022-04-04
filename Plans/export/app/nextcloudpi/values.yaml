@@ -7,6 +7,12 @@ persistence:
   data:
     enabled: true
     mountPath: /data
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   httpwebport:
     enabled: true
@@ -22,7 +28,7 @@ service:
       main:
         enabled: true
         port: 443
-        protocol: TCP
+        protocol: HTTP
         targetPort: 443
   panelwebport:
     enabled: true

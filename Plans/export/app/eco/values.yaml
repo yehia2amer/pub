@@ -17,6 +17,12 @@ persistence:
   steamcmd:
     enabled: true
     mountPath: /serverdata/steamcmd
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   main:
     enabled: true
@@ -24,7 +30,7 @@ service:
       main:
         enabled: true
         port: 3001
-        protocol: TCP
+        protocol: HTTP
         targetPort: 3001
   udp-gameport:
     enabled: true

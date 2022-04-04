@@ -18,6 +18,12 @@ persistence:
     enabled: true
     mountPath: /etc/localtime
     readOnly: true
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   lansyncport(udp):
     enabled: true

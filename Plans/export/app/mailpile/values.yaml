@@ -10,6 +10,12 @@ persistence:
   path2:
     enabled: true
     mountPath: /root/.gnupg
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   main:
     enabled: true

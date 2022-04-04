@@ -9,6 +9,12 @@ image:
   repository: storjlabs/storagenode
   tag: latest
 persistence: {}
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   main:
     enabled: true
@@ -16,7 +22,7 @@ service:
       main:
         enabled: true
         port: 14002
-        protocol: TCP
+        protocol: HTTP
         targetPort: 14002
   tcpport:
     enabled: true

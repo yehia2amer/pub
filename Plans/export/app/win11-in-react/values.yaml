@@ -4,6 +4,12 @@ image:
   repository: blueedge/win11react
   tag: latest
 persistence: {}
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   main:
     enabled: false

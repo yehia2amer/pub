@@ -13,6 +13,12 @@ persistence:
   data:
     enabled: true
     mountPath: /data
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   hpxport:
     enabled: true
@@ -28,7 +34,7 @@ service:
       main:
         enabled: true
         port: 7008
-        protocol: TCP
+        protocol: HTTP
         targetPort: 7008
   torrentport:
     enabled: true

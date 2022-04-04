@@ -17,6 +17,12 @@ persistence:
   logsfolder:
     enabled: true
     mountPath: /opt/JDownloader/logs
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   main:
     enabled: true

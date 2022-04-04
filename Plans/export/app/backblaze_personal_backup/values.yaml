@@ -16,6 +16,12 @@ persistence:
   storagetobackup:
     enabled: true
     mountPath: /drive_d/
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   main:
     enabled: true
@@ -23,7 +29,7 @@ service:
       main:
         enabled: true
         port: 5800
-        protocol: TCP
+        protocol: HTTP
         targetPort: 5800
   vnc:
     enabled: true

@@ -7,6 +7,12 @@ persistence:
   tonido:
     enabled: true
     mountPath: /unRAID
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   main:
     enabled: true

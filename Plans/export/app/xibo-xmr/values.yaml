@@ -9,6 +9,12 @@ image:
   repository: xibosignage/xibo-xmr
   tag: latest
 persistence: {}
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   listenport:
     enabled: true

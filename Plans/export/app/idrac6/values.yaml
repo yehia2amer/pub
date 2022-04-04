@@ -20,6 +20,12 @@ persistence:
   virtualmedia:
     enabled: true
     mountPath: /vmedia
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   main:
     enabled: true

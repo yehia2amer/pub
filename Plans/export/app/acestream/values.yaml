@@ -7,6 +7,12 @@ persistence:
   acestreamcache:
     enabled: true
     mountPath: /srv/acestream/.ACEStream
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   main:
     enabled: true

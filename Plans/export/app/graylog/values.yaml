@@ -12,6 +12,12 @@ persistence:
   appdata:
     enabled: true
     mountPath: /usr/share/graylog/data/journal
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   gelftcp:
     enabled: true
@@ -35,7 +41,7 @@ service:
       main:
         enabled: true
         port: 9000
-        protocol: TCP
+        protocol: HTTP
         targetPort: 9000
   syslogtcp:
     enabled: true

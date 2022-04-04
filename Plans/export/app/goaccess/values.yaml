@@ -7,6 +7,12 @@ persistence:
   goaccess:
     enabled: true
     mountPath: /opt/log
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   main:
     enabled: true

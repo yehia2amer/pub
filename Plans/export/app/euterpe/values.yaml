@@ -7,6 +7,12 @@ persistence:
   storage(library):
     enabled: true
     mountPath: /root/Music
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   main:
     enabled: true

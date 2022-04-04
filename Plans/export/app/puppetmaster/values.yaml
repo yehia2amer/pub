@@ -13,6 +13,12 @@ persistence:
   ssldir:
     enabled: true
     mountPath: /etc/puppetlabs/puppet/ssl
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   hostport2:
     enabled: true

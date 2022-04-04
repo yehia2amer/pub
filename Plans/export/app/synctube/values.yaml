@@ -7,6 +7,12 @@ persistence:
   storage(config):
     enabled: true
     mountPath: /usr/src/app/user
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   main:
     enabled: true

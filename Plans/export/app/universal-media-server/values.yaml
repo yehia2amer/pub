@@ -10,6 +10,12 @@ persistence:
   media:
     enabled: true
     mountPath: /media
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   main:
     enabled: true
@@ -17,7 +23,7 @@ service:
       main:
         enabled: true
         port: 9001
-        protocol: TCP
+        protocol: HTTP
         targetPort: 9001
   port1044:
     enabled: true

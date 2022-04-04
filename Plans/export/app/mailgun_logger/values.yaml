@@ -8,6 +8,12 @@ image:
   repository: jackjoe/mailgun_logger
   tag: latest
 persistence: {}
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   main:
     enabled: true

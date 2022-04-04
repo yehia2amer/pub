@@ -7,6 +7,12 @@ image:
   repository: jwater7/godaddy-publicip-updater
   tag: latest
 persistence: {}
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   main:
     enabled: false

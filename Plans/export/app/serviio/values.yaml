@@ -16,6 +16,12 @@ persistence:
   hostpath5:
     enabled: true
     mountPath: /media/serviio
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   hostport2:
     enabled: true
@@ -55,5 +61,5 @@ service:
       main:
         enabled: true
         port: 23423
-        protocol: TCP
+        protocol: HTTP
         targetPort: 23423

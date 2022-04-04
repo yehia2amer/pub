@@ -10,6 +10,12 @@ persistence:
   hostpath2:
     enabled: true
     mountPath: /usr/share/icecast/web/void.mp3
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   main:
     enabled: false

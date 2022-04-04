@@ -15,6 +15,12 @@ persistence:
   datapersist:
     enabled: true
     mountPath: /splunkdata
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   dataingest:
     enabled: true
@@ -30,7 +36,7 @@ service:
       main:
         enabled: true
         port: 8000
-        protocol: TCP
+        protocol: HTTP
         targetPort: 8000
   management:
     enabled: true

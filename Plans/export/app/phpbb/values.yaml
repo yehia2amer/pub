@@ -19,6 +19,12 @@ persistence:
   appdata:
     enabled: true
     mountPath: /bitnami/phpbb
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   main:
     enabled: true

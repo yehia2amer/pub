@@ -7,6 +7,12 @@ persistence:
   applicationpath:
     enabled: true
     mountPath: /hoobs
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   homebridgeport:
     enabled: true
@@ -22,5 +28,5 @@ service:
       main:
         enabled: true
         port: 8082
-        protocol: TCP
+        protocol: HTTP
         targetPort: 80

@@ -10,6 +10,12 @@ persistence:
   dockervolumes:
     enabled: true
     mountPath: /var/lib/docker/volumes
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   main:
     enabled: true

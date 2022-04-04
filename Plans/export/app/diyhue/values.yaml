@@ -9,6 +9,12 @@ persistence:
   appdata:
     enabled: true
     mountPath: /opt/hue-emulator/export/
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   '1900':
     enabled: true
@@ -40,5 +46,5 @@ service:
       main:
         enabled: true
         port: 80
-        protocol: TCP
+        protocol: HTTP
         targetPort: 80

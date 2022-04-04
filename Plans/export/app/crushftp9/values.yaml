@@ -12,6 +12,12 @@ persistence:
   unraidsharepath:
     enabled: true
     mountPath: /unraid
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   ftpport:
     enabled: true
@@ -51,5 +57,5 @@ service:
       main:
         enabled: true
         port: 8080
-        protocol: TCP
+        protocol: HTTP
         targetPort: 8080

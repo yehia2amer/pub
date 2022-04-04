@@ -14,6 +14,12 @@ persistence:
   config:
     enabled: true
     mountPath: /opt/PhantomBot/config
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   main:
     enabled: true

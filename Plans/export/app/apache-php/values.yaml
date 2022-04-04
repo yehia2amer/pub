@@ -8,6 +8,12 @@ persistence:
     enabled: true
     mountPath: /etc/localtime
     readOnly: true
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   main:
     enabled: true
@@ -15,7 +21,7 @@ service:
       main:
         enabled: true
         port: 8005
-        protocol: TCP
+        protocol: HTTP
         targetPort: 80
   tcp-port-1:
     enabled: true

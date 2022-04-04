@@ -7,6 +7,12 @@ persistence:
   lazylibrarian-calibre:
     enabled: true
     mountPath: /magazines
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   main:
     enabled: true

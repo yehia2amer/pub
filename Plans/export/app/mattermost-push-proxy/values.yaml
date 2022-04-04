@@ -13,6 +13,12 @@ persistence:
   mattermostpushproxypath:
     enabled: true
     mountPath: /mattermost-push-proxy
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   main:
     enabled: true

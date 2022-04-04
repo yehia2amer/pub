@@ -16,6 +16,12 @@ persistence:
   tv-showdestinationfolder:
     enabled: true
     mountPath: /tvshows
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   main:
     enabled: true

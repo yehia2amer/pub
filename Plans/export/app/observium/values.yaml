@@ -7,6 +7,12 @@ persistence:
   observium:
     enabled: true
     mountPath: /opt/observium/rrd
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   main:
     enabled: true
@@ -14,7 +20,7 @@ service:
       main:
         enabled: true
         port: 8668
-        protocol: TCP
+        protocol: HTTP
         targetPort: 8668
   udp-port-1:
     enabled: true

@@ -7,6 +7,12 @@ persistence:
   ubuntu-xrdp:
     enabled: true
     mountPath: /home/ubuntu/unraid
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   main:
     enabled: true

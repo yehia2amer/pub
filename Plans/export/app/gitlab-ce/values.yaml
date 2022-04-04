@@ -13,6 +13,12 @@ persistence:
   logstoragepath:
     enabled: true
     mountPath: /var/log/gitlab
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   main:
     enabled: true
@@ -20,7 +26,7 @@ service:
       main:
         enabled: true
         port: 9080
-        protocol: TCP
+        protocol: HTTP
         targetPort: 9080
   sshport:
     enabled: true

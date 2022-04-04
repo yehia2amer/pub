@@ -7,6 +7,12 @@ persistence:
   xeoma:
     enabled: true
     mountPath: /archive
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   main:
     enabled: true
@@ -14,7 +20,7 @@ service:
       main:
         enabled: true
         port: 10090
-        protocol: TCP
+        protocol: HTTP
         targetPort: 10090
   tcp-port-0:
     enabled: true

@@ -329,7 +329,7 @@ adguard-home:
         Description: Port for the Web UI
         Display: advanced
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: WebUI
         Required: 'false'
         Target: 3000
@@ -430,7 +430,6 @@ adguardhome-sync:
         Target: UMASK
         Type: Variable
         value: ''
-  GitHub: https://github.com/linuxserver/docker-adguardhome-sync#application-setup
   Icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/linuxserver-ls-logo.png
   Keywords:
   - adguardhome-sync
@@ -708,7 +707,6 @@ akaunting:
   Tag: latest
   WebUI: http://[IP]:[PORT:80]/
 alienswarm:
-  Beta: 'true'
   CategoryList:
   - GameServers
   Config:
@@ -887,7 +885,6 @@ alienswarm:
   WebUI: ''
   caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/AlienSwarm.xml
 alienswarm-reactivedrop:
-  Beta: 'true'
   CategoryList:
   - GameServers
   Config:
@@ -1613,7 +1610,6 @@ ama:
   Tag: latest
   WebUI: ''
 ambd:
-  Beta: 'true'
   CategoryList:
   - Downloaders
   - MediaApp-Music
@@ -2929,7 +2925,7 @@ amule:
         Description: ''
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: WebUI
         Required: 'false'
         Target: 4711
@@ -3328,7 +3324,6 @@ anaconda3:
         Type: Port
         value: 8888
     Variable: {}
-  GitHub: https://github.com/okwrtdsh/anaconda3
   Icon: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/anaconda3.png
   Keywords:
   - anaconda3
@@ -3446,7 +3441,6 @@ androiddebugbridge:
   Tag: latest
   WebUI: ''
 androidstudio:
-  Beta: 'true'
   Branch:
     Tag: canary
     TagDescription: Most recent Android Studio Canary (currently only Canary works
@@ -3755,7 +3749,6 @@ anope:
   WebUI: ''
   caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/Anope.xml
 apache-nifi:
-  BindTime: 'true'
   CategoryList:
   - Productivity
   Config:
@@ -3784,7 +3777,6 @@ apache-nifi:
         Type: Port
         value: 8080
     Variable: {}
-  GitHub: https://github.com/DanRegalia/NIFI-Unraid
   Icon: https://d36jcksde1wxzq.cloudfront.net/be7833db9bddb4494d2a7c3dd659199a.png
   Keywords:
   - apache-nifi
@@ -3802,7 +3794,6 @@ apache-nifi:
   Tag: latest
   WebUI: http://[IP]:[PORT:8080]/nifi/
 apache-php:
-  BindTime: 'true'
   CategoryList:
   - Network-Web
   Config:
@@ -3818,7 +3809,7 @@ apache-php:
       main:
         ContainerPort: '80'
         HostPort: '8005'
-        Mode: tcp
+        Mode: HTTP
         Name: tcp-port-0
         Protocol: tcp
         Target: 80
@@ -4506,7 +4497,6 @@ apprise-api:
         Target: UMASK
         Type: Variable
         value: ''
-  GitHub: https://github.com/linuxserver/docker-apprise-api
   Icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/apprise-api-logo.png
   Keywords:
   - apprise-api
@@ -4579,7 +4569,6 @@ appsmith:
   Tag: latest
   WebUI: http://[IP]:[PORT:80]
 apt-cacher-ng:
-  BindTime: 'true'
   CategoryList:
   - Network-Proxy
   - Network-Other
@@ -4603,7 +4592,6 @@ apt-cacher-ng:
         Target: 3142
         value: 3142
     Variable: {}
-  GitHub: https://github.com/sameersbn/docker-apt-cacher-ng
   Icon: https://github.com/atribe/unRAID-docker/raw/master/icons/apt-cacher.png
   Keywords:
   - apt-cacher-ng
@@ -5263,7 +5251,7 @@ aria2-with-ariang:
         Description: 'Container Port: 80'
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: Aria2 WebUI Port
         Required: 'true'
         Target: 80
@@ -5658,7 +5646,7 @@ aria2webui:
         Description: 'Container Port: 80'
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: Aria2 WebUI Port
         Required: 'true'
         Target: 80
@@ -7099,7 +7087,6 @@ assettocorsacompetizione:
   WebUI: ''
   caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/AssettoCorsaCompetizione.xml
 atd:
-  Beta: 'true'
   CategoryList:
   - Downloaders
   - MediaApp-Music
@@ -7921,7 +7908,7 @@ avidemux:
           other network types, port 5800 should be used instead.
         Display: advanced-hide
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: WEB Port for GUI
         Required: 'true'
         Target: 5800
@@ -8316,7 +8303,7 @@ backblaze_personal_backup:
         Description: Port used to access the application's GUI via the web interface.
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: Http VNC GUI
         Required: 'true'
         Target: 5800
@@ -9224,7 +9211,7 @@ bitcoinwalletgui:
         Description: 'Container Port: 6901'
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: noVNC port
         Required: 'false'
         Target: 6901
@@ -9714,7 +9701,6 @@ blender:
         Target: UMASK
         Type: Variable
         value: ''
-  GitHub: https://github.com/linuxserver/docker-blender#application-setup
   Icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/blender-logo.png
   Keywords:
   - blender
@@ -9774,7 +9760,7 @@ blender-desktop-g3:
         Description: ''
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: WebUI (noVNC)
         Required: 'false'
         Target: 6901
@@ -9857,7 +9843,7 @@ blueiris:
         Description: VNC Web Server Port
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: VNC Web Server Port
         Required: 'false'
         Target: 8080
@@ -10010,7 +9996,7 @@ blynk-server:
         Description: 'Container Port: 9443'
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: Host Port 2
         Required: 'false'
         Target: 9443
@@ -10483,7 +10469,6 @@ botdarr:
   Tag: latest
   WebUI: ''
 breitbandmessung-de:
-  Beta: 'true'
   CategoryList:
   - HomeAutomation
   - Productivity
@@ -10541,8 +10526,6 @@ breitbandmessung-de:
   Tag: latest
   WebUI: ''
 btdex:
-  Beta: 'true'
-  BindTime: 'true'
   CategoryList:
   - Crypto
   Config:
@@ -10572,7 +10555,6 @@ btdex:
         Name: DISPLAY_WIDTH
         Target: DISPLAY_WIDTH
         value: 1440|1680
-  GitHub: https://github.com/furritos/docker-btdex
   Icon: https://github.com/paulpoco/docker-templates/raw/master/paulpoco/images/btdex.png
   Keywords:
   - btdex
@@ -11006,7 +10988,7 @@ cacti:
         Description: 'Container Port: 80'
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: webui
         Required: 'true'
         Target: 80
@@ -11088,7 +11070,7 @@ caddy:
         Description: 'Container Port: 8080'
         Display: always-hide
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: Host Port for 8080
         Required: 'true'
         Target: 8080
@@ -11583,7 +11565,6 @@ checkmk-raw:
   WebUI: http://[IP]:[PORT:5000]//cmk/check_mk/
   caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/Checkmk-RAW.xml
 cherrymusic:
-  BindTime: 'true'
   CategoryList:
   - Cloud
   - MediaServer-Music
@@ -11606,7 +11587,6 @@ cherrymusic:
         Target: 8070
         value: 8070
     Variable: {}
-  GitHub: https://github.com/noinip/cherrymusic
   Icon: https://raw.githubusercontent.com/noinip/cherrymusic-1/master/res/img/cherrymusic_logo_big.png
   Keywords:
   - cherrymusic
@@ -11828,7 +11808,6 @@ chivalry-medievalwarfare:
   Tag: chivalrymw
   WebUI: ''
 chowdown:
-  BindTime: 'true'
   CategoryList:
   - Other
   Config:
@@ -12008,7 +11987,7 @@ chromium-desktop-g3:
         Description: ''
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: WebUI (noVNC)WebUI (noVNC)
         Required: 'false'
         Target: 6901
@@ -12067,7 +12046,6 @@ chromium-desktop-g3:
   WebUI: http://[IP]:[PORT:6901]
 chronograf:
   BaseImage: ''
-  BindTime: 'true'
   CategoryList:
   - Tools-System
   Config:
@@ -12110,7 +12088,6 @@ chronograf:
     \ size=4]Change Log[/font][/center]\n\n[font size=3]2018.04.29[/font]\n- Initial\
     \ release of the Chronograf template\n    \n    \n  "
 chronos:
-  BindTime: 'true'
   CategoryList:
   - Tools-Utilities
   Config:
@@ -12132,7 +12109,6 @@ chronos:
         Target: 5000
         value: 5000
     Variable: {}
-  GitHub: https://github.com/simse/chronos
   Icon: https://i.imgur.com/MoAbdWn.png
   Keywords:
   - chronos
@@ -12695,7 +12671,7 @@ cloudberrybackup:
           other network types, port 5800 should be used instead.
         Display: advanced-hide
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: WEB Port for GUI
         Required: 'true'
         Target: 5800
@@ -12852,11 +12828,6 @@ cloudberrybackup:
 
     '
   Privileged: 'false'
-  RecommendedDate: 1612155600
-  RecommendedRaw: 2/1/2021
-  RecommendedReason:
-    en_US: Easily backup your files to cloud based storage.  <a href='https://www.youtube.com/watch?v=OHP8OKMMm4E'
-      target='_blank'>Walk Through Video</a>
   Registry: https://hub.docker.com/r/jlesage/cloudberry-backup/
   Repository: jlesage/cloudberry-backup
   Requires: ''
@@ -12919,7 +12890,6 @@ cloudcommander:
         Type: Variable
         value: /root
   ExtraParams: -u 99:100
-  GitHub: https://github.com/coderaiser/cloudcmd
   Icon: https://raw.githubusercontent.com/cheesemarathon/docker-templates/master/images/cloudcmdLogo.png
   Keywords:
   - cloudcommander
@@ -12938,7 +12908,6 @@ cloudcommander:
   Tag: latest
   WebUI: http://[IP]:[PORT:8000]
 cloudflare:
-  BindTime: 'true'
   CategoryList:
   - Network-DNS
   Config:
@@ -12962,7 +12931,6 @@ cloudflare:
         Name: CF_HOST
         Target: CF_HOST
         value: sub.domain.com
-  GitHub: https://github.com/macexx/cloudflare-ddns
   Icon: https://i.imgur.com/PKa3Sm2.png
   Keywords:
   - cloudflare
@@ -14108,7 +14076,6 @@ compreface-gpu:
   Tag: 0.6.1-mobilenet-gpu
   WebUI: http://[IP]:[PORT:80]
 conanexiles:
-  Beta: 'true'
   CategoryList:
   - GameServers
   Config:
@@ -14701,7 +14668,6 @@ cops:
         Target: UMASK
         Type: Variable
         value: ''
-  GitHub: https://github.com/linuxserver/docker-cops#application-setup
   Icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/cops-logo.png
   Keywords:
   - cops
@@ -14722,7 +14688,6 @@ cops:
   Tag: latest
   WebUI: http://[IP]:[PORT:80]
 couchdb-offical-docker-v1-x:
-  BindTime: 'true'
   CategoryList:
   - Productivity
   Config:
@@ -14744,7 +14709,6 @@ couchdb-offical-docker-v1-x:
         Target: 5984
         value: 5984
     Variable: {}
-  GitHub: https://github.com/docker-library/official-images/blob/master/library/couchdb
   Icon: https://couchdb.apache.org/image/couch@2x.png
   Keywords:
   - couchdb-offical-docker-v1-x
@@ -14763,7 +14727,6 @@ couchdb-offical-docker-v1-x:
   Tag: latest
   WebUI: http://[IP]:[PORT:5984]/_utils
 couchdb-v2-x:
-  BindTime: 'true'
   CategoryList:
   - Productivity
   Config:
@@ -14785,7 +14748,6 @@ couchdb-v2-x:
         Target: 5984
         value: 5984
     Variable: {}
-  GitHub: https://github.com/apache/docker-couchdb
   Icon: https://couchdb.apache.org/image/couch@2x.png
   Keywords:
   - couchdb-v2-x
@@ -14803,7 +14765,6 @@ couchdb-v2-x:
   Tag: latest
   WebUI: http://[IP]:[PORT:5984]/_utils
 couchpotato-git:
-  BindTime: 'true'
   CategoryList:
   - Downloaders
   - MediaApp-Video
@@ -14830,7 +14791,6 @@ couchpotato-git:
         Name: UMASK
         Target: UMASK
         value: '000'
-  GitHub: https://github.com/binhex/arch-couchpotato-git
   Icon: https://raw.githubusercontent.com/binhex/docker-templates/master/binhex/images/couchpotato-icon.png
   Keywords:
   - couchpotato-git
@@ -14995,7 +14955,6 @@ cowyo:
   Tag: latest
   WebUI: http://[IP]:[PORT:8050]
 craftopia:
-  Beta: 'true'
   CategoryList:
   - GameServers
   Config:
@@ -15201,7 +15160,7 @@ crafty:
         Description: Port to connect to the Web UI
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: Web UI Port
         Required: 'true'
         Target: 8000
@@ -15277,7 +15236,7 @@ crashplanpro:
           other network types, port 5800 should be used instead.
         Display: advanced-hide
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: WEB Port for GUI
         Required: 'true'
         Target: 5800
@@ -15668,7 +15627,7 @@ crushftp9:
         Description: Crush HTTP Port 8080
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: HTTP Port
         Required: 'true'
         Target: 8080
@@ -15765,7 +15724,7 @@ crypto-exchanges-gateway:
         Description: HTTP Port
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: HTTP Port
         Required: 'false'
         Target: 8000
@@ -15879,7 +15838,7 @@ cryptpad:
         Description: Port 1
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: Port 1
         Required: 'false'
         Target: 3000
@@ -16098,7 +16057,6 @@ csgo:
   WebUI: ''
   caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/CSGO.xml
 csmm-7dtd:
-  Beta: 'true'
   CategoryList:
   - GameServers
   - Network-Other
@@ -16127,7 +16085,7 @@ csmm-7dtd:
           above.
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: Web Port
         Required: 'true'
         Target: 1337
@@ -16853,7 +16811,6 @@ cstrikeconditionzero:
   WebUI: ''
   caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/CStrikeConditionZero.xml
 cups:
-  Beta: 'true'
   CategoryList:
   - Tools-Utilities
   - Network-Other
@@ -17079,7 +17036,7 @@ czkawka:
           other network types, port 5800 should be used instead.
         Display: advanced-hide
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: WEB Port for GUI
         Required: 'true'
         Target: 5800
@@ -19308,7 +19265,6 @@ debian-apt-mirror:
   Tag: latest
   WebUI: http://[IP]:[PORT:980]/
 debian-bullseye:
-  Beta: 'true'
   CategoryList:
   - Productivity
   - Tools-System
@@ -19524,8 +19480,6 @@ deduper:
   Tag: latest
   WebUI: http://[IP]:[PORT:5800]
 demonsaw-client:
-  Beta: 'true'
-  BindTime: 'true'
   CategoryList:
   - Other
   Config:
@@ -19546,7 +19500,6 @@ demonsaw-client:
         Target: 8080
         value: 8080
     Variable: {}
-  GitHub: https://github.com/miketweaver/demonsaw-client
   Icon: https://cdn.rawgit.com/miketweaver/demonsaw-client/master/Demonsaw-Logo-with-text.png
   Keywords:
   - demonsaw-client
@@ -20580,7 +20533,6 @@ diskover:
         Target: UMASK
         Type: Variable
         value: ''
-  GitHub: https://github.com/linuxserver/docker-diskover#application-setup
   Icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/linuxserver-ls-logo.png
   Keywords:
   - diskover
@@ -20696,7 +20648,7 @@ dispatch:
         Description: HTTP
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: HTTP
         Required: 'true'
         Target: 80
@@ -20778,7 +20730,7 @@ diyhue:
         Description: 'Container Port: 80'
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: '80'
         Required: 'true'
         Target: 80
@@ -20807,7 +20759,6 @@ diyhue:
         Target: MAC
         Type: Variable
         value: bc:5f:f4:cd:c6:19
-  GitHub: https://github.com/mariusmotea/diyHue
   Icon: https://raw.githubusercontent.com/cheesemarathon/docker-templates/master/images/diyhue.png
   Keywords:
   - diyhue
@@ -21268,11 +21219,6 @@ docker-webui:
   Overview: "Hello to all of you,\r\n"
   PostArgs: ''
   Privileged: 'false'
-  RecommendedDate: 1633060800
-  RecommendedRaw: 10/1/2021
-  RecommendedReason:
-    en_US: Creates a nice landing page for all of your docker containers with no work
-      involved
   RecommendedWho: Andrew
   Registry: https://hub.docker.com/r/olprog/unraid-docker-webui
   Repository: olprog/unraid-docker-webui
@@ -21413,7 +21359,6 @@ dockerregistry:
         Type: Port
         value: 5000
     Variable: {}
-  GitHub: https://github.com/docker/distribution-library-image
   Icon: https://github.com/juusujanar/unraid-templates/raw/master/img/DockerRegistry-logo.png
   Keywords:
   - dockerregistry
@@ -22104,7 +22049,7 @@ draw-io:
         Description: 'Container Port: 8080'
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: WebUI Port
         Required: 'false'
         Target: 8080
@@ -22264,7 +22209,7 @@ drone:
         Description: 'Container Port: 80'
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: HTTP Port
         Required: 'true'
         Target: 80
@@ -22877,7 +22822,7 @@ dupeguru:
           other network types, port 5800 should be used instead.
         Display: advanced-hide
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: WEB Port for GUI
         Required: 'true'
         Target: 5800
@@ -23131,7 +23076,6 @@ duplicacy:
   WebUI: http://[IP]:[PORT:3875]
   caTemplateURL: https://raw.githubusercontent.com/hotio/unraid-templates/master/hotio/duplicacy.xml
 dvblink:
-  BindTime: 'true'
   CategoryList:
   - MediaServer-Video
   Config:
@@ -23147,7 +23091,7 @@ dvblink:
       main:
         ContainerPort: '39876'
         HostPort: '39876'
-        Mode: tcp
+        Mode: HTTP
         Name: tcp-port-0
         Protocol: tcp
         Target: 39876
@@ -23187,7 +23131,6 @@ dvblink:
   Version: '1.0'
   WebUI: http://[IP]:[PORT:39876]/
 dvwa-web:
-  Beta: 'true'
   CategoryList:
   - Other
   Config:
@@ -23233,7 +23176,7 @@ dvwa-web:
         Description: 'Container Port: 80'
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: Host Port 1
         Required: 'false'
         Target: 80
@@ -23296,7 +23239,7 @@ eco:
         Description: TCP Web Port
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: TCP - Web Port
         Required: 'true'
         Target: 3001
@@ -23535,7 +23478,7 @@ elasticsearch:
         Description: Host port exposed for REST HTTP interface.
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: REST API Port
         Required: 'true'
         Target: 9200
@@ -23585,7 +23528,6 @@ elasticsearch:
   Tag: latest
   WebUI: http://[IP]:[PORT:9200]/
 elasticsearch-5:
-  BindTime: 'true'
   CategoryList:
   - Other
   Config:
@@ -23635,7 +23577,6 @@ elasticsearch-5:
   Tag: 5.6.14
   WebUI: http://[IP]:[PORT:9200]/
 electrs:
-  Beta: 'true'
   CategoryList:
   - Tools-Utilities
   - Network-Other
@@ -23847,7 +23788,6 @@ electrum:
   WebUI: http://[IP]:[PORT:8080]/vnc.html?autoconnect=true
   caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/Electrum.xml
 electrumx:
-  Beta: 'true'
   CategoryList:
   - Tools-Utilities
   - Network-Other
@@ -24149,7 +24089,7 @@ emule:
         Description: ''
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: WebUI
         Required: 'false'
         Target: 4711
@@ -24507,12 +24447,6 @@ enpass:
     \n"
   PostArgs: ''
   Privileged: 'false'
-  RecommendedDate: 1627790400
-  RecommendedRaw: 8/1/2021
-  RecommendedReason:
-    de_DE: "Mit \xFCber 10.000 Downloads in diesem Monat ist Enpass das CA Monthly\
-      \ Spotlight im August. "
-    en_US: With over 10k downloads this month, Enpass is August's CA Monthly Spotlight.
   Registry: https://hub.docker.com/r/ich777/enpass
   Repository: ich777/enpass
   Requires: ''
@@ -24712,7 +24646,7 @@ ergonode:
         Description: 'Container Port: 9053'
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: Node swagger/panel
         Required: 'true'
         Target: 9053
@@ -24961,7 +24895,6 @@ factorio:
   WebUI: ''
   caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/Factorio.xml
 factorioservermanager:
-  Beta: 'true'
   CategoryList:
   - GameServers
   Config:
@@ -25018,7 +24951,7 @@ factorioservermanager:
         Description: (check if Port is already used by other Contrainer)
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: FSM Port
         Required: 'false'
         Target: 80
@@ -25982,7 +25915,6 @@ ffmpeg-nvidia:
   Tag: 4.2-nvidia
   WebUI: ''
 fhdhr:
-  Beta: 'true'
   CategoryList:
   - MediaApp-Video
   Config:
@@ -26163,7 +26095,7 @@ filebot:
           other network types, port 5800 should be used instead.
         Display: advanced-hide
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: WEB Port for GUI
         Required: 'true'
         Target: 5800
@@ -26582,7 +26514,6 @@ filebot:
   Tag: latest
   WebUI: http://[IP]:[PORT:5800]
 fileflows:
-  Beta: 'true'
   CategoryList:
   - Productivity
   Config:
@@ -26711,7 +26642,6 @@ fileflows:
   Tag: latest
   WebUI: http://[IP]:[PORT:5000]
 fileflows-node:
-  Beta: 'true'
   CategoryList:
   - Productivity
   Config:
@@ -26851,7 +26781,7 @@ filegator:
         Description: ''
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: WebUI (HTTP)
         Required: 'false'
         Target: 80
@@ -27031,7 +26961,7 @@ firefox-desktop-g3:
         Description: ''
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: WebUI (noVNC)
         Required: 'false'
         Target: 6901
@@ -27419,7 +27349,7 @@ fivem:
           click on WebUI on the Docker page within Unraid).'
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: TCP - WebConsole
         Required: 'false'
         Target: 8080
@@ -28066,7 +27996,6 @@ flashpaper:
   Tag: latest
   WebUI: http://[IP]:[PORT:80]
 flextv:
-  BindTime: 'true'
   CategoryList:
   - MediaApp
   Config:
@@ -28082,7 +28011,7 @@ flextv:
       main:
         ContainerPort: '80'
         HostPort: '5666'
-        Mode: tcp
+        Mode: HTTP
         Name: tcp-port-0
         Protocol: tcp
         Target: 80
@@ -28100,7 +28029,6 @@ flextv:
         Name: UMASK
         Target: UMASK
         value: '000'
-  GitHub: https://github.com/jcreynolds/docker-templates
   Icon: https://github.com/d8ahazard/Phlex/raw/master/img/android-icon-144x144.png
   Keywords:
   - flextv
@@ -28156,7 +28084,7 @@ fluttercoin-wallet:
         Description: TCP noVNC WebGUI Port
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: WebGUI
         Required: 'true'
         Target: 8080
@@ -28275,7 +28203,6 @@ fluttercoin-wallet:
   WebUI: http://[IP]:[PORT:8080]/vnc.html?autoconnect=true
   caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/FlutterCoin-Wallet.xml
 fmd2-wine:
-  Beta: 'true'
   CategoryList:
   - Downloaders
   - MediaApp-Books
@@ -28466,7 +28393,6 @@ fogproject:
   Tag: latest
   WebUI: http://[IP]:[PORT:80]
 fotosho:
-  Beta: 'true'
   CategoryList:
   - MediaApp-Photos
   - MediaServer-Photos
@@ -29091,7 +29017,6 @@ fr24feed-piaware:
   Tag: latest
   WebUI: http://[IP]:[PORT:8080]/gmap.html
 frak-gvm:
-  BindTime: 'true'
   CategoryList:
   - Tools-Utilities
   - Security
@@ -29114,7 +29039,6 @@ frak-gvm:
         Target: 9392
         value: 8080
     Variable: {}
-  GitHub: https://www.github.com/Secure-Compliance-Solutions-LLC/GVM-Docker
   Icon: https://raw.githubusercontent.com/frakman1/unraid-docker-templates/master/openvas/gvm.png
   Keywords:
   - frak-gvm
@@ -29162,7 +29086,7 @@ freecad-desktop-g3:
         Description: ''
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: WebUI (noVNC)
         Required: 'false'
         Target: 6901
@@ -29312,7 +29236,7 @@ freepbx:
         Description: HTTP
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: HTTP
         Required: 'false'
         Target: 80
@@ -29778,7 +29702,7 @@ frigate-nvidia:
         Description: 'Container Port: 5000'
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: HTTP port
         Required: 'true'
         Target: 5000
@@ -30488,7 +30412,6 @@ geoip2influx:
   - https://hub.docker.com/r/gilbn/geoip2influx/
   Tag: latest
 get-iplayer:
-  BindTime: 'true'
   CategoryList:
   - MediaApp-Video
   - MediaServer-Video
@@ -30519,7 +30442,6 @@ get-iplayer:
         Name: UMASK
         Target: UMASK
         value: '000'
-  GitHub: https://github.com/binhex/arch-get-iplayer
   Icon: https://raw.githubusercontent.com/binhex/docker-templates/master/binhex/images/get-iplayer-icon.png
   Keywords:
   - get-iplayer
@@ -30652,7 +30574,7 @@ gimp-desktop-g3:
         Description: ''
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: WebUI (noVNC)
         Required: 'false'
         Target: 6901
@@ -30775,10 +30697,6 @@ github-backup:
   Overview: Like to maintain your own data? Automatically backup your github account
     to your Unraid server on a schedule.
   Privileged: 'false'
-  RecommendedDate: 1643691600
-  RecommendedRaw: 2/1/2022
-  RecommendedReason:
-    en_US: Easily and automatically backup your GitHub account to your Unraid server
   Registry: https://hub.docker.com/r/lnxd/github-backup
   Repository: lnxd/github-backup
   Requires: ''
@@ -30787,7 +30705,6 @@ github-backup:
   Tag: latest
   caTemplateURL: https://raw.githubusercontent.com/lnxd/unraid-templates/master/lnxd/github-backup.xml
 gitlab:
-  BindTime: 'true'
   CategoryList:
   - Cloud
   - Network-Web
@@ -30806,7 +30723,7 @@ gitlab:
       main:
         ContainerPort: '80'
         HostPort: '10080'
-        Mode: tcp
+        Mode: HTTP
         Name: tcp-port-1
         Protocol: tcp
         Target: 80
@@ -30869,7 +30786,6 @@ gitlab:
         Target: SSL_SELF_SIGNED
         value: 'false'
   ExtraParams: --link postgresql:postgresql --link redis:redisio
-  GitHub: https://github.com/sameersbn/docker-gitlab
   Icon: https://avatars.githubusercontent.com/u/1086321
   Keywords:
   - gitlab
@@ -30891,7 +30807,6 @@ gitlab:
   Tag: latest
   WebUI: http://[IP]:[PORT:80]/
 gitlab-ce:
-  BindTime: 'true'
   CategoryList:
   - Backup
   - Cloud
@@ -30939,7 +30854,7 @@ gitlab-ce:
         Default: '9080'
         Description: This is GitLab's Web UI port you can access via a web browser.
         Display: always-hide
-        Mode: tcp
+        Mode: HTTP
         Name: Web Interface Port (HTTP)
         Required: 'true'
         Target: 9080
@@ -30967,7 +30882,6 @@ gitlab-ce:
         value: 9443
     Variable: {}
   ExtraParams: --env GITLAB_OMNIBUS_CONFIG="external_url 'http://unraid:9080/'"
-  GitHub: https://github.com/gitlabhq/gitlabhq
   Icon: https://raw.githubusercontent.com/tynor88/docker-templates/master/images/gitlab_small.png
   Keywords:
   - gitlab-ce
@@ -31057,7 +30971,7 @@ glauth:
         Description: Container Management Port
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: Management Port
         Required: 'false'
         Target: 5555
@@ -31082,7 +30996,6 @@ glauth:
   Tag: latest
   WebUI: http://[IP]:[PORT:5555]
 go-auto-yt:
-  Beta: 'true'
   CategoryList:
   - Downloaders
   - Tools-Utilities
@@ -31235,7 +31148,6 @@ go-playground:
   Tag: latest
   WebUI: http://[IP]:[PORT:8000]
 goaccess:
-  BindTime: 'true'
   CategoryList:
   - Other
   Config:
@@ -31396,8 +31308,6 @@ godaddy-ddns:
   Tag: latest
   WebUI: ''
 gogs:
-  Beta: 'true'
-  BindTime: 'true'
   CategoryList:
   - Cloud
   - Productivity
@@ -31415,7 +31325,7 @@ gogs:
       main:
         ContainerPort: '3000'
         HostPort: '8930'
-        Mode: tcp
+        Mode: HTTP
         Name: tcp-port-1
         Protocol: tcp
         Target: 3000
@@ -31429,7 +31339,6 @@ gogs:
         Target: 22
         value: 8922
     Variable: {}
-  GitHub: https://github.com/quimnut/unraid-docker-templates/
   Icon: https://raw.githubusercontent.com/quimnut/unraid-docker-templates/master/quimnut/gogs.png
   Keywords:
   - gogs
@@ -31556,7 +31465,6 @@ gokapi:
   Tag: latest
   WebUI: http://[IP]:[PORT:53842]
 google-cloud-storage-backup:
-  BindTime: 'true'
   CategoryList:
   - Backup
   - Cloud
@@ -31591,7 +31499,6 @@ google-cloud-storage-backup:
         Name: SECRET_KEY
         Target: SECRET_KEY
         value: 'Container Variable: SECRET_KEY'
-  GitHub: https://github.com/vinid223/GcloudStorage-docker
   Icon: https://i.imgur.com/jdjTCs8.png
   Keywords:
   - google-cloud-storage-backup
@@ -32137,7 +32044,7 @@ graph-node:
         Description: ' GraphQL interface'
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: ' GraphQL interface'
         Required: 'true'
         Target: 8000
@@ -32296,7 +32203,7 @@ graylog:
         Description: 'Container Port: 9000'
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: Graylog web interface and REST API
         Required: 'false'
         Target: 9000
@@ -32434,7 +32341,7 @@ gridcoinwalletgui:
         Description: 'default: 6901'
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: NOVNC PORT
         Required: 'false'
         Target: 6901
@@ -33177,7 +33084,6 @@ halflife2deathmatch:
   WebUI: ''
   caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/HalfLife2DeathMatch.xml
 happypandax:
-  Beta: 'true'
   CategoryList:
   - Downloaders
   - MediaServer-Books
@@ -33224,7 +33130,7 @@ happypandax:
         Description: WebUI
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: WebUI Port
         Required: 'true'
         Target: 7008
@@ -33530,7 +33436,6 @@ healthchecksdashboard:
   Tag: latest
   WebUI: http://[IP]:[PORT:2015]/#APIKEY=Label&amp;theme=light
 hetzner-ddns:
-  Beta: 'true'
   CategoryList:
   - Network-DNS
   Config:
@@ -33591,7 +33496,6 @@ hetzner-ddns:
   Tag: latest
   WebUI: ''
 hexchat:
-  BindTime: 'true'
   CategoryList:
   - Productivity
   - Tools-Utilities
@@ -33626,7 +33530,6 @@ hexchat:
         Name: WEBPAGE_TITLE
         Target: WEBPAGE_TITLE
         value: HexChat
-  GitHub: https://github.com/binhex/arch-hexchat
   Icon: https://raw.githubusercontent.com/binhex/docker-templates/master/binhex/images/hexchat-icon.png
   Keywords:
   - hexchat
@@ -33920,7 +33823,7 @@ hoobs:
         Description: ''
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: Server Port
         Required: 'false'
         Target: 80
@@ -34598,8 +34501,6 @@ icloudpd:
   Tag: latest
   WebUI: ''
 idle-miner-dashboard:
-  Beta: 'true'
-  BindTime: 'true'
   CategoryList:
   - HomeAutomation
   - Tools-Utilities
@@ -34889,7 +34790,7 @@ inkscape-desktop-g3:
         Description: ''
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: WebUI (noVNC)
         Required: 'false'
         Target: 6901
@@ -34948,7 +34849,6 @@ inkscape-desktop-g3:
   Tag: latest
   WebUI: http://[IP]:[PORT:6901]
 inotify-command:
-  BindTime: 'true'
   CategoryList:
   - Tools-Utilities
   Config:
@@ -34969,7 +34869,6 @@ inotify-command:
         Name: UMAP
         Target: UMAP
         value: nobody:99:100
-  GitHub: https://github.com/coppit/docker-inotify-command
   Icon: https://raw.githubusercontent.com/coppit/docker-inotify-command/master/terminal-icon.png
   Keywords:
   - inotify-command
@@ -35862,7 +35761,6 @@ intel-gpu-telegraf:
   Tag: latest
   WebUI: ''
 intellij:
-  BindTime: 'true'
   CategoryList:
   - Productivity
   - Tools-Utilities
@@ -35897,7 +35795,6 @@ intellij:
         Name: WEBPAGE_TITLE
         Target: WEBPAGE_TITLE
         value: IntelliJ
-  GitHub: https://github.com/binhex/arch-intellij
   Icon: https://raw.githubusercontent.com/binhex/docker-templates/master/binhex/images/intellij-icon.png
   Keywords:
   - intellij
@@ -36075,7 +35972,7 @@ invoiceninja:
         Description: 'Container Port: 80'
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: HTTP Port
         Required: 'false'
         Target: 80
@@ -36347,7 +36244,7 @@ iobroker:
         Description: 'Container Port: 8081'
         Display: advanced-hide
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: WebUI Port
         Required: 'false'
         Target: 8081
@@ -36475,7 +36372,7 @@ ioquake3:
           click on WebUI on the Docker page within Unraid).'
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: TCP - WebConsole
         Required: 'false'
         Target: 8080
@@ -36779,7 +36676,6 @@ ipxe-buildweb:
   Tag: latest
   WebUI: http://[IP]:[PORT:80]
 iw4x-server:
-  Beta: 'true'
   CategoryList:
   - GameServers
   Config:
@@ -37020,7 +36916,6 @@ javinizer:
   Tag: latest
   WebUI: http://[IP]:[PORT:8600]
 jbreed-nessus:
-  BindTime: 'true'
   CategoryList:
   - Tools-Utilities
   - Security
@@ -37043,7 +36938,6 @@ jbreed-nessus:
         Target: 8834
         value: 8834
     Variable: {}
-  GitHub: https://github.com/jbreed/nessus
   Icon: https://raw.githubusercontent.com/jbreed/docker-templates/master/nessus/nessus.png
   Keywords:
   - jbreed-nessus
@@ -37347,7 +37241,6 @@ jellyfin-vue-static:
   Tag: unstable-static
   WebUI: http://[IP]:[PORT:80]/
 jellyseerr:
-  Beta: 'true'
   CategoryList:
   - Downloaders
   - MediaApp-Video
@@ -37496,7 +37389,6 @@ jenkins:
   Tag: latest
   WebUI: http://[IP]:[PORT:8080]/
 jira-service-desk:
-  BindTime: 'true'
   CategoryList:
   - Cloud
   - Tools-Utilities
@@ -37561,7 +37453,6 @@ jira-service-desk:
         Target: ATL_TOMCAT_SCHEME
         Type: Variable
         value: https
-  GitHub: https://github.com/ibracorp/jira-servicedesk
   Icon: https://i.imgur.com/rNMse7m.png
   Keywords:
   - jira-service-desk
@@ -38732,7 +38623,7 @@ jitsi-web:
         Description: HTTP
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: HTTP
         Required: 'false'
         Target: 80
@@ -39275,7 +39166,7 @@ joplinapp:
         Description: 'Container Port: 5800'
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: Web Port
         Required: 'false'
         Target: 5800
@@ -39595,7 +39486,6 @@ kanzi:
         Target: URL_ENDPOINT
         Type: Variable
         value: ''
-  GitHub: https://github.com/linuxserver/docker-kanzi#application-setup
   Icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/kanzi-logo.png
   Keywords:
   - kanzi
@@ -39702,7 +39592,7 @@ kdeindocker:
         Description: 'noVNC Port: 8080'
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: noVNC Port
         Required: 'false'
         Target: 8080
@@ -39927,7 +39817,6 @@ kdenlive:
         Target: UMASK
         Type: Variable
         value: ''
-  GitHub: https://github.com/linuxserver/docker-kdenlive#application-setup
   Icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/kdenlive-logo.png
   Keywords:
   - kdenlive
@@ -39972,7 +39861,7 @@ kdenlive-vnc:
         Description: 'Container Port: 5800'
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: WebUI
         Required: 'true'
         Target: 5800
@@ -40063,7 +39952,6 @@ keeweb:
   Tag: latest
   WebUI: https://[IP]:[PORT:443]
 kerio-connect:
-  BindTime: 'true'
   CategoryList:
   - Network-Web
   - Network-Other
@@ -40080,7 +39968,7 @@ kerio-connect:
       main:
         ContainerPort: '4040'
         HostPort: '4040'
-        Mode: tcp
+        Mode: HTTP
         Name: tcp-port-0
         Protocol: tcp
         Target: 4040
@@ -40788,7 +40676,6 @@ kitana:
   Tag: latest
   WebUI: http://[IP]:[PORT:31337]
 kitchenowl:
-  Beta: 'true'
   CategoryList:
   - Productivity
   Config:
@@ -40846,7 +40733,6 @@ kitchenowl:
   - https://hub.docker.com/r/tombursch/kitchenowl
   Tag: latest
 kitchenowl-web:
-  Beta: 'true'
   CategoryList:
   - Productivity
   Config:
@@ -42054,15 +41940,6 @@ languagetool:
     \ that a simple spell checker cannot detect.\r\n"
   PostArgs: ''
   Privileged: 'false'
-  RecommendedDate: 1625112000
-  RecommendedRaw: 7/1/2021
-  RecommendedReason:
-    de_DE: "Mit \xFCber 214.000 Downloads in diesem Monat, languagetool kann gro\xDF\
-      e n-gram Datens\xE4tze nutzen, um Fehler mit W\xF6rtern zu erkennen, die in\
-      \ \xFCber 20 Sprachen oft verwechselt werden!"
-    en_US: With over 214k downloads this month, languagetool can make use of large
-      n-gram data sets to detect errors with words that are often confused in over
-      20 languages!
   Registry: https://hub.docker.com/r/erikvl87/languagetool/
   Repository: erikvl87/languagetool
   Requires: ''
@@ -42073,8 +41950,6 @@ languagetool:
   WebUI: ''
 lazylibrarian-calibre:
   BaseImage: linuxserver/lazylibrarian
-  Beta: 'true'
-  BindTime: 'true'
   CategoryList:
   - MediaApp-Books
   Config:
@@ -42128,7 +42003,7 @@ ldap-auth:
         Description: the port for ldap login page
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: 'Port: 9000'
         Required: 'true'
         Target: 9000
@@ -42210,7 +42085,6 @@ ldap-auth:
         Target: UMASK
         Type: Variable
         value: ''
-  GitHub: https://github.com/linuxserver/docker-ldap-auth#application-setup
   Icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/ldap-auth-logo.png
   Keywords:
   - ldap-auth
@@ -42730,7 +42604,6 @@ lemur-cfssl:
   Tag: latest
   WebUI: http://[IP]:[PORT:80]
 lftp-mirror:
-  BindTime: 'true'
   CategoryList:
   - Other
   Config:
@@ -42830,7 +42703,7 @@ librenms:
         Description: HTTP Port
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: HTTP Port
         Required: 'false'
         Target: 8000
@@ -43057,7 +42930,6 @@ librenms:
   Tag: latest
   WebUI: http://[IP]:[PORT:8000]/
 lighttpd:
-  BindTime: 'true'
   CategoryList:
   - Network-Web
   Config:
@@ -43101,7 +42973,6 @@ lighttpd:
         value: 8081
     Variable: {}
   ExtraParams: -t
-  GitHub: https://github.com/llalon/docker-templates
   Icon: https://raw.githubusercontent.com/llalon/unraid-templates/main/llalon/images/lighttpd.png
   Keywords:
   - lighttpd
@@ -43179,7 +43050,6 @@ limnoria:
         Target: UMASK
         Type: Variable
         value: ''
-  GitHub: https://github.com/linuxserver/docker-limnoria#application-setup
   Icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/limnoria-logo.png
   Keywords:
   - limnoria
@@ -43522,7 +43392,6 @@ liquidctl:
   Tag: latest
   WebUI: ''
 livebook:
-  Beta: 'true'
   CategoryList:
   - Tools-Utilities
   Config:
@@ -43583,7 +43452,6 @@ livebook:
   Tag: latest
   WebUI: http://[IP]:[PORT:8080]
 llalon-github-backup:
-  BindTime: 'true'
   CategoryList:
   - Backup
   Config:
@@ -43640,7 +43508,6 @@ llalon-github-backup:
         Target: TOKEN
         Type: Variable
         value: 1a2b3c4d5e6f71a2b3c4d5e6f71a2b3c4d5e6f7b
-  GitHub: https://github.com/llalon/docker-templates
   Icon: https://raw.githubusercontent.com/llalon/unraid-templates/main/llalon/images/github-backup.png
   Keywords:
   - llalon-github-backup
@@ -43657,7 +43524,6 @@ llalon-github-backup:
   - https://hub.docker.com/r/llalon/github-backup
   Tag: latest
 llalon-shreddit:
-  BindTime: 'true'
   CategoryList:
   - Tools-Utilities
   Config:
@@ -43723,7 +43589,6 @@ llalon-shreddit:
         Target: REDDIT_USERNAME
         Type: Variable
         value: username
-  GitHub: https://github.com/llalon/docker-templates
   Icon: https://raw.githubusercontent.com/llalon/unraid-templates/main/llalon/images/shreddit.png
   Keywords:
   - llalon-shreddit
@@ -43855,11 +43720,6 @@ log4jscan:
     \ log4j hosts\r\n"
   PostArgs: '  --run-all-tests -l /data/urls.txt'
   Privileged: 'false'
-  RecommendedDate: 1641013200
-  RecommendedRaw: 1/1/2022
-  RecommendedReason:
-    en_US: A fully automated, accurate, and extensive scanner for finding vulnerable
-      log4j hosts
   RecommendedWho: SpencerJ
   Registry: https://registry.hub.docker.com/r/spaceinvaderone/log4j-scan
   Repository: spaceinvaderone/log4j-scan
@@ -43870,7 +43730,6 @@ log4jscan:
   Tag: latest
   WebUI: ''
 logarr:
-  Beta: 'true'
   CategoryList:
   - Tools-Utilities
   Config:
@@ -43996,7 +43855,7 @@ logitechmediaserver:
         Description: 'Container Port: 9000'
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: WebUI Port
         Required: 'true'
         Target: 9000
@@ -44046,7 +43905,6 @@ logitechmediaserver:
   Tag: latest
   WebUI: http://[IP]:[PORT:9000]/
 logitechmediaserver-latest:
-  BindTime: 'true'
   CategoryList:
   - MediaServer-Music
   Config:
@@ -44062,7 +43920,7 @@ logitechmediaserver-latest:
       main:
         ContainerPort: '9000'
         HostPort: '9000'
-        Mode: tcp
+        Mode: HTTP
         Name: tcp-port-3
         Protocol: tcp
         Target: 9000
@@ -44404,7 +44262,7 @@ machinaris-chia-harvester:
         Description: Machinaris local web app port.
         Display: advanced-hide
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: web_port
         Required: 'false'
         Target: 8926
@@ -44512,7 +44370,6 @@ machinaris-chia-harvester:
   Tag: latest
   WebUI: http://[IP]:[PORT:8926]/
 machinebox-facebox:
-  Beta: 'true'
   CategoryList:
   - HomeAutomation
   - Security
@@ -45320,7 +45177,7 @@ maildev:
         Description: ''
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: Port (WebUI)
         Required: 'false'
         Target: 80
@@ -45510,7 +45367,6 @@ mailpile:
   Tag: latest
   WebUI: http://[IP]:[PORT:33411]
 malfurious-mailserver:
-  BindTime: 'true'
   CategoryList:
   - Network-Web
   Config:
@@ -45578,7 +45434,7 @@ malfurious-mailserver:
         Description: RSPAMD WebGUI Port
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: RSPAMD WebGUI Port
         Required: 'true'
         Target: 11334
@@ -45695,7 +45551,6 @@ malfurious-mailserver:
         Target: RSPAMD_PASSWORD
         Type: Variable
         value: ''
-  GitHub: https://github.com/malfurious/mailserver
   Icon: https://raw.githubusercontent.com/Malfurious/docker-templates/master/images/MailserverIcon.png
   Keywords:
   - malfurious-mailserver
@@ -45713,7 +45568,6 @@ malfurious-mailserver:
   Tag: latest
   WebUI: http://[IP]:[PORT:11334]
 malfurious-roundcube-postfixadmin:
-  BindTime: 'true'
   CategoryList:
   - Network-Web
   Config:
@@ -45910,7 +45764,6 @@ malfurious-roundcube-postfixadmin:
         Type: Variable
         value: ''
   ExtraParams: --add-host mail.domain.com:xxx.xxx.xxx.xxx
-  GitHub: https://github.com/Malfurious/roundcube-postfixadmin
   Icon: https://raw.githubusercontent.com/Malfurious/docker-templates/master/images/roundcube.png
   Keywords:
   - malfurious-roundcube-postfixadmin
@@ -45928,7 +45781,6 @@ malfurious-roundcube-postfixadmin:
   Tag: latest
   WebUI: ''
 maloja:
-  Beta: 'true'
   CategoryList:
   - MediaServer-Music
   Config:
@@ -46411,7 +46263,6 @@ media-roller:
   Tag: latest
   WebUI: http://[IP]:[PORT:3000]/
 mediaelch:
-  BindTime: 'true'
   CategoryList:
   - Tools
   - MediaApp-Video
@@ -46498,13 +46349,6 @@ mediagoblin:
     [B][u]admin[/B][/u][br]Password: [B][u]admin[/B][/u][/b]'
   PostArgs: ''
   Privileged: 'false'
-  RecommendedDate: 1622520000
-  RecommendedRaw: 6/1/2021
-  RecommendedReason:
-    de_DE: "Die Nummer 1 unter den Trend-Apps mit \xFCber 370.000 Downloads ist mediagoblin:\
-      \ Die dezentrale, eigene Medien-Publishing-Plattform"
-    en_US: 'The #1 trending app with over 370k downloads is mediagoblin: the decentralized,
-      roll your own, media publishing platform'
   Registry: https://hub.docker.com/r/mtlynch/mediagoblin/
   Repository: mtlynch/mediagoblin
   Requires: ''
@@ -46552,7 +46396,7 @@ mediainfo:
           other network types, port 5800 should be used instead.
         Display: advanced-hide
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: WEB Port for GUI
         Required: 'true'
         Target: 5800
@@ -46795,7 +46639,6 @@ mediawiki:
   Tag: latest
   WebUI: http://[IP]:[PORT:80]
 mediawiki-beta:
-  Beta: 'true'
   CategoryList:
   - Cloud
   - Productivity
@@ -47444,7 +47287,6 @@ metabase:
         Target: MB_DB_FILE
         Type: Variable
         value: /tmp/metabase.db
-  GitHub: https://github.com/metabase/metabase
   Icon: https://raw.githubusercontent.com/cheesemarathon/docker-templates/master/images/MetabaseLogo.png
   Keywords:
   - metabase
@@ -47462,7 +47304,6 @@ metabase:
   Tag: latest
   WebUI: http://[IP]:[PORT:3000]
 metatube:
-  Beta: 'true'
   CategoryList:
   - Downloaders
   - Productivity
@@ -47814,7 +47655,6 @@ minimal-ics-hoster:
   Tag: latest
   WebUI: http://[IP]:[PORT:5000]
 mininote:
-  Beta: 'true'
   CategoryList:
   - Productivity
   - Tools-Utilities
@@ -47902,7 +47742,7 @@ mkvcleaver:
           other network types, port 5800 should be used instead.
         Display: advanced-hide
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: WEB Port for GUI
         Required: 'true'
         Target: 5800
@@ -48080,7 +47920,7 @@ mkvtoolnix:
           other network types, port 5800 should be used instead.
         Display: advanced-hide
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: WEB Port for GUI
         Required: 'true'
         Target: 5800
@@ -48220,7 +48060,6 @@ mkvtoolnix:
   Tag: latest
   WebUI: http://[IP]:[PORT:5800]
 mochad:
-  BindTime: 'true'
   CategoryList:
   - HomeAutomation
   - Network-Other
@@ -48243,7 +48082,6 @@ mochad:
         Target: 1099
         value: 1099
     Variable: {}
-  GitHub: https://github.com/sameersbn/docker-mochad
   Icon: https://raw.githubusercontent.com/jshridha/templates/master/Bungy/Icons/x10_icon.jpg
   Keywords:
   - mochad
@@ -48694,7 +48532,6 @@ monitoror:
   Tag: latest
   WebUI: http://[IP]:[PORT:8080]
 monitorr:
-  Beta: 'true'
   CategoryList:
   - Tools-Utilities
   Config:
@@ -49282,7 +49119,6 @@ motioneye:
   Tag: latest
   WebUI: http://[IP]:[PORT:8765]
 moviegrabber:
-  BindTime: 'true'
   CategoryList:
   - Downloaders
   Config:
@@ -49308,7 +49144,6 @@ moviegrabber:
         Name: UMASK
         Target: UMASK
         value: '000'
-  GitHub: https://github.com/binhex/arch-moviegrabber
   Icon: https://raw.githubusercontent.com/binhex/docker-templates/master/binhex/images/moviegrabber-icon.png
   Keywords:
   - moviegrabber
@@ -49450,7 +49285,6 @@ mqtt:
   Tag: latest
   WebUI: http://mqtt.org/
 multi-scrobbler:
-  Beta: 'true'
   CategoryList:
   - Network-Web
   - MediaServer-Music
@@ -49534,7 +49368,7 @@ multitheftauto:
         Description: 'Container Port: 22005'
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: TCP - http Port
         Required: 'true'
         Target: 22005
@@ -49738,7 +49572,6 @@ mumble:
   Tag: latest
   WebUI: ''
 munin-server:
-  BindTime: 'true'
   CategoryList:
   - Network-Management
   - Tools-Utilities
@@ -49755,7 +49588,7 @@ munin-server:
       main:
         ContainerPort: '80'
         HostPort: '8888'
-        Mode: tcp
+        Mode: HTTP
         Name: tcp-port-0
         Protocol: tcp
         Target: 80
@@ -50279,7 +50112,7 @@ necesse:
           click on WebUI on the Docker page within Unraid).'
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: TCP - WebConsole
         Required: 'true'
         Target: 8080
@@ -50390,7 +50223,7 @@ neko:
         Description: 'Container Port: 8080'
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: Web UI
         Required: 'true'
         Target: 8080
@@ -50535,7 +50368,6 @@ neolink:
   Tag: latest
   WebUI: ''
 neotokyo:
-  Beta: 'true'
   CategoryList:
   - GameServers
   Config:
@@ -50757,7 +50589,7 @@ netbootxyz:
         Description: Web configuration interface.
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: WebUI
         Required: 'true'
         Target: 3000
@@ -50849,7 +50681,6 @@ netbootxyz:
         Target: UMASK
         Type: Variable
         value: ''
-  GitHub: https://github.com/linuxserver/docker-netbootxyz#application-setup
   Icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/netbootxyz-logo.png
   Keywords:
   - netbootxyz
@@ -51242,7 +51073,7 @@ nextcloudpi:
         Description: Secure web port
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: HTTPS web port
         Required: 'false'
         Target: 443
@@ -51360,7 +51191,7 @@ nginx:
         Description: http
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: WebUI
         Required: 'true'
         Target: 80
@@ -51408,7 +51239,6 @@ nginx:
         Target: UMASK
         Type: Variable
         value: ''
-  GitHub: https://github.com/linuxserver/docker-nginx#application-setup
   Icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/nginx-logo.png
   Keywords:
   - nginx
@@ -51462,7 +51292,7 @@ nginxpagespeed:
         Description: Port for the HTTP Protocol
         Display: advanced
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: HTTP Port
         Required: 'true'
         Target: 80
@@ -51863,7 +51693,6 @@ nodered:
   Tag: latest
   WebUI: http://[IP]:[PORT:1880]
 noderedv2beta:
-  Beta: 'true'
   CategoryList:
   - HomeAutomation
   Config:
@@ -51923,7 +51752,6 @@ noderedv2beta:
   Tag: beta
   WebUI: http://[IP]:[PORT:1880]
 noip:
-  BindTime: 'true'
   CategoryList:
   - Network-DNS
   Config:
@@ -51936,7 +51764,6 @@ noip:
         Target: /config
     Port: {}
     Variable: {}
-  GitHub: https://github.com/coppit/docker-no-ip
   Icon: https://raw.githubusercontent.com/coppit/docker-no-ip/master/no-ip-hernandito.png
   Keywords:
   - noip
@@ -52261,7 +52088,6 @@ nosqlclient:
   Tag: latest
   WebUI: http://[IP]:[PORT:3000]
 notea:
-  BindTime: 'true'
   CategoryList:
   - Productivity
   Config:
@@ -52445,7 +52271,6 @@ notifiarr:
   - https://hub.docker.com/r/golift/notifiarr/
   Tag: latest
 nsfmineroc:
-  BindTime: 'true'
   CategoryList:
   - Other
   Config:
@@ -52772,7 +52597,7 @@ nvim-server:
         Description: Port for accessing the Web UI
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: WEB UI
         Required: 'false'
         Target: 3000
@@ -52896,7 +52721,6 @@ oauth2-proxy:
         Type: Port
         value: 4180
     Variable: {}
-  GitHub: https://github.com/pusher/oauth2_proxy
   Icon: https://github.com/oauth2-proxy/oauth2-proxy/raw/master/docs/static/img/logos/OAuth2_Proxy_icon.png
   Keywords:
   - oauth2-proxy
@@ -52916,7 +52740,6 @@ oauth2-proxy:
   Tag: latest
   WebUI: ''
 obfs4-bridge:
-  BindTime: 'true'
   CategoryList:
   - Network-Other
   Config:
@@ -53013,7 +52836,6 @@ obfs4-bridge:
         Target: PT_PORT
         Type: Variable
         value: '9292'
-  GitHub: https://gitlab.torproject.org/tpo/anti-censorship/docker-obfs4-bridge/
   Icon: https://raw.githubusercontent.com/sgraaf/Unraid-Docker-Templates/main/obfs4-bridge/icon.png
   Keywords:
   - obfs4-bridge
@@ -53199,7 +53021,7 @@ observium:
       main:
         ContainerPort: '8668'
         HostPort: '8668'
-        Mode: tcp
+        Mode: HTTP
         Name: tcp-port-0
         Protocol: tcp
         Target: 8668
@@ -53781,7 +53603,7 @@ octoprint-spants:
         Description: ''
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: WebUI
         Required: 'true'
         Target: 5000
@@ -53974,7 +53796,7 @@ office-document-server-ee:
         Description: 'Container Port: 80'
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: HTTP Port
         Required: 'false'
         Target: 80
@@ -54199,7 +54021,7 @@ onlyoffice-community-server:
         Description: 'Container Port: 80'
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: HTTP Port
         Required: 'true'
         Target: 80
@@ -55151,7 +54973,7 @@ opengl-desktop-g3:
         Description: ''
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: WebUI (noVNC)
         Required: 'false'
         Target: 6901
@@ -55830,7 +55652,7 @@ openttd:
           click on WebUI on the Docker page within Unraid).'
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: TCP - WebConsole
         Required: 'false'
         Target: 8080
@@ -56621,7 +56443,7 @@ p3r-brave-browser:
         Description: 'Container Port: 5800'
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: Web Port
         Required: 'true'
         Target: 5800
@@ -56723,7 +56545,7 @@ p3r-firefox-browser:
         Description: 'Container Port: 5800'
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: Web Port
         Required: 'true'
         Target: 5800
@@ -56815,7 +56637,7 @@ p3r-keepassxc:
         Description: 'Container Port: 5800'
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: Web Port
         Required: 'true'
         Target: 5800
@@ -56861,7 +56683,6 @@ p3r-keepassxc:
   Tag: latest
   WebUI: http://[IP]:[PORT:5800]/
 p3r-lemp-stack:
-  Beta: 'true'
   CategoryList:
   - Network-Web
   Config:
@@ -56896,7 +56717,7 @@ p3r-lemp-stack:
         Description: 'Container Port: 80'
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: HTTP
         Required: 'true'
         Target: 80
@@ -56920,7 +56741,6 @@ p3r-lemp-stack:
   Tag: latest
   WebUI: http://[IP]:[PORT:80]/
 p3r-openrgb:
-  Beta: 'true'
   CategoryList:
   - Tools-Utilities
   Config:
@@ -56966,7 +56786,7 @@ p3r-openrgb:
         Description: 'Container Port: 5800'
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: Web Port
         Required: 'true'
         Target: 5800
@@ -57534,8 +57354,6 @@ petio:
   Tag: latest
   WebUI: http://[IP]:[PORT:7777]
 phantom:
-  Beta: 'true'
-  BindTime: 'true'
   CategoryList:
   - GameServers
   Config:
@@ -57597,7 +57415,6 @@ phantom:
         Name: UMASK
         Target: UMASK
         value: '000'
-  GitHub: https://github.com/binhex/arch-phantom
   Icon: https://raw.githubusercontent.com/binhex/docker-templates/master/binhex/images/phantom-icon.png
   Keywords:
   - phantom
@@ -57747,7 +57564,6 @@ phantombot-1:
   Tag: latest
   WebUI: http://[IP]:[PORT:25000]/
 phlex:
-  BindTime: 'true'
   CategoryList:
   - Tools
   Config:
@@ -57769,7 +57585,6 @@ phlex:
         Target: 80
         value: 8063
     Variable: {}
-  GitHub: https://github.com/SiwatINC/unraid-ca-repository
   Icon: https://github.com/d8ahazard/Phlex/raw/master/img/android-icon-144x144.png
   Keywords:
   - phlex
@@ -59309,7 +59124,6 @@ pinry:
   Tag: latest
   WebUI: http://[IP]:[PORT:80]/
 pipework1-1-3:
-  Beta: 'true'
   CABlacklist: true
   CategoryList:
   - Network-Other
@@ -59338,7 +59152,6 @@ pipework1-1-3:
   - https://hub.docker.com/r/dreamcat4/pipework/
   Tag: 1.1.3
 pixark:
-  Beta: 'true'
   CategoryList:
   - GameServers
   Config:
@@ -59606,7 +59419,7 @@ pixelserv-tls:
         Description: Webserver - Https
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: HTTPS
         Required: 'true'
         Target: 443
@@ -60142,7 +59955,6 @@ plex-meta-manager:
         Target: UMASK
         Type: Variable
         value: ''
-  GitHub: https://github.com/linuxserver/docker-plex-meta-manager#application-setup
   Icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/linuxserver-ls-logo.png
   Keywords:
   - plex-meta-manager
@@ -60164,7 +59976,6 @@ plex-meta-manager:
   Tag: latest
   WebUI: ''
 plex-utills:
-  Beta: 'true'
   CategoryList:
   - Tools-Utilities
   - MediaApp-Other
@@ -60784,7 +60595,6 @@ plexannouncer:
   Tag: latest
   WebUI: ''
 plexripper:
-  Beta: 'true'
   CategoryList:
   - Backup
   - Downloaders
@@ -60879,7 +60689,6 @@ plexripper:
   Tag: latest
   WebUI: http://[IP]:[PORT:7000]/
 plexripper-development:
-  Beta: 'true'
   CategoryList:
   - Backup
   - Downloaders
@@ -61265,7 +61074,7 @@ portainer-ce:
         Description: ''
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: WebUI
         Required: 'false'
         Target: 9000
@@ -61302,7 +61111,6 @@ portainer-ce:
   Tag: latest
   WebUI: http://[IP]:[PORT:9000]
 portainerci:
-  BindTime: 'true'
   CategoryList:
   - Network-Management
   - Productivity
@@ -61343,7 +61151,6 @@ portainerci:
         Type: Port
         value: 9000
     Variable: {}
-  GitHub: https://github.com/portainer/portainer
   Icon: https://github.com/juusujanar/unraid-templates/raw/master/img/Portainer-logo.png
   Keywords:
   - portainerci
@@ -61525,7 +61332,6 @@ post-recording:
   Tag: latest
   WebUI: ''
 poste:
-  Beta: 'true'
   CategoryList:
   - Cloud
   - Productivity
@@ -61632,7 +61438,7 @@ poste:
         Description: web interface port
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: Webui
         Required: 'true'
         Target: 80
@@ -62075,7 +61881,6 @@ postgres10:
         Target: POSTGRES_USER
         Type: Variable
         value: ''
-  GitHub: https://github.com/docker-library/postgres
   Icon: https://github.com/juusujanar/unraid-templates/raw/master/img/PostgreSQL-logo.png
   Keywords:
   - postgres10
@@ -62161,7 +61966,6 @@ postgres11:
         Target: POSTGRES_USER
         Type: Variable
         value: ''
-  GitHub: https://github.com/docker-library/postgres
   Icon: https://github.com/juusujanar/unraid-templates/raw/master/img/PostgreSQL-logo.png
   Keywords:
   - postgres11
@@ -62270,7 +62074,6 @@ postgres12-5:
   Tag: 12.5-alpine
   WebUI: ''
 postgresql:
-  BindTime: 'true'
   CategoryList:
   - Network-Management
   - Productivity
@@ -62298,7 +62101,6 @@ postgresql:
         Name: DB_USER
         Target: DB_USER
         value: gitlab
-  GitHub: https://github.com/sameersbn/docker-postgresql
   Icon: https://www.iconattitude.com/icons/open_icon_library/apps/png/256/postgresql.png
   Keywords:
   - postgresql
@@ -62501,7 +62303,6 @@ postscriptum:
   WebUI: ''
   caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/PostScriptum.xml
 preclear:
-  BindTime: 'true'
   CategoryList:
   - Productivity
   - Tools-Utilities
@@ -62536,7 +62337,6 @@ preclear:
         Name: WEBPAGE_TITLE
         Target: WEBPAGE_TITLE
         value: Preclear
-  GitHub: https://github.com/binhex/arch-preclear
   Icon: https://raw.githubusercontent.com/binhex/docker-templates/master/binhex/images/preclear-icon.png
   Keywords:
   - preclear
@@ -62559,8 +62359,6 @@ preclear:
   WebUI: http://[IP]:[PORT:6080]/vnc.html?resize=remote&host=[IP]&port=[PORT:6080]&autoconnect=1
 pritunl:
   BaseImage: lsiobase/xenial
-  Beta: 'true'
-  BindTime: 'true'
   CategoryList:
   - Network-Other
   Config:
@@ -62595,7 +62393,7 @@ pritunl:
         Description: 'Container Port: 443'
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: https
         Required: 'false'
         Target: 443
@@ -62648,7 +62446,6 @@ pritunl:
         Target: PUID
         Type: Variable
         value: ''
-  GitHub: https://github.com/bashNinja-dockers/docker-pritunl
   Icon: https://cdn.rawgit.com/bashNinja-dockers/docker-pritunl/0cf3b425/logo.png
   Keywords:
   - pritunl
@@ -62991,7 +62788,6 @@ prometheus-phoenixstats:
   Tag: latest
   WebUI: http://[IP]:[PORT:80]/metrics
 prpdf:
-  Beta: 'true'
   CAComment: This template is set up to use a custom network. You may have to adjust
     the network or IP address etc to match your system
   CategoryList:
@@ -63129,8 +62925,6 @@ prusaslicer-novnc:
   WebUI: http://[IP]:[PORT:8080]
 ps3netsrv:
   BaseImage: alpine:3.11
-  Beta: 'true'
-  BindTime: 'true'
   CategoryList:
   - Network-Other
   Config:
@@ -63185,7 +62979,6 @@ ps3netsrv:
         Target: USER_ID
         Type: Variable
         value: ''
-  GitHub: https://github.com/shawly/docker-ps3netsrv
   Icon: https://raw.githubusercontent.com/miketweaver/docker-templates/master/bashninja/ps3netsrvicon.png
   Keywords:
   - ps3netsrv
@@ -63429,7 +63222,7 @@ pure-ftpd:
         Description: FTP port
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: FTP port
         Required: 'false'
         Target: 2100
@@ -63612,7 +63405,7 @@ putty:
           other network types, port 5800 should be used instead.
         Display: advanced-hide
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: WEB Port for GUI
         Required: 'true'
         Target: 5800
@@ -64051,7 +63844,6 @@ py-stocks-api:
   Tag: latest
   WebUI: http://[IP]:[PORT]
 pycharm:
-  BindTime: 'true'
   CategoryList:
   - Productivity
   - Tools-Utilities
@@ -64086,7 +63878,6 @@ pycharm:
         Name: WEBPAGE_TITLE
         Target: WEBPAGE_TITLE
         value: Tower
-  GitHub: https://github.com/binhex/arch-pycharm
   Icon: https://raw.githubusercontent.com/binhex/docker-templates/master/binhex/images/pycharm-icon.png
   Keywords:
   - pycharm
@@ -64150,7 +63941,7 @@ pyload-ng:
         Description: Allows HTTP access to the application
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: WebUI
         Required: 'true'
         Target: 8000
@@ -64198,7 +63989,6 @@ pyload-ng:
         Target: UMASK
         Type: Variable
         value: ''
-  GitHub: https://github.com/linuxserver/docker-pyload-ng#application-setup
   Icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/linuxserver-ls-logo.png
   Keywords:
   - pyload-ng
@@ -64754,7 +64544,7 @@ qdirstat:
           other network types, port 5800 should be used instead.
         Display: advanced-hide
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: WEB Port for GUI
         Required: 'true'
         Target: 5800
@@ -65008,7 +64798,7 @@ qflood:
         Description: 'Container Port: 3000'
         Display: always-hide
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: Host Port for 3000
         Required: 'true'
         Target: 3000
@@ -65571,7 +65361,6 @@ quiz-game:
   Tag: latest
   WebUI: http://[IP]:[PORT:80]/
 radarr-sma:
-  Beta: 'true'
   Branch:
   - Tag: latest
     TagDescription: Radarr (latest) + SMA + FFMPEG
@@ -65834,7 +65623,6 @@ raneto:
         Target: UMASK
         Type: Variable
         value: ''
-  GitHub: https://github.com/linuxserver/docker-raneto#application-setup
   Icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/raneto-logo.png
   Keywords:
   - raneto
@@ -66132,7 +65920,7 @@ ravencoinwalletgui:
         Description: Port used to access the application's GUI via the web interface.
         Display: advanced-hide
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: WEB Port for GUI
         Required: 'true'
         Target: 5800
@@ -66306,7 +66094,6 @@ ravencoinwalletgui:
   WebUI: http://[IP]:[PORT:5800]
 rclone:
   BaseImage: quay.io/justcontainers/base-alpine
-  Beta: 'true'
   CategoryList:
   - Backup
   - Cloud
@@ -66442,7 +66229,7 @@ rclone-browser:
         Description: Port for noVNC.
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: WebUI (1)
         Required: 'false'
         Target: 5800
@@ -66535,7 +66322,6 @@ rclone-browser:
   WebUI: http://[IP]:[PORT:5800]
 rclone-mount:
   BaseImage: https://hub.docker.com/_/alpine/
-  Beta: 'true'
   CategoryList:
   - Backup
   - Cloud
@@ -66640,7 +66426,7 @@ rcon-webadmin:
         Description: 'Container Port: 4326'
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: webUI
         Required: 'false'
         Target: 4326
@@ -66897,7 +66683,6 @@ rdesktop:
         Target: UMASK
         Type: Variable
         value: ''
-  GitHub: https://github.com/linuxserver/docker-rdesktop#application-setup
   Icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/rdesktop-logo.png
   Keywords:
   - rdesktop
@@ -66916,7 +66701,6 @@ rdesktop:
   Tag: latest
   WebUI: http://[IP]:[PORT:3000]
 rdiffweb:
-  BindTime: 'true'
   CategoryList:
   - Cloud
   - Network-Web
@@ -66941,7 +66725,6 @@ rdiffweb:
         Target: 8080
         value: 8099
     Variable: {}
-  GitHub: https://github.com/jshridha/docker-rdiffweb/
   Icon: ''
   Keywords:
   - rdiffweb
@@ -67343,7 +67126,7 @@ redm:
           click on WebUI on the Docker page within Unraid).'
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: TCP - WebConsole
         Required: 'false'
         Target: 8080
@@ -67848,10 +67631,6 @@ rickroll:
     the content is local to the container.
   PostArgs: ''
   Privileged: 'false'
-  RecommendedDate: 1648785600
-  RecommendedRaw: 4/1/2022
-  RecommendedReason:
-    en_US: Host your own Rickrolls for April Fools Day
   Registry: https://hub.docker.com/r/modem7/docker-rickroll
   Repository: modem7/docker-rickroll
   Requires: ''
@@ -67861,7 +67640,6 @@ rickroll:
   Tag: latest
   WebUI: http://[IP]:[PORT:80]
 rider:
-  BindTime: 'true'
   CategoryList:
   - Productivity
   - Tools-Utilities
@@ -67896,7 +67674,6 @@ rider:
         Name: WEBPAGE_TITLE
         Target: WEBPAGE_TITLE
         value: Rider
-  GitHub: https://github.com/binhex/arch-rider
   Icon: https://raw.githubusercontent.com/binhex/docker-templates/master/binhex/images/rider-icon.png
   Keywords:
   - rider
@@ -68776,7 +68553,6 @@ rss-proxy:
   Tag: latest
   WebUI: http://[IP]:[PORT:3000]
 rss-to-telegram:
-  Beta: 'true'
   CategoryList:
   - Network-Other
   - Network-Messenger
@@ -68937,7 +68713,7 @@ rstudio:
         Description: 'Container Port: 8787'
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: Host Port 1
         Required: 'false'
         Target: 8787
@@ -69078,7 +68854,7 @@ rtmps-server:
         Description: The port used to access the built in players and stats page.
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: Players &amp; Stats Port
         Required: 'false'
         Target: 8080
@@ -69549,7 +69325,6 @@ rustypaste:
   Tag: latest
   WebUI: http://[IP]:[PORT:8000]
 s3backup:
-  BindTime: 'true'
   CategoryList:
   - Backup
   - Cloud
@@ -69579,7 +69354,6 @@ s3backup:
         Name: SECRET_KEY
         Target: SECRET_KEY
         value: Your AWS Access secret
-  GitHub: https://github.com/joch/docker-s3backup
   Icon: https://i.imgur.com/NqyrUIy.png
   Keywords:
   - s3backup
@@ -69595,7 +69369,6 @@ s3backup:
   - https://registry.hub.docker.com/r/joch/s3backup/
   Tag: latest
 s3sync:
-  Beta: 'true'
   CategoryList:
   - Backup
   - Cloud
@@ -69702,7 +69475,6 @@ s3sync:
   Tag: latest
   WebUI: ''
 sabnzbd-extended:
-  Beta: 'true'
   CategoryList:
   - Downloaders
   Config:
@@ -69737,7 +69509,7 @@ sabnzbd-extended:
         Description: 'Container Port: 8080'
         Display: always-hide
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: Host Port for 8080
         Required: 'true'
         Target: 8080
@@ -70020,7 +69792,7 @@ salt4unraid:
         Description: 'Container Port: 3333'
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: Saltgui web/api port
         Required: 'false'
         Target: 3333
@@ -70089,7 +69861,6 @@ salt4unraid:
   Tag: latest
   WebUI: http://[IP]:[PORT:3333]
 satisfactory:
-  Beta: 'true'
   CategoryList:
   - GameServers
   Config:
@@ -71216,7 +70987,7 @@ serviio:
         Description: "WEBUI PORT\r\nAccess by going to http://IP:23423/console"
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: WEBUI
         Required: 'true'
         Target: 23423
@@ -72242,7 +72013,7 @@ shinysdr:
         Description: 'Container Port: 8100'
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: HTTP
         Required: 'true'
         Target: 8100
@@ -72561,8 +72332,6 @@ signtools:
   Tag: latest
   WebUI: http://[IP]:[PORT:8080]
 signum-node:
-  Beta: 'true'
-  BindTime: 'true'
   CategoryList:
   - Crypto
   Config:
@@ -72578,7 +72347,7 @@ signum-node:
       main:
         ContainerPort: '8125'
         HostPort: '8125'
-        Mode: tcp
+        Mode: HTTP
         Name: tcp-port-1
         Protocol: tcp
         Target: 8125
@@ -72593,7 +72362,6 @@ signum-node:
         value: 8123
     Variable: {}
   ExtraParams: --init
-  GitHub: https://github.com/signum-network/signum-node
   Icon: https://raw.githubusercontent.com/signum-network/signum-node/main/resources/images/signum_overlay_logo.ico
   Keywords:
   - signum-node
@@ -73178,7 +72946,6 @@ skyfactoryone:
   Tag: latest
   WebUI: ''
 slack-invite:
-  BindTime: 'true'
   CategoryList:
   - Network-Messenger
   - Productivity
@@ -73329,7 +73096,6 @@ snapdrop:
         Target: UMASK
         Type: Variable
         value: ''
-  GitHub: https://github.com/linuxserver/docker-snapdrop#application-setup
   Icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/snapdrop-logo.png
   Keywords:
   - snapdrop
@@ -73402,7 +73168,6 @@ snippet-box:
   WebUI: http://[IP]:[PORT:5000]
 socat:
   BaseImage: justcontainers/base-alpine
-  BindTime: 'true'
   Branch:
     Tag: dev
     TagDescription: dev branch
@@ -73445,7 +73210,6 @@ socat:
   Tag: latest
   WebUI: ''
 socials:
-  BindTime: 'true'
   CategoryList:
   - Other
   Config:
@@ -73706,7 +73470,6 @@ songkong:
   Tag: latest
   WebUI: http://[IP]:[PORT:4567]/
 sourcegraph:
-  BindTime: 'true'
   CategoryList:
   - Backup
   - Cloud
@@ -73768,7 +73531,7 @@ sourcegraph:
         Description: This is SourceGraph's Web UI port you can access via a web browser.
         Display: always-hide
         Mask: '{8}'
-        Mode: tcp
+        Mode: HTTP
         Name: Web Interface Port (HTTP)
         Required: 'true'
         Target: 7080
@@ -73776,7 +73539,6 @@ sourcegraph:
         value: 7080
     Variable: {}
   ExtraParams: -d --rm
-  GitHub: https://github.com/sourcegraph/sourcegraph
   Icon: https://github.com/sourcegraph/themes/raw/master/icon.png
   Keywords:
   - sourcegraph
@@ -74100,7 +73862,7 @@ splunk:
         Description: HTTP Web UI
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: Web
         Required: 'true'
         Target: 8000
@@ -74854,8 +74616,6 @@ starbound:
   WebUI: ''
   caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/Starbound.xml
 starbound-gog-server:
-  Beta: 'true'
-  BindTime: 'true'
   CategoryList:
   - Other
   Config:
@@ -74884,7 +74644,6 @@ starbound-gog-server:
         Target: 21026
         value: 21026
     Variable: {}
-  GitHub: https://github.com/miketweaver/docker-starbound-gog-server
   Icon: https://cdn.rawgit.com/miketweaver/docker-starbound-server/master/starbound.png
   Keywords:
   - starbound-gog-server
@@ -75284,7 +75043,7 @@ storagenode-v3:
         Description: The port to access web dashboard
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: Dashboard Port
         Required: 'true'
         Target: 14002
@@ -76937,7 +76696,7 @@ swag:
         Description: Http port (required for http validation and http - https redirect)
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: 'Port: 80'
         Required: 'false'
         Target: 80
@@ -77120,7 +76879,6 @@ swag:
         Type: Variable
         value: ''
   ExtraParams: --cap-add=NET_ADMIN
-  GitHub: https://github.com/linuxserver/docker-swag#application-setup
   Icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/linuxserver-ls-logo.png
   Keywords:
   - swag
@@ -77962,7 +77720,6 @@ tar1090:
   Tag: latest
   WebUI: http://[IP]:[PORT:80]/
 tartube:
-  Beta: 'true'
   CategoryList:
   - Productivity
   - Tools-Utilities
@@ -79209,7 +78966,7 @@ terraria:
           click on WebUI on the Docker page within Unraid).'
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: TCP - WebConsole
         Required: 'false'
         Target: 8080
@@ -79317,7 +79074,7 @@ terraria-tmodloader:
           click on WebUI on the Docker page within Unraid).'
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: TCP - WebConsole
         Required: 'false'
         Target: 8080
@@ -79425,7 +79182,7 @@ terraria-tshock:
           click on WebUI on the Docker page within Unraid).'
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: TCP - WebConsole
         Required: 'false'
         Target: 8080
@@ -79496,7 +79253,6 @@ terraria-tshock:
   WebUI: http://[IP]:[PORT:8080]/
   caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/Terraria-TShock.xml
 theforest:
-  Beta: 'true'
   CategoryList:
   - GameServers
   Config:
@@ -79898,7 +79654,6 @@ thunderbird:
   WebUI: http://[IP]:[PORT:8080]/vnc.html?autoconnect=true
   caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/Thunderbird.xml
 tinymm-cli:
-  BindTime: 'true'
   CategoryList:
   - Other
   Config:
@@ -79914,7 +79669,7 @@ tinymm-cli:
       main:
         ContainerPort: '5800'
         HostPort: '5800'
-        Mode: tcp
+        Mode: HTTP
         Name: tcp-port-0
         Protocol: ''
         Target: 5800
@@ -80001,7 +79756,7 @@ tixati:
         Description: Port used to access the web interface.
         Display: advanced-hide
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: WEB Port
         Required: 'true'
         Target: 5800
@@ -80215,7 +79970,6 @@ todomini:
   Tag: latest
   WebUI: http://[IP]:[PORT:80]
 tonido:
-  BindTime: 'true'
   CategoryList:
   - Cloud
   Config:
@@ -80805,8 +80559,6 @@ trango:
   WebUI: https://[IP]:[PORT:5533]
 transmission-nzbtomedia:
   BaseImage: lsiobase/alpine.python
-  Beta: 'true'
-  BindTime: 'true'
   CategoryList:
   - Downloaders
   Config:
@@ -80821,7 +80573,7 @@ transmission-nzbtomedia:
       main:
         ContainerPort: '9091'
         HostPort: '9091'
-        Mode: tcp
+        Mode: HTTP
         Name: tcp-port-0
         Protocol: tcp
         Target: 9091
@@ -81117,7 +80869,6 @@ troddit:
   WebUI: http://[IP]:[PORT:3000]/
 ts-dnsserver:
   BaseImage: roxedus/base-alpine:latest
-  Beta: 'true'
   CategoryList:
   - Network-DNS
   Config:
@@ -81152,7 +80903,7 @@ ts-dnsserver:
         Description: 'Container Port: '
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: Web UI
         Required: 'false'
         Target: 5380
@@ -81240,7 +80991,7 @@ tsmuxer:
           other network types, port 5800 should be used instead.
         Display: advanced-hide
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: WEB Port for GUI
         Required: 'true'
         Target: 5800
@@ -81949,7 +81700,6 @@ twonky-server:
   Tag: latest
   WebUI: http://[IP]:[PORT:9000]/
 ubuntu-xfce:
-  Beta: 'true'
   CategoryList:
   - Other
   Config:
@@ -81997,7 +81747,6 @@ ubuntu-xfce:
   Tag: latest
   WebUI: ''
 ubuntu-xrdp:
-  BindTime: 'true'
   CategoryList:
   - Productivity
   Config:
@@ -82049,7 +81798,6 @@ ubuntu-xrdp:
   Tag: latest
   WebUI: ''
 unbound:
-  Beta: 'true'
   CategoryList:
   - Network-DNS
   Config:
@@ -82278,7 +82026,7 @@ unifi-controller:
         Description: Unifi web admin port
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: WebUI
         Required: 'true'
         Target: 8443
@@ -82425,7 +82173,6 @@ unifi-controller:
         Target: UMASK
         Type: Variable
         value: ''
-  GitHub: https://github.com/linuxserver/docker-unifi-controller#application-setup
   Icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/unifi-controller-logo.png
   Keywords:
   - unifi-controller
@@ -82621,7 +82368,6 @@ unifi-protect-backup:
   - https://github.com/ep1cman/unifi-protect-backup/pkgs/container/unifi-protect-backup
   Tag: latest
 unifi-video:
-  BindTime: 'true'
   CategoryList:
   - HomeAutomation
   - Network-Management
@@ -82638,7 +82384,7 @@ unifi-video:
       main:
         ContainerPort: '7080'
         HostPort: '7080'
-        Mode: tcp
+        Mode: HTTP
         Name: tcp-port-3
         Protocol: tcp
         Target: 7080
@@ -82770,7 +82516,7 @@ universal-media-server:
         Description: 'Container Port: 9001'
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: WebUI
         Required: 'true'
         Target: 9001
@@ -82987,7 +82733,7 @@ unms:
         Description: 'Container Port: 443'
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: Host Port 2
         Required: 'true'
         Target: 443
@@ -83015,7 +82761,6 @@ unms:
   Tag: latest
   WebUI: https://[IP]:[PORT:443]
 unoeurodns:
-  BindTime: 'true'
   CategoryList:
   - Network-DNS
   Config:
@@ -83044,7 +82789,6 @@ unoeurodns:
         Name: PUSHBULLET_ACCESS_TOKEN
         Target: PUSHBULLET_ACCESS_TOKEN
         value: ''
-  GitHub: https://github.com/tynor88/docker-unoeuro-dns
   Icon: https://raw.githubusercontent.com/tynor88/docker-templates/master/images/unoeuro_small.png
   Keywords:
   - unoeurodns
@@ -83061,8 +82805,6 @@ unoeurodns:
   Tag: latest
   WebUI: ''
 unraid-api:
-  Beta: 'true'
-  BindTime: 'true'
   CategoryList:
   - HomeAutomation
   - Tools-Utilities
@@ -83526,7 +83268,6 @@ urban-terror:
   Tag: latest
   WebUI: ''
 urbit:
-  BindTime: 'true'
   CategoryList:
   - Cloud
   - Network
@@ -83572,7 +83313,6 @@ urbit:
         Type: Port
         value: 80
     Variable: {}
-  GitHub: https://github.com/urbit/urbit
   Icon: https://raw.githubusercontent.com/tipdec-siblyn/unraid-template/main/urbit.png
   Keywords:
   - urbit
@@ -84986,7 +84726,6 @@ webtop:
         Target: UMASK
         Type: Variable
         value: ''
-  GitHub: https://github.com/linuxserver/docker-webtop#application-setup
   Icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/webtop-logo.png
   Keywords:
   - webtop
@@ -85415,7 +85154,6 @@ wger-unraid:
   Tag: latest
   WebUI: http://[IP]:[PORT:8000]
 whoogle-search:
-  Beta: 'true'
   CAComment: 'It appears that after installation you have to run a command to get
     this application to work:  See <a href=https://forums.unraid.net/topic/92360-support-foxxmd-whoogle-search/page/2/?tab=comments#comment-1103804
     target=_blank>here</a>'
@@ -85761,7 +85499,7 @@ wireguard-easy:
         Description: ''
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: Port (WebUI)
         Required: 'false'
         Target: 51821
@@ -85979,7 +85717,6 @@ wrapperr:
   Tag: latest
   WebUI: http://[IP]:[PORT:80]/
 wreckfest:
-  Beta: 'true'
   CategoryList:
   - GameServers
   Config:
@@ -86016,7 +85753,7 @@ wreckfest:
           click on WebUI on the Docker page within Unraid).'
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: TCP - WebConsole
         Required: 'false'
         Target: 8080
@@ -86532,7 +86269,6 @@ wyzesense2mqtt:
   Tag: latest
   WebUI: ''
 xeoma:
-  BindTime: 'true'
   CategoryList:
   - HomeAutomation
   - Network-Other
@@ -86548,7 +86284,7 @@ xeoma:
       main:
         ContainerPort: '10090'
         HostPort: '10090'
-        Mode: tcp
+        Mode: HTTP
         Name: tcp-port-1
         Protocol: tcp
         Target: 10090
@@ -87626,7 +87362,7 @@ yacy:
         Description: HTTP
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: HTTP
         Required: 'true'
         Target: 8090
@@ -87969,7 +87705,6 @@ youtube-dl:
   Tag: latest
   WebUI: http://[IP]:[PORT:8080]
 youtube-dl-material:
-  Beta: 'true'
   CategoryList:
   - Downloaders
   - MediaApp-Video
@@ -88311,7 +88046,7 @@ zcashwalletgui:
         Description: 'Container Port: 6901'
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: noVNC port
         Required: 'false'
         Target: 6901
@@ -88595,7 +88330,7 @@ zoneminder:
         Description: ''
         Display: always
         Mask: 'false'
-        Mode: tcp
+        Mode: HTTP
         Name: WebUI Port
         Required: 'true'
         Target: 443

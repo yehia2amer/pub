@@ -23,6 +23,12 @@ persistence:
   plugins:
     enabled: true
     mountPath: /mattermost/plugins
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   gossipporttcp:
     enabled: true

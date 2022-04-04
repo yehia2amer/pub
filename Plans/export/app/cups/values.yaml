@@ -11,6 +11,12 @@ persistence:
   usbmapping:
     enabled: true
     mountPath: /var/run/dbus
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   main:
     enabled: true

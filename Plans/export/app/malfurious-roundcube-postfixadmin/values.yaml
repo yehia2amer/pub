@@ -21,6 +21,12 @@ persistence:
   enigmagpgkeystoragepath:
     enabled: true
     mountPath: /enigma
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   main:
     enabled: true

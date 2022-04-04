@@ -21,6 +21,12 @@ persistence:
   mountedmysqldata:
     enabled: true
     mountPath: /var/lib/mysql
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   main:
     enabled: false

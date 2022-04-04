@@ -13,6 +13,12 @@ persistence:
   storage(data):
     enabled: true
     mountPath: /debian
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   main:
     enabled: true

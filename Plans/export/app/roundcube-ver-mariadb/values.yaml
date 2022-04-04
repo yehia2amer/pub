@@ -28,6 +28,12 @@ persistence:
   roundcube-templocation:
     enabled: true
     mountPath: /tmp/roundcube-temp
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   main:
     enabled: true

@@ -10,6 +10,12 @@ persistence:
   files:
     enabled: true
     mountPath: /files
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   main:
     enabled: true

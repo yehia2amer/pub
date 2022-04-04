@@ -7,6 +7,12 @@ persistence:
   data-path:
     enabled: true
     mountPath: /root/.ethereum
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   discovery:
     enabled: true

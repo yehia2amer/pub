@@ -43,6 +43,12 @@ persistence:
   nginxlogs:
     enabled: true
     mountPath: /var/log/nginx
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   httpport:
     enabled: true

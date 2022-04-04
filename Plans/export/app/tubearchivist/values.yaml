@@ -17,6 +17,12 @@ persistence:
   youtubemediapath:
     enabled: true
     mountPath: /youtube
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   main:
     enabled: true

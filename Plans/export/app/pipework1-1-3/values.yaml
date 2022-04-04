@@ -4,6 +4,12 @@ image:
   repository: dreamcat4/pipework
   tag: 1.1.3
 persistence: {}
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   main:
     enabled: false

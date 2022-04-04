@@ -7,6 +7,12 @@ persistence:
   kerio-connect:
     enabled: true
     mountPath: /backup
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   main:
     enabled: true
@@ -14,7 +20,7 @@ service:
       main:
         enabled: true
         port: 4040
-        protocol: TCP
+        protocol: HTTP
         targetPort: 4040
   tcp-port-1:
     enabled: true

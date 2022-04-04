@@ -9,6 +9,12 @@ persistence:
   internalshare:
     enabled: true
     mountPath: /UNRAID_SHARE
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   main:
     enabled: true
@@ -16,7 +22,7 @@ service:
       main:
         enabled: true
         port: 6901
-        protocol: TCP
+        protocol: HTTP
         targetPort: 6901
   webui(vnc):
     enabled: true

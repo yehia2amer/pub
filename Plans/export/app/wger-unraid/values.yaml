@@ -36,6 +36,12 @@ persistence:
   django_static_root:
     enabled: true
     mountPath: /home/wger/static
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   main:
     enabled: true

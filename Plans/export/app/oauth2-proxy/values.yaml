@@ -7,6 +7,12 @@ persistence:
   hostpath1:
     enabled: true
     mountPath: /etc/oauth2/
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   main:
     enabled: true

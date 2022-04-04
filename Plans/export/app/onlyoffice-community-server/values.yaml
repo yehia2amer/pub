@@ -23,6 +23,12 @@ persistence:
   communityserverlogs:
     enabled: true
     mountPath: /var/log/onlyoffice
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   httpsport:
     enabled: true
@@ -38,7 +44,7 @@ service:
       main:
         enabled: true
         port: 8080
-        protocol: TCP
+        protocol: HTTP
         targetPort: 80
   portforxmpp-compatibleinstantmessagingclient(foronlyofficetalkcorrectwork):
     enabled: true

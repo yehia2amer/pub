@@ -17,6 +17,12 @@ persistence:
   sourcefolder:
     enabled: true
     mountPath: /media/source
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   main:
     enabled: true

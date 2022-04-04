@@ -11,6 +11,12 @@ persistence:
   pathvarrundocker-sock:
     enabled: true
     mountPath: /var/run/docker.sock
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   main:
     enabled: true

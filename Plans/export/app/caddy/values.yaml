@@ -8,6 +8,12 @@ persistence:
   config:
     enabled: true
     mountPath: /config
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   hostportfor8443:
     enabled: true
@@ -23,5 +29,5 @@ service:
       main:
         enabled: true
         port: 8080
-        protocol: TCP
+        protocol: HTTP
         targetPort: 8080

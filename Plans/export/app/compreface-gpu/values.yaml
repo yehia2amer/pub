@@ -11,6 +11,12 @@ persistence:
   data:
     enabled: true
     mountPath: /var/lib/postgresql/data
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   main:
     enabled: true

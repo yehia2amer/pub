@@ -10,6 +10,12 @@ persistence:
   dockersocket:
     enabled: true
     mountPath: /var/run/docker.sock
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   main:
     enabled: true
@@ -17,7 +23,7 @@ service:
       main:
         enabled: true
         port: 9996
-        protocol: TCP
+        protocol: HTTP
         targetPort: 9000
   sshtunnel:
     enabled: true

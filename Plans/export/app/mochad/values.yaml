@@ -7,6 +7,12 @@ persistence:
   mochad:
     enabled: true
     mountPath: /dev/bus/usb/004
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   main:
     enabled: true

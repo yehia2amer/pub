@@ -10,6 +10,12 @@ persistence:
   iconspath:
     enabled: true
     mountPath: /app/public/item-icons/
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   main:
     enabled: true

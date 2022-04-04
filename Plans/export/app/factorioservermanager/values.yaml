@@ -13,6 +13,12 @@ persistence:
   fsmsaves:
     enabled: true
     mountPath: /opt/factorio/saves
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   factorioport:
     enabled: true
@@ -28,5 +34,5 @@ service:
       main:
         enabled: true
         port: 8888
-        protocol: TCP
+        protocol: HTTP
         targetPort: 80

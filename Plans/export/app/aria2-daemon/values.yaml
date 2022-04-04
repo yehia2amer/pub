@@ -31,6 +31,12 @@ persistence:
   hostpath1:
     enabled: true
     mountPath: /download
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   aria2-dhtlistenport:
     enabled: true

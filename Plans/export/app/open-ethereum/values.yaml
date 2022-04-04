@@ -7,6 +7,12 @@ persistence:
   base-path:
     enabled: true
     mountPath: /home/openethereum/.local/share/openethereum/
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   discovery:
     enabled: true

@@ -16,6 +16,12 @@ persistence:
   plots1:
     enabled: true
     mountPath: /plots1
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   main:
     enabled: true
@@ -23,7 +29,7 @@ service:
       main:
         enabled: true
         port: 8926
-        protocol: TCP
+        protocol: HTTP
         targetPort: 8926
   worker_port:
     enabled: true

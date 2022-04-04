@@ -30,6 +30,12 @@ persistence:
   varlibredis:
     enabled: true
     mountPath: /var/lib/redis
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   httpsport:
     enabled: true
@@ -45,5 +51,5 @@ service:
       main:
         enabled: true
         port: 8082
-        protocol: TCP
+        protocol: HTTP
         targetPort: 80

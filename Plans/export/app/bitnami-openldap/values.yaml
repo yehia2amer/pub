@@ -36,6 +36,12 @@ persistence:
   ldap_custom_schema_file:
     enabled: true
     mountPath: /schema/custom.ldif
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   https_port:
     enabled: true

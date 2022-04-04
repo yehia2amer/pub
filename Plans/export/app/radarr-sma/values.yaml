@@ -12,6 +12,12 @@ persistence:
   hostpathforstorage:
     enabled: true
     mountPath: /storage
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   main:
     enabled: true

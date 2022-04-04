@@ -7,6 +7,12 @@ persistence:
   data:
     enabled: true
     mountPath: /data
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   containerhttps:
     enabled: true
@@ -70,7 +76,7 @@ service:
       main:
         enabled: true
         port: 8280
-        protocol: TCP
+        protocol: HTTP
         targetPort: 80
   pop3port:
     enabled: true

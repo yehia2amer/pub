@@ -14,6 +14,12 @@ persistence:
   pathtofiles:
     enabled: true
     mountPath: /mnt/user
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   main:
     enabled: true

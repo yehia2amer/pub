@@ -20,6 +20,12 @@ persistence:
   maildatapath:
     enabled: true
     mountPath: /var/mail
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   imapport:
     enabled: true
@@ -43,7 +49,7 @@ service:
       main:
         enabled: true
         port: 11334
-        protocol: TCP
+        protocol: HTTP
         targetPort: 11334
   managesieveport:
     enabled: true

@@ -10,6 +10,12 @@ persistence:
   storage(config):
     enabled: true
     mountPath: /www/lib/config.local.php
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   main:
     enabled: true

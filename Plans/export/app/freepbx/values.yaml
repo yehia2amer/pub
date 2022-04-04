@@ -29,6 +29,12 @@ persistence:
   www:
     enabled: true
     mountPath: /var/www/html
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   fop:
     enabled: true
@@ -52,7 +58,7 @@ service:
       main:
         enabled: true
         port: 8150
-        protocol: TCP
+        protocol: HTTP
         targetPort: 80
   pjsip:
     enabled: true

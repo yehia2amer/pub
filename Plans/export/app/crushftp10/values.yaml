@@ -14,6 +14,12 @@ persistence:
   ftpfolder1:
     enabled: true
     mountPath: /mnt/FTP/Shared
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   ftppassiveports:
     enabled: true

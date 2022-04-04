@@ -17,6 +17,12 @@ persistence:
   logs:
     enabled: true
     mountPath: /home/botdarr/logs
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   main:
     enabled: false

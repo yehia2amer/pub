@@ -7,6 +7,12 @@ persistence:
   jenkins_home:
     enabled: true
     mountPath: /var/jenkins_home
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   main:
     enabled: true

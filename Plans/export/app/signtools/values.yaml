@@ -14,6 +14,12 @@ persistence:
   signer-cfg-yml:
     enabled: true
     mountPath: /signer-cfg.yml
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   main:
     enabled: true

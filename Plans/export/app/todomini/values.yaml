@@ -8,6 +8,12 @@ persistence:
     enabled: true
     mountPath: /var/www/public/img/stardust.png
     readOnly: true
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   main:
     enabled: true

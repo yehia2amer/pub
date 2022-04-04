@@ -13,6 +13,12 @@ persistence:
     enabled: true
     mountPath: /etc/tor/
     readOnly: true
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   '9001':
     enabled: true

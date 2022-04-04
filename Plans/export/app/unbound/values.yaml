@@ -7,6 +7,12 @@ persistence:
   configpath:
     enabled: true
     mountPath: /opt/unbound/etc/unbound/
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   main:
     enabled: true

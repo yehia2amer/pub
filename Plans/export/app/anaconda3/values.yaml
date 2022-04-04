@@ -7,6 +7,12 @@ persistence:
   appdata:
     enabled: true
     mountPath: /src/notebooks
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   main:
     enabled: true

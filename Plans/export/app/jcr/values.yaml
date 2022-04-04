@@ -9,6 +9,12 @@ persistence:
   varoptjfrogartifactory:
     enabled: true
     mountPath: /var/opt/jfrog/artifactory
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   main:
     enabled: true

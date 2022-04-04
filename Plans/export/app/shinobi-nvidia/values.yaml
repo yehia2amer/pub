@@ -24,6 +24,12 @@ persistence:
   videos:
     enabled: true
     mountPath: /home/Shinobi/videos
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   main:
     enabled: true

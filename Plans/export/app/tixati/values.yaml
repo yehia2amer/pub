@@ -18,6 +18,12 @@ persistence:
   storage:
     enabled: true
     mountPath: /storage
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   containerport:
     enabled: true
@@ -33,7 +39,7 @@ service:
       main:
         enabled: true
         port: 5800
-        protocol: TCP
+        protocol: HTTP
         targetPort: 5800
   vncportforgui:
     enabled: true

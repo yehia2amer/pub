@@ -11,6 +11,12 @@ persistence:
     enabled: true
     mountPath: /var/www/html/php.ini
     readOnly: true
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   db:
     enabled: true
@@ -26,5 +32,5 @@ service:
       main:
         enabled: true
         port: 8088
-        protocol: TCP
+        protocol: HTTP
         targetPort: 80

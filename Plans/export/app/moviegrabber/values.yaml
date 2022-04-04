@@ -8,6 +8,12 @@ persistence:
   moviegrabber:
     enabled: true
     mountPath: /media
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   main:
     enabled: true

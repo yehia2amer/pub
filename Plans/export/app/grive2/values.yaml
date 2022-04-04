@@ -13,6 +13,12 @@ persistence:
   unraid_folder:
     enabled: true
     mountPath: /drive
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   main:
     enabled: false

@@ -4,6 +4,12 @@ image:
   repository: testdasi/simple-dns-doh
   tag: latest
 persistence: {}
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   dnsudp:
     enabled: true

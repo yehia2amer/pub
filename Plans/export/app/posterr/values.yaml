@@ -11,6 +11,12 @@ persistence:
   custom:
     enabled: true
     mountPath: /usr/src/app/public/custom
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   main:
     enabled: true

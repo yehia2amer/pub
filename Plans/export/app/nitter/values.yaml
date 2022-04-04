@@ -7,6 +7,12 @@ persistence:
   nitter-conf:
     enabled: true
     mountPath: /src/nitter.conf
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   main:
     enabled: true

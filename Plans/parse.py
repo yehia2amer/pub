@@ -7,6 +7,8 @@ import requests
 
 invalid = '<>:"/\|?*$ '
 blacklistedenvs = ["UID", "GID", "PUID", "PGID", "TZ"]
+puidcheck = ["UID", "GID", "PUID", "PGID"]
+puidflag = False
 
 my_dir = './apps'
 
@@ -110,6 +112,11 @@ for n in afList:
       n.pop("topTrending", "")
       n.pop("TemplateURL", "")
       n.pop("ChangeLogPresent", "")
+      n.pop("BindTime", "")
+      n.pop("Beta", "")
+      n.pop("RecommendedDate", "")
+      n.pop("RecommendedRaw", "")
+      n.pop("RecommendedReason", "")
       
       if "Overview" in n.keys() and n["Overview"]:
         ovlist = n["Overview"].splitlines(keepends=True)
@@ -147,6 +154,7 @@ for n in afList:
         
       n.pop("Project", "")
       n.pop("Github", "")
+      n.pop("GitHub", "")
       n.pop("ReadMe", "")
         
       n["Keywords"] = []
@@ -214,6 +222,8 @@ for n in afList:
       if ( "Environment" in n.keys() and n["Environment"] ) and isinstance(n["Environment"], dict) and ( "Variable" in n["Environment"].keys() and n["Environment"]["Variable"] ):
         if isinstance(n["Environment"]["Variable"], list):
           for var in n["Environment"]["Variable"]:
+            if var["Name"] and var["Name"] in puidcheck:
+              puidflag = True
             if var["Name"] and not var["Name"] in blacklistedenvs :
               n["Config"]["Variable"][var["Name"]] = {}
               n["Config"]["Variable"][var["Name"]]["Name"] = var["Name"]
@@ -221,6 +231,8 @@ for n in afList:
               n["Config"]["Variable"][var["Name"]]["value"] = var["Value"]
         elif isinstance(n["Environment"]["Variable"], dict) and not "Name" in n["Environment"]["Variable"] and not "Value" in n["Environment"]["Variable"]:
           for name, value in n["Environment"]["Variable"].items():
+            if name and name in puidcheck:
+              puidflag = True
             if name and not name in blacklistedenvs:
               n["Config"]["Variable"][name] = {}
               n["Config"]["Variable"][name]["Name"] = name
@@ -377,6 +389,7 @@ for n in afList:
           name = "main"
         elif mainport and "Target" in value.keys() and value["Target"] == mainport:     
           name = "main"
+          value["Mode"] = 'HTTP'
 
         name = name.lower()
         for char in invalid:
@@ -557,9 +570,27 @@ for name, app in combinedfree.items():
   
 
   for name, value in app["Config"]["Variable"].items():
+    if name and name in puidcheck:
+      puidflag = True
+    if value["Target"] in puidcheck:
+      puidflag = True
     if not name in blacklistedenvs and not value["Target"] in blacklistedenvs:
       valuesyaml["env"][value["Target"]] = value["value"]
-     
+
+  valuesyaml["securityContext"] = {}
+  valuesyaml["podSecurityContext"] = {}
+  if puidflag:
+    valuesyaml["securityContext"]["readOnlyRootFilesystem"] = False
+    valuesyaml["securityContext"]["runAsNonRoot"] = False
+    valuesyaml["podSecurityContext"]["runAsUser"] = 0
+    valuesyaml["podSecurityContext"]["runAsGroup"] = 0
+
+  if "Privileged" in app["Config"].keys() and app["Config"]["Privileged"] and ( app["Config"]["Privileged"] == 'true' or app["Config"]["Privileged"] == 'True' or app["Config"]["Privileged"] == True ):
+    valuesyaml["securityContext"]["privileged"] = True
+    
+  if "PostArgs" in app["Config"].keys() and app["Config"]["PostArgs"]:
+    valuesyaml["args"] = [app["Config"]["PostArgs"]]
+
   valuesyaml["persistence"] = {}
   for name, value in app["Config"]["Path"].items():
     valuesyaml["persistence"][name] = {}

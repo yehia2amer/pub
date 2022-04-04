@@ -10,6 +10,12 @@ persistence:
   wizstorage:
     enabled: true
     mountPath: /wiz/storage
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   '9269':
     enabled: true

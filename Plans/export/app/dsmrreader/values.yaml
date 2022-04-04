@@ -19,6 +19,12 @@ persistence:
   backupdirectory:
     enabled: true
     mountPath: /home/dsmr/app/backups
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 service:
   main:
     enabled: true
