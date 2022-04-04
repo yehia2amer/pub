@@ -591,8 +591,8 @@ for name, app in combinedfree.items():
       else: 
         valuesyaml["service"][name]["ports"][name]["targetPort"] = value["value"]
         
-  if not app["Config"]["Port"]["main"]
-    raise Exception("App does not have a main port set: " app["name"] )
+  if not app["Config"]["Port"]["main"]:
+    raise Exception("App does not have a main port set: "+app["name"] )
 
   valuesyamlString = yaml.dump(valuesyaml)
   valuesyamlFile = open("./export/"+"app/"+tmpname+"/values.yaml", "w")
