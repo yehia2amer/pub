@@ -1,0 +1,143 @@
+CategoryList:
+- MediaApp-Photos
+- MediaServer-Photos
+Config:
+  Device: {}
+  Label: {}
+  Path:
+    Cache path:
+      Default: ''
+      Description: This is the place where all the generated thumbs and other cache
+        files will be placed. Fast SSD is preferable.
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Cache path
+      Required: 'true'
+      Target: /root/picthor/cache
+      Type: Path
+      value: ''
+    Root directory path:
+      Default: ''
+      Description: Root path example where you should mount your photos library folder.
+        Use this path when you will be adding a root dir in the web ui. Read only
+        access mode is recommend.
+      Display: always
+      Mask: 'false'
+      Mode: ro
+      Name: Root directory path
+      Required: 'false'
+      Target: /root/picthor-root-1
+      Type: Path
+      value: ''
+  Port:
+    Web UI Port:
+      Default: '5000'
+      Description: Picthor is listening on port 5000 by default, map it to an available
+        port on your unraid server
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Web UI Port
+      Required: 'true'
+      Target: '5000'
+      Type: Port
+      value: '5000'
+  Variable:
+    PICTHOR_CACHE_DIR:
+      Default: /root/picthor/cache
+      Description: 'Container path to cache dir. This should match the mapped '
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: PICTHOR_CACHE_DIR
+      Required: 'true'
+      Target: PICTHOR_CACHE_DIR
+      Type: Variable
+      value: /root/picthor/cache
+    PostgreSQL database:
+      Default: ''
+      Description: 'Container Variable: PICTHOR_POSTGRES_DB'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: PostgreSQL database
+      Required: 'true'
+      Target: PICTHOR_POSTGRES_DB
+      Type: Variable
+      value: ''
+    PostgreSQL host:
+      Default: ''
+      Description: 'Container Variable: PICTHOR_POSTGRES_HOST'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: PostgreSQL host
+      Required: 'true'
+      Target: PICTHOR_POSTGRES_HOST
+      Type: Variable
+      value: ''
+    PostgreSQL password:
+      Default: ''
+      Description: 'Container Variable: PICTHOR_POSTGRES_PASSWORD'
+      Display: always
+      Mask: 'true'
+      Mode: ''
+      Name: PostgreSQL password
+      Required: 'true'
+      Target: PICTHOR_POSTGRES_PASSWORD
+      Type: Variable
+      value: ''
+    PostgreSQL port:
+      Default: ''
+      Description: 'Container Variable: PICTHOR_POSTGRES_PORT'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: PostgreSQL port
+      Required: 'true'
+      Target: PICTHOR_POSTGRES_PORT
+      Type: Variable
+      value: ''
+    PostgreSQL username:
+      Default: ''
+      Description: 'Container Variable: PICTHOR_POSTGRES_USERNAME'
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: PostgreSQL username
+      Required: 'true'
+      Target: PICTHOR_POSTGRES_USERNAME
+      Type: Variable
+      value: ''
+    Web address:
+      Default: ''
+      Description: "The url of your picthor installation.\r\nUsually: http://&lt;your\
+        \ unraid ip&gt;:&lt;picthor web ui port&gt;"
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Web address
+      Required: 'true'
+      Target: PICTHOR_WEB_ADDRESS
+      Type: Variable
+      value: ''
+Icon: https://raw.githubusercontent.com/picthor-io/unraid-templates/main/picthor-logo-short-t.png
+Keywords:
+- picthor-io
+Name: picthor.io
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "&lt;h1&gt;\r\n"
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/picthor-io/picthor-io-server
+Registry: https://hub.docker.com/r/picthorio/picthor-io
+Repository: picthorio/picthor-io:latest
+Requires: ''
+Sources:
+- https://github.com/picthor-io/picthor-io-server
+- https://hub.docker.com/r/picthorio/picthor-io
+TemplateURL: https://raw.githubusercontent.com/picthor-io/unraid-templates/master/picthor-io.xml
+WebUI: http://[IP]:[PORT:5000]

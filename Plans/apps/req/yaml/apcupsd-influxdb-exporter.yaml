@@ -1,0 +1,130 @@
+CategoryList:
+- Tools-Utilities
+Config:
+  Device: {}
+  Label: {}
+  Path: {}
+  Port: {}
+  Variable:
+    APCUPSD_HOST:
+      Default: localhost
+      Description: address of host running apcupsd
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: APCUPSD_HOST
+      Required: 'true'
+      Target: APCUPSD_HOST
+      Type: Variable
+      value: 10.13.13.15
+    Debugging Output:
+      Default: 'false'
+      Description: Set this variable to true to see the output in the docker log.
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Debugging Output
+      Required: 'false'
+      Target: VERBOSE
+      Type: Variable
+      value: 'false'
+    HOSTNAME:
+      Default: unraid
+      Description: host you want the measurements to show up as in influxdb
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: HOSTNAME
+      Required: 'true'
+      Target: HOSTNAME
+      Type: Variable
+      value: panthro
+    INFLUXDB_DATABASE:
+      Default: apcupsd
+      Description: influxdb database name to store values
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: INFLUXDB_DATABASE
+      Required: 'true'
+      Target: INFLUXDB_DATABASE
+      Type: Variable
+      value: apcupsd
+    INFLUXDB_HOST:
+      Default: localhost
+      Description: ip address of influxdb
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: INFLUXDB_HOST
+      Required: 'true'
+      Target: INFLUXDB_HOST
+      Type: Variable
+      value: 10.13.13.15
+    INFLUXDB_PASSWORD:
+      Default: ''
+      Description: Password for Influxdb
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: INFLUXDB_PASSWORD
+      Required: 'false'
+      Target: INFLUXDB_PASSWORD
+      Type: Variable
+      value: ''
+    INFLUXDB_PORT:
+      Default: '8086'
+      Description: 'Container Variable: INFLUXDB_PORT'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: INFLUXDB_PORT
+      Required: 'true'
+      Target: INFLUXDB_PORT
+      Type: Variable
+      value: '8086'
+    INFLUXDB_USER:
+      Default: ''
+      Description: User name for Influxdb
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: ''
+      Name: INFLUXDB_USER
+      Required: 'false'
+      Target: INFLUXDB_USER
+      Type: Variable
+      value: ''
+    WATTS:
+      Default: ''
+      Description: If your UPS doesn't have the NOMPOWER metric then specify the rated
+        watts so that the load percentage can be used to calculate the current watts
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: WATTS
+      Required: 'false'
+      Target: WATTS
+      Type: Variable
+      value: '1500'
+Icon: ''
+Keywords:
+- apcupsd-influxdb-exporter
+Name: apcupsd-influxdb-exporter
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: Docker wrapper for a python script to query apcupsd via a python version
+  of apcaccess, it then sends the data to influxdb.
+PostArgs: ''
+Privileged: 'false'
+Project: https://github.com/atribe/apcupsd-influxdb-exporter
+Registry: https://cloud.docker.com/repository/docker/atribe/apcupsd-influxdb-exporter
+Repository: atribe/apcupsd-influxdb-exporter
+Requires: ' Influxdb (autoadd) exporter app (autoadd)'
+Sources:
+- https://github.com/atribe/apcupsd-influxdb-exporter
+- https://cloud.docker.com/repository/docker/atribe/apcupsd-influxdb-exporter
+TemplateURL: https://raw.githubusercontent.com/atribe/unRAID-docker/master/apcupsd-influxdb-exporter.xml
+WebUI: ''
+topPerforming: 0.98
+topTrending: -0.954

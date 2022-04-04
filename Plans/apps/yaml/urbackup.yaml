@@ -1,0 +1,47 @@
+BindTime: 'true'
+CategoryList:
+- Productivity
+- Tools-Utilities
+- Backup
+Data:
+  Volume:
+  - ContainerDir: /config
+    HostDir: /mnt/user/appdata/config
+    Mode: rw
+  - ContainerDir: /media
+    HostDir: /mnt/user
+    Mode: rw
+Environment:
+  Variable:
+  - Name: UMASK
+    Value: '000'
+  - Name: PUID
+    Value: '99'
+  - Name: PGID
+    Value: '100'
+GitHub: https://github.com/binhex/arch-urbackup
+Icon: https://raw.githubusercontent.com/binhex/docker-templates/master/binhex/images/urbackup-icon.png
+Keywords:
+- urbackup
+Name: binhex-urbackup
+Networking:
+  Mode: host
+  Publish: "\n    "
+Overview: 'UrBackup is an easy to setup Open Source client/server backup system, that
+  through a combination of image and file backups accomplishes both data safety and
+  a fast restoration time.
+
+  '
+Privileged: 'false'
+Project: https://urbackup.org/
+ReadMe: https://github.com/binhex/documentation
+Registry: https://registry.hub.docker.com/r/binhex/arch-urbackup/
+Repository: binhex/arch-urbackup
+Requires: ''
+Sources:
+- https://urbackup.org/
+- https://registry.hub.docker.com/r/binhex/arch-urbackup/
+TemplateURL: https://raw.githubusercontent.com/binhex/docker-templates/master/binhex/urbackup.xml
+WebUI: http://[IP]:[PORT:55414]/
+topPerforming: 2.573
+topTrending: -3.5829999999999997

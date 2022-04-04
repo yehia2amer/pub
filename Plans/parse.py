@@ -52,99 +52,115 @@ for p in range(len(paths)):
 
 print("Splitting and sanitising json input...")
 for n in afList:
-  if "Name" in n.keys() and n["Name"].lower() not in paths and ("Blacklist" not in n.keys() or not n["Blacklist"] ) and ("Deprecated" not in n.keys() or not n["Deprecated"] ) :
+  if "Name" in n.keys() and ("Blacklist" not in n.keys() or not n["Blacklist"] ) and ("Deprecated" not in n.keys() or not n["Deprecated"] ) and ( "Plugin" not in n.keys() or not n["Plugin"] ) and ( "LanguagePack" not in n.keys() or not n["LanguagePack"] ):
     tmp = n["Name"].lower()
     for char in invalid:
       tmp = tmp.replace(char, '')
+    tmp = tmp.replace('.', '-')
+    tmp = tmp.replace('binhex-', '')
+    tmp = tmp.encode("utf-8").decode("utf-8")
     if tmp in n.keys():
-      tmp = tmp+"2"
+      tmp = tmp+"-duplicate-1"
     if tmp in n.keys():
-      tmp = tmp+"3"
+      tmp = tmp+"-duplicate-2"
     if tmp in n.keys():
-      tmp = tmp+"4"
-    print(tmp.encode("utf-8"))
-    
-    n.pop("downloads", "")
-    n.pop("downloadtrend", "")
-    n.pop("stars", "")
-    n.pop("trending", "")
-    n.pop("trends", "")
-    n.pop("trendsDate", "")
-    n.pop("templatePath", "")
-    n.pop("Shell", "")
-    n.pop("CPUset", "")
-    n.pop("DonateImg", "")
-    n.pop("DonateLink", "")
-    n.pop("DonateText", "")
-    n.pop("Video", "")
-    n.pop("Support", "")
-    n.pop("FirstSeen", "")
-    n.pop("LastUpdate", "")
-    n.pop("LastUpdateScan", "")
-    n.pop("Repo", "")
-    
-    if "Overview" in n.keys() and n["Overview"]:
-      ovlist = n["Overview"].splitlines(keepends=True)
-      try:
-        while True:
-          ovlist.remove("\r\n")
-        while True:
-          ovlist.remove("\n")
-        while True:
-          ovlist.remove("DESCRIPTION\r\n")
-        while True:
-          ovlist.remove("DESCRIPTION")
-      except ValueError:
-        pass
-      n["Overview"] = ovlist[0]
-
-    if not "CategoryList" in n.keys():
-      n["CategoryList"] = ["Other"]
+      tmp = tmp+"-duplicate-3"
+    print(tmp)
+    if ( tmp not in paths ) :
+      n.pop("downloads", "")
+      n.pop("downloadtrend", "")
+      n.pop("stars", "")
+      n.pop("trending", "")
+      n.pop("trends", "")
+      n.pop("trendsDate", "")
+      n.pop("templatePath", "")
+      n.pop("Shell", "")
+      n.pop("CPUset", "")
+      n.pop("DonateImg", "")
+      n.pop("DonateLink", "")
+      n.pop("DonateText", "")
+      n.pop("Video", "")
+      n.pop("Support", "")
+      n.pop("FirstSeen", "")
+      n.pop("LastUpdate", "")
+      n.pop("LastUpdateScan", "")
+      n.pop("Repo", "")
       
-    if not "Overview" in n.keys():
-      n["Overview"] = "This App does not have a description yet..."
-      
-    n["Sources"] = []
-    if "Project" in n.keys() and n["Project"]:
-      n["Sources"].append(n["Project"])
-      
-    if "Registry" in n.keys() and n["Registry"]:
-      n["Sources"].append(n["Registry"])
-      
-    n["Keywords"] = []
-    n["Keywords"].append(tmp)
+      if "Overview" in n.keys() and n["Overview"]:
+        ovlist = n["Overview"].splitlines(keepends=True)
+        try:
+          while True:
+            ovlist.remove("\r\n")
+          while True:
+            ovlist.remove("\n")
+          while True:
+            ovlist.remove("DESCRIPTION\r\n")
+          while True:
+            ovlist.remove("DESCRIPTION")
+        except ValueError:
+          pass
+        n["Overview"] = ovlist[0]
     
-    if "Config" in n.keys() and n["Config"]:
-      hold = {}
-      hold["Port"] = {}
-      hold["Variable"] = {}
-      hold["Path"] = {}
-      hold["Device"] = {}
-      hold["Label"] = {}
-      if isinstance(n["Config"], list):
-        for a in n["Config"]:
-          name = a["@attributes"]["Name"]
-          type = a["@attributes"]["Type"]
-          a.update(a["@attributes"])
-          a.pop("@attributes", "")
-          hold[type][name] = a
-      else:
-          name = n["Config"]["@attributes"]["Name"]
-          type = n["Config"]["@attributes"]["Type"]
-          n["Config"].update(n["Config"]["@attributes"])
-          n["Config"].pop("@attributes", "")
-          hold[type][name] = n["Config"]
-      n.pop("Config", "")
-      n["Config"] = hold
+      if not "CategoryList" in n.keys():
+        n["CategoryList"] = ["Other"]
+        
+      if not "Overview" in n.keys():
+        n["Overview"] = "This App does not have a description yet..."
+        
+      n["Sources"] = []
+      if "Project" in n.keys() and n["Project"]:
+        n["Sources"].append(n["Project"])
+        
+      if "Registry" in n.keys() and n["Registry"]:
+        n["Sources"].append(n["Registry"])
+        
+      n["Keywords"] = []
+      n["Keywords"].append(tmp)
       
+      if not "Requires" in n.keys():
+        n["Requires"] = ""
     
-    globals()['%s' % tmp] = n
-    
-    if "Plugin" in n.keys() and n["Plugin"]:
-      print("skipping "+tmp+" is a unraid plugin...")
-    else:
+        
+      if "influxdb" in tmp:
+        n["Requires"] = n["Requires"]+" Influxdb (autoadd)"
+        
+      if "exporter" in tmp:
+        n["Requires"] = n["Requires"]+" exporter app (autoadd)"
+        
+      if "-duplicate-" in tmp:
+        n["Requires"] = n["Requires"]+" duplicate app (autoadd)"
+        
+      if "Network" in n.keys() and n["Network"] == "host":
+        n["Requires"] = n["Requires"]+" App uses hostnetworking (autoadd)"
+      
+      if "Config" in n.keys() and n["Config"]:
+        hold = {}
+        hold["Port"] = {}
+        hold["Variable"] = {}
+        hold["Path"] = {}
+        hold["Device"] = {}
+        hold["Label"] = {}
+        if isinstance(n["Config"], list):
+          for a in n["Config"]:
+            name = a["@attributes"]["Name"]
+            type = a["@attributes"]["Type"]
+            a.update(a["@attributes"])
+            a.pop("@attributes", "")
+            hold[type][name] = a
+        else:
+            name = n["Config"]["@attributes"]["Name"]
+            type = n["Config"]["@attributes"]["Type"]
+            n["Config"].update(n["Config"]["@attributes"])
+            n["Config"].pop("@attributes", "")
+            hold[type][name] = n["Config"]
+        n.pop("Config", "")
+        n["Config"] = hold
+        
+      
+      globals()['%s' % tmp] = n
+      
       combined[tmp] = n
-      if ("Requires" in n.keys() and n["Requires"]) or ("Network" in n.keys() and n["Network"] == "host"):
+      if "Requires" in n.keys() and n["Requires"]:
         combinedreq[tmp] = n
         jsonString = json.dumps(n)
         jsonFile = open("apps/"+"req/"+"json/"+tmp+".json", "w")
@@ -166,7 +182,7 @@ for n in afList:
         yamlFile = open("apps/"+"yaml/"+tmp+".yaml", "w")
         yamlFile.write(yamlString)
         yamlFile.close()
-
+    
 print("Writhing combined json and yaml output...")
 
 jsonString2 = json.dumps(combinedfree)
@@ -229,7 +245,7 @@ for name, app in combinedfree.items():
   for char in invalid:
     tmpname = tmpname.replace(char, '')
     
-  print(tmpname.encode("utf-8"))
+  print(tmpname)
   appchartyaml["name"] = tmpname
   appchartyaml["annotations"]["truecharts.org/catagories"] = app["CategoryList"]
   appchartyaml["description"] = app["Overview"]

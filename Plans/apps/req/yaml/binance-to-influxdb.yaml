@@ -1,0 +1,51 @@
+CategoryList:
+- Downloaders
+- Tools-Utilities
+Config:
+  Device: {}
+  Label: {}
+  Path:
+    Config:
+      Default: /mnt/user/appdata/binance-ingester
+      Description: 'Container Path: /config'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Config
+      Required: 'false'
+      Target: /config
+      Type: Path
+      value: /mnt/user/appdata/binance-to-influxdb
+  Port: {}
+  Variable:
+    InfluxDB Token:
+      Default: ''
+      Description: Influx database access token
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: InfluxDB Token
+      Required: 'true'
+      Target: INFLUXDB_TOKEN
+      Type: Variable
+      value: ''
+Icon: ''
+Keywords:
+- binance-to-influxdb
+Name: binance-to-influxdb
+Network: bridge
+Networking:
+  Mode: bridge
+Overview: "Binance to Influx is a container designed to be run on an [Unraid](https://www.unraid.net/)\
+  \ server via Docker. The purpose of the container is to simplify the ingestion of\
+  \ cryptocurrency market data, provided by the [Binance API](https://binance.com/),\
+  \ into your own [Influx database](https://www.influxdata.com/).  \r\n"
+PostArgs: ''
+Privileged: 'false'
+Registry: https://registry.hub.docker.com/r/nixoninnes/binance-to-influxdb
+Repository: nixoninnes/binance-to-influxdb:latest
+Requires: ' Influxdb (autoadd)'
+Sources:
+- https://registry.hub.docker.com/r/nixoninnes/binance-to-influxdb
+TemplateURL: https://raw.githubusercontent.com/NixonInnes/unraid-builds-xml/master/binance-to-influxdb.xml
+WebUI: ''

@@ -127,6 +127,133 @@
   - https://hub.docker.com/r/2fauth/2fauth
   TemplateURL: https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/master/templates/2FAuth.xml
   WebUI: http://[IP]:[PORT:8000]
+adguard-exporter:
+  CategoryList:
+  - Tools-Utilities
+  Config:
+    Device: {}
+    Label: {}
+    Path: {}
+    Port:
+      Port to expose metrics:
+        Default: ''
+        Description: 'Container Port: 9617'
+        Display: always
+        Mask: 'false'
+        Mode: tcp
+        Name: Port to expose metrics
+        Required: 'false'
+        Target: '9617'
+        Type: Port
+        value: '9617'
+    Variable:
+      adguard_hostname:
+        Default: AdGuard IP
+        Description: 'Container Variable: adguard_hostname'
+        Display: always
+        Mask: 'false'
+        Mode: ''
+        Name: adguard_hostname
+        Required: 'false'
+        Target: adguard_hostname
+        Type: Variable
+        value: ''
+      adguard_password:
+        Default: AdGuard Password
+        Description: 'Container Variable: adguard_password'
+        Display: always
+        Mask: 'true'
+        Mode: ''
+        Name: adguard_password
+        Required: 'false'
+        Target: adguard_password
+        Type: Variable
+        value: ''
+      adguard_port:
+        Default: ''
+        Description: optional if adguard is not using port 80 (http)/443 (https)
+        Display: always
+        Mask: 'false'
+        Mode: ''
+        Name: adguard_port
+        Required: 'false'
+        Target: adguard_port
+        Type: Variable
+        value: ''
+      adguard_protocol:
+        Default: http
+        Description: 'Container Variable: adguard_protocol'
+        Display: always
+        Mask: 'false'
+        Mode: ''
+        Name: adguard_protocol
+        Required: 'false'
+        Target: adguard_protocol
+        Type: Variable
+        value: http
+      adguard_username:
+        Default: AdGuard UserName
+        Description: 'Container Variable: adguard_username'
+        Display: always
+        Mask: 'false'
+        Mode: ''
+        Name: adguard_username
+        Required: 'false'
+        Target: adguard_username
+        Type: Variable
+        value: ''
+      interval:
+        Default: 30s
+        Description: 'Container Variable: interval'
+        Display: always
+        Mask: 'false'
+        Mode: ''
+        Name: interval
+        Required: 'false'
+        Target: interval
+        Type: Variable
+        value: 30s
+      log_limit:
+        Default: ''
+        Description: 'Container Variable: log_limit'
+        Display: always
+        Mask: 'false'
+        Mode: ''
+        Name: log_limit
+        Required: 'false'
+        Target: log_limit
+        Type: Variable
+        value: '10000'
+      server_port:
+        Default: '9617'
+        Description: 'Container Variable: server_port'
+        Display: always
+        Mask: 'false'
+        Mode: ''
+        Name: server_port
+        Required: 'false'
+        Target: server_port
+        Type: Variable
+        value: '9617'
+  Icon: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/prometheus.png
+  Keywords:
+  - adguard-exporter
+  Name: adguard-exporter
+  Network: bridge
+  Networking:
+    Mode: bridge
+  Overview: Docker AdGuard Exporter for Prometheus.
+  PostArgs: ''
+  Privileged: 'false'
+  Project: https://github.com/ebrianne/adguard-exporter
+  Registry: https://hub.docker.com/r/ebrianne/adguard-exporter
+  Repository: ebrianne/adguard-exporter:latest
+  Requires: ' exporter app (autoadd)'
+  Sources:
+  - https://github.com/ebrianne/adguard-exporter
+  - https://hub.docker.com/r/ebrianne/adguard-exporter
+  TemplateURL: https://raw.githubusercontent.com/tquizzle/Docker-xml/master/docker-adguard-prom-exporter.xml
+  WebUI: http://[IP]:[PORT:9617]/metrics
 admidio:
   CategoryList:
   - Productivity
@@ -228,12 +355,87 @@ airconnect:
   Registry: https://hub.docker.com/r/1activegeek/airconnect/
   RepoShort: Selfhosters
   Repository: 1activegeek/airconnect
+  Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://github.com/philippe44/AirConnect
   - https://hub.docker.com/r/1activegeek/airconnect/
   TemplateURL: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/airconnect.xml
   topPerforming: 9.337
   topTrending: 1.2129999999999992
+alpaca-to-influxdb:
+  CategoryList:
+  - Downloaders
+  - Tools-Utilities
+  Config:
+    Device: {}
+    Label: {}
+    Path:
+      Config:
+        Default: /mnt/user/appdata/alpaca-to-influxdb
+        Description: 'Container Path: /config'
+        Display: always
+        Mask: 'false'
+        Mode: rw
+        Name: Config
+        Required: 'false'
+        Target: /config
+        Type: Path
+        value: /mnt/user/appdata/alpaca-to-influxdb
+    Port: {}
+    Variable:
+      Alpaca API Key ID:
+        Default: ''
+        Description: 'Container Variable: ALPACA_ID'
+        Display: always
+        Mask: 'false'
+        Mode: ''
+        Name: Alpaca API Key ID
+        Required: 'true'
+        Target: ALPACA_ID
+        Type: Variable
+        value: ''
+      Alpaca API Key Secret:
+        Default: ''
+        Description: 'Container Variable: ALPACA_KEY'
+        Display: always
+        Mask: 'false'
+        Mode: ''
+        Name: Alpaca API Key Secret
+        Required: 'true'
+        Target: ALPACA_KEY
+        Type: Variable
+        value: ''
+      InfluxDB Token:
+        Default: ''
+        Description: 'Container Variable: INFLUX_TOKEN'
+        Display: always
+        Mask: 'false'
+        Mode: ''
+        Name: InfluxDB Token
+        Required: 'true'
+        Target: INFLUX_TOKEN
+        Type: Variable
+        value: ''
+  Icon: ''
+  Keywords:
+  - alpaca-to-influxdb
+  Name: alpaca-to-influxdb
+  Network: bridge
+  Networking:
+    Mode: bridge
+  Overview: "Alpaca to Influx is a container designed to be run on an [Unraid](https://www.unraid.net/)\
+    \ server via Docker. The purpose of the container is to simplify the ingestion\
+    \ of stock market data, provided by the [Alpaca API](https://alpaca.markets/),\
+    \ into your own [Influx database](https://www.influxdata.com/).  \r\n"
+  PostArgs: ''
+  Privileged: 'false'
+  Registry: https://hub.docker.com/r/nixoninnes/binance-to-influxdb
+  Repository: nixoninnes/alpaca-to-influxdb:latest
+  Requires: ' Influxdb (autoadd)'
+  Sources:
+  - https://hub.docker.com/r/nixoninnes/binance-to-influxdb
+  TemplateURL: https://raw.githubusercontent.com/NixonInnes/unraid-builds-xml/master/alpaca-to-influxdb.xml
+  WebUI: ''
 antennas:
   CategoryList:
   - Tools-Utilities
@@ -292,6 +494,138 @@ antennas:
   WebUI: http://[IP]:[PORT:5004]
   topPerforming: 1.061
   topTrending: -2.3040000000000003
+apcupsd-influxdb-exporter:
+  CategoryList:
+  - Tools-Utilities
+  Config:
+    Device: {}
+    Label: {}
+    Path: {}
+    Port: {}
+    Variable:
+      APCUPSD_HOST:
+        Default: localhost
+        Description: address of host running apcupsd
+        Display: always
+        Mask: 'false'
+        Mode: ''
+        Name: APCUPSD_HOST
+        Required: 'true'
+        Target: APCUPSD_HOST
+        Type: Variable
+        value: 10.13.13.15
+      Debugging Output:
+        Default: 'false'
+        Description: Set this variable to true to see the output in the docker log.
+        Display: advanced
+        Mask: 'false'
+        Mode: ''
+        Name: Debugging Output
+        Required: 'false'
+        Target: VERBOSE
+        Type: Variable
+        value: 'false'
+      HOSTNAME:
+        Default: unraid
+        Description: host you want the measurements to show up as in influxdb
+        Display: always
+        Mask: 'false'
+        Mode: ''
+        Name: HOSTNAME
+        Required: 'true'
+        Target: HOSTNAME
+        Type: Variable
+        value: panthro
+      INFLUXDB_DATABASE:
+        Default: apcupsd
+        Description: influxdb database name to store values
+        Display: advanced
+        Mask: 'false'
+        Mode: ''
+        Name: INFLUXDB_DATABASE
+        Required: 'true'
+        Target: INFLUXDB_DATABASE
+        Type: Variable
+        value: apcupsd
+      INFLUXDB_HOST:
+        Default: localhost
+        Description: ip address of influxdb
+        Display: always
+        Mask: 'false'
+        Mode: ''
+        Name: INFLUXDB_HOST
+        Required: 'true'
+        Target: INFLUXDB_HOST
+        Type: Variable
+        value: 10.13.13.15
+      INFLUXDB_PASSWORD:
+        Default: ''
+        Description: Password for Influxdb
+        Display: advanced-hide
+        Mask: 'false'
+        Mode: ''
+        Name: INFLUXDB_PASSWORD
+        Required: 'false'
+        Target: INFLUXDB_PASSWORD
+        Type: Variable
+        value: ''
+      INFLUXDB_PORT:
+        Default: '8086'
+        Description: 'Container Variable: INFLUXDB_PORT'
+        Display: advanced
+        Mask: 'false'
+        Mode: ''
+        Name: INFLUXDB_PORT
+        Required: 'true'
+        Target: INFLUXDB_PORT
+        Type: Variable
+        value: '8086'
+      INFLUXDB_USER:
+        Default: ''
+        Description: User name for Influxdb
+        Display: advanced-hide
+        Mask: 'false'
+        Mode: ''
+        Name: INFLUXDB_USER
+        Required: 'false'
+        Target: INFLUXDB_USER
+        Type: Variable
+        value: ''
+      WATTS:
+        Default: ''
+        Description: If your UPS doesn't have the NOMPOWER metric then specify the
+          rated watts so that the load percentage can be used to calculate the current
+          watts
+        Display: always
+        Mask: 'false'
+        Mode: ''
+        Name: WATTS
+        Required: 'false'
+        Target: WATTS
+        Type: Variable
+        value: '1500'
+  Icon: ''
+  Keywords:
+  - apcupsd-influxdb-exporter
+  Name: apcupsd-influxdb-exporter
+  Network: bridge
+  Networking:
+    Mode: bridge
+  Overview: Docker wrapper for a python script to query apcupsd via a python version
+    of apcaccess, it then sends the data to influxdb.
+  PostArgs: ''
+  Privileged: 'false'
+  Project: https://github.com/atribe/apcupsd-influxdb-exporter
+  Registry: https://cloud.docker.com/repository/docker/atribe/apcupsd-influxdb-exporter
+  Repository: atribe/apcupsd-influxdb-exporter
+  Requires: ' Influxdb (autoadd) exporter app (autoadd)'
+  Sources:
+  - https://github.com/atribe/apcupsd-influxdb-exporter
+  - https://cloud.docker.com/repository/docker/atribe/apcupsd-influxdb-exporter
+  TemplateURL: https://raw.githubusercontent.com/atribe/unRAID-docker/master/apcupsd-influxdb-exporter.xml
+  WebUI: ''
+  topPerforming: 0.98
+  topTrending: -0.954
 awtrix2:
   CategoryList:
   - Drivers
@@ -417,6 +751,7 @@ awtrix2:
   Project: https://awtrixdocs.blueforcer.de/
   Registry: https://hub.docker.com/r/whyet/awtrix2
   Repository: whyet/awtrix2
+  Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://awtrixdocs.blueforcer.de/
   - https://hub.docker.com/r/whyet/awtrix2
@@ -424,6 +759,58 @@ awtrix2:
   WebUI: http://[IP]:[PORT:7000]
   topPerforming: 4.604
   topTrending: -6.805000000000001
+binance-to-influxdb:
+  CategoryList:
+  - Downloaders
+  - Tools-Utilities
+  Config:
+    Device: {}
+    Label: {}
+    Path:
+      Config:
+        Default: /mnt/user/appdata/binance-ingester
+        Description: 'Container Path: /config'
+        Display: always
+        Mask: 'false'
+        Mode: rw
+        Name: Config
+        Required: 'false'
+        Target: /config
+        Type: Path
+        value: /mnt/user/appdata/binance-to-influxdb
+    Port: {}
+    Variable:
+      InfluxDB Token:
+        Default: ''
+        Description: Influx database access token
+        Display: always
+        Mask: 'false'
+        Mode: ''
+        Name: InfluxDB Token
+        Required: 'true'
+        Target: INFLUXDB_TOKEN
+        Type: Variable
+        value: ''
+  Icon: ''
+  Keywords:
+  - binance-to-influxdb
+  Name: binance-to-influxdb
+  Network: bridge
+  Networking:
+    Mode: bridge
+  Overview: "Binance to Influx is a container designed to be run on an [Unraid](https://www.unraid.net/)\
+    \ server via Docker. The purpose of the container is to simplify the ingestion\
+    \ of cryptocurrency market data, provided by the [Binance API](https://binance.com/),\
+    \ into your own [Influx database](https://www.influxdata.com/).  \r\n"
+  PostArgs: ''
+  Privileged: 'false'
+  Registry: https://registry.hub.docker.com/r/nixoninnes/binance-to-influxdb
+  Repository: nixoninnes/binance-to-influxdb:latest
+  Requires: ' Influxdb (autoadd)'
+  Sources:
+  - https://registry.hub.docker.com/r/nixoninnes/binance-to-influxdb
+  TemplateURL: https://raw.githubusercontent.com/NixonInnes/unraid-builds-xml/master/binance-to-influxdb.xml
+  WebUI: ''
 bind9:
   CategoryList:
   - Network-DNS
@@ -515,6 +902,7 @@ bind9:
   Project: https://www.isc.org/bind/
   Registry: https://hub.docker.com/r/pwa666/bind9
   Repository: pwa666/bind9:latest
+  Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://www.isc.org/bind/
   - https://hub.docker.com/r/pwa666/bind9
@@ -614,6 +1002,7 @@ channelsdvr_intel:
   Project: https://getchannels.com/dvr
   Registry: https://registry.hub.docker.com/r/timstephens24/channels-dvr
   Repository: timstephens24/channels-dvr
+  Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://getchannels.com/dvr
   - https://registry.hub.docker.com/r/timstephens24/channels-dvr
@@ -734,6 +1123,7 @@ channelsdvr_nvidia:
   Project: https://getchannels.com/dvr
   Registry: https://registry.hub.docker.com/r/timstephens24/channels-dvr
   Repository: timstephens24/channels-dvr
+  Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://getchannels.com/dvr
   - https://registry.hub.docker.com/r/timstephens24/channels-dvr
@@ -899,6 +1289,7 @@ chia:
   Project: https://www.chia.net/
   Registry: https://github.com/orgs/chia-network/packages/container/package/chia
   Repository: ghcr.io/chia-network/chia
+  Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://www.chia.net/
   - https://github.com/orgs/chia-network/packages/container/package/chia
@@ -993,6 +1384,7 @@ coturn:
   Project: https://github.com/coturn/coturn
   Registry: https://hub.docker.com/r/instrumentisto/coturn/
   Repository: instrumentisto/coturn
+  Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://github.com/coturn/coturn
   - https://hub.docker.com/r/instrumentisto/coturn/
@@ -1141,6 +1533,7 @@ daapd:
   ReadMe: https://github.com/linuxserver/docker-daapd#readme
   Registry: https://github.com/orgs/linuxserver/packages/container/package/daapd
   Repository: lscr.io/linuxserver/daapd
+  Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://owntone.github.io/owntone-server/
   - https://github.com/orgs/linuxserver/packages/container/package/daapd
@@ -1493,6 +1886,7 @@ elastiflow:
   Project: https://www.elastiflow.com/
   Registry: https://registry.hub.docker.com/r/elastiflow/flow-collector
   Repository: elastiflow/flow-collector:5.3.4
+  Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://www.elastiflow.com/
   - https://registry.hub.docker.com/r/elastiflow/flow-collector
@@ -1638,6 +2032,7 @@ ersatztv:
   Project: https://github.com/jasongdove/ErsatzTV
   Registry: https://hub.docker.com/r/jasongdove/ersatztv
   Repository: jasongdove/ersatztv
+  Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://github.com/jasongdove/ErsatzTV
   - https://hub.docker.com/r/jasongdove/ersatztv
@@ -1816,6 +2211,7 @@ flexconnect:
   Project: https://github.com/d8ahazard/FlexConnect
   Registry: https://hub.docker.com/r/digitalhigh/flexconnect
   Repository: digitalhigh/flexconnect
+  Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://github.com/d8ahazard/FlexConnect
   - https://hub.docker.com/r/digitalhigh/flexconnect
@@ -1936,6 +2332,7 @@ fogproject:
   Project: https://fogproject.org/
   Registry: https://hub.docker.com/r/mudislander/fogproject//Dockerfile/
   Repository: mudislander/fogproject
+  Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://fogproject.org/
   - https://hub.docker.com/r/mudislander/fogproject//Dockerfile/
@@ -2023,6 +2420,7 @@ foundryvtt:
   Project: https://foundryvtt.com/
   Registry: https://hub.docker.com/r/fithwum/foundry_vtt/
   Repository: fithwum/foundry_vtt
+  Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://foundryvtt.com/
   - https://hub.docker.com/r/fithwum/foundry_vtt/
@@ -2098,7 +2496,7 @@ gerbera:
   Project: https://github.com/gerbera/gerbera
   Registry: https://hub.docker.com/r/gerbera/gerbera
   Repository: gerbera/gerbera
-  Requires: ''
+  Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://github.com/gerbera/gerbera
   - https://hub.docker.com/r/gerbera/gerbera
@@ -2265,6 +2663,7 @@ geysermc:
   Project: https://git.nefald.fr/docker/geyser
   Registry: https://hub.docker.com/r/nefald/geysermc
   Repository: nefald/geysermc
+  Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://git.nefald.fr/docker/geyser
   - https://hub.docker.com/r/nefald/geysermc
@@ -2386,6 +2785,7 @@ gladys-assistant:
   Project: https://gladysassistant.com/
   Registry: https://hub.docker.com/r/gladysassistant/gladys/
   Repository: gladysassistant/gladys:v4
+  Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://gladysassistant.com/
   - https://hub.docker.com/r/gladysassistant/gladys/
@@ -2496,6 +2896,7 @@ glimmr:
   Project: https://github.com/d8ahazard/glimmr
   Registry: https://registry.hub.docker.com/r/digitalhigh/glimmr
   Repository: digitalhigh/glimmr
+  Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://github.com/d8ahazard/glimmr
   - https://registry.hub.docker.com/r/digitalhigh/glimmr
@@ -2595,6 +2996,7 @@ gluster-server:
   Project: https://github.com/testdasi/gluster-server
   Registry: https://registry.hub.docker.com/r/testdasi/gluster-server/
   Repository: testdasi/gluster-server:latest
+  Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://github.com/testdasi/gluster-server
   - https://registry.hub.docker.com/r/testdasi/gluster-server/
@@ -2823,6 +3225,7 @@ grafana-unraid-stack:
   Project: https://github.com/testdasi/grafana-unraid-stack
   Registry: https://registry.hub.docker.com/r/testdasi/grafana-unraid-stack/
   Repository: testdasi/grafana-unraid-stack:latest
+  Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://github.com/testdasi/grafana-unraid-stack
   - https://registry.hub.docker.com/r/testdasi/grafana-unraid-stack/
@@ -2977,6 +3380,7 @@ gsdock:
   Privileged: 'false'
   Registry: https://hub.docker.com/r/shrmn/gsdock/
   Repository: shrmn/gsdock
+  Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://hub.docker.com/r/shrmn/gsdock/
   TemplateURL: https://raw.githubusercontent.com/shrmnk/docker-templates/master/shrmn/gsdock.xml
@@ -3052,6 +3456,7 @@ hddtemp:
   Project: https://hub.docker.com/r/drewster727/hddtemp-docker/
   Registry: https://hub.docker.com/r/drewster727/hddtemp-docker/
   Repository: drewster727/hddtemp-docker
+  Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://hub.docker.com/r/drewster727/hddtemp-docker/
   - https://hub.docker.com/r/drewster727/hddtemp-docker/
@@ -3145,12 +3550,52 @@ homeassistant:
   ReadMe: https://github.com/linuxserver/docker-homeassistant#readme
   Registry: https://github.com/orgs/linuxserver/packages/container/package/homeassistant
   Repository: lscr.io/linuxserver/homeassistant
+  Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://www.home-assistant.io/
   - https://github.com/orgs/linuxserver/packages/container/package/homeassistant
   WebUI: http://[IP]:[PORT:8123]
   caTemplateURL: https://raw.githubusercontent.com/linuxserver/templates/master/unraid/homeassistant.xml
   topTrending: -15.504000000000001
+influxdb:
+  BindTime: 'true'
+  CategoryList:
+  - Network-Management
+  - Tools-Utilities
+  Data:
+    Volume:
+      ContainerDir: /var/lib/influxdb
+      HostDir: /mnt/user/appdata/influxdb
+      Mode: rw
+  Environment: "\n  "
+  GitHub: https://github.com/influxdata/influxdb
+  Icon: https://raw.githubusercontent.com/pootzko/InfluxData.Net/master/nuget-icon.png
+  Keywords:
+  - influxdb
+  Name: Influxdb
+  Networking:
+    Mode: bridge
+    Publish:
+      Port:
+      - ContainerPort: '8083'
+        HostPort: '8083'
+        Protocol: tcp
+      - ContainerPort: '8086'
+        HostPort: '8086'
+        Protocol: tcp
+  Official: true
+  Overview: InfluxDB is an open source time series database with no external dependencies.
+    It's useful for recording metrics, events, and performing analytics.
+  Privileged: 'false'
+  Project: https://influxdata.com/
+  Registry: https://hub.docker.com/_/influxdb/
+  Repository: influxdb:latest
+  Requires: ' Influxdb (autoadd)'
+  Sources:
+  - https://influxdata.com/
+  - https://hub.docker.com/_/influxdb/
+  TemplateURL: https://raw.githubusercontent.com/atribe/unRAID-docker/master/influxdb.xml
+  WebUI: http://[IP]:[PORT:8083]/
 jfa-go:
   CategoryList:
   - Tools-Utilities
@@ -3316,6 +3761,7 @@ lg-connector:
   Registry: https://hub.docker.com/r/fison67/lg-connector/
   RepoShort: Selfhosters
   Repository: fison67/lg-connector:0.0.3
+  Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://github.com/fison67/LG-Connector
   - https://hub.docker.com/r/fison67/lg-connector/
@@ -3491,6 +3937,7 @@ lomorage:
   Project: https://github.com/lomorage/lomo-docker
   Registry: https://hub.docker.com/r/lomorage/amd64-lomorage
   Repository: lomorage/amd64-lomorage
+  Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://github.com/lomorage/lomo-docker
   - https://hub.docker.com/r/lomorage/amd64-lomorage
@@ -3682,6 +4129,7 @@ machinaris:
   Project: https://github.com/guydavis/machinaris
   Registry: https://hub.docker.com/repository/docker/guydavis/machinaris
   Repository: ghcr.io/guydavis/machinaris
+  Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://github.com/guydavis/machinaris
   - https://hub.docker.com/repository/docker/guydavis/machinaris
@@ -8990,6 +9438,7 @@ minecraft:
   Project: https://www.minecraft.net/en-us/
   Registry: https://hub.docker.com/r/fithwum/minecraft/
   Repository: fithwum/minecraft
+  Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://www.minecraft.net/en-us/
   - https://hub.docker.com/r/fithwum/minecraft/
@@ -9373,6 +9822,7 @@ mymediaforalexa:
   RecommendedWho: Andrew
   Registry: https://hub.docker.com/r/bizmodeller/mymediaforalexa/~/dockerfile/
   Repository: bizmodeller/mymediaforalexa
+  Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://hub.docker.com/r/bizmodeller/mymediaforalexa/~/dockerfile/
   TemplateURL: https://raw.githubusercontent.com/itimpi/Unraid-CA-Templates/master/MyMediaForAlexa.xml
@@ -9422,6 +9872,7 @@ myst:
   Project: https://github.com/mysteriumnetwork/node
   Registry: https://hub.docker.com/r/mysteriumnetwork/myst/
   Repository: mysteriumnetwork/myst
+  Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://github.com/mysteriumnetwork/node
   - https://hub.docker.com/r/mysteriumnetwork/myst/
@@ -9495,6 +9946,7 @@ neo4j:
   Project: https://neo4j.com/
   Registry: https://hub.docker.com/_/neo4j/
   Repository: neo4j
+  Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://neo4j.com/
   - https://hub.docker.com/_/neo4j/
@@ -9701,6 +10153,7 @@ netdata:
   RecommendedWho: Andrew
   Registry: https://hub.docker.com/r/netdata/netdata
   Repository: netdata/netdata
+  Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://docs.netdata.cloud/
   - https://hub.docker.com/r/netdata/netdata
@@ -10011,6 +10464,7 @@ nps-client:
   Project: https://github.com/ehang-io/nps
   Registry: https://hub.docker.com/r/ffdfgdfg/npc
   Repository: ffdfgdfg/npc
+  Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://github.com/ehang-io/nps
   - https://hub.docker.com/r/ffdfgdfg/npc
@@ -10052,6 +10506,7 @@ ntopng:
   Project: https://www.ntop.org/
   Registry: https://hub.docker.com/r/ntop/ntopng/
   Repository: ntop/ntopng:stable
+  Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://www.ntop.org/
   - https://hub.docker.com/r/ntop/ntopng/
@@ -10059,6 +10514,182 @@ ntopng:
   WebUI: http://[IP]:[PORT:3000]/
   topPerforming: 3.594
   topTrending: 1.0999999999999996
+nut-influxdb-exporter:
+  CategoryList:
+  - Tools-Utilities
+  Config:
+    Device: {}
+    Label: {}
+    Path: {}
+    Port: {}
+    Variable:
+      Debugging Output:
+        Default: 'false'
+        Description: Set this variable to true to see the output in the docker log.
+        Display: advanced
+        Mask: 'false'
+        Mode: ''
+        Name: Debugging Output
+        Required: 'false'
+        Target: VERBOSE
+        Type: Variable
+        value: 'false'
+      HOSTNAME:
+        Default: unraid
+        Description: host you want the measurements to show up as in InfluxDB
+        Display: always
+        Mask: 'false'
+        Mode: ''
+        Name: HOSTNAME
+        Required: 'true'
+        Target: HOSTNAME
+        Type: Variable
+        value: unraid-ups
+      INFLUXDB_DATABASE:
+        Default: nut
+        Description: InfluxDB database name to store the values
+        Display: advanced
+        Mask: 'false'
+        Mode: ''
+        Name: INFLUXDB_DATABASE
+        Required: 'true'
+        Target: INFLUXDB_DATABASE
+        Type: Variable
+        value: nut
+      INFLUXDB_HOST:
+        Default: localhost
+        Description: IP address of influxdb
+        Display: always
+        Mask: 'false'
+        Mode: ''
+        Name: INFLUXDB_HOST
+        Required: 'true'
+        Target: INFLUXDB_HOST
+        Type: Variable
+        value: 127.0.0.1
+      INFLUXDB_PASSWORD:
+        Default: ''
+        Description: Password for Influxdb
+        Display: advanced-hide
+        Mask: 'false'
+        Mode: ''
+        Name: INFLUXDB_PASSWORD
+        Required: 'false'
+        Target: INFLUXDB_PASSWORD
+        Type: Variable
+        value: ''
+      INFLUXDB_PORT:
+        Default: '8086'
+        Description: 'Container Variable: INFLUXDB_PORT'
+        Display: advanced
+        Mask: 'false'
+        Mode: ''
+        Name: INFLUXDB_PORT
+        Required: 'true'
+        Target: INFLUXDB_PORT
+        Type: Variable
+        value: '8086'
+      INFLUXDB_USER:
+        Default: ''
+        Description: User name for Influxdb
+        Display: advanced-hide
+        Mask: 'false'
+        Mode: ''
+        Name: INFLUXDB_USER
+        Required: 'false'
+        Target: INFLUXDB_USER
+        Type: Variable
+        value: ''
+      NUT_HOST:
+        Default: 127.0.0.1
+        Description: NUT hostname
+        Display: advanced
+        Mask: 'false'
+        Mode: ''
+        Name: NUT_HOST
+        Required: 'true'
+        Target: NUT_HOST
+        Type: Variable
+        value: 127.0.0.1
+      NUT_PASSWORD:
+        Default: ''
+        Description: Password for NUT
+        Display: advanced-hide
+        Mask: 'false'
+        Mode: ''
+        Name: NUT_PASSWORD
+        Required: 'false'
+        Target: NUT_PASSWORD
+        Type: Variable
+        value: ''
+      NUT_PORT:
+        Default: ''
+        Description: NUT Port
+        Display: advanced-hide
+        Mask: 'false'
+        Mode: ''
+        Name: NUT_PORT
+        Required: 'false'
+        Target: NUT_PORT
+        Type: Variable
+        value: ''
+      NUT_USERNAME:
+        Default: ''
+        Description: Username for NUT
+        Display: advanced-hide
+        Mask: 'false'
+        Mode: ''
+        Name: NUT_USERNAME
+        Required: 'false'
+        Target: NUT_USERNAME
+        Type: Variable
+        value: ''
+      UPS_NAME:
+        Default: ups
+        Description: NUT UPS name
+        Display: advanced-hide
+        Mask: 'false'
+        Mode: ''
+        Name: UPS_NAME
+        Required: 'false'
+        Target: UPS_NAME
+        Type: Variable
+        value: ''
+      WATTS:
+        Default: ''
+        Description: If your UPS doesn't have the nominal power metric then specify
+          the rated watts so that the load percentage can be used to calculate the
+          current watts
+        Display: always
+        Mask: 'false'
+        Mode: ''
+        Name: WATTS
+        Required: 'false'
+        Target: WATTS
+        Type: Variable
+        value: '1500'
+  Icon: https://raw.githubusercontent.com/kiwimato/nut-influxdb-exporter/master/assets/nut.png
+  Keywords:
+  - nut-influxdb-exporter
+  Name: nut-influxdb-exporter
+  Network: bridge
+  Networking:
+    Mode: bridge
+  Overview: Docker wrapper for a Python script to query NUT - Network UPS Tools via
+    a Python script and then send the results to InfluxDB for storage.
+  PostArgs: ''
+  Privileged: 'false'
+  Project: https://github.com/kiwimato/nut-influxdb-exporter
+  Registry: https://hub.docker.com/r/maihai/nut-influxdb-exporter
+  Repository: maihai/nut-influxdb-exporter
+  Requires: ' Influxdb (autoadd) exporter app (autoadd)'
+  Sources:
+  - https://github.com/kiwimato/nut-influxdb-exporter
+  - https://hub.docker.com/r/maihai/nut-influxdb-exporter
+  TemplateURL: https://raw.githubusercontent.com/kiwimato/nut-influxdb-exporter/master/nut-influxdb-exporter.xml
+  WebUI: ''
+  topPerforming: 1.832
+  topTrending: -1.26
 onetimesecret:
   CategoryList:
   - Productivity
@@ -11403,6 +12034,7 @@ plex-meta-manager:
   Project: https://github.com/meisnate12/Plex-Meta-Manager/wiki/
   Registry: https://hub.docker.com/r/meisnate12/plex-meta-manager/
   Repository: meisnate12/plex-meta-manager
+  Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://github.com/meisnate12/Plex-Meta-Manager/wiki/
   - https://hub.docker.com/r/meisnate12/plex-meta-manager/
@@ -11756,6 +12388,90 @@ projectzomboidreporter-web:
   - https://hub.docker.com/r/chrisashtear/zomboid-reporter-nginx/
   TemplateURL: https://raw.githubusercontent.com/natcoso9955/unRAID-docker/master/ProjectZomboidReporter-Web_unraid.xml
   WebUI: http://[IP]:[PORT:80]/
+prometheus-qbittorrent-exporter:
+  CategoryList:
+  - Tools-Utilities
+  Config:
+    Device: {}
+    Label: {}
+    Path: {}
+    Port:
+      Host Port 1:
+        Default: ''
+        Description: 'Container Port: 8000'
+        Display: always
+        Mask: 'false'
+        Mode: tcp
+        Name: Host Port 1
+        Required: 'true'
+        Target: '8000'
+        Type: Port
+        value: ''
+    Variable:
+      qBittorrent Host:
+        Default: ''
+        Description: Hostname/IP of your qBittorrent instance
+        Display: always
+        Mask: 'false'
+        Mode: ''
+        Name: qBittorrent Host
+        Required: 'true'
+        Target: QBITTORRENT_HOST
+        Type: Variable
+        value: ''
+      qBittorrent Password:
+        Default: ''
+        Description: Password to your qBittorrent instance
+        Display: always
+        Mask: 'true'
+        Mode: ''
+        Name: qBittorrent Password
+        Required: 'true'
+        Target: QBITTORRENT_PASS
+        Type: Variable
+        value: ''
+      qBittorrent Port:
+        Default: ''
+        Description: Port of your qBittorrent instance
+        Display: always
+        Mask: 'false'
+        Mode: ''
+        Name: qBittorrent Port
+        Required: 'true'
+        Target: QBITTORRENT_PORT
+        Type: Variable
+        value: ''
+      qBittorrent User:
+        Default: ''
+        Description: Username to your qBittorrent instance
+        Display: always
+        Mask: 'false'
+        Mode: ''
+        Name: qBittorrent User
+        Required: 'true'
+        Target: QBITTORRENT_USER
+        Type: Variable
+        value: ''
+  Icon: https://raw.githubusercontent.com/MasterEvarior/unraid-templates/main/prometheus-qbittorrent-exporter/prometheus.png
+  Keywords:
+  - prometheus-qbittorrent-exporter
+  Name: prometheus-qbittorrent-exporter
+  Network: bridge
+  Networking:
+    Mode: bridge
+  Overview: Get metrics from a qBittorrent server and offers them in a prometheus
+    format.
+  PostArgs: ''
+  Privileged: 'false'
+  Project: https://github.com/esanchezm/prometheus-qbittorrent-exporter
+  Registry: https://hub.docker.com/r/esanchezm/prometheus-qbittorrent-exporter/
+  Repository: esanchezm/prometheus-qbittorrent-exporter
+  Requires: ' exporter app (autoadd)'
+  Sources:
+  - https://github.com/esanchezm/prometheus-qbittorrent-exporter
+  - https://hub.docker.com/r/esanchezm/prometheus-qbittorrent-exporter/
+  TemplateURL: https://raw.githubusercontent.com/MasterEvarior/unraid-templates/master/prometheus-qbittorrent-exporter/prometheus-qbittorrent-exporter.xml
+  WebUI: ''
 pterodactyl-deamons:
   CategoryList:
   - GameServers
@@ -12132,6 +12848,7 @@ roonserver:
   Project: https://roonlabs.com/
   Registry: https://hub.docker.com/r/steefdebruijn/docker-roonserver/
   Repository: steefdebruijn/docker-roonserver
+  Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://roonlabs.com/
   - https://hub.docker.com/r/steefdebruijn/docker-roonserver/
@@ -12532,6 +13249,7 @@ rust-server:
   Privileged: 'true'
   Registry: https://hub.docker.com/r/mdarkness1988/rust-server
   Repository: mdarkness1988/rust-server
+  Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://hub.docker.com/r/mdarkness1988/rust-server
   TemplateURL: https://raw.githubusercontent.com/mdarkness1988/rust-server-template/master/Rust-Server.xml
@@ -12885,6 +13603,7 @@ sagetvopen-sagetv-opendct:
   Project: https://github.com/enternoescape/opendct
   Registry: https://hub.docker.com/r/sagetvopen/sagetv-opendct/
   Repository: sagetvopen/sagetv-opendct
+  Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://github.com/enternoescape/opendct
   - https://hub.docker.com/r/sagetvopen/sagetv-opendct/
@@ -13150,6 +13869,7 @@ sagetvopen-sagetv-server-java11:
   Project: https://github.com/google/sagetv
   Registry: https://hub.docker.com/r/sagetvopen/sagetv-server-java11/
   Repository: sagetvopen/sagetv-server-java11
+  Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://github.com/google/sagetv
   - https://hub.docker.com/r/sagetvopen/sagetv-server-java11/
@@ -13415,6 +14135,7 @@ sagetvopen-sagetv-server-java16:
   Project: https://github.com/google/sagetv
   Registry: https://hub.docker.com/r/sagetvopen/sagetv-server-java16/
   Repository: sagetvopen/sagetv-server-java16
+  Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://github.com/google/sagetv
   - https://hub.docker.com/r/sagetvopen/sagetv-server-java16/
@@ -13680,6 +14401,7 @@ sagetvopen-sagetv-server-java8:
   Project: https://github.com/google/sagetv
   Registry: https://hub.docker.com/r/sagetvopen/sagetv-server-java8/
   Repository: sagetvopen/sagetv-server-java8
+  Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://github.com/google/sagetv
   - https://hub.docker.com/r/sagetvopen/sagetv-server-java8/
@@ -14000,6 +14722,7 @@ sagetvopen-sagetv-server-opendct-java11:
   Project: https://github.com/google/sagetv
   Registry: https://hub.docker.com/r/sagetvopen/sagetv-server-opendct-java11/
   Repository: sagetvopen/sagetv-server-opendct-java11
+  Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://github.com/google/sagetv
   - https://hub.docker.com/r/sagetvopen/sagetv-server-opendct-java11/
@@ -14320,6 +15043,7 @@ sagetvopen-sagetv-server-opendct-java16:
   Project: https://github.com/google/sagetv
   Registry: https://hub.docker.com/r/sagetvopen/sagetv-server-opendct-java16/
   Repository: sagetvopen/sagetv-server-opendct-java16
+  Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://github.com/google/sagetv
   - https://hub.docker.com/r/sagetvopen/sagetv-server-opendct-java16/
@@ -14640,6 +15364,7 @@ sagetvopen-sagetv-server-opendct-java8:
   Project: https://github.com/google/sagetv
   Registry: https://hub.docker.com/r/sagetvopen/sagetv-server-opendct-java8/
   Repository: sagetvopen/sagetv-server-opendct-java8
+  Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://github.com/google/sagetv
   - https://hub.docker.com/r/sagetvopen/sagetv-server-opendct-java8/
@@ -14689,6 +15414,7 @@ scrypted:
   Project: https://github.com/koush/scrypted
   Registry: https://hub.docker.com/r/koush/scrypted/
   Repository: koush/scrypted
+  Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://github.com/koush/scrypted
   - https://hub.docker.com/r/koush/scrypted/
@@ -14807,6 +15533,7 @@ sia:
   Project: https://sia.tech/
   Registry: https://hub.docker.com/r/mtlynch/sia/
   Repository: mtlynch/sia
+  Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://sia.tech/
   - https://hub.docker.com/r/mtlynch/sia/
@@ -14814,6 +15541,57 @@ sia:
   WebUI: ''
   topPerforming: 0.014
   topTrending: -0.207
+speedtestforinfluxdb:
+  CAComment: Technically this app is deprecated (retired) and has been replaced.  See
+    <a href=https://github.com/barrycarey/Speedtest-for-InfluxDB-and-Grafana/issues/46#issuecomment-933066819
+    target=_blank>here</a>.  This app itself though is not being deprecated within
+    Apps for the time being
+  CategoryList:
+  - Cloud
+  - Network-Web
+  Config:
+    Device: {}
+    Label: {}
+    Path:
+      Config File:
+        Default: /mnt/user/appdata/speedtest-influxdb/config.ini
+        Description: "Download the config.ini file from https://github.com/barrycarey/Speedtest-for-InfluxDB-and-Grafana/blob/master/config.ini\
+          \ and copy it to /mnt/user/appdata/speedtest-influxdb/config.ini\r\nCOPY\
+          \ THE FILE BEFORE YOU START THE CONTAINER. IF YOU DON'T AN EMPTY DIRECTORY\
+          \ WILL BE CREATED INSTEAD."
+        Display: always
+        Mask: 'false'
+        Mode: rw
+        Name: Config File
+        Required: 'true'
+        Target: /src/config.ini
+        Type: Path
+        value: /mnt/user/appdata/speedtest-influxdb/config.ini
+    Port: {}
+    Variable: {}
+  Icon: ''
+  Keywords:
+  - speedtestforinfluxdb
+  Name: SpeedtestforInfluxDB
+  Network: bridge
+  Networking:
+    Mode: bridge
+  Overview: A speedtest docker container that forwards the data to influxDB. Download
+    the config.ini file from https://github.com/barrycarey/Speedtest-for-InfluxDB-and-Grafana/blob/master/config.ini
+    before you start the container.
+  PostArgs: ''
+  Privileged: 'false'
+  Project: https://github.com/barrycarey/speedtest-for-influxdb-and-grafana
+  Registry: https://hub.docker.com/r/barrycarey/speedtest-for-influxdb-and-grafana
+  Repository: barrycarey/speedtest-for-influxdb-and-grafana
+  Requires: ' Influxdb (autoadd)'
+  Sources:
+  - https://github.com/barrycarey/speedtest-for-influxdb-and-grafana
+  - https://hub.docker.com/r/barrycarey/speedtest-for-influxdb-and-grafana
+  TemplateURL: https://raw.githubusercontent.com/atribe/unRAID-docker/master/speedtest-influxdb.xml
+  WebUI: ''
+  topPerforming: 0.016
+  topTrending: -1.767
 steam-headless:
   CategoryList:
   - GameServers
@@ -14995,7 +15773,8 @@ steam-headless:
   Repository: josh5/steam-headless:latest
   Requires: "\r<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Nvidia-Driver\
     \ plugin** (nVidia Support)\r<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Radeon-TOP\
-    \ plugin** (AMD Support)\r<br>&nbsp;&nbsp;&nbsp;&nbsp;"
+    \ plugin** (AMD Support)\r<br>&nbsp;&nbsp;&nbsp;&nbsp; App uses hostnetworking\
+    \ (autoadd)"
   Sources:
   - https://store.steampowered.com/
   - https://hub.docker.com/r/josh5/steam-headless
@@ -15365,6 +16144,7 @@ tailscale:
       container
   Registry: https://hub.docker.com/repository/docker/deasmi/unraid-tailscale
   Repository: deasmi/unraid-tailscale:latest
+  Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://github.com/deasmi/unraid-tailscale
   - https://hub.docker.com/repository/docker/deasmi/unraid-tailscale
@@ -15565,6 +16345,7 @@ teamspeak-alpine:
   Project: https://www.teamspeak.com/
   Registry: https://hub.docker.com/r/fithwum/teamspeak-alpine/
   Repository: fithwum/teamspeak-alpine
+  Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://www.teamspeak.com/
   - https://hub.docker.com/r/fithwum/teamspeak-alpine/
@@ -15666,6 +16447,7 @@ teamspeak3-simple:
   Project: https://www.teamspeak.com/
   Registry: https://hub.docker.com/r/fithwum/teamspeak3/
   Repository: fithwum/teamspeak3
+  Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://www.teamspeak.com/
   - https://hub.docker.com/r/fithwum/teamspeak3/
@@ -15826,6 +16608,7 @@ telegraf:
   Project: https://github.com/influxdata/telegraf
   Registry: https://hub.docker.com/_/telegraf/
   Repository: telegraf:latest
+  Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://github.com/influxdata/telegraf
   - https://hub.docker.com/_/telegraf/
@@ -16051,6 +16834,7 @@ tuyagateway:
   Registry: https://registry.hub.docker.com/r/tradeface/tuyagateway/
   RepoShort: Selfhosters
   Repository: tradeface/tuyagateway
+  Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://github.com/TradeFace/tuyagateway
   - https://registry.hub.docker.com/r/tradeface/tuyagateway/
@@ -16101,6 +16885,7 @@ unifiprotect:
   Project: https://github.com/markdegrootnl/unifi-protect-x86
   Registry: https://hub.docker.com/r/markdegroot/unifi-protect-x86/
   Repository: markdegroot/unifi-protect-x86
+  Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://github.com/markdegrootnl/unifi-protect-x86
   - https://hub.docker.com/r/markdegroot/unifi-protect-x86/
@@ -16407,6 +17192,7 @@ weatherflow2mqtt:
   Project: https://github.com/briis/hass-weatherflow2mqtt
   Registry: https://hub.docker.com/r/briis/weatherflow2mqtt
   Repository: briis/weatherflow2mqtt:latest
+  Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://github.com/briis/hass-weatherflow2mqtt
   - https://hub.docker.com/r/briis/weatherflow2mqtt
@@ -16649,6 +17435,7 @@ xlink-kai-evolution:
   Project: https://www.teamxlink.co.uk/
   Registry: https://hub.docker.com/r/ich777/xlinkkaievolution/
   Repository: ich777/xlinkkaievolution
+  Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://www.teamxlink.co.uk/
   - https://hub.docker.com/r/ich777/xlinkkaievolution/
@@ -16756,6 +17543,7 @@ xteve_dnsforge:
   Privileged: 'false'
   Registry: https://hub.docker.com/r/dnsforge/xteve
   Repository: dnsforge/xteve:latest
+  Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://hub.docker.com/r/dnsforge/xteve
   TemplateURL: https://raw.githubusercontent.com/alturismo/unraid_templates/master/my-dnsforge_xteve.xml
@@ -16849,6 +17637,7 @@ xteve_g2g_owi:
   Project: https://github.com/alturismo/xteve_g2g_owi/
   Registry: https://hub.docker.com/r/alturismo/xteve_g2g_owi
   Repository: alturismo/xteve_g2g_owi
+  Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://github.com/alturismo/xteve_g2g_owi/
   - https://hub.docker.com/r/alturismo/xteve_g2g_owi
@@ -16936,6 +17725,7 @@ xteve_guide2go:
   Project: https://github.com/alturismo/xteve_guide2go
   Registry: https://hub.docker.com/r/alturismo/xteve_guide2go
   Repository: alturismo/xteve_guide2go
+  Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://github.com/alturismo/xteve_guide2go
   - https://hub.docker.com/r/alturismo/xteve_guide2go
@@ -17015,6 +17805,7 @@ zabbix-agent:
   Privileged: 'true'
   Registry: https://hub.docker.com/r/zabbix/zabbix-agent
   Repository: zabbix/zabbix-agent:latest
+  Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://hub.docker.com/r/zabbix/zabbix-agent
   TemplateURL: https://raw.githubusercontent.com/vrx-666/unraid-xml/master/my-zabbix-agent.xml
@@ -17093,6 +17884,7 @@ zabbix-agent2:
   Privileged: 'true'
   Registry: https://hub.docker.com/r/zabbix/zabbix-agent
   Repository: zabbix/zabbix-agent2:latest
+  Requires: ' App uses hostnetworking (autoadd)'
   Sources:
   - https://hub.docker.com/r/zabbix/zabbix-agent
   TemplateURL: https://raw.githubusercontent.com/vrx-666/unraid-xml/master/my-zabbix-agent2.xml
