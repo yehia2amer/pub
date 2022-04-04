@@ -23,9 +23,27 @@ persistence:
     enabled: true
     mountPath: /var/run/libvirt/libvirt-sock
 service:
-  main:
+  saltguiwebapiport:
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      saltguiwebapiport:
+        enabled: true
+        port: '3333'
+        protocol: TCP
+        targetPort: '3333'
+  saltpublishport:
+    enabled: true
+    ports:
+      saltpublishport:
+        enabled: true
+        port: '4505'
+        protocol: TCP
+        targetPort: '4505'
+  saltrequestserverport:
+    enabled: true
+    ports:
+      saltrequestserverport:
+        enabled: true
+        port: '4506'
+        protocol: TCP
+        targetPort: '4506'

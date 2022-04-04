@@ -10,7 +10,15 @@ Config:
       Name: data
       Target: /usr/share/elasticsearch/data
       value: /mnt/cache/appdata/elasticsearch5/data
-  Port: {}
+  Port:
+    main:
+      ContainerPort: '9200'
+      HostPort: '9200'
+      Mode: tcp
+      Name: tcp-port-0
+      Protocol: tcp
+      Target: '9200'
+      value: '9200'
   Variable:
     discovery-type:
       Name: discovery.type
@@ -26,13 +34,6 @@ Keywords:
 - elasticsearch-5
 - Other
 Name: elasticsearch-5
-Networking:
-  Mode: bridge
-  Publish:
-    Port:
-      ContainerPort: '9200'
-      HostPort: '9200'
-      Protocol: tcp
 Official: true
 Overview: Elasticsearch is a distributed, RESTful search and analytics engine capable
   of solving a growing number of use cases. As the heart of the Elastic Stack, it

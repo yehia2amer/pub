@@ -10,23 +10,29 @@ Config:
       Name: localtime
       Target: /etc/localtime
       value: /etc/localtime
-  Port: {}
+  Port:
+    tcp-port-0:
+      ContainerPort: '80'
+      HostPort: '8005'
+      Mode: tcp
+      Name: tcp-port-0
+      Protocol: tcp
+      Target: '80'
+      value: '8005'
+    tcp-port-1:
+      ContainerPort: '443'
+      HostPort: '8443'
+      Mode: tcp
+      Name: tcp-port-1
+      Protocol: tcp
+      Target: '443'
+      value: '8443'
   Variable: {}
 Icon: https://raw.githubusercontent.com/chvb/docker-templates/master/chvb/img/apache-php.png
 Keywords:
 - apache-php
 - Network-Web
 Name: apache-php
-Networking:
-  Mode: bridge
-  Publish:
-    Port:
-    - ContainerPort: '80'
-      HostPort: '8005'
-      Protocol: tcp
-    - ContainerPort: '443'
-      HostPort: '8443'
-      Protocol: tcp
 Overview: 'Apache based web server with basic PHP web server capabilities with the
   addition of php5-gd, php5-sqlite, php5-intl[br][br]
 

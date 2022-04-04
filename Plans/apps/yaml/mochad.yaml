@@ -11,7 +11,15 @@ Config:
       Name: '004'
       Target: /dev/bus/usb/004
       value: /dev/bus/usb/004
-  Port: {}
+  Port:
+    main:
+      ContainerPort: '1099'
+      HostPort: '1099'
+      Mode: tcp
+      Name: tcp-port-0
+      Protocol: tcp
+      Target: '1099'
+      value: '1099'
   Variable: {}
 GitHub: https://github.com/sameersbn/docker-mochad
 Icon: https://raw.githubusercontent.com/jshridha/templates/master/Bungy/Icons/x10_icon.jpg
@@ -20,13 +28,6 @@ Keywords:
 - HomeAutomation
 - Network-Other
 Name: mochad
-Networking:
-  Mode: bridge
-  Publish:
-    Port:
-      ContainerPort: '1099'
-      HostPort: '1099'
-      Protocol: tcp
 Overview: Mochad is a TCP gateway to access the CM15a and CM19 X-10 interfaces
 Privileged: 'true'
 Registry: https://registry.hub.docker.com/r/jshridha/mochad

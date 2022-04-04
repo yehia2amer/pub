@@ -9,26 +9,37 @@ Config:
       Mode: rw
       Name: unraid
       Target: /home/ubuntu/unraid
-  Port: {}
+  Port:
+    tcp-port-0:
+      ContainerPort: '3389'
+      HostPort: '3389'
+      Mode: tcp
+      Name: tcp-port-0
+      Protocol: tcp
+      Target: '3389'
+      value: '3389'
+    tcp-port-1:
+      ContainerPort: '6080'
+      HostPort: '6080'
+      Mode: tcp
+      Name: tcp-port-1
+      Protocol: tcp
+      Target: '6080'
+      value: '6080'
+    tcp-port-2:
+      ContainerPort: '5900'
+      HostPort: '5900'
+      Mode: tcp
+      Name: tcp-port-2
+      Protocol: tcp
+      Target: '5900'
+      value: '5900'
   Variable: {}
 Icon: https://findicons.com/files/icons/1008/quiet/256/ubuntu.png
 Keywords:
 - ubuntu-xrdp
 - Productivity
 Name: ubuntu-xrdp
-Networking:
-  Mode: bridge
-  Publish:
-    Port:
-    - ContainerPort: '3389'
-      HostPort: '3389'
-      Protocol: tcp
-    - ContainerPort: '6080'
-      HostPort: '6080'
-      Protocol: tcp
-    - ContainerPort: '5900'
-      HostPort: '5900'
-      Protocol: tcp
 Overview: LXDE desktop ubuntu (use remote desktop client to connect)
 Privileged: 'false'
 Registry: https://registry.hub.docker.com/r/snoopy86/desktop-dockers/

@@ -8,9 +8,19 @@ image:
   tag: latest
 persistence: {}
 service:
-  main:
+  port_tcp:
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      port_tcp:
+        enabled: true
+        port: '8388'
+        protocol: TCP
+        targetPort: '8388'
+  port_udp:
+    enabled: true
+    ports:
+      port_udp:
+        enabled: true
+        port: '8388'
+        protocol: UDP
+        targetPort: '8388'

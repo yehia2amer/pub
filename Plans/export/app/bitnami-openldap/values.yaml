@@ -37,9 +37,19 @@ persistence:
     enabled: true
     mountPath: /schema/custom.ldif
 service:
-  main:
+  http_port:
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      http_port:
+        enabled: true
+        port: '1389'
+        protocol: TCP
+        targetPort: '1389'
+  https_port:
+    enabled: true
+    ports:
+      https_port:
+        enabled: true
+        port: '1636'
+        protocol: TCP
+        targetPort: '1636'

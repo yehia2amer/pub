@@ -10,7 +10,23 @@ Config:
       Mode: rw
       Name: archive
       Target: /archive
-  Port: {}
+  Port:
+    tcp-port-0:
+      ContainerPort: '8090'
+      HostPort: '8090'
+      Mode: tcp
+      Name: tcp-port-0
+      Protocol: tcp
+      Target: '8090'
+      value: '8090'
+    tcp-port-1:
+      ContainerPort: '10090'
+      HostPort: '10090'
+      Mode: tcp
+      Name: tcp-port-1
+      Protocol: tcp
+      Target: '10090'
+      value: '10090'
   Variable: {}
 Icon: https://raw.githubusercontent.com/coppit/docker-xeoma/master/xeoma.png
 Keywords:
@@ -18,16 +34,6 @@ Keywords:
 - HomeAutomation
 - Network-Other
 Name: xeoma
-Networking:
-  Mode: bridge
-  Publish:
-    Port:
-    - ContainerPort: '8090'
-      HostPort: '8090'
-      Protocol: tcp
-    - ContainerPort: '10090'
-      HostPort: '10090'
-      Protocol: tcp
 Overview: Xeoma is surveillance software. Connect your cameras and record any detected
   movement.
 Privileged: 'false'

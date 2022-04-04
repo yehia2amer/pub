@@ -17,9 +17,19 @@ persistence:
     enabled: true
     mountPath: /csmm-7dtd
 service:
-  main:
+  mariadbport:
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      mariadbport:
+        enabled: true
+        port: '3306'
+        protocol: TCP
+        targetPort: '3306'
+  webport:
+    enabled: true
+    ports:
+      webport:
+        enabled: true
+        port: '1337'
+        protocol: TCP
+        targetPort: '1337'

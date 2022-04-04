@@ -11,9 +11,19 @@ persistence:
     enabled: true
     mountPath: /app/.config
 service:
-  main:
+  webclipperport:
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      webclipperport:
+        enabled: true
+        port: '41184'
+        protocol: TCP
+        targetPort: '41184'
+  webport:
+    enabled: true
+    ports:
+      webport:
+        enabled: true
+        port: '5800'
+        protocol: TCP
+        targetPort: '5800'

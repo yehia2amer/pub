@@ -8,9 +8,19 @@ persistence:
     enabled: true
     mountPath: /config
 service:
-  main:
+  httpport:
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      httpport:
+        enabled: true
+        port: '81'
+        protocol: TCP
+        targetPort: '80'
+  httpsport:
+    enabled: true
+    ports:
+      httpsport:
+        enabled: true
+        port: '444'
+        protocol: TCP
+        targetPort: '443'

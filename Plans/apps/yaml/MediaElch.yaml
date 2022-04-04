@@ -11,7 +11,15 @@ Config:
       Name: shows
       Target: /shows
       value: /mnt/user
-  Port: {}
+  Port:
+    main:
+      ContainerPort: '5800'
+      HostPort: '5800'
+      Mode: tcp
+      Name: tcp-port-0
+      Protocol: tcp
+      Target: '5800'
+      value: '5800'
   Variable:
     umask:
       Name: UMASK
@@ -23,13 +31,6 @@ Keywords:
 - Tools
 - MediaApp-Video
 Name: mediaelch
-Networking:
-  Mode: bridge
-  Publish:
-    Port:
-      ContainerPort: '5800'
-      HostPort: '5800'
-      Protocol: tcp
 Overview: Mediaelch is a Tool to manage your movie and show libary regarding the metadata
   and artwork.
 Privileged: 'false'

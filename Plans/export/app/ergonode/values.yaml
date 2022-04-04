@@ -11,9 +11,19 @@ persistence:
     enabled: true
     mountPath: /home/ergo/.ergo
 service:
-  main:
+  nodeswaggerpanel:
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      nodeswaggerpanel:
+        enabled: true
+        port: '9053'
+        protocol: TCP
+        targetPort: '9053'
+  peerport:
+    enabled: true
+    ports:
+      peerport:
+        enabled: true
+        port: '9030'
+        protocol: TCP
+        targetPort: '9030'

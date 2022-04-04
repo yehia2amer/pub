@@ -10,9 +10,19 @@ persistence:
     enabled: true
     mountPath: /config
 service:
-  main:
+  hostportfor3000:
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      hostportfor3000:
+        enabled: true
+        port: '3000'
+        protocol: TCP
+        targetPort: '3000'
+  hostportfor8080:
+    enabled: true
+    ports:
+      hostportfor8080:
+        enabled: true
+        port: '8080'
+        protocol: TCP
+        targetPort: '8080'

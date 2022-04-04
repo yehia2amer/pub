@@ -9,20 +9,21 @@ Config:
       Mode: rw
       Name: log
       Target: /opt/log
-  Port: {}
+  Port:
+    main:
+      ContainerPort: '7889'
+      HostPort: '7889'
+      Mode: tcp
+      Name: tcp-port-0
+      Protocol: tcp
+      Target: '7889'
+      value: '7889'
   Variable: {}
 Icon: https://raw.githubusercontent.com/gregyankovoy/docker-templates/master/greg/img/goaccess-logo.png
 Keywords:
 - goaccess
 - Other
 Name: goaccess
-Networking:
-  Mode: bridge
-  Publish:
-    Port:
-      ContainerPort: '7889'
-      HostPort: '7889'
-      Protocol: tcp
 Overview: GoAccess is an open source real-time web log analyzer and interactive viewer
   that runs in a terminal in *nix systems or through your browser. It provides fast
   and valuable HTTP statistics for system administrators that require a visual server

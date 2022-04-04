@@ -9,9 +9,19 @@ persistence:
     enabled: true
     mountPath: /etc/mumble
 service:
-  main:
+  porttcp:
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      porttcp:
+        enabled: true
+        port: '64738'
+        protocol: TCP
+        targetPort: '64738'
+  portudp:
+    enabled: true
+    ports:
+      portudp:
+        enabled: true
+        port: '64738'
+        protocol: UDP
+        targetPort: '64738'

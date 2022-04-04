@@ -10,7 +10,23 @@ Config:
       Name: config
       Target: /config
       value: /mnt/cache/appdata/tmm-cli/config/
-  Port: {}
+  Port:
+    tcp-port-0:
+      ContainerPort: '5800'
+      HostPort: '5800'
+      Mode: tcp
+      Name: tcp-port-0
+      Protocol: ''
+      Target: '5800'
+      value: '5800'
+    tcp-port-1:
+      ContainerPort: '5801'
+      HostPort: '5801'
+      Mode: tcp
+      Name: tcp-port-1
+      Protocol: ''
+      Target: '5801'
+      value: '5801'
   Variable:
     guid:
       Name: GUID
@@ -29,16 +45,6 @@ Keywords:
 - tinymm-cli
 - Other
 Name: tinymm-cli
-Networking:
-  Mode: bridge
-  Publish:
-    Port:
-    - ContainerPort: '5800'
-      HostPort: '5800'
-      Protocol: ''
-    - ContainerPort: '5801'
-      HostPort: '5801'
-      Protocol: ''
 Overview: Tiny Media Manager  CLI with Cron.
 Privileged: 'false'
 Registry: https://registry.hub.docker.com/r/coolasice1999/tmm-cli-cronjob/

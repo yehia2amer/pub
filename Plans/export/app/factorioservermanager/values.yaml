@@ -14,9 +14,19 @@ persistence:
     enabled: true
     mountPath: /opt/factorio/saves
 service:
-  main:
+  factorioport:
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      factorioport:
+        enabled: true
+        port: '34197'
+        protocol: UDP
+        targetPort: '34197'
+  fsmport:
+    enabled: true
+    ports:
+      fsmport:
+        enabled: true
+        port: '8888'
+        protocol: TCP
+        targetPort: '80'

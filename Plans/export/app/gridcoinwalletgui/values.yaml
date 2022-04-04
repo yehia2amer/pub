@@ -13,9 +13,19 @@ persistence:
     enabled: true
     mountPath: /var/lib/boinc-client/
 service:
-  main:
+  novncport:
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      novncport:
+        enabled: true
+        port: '6901'
+        protocol: TCP
+        targetPort: '6901'
+  vncport:
+    enabled: true
+    ports:
+      vncport:
+        enabled: true
+        port: '5901'
+        protocol: TCP
+        targetPort: '5901'

@@ -8,9 +8,27 @@ persistence:
     enabled: true
     mountPath: /app/config
 service:
-  main:
+  ldapport:
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      ldapport:
+        enabled: true
+        port: '389'
+        protocol: TCP
+        targetPort: '389'
+  ldapsport:
+    enabled: true
+    ports:
+      ldapsport:
+        enabled: true
+        port: '636'
+        protocol: TCP
+        targetPort: '636'
+  managementport:
+    enabled: true
+    ports:
+      managementport:
+        enabled: true
+        port: '5555'
+        protocol: TCP
+        targetPort: '5555'

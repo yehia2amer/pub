@@ -21,9 +21,51 @@ persistence:
     enabled: true
     mountPath: /var/mail
 service:
-  main:
+  imapport:
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      imapport:
+        enabled: true
+        port: '143'
+        protocol: TCP
+        targetPort: '143'
+  imapsport:
+    enabled: true
+    ports:
+      imapsport:
+        enabled: true
+        port: '993'
+        protocol: TCP
+        targetPort: '993'
+  managesieveport:
+    enabled: true
+    ports:
+      managesieveport:
+        enabled: true
+        port: '4190'
+        protocol: TCP
+        targetPort: '4190'
+  rspamdwebguiport:
+    enabled: true
+    ports:
+      rspamdwebguiport:
+        enabled: true
+        port: '11334'
+        protocol: TCP
+        targetPort: '11334'
+  smtpport:
+    enabled: true
+    ports:
+      smtpport:
+        enabled: true
+        port: '25'
+        protocol: TCP
+        targetPort: '25'
+  smtpsport:
+    enabled: true
+    ports:
+      smtpsport:
+        enabled: true
+        port: '587'
+        protocol: TCP
+        targetPort: '587'

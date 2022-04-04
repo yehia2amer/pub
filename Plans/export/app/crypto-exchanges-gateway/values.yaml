@@ -8,9 +8,19 @@ persistence:
     enabled: true
     mountPath: /root/crypto-exchanges-gateway/custom_config
 service:
-  main:
+  httpport:
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      httpport:
+        enabled: true
+        port: '8000'
+        protocol: TCP
+        targetPort: '8000'
+  wsport:
+    enabled: true
+    ports:
+      wsport:
+        enabled: true
+        port: '8001'
+        protocol: TCP
+        targetPort: '8001'

@@ -8,9 +8,19 @@ persistence:
     enabled: true
     mountPath: /db
 service:
-  main:
+  tcp-port-0:
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      tcp-port-0:
+        enabled: true
+        port: '8123'
+        protocol: TCP
+        targetPort: '8123'
+  tcp-port-1:
+    enabled: true
+    ports:
+      tcp-port-1:
+        enabled: true
+        port: '8125'
+        protocol: TCP
+        targetPort: '8125'

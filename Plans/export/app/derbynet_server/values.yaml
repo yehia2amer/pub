@@ -12,9 +12,19 @@ persistence:
     enabled: true
     mountPath: /var/lib/derbynet
 service:
-  main:
+  securewebserverport(selfsignedcerts):
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      securewebserverport(selfsignedcerts):
+        enabled: true
+        port: '8051'
+        protocol: TCP
+        targetPort: '443'
+  webserverport:
+    enabled: true
+    ports:
+      webserverport:
+        enabled: true
+        port: '8050'
+        protocol: TCP
+        targetPort: '80'

@@ -8,9 +8,19 @@ persistence:
     enabled: true
     mountPath: /hoobs
 service:
-  main:
+  homebridgeport:
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      homebridgeport:
+        enabled: true
+        port: '51826'
+        protocol: TCP
+        targetPort: '51826'
+  serverport:
+    enabled: true
+    ports:
+      serverport:
+        enabled: true
+        port: '8082'
+        protocol: TCP
+        targetPort: '80'

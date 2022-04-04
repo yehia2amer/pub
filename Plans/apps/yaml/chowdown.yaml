@@ -9,20 +9,21 @@ Config:
       Mode: rw
       Name: config
       Target: /config
-  Port: {}
+  Port:
+    main:
+      ContainerPort: '4000'
+      HostPort: '4000'
+      Mode: tcp
+      Name: tcp-port-0
+      Protocol: tcp
+      Target: '4000'
+      value: '4000'
   Variable: {}
 Icon: https://raw.githubusercontent.com/gregyankovoy/docker-templates/master/greg/img/chowdown-logo.png
 Keywords:
 - chowdown
 - Other
 Name: chowdown
-Networking:
-  Mode: bridge
-  Publish:
-    Port:
-      ContainerPort: '4000'
-      HostPort: '4000'
-      Protocol: tcp
 Overview: Simple recipes in Markdown format.
 Privileged: 'false'
 Registry: https://hub.docker.com/r/gregyankovoy/chowdown/Dockerfile/

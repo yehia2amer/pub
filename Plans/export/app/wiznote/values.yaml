@@ -11,9 +11,19 @@ persistence:
     enabled: true
     mountPath: /wiz/storage
 service:
-  main:
+  '80':
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      '80':
+        enabled: true
+        port: '888'
+        protocol: TCP
+        targetPort: '80'
+  '9269':
+    enabled: true
+    ports:
+      '9269':
+        enabled: true
+        port: '9269'
+        protocol: UDP
+        targetPort: '9269'

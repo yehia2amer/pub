@@ -10,9 +10,19 @@ persistence:
     enabled: true
     mountPath: /var/opt/jfrog/artifactory
 service:
-  main:
+  port8081:
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      port8081:
+        enabled: true
+        port: '6181'
+        protocol: TCP
+        targetPort: '8081'
+  port8082:
+    enabled: true
+    ports:
+      port8082:
+        enabled: true
+        port: '6182'
+        protocol: TCP
+        targetPort: '8082'

@@ -24,9 +24,27 @@ persistence:
     enabled: true
     mountPath: /mattermost/plugins
 service:
-  main:
+  gossipporttcp:
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      gossipporttcp:
+        enabled: true
+        port: '8074'
+        protocol: TCP
+        targetPort: '8074'
+  gossipportudp:
+    enabled: true
+    ports:
+      gossipportudp:
+        enabled: true
+        port: '8074'
+        protocol: UDP
+        targetPort: '8074'
+  listenaddress:
+    enabled: true
+    ports:
+      listenaddress:
+        enabled: true
+        port: '8067'
+        protocol: TCP
+        targetPort: '8067'

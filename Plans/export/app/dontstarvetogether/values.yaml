@@ -19,9 +19,27 @@ persistence:
     enabled: true
     mountPath: /serverdata/.klei/DoNotStarveTogether
 service:
-  main:
+  udp1-game:
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      udp1-game:
+        enabled: true
+        port: '10890'
+        protocol: UDP
+        targetPort: '10890'
+  udp2-masterserver:
+    enabled: true
+    ports:
+      udp2-masterserver:
+        enabled: true
+        port: '27016'
+        protocol: UDP
+        targetPort: '27016'
+  udp3-authentication:
+    enabled: true
+    ports:
+      udp3-authentication:
+        enabled: true
+        port: '8766'
+        protocol: UDP
+        targetPort: '8766'

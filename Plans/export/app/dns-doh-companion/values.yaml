@@ -5,9 +5,19 @@ image:
   tag: latest
 persistence: {}
 service:
-  main:
+  dnstcp:
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      dnstcp:
+        enabled: true
+        port: '53'
+        protocol: TCP
+        targetPort: '53'
+  dnsudp:
+    enabled: true
+    ports:
+      dnsudp:
+        enabled: true
+        port: '53'
+        protocol: UDP
+        targetPort: '53'

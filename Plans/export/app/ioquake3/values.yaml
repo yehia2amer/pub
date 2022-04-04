@@ -14,9 +14,19 @@ persistence:
     enabled: true
     mountPath: /ioquake3
 service:
-  main:
+  tcp-webconsole:
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      tcp-webconsole:
+        enabled: true
+        port: '9029'
+        protocol: TCP
+        targetPort: '8080'
+  udp-gameport:
+    enabled: true
+    ports:
+      udp-gameport:
+        enabled: true
+        port: '27960'
+        protocol: UDP
+        targetPort: '27960'

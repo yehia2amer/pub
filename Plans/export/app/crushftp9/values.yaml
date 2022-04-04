@@ -13,9 +13,43 @@ persistence:
     enabled: true
     mountPath: /unraid
 service:
-  main:
+  ftpport:
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      ftpport:
+        enabled: true
+        port: '9921'
+        protocol: TCP
+        targetPort: '9921'
+  httpport:
+    enabled: true
+    ports:
+      httpport:
+        enabled: true
+        port: '8080'
+        protocol: TCP
+        targetPort: '8080'
+  httpport2222:
+    enabled: true
+    ports:
+      httpport2222:
+        enabled: true
+        port: '2222'
+        protocol: TCP
+        targetPort: '2222'
+  httpport9090:
+    enabled: true
+    ports:
+      httpport9090:
+        enabled: true
+        port: '9090'
+        protocol: TCP
+        targetPort: '9090'
+  httpsport:
+    enabled: true
+    ports:
+      httpsport:
+        enabled: true
+        port: '9443'
+        protocol: TCP
+        targetPort: '9443'

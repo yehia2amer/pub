@@ -11,9 +11,27 @@ persistence:
     enabled: true
     mountPath: /server/UserData
 service:
-  main:
+  gametcp:
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      gametcp:
+        enabled: true
+        port: '2350'
+        protocol: TCP
+        targetPort: '2350'
+  gameudp:
+    enabled: true
+    ports:
+      gameudp:
+        enabled: true
+        port: '2350'
+        protocol: UDP
+        targetPort: '2350'
+  xmlrpc:
+    enabled: true
+    ports:
+      xmlrpc:
+        enabled: true
+        port: '5000'
+        protocol: TCP
+        targetPort: '5000'

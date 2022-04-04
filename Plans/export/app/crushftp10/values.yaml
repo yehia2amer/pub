@@ -15,9 +15,43 @@ persistence:
     enabled: true
     mountPath: /mnt/FTP/Shared
 service:
-  main:
+  ftppassiveports:
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      ftppassiveports:
+        enabled: true
+        port: 2000-2100
+        protocol: TCP
+        targetPort: 2000-2100
+  ftpport:
+    enabled: true
+    ports:
+      ftpport:
+        enabled: true
+        port: '21'
+        protocol: TCP
+        targetPort: '21'
+  httpport:
+    enabled: true
+    ports:
+      httpport:
+        enabled: true
+        port: '9090'
+        protocol: TCP
+        targetPort: '9090'
+  httpsport:
+    enabled: true
+    ports:
+      httpsport:
+        enabled: true
+        port: '443'
+        protocol: TCP
+        targetPort: '443'
+  sftpport:
+    enabled: true
+    ports:
+      sftpport:
+        enabled: true
+        port: '2222'
+        protocol: TCP
+        targetPort: '2222'

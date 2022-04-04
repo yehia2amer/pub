@@ -8,9 +8,35 @@ persistence:
     enabled: true
     mountPath: /data
 service:
-  main:
+  communicationport:
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      communicationport:
+        enabled: true
+        port: '8333'
+        protocol: TCP
+        targetPort: '8333'
+  rpcport:
+    enabled: true
+    ports:
+      rpcport:
+        enabled: true
+        port: '8332'
+        protocol: TCP
+        targetPort: '8332'
+  testnetcommunicationport:
+    enabled: true
+    ports:
+      testnetcommunicationport:
+        enabled: true
+        port: '18333'
+        protocol: TCP
+        targetPort: '18333'
+  testnetrpcport-maptouserpc:
+    enabled: true
+    ports:
+      testnetrpcport-maptouserpc:
+        enabled: true
+        port: '18332'
+        protocol: TCP
+        targetPort: '18332'

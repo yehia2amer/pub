@@ -10,7 +10,15 @@ Config:
       Name: media
       Target: /media
       value: /mnt/user
-  Port: {}
+  Port:
+    main:
+      ContainerPort: '9191'
+      HostPort: '9191'
+      Mode: tcp
+      Name: tcp-port-0
+      Protocol: tcp
+      Target: '9191'
+      value: '9191'
   Variable:
     umask:
       Name: UMASK
@@ -22,13 +30,6 @@ Keywords:
 - moviegrabber
 - Downloaders
 Name: moviegrabber
-Networking:
-  Mode: bridge
-  Publish:
-    Port:
-      ContainerPort: '9191'
-      HostPort: '9191'
-      Protocol: tcp
 Overview: MovieGrabber is a fully automated way of downloading movie from usenet,
   it supports any nzb client that has a "watched" or "monitor" folder facility such
   as Sabnzbd+, Grabit and Newsbin. MovieGrabber works by checking imdb for matching

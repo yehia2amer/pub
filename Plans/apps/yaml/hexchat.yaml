@@ -11,7 +11,15 @@ Config:
       Name: config
       Target: /config
       value: /mnt/user/appdata/config
-  Port: {}
+  Port:
+    main:
+      ContainerPort: '6080'
+      HostPort: '6080'
+      Mode: tcp
+      Name: tcp-port-0
+      Protocol: tcp
+      Target: '6080'
+      value: '6080'
   Variable:
     umask:
       Name: UMASK
@@ -32,13 +40,6 @@ Keywords:
 - Productivity
 - Tools-Utilities
 Name: hexchat
-Networking:
-  Mode: bridge
-  Publish:
-    Port:
-      ContainerPort: '6080'
-      HostPort: '6080'
-      Protocol: tcp
 Overview: "HexChat is an IRC client based on XChat, but unlike XChat it\u2019s completely\
   \ free for both Windows and Unix-like systems. Since XChat is open source, it\u2019\
   s perfectly legal. For more info. HexChat was originally called XChat-WDK which\

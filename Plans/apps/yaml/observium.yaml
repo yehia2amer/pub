@@ -9,23 +9,29 @@ Config:
       Name: rrd
       Target: /opt/observium/rrd
       value: /mnt/user/appdata/observium/rrd
-  Port: {}
+  Port:
+    tcp-port-0:
+      ContainerPort: '8668'
+      HostPort: '8668'
+      Mode: tcp
+      Name: tcp-port-0
+      Protocol: tcp
+      Target: '8668'
+      value: '8668'
+    udp-port-1:
+      ContainerPort: '514'
+      HostPort: '8514'
+      Mode: udp
+      Name: udp-port-1
+      Protocol: udp
+      Target: '514'
+      value: '8514'
   Variable: {}
 Icon: https://i.imgur.com/CGrAh79.png
 Keywords:
 - observium
 - Network-Management
 Name: observium
-Networking:
-  Mode: bridge
-  Publish:
-    Port:
-    - ContainerPort: '8668'
-      HostPort: '8668'
-      Protocol: tcp
-    - ContainerPort: '514'
-      HostPort: '8514'
-      Protocol: udp
 Overview: "Observium is an autodiscovering network monitoring platform supporting\
   \ a wide range of hardware platforms and operating systems.[br][br]\r\n"
 Privileged: 'false'

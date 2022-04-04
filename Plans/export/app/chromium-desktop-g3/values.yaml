@@ -10,9 +10,19 @@ persistence:
     enabled: true
     mountPath: /UNRAID_SHARE
 service:
-  main:
+  webui(novnc)webui(novnc):
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      webui(novnc)webui(novnc):
+        enabled: true
+        port: '6901'
+        protocol: TCP
+        targetPort: '6901'
+  webui(vnc):
+    enabled: true
+    ports:
+      webui(vnc):
+        enabled: true
+        port: '5901'
+        protocol: TCP
+        targetPort: '5901'

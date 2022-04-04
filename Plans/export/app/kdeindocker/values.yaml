@@ -15,9 +15,19 @@ persistence:
     enabled: true
     mountPath: /config
 service:
-  main:
+  novncport:
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      novncport:
+        enabled: true
+        port: '4686'
+        protocol: TCP
+        targetPort: '8080'
+  vncport:
+    enabled: true
+    ports:
+      vncport:
+        enabled: true
+        port: '4900'
+        protocol: TCP
+        targetPort: '5900'

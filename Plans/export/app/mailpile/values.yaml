@@ -12,8 +12,10 @@ persistence:
     mountPath: /root/.gnupg
 service:
   main:
+    enabled: true
     ports:
       main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+        enabled: true
+        port: '33411'
+        protocol: TCP
+        targetPort: '33411'

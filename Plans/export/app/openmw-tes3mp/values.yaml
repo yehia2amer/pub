@@ -11,9 +11,19 @@ persistence:
     enabled: true
     mountPath: /openmw
 service:
-  main:
+  tcp-gameport:
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      tcp-gameport:
+        enabled: true
+        port: '25565'
+        protocol: TCP
+        targetPort: '25565'
+  udp-gameport:
+    enabled: true
+    ports:
+      udp-gameport:
+        enabled: true
+        port: '25565'
+        protocol: UDP
+        targetPort: '25565'

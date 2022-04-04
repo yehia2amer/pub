@@ -10,9 +10,35 @@ persistence:
     enabled: true
     mountPath: /opt/hue-emulator/export/
 service:
-  main:
+  '1900':
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      '1900':
+        enabled: true
+        port: '1900'
+        protocol: UDP
+        targetPort: '1900'
+  '2100':
+    enabled: true
+    ports:
+      '2100':
+        enabled: true
+        port: '2100'
+        protocol: UDP
+        targetPort: '2100'
+  '443':
+    enabled: true
+    ports:
+      '443':
+        enabled: true
+        port: '443'
+        protocol: TCP
+        targetPort: '443'
+  '80':
+    enabled: true
+    ports:
+      '80':
+        enabled: true
+        port: '80'
+        protocol: TCP
+        targetPort: '80'

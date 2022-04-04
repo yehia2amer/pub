@@ -14,9 +14,67 @@ persistence:
     enabled: true
     mountPath: /opt/userscripts
 service:
-  main:
+  coapport(shelly):
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      coapport(shelly):
+        enabled: true
+        port: '5683'
+        protocol: UDP
+        targetPort: '5683'
+  flotport:
+    enabled: true
+    ports:
+      flotport:
+        enabled: true
+        port: '8282'
+        protocol: TCP
+        targetPort: '8282'
+  homematicport:
+    enabled: true
+    ports:
+      homematicport:
+        enabled: true
+        port: '2001'
+        protocol: TCP
+        targetPort: '2001'
+  mqttport:
+    enabled: true
+    ports:
+      mqttport:
+        enabled: true
+        port: '1883'
+        protocol: TCP
+        targetPort: '1883'
+  mqttsslport:
+    enabled: true
+    ports:
+      mqttsslport:
+        enabled: true
+        port: '8883'
+        protocol: TCP
+        targetPort: '8883'
+  node-redport:
+    enabled: true
+    ports:
+      node-redport:
+        enabled: true
+        port: '1880'
+        protocol: TCP
+        targetPort: '1880'
+  socket-ioport:
+    enabled: true
+    ports:
+      socket-ioport:
+        enabled: true
+        port: '8284'
+        protocol: TCP
+        targetPort: '8284'
+  webuiport:
+    enabled: true
+    ports:
+      webuiport:
+        enabled: true
+        port: '8081'
+        protocol: TCP
+        targetPort: '8081'

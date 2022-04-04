@@ -8,9 +8,19 @@ persistence:
     enabled: true
     mountPath: /nexus-data
 service:
-  main:
+  dockerregistry:
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      dockerregistry:
+        enabled: true
+        port: '5000'
+        protocol: TCP
+        targetPort: '5000'
+  webgui:
+    enabled: true
+    ports:
+      webgui:
+        enabled: true
+        port: '8081'
+        protocol: TCP
+        targetPort: '8081'

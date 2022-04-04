@@ -21,8 +21,10 @@ persistence:
     mountPath: /home/dsmr/app/backups
 service:
   main:
+    enabled: true
     ports:
       main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+        enabled: true
+        port: '7777'
+        protocol: TCP
+        targetPort: '80'

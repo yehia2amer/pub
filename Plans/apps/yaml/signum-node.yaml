@@ -11,7 +11,23 @@ Config:
       Name: db
       Target: /db
       value: /mnt/user/appdata/signum-node/db
-  Port: {}
+  Port:
+    tcp-port-0:
+      ContainerPort: '8123'
+      HostPort: '8123'
+      Mode: tcp
+      Name: tcp-port-0
+      Protocol: tcp
+      Target: '8123'
+      value: '8123'
+    tcp-port-1:
+      ContainerPort: '8125'
+      HostPort: '8125'
+      Mode: tcp
+      Name: tcp-port-1
+      Protocol: tcp
+      Target: '8125'
+      value: '8125'
   Variable: {}
 ExtraParams: --init
 GitHub: https://github.com/signum-network/signum-node
@@ -20,16 +36,6 @@ Keywords:
 - signum-node
 - Crypto
 Name: signum-node
-Networking:
-  Mode: bridge
-  Publish:
-    Port:
-    - ContainerPort: '8123'
-      HostPort: '8123'
-      Protocol: tcp
-    - ContainerPort: '8125'
-      HostPort: '8125'
-      Protocol: tcp
 Overview: 'Proof of Commitment - ASIC proof / Energy efficient and sustainable mining
 
   '

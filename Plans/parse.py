@@ -172,6 +172,9 @@ for n in afList:
       if "Network" in n.keys() and n["Network"] == "host":
         n["Requires"] = n["Requires"]+" App uses hostnetworking (autoadd)"
         
+      if "Networking" in n.keys() and n["Networking"] and "Mode" in n["Networking"].keys() and n["Networking"]["Mode"] and n["Networking"]["Mode"] == "host":
+        n["Requires"] = n["Requires"]+" App uses hostnetworking (autoadd)"
+        
       if (tmp in reqblocked) or (tmp.rstrip(string.digits) in reqblocked) or (testtmp in reqblocked) :
         n["Requires"] = n["Requires"]+" as was manually flagged as having requirements (autoadd)"
         
@@ -280,12 +283,44 @@ for n in afList:
       n["Config"].pop("Path", "")
       n["Config"]["Path"] = pathstore
       
-      ## TODO: Parse ports
+
+      ## TODO merge port settings
+      if ( "Networking" in n.keys() and n["Networking"] ) and isinstance(n["Networking"], dict) and ( "Publish" in n["Networking"].keys() and n["Networking"]["Publish"] and isinstance(n["Networking"]["Publish"], dict) ) and ( "Port" in n["Networking"]["Publish"].keys() and n["Networking"]["Publish"]["Port"] ):
+        if isinstance(n["Networking"]["Publish"]["Port"], dict):
+          store = n["Networking"]["Publish"]["Port"]
+          n["Networking"]["Publish"].pop("Port", "")
+          n["Networking"]["Publish"]["Port"] = [store]
+        if isinstance(n["Networking"]["Publish"]["Port"], list):
+          for index, var in enumerate(n["Networking"]["Publish"]["Port"]):
+            if "Mode" in var.keys() and var["Mode"]:
+              var["Mode"] = var["Mode"]
+            elif "Protocol" in var.keys() and var["Protocol"]:
+              var["Mode"] = var["Protocol"]
+            else:
+              var["Mode"] = "tcp"
+            if not "Name" in var.keys():
+              var["Name"] = var["Mode"]+"-port-"+str(index)
+            label = var["Name"].lower()
+            for char in invalid:
+              label = label.replace(char, '')
+            label = label.replace('.', '-')
+            n["Config"]["Port"][label] = {}
+            n["Config"]["Port"][label] = var
+            if "ContainerPort" in n["Config"]["Port"][label].keys() and n["Config"]["Port"][label]["ContainerPort"]:
+              n["Config"]["Port"][label]["Target"] = n["Config"]["Port"][label]["ContainerPort"]
+            if "HostPort" in n["Config"]["Port"][label].keys() and n["Config"]["Port"][label]["HostPort"]:
+              n["Config"]["Port"][label]["value"] = n["Config"]["Port"][label]["HostPort"]
+            if "Target" not in n["Config"]["Port"][label].keys() and "value" not in n["Config"]["Port"][label].keys():
+              n["Config"]["Port"].pop(label, "")
+      
+      n.pop("Networking", "")
       
       portstore = {}
       for name, value in n["Config"]["Port"].items():
         store = value
-
+        
+        if len(n["Config"]["Port"]) == 1:
+          name = "main"
         name = name.lower()
         for char in invalid:
           name = name.replace(char, '')
@@ -477,6 +512,23 @@ for name, app in combinedfree.items():
     if "Mode" in value.keys() and value["Mode"] and value["Mode"] == "ro":
       valuesyaml["persistence"][name]["readOnly"] = True
       
+  valuesyaml["service"] = {}
+  for name, value in app["Config"]["Port"].items():
+    valuesyaml["service"][name] = {}
+    valuesyaml["service"][name]["enabled"] = True
+
+    valuesyaml["service"][name]["ports"] = {}
+    valuesyaml["service"][name]["ports"][name] = {}
+    valuesyaml["service"][name]["ports"][name]["enabled"] = True
+    valuesyaml["service"][name]["ports"][name]["protocol"] = value["Mode"].upper()
+    if "value" in value.keys() and value["value"]:
+      valuesyaml["service"][name]["ports"][name]["port"] = value["value"]
+    else:
+      valuesyaml["service"][name]["ports"][name]["port"] = value["Target"]
+    if "Target" in value.keys() and value["Target"]:
+      valuesyaml["service"][name]["ports"][name]["targetPort"] = value["Target"]
+    else: 
+      valuesyaml["service"][name]["ports"][name]["targetPort"] = value["value"]
 
   valuesyamlString = yaml.dump(valuesyaml)
   valuesyamlFile = open("./export/"+"app/"+tmpname+"/values.yaml", "w")

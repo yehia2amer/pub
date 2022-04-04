@@ -13,7 +13,23 @@ Config:
       Name: data
       Target: /data
       value: path to gogs data
-  Port: {}
+  Port:
+    tcp-port-0:
+      ContainerPort: '22'
+      HostPort: '8922'
+      Mode: tcp
+      Name: tcp-port-0
+      Protocol: tcp
+      Target: '22'
+      value: '8922'
+    tcp-port-1:
+      ContainerPort: '3000'
+      HostPort: '8930'
+      Mode: tcp
+      Name: tcp-port-1
+      Protocol: tcp
+      Target: '3000'
+      value: '8930'
   Variable: {}
 GitHub: https://github.com/quimnut/unraid-docker-templates/
 Icon: https://raw.githubusercontent.com/quimnut/unraid-docker-templates/master/quimnut/gogs.png
@@ -23,16 +39,6 @@ Keywords:
 - Productivity
 - Tools-Utilities
 Name: gogs
-Networking:
-  Mode: bridge
-  Publish:
-    Port:
-    - ContainerPort: '22'
-      HostPort: '8922'
-      Protocol: tcp
-    - ContainerPort: '3000'
-      HostPort: '8930'
-      Protocol: tcp
 Official: true
 Overview: gogs https://gogs.io/ is a painless self-hosted Git service [br][br]
 Privileged: 'false'

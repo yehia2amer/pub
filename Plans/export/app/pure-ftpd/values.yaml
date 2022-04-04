@@ -14,9 +14,19 @@ persistence:
     enabled: true
     mountPath: /home
 service:
-  main:
+  ftpport:
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      ftpport:
+        enabled: true
+        port: '2100'
+        protocol: TCP
+        targetPort: '2100'
+  pasvportrange:
+    enabled: true
+    ports:
+      pasvportrange:
+        enabled: true
+        port: 30000-30009
+        protocol: TCP
+        targetPort: 30000-30009

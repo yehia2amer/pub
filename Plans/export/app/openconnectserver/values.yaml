@@ -20,9 +20,19 @@ persistence:
     enabled: true
     mountPath: /config
 service:
-  main:
+  4443tcp:
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      4443tcp:
+        enabled: true
+        port: '4443'
+        protocol: TCP
+        targetPort: '4443'
+  4443udp:
+    enabled: true
+    ports:
+      4443udp:
+        enabled: true
+        port: '4443'
+        protocol: UDP
+        targetPort: '4443'

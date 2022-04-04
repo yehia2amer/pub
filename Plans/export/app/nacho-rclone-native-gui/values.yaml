@@ -10,8 +10,10 @@ persistence:
     mountPath: /config/rclone
 service:
   main:
+    enabled: true
     ports:
       main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+        enabled: true
+        port: '5572'
+        protocol: TCP
+        targetPort: '5572'

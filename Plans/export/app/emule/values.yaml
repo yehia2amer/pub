@@ -15,9 +15,27 @@ persistence:
     enabled: true
     mountPath: /data
 service:
-  main:
+  port(tcp):
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      port(tcp):
+        enabled: true
+        port: '23732'
+        protocol: TCP
+        targetPort: '23732'
+  port(udp):
+    enabled: true
+    ports:
+      port(udp):
+        enabled: true
+        port: '23733'
+        protocol: TCP
+        targetPort: '23733'
+  webui:
+    enabled: true
+    ports:
+      webui:
+        enabled: true
+        port: '4711'
+        protocol: TCP
+        targetPort: '4711'

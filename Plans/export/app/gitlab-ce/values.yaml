@@ -14,9 +14,27 @@ persistence:
     enabled: true
     mountPath: /var/log/gitlab
 service:
-  main:
+  sshport:
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      sshport:
+        enabled: true
+        port: '9022'
+        protocol: TCP
+        targetPort: '22'
+  webinterfaceport(http):
+    enabled: true
+    ports:
+      webinterfaceport(http):
+        enabled: true
+        port: '9080'
+        protocol: TCP
+        targetPort: '9080'
+  webinterfaceport(https):
+    enabled: true
+    ports:
+      webinterfaceport(https):
+        enabled: true
+        port: '9443'
+        protocol: TCP
+        targetPort: '9443'

@@ -11,8 +11,10 @@ persistence:
     mountPath: /app/people
 service:
   main:
+    enabled: true
     ports:
       main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+        enabled: true
+        port: '7574'
+        protocol: TCP
+        targetPort: '7574'

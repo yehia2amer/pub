@@ -17,9 +17,27 @@ persistence:
     enabled: true
     mountPath: /serverdata/steamcmd
 service:
-  main:
+  udp1-gameport:
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      udp1-gameport:
+        enabled: true
+        port: '7777'
+        protocol: UDP
+        targetPort: '7777'
+  udp2-serverqueryport:
+    enabled: true
+    ports:
+      udp2-serverqueryport:
+        enabled: true
+        port: '15777'
+        protocol: UDP
+        targetPort: '15777'
+  udp3-beaconport:
+    enabled: true
+    ports:
+      udp3-beaconport:
+        enabled: true
+        port: '15000'
+        protocol: UDP
+        targetPort: '15000'

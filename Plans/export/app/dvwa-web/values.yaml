@@ -12,9 +12,19 @@ persistence:
     mountPath: /var/www/html/php.ini
     readOnly: true
 service:
-  main:
+  db:
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      db:
+        enabled: true
+        port: '5432'
+        protocol: TCP
+        targetPort: '5432'
+  hostport1:
+    enabled: true
+    ports:
+      hostport1:
+        enabled: true
+        port: '8088'
+        protocol: TCP
+        targetPort: '80'

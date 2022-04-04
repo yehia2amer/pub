@@ -36,9 +36,35 @@ persistence:
     enabled: true
     mountPath: /inspircd
 service:
-  main:
+  tcp1-clients,plaintext:
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      tcp1-clients,plaintext:
+        enabled: true
+        port: '6667'
+        protocol: TCP
+        targetPort: '6667'
+  tcp2-clients,tls:
+    enabled: true
+    ports:
+      tcp2-clients,tls:
+        enabled: true
+        port: '6697'
+        protocol: TCP
+        targetPort: '6697'
+  tcp3-server,plaintext:
+    enabled: true
+    ports:
+      tcp3-server,plaintext:
+        enabled: true
+        port: '7000'
+        protocol: TCP
+        targetPort: '7000'
+  tcp4-server,tls:
+    enabled: true
+    ports:
+      tcp4-server,tls:
+        enabled: true
+        port: '7001'
+        protocol: TCP
+        targetPort: '7001'

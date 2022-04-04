@@ -14,9 +14,43 @@ persistence:
     enabled: true
     mountPath: /Share
 service:
-  main:
+  tcp_port:
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      tcp_port:
+        enabled: true
+        port: '21248'
+        protocol: TCP
+        targetPort: '21248'
+  tls_port:
+    enabled: true
+    ports:
+      tls_port:
+        enabled: true
+        port: '21249'
+        protocol: TCP
+        targetPort: '21249'
+  udp_port:
+    enabled: true
+    ports:
+      udp_port:
+        enabled: true
+        port: '21248'
+        protocol: UDP
+        targetPort: '21248'
+  webuihttp_port:
+    enabled: true
+    ports:
+      webuihttp_port:
+        enabled: true
+        port: '5600'
+        protocol: TCP
+        targetPort: '5600'
+  webuihttps_port:
+    enabled: true
+    ports:
+      webuihttps_port:
+        enabled: true
+        port: '5601'
+        protocol: TCP
+        targetPort: '5601'

@@ -28,8 +28,10 @@ persistence:
     mountPath: /directus/uploads/
 service:
   main:
+    enabled: true
     ports:
       main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+        enabled: true
+        port: '8055'
+        protocol: TCP
+        targetPort: '8055'

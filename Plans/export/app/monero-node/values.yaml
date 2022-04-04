@@ -15,9 +15,19 @@ persistence:
     enabled: true
     mountPath: /src
 service:
-  main:
+  port(1):
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      port(1):
+        enabled: true
+        port: '18080'
+        protocol: TCP
+        targetPort: '18080'
+  port(2):
+    enabled: true
+    ports:
+      port(2):
+        enabled: true
+        port: '18081'
+        protocol: TCP
+        targetPort: '18081'

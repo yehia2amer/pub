@@ -17,9 +17,43 @@ persistence:
     enabled: true
     mountPath: /media/serviio
 service:
-  main:
+  hostport2:
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      hostport2:
+        enabled: true
+        port: '8895'
+        protocol: TCP
+        targetPort: '8895'
+  hostport3:
+    enabled: true
+    ports:
+      hostport3:
+        enabled: true
+        port: '23523'
+        protocol: TCP
+        targetPort: '23523'
+  hostport5:
+    enabled: true
+    ports:
+      hostport5:
+        enabled: true
+        port: '23424'
+        protocol: TCP
+        targetPort: '23424'
+  hostport6:
+    enabled: true
+    ports:
+      hostport6:
+        enabled: true
+        port: '23524'
+        protocol: TCP
+        targetPort: '23524'
+  webui:
+    enabled: true
+    ports:
+      webui:
+        enabled: true
+        port: '23423'
+        protocol: TCP
+        targetPort: '23423'

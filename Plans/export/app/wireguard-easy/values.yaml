@@ -10,9 +10,19 @@ persistence:
     enabled: true
     mountPath: /etc/wireguard
 service:
-  main:
+  port(vpn):
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      port(vpn):
+        enabled: true
+        port: '51820'
+        protocol: UDP
+        targetPort: '51820'
+  port(webui):
+    enabled: true
+    ports:
+      port(webui):
+        enabled: true
+        port: '51821'
+        protocol: TCP
+        targetPort: '51821'

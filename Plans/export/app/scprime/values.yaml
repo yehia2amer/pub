@@ -12,9 +12,27 @@ persistence:
     enabled: true
     mountPath: /storage
 service:
-  main:
+  port1:
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      port1:
+        enabled: true
+        port: '4282'
+        protocol: TCP
+        targetPort: '4282'
+  port2:
+    enabled: true
+    ports:
+      port2:
+        enabled: true
+        port: '4283'
+        protocol: TCP
+        targetPort: '4283'
+  port3:
+    enabled: true
+    ports:
+      port3:
+        enabled: true
+        port: '4285'
+        protocol: TCP
+        targetPort: '4285'

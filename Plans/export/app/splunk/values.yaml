@@ -16,9 +16,27 @@ persistence:
     enabled: true
     mountPath: /splunkdata
 service:
-  main:
+  dataingest:
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      dataingest:
+        enabled: true
+        port: '9997'
+        protocol: TCP
+        targetPort: '9997'
+  management:
+    enabled: true
+    ports:
+      management:
+        enabled: true
+        port: '8089'
+        protocol: TCP
+        targetPort: '8089'
+  web:
+    enabled: true
+    ports:
+      web:
+        enabled: true
+        port: '8000'
+        protocol: TCP
+        targetPort: '8000'

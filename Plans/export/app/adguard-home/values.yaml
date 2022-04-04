@@ -8,9 +8,19 @@ persistence:
     enabled: true
     mountPath: /opt/adguardhome/conf
 service:
-  main:
+  dnsserver:
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      dnsserver:
+        enabled: true
+        port: '53'
+        protocol: TCP
+        targetPort: '53'
+  webui:
+    enabled: true
+    ports:
+      webui:
+        enabled: true
+        port: '3000'
+        protocol: TCP
+        targetPort: '3000'

@@ -10,7 +10,15 @@ Config:
       Mode: rw
       Name: downloads
       Target: /nobody/downloads
-  Port: {}
+  Port:
+    main:
+      ContainerPort: '8080'
+      HostPort: '8080'
+      Mode: tcp
+      Name: tcp-port-0
+      Protocol: tcp
+      Target: '8080'
+      value: '8080'
   Variable: {}
 GitHub: https://github.com/miketweaver/demonsaw-client
 Icon: https://cdn.rawgit.com/miketweaver/demonsaw-client/master/Demonsaw-Logo-with-text.png
@@ -18,13 +26,6 @@ Keywords:
 - demonsaw-client
 - Other
 Name: demonsaw-client
-Networking:
-  Mode: bridge
-  Publish:
-    Port:
-      ContainerPort: '8080'
-      HostPort: '8080'
-      Protocol: tcp
 Overview: Docker container to run a DemonSaw Client with web RDP access.
 Privileged: 'false'
 Registry: https://hub.docker.com/r/bashninja/demonsaw-client/

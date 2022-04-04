@@ -22,9 +22,35 @@ persistence:
     mountPath: /storage
     readOnly: true
 service:
-  main:
+  cloudberrybackupwebinterfacehttpport:
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      cloudberrybackupwebinterfacehttpport:
+        enabled: true
+        port: '43210'
+        protocol: TCP
+        targetPort: '43210'
+  cloudberrybackupwebinterfacehttpsport:
+    enabled: true
+    ports:
+      cloudberrybackupwebinterfacehttpsport:
+        enabled: true
+        port: '43211'
+        protocol: TCP
+        targetPort: '43211'
+  vncportforgui:
+    enabled: true
+    ports:
+      vncportforgui:
+        enabled: true
+        port: '5900'
+        protocol: TCP
+        targetPort: '5900'
+  webportforgui:
+    enabled: true
+    ports:
+      webportforgui:
+        enabled: true
+        port: '5800'
+        protocol: TCP
+        targetPort: '5800'

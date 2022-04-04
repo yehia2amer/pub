@@ -15,8 +15,10 @@ persistence:
     mountPath: /quake3
 service:
   main:
+    enabled: true
     ports:
       main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+        enabled: true
+        port: 27960-27963
+        protocol: UDP
+        targetPort: 27960-27963

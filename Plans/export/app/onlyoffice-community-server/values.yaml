@@ -24,9 +24,27 @@ persistence:
     enabled: true
     mountPath: /var/log/onlyoffice
 service:
-  main:
+  httpport:
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      httpport:
+        enabled: true
+        port: '8080'
+        protocol: TCP
+        targetPort: '80'
+  httpsport:
+    enabled: true
+    ports:
+      httpsport:
+        enabled: true
+        port: '4431'
+        protocol: TCP
+        targetPort: '443'
+  portforxmpp-compatibleinstantmessagingclient(foronlyofficetalkcorrectwork):
+    enabled: true
+    ports:
+      portforxmpp-compatibleinstantmessagingclient(foronlyofficetalkcorrectwork):
+        enabled: true
+        port: '5222'
+        protocol: TCP
+        targetPort: '5222'

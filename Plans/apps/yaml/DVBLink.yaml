@@ -10,26 +10,37 @@ Config:
       Name: DVBLink
       Target: /opt/DVBLink
       value: /mnt/user/appdata/DVBLink/data
-  Port: {}
+  Port:
+    tcp-port-0:
+      ContainerPort: '39876'
+      HostPort: '39876'
+      Mode: tcp
+      Name: tcp-port-0
+      Protocol: tcp
+      Target: '39876'
+      value: '39876'
+    tcp-port-1:
+      ContainerPort: '8100'
+      HostPort: '8100'
+      Mode: tcp
+      Name: tcp-port-1
+      Protocol: tcp
+      Target: '8100'
+      value: '8100'
+    tcp-port-2:
+      ContainerPort: '22'
+      HostPort: '2222'
+      Mode: tcp
+      Name: tcp-port-2
+      Protocol: tcp
+      Target: '22'
+      value: '2222'
   Variable: {}
 Icon: https://raw.githubusercontent.com/chvb/docker-templates/master/chvb/img/dvblink.jpg
 Keywords:
 - dvblink
 - MediaServer-Video
 Name: dvblink
-Networking:
-  Mode: bridge
-  Publish:
-    Port:
-    - ContainerPort: '39876'
-      HostPort: '39876'
-      Protocol: tcp
-    - ContainerPort: '8100'
-      HostPort: '8100'
-      Protocol: tcp
-    - ContainerPort: '22'
-      HostPort: '2222'
-      Protocol: tcp
 Overview: DVBLink need to enjoy your favorite channels and recordings within your
   home network and on the go!
 Privileged: 'false'

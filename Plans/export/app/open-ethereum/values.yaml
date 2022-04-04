@@ -8,9 +8,35 @@ persistence:
     enabled: true
     mountPath: /home/openethereum/.local/share/openethereum/
 service:
-  main:
+  discovery:
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      discovery:
+        enabled: true
+        port: '30303'
+        protocol: UDP
+        targetPort: '30303'
+  json-rpchttp:
+    enabled: true
+    ports:
+      json-rpchttp:
+        enabled: true
+        port: '8545'
+        protocol: TCP
+        targetPort: '8545'
+  listener:
+    enabled: true
+    ports:
+      listener:
+        enabled: true
+        port: '30303'
+        protocol: TCP
+        targetPort: '30303'
+  web-socketsserver:
+    enabled: true
+    ports:
+      web-socketsserver:
+        enabled: true
+        port: '8546'
+        protocol: TCP
+        targetPort: '8546'

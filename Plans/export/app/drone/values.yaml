@@ -13,9 +13,19 @@ persistence:
     enabled: true
     mountPath: /data
 service:
-  main:
+  httpport:
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      httpport:
+        enabled: true
+        port: '80'
+        protocol: TCP
+        targetPort: '80'
+  httpsport:
+    enabled: true
+    ports:
+      httpsport:
+        enabled: true
+        port: '443'
+        protocol: TCP
+        targetPort: '443'

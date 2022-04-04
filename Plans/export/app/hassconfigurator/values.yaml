@@ -12,8 +12,10 @@ persistence:
     mountPath: /hass-config
 service:
   main:
+    enabled: true
     ports:
       main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+        enabled: true
+        port: '3218'
+        protocol: TCP
+        targetPort: '3218'

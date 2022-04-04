@@ -11,9 +11,27 @@ persistence:
     enabled: true
     mountPath: /octoprint
 service:
-  main:
+  snapshot:
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      snapshot:
+        enabled: true
+        port: '5004'
+        protocol: TCP
+        targetPort: '8080'
+  webcam:
+    enabled: true
+    ports:
+      webcam:
+        enabled: true
+        port: '5003'
+        protocol: TCP
+        targetPort: '80'
+  webui:
+    enabled: true
+    ports:
+      webui:
+        enabled: true
+        port: '5002'
+        protocol: TCP
+        targetPort: '5000'

@@ -14,9 +14,43 @@ persistence:
     enabled: true
     mountPath: /serverdata/serverfiles
 service:
-  main:
+  tcp-webconsole:
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      tcp-webconsole:
+        enabled: true
+        port: '9016'
+        protocol: TCP
+        targetPort: '8080'
+  tcp1:
+    enabled: true
+    ports:
+      tcp1:
+        enabled: true
+        port: '30110'
+        protocol: TCP
+        targetPort: '30110'
+  tcp2:
+    enabled: true
+    ports:
+      tcp2:
+        enabled: true
+        port: '30120'
+        protocol: TCP
+        targetPort: '30120'
+  udp1:
+    enabled: true
+    ports:
+      udp1:
+        enabled: true
+        port: '30110'
+        protocol: UDP
+        targetPort: '30110'
+  udp2:
+    enabled: true
+    ports:
+      udp2:
+        enabled: true
+        port: '30120'
+        protocol: UDP
+        targetPort: '30120'

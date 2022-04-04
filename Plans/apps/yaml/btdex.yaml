@@ -11,7 +11,15 @@ Config:
       Name: cache
       Target: /opt/btdex/cache
       value: /mnt/user/appdata/btdex/cache
-  Port: {}
+  Port:
+    main:
+      ContainerPort: '8080'
+      HostPort: '5800'
+      Mode: tcp
+      Name: tcp-port-0
+      Protocol: tcp
+      Target: '8080'
+      value: '5800'
   Variable:
     display_height:
       Name: DISPLAY_HEIGHT
@@ -27,13 +35,6 @@ Keywords:
 - btdex
 - Crypto
 Name: btdex
-Networking:
-  Mode: bridge
-  Publish:
-    Port:
-      ContainerPort: '8080'
-      HostPort: '5800'
-      Protocol: tcp
 Overview: This is a Docker container for BTDEX based on jlesage/docker-baseimage-gui
   Docker image.
 Privileged: 'false'

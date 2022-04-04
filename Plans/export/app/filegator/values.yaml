@@ -15,9 +15,19 @@ persistence:
     mountPath: /var/www/localhost/filegator/configuration.php
     readOnly: true
 service:
-  main:
+  webui(http):
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      webui(http):
+        enabled: true
+        port: '8048'
+        protocol: TCP
+        targetPort: '80'
+  webui(https):
+    enabled: true
+    ports:
+      webui(https):
+        enabled: true
+        port: '8049'
+        protocol: TCP
+        targetPort: '443'

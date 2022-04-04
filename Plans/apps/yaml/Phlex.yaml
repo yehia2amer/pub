@@ -10,7 +10,15 @@ Config:
       Name: config
       Target: /config
       value: /mnt/user/appdata/phlex
-  Port: {}
+  Port:
+    main:
+      ContainerPort: '80'
+      HostPort: '8063'
+      Mode: tcp
+      Name: tcp-port-0
+      Protocol: tcp
+      Target: '80'
+      value: '8063'
   Variable: {}
 GitHub: https://github.com/SiwatINC/unraid-ca-repository
 Icon: https://github.com/d8ahazard/Phlex/raw/master/img/android-icon-144x144.png
@@ -18,13 +26,6 @@ Keywords:
 - phlex
 - Tools
 Name: phlex
-Networking:
-  Mode: bridge
-  Publish:
-    Port:
-      ContainerPort: '80'
-      HostPort: '8063'
-      Protocol: tcp
 Overview: 'Flex TV. is a web application that interfaces between google Assistant
   and Plex to allow you to control playback of media using Actions for Google or IFTTT.
 

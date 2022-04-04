@@ -12,9 +12,19 @@ persistence:
     enabled: true
     mountPath: /opt/rcon-web-admin/db
 service:
-  main:
+  websocketaccessfromui:
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      websocketaccessfromui:
+        enabled: true
+        port: '4327'
+        protocol: TCP
+        targetPort: '4327'
+  webui:
+    enabled: true
+    ports:
+      webui:
+        enabled: true
+        port: '4326'
+        protocol: TCP
+        targetPort: '4326'

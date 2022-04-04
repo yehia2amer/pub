@@ -11,7 +11,23 @@ Config:
       Name: sys
       Target: /sys
       value: /sys
-  Port: {}
+  Port:
+    tcp-port-0:
+      ContainerPort: '80'
+      HostPort: '8888'
+      Mode: tcp
+      Name: tcp-port-0
+      Protocol: tcp
+      Target: '80'
+      value: '8888'
+    tcp-port-1:
+      ContainerPort: '4949'
+      HostPort: '4949'
+      Mode: tcp
+      Name: tcp-port-1
+      Protocol: tcp
+      Target: '4949'
+      value: '4949'
   Variable:
     allowed_hosts:
       Name: ALLOWED_HOSTS
@@ -27,16 +43,6 @@ Keywords:
 - Network-Management
 - Tools-Utilities
 Name: munin-server
-Networking:
-  Mode: bridge
-  Publish:
-    Port:
-    - ContainerPort: '80'
-      HostPort: '8888'
-      Protocol: tcp
-    - ContainerPort: '4949'
-      HostPort: '4949'
-      Protocol: tcp
 Overview: Primarily provides server stats for your unRAID instance in addition to
   monitoring other servers
 Privileged: 'false'

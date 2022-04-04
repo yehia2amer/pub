@@ -11,7 +11,39 @@ Config:
       Name: config
       Target: /config
       value: /mnt/user/appdata/config
-  Port: {}
+  Port:
+    tcp-port-0:
+      ContainerPort: '19132'
+      HostPort: '19132'
+      Mode: tcp
+      Name: tcp-port-0
+      Protocol: tcp
+      Target: '19132'
+      value: '19132'
+    tcp-port-2:
+      ContainerPort: '19133'
+      HostPort: '19133'
+      Mode: tcp
+      Name: tcp-port-2
+      Protocol: tcp
+      Target: '19133'
+      value: '19133'
+    udp-port-1:
+      ContainerPort: '19132'
+      HostPort: '19132'
+      Mode: udp
+      Name: udp-port-1
+      Protocol: udp
+      Target: '19132'
+      value: '19132'
+    udp-port-3:
+      ContainerPort: '19133'
+      HostPort: '19133'
+      Mode: udp
+      Name: udp-port-3
+      Protocol: udp
+      Target: '19133'
+      value: '19133'
   Variable:
     cleanup_timeout:
       Name: CLEANUP_TIMEOUT
@@ -35,22 +67,6 @@ Keywords:
 - phantom
 - GameServers
 Name: phantom
-Networking:
-  Mode: bridge
-  Publish:
-    Port:
-    - ContainerPort: '19132'
-      HostPort: '19132'
-      Protocol: tcp
-    - ContainerPort: '19132'
-      HostPort: '19132'
-      Protocol: udp
-    - ContainerPort: '19133'
-      HostPort: '19133'
-      Protocol: tcp
-    - ContainerPort: '19133'
-      HostPort: '19133'
-      Protocol: udp
 Overview: Makes hosted Bedrock/MCPE servers show up as LAN servers, specifically for
   consoles. You can now play on remote servers (not Realms!) on your Xbox and PS4
   with friends. It's like having a LAN server that's not actually there, spooky.

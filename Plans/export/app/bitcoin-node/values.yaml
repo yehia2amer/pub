@@ -8,9 +8,19 @@ persistence:
     enabled: true
     mountPath: /bitcoin/.bitcoin
 service:
-  main:
+  port(1):
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      port(1):
+        enabled: true
+        port: '8332'
+        protocol: TCP
+        targetPort: '8332'
+  port(2):
+    enabled: true
+    ports:
+      port(2):
+        enabled: true
+        port: '8333'
+        protocol: TCP
+        targetPort: '8333'

@@ -13,9 +13,27 @@ persistence:
     enabled: true
     mountPath: /fluttercoin
 service:
-  main:
+  jsonremoteport:
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      jsonremoteport:
+        enabled: true
+        port: '7474'
+        protocol: TCP
+        targetPort: '7474'
+  peertopeerconnection:
+    enabled: true
+    ports:
+      peertopeerconnection:
+        enabled: true
+        port: '7408'
+        protocol: TCP
+        targetPort: '7408'
+  webgui:
+    enabled: true
+    ports:
+      webgui:
+        enabled: true
+        port: '8080'
+        protocol: TCP
+        targetPort: '8080'

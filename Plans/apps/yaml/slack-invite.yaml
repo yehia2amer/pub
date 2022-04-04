@@ -6,7 +6,15 @@ Config:
   Device: {}
   Label: {}
   Path: {}
-  Port: {}
+  Port:
+    main:
+      ContainerPort: '7879'
+      HostPort: '7879'
+      Mode: tcp
+      Name: tcp-port-0
+      Protocol: tcp
+      Target: '7879'
+      value: '7879'
   Variable:
     community_name:
       Name: COMMUNITY_NAME
@@ -26,13 +34,6 @@ Keywords:
 - Network-Messenger
 - Productivity
 Name: slack-invite
-Networking:
-  Mode: bridge
-  Publish:
-    Port:
-      ContainerPort: '7879'
-      HostPort: '7879'
-      Protocol: tcp
 Overview: Creates a simple webpage for Slack invite signups
 Privileged: 'false'
 Registry: https://hub.docker.com/r/ninthwalker/slack-invite/

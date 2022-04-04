@@ -9,9 +9,27 @@ persistence:
     enabled: true
     mountPath: /assets
 service:
-  main:
+  players&amp;statsport:
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      players&amp;statsport:
+        enabled: true
+        port: '8080'
+        protocol: TCP
+        targetPort: '8080'
+  rtmpport:
+    enabled: true
+    ports:
+      rtmpport:
+        enabled: true
+        port: '1935'
+        protocol: TCP
+        targetPort: '1935'
+  rtmpsport:
+    enabled: true
+    ports:
+      rtmpsport:
+        enabled: true
+        port: '1936'
+        protocol: TCP
+        targetPort: '1936'

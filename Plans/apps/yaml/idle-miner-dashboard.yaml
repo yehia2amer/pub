@@ -13,7 +13,15 @@ Config:
       Name: config
       Target: /app/config
       value: /mnt/user/appdata/IdleMinerDashboard
-  Port: {}
+  Port:
+    main:
+      ContainerPort: '3000'
+      HostPort: '4650'
+      Mode: tcp
+      Name: tcp-port-0
+      Protocol: tcp
+      Target: '3000'
+      value: '4650'
   Variable: {}
 Icon: https://raw.githubusercontent.com/ElectricBrainUK/IdleMiner/master/electron/assets/appIcon.png
 Keywords:
@@ -22,13 +30,6 @@ Keywords:
 - Tools-Utilities
 - Crypto
 Name: idle-miner-dashboard
-Networking:
-  Mode: bridge
-  Publish:
-    Port:
-      ContainerPort: '3000'
-      HostPort: '4650'
-      Protocol: tcp
 Overview: 'Idle Miner lets you remotely control your mining rigs as well as setting
   up smart rules. This component is a dashboard that lets you control all of your
   rigs from one place.

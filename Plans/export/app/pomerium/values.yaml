@@ -12,9 +12,27 @@ persistence:
     enabled: true
     mountPath: /pomerium/
 service:
-  main:
+  '5443':
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      '5443':
+        enabled: true
+        port: '5443'
+        protocol: TCP
+        targetPort: '5443'
+  http:
+    enabled: true
+    ports:
+      http:
+        enabled: true
+        port: '180'
+        protocol: TCP
+        targetPort: '80'
+  https:
+    enabled: true
+    ports:
+      https:
+        enabled: true
+        port: '1443'
+        protocol: TCP
+        targetPort: '443'

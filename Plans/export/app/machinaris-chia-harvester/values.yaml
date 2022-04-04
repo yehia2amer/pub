@@ -17,9 +17,19 @@ persistence:
     enabled: true
     mountPath: /plots1
 service:
-  main:
+  web_port:
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      web_port:
+        enabled: true
+        port: '8926'
+        protocol: TCP
+        targetPort: '8926'
+  worker_port:
+    enabled: true
+    ports:
+      worker_port:
+        enabled: true
+        port: '8927'
+        protocol: TCP
+        targetPort: '8927'

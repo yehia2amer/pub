@@ -10,9 +10,19 @@ image:
   tag: latest
 persistence: {}
 service:
-  main:
+  dashboardport:
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      dashboardport:
+        enabled: true
+        port: '14002'
+        protocol: TCP
+        targetPort: '14002'
+  tcpport:
+    enabled: true
+    ports:
+      tcpport:
+        enabled: true
+        port: '28967'
+        protocol: TCP
+        targetPort: '28967'

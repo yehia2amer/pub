@@ -32,9 +32,27 @@ persistence:
     enabled: true
     mountPath: /download
 service:
-  main:
+  aria2-dhtlistenport:
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      aria2-dhtlistenport:
+        enabled: true
+        port: '6881'
+        protocol: TCP
+        targetPort: '6881'
+  aria2-listenport:
+    enabled: true
+    ports:
+      aria2-listenport:
+        enabled: true
+        port: '6889'
+        protocol: TCP
+        targetPort: '6889'
+  aria2rpc:
+    enabled: true
+    ports:
+      aria2rpc:
+        enabled: true
+        port: '6800'
+        protocol: TCP
+        targetPort: '6800'

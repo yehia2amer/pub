@@ -8,9 +8,19 @@ persistence:
     enabled: true
     mountPath: /opt/observium/rrd
 service:
-  main:
+  tcp-port-0:
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      tcp-port-0:
+        enabled: true
+        port: '8668'
+        protocol: TCP
+        targetPort: '8668'
+  udp-port-1:
+    enabled: true
+    ports:
+      udp-port-1:
+        enabled: true
+        port: '8514'
+        protocol: UDP
+        targetPort: '514'

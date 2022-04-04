@@ -11,9 +11,27 @@ persistence:
     enabled: true
     mountPath: /serverdata/serverfiles
 service:
-  main:
+  tcp-gameport:
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      tcp-gameport:
+        enabled: true
+        port: '3979'
+        protocol: TCP
+        targetPort: '3979'
+  tcp-webconsole:
+    enabled: true
+    ports:
+      tcp-webconsole:
+        enabled: true
+        port: '9015'
+        protocol: TCP
+        targetPort: '8080'
+  udp-gameport:
+    enabled: true
+    ports:
+      udp-gameport:
+        enabled: true
+        port: '3979'
+        protocol: UDP
+        targetPort: '3979'

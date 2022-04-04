@@ -13,7 +13,15 @@ Config:
       Name: restores
       Target: /restores
       value: /mnt/cache/appdata/rdiffweb/restores
-  Port: {}
+  Port:
+    main:
+      ContainerPort: '8080'
+      HostPort: '8099'
+      Mode: tcp
+      Name: tcp-port-0
+      Protocol: tcp
+      Target: '8080'
+      value: '8099'
   Variable: {}
 GitHub: https://github.com/jshridha/docker-rdiffweb/
 Icon: ''
@@ -24,13 +32,6 @@ Keywords:
 - Productivity
 - Tools-Utilities
 Name: rdiffweb
-Networking:
-  Mode: bridge
-  Publish:
-    Port:
-      ContainerPort: '8080'
-      HostPort: '8099'
-      Protocol: tcp
 Overview: Rdiffweb is used to browse and restore backups created by rdiff-backup.
 Privileged: 'false'
 Registry: https://hub.docker.com/r/jshridha/rdiffweb/~/dockerfile/

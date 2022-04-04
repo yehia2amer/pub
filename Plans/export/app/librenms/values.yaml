@@ -23,9 +23,19 @@ persistence:
     enabled: true
     mountPath: /data
 service:
-  main:
+  httpport:
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      httpport:
+        enabled: true
+        port: '6980'
+        protocol: TCP
+        targetPort: '8000'
+  syslogport:
+    enabled: true
+    ports:
+      syslogport:
+        enabled: true
+        port: '514'
+        protocol: UDP
+        targetPort: '514'

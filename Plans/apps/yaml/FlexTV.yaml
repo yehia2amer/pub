@@ -10,7 +10,23 @@ Config:
       Name: config
       Target: /config
       value: path to config
-  Port: {}
+  Port:
+    tcp-port-0:
+      ContainerPort: '80'
+      HostPort: '5666'
+      Mode: tcp
+      Name: tcp-port-0
+      Protocol: tcp
+      Target: '80'
+      value: '5666'
+    tcp-port-1:
+      ContainerPort: '443'
+      HostPort: '5667'
+      Mode: tcp
+      Name: tcp-port-1
+      Protocol: tcp
+      Target: '443'
+      value: '5667'
   Variable:
     umask:
       Name: UMASK
@@ -22,16 +38,6 @@ Keywords:
 - flextv
 - MediaApp
 Name: flextv
-Networking:
-  Mode: bridge
-  Publish:
-    Port:
-    - ContainerPort: '80'
-      HostPort: '5666'
-      Protocol: tcp
-    - ContainerPort: '443'
-      HostPort: '5667'
-      Protocol: tcp
 Overview: A super-sexy voice interface for the Plex HTPC.
 Privileged: 'false'
 Registry: https://registry.hub.docker.com/r/jcreynolds/flextv/

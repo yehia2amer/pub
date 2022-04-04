@@ -17,9 +17,27 @@ persistence:
     enabled: true
     mountPath: /serverdata/steamcmd
 service:
-  main:
+  tcp-playerports:
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      tcp-playerports:
+        enabled: true
+        port: 16262-16326
+        protocol: TCP
+        targetPort: 16262-16326
+  tcp-rconport:
+    enabled: true
+    ports:
+      tcp-rconport:
+        enabled: true
+        port: '27015'
+        protocol: TCP
+        targetPort: '27015'
+  udp-gameport:
+    enabled: true
+    ports:
+      udp-gameport:
+        enabled: true
+        port: '16261'
+        protocol: UDP
+        targetPort: '16261'

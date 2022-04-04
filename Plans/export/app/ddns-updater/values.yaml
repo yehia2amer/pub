@@ -24,8 +24,10 @@ persistence:
     mountPath: /updater/data
 service:
   main:
+    enabled: true
     ports:
       main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+        enabled: true
+        port: '8000'
+        protocol: TCP
+        targetPort: '8000'

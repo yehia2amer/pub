@@ -8,9 +8,27 @@ persistence:
     enabled: true
     mountPath: /home/ubuntu/unraid
 service:
-  main:
+  tcp-port-0:
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      tcp-port-0:
+        enabled: true
+        port: '3389'
+        protocol: TCP
+        targetPort: '3389'
+  tcp-port-1:
+    enabled: true
+    ports:
+      tcp-port-1:
+        enabled: true
+        port: '6080'
+        protocol: TCP
+        targetPort: '6080'
+  tcp-port-2:
+    enabled: true
+    ports:
+      tcp-port-2:
+        enabled: true
+        port: '5900'
+        protocol: TCP
+        targetPort: '5900'

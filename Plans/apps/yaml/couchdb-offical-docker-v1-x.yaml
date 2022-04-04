@@ -10,7 +10,15 @@ Config:
       Name: couchdb
       Target: /usr/local/var/lib/couchdb
       value: /mnt/user/appdata/couchdb
-  Port: {}
+  Port:
+    main:
+      ContainerPort: '5984'
+      HostPort: '5984'
+      Mode: tcp
+      Name: tcp-port-0
+      Protocol: tcp
+      Target: '5984'
+      value: '5984'
   Variable: {}
 GitHub: https://github.com/docker-library/official-images/blob/master/library/couchdb
 Icon: https://couchdb.apache.org/image/couch@2x.png
@@ -18,13 +26,6 @@ Keywords:
 - couchdb-offical-docker-v1-x
 - Productivity
 Name: couchdb-offical-docker-v1-x
-Networking:
-  Mode: bridge
-  Publish:
-    Port:
-      ContainerPort: '5984'
-      HostPort: '5984'
-      Protocol: tcp
 Official: true
 Overview: 'CouchDB offical docker image[br][br]
 

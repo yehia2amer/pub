@@ -12,9 +12,35 @@ persistence:
     enabled: true
     mountPath: /config
 service:
-  main:
+  tcp-port-0:
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      tcp-port-0:
+        enabled: true
+        port: '19132'
+        protocol: TCP
+        targetPort: '19132'
+  tcp-port-2:
+    enabled: true
+    ports:
+      tcp-port-2:
+        enabled: true
+        port: '19133'
+        protocol: TCP
+        targetPort: '19133'
+  udp-port-1:
+    enabled: true
+    ports:
+      udp-port-1:
+        enabled: true
+        port: '19132'
+        protocol: UDP
+        targetPort: '19132'
+  udp-port-3:
+    enabled: true
+    ports:
+      udp-port-3:
+        enabled: true
+        port: '19133'
+        protocol: UDP
+        targetPort: '19133'

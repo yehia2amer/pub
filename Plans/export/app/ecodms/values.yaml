@@ -17,9 +17,35 @@ persistence:
     enabled: true
     mountPath: /srv/scaninput
 service:
-  main:
+  ecodmsapi:
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      ecodmsapi:
+        enabled: true
+        port: '8180'
+        protocol: TCP
+        targetPort: '8180'
+  ecodmsconnectionmanager:
+    enabled: true
+    ports:
+      ecodmsconnectionmanager:
+        enabled: true
+        port: '17001'
+        protocol: TCP
+        targetPort: '17001'
+  ecodmsdatabase:
+    enabled: true
+    ports:
+      ecodmsdatabase:
+        enabled: true
+        port: '17002'
+        protocol: TCP
+        targetPort: '17002'
+  "ecodmsweboberfl\xE4che":
+    enabled: true
+    ports:
+      "ecodmsweboberfl\xE4che":
+        enabled: true
+        port: '8080'
+        protocol: TCP
+        targetPort: '8080'

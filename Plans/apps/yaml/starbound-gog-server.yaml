@@ -10,7 +10,23 @@ Config:
       Mode: rw
       Name: starbound
       Target: /starbound
-  Port: {}
+  Port:
+    tcp-port-0:
+      ContainerPort: '21025'
+      HostPort: '21025'
+      Mode: tcp
+      Name: tcp-port-0
+      Protocol: tcp
+      Target: '21025'
+      value: '21025'
+    tcp-port-1:
+      ContainerPort: '21026'
+      HostPort: '21026'
+      Mode: tcp
+      Name: tcp-port-1
+      Protocol: tcp
+      Target: '21026'
+      value: '21026'
   Variable: {}
 GitHub: https://github.com/miketweaver/docker-starbound-gog-server
 Icon: https://cdn.rawgit.com/miketweaver/docker-starbound-server/master/starbound.png
@@ -18,16 +34,6 @@ Keywords:
 - starbound-gog-server
 - Other
 Name: starbound-gog-server
-Networking:
-  Mode: bridge
-  Publish:
-    Port:
-    - ContainerPort: '21025'
-      HostPort: '21025'
-      Protocol: tcp
-    - ContainerPort: '21026'
-      HostPort: '21026'
-      Protocol: tcp
 Overview: Docker container to run a GOG Starbound Server.
 Privileged: 'false'
 Registry: https://hub.docker.com/r/bashninja/docker-gog-starbound-server/

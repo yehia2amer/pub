@@ -11,7 +11,15 @@ Config:
       Name: data
       Target: /data
       value: /mnt/cache/appdata/frak-gvm/data
-  Port: {}
+  Port:
+    main:
+      ContainerPort: '9392'
+      HostPort: '8080'
+      Mode: tcp
+      Name: tcp-port-0
+      Protocol: tcp
+      Target: '9392'
+      value: '8080'
   Variable: {}
 GitHub: https://www.github.com/Secure-Compliance-Solutions-LLC/GVM-Docker
 Icon: https://raw.githubusercontent.com/frakman1/unraid-docker-templates/master/openvas/gvm.png
@@ -20,13 +28,6 @@ Keywords:
 - Tools-Utilities
 - Security
 Name: frak-gvm
-Networking:
-  Mode: bridge
-  Publish:
-    Port:
-      ContainerPort: '9392'
-      HostPort: '8080'
-      Protocol: tcp
 Overview: OpenVAS is a full-featured vulnerability scanner. Its capabilities include
   unauthenticated testing, authenticated testing, various high level and low level
   Internet and industrial protocols, performance tuning for large-scale scans and

@@ -11,23 +11,29 @@ Config:
       Mode: rw
       Name: watch
       Target: /watch
-  Port: {}
+  Port:
+    tcp-port-0:
+      ContainerPort: '9091'
+      HostPort: '9091'
+      Mode: tcp
+      Name: tcp-port-0
+      Protocol: tcp
+      Target: '9091'
+      value: '9091'
+    tcp-port-1:
+      ContainerPort: '51413'
+      HostPort: '51413'
+      Mode: tcp
+      Name: tcp-port-1
+      Protocol: tcp
+      Target: '51413'
+      value: '51413'
   Variable: {}
 Icon: https://raw.githubusercontent.com/thraxis/docker-templates/master/thraxis/img/transmission-nzbtomedia-icon.png
 Keywords:
 - transmission-nzbtomedia
 - Downloaders
 Name: transmission-nzbtomedia
-Networking:
-  Mode: bridge
-  Publish:
-    Port:
-    - ContainerPort: '9091'
-      HostPort: '9091'
-      Protocol: tcp
-    - ContainerPort: '51413'
-      HostPort: '51413'
-      Protocol: tcp
 Overview: "Transmission is designed for easy, powerful use. Transmission has the features\
   \ you want from a BitTorrent client: encryption, a web interface, peer exchange,\
   \ magnet links, DHT, \xB5TP, UPnP and NAT-PMP port forwarding, webseed support,\

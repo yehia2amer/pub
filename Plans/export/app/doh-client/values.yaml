@@ -10,9 +10,19 @@ persistence:
     enabled: true
     mountPath: /DoH
 service:
-  main:
+  tcpdnsqueryport:
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      tcpdnsqueryport:
+        enabled: true
+        port: '53'
+        protocol: TCP
+        targetPort: '53'
+  udpdnsqueryport:
+    enabled: true
+    ports:
+      udpdnsqueryport:
+        enabled: true
+        port: '53'
+        protocol: UDP
+        targetPort: '53'

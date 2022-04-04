@@ -18,8 +18,10 @@ persistence:
     mountPath: /tvshows
 service:
   main:
+    enabled: true
     ports:
       main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+        enabled: true
+        port: '7000'
+        protocol: TCP
+        targetPort: '7000'

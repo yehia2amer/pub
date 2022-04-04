@@ -10,32 +10,53 @@ Config:
       Name: dbus
       Target: /var/run/dbus
       value: /var/run/dbus
-  Port: {}
+  Port:
+    tcp-port-0:
+      ContainerPort: '3483'
+      HostPort: '3483'
+      Mode: tcp
+      Name: tcp-port-0
+      Protocol: tcp
+      Target: '3483'
+      value: '3483'
+    tcp-port-3:
+      ContainerPort: '9000'
+      HostPort: '9000'
+      Mode: tcp
+      Name: tcp-port-3
+      Protocol: tcp
+      Target: '9000'
+      value: '9000'
+    tcp-port-4:
+      ContainerPort: '9090'
+      HostPort: '9090'
+      Mode: tcp
+      Name: tcp-port-4
+      Protocol: tcp
+      Target: '9090'
+      value: '9090'
+    udp-port-1:
+      ContainerPort: '3483'
+      HostPort: '3483'
+      Mode: udp
+      Name: udp-port-1
+      Protocol: udp
+      Target: '3483'
+      value: '3483'
+    udp-port-2:
+      ContainerPort: '5353'
+      HostPort: '5353'
+      Mode: udp
+      Name: udp-port-2
+      Protocol: udp
+      Target: '5353'
+      value: '5353'
   Variable: {}
 Icon: https://i.imgur.com/PoUuA3k.png
 Keywords:
 - logitechmediaserver-latest
 - MediaServer-Music
 Name: logitechmediaserver-latest
-Networking:
-  Mode: bridge
-  Publish:
-    Port:
-    - ContainerPort: '3483'
-      HostPort: '3483'
-      Protocol: tcp
-    - ContainerPort: '3483'
-      HostPort: '3483'
-      Protocol: udp
-    - ContainerPort: '5353'
-      HostPort: '5353'
-      Protocol: udp
-    - ContainerPort: '9000'
-      HostPort: '9000'
-      Protocol: tcp
-    - ContainerPort: '9090'
-      HostPort: '9090'
-      Protocol: tcp
 Overview: Logitech Media Server (formerly SlimServer, SqueezeCenter and Squeezebox
   Server) is a streaming audio server supported by Logitech (formerly Slim Devices),
   developed in particular to support their Squeezebox range of digital audio receivers.

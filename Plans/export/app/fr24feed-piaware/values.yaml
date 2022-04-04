@@ -14,9 +14,19 @@ persistence:
     enabled: true
     mountPath: /etc/piaware.conf
 service:
-  main:
+  fr24feedadminhttpport:
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      fr24feedadminhttpport:
+        enabled: true
+        port: '8754'
+        protocol: TCP
+        targetPort: '8754'
+  httpport:
+    enabled: true
+    ports:
+      httpport:
+        enabled: true
+        port: '8080'
+        protocol: TCP
+        targetPort: '8080'

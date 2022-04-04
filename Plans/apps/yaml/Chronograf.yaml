@@ -10,20 +10,21 @@ Config:
       Mode: rw
       Name: chronograf
       Target: /var/lib/chronograf
-  Port: {}
+  Port:
+    main:
+      ContainerPort: '8888'
+      HostPort: '8888'
+      Mode: tcp
+      Name: tcp-port-0
+      Protocol: tcp
+      Target: '8888'
+      value: '8888'
   Variable: {}
 Icon: https://raw.githubusercontent.com/Data-Monkey/docker-templates/master/Data-Monkey/img/chronograf.png
 Keywords:
 - chronograf
 - Tools-System
 Name: chronograf
-Networking:
-  Mode: bridge
-  Publish:
-    Port:
-      ContainerPort: '8888'
-      HostPort: '8888'
-      Protocol: tcp
 Official: true
 Overview: "Chronograf is InfluxData\u2019s open source web application. Use Chronograf\
   \ with the other components of the TICK stack to visualize your monitoring data\

@@ -12,7 +12,15 @@ Config:
       Name: apt-cacher-ng
       Target: /var/cache/apt-cacher-ng
       value: /mnt/user/appdata/apt-cacher-ng
-  Port: {}
+  Port:
+    main:
+      ContainerPort: '3142'
+      HostPort: '3142'
+      Mode: tcp
+      Name: tcp-port-0
+      Protocol: tcp
+      Target: '3142'
+      value: '3142'
   Variable: {}
 GitHub: https://github.com/sameersbn/docker-apt-cacher-ng
 Icon: https://github.com/atribe/unRAID-docker/raw/master/icons/apt-cacher.png
@@ -22,13 +30,6 @@ Keywords:
 - Network-Other
 - Tools-Utilities
 Name: apt-cacher-ng
-Networking:
-  Mode: bridge
-  Publish:
-    Port:
-      ContainerPort: '3142'
-      HostPort: '3142'
-      Protocol: tcp
 Overview: Apt-Cacher NG is a caching proxy, specialized for package files from Linux
   distributors, primarily for Debian (and Debian based) distributions but not limited
   to those.

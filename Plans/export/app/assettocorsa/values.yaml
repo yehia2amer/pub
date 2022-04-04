@@ -17,9 +17,43 @@ persistence:
     enabled: true
     mountPath: /serverdata/steamcmd
 service:
-  main:
+  tcp:
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      tcp:
+        enabled: true
+        port: '9600'
+        protocol: TCP
+        targetPort: '9600'
+  tcp2:
+    enabled: true
+    ports:
+      tcp2:
+        enabled: true
+        port: '8081'
+        protocol: TCP
+        targetPort: '8081'
+  tcp3-stracker:
+    enabled: true
+    ports:
+      tcp3-stracker:
+        enabled: true
+        port: '50041'
+        protocol: TCP
+        targetPort: '50041'
+  tcp4-assetto-server-manager:
+    enabled: true
+    ports:
+      tcp4-assetto-server-manager:
+        enabled: true
+        port: '8772'
+        protocol: TCP
+        targetPort: '8772'
+  udp:
+    enabled: true
+    ports:
+      udp:
+        enabled: true
+        port: '9600'
+        protocol: UDP
+        targetPort: '9600'

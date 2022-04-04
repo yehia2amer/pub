@@ -18,9 +18,27 @@ persistence:
     mountPath: /sys/bus/i2c/devices/
     readOnly: true
 service:
-  main:
+  sdkserverport:
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      sdkserverport:
+        enabled: true
+        port: '6742'
+        protocol: TCP
+        targetPort: '6742'
+  vncport:
+    enabled: true
+    ports:
+      vncport:
+        enabled: true
+        port: '5900'
+        protocol: TCP
+        targetPort: '5900'
+  webport:
+    enabled: true
+    ports:
+      webport:
+        enabled: true
+        port: '5800'
+        protocol: TCP
+        targetPort: '5800'

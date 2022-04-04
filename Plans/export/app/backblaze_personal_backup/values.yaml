@@ -17,9 +17,19 @@ persistence:
     enabled: true
     mountPath: /drive_d/
 service:
-  main:
+  httpvncgui:
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      httpvncgui:
+        enabled: true
+        port: '5800'
+        protocol: TCP
+        targetPort: '5800'
+  vnc:
+    enabled: true
+    ports:
+      vnc:
+        enabled: true
+        port: '5900'
+        protocol: TCP
+        targetPort: '5900'

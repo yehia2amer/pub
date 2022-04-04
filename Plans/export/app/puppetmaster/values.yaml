@@ -14,9 +14,19 @@ persistence:
     enabled: true
     mountPath: /etc/puppetlabs/puppet/ssl
 service:
-  main:
+  hostport1:
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      hostport1:
+        enabled: true
+        port: '8140'
+        protocol: TCP
+        targetPort: '8140'
+  hostport2:
+    enabled: true
+    ports:
+      hostport2:
+        enabled: true
+        port: '8081'
+        protocol: TCP
+        targetPort: '8081'

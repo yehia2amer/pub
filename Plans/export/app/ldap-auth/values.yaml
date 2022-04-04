@@ -9,9 +9,19 @@ image:
   tag: latest
 persistence: {}
 service:
-  main:
+  port9000:
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      port9000:
+        enabled: true
+        port: '9000'
+        protocol: TCP
+        targetPort: '9000'
+  webui:
+    enabled: true
+    ports:
+      webui:
+        enabled: true
+        port: '8888'
+        protocol: TCP
+        targetPort: '8888'

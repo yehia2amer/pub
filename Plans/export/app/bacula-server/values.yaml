@@ -26,9 +26,19 @@ persistence:
     enabled: true
     mountPath: /etc/baculum
 service:
-  main:
+  baculastorageport:
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      baculastorageport:
+        enabled: true
+        port: '9103'
+        protocol: TCP
+        targetPort: '9103'
+  baculawebport:
+    enabled: true
+    ports:
+      baculawebport:
+        enabled: true
+        port: '9095'
+        protocol: TCP
+        targetPort: '9095'

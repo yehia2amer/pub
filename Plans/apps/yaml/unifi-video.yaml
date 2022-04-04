@@ -11,7 +11,87 @@ Config:
       Name: videos
       Target: /var/lib/unifi-video/videos
       value: /mnt/user/UnfiVideoShareForStorage
-  Port: {}
+  Port:
+    tcp-port-0:
+      ContainerPort: '1935'
+      HostPort: '1935'
+      Mode: tcp
+      Name: tcp-port-0
+      Protocol: tcp
+      Target: '1935'
+      value: '1935'
+    tcp-port-1:
+      ContainerPort: '6666'
+      HostPort: '6666'
+      Mode: tcp
+      Name: tcp-port-1
+      Protocol: tcp
+      Target: '6666'
+      value: '6666'
+    tcp-port-3:
+      ContainerPort: '7080'
+      HostPort: '7080'
+      Mode: tcp
+      Name: tcp-port-3
+      Protocol: tcp
+      Target: '7080'
+      value: '7080'
+    tcp-port-4:
+      ContainerPort: '7442'
+      HostPort: '7442'
+      Mode: tcp
+      Name: tcp-port-4
+      Protocol: tcp
+      Target: '7442'
+      value: '7442'
+    tcp-port-5:
+      ContainerPort: '7443'
+      HostPort: '7443'
+      Mode: tcp
+      Name: tcp-port-5
+      Protocol: tcp
+      Target: '7443'
+      value: '7443'
+    tcp-port-6:
+      ContainerPort: '7444'
+      HostPort: '7444'
+      Mode: tcp
+      Name: tcp-port-6
+      Protocol: tcp
+      Target: '7444'
+      value: '7444'
+    tcp-port-7:
+      ContainerPort: '7445'
+      HostPort: '7445'
+      Mode: tcp
+      Name: tcp-port-7
+      Protocol: tcp
+      Target: '7445'
+      value: '7445'
+    tcp-port-8:
+      ContainerPort: '7446'
+      HostPort: '7446'
+      Mode: tcp
+      Name: tcp-port-8
+      Protocol: tcp
+      Target: '7446'
+      value: '7446'
+    tcp-port-9:
+      ContainerPort: '7447'
+      HostPort: '7447'
+      Mode: tcp
+      Name: tcp-port-9
+      Protocol: tcp
+      Target: '7447'
+      value: '7447'
+    udp-port-2:
+      ContainerPort: '7004'
+      HostPort: '7004'
+      Mode: udp
+      Name: udp-port-2
+      Protocol: udp
+      Target: '7004'
+      value: '7004'
   Variable: {}
 Icon: https://i.imgur.com/dD9ub3n.png
 Keywords:
@@ -19,40 +99,6 @@ Keywords:
 - HomeAutomation
 - Network-Management
 Name: unifi-video
-Networking:
-  Mode: bridge
-  Publish:
-    Port:
-    - ContainerPort: '1935'
-      HostPort: '1935'
-      Protocol: tcp
-    - ContainerPort: '6666'
-      HostPort: '6666'
-      Protocol: tcp
-    - ContainerPort: '7004'
-      HostPort: '7004'
-      Protocol: udp
-    - ContainerPort: '7080'
-      HostPort: '7080'
-      Protocol: tcp
-    - ContainerPort: '7442'
-      HostPort: '7442'
-      Protocol: tcp
-    - ContainerPort: '7443'
-      HostPort: '7443'
-      Protocol: tcp
-    - ContainerPort: '7444'
-      HostPort: '7444'
-      Protocol: tcp
-    - ContainerPort: '7445'
-      HostPort: '7445'
-      Protocol: tcp
-    - ContainerPort: '7446'
-      HostPort: '7446'
-      Protocol: tcp
-    - ContainerPort: '7447'
-      HostPort: '7447'
-      Protocol: tcp
 Overview: Unifi Video Controller (NVR) is a NVR software from the company Ubiquiti
   Networks to use with their UniFi Video IP Cameras.  To use the latest BETA version,
   add a :beta in the Repository field in Advanced view.

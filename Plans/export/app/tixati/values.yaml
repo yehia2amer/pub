@@ -19,9 +19,27 @@ persistence:
     enabled: true
     mountPath: /storage
 service:
-  main:
+  containerport:
+    enabled: true
     ports:
-      main:
-        port: 9117
-        targetPort: 9117
-    protocol: HTTP
+      containerport:
+        enabled: true
+        port: '10844'
+        protocol: UDP
+        targetPort: '10844'
+  vncportforgui:
+    enabled: true
+    ports:
+      vncportforgui:
+        enabled: true
+        port: '5900'
+        protocol: TCP
+        targetPort: '5900'
+  webport:
+    enabled: true
+    ports:
+      webport:
+        enabled: true
+        port: '5800'
+        protocol: TCP
+        targetPort: '5800'
