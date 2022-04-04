@@ -6,9 +6,12 @@ image:
   repository: docker.io/llalon/github-backup
   tag: latest
 persistence:
+  backuplocation:
+    enabled: true
+    mountPath: /home/docker/backups
   config:
     enabled: true
-    mountPath: /config
+    mountPath: /home/docker/github-backup/config/
 service:
   main:
     ports:

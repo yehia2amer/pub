@@ -7,9 +7,12 @@ image:
   repository: p3rco/firefox
   tag: latest
 persistence:
+  browserdownloadsfolder:
+    enabled: true
+    mountPath: /Downloads/
   config:
     enabled: true
-    mountPath: /config
+    mountPath: /config/
 service:
   main:
     ports:

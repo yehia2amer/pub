@@ -4,9 +4,18 @@ image:
   repository: riftbit/serviio
   tag: latest
 persistence:
-  config:
+  hostpath2:
     enabled: true
-    mountPath: /config
+    mountPath: /opt/serviio/library
+  hostpath3:
+    enabled: true
+    mountPath: /opt/serviio/plugins
+  hostpath4:
+    enabled: true
+    mountPath: /opt/serviio/log
+  hostpath5:
+    enabled: true
+    mountPath: /media/serviio
 service:
   main:
     ports:

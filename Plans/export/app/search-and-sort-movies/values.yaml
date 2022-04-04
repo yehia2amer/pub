@@ -4,9 +4,15 @@ image:
   repository: olprog/search-and-sort-movies
   tag: latest
 persistence:
-  config:
+  besorted:
     enabled: true
-    mountPath: /config
+    mountPath: /be_sorted
+  movies:
+    enabled: true
+    mountPath: /movies
+  series:
+    enabled: true
+    mountPath: /series
 service:
   main:
     ports:

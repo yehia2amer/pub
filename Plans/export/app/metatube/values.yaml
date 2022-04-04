@@ -8,9 +8,12 @@ image:
   repository: jvt038/metatube
   tag: latest
 persistence:
-  config:
+  storage(database):
     enabled: true
-    mountPath: /config
+    mountPath: /database
+  storage(downloads):
+    enabled: true
+    mountPath: /downloads
 service:
   main:
     ports:

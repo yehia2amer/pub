@@ -4,9 +4,16 @@ image:
   repository: andreimarcu/linx-server
   tag: latest
 persistence:
-  config:
+  storage(configfile):
     enabled: true
-    mountPath: /config
+    mountPath: /data/linx-server.conf
+    readOnly: true
+  storage(files):
+    enabled: true
+    mountPath: /data/files
+  storage(meta):
+    enabled: true
+    mountPath: /data/meta
 service:
   main:
     ports:

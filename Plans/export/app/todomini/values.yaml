@@ -4,9 +4,10 @@ image:
   repository: brettdocker/minitodo
   tag: latest
 persistence:
-  config:
+  storage(background):
     enabled: true
-    mountPath: /config
+    mountPath: /var/www/public/img/stardust.png
+    readOnly: true
 service:
   main:
     ports:

@@ -4,9 +4,10 @@ image:
   repository: rudloff/alltube
   tag: latest
 persistence:
-  config:
+  storage(configfile):
     enabled: true
-    mountPath: /config
+    mountPath: /var/www/html/config/config.yml
+    readOnly: true
 service:
   main:
     ports:

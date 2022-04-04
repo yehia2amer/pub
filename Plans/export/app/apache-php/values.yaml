@@ -4,9 +4,10 @@ image:
   repository: chvb/docker-apache-php
   tag: latest
 persistence:
-  config:
+  apache-php:
     enabled: true
-    mountPath: /config
+    mountPath: /etc/localtime
+    readOnly: true
 service:
   main:
     ports:

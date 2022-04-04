@@ -4,9 +4,12 @@ image:
   repository: portainer/portainer-ce
   tag: latest
 persistence:
-  config:
+  data:
     enabled: true
-    mountPath: /config
+    mountPath: /data
+  dockersocket:
+    enabled: true
+    mountPath: /var/run/docker.sock
 service:
   main:
     ports:

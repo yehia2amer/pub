@@ -6,9 +6,12 @@ image:
   repository: accetto/ubuntu-vnc-xfce-blender-g3
   tag: latest
 persistence:
-  config:
+  internalshare:
     enabled: true
-    mountPath: /config
+    mountPath: /UNRAID_SHARE
+  storage(projects):
+    enabled: true
+    mountPath: /srv/projects
 service:
   main:
     ports:

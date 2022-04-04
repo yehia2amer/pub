@@ -9,9 +9,12 @@ image:
   repository: ich777/luckybackup
   tag: latest
 persistence:
-  config:
+  datadir:
     enabled: true
-    mountPath: /config
+    mountPath: /luckybackup
+  shares:
+    enabled: true
+    mountPath: /mnt/user
 service:
   main:
     ports:

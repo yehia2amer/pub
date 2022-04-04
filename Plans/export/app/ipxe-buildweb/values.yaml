@@ -4,9 +4,18 @@ image:
   repository: angelics/unraid-docker-ipxe-buildweb
   tag: latest
 persistence:
-  config:
+  cache:
     enabled: true
-    mountPath: /config
+    mountPath: /cache
+  ipxe:
+    enabled: true
+    mountPath: /ipxe
+  ipxe-buildweb:
+    enabled: true
+    mountPath: /ipxe-buildweb
+  logs:
+    enabled: true
+    mountPath: /logs
 service:
   main:
     ports:

@@ -9,7 +9,16 @@ image:
 persistence:
   config:
     enabled: true
-    mountPath: /config
+    mountPath: /data/teamcity_agent/conf
+  dockervolumes:
+    enabled: true
+    mountPath: /var/lib/docker
+  temp:
+    enabled: true
+    mountPath: /opt/buildagent/temp
+  work:
+    enabled: true
+    mountPath: /opt/buildagent/work
 service:
   main:
     ports:

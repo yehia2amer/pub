@@ -6,9 +6,13 @@ image:
   repository: doudou34/tor-server
   tag: latest
 persistence:
-  config:
+  etclocaltime:
     enabled: true
-    mountPath: /config
+    mountPath: /etc/localtime
+  etctor:
+    enabled: true
+    mountPath: /etc/tor/
+    readOnly: true
 service:
   main:
     ports:

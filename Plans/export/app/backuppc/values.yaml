@@ -4,9 +4,18 @@ image:
   repository: tiredofit/backuppc
   tag: latest
 persistence:
-  config:
+  backuplocation:
     enabled: true
-    mountPath: /config
+    mountPath: /var/lib/backuppc
+  configurationfiles:
+    enabled: true
+    mountPath: /etc/backuppc
+  homedirectory:
+    enabled: true
+    mountPath: /home/backuppc
+  logs:
+    enabled: true
+    mountPath: /www/logs
 service:
   main:
     ports:

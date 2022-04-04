@@ -6,9 +6,12 @@ image:
   repository: mdschaefer/crushftp9
   tag: latest
 persistence:
-  config:
+  crushftp9configfiles:
     enabled: true
-    mountPath: /config
+    mountPath: /var/opt/CrushFTP9_PC
+  unraidsharepath:
+    enabled: true
+    mountPath: /unraid
 service:
   main:
     ports:

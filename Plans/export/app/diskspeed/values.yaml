@@ -4,9 +4,13 @@ image:
   repository: jbartlett777/diskspeed
   tag: latest
 persistence:
-  config:
+  localstorage:
     enabled: true
-    mountPath: /config
+    mountPath: /tmp/DiskSpeed
+  unraidinifiles:
+    enabled: true
+    mountPath: /var/local/emhttp
+    readOnly: true
 service:
   main:
     ports:

@@ -4,9 +4,18 @@ image:
   repository: ecodms/allinone-18.09
   tag: latest
 persistence:
-  config:
+  backuppath:
     enabled: true
-    mountPath: /config
+    mountPath: /srv/backup
+  data:
+    enabled: true
+    mountPath: /srv/data
+  restorepath:
+    enabled: true
+    mountPath: /srv/restore
+  scaninputpath:
+    enabled: true
+    mountPath: /srv/scaninput
 service:
   main:
     ports:

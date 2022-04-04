@@ -7,9 +7,12 @@ image:
   repository: wallabag/wallabag
   tag: latest
 persistence:
-  config:
+  data:
     enabled: true
-    mountPath: /config
+    mountPath: /var/www/wallabag/data
+  images:
+    enabled: true
+    mountPath: /var/www/wallabag/web/assets/images
 service:
   main:
     ports:

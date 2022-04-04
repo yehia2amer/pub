@@ -8,9 +8,13 @@ image:
   repository: ich777/unmined
   tag: latest
 persistence:
-  config:
+  datadir:
     enabled: true
-    mountPath: /config
+    mountPath: /unmined
+  minecraftworld:
+    enabled: true
+    mountPath: /unmined/worlds
+    readOnly: true
 service:
   main:
     ports:

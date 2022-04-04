@@ -4,9 +4,15 @@ image:
   repository: gangefors/airdcpp-webclient
   tag: latest
 persistence:
-  config:
+  applicationdata:
     enabled: true
-    mountPath: /config
+    mountPath: /.airdcpp
+  downloads:
+    enabled: true
+    mountPath: /Downloads
+  share:
+    enabled: true
+    mountPath: /Share
 service:
   main:
     ports:

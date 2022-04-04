@@ -4,9 +4,12 @@ image:
   repository: grafana/loki
   tag: latest
 persistence:
-  config:
+  hostpath1:
     enabled: true
-    mountPath: /config
+    mountPath: /etc/loki
+  hostpath2:
+    enabled: true
+    mountPath: /loki
 service:
   main:
     ports:

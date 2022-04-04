@@ -4,9 +4,13 @@ image:
   repository: rootgg/plik
   tag: latest
 persistence:
-  config:
+  data:
     enabled: true
-    mountPath: /config
+    mountPath: /data
+  storage(configfile):
+    enabled: true
+    mountPath: /home/plik/server/plikd.cfg
+    readOnly: true
 service:
   main:
     ports:

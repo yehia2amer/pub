@@ -4,9 +4,15 @@ image:
   repository: mattermost/mattermost-push-proxy
   tag: latest
 persistence:
+  certspath:
+    enabled: true
+    mountPath: /certs
   config:
     enabled: true
     mountPath: /config
+  mattermostpushproxypath:
+    enabled: true
+    mountPath: /mattermost-push-proxy
 service:
   main:
     ports:

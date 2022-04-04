@@ -4,9 +4,12 @@ image:
   repository: docker.io/sebp/lighttpd
   tag: latest
 persistence:
-  config:
+  configdirectory:
     enabled: true
-    mountPath: /config
+    mountPath: /etc/lighttpd
+  wwwdirectory:
+    enabled: true
+    mountPath: /var/www/localhost/htdocs
 service:
   main:
     ports:

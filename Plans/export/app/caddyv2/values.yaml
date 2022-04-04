@@ -4,9 +4,15 @@ image:
   repository: caddy
   tag: alpine
 persistence:
+  caddyfile:
+    enabled: true
+    mountPath: /etc/caddy/Caddyfile
   config:
     enabled: true
     mountPath: /config
+  data:
+    enabled: true
+    mountPath: /data
 service:
   main:
     ports:

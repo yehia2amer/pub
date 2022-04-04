@@ -9,9 +9,18 @@ image:
   repository: xternet/unraid-onlyoffice-mail-server
   tag: latest
 persistence:
-  config:
+  mountedcertsfolder:
     enabled: true
-    mountPath: /config
+    mountPath: /etc/pki/tls/mailserver
+  mountedlogsfolder:
+    enabled: true
+    mountPath: /var/log
+  mountedmaildata:
+    enabled: true
+    mountPath: /var/vmail
+  mountedmysqldata:
+    enabled: true
+    mountPath: /var/lib/mysql
 service:
   main:
     ports:

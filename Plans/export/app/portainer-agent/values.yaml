@@ -4,9 +4,12 @@ image:
   repository: portainer/agent
   tag: latest
 persistence:
-  config:
+  dockersocket:
     enabled: true
-    mountPath: /config
+    mountPath: /var/run/docker.sock
+  dockervolumes:
+    enabled: true
+    mountPath: /var/lib/docker/volumes
 service:
   main:
     ports:

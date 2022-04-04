@@ -4,9 +4,12 @@ image:
   repository: phoronix/pts
   tag: latest
 persistence:
-  config:
+  appdata:
     enabled: true
-    mountPath: /config
+    mountPath: /var/lib/phoronix-test-suite
+  results:
+    enabled: true
+    mountPath: /var/lib/phoronix-test-suite/test-results
 service:
   main:
     ports:

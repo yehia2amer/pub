@@ -5,17 +5,6 @@ Config:
   Device: {}
   Label: {}
   Path:
-    backups(from):
-      Default: ''
-      Description: Specify the location for backups (source).
-      Display: always
-      Mask: 'false'
-      Mode: ro
-      Name: Backups (from)
-      Required: 'true'
-      Target: /data
-      Type: Path
-      value: ''
     backups(to):
       Default: ''
       Description: Specify the location for backups (destination).
@@ -27,7 +16,7 @@ Config:
       Target: /destination
       Type: Path
       value: ''
-    storage(config):
+    config:
       Default: ''
       Description: This is the location for the internal data.
       Display: always
@@ -38,6 +27,17 @@ Config:
       Target: /config
       Type: Path
       value: /mnt/user/appdata/vorta
+    data:
+      Default: ''
+      Description: Specify the location for backups (source).
+      Display: always
+      Mask: 'false'
+      Mode: ro
+      Name: Backups (from)
+      Required: 'true'
+      Target: /data
+      Type: Path
+      value: ''
   Port:
     webui:
       Default: ''

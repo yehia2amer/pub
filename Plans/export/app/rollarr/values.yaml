@@ -4,9 +4,12 @@ image:
   repository: thehumanrobot/rollarr
   tag: latest
 persistence:
-  config:
+  appdata:
     enabled: true
-    mountPath: /config
+    mountPath: /rollar/data.json
+  prerolls:
+    enabled: true
+    mountPath: /media/prerolls
 service:
   main:
     ports:

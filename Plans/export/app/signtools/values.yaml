@@ -5,9 +5,15 @@ image:
   repository: signtools/signtools
   tag: latest
 persistence:
-  config:
+  data:
     enabled: true
-    mountPath: /config
+    mountPath: /data
+  dataprofiles:
+    enabled: true
+    mountPath: /data/profiles/
+  signer-cfg-yml:
+    enabled: true
+    mountPath: /signer-cfg.yml
 service:
   main:
     ports:

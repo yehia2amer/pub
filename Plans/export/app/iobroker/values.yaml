@@ -7,9 +7,12 @@ image:
   repository: buanet/iobroker
   tag: latest
 persistence:
-  config:
+  data:
     enabled: true
-    mountPath: /config
+    mountPath: /opt/iobroker
+  scripts:
+    enabled: true
+    mountPath: /opt/userscripts
 service:
   main:
     ports:

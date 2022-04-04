@@ -6,7 +6,17 @@ image:
 persistence:
   config:
     enabled: true
-    mountPath: /config
+    mountPath: /app/data/config
+  db:
+    enabled: true
+    mountPath: /app/data/db
+  image:
+    enabled: true
+    mountPath: /app/data/images/
+    readOnly: true
+  tmp:
+    enabled: true
+    mountPath: /app/data/tmp
 service:
   main:
     ports:

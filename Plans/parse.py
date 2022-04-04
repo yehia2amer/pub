@@ -9,6 +9,20 @@ invalid = '<>:"/\|?*$ '
 blacklistedenvs = ["UID", "GID", "PUID", "PGID", "TZ"]
 
 my_dir = './apps'
+
+print("test: ")
+
+with open("./blacklist.txt", "r") as f:
+    blacklist = f.readlines()
+for b in range(len(blacklist)):
+    blacklist[b] = blacklist[b].strip("\n").lower()
+    print(blacklist[b])
+    
+with open("./reqblocked.txt", "r") as f:
+    reqblocked = f.readlines()
+for r in range(len(reqblocked)):
+    reqblocked[r] = reqblocked[r].strip("\n").lower()
+
 for root, dirs, files in os.walk(my_dir, topdown=False):
     for name in files:
         os.remove(os.path.join(root, name))
@@ -69,9 +83,11 @@ for n in afList:
       tmp = tmp+"-duplicate-2"
     if tmp in n.keys():
       tmp = tmp+"-duplicate-3"
+    tmp = tmp.lower()
     print(tmp)
     n["Name"] = tmp
-    if ( tmp not in paths ) :
+    testtmp = tmp.replace("-", '')
+    if ( tmp not in paths ) and ( tmp.rstrip(string.digits) not in paths )  and ( testtmp not in paths ) and ( tmp not in blacklist )  and ( tmp.rstrip(string.digits) not in blacklist )  and ( testtmp not in blacklist ):
       n.pop("downloads", "")
       n.pop("downloadtrend", "")
       n.pop("stars", "")
@@ -150,9 +166,15 @@ for n in afList:
       if "-duplicate-" in tmp:
         n["Requires"] = n["Requires"]+" duplicate app (autoadd)"
         
+      if "vpn" in tmp:
+        n["Requires"] = n["Requires"]+" VPN related app (autoadd)"
+        
       if "Network" in n.keys() and n["Network"] == "host":
         n["Requires"] = n["Requires"]+" App uses hostnetworking (autoadd)"
-      
+        
+      if (tmp in reqblocked) or (tmp.rstrip(string.digits) in reqblocked) or (testtmp in reqblocked) :
+        n["Requires"] = n["Requires"]+" as was manually flagged as having requirements (autoadd)"
+        
       dockersplit = n["Repository"].split(":", 1)
       n["Repository"] = dockersplit[0]
       if len(dockersplit) == 2:
@@ -243,6 +265,11 @@ for n in afList:
       pathstore = {}
       for name, value in n["Config"]["Path"].items():
         store = value
+        basename = os.path.basename(os.path.normpath(value["Target"]))
+        if basename == "config" and not "config" in pathstore.keys():
+          name = "config"
+        if basename == "data" and not "data" in pathstore.keys():
+          name = "data"
 
         name = name.lower()
         for char in invalid:
@@ -272,22 +299,25 @@ for n in afList:
       
       combined[tmp] = n
       if "Requires" in n.keys() and n["Requires"]:
+        print:("")
+        ## Can be enabled when we actually need this data
         combinedreq[tmp] = n
-        jsonString = json.dumps(n)
-        jsonFile = open("apps/"+"req/"+"json/"+tmp+".json", "w")
-        jsonFile.write(jsonString)
-        jsonFile.close()
-        
-        yamlString = yaml.dump(n)
-        yamlFile = open("apps/"+"req/"+"yaml/"+tmp+".yaml", "w")
-        yamlFile.write(yamlString)
-        yamlFile.close()
+        # jsonString = json.dumps(n)
+        # jsonFile = open("apps/"+"req/"+"json/"+tmp+".json", "w")
+        # jsonFile.write(jsonString)
+        # jsonFile.close()
+        # 
+        # yamlString = yaml.dump(n)
+        # yamlFile = open("apps/"+"req/"+"yaml/"+tmp+".yaml", "w")
+        # yamlFile.write(yamlString)
+        # yamlFile.close()
       else:
+        ## Can be enabled when we actually need this data
         combinedfree[tmp] = n
-        jsonString = json.dumps(n)
-        jsonFile = open("apps/"+"json/"+tmp+".json", "w")
-        jsonFile.write(jsonString)
-        jsonFile.close()
+        # jsonString = json.dumps(n)
+        # jsonFile = open("apps/"+"json/"+tmp+".json", "w")
+        # jsonFile.write(jsonString)
+        # jsonFile.close()
         
         yamlString = yaml.dump(n)
         yamlFile = open("apps/"+"yaml/"+tmp+".yaml", "w")
@@ -296,36 +326,38 @@ for n in afList:
     
 print("Writhing combined json and yaml output...")
 
-jsonString2 = json.dumps(combinedfree)
-jsonFile2 = open("apps-free.json", "w")
-jsonFile2.write(jsonString2)
-jsonFile2.close()
+## Can be enabled when we actually need this data
+# jsonString2 = json.dumps(combinedfree)
+# jsonFile2 = open("apps-free.json", "w")
+# jsonFile2.write(jsonString2)
+# jsonFile2.close()
 
 yamlString2 = yaml.dump(combinedfree)
 yamlFile2 = open("apps-free.yaml", "w")
 yamlFile2.write(yamlString2)
 yamlFile2.close()
 
+## Can be enabled when we actually need this data
+# jsonString3 = json.dumps(combinedreq)
+# jsonFile3 = open("apps-req.json", "w")
+# jsonFile3.write(jsonString3)
+# jsonFile3.close()
+# 
+# yamlString3 = yaml.dump(combinedreq)
+# yamlFile3 = open("apps-req.yaml", "w")
+# yamlFile3.write(yamlString3)
+# yamlFile3.close()
 
-jsonString3 = json.dumps(combinedreq)
-jsonFile3 = open("apps-req.json", "w")
-jsonFile3.write(jsonString3)
-jsonFile3.close()
-
-yamlString3 = yaml.dump(combinedreq)
-yamlFile3 = open("apps-req.yaml", "w")
-yamlFile3.write(yamlString3)
-yamlFile3.close()
-
-jsonString4 = json.dumps(combined)
-jsonFile4 = open("apps.json", "w")
-jsonFile4.write(jsonString4)
-jsonFile4.close()
-
-yamlString4 = yaml.dump(combined)
-yamlFile4 = open("apps.yaml", "w")
-yamlFile4.write(yamlString4)
-yamlFile4.close()
+## Can be enabled when we actually need this data
+# jsonString4 = json.dumps(combined)
+# jsonFile4 = open("apps.json", "w")
+# jsonFile4.write(jsonString4)
+# jsonFile4.close()
+# 
+# yamlString4 = yaml.dump(combined)
+# yamlFile4 = open("apps.yaml", "w")
+# yamlFile4.write(yamlString4)
+# yamlFile4.close()
 
 print("Loading Helm Chart Defaults...")
 
@@ -416,9 +448,9 @@ for name, app in combinedfree.items():
   appyamlFile.close()
   
   with open("./export/"+"app/"+tmpname+"/Chart.yaml", "r") as f:
-      lines = f.readlines()
+      lines2 = f.readlines()
   with open("./export/"+"app/"+tmpname+"/Chart.yaml", "w") as f:
-      for line in lines:
+      for line in lines2:
           if line.strip("\n") == "  truecharts.org/catagories:":
             f.write("  truecharts.org/catagories: | \n")
           elif "  - " in line:
@@ -436,6 +468,15 @@ for name, app in combinedfree.items():
   for name, value in app["Config"]["Variable"].items():
     if not name in blacklistedenvs and not value["Target"] in blacklistedenvs:
       valuesyaml["env"][value["Target"]] = value["value"]
+     
+  valuesyaml["persistence"] = {}
+  for name, value in app["Config"]["Path"].items():
+    valuesyaml["persistence"][name] = {}
+    valuesyaml["persistence"][name]["mountPath"] = value["Target"]
+    valuesyaml["persistence"][name]["enabled"] = True
+    if "Mode" in value.keys() and value["Mode"] and value["Mode"] == "ro":
+      valuesyaml["persistence"][name]["readOnly"] = True
+      
 
   valuesyamlString = yaml.dump(valuesyaml)
   valuesyamlFile = open("./export/"+"app/"+tmpname+"/values.yaml", "w")

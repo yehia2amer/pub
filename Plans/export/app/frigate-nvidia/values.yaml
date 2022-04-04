@@ -7,9 +7,18 @@ image:
   repository: blakeblackshear/frigate
   tag: stable-amd64nvidia
 persistence:
+  cachetoram:
+    enabled: true
+    mountPath: /tmp/cache
   config:
     enabled: true
     mountPath: /config
+  localtime:
+    enabled: true
+    mountPath: /etc/localtime
+  mediapath:
+    enabled: true
+    mountPath: /media/frigate
 service:
   main:
     ports:

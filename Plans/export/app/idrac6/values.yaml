@@ -11,9 +11,15 @@ image:
   repository: domistyle/idrac6
   tag: latest
 persistence:
-  config:
+  libraries:
     enabled: true
-    mountPath: /config
+    mountPath: /app
+  screenshots:
+    enabled: true
+    mountPath: /screenshots
+  virtualmedia:
+    enabled: true
+    mountPath: /vmedia
 service:
   main:
     ports:

@@ -6,9 +6,22 @@ image:
   repository: lubeda/salt4unraid
   tag: latest
 persistence:
-  config:
+  dockersocket:
     enabled: true
-    mountPath: /config
+    mountPath: /var/run/docker.sock
+  pathtoqemuimages:
+    enabled: true
+    mountPath: /mnt/user/domains
+    readOnly: true
+  saltconfigdirectory:
+    enabled: true
+    mountPath: /etc/salt/
+  saltdatadirectory:
+    enabled: true
+    mountPath: /srv
+  virtualisationpassthrough:
+    enabled: true
+    mountPath: /var/run/libvirt/libvirt-sock
 service:
   main:
     ports:

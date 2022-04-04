@@ -5,9 +5,12 @@ image:
   repository: ydkn/cups
   tag: latest
 persistence:
-  config:
+  configfile:
     enabled: true
-    mountPath: /config
+    mountPath: /etc/cups/
+  usbmapping:
+    enabled: true
+    mountPath: /var/run/dbus
 service:
   main:
     ports:

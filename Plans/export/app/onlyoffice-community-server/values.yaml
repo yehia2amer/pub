@@ -17,9 +17,12 @@ image:
   repository: xternet/unraid-onlyoffice-community-server
   tag: latest
 persistence:
-  config:
+  communityserverdata:
     enabled: true
-    mountPath: /config
+    mountPath: /var/www/onlyoffice/Data
+  communityserverlogs:
+    enabled: true
+    mountPath: /var/log/onlyoffice
 service:
   main:
     ports:

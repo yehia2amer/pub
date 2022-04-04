@@ -4,9 +4,12 @@ image:
   repository: wiznote/wizserver
   tag: latest
 persistence:
-  config:
+  etclocaltime:
     enabled: true
-    mountPath: /config
+    mountPath: /etc/localtime
+  wizstorage:
+    enabled: true
+    mountPath: /wiz/storage
 service:
   main:
     ports:

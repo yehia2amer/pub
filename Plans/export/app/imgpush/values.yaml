@@ -4,9 +4,12 @@ image:
   repository: hauxir/imgpush
   tag: latest
 persistence:
-  config:
+  storage(cache):
     enabled: true
-    mountPath: /config
+    mountPath: /cache
+  storage(images):
+    enabled: true
+    mountPath: /images
 service:
   main:
     ports:

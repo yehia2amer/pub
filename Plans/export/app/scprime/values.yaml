@@ -5,9 +5,12 @@ image:
   repository: scprime/scprime
   tag: latest
 persistence:
-  config:
+  metadata:
     enabled: true
-    mountPath: /config
+    mountPath: /scp-data
+  storage:
+    enabled: true
+    mountPath: /storage
 service:
   main:
     ports:

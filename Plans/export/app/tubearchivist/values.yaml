@@ -11,9 +11,12 @@ image:
   repository: bbilly1/tubearchivist
   tag: latest
 persistence:
-  config:
+  appdata:
     enabled: true
-    mountPath: /config
+    mountPath: /cache
+  youtubemediapath:
+    enabled: true
+    mountPath: /youtube
 service:
   main:
     ports:

@@ -9,9 +9,12 @@ image:
   repository: ghcr.io/siwatinc/h265ize
   tag: latest
 persistence:
-  config:
+  mntdirectory:
     enabled: true
-    mountPath: /config
+    mountPath: /tmp
+  tempdirectory:
+    enabled: true
+    mountPath: /mnt
 service:
   main:
     ports:

@@ -9,9 +9,10 @@ image:
   repository: vinid223/gcloud-storage-backup
   tag: latest
 persistence:
-  config:
+  google-cloud-storage-backup:
     enabled: true
-    mountPath: /config
+    mountPath: /data/backup
+    readOnly: true
 service:
   main:
     ports:

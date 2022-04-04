@@ -17,9 +17,15 @@ image:
   repository: directus/directus
   tag: latest
 persistence:
-  config:
+  appdatadatabase(sqlite):
     enabled: true
-    mountPath: /config
+    mountPath: /directus/database/
+  appdataextensions:
+    enabled: true
+    mountPath: /directus/extensions/
+  appdatauploads:
+    enabled: true
+    mountPath: /directus/uploads/
 service:
   main:
     ports:

@@ -10,9 +10,12 @@ image:
   repository: ghcr.io/guydavis/machinaris
   tag: latest
 persistence:
-  config:
+  appdata:
     enabled: true
-    mountPath: /config
+    mountPath: /root/.chia
+  plots1:
+    enabled: true
+    mountPath: /plots1
 service:
   main:
     ports:

@@ -4,9 +4,15 @@ image:
   repository: freddy0/crafty-container
   tag: latest
 persistence:
-  config:
+  backups:
     enabled: true
-    mountPath: /config
+    mountPath: /crafty_web/backups
+  database:
+    enabled: true
+    mountPath: /crafty_db
+  server-files:
+    enabled: true
+    mountPath: /minecraft_servers
 service:
   main:
     ports:

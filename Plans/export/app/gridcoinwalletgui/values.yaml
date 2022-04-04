@@ -6,9 +6,12 @@ image:
   repository: sublivion/gridcoinwalletgui
   tag: latest
 persistence:
-  config:
+  appdataconfigpath:
     enabled: true
-    mountPath: /config
+    mountPath: /headless/.GridcoinResearch/
+  boincdatadir:
+    enabled: true
+    mountPath: /var/lib/boinc-client/
 service:
   main:
     ports:

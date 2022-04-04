@@ -8,9 +8,15 @@ image:
   repository: d8sychain/mediawiki
   tag: edge
 persistence:
+  backupdir:
+    enabled: true
+    mountPath: /config/backup
   config:
     enabled: true
     mountPath: /config
+  fileuploadsdir:
+    enabled: true
+    mountPath: /config/assets
 service:
   main:
     ports:

@@ -7,9 +7,9 @@ image:
   repository: registry.hub.docker.com/library/postgres
   tag: '10'
 persistence:
-  config:
+  data:
     enabled: true
-    mountPath: /config
+    mountPath: /var/lib/postgresql/data
 service:
   main:
     ports:

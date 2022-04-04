@@ -4,9 +4,10 @@ image:
   repository: rssbridge/rss-bridge
   tag: latest
 persistence:
-  config:
+  whitelist-txt:
     enabled: true
-    mountPath: /config
+    mountPath: /app/whitelist.txt
+    readOnly: true
 service:
   main:
     ports:

@@ -25,9 +25,12 @@ image:
   repository: fanningert/aria2-with-ariang
   tag: latest
 persistence:
-  config:
+  configstoragepath:
     enabled: true
-    mountPath: /config
+    mountPath: /conf
+  downloadstoragepath:
+    enabled: true
+    mountPath: /download
 service:
   main:
     ports:

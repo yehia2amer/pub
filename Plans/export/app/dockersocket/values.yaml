@@ -6,9 +6,10 @@ image:
   repository: ghcr.io/tecnativa/docker-socket-proxy
   tag: latest
 persistence:
-  config:
+  docker-sock:
     enabled: true
-    mountPath: /config
+    mountPath: /var/run/docker.sock
+    readOnly: true
 service:
   main:
     ports:

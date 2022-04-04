@@ -7,6 +7,13 @@ persistence:
   config:
     enabled: true
     mountPath: /config
+  data:
+    enabled: true
+    mountPath: /data
+  storage(configfile):
+    enabled: true
+    mountPath: /var/www/localhost/filegator/configuration.php
+    readOnly: true
 service:
   main:
     ports:

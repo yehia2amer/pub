@@ -4,9 +4,15 @@ image:
   repository: ghcr.io/suwayomi/tachidesk
   tag: latest
 persistence:
-  config:
+  appdata:
     enabled: true
-    mountPath: /config
+    mountPath: /home/suwayomi/.local/share/Tachidesk
+  library:
+    enabled: true
+    mountPath: /home/suwayomi/.local/share/Tachidesk/downloads
+  local-library:
+    enabled: true
+    mountPath: /home/suwayomi/.local/share/Tachidesk/local
 service:
   main:
     ports:

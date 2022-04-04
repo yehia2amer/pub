@@ -4,9 +4,10 @@ image:
   repository: bleckbeard/hiccup
   tag: latest
 persistence:
-  config:
+  storage(configfile):
     enabled: true
-    mountPath: /config
+    mountPath: /usr/share/nginx/html/config.json
+    readOnly: true
 service:
   main:
     ports:

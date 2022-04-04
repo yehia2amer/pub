@@ -5,9 +5,12 @@ image:
   repository: mikeah/superslicer-novnc
   tag: latest
 persistence:
-  config:
+  configsfolder:
     enabled: true
-    mountPath: /config
+    mountPath: /configs/
+  prints:
+    enabled: true
+    mountPath: /prints/
 service:
   main:
     ports:

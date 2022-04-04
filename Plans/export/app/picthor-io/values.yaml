@@ -11,9 +11,13 @@ image:
   repository: picthorio/picthor-io
   tag: latest
 persistence:
-  config:
+  cachepath:
     enabled: true
-    mountPath: /config
+    mountPath: /root/picthor/cache
+  rootdirectorypath:
+    enabled: true
+    mountPath: /root/picthor-root-1
+    readOnly: true
 service:
   main:
     ports:

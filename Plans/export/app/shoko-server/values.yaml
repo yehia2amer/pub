@@ -4,9 +4,15 @@ image:
   repository: shokoanime/server
   tag: daily
 persistence:
-  config:
+  animefolder:
     enabled: true
-    mountPath: /config
+    mountPath: /anime
+  appdata:
+    enabled: true
+    mountPath: /home/shoko/.shoko/
+  importfolder:
+    enabled: true
+    mountPath: /import
 service:
   main:
     ports:

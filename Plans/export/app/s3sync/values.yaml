@@ -10,9 +10,10 @@ image:
   repository: whatname/docker-s3sync
   tag: latest
 persistence:
-  config:
+  backupsourceexample:
     enabled: true
-    mountPath: /config
+    mountPath: /data/example
+    readOnly: true
 service:
   main:
     ports:

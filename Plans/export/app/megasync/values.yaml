@@ -7,9 +7,13 @@ image:
   repository: ich777/megasync
   tag: latest
 persistence:
-  config:
+  datadir:
     enabled: true
-    mountPath: /config
+    mountPath: /megasync/.local/share/data/Mega Limited/MEGAsync
+  hostpath:
+    enabled: true
+    mountPath: /mnt/host
+    readOnly: true
 service:
   main:
     ports:

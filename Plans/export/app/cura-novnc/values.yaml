@@ -4,9 +4,12 @@ image:
   repository: mikeah/cura-novnc
   tag: latest
 persistence:
-  config:
+  homefolder:
     enabled: true
-    mountPath: /config
+    mountPath: /home/cura/
+  prints:
+    enabled: true
+    mountPath: /prints/
 service:
   main:
     ports:

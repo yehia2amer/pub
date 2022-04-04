@@ -4,9 +4,22 @@ image:
   repository: gcr.io/cadvisor/cadvisor
   tag: latest
 persistence:
-  config:
+  dockerstoragefilesystem:
     enabled: true
-    mountPath: /config
+    mountPath: /var/lib/docker/
+    readOnly: true
+  rootfilesystem:
+    enabled: true
+    mountPath: /rootfs
+    readOnly: true
+  runtimevariabledata:
+    enabled: true
+    mountPath: /var/run
+    readOnly: true
+  sysfilesystem:
+    enabled: true
+    mountPath: /sys
+    readOnly: true
 service:
   main:
     ports:

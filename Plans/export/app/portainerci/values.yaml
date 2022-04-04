@@ -4,9 +4,12 @@ image:
   repository: portainerci/portainer
   tag: '2.1'
 persistence:
-  config:
+  data:
     enabled: true
-    mountPath: /config
+    mountPath: /data
+  dockersocket:
+    enabled: true
+    mountPath: /var/run/docker.sock
 service:
   main:
     ports:

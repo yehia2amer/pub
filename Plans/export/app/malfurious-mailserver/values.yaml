@@ -11,9 +11,15 @@ image:
   repository: malfurious/mailserver
   tag: latest
 persistence:
-  config:
+  data:
     enabled: true
-    mountPath: /config
+    mountPath: /data
+  letsencryptcertificatepath:
+    enabled: true
+    mountPath: /etc/letsencrypt
+  maildatapath:
+    enabled: true
+    mountPath: /var/mail
 service:
   main:
     ports:

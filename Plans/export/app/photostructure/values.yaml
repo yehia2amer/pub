@@ -7,7 +7,16 @@ image:
 persistence:
   config:
     enabled: true
-    mountPath: /config
+    mountPath: /ps/config
+  library:
+    enabled: true
+    mountPath: /ps/library
+  logs:
+    enabled: true
+    mountPath: /ps/logs
+  tempscratchdisk:
+    enabled: true
+    mountPath: /ps/tmp
 service:
   main:
     ports:

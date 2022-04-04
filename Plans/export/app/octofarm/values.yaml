@@ -5,9 +5,15 @@ image:
   repository: octofarm/octofarm
   tag: latest
 persistence:
-  config:
+  images:
     enabled: true
-    mountPath: /config
+    mountPath: /app/images
+  logs:
+    enabled: true
+    mountPath: /app/logs
+  scripts:
+    enabled: true
+    mountPath: /scripts
 service:
   main:
     ports:

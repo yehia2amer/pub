@@ -4,9 +4,12 @@ image:
   repository: grafana/promtail
   tag: latest
 persistence:
-  config:
+  hostpath1:
     enabled: true
-    mountPath: /config
+    mountPath: /etc/promtail
+  positions:
+    enabled: true
+    mountPath: /positions
 service:
   main:
     ports:

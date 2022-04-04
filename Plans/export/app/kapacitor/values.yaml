@@ -6,7 +6,10 @@ image:
 persistence:
   config:
     enabled: true
-    mountPath: /config
+    mountPath: /etc/kapacitor/kapacitor.conf
+  hostpath1:
+    enabled: true
+    mountPath: /var/lib/kapacitor
 service:
   main:
     ports:

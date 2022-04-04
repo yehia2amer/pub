@@ -6,9 +6,15 @@ image:
   repository: tchabaud/amule
   tag: latest
 persistence:
-  config:
+  storage(complete):
     enabled: true
-    mountPath: /config
+    mountPath: /incoming
+  storage(config):
+    enabled: true
+    mountPath: /home/amule/.aMule
+  storage(incomplete):
+    enabled: true
+    mountPath: /temp
 service:
   main:
     ports:

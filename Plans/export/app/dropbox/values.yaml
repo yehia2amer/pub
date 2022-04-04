@@ -8,9 +8,16 @@ image:
   repository: roninkenji/dropbox-docker
   tag: latest
 persistence:
-  config:
+  configfolder:
     enabled: true
-    mountPath: /config
+    mountPath: /dropbox
+  datafiles:
+    enabled: true
+    mountPath: /dropbox/Dropbox
+  timezonefile:
+    enabled: true
+    mountPath: /etc/localtime
+    readOnly: true
 service:
   main:
     ports:

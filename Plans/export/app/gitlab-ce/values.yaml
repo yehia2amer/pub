@@ -4,9 +4,15 @@ image:
   repository: gitlab/gitlab-ce
   tag: latest
 persistence:
-  config:
+  applicationdatastoragepath:
     enabled: true
-    mountPath: /config
+    mountPath: /var/opt/gitlab
+  configstoragepath:
+    enabled: true
+    mountPath: /etc/gitlab
+  logstoragepath:
+    enabled: true
+    mountPath: /var/log/gitlab
 service:
   main:
     ports:

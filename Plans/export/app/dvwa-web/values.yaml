@@ -6,7 +6,11 @@ image:
 persistence:
   config:
     enabled: true
-    mountPath: /config
+    mountPath: /var/www/html/config/
+  hostpath2:
+    enabled: true
+    mountPath: /var/www/html/php.ini
+    readOnly: true
 service:
   main:
     ports:

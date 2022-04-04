@@ -5,9 +5,12 @@ image:
   repository: bgameiro/arch-jupyterlab
   tag: latest
 persistence:
-  config:
+  appdata:
     enabled: true
-    mountPath: /config
+    mountPath: /appdata
+  data:
+    enabled: true
+    mountPath: /opt/app/data
 service:
   main:
     ports:

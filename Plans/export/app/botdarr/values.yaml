@@ -11,9 +11,12 @@ image:
   repository: shayaantx/botdarr
   tag: latest
 persistence:
-  config:
+  database:
     enabled: true
-    mountPath: /config
+    mountPath: /home/botdarr/database
+  logs:
+    enabled: true
+    mountPath: /home/botdarr/logs
 service:
   main:
     ports:

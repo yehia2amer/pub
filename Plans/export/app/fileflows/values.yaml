@@ -5,9 +5,18 @@ image:
   repository: revenz/fileflows
   tag: latest
 persistence:
-  config:
+  data:
     enabled: true
-    mountPath: /config
+    mountPath: /app/Data
+  logs:
+    enabled: true
+    mountPath: /app/Logs
+  media:
+    enabled: true
+    mountPath: /media/
+  tempdirectory:
+    enabled: true
+    mountPath: /temp
 service:
   main:
     ports:

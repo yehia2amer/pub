@@ -8,9 +8,12 @@ image:
   repository: ich777/jdupes-gui
   tag: latest
 persistence:
-  config:
+  datadir:
     enabled: true
-    mountPath: /config
+    mountPath: /jdupes
+  pathtofiles:
+    enabled: true
+    mountPath: /mnt/user
 service:
   main:
     ports:

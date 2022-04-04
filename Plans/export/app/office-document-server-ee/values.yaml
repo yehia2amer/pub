@@ -6,9 +6,30 @@ image:
   repository: onlyoffice/documentserver-ee
   tag: latest
 persistence:
-  config:
+  mountedfolderfordatabase:
     enabled: true
-    mountPath: /config
+    mountPath: /var/lib/postgresql
+  mountedfolderfordatafiles(sslcertificatescanbeaddedinthecertsubfolder):
+    enabled: true
+    mountPath: /var/www/onlyoffice/Data
+  mountedfolderforfilecache:
+    enabled: true
+    mountPath: /var/lib/onlyoffice
+  mountedfolderforlogs:
+    enabled: true
+    mountPath: /var/log/onlyoffice
+  mountedfolderforunsavedfiles:
+    enabled: true
+    mountPath: /var/lib/onlyoffice/documentserver/App_Data/cache/files/forgotten
+  mountedfolderwhereyoucanaddyourcustomfonts:
+    enabled: true
+    mountPath: /usr/share/fonts/truetype/custom
+  varlibrabbitmq:
+    enabled: true
+    mountPath: /var/lib/rabbitmq
+  varlibredis:
+    enabled: true
+    mountPath: /var/lib/redis
 service:
   main:
     ports:

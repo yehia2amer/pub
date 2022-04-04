@@ -30,9 +30,12 @@ image:
   repository: wger/devel
   tag: latest
 persistence:
-  config:
+  django_media_root:
     enabled: true
-    mountPath: /config
+    mountPath: /home/wger/media
+  django_static_root:
+    enabled: true
+    mountPath: /home/wger/static
 service:
   main:
     ports:

@@ -18,7 +18,16 @@ image:
 persistence:
   config:
     enabled: true
-    mountPath: /config
+    mountPath: /var/roundcube/config
+  dblocation:
+    enabled: true
+    mountPath: /var/roundcube/db
+  htmllocation:
+    enabled: true
+    mountPath: /var/www/html
+  roundcube-templocation:
+    enabled: true
+    mountPath: /tmp/roundcube-temp
 service:
   main:
     ports:

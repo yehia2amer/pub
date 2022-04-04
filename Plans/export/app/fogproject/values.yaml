@@ -4,9 +4,12 @@ image:
   repository: redvex2460/fogproject
   tag: latest
 persistence:
-  config:
+  images:
     enabled: true
-    mountPath: /config
+    mountPath: /images
+  mysql:
+    enabled: true
+    mountPath: /var/lib/mysql
 service:
   main:
     ports:

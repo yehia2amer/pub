@@ -4,9 +4,10 @@ image:
   repository: pinion/cherrymusic
   tag: latest
 persistence:
-  config:
+  cherrymusic:
     enabled: true
-    mountPath: /config
+    mountPath: /music
+    readOnly: true
 service:
   main:
     ports:

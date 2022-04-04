@@ -5,9 +5,18 @@ image:
   repository: kopia/kopia
   tag: latest
 persistence:
+  cachepath:
+    enabled: true
+    mountPath: /app/cache
   config:
     enabled: true
-    mountPath: /config
+    mountPath: /app/config
+  data:
+    enabled: true
+    mountPath: /app/data
+  logpath:
+    enabled: true
+    mountPath: /app/logs
 service:
   main:
     ports:

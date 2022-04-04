@@ -4,9 +4,10 @@ image:
   repository: xavierh/goaccess-for-nginxproxymanager
   tag: latest
 persistence:
-  config:
+  hostpath1:
     enabled: true
-    mountPath: /config
+    mountPath: /opt/log
+    readOnly: true
 service:
   main:
     ports:

@@ -17,9 +17,13 @@ image:
   repository: ich777/dirsyncpro
   tag: latest
 persistence:
-  config:
+  datadirectory:
     enabled: true
-    mountPath: /config
+    mountPath: /dirsyncpro
+  sourcedirectory-readonly:
+    enabled: true
+    mountPath: /mnt/sourcefiles
+    readOnly: true
 service:
   main:
     ports:

@@ -6,9 +6,15 @@ image:
   repository: atunnecliffe/splunk
   tag: latest
 persistence:
-  config:
+  appcredspersist:
     enabled: true
-    mountPath: /config
+    mountPath: /opt/splunk/etc/auth
+  configpersist:
+    enabled: true
+    mountPath: /opt/splunk/etc/apps
+  datapersist:
+    enabled: true
+    mountPath: /splunkdata
 service:
   main:
     ports:

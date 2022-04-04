@@ -8,6 +8,17 @@ Config:
   Device: {}
   Label: {}
   Path:
+    data:
+      Default: ''
+      Description: This is the location for the data (files and links).
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Storage (data)
+      Required: 'false'
+      Target: /data
+      Type: Path
+      value: /mnt/user/appdata/jirafeau/data
     storage(config):
       Default: ''
       Description: This is the configuration file.
@@ -19,17 +30,6 @@ Config:
       Target: /www/lib/config.local.php
       Type: Path
       value: /mnt/user/appdata/jirafeau/config/config.local.php
-    storage(data):
-      Default: ''
-      Description: This is the location for the data (files and links).
-      Display: always
-      Mask: 'false'
-      Mode: rw
-      Name: Storage (data)
-      Required: 'false'
-      Target: /data
-      Type: Path
-      value: /mnt/user/appdata/jirafeau/data
   Port:
     webui:
       Default: ''

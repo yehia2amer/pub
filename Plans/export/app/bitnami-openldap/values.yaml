@@ -24,9 +24,18 @@ image:
   repository: bitnami/openldap
   tag: latest
 persistence:
-  config:
+  appdata:
     enabled: true
-    mountPath: /config
+    mountPath: /bitnami/openldap/
+  certsfolderpath:
+    enabled: true
+    mountPath: /opt/bitnami/openldap/certs/
+  ldap_custom_ldif_dir:
+    enabled: true
+    mountPath: /ldifs
+  ldap_custom_schema_file:
+    enabled: true
+    mountPath: /schema/custom.ldif
 service:
   main:
     ports:

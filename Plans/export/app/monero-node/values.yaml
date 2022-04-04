@@ -5,9 +5,15 @@ image:
   repository: kannix/monero-full-node
   tag: latest
 persistence:
-  config:
+  blockchain(storage):
     enabled: true
-    mountPath: /config
+    mountPath: /home/monero/.bitmonero
+  containerdir(1):
+    enabled: true
+    mountPath: /usr/local
+  containerdir(2):
+    enabled: true
+    mountPath: /src
 service:
   main:
     ports:

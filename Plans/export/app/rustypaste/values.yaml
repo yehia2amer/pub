@@ -5,9 +5,13 @@ image:
   repository: orhunp/rustypaste
   tag: latest
 persistence:
-  config:
+  storage(configfile):
     enabled: true
-    mountPath: /config
+    mountPath: /app/config.toml
+    readOnly: true
+  storage(uploads):
+    enabled: true
+    mountPath: /app/upload
 service:
   main:
     ports:

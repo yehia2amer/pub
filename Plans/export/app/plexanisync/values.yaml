@@ -11,9 +11,12 @@ image:
   repository: mizz141/plexanisync-mizz141
   tag: latest
 persistence:
-  config:
+  custom_mappings:
     enabled: true
-    mountPath: /config
+    mountPath: /plexanisync/custom_mappings.yaml
+  settings_location:
+    enabled: true
+    mountPath: /config/settings.ini
 service:
   main:
     ports:

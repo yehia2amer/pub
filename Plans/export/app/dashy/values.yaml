@@ -4,9 +4,12 @@ image:
   repository: lissy93/dashy
   tag: latest
 persistence:
-  config:
+  configfile:
     enabled: true
-    mountPath: /config
+    mountPath: /app/public/conf.yml
+  iconspath:
+    enabled: true
+    mountPath: /app/public/item-icons/
 service:
   main:
     ports:

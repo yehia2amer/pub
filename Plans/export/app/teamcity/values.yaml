@@ -4,9 +4,12 @@ image:
   repository: jetbrains/teamcity-server
   tag: latest
 persistence:
-  config:
+  data:
     enabled: true
-    mountPath: /config
+    mountPath: /data/teamcity_server/datadir
+  logs:
+    enabled: true
+    mountPath: /opt/teamcity/logs
 service:
   main:
     ports:

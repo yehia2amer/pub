@@ -7,9 +7,24 @@ image:
   repository: pwa666/bacula-server
   tag: 11-sqlite3-latest
 persistence:
-  config:
+  apachelogpath:
     enabled: true
-    mountPath: /config
+    mountPath: /var/log/apache2
+  baculaconfigpath:
+    enabled: true
+    mountPath: /opt/bacula/etc
+  baculalogpath:
+    enabled: true
+    mountPath: /opt/bacula/log
+  baculastoragepath:
+    enabled: true
+    mountPath: /mnt/bacula
+  baculaworkingdirectory:
+    enabled: true
+    mountPath: /opt/bacula/working
+  baculumconfig:
+    enabled: true
+    mountPath: /etc/baculum
 service:
   main:
     ports:

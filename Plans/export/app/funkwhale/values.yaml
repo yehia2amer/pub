@@ -6,9 +6,13 @@ image:
   repository: thetarkus/funkwhale
   tag: latest
 persistence:
-  config:
+  data:
     enabled: true
-    mountPath: /config
+    mountPath: /data
+  musicpath:
+    enabled: true
+    mountPath: /music
+    readOnly: true
 service:
   main:
     ports:

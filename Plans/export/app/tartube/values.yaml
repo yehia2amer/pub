@@ -7,9 +7,12 @@ image:
   repository: 468654/tartube
   tag: latest
 persistence:
-  config:
+  storage(bridge):
     enabled: true
-    mountPath: /config
+    mountPath: /unraid_mnt
+  storage(data):
+    enabled: true
+    mountPath: /debian
 service:
   main:
     ports:

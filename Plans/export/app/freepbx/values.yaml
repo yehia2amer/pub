@@ -14,9 +14,21 @@ image:
   repository: tiredofit/freepbx
   tag: 15-latest
 persistence:
-  config:
+  certs:
     enabled: true
-    mountPath: /config
+    mountPath: /certs
+  data:
+    enabled: true
+    mountPath: /data
+  dbpath:
+    enabled: true
+    mountPath: /var/lib/mysql
+  log:
+    enabled: true
+    mountPath: /var/log
+  www:
+    enabled: true
+    mountPath: /var/www/html
 service:
   main:
     ports:

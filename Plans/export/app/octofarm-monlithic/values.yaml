@@ -4,9 +4,18 @@ image:
   repository: octofarm/octofarm
   tag: monolithic-latest
 persistence:
-  config:
+  database:
     enabled: true
-    mountPath: /config
+    mountPath: /data/db
+  images:
+    enabled: true
+    mountPath: /app/images
+  logs:
+    enabled: true
+    mountPath: /data/logs
+  scripts:
+    enabled: true
+    mountPath: /scripts
 service:
   main:
     ports:

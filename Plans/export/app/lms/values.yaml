@@ -4,9 +4,17 @@ image:
   repository: epoupon/lms
   tag: latest
 persistence:
-  config:
+  storage(configfile):
     enabled: true
-    mountPath: /config
+    mountPath: /etc/lms.conf
+    readOnly: true
+  storage(data):
+    enabled: true
+    mountPath: /var/lms
+  storage(media):
+    enabled: true
+    mountPath: /music
+    readOnly: true
 service:
   main:
     ports:

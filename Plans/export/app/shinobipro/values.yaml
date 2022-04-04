@@ -18,6 +18,26 @@ persistence:
   config:
     enabled: true
     mountPath: /config
+  customautoloadmodules:
+    enabled: true
+    mountPath: /opt/shinobi/libs/customAutoLoad
+  localtime:
+    enabled: true
+    mountPath: /etc/localtime
+    readOnly: true
+  mariadbdatabaselocation:
+    enabled: true
+    mountPath: /var/lib/mysql
+  temporarystreams:
+    enabled: true
+    mountPath: /dev/shm/streams
+  timezone:
+    enabled: true
+    mountPath: /usr/share/zoneinfo/
+    readOnly: true
+  videostoragelocation:
+    enabled: true
+    mountPath: /opt/shinobi/videos
 service:
   main:
     ports:

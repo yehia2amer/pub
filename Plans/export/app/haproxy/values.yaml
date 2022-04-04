@@ -4,9 +4,10 @@ image:
   repository: haproxy
   tag: latest
 persistence:
-  config:
+  configurationdirectory:
     enabled: true
-    mountPath: /config
+    mountPath: /usr/local/etc/haproxy
+    readOnly: true
 service:
   main:
     ports:

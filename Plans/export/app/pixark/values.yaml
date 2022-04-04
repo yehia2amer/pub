@@ -15,9 +15,12 @@ image:
   repository: ich777/steamcmd
   tag: pixark
 persistence:
-  config:
+  serverfiles:
     enabled: true
-    mountPath: /config
+    mountPath: /serverdata/serverfiles
+  steamcmd:
+    enabled: true
+    mountPath: /serverdata/steamcmd
 service:
   main:
     ports:

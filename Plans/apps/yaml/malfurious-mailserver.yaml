@@ -5,6 +5,17 @@ Config:
   Device: {}
   Label: {}
   Path:
+    data:
+      Default: /mnt/user/appdata/malfurious-mailserver/redis
+      Description: 'Container Path: /data'
+      Display: advanced-hide
+      Mask: 'false'
+      Mode: rw
+      Name: Redis Data Path
+      Required: 'false'
+      Target: /data
+      Type: Path
+      value: ''
     letsencryptcertificatepath:
       Default: ''
       Description: 'Container Path: /etc/letsencrypt'
@@ -25,17 +36,6 @@ Config:
       Name: Mail Data Path
       Required: 'true'
       Target: /var/mail
-      Type: Path
-      value: ''
-    redisdatapath:
-      Default: /mnt/user/appdata/malfurious-mailserver/redis
-      Description: 'Container Path: /data'
-      Display: advanced-hide
-      Mask: 'false'
-      Mode: rw
-      Name: Redis Data Path
-      Required: 'false'
-      Target: /data
       Type: Path
       value: ''
   Port:

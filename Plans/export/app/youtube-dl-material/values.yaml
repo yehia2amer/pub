@@ -6,9 +6,18 @@ image:
   repository: tzahi12345/youtubedl-material
   tag: latest
 persistence:
-  config:
+  appdata:
     enabled: true
-    mountPath: /config
+    mountPath: /app/appdata
+  audiodownloads:
+    enabled: true
+    mountPath: /app/audio/
+  subscriptiondownloads:
+    enabled: true
+    mountPath: /app/subscriptions/
+  videodownloads:
+    enabled: true
+    mountPath: /app/video/
 service:
   main:
     ports:

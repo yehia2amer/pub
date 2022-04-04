@@ -4,9 +4,12 @@ image:
   repository: infiniteproject/icecast
   tag: latest
 persistence:
-  config:
+  hostpath1:
     enabled: true
-    mountPath: /config
+    mountPath: /etc/icecast.xml
+  hostpath2:
+    enabled: true
+    mountPath: /usr/share/icecast/web/void.mp3
 service:
   main:
     ports:

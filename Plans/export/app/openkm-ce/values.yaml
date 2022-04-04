@@ -4,9 +4,18 @@ image:
   repository: openkm/openkm-ce
   tag: 6.3.8
 persistence:
-  config:
+  configfile(1):
     enabled: true
-    mountPath: /config
+    mountPath: /opt/tomcat/conf/server.xml
+  configfile(2):
+    enabled: true
+    mountPath: /opt/tomcat/OpenKM.cfg
+  repository(data):
+    enabled: true
+    mountPath: /opt/tomcat/repository
+  swapspace:
+    enabled: true
+    mountPath: /HOST_SWAP
 service:
   main:
     ports:

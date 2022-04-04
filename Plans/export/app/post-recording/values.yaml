@@ -11,9 +11,15 @@ image:
   repository: chacawaca/post-recording
   tag: latest
 persistence:
+  backupfolder:
+    enabled: true
+    mountPath: /backup
   config:
     enabled: true
     mountPath: /config
+  watchfolder:
+    enabled: true
+    mountPath: /watch
 service:
   main:
     ports:

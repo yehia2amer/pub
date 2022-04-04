@@ -16,7 +16,14 @@ image:
 persistence:
   config:
     enabled: true
-    mountPath: /config
+    mountPath: /config/rebuild-dndc
+  dockersock:
+    enabled: true
+    mountPath: /var/run/docker.sock
+  dockertemplatelocation:
+    enabled: true
+    mountPath: /config/docker-templates
+    readOnly: true
 service:
   main:
     ports:

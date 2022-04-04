@@ -4,9 +4,12 @@ image:
   repository: songkong/songkong
   tag: latest
 persistence:
-  config:
+  music:
     enabled: true
-    mountPath: /config
+    mountPath: /music
+  songkongconfig:
+    enabled: true
+    mountPath: /songkong
 service:
   main:
     ports:

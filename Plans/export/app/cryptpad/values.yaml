@@ -4,9 +4,24 @@ image:
   repository: promasu/cryptpad
   tag: latest
 persistence:
-  config:
+  blobpath:
     enabled: true
-    mountPath: /config
+    mountPath: /cryptpad/blob
+  blockpath:
+    enabled: true
+    mountPath: /cryptpad/block
+  configpath:
+    enabled: true
+    mountPath: /cryptpad/config/config.js
+  customizepath:
+    enabled: true
+    mountPath: /cryptpad/customize
+  data:
+    enabled: true
+    mountPath: /cryptpad/data
+  datastorepath:
+    enabled: true
+    mountPath: /cryptpad/datastore
 service:
   main:
     ports:

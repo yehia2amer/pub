@@ -4,9 +4,10 @@ image:
   repository: dwaaan/hrconvert2-docker
   tag: latest
 persistence:
-  config:
+  storage(configfile):
     enabled: true
-    mountPath: /config
+    mountPath: /var/www/html/HRProprietary/HRConvert2/config.php
+    readOnly: true
 service:
   main:
     ports:

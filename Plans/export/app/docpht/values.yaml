@@ -7,7 +7,16 @@ image:
 persistence:
   config:
     enabled: true
-    mountPath: /config
+    mountPath: /var/www/app/src/config
+  data:
+    enabled: true
+    mountPath: /var/www/app/data
+  pages:
+    enabled: true
+    mountPath: /var/www/app/pages
+  ssl:
+    enabled: true
+    mountPath: /etc/nginx/ssl
 service:
   main:
     ports:

@@ -5,9 +5,15 @@ image:
   repository: sonarqube
   tag: latest
 persistence:
-  config:
+  data:
     enabled: true
-    mountPath: /config
+    mountPath: /opt/sonarqube/data
+  extensions:
+    enabled: true
+    mountPath: /opt/sonarqube/extensions
+  logs:
+    enabled: true
+    mountPath: /opt/sonarqube/logs
 service:
   main:
     ports:

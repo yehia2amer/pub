@@ -11,9 +11,10 @@ image:
   repository: amir20/dozzle
   tag: latest
 persistence:
-  config:
+  dockerlogs:
     enabled: true
-    mountPath: /config
+    mountPath: /var/run/docker.sock
+    readOnly: true
 service:
   main:
     ports:

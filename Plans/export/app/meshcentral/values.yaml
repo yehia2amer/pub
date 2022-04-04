@@ -10,9 +10,12 @@ image:
   repository: typhonragewind/meshcentral
   tag: latest
 persistence:
-  config:
+  optmeshcentralmeshcentral-data:
     enabled: true
-    mountPath: /config
+    mountPath: /opt/meshcentral/meshcentral-data
+  optmeshcentralmeshcentral-files:
+    enabled: true
+    mountPath: '/opt/meshcentral/meshcentral-files '
 service:
   main:
     ports:

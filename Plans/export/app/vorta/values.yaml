@@ -6,9 +6,16 @@ image:
   repository: ghcr.io/borgbase/vorta-docker
   tag: latest
 persistence:
+  backups(to):
+    enabled: true
+    mountPath: /destination
   config:
     enabled: true
     mountPath: /config
+  data:
+    enabled: true
+    mountPath: /data
+    readOnly: true
 service:
   main:
     ports:

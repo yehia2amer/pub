@@ -4,17 +4,6 @@ Config:
   Device: {}
   Label: {}
   Path:
-    clipdirectory:
-      Default: /mnt/user/appdata/unifi-protect-backup/clips
-      Description: ONLY USED WITH LOCAL RCLONE REMOTE
-      Display: always
-      Mask: 'false'
-      Mode: r
-      Name: Clip directory
-      Required: 'false'
-      Target: /data
-      Type: Path
-      value: /mnt/user/appdata/unifi-protect-backup/clips
     config:
       Default: /mnt/user/appdata/unifi-protect-backup
       Description: Location of rclone configuration files
@@ -26,6 +15,17 @@ Config:
       Target: /config
       Type: Path
       value: /mnt/user/appdata/unifi-protect-backup
+    data:
+      Default: /mnt/user/appdata/unifi-protect-backup/clips
+      Description: ONLY USED WITH LOCAL RCLONE REMOTE
+      Display: always
+      Mask: 'false'
+      Mode: r
+      Name: Clip directory
+      Required: 'false'
+      Target: /data
+      Type: Path
+      value: /mnt/user/appdata/unifi-protect-backup/clips
   Port: {}
   Variable:
     clipretentionperiod:

@@ -9,9 +9,15 @@ image:
   repository: ich777/steamcmd
   tag: dontstarve
 persistence:
-  config:
+  serverfiles:
     enabled: true
-    mountPath: /config
+    mountPath: /serverdata/serverfiles
+  steamcmd:
+    enabled: true
+    mountPath: /serverdata/steamcmd
+  token:
+    enabled: true
+    mountPath: /serverdata/.klei/DoNotStarveTogether
 service:
   main:
     ports:

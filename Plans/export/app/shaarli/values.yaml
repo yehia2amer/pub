@@ -4,9 +4,12 @@ image:
   repository: shaarli/shaarli
   tag: master
 persistence:
-  config:
+  cache:
     enabled: true
-    mountPath: /config
+    mountPath: /var/www/shaarli/cache
+  data:
+    enabled: true
+    mountPath: /var/www/shaarli/data
 service:
   main:
     ports:

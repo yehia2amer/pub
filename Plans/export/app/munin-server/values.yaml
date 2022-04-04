@@ -6,9 +6,10 @@ image:
   repository: shaf/munin-server
   tag: latest
 persistence:
-  config:
+  munin-server:
     enabled: true
-    mountPath: /config
+    mountPath: /sys
+    readOnly: true
 service:
   main:
     ports:

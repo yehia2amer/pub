@@ -4,9 +4,12 @@ image:
   repository: lancachenet/monolithic
   tag: latest
 persistence:
-  config:
+  cache-folder:
     enabled: true
-    mountPath: /config
+    mountPath: /data/cache/
+  logs-folder:
+    enabled: true
+    mountPath: /data/logs
 service:
   main:
     ports:

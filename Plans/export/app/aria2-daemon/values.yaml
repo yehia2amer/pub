@@ -25,9 +25,12 @@ image:
   repository: fanningert/aria2-daemon
   tag: latest
 persistence:
-  config:
+  configstoragepath:
     enabled: true
-    mountPath: /config
+    mountPath: /conf
+  hostpath1:
+    enabled: true
+    mountPath: /download
 service:
   main:
     ports:

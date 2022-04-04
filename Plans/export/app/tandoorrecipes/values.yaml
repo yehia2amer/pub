@@ -17,9 +17,12 @@ image:
   repository: vabene1111/recipes
   tag: latest
 persistence:
-  config:
+  data:
     enabled: true
-    mountPath: /config
+    mountPath: /data
+  medialocation:
+    enabled: true
+    mountPath: /opt/recipes/mediafiles/
 service:
   main:
     ports:

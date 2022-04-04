@@ -4,9 +4,15 @@ image:
   repository: deasmi/docker-puppetmaster
   tag: latest
 persistence:
-  config:
+  coded:
     enabled: true
-    mountPath: /config
+    mountPath: /etc/puppetlabs/code
+  confdir:
+    enabled: true
+    mountPath: /etc/puppetlabs/puppet
+  ssldir:
+    enabled: true
+    mountPath: /etc/puppetlabs/puppet/ssl
 service:
   main:
     ports:

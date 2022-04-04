@@ -33,9 +33,18 @@ image:
   repository: jlesage/filebot
   tag: latest
 persistence:
+  automatedmediacenteroutputdirectory:
+    enabled: true
+    mountPath: /output
+  automatedmediacenterwatchdirectory:
+    enabled: true
+    mountPath: /watch
   config:
     enabled: true
     mountPath: /config
+  storage:
+    enabled: true
+    mountPath: /storage
 service:
   main:
     ports:

@@ -7,9 +7,13 @@ image:
   repository: hussainalhaddad/config2mega
   tag: latest
 persistence:
-  config:
+  megaconfigfolder:
     enabled: true
-    mountPath: /config
+    mountPath: /root/.megaCmd
+  unraidconfigfolder:
+    enabled: true
+    mountPath: /home/unraidconfig
+    readOnly: true
 service:
   main:
     ports:

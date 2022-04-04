@@ -6,9 +6,18 @@ image:
   repository: xternet/onlyoffice-mysql-5.7
   tag: latest
 persistence:
-  config:
+  mountedfolderformysqldatabase:
     enabled: true
-    mountPath: /config
+    mountPath: /var/lib/mysql
+  mountedmysqllogs:
+    enabled: true
+    mountPath: /var/log/mysql
+  onlyofficeentrypointformysqldatabasesetup(setup-sqlcreatedbeforemysqlcontainerisstarted):
+    enabled: true
+    mountPath: /docker-entrypoint-initdb.d
+  onlyofficemysqlconfig(onlyoffice-cnfcreatedbeforemysqlcontainerisstarted):
+    enabled: true
+    mountPath: /etc/mysql/conf.d
 service:
   main:
     ports:

@@ -4,9 +4,12 @@ image:
   repository: crazymax/fail2ban
   tag: latest
 persistence:
-  config:
+  data:
     enabled: true
-    mountPath: /config
+    mountPath: /data
+  log_file:
+    enabled: true
+    mountPath: /var/log
 service:
   main:
     ports:

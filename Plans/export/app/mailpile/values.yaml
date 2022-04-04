@@ -4,9 +4,12 @@ image:
   repository: rroemhild/mailpile
   tag: latest
 persistence:
-  config:
+  path1:
     enabled: true
-    mountPath: /config
+    mountPath: /root/.local/share/Mailpile
+  path2:
+    enabled: true
+    mountPath: /root/.gnupg
 service:
   main:
     ports:

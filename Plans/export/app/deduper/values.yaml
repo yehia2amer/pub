@@ -4,9 +4,12 @@ image:
   repository: daman20/deduper
   tag: latest
 persistence:
-  config:
+  appdata:
     enabled: true
-    mountPath: /config
+    mountPath: /appdata
+  scandirectory:
+    enabled: true
+    mountPath: /scan
 service:
   main:
     ports:

@@ -11,9 +11,15 @@ image:
   repository: imthai/qbittorrent-filebot
   tag: latest
 persistence:
-  config:
+  data:
     enabled: true
-    mountPath: /config
+    mountPath: /data
+  downloads:
+    enabled: true
+    mountPath: /downloads
+  media:
+    enabled: true
+    mountPath: /media
 service:
   main:
     ports:

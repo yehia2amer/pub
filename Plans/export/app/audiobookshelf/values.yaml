@@ -4,9 +4,15 @@ image:
   repository: advplyr/audiobookshelf
   tag: latest
 persistence:
+  audiobooks:
+    enabled: true
+    mountPath: /audiobooks
   config:
     enabled: true
     mountPath: /config
+  metadata:
+    enabled: true
+    mountPath: /metadata
 service:
   main:
     ports:

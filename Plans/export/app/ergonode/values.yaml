@@ -4,9 +4,12 @@ image:
   repository: ergoplatform/ergo
   tag: latest
 persistence:
-  config:
+  nodeconf:
     enabled: true
-    mountPath: /config
+    mountPath: /etc/myergo.conf
+  nodedata:
+    enabled: true
+    mountPath: /home/ergo/.ergo
 service:
   main:
     ports:

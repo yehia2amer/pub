@@ -15,9 +15,15 @@ image:
   repository: prodrigestivill/postgres-backup-local
   tag: latest
 persistence:
-  config:
+  backups:
     enabled: true
-    mountPath: /config
+    mountPath: /backups
+  data:
+    enabled: true
+    mountPath: /var/lib/postgresql/data
+  varoptpgbackups:
+    enabled: true
+    mountPath: /var/opt/pgbackups
 service:
   main:
     ports:

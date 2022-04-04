@@ -32,9 +32,21 @@ image:
   repository: xibosignage/xibo-cms
   tag: '1.8'
 persistence:
-  config:
+  backup:
     enabled: true
-    mountPath: /config
+    mountPath: /var/www/backup
+  customfiles:
+    enabled: true
+    mountPath: /var/www/cms/custom
+  customtheme:
+    enabled: true
+    mountPath: /var/www/cms/web/theme/custom
+  library:
+    enabled: true
+    mountPath: /var/www/cms/library
+  userscritps:
+    enabled: true
+    mountPath: /var/www/cms/web/userscripts
 service:
   main:
     ports:

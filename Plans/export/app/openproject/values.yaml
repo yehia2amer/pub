@@ -5,9 +5,12 @@ image:
   repository: openproject/community
   tag: '12'
 persistence:
-  config:
+  hostpath1:
     enabled: true
-    mountPath: /config
+    mountPath: /var/openproject/pgdata
+  hostpath2:
+    enabled: true
+    mountPath: /var/openproject/assets
 service:
   main:
     ports:

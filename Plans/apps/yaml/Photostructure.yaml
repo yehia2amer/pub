@@ -6,6 +6,17 @@ Config:
   Device: {}
   Label: {}
   Path:
+    config:
+      Default: /mnt/user/appdata/photostructure/config
+      Description: System configuration is written into this directory.
+      Display: advanced
+      Mask: 'false'
+      Mode: rw
+      Name: System config
+      Required: 'true'
+      Target: /ps/config
+      Type: Path
+      value: /mnt/user/appdata/photostructure/config
     library:
       Default: /mnt/user/Photos
       Description: This is where your PhotoStructure Library will be stored. It needs
@@ -30,17 +41,6 @@ Config:
       Target: /ps/logs
       Type: Path
       value: /mnt/user/appdata/photostructure/logs
-    systemconfig:
-      Default: /mnt/user/appdata/photostructure/config
-      Description: System configuration is written into this directory.
-      Display: advanced
-      Mask: 'false'
-      Mode: rw
-      Name: System config
-      Required: 'true'
-      Target: /ps/config
-      Type: Path
-      value: /mnt/user/appdata/photostructure/config
     tempscratchdisk:
       Default: /mnt/cache/appdata/photostructure/tmp
       Description: This needs to be fast, local disk.

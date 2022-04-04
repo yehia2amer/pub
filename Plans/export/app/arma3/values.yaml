@@ -10,9 +10,15 @@ image:
   repository: ich777/steamcmd
   tag: arma3
 persistence:
-  config:
+  profiles:
     enabled: true
-    mountPath: /config
+    mountPath: /serverdata/.local/share
+  serverfiles:
+    enabled: true
+    mountPath: /serverdata/serverfiles
+  steamcmd:
+    enabled: true
+    mountPath: /serverdata/steamcmd
 service:
   main:
     ports:

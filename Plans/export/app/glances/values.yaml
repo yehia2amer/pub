@@ -4,9 +4,10 @@ image:
   repository: nicolargo/glances
   tag: latest
 persistence:
-  config:
+  glances:
     enabled: true
-    mountPath: /config
+    mountPath: /var/run/docker.sock
+    readOnly: true
 service:
   main:
     ports:

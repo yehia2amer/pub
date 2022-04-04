@@ -7,9 +7,12 @@ image:
   repository: crazymax/pure-ftpd
   tag: latest
 persistence:
-  config:
+  data:
     enabled: true
-    mountPath: /config
+    mountPath: /data
+  ftpfolder:
+    enabled: true
+    mountPath: /home
 service:
   main:
     ports:

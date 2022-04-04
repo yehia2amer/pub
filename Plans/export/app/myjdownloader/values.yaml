@@ -8,9 +8,15 @@ image:
   repository: jaymoulin/jdownloader
   tag: latest
 persistence:
-  config:
+  configfolder:
     enabled: true
-    mountPath: /config
+    mountPath: /opt/JDownloader/cfg
+  downloadsfolder:
+    enabled: true
+    mountPath: /opt/JDownloader/Downloads
+  logsfolder:
+    enabled: true
+    mountPath: /opt/JDownloader/logs
 service:
   main:
     ports:

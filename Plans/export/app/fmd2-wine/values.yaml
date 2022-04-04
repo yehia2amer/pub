@@ -5,9 +5,21 @@ image:
   repository: banhcanh/docker-fmd2
   tag: latest
 persistence:
-  config:
+  appluamodulespath:
     enabled: true
-    mountPath: /config
+    mountPath: /app/FMD2/lua
+  appuserdata:
+    enabled: true
+    mountPath: /app/FMD2/userdata
+  appwineconfig:
+    enabled: true
+    mountPath: /config/.wine
+  data:
+    enabled: true
+    mountPath: /app/FMD2/data
+  downloaddirectory:
+    enabled: true
+    mountPath: /downloads
 service:
   main:
     ports:

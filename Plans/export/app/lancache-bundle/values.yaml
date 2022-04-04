@@ -34,9 +34,15 @@ image:
   repository: josh5/lancache-bundle
   tag: latest
 persistence:
-  config:
+  data:
     enabled: true
-    mountPath: /config
+    mountPath: /data/cache
+  dnslogs:
+    enabled: true
+    mountPath: /var/log/named
+  nginxlogs:
+    enabled: true
+    mountPath: /var/log/nginx
 service:
   main:
     ports:

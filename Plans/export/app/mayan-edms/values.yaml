@@ -4,9 +4,15 @@ image:
   repository: mayanedms/mayanedms
   tag: latest
 persistence:
-  config:
+  directory(data):
     enabled: true
-    mountPath: /config
+    mountPath: /var/lib/mayan
+  stagingfolder(optional):
+    enabled: true
+    mountPath: /opt/staging_folder
+  watchfolder(optional):
+    enabled: true
+    mountPath: /opt/watch_folder
 service:
   main:
     ports:

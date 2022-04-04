@@ -7,9 +7,12 @@ image:
   repository: twiddly/happypandax
   tag: latest
 persistence:
-  config:
+  contentpath:
     enabled: true
-    mountPath: /config
+    mountPath: /content
+  data:
+    enabled: true
+    mountPath: /data
 service:
   main:
     ports:

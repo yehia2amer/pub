@@ -4,9 +4,12 @@ image:
   repository: sclaflin/plate-minder
   tag: latest
 persistence:
-  config:
+  config_yaml:
     enabled: true
-    mountPath: /config
+    mountPath: /app/config.yaml
+  data:
+    enabled: true
+    mountPath: /app/data
 service:
   main:
     ports:

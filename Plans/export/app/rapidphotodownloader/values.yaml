@@ -8,9 +8,15 @@ image:
   repository: ich777/rapidphotodownloader
   tag: latest
 persistence:
-  config:
+  datadir:
     enabled: true
-    mountPath: /config
+    mountPath: /rapidphotodownloader
+  destinantionfolder:
+    enabled: true
+    mountPath: /media/destination
+  sourcefolder:
+    enabled: true
+    mountPath: /media/source
 service:
   main:
     ports:

@@ -5,9 +5,12 @@ image:
   repository: docker
   tag: dind
 persistence:
-  config:
+  certificate:
     enabled: true
-    mountPath: /config
+    mountPath: /certs
+  dockerstorage:
+    enabled: true
+    mountPath: /var/lib/docker
 service:
   main:
     ports:

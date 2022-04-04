@@ -7,9 +7,13 @@ image:
   repository: webpsh/webps
   tag: latest
 persistence:
-  config:
+  storage(cache):
     enabled: true
-    mountPath: /config
+    mountPath: /opt/exhaust
+  storage(pics):
+    enabled: true
+    mountPath: /opt/pics
+    readOnly: true
 service:
   main:
     ports:

@@ -4,9 +4,12 @@ image:
   repository: ghcr.io/sytone/obsidian-remote
   tag: latest
 persistence:
-  config:
+  storage(config):
     enabled: true
-    mountPath: /config
+    mountPath: /config/.config/obsidian
+  storage(vaults):
+    enabled: true
+    mountPath: /vaults
 service:
   main:
     ports:

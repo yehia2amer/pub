@@ -4,9 +4,12 @@ image:
   repository: malvarez00/docker-motioneye
   tag: latest
 persistence:
-  config:
+  configurationpath:
     enabled: true
-    mountPath: /config
+    mountPath: /etc/motioneye
+  mediafilespath:
+    enabled: true
+    mountPath: /var/lib/motioneye
 service:
   main:
     ports:

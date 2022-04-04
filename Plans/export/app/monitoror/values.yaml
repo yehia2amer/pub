@@ -5,9 +5,10 @@ image:
   repository: monitoror/monitoror
   tag: latest
 persistence:
-  config:
+  directory(config):
     enabled: true
-    mountPath: /config
+    mountPath: /configs
+    readOnly: true
 service:
   main:
     ports:

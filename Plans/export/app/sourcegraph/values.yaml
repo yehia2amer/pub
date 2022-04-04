@@ -4,9 +4,12 @@ image:
   repository: sourcegraph/server
   tag: 3.10.0
 persistence:
-  config:
+  applicationdatastoragepath:
     enabled: true
-    mountPath: /config
+    mountPath: /var/opt/sourcegraph
+  configstoragepath:
+    enabled: true
+    mountPath: /etc/sourcegraph
 service:
   main:
     ports:

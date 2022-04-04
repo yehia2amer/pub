@@ -9,9 +9,12 @@ image:
   repository: ich777/krusader
   tag: latest
 persistence:
-  config:
+  containerpath:
     enabled: true
-    mountPath: /config
+    mountPath: /krusader
+  datapath:
+    enabled: true
+    mountPath: /mnt/user
 service:
   main:
     ports:

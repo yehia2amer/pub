@@ -8,9 +8,12 @@ image:
   repository: markusmcnugen/crushftp
   tag: latest
 persistence:
-  config:
+  configvolume:
     enabled: true
-    mountPath: /config
+    mountPath: /var/opt/CrushFTP10
+  ftpfolder1:
+    enabled: true
+    mountPath: /mnt/FTP/Shared
 service:
   main:
     ports:

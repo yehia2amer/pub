@@ -4,9 +4,13 @@ image:
   repository: checkmk/check-mk-raw
   tag: latest
 persistence:
-  config:
+  datapath:
     enabled: true
-    mountPath: /config
+    mountPath: /omd/sites
+  hostlocaltime:
+    enabled: true
+    mountPath: /etc/localtime
+    readOnly: true
 service:
   main:
     ports:
