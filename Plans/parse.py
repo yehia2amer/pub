@@ -639,3 +639,20 @@ for name, app in combinedfree.items():
   valuesyamlFile.write(valuesyamlString)
   valuesyamlFile.close()
   
+  # Handle Questions.yaml
+  
+  
+  questionsyamlString = yaml.dump(questionsyaml)
+  questionsyamlFile = open("./export/"+"app/"+tmpname+"/questions.yaml", "w")
+  questionsyamlFile.write(questionsyamlString)
+  questionsyamlFile.close()
+  
+  with open("./export/"+"app/"+tmpname+"/questions.yaml", "r") as f:
+      lines3 = f.readlines()
+  with open("./export/"+"app/"+tmpname+"/questions.yaml", "w") as f:
+      for line in lines3:
+          if "dhgfhgfddhgfhdgfhgfd" in line:
+            f.write(""+line)
+          else:
+              f.write(line)
+  
