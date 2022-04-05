@@ -477,10 +477,6 @@ fileObject = open("example/values.json", "r")
 jsonContent = fileObject.read()
 valuesyaml = json.loads(jsonContent)
 
-fileObject = open("example/questions.json", "r")
-jsonContent = fileObject.read()
-questionsyaml = json.loads(jsonContent)
-
 chartsyaml["annotations"].pop("truecharts.org/catagories", "")
 chartsyaml["annotations"]["truecharts.org/catagories"] = []
 
@@ -585,8 +581,10 @@ for name, app in combinedfree.items():
     valuesyaml["podSecurityContext"]["runAsUser"] = 0
     valuesyaml["podSecurityContext"]["runAsGroup"] = 0
 
+  privflag = False
   if "Privileged" in app["Config"].keys() and app["Config"]["Privileged"] and ( app["Config"]["Privileged"] == 'true' or app["Config"]["Privileged"] == 'True' or app["Config"]["Privileged"] == True ):
     valuesyaml["securityContext"]["privileged"] = True
+    privflag = True
     
   if "PostArgs" in app["Config"].keys() and app["Config"]["PostArgs"]:
     valuesyaml["args"] = [app["Config"]["PostArgs"]]
@@ -628,6 +626,8 @@ for name, app in combinedfree.items():
   if "main" not in  valuesyaml["service"].keys() or not valuesyaml["service"]["main" ]:
       placeholder = next(iter(valuesyaml["service"]))
       valuesyaml["service"]["main"] = valuesyaml["service"][placeholder]
+      valuesyaml["service"]["main"]["ports"]["main"] = valuesyaml["service"][placeholder]["ports"][placeholder]
+      valuesyaml["service"]["main"]["ports"].pop(placeholder, "")
       valuesyaml["service"].pop(placeholder, "")
       
         
@@ -642,17 +642,114 @@ for name, app in combinedfree.items():
   # Handle Questions.yaml
   
   
-  questionsyamlString = yaml.dump(questionsyaml)
-  questionsyamlFile = open("./export/"+"app/"+tmpname+"/questions.yaml", "w")
-  questionsyamlFile.write(questionsyamlString)
-  questionsyamlFile.close()
-  
-  with open("./export/"+"app/"+tmpname+"/questions.yaml", "r") as f:
-      lines3 = f.readlines()
+  with open("./example/questions1-no-portal.yaml", "r") as f:
+      questions1noportal = f.readlines()
+  with open("./example/questions1-portal.yaml", "r") as f:
+      questions1portal = f.readlines()
+  with open("./example/questions2.yaml", "r") as f:
+      questions2 = f.readlines()
+  with open("./example/questions2-service.yaml", "r") as f:
+      questions2service = f.readlines()
+  with open("./example/questions3.yaml", "r") as f:
+      questions3 = f.readlines()
+  with open("./example/questions4.yaml", "r") as f:
+      questions4 = f.readlines()
+  with open("./example/questions4-persistence.yaml", "r") as f:
+      questions4persistence = f.readlines()
+  with open("./example/questions5.yaml", "r") as f:
+      questions5 = f.readlines()
+  with open("./example/questions6.yaml", "r") as f:
+      questions6 = f.readlines()
+  with open("./example/questions7.yaml", "r") as f:
+      questions7 = f.readlines()
+  with open("./example/questions-env.yaml", "r") as f:
+      questionsenv = f.readlines()
+  with open("./example/questions-env-fixed.yaml", "r") as f:
+      questionsenvfixed = f.readlines()
   with open("./export/"+"app/"+tmpname+"/questions.yaml", "w") as f:
-      for line in lines3:
-          if "dhgfhgfddhgfhdgfhgfd" in line:
-            f.write(""+line)
+      if not valuesyaml["service"]["main"]["enabled"]:
+        for line in questions1noportal:
+          f.write(line)
+      else:
+        for line in questions1portal:
+          f.write(line)
+      f.write("\n")
+      if len(valuesyaml["env"]) != 0:
+        for line in questionsenvfixed:
+          f.write(line)
+        f.write("\n")
+        for name, value in valuesyaml["env"].items():
+          for line in questionsenv:
+            f.write(line)
+        f.write("\n")
+      f.write("\n")
+      if valuesyaml["service"]["main"]["enabled"]:
+        for line in questions2:
+          if "PLACEHOLDERPORTPORT" in line:
+            f.write("                              default: "+str(valuesyaml["service"]["main"]["ports"]["main"]["port"])+"\n")
+          elif "PLACEHOLDERPORTMODE" in line:
+            f.write("                                    default: "+str(valuesyaml["service"]["main"]["ports"]["main"]["protocol"])+"\n")
+          elif "PLACEHOLDERPORTTARGET" in line:
+            f.write("                                    default: "+str(valuesyaml["service"]["main"]["ports"]["main"]["targetPort"])+"\n")
           else:
-              f.write(line)
+            f.write(line)
+        f.write("\n")
+        for name, value in valuesyaml["service"].items():
+          if name != "main":
+            for line in questions2service:
+              if "PLACEHOLDERSVCNAME" in line:
+                f.write("        - variable: "+name+"\n")
+              elif "PLACEHOLDERSVCLABEL" in line:
+                f.write('          label: "'+name+' service"\n')
+              elif "PLACEHOLDERPORTNAME" in line:
+                f.write("                    - variable: "+name+"\n")
+              elif "PLACEHOLDERPORTLABEL" in line:
+                f.write('                      label: "'+name+' port"\n')
+              elif "PLACEHOLDERPORTPORT" in line:
+                f.write("                              default: "+str(valuesyaml["service"][name]["ports"][name]["port"])+"\n")
+              elif "PLACEHOLDERPORTMODE" in line:
+                f.write("                                    default: "+str(valuesyaml["service"][name]["ports"][name]["protocol"])+"\n")
+              elif "PLACEHOLDERPORTTARGET" in line:
+                f.write("                                    default: "+str(valuesyaml["service"][name]["ports"][name]["targetPort"])+"\n")
+              else:
+                f.write(line)
+        f.write("\n")
+      f.write("\n")
+      for line in questions3:
+        f.write(line)
+      f.write("\n")
+      if len(valuesyaml["persistence"]) != 0:
+        for line in questions4:
+          f.write(line)
+        f.write("\n")
+        for name, value in valuesyaml["persistence"].items():
+          for line in questions4persistence:
+            f.write(line)
+      f.write("\n")
+      for line in questions5:
+        f.write(line)
+      f.write("\n")
+      if valuesyaml["service"]["main"]["enabled"]:
+        for line in questions6:
+          f.write(line)
+      f.write("\n")
+      for line in questions7:
+        if puidflag and "runAsGroupExample" in line:
+          f.write("            default: 0\n")
+        elif puidflag and  "runAsUserExample" in line:
+          f.write("            default: 0\n")
+        elif privflag and  "privilegedExample" in line:
+          f.write("                  default: true\n")
+        elif puidflag and  "runAsNonRootExample" in line:
+          f.write("                  default: false\n")
+        elif "runAsGroupExample" in line:
+          f.write("            default: 568\n")
+        elif "runAsUserExample" in line:
+          f.write("            default: 568\n")
+        elif "privilegedExample" in line:
+          f.write("                  default: false\n")
+        elif "runAsNonRootExample" in line:
+          f.write("                  default: true\n")
+        else:
+          f.write(line)
   

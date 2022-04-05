@@ -1,283 +1,319 @@
+# Include{groups}
 portals:
   open:
-    host:
-    - $kubernetes-resource_configmap_portal_host
-    ports:
-    - $kubernetes-resource_configmap_portal_port
     protocols:
-    - $kubernetes-resource_configmap_portal_protocol
+      - "$kubernetes-resource_configmap_portal_protocol"
+    host:
+      - "$kubernetes-resource_configmap_portal_host"
+    ports:
+      - "$kubernetes-resource_configmap_portal_port"
 questions:
-- group: Container Image
-  label: Configure Portal Button
-  schema:
-    attrs:
-    - description: enable the portal button
-      label: Enable
-      schema:
-        default: true
-        editable: false
-        hidden: true
-        type: boolean
-      variable: enabled
-    hidden: true
-    type: dict
-  variable: portal
-- group: Controller
-  label: ''
-  schema:
-    additional_attrs: true
-    attrs:
-    - label: Show Advanced Controller Settings
-      schema:
-        default: false
-        show_subquestions_if: true
-        subquestions:
-        - description: Please specify type of workload to deploy
-          label: (Advanced) Controller Type
+  - variable: portal
+    group: "Container Image"
+    label: "Configure Portal Button"
+    schema:
+      type: dict
+      hidden: true
+      attrs:
+        - variable: enabled
+          label: "Enable"
+          description: "enable the portal button"
           schema:
-            default: deployment
-            enum:
-            - description: Deployment
-              value: deployment
-            - description: Statefulset
-              value: statefulset
-            - description: Daemonset
-              value: daemonset
-            required: true
-            type: string
-          variable: type
-        - description: Number of desired pod replicas
-          label: Desired Replicas
+            hidden: true
+            editable: false
+            type: boolean
+            default: true
+# Include{global}
+
+  - variable: controller
+    group: "Controller"
+    label: ""
+    schema:
+      additional_attrs: true
+      type: dict
+      attrs:
+        - variable: advanced
+          label: "Show Advanced Controller Settings"
           schema:
-            default: 1
-            required: true
-            type: int
-          variable: replicas
-        - description: Please specify type of workload to deploy
-          label: (Advanced) Update Strategy
-          schema:
-            default: Recreate
-            enum:
-            - description: 'Recreate: Kill existing pods before creating new ones'
-              value: Recreate
-            - description: 'RollingUpdate: Create new pods and then kill old ones'
-              value: RollingUpdate
-            - description: '(Legacy) OnDelete: ignore .spec.template changes'
-              value: OnDelete
-            required: true
-            type: string
-          variable: strategy
-        type: boolean
-      variable: advanced
-    type: dict
-  variable: controller
-- group: Networking and Services
-  label: Configure Service(s)
-  schema:
-    additional_attrs: true
-    attrs:
-    - description: The Primary service on which the healthcheck runs, often the webUI
-      label: Main Service
-      schema:
-        additional_attrs: true
-        attrs:
-        - label: Main Service Port Configuration
+            type: boolean
+            default: false
+            show_subquestions_if: true
+            subquestions:
+              - variable: type
+                description: "Please specify type of workload to deploy"
+                label: "(Advanced) Controller Type"
+                schema:
+                  type: string
+                  default: "deployment"
+                  required: true
+                  enum:
+                    - value: "deployment"
+                      description: "Deployment"
+                    - value: "statefulset"
+                      description: "Statefulset"
+                    - value: "daemonset"
+                      description: "Daemonset"
+              - variable: replicas
+                description: "Number of desired pod replicas"
+                label: "Desired Replicas"
+                schema:
+                  type: int
+                  default: 1
+                  required: true
+              - variable: strategy
+                description: "Please specify type of workload to deploy"
+                label: "(Advanced) Update Strategy"
+                schema:
+                  type: string
+                  default: "Recreate"
+                  required: true
+                  enum:
+                    - value: "Recreate"
+                      description: "Recreate: Kill existing pods before creating new ones"
+                    - value: "RollingUpdate"
+                      description: "RollingUpdate: Create new pods and then kill old ones"
+                    - value: "OnDelete"
+                      description: "(Legacy) OnDelete: ignore .spec.template changes"
+# Include{controllerExpert}
+
+
+
+
+
+
+
+# Include{containerConfig}
+
+  - variable: service
+    group: "Networking and Services"
+    label: "Configure Service(s)"
+    schema:
+      additional_attrs: true
+      type: dict
+      attrs:
+        - variable: main
+          label: "Main Service"
+          description: "The Primary service on which the healthcheck runs, often the webUI"
           schema:
             additional_attrs: true
-            attrs:
-            - description: This port exposes the container port on the service
-              label: Port
-              schema:
-                default: 9117
-                required: true
-                type: int
-              variable: port
-            - label: Show Advanced settings
-              schema:
-                default: false
-                show_subquestions_if: true
-                subquestions:
-                - label: Enable the port
-                  schema:
-                    default: true
-                    type: boolean
-                  variable: enabled
-                - label: Port Type
-                  schema:
-                    default: HTTP
-                    enum:
-                    - description: HTTP
-                      value: HTTP
-                    - description: HTTPS
-                      value: HTTPS
-                    - description: TCP
-                      value: TCP
-                    - description: UDP
-                      value: UDP
-                    type: string
-                  variable: protocol
-                - description: This port gets exposed to the node. Only considered
-                    when service type is NodePort, Simple or LoadBalancer
-                  label: Node Port (Optional)
-                  schema:
-                    max: 65535
-                    min: 9000
-                    type: int
-                  variable: nodePort
-                - description: The internal(!) port on the container the Application
-                    runs on
-                  label: Target Port
-                  schema:
-                    default: 9117
-                    type: int
-                  variable: targetPort
-                type: boolean
-              variable: advanced
             type: dict
-          variable: main
-        type: dict
-      variable: main
-    type: dict
-  variable: service
-- group: Networking and Services
-  label: Show Expert Config
-  schema:
-    default: false
-    show_subquestions_if: true
-    subquestions:
-    - group: Networking and Services
-      label: Host-Networking (Complicated)
-      schema:
-        default: false
-        type: boolean
-      variable: hostNetwork
-    type: boolean
-  variable: serviceexpert
-- description: Integrated Persistent Storage
-  group: Storage and Persistence
-  label: Integrated Persistent Storage
-  schema:
-    additional_attrs: true
-    attrs:
-    - description: Stores the Application Configuration.
-      label: App Config Storage
-      schema:
-        additional_attrs: true
-        attrs:
-        - description: Sets the persistence type, Anything other than PVC could break
-            rollback!
-          label: Type of Storage
+            attrs:
+# Include{serviceSelector}
+                    - variable: main
+                      label: "Main Service Port Configuration"
+                      schema:
+                        additional_attrs: true
+                        type: dict
+                        attrs:
+                          - variable: port
+                            label: "Port"
+                            description: "This port exposes the container port on the service"
+                            schema:
+                              type: int
+                              default: 80
+                              required: true
+                          - variable: advanced
+                            label: "Show Advanced settings"
+                            schema:
+                              type: boolean
+                              default: false
+                              show_subquestions_if: true
+                              subquestions:
+                                - variable: protocol
+                                  label: "Port Type"
+                                  schema:
+                                    type: string
+                                    default: TCP
+                                    enum:
+                                      - value: HTTP
+                                        description: "HTTP"
+                                      - value: "HTTPS"
+                                        description: "HTTPS"
+                                      - value: TCP
+                                        description: "TCP"
+                                      - value: "UDP"
+                                        description: "UDP"
+                                - variable: nodePort
+                                  label: "Node Port (Optional)"
+                                  description: "This port gets exposed to the node. Only considered when service type is NodePort, Simple or LoadBalancer"
+                                  schema:
+                                    type: int
+                                    min: 9000
+                                    max: 65535
+                                - variable: targetPort
+                                  label: "Target Port"
+                                  description: "The internal(!) port on the container the Application runs on"
+                                  schema:
+                                    type: int
+                                    default: 80
+
+
+
+  - variable: serviceexpert
+    group: "Networking and Services"
+    label: "Show Expert Config"
+    schema:
+      type: boolean
+      default: false
+      show_subquestions_if: true
+      subquestions:
+        - variable: hostNetwork
+          group: "Networking and Services"
+          label: "Host-Networking (Complicated)"
           schema:
-            default: simplePVC
-            enum:
-            - description: PVC (simple)
-              value: simplePVC
-            - description: HostPath (simple)
-              value: simpleHP
-            - description: emptyDir
-              value: emptyDir
-            - description: pvc
-              value: pvc
-            - description: hostPath
-              value: hostPath
-            type: string
-          variable: type
-        - description: Path inside the container the storage is mounted
-          label: hostPath
-          schema:
-            show_if:
-            - - type
-              - '='
-              - hostPath
-            type: hostpath
-          variable: hostPath
-        - label: EmptyDir Medium
-          schema:
-            default: ''
-            enum:
-            - description: Default
-              value: ''
-            - description: Memory
-              value: Memory
-            show_if:
-            - - type
-              - '='
-              - emptyDir
-            type: string
-          variable: medium
-        type: dict
-      variable: config
-    type: dict
-  variable: persistence
-- group: Ingress
-  label: ''
-  schema:
-    additional_attrs: true
-    attrs:
-    - label: Main Ingress
-      schema:
-        additional_attrs: true
-        attrs: null
-        type: dict
-      variable: main
-    type: dict
-  variable: ingress
-- group: Security and Permissions
-  label: Show Advanced Security Settings
-  schema:
-    default: false
-    show_subquestions_if: true
-    subquestions:
-    - label: Security Context
-      schema:
-        additional_attrs: true
-        attrs:
-        - label: Privileged mode
-          schema:
+            type: boolean
             default: false
-            type: boolean
-          variable: privileged
-        - label: ReadOnly Root Filesystem
+
+# Include{serviceExpert}
+
+# Include{serviceList}
+
+
+  - variable: persistence
+    label: "Integrated Persistent Storage"
+    description: "Integrated Persistent Storage"
+    group: "Storage and Persistence"
+    schema:
+      additional_attrs: true
+      type: dict
+      attrs:
+        - variable: config
+          label: "App Config Storage"
+          description: "Stores the Application Configuration."
           schema:
-            default: false
-            type: boolean
-          variable: readOnlyRootFilesystem
-        - label: Allow Privilege Escalation
+            additional_attrs: true
+            type: dict
+            attrs:
+              - variable: type
+                label: "Type of Storage"
+                description: "Sets the persistence type, Anything other than PVC could break rollback!"
+                schema:
+                  type: string
+                  default: "simplePVC"
+                  enum:
+                    - value: "simplePVC"
+                      description: "PVC (simple)"
+                    - value: "simpleHP"
+                      description: "HostPath (simple)"
+                    - value: "emptyDir"
+                      description: "emptyDir"
+                    - value: "pvc"
+                      description: "pvc"
+                    - value: "hostPath"
+                      description: "hostPath"
+# Include{persistenceBasic}
+              - variable: hostPath
+                label: "hostPath"
+                description: "Path inside the container the storage is mounted"
+                schema:
+                  show_if: [["type", "=", "hostPath"]]
+                  type: hostpath
+              - variable: medium
+                label: "EmptyDir Medium"
+                schema:
+                  show_if: [["type", "=", "emptyDir"]]
+                  type: string
+                  default: ""
+                  enum:
+                    - value: ""
+                      description: "Default"
+                    - value: "Memory"
+                      description: "Memory"
+# Include{persistenceAdvanced}
+# Include{persistenceList}
+
+  - variable: ingress
+    label: ""
+    group: "Ingress"
+    schema:
+      additional_attrs: true
+      type: dict
+      attrs:
+        - variable: main
+          label: "Main Ingress"
           schema:
-            default: false
-            type: boolean
-          variable: allowPrivilegeEscalation
-        - label: runAsNonRoot
+            additional_attrs: true
+            type: dict
+            attrs:
+# Include{ingressDefault}
+
+# Include{ingressTLS}
+
+# Include{ingressTraefik}
+
+# Include{ingressExpert}
+
+
+# Include{ingressList}
+
+# Include{security}
+
+  - variable: advancedSecurity
+    label: "Show Advanced Security Settings"
+    group: "Security and Permissions"
+    schema:
+      type: boolean
+      default: false
+      show_subquestions_if: true
+      subquestions:
+        - variable: securityContext
+          label: "Security Context"
           schema:
-            default: true
-            type: boolean
-          variable: runAsNonRoot
-        type: dict
-      variable: securityContext
-    type: boolean
-  variable: advancedSecurity
-- group: Security and Permissions
-  label: Pod Security Context
-  schema:
-    additional_attrs: true
-    attrs:
-    - description: The UserID of the user running the application
-      label: runAsUser
-      schema:
-        default: 568
-        type: int
-      variable: runAsUser
-    - description: The groupID this App of the user running the application"
-      label: runAsGroup
-      schema:
-        default: 568
-        type: int
-      variable: runAsGroup
-    - description: The group that should own ALL storage.
-      label: fsGroup
-      schema:
-        default: 568
-        type: int
-      variable: fsGroup
-    type: dict
-  variable: podSecurityContext
+            additional_attrs: true
+            type: dict
+            attrs:
+              - variable: privileged
+                label: "Privileged mode"
+                schema:
+                  type: boolean
+                  default: false
+              - variable: readOnlyRootFilesystem
+                label: "ReadOnly Root Filesystem"
+                schema:
+                  type: boolean
+                  default: readOnlyRootFilesystemExample
+              - variable: allowPrivilegeEscalation
+                label: "Allow Privilege Escalation"
+                schema:
+                  type: boolean
+                  default: false
+              - variable: runAsNonRoot
+                label: "runAsNonRoot"
+                schema:
+                  type: boolean
+                  default: false
+# Include{securityContextAdvanced}
+
+  - variable: podSecurityContext
+    group: "Security and Permissions"
+    label: "Pod Security Context"
+    schema:
+      additional_attrs: true
+      type: dict
+      attrs:
+        - variable: runAsUser
+          label: "runAsUser"
+          description: "The UserID of the user running the application"
+          schema:
+            type: int
+            default: 0
+        - variable: runAsGroup
+          label: "runAsGroup"
+          description: The groupID this App of the user running the application"
+          schema:
+            type: int
+            default: 0
+        - variable: fsGroup
+          label: "fsGroup"
+          description: "The group that should own ALL storage."
+          schema:
+            type: int
+            default: 568
+# Include{podSecurityContextAdvanced}
+
+
+# Include{resources}
+
+# Include{advanced}
+
+# Include{addons}
