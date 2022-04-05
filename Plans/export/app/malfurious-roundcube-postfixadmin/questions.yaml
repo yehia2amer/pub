@@ -88,77 +88,91 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: MYSQL_HOST
+          label: "MYSQL_HOST"
+          description: "Your MariaDBMySQL Server IP AddressHostname"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: ROUND_USER
+          label: "ROUND_USER"
+          description: "Your MariaDBMySQL Server Roundcube Username"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: ROUND_PASS
+          label: "ROUND_PASS"
+          description: "Your MariaDBMySQL Server Roundcube Password"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: ROUND_DB
+          label: "ROUND_DB"
+          description: "Your MariaDBMySQL Server Roundcube Database Name"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: POST_USER
+          label: "POST_USER"
+          description: "Your MariaDBMySQL Server Postfixadmin Username"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: POST_PASS
+          label: "POST_PASS"
+          description: "Your MariaDBMySQL Server Postfixadmin Password"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: POST_DB
+          label: "POST_DB"
+          description: "Your MariaDBMySQL Server Postfixadmin Database Name"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: MAIL_HOST
+          label: "MAIL_HOST"
+          description: "Your Mail Server IP AddressHostname"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: ENABLE_IMAPS
+          label: "ENABLE_IMAPS"
+          description: "Enables or Disables IMAPS for Roundcube"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: ENABLE_SMTPS
+          label: "ENABLE_SMTPS"
+          description: "Enables or Disables SMTPS for Roundcube"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: DISABLE_INSTALLER
+          label: "DISABLE_INSTALLER"
+          description: "Enables or Disables the Roundcube Installer"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: ROUNDCUBE_PORT
+          label: "ROUNDCUBE_PORT"
+          description: "Roundcube Container Listening Port"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: POSTFIX_PORT
+          label: "POSTFIX_PORT"
+          description: "Roundcube Container Listening Port"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: PASS_CRYPT
+          label: "PASS_CRYPT"
+          description: "Postfixadmin Password Encryption Method"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: ""
+
 
 # Include{containerConfig}
 
@@ -234,7 +248,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: postfixadminport
-                      label: "postfixadminport port"
+                      label: "postfixadminport Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

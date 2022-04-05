@@ -88,17 +88,18 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: WG_HOST
+          label: "WG_HOST"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: PASSWORD
+          label: "PASSWORD"
+          description: "WebUI password"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "unraid"
+
 
 # Include{containerConfig}
 
@@ -174,7 +175,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: port(vpn)
-                      label: "port(vpn) port"
+                      label: "port(vpn) Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

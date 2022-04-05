@@ -88,22 +88,25 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: DISPLAY_WIDTH
+          label: "DISPLAY_WIDTH"
+          description: "Display Width in Pixels"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "1920"
+        - variable: DISPLAY_HEIGHT
+          label: "DISPLAY_HEIGHT"
+          description: "Display Height in Pixels"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "1080"
+        - variable: VNC_PASSWORD
+          label: "VNC_PASSWORD"
+          description: "Set New VNC Password"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: ""
+
 
 # Include{containerConfig}
 
@@ -179,7 +182,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: vncport
-                      label: "vncport port"
+                      label: "vncport Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

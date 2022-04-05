@@ -88,27 +88,31 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: RWA_ADMIN
+          label: "RWA_ADMIN"
+          description: "Container Variable RWA_ADMIN"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "TRUE"
+        - variable: RWA_USERNAME
+          label: "RWA_USERNAME"
+          description: "Container Variable RWA_USERNAME"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "admin"
+        - variable: RWA_PASSWORD
+          label: "RWA_PASSWORD"
+          description: "Container Variable RWA_PASSWORD"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "admin"
+        - variable: RWA_ENV
+          label: "RWA_ENV"
+          description: "Container Variable RWA_ENV"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "False"
+
 
 # Include{containerConfig}
 
@@ -184,7 +188,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: websocketaccessfromui
-                      label: "websocketaccessfromui port"
+                      label: "websocketaccessfromui Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

@@ -88,32 +88,37 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: NEKO_PASSWORD
+          label: "NEKO_PASSWORD"
+          description: "Container Variable NEKO_PASSWORD"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "ChangeMePls-<3"
+        - variable: NEKO_PASSWORD_ADMIN
+          label: "NEKO_PASSWORD_ADMIN"
+          description: "Container Variable NEKO_PASSWORD_ADMIN"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "ChangeMeAlsoPls_:)"
+        - variable: NEKO_NAT1TO1
+          label: "NEKO_NAT1TO1"
+          description: "Enter the IP of your Unraid-Server"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "192.168.1.x"
+        - variable: NEKO_EPR
+          label: "NEKO_EPR"
+          description: "Container Variable NEKO_EPR"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "52000-52100"
+        - variable: NEKO_SCREEN
+          label: "NEKO_SCREEN"
+          description: "Container Variable NEKO_SCREEN"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "1920x1080@30"
+
 
 # Include{containerConfig}
 
@@ -189,7 +194,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: port52000-52100
-                      label: "port52000-52100 port"
+                      label: "port52000-52100 Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

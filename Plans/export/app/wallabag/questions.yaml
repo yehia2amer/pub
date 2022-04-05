@@ -88,22 +88,25 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: SYMFONY__ENV__DOMAIN_NAME
+          label: "SYMFONY__ENV__DOMAIN_NAME"
+          description: "Domain"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "http://<IP>:6500"
+        - variable: SYMFONY__ENV__SECRET
+          label: "SYMFONY__ENV__SECRET"
+          description: "Randomly generated secret here"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "LongRandomSecretHere"
+        - variable: SYMFONY__ENV__FOSUSER_REGISTRATION
+          label: "SYMFONY__ENV__FOSUSER_REGISTRATION"
+          description: "Public User Registration"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "false"
+
 
 # Include{containerConfig}
 

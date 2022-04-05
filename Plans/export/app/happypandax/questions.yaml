@@ -88,22 +88,25 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: RUN_IN_BACKGROUND
+          label: "RUN_IN_BACKGROUND"
+          description: "Container Variable RUN_IN_BACKGROUND"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "true"
+        - variable: AUTOSTART_ON_BOOT
+          label: "AUTOSTART_ON_BOOT"
+          description: "Container Variable AUTOSTART_ON_BOOT"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "always"
+        - variable: UMASK
+          label: "UMASK"
+          description: "Container Variable UMASK"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "002"
+
 
 # Include{containerConfig}
 
@@ -179,7 +182,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: hpxport
-                      label: "hpxport port"
+                      label: "hpxport Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -239,7 +242,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: torrentport
-                      label: "torrentport port"
+                      label: "torrentport Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

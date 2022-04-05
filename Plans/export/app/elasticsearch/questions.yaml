@@ -88,12 +88,13 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: discovery.type
+          label: "discovery.type"
+          description: "Container Variable discovery.type"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "single-node"
+
 
 # Include{containerConfig}
 
@@ -169,7 +170,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: nodescommunicationport
-                      label: "nodescommunicationport port"
+                      label: "nodescommunicationport Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

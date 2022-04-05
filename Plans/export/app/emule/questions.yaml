@@ -88,42 +88,49 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: EMULE_NICK
+          label: "EMULE_NICK"
+          description: "User nickname."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "eMule_DOCKER"
+        - variable: EMULE_MAX_UPLOAD
+          label: "EMULE_MAX_UPLOAD"
+          description: "Max upload speed, in KB format."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "100000"
+        - variable: EMULE_LANGUAGE
+          label: "EMULE_LANGUAGE"
+          description: "WebUI languange code. Visit 'httpswww.science.co.illanguageLocale-codes.php' for your language."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "1033"
+        - variable: EMULE_CAP_UPLOAD
+          label: "EMULE_CAP_UPLOAD"
+          description: "Upload capacity, in KB format."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "1000000"
+        - variable: EMULE_CAP_DOWNLOAD
+          label: "EMULE_CAP_DOWNLOAD"
+          description: "Download capacity, in KB format."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "1000000"
+        - variable: EMULE_RECONNECT
+          label: "EMULE_RECONNECT"
+          description: "Automatic reconnect."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "1"
+        - variable: EMULE_UPDATE_FROM_SERVER
+          label: "EMULE_UPDATE_FROM_SERVER"
+          description: "Update server list from other servers."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "1"
+
 
 # Include{containerConfig}
 
@@ -199,7 +206,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: port(tcp)
-                      label: "port(tcp) port"
+                      label: "port(tcp) Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -259,7 +266,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: port(udp)
-                      label: "port(udp) port"
+                      label: "port(udp) Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

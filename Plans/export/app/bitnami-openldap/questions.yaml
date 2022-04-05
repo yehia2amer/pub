@@ -88,107 +88,127 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: LDAP_ADMIN_USERNAME
+          label: "LDAP_ADMIN_USERNAME"
+          description: "Container Variable LDAP_ADMIN_USERNAME"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: LDAP_ADMIN_PASSWORD
+          label: "LDAP_ADMIN_PASSWORD"
+          description: "Container Variable LDAP_ADMIN_PASSWORD"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: LDAP_USERS
+          label: "LDAP_USERS"
+          description: "Comma separated list of LDAP users to create in the default LDAP tree. Default user01,user02"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: LDAP_PASSWORDS
+          label: "LDAP_PASSWORDS"
+          description: "Comma separated list of passwords to use for LDAP users. Default password1,password2"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: LDAP_ENABLE_TLS
+          label: "LDAP_ENABLE_TLS"
+          description: "Whether to enable TLS for traffic or not. Defaults to no"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: LDAP_TLS_CERT_FILE
+          label: "LDAP_TLS_CERT_FILE"
+          description: "File containing the certificate file for the TSL traffic. No defaults. (container's relative path, e.g. optbitnamiopenldapcertsopenldap.crt)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: LDAP_TLS_KEY_FILE
+          label: "LDAP_TLS_KEY_FILE"
+          description: "File containing the key for certificate. No defaults. (container's relative path, e.g. optbitnamiopenldapcertsopenldap.key)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: LDAP_TLS_CA_FILE
+          label: "LDAP_TLS_CA_FILE"
+          description: "File containing the CA of the certificate. No defaults. (container's relative path, e.g. optbitnamiopenldapcertsopenldapCA.crt)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: LDAP_TLS_DH_PARAMS_FILE
+          label: "LDAP_TLS_DH_PARAMS_FILE"
+          description: "File containing the DH parameters. No defaults."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: LDAP_ROOT
+          label: "LDAP_ROOT"
+          description: "LDAP database root node of the LDAP tree. Default dc=example,dc=org"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: LDAP_USER_DC
+          label: "LDAP_USER_DC"
+          description: "DC for the users' organizational unit. Default users"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: LDAP_GROUP
+          label: "LDAP_GROUP"
+          description: "Group used to group created users. Default readers"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: LDAP_CONFIG_ADMIN_ENABLED
+          label: "LDAP_CONFIG_ADMIN_ENABLED"
+          description: "Whether to create a configuration admin user. Default no."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: LDAP_CONFIG_ADMIN_USERNAME
+          label: "LDAP_CONFIG_ADMIN_USERNAME"
+          description: "LDAP configuration admin user. This is separate from LDAP_ADMIN_USERNAME. Default admin."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: LDAP_CONFIG_ADMIN_PASSWORD
+          label: "LDAP_CONFIG_ADMIN_PASSWORD"
+          description: "LDAP configuration admin password. Default configpassword."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: LDAP_EXTRA_SCHEMAS
+          label: "LDAP_EXTRA_SCHEMAS"
+          description: "Extra schemas to add, among OpenLDAP's distributed schemas. Default cosine, inetorgperson, nis"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: LDAP_SKIP_DEFAULT_TREE
+          label: "LDAP_SKIP_DEFAULT_TREE"
+          description: "Whether to skip creating the default LDAP tree based on LDAP_USERS, LDAP_PASSWORDS, LDAP_USER_DC and LDAP_GROUP. Default no"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: LDAP_ULIMIT_NOFILES
+          label: "LDAP_ULIMIT_NOFILES"
+          description: "Maximum number of open file descriptors. Default 1024."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: LDAP_ALLOW_ANON_BINDING
+          label: "LDAP_ALLOW_ANON_BINDING"
+          description: "Allow anonymous bindings to the LDAP server. Default yes"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: BITNAMI_DEBUG
+          label: "BITNAMI_DEBUG"
+          description: "Turn on debug info in logs"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: ""
+
 
 # Include{containerConfig}
 
@@ -264,7 +284,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: https_port
-                      label: "https_port port"
+                      label: "https_port Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

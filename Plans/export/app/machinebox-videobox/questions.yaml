@@ -88,52 +88,61 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: MB_ADDRESS
+          label: "MB_ADDRESS"
+          description: "(string) Defaults to 0.0.0.0 - Address where the service will listen. "
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "0.0.0.0"
+        - variable: MB_KEY
+          label: "MB_KEY"
+          description: "Container Variable MB_KEYGet one here httpsmachinebox.iologin"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: MB_VIDEOBOX_FACEBOX_ADDR
+          label: "MB_VIDEOBOX_FACEBOX_ADDR"
+          description: "(string) The endpoint for Facebox "
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "http://192.168.2.254:8085"
+        - variable: MB_VIDEOBOX_TAGBOX_ADDR
+          label: "MB_VIDEOBOX_TAGBOX_ADDR"
+          description: "string) The endpoint for Tagbox "
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "http://192.168.2.254:8082"
+        - variable: MB_VIDEOBOX_NUDEBOX_ADDR
+          label: "MB_VIDEOBOX_NUDEBOX_ADDR"
+          description: "(string) The endpoint for Nudebox "
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: MB_DISABLE_CORS
+          label: "MB_DISABLE_CORS"
+          description: "(bool) Defaults to false - If true will turn off CORS support for the box. "
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "false"
+        - variable: MB_BASICAUTH_USER
+          label: "MB_BASICAUTH_USER"
+          description: "(string) The Basic Authentication username and password that every request must use. Recommended for sitautions where the boxes are publicly accessible. "
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: MB_BASICAUTH_PASS
+          label: "MB_BASICAUTH_PASS"
+          description: "Container Variable MB_BASICAUTH_PASS"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: MB_VIDEOBOX_RESULT_DURATION
+          label: "MB_VIDEOBOX_RESULT_DURATION"
+          description: "Defaults to 1h (one hour) - Amount of time to keep the results before automatically deleting them "
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "1h"
+
 
 # Include{containerConfig}
 

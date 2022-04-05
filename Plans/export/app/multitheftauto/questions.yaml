@@ -88,32 +88,37 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: GAME_PARAMS
+          label: "GAME_PARAMS"
+          description: "Enter your extra startup parameters otherwise leave blank!"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: SKIP_BASECONFIG_CHK
+          label: "SKIP_BASECONFIG_CHK"
+          description: "Set to 'true' (without quotes) to skip the download of the Basic Configuration files."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: DOWNLOAD_RESOURCES
+          label: "DOWNLOAD_RESOURCES"
+          description: "Set to 'true' (without quotes) to download the resources, otherwise leave blank."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "true"
+        - variable: FORCE_UPDATE
+          label: "FORCE_UPDATE"
+          description: "Set to 'true' (without quotes) to redownload the whole server (please note that you have to set Download Resources to 'true' and leave Skip Basicconfiguration blank to download everything new). "
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: LOGFILE_DIR
+          label: "LOGFILE_DIR"
+          description: "Change only if you know what you are doing."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "multitheftauto_linux_x64/mods/deathmatch/logs/server.log"
+
 
 # Include{containerConfig}
 
@@ -189,7 +194,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: udp1-gameport
-                      label: "udp1-gameport port"
+                      label: "udp1-gameport Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -249,7 +254,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: udp2-aseport
-                      label: "udp2-aseport port"
+                      label: "udp2-aseport Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

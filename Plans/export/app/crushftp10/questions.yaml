@@ -88,27 +88,31 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: CRUSH_ADMIN_USER
+          label: "CRUSH_ADMIN_USER"
+          description: "Default admin user for CrushFTP administration"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "crushadmin"
+        - variable: CRUSH_ADMIN_PASSWORD
+          label: "CRUSH_ADMIN_PASSWORD"
+          description: "Default admin password for CrushFTP administration"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "crushadmin"
+        - variable: CRUSH_ADMIN_PROTOCOL
+          label: "CRUSH_ADMIN_PROTOCOL"
+          description: "Protocol for health cecks"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "http"
+        - variable: CRUSH_ADMIN_PORT
+          label: "CRUSH_ADMIN_PORT"
+          description: "Port for health cecks"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "8080"
+
 
 # Include{containerConfig}
 
@@ -184,7 +188,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: httpsport
-                      label: "httpsport port"
+                      label: "httpsport Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -244,7 +248,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: ftppassiveports
-                      label: "ftppassiveports port"
+                      label: "ftppassiveports Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -304,7 +308,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: sftpport
-                      label: "sftpport port"
+                      label: "sftpport Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -364,7 +368,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: httpport
-                      label: "httpport port"
+                      label: "httpport Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

@@ -88,12 +88,13 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: VNC_PASSWORD
+          label: "VNC_PASSWORD"
+          description: "Set New VNC Password"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: ""
+
 
 # Include{containerConfig}
 
@@ -169,7 +170,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: vncport
-                      label: "vncport port"
+                      label: "vncport Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

@@ -88,122 +88,145 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: ENABLE_AUTH
+          label: "ENABLE_AUTH"
+          description: "Enable authentication 0 OR 1"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "1"
+        - variable: ENABLE_GUESTS
+          label: "ENABLE_GUESTS"
+          description: "Enable guest access 0 OR 1"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "1"
+        - variable: ENABLE_LETSENCRYPT
+          label: "ENABLE_LETSENCRYPT"
+          description: "Enable Let's Encrypt certificate generation 0 OR 1"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "1"
+        - variable: ENABLE_HTTP_REDIRECT
+          label: "ENABLE_HTTP_REDIRECT"
+          description: "Redirect HTTP traffic to HTTPS (necessary for Let's Encrypt) 0 OR 1"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "1"
+        - variable: ENABLE_TRANSCRIPTIONS
+          label: "ENABLE_TRANSCRIPTIONS"
+          description: "Enable Jigasi transcription in a conference"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "1"
+        - variable: DISABLE_HTTPS
+          label: "DISABLE_HTTPS"
+          description: "Handle TLS connections outside of this setup"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "1"
+        - variable: JICOFO_AUTH_USER
+          label: "JICOFO_AUTH_USER"
+          description: "XMPP user for Jicofo client connections"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "focus"
+        - variable: LETSENCRYPT_DOMAIN
+          label: "LETSENCRYPT_DOMAIN"
+          description: "Domain for which to generate the certificate"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "meet.example.com"
+        - variable: LETSENCRYPT_EMAIL
+          label: "LETSENCRYPT_EMAIL"
+          description: "E-Mail for receiving important account notifications (mandatory) 	"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "user@example.com"
+        - variable: PUBLIC_URL
+          label: "PUBLIC_URL"
+          description: "Public URL for the web service"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "https://meet.example.com"
+        - variable: XMPP_DOMAIN
+          label: "XMPP_DOMAIN"
+          description: "Internal XMPP domain"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "meet.jitsi"
+        - variable: XMPP_BOSH_URL_BASE
+          label: "XMPP_BOSH_URL_BASE"
+          description: "Internal XMPP server URL for BOSH module"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "http://xmpp.meet.jitsi:5280"
+        - variable: XMPP_GUEST_DOMAIN
+          label: "XMPP_GUEST_DOMAIN"
+          description: "XMPP domain for unauthenticated users"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "guest.meet.jitsi"
+        - variable: XMPP_MUC_DOMAIN
+          label: "XMPP_MUC_DOMAIN"
+          description: "XMPP domain for the MUC"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "muc.meet.jitsi"
+        - variable: XMPP_RECORDER_DOMAIN
+          label: "XMPP_RECORDER_DOMAIN"
+          description: "Domain for the jibri recorder"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "recorder.meet.jitsi"
+        - variable: ETHERPAD_URL_BASE
+          label: "ETHERPAD_URL_BASE"
+          description: "Set etherpad-lite URL"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "http://etherpad.meet.jitsi:9001"
+        - variable: JIBRI_BREWERY_MUC
+          label: "JIBRI_BREWERY_MUC"
+          description: "MUC name for the Jibri pool"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "jibribrewery"
+        - variable: JIBRI_PENDING_TIMEOUT
+          label: "JIBRI_PENDING_TIMEOUT"
+          description: "MUC connection timeout"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "90"
+        - variable: JIBRI_XMPP_USER
+          label: "JIBRI_XMPP_USER"
+          description: "Internal user for Jibri client connections."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "jibri"
+        - variable: JIBRI_XMPP_PASSWORD
+          label: "JIBRI_XMPP_PASSWORD"
+          description: "Internal password for Jibri client connections."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "passw0rd"
+        - variable: JIBRI_RECORDER_USER
+          label: "JIBRI_RECORDER_USER"
+          description: "Internal recorder user for Jibri client connections"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "recorder"
+        - variable: JIBRI_RECORDER_PASSWORD
+          label: "JIBRI_RECORDER_PASSWORD"
+          description: "Internal recorder password for Jibri client connections"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "passw0rd"
+        - variable: ENABLE_RECORDING
+          label: "ENABLE_RECORDING"
+          description: "Enable recording conference to local disk"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "1"
+
 
 # Include{containerConfig}
 
@@ -279,7 +302,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: https
-                      label: "https port"
+                      label: "https Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

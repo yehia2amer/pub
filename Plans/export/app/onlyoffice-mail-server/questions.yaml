@@ -77,32 +77,37 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: MYSQL_SERVER
+          label: "MYSQL_SERVER"
+          description: "Container Variable onlyoffice-mysql-server &lt;----&gt; For database hosted on another server use the external IP ( internet IP )."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "onlyoffice-mysql-server"
+        - variable: MYSQL_SERVER_PORT
+          label: "MYSQL_SERVER_PORT"
+          description: "Container Variable MYSQL_SERVER_PORT"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "3306"
+        - variable: MYSQL_ROOT_USER
+          label: "MYSQL_ROOT_USER"
+          description: "Container Variable MYSQL_ROOT_USER"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "mail_admin"
+        - variable: MYSQL_ROOT_PASSWD
+          label: "MYSQL_ROOT_PASSWD"
+          description: "Container Variable MYSQL_ROOT_PASSWD"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "Isadmin123"
+        - variable: MYSQL_SERVER_DB_NAME
+          label: "MYSQL_SERVER_DB_NAME"
+          description: "Container Variable MYSQL_SERVER_DB_NAME"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "onlyoffice_mailserver"
+
 
 
   - variable: serviceexpert

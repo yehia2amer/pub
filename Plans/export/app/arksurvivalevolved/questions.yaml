@@ -88,57 +88,67 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: GAME_ID
+          label: "GAME_ID"
+          description: "The GAME_ID that the container download at startup.If you want to install a static or beta version of the game change the value to '376030 -beta YOURBRANCH' (without quotes, replace YOURBRANCH with the branch or version you want to install)."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "376030"
+        - variable: USERNAME
+          label: "USERNAME"
+          description: "Your Steam username goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION You have to disable Steam Guard)."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: VALIDATE
+          label: "VALIDATE"
+          description: "Set the Variable to 'true' if you want to validate the installation otherwise leave it blank."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: PASSWRD
+          label: "PASSWRD"
+          description: "Your Steam password goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION You have to disable Steam Guard)."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: MAP
+          label: "MAP"
+          description: "Container Variable MAP"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "TheIsland"
+        - variable: SERVER_NAME
+          label: "SERVER_NAME"
+          description: "Leave empty if you want to use the settings from GameUserSettings.ini (this field accepts no spaces)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: SRV_PWD
+          label: "SRV_PWD"
+          description: "Leave empty if you want to use the settings from GameUserSettings.ini (this field accepts no spaces)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: SRV_ADMIN_PWD
+          label: "SRV_ADMIN_PWD"
+          description: "Leave empty if you want to use the settings from GameUserSettings.ini (this field accepts no spaces)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: GAME_PARAMS
+          label: "GAME_PARAMS"
+          description: "Enter your game parameters seperated with ? and start with a ? (don't put spaces in between eg ?MaxPlayers=40?FastDecayUnsnappedCoreStructures=true)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: GAME_PARAMS_EXTRA
+          label: "GAME_PARAMS_EXTRA"
+          description: "Type in your Extra Game Parameters seperated with a space and - (eg -DisableDeathSpectator -UseBattlEye)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "-server -log"
+
 
 # Include{containerConfig}
 
@@ -214,7 +224,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: udp2
-                      label: "udp2 port"
+                      label: "udp2 Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -274,7 +284,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: udpsteam
-                      label: "udpsteam port"
+                      label: "udpsteam Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -334,7 +344,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: rcontcp
-                      label: "rcontcp port"
+                      label: "rcontcp Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

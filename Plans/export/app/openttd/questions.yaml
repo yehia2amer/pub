@@ -88,22 +88,25 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: GAME_PARAMS
+          label: "GAME_PARAMS"
+          description: "To load the last autosavegame you MUST specifie the following in the GAME_PARAMETERS variable '-g serverdataserverfiles.localshareopenttdsaveautosaveautosave0.sav'"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: GAME_VERSION
+          label: "GAME_VERSION"
+          description: "Define the prefered game version (eg '1.10.3' without quotes) or set to 'latest' (without quotes) to pull the newest build."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "latest"
+        - variable: GFX_PK_V
+          label: "GFX_PK_V"
+          description: "Define the prefered OpenGFX version (eg '0.6.0' without quotes) or set to 'latest' (without quotes) to pull the newest build."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "latest"
+
 
 # Include{containerConfig}
 
@@ -179,7 +182,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: tcp-gameport
-                      label: "tcp-gameport port"
+                      label: "tcp-gameport Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -239,7 +242,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: udp-gameport
-                      label: "udp-gameport port"
+                      label: "udp-gameport Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

@@ -77,32 +77,37 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: telegraf_hostname
+          label: "telegraf_hostname"
+          description: "Container Variable This will set the hostname variable in telegraf.conf"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "myhostname"
+        - variable: influx_url
+          label: "influx_url"
+          description: "Container Variable This will set the outputs.influxdb URL variable in telegraf.conf"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "http://localhost:8086"
+        - variable: influx_db
+          label: "influx_db"
+          description: "Container Variable This will set the database variable in telegraf.conf"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "telegraf"
+        - variable: influx_password
+          label: "influx_password"
+          description: "Container Variable This will set the database password variable in telegraf.conf"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: influx_skip_db_creation
+          label: "influx_skip_db_creation"
+          description: "Container Variable This will set the skip_database_creation variable in telegraf.conf"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "false"
+
 
 
   - variable: serviceexpert

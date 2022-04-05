@@ -88,22 +88,25 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: MEM_LIMIT
+          label: "MEM_LIMIT"
+          description: "Optionally change the Java memory limit. Set to `default` to reset to default"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: MEM_STARTUP
+          label: "MEM_STARTUP"
+          description: "Optionally change the Java initialminimum memory. Set to `default` to reset to default"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: UMASK
+          label: "UMASK"
+          description: "Container Variable UMASK"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: ""
+
 
 # Include{containerConfig}
 
@@ -179,7 +182,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: port3478
-                      label: "port3478 port"
+                      label: "port3478 Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -239,7 +242,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: port10001
-                      label: "port10001 port"
+                      label: "port10001 Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -299,7 +302,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: port8080
-                      label: "port8080 port"
+                      label: "port8080 Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -359,7 +362,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: port1900
-                      label: "port1900 port"
+                      label: "port1900 Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -419,7 +422,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: port8843
-                      label: "port8843 port"
+                      label: "port8843 Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -479,7 +482,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: port8880
-                      label: "port8880 port"
+                      label: "port8880 Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -539,7 +542,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: port6789
-                      label: "port6789 port"
+                      label: "port6789 Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -599,7 +602,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: port5514
-                      label: "port5514 port"
+                      label: "port5514 Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

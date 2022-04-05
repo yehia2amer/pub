@@ -88,42 +88,49 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: SCR_WIDTH
+          label: "SCR_WIDTH"
+          description: "Container Variable SCR_WIDTH"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "1600"
+        - variable: SCR_HEIGHT
+          label: "SCR_HEIGHT"
+          description: "Container Variable SCR_HEIGHT"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "900"
+        - variable: noVNC PATH_PREFIX
+          label: "noVNC PATH_PREFIX"
+          description: "Container Variable noVNC PATH_PREFIX"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "/"
+        - variable: VNC_RESIZE
+          label: "VNC_RESIZE"
+          description: "Container Variable VNC_RESIZEremote = rescale remote desktopscale = stretch remote desktopoff = disable resize"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "scale"
+        - variable: RECON_DELAY
+          label: "RECON_DELAY"
+          description: "Container Variable RECON_DELAY"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "20"
+        - variable: PAGE_TITLE
+          label: "PAGE_TITLE"
+          description: "Container Variable PAGE_TITLE"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "KID"
+        - variable: ROOT_PASSWORD
+          label: "ROOT_PASSWORD"
+          description: "Container Variable ROOT_PASSWORD"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "admin"
+
 
 # Include{containerConfig}
 
@@ -199,7 +206,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: vncport
-                      label: "vncport port"
+                      label: "vncport Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

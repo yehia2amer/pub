@@ -77,42 +77,49 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: DELETE_TS
+          label: "DELETE_TS"
+          description: "Remove the original .ts recording file. 0 = Yes, 1 = No, 2 = Move to backup directory"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "1"
+        - variable: SUBTITLES
+          label: "SUBTITLES"
+          description: "Extract subtitles to .srt. 0= Yes, 1 = No"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "0"
+        - variable: CONVERSION_FORMAT
+          label: "CONVERSION_FORMAT"
+          description: "mkv or mp4"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "mkv"
+        - variable: SOURCE_EXT
+          label: "SOURCE_EXT"
+          description: "Source file extension, default .ts"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "ts"
+        - variable: POST_PROCESS
+          label: "POST_PROCESS"
+          description: "comchap or comcutdefault comchap"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "comchap"
+        - variable: NVIDIA_VISIBLE_DEVICES
+          label: "NVIDIA_VISIBLE_DEVICES"
+          description: "GPU UUID retrieved from Nvidia plugin settings"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: UMASK
+          label: "UMASK"
+          description: "Container Variable UMASK"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "000"
+
 
 
   - variable: serviceexpert

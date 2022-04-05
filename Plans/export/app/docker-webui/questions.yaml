@@ -88,27 +88,30 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: CIRCLE
+          label: "CIRCLE"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "yes"
+        - variable: HOST
+          label: "HOST"
+          description: "HOST allows to put a DNS or DynDNS. Ex unraid.duckdns.orgIf you don't put anything, you don't need to fill in UNRAID_IP."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: UNRAID_IP
+          label: "UNRAID_IP"
+          description: "Enter the local IP address of Unraid if HOST is filled.Ex 192.168.100.24This will determine if a container has its own IP or not. Fill in only if HOST is filled in."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: TITLE
+          label: "TITLE"
+          description: "If you want to change the title of the page in the tab. Put a title in this variable."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "Docker WebUI"
+
 
 # Include{containerConfig}
 

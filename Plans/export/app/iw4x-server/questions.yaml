@@ -88,42 +88,49 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: GAME_PARAMS
+          label: "GAME_PARAMS"
+          description: "Specify your Startup Parameters here."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "+exec server.cfg +sv_maxclients 12 +set fs_game mods/bots +set playlistFilename playlists.info"
+        - variable: FORCE_UPDATE
+          label: "FORCE_UPDATE"
+          description: "Set to 'true' (without quotes) to force an update."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: IW4X_DL_URL
+          label: "IW4X_DL_URL"
+          description: "Main IW4x Download URL (only change if you know what you are doing)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "https://dss0.cc/updater/iw4x_files.zip"
+        - variable: IW4X_DLC_URL
+          label: "IW4X_DLC_URL"
+          description: "IW4x DLC Download URL (only change if you know what you are doing)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "https://iw4x-my.sharepoint.com/:u:/g/personal/emosewaj_iw4x_onmicrosoft_com/EYnWYmCXExpEvn-bL2262Q0BSy0jVZF0FXslvpJEDPE5Fw?e=gPx8RF&download=1"
+        - variable: UMASK
+          label: "UMASK"
+          description: "Container Variable UMASK"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "000"
+        - variable: DATA_PERM
+          label: "DATA_PERM"
+          description: "Container Variable DATA_PERM"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "770"
+        - variable: GAME_PORT
+          label: "GAME_PORT"
+          description: "Change if you need another Game Port (please create a new TCP and UDP Port with the corresponding port number)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "28960"
+
 
 # Include{containerConfig}
 
@@ -199,7 +206,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: udp-gameport
-                      label: "udp-gameport port"
+                      label: "udp-gameport Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

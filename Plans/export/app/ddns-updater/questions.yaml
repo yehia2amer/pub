@@ -88,82 +88,97 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: PUBLICIP_FETCHERS
+          label: "PUBLICIP_FETCHERS"
+          description: "Comma separated fetcher types to obtain the public IP address from http and dns"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "all"
+        - variable: PUBLICIP_HTTP_PROVIDERS
+          label: "PUBLICIP_HTTP_PROVIDERS"
+          description: "PUBLICIP_HTTP_PROVIDERS gets your public IPv4 or IPv6 address. It can be one or more of the following (defaultall), opendns, ifconfig, ipinfo, ddns, google.You can also specify an HTTPS URL such as httpsipinfo.ioip"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "all"
+        - variable: PUBLICIPV4_HTTP_PROVIDERS
+          label: "PUBLICIPV4_HTTP_PROVIDERS"
+          description: "PUBLICIPV4_HTTP_PROVIDERS gets your public IPv4 address only. It can be one or more of the following (defaultall), ipify, noip.You can also specify an HTTPS URL such as httpsipinfo.ioip"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "all"
+        - variable: PUBLICIPV6_HTTP_PROVIDERS
+          label: "PUBLICIPV6_HTTP_PROVIDERS"
+          description: "PUBLICIPV6_HTTP_PROVIDERS gets your public IPv6 address only. It can be one or more of the following (defaultall), ipify, noip.You can also specify an HTTPS URL such as httpsipinfo.ioip"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "all"
+        - variable: PUBLICIP_DNS_PROVIDERS
+          label: "PUBLICIP_DNS_PROVIDERS"
+          description: "PUBLICIP_DNS_PROVIDERS gets your public IPv4 address only or IPv6 address only or one of them. It can be one or more of the following (defaultall), google, cloudflare,"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "all"
+        - variable: PUBLICIP_DNS_TIMEOUT
+          label: "PUBLICIP_DNS_TIMEOUT"
+          description: "Public IP DNS query timeout (in seconds)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "3s"
+        - variable: UPDATE_COOLDOWN_PERIOD
+          label: "UPDATE_COOLDOWN_PERIOD"
+          description: "Duration to cooldown between updates for each record. This is useful to avoid being rate limited or banned. (in minutes)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "5m"
+        - variable: HTTP_TIMEOUT
+          label: "HTTP_TIMEOUT"
+          description: "Timeout for all HTTP requests (in seconds)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "10s"
+        - variable: BACKUP_DIRECTORY
+          label: "BACKUP_DIRECTORY"
+          description: "Directory to read and write data files from internally"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "/updater/data/backup"
+        - variable: BACKUP_PERIOD
+          label: "BACKUP_PERIOD"
+          description: "Set to a period (i.e. 72h15m) to enable zip backups of dataconfig.json and dataupdates.json in a zip file"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "0"
+        - variable: LOG_LEVEL
+          label: "LOG_LEVEL"
+          description: "Level of logging, debug, info, warning or error"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "info"
+        - variable: LOG_CALLER
+          label: "LOG_CALLER"
+          description: "Container Variable LOG_CALLER"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "hidden"
+        - variable: ROOT_URL
+          label: "ROOT_URL"
+          description: "URL path to append to all paths to the webUI (i.e. ddns for accessing httpsexample.comddns through a proxy)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "/"
+        - variable: SHOUTRRR_ADDRESSES
+          label: "SHOUTRRR_ADDRESSES"
+          description: "(optional) Comma separated list of Shoutrrr addresses (notification services) -- (See GitHub Documentation)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: HEALTH_SERVER_ADDRESS
+          label: "HEALTH_SERVER_ADDRESS"
+          description: "Health server listening address"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "127.0.0.1:9999"
+
 
 # Include{containerConfig}
 

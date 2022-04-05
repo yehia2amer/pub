@@ -77,62 +77,73 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: POSTGRES_HOST
+          label: "POSTGRES_HOST"
+          description: "Container Variable POSTGRES_HOST"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "192.168.1.7"
+        - variable: POSTGRES_PORT
+          label: "POSTGRES_PORT"
+          description: "Container Variable POSTGRES_PORT"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "5432"
+        - variable: POSTGRES_DB
+          label: "POSTGRES_DB"
+          description: "Container Variable POSTGRES_DB"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "postgres, nextcloud, traccar, joplin, wikijs, authelia"
+        - variable: POSTGRES_USER
+          label: "POSTGRES_USER"
+          description: "Container Variable POSTGRES_USER"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "postgres_root_user"
+        - variable: POSTGRES_PASSWORD
+          label: "POSTGRES_PASSWORD"
+          description: "Container Variable POSTGRES_PASSWORD"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "postgres_root_password"
+        - variable: POSTGRES_EXTRA_OPTS
+          label: "POSTGRES_EXTRA_OPTS"
+          description: "Container Variable POSTGRES_EXTRA_OPTS"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "-Z9 --schema=public --blobs"
+        - variable: SCHEDULE
+          label: "SCHEDULE"
+          description: "Container Variable SCHEDULE"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "@hourly"
+        - variable: BACKUP_KEEP_DAYS
+          label: "BACKUP_KEEP_DAYS"
+          description: "Container Variable BACKUP_KEEP_DAYS"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "7"
+        - variable: BACKUP_KEEP_WEEKS
+          label: "BACKUP_KEEP_WEEKS"
+          description: "Container Variable BACKUP_KEEP_WEEKS"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "4"
+        - variable: BACKUP_KEEP_MONTHS
+          label: "BACKUP_KEEP_MONTHS"
+          description: "Container Variable BACKUP_KEEP_MONTHS"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "6"
+        - variable: HEALTHCHECK_PORT
+          label: "HEALTHCHECK_PORT"
+          description: "Container Variable HEALTHCHECK_PORT"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "9080"
+
 
 
   - variable: serviceexpert

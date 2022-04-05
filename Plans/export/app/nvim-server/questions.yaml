@@ -88,22 +88,25 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: USER
+          label: "USER"
+          description: "User for login, default is set to guest"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "guest"
+        - variable: SECRET
+          label: "SECRET"
+          description: "Password for login, default is set to password"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "password"
+        - variable: 
+          label: ""
+          description: "Container Variable UID"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "$GID"
+
 
 # Include{containerConfig}
 
@@ -179,7 +182,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: markdownpreview
-                      label: "markdownpreview port"
+                      label: "markdownpreview Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

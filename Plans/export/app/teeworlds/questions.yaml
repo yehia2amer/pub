@@ -88,12 +88,13 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: GAME_CONFIG
+          label: "GAME_CONFIG"
+          description: "Container Variable GAME_CONFIG"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "dm.cfg"
+
 
 # Include{containerConfig}
 
@@ -169,7 +170,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: tcp
-                      label: "tcp port"
+                      label: "tcp Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

@@ -88,12 +88,13 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: SCPRIME_WALLET_PASSWORD
+          label: "SCPRIME_WALLET_PASSWORD"
+          description: "Enter your password to automatically unlock your wallet when the docker starts.&lt;br&gt;&lt;b&gt;NOTE&lt;b&gt; Your default password is your seed phrase unless changed."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: ""
+
 
 # Include{containerConfig}
 
@@ -169,7 +170,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: port2
-                      label: "port2 port"
+                      label: "port2 Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -229,7 +230,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: port3
-                      label: "port3 port"
+                      label: "port3 Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

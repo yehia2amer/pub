@@ -88,147 +88,175 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: INSP_NET_SUFFIX
+          label: "INSP_NET_SUFFIX"
+          description: "Suffix used behind the server name (in this format '.example.com')"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ".example.com"
+        - variable: INSP_NET_NAME
+          label: "INSP_NET_NAME"
+          description: "Name advertised as network name"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "InspIRCD"
+        - variable: INSP_ADMIN_NAME
+          label: "INSP_ADMIN_NAME"
+          description: "Name showed by the admin command"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "Jonny English"
+        - variable: INSP_ADMIN_NICK
+          label: "INSP_ADMIN_NICK"
+          description: "Nick showed by the admin command"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "MI5"
+        - variable: INSP_ADMIN_EMAIL
+          label: "INSP_ADMIN_EMAIL"
+          description: "E-mail shown by the admin command"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "jonny.english@example.com"
+        - variable: INSP_ENABLE_DNSBL
+          label: "INSP_ENABLE_DNSBL"
+          description: "Set to no to disable DNSBLs (DNS-based block list - set to 'yes' or 'no')"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "yes"
+        - variable: INSP_CONNECT_PASSWORD
+          label: "INSP_CONNECT_PASSWORD"
+          description: "Password either as plaintext, or hash value - if you don't want a password leave this variable empty(Make sure you escape special chars like  or &amp; if needed)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: INSP_CONNECT_HASH
+          label: "INSP_CONNECT_HASH"
+          description: "Hashing algorithm for the Connection Password  - if you don't entered a password leave this variable empty (e.g. hmac-sha256, hmac-md5, hmac-ripemd160, md5, ripemd160, sha256)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: INSP_OPER_NAME
+          label: "INSP_OPER_NAME"
+          description: "Oper name"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "oper"
+        - variable: INSP_OPER_HOST
+          label: "INSP_OPER_HOST"
+          description: "Hosts allowed to oper up (If you don't want to connect OP's from outside change for example to '@localhost' or what your hostname matches that the OP should connect)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "*@*"
+        - variable: INSP_OPER_PASSWORD_HASH
+          label: "INSP_OPER_PASSWORD_HASH"
+          description: "Hash value for your oper password hash (to generate a password hash create the server without the hash, connect to the InspIRCd and type in 'mkpasswd HASHMALGORITHM PASSORD' eg 'mkpasswd hmac-sha256 superstronpassword')"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: INSP_OPER_HASH
+          label: "INSP_OPER_HASH"
+          description: "Hashing algorithm for the Operator Password - if you don't entered a password leave this variable empty (e.g. hmac-sha256, hmac-md5, hmac-ripemd160, md5, ripemd160, sha256)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "hmac-sha256"
+        - variable: INSP_OPER_SSLONLY
+          label: "INSP_OPER_SSLONLY"
+          description: "Allow oper up only while using TLS (set to 'yes' or 'no')"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "yes"
+        - variable: INSP_TLS_CN
+          label: "INSP_TLS_CN"
+          description: "Common name of the certificate"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "irc.example.com"
+        - variable: INSP_TLS_MAIL
+          label: "INSP_TLS_MAIL"
+          description: "Mail address represented in the certificate"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "nomail@example.com"
+        - variable: INSP_TLS_UNIT
+          label: "INSP_TLS_UNIT"
+          description: "Unit responsible for the service"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "Server Admins"
+        - variable: INSP_TLS_ORG
+          label: "INSP_TLS_ORG"
+          description: "Organisation name"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "Example IRC Network"
+        - variable: INSP_TLS_LOC
+          label: "INSP_TLS_LOC"
+          description: "City name"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "Example City"
+        - variable: INSP_TLS_STATE
+          label: "INSP_TLS_STATE"
+          description: "State name"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "Example State"
+        - variable: INSP_TLS_COUNTRY
+          label: "INSP_TLS_COUNTRY"
+          description: "Country Code by ISO 3166-1 (to get the country code visit httpsen.wikipedia.orgwikiISO_3166-1)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "XZ"
+        - variable: INSP_TLS_DURATION
+          label: "INSP_TLS_DURATION"
+          description: "Duration until the certificate expires"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "365"
+        - variable: INSP_SERVICES_IPADDR
+          label: "INSP_SERVICES_IPADDR"
+          description: "Specify the IP Address from where the Services are connecting (if you run Anope on the same Unraid machine it is usually the IP address of Unraid)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: INSP_SERVICES_ALLOWMASK
+          label: "INSP_SERVICES_ALLOWMASK"
+          description: "CIDR of services source IP (If you run your Services on the same Network as your IRCd you don't have to fill in this value)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: INSP_SERVICES_HIDDEN
+          label: "INSP_SERVICES_HIDDEN"
+          description: "Hide services from MAP and LINKS (valid options are 'yes' or 'no', change only if you know what you are doing!)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "no"
+        - variable: INSP_SERVICES_TLS_ON
+          label: "INSP_SERVICES_TLS_ON"
+          description: "Turn on TLS encryption for the Services link (this is be no proble if you connect it to your internal network since it only talks internally to your Services)."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "no"
+        - variable: INSP_SERVICES_PASSWORD
+          label: "INSP_SERVICES_PASSWORD"
+          description: "Password send by this server and send by the services"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: UMASK
+          label: "UMASK"
+          description: "Container Variable UMASK"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "000"
+        - variable: DATA_PERM
+          label: "DATA_PERM"
+          description: "Container Variable DATA_PERM"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "770"
+
 
 # Include{containerConfig}
 
@@ -304,7 +332,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: tcp2-clients,tls
-                      label: "tcp2-clients,tls port"
+                      label: "tcp2-clients,tls Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -364,7 +392,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: tcp3-server,plaintext
-                      label: "tcp3-server,plaintext port"
+                      label: "tcp3-server,plaintext Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -424,7 +452,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: tcp4-server,tls
-                      label: "tcp4-server,tls port"
+                      label: "tcp4-server,tls Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

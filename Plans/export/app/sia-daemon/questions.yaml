@@ -88,17 +88,19 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: SIA_WALLET_PASSWORD
+          label: "SIA_WALLET_PASSWORD"
+          description: "Container Variable SIA_WALLET_PASSWORD"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: SIA_API_PASSWORD
+          label: "SIA_API_PASSWORD"
+          description: "Container Variable SIA_API_PASSWORD"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: ""
+
 
 # Include{containerConfig}
 
@@ -174,7 +176,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: hostrhp2port
-                      label: "hostrhp2port port"
+                      label: "hostrhp2port Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -234,7 +236,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: hostrhp3port
-                      label: "hostrhp3port port"
+                      label: "hostrhp3port Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

@@ -88,17 +88,19 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: JWT_ENABLED
+          label: "JWT_ENABLED"
+          description: "Secret onoff ON"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "true"
+        - variable: JWT_SECRET
+          label: "JWT_SECRET"
+          description: "Secret name "
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "mySecret"
+
 
 # Include{containerConfig}
 
@@ -174,7 +176,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: httpsport
-                      label: "httpsport port"
+                      label: "httpsport Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

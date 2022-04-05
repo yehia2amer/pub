@@ -88,22 +88,22 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: ENABLE_MJPG_STREAMER
+          label: "ENABLE_MJPG_STREAMER"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "true"
+        - variable: CAMERA_DEV
+          label: "CAMERA_DEV"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "/dev/video0"
+        - variable: MJPG_STREAMER_INPUT
+          label: "MJPG_STREAMER_INPUT"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "-y -n -r 640x480"
+
 
 # Include{containerConfig}
 
@@ -179,7 +179,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: webcam
-                      label: "webcam port"
+                      label: "webcam Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -239,7 +239,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: snapshot
-                      label: "snapshot port"
+                      label: "snapshot Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

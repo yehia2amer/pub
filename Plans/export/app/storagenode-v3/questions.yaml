@@ -88,32 +88,37 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: WALLET
+          label: "WALLET"
+          description: "Your Payout address here."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: EMAIL
+          label: "EMAIL"
+          description: "Email address used to sign Storj V3 node. (recommended)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: ADDRESS
+          label: "ADDRESS"
+          description: "Your ISP IP address28967 (static IP) or dynamic DNS address here."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "my.ddns.com:28969"
+        - variable: STORAGE
+          label: "STORAGE"
+          description: "A minimum of 500GB with no maximum of available space per node.  Preferred minimum of 8TB and maximum of 24TB of available space per node."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "8TB"
+        - variable: BANDWIDTH
+          label: "BANDWIDTH"
+          description: "(OPTIONAL) Amount of  bandwidth used, per month, to Storj network.  According to Storj documentation, minimum is 2TB, recommended is 16+ TB, preferred is unlimited (e.g. 100000TB)."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: ""
+
 
 # Include{containerConfig}
 
@@ -189,7 +194,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: tcpport
-                      label: "tcpport port"
+                      label: "tcpport Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

@@ -88,17 +88,19 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: VNC_PW
+          label: "VNC_PW"
+          description: "The VNCnoVNC password."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "unraid"
+        - variable: VNC_RESOLUTION
+          label: "VNC_RESOLUTION"
+          description: "The VNCnoVNC resolution."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "1360x768"
+
 
 # Include{containerConfig}
 
@@ -174,7 +176,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: webui(vnc)
-                      label: "webui(vnc) port"
+                      label: "webui(vnc) Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

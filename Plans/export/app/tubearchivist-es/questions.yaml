@@ -88,27 +88,31 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: ELASTIC_PASSWORD
+          label: "ELASTIC_PASSWORD"
+          description: "Container Variable ELASTIC_PASSWORD"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "verysecret"
+        - variable: ES_JAVA_OPTS
+          label: "ES_JAVA_OPTS"
+          description: "Container Variable ES_JAVA_OPTS"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "-Xms512m -Xmx512m"
+        - variable: discovery.type
+          label: "discovery.type"
+          description: "Container Variable discovery.type"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "single-node"
+        - variable: xpack.security.enabled
+          label: "xpack.security.enabled"
+          description: "Container Variable xpack.security.enabled"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "true"
+
 
 # Include{containerConfig}
 

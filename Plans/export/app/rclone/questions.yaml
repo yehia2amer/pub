@@ -77,27 +77,31 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: SYNC_DESTINATION
+          label: "SYNC_DESTINATION"
+          description: "The destination that the data should be backed up to (must be the same name as specified in .rclone.conf)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: SYNC_DESTINATION_SUBPATH
+          label: "SYNC_DESTINATION_SUBPATH"
+          description: "If the data should be backed up to a subpath on the destionation (will automaticly be created if it does not exist)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: CRON_SCHEDULE
+          label: "CRON_SCHEDULE"
+          description: "A custom cron schedule which will override the default value of 0     (hourly)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: SYNC_COMMAND
+          label: "SYNC_COMMAND"
+          description: "A custom rclone command which will override the default value of rclone sync data SYNC_DESTINATIONSYNC_DESTINATION_SUBPATH"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: ""
+
 
 
   - variable: serviceexpert

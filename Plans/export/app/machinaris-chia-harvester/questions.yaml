@@ -88,37 +88,43 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: plots_dir
+          label: "plots_dir"
+          description: "A colon-separated list of all in-container paths (defined above) holding your completed plots.  Example plots1plots2plots3"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "/plots1"
+        - variable: controller_host
+          label: "controller_host"
+          description: "The IP address of the Machinaris Controller on your LAN for controllerworker communication. ANOTHER COMPUTER"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: farmer_address
+          label: "farmer_address"
+          description: "The IP address of the Chia fullnode farmer this harvester will connect to. ANOTHER COMPUTER"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: worker_address
+          label: "worker_address"
+          description: "The IP address of this Unraid server on your LAN for controllerworker communication. THIS COMPUTER"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: mode
+          label: "mode"
+          description: "Default is 'harvester'.  If plotting as well, use 'harvester,plotter' and add a 'plotting' Path mount."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "harvester"
+        - variable: blockchains
+          label: "blockchains"
+          description: "Leave at 'chia'.  Only one, not multple."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "chia"
+
 
 # Include{containerConfig}
 
@@ -194,7 +200,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: worker_port
-                      label: "worker_port port"
+                      label: "worker_port Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

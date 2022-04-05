@@ -88,37 +88,42 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: GAME_PARAMS
+          label: "GAME_PARAMS"
+          description: "The startup parameters for the server (only change if you know what you are doing!)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "+set dedicated 2 +set sv_allowDownload 1 +set com_hunkmegs 64"
+        - variable: Q3_MAP
+          label: "Q3_MAP"
+          description: "The initial map wich the server would start."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "q3dm1"
+        - variable: IOQ3_PORT
+          label: "IOQ3_PORT"
+          description: "Base Port"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "27960"
+        - variable: DL_URL
+          label: "DL_URL"
+          description: "Only change if you know what you're doing!"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "https://files.ioquake3.org/Linux.zip"
+        - variable: DL_URL_PATCH
+          label: "DL_URL_PATCH"
+          description: "Only change if you know what you're doing!"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "https://files.ioquake3.org/quake3-latest-pk3s.zip"
+        - variable: UMASK
+          label: "UMASK"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "000"
+
 
 # Include{containerConfig}
 
@@ -194,7 +199,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: udp-gameport
-                      label: "udp-gameport port"
+                      label: "udp-gameport Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

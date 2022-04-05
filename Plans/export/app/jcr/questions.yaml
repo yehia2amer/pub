@@ -88,17 +88,19 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: EXTRA_JAVA_OPTIONS
+          label: "EXTRA_JAVA_OPTIONS"
+          description: "Container Variable EXTRA_JAVA_OPTIONS"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "-Xms512m -Xmx2g -Xss256k -XX:+UseG1GC"
+        - variable: --user
+          label: "--user"
+          description: "Container Variable --user"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "${UID}:${GID}"
+
 
 # Include{containerConfig}
 
@@ -174,7 +176,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: port8081
-                      label: "port8081 port"
+                      label: "port8081 Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

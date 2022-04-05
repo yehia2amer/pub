@@ -88,27 +88,31 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: DISCORD_BOT_TOKEN
+          label: "DISCORD_BOT_TOKEN"
+          description: "The Bot Token used by the bot to authenticate with Discord."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: HOST
+          label: "HOST"
+          description: "The externally-accessible URL for this instance of the discord bot. For example, httptest.com8123 (NOTE The EXTERNAL PORT of the bot must be included at the end of the URL This is used to provide the linking URI to the capture, via the Direct Message the bot sends you when typing .au new (in conjunction with the PORT above). You must specify http or https accordingly as part of the URL"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: DISCORD_BOT_TOKEN_2
+          label: "DISCORD_BOT_TOKEN_2"
+          description: " (Optional) A second Bot Token to be used to distribute the mutedeafen requests to Discord. If you play in larger groups of 8+ people, this is recommended to not be rate-limited (delayed) by Discord when rounds change!"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: NUM_SHARDS
+          label: "NUM_SHARDS"
+          description: "How many total bot shard instances you'll be running in your current stack."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: ""
+
 
 # Include{containerConfig}
 

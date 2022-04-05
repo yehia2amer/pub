@@ -88,27 +88,31 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: PASSWORD
+          label: "PASSWORD"
+          description: "Container Variable PASSWORD"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: METHOD
+          label: "METHOD"
+          description: "Container Variable METHOD"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "chacha20-ietf-poly1305"
+        - variable: DNS_ADDRS
+          label: "DNS_ADDRS"
+          description: "Container Variable DNS_ADDRS"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "8.8.8.8,8.8.4.4"
+        - variable: TIMEOUT
+          label: "TIMEOUT"
+          description: "Container Variable TIMEOUT"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "300"
+
 
 # Include{containerConfig}
 
@@ -184,7 +188,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: portudp
-                      label: "portudp port"
+                      label: "portudp Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

@@ -88,57 +88,57 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: GITLAB_HOST
+          label: "GITLAB_HOST"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "localhost"
+        - variable: GITLAB_EMAIL
+          label: "GITLAB_EMAIL"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "example@example.com"
+        - variable: GITLAB_SSH_PORT
+          label: "GITLAB_SSH_PORT"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "10020"
+        - variable: GITLAB_PORT
+          label: "GITLAB_PORT"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "10080"
+        - variable: GITLAB_HTTPS
+          label: "GITLAB_HTTPS"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "false"
+        - variable: SSL_SELF_SIGNED
+          label: "SSL_SELF_SIGNED"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "false"
+        - variable: SMTP_USER
+          label: "SMTP_USER"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "gitlabEmail@gmail.com"
+        - variable: SMTP_PASS
+          label: "SMTP_PASS"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "gmailpassword"
+        - variable: GITLAB_BACKUPS
+          label: "GITLAB_BACKUPS"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "daily"
+        - variable: GITLAB_BACKUP_EXPIRY
+          label: "GITLAB_BACKUP_EXPIRY"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "2419200"
+
 
 # Include{containerConfig}
 
@@ -214,7 +214,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: tcp-port-0
-                      label: "tcp-port-0 port"
+                      label: "tcp-port-0 Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -274,7 +274,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: tcp-port-2
-                      label: "tcp-port-2 port"
+                      label: "tcp-port-2 Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

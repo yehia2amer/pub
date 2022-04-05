@@ -88,22 +88,25 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: AUTH_METHOD
+          label: "AUTH_METHOD"
+          description: "Authentication method to use. Can be puredb, mysql, pgsql or ldap "
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "puredb"
+        - variable: SECURE_MODE
+          label: "SECURE_MODE"
+          description: "Enable secure mode - httpsgithub.comcrazy-maxdocker-pure-ftpd#secure-mode"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "true"
+        - variable: PASSIVE_PORT_RANGE
+          label: "PASSIVE_PORT_RANGE"
+          description: "Port range for passive connections"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "30000:30009"
+
 
 # Include{containerConfig}
 
@@ -179,7 +182,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: pasvportrange
-                      label: "pasvportrange port"
+                      label: "pasvportrange Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

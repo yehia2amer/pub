@@ -88,47 +88,55 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: GAME_ID
+          label: "GAME_ID"
+          description: "The GAME_ID that the container download at startup.(httpsdeveloper.valvesoftware.comwikiDedicated_Servers_List)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "220070"
+        - variable: MAP
+          label: "MAP"
+          description: "Map name (eg 'aocffa-arena3_p', 'aocffa-hillside_p', 'aocffa-battlegrounds_v3_p')"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "aocffa-moor_p"
+        - variable: ADMIN_PWD
+          label: "ADMIN_PWD"
+          description: "Server Admin Password (can't be empty)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "adminDocker"
+        - variable: GAME_PARAMS
+          label: "GAME_PARAMS"
+          description: "Enter your game parameters seperated with ? and start with a ? (don't put spaces in between eg ?port=7000?queryport=7010)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "?port=7000?queryport=7010"
+        - variable: GAME_PARAMS_EXTRA
+          label: "GAME_PARAMS_EXTRA"
+          description: "Type in your Extra Game Parameters seperated with a space and - (eg -seekfreeloadingserver)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "-seekfreeloadingserver"
+        - variable: USERNAME
+          label: "USERNAME"
+          description: "Your Steam username goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION You have to disable Steam Guard)."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: VALIDATE
+          label: "VALIDATE"
+          description: "Set the Variable to 'true' if you want to validate the installation otherwise leave it blank."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: PASSWRD
+          label: "PASSWRD"
+          description: "Your Steam password goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION You have to disable Steam Guard)."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: ""
+
 
 # Include{containerConfig}
 
@@ -204,7 +212,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: udp2-gamequeryport
-                      label: "udp2-gamequeryport port"
+                      label: "udp2-gamequeryport Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -264,7 +272,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: udp3-steamqueryport
-                      label: "udp3-steamqueryport port"
+                      label: "udp3-steamqueryport Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

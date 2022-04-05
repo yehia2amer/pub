@@ -88,22 +88,25 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: PASSWORD
+          label: "PASSWORD"
+          description: "Container Variable PASSWORD"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "yourpasswordhere"
+        - variable: ROOT
+          label: "ROOT"
+          description: "Give the user root permissions"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "FALSE"
+        - variable: ADD
+          label: "ADD"
+          description: "Input 'shiny' without quotes to add shiny server"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "shiny"
+
 
 # Include{containerConfig}
 
@@ -179,7 +182,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: hostport2
-                      label: "hostport2 port"
+                      label: "hostport2 Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

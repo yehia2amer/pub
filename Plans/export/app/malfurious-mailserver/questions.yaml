@@ -88,42 +88,49 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: MAIL_HOST
+          label: "MAIL_HOST"
+          description: "Mail Server Hostname"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: POST_USER
+          label: "POST_USER"
+          description: "MySQL Postfix Username"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: POST_PASS
+          label: "POST_PASS"
+          description: "MySQL Postfix Password"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: POST_DB
+          label: "POST_DB"
+          description: "MySQL Postfix Database Name"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: MYSQL_HOST
+          label: "MYSQL_HOST"
+          description: "Your MariaDBMySQL Server IP AddressHostname"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: RSPAMD_PASSWORD
+          label: "RSPAMD_PASSWORD"
+          description: "RSPAMD Password"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: PASS_CRYPT
+          label: "PASS_CRYPT"
+          description: "Postfixadmin Password Encryption Method"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: ""
+
 
 # Include{containerConfig}
 
@@ -199,7 +206,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: smtpport
-                      label: "smtpport port"
+                      label: "smtpport Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -259,7 +266,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: imapport
-                      label: "imapport port"
+                      label: "imapport Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -319,7 +326,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: smtpsport
-                      label: "smtpsport port"
+                      label: "smtpsport Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -379,7 +386,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: imapsport
-                      label: "imapsport port"
+                      label: "imapsport Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -439,7 +446,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: managesieveport
-                      label: "managesieveport port"
+                      label: "managesieveport Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

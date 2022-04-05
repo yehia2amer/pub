@@ -88,72 +88,85 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: TIMEZONE
+          label: "TIMEZONE"
+          description: "Timezone in TZ format. See here httpsen.wikipedia.orgwikiList_of_tz_database_time_zones"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "America/New_York"
+        - variable: DB_ENGINE
+          label: "DB_ENGINE"
+          description: "Either SQLite (default for unRAID) or PostgreSQL with django.db.backends.postgresql"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "django.db.backends.sqlite3"
+        - variable: SECRET_KEY
+          label: "SECRET_KEY"
+          description: "Randomly generate a secret key please."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: ALLOWED_HOSTS
+          label: "ALLOWED_HOSTS"
+          description: "Either  for all, or specific domainssubdomains, etc."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "*"
+        - variable: COMMENT_PREF_DEFAULT
+          label: "COMMENT_PREF_DEFAULT"
+          description: "Enables or disables the comment system."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "1"
+        - variable: SHOPPING_MIN_AUTOSYNC_INTERVAL
+          label: "SHOPPING_MIN_AUTOSYNC_INTERVAL"
+          description: "Minimum shopping list refresh interval."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "5"
+        - variable: DEBUG
+          label: "DEBUG"
+          description: "Debug mode disabled (default) or enabled."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "0"
+        - variable: GUNICORN_MEDIA
+          label: "GUNICORN_MEDIA"
+          description: "Enables serving media files directly from Gunicorn."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "1"
+        - variable: POSTGRES_HOST
+          label: "POSTGRES_HOST"
+          description: "Host for PostgreSQL, should you choose to use it."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: POSTGRES_PORT
+          label: "POSTGRES_PORT"
+          description: "Port for PostgreSQL server shouldy you choose to use it."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "5432"
+        - variable: POSTGRES_USER
+          label: "POSTGRES_USER"
+          description: "User for PostgreSQL should you choose to use it."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: POSTGRES_PASSWORD
+          label: "POSTGRES_PASSWORD"
+          description: "Password for PostgreSQL should you choose to use it."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: POSTGRES_DB
+          label: "POSTGRES_DB"
+          description: "Name of SQLite database, or the name of your PostgreSQL database if you are using that."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "/data/recipes.db"
+
 
 # Include{containerConfig}
 

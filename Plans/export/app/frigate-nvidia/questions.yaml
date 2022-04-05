@@ -88,22 +88,25 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: FRIGATE_RTSP_PASSWORD
+          label: "FRIGATE_RTSP_PASSWORD"
+          description: "Container Variable FRIGATE_RTSP_PASSWORD"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "enterpassword"
+        - variable: NVIDIA_VISIBLE_DEVICES
+          label: "NVIDIA_VISIBLE_DEVICES"
+          description: "Container Variable NVIDIA_VISIBLE_DEVICES"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "YOUR-GPU-UUID"
+        - variable: NVIDIA_DRIVER_CAPABILITIES
+          label: "NVIDIA_DRIVER_CAPABILITIES"
+          description: "Container Variable NVIDIA_DRIVER_CAPABILITIES"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "compute,utility,video"
+
 
 # Include{containerConfig}
 
@@ -179,7 +182,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: rtmpport
-                      label: "rtmpport port"
+                      label: "rtmpport Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

@@ -88,32 +88,37 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: GAME_ID
+          label: "GAME_ID"
+          description: "The GAME_ID that the container download at startup.(httpsdeveloper.valvesoftware.comwikiDedicated_Servers_List)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "343050"
+        - variable: USERNAME
+          label: "USERNAME"
+          description: "Your Steam username goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION You have to disable Steam Guard)."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: VALIDATE
+          label: "VALIDATE"
+          description: "Set the Variable to 'true' if you want to validate the installation otherwise leave it blank."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: PASSWRD
+          label: "PASSWRD"
+          description: "Your Steam password goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION You have to disable Steam Guard)."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: CAVES
+          label: "CAVES"
+          description: "Delete 'true' if you don't want Caves on your Server."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "true"
+
 
 # Include{containerConfig}
 
@@ -189,7 +194,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: udp2-masterserver
-                      label: "udp2-masterserver port"
+                      label: "udp2-masterserver Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -249,7 +254,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: udp3-authentication
-                      label: "udp3-authentication port"
+                      label: "udp3-authentication Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

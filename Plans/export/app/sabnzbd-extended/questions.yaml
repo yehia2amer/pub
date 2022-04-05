@@ -88,77 +88,91 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: AUDIO_FORMAT
+          label: "AUDIO_FORMAT"
+          description: "FLAC or OPUS or MP3 or AAC or ALAC - converts lossless FLAC files to set format"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: AUDIO_BITRATE
+          label: "AUDIO_BITRATE"
+          description: "Set to desired bitrate when converting to OPUSMP3FDK-AACAAC format types"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: AUDIO_VERIFY
+          label: "AUDIO_VERIFY"
+          description: "TRUE = ENABLED, Verifies FLACMP3 files for errors (fixes MP3's, deletes bad FLAC files)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: AUDIO_DSFA
+          label: "AUDIO_DSFA"
+          description: "TRUE = ENABLED  Detects single file albums and mark download as failed if detected"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: AUDIO_REPLAYGAIN
+          label: "AUDIO_REPLAYGAIN"
+          description: "TRUE = ENABLED, adds replaygain tags for compatible players (FLAC ONLY)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: RequireAudioQualityMatch
+          label: "RequireAudioQualityMatch"
+          description: "true = ENABLED  Verifies files match desired Target Format file extension"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: AUDIO_BEETS
+          label: "AUDIO_BEETS"
+          description: "TRUE = ENABLED  Enables tagging with Beets"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: RequireLanguage
+          label: "RequireLanguage"
+          description: "true = enabled, disablesenables checking video audiosubtitle language based on VIDEO_LANG setting"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: VIDEO_LANG
+          label: "VIDEO_LANG"
+          description: "Default eng  Set to required language (ISO 639-2 language code), if not found, will mark as failed"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: VIDEO_MKVCLEANER
+          label: "VIDEO_MKVCLEANER"
+          description: "TRUE = Enabled  Uses MKVToolNix to remove unwanted audiosubtitle streams and sets UND audio language based on Required AudioSubtitle Language setting"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: VIDEO_SMA
+          label: "VIDEO_SMA"
+          description: "TRUE = Enabled  Uses SMA to process incoming video files"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: VIDEO_SMA_TAGGING
+          label: "VIDEO_SMA_TAGGING"
+          description: "TRUE = Enabled  Uses SMA to Tag MP4 files (Enabled SMA process manual.py -a; Disabled SMA Process manual.py -nt)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: NVIDIA_VISIBLE_DEVICES
+          label: "NVIDIA_VISIBLE_DEVICES"
+          description: "NVIDIA_VISIBLE_DEVICES"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: NVIDIA_DRIVER_CAPABILITIES
+          label: "NVIDIA_DRIVER_CAPABILITIES"
+          description: "NVIDIA_DRIVER_CAPABILITIES"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: ""
+
 
 # Include{containerConfig}
 
@@ -234,7 +248,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: hostportfor9090
-                      label: "hostportfor9090 port"
+                      label: "hostportfor9090 Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

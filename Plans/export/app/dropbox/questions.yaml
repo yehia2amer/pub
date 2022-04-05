@@ -88,27 +88,31 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: DROPBOX_USER
+          label: "DROPBOX_USER"
+          description: "User to run dropbox as."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "nobody"
+        - variable: DROPBOX_USERID
+          label: "DROPBOX_USERID"
+          description: "uid to run dropbox as."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "99"
+        - variable: DROPBOX_GROUP
+          label: "DROPBOX_GROUP"
+          description: "Group to run dropbox as."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "users"
+        - variable: DROPBOX_GROUPID
+          label: "DROPBOX_GROUPID"
+          description: "gid to run dropbox as."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "100"
+
 
 # Include{containerConfig}
 
@@ -184,7 +188,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: lansyncport(udp)
-                      label: "lansyncport(udp) port"
+                      label: "lansyncport(udp) Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

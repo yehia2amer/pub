@@ -88,17 +88,19 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: MAC
+          label: "MAC"
+          description: "Container Variable MAC"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "bc:5f:f4:cd:c6:19"
+        - variable: IP
+          label: "IP"
+          description: "Container Variable IP"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "192.168.1.4"
+
 
 # Include{containerConfig}
 
@@ -174,7 +176,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: 443
-                      label: "443 port"
+                      label: "443 Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -234,7 +236,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: 1900
-                      label: "1900 port"
+                      label: "1900 Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -294,7 +296,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: 2100
-                      label: "2100 port"
+                      label: "2100 Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

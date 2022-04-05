@@ -77,22 +77,25 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: ZONE_NAME
+          label: "ZONE_NAME"
+          description: "The DNS zone that DDNS updates should be applied to."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "example.com"
+        - variable: API_TOKEN
+          label: "API_TOKEN"
+          description: "Your Hetzner  API token."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "my-secret-api-token"
+        - variable: RECORD_TYPE
+          label: "RECORD_TYPE"
+          description: "The record type of your zone. If your zone uses an IPv4 address use A. Use AAAA if it uses an IPv6 address."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "A"
+
 
 
   - variable: serviceexpert

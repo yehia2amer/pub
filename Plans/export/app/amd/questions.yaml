@@ -77,142 +77,169 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: AUTOSTART
+          label: "AUTOSTART"
+          description: "true = Enabled  Runs script automatically on startup"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: SCRIPTINTERVAL
+          label: "SCRIPTINTERVAL"
+          description: "#s or #m or #h or #d  s = seconds, m = minutes, h = hours, d = days  Amount of time between each script run, when AUTOSTART is enabled"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: LidarrUrl
+          label: "LidarrUrl"
+          description: "Set domain or IP to your Lidarr instance including port. If using reverse proxy, do not use a trailing slash. Ensure you specify https."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: LidarrAPIkey
+          label: "LidarrAPIkey"
+          description: "Lidarr API key"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: LIDARRREMOTEPATH
+          label: "LIDARRREMOTEPATH"
+          description: "OPTIONAL  ADVANCED FEATURE  Configure this to the local volume path for Lidarr to see the downloads folder, this will enable file moves, instead of copies... Less resource intensive"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: ARL_TOKEN
+          label: "ARL_TOKEN"
+          description: "User token for dl client, for instructions to obtain token httpsnotabug.orgRemixDevsDeezloaderRemixwikiLogin+via+userToken"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: DOWNLOADMODE
+          label: "DOWNLOADMODE"
+          description: "wanted or artist  wanted mode only download missingcutoff  artist mode downloads all albums by an artist (requires lidarr volume mapping root media folders for import)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: ALBUM_TYPE_FILTER
+          label: "ALBUM_TYPE_FILTER"
+          description: "Filter Types COMPILE, SINGLE, ALBUM, EP (this is a ', ' separated list of Album Types to skip) (artist mode only)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: LIST
+          label: "LIST"
+          description: "both or missing or cutoff  both = missing + cutoff  missng = lidarr missing list  cutoff = lidarr cutoff li"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: SearchType
+          label: "SearchType"
+          description: "both or artist or fuzzy  both = artist + fuzzy searching  artist = only artist searching  fuzzy = only fuzzy searching (Various Artist is always fuzzy searched, regardless of setting)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: Concurrency
+          label: "Concurrency"
+          description: "Number of concurrent downloads"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: POSTPROCESSTHREADS
+          label: "POSTPROCESSTHREADS"
+          description: "Controls number of threads used for Format conversion and replaygain tagging"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: EMBEDDED_COVER_QUALITY
+          label: "EMBEDDED_COVER_QUALITY"
+          description: "Controls the quality of the cover image compression in percentage, 100 = no compression"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: FORMAT
+          label: "FORMAT"
+          description: "FLAC or MP3 or OPUS or AAC or ALAC"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: BITRATE
+          label: "BITRATE"
+          description: "FLAC - OPUSAACMP3 will be converted using this bitrate (MP3 320128 is native, not converted)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: FORCECONVERT
+          label: "FORCECONVERT"
+          description: "true = enabled  This will convert lossy MP3 to desired target format (exluding FLACALAC, ALAC setting will convert to AAC)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: requirequality
+          label: "requirequality"
+          description: "true = enabled  Requires all downloaded files match target file extension (mp3 or flac) when enabled"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: replaygain
+          label: "replaygain"
+          description: "true = enabled  true = enabled  Scans and analyzes files to add replaygain tags to song metadata"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: MatchDistance
+          label: "MatchDistance"
+          description: "Set as an integer, the higher the number, the more lienet it is. Example A match score of 0 is a perfect match  For more information, this score is produced using this function httpsen.wikibooks.orgwikiAlgorithm_ImplementationStringsLevenshtein_distance"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: FolderPermissions
+          label: "FolderPermissions"
+          description: "Based on chmod linux permissions"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: FilePermissions
+          label: "FilePermissions"
+          description: "Based on chmod linux permissions"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: MBRAINZMIRROR
+          label: "MBRAINZMIRROR"
+          description: "OPTIONAL Only change if using a different mirror"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: MBRATELIMIT
+          label: "MBRATELIMIT"
+          description: "OPTIONAL musicbrainz rate limit, musicbrainz allows only 1 connection per second, max setting is 10  Set to 101 to disable limit"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: NOTIFYPLEX
+          label: "NOTIFYPLEX"
+          description: "true = enabled  Plex must have a Music library added and also be configured with the downloads-ama directory"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: PLEXLIBRARYNAME
+          label: "PLEXLIBRARYNAME"
+          description: "This must exactly match the name of the Plex Library that contains the Lidarr Media Folder data"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: PLEXURL
+          label: "PLEXURL"
+          description: "ONLY used if NOTIFYPLEX is enabled..."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: PLEXTOKEN
+          label: "PLEXTOKEN"
+          description: "ONLY used if NOTIFYPLEX is enabled..."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: ""
+
 
 
   - variable: serviceexpert

@@ -88,72 +88,85 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: MYSQL_SERVER_ROOT_PASSWORD
+          label: "MYSQL_SERVER_ROOT_PASSWORD"
+          description: "Container Variable MYSQL_SERVER_ROOT_PASSWORD"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "my-secret-pw"
+        - variable: MYSQL_SERVER_DB_NAME
+          label: "MYSQL_SERVER_DB_NAME"
+          description: "Container Variable MYSQL_SERVER_DB_NAME"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "onlyoffice"
+        - variable: MYSQL_SERVER_HOST
+          label: "MYSQL_SERVER_HOST"
+          description: "Container Variable MYSQL_SERVER_HOST  &lt;----&gt; 'localhost' is used when we do not make use of the mail server docker or we do not want external database at all &lt;----&gt; for external local database use ' onlyoffice-mysql-server ' ( name of the docker that is hosting the mysql database, also without the ' ' ) as long is on the 'onlyoffice' network we created before starting the dockers or you can use unraid IP you see in the up right corner, but it will be better to just use the name of the docker hosting mysql if your unraid IP is not static. &lt;----&gt; For database hosted on another server use the external IP ( internet IP )."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "localhost"
+        - variable: MYSQL_SERVER_USER
+          label: "MYSQL_SERVER_USER"
+          description: "Container Variable MYSQL_SERVER_USER"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "onlyoffice_user"
+        - variable: MYSQL_SERVER_PASS
+          label: "MYSQL_SERVER_PASS"
+          description: "Container Variable MYSQL_SERVER_PASS"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "onlyoffice_pass"
+        - variable: MAIL_SERVER_API_HOST
+          label: "MAIL_SERVER_API_HOST"
+          description: "Container Variable MAIL_SERVER_API_HOST For external mysql server add the values bellow back to value and default value.Value onlyoffice-mail-serverDefault Value onlyoffice-mail-server If you installed them on another server add the IP instead.( For Mail Server Container with External Database )"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: MAIL_SERVER_API_PORT
+          label: "MAIL_SERVER_API_PORT"
+          description: "Container Variable MAIL_SERVER_API_PORT"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "8081"
+        - variable: MAIL_SERVER_DB_HOST
+          label: "MAIL_SERVER_DB_HOST"
+          description: " Container Variable MAIL_SERVER_DB_HOST For external mysql server add the values bellow back to value and default value.Value onlyoffice-mysql-serverDefault Value onlyoffice-mysql-serverIf you installed them on another server add the IP instead.( For Mail Server Container with External Database )"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: MAIL_SERVER_DB_NAME
+          label: "MAIL_SERVER_DB_NAME"
+          description: "Container Variable MAIL_SERVER_DB_NAME"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "onlyoffice_mailserver"
+        - variable: MAIL_SERVER_DB_PORT
+          label: "MAIL_SERVER_DB_PORT"
+          description: "Container Variable MAIL_SERVER_DB_PORT"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "3306"
+        - variable: MAIL_SERVER_DB_USER
+          label: "MAIL_SERVER_DB_USER"
+          description: "Container Variable MAIL_SERVER_DB_USER"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "mail_admin"
+        - variable: MAIL_SERVER_DB_PASS
+          label: "MAIL_SERVER_DB_PASS"
+          description: "Container Variable MAIL_SERVER_DB_PASS"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "Isadmin123"
+        - variable: DOCUMENT_SERVER_PORT_80_TCP_ADDR
+          label: "DOCUMENT_SERVER_PORT_80_TCP_ADDR"
+          description: "Container Variable DOCUMENT_SERVER_PORT_80_TCP_ADDR If you install onlyoffice-document-server container ( and you should, also start onlyoffice-document-server first ) add the values bellow back to value and default value. Value onlyoffice-document-serverDefault Value onlyoffice-document-server"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: ""
+
 
 # Include{containerConfig}
 
@@ -229,7 +242,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: httpsport
-                      label: "httpsport port"
+                      label: "httpsport Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -289,7 +302,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: portforxmpp-compatibleinstantmessagingclient(foronlyofficetalkcorrectwork)
-                      label: "portforxmpp-compatibleinstantmessagingclient(foronlyofficetalkcorrectwork) port"
+                      label: "portforxmpp-compatibleinstantmessagingclient(foronlyofficetalkcorrectwork) Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

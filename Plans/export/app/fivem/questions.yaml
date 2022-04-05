@@ -88,37 +88,43 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: GAME_CONFIG
+          label: "GAME_CONFIG"
+          description: "You can edit the server.cfg after the first start (if you don't want to use the server.cfg then leave this field empty. For exampele if you plan to use txAdmin you have to add another port in the template with the host and container port 40120, you then can connect to txAdmin with YOURSERVERIP40120)."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "server.cfg"
+        - variable: START_VARS
+          label: "START_VARS"
+          description: "Extra start variables."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: SRV_NAME
+          label: "SRV_NAME"
+          description: "Your Servername"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: SERVER_KEY
+          label: "SERVER_KEY"
+          description: "Your Server Key from httpskeymaster.fivem.net"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: SRV_ADR
+          label: "SRV_ADR"
+          description: "Looks something like this httpsruntime.fivem.netartifactsfivembuild_proot_linuxmaster"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master/"
+        - variable: MANUAL_UPDATES
+          label: "MANUAL_UPDATES"
+          description: "Set this to 'true' without quotes to update your server manually (otherwise leave blank)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: ""
+
 
 # Include{containerConfig}
 
@@ -194,7 +200,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: tcp1
-                      label: "tcp1 port"
+                      label: "tcp1 Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -254,7 +260,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: tcp2
-                      label: "tcp2 port"
+                      label: "tcp2 Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -314,7 +320,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: udp1
-                      label: "udp1 port"
+                      label: "udp1 Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -374,7 +380,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: udp2
-                      label: "udp2 port"
+                      label: "udp2 Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

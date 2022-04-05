@@ -88,32 +88,37 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: GAME_ID
+          label: "GAME_ID"
+          description: "The GAME_ID that the container download at startup.(httpsdeveloper.valvesoftware.comwikiDedicated_Servers_List)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "403240"
+        - variable: GAME_PARAMS
+          label: "GAME_PARAMS"
+          description: "Enter your start up commands for the server."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "Port=7787 QueryPort=27165"
+        - variable: USERNAME
+          label: "USERNAME"
+          description: "Your Steam username goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION You have to disable Steam Guard)."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: VALIDATE
+          label: "VALIDATE"
+          description: "Set the Variable to 'true' if you want to validate the installation otherwise leave it blank."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: PASSWRD
+          label: "PASSWRD"
+          description: "Your Steam password goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION You have to disable Steam Guard)."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: ""
+
 
 # Include{containerConfig}
 
@@ -189,7 +194,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: udp2-gameport2
-                      label: "udp2-gameport2 port"
+                      label: "udp2-gameport2 Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -249,7 +254,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: udp3-queryport1
-                      label: "udp3-queryport1 port"
+                      label: "udp3-queryport1 Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -309,7 +314,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: udp4-queryport2
-                      label: "udp4-queryport2 port"
+                      label: "udp4-queryport2 Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -369,7 +374,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: tcp1-queryport2
-                      label: "tcp1-queryport2 port"
+                      label: "tcp1-queryport2 Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -429,7 +434,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: tcp2-rconport
-                      label: "tcp2-rconport port"
+                      label: "tcp2-rconport Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -489,7 +494,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: udp5-rconport
-                      label: "udp5-rconport port"
+                      label: "udp5-rconport Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

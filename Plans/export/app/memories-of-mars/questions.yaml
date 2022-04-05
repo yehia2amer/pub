@@ -88,37 +88,43 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: GAME_ID
+          label: "GAME_ID"
+          description: "The GAME_ID that the container download at startup.(httpsdeveloper.valvesoftware.comwikiDedicated_Servers_List)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "897590"
+        - variable: GAME_PARAMS
+          label: "GAME_PARAMS"
+          description: "Enter Extra Startup Parameters here if needed, otherwise leave empty (eg '-port=7778', '-maxplayers=12')"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: MULTIHOME
+          label: "MULTIHOME"
+          description: "This has to be the IP of your Unraid server otherwise you can't connect to the game and the game will lost connection to the server!"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: USERNAME
+          label: "USERNAME"
+          description: "Your Steam username goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION You have to disable Steam Guard)."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: VALIDATE
+          label: "VALIDATE"
+          description: "Set the Variable to 'true' if you want to validate the installation otherwise leave it blank."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: PASSWRD
+          label: "PASSWRD"
+          description: "Your Steam password goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION You have to disable Steam Guard)."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: ""
+
 
 # Include{containerConfig}
 
@@ -194,7 +200,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: udp1-gameport
-                      label: "udp1-gameport port"
+                      label: "udp1-gameport Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -254,7 +260,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: tcp2-beaconport
-                      label: "tcp2-beaconport port"
+                      label: "tcp2-beaconport Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -314,7 +320,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: udp2-beaconport
-                      label: "udp2-beaconport port"
+                      label: "udp2-beaconport Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

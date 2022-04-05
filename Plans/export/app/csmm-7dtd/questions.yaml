@@ -88,52 +88,61 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: HOSTNAME
+          label: "HOSTNAME"
+          description: "Must be in this exact format 'httpswww.server.org' (without quotes, no path or locations allowed only subdomains and with no trailing '')."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: STEAM_API_KEY
+          label: "STEAM_API_KEY"
+          description: "Steam API Key goes here (you can get it from httpssteamcommunity.comdevapikey)."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: BOTTOKEN
+          label: "BOTTOKEN"
+          description: "Your Discord Bot Token (you can get it from here httpsdiscordapp.comdevelopersapplications)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: CLIENTSECRET
+          label: "CLIENTSECRET"
+          description: "Your Discord Client Secret (you can get it from here httpsdiscordapp.comdevelopersapplications)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: CLIENTID
+          label: "CLIENTID"
+          description: "Your Discord Client ID (you can get it from here httpsdiscordapp.comdevelopersapplications)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: DB_BKP_INTERV
+          label: "DB_BKP_INTERV"
+          description: "Specify the database backup interval in seconds (saved to the ..Database7dtd.sql)."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "90"
+        - variable: FORCE_UPDATE
+          label: "FORCE_UPDATE"
+          description: "Set to 'true' to force an update."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: CSMM_LOGLEVEL
+          label: "CSMM_LOGLEVEL"
+          description: "Log level (valid are ‘blank’, ‘error’, ‘warn’, ‘info’, ‘debug’, ‘verbose’, ‘silly’)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "info"
+        - variable: CSMM_DL_URL
+          label: "CSMM_DL_URL"
+          description: "Only change if you are know what you are doing."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "https://github.com/CatalysmsServerManager/7-days-to-die-server-manager/archive/master.zip"
+
 
 # Include{containerConfig}
 
@@ -209,7 +218,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: mariadbport
-                      label: "mariadbport port"
+                      label: "mariadbport Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

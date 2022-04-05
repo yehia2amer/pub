@@ -88,47 +88,55 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: GAME_ID
+          label: "GAME_ID"
+          description: "The GAME_ID that the container download at startup.(httpsdeveloper.valvesoftware.comwikiDedicated_Servers_List)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "1006030"
+        - variable: USERNAME
+          label: "USERNAME"
+          description: "Your Steam username goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION You have to disable Steam Guard)."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: VALIDATE
+          label: "VALIDATE"
+          description: "Set the Variable to 'true' if you want to validate the installation otherwise leave it blank."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: PASSWRD
+          label: "PASSWRD"
+          description: "Your Steam password goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION You have to disable Steam Guard)."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: MAP_NAME
+          label: "MAP_NAME"
+          description: "Standard Map Name"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "Ocean"
+        - variable: GAME_PARAMS
+          label: "GAME_PARAMS"
+          description: "Enter your start up commands for the server."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "?ServerX=0?ServerY=0?AltSaveDirectoryName=00?MaxPlayers=50?ReservedPlayerSlots=10?QueryPort=57550?Port=5750"
+        - variable: GAME_PARAMS_EXTRA
+          label: "GAME_PARAMS_EXTRA"
+          description: "Container Variable GAME_PARAMS_EXTRA"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "-log -server -NoBattlEye"
+        - variable: ENA_REDIS
+          label: "ENA_REDIS"
+          description: "If you've set up a external Redis server leave this blank, to enable the built in Redis server enter 'yes' (without quotes)."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "yes"
+
 
 # Include{containerConfig}
 
@@ -204,7 +212,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: udp2-gameport1
-                      label: "udp2-gameport1 port"
+                      label: "udp2-gameport1 Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -264,7 +272,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: udp3-gameporta2
-                      label: "udp3-gameporta2 port"
+                      label: "udp3-gameporta2 Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -324,7 +332,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: tcp1-rconport
-                      label: "tcp1-rconport port"
+                      label: "tcp1-rconport Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -384,7 +392,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: tcp2-seamlessport
-                      label: "tcp2-seamlessport port"
+                      label: "tcp2-seamlessport Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -444,7 +452,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: tcp3-redisserver
-                      label: "tcp3-redisserver port"
+                      label: "tcp3-redisserver Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

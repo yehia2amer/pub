@@ -88,17 +88,19 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: UMASK
+          label: "UMASK"
+          description: "Container Variable UMASK"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "000"
+        - variable: DATA_PERM
+          label: "DATA_PERM"
+          description: "Container Variable DATA_PERM"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "770"
+
 
 # Include{containerConfig}
 
@@ -174,7 +176,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: udp
-                      label: "udp port"
+                      label: "udp Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

@@ -88,32 +88,37 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: ROOT
+          label: "ROOT"
+          description: "This is only needed if you want to create backups from your boot drive or other directories that require root privileges (please don't forget to change the Shares Host path to  otherwise you can't see it in mnt in the container)."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "false"
+        - variable: DATA_PERM
+          label: "DATA_PERM"
+          description: "Data Permissions for config directory"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "770"
+        - variable: UMASK
+          label: "UMASK"
+          description: "Container Variable UMASK"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "0000"
+        - variable: CUSTOM_RES_W
+          label: "CUSTOM_RES_W"
+          description: "Minimum screen width 1024 pixels"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "1024"
+        - variable: CUSTOM_RES_H
+          label: "CUSTOM_RES_H"
+          description: "Minimum screen hight 768 pixels"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "768"
+
 
 # Include{containerConfig}
 

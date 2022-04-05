@@ -88,17 +88,19 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: TOR_NICKNAME
+          label: "TOR_NICKNAME"
+          description: "Container Variable NICKNAME"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "myRelay"
+        - variable: CONTACT_EMAIL
+          label: "CONTACT_EMAIL"
+          description: "Container Variable CONTACTINFO"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "mail@domain.com"
+
 
 # Include{containerConfig}
 
@@ -174,7 +176,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: 9001
-                      label: "9001 port"
+                      label: "9001 Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

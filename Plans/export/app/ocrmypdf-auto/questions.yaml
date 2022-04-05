@@ -77,47 +77,55 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: OCR_OUTPUT_MODE
+          label: "OCR_OUTPUT_MODE"
+          description: "Controls the output directory layout &lt;br &gt; &lt;code&gt;MIRROR_TREE&lt;code&gt; - (Default) Mirror the directory structure of the input directory, i.e. for an input file &lt;code&gt;inputfoobar.pdf&lt;code&gt; create an output file &lt;code&gt;outputfoobar.pdf&lt;code&gt;. &lt;br &gt; &lt;code&gt;SINGLE_FOLDER&lt;code&gt; - Collect all output files in a single flat folder, i.e. for an input file &lt;code&gt;inputfoobar.pdf&lt;code&gt; create an output file &lt;code&gt;outputbar.pdf&lt;code&gt;."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "MIRROR_TREE"
+        - variable: OCR_ACTION_ON_SUCCESS
+          label: "OCR_ACTION_ON_SUCCESS"
+          description: "Controls the action (if any) to perform after successful OCR processing &lt;br &gt; &lt;code&gt;NOTHING&lt;code&gt; - (Default) Do nothing. Input files remain in place where they were found. &lt;br &gt; &lt;code&gt;ARCHIVE_INPUT_FILES&lt;code&gt; - Archive input files by &lt;strong&gt;moving&lt;strong&gt; them &lt;em&gt;(overwriting existing files!)&lt;em&gt; to the &lt;code&gt;archive&lt;code&gt; Volume &lt;br &gt; &lt;code&gt;DELETE_INPUT_FILES&lt;code&gt; - Delete the input file after successful processing."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "NOTHING"
+        - variable: OCR_LANGUAGES
+          label: "OCR_LANGUAGES"
+          description: "Additional languages (besides English) to install, given as a space-separated list of language abbreviations. All available languages can be found on the &lt;a href=httpspackages.ubuntu.comsearch?keywords=tesseract-ocr-&amp;searchon=names&amp;suite=bionic&amp;section=all&gt;Ubuntu site&lt;a&gt;. Example for German, Chinese - Simplified, and Italian &lt;code&gt;deu chi-sim ita&lt;code&gt;"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: OCR_NOTIFY_URL
+          label: "OCR_NOTIFY_URL"
+          description: "On a successful completion, a POST will be made to the given URL, with a JSON payload of &lt;code&gt;{'pdf' 'outputdoc.pdf', 'txt' 'outputdoc.pdf.txt'} &lt;code&gt;. The txt property will only be present if you add the &lt;code&gt;--sidecar &lt;code&gt; option to the &lt;code&gt;ocr.config&lt;code&gt; file. This could be used to kick off additional processing, like indexing of the content or notifications."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: OCR_PROCESS_EXISTING_ON_START
+          label: "OCR_PROCESS_EXISTING_ON_START"
+          description: "Set to &lt;code&gt;1&lt;code&gt; to enable processing of any files in the input directory when the container is launched. &lt;br&gt; Set to &lt;code&gt;0&lt;code&gt; (Default) or unset to ignore existing files until they are modified."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "0"
+        - variable: OCR_VERBOSITY
+          label: "OCR_VERBOSITY"
+          description: "Control the verbosity of debug logging. Accepts python &lt;code&gt;logging&lt;code&gt; levels, e.g. &lt;code&gt;warn&lt;code&gt; (Default), &lt;code&gt;info&lt;code&gt;, &lt;code&gt;debug&lt;code&gt;, etc."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: USERMAP_UID
+          label: "USERMAP_UID"
+          description: "Set the UID that the OCR tools will run as. unRAID standard is 99."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "99"
+        - variable: USERMAP_GID
+          label: "USERMAP_GID"
+          description: "Set the primary GID that the OCR tools will run with. unRAID standard is 100."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "100"
+
 
 
   - variable: serviceexpert

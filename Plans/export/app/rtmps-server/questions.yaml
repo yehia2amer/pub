@@ -88,12 +88,13 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: SSL_DOMAIN
+          label: "SSL_DOMAIN"
+          description: "Defines the domain the default self sigend certificate will be valid for."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "rtmp-server.loc"
+
 
 # Include{containerConfig}
 
@@ -169,7 +170,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: rtmpport
-                      label: "rtmpport port"
+                      label: "rtmpport Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -229,7 +230,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: rtmpsport
-                      label: "rtmpsport port"
+                      label: "rtmpsport Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

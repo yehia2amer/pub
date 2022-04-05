@@ -88,17 +88,19 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: SALT_PASSWORD
+          label: "SALT_PASSWORD"
+          description: "Container Variable SALT_PASSWORD"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "salty"
+        - variable: SALT_LOGLEVEL
+          label: "SALT_LOGLEVEL"
+          description: "Container Variable SALT_LOGLEVEL"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "warning"
+
 
 # Include{containerConfig}
 
@@ -174,7 +176,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: saltpublishport
-                      label: "saltpublishport port"
+                      label: "saltpublishport Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -234,7 +236,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: saltrequestserverport
-                      label: "saltrequestserverport port"
+                      label: "saltrequestserverport Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

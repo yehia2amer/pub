@@ -88,47 +88,55 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: postgres_host
+          label: "postgres_host"
+          description: "postgres_host"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "localhost"
+        - variable: postgres_user
+          label: "postgres_user"
+          description: "postgre user"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "dsmrreader"
+        - variable: postgres_pass
+          label: "postgres_pass"
+          description: "postgres password"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "dsmrreader"
+        - variable: postgres_db
+          label: "postgres_db"
+          description: "postgres db name"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "graph-node"
+        - variable: ipfs
+          label: "ipfs"
+          description: "Container Variable ipfs"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "localhost:5001"
+        - variable: ethereum
+          label: "ethereum"
+          description: "ethereum node url"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "mainnet:http://localhost:8545"
+        - variable: postgres_port
+          label: "postgres_port"
+          description: "postgres port"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "5732"
+        - variable: GRAPH_LOG
+          label: "GRAPH_LOG"
+          description: "log level"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "info"
+
 
 # Include{containerConfig}
 
@@ -204,7 +212,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: json-rpc
-                      label: "json-rpc port"
+                      label: "json-rpc Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -264,7 +272,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: graphqlwebsocket
-                      label: "graphqlwebsocket port"
+                      label: "graphqlwebsocket Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

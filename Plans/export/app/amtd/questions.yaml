@@ -77,77 +77,91 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: AUTOSTART
+          label: "AUTOSTART"
+          description: "true = Enabled  Runs script automatically on startup"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: SCRIPTINTERVAL
+          label: "SCRIPTINTERVAL"
+          description: "#s or #m or #h or #d  s = seconds, m = minutes, h = hours, d = days  Amount of time between each script run, when AUTOSTART is enabled"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: RadarrUrl
+          label: "RadarrUrl"
+          description: "Set domain or IP to your Radarr instance including port. If using reverse proxy, do not use a trailing slash. Ensure you specify https..."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: RadarrAPIkey
+          label: "RadarrAPIkey"
+          description: "Radarr API Key"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: extrastype
+          label: "extrastype"
+          description: "all or trailers  all downloads all available videos (trailers, clips, featurettes, etc...)  trailers only downloads trailers"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: LANGUAGES
+          label: "LANGUAGES"
+          description: "Set the primary desired language, if not found, fallback to next langauge in the list... (this is a ',' separated list of ISO 639-1 language codes)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: videoformat
+          label: "videoformat"
+          description: "For guidence, please see youtube-dl documentation"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: subtitlelanguage
+          label: "subtitlelanguage"
+          description: "Desired Language Code  For guidence, please see youtube-dl documentation"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: SINGLETRAILER
+          label: "SINGLETRAILER"
+          description: "true = enabled  Only downloads the first available trailer, does not apply to other extras type"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: PREFER_EXISTING
+          label: "PREFER_EXISTING"
+          description: "true = enabled  Checks for existing trailer file, and skips it if found"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: USEFOLDERS
+          label: "USEFOLDERS"
+          description: "true = enabled  Creates subfolders within the movie folder for extras"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: EndClient
+          label: "EndClient"
+          description: "plex or emby or jellyfin  Select the appropriate client for maximum compatibility"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: FilePermissions
+          label: "FilePermissions"
+          description: "Based on chmod linux permissions"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: FolderPermissions
+          label: "FolderPermissions"
+          description: "Based on chmod linux permissions"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: ""
+
 
 
   - variable: serviceexpert

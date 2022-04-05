@@ -88,12 +88,13 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: COOKIE_SECRET
+          label: "COOKIE_SECRET"
+          description: "Container Variable COOKIE_SECRET"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: ""
+
 
 # Include{containerConfig}
 
@@ -169,7 +170,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: http
-                      label: "http port"
+                      label: "http Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -229,7 +230,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: 5443
-                      label: "5443 port"
+                      label: "5443 Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

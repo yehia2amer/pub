@@ -77,72 +77,85 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: OC_USER
+          label: "OC_USER"
+          description: "Username to connect to ownCloud"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: OC_PASS
+          label: "OC_PASS"
+          description: "Password or App-Token for the ownCloud user"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: OC_SERVER
+          label: "OC_SERVER"
+          description: "ownCloud Server URL, with, if necessary, with port"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: OC_URLPATH
+          label: "OC_URLPATH"
+          description: "Server path to the ownCloud instance"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "/owncloud/"
+        - variable: OC_FILEPATH
+          label: "OC_FILEPATH"
+          description: "Only sync one specific folder. Use '' for everything"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "/"
+        - variable: RUN_UID
+          label: "RUN_UID"
+          description: "UID for the occlient user and sync location"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "99"
+        - variable: RUN_GID
+          label: "RUN_GID"
+          description: "GID for the occlient user and sync location"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "100"
+        - variable: OC_WEBDAV
+          label: "OC_WEBDAV"
+          description: "In case the webdav path is not default, you can change it here "
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "remote.php/webdav"
+        - variable: OC_PROTO
+          label: "OC_PROTO"
+          description: "Connect via http or https"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "https"
+        - variable: TRUST_SELFSIGN
+          label: "TRUST_SELFSIGN"
+          description: "Set to 1 to trust self-signed certificates"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "0"
+        - variable: SYNC_HIDDEN
+          label: "SYNC_HIDDEN"
+          description: "Set to 1 to sync all hidden files within the specified ownCloud directory"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "0"
+        - variable: SILENCE_OUTPUT
+          label: "SILENCE_OUTPUT"
+          description: "Set to 0 to get more verbose output"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "1"
+        - variable: RUN_INTERVAL
+          label: "RUN_INTERVAL"
+          description: "Interval in seconds at which the client will run and check for changes"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "30"
+
 
 
   - variable: serviceexpert

@@ -88,17 +88,19 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: TERRARIA_SRV_V
+          label: "TERRARIA_SRV_V"
+          description: "Enter your prefered Terraria version (you can get the latest version number for example here httpsterraria.fandom.comwikiServer#Downloads)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "1.4.3.6"
+        - variable: GAME_PARAMS
+          label: "GAME_PARAMS"
+          description: "Enter your start up commands for the server."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "-config serverconfig.txt"
+
 
 # Include{containerConfig}
 
@@ -174,7 +176,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: tcp
-                      label: "tcp port"
+                      label: "tcp Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

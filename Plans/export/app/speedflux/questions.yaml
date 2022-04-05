@@ -77,62 +77,73 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: INFLUX_DB_ADDRESS
+          label: "INFLUX_DB_ADDRESS"
+          description: "Container Variable INFLUX_DB_ADDRESSIP or Hostname of Influx DB"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "influxdb"
+        - variable: INFLUX_DB_PORT
+          label: "INFLUX_DB_PORT"
+          description: "Container Variable INFLUX_DB_PORT"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "8086"
+        - variable: INFLUX_DB_USER
+          label: "INFLUX_DB_USER"
+          description: "Container Variable INFLUX_DB_USER"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: INFLUX_DB_PASSWORD
+          label: "INFLUX_DB_PASSWORD"
+          description: "Container Variable INFLUX_DB_PASSWORD"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: INFLUX_DB_DATABASE
+          label: "INFLUX_DB_DATABASE"
+          description: "Container Variable INFLUX_DB_DATABASEIf the database doesn't exist, it will be created. "
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "speedtest"
+        - variable: SPEEDTEST_INTERVAL
+          label: "SPEEDTEST_INTERVAL"
+          description: "How often should speed be tested, in minutes. Default is set at 230 as I like to see changes over time at different times of day. "
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "150"
+        - variable: INFLUX_DB_TAGS
+          label: "INFLUX_DB_TAGS"
+          description: "Tags to be added to the datasets. See httpsgithub.combreadlysmspeedtest-to-influxdb#tag-options. Tags must be comma seperated"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "isp, external_ip, server_id, server_name, server_location, speedtest_url"
+        - variable: PING_INTERVAL
+          label: "PING_INTERVAL"
+          description: "Interval is in seconds. This is how often your latency will be checked. "
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "60"
+        - variable: PING_TARGETS
+          label: "PING_TARGETS"
+          description: "hostnames or domains to use to test ping. On every ping interval, all servers input will be tested. Must be comma seperated. "
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "1.1.1.1, 8.8.8.8"
+        - variable: LOG_TYPE
+          label: "LOG_TYPE"
+          description: "Options are 'info' or 'debug' "
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "info"
+        - variable: SPEEDTEST_SERVER_ID
+          label: "SPEEDTEST_SERVER_ID"
+          description: "Input a Ookla Speedtest server ID to use for your tests. This will use this server for every test. "
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: ""
+
 
 
   - variable: serviceexpert

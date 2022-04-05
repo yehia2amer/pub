@@ -88,17 +88,19 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: CRUSHADMIN
+          label: "CRUSHADMIN"
+          description: "Admin user for Crushftp "
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "crushadmin"
+        - variable: CRUSHPASSWORD
+          label: "CRUSHPASSWORD"
+          description: "Password for Admin user "
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "crush9password"
+
 
 # Include{containerConfig}
 
@@ -174,7 +176,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: httpsport
-                      label: "httpsport port"
+                      label: "httpsport Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -234,7 +236,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: ftpport
-                      label: "ftpport port"
+                      label: "ftpport Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -294,7 +296,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: httpport9090
-                      label: "httpport9090 port"
+                      label: "httpport9090 Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -354,7 +356,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: httpport2222
-                      label: "httpport2222 port"
+                      label: "httpport2222 Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

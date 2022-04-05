@@ -88,27 +88,31 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: GAME_V
+          label: "GAME_V"
+          description: "Preferred game version goes here (set to ‘latest’ to download the latest and check on every startup if there is a newer version available)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "latest"
+        - variable: SRV_NAME
+          label: "SRV_NAME"
+          description: "Servername goes here"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "DockerMindustry"
+        - variable: GAME_PARAMS
+          label: "GAME_PARAMS"
+          description: "Extra startup Parameters if needed (leave empty if not needed)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: UMASK
+          label: "UMASK"
+          description: "Permissions for newly created files. Don’t change unless you are knowing what you are doing!"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "000"
+
 
 # Include{containerConfig}
 
@@ -184,7 +188,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: udp-gameport
-                      label: "udp-gameport port"
+                      label: "udp-gameport Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

@@ -88,22 +88,25 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: VNC_PASSWORD
+          label: "VNC_PASSWORD"
+          description: "Container Variable VNC_PASSWORD"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: DISPLAY_WIDTH
+          label: "DISPLAY_WIDTH"
+          description: "Container Variable DISPLAY_WIDTH"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "1280"
+        - variable: DISPLAY_HEIGHT
+          label: "DISPLAY_HEIGHT"
+          description: "Container Variable DISPLAY_HEIGHT"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "768"
+
 
 # Include{containerConfig}
 
@@ -179,7 +182,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: webclipperport
-                      label: "webclipperport port"
+                      label: "webclipperport Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

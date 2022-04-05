@@ -77,27 +77,31 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: script
+          label: "script"
+          description: "encode.sh or mkvdts2ac3.sh"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "encode.sh"
+        - variable: parameters
+          label: "parameters"
+          description: "Parameters for FFmpeg"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "-map 0;-vcodec copy;-scodec copy;-acodec ac3;-b:a 640k"
+        - variable: output_format
+          label: "output_format"
+          description: "Format of output file."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "mkv"
+        - variable: mkvdts2ac3_params
+          label: "mkvdts2ac3_params"
+          description: "Parameters for mkvdts2ac3"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "--compress none;-d;-n;-w /output;--new"
+
 
 
   - variable: serviceexpert

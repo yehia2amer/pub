@@ -88,52 +88,61 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: LETS_ENCRYPT_ENABLED
+          label: "LETS_ENCRYPT_ENABLED"
+          description: "Enables Let's Encrypt certificate instead of self-signed certificates"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: PUBLIC_DNS
+          label: "PUBLIC_DNS"
+          description: " DNS domain to be used as certificate "
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: ORGANISATION_UNIT
+          label: "ORGANISATION_UNIT"
+          description: "Organisation unit to be used as certificate "
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: ORGANISATION
+          label: "ORGANISATION"
+          description: "Organisation name to be used as certificate "
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: CITY
+          label: "CITY"
+          description: "City name to be used as certificate "
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: STATE
+          label: "STATE"
+          description: " State name to be used as certificate "
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: COUNTRY_CODE
+          label: "COUNTRY_CODE"
+          description: "Country code to be used as certificate "
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: KEYSTORE_PASS
+          label: "KEYSTORE_PASS"
+          description: "'.keystore'.jks' store password"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: KEY_PASS
+          label: "KEY_PASS"
+          description: "Private key password &lt;refKEYSTORE_PASS&gt;"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: ""
+
 
 # Include{containerConfig}
 
@@ -209,7 +218,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: webuisslport
-                      label: "webuisslport port"
+                      label: "webuisslport Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

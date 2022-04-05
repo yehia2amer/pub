@@ -88,242 +88,289 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: AUTH_TYPE
+          label: "AUTH_TYPE"
+          description: "Select authentication type (internal, jwt or ldap)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "internal"
+        - variable: ENABLE_AUTH
+          label: "ENABLE_AUTH"
+          description: "Enable authentication"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "1"
+        - variable: ENABLE_GUESTS
+          label: "ENABLE_GUESTS"
+          description: "Enable guest access"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "1"
+        - variable: GLOBAL_MODULES
+          label: "GLOBAL_MODULES"
+          description: "Custom prosody modules to load in global configuration (comma separated)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "statistics,alert"
+        - variable: GLOBAL_CONFIG
+          label: "GLOBAL_CONFIG"
+          description: "Custom configuration string with escaped newlines"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "foo = bar;\nkey = val;"
+        - variable: XMPP_DOMAIN
+          label: "XMPP_DOMAIN"
+          description: "Internal XMPP domain"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "meet.jitsi"
+        - variable: XMPP_AUTH_DOMAIN
+          label: "XMPP_AUTH_DOMAIN"
+          description: "Internal XMPP domain for authenticated services"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "auth.meet.jitsi"
+        - variable: XMPP_GUEST_DOMAIN
+          label: "XMPP_GUEST_DOMAIN"
+          description: "XMPP domain for unauthenticated users"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "guest.meet.jitsi"
+        - variable: XMPP_MUC_DOMAIN
+          label: "XMPP_MUC_DOMAIN"
+          description: "XMPP domain for the MUC"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "muc.meet.jitsi"
+        - variable: XMPP_INTERNAL_MUC_DOMAIN
+          label: "XMPP_INTERNAL_MUC_DOMAIN"
+          description: "XMPP domain for the internal MUC"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "internal-muc.meet.jitsi"
+        - variable: XMPP_MODULES
+          label: "XMPP_MODULES"
+          description: "Custom Prosody modules for XMPP_DOMAIN (comma separated)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "info,alert"
+        - variable: XMPP_MUC_MODULES
+          label: "XMPP_MUC_MODULES"
+          description: "Custom Prosody modules for MUC component (comma separated)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "info,alert"
+        - variable: XMPP_INTERNAL_MUC_MODULES
+          label: "XMPP_INTERNAL_MUC_MODULES"
+          description: "Custom Prosody modules for internal MUC component (comma separated)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "info,alert"
+        - variable: XMPP_RECORDER_DOMAIN
+          label: "XMPP_RECORDER_DOMAIN"
+          description: "Domain for the jibri recorder"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "recorder.meet.jitsi"
+        - variable: JICOFO_COMPONENT_SECRET
+          label: "JICOFO_COMPONENT_SECRET"
+          description: "XMPP component password for Jicofo"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "s3cr37"
+        - variable: JICOFO_AUTH_USER
+          label: "JICOFO_AUTH_USER"
+          description: "XMPP user for Jicofo client connections"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "focus"
+        - variable: JICOFO_AUTH_PASSWORD
+          label: "JICOFO_AUTH_PASSWORD"
+          description: "XMPP password for Jicofo client connections"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "passw0rd"
+        - variable: JVB_AUTH_USER
+          label: "JVB_AUTH_USER"
+          description: "XMPP user for JVB MUC client connections"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "jvb"
+        - variable: JVB_AUTH_PASSWORD
+          label: "JVB_AUTH_PASSWORD"
+          description: "XMPP password for JVB MUC client connections"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "passw0rd"
+        - variable: JIGASI_XMPP_USER
+          label: "JIGASI_XMPP_USER"
+          description: "XMPP user for Jigasi MUC client connections"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "jigasi"
+        - variable: JIGASI_XMPP_PASSWORD
+          label: "JIGASI_XMPP_PASSWORD"
+          description: "XMPP password for Jigasi MUC client connections"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "passw0rd"
+        - variable: JIBRI_XMPP_USER
+          label: "JIBRI_XMPP_USER"
+          description: "Internal user for Jibri client connections."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "jibri"
+        - variable: JIBRI_XMPP_PASSWORD
+          label: "JIBRI_XMPP_PASSWORD"
+          description: "Internal password for Jibri client connections."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "passw0rd"
+        - variable: JIBRI_RECORDER_USER
+          label: "JIBRI_RECORDER_USER"
+          description: "Internal recorder user for Jibri client connections"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "recorder"
+        - variable: JIBRI_RECORDER_PASSWORD
+          label: "JIBRI_RECORDER_PASSWORD"
+          description: "Internal recorder password for Jibri client connections"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "passw0rd"
+        - variable: JWT_APP_ID
+          label: "JWT_APP_ID"
+          description: "Application identifier"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "my_jitsi_app_id"
+        - variable: JWT_APP_SECRET
+          label: "JWT_APP_SECRET"
+          description: "Application secret known only to your token"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "my_jitsi_app_secret"
+        - variable: JWT_ACCEPTED_ISSUERS
+          label: "JWT_ACCEPTED_ISSUERS"
+          description: "(Optional) Set asap_accepted_issuers as a comma separated list"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "my_web_client,my_app_client"
+        - variable: JWT_ACCEPTED_AUDIENCES
+          label: "JWT_ACCEPTED_AUDIENCES"
+          description: "(Optional) Set asap_accepted_audiences as a comma separated list"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "my_server1,my_server2"
+        - variable: JWT_ASAP_KEYSERVER
+          label: "JWT_ASAP_KEYSERVER"
+          description: "(Optional) Set asap_keyserver to a url where public keys can be found"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "https://example.com/asap"
+        - variable: JWT_ALLOW_EMPTY
+          label: "JWT_ALLOW_EMPTY"
+          description: "(Optional) Allow anonymous users with no JWT while validating JWTs when provided"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "0"
+        - variable: JWT_AUTH_TYPE
+          label: "JWT_AUTH_TYPE"
+          description: "(Optional) Controls which module is used for processing incoming JWTs"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "token"
+        - variable: JWT_TOKEN_AUTH_MODULE
+          label: "JWT_TOKEN_AUTH_MODULE"
+          description: "(Optional) Controls which module is used for validating JWTs"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "token_verification"
+        - variable: LOG_LEVEL
+          label: "LOG_LEVEL"
+          description: "Controls which logs are output from prosody and associated modules"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "info"
+        - variable: LDAP_URL
+          label: "LDAP_URL"
+          description: "URL for ldap connection"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "ldaps://ldap.domain.com/"
+        - variable: LDAP_BASE
+          label: "LDAP_BASE"
+          description: "LDAP base DN. Can be empty."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "DC=example,DC=domain,DC=com"
+        - variable: LDAP_BINDDN
+          label: "LDAP_BINDDN"
+          description: "LDAP user DN. Do not specify this parameter for the anonymous bind."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "CN=binduser,OU=users,DC=example,DC=domain,DC=com"
+        - variable: LDAP_BINDPW
+          label: "LDAP_BINDPW"
+          description: "LDAP user password. Do not specify this parameter for the anonymous bind."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "LdapUserPassw0rd"
+        - variable: LDAP_FILTER
+          label: "LDAP_FILTER"
+          description: "LDAP filter."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "(sAMAccountName=%u)"
+        - variable: LDAP_AUTH_METHOD
+          label: "LDAP_AUTH_METHOD"
+          description: "LDAP authentication method."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "bind"
+        - variable: LDAP_VERSION
+          label: "LDAP_VERSION"
+          description: "LDAP protocol version"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "3"
+        - variable: LDAP_USE_TLS
+          label: "LDAP_USE_TLS"
+          description: "Enable LDAP TLS"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "1"
+        - variable: LDAP_TLS_CIPHERS
+          label: "LDAP_TLS_CIPHERS"
+          description: "Set TLS ciphers list to allow"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "SECURE256:SECURE128"
+        - variable: LDAP_TLS_CHECK_PEER
+          label: "LDAP_TLS_CHECK_PEER"
+          description: "Require and verify LDAP server certificate"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "1"
+        - variable: LDAP_TLS_CACERT_FILE
+          label: "LDAP_TLS_CACERT_FILE"
+          description: "Path to CA cert file. Used when server certificate verification is enabled"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "/etc/ssl/certs/ca-certificates.crt"
+        - variable: LDAP_TLS_CACERT_DIR
+          label: "LDAP_TLS_CACERT_DIR"
+          description: "Path to CA certs directory. Used when server certificate verification is enabled."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "/etc/ssl/certs"
+        - variable: LDAP_START_TLS
+          label: "LDAP_START_TLS"
+          description: "Enable START_TLS, requires LDAPv3, URL must be ldap not ldaps"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "0"
+
 
 # Include{containerConfig}
 
@@ -399,7 +446,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: port2
-                      label: "port2 port"
+                      label: "port2 Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -459,7 +506,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: port3
-                      label: "port3 port"
+                      label: "port3 Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

@@ -88,22 +88,25 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: GAME_PARAMS
+          label: "GAME_PARAMS"
+          description: "Enter your extra start up commands for the server here otherwise leave empty."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: GAME_ID
+          label: "GAME_ID"
+          description: "The GAME_ID that the container downloads at startup. If you want to install a static or beta version of the game change the value to '1169370 -beta YOURBRANCH' (without quotes, replace YOURBRANCH with the branch or version you want to install)."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "1169370"
+        - variable: WORLD_NAME
+          label: "WORLD_NAME"
+          description: "Specify the world name here (your worlds are saved in ....configNecessesaves)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "World"
+
 
 # Include{containerConfig}
 
@@ -179,7 +182,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: udp-gameport
-                      label: "udp-gameport port"
+                      label: "udp-gameport Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

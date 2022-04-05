@@ -88,17 +88,19 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: DoH_V
+          label: "DoH_V"
+          description: "Find the versions here httpsgithub.comm13253dns-over-httpsreleases or set to 'latest' without quotes to download the latest version"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "latest"
+        - variable: GO_DL_URL
+          label: "GO_DL_URL"
+          description: "Container Variable GO_DL_URL"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "https://dl.google.com/go/go1.13.1.linux-amd64.tar.gz"
+
 
 # Include{containerConfig}
 
@@ -174,7 +176,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: tcpdnsqueryport
-                      label: "tcpdnsqueryport port"
+                      label: "tcpdnsqueryport Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

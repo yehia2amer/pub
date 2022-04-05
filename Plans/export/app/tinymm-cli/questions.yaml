@@ -88,22 +88,22 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: USER_ID
+          label: "USER_ID"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "0"
+        - variable: GUID
+          label: "GUID"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "100"
+        - variable: UMASK
+          label: "UMASK"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "000"
+
 
 # Include{containerConfig}
 
@@ -179,7 +179,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: tcp-port-1
-                      label: "tcp-port-1 port"
+                      label: "tcp-port-1 Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

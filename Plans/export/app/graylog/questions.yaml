@@ -88,32 +88,37 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: GRAYLOG_PASSWORD_SECRET
+          label: "GRAYLOG_PASSWORD_SECRET"
+          description: "CHANGE ME (must be at least 16 characters)!"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: GRAYLOG_ROOT_PASSWORD_SHA2
+          label: "GRAYLOG_ROOT_PASSWORD_SHA2"
+          description: "Container Variable GRAYLOG_ROOT_PASSWORD_SHA2"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: GRAYLOG_HTTP_EXTERNAL_URI
+          label: "GRAYLOG_HTTP_EXTERNAL_URI"
+          description: "Container Variable GRAYLOG_HTTP_EXTERNAL_URI"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: GRAYLOG_MONGODB_URI
+          label: "GRAYLOG_MONGODB_URI"
+          description: "Container Variable GRAYLOG_MONGODB_URI"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: GRAYLOG_ELASTICSEARCH_HOSTS
+          label: "GRAYLOG_ELASTICSEARCH_HOSTS"
+          description: "Need to be specified as a comma-separated list of valid URIs for the http ports of your elasticsearch nodes"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: ""
+
 
 # Include{containerConfig}
 
@@ -189,7 +194,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: syslogtcp
-                      label: "syslogtcp port"
+                      label: "syslogtcp Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -249,7 +254,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: syslogudp
-                      label: "syslogudp port"
+                      label: "syslogudp Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -309,7 +314,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: gelftcp
-                      label: "gelftcp port"
+                      label: "gelftcp Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -369,7 +374,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: gelfudp
-                      label: "gelfudp port"
+                      label: "gelfudp Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

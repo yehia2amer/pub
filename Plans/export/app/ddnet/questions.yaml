@@ -88,12 +88,13 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: GAME_CONFIG
+          label: "GAME_CONFIG"
+          description: "Change only if you know what you are doing (default game config file that will be executed on start of the container - located in the main directory for DDNet)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "autoexec.cfg"
+
 
 # Include{containerConfig}
 
@@ -169,7 +170,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: tcp
-                      label: "tcp port"
+                      label: "tcp Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

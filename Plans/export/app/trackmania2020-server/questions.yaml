@@ -88,22 +88,25 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: MASTER_LOGIN
+          label: "MASTER_LOGIN"
+          description: "httpsplayers.trackmania.comserverdedicatedcreate"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: MASTER_PASSWORD
+          label: "MASTER_PASSWORD"
+          description: "httpsplayers.trackmania.comserverdedicatedcreate"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: XMLRPC_ALLOWREMOTE
+          label: "XMLRPC_ALLOWREMOTE"
+          description: "Container Variable XMLRPC_ALLOWREMOTE"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: ""
+
 
 # Include{containerConfig}
 
@@ -179,7 +182,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: gameudp
-                      label: "gameudp port"
+                      label: "gameudp Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -239,7 +242,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: xmlrpc
-                      label: "xmlrpc port"
+                      label: "xmlrpc Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

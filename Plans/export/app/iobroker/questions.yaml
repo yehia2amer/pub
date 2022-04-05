@@ -88,22 +88,25 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: USBDEVICES
+          label: "USBDEVICES"
+          description: "Sets relevant permissions on mounted devices like "
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: SETUID
+          label: "SETUID"
+          description: "Container Variable SETUID"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "99"
+        - variable: SETGID
+          label: "SETGID"
+          description: "Container Variable SETGID"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "100"
+
 
 # Include{containerConfig}
 
@@ -179,7 +182,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: coapport(shelly)
-                      label: "coapport(shelly) port"
+                      label: "coapport(shelly) Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -239,7 +242,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: flotport
-                      label: "flotport port"
+                      label: "flotport Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -299,7 +302,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: homematicport
-                      label: "homematicport port"
+                      label: "homematicport Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -359,7 +362,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: mqttport
-                      label: "mqttport port"
+                      label: "mqttport Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -419,7 +422,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: mqttsslport
-                      label: "mqttsslport port"
+                      label: "mqttsslport Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -479,7 +482,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: node-redport
-                      label: "node-redport port"
+                      label: "node-redport Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -539,7 +542,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: socket-ioport
-                      label: "socket-ioport port"
+                      label: "socket-ioport Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

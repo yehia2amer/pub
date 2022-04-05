@@ -88,42 +88,49 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: GAME_ID
+          label: "GAME_ID"
+          description: "The GAME_ID that the container download at startup.(httpsdeveloper.valvesoftware.comwikiDedicated_Servers_List)If you want to use a static version of the game and not always the latest one then enter this '294420 -beta stable_alpha19.4' or '294420 -beta latest_experimental' (without quotes) if you want to stay for example on alpha19.4."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "294420"
+        - variable: SERVERCONFIG
+          label: "SERVERCONFIG"
+          description: "Please change if your serverconfigfile has another name."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "serverconfig.xml"
+        - variable: GAME_PARAMS
+          label: "GAME_PARAMS"
+          description: "Enter your start up commands for the server."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "-logfile 7DaysToDie_Data/output_log.txt $@"
+        - variable: USERNAME
+          label: "USERNAME"
+          description: "Your Steam username goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION You have to disable Steam Guard)."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: VALIDATE
+          label: "VALIDATE"
+          description: "Set the Variable to 'true' if you want to validate the installation otherwise leave it blank."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: PASSWRD
+          label: "PASSWRD"
+          description: "Your Steam password goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION You have to disable Steam Guard)."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: ENABLE_BEPINEX
+          label: "ENABLE_BEPINEX"
+          description: "If you want to enable BepInEx set this variable to 'true' (without quotes)."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "false"
+
 
 # Include{containerConfig}
 
@@ -199,7 +206,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: udp1-steammasterserver
-                      label: "udp1-steammasterserver port"
+                      label: "udp1-steammasterserver Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -259,7 +266,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: udp2-steamcommunications
-                      label: "udp2-steamcommunications port"
+                      label: "udp2-steamcommunications Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -319,7 +326,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: udp3-raknet
-                      label: "udp3-raknet port"
+                      label: "udp3-raknet Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -379,7 +386,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: udp4-unet
-                      label: "udp4-unet port"
+                      label: "udp4-unet Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -439,7 +446,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: tcp2-webbasecontrol
-                      label: "tcp2-webbasecontrol port"
+                      label: "tcp2-webbasecontrol Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -499,7 +506,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: tcp3-webpanel
-                      label: "tcp3-webpanel port"
+                      label: "tcp3-webpanel Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -559,7 +566,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: udp5-registeringatserverlist
-                      label: "udp5-registeringatserverlist port"
+                      label: "udp5-registeringatserverlist Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

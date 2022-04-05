@@ -88,27 +88,27 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: REMOTE_MINECRAFT_IP
+          label: "REMOTE_MINECRAFT_IP"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: REMOTE_MINECRAFT_PORT
+          label: "REMOTE_MINECRAFT_PORT"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "19132"
+        - variable: CLEANUP_TIMEOUT
+          label: "CLEANUP_TIMEOUT"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "60"
+        - variable: UMASK
+          label: "UMASK"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "000"
+
 
 # Include{containerConfig}
 
@@ -184,7 +184,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: udp-port-1
-                      label: "udp-port-1 port"
+                      label: "udp-port-1 Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -244,7 +244,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: tcp-port-2
-                      label: "tcp-port-2 port"
+                      label: "tcp-port-2 Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -304,7 +304,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: udp-port-3
-                      label: "udp-port-3 port"
+                      label: "udp-port-3 Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

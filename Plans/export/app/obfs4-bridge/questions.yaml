@@ -88,32 +88,37 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: OR_PORT
+          label: "OR_PORT"
+          description: "Container Variable OR_PORT"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "9393"
+        - variable: PT_PORT
+          label: "PT_PORT"
+          description: "Container Variable PT_PORT"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "9292"
+        - variable: EMAIL
+          label: "EMAIL"
+          description: "Container Variable EMAIL"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: OBFS4_ENABLE_ADDITIONAL_VARIABLES
+          label: "OBFS4_ENABLE_ADDITIONAL_VARIABLES"
+          description: "Container Variable OBFS4_ENABLE_ADDITIONAL_VARIABLES"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "0"
+        - variable: OBFS4V_AddressDisableIPv6
+          label: "OBFS4V_AddressDisableIPv6"
+          description: "Container Variable OBFS4V_AddressDisableIPv6"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "0"
+
 
 # Include{containerConfig}
 
@@ -189,7 +194,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: pt_port
-                      label: "pt_port port"
+                      label: "pt_port Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

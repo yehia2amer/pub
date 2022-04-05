@@ -88,12 +88,13 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: DOCKER_TLS_CERTDIR
+          label: "DOCKER_TLS_CERTDIR"
+          description: "Container Variable DOCKER_TLS_CERTDIR"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "/certs"
+
 
 # Include{containerConfig}
 
@@ -169,7 +170,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: non-tlstcpport
-                      label: "non-tlstcpport port"
+                      label: "non-tlstcpport Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

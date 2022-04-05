@@ -88,67 +88,79 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: LISTEN_PORT
+          label: "LISTEN_PORT"
+          description: "Container Variable LISTEN_PORT"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "4443"
+        - variable: DNS_SERVERS
+          label: "DNS_SERVERS"
+          description: "Container Variable DNS_SERVERS"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "8.8.8.8,37.235.1.174,8.8.4.4,37.235.1.177"
+        - variable: CA_CN
+          label: "CA_CN"
+          description: "Name of CA for generated certs"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "VPN CA"
+        - variable: CA_ORG
+          label: "CA_ORG"
+          description: "Organization of CA for generated certs"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "OCSERV"
+        - variable: CA_DAYS
+          label: "CA_DAYS"
+          description: "Days CA cert is valid for generated certs"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "9999"
+        - variable: SRV_CN
+          label: "SRV_CN"
+          description: "Name of server for generated certs"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "vpn.example.com"
+        - variable: SRV_ORG
+          label: "SRV_ORG"
+          description: "Organization of server for generated certs"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "My Company"
+        - variable: SRV_DAYS
+          label: "SRV_DAYS"
+          description: "Days server cert is valid for generated certs"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "9999"
+        - variable: TUNNEL_MODE
+          label: "TUNNEL_MODE"
+          description: "Container Variable TUNNEL_MODE"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "all"
+        - variable: TUNNEL_ROUTES
+          label: "TUNNEL_ROUTES"
+          description: "Container Variable TUNNEL_ROUTES"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: SPLIT_DNS_DOMAINS
+          label: "SPLIT_DNS_DOMAINS"
+          description: "Container Variable SPLIT_DNS_DOMAINS"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: POWER_USER
+          label: "POWER_USER"
+          description: "Container Variable POWER_USER"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "no"
+
 
 # Include{containerConfig}
 
@@ -224,7 +236,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: 4443udp
-                      label: "4443udp port"
+                      label: "4443udp Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

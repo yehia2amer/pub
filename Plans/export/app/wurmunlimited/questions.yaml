@@ -88,92 +88,109 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: GAME_ID
+          label: "GAME_ID"
+          description: "The GAME_ID that the container download at startup.(httpsdeveloper.valvesoftware.comwikiDedicated_Servers_List)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "402370"
+        - variable: USERNAME
+          label: "USERNAME"
+          description: "Your Steam username goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION You have to disable Steam Guard)."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: VALIDATE
+          label: "VALIDATE"
+          description: "Set the Variable to 'true' if you want to validate the installation otherwise leave it blank."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: PASSWRD
+          label: "PASSWRD"
+          description: "Your Steam password goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION You have to disable Steam Guard)."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: MOD_LAUNCHER
+          label: "MOD_LAUNCHER"
+          description: "To enable the Server-ModLauncher set it to 'true' (without quotes) otherwise leave it blank."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: WU_SERVERNAME
+          label: "WU_SERVERNAME"
+          description: "Name of the Server"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "DockerServer"
+        - variable: WU_PWD
+          label: "WU_PWD"
+          description: "Server Password to join"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "Docker"
+        - variable: WU_ADMINPWD
+          label: "WU_ADMINPWD"
+          description: "Your Admin Password"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "adminDocker"
+        - variable: WU_MAXPLAYERS
+          label: "WU_MAXPLAYERS"
+          description: "Define the maximum players on the server"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "150"
+        - variable: GAME_PORT
+          label: "GAME_PORT"
+          description: "Container Variable GAME_PORT"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "3724"
+        - variable: WU_QUERYPORT
+          label: "WU_QUERYPORT"
+          description: "Container Variable WU_QUERYPORT"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "27020"
+        - variable: WU_HOMESERVER
+          label: "WU_HOMESERVER"
+          description: "If set to 'true' (without quotes) Server is a homeserver and belongs to a single kingdom."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "true"
+        - variable: WU_HOMEKINGDOM
+          label: "WU_HOMEKINGDOM"
+          description: "If you're using the Adventure base, use 1, 2, or 3.  If you're using Creative, use 4.  Kingdom numbers 0 - No kingdom  1 - Jen-Kellon  2 - Mol-Rehan  3 - Horde of the Summoned  4 - Freedom"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "4"
+        - variable: GAME_MODE
+          label: "GAME_MODE"
+          description: "Choose between 'Adventure' and 'Creative' (without quotes) or copy your own map to the root of the serverfolder and define the name of the mapfolder here"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "Creative"
+        - variable: WU_LOGINSERVER
+          label: "WU_LOGINSERVER"
+          description: "If set to 'false' the server is intended to connect to another server who is the loginserver."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "true"
+        - variable: WU_EPICSERVERS
+          label: "WU_EPICSERVERS"
+          description: "If set to true the server will follow the rules of the Epic servers in Wurm Online"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "false"
+        - variable: GAME_PARAMS
+          label: "GAME_PARAMS"
+          description: "Enter your extra start up commands for the server if needed."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: ""
+
 
 # Include{containerConfig}
 
@@ -249,7 +266,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: udp2
-                      label: "udp2 port"
+                      label: "udp2 Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -309,7 +326,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: tcp1
-                      label: "tcp1 port"
+                      label: "tcp1 Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -369,7 +386,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: tcp2
-                      label: "tcp2 port"
+                      label: "tcp2 Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

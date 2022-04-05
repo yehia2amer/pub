@@ -88,37 +88,43 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: GAME_ID
+          label: "GAME_ID"
+          description: "The GAME_ID that the container download at startup.(httpsdeveloper.valvesoftware.comwikiDedicated_Servers_List)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "302550"
+        - variable: USERNAME
+          label: "USERNAME"
+          description: "Your Steam username goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION You have to disable Steam Guard)."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: VALIDATE
+          label: "VALIDATE"
+          description: "Set the Variable to 'true' if you want to validate the installation otherwise leave it blank."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: PASSWRD
+          label: "PASSWRD"
+          description: "Your Steam password goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION You have to disable Steam Guard)."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: INSTALL_STRACKER
+          label: "INSTALL_STRACKER"
+          description: "Set to 'true' (without quotes) to install Stacker, otherwise leave blank (Please note that you can only Stacker or Assetto-Server-Manager, not both at the same time)."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: INSTALL_ASSETTO_SERVER_MANAGER
+          label: "INSTALL_ASSETTO_SERVER_MANAGER"
+          description: "Set to 'true' (without quotes) to install Assetto-Server-Manager, otherwise leave blank (Please note that you can only Stacker or Assetto-Server-Manager, not both at the same time)."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: ""
+
 
 # Include{containerConfig}
 
@@ -194,7 +200,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: udp
-                      label: "udp port"
+                      label: "udp Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -254,7 +260,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: tcp2
-                      label: "tcp2 port"
+                      label: "tcp2 Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -314,7 +320,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: tcp3-stracker
-                      label: "tcp3-stracker port"
+                      label: "tcp3-stracker Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -374,7 +380,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: tcp4-assetto-server-manager
-                      label: "tcp4-assetto-server-manager port"
+                      label: "tcp4-assetto-server-manager Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

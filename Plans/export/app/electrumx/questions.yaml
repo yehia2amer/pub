@@ -88,37 +88,43 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: DAEMON_URL
+          label: "DAEMON_URL"
+          description: "Bitcoin RPC (Auth and Address)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "user:pass@host:8332"
+        - variable: COIN
+          label: "COIN"
+          description: "Container Variable COIN"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "BitcoinSegwit"
+        - variable: BANNER_FILE
+          label: "BANNER_FILE"
+          description: "Place a text file to be displayed to clients in the data directory above"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "/data/banner.txt"
+        - variable: DONATION_ADDRESS
+          label: "DONATION_ADDRESS"
+          description: "Your Bitcoin address to display to clients for donations"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "bc1q5g4e6auucmwzj5cwfc7870yn4cg0dselhpn47p"
+        - variable: SERVICES
+          label: "SERVICES"
+          description: "Services and ports to bind. Must match ports above."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "tcp://:50001,ssl://:50002,wss://:50004,rpc://0.0.0.0"
+        - variable: REPORT_SERVICES
+          label: "REPORT_SERVICES"
+          description: "Optionally advertise FQDNs where your ElectrumX is available"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: ""
+
 
 # Include{containerConfig}
 
@@ -194,7 +200,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: ssl
-                      label: "ssl port"
+                      label: "ssl Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -254,7 +260,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: wss
-                      label: "wss port"
+                      label: "wss Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -314,7 +320,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: rpc
-                      label: "rpc port"
+                      label: "rpc Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

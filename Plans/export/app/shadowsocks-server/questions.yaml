@@ -88,22 +88,25 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: PASSWORD
+          label: "PASSWORD"
+          description: "Password"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: CIPHER
+          label: "CIPHER"
+          description: "Encryption cipher to use"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "chacha20-ietf-poly1305"
+        - variable: PROFILING
+          label: "PROFILING"
+          description: "Enable the Go pprof http server on 6060 If enabled you must create a port variable to container port 6060"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "off"
+
 
 # Include{containerConfig}
 
@@ -179,7 +182,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: port_udp
-                      label: "port_udp port"
+                      label: "port_udp Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

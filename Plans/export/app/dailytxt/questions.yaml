@@ -88,32 +88,37 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: SECRET_KEY
+          label: "SECRET_KEY"
+          description: "Generate secret key, by running the following cmd from unRAID Terminal 'openssl rand -base64 32'."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: ALLOW_REGISTRATION
+          label: "ALLOW_REGISTRATION"
+          description: "Enables or disables registration for new users. (TrueFalse)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "True"
+        - variable: DATA_INDENT
+          label: "DATA_INDENT"
+          description: "Use this if you want the JSON log file to be indented. Makes it easier to compare the files."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "2"
+        - variable: JWT_EXP_DAYS
+          label: "JWT_EXP_DAYS"
+          description: "After how many days the JWT token will expire and you have to re-login. (default 30 days)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "7"
+        - variable: PORT
+          label: "PORT"
+          description: "Used to pass the number of the port to the nginx 'default.conf' file, from inside the container."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "8765"
+
 
 # Include{containerConfig}
 

@@ -88,32 +88,37 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: DRONE_GITHUB_CLIENT_ID
+          label: "DRONE_GITHUB_CLIENT_ID"
+          description: "Container Variable DRONE_GITHUB_CLIENT_ID"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: DRONE_GITHUB_CLIENT_SECRET
+          label: "DRONE_GITHUB_CLIENT_SECRET"
+          description: "Container Variable DRONE_GITHUB_CLIENT_SECRET"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: DRONE_RPC_SECRET
+          label: "DRONE_RPC_SECRET"
+          description: "Container Variable DRONE_RPC_SECRET"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: DRONE_SERVER_HOST
+          label: "DRONE_SERVER_HOST"
+          description: "Container Variable DRONE_SERVER_HOST"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: DRONE_SERVER_PROTO
+          label: "DRONE_SERVER_PROTO"
+          description: "Container Variable DRONE_SERVER_PROTO"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: ""
+
 
 # Include{containerConfig}
 
@@ -189,7 +194,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: httpsport
-                      label: "httpsport port"
+                      label: "httpsport Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

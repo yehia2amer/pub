@@ -88,52 +88,61 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: GAME_ID
+          label: "GAME_ID"
+          description: "The GAME_ID that the container download at startup.(httpsdeveloper.valvesoftware.comwikiDedicated_Servers_List)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "233780"
+        - variable: GAME_PARAMS
+          label: "GAME_PARAMS"
+          description: "Enter your start up commands for the server.Note To change the Port of the server please click on 'Show more settings' button, don't forget to change the other ports."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: USERNAME
+          label: "USERNAME"
+          description: "Your Steam username goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION You have to disable Steam Guard)."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: PASSWRD
+          label: "PASSWRD"
+          description: "Your Steam password goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION You have to disable Steam Guard)."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: VALIDATE
+          label: "VALIDATE"
+          description: "Set the Variable to 'true' if you want to validate the installation otherwise leave it blank."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: MARIA_DB_ROOT_PWD
+          label: "MARIA_DB_ROOT_PWD"
+          description: "Enter the preffered root password of the database."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "ExileMod"
+        - variable: WORKSHOP_MAN_INST
+          label: "WORKSHOP_MAN_INST"
+          description: "Please set to 'true' (without quotes) if you want to install the Workshopcontent for ExileMod manually since the account you specified above must have a valid game purchase for ArmA3 (you could also use one account to download the dedicated server files and another to install the Workshop files).A COMPLETE HOW TO WILL BE IN THE CONSOLEWARNING Please let this variable set to 'true' if you initially set it to 'true'."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: GAME_PORT
+          label: "GAME_PORT"
+          description: "Container Variable GAME_PORT"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "2302"
+        - variable: EXILEMOD_SERVER_URL
+          label: "EXILEMOD_SERVER_URL"
+          description: "Change only if you know what you are doing!"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "http://www.exilemod.com/ExileServer-1.0.4a.zip"
+
 
 # Include{containerConfig}
 
@@ -209,7 +218,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: udpgameport
-                      label: "udpgameport port"
+                      label: "udpgameport Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -269,7 +278,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: udpsteamquerryport
-                      label: "udpsteamquerryport port"
+                      label: "udpsteamquerryport Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -329,7 +338,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: udpsteammasterport
-                      label: "udpsteammasterport port"
+                      label: "udpsteammasterport Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -389,7 +398,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: udpvonport
-                      label: "udpvonport port"
+                      label: "udpvonport Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -449,7 +458,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: udpbattleyetraffic
-                      label: "udpbattleyetraffic port"
+                      label: "udpbattleyetraffic Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -509,7 +518,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: tcpmariadb
-                      label: "tcpmariadb port"
+                      label: "tcpmariadb Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

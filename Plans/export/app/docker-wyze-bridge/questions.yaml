@@ -88,27 +88,28 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: WYZE_EMAIL
+          label: "WYZE_EMAIL"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: WYZE_PASSWORD
+          label: "WYZE_PASSWORD"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: LAN
+          label: "LAN"
+          description: "httpsgithub.commrlt8docker-wyze-bridge#LAN-Mode"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: FRESH_DATA
+          label: "FRESH_DATA"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "True"
+
 
 # Include{containerConfig}
 
@@ -184,7 +185,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: hostpath1
-                      label: "hostpath1 port"
+                      label: "hostpath1 Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -244,7 +245,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: hostport2
-                      label: "hostport2 port"
+                      label: "hostport2 Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

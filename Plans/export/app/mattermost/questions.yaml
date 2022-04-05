@@ -88,27 +88,31 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: 8075
+          label: "8075"
+          description: "The port used for streaming data between servers."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "8075"
+        - variable: MM_SQLSETTINGS_DATASOURCE
+          label: "MM_SQLSETTINGS_DATASOURCE"
+          description: "Edit This Change MM_USERNAME, MM_PASSWORD, DB_HOST, DB_PORT_NUMBER To your database configuration "
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "MM_USERNAME:MM_PASSWORD@tcp(DB_HOST:DB_PORT_NUMBER)/MM_DBNAME?charset=utf8mb4,utf8&readTimeout=30s&writeTimeout=30s"
+        - variable: APP_HOST
+          label: "APP_HOST"
+          description: "Application host address"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "IP OR HOSTNAME"
+        - variable: MM_SQLSETTINGS_DRIVERNAME
+          label: "MM_SQLSETTINGS_DRIVERNAME"
+          description: "Container Variable MM_SQLSETTINGS_DRIVERNAME"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "mysql"
+
 
 # Include{containerConfig}
 
@@ -184,7 +188,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: gossipporttcp
-                      label: "gossipporttcp port"
+                      label: "gossipporttcp Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -244,7 +248,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: gossipportudp
-                      label: "gossipportudp port"
+                      label: "gossipportudp Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

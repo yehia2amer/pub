@@ -88,17 +88,17 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: ALLOWED_HOSTS
+          label: "ALLOWED_HOSTS"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "127.0.0.1/32"
+        - variable: HOSTNAME
+          label: "HOSTNAME"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "unRAID"
+
 
 # Include{containerConfig}
 
@@ -174,7 +174,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: tcp-port-1
-                      label: "tcp-port-1 port"
+                      label: "tcp-port-1 Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

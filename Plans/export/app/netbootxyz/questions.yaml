@@ -88,27 +88,31 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: MENU_VERSION
+          label: "MENU_VERSION"
+          description: "Specify a specific version of boot files you want to use from NETBOOT.XYZ (unset pulls latest)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: PORT_RANGE
+          label: "PORT_RANGE"
+          description: "Specify the port range tftp will use for data transfers (see Wikipedia)(httpsen.wikipedia.orgwikiTrivial_File_Transfer_Protocol#Details)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: SUBFOLDER
+          label: "SUBFOLDER"
+          description: "Specify a sobfolder if running this behind a reverse proxy (IE proxy)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: UMASK
+          label: "UMASK"
+          description: "Container Variable UMASK"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: ""
+
 
 # Include{containerConfig}
 
@@ -184,7 +188,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: port69
-                      label: "port69 port"
+                      label: "port69 Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -244,7 +248,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: port80
-                      label: "port80 port"
+                      label: "port80 Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

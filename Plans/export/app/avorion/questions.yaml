@@ -88,42 +88,49 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+        - variable: GAME_ID
+          label: "GAME_ID"
+          description: "The GAME_ID that the container download at startup.(httpsdeveloper.valvesoftware.comwikiDedicated_Servers_List)"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "565060"
+        - variable: GALAXY_NAME
+          label: "GALAXY_NAME"
+          description: "Enter the Galaxy Name here (also the savepath will be the same as the Galaxy Name in the serverfiles folder, please use no spaces or special characters)."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: "AvorionDocker"
+        - variable: GAME_PARAMS
+          label: "GAME_PARAMS"
+          description: "Enter your start up commands for the server (for example the server admin --admin [YOURsteamID64] e.g '--admin 123456789123456789' without quotes)."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: USERNAME
+          label: "USERNAME"
+          description: "Your Steam username goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION You have to disable Steam Guard)."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: VALIDATE
+          label: "VALIDATE"
+          description: "Set the Variable to 'true' if you want to validate the installation otherwise leave it blank."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: PASSWRD
+          label: "PASSWRD"
+          description: "Your Steam password goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION You have to disable Steam Guard)."
           schema:
             type: string
-            default: PLACEHOLDERVALUE"        - variable: PLACEHOLDERNAME
-          label: "PLACEHOLDERLABEL"
-          description: "PLACEHOLDERDESCRIPTION"
+            default: ""
+        - variable: UMASK
+          label: "UMASK"
+          description: "Container Variable UMASK"
           schema:
             type: string
-            default: PLACEHOLDERVALUE"
+            default: "000"
+
 
 # Include{containerConfig}
 
@@ -199,7 +206,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: hostport2
-                      label: "hostport2 port"
+                      label: "hostport2 Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -259,7 +266,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: hostport3
-                      label: "hostport3 port"
+                      label: "hostport3 Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -319,7 +326,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: hostport4
-                      label: "hostport4 port"
+                      label: "hostport4 Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -379,7 +386,7 @@ questions:
             attrs:
 # Include{serviceSelector}
                     - variable: hostport5
-                      label: "hostport5 port"
+                      label: "hostport5 Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
