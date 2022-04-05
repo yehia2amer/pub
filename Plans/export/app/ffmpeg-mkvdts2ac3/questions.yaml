@@ -103,7 +103,6 @@ questions:
             default: "--compress none;-d;-n;-w /output;--new"
 
 
-
   - variable: serviceexpert
     group: "Networking and Services"
     label: "Show Expert Config"
@@ -123,7 +122,6 @@ questions:
 
 # Include{serviceList}
 
-
   - variable: persistence
     label: "Integrated Persistent Storage"
     description: "Integrated Persistent Storage"
@@ -133,8 +131,8 @@ questions:
       type: dict
       attrs:
         - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+          label: "config Storage"
+          description: "Config"
           schema:
             additional_attrs: true
             type: dict
@@ -174,9 +172,9 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+# Include{persistenceAdvanced}        - variable: watch
+          label: "watch Storage"
+          description: "Watch"
           schema:
             additional_attrs: true
             type: dict
@@ -216,9 +214,9 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+# Include{persistenceAdvanced}        - variable: output
+          label: "output Storage"
+          description: "Output"
           schema:
             additional_attrs: true
             type: dict
@@ -258,9 +256,9 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+# Include{persistenceAdvanced}        - variable: copy
+          label: "copy Storage"
+          description: "Copy"
           schema:
             additional_attrs: true
             type: dict
@@ -301,6 +299,7 @@ questions:
                     - value: "Memory"
                       description: "Memory"
 # Include{persistenceAdvanced}
+
 # Include{persistenceList}
 
 

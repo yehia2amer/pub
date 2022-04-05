@@ -77,11 +77,6 @@ questions:
 # Include{controllerExpert}
 
 
-
-
-
-
-
 # Include{containerConfig}
 
   - variable: service
@@ -408,7 +403,6 @@ questions:
 
 # Include{serviceList}
 
-
   - variable: persistence
     label: "Integrated Persistent Storage"
     description: "Integrated Persistent Storage"
@@ -417,9 +411,9 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+        - variable: hostpath5
+          label: "hostpath5 Storage"
+          description: "Path (root) to media content. ADD the container path (mediaserviio) into Library &gt; Shared Folder in Serviio GUI"
           schema:
             additional_attrs: true
             type: dict
@@ -459,9 +453,9 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+# Include{persistenceAdvanced}        - variable: hostpath2
+          label: "hostpath2 Storage"
+          description: "Container Path optserviiolibrary"
           schema:
             additional_attrs: true
             type: dict
@@ -501,9 +495,9 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+# Include{persistenceAdvanced}        - variable: hostpath3
+          label: "hostpath3 Storage"
+          description: "Container Path optserviioplugins"
           schema:
             additional_attrs: true
             type: dict
@@ -543,9 +537,9 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+# Include{persistenceAdvanced}        - variable: hostpath4
+          label: "hostpath4 Storage"
+          description: "Container Path optserviiolog"
           schema:
             additional_attrs: true
             type: dict
@@ -586,6 +580,7 @@ questions:
                     - value: "Memory"
                       description: "Memory"
 # Include{persistenceAdvanced}
+
 # Include{persistenceList}
 
   - variable: ingress

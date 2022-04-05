@@ -91,7 +91,6 @@ questions:
 
 # Include{serviceList}
 
-
   - variable: persistence
     label: "Integrated Persistent Storage"
     description: "Integrated Persistent Storage"
@@ -100,9 +99,9 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+        - variable: applicationdata
+          label: "applicationdata Storage"
+          description: "Container Path .airdcpp"
           schema:
             additional_attrs: true
             type: dict
@@ -142,9 +141,9 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+# Include{persistenceAdvanced}        - variable: downloads
+          label: "downloads Storage"
+          description: "Container Path Downloads"
           schema:
             additional_attrs: true
             type: dict
@@ -184,9 +183,9 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+# Include{persistenceAdvanced}        - variable: share
+          label: "share Storage"
+          description: "Container Path Share"
           schema:
             additional_attrs: true
             type: dict
@@ -227,6 +226,7 @@ questions:
                     - value: "Memory"
                       description: "Memory"
 # Include{persistenceAdvanced}
+
 # Include{persistenceList}
 
 

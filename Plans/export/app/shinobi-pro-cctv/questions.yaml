@@ -91,7 +91,6 @@ questions:
             default: ""
 
 
-
   - variable: serviceexpert
     group: "Networking and Services"
     label: "Show Expert Config"
@@ -111,7 +110,6 @@ questions:
 
 # Include{serviceList}
 
-
   - variable: persistence
     label: "Integrated Persistent Storage"
     description: "Integrated Persistent Storage"
@@ -120,9 +118,9 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+        - variable: streams
+          label: "streams Storage"
+          description: "Streams cache"
           schema:
             additional_attrs: true
             type: dict
@@ -163,8 +161,8 @@ questions:
                     - value: "Memory"
                       description: "Memory"
 # Include{persistenceAdvanced}        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+          label: "config Storage"
+          description: "Shinobi config working directory"
           schema:
             additional_attrs: true
             type: dict
@@ -204,9 +202,9 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+# Include{persistenceAdvanced}        - variable: customautoload
+          label: "customautoload Storage"
+          description: "customAutoLoad elements"
           schema:
             additional_attrs: true
             type: dict
@@ -246,9 +244,9 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+# Include{persistenceAdvanced}        - variable: database
+          label: "database Storage"
+          description: "Shinobi Mysql directory"
           schema:
             additional_attrs: true
             type: dict
@@ -288,9 +286,9 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+# Include{persistenceAdvanced}        - variable: videos
+          label: "videos Storage"
+          description: "Stored Videos location"
           schema:
             additional_attrs: true
             type: dict
@@ -330,9 +328,9 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+# Include{persistenceAdvanced}        - variable: plugins
+          label: "plugins Storage"
+          description: "Container Path usrsrcappstore"
           schema:
             additional_attrs: true
             type: dict
@@ -372,9 +370,9 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+# Include{persistenceAdvanced}        - variable: localtime
+          label: "localtime Storage"
+          description: "Container Path etclocaltime"
           schema:
             additional_attrs: true
             type: dict
@@ -415,6 +413,7 @@ questions:
                     - value: "Memory"
                       description: "Memory"
 # Include{persistenceAdvanced}
+
 # Include{persistenceList}
 
 

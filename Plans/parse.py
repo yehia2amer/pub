@@ -703,7 +703,6 @@ for name, app in combinedfree.items():
               f.write('            default: "'+value+'"\n')
             else:
               f.write(line)
-        f.write("\n")
       f.write("\n")
       if valuesyaml["service"]["main"]["enabled"]:
         for line in questions2:
@@ -760,7 +759,27 @@ for name, app in combinedfree.items():
         f.write("\n")
         for name, value in valuesyaml["persistence"].items():
           for line in questions4persistence:
-            f.write(line)
+            if "PLACEHOLDERDESCRIPTION" in line:
+              for name2, value2  in app["Config"]["Path"].items():
+                    if name2 == name and "Description" in  value2.keys() and value2["Description"]:
+                      try:
+                        desc = value2["Description"]
+                        desc = desc.replace("\r\n", '')
+                        desc = desc.replace("\n", '')
+                        for char in invalidtext:
+                          desc = desc.replace(char, '')
+                        desc = desc.encode("utf-8").decode("utf-8")
+                        f.write('          description: "'+desc+'"\n')
+                      except:
+                        pass
+                      break
+            elif "PLACEHOLDERVAR" in line:
+              f.write("        - variable: "+name+"\n")
+            elif "PLACEHOLDERLABEL" in line:
+              f.write('          label: "'+name+' Storage"\n')
+            else:
+              f.write(line)
+        f.write("\n")
       f.write("\n")
       for line in questions5:
         f.write(line)
@@ -788,4 +807,5 @@ for name, app in combinedfree.items():
           f.write("                  default: true\n")
         else:
           f.write(line)
+      f.write("\n")
   

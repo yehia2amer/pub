@@ -76,11 +76,6 @@ questions:
                       description: "(Legacy) OnDelete: ignore .spec.template changes"
 # Include{controllerExpert}
 
-
-
-
-
-
   - variable: env
     group: "Container Configuration"
     label: "Image Environment"
@@ -111,7 +106,6 @@ questions:
           schema:
             type: string
             default: "850"
-
 
 # Include{containerConfig}
 
@@ -199,7 +193,6 @@ questions:
 
 # Include{serviceList}
 
-
   - variable: persistence
     label: "Integrated Persistent Storage"
     description: "Integrated Persistent Storage"
@@ -208,9 +201,9 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+        - variable: datadir
+          label: "datadir Storage"
+          description: "Main Data directory"
           schema:
             additional_attrs: true
             type: dict
@@ -250,9 +243,9 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+# Include{persistenceAdvanced}        - variable: minecraftworld
+          label: "minecraftworld Storage"
+          description: "Path to your Minecraft world folder (You can also create multiple mappings but it is strongly recommended to mount it as Read Only and to the path unminedworlds...)"
           schema:
             additional_attrs: true
             type: dict
@@ -293,6 +286,7 @@ questions:
                     - value: "Memory"
                       description: "Memory"
 # Include{persistenceAdvanced}
+
 # Include{persistenceList}
 
   - variable: ingress

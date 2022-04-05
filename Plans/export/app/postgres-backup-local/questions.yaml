@@ -145,7 +145,6 @@ questions:
             default: "9080"
 
 
-
   - variable: serviceexpert
     group: "Networking and Services"
     label: "Show Expert Config"
@@ -165,7 +164,6 @@ questions:
 
 # Include{serviceList}
 
-
   - variable: persistence
     label: "Integrated Persistent Storage"
     description: "Integrated Persistent Storage"
@@ -174,9 +172,9 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+        - variable: varoptpgbackups
+          label: "varoptpgbackups Storage"
+          description: "Container Path varoptpgbackups"
           schema:
             additional_attrs: true
             type: dict
@@ -216,9 +214,9 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+# Include{persistenceAdvanced}        - variable: data
+          label: "data Storage"
+          description: "Container Path varlibpostgresqldata"
           schema:
             additional_attrs: true
             type: dict
@@ -258,9 +256,9 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+# Include{persistenceAdvanced}        - variable: backups
+          label: "backups Storage"
+          description: "Container Path backups"
           schema:
             additional_attrs: true
             type: dict
@@ -301,6 +299,7 @@ questions:
                     - value: "Memory"
                       description: "Memory"
 # Include{persistenceAdvanced}
+
 # Include{persistenceList}
 
 

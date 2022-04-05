@@ -91,7 +91,6 @@ questions:
 
 # Include{serviceList}
 
-
   - variable: persistence
     label: "Integrated Persistent Storage"
     description: "Integrated Persistent Storage"
@@ -100,9 +99,9 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+        - variable: usershares(read-onlybackupsource)
+          label: "usershares(read-onlybackupsource) Storage"
+          description: "Container Path mntuser"
           schema:
             additional_attrs: true
             type: dict
@@ -142,9 +141,9 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+# Include{persistenceAdvanced}        - variable: flashdrive(read-onlybackupsource)
+          label: "flashdrive(read-onlybackupsource) Storage"
+          description: "Container Path boot"
           schema:
             additional_attrs: true
             type: dict
@@ -184,9 +183,9 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+# Include{persistenceAdvanced}        - variable: borgrepo(backupdestination)
+          label: "borgrepo(backupdestination) Storage"
+          description: "Container Path mntborg-repository"
           schema:
             additional_attrs: true
             type: dict
@@ -226,9 +225,9 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+# Include{persistenceAdvanced}        - variable: borgcache
+          label: "borgcache Storage"
+          description: "Container Path root.cacheborg"
           schema:
             additional_attrs: true
             type: dict
@@ -268,9 +267,9 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+# Include{persistenceAdvanced}        - variable: borgmaticconfig
+          label: "borgmaticconfig Storage"
+          description: "Container Path etcborgmatic.d"
           schema:
             additional_attrs: true
             type: dict
@@ -310,9 +309,9 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+# Include{persistenceAdvanced}        - variable: borgkeys
+          label: "borgkeys Storage"
+          description: "Container Path root.configborg"
           schema:
             additional_attrs: true
             type: dict
@@ -352,9 +351,9 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+# Include{persistenceAdvanced}        - variable: sshkeys
+          label: "sshkeys Storage"
+          description: "Container Path root.ssh"
           schema:
             additional_attrs: true
             type: dict
@@ -394,9 +393,9 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+# Include{persistenceAdvanced}        - variable: fusemountpoint
+          label: "fusemountpoint Storage"
+          description: "Container Path mntfuse"
           schema:
             additional_attrs: true
             type: dict
@@ -437,6 +436,7 @@ questions:
                     - value: "Memory"
                       description: "Memory"
 # Include{persistenceAdvanced}
+
 # Include{persistenceList}
 
 

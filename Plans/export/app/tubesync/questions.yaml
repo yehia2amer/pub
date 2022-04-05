@@ -76,11 +76,6 @@ questions:
                       description: "(Legacy) OnDelete: ignore .spec.template changes"
 # Include{controllerExpert}
 
-
-
-
-
-
   - variable: env
     group: "Container Configuration"
     label: "Image Environment"
@@ -124,7 +119,6 @@ questions:
           schema:
             type: string
             default: "False"
-
 
 # Include{containerConfig}
 
@@ -212,7 +206,6 @@ questions:
 
 # Include{serviceList}
 
-
   - variable: persistence
     label: "Integrated Persistent Storage"
     description: "Integrated Persistent Storage"
@@ -222,8 +215,8 @@ questions:
       type: dict
       attrs:
         - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+          label: "config Storage"
+          description: "Config storage path. Default is mntuserappdatatubesync."
           schema:
             additional_attrs: true
             type: dict
@@ -263,9 +256,9 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+# Include{persistenceAdvanced}        - variable: downloads
+          label: "downloads Storage"
+          description: "Path to store downloaded content. Default is none."
           schema:
             additional_attrs: true
             type: dict
@@ -306,6 +299,7 @@ questions:
                     - value: "Memory"
                       description: "Memory"
 # Include{persistenceAdvanced}
+
 # Include{persistenceList}
 
   - variable: ingress

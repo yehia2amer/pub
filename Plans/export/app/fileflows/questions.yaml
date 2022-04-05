@@ -76,11 +76,6 @@ questions:
                       description: "(Legacy) OnDelete: ignore .spec.template changes"
 # Include{controllerExpert}
 
-
-
-
-
-
   - variable: env
     group: "Container Configuration"
     label: "Image Environment"
@@ -94,7 +89,6 @@ questions:
           schema:
             type: string
             default: ""
-
 
 # Include{containerConfig}
 
@@ -182,7 +176,6 @@ questions:
 
 # Include{serviceList}
 
-
   - variable: persistence
     label: "Integrated Persistent Storage"
     description: "Integrated Persistent Storage"
@@ -191,9 +184,9 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+        - variable: data
+          label: "data Storage"
+          description: "Location of the database file, best to set this in appdata"
           schema:
             additional_attrs: true
             type: dict
@@ -233,9 +226,9 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+# Include{persistenceAdvanced}        - variable: logs
+          label: "logs Storage"
+          description: "logging directory, best to store this with the appdata"
           schema:
             additional_attrs: true
             type: dict
@@ -275,9 +268,9 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+# Include{persistenceAdvanced}        - variable: tempdirectory
+          label: "tempdirectory Storage"
+          description: "Where temporary files will be created during the file flow processBest to put this on a cache drive or a faster ssdnvme"
           schema:
             additional_attrs: true
             type: dict
@@ -317,9 +310,9 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+# Include{persistenceAdvanced}        - variable: media
+          label: "media Storage"
+          description: "Mapping to a folder in unRAID.   this is optional and you can add as many as you like."
           schema:
             additional_attrs: true
             type: dict
@@ -360,6 +353,7 @@ questions:
                     - value: "Memory"
                       description: "Memory"
 # Include{persistenceAdvanced}
+
 # Include{persistenceList}
 
   - variable: ingress

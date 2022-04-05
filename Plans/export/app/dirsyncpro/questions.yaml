@@ -76,11 +76,6 @@ questions:
                       description: "(Legacy) OnDelete: ignore .spec.template changes"
 # Include{controllerExpert}
 
-
-
-
-
-
   - variable: env
     group: "Container Configuration"
     label: "Image Environment"
@@ -166,7 +161,6 @@ questions:
           schema:
             type: string
             default: ""
-
 
 # Include{containerConfig}
 
@@ -254,7 +248,6 @@ questions:
 
 # Include{serviceList}
 
-
   - variable: persistence
     label: "Integrated Persistent Storage"
     description: "Integrated Persistent Storage"
@@ -263,9 +256,9 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+        - variable: datadirectory
+          label: "datadirectory Storage"
+          description: "Data directory for the container"
           schema:
             additional_attrs: true
             type: dict
@@ -305,9 +298,9 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+# Include{persistenceAdvanced}        - variable: sourcedirectory-readonly
+          label: "sourcedirectory-readonly Storage"
+          description: "You can change the Acces Mode from Read Only to ReadWrite if you want to sync files back and forth."
           schema:
             additional_attrs: true
             type: dict
@@ -348,6 +341,7 @@ questions:
                     - value: "Memory"
                       description: "Memory"
 # Include{persistenceAdvanced}
+
 # Include{persistenceList}
 
   - variable: ingress

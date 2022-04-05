@@ -76,11 +76,6 @@ questions:
                       description: "(Legacy) OnDelete: ignore .spec.template changes"
 # Include{controllerExpert}
 
-
-
-
-
-
   - variable: env
     group: "Container Configuration"
     label: "Image Environment"
@@ -112,7 +107,6 @@ questions:
           schema:
             type: string
             default: "/mnt/user/downloads/"
-
 
 # Include{containerConfig}
 
@@ -200,7 +194,6 @@ questions:
 
 # Include{serviceList}
 
-
   - variable: persistence
     label: "Integrated Persistent Storage"
     description: "Integrated Persistent Storage"
@@ -209,9 +202,9 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+        - variable: configfolder
+          label: "configfolder Storage"
+          description: "Container Path optJDownloadercfg"
           schema:
             additional_attrs: true
             type: dict
@@ -251,9 +244,9 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+# Include{persistenceAdvanced}        - variable: logsfolder
+          label: "logsfolder Storage"
+          description: "Container Path optJDownloaderlogs"
           schema:
             additional_attrs: true
             type: dict
@@ -293,9 +286,9 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+# Include{persistenceAdvanced}        - variable: downloadsfolder
+          label: "downloadsfolder Storage"
+          description: "Container Path optJDownloaderDownloads"
           schema:
             additional_attrs: true
             type: dict
@@ -336,6 +329,7 @@ questions:
                     - value: "Memory"
                       description: "Memory"
 # Include{persistenceAdvanced}
+
 # Include{persistenceList}
 
   - variable: ingress

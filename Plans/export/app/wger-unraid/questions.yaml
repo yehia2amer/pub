@@ -76,11 +76,6 @@ questions:
                       description: "(Legacy) OnDelete: ignore .spec.template changes"
 # Include{controllerExpert}
 
-
-
-
-
-
   - variable: env
     group: "Container Configuration"
     label: "Image Environment"
@@ -256,7 +251,6 @@ questions:
             default: "django_redis.client.DefaultClient
     "
 
-
 # Include{containerConfig}
 
   - variable: service
@@ -343,7 +337,6 @@ questions:
 
 # Include{serviceList}
 
-
   - variable: persistence
     label: "Integrated Persistent Storage"
     description: "Integrated Persistent Storage"
@@ -352,9 +345,9 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+        - variable: django_media_root
+          label: "django_media_root Storage"
+          description: "Path to uploaded files"
           schema:
             additional_attrs: true
             type: dict
@@ -394,9 +387,9 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+# Include{persistenceAdvanced}        - variable: django_static_root
+          label: "django_static_root Storage"
+          description: "DJANGO_STATIC_ROOT"
           schema:
             additional_attrs: true
             type: dict
@@ -437,6 +430,7 @@ questions:
                     - value: "Memory"
                       description: "Memory"
 # Include{persistenceAdvanced}
+
 # Include{persistenceList}
 
   - variable: ingress

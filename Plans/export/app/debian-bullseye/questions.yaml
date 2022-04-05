@@ -76,11 +76,6 @@ questions:
                       description: "(Legacy) OnDelete: ignore .spec.template changes"
 # Include{controllerExpert}
 
-
-
-
-
-
   - variable: env
     group: "Container Configuration"
     label: "Image Environment"
@@ -130,7 +125,6 @@ questions:
           schema:
             type: string
             default: "0000"
-
 
 # Include{containerConfig}
 
@@ -218,7 +212,6 @@ questions:
 
 # Include{serviceList}
 
-
   - variable: persistence
     label: "Integrated Persistent Storage"
     description: "Integrated Persistent Storage"
@@ -227,9 +220,9 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+        - variable: homedirectory
+          label: "homedirectory Storage"
+          description: "All things that are saved in the container should be in the this or a subdirectory in of this folder, all files that are store outside this folder are not persistant and will be wiped if there is an update of the container or you change something in the template."
           schema:
             additional_attrs: true
             type: dict
@@ -270,6 +263,7 @@ questions:
                     - value: "Memory"
                       description: "Memory"
 # Include{persistenceAdvanced}
+
 # Include{persistenceList}
 
   - variable: ingress

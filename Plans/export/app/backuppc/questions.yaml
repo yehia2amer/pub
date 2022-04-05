@@ -77,11 +77,6 @@ questions:
 # Include{controllerExpert}
 
 
-
-
-
-
-
 # Include{containerConfig}
 
   - variable: service
@@ -168,7 +163,6 @@ questions:
 
 # Include{serviceList}
 
-
   - variable: persistence
     label: "Integrated Persistent Storage"
     description: "Integrated Persistent Storage"
@@ -177,9 +171,9 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+        - variable: backuplocation
+          label: "backuplocation Storage"
+          description: "Backup Location"
           schema:
             additional_attrs: true
             type: dict
@@ -219,9 +213,9 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+# Include{persistenceAdvanced}        - variable: configurationfiles
+          label: "configurationfiles Storage"
+          description: "Configuration Files"
           schema:
             additional_attrs: true
             type: dict
@@ -261,9 +255,9 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+# Include{persistenceAdvanced}        - variable: homedirectory
+          label: "homedirectory Storage"
+          description: "Home Directory for Backuppc (SSH Keys)"
           schema:
             additional_attrs: true
             type: dict
@@ -303,9 +297,9 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+# Include{persistenceAdvanced}        - variable: logs
+          label: "logs Storage"
+          description: "Logs"
           schema:
             additional_attrs: true
             type: dict
@@ -346,6 +340,7 @@ questions:
                     - value: "Memory"
                       description: "Memory"
 # Include{persistenceAdvanced}
+
 # Include{persistenceList}
 
   - variable: ingress

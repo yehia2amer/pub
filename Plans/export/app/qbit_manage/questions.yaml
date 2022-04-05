@@ -175,7 +175,6 @@ questions:
             default: "100"
 
 
-
   - variable: serviceexpert
     group: "Networking and Services"
     label: "Show Expert Config"
@@ -195,7 +194,6 @@ questions:
 
 # Include{serviceList}
 
-
   - variable: persistence
     label: "Integrated Persistent Storage"
     description: "Integrated Persistent Storage"
@@ -204,9 +202,9 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+        - variable: root_dir
+          label: "root_dir Storage"
+          description: "Container Path Samepathasqbittorrentdownloads"
           schema:
             additional_attrs: true
             type: dict
@@ -247,8 +245,8 @@ questions:
                     - value: "Memory"
                       description: "Memory"
 # Include{persistenceAdvanced}        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+          label: "config Storage"
+          description: "Container Path config"
           schema:
             additional_attrs: true
             type: dict
@@ -289,6 +287,7 @@ questions:
                     - value: "Memory"
                       description: "Memory"
 # Include{persistenceAdvanced}
+
 # Include{persistenceList}
 
 

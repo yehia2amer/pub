@@ -76,11 +76,6 @@ questions:
                       description: "(Legacy) OnDelete: ignore .spec.template changes"
 # Include{controllerExpert}
 
-
-
-
-
-
   - variable: env
     group: "Container Configuration"
     label: "Image Environment"
@@ -166,7 +161,6 @@ questions:
           schema:
             type: string
             default: "002"
-
 
 # Include{containerConfig}
 
@@ -254,7 +248,6 @@ questions:
 
 # Include{serviceList}
 
-
   - variable: persistence
     label: "Integrated Persistent Storage"
     description: "Integrated Persistent Storage"
@@ -263,9 +256,9 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+        - variable: appdatauploads
+          label: "appdatauploads Storage"
+          description: "Container Path directusuploadsThis is where your files get stored you upload to and manage within Directus"
           schema:
             additional_attrs: true
             type: dict
@@ -305,9 +298,9 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+# Include{persistenceAdvanced}        - variable: appdataextensions
+          label: "appdataextensions Storage"
+          description: "Container Path directusextensions"
           schema:
             additional_attrs: true
             type: dict
@@ -347,9 +340,9 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+# Include{persistenceAdvanced}        - variable: appdatadatabase(sqlite)
+          label: "appdatadatabase(sqlite) Storage"
+          description: "Only needed for SQLite environments"
           schema:
             additional_attrs: true
             type: dict
@@ -390,6 +383,7 @@ questions:
                     - value: "Memory"
                       description: "Memory"
 # Include{persistenceAdvanced}
+
 # Include{persistenceList}
 
   - variable: ingress

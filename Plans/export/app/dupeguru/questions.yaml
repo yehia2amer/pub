@@ -76,11 +76,6 @@ questions:
                       description: "(Legacy) OnDelete: ignore .spec.template changes"
 # Include{controllerExpert}
 
-
-
-
-
-
   - variable: env
     group: "Container Configuration"
     label: "Image Environment"
@@ -136,7 +131,6 @@ questions:
           schema:
             type: string
             default: ""
-
 
 # Include{containerConfig}
 
@@ -284,7 +278,6 @@ questions:
 
 # Include{serviceList}
 
-
   - variable: persistence
     label: "Integrated Persistent Storage"
     description: "Integrated Persistent Storage"
@@ -294,8 +287,8 @@ questions:
       type: dict
       attrs:
         - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+          label: "config Storage"
+          description: "This is where the application stores its configuration, log and any files needing persistency.&lt;br&gt;Container path config"
           schema:
             additional_attrs: true
             type: dict
@@ -335,9 +328,9 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+# Include{persistenceAdvanced}        - variable: storage
+          label: "storage Storage"
+          description: "This location contains files from your host that need to be accessible by the application.&lt;br&gt;Container path storage"
           schema:
             additional_attrs: true
             type: dict
@@ -377,9 +370,9 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+# Include{persistenceAdvanced}        - variable: trash
+          label: "trash Storage"
+          description: "This is where dupeGuru moves files when they are sent to trash.  Usage of the trash is optional.  The default value of &lt;i&gt;devnull&lt;i&gt; can be kept if the trash is not wanted.&lt;br&gt;Container path trash"
           schema:
             additional_attrs: true
             type: dict
@@ -420,6 +413,7 @@ questions:
                     - value: "Memory"
                       description: "Memory"
 # Include{persistenceAdvanced}
+
 # Include{persistenceList}
 
   - variable: ingress

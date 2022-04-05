@@ -76,11 +76,6 @@ questions:
                       description: "(Legacy) OnDelete: ignore .spec.template changes"
 # Include{controllerExpert}
 
-
-
-
-
-
   - variable: env
     group: "Container Configuration"
     label: "Image Environment"
@@ -93,7 +88,6 @@ questions:
           schema:
             type: string
             default: "monerod"
-
 
 # Include{containerConfig}
 
@@ -241,7 +235,6 @@ questions:
 
 # Include{serviceList}
 
-
   - variable: persistence
     label: "Integrated Persistent Storage"
     description: "Integrated Persistent Storage"
@@ -250,9 +243,8 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+        - variable: containerdir(1)
+          label: "containerdir(1) Storage"
           schema:
             additional_attrs: true
             type: dict
@@ -292,9 +284,8 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+# Include{persistenceAdvanced}        - variable: containerdir(2)
+          label: "containerdir(2) Storage"
           schema:
             additional_attrs: true
             type: dict
@@ -334,9 +325,8 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+# Include{persistenceAdvanced}        - variable: blockchain(storage)
+          label: "blockchain(storage) Storage"
           schema:
             additional_attrs: true
             type: dict
@@ -377,6 +367,7 @@ questions:
                     - value: "Memory"
                       description: "Memory"
 # Include{persistenceAdvanced}
+
 # Include{persistenceList}
 
   - variable: ingress

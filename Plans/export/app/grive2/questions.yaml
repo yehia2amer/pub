@@ -115,7 +115,6 @@ questions:
             default: ""
 
 
-
   - variable: serviceexpert
     group: "Networking and Services"
     label: "Show Expert Config"
@@ -135,7 +134,6 @@ questions:
 
 # Include{serviceList}
 
-
   - variable: persistence
     label: "Integrated Persistent Storage"
     description: "Integrated Persistent Storage"
@@ -144,9 +142,9 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+        - variable: unraid_folder
+          label: "unraid_folder Storage"
+          description: "Path to the unraid folder in which to sync the files, it also will contain .grive config file"
           schema:
             additional_attrs: true
             type: dict
@@ -187,6 +185,7 @@ questions:
                     - value: "Memory"
                       description: "Memory"
 # Include{persistenceAdvanced}
+
 # Include{persistenceList}
 
 

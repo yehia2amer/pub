@@ -76,11 +76,6 @@ questions:
                       description: "(Legacy) OnDelete: ignore .spec.template changes"
 # Include{controllerExpert}
 
-
-
-
-
-
   - variable: env
     group: "Container Configuration"
     label: "Image Environment"
@@ -124,7 +119,6 @@ questions:
           schema:
             type: string
             default: ""
-
 
 # Include{containerConfig}
 
@@ -272,7 +266,6 @@ questions:
 
 # Include{serviceList}
 
-
   - variable: persistence
     label: "Integrated Persistent Storage"
     description: "Integrated Persistent Storage"
@@ -281,9 +274,9 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+        - variable: storagetobackup
+          label: "storagetobackup Storage"
+          description: "This will be exposed to the Backblaze Client as drive D and therefore be backed up"
           schema:
             additional_attrs: true
             type: dict
@@ -324,8 +317,8 @@ questions:
                     - value: "Memory"
                       description: "Memory"
 # Include{persistenceAdvanced}        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+          label: "config Storage"
+          description: "Container Path config"
           schema:
             additional_attrs: true
             type: dict
@@ -366,6 +359,7 @@ questions:
                     - value: "Memory"
                       description: "Memory"
 # Include{persistenceAdvanced}
+
 # Include{persistenceList}
 
   - variable: ingress

@@ -77,11 +77,6 @@ questions:
 # Include{controllerExpert}
 
 
-
-
-
-
-
 # Include{containerConfig}
 
   - variable: service
@@ -168,7 +163,6 @@ questions:
 
 # Include{serviceList}
 
-
   - variable: persistence
     label: "Integrated Persistent Storage"
     description: "Integrated Persistent Storage"
@@ -177,9 +171,9 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+        - variable: comics
+          label: "comics Storage"
+          description: "Container Path comics"
           schema:
             additional_attrs: true
             type: dict
@@ -220,8 +214,8 @@ questions:
                     - value: "Memory"
                       description: "Memory"
 # Include{persistenceAdvanced}        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+          label: "config Storage"
+          description: "Container Path config"
           schema:
             additional_attrs: true
             type: dict
@@ -262,6 +256,7 @@ questions:
                     - value: "Memory"
                       description: "Memory"
 # Include{persistenceAdvanced}
+
 # Include{persistenceList}
 
   - variable: ingress

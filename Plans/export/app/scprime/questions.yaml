@@ -76,11 +76,6 @@ questions:
                       description: "(Legacy) OnDelete: ignore .spec.template changes"
 # Include{controllerExpert}
 
-
-
-
-
-
   - variable: env
     group: "Container Configuration"
     label: "Image Environment"
@@ -94,7 +89,6 @@ questions:
           schema:
             type: string
             default: ""
-
 
 # Include{containerConfig}
 
@@ -302,7 +296,6 @@ questions:
 
 # Include{serviceList}
 
-
   - variable: persistence
     label: "Integrated Persistent Storage"
     description: "Integrated Persistent Storage"
@@ -311,9 +304,9 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+        - variable: metadata
+          label: "metadata Storage"
+          description: "Location where metadata is stored including consensus, wallets and file contracts. 100Gb of free space is recommended, SSD preferred.&lt;br&gt;Container Path scp-data"
           schema:
             additional_attrs: true
             type: dict
@@ -353,9 +346,9 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+# Include{persistenceAdvanced}        - variable: storage
+          label: "storage Storage"
+          description: "Path where shared folders are located.&lt;br&gt;Container Path storage"
           schema:
             additional_attrs: true
             type: dict
@@ -396,6 +389,7 @@ questions:
                     - value: "Memory"
                       description: "Memory"
 # Include{persistenceAdvanced}
+
 # Include{persistenceList}
 
   - variable: ingress

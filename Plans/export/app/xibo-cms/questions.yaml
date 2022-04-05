@@ -76,11 +76,6 @@ questions:
                       description: "(Legacy) OnDelete: ignore .spec.template changes"
 # Include{controllerExpert}
 
-
-
-
-
-
   - variable: env
     group: "Container Configuration"
     label: "Image Environment"
@@ -257,7 +252,6 @@ questions:
             type: string
             default: ""
 
-
 # Include{containerConfig}
 
   - variable: service
@@ -344,7 +338,6 @@ questions:
 
 # Include{serviceList}
 
-
   - variable: persistence
     label: "Integrated Persistent Storage"
     description: "Integrated Persistent Storage"
@@ -353,9 +346,9 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+        - variable: customfiles
+          label: "customfiles Storage"
+          description: "Container Path varwwwcmscustom"
           schema:
             additional_attrs: true
             type: dict
@@ -395,9 +388,9 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+# Include{persistenceAdvanced}        - variable: backup
+          label: "backup Storage"
+          description: "Container Path varwwwbackup"
           schema:
             additional_attrs: true
             type: dict
@@ -437,9 +430,9 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+# Include{persistenceAdvanced}        - variable: customtheme
+          label: "customtheme Storage"
+          description: "Container Path varwwwcmswebthemecustom"
           schema:
             additional_attrs: true
             type: dict
@@ -479,9 +472,9 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+# Include{persistenceAdvanced}        - variable: library
+          label: "library Storage"
+          description: "Container Path varwwwcmslibrary"
           schema:
             additional_attrs: true
             type: dict
@@ -521,9 +514,9 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+# Include{persistenceAdvanced}        - variable: userscritps
+          label: "userscritps Storage"
+          description: "Container Path varwwwcmswebuserscripts"
           schema:
             additional_attrs: true
             type: dict
@@ -564,6 +557,7 @@ questions:
                     - value: "Memory"
                       description: "Memory"
 # Include{persistenceAdvanced}
+
 # Include{persistenceList}
 
   - variable: ingress

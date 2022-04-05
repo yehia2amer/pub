@@ -77,11 +77,6 @@ questions:
 # Include{controllerExpert}
 
 
-
-
-
-
-
 # Include{containerConfig}
 
   - variable: service
@@ -228,7 +223,6 @@ questions:
 
 # Include{serviceList}
 
-
   - variable: persistence
     label: "Integrated Persistent Storage"
     description: "Integrated Persistent Storage"
@@ -237,9 +231,9 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+        - variable: urbitconfigpath
+          label: "urbitconfigpath Storage"
+          description: "This is where Urbit will access the key or the data pier of an existing planet. A key file sampel-palnet.key will boot the sampel-palnet planet. For booting a comet create a file in .comet."
           schema:
             additional_attrs: true
             type: dict
@@ -280,6 +274,7 @@ questions:
                     - value: "Memory"
                       description: "Memory"
 # Include{persistenceAdvanced}
+
 # Include{persistenceList}
 
   - variable: ingress

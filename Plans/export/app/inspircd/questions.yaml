@@ -76,11 +76,6 @@ questions:
                       description: "(Legacy) OnDelete: ignore .spec.template changes"
 # Include{controllerExpert}
 
-
-
-
-
-
   - variable: env
     group: "Container Configuration"
     label: "Image Environment"
@@ -256,7 +251,6 @@ questions:
           schema:
             type: string
             default: "770"
-
 
 # Include{containerConfig}
 
@@ -524,7 +518,6 @@ questions:
 
 # Include{serviceList}
 
-
   - variable: persistence
     label: "Integrated Persistent Storage"
     description: "Integrated Persistent Storage"
@@ -533,9 +526,9 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+        - variable: datapath
+          label: "datapath Storage"
+          description: "Your configuration is located in '...conf' (WARNING change the main configurations via the variables here and not the files which say that you should don't edit them)"
           schema:
             additional_attrs: true
             type: dict
@@ -576,6 +569,7 @@ questions:
                     - value: "Memory"
                       description: "Memory"
 # Include{persistenceAdvanced}
+
 # Include{persistenceList}
 
   - variable: ingress

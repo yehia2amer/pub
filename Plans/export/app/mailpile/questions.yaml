@@ -77,11 +77,6 @@ questions:
 # Include{controllerExpert}
 
 
-
-
-
-
-
 # Include{containerConfig}
 
   - variable: service
@@ -168,7 +163,6 @@ questions:
 
 # Include{serviceList}
 
-
   - variable: persistence
     label: "Integrated Persistent Storage"
     description: "Integrated Persistent Storage"
@@ -177,9 +171,9 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+        - variable: path1
+          label: "path1 Storage"
+          description: "Container Path root.localshareMailpile"
           schema:
             additional_attrs: true
             type: dict
@@ -219,9 +213,9 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+# Include{persistenceAdvanced}        - variable: path2
+          label: "path2 Storage"
+          description: "Container Path root.gnupg"
           schema:
             additional_attrs: true
             type: dict
@@ -262,6 +256,7 @@ questions:
                     - value: "Memory"
                       description: "Memory"
 # Include{persistenceAdvanced}
+
 # Include{persistenceList}
 
   - variable: ingress

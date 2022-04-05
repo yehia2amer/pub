@@ -76,11 +76,6 @@ questions:
                       description: "(Legacy) OnDelete: ignore .spec.template changes"
 # Include{controllerExpert}
 
-
-
-
-
-
   - variable: env
     group: "Container Configuration"
     label: "Image Environment"
@@ -118,7 +113,6 @@ questions:
           schema:
             type: string
             default: "true"
-
 
 # Include{containerConfig}
 
@@ -326,7 +320,6 @@ questions:
 
 # Include{serviceList}
 
-
   - variable: persistence
     label: "Integrated Persistent Storage"
     description: "Integrated Persistent Storage"
@@ -335,9 +328,9 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+        - variable: steamcmd
+          label: "steamcmd Storage"
+          description: "Container Path serverdatasteamcmd"
           schema:
             additional_attrs: true
             type: dict
@@ -377,9 +370,9 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+# Include{persistenceAdvanced}        - variable: serverfiles
+          label: "serverfiles Storage"
+          description: "Container Path serverdataserverfiles"
           schema:
             additional_attrs: true
             type: dict
@@ -419,9 +412,9 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+# Include{persistenceAdvanced}        - variable: token
+          label: "token Storage"
+          description: "Put your created 'cluster_token.txt' in the 'Cluster_1' subfolder."
           schema:
             additional_attrs: true
             type: dict
@@ -462,6 +455,7 @@ questions:
                     - value: "Memory"
                       description: "Memory"
 # Include{persistenceAdvanced}
+
 # Include{persistenceList}
 
   - variable: ingress

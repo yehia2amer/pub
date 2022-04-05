@@ -91,7 +91,6 @@ questions:
 
 # Include{serviceList}
 
-
   - variable: persistence
     label: "Integrated Persistent Storage"
     description: "Integrated Persistent Storage"
@@ -101,8 +100,8 @@ questions:
       type: dict
       attrs:
         - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+          label: "config Storage"
+          description: "Container Path mopidy.conf"
           schema:
             additional_attrs: true
             type: dict
@@ -142,9 +141,9 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+# Include{persistenceAdvanced}        - variable: hostpath2
+          label: "hostpath2 Storage"
+          description: "Container Path tmpsnapfifo"
           schema:
             additional_attrs: true
             type: dict
@@ -184,9 +183,9 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+# Include{persistenceAdvanced}        - variable: hostpath3
+          label: "hostpath3 Storage"
+          description: "Container Path media"
           schema:
             additional_attrs: true
             type: dict
@@ -227,6 +226,7 @@ questions:
                     - value: "Memory"
                       description: "Memory"
 # Include{persistenceAdvanced}
+
 # Include{persistenceList}
 
 

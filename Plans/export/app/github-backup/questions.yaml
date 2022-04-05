@@ -91,7 +91,6 @@ questions:
             default: "3600"
 
 
-
   - variable: serviceexpert
     group: "Networking and Services"
     label: "Show Expert Config"
@@ -111,7 +110,6 @@ questions:
 
 # Include{serviceList}
 
-
   - variable: persistence
     label: "Integrated Persistent Storage"
     description: "Integrated Persistent Storage"
@@ -120,9 +118,9 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+        - variable: backuplocation
+          label: "backuplocation Storage"
+          description: "Set the location of your github backups. Please note that the default will create a backup share if it does not exist and you don't change it."
           schema:
             additional_attrs: true
             type: dict
@@ -163,8 +161,8 @@ questions:
                     - value: "Memory"
                       description: "Memory"
 # Include{persistenceAdvanced}        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+          label: "config Storage"
+          description: "Persistent storage for config.json"
           schema:
             additional_attrs: true
             type: dict
@@ -205,6 +203,7 @@ questions:
                     - value: "Memory"
                       description: "Memory"
 # Include{persistenceAdvanced}
+
 # Include{persistenceList}
 
 

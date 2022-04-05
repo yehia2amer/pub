@@ -76,11 +76,6 @@ questions:
                       description: "(Legacy) OnDelete: ignore .spec.template changes"
 # Include{controllerExpert}
 
-
-
-
-
-
   - variable: env
     group: "Container Configuration"
     label: "Image Environment"
@@ -112,7 +107,6 @@ questions:
           schema:
             type: string
             default: "10"
-
 
 # Include{containerConfig}
 
@@ -200,7 +194,6 @@ questions:
 
 # Include{serviceList}
 
-
   - variable: persistence
     label: "Integrated Persistent Storage"
     description: "Integrated Persistent Storage"
@@ -209,9 +202,9 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+        - variable: storage(database)
+          label: "storage(database) Storage"
+          description: "This is the location for the database."
           schema:
             additional_attrs: true
             type: dict
@@ -251,9 +244,9 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+# Include{persistenceAdvanced}        - variable: storage(downloads)
+          label: "storage(downloads) Storage"
+          description: "This is the location for the downloads."
           schema:
             additional_attrs: true
             type: dict
@@ -294,6 +287,7 @@ questions:
                     - value: "Memory"
                       description: "Memory"
 # Include{persistenceAdvanced}
+
 # Include{persistenceList}
 
   - variable: ingress

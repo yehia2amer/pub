@@ -76,11 +76,6 @@ questions:
                       description: "(Legacy) OnDelete: ignore .spec.template changes"
 # Include{controllerExpert}
 
-
-
-
-
-
   - variable: env
     group: "Container Configuration"
     label: "Image Environment"
@@ -100,7 +95,6 @@ questions:
           schema:
             type: string
             default: "mySecret"
-
 
 # Include{containerConfig}
 
@@ -248,7 +242,6 @@ questions:
 
 # Include{serviceList}
 
-
   - variable: persistence
     label: "Integrated Persistent Storage"
     description: "Integrated Persistent Storage"
@@ -257,9 +250,9 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+        - variable: mountedfolderforlogs
+          label: "mountedfolderforlogs Storage"
+          description: "Container Path varlogonlyoffice"
           schema:
             additional_attrs: true
             type: dict
@@ -299,9 +292,9 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+# Include{persistenceAdvanced}        - variable: mountedfolderfordatafiles(sslcertificatescanbeaddedinthecertsubfolder)
+          label: "mountedfolderfordatafiles(sslcertificatescanbeaddedinthecertsubfolder) Storage"
+          description: "Container Path varwwwonlyofficeData"
           schema:
             additional_attrs: true
             type: dict
@@ -341,9 +334,9 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+# Include{persistenceAdvanced}        - variable: mountedfolderforfilecache
+          label: "mountedfolderforfilecache Storage"
+          description: "Container Path varlibonlyoffice"
           schema:
             additional_attrs: true
             type: dict
@@ -383,9 +376,9 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+# Include{persistenceAdvanced}        - variable: mountedfolderfordatabase
+          label: "mountedfolderfordatabase Storage"
+          description: "Container Path varlibpostgresql"
           schema:
             additional_attrs: true
             type: dict
@@ -425,9 +418,9 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+# Include{persistenceAdvanced}        - variable: mountedfolderwhereyoucanaddyourcustomfonts
+          label: "mountedfolderwhereyoucanaddyourcustomfonts Storage"
+          description: "Container Path usrsharefontstruetypecustom"
           schema:
             additional_attrs: true
             type: dict
@@ -467,9 +460,9 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+# Include{persistenceAdvanced}        - variable: mountedfolderforunsavedfiles
+          label: "mountedfolderforunsavedfiles Storage"
+          description: "Container Path varlibonlyofficedocumentserverApp_Datacachefilesforgotten"
           schema:
             additional_attrs: true
             type: dict
@@ -509,9 +502,9 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+# Include{persistenceAdvanced}        - variable: varlibrabbitmq
+          label: "varlibrabbitmq Storage"
+          description: "Container Path varlibrabbitmq"
           schema:
             additional_attrs: true
             type: dict
@@ -551,9 +544,9 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+# Include{persistenceAdvanced}        - variable: varlibredis
+          label: "varlibredis Storage"
+          description: "Container Path varlibredis"
           schema:
             additional_attrs: true
             type: dict
@@ -594,6 +587,7 @@ questions:
                     - value: "Memory"
                       description: "Memory"
 # Include{persistenceAdvanced}
+
 # Include{persistenceList}
 
   - variable: ingress
