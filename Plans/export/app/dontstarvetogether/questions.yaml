@@ -179,16 +179,16 @@ questions:
                                     type: int
                                     default: 10890
 
-        - variable: udp2-masterserver
-          label: "udp2-masterserver service"
+        - variable: masterserver
+          label: "masterserver service"
           description: "The Primary service on which the healthcheck runs, often the webUI"
           schema:
             additional_attrs: true
             type: dict
             attrs:
 # Include{serviceSelector}
-                    - variable: udp2-masterserver
-                      label: "udp2-masterserver Service Port Configuration"
+                    - variable: masterserver
+                      label: "masterserver Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -239,16 +239,16 @@ questions:
                                   schema:
                                     type: int
                                     default: 27016
-        - variable: udp3-authentication
-          label: "udp3-authentication service"
+        - variable: authentication
+          label: "authentication service"
           description: "The Primary service on which the healthcheck runs, often the webUI"
           schema:
             additional_attrs: true
             type: dict
             attrs:
 # Include{serviceSelector}
-                    - variable: udp3-authentication
-                      label: "udp3-authentication Service Port Configuration"
+                    - variable: authentication
+                      label: "authentication Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

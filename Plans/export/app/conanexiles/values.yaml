@@ -23,34 +23,26 @@ securityContext:
   readOnlyRootFilesystem: false
   runAsNonRoot: false
 service:
+  gameport+1:
+    enabled: true
+    ports:
+      gameport+1:
+        enabled: true
+        port: 7778
+        protocol: UDP
+        targetPort: 7778
   main:
     enabled: true
     ports:
       main:
         enabled: true
         port: 7777
-        protocol: TCP
-        targetPort: 7777
-  udp1-gameport:
-    enabled: true
-    ports:
-      udp1-gameport:
-        enabled: true
-        port: 7777
         protocol: UDP
         targetPort: 7777
-  udp2-gameport+1:
+  steamport:
     enabled: true
     ports:
-      udp2-gameport+1:
-        enabled: true
-        port: 7778
-        protocol: UDP
-        targetPort: 7778
-  udp3-steamport:
-    enabled: true
-    ports:
-      udp3-steamport:
+      steamport:
         enabled: true
         port: 27015
         protocol: UDP

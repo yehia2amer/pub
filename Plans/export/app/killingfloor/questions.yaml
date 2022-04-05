@@ -179,16 +179,16 @@ questions:
                                     type: int
                                     default: 7707
 
-        - variable: udp2-query
-          label: "udp2-query service"
+        - variable: query
+          label: "query service"
           description: "The Primary service on which the healthcheck runs, often the webUI"
           schema:
             additional_attrs: true
             type: dict
             attrs:
 # Include{serviceSelector}
-                    - variable: udp2-query
-                      label: "udp2-query Service Port Configuration"
+                    - variable: query
+                      label: "query Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -239,16 +239,16 @@ questions:
                                   schema:
                                     type: int
                                     default: 7708
-        - variable: udp3-gamespyquery
-          label: "udp3-gamespyquery service"
+        - variable: gamespyquery
+          label: "gamespyquery service"
           description: "The Primary service on which the healthcheck runs, often the webUI"
           schema:
             additional_attrs: true
             type: dict
             attrs:
 # Include{serviceSelector}
-                    - variable: udp3-gamespyquery
-                      label: "udp3-gamespyquery Service Port Configuration"
+                    - variable: gamespyquery
+                      label: "gamespyquery Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -299,76 +299,16 @@ questions:
                                   schema:
                                     type: int
                                     default: 7717
-        - variable: tcp1-masterserverbrowser
-          label: "tcp1-masterserverbrowser service"
+        - variable: masterserverbr
+          label: "masterserverbr service"
           description: "The Primary service on which the healthcheck runs, often the webUI"
           schema:
             additional_attrs: true
             type: dict
             attrs:
 # Include{serviceSelector}
-                    - variable: tcp1-masterserverbrowser
-                      label: "tcp1-masterserverbrowser Service Port Configuration"
-                      schema:
-                        additional_attrs: true
-                        type: dict
-                        attrs:
-                          - variable: port
-                            label: "Port"
-                            description: "This port exposes the container port on the service"
-                            schema:
-                              type: int
-                              default: 28852
-                              required: true
-                          - variable: advanced
-                            label: "Show Advanced settings"
-                            schema:
-                              type: boolean
-                              default: false
-                              show_subquestions_if: true
-                              subquestions:
-                                - variable: enabled
-                                  label: "Enable the port"
-                                  schema:
-                                    type: boolean
-                                    default: true
-                                - variable: protocol
-                                  label: "Port Type"
-                                  schema:
-                                    type: string
-                                    default: TCP
-                                    enum:
-                                      - value: HTTP
-                                        description: "HTTP"
-                                      - value: "HTTPS"
-                                        description: "HTTPS"
-                                      - value: TCP
-                                        description: "TCP"
-                                      - value: "UDP"
-                                        description: "UDP"
-                                - variable: nodePort
-                                  label: "Node Port (Optional)"
-                                  description: "This port gets exposed to the node. Only considered when service type is NodePort, Simple or LoadBalancer"
-                                  schema:
-                                    type: int
-                                    min: 9000
-                                    max: 65535
-                                - variable: targetPort
-                                  label: "Target Port"
-                                  description: "The internal(!) port on the container the Application runs on"
-                                  schema:
-                                    type: int
-                                    default: 28852
-        - variable: udp4-masterserverbrowser
-          label: "udp4-masterserverbrowser service"
-          description: "The Primary service on which the healthcheck runs, often the webUI"
-          schema:
-            additional_attrs: true
-            type: dict
-            attrs:
-# Include{serviceSelector}
-                    - variable: udp4-masterserverbrowser
-                      label: "udp4-masterserverbrowser Service Port Configuration"
+                    - variable: masterserverbr
+                      label: "masterserverbr Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -419,16 +359,16 @@ questions:
                                   schema:
                                     type: int
                                     default: 28852
-        - variable: tcp2-adminport
-          label: "tcp2-adminport service"
+        - variable: adminport
+          label: "adminport service"
           description: "The Primary service on which the healthcheck runs, often the webUI"
           schema:
             additional_attrs: true
             type: dict
             attrs:
 # Include{serviceSelector}
-                    - variable: tcp2-adminport
-                      label: "tcp2-adminport Service Port Configuration"
+                    - variable: adminport
+                      label: "adminport Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -479,16 +419,16 @@ questions:
                                   schema:
                                     type: int
                                     default: 8075
-        - variable: udp5-steamport
-          label: "udp5-steamport service"
+        - variable: steamport
+          label: "steamport service"
           description: "The Primary service on which the healthcheck runs, often the webUI"
           schema:
             additional_attrs: true
             type: dict
             attrs:
 # Include{serviceSelector}
-                    - variable: udp5-steamport
-                      label: "udp5-steamport Service Port Configuration"
+                    - variable: steamport
+                      label: "steamport Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

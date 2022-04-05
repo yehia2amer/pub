@@ -28,62 +28,7 @@
         Type: Path
         value: /mnt/user/appdata/steamcmd
     Port:
-      tcp-gamedetails:
-        Default: ''
-        Description: 'Container Port: 26900'
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: TCP - Game details
-        Required: 'true'
-        Target: 26900
-        Type: Port
-        value: 26900
-      tcp2-webbasecontrol:
-        Default: ''
-        Description: 'Container Port: 8080'
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: TCP2 - Web base control
-        Required: 'false'
-        Target: 8080
-        Type: Port
-        value: 8080
-      tcp3-webpanel:
-        Default: ''
-        Description: 'Container Port: 8082'
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: TCP3 - Web Panel
-        Required: 'false'
-        Target: 8082
-        Type: Port
-        value: 8082
-      udp1-steammasterserver:
-        Default: ''
-        Description: 'Container Port: 26900'
-        Display: always
-        Mask: 'false'
-        Mode: udp
-        Name: UDP1 - Steam Master server
-        Required: 'true'
-        Target: 26900
-        Type: Port
-        value: 26900
-      udp2-steamcommunications:
-        Default: ''
-        Description: 'Container Port: 26901'
-        Display: always
-        Mask: 'false'
-        Mode: udp
-        Name: UDP2 - Steam Communications
-        Required: 'true'
-        Target: 26901
-        Type: Port
-        value: 26901
-      udp3-raknet:
+      raknet:
         Default: ''
         Description: 'Container Port: 26902'
         Display: always
@@ -94,18 +39,7 @@
         Target: 26902
         Type: Port
         value: 26902
-      udp4-unet:
-        Default: ''
-        Description: 'Container Port: '
-        Display: always
-        Mask: 'false'
-        Mode: udp
-        Name: UDP4 - UNET
-        Required: 'true'
-        Target: 26903
-        Type: Port
-        value: 26903
-      udp5-registeringatserverlist:
+      registeringats:
         Default: ''
         Description: Should be in the range 27015 - 27030, don't forget to set also
           a different Container Port if you change this value.
@@ -117,6 +51,72 @@
         Target: 27015
         Type: Port
         value: 27015
+      steamcommunica:
+        Default: ''
+        Description: 'Container Port: 26901'
+        Display: always
+        Mask: 'false'
+        Mode: udp
+        Name: UDP2 - Steam Communications
+        Required: 'true'
+        Target: 26901
+        Type: Port
+        value: 26901
+      steammasterser:
+        Default: ''
+        Description: 'Container Port: 26900'
+        Display: always
+        Mask: 'false'
+        Mode: udp
+        Name: UDP1 - Steam Master server
+        Required: 'true'
+        Target: 26900
+        Type: Port
+        value: 26900
+      tcp-:
+        Default: ''
+        Description: 'Container Port: 26900'
+        Display: always
+        Mask: 'false'
+        Mode: tcp
+        Name: TCP - Game details
+        Required: 'true'
+        Target: 26900
+        Type: Port
+        value: 26900
+      unet:
+        Default: ''
+        Description: 'Container Port: '
+        Display: always
+        Mask: 'false'
+        Mode: udp
+        Name: UDP4 - UNET
+        Required: 'true'
+        Target: 26903
+        Type: Port
+        value: 26903
+      webbasecontrol:
+        Default: ''
+        Description: 'Container Port: 8080'
+        Display: always
+        Mask: 'false'
+        Mode: tcp
+        Name: TCP2 - Web base control
+        Required: 'false'
+        Target: 8080
+        Type: Port
+        value: 8080
+      webpanel:
+        Default: ''
+        Description: 'Container Port: 8082'
+        Display: always
+        Mask: 'false'
+        Mode: tcp
+        Name: TCP3 - Web Panel
+        Required: 'false'
+        Target: 8082
+        Type: Port
+        value: 8082
     Variable:
       bepinex:
         Default: ''
@@ -2252,20 +2252,7 @@ americasarmy-pg:
         Type: Path
         value: /mnt/user/appdata/steamcmd
     Port:
-      udp1-gameport:
-        Default: ''
-        Description: UDP Gameport (if you need another port, please delete this entry
-          and create a new UDP Port with the required port number, also don't forget
-          to change the port number at the Game Parameters)
-        Display: always
-        Mask: 'false'
-        Mode: udp
-        Name: UDP1 - Game Port
-        Required: 'true'
-        Target: 7778
-        Type: Port
-        value: 7778
-      udp2-gameport:
+      gameport:
         Default: ''
         Description: UDP Gameport (if you need another port, please delete this entry
           and create a new UDP Port with the required port number, also don't forget
@@ -2278,7 +2265,7 @@ americasarmy-pg:
         Target: 8778
         Type: Port
         value: 8778
-      udp3-steamqueryport:
+      steamqueryport:
         Default: ''
         Description: UDP Queryport (if you need another port, please delete this entry
           and create a new UDP Port with the required port number, also don't forget
@@ -4825,7 +4812,7 @@ aria2-daemon:
         Type: Path
         value: ''
     Port:
-      aria2-dhtlistenport:
+      aria2-dhtliste:
         Default: '6881'
         Description: 'Set UDP listening port used by DHT(IPv4, IPv6) and UDP tracker.
           Multiple ports can be specified by using ,, for example: 6881,6885. You
@@ -4839,7 +4826,7 @@ aria2-daemon:
         Target: 6881
         Type: Port
         value: 6881
-      aria2-listenport:
+      aria2-listenpo:
         Default: '6889'
         Description: 'Set TCP port number for BitTorrent downloads. Multiple ports
           can be specified by using ,, for example: 6881,6885. You can also use -
@@ -5207,7 +5194,7 @@ aria2-with-ariang:
         Type: Path
         value: ''
     Port:
-      aria2-dhtlistenport:
+      aria2-dhtliste:
         Default: '6881'
         Description: 'Set UDP listening port used by DHT(IPv4, IPv6) and UDP tracker.
           Multiple ports can be specified by using ,, for example: 6881,6885. You
@@ -5221,7 +5208,7 @@ aria2-with-ariang:
         Target: 6881
         Type: Port
         value: 6881
-      aria2-listenport:
+      aria2-listenpo:
         Default: '6889'
         Description: 'Set TCP port number for BitTorrent downloads. Multiple ports
           can be specified by using ,, for example: 6881,6885. You can also use -
@@ -5602,7 +5589,7 @@ aria2webui:
         Type: Path
         value: ''
     Port:
-      aria2-dhtlistenport:
+      aria2-dhtliste:
         Default: '6881'
         Description: 'Set UDP listening port used by DHT(IPv4, IPv6) and UDP tracker.
           Multiple ports can be specified by using ,, for example: 6881,6885. You
@@ -5616,7 +5603,7 @@ aria2webui:
         Target: 6881
         Type: Port
         value: 6881
-      aria2-listenport:
+      aria2-listenpo:
         Default: '6889'
         Description: 'Set TCP port number for BitTorrent downloads. Multiple ports
           can be specified by using ,, for example: 6881,6885. You can also use -
@@ -6265,7 +6252,7 @@ arma3:
         Target: 2302
         Type: Port
         value: 2302
-      udpbattleyetraffic:
+      udpbattleyetra:
         Default: ''
         Description: UDP Game Port +4
         Display: always
@@ -6287,7 +6274,7 @@ arma3:
         Target: 2302
         Type: Port
         value: 2302
-      udpsteammasterport:
+      udpsteammaster:
         Default: ''
         Description: UDP Game Port +2
         Display: always
@@ -6298,7 +6285,7 @@ arma3:
         Target: 2304
         Type: Port
         value: 2304
-      udpsteamquerryport:
+      udpsteamquerry:
         Default: ''
         Description: UDP Game Port +1
         Display: always
@@ -6503,7 +6490,7 @@ arma3exilemod:
         Target: 3306
         Type: Port
         value: 3306
-      udpbattleyetraffic:
+      udpbattleyetra:
         Default: ''
         Description: UDP Game Port +4
         Display: always
@@ -6525,7 +6512,7 @@ arma3exilemod:
         Target: 2302
         Type: Port
         value: 2302
-      udpsteammasterport:
+      udpsteammaster:
         Default: ''
         Description: UDP Game Port +2
         Display: always
@@ -6536,7 +6523,7 @@ arma3exilemod:
         Target: 2304
         Type: Port
         value: 2304
-      udpsteamquerryport:
+      udpsteamquerry:
         Default: ''
         Description: UDP Game Port +1
         Display: always
@@ -6805,6 +6792,29 @@ assettocorsa:
         Type: Path
         value: /mnt/user/appdata/steamcmd
     Port:
+      assetto-:
+        Default: ''
+        Description: 'Only needed if you installed Assetto-Server-Manager (Webserver
+          Address: http://[IPOFYOURSERVER]:8771).'
+        Display: always
+        Mask: 'false'
+        Mode: tcp
+        Name: TCP4 - Assetto-Server-Manager
+        Required: 'false'
+        Target: 8772
+        Type: Port
+        value: 8772
+      stracker:
+        Default: ''
+        Description: 'Only needed if you installed Stacker (Webserver Address: http://[IPOFYOURSERVER]:50041).'
+        Display: always
+        Mask: 'false'
+        Mode: tcp
+        Name: TCP3 - Stracker
+        Required: 'false'
+        Target: 50041
+        Type: Port
+        value: 50041
       tcp:
         Default: ''
         Description: 'Container Port: 9600'
@@ -6827,29 +6837,6 @@ assettocorsa:
         Target: 8081
         Type: Port
         value: 8081
-      tcp3-stracker:
-        Default: ''
-        Description: 'Only needed if you installed Stacker (Webserver Address: http://[IPOFYOURSERVER]:50041).'
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: TCP3 - Stracker
-        Required: 'false'
-        Target: 50041
-        Type: Port
-        value: 50041
-      tcp4-assetto-server-manager:
-        Default: ''
-        Description: 'Only needed if you installed Assetto-Server-Manager (Webserver
-          Address: http://[IPOFYOURSERVER]:8771).'
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: TCP4 - Assetto-Server-Manager
-        Required: 'false'
-        Target: 8772
-        Type: Port
-        value: 8772
       udp:
         Default: ''
         Description: 'Container Port: 9600'
@@ -7351,51 +7338,7 @@ atlas:
         Type: Path
         value: /mnt/cache/appdata/steamcmd
     Port:
-      tcp1-rconport:
-        Default: ''
-        Description: 'Container Port: 32330'
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: TCP1 - RCON Port
-        Required: 'true'
-        Target: 32330
-        Type: Port
-        value: 32330
-      tcp2-seamlessport:
-        Default: ''
-        Description: 'Container Port: 27000'
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: TCP2 - Seamless Port
-        Required: 'true'
-        Target: 27000
-        Type: Port
-        value: 27000
-      tcp3-redisserver:
-        Default: ''
-        Description: 'Container Port: 6379'
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: TCP3 - Redis Server
-        Required: 'false'
-        Target: 6379
-        Type: Port
-        value: 6379
-      udp1-queryport:
-        Default: ''
-        Description: 'Container Port: 57550'
-        Display: always
-        Mask: 'false'
-        Mode: udp
-        Name: UDP1 - Query Port
-        Required: 'true'
-        Target: 57550
-        Type: Port
-        value: 57550
-      udp2-gameport1:
+      gameport1:
         Default: ''
         Description: 'Container Port: 5750'
         Display: always
@@ -7406,7 +7349,7 @@ atlas:
         Target: 5750
         Type: Port
         value: 5750
-      udp3-gameporta2:
+      gameporta2:
         Default: ''
         Description: 'Container Port: 5751'
         Display: always
@@ -7417,6 +7360,50 @@ atlas:
         Target: 5751
         Type: Port
         value: 5751
+      queryport:
+        Default: ''
+        Description: 'Container Port: 57550'
+        Display: always
+        Mask: 'false'
+        Mode: udp
+        Name: UDP1 - Query Port
+        Required: 'true'
+        Target: 57550
+        Type: Port
+        value: 57550
+      rconport:
+        Default: ''
+        Description: 'Container Port: 32330'
+        Display: always
+        Mask: 'false'
+        Mode: tcp
+        Name: TCP1 - RCON Port
+        Required: 'true'
+        Target: 32330
+        Type: Port
+        value: 32330
+      redisserver:
+        Default: ''
+        Description: 'Container Port: 6379'
+        Display: always
+        Mask: 'false'
+        Mode: tcp
+        Name: TCP3 - Redis Server
+        Required: 'false'
+        Target: 6379
+        Type: Port
+        value: 6379
+      seamlessport:
+        Default: ''
+        Description: 'Container Port: 27000'
+        Display: always
+        Mask: 'false'
+        Mode: tcp
+        Name: TCP2 - Seamless Port
+        Required: 'true'
+        Target: 27000
+        Type: Port
+        value: 27000
     Variable:
       extragameparameters:
         Default: ''
@@ -8675,7 +8662,7 @@ barotrauma:
         Type: Path
         value: /mnt/user/appdata/steamcmd
     Port:
-      udp1-gameport:
+      gameport:
         Default: ''
         Description: UDP Game Port (if you need another port, please delete this entry
           and create a new UDP Port with the required port number, also don't forget
@@ -8688,7 +8675,7 @@ barotrauma:
         Target: 27015
         Type: Port
         value: 27015
-      udp2-steamqueryport:
+      steamqueryport:
         Default: ''
         Description: UDP Steam Query Port (if you need another port, please delete
           this entry and create a new UDP Port with the required port number, also
@@ -9127,7 +9114,7 @@ bitcoinunlimited:
         Type: Path
         value: /mnt/user/appdata/blockchain
     Port:
-      communicationport:
+      communicationp:
         Default: '8333'
         Description: Main Port Used
         Display: always
@@ -9149,7 +9136,7 @@ bitcoinunlimited:
         Target: 8332
         Type: Port
         value: 8332
-      testnetcommunicationport:
+      testnetcommuni:
         Default: '18333'
         Description: Testnet Communication Port
         Display: always
@@ -9160,7 +9147,7 @@ bitcoinunlimited:
         Target: 18333
         Type: Port
         value: 18333
-      testnetrpcport-maptouserpc:
+      testnetrpcport:
         Default: '18332'
         Description: Testnet RPC Port
         Display: always
@@ -11054,7 +11041,7 @@ caddy:
         Type: Path
         value: ''
     Port:
-      hostportfor8443:
+      hostportfor844:
         Default: '8443'
         Description: 'Container Port: 8443'
         Display: always-hide
@@ -11632,7 +11619,7 @@ chivalry-medievalwarfare:
         Type: Path
         value: /mnt/user/appdata/steamcmd
     Port:
-      udp1-gameport:
+      gameport:
         Default: ''
         Description: UDP Gameport (if you need another port, please delete this entry
           and create a new UDP Port with the required port number, also don't forget
@@ -11645,7 +11632,7 @@ chivalry-medievalwarfare:
         Target: 7000
         Type: Port
         value: 7000
-      udp2-gamequeryport:
+      gamequeryport:
         Default: ''
         Description: UDP Gamequeryport (if you need another port, please delete this
           entry and create a new UDP Port with the required port number, also don't
@@ -11658,7 +11645,7 @@ chivalry-medievalwarfare:
         Target: 7010
         Type: Port
         value: 7010
-      udp3-steamqueryport:
+      steamqueryport:
         Default: ''
         Description: UDP Steamqueryport (if you need another port, please delete this
           entry and create a new UDP Port with the required port number, also don't
@@ -12321,7 +12308,7 @@ citadel-forgedwithfire:
         Type: Path
         value: /mnt/user/appdata/steamcmd
     Port:
-      udp1-gameport:
+      gameport:
         Default: ''
         Description: UDP Game Port (if you need another port, please delete this entry
           and create a new UDP Port with the corresponding port number, also don't
@@ -12334,7 +12321,7 @@ citadel-forgedwithfire:
         Target: 7777
         Type: Port
         value: 7777
-      udp2-queryport:
+      queryport:
         Default: ''
         Description: UDP Query Port (if you need another port, please delete this
           entry and create a new UDP Port with the corresponding port number, also
@@ -12636,21 +12623,7 @@ cloudberrybackup:
         Type: Path
         value: ''
     Port:
-      cloudberrybackupwebinterfacehttpport:
-        Default: '43210'
-        Description: Port used to access the CloudBerry Backup's web interface via
-          HTTP.&lt;br&gt;&lt;b&gt;NOTE:&lt;/b&gt; This applies only when &lt;i&gt;Network
-          Type&lt;/i&gt; is set to &lt;i&gt;Bridge&lt;/i&gt;.  For other network types,
-          port 43210 should be used instead.
-        Display: advanced
-        Mask: 'false'
-        Mode: tcp
-        Name: CloudBerry Backup Web Interface HTTP Port
-        Required: 'false'
-        Target: 43210
-        Type: Port
-        value: 43210
-      cloudberrybackupwebinterfacehttpsport:
+      cloudberryback:
         Default: '43211'
         Description: Port used to access the CloudBerry Backup's web interface via
           HTTPs.&lt;br&gt;&lt;b&gt;NOTE:&lt;/b&gt; This applies only when &lt;i&gt;Network
@@ -14105,20 +14078,7 @@ conanexiles:
         Type: Path
         value: /mnt/user/appdata/steamcmd
     Port:
-      tcp1-gameport:
-        Default: ''
-        Description: TCP Game Port (if you need another port, please delete this entry
-          and create a new TCP Port with the required port number, also don't forget
-          to change your server settings)
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: TCP1 - Game Port
-        Required: 'true'
-        Target: 7777
-        Type: Port
-        value: 7777
-      udp1-gameport:
+      gameport:
         Default: ''
         Description: UDP Game Port (if you need another port, please delete this entry
           and create a new UDP Port with the required port number, also don't forget
@@ -14131,7 +14091,7 @@ conanexiles:
         Target: 7777
         Type: Port
         value: 7777
-      udp2-gameport+1:
+      gameport+1:
         Default: ''
         Description: UDP Game Port +1 (if you need another port, please delete this
           entry and create a new UDP Port with the required port number, also don't
@@ -14144,7 +14104,7 @@ conanexiles:
         Target: 7778
         Type: Port
         value: 7778
-      udp3-steamport:
+      steamport:
         Default: ''
         Description: UDP Steam Port (if you need another port, please delete this
           entry and create a new UDP Port with the required port number, also don't
@@ -15425,7 +15385,7 @@ crushftp10:
         Type: Path
         value: /mnt/user/
     Port:
-      ftppassiveports:
+      ftppassiveport:
         Default: 2000-2100
         Description: 'Container Port: 2000-2100'
         Display: always
@@ -18301,7 +18261,7 @@ daysofwar:
         Type: Path
         value: /mnt/user/appdata/steamcmd
     Port:
-      udp1-gameport:
+      gameport:
         Default: ''
         Description: UDP Game Port (if you need another port, please delete this entry
           and create a new UDP Port with the required port number, also don't forget
@@ -18314,7 +18274,7 @@ daysofwar:
         Target: 7777
         Type: Port
         value: 7777
-      udp2-steamport:
+      steamport:
         Default: ''
         Description: UDP Steam Port (if you need another port, please delete this
           entry and create a new UDP Port with the required port number, also don't
@@ -19629,7 +19589,7 @@ derbynet_server:
         Type: Path
         value: /mnt/cache/appdata/derbynet_server/data
     Port:
-      securewebserverport(selfsignedcerts):
+      securewebserve:
         Default: '8051'
         Description: 'The docker has a secure webportal but the certificates are self
           signed.  '
@@ -21608,7 +21568,7 @@ doh-client:
         Type: Path
         value: /mnt/cache/appdata/doh-client
     Port:
-      tcpdnsqueryport:
+      tcpdnsquerypor:
         Default: ''
         Description: TCP DNS Query Port
         Display: advanced-hide
@@ -21619,7 +21579,7 @@ doh-client:
         Target: 53
         Type: Port
         value: 53
-      udpdnsqueryport:
+      udpdnsquerypor:
         Default: ''
         Description: UDP DNS Query Port
         Display: advanced-hide
@@ -21775,29 +21735,7 @@ dontstarvetogether:
         Type: Path
         value: /mnt/cache/appdata/dontstarve/token
     Port:
-      udp1-game:
-        Default: ''
-        Description: 'Container Port: 10890'
-        Display: always
-        Mask: 'false'
-        Mode: udp
-        Name: UDP1 - Game
-        Required: 'true'
-        Target: 10890
-        Type: Port
-        value: 10890
-      udp2-masterserver:
-        Default: ''
-        Description: 'Container Port: 27016'
-        Display: always
-        Mask: 'false'
-        Mode: udp
-        Name: UDP2 - Master Server
-        Required: 'true'
-        Target: 27016
-        Type: Port
-        value: 27016
-      udp3-authentication:
+      authentication:
         Default: ''
         Description: 'Container Port: 8766'
         Display: always
@@ -21808,6 +21746,28 @@ dontstarvetogether:
         Target: 8766
         Type: Port
         value: 8766
+      game:
+        Default: ''
+        Description: 'Container Port: 10890'
+        Display: always
+        Mask: 'false'
+        Mode: udp
+        Name: UDP1 - Game
+        Required: 'true'
+        Target: 10890
+        Type: Port
+        value: 10890
+      masterserver:
+        Default: ''
+        Description: 'Container Port: 27016'
+        Display: always
+        Mask: 'false'
+        Mode: udp
+        Name: UDP2 - Master Server
+        Required: 'true'
+        Target: 27016
+        Type: Port
+        value: 27016
     Variable:
       caves:
         Default: ''
@@ -22404,7 +22364,7 @@ dropbox:
         Type: Path
         value: /etc/localtime
     Port:
-      lansyncport(tcp):
+      lansyncport(tc:
         Default: '17500'
         Description: Port for Lan Sync
         Display: advanced
@@ -22415,7 +22375,7 @@ dropbox:
         Target: 17500
         Type: Port
         value: 17500
-      lansyncport(udp):
+      lansyncport(ud:
         Default: '17500'
         Description: Port for Lan Sync
         Display: advanced
@@ -23484,7 +23444,7 @@ elasticsearch:
         Target: 9200
         Type: Port
         value: 9200
-      nodescommunicationport:
+      nodescommunica:
         Default: '9300'
         Description: Host port exposed for node communication.
         Display: always
@@ -28090,7 +28050,7 @@ fluttercoin-wallet:
         Target: 8080
         Type: Port
         value: 8080
-      peertopeerconnection:
+      peertopeerconn:
         Default: ''
         Description: TCP Port for Peer to Peer connection
         Display: always
@@ -30506,7 +30466,7 @@ geth-ethereum:
         Target: 8545
         Type: Port
         value: 8545
-      json-rpcweb-socket:
+      json-rpcweb-:
         Default: ''
         Description: Web-Sockets server supports a number of APIs.
         Display: always
@@ -30850,16 +30810,6 @@ gitlab-ce:
         Type: Path
         value: /mnt/cache/appdata/gitlab-ce/log
     Port:
-      main:
-        Default: '9080'
-        Description: This is GitLab's Web UI port you can access via a web browser.
-        Display: always-hide
-        Mode: HTTP
-        Name: Web Interface Port (HTTP)
-        Required: 'true'
-        Target: 9080
-        Type: Port
-        value: 9080
       sshport:
         Default: '9022'
         Description: This is GitLab's SSH port.
@@ -30870,7 +30820,7 @@ gitlab-ce:
         Target: 22
         Type: Port
         value: 9022
-      webinterfaceport(https):
+      webinterfacepo:
         Default: '9443'
         Description: This is GitLab's Web UI SSL port you can access via a web browser.
         Display: always-hide
@@ -32017,7 +31967,7 @@ graph-node:
     Label: {}
     Path: {}
     Port:
-      graphqlwebsocket:
+      graphqlwebsock:
         Default: ''
         Description: GraphQL WebSocket server
         Display: always
@@ -34042,7 +33992,7 @@ hurtworld:
         Type: Path
         value: /mnt/user/appdata/steamcmd
     Port:
-      udp1-gameport:
+      gameport:
         Default: ''
         Description: UDP Gameport (if you need another port, please delete this entry
           and create a new UDP Port with the required port number, also don't forget
@@ -34055,7 +34005,7 @@ hurtworld:
         Target: 12871
         Type: Port
         value: 12871
-      udp2-queryport:
+      queryport:
         Default: ''
         Description: UDP Queryport (if you need another port, please delete this entry
           and create a new UDP Port with the required port number, also don't forget
@@ -34906,7 +34856,7 @@ inspircd:
         Type: Path
         value: /mnt/cache/appdata/inspircd
     Port:
-      tcp1-clients,plaintext:
+      clients,plaint:
         Default: ''
         Description: TCP Clients Connection Port (Unencrypted)
         Display: always
@@ -34917,7 +34867,7 @@ inspircd:
         Target: 6667
         Type: Port
         value: 6667
-      tcp2-clients,tls:
+      clients,tls:
         Default: ''
         Description: TCP Clients Connection Port (Encrypted)
         Display: always
@@ -34928,7 +34878,7 @@ inspircd:
         Target: 6697
         Type: Port
         value: 6697
-      tcp3-server,plaintext:
+      server,plainte:
         Default: ''
         Description: TCP Server Port (Unencrypted - You don't have to forward this
           port if you use this as a standalone IRC Server)
@@ -34940,7 +34890,7 @@ inspircd:
         Target: 7000
         Type: Port
         value: 7000
-      tcp4-server,tls:
+      server,tls:
         Default: ''
         Description: TCP Server Port (Encrypted - You don't have to forward this port
           if you use this as a standalone IRC Server)
@@ -35517,7 +35467,7 @@ insurgencysandstorm:
         Type: Path
         value: /mnt/user/appdata/steamcmd
     Port:
-      udp1-gameport:
+      gameport:
         Default: ''
         Description: 'Container Port: 27102'
         Display: always
@@ -35528,7 +35478,7 @@ insurgencysandstorm:
         Target: 27102
         Type: Port
         value: 27102
-      udp2-queryport:
+      queryport:
         Default: ''
         Description: 'Container Port: 27131'
         Display: always
@@ -36206,7 +36156,7 @@ iobroker:
         Type: Path
         value: /mnt/user/appdata/iobroker/scripts
     Port:
-      coapport(shelly):
+      coapport(shell:
         Default: ''
         Description: 'Container Port: 5683'
         Display: always
@@ -40264,18 +40214,7 @@ killingfloor:
         Type: Path
         value: /mnt/user/appdata/steamcmd
     Port:
-      tcp1-masterserverbrowser:
-        Default: ''
-        Description: 'Container Port: 28852'
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: TCP1 - Master Server Browser
-        Required: 'true'
-        Target: 28852
-        Type: Port
-        value: 28852
-      tcp2-adminport:
+      adminport:
         Default: ''
         Description: 'Container Port: 8075'
         Display: always
@@ -40286,7 +40225,7 @@ killingfloor:
         Target: 8075
         Type: Port
         value: 8075
-      udp1-game:
+      game:
         Default: ''
         Description: 'Container Port: 7707'
         Display: always
@@ -40297,18 +40236,7 @@ killingfloor:
         Target: 7707
         Type: Port
         value: 7707
-      udp2-query:
-        Default: ''
-        Description: 'Container Port: 7708'
-        Display: always
-        Mask: 'false'
-        Mode: udp
-        Name: UDP2 - Query
-        Required: 'true'
-        Target: 7708
-        Type: Port
-        value: 7708
-      udp3-gamespyquery:
+      gamespyquery:
         Default: ''
         Description: 'Container Port: 7717'
         Display: always
@@ -40319,7 +40247,7 @@ killingfloor:
         Target: 7717
         Type: Port
         value: 7717
-      udp4-masterserverbrowser:
+      masterserverbr:
         Default: ''
         Description: 'Container Port: 28852'
         Display: always
@@ -40330,7 +40258,18 @@ killingfloor:
         Target: 28852
         Type: Port
         value: 28852
-      udp5-steamport:
+      query:
+        Default: ''
+        Description: 'Container Port: 7708'
+        Display: always
+        Mask: 'false'
+        Mode: udp
+        Name: UDP2 - Query
+        Required: 'true'
+        Target: 7708
+        Type: Port
+        value: 7708
+      steamport:
         Default: ''
         Description: 'Container Port: 20560'
         Display: always
@@ -40473,6 +40412,39 @@ killingfloor2:
         Type: Path
         value: /mnt/user/appdata/steamcmd
     Port:
+      game:
+        Default: ''
+        Description: 'Container Port: 7777'
+        Display: always
+        Mask: 'false'
+        Mode: udp
+        Name: UDP1 - Game
+        Required: 'true'
+        Target: 7777
+        Type: Port
+        value: 7777
+      query:
+        Default: ''
+        Description: 'Container Port: 27015'
+        Display: always
+        Mask: 'false'
+        Mode: udp
+        Name: UDP2 - Query
+        Required: 'true'
+        Target: 27015
+        Type: Port
+        value: 27015
+      steam:
+        Default: ''
+        Description: 'Container Port: 20560'
+        Display: always
+        Mask: 'false'
+        Mode: udp
+        Name: UDP3 - Steam
+        Required: 'true'
+        Target: 20560
+        Type: Port
+        value: 20560
       tcp-webadmin:
         Default: ''
         Description: 'Container Port: 8080'
@@ -40484,39 +40456,6 @@ killingfloor2:
         Target: 8080
         Type: Port
         value: 8080
-      udp1-game:
-        Default: ''
-        Description: 'Container Port: 7777'
-        Display: always
-        Mask: 'false'
-        Mode: udp
-        Name: UDP1 - Game
-        Required: 'true'
-        Target: 7777
-        Type: Port
-        value: 7777
-      udp2-query:
-        Default: ''
-        Description: 'Container Port: 27015'
-        Display: always
-        Mask: 'false'
-        Mode: udp
-        Name: UDP2 - Query
-        Required: 'true'
-        Target: 27015
-        Type: Port
-        value: 27015
-      udp3-steam:
-        Default: ''
-        Description: 'Container Port: 20560'
-        Display: always
-        Mask: 'false'
-        Mode: udp
-        Name: UDP3 - Steam
-        Required: 'true'
-        Target: 20560
-        Type: Port
-        value: 20560
     Variable:
       game_id:
         Default: ''
@@ -43828,18 +43767,7 @@ logitechmediaserver:
         Target: 9090
         Type: Port
         value: 9090
-      controlport-tcp:
-        Default: '3483'
-        Description: 'Container Port: 3483/TCP'
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: Control Port - TCP
-        Required: 'true'
-        Target: 3483
-        Type: Port
-        value: 3483
-      controlport-udp:
+      controlport-:
         Default: '3483'
         Description: 'Container Port: 3483/UDP'
         Display: always
@@ -45440,7 +45368,7 @@ malfurious-mailserver:
         Target: 11334
         Type: Port
         value: 11334
-      managesieveport:
+      managesievepor:
         Default: '4190'
         Description: ManageSieve Port
         Display: always
@@ -45586,7 +45514,7 @@ malfurious-roundcube-postfixadmin:
         Type: Path
         value: ''
     Port:
-      postfixadminport:
+      postfixadminpo:
         Default: '8080'
         Description: Postfixadmin Host Port
         Display: always
@@ -46961,40 +46889,7 @@ memories-of-mars:
         Type: Path
         value: /mnt/user/appdata/steamcmd
     Port:
-      tcp1-gameport:
-        Default: ''
-        Description: TCP Game Port
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: TCP 1 - Game Port
-        Required: 'true'
-        Target: 7777
-        Type: Port
-        value: 7777
-      tcp2-beaconport:
-        Default: ''
-        Description: TCP Beacon Port
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: TCP 2 - Beacon Port
-        Required: 'true'
-        Target: 15000
-        Type: Port
-        value: 15000
-      udp1-gameport:
-        Default: ''
-        Description: UDP Game Port
-        Display: always
-        Mask: 'false'
-        Mode: udp
-        Name: UDP 1 - Game Port
-        Required: 'true'
-        Target: 7777
-        Type: Port
-        value: 7777
-      udp2-beaconport:
+      beaconport:
         Default: ''
         Description: UDP Beacon Port
         Display: always
@@ -47005,6 +46900,17 @@ memories-of-mars:
         Target: 15000
         Type: Port
         value: 15000
+      gameport:
+        Default: ''
+        Description: UDP Game Port
+        Display: always
+        Mask: 'false'
+        Mode: udp
+        Name: UDP 1 - Game Port
+        Required: 'true'
+        Target: 7777
+        Type: Port
+        value: 7777
     Variable:
       extragameparameters:
         Default: ''
@@ -48863,6 +48769,32 @@ mordhau:
         Type: Path
         value: /mnt/user/appdata/steamcmd
     Port:
+      beaconport:
+        Default: ''
+        Description: UDP Beaconport (if you need another port, please delete this
+          entry and create a new UDP Port with the required port number, also don't
+          forget to click an 'Show more settings ...' and change the port number)
+        Display: always
+        Mask: 'false'
+        Mode: udp
+        Name: UDP3 - Beacon Port
+        Required: 'true'
+        Target: 15000
+        Type: Port
+        value: 15000
+      gameport:
+        Default: ''
+        Description: UDP Gameport (if you need another port, please delete this entry
+          and create a new UDP Port with the required port number, also don't forget
+          to click an 'Show more settings ...' and change the port number)
+        Display: always
+        Mask: 'false'
+        Mode: udp
+        Name: UDP1 - Game Port
+        Required: 'true'
+        Target: 7777
+        Type: Port
+        value: 7777
       udp:
         Default: ''
         Description: UDP Queryport (if you need another port, please delete this entry
@@ -48876,32 +48808,6 @@ mordhau:
         Target: 27015
         Type: Port
         value: 27015
-      udp1-gameport:
-        Default: ''
-        Description: UDP Gameport (if you need another port, please delete this entry
-          and create a new UDP Port with the required port number, also don't forget
-          to click an 'Show more settings ...' and change the port number)
-        Display: always
-        Mask: 'false'
-        Mode: udp
-        Name: UDP1 - Game Port
-        Required: 'true'
-        Target: 7777
-        Type: Port
-        value: 7777
-      udp3-beaconport:
-        Default: ''
-        Description: UDP Beaconport (if you need another port, please delete this
-          entry and create a new UDP Port with the required port number, also don't
-          forget to click an 'Show more settings ...' and change the port number)
-        Display: always
-        Mask: 'false'
-        Mode: udp
-        Name: UDP3 - Beacon Port
-        Required: 'true'
-        Target: 15000
-        Type: Port
-        value: 15000
     Variable:
       beacon_port:
         Default: ''
@@ -49363,6 +49269,28 @@ multitheftauto:
         Type: Path
         value: /mnt/cache/appdata/multitheftauto
     Port:
+      aseport:
+        Default: ''
+        Description: Game Port +123
+        Display: always
+        Mask: 'false'
+        Mode: udp
+        Name: UDP2 - ASE Port
+        Required: 'false'
+        Target: 22126
+        Type: Port
+        value: 22126
+      gameport:
+        Default: ''
+        Description: 'Container Port: 22003'
+        Display: always
+        Mask: 'false'
+        Mode: udp
+        Name: UDP1 - Game Port
+        Required: 'true'
+        Target: 22003
+        Type: Port
+        value: 22003
       main:
         Default: ''
         Description: 'Container Port: 22005'
@@ -49374,28 +49302,6 @@ multitheftauto:
         Target: 22005
         Type: Port
         value: 22005
-      udp1-gameport:
-        Default: ''
-        Description: 'Container Port: 22003'
-        Display: always
-        Mask: 'false'
-        Mode: udp
-        Name: UDP1 - Game Port
-        Required: 'true'
-        Target: 22003
-        Type: Port
-        value: 22003
-      udp2-aseport:
-        Default: ''
-        Description: Game Port +123
-        Display: always
-        Mask: 'false'
-        Mode: udp
-        Name: UDP2 - ASE Port
-        Required: 'false'
-        Target: 22126
-        Type: Port
-        value: 22126
     Variable:
       downloadresources:
         Default: ''
@@ -50229,7 +50135,7 @@ neko:
         Target: 8080
         Type: Port
         value: 6530
-      port52000-52100:
+      port52000-5210:
         Default: 52000-52100
         Description: Needed for Webrtc Communication
         Display: advanced
@@ -52603,7 +52509,7 @@ nvim-server:
         Target: 3000
         Type: Port
         value: 6080
-      markdownpreview:
+      markdownprevie:
         Default: '8090'
         Description: Port for the Instant Markdown Preview Server
         Display: advanced
@@ -54027,7 +53933,7 @@ onlyoffice-community-server:
         Target: 80
         Type: Port
         value: 8080
-      portforxmpp-compatibleinstantmessagingclient(foronlyofficetalkcorrectwork):
+      portforxmpp-co:
         Default: '5222'
         Description: 'Container Path: 5222'
         Display: always
@@ -54549,7 +54455,7 @@ open-ethereum:
         Target: 30303
         Type: Port
         value: 30303
-      web-socketsserver:
+      web-:
         Default: '8546'
         Description: ' Web-Sockets server supports a number of APIs.'
         Display: always
@@ -57089,6 +56995,17 @@ pavlovvr:
         Type: Path
         value: /mnt/user/appdata/steamcmd
     Port:
+      serverport:
+        Default: ''
+        Description: 'Container Port: 7200'
+        Display: advanced
+        Mask: 'false'
+        Mode: udp
+        Name: UDP3 - ServerPort
+        Required: 'true'
+        Target: 7200
+        Type: Port
+        value: 7200
       udp-gameport:
         Default: ''
         Description: If you specify another game port then delete this entry and create
@@ -57102,28 +57019,6 @@ pavlovvr:
         Target: 7777
         Type: Port
         value: 7777
-      udp2-serverport:
-        Default: ''
-        Description: 'Container Port: 7000'
-        Display: advanced
-        Mask: 'false'
-        Mode: udp
-        Name: UDP2 - ServerPort
-        Required: 'true'
-        Target: 7000
-        Type: Port
-        value: 7000
-      udp3-serverport:
-        Default: ''
-        Description: 'Container Port: 7200'
-        Display: advanced
-        Mask: 'false'
-        Mode: udp
-        Name: UDP3 - ServerPort
-        Required: 'true'
-        Target: 7200
-        Type: Port
-        value: 7200
     Variable:
       game_id:
         Default: ''
@@ -59181,20 +59076,7 @@ pixark:
         Type: Path
         value: /mnt/user/appdata/steamcmd
     Port:
-      udp1-gameport:
-        Default: ''
-        Description: UDP Game Port (if you need another port, please delete this entry
-          and create a new UDP Port with the required port number, also don't forget
-          to click an 'Show more settings ...' and change the port number
-        Display: always
-        Mask: 'false'
-        Mode: udp
-        Name: UDP1 - Game Port
-        Required: 'true'
-        Target: 27015
-        Type: Port
-        value: 27015
-      udp2-cubeport:
+      cubeport:
         Default: ''
         Description: UDP Cube Port (if you need another port, please delete this entry
           and create a new UDP Port with the required port number, also don't forget
@@ -59207,7 +59089,20 @@ pixark:
         Target: 27018
         Type: Port
         value: 27018
-      udp3-queryport:
+      gameport:
+        Default: ''
+        Description: UDP Game Port (if you need another port, please delete this entry
+          and create a new UDP Port with the required port number, also don't forget
+          to click an 'Show more settings ...' and change the port number
+        Display: always
+        Mask: 'false'
+        Mode: udp
+        Name: UDP1 - Game Port
+        Required: 'true'
+        Target: 27015
+        Type: Port
+        value: 27015
+      queryport:
         Default: ''
         Description: UDP Query Port (if you need another port, please delete this
           entry and create a new UDP Port with the required port number, also don't
@@ -61410,7 +61305,7 @@ poste:
         Target: 465
         Type: Port
         value: 465
-      externalsievefiltermanager:
+      externalsievef:
         Default: '4190'
         Description: When you are going to use clients with ability to manage Sieve
           filters externally, you need also publish port 4190
@@ -62150,7 +62045,7 @@ postscriptum:
         Type: Path
         value: /mnt/user/appdata/steamcmd
     Port:
-      udp1-gameport:
+      gameport:
         Default: ''
         Description: UDP GamePort (if you need another port, please delete this entry
           and create a new UDP Port with the required port number, also don't forget
@@ -62163,7 +62058,7 @@ postscriptum:
         Target: 10027
         Type: Port
         value: 10027
-      udp2-queryport:
+      queryport:
         Default: ''
         Description: UDP QueryPort (if you need another port, please delete this entry
           and create a new UDP Port with the required port number, also don't forget
@@ -62532,7 +62427,7 @@ projectzomboid:
         Type: Path
         value: /mnt/user/appdata/steamcmd
     Port:
-      tcp-playerports:
+      tcp-:
         Default: ''
         Description: 'Every player that connects to your server need''s it''s own
           port (if you don''t need that many ports you can also delete this entry
@@ -64782,7 +64677,7 @@ qflood:
         Type: Path
         value: ''
     Port:
-      hostportfor8080:
+      hostportfor808:
         Default: '8080'
         Description: 'Container Port: 8080'
         Display: always-hide
@@ -65111,20 +65006,7 @@ quakelive:
         Type: Path
         value: /mnt/user/appdata/steamcmd
     Port:
-      tcp1-rconport:
-        Default: ''
-        Description: TCP RCON Port (if you need another port, please delete this entry
-          and create a new TCP Port with the required port number, also don't forget
-          to change it in the server.cfg)
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: TCP1 - RCON Port
-        Required: 'false'
-        Target: 28690
-        Type: Port
-        value: 28690
-      udp1-gameport:
+      gameport:
         Default: ''
         Description: UDP Game Port (if you need another port, please delete this entry
           and create a new UDP Port with the required port number, also don't forget
@@ -65137,6 +65019,19 @@ quakelive:
         Target: 27960
         Type: Port
         value: 27960
+      rconport:
+        Default: ''
+        Description: TCP RCON Port (if you need another port, please delete this entry
+          and create a new TCP Port with the required port number, also don't forget
+          to change it in the server.cfg)
+        Display: always
+        Mask: 'false'
+        Mode: tcp
+        Name: TCP1 - RCON Port
+        Required: 'false'
+        Target: 28690
+        Type: Port
+        value: 28690
     Variable:
       game_id:
         Default: ''
@@ -66432,7 +66327,7 @@ rcon-webadmin:
         Target: 4326
         Type: Port
         value: 4326
-      websocketaccessfromui:
+      websocketacces:
         Default: ''
         Description: 'Container Port: 4327'
         Display: always
@@ -69493,7 +69388,7 @@ sabnzbd-extended:
         Type: Path
         value: ''
     Port:
-      hostportfor9090:
+      hostportfor909:
         Default: '9090'
         Description: 'Container Port: 9090'
         Display: always-hide
@@ -69798,7 +69693,7 @@ salt4unraid:
         Target: 3333
         Type: Port
         value: 3333
-      saltpublishport:
+      saltpublishpor:
         Default: ''
         Description: 'Container Port: 4505'
         Display: advanced
@@ -69809,7 +69704,7 @@ salt4unraid:
         Target: 4505
         Type: Port
         value: 4505
-      saltrequestserverport:
+      saltrequestser:
         Default: ''
         Description: 'Container Port: 4506'
         Display: advanced
@@ -69890,33 +69785,7 @@ satisfactory:
         Type: Path
         value: /mnt/user/appdata/steamcmd
     Port:
-      udp1-gameport:
-        Default: ''
-        Description: 'UDP Game Port (if you need another port, please delete this
-          entry and create a new UDP Port with the required port number, also don''t
-          forget to set the port number in the Game Parameters with eg: ''-Port=7777'')'
-        Display: always
-        Mask: 'false'
-        Mode: udp
-        Name: UDP 1 - Game Port
-        Required: 'true'
-        Target: 7777
-        Type: Port
-        value: 7777
-      udp2-serverqueryport:
-        Default: ''
-        Description: 'UDP Query Port (if you need another port, please delete this
-          entry and create a new UDP Port with the required port number, also don''t
-          forget to set the port number in the Game Parameters with eg: ''-ServerQueryPort=15777'')'
-        Display: always
-        Mask: 'false'
-        Mode: udp
-        Name: UDP 2 - Server Query Port
-        Required: 'true'
-        Target: 15777
-        Type: Port
-        value: 15777
-      udp3-beaconport:
+      beaconport:
         Default: ''
         Description: 'UDP Beacon Port (if you need another port, please delete this
           entry and create a new UDP Port with the required port number, also don''t
@@ -69929,6 +69798,32 @@ satisfactory:
         Target: 15000
         Type: Port
         value: 15000
+      gameport:
+        Default: ''
+        Description: 'UDP Game Port (if you need another port, please delete this
+          entry and create a new UDP Port with the required port number, also don''t
+          forget to set the port number in the Game Parameters with eg: ''-Port=7777'')'
+        Display: always
+        Mask: 'false'
+        Mode: udp
+        Name: UDP 1 - Game Port
+        Required: 'true'
+        Target: 7777
+        Type: Port
+        value: 7777
+      serverquerypor:
+        Default: ''
+        Description: 'UDP Query Port (if you need another port, please delete this
+          entry and create a new UDP Port with the required port number, also don''t
+          forget to set the port number in the Game Parameters with eg: ''-ServerQueryPort=15777'')'
+        Display: always
+        Mask: 'false'
+        Mode: udp
+        Name: UDP 2 - Server Query Port
+        Required: 'true'
+        Target: 15777
+        Type: Port
+        value: 15777
     Variable:
       game_id:
         Default: ''
@@ -73503,7 +73398,7 @@ sourcegraph:
         Type: Path
         value: /mnt/cache/appdata/sourcegraph/config
     Port:
-      adminconsoleport:
+      adminconsolepo:
         Default: '2633'
         Description: This is SourceGraph's Admin Console WebUI port you can access
           via a web browser
@@ -74012,29 +73907,7 @@ squad:
         Type: Path
         value: /mnt/user/appdata/steamcmd
     Port:
-      tcp1-queryport2:
-        Default: ''
-        Description: 'Container Port: 27166'
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: TCP1 - Query Port 2
-        Required: 'true'
-        Target: 27166
-        Type: Port
-        value: 27166
-      tcp2-rconport:
-        Default: ''
-        Description: TCP RCON Port (not required)
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: TCP2 - RCON Port
-        Required: 'false'
-        Target: 21114
-        Type: Port
-        value: 21114
-      udp1-gameport1:
+      gameport1:
         Default: ''
         Description: UDP Gameport (if you need another port, please delete this entry
           and create a new UDP Port with the required port number, also don't forget
@@ -74047,7 +73920,7 @@ squad:
         Target: 7787
         Type: Port
         value: 7787
-      udp2-gameport2:
+      gameport2:
         Default: ''
         Description: UDP Game Port +1
         Display: always
@@ -74058,7 +73931,7 @@ squad:
         Target: 7788
         Type: Port
         value: 7788
-      udp3-queryport1:
+      queryport1:
         Default: ''
         Description: UDP Query Port (if you need another port, please delete this
           entry and create a new UDP Port with the required port number, also don't
@@ -74071,18 +73944,18 @@ squad:
         Target: 27165
         Type: Port
         value: 27165
-      udp4-queryport2:
+      queryport2:
         Default: ''
-        Description: UDP Query Port +1
+        Description: 'Container Port: 27166'
         Display: always
         Mask: 'false'
-        Mode: udp
-        Name: UDP4 - Query Port 2
+        Mode: tcp
+        Name: TCP1 - Query Port 2
         Required: 'true'
         Target: 27166
         Type: Port
         value: 27166
-      udp5-rconport:
+      rconport:
         Default: ''
         Description: UDP RCON Port (not required)
         Display: always
@@ -74214,7 +74087,7 @@ sstvproxy:
         Type: Path
         value: ''
     Port:
-      yapexposedexternalport:
+      yapexposedexte:
         Default: '8099'
         Description: 'Container Port: 8099'
         Display: always
@@ -74225,7 +74098,7 @@ sstvproxy:
         Target: 8099
         Type: Port
         value: 8099
-      yapexposedlocalport:
+      yapexposedloca:
         Default: '8098'
         Description: 'Container Port: 8098'
         Display: always
@@ -74853,18 +74726,7 @@ stationeers:
         Type: Path
         value: /mnt/user/appdata/steamcmd
     Port:
-      udp1-steamport:
-        Default: ''
-        Description: 'Container Port: 27015'
-        Display: always
-        Mask: 'false'
-        Mode: udp
-        Name: UDP1 - Steam Port
-        Required: 'true'
-        Target: 27015
-        Type: Port
-        value: 27015
-      udp2-gameport:
+      gameport:
         Default: ''
         Description: 'Container Port: 27500'
         Display: always
@@ -74875,6 +74737,17 @@ stationeers:
         Target: 27500
         Type: Port
         value: 27500
+      steamport:
+        Default: ''
+        Description: 'Container Port: 27015'
+        Display: always
+        Mask: 'false'
+        Mode: udp
+        Name: UDP1 - Steam Port
+        Required: 'true'
+        Target: 27015
+        Type: Port
+        value: 27015
     Variable:
       game_id:
         Default: ''
@@ -79282,18 +79155,7 @@ theforest:
         Type: Path
         value: /mnt/user/appdata/steamcmd
     Port:
-      udp1-steamport:
-        Default: ''
-        Description: 'Container Port: 8766'
-        Display: always
-        Mask: 'false'
-        Mode: udp
-        Name: UDP1 - Steam Port
-        Required: 'true'
-        Target: 8766
-        Type: Port
-        value: 8766
-      udp2-gameport:
+      gameport:
         Default: ''
         Description: 'Container Port: 27015'
         Display: always
@@ -79304,7 +79166,18 @@ theforest:
         Target: 27015
         Type: Port
         value: 27015
-      udp3-steamqueryport:
+      steamport:
+        Default: ''
+        Description: 'Container Port: 8766'
+        Display: always
+        Mask: 'false'
+        Mode: udp
+        Name: UDP1 - Steam Port
+        Required: 'true'
+        Target: 8766
+        Type: Port
+        value: 8766
+      steamqueryport:
         Default: ''
         Description: 'Container Port: 27016'
         Display: always
@@ -82899,55 +82772,7 @@ unturned:
         Type: Path
         value: /mnt/user/appdata/steamcmd
     Port:
-      tcp1-gameport:
-        Default: ''
-        Description: "TCP Game Port (if you need another port, please delete this\
-          \ entry and create a new TCP Port with the required port number, also don't\
-          \ forget to change it in the 'Show more settings ...' section below)\r\n\
-          ATTENTION: Don't forget that you must set 2 other ports GAME_PORT +1 &amp;\
-          \ GAME_PORT +2"
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: TCP1 - Game Port
-        Required: 'true'
-        Target: 27015
-        Type: Port
-        value: 27015
-      tcp2-gameport:
-        Default: ''
-        Description: Game Port +1
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: TCP2 - Game Port
-        Required: 'false'
-        Target: 27016
-        Type: Port
-        value: 27016
-      tcp3-gameport:
-        Default: ''
-        Description: Game Port +2
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: TCP3 - Game Port
-        Required: 'false'
-        Target: 27017
-        Type: Port
-        value: 27017
-      udp2-gameport:
-        Default: ''
-        Description: Game Port +1
-        Display: always
-        Mask: 'false'
-        Mode: udp
-        Name: UDP2 - Game Port
-        Required: 'false'
-        Target: 27016
-        Type: Port
-        value: 27016
-      udp3-gameport:
+      main:
         Default: ''
         Description: Game Port +2
         Display: always
@@ -83301,7 +83126,7 @@ urbit:
         Target: 34343
         Type: Port
         value: 34343
-      webinterfaceport:
+      webinterfacepo:
         Default: '8088'
         Description: Port 80 is used for Urbit's HTTP interface for both Landscape
           and for API calls to the ship.
@@ -85772,7 +85597,7 @@ wreckfest:
         Target: 33540
         Type: Port
         value: 33540
-      udp-steamqueryports:
+      udp-steamquery:
         Default: ''
         Description: UDP Steam/Query Ports (if you need another port, please delete
           this entry and create a new UDP Port with the required port number, also
@@ -88336,7 +88161,7 @@ zoneminder:
         Target: 443
         Type: Port
         value: 8443
-      zmninjaeventnotificationserverport:
+      zmninjaeventno:
         Default: '9000'
         Description: ''
         Display: always

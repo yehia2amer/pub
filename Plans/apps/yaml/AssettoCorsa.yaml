@@ -27,6 +27,29 @@ Config:
       Type: Path
       value: /mnt/user/appdata/steamcmd
   Port:
+    assetto-:
+      Default: ''
+      Description: 'Only needed if you installed Assetto-Server-Manager (Webserver
+        Address: http://[IPOFYOURSERVER]:8771).'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: TCP4 - Assetto-Server-Manager
+      Required: 'false'
+      Target: 8772
+      Type: Port
+      value: 8772
+    stracker:
+      Default: ''
+      Description: 'Only needed if you installed Stacker (Webserver Address: http://[IPOFYOURSERVER]:50041).'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: TCP3 - Stracker
+      Required: 'false'
+      Target: 50041
+      Type: Port
+      value: 50041
     tcp:
       Default: ''
       Description: 'Container Port: 9600'
@@ -49,29 +72,6 @@ Config:
       Target: 8081
       Type: Port
       value: 8081
-    tcp3-stracker:
-      Default: ''
-      Description: 'Only needed if you installed Stacker (Webserver Address: http://[IPOFYOURSERVER]:50041).'
-      Display: always
-      Mask: 'false'
-      Mode: tcp
-      Name: TCP3 - Stracker
-      Required: 'false'
-      Target: 50041
-      Type: Port
-      value: 50041
-    tcp4-assetto-server-manager:
-      Default: ''
-      Description: 'Only needed if you installed Assetto-Server-Manager (Webserver
-        Address: http://[IPOFYOURSERVER]:8771).'
-      Display: always
-      Mask: 'false'
-      Mode: tcp
-      Name: TCP4 - Assetto-Server-Manager
-      Required: 'false'
-      Target: 8772
-      Type: Port
-      value: 8772
     udp:
       Default: ''
       Description: 'Container Port: 9600'

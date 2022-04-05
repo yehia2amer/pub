@@ -25,6 +25,22 @@ securityContext:
   readOnlyRootFilesystem: false
   runAsNonRoot: false
 service:
+  gameport1:
+    enabled: true
+    ports:
+      gameport1:
+        enabled: true
+        port: 5750
+        protocol: UDP
+        targetPort: 5750
+  gameporta2:
+    enabled: true
+    ports:
+      gameporta2:
+        enabled: true
+        port: 5751
+        protocol: UDP
+        targetPort: 5751
   main:
     enabled: true
     ports:
@@ -33,43 +49,27 @@ service:
         port: 57550
         protocol: UDP
         targetPort: 57550
-  tcp1-rconport:
+  rconport:
     enabled: true
     ports:
-      tcp1-rconport:
+      rconport:
         enabled: true
         port: 32330
         protocol: TCP
         targetPort: 32330
-  tcp2-seamlessport:
+  redisserver:
     enabled: true
     ports:
-      tcp2-seamlessport:
-        enabled: true
-        port: 27000
-        protocol: TCP
-        targetPort: 27000
-  tcp3-redisserver:
-    enabled: true
-    ports:
-      tcp3-redisserver:
+      redisserver:
         enabled: true
         port: 6379
         protocol: TCP
         targetPort: 6379
-  udp2-gameport1:
+  seamlessport:
     enabled: true
     ports:
-      udp2-gameport1:
+      seamlessport:
         enabled: true
-        port: 5750
-        protocol: UDP
-        targetPort: 5750
-  udp3-gameporta2:
-    enabled: true
-    ports:
-      udp3-gameporta2:
-        enabled: true
-        port: 5751
-        protocol: UDP
-        targetPort: 5751
+        port: 27000
+        protocol: TCP
+        targetPort: 27000

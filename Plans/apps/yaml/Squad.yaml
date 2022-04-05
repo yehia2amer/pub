@@ -27,29 +27,7 @@ Config:
       Type: Path
       value: /mnt/user/appdata/steamcmd
   Port:
-    tcp1-queryport2:
-      Default: ''
-      Description: 'Container Port: 27166'
-      Display: always
-      Mask: 'false'
-      Mode: tcp
-      Name: TCP1 - Query Port 2
-      Required: 'true'
-      Target: 27166
-      Type: Port
-      value: 27166
-    tcp2-rconport:
-      Default: ''
-      Description: TCP RCON Port (not required)
-      Display: always
-      Mask: 'false'
-      Mode: tcp
-      Name: TCP2 - RCON Port
-      Required: 'false'
-      Target: 21114
-      Type: Port
-      value: 21114
-    udp1-gameport1:
+    gameport1:
       Default: ''
       Description: UDP Gameport (if you need another port, please delete this entry
         and create a new UDP Port with the required port number, also don't forget
@@ -62,7 +40,7 @@ Config:
       Target: 7787
       Type: Port
       value: 7787
-    udp2-gameport2:
+    gameport2:
       Default: ''
       Description: UDP Game Port +1
       Display: always
@@ -73,7 +51,7 @@ Config:
       Target: 7788
       Type: Port
       value: 7788
-    udp3-queryport1:
+    queryport1:
       Default: ''
       Description: UDP Query Port (if you need another port, please delete this entry
         and create a new UDP Port with the required port number, also don't forget
@@ -86,18 +64,18 @@ Config:
       Target: 27165
       Type: Port
       value: 27165
-    udp4-queryport2:
+    queryport2:
       Default: ''
-      Description: UDP Query Port +1
+      Description: 'Container Port: 27166'
       Display: always
       Mask: 'false'
-      Mode: udp
-      Name: UDP4 - Query Port 2
+      Mode: tcp
+      Name: TCP1 - Query Port 2
       Required: 'true'
       Target: 27166
       Type: Port
       value: 27166
-    udp5-rconport:
+    rconport:
       Default: ''
       Description: UDP RCON Port (not required)
       Display: always

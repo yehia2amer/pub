@@ -27,20 +27,7 @@ Config:
       Type: Path
       value: /mnt/user/appdata/steamcmd
   Port:
-    tcp1-rconport:
-      Default: ''
-      Description: TCP RCON Port (if you need another port, please delete this entry
-        and create a new TCP Port with the required port number, also don't forget
-        to change it in the server.cfg)
-      Display: always
-      Mask: 'false'
-      Mode: tcp
-      Name: TCP1 - RCON Port
-      Required: 'false'
-      Target: 28690
-      Type: Port
-      value: 28690
-    udp1-gameport:
+    gameport:
       Default: ''
       Description: UDP Game Port (if you need another port, please delete this entry
         and create a new UDP Port with the required port number, also don't forget
@@ -53,6 +40,19 @@ Config:
       Target: 27960
       Type: Port
       value: 27960
+    rconport:
+      Default: ''
+      Description: TCP RCON Port (if you need another port, please delete this entry
+        and create a new TCP Port with the required port number, also don't forget
+        to change it in the server.cfg)
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: TCP1 - RCON Port
+      Required: 'false'
+      Target: 28690
+      Type: Port
+      value: 28690
   Variable:
     game_id:
       Default: ''

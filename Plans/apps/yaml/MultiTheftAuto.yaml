@@ -16,6 +16,28 @@ Config:
       Type: Path
       value: /mnt/cache/appdata/multitheftauto
   Port:
+    aseport:
+      Default: ''
+      Description: Game Port +123
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: UDP2 - ASE Port
+      Required: 'false'
+      Target: 22126
+      Type: Port
+      value: 22126
+    gameport:
+      Default: ''
+      Description: 'Container Port: 22003'
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: UDP1 - Game Port
+      Required: 'true'
+      Target: 22003
+      Type: Port
+      value: 22003
     main:
       Default: ''
       Description: 'Container Port: 22005'
@@ -27,28 +49,6 @@ Config:
       Target: 22005
       Type: Port
       value: 22005
-    udp1-gameport:
-      Default: ''
-      Description: 'Container Port: 22003'
-      Display: always
-      Mask: 'false'
-      Mode: udp
-      Name: UDP1 - Game Port
-      Required: 'true'
-      Target: 22003
-      Type: Port
-      value: 22003
-    udp2-aseport:
-      Default: ''
-      Description: Game Port +123
-      Display: always
-      Mask: 'false'
-      Mode: udp
-      Name: UDP2 - ASE Port
-      Required: 'false'
-      Target: 22126
-      Type: Port
-      value: 22126
   Variable:
     downloadresources:
       Default: ''

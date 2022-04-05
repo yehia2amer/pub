@@ -30,6 +30,22 @@ service:
         port: 7777
         protocol: UDP
         targetPort: 7777
+  query:
+    enabled: true
+    ports:
+      query:
+        enabled: true
+        port: 27015
+        protocol: UDP
+        targetPort: 27015
+  steam:
+    enabled: true
+    ports:
+      steam:
+        enabled: true
+        port: 20560
+        protocol: UDP
+        targetPort: 20560
   tcp-webadmin:
     enabled: true
     ports:
@@ -38,19 +54,3 @@ service:
         port: 8080
         protocol: TCP
         targetPort: 8080
-  udp2-query:
-    enabled: true
-    ports:
-      udp2-query:
-        enabled: true
-        port: 27015
-        protocol: UDP
-        targetPort: 27015
-  udp3-steam:
-    enabled: true
-    ports:
-      udp3-steam:
-        enabled: true
-        port: 20560
-        protocol: UDP
-        targetPort: 20560

@@ -23,35 +23,19 @@ securityContext:
   readOnlyRootFilesystem: false
   runAsNonRoot: false
 service:
+  beaconport:
+    enabled: true
+    ports:
+      beaconport:
+        enabled: true
+        port: 15000
+        protocol: UDP
+        targetPort: 15000
   main:
     enabled: true
     ports:
       main:
         enabled: true
         port: 7777
-        protocol: TCP
-        targetPort: 7777
-  tcp2-beaconport:
-    enabled: true
-    ports:
-      tcp2-beaconport:
-        enabled: true
-        port: 15000
-        protocol: TCP
-        targetPort: 15000
-  udp1-gameport:
-    enabled: true
-    ports:
-      udp1-gameport:
-        enabled: true
-        port: 7777
         protocol: UDP
         targetPort: 7777
-  udp2-beaconport:
-    enabled: true
-    ports:
-      udp2-beaconport:
-        enabled: true
-        port: 15000
-        protocol: UDP
-        targetPort: 15000

@@ -22,6 +22,22 @@ securityContext:
   readOnlyRootFilesystem: false
   runAsNonRoot: false
 service:
+  adminport:
+    enabled: true
+    ports:
+      adminport:
+        enabled: true
+        port: 8075
+        protocol: TCP
+        targetPort: 8075
+  gamespyquery:
+    enabled: true
+    ports:
+      gamespyquery:
+        enabled: true
+        port: 7717
+        protocol: UDP
+        targetPort: 7717
   main:
     enabled: true
     ports:
@@ -30,50 +46,26 @@ service:
         port: 7707
         protocol: UDP
         targetPort: 7707
-  tcp1-masterserverbrowser:
+  masterserverbr:
     enabled: true
     ports:
-      tcp1-masterserverbrowser:
+      masterserverbr:
         enabled: true
         port: 28852
-        protocol: TCP
+        protocol: UDP
         targetPort: 28852
-  tcp2-adminport:
+  query:
     enabled: true
     ports:
-      tcp2-adminport:
-        enabled: true
-        port: 8075
-        protocol: TCP
-        targetPort: 8075
-  udp2-query:
-    enabled: true
-    ports:
-      udp2-query:
+      query:
         enabled: true
         port: 7708
         protocol: UDP
         targetPort: 7708
-  udp3-gamespyquery:
+  steamport:
     enabled: true
     ports:
-      udp3-gamespyquery:
-        enabled: true
-        port: 7717
-        protocol: UDP
-        targetPort: 7717
-  udp4-masterserverbrowser:
-    enabled: true
-    ports:
-      udp4-masterserverbrowser:
-        enabled: true
-        port: 28852
-        protocol: UDP
-        targetPort: 28852
-  udp5-steamport:
-    enabled: true
-    ports:
-      udp5-steamport:
+      steamport:
         enabled: true
         port: 20560
         protocol: UDP

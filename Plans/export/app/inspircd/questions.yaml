@@ -317,16 +317,16 @@ questions:
                                     type: int
                                     default: 6667
 
-        - variable: tcp2-clients,tls
-          label: "tcp2-clients,tls service"
+        - variable: clients,tls
+          label: "clients,tls service"
           description: "The Primary service on which the healthcheck runs, often the webUI"
           schema:
             additional_attrs: true
             type: dict
             attrs:
 # Include{serviceSelector}
-                    - variable: tcp2-clients,tls
-                      label: "tcp2-clients,tls Service Port Configuration"
+                    - variable: clients,tls
+                      label: "clients,tls Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -377,16 +377,16 @@ questions:
                                   schema:
                                     type: int
                                     default: 6697
-        - variable: tcp3-server,plaintext
-          label: "tcp3-server,plaintext service"
+        - variable: server,plainte
+          label: "server,plainte service"
           description: "The Primary service on which the healthcheck runs, often the webUI"
           schema:
             additional_attrs: true
             type: dict
             attrs:
 # Include{serviceSelector}
-                    - variable: tcp3-server,plaintext
-                      label: "tcp3-server,plaintext Service Port Configuration"
+                    - variable: server,plainte
+                      label: "server,plainte Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -437,16 +437,16 @@ questions:
                                   schema:
                                     type: int
                                     default: 7000
-        - variable: tcp4-server,tls
-          label: "tcp4-server,tls service"
+        - variable: server,tls
+          label: "server,tls service"
           description: "The Primary service on which the healthcheck runs, often the webUI"
           schema:
             additional_attrs: true
             type: dict
             attrs:
 # Include{serviceSelector}
-                    - variable: tcp4-server,tls
-                      label: "tcp4-server,tls Service Port Configuration"
+                    - variable: server,tls
+                      label: "server,tls Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

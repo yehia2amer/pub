@@ -27,18 +27,7 @@ Config:
       Type: Path
       value: /mnt/user/appdata/steamcmd
   Port:
-    udp1-steamport:
-      Default: ''
-      Description: 'Container Port: 27015'
-      Display: always
-      Mask: 'false'
-      Mode: udp
-      Name: UDP1 - Steam Port
-      Required: 'true'
-      Target: 27015
-      Type: Port
-      value: 27015
-    udp2-gameport:
+    gameport:
       Default: ''
       Description: 'Container Port: 27500'
       Display: always
@@ -49,6 +38,17 @@ Config:
       Target: 27500
       Type: Port
       value: 27500
+    steamport:
+      Default: ''
+      Description: 'Container Port: 27015'
+      Display: always
+      Mask: 'false'
+      Mode: udp
+      Name: UDP1 - Steam Port
+      Required: 'true'
+      Target: 27015
+      Type: Port
+      value: 27015
   Variable:
     game_id:
       Default: ''

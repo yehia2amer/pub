@@ -161,67 +161,6 @@ questions:
                                   label: "Port Type"
                                   schema:
                                     type: string
-                                    default: TCP
-                                    enum:
-                                      - value: HTTP
-                                        description: "HTTP"
-                                      - value: "HTTPS"
-                                        description: "HTTPS"
-                                      - value: TCP
-                                        description: "TCP"
-                                      - value: "UDP"
-                                        description: "UDP"
-                                - variable: nodePort
-                                  label: "Node Port (Optional)"
-                                  description: "This port gets exposed to the node. Only considered when service type is NodePort, Simple or LoadBalancer"
-                                  schema:
-                                    type: int
-                                    min: 9000
-                                    max: 65535
-                                - variable: targetPort
-                                  label: "Target Port"
-                                  description: "The internal(!) port on the container the Application runs on"
-                                  schema:
-                                    type: int
-                                    default: 7777
-
-        - variable: udp1-gameport
-          label: "udp1-gameport service"
-          description: "The Primary service on which the healthcheck runs, often the webUI"
-          schema:
-            additional_attrs: true
-            type: dict
-            attrs:
-# Include{serviceSelector}
-                    - variable: udp1-gameport
-                      label: "udp1-gameport Service Port Configuration"
-                      schema:
-                        additional_attrs: true
-                        type: dict
-                        attrs:
-                          - variable: port
-                            label: "Port"
-                            description: "This port exposes the container port on the service"
-                            schema:
-                              type: int
-                              default: 7777
-                              required: true
-                          - variable: advanced
-                            label: "Show Advanced settings"
-                            schema:
-                              type: boolean
-                              default: false
-                              show_subquestions_if: true
-                              subquestions:
-                                - variable: enabled
-                                  label: "Enable the port"
-                                  schema:
-                                    type: boolean
-                                    default: true
-                                - variable: protocol
-                                  label: "Port Type"
-                                  schema:
-                                    type: string
                                     default: UDP
                                     enum:
                                       - value: HTTP
@@ -245,16 +184,17 @@ questions:
                                   schema:
                                     type: int
                                     default: 7777
-        - variable: udp2-gameport+1
-          label: "udp2-gameport+1 service"
+
+        - variable: gameport+1
+          label: "gameport+1 service"
           description: "The Primary service on which the healthcheck runs, often the webUI"
           schema:
             additional_attrs: true
             type: dict
             attrs:
 # Include{serviceSelector}
-                    - variable: udp2-gameport+1
-                      label: "udp2-gameport+1 Service Port Configuration"
+                    - variable: gameport+1
+                      label: "gameport+1 Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -305,16 +245,16 @@ questions:
                                   schema:
                                     type: int
                                     default: 7778
-        - variable: udp3-steamport
-          label: "udp3-steamport service"
+        - variable: steamport
+          label: "steamport service"
           description: "The Primary service on which the healthcheck runs, often the webUI"
           schema:
             additional_attrs: true
             type: dict
             attrs:
 # Include{serviceSelector}
-                    - variable: udp3-steamport
-                      label: "udp3-steamport Service Port Configuration"
+                    - variable: steamport
+                      label: "steamport Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

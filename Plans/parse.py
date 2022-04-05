@@ -4,12 +4,15 @@ import os
 import string
 import shutil
 import requests
+import textwrap
+import re
 
 invalid = '<>:"/\|?*$ '
 invalidtext = '<>:"/\|*$'
 blacklistedenvs = ["UID", "GID", "PUID", "PGID", "TZ"]
 puidcheck = ["UID", "GID", "PUID", "PGID"]
 puidflag = False
+
 
 my_dir = './apps'
 
@@ -332,6 +335,14 @@ for n in afList:
       for name, value in n["Config"]["Port"].items():
         goodTarget = False
         goodvalue = False
+        
+        name = name.lower()
+        for char in invalid:
+          name = name.replace(char, '')
+        
+        name = re.sub('udp[\d]-', '', name)
+        name = re.sub('tcp[\d]-', '', name)
+        name = textwrap.shorten(name, 14, placeholder='')
         
         if "value" in value.keys() and value["value"]:
           cleanTarget0 = value["value"].split("-")[0]
