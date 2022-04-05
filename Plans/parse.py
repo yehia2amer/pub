@@ -797,6 +797,8 @@ for name, app in combinedfree.items():
           f.write("                  default: true\n")
         elif puidflag and  "runAsNonRootExample" in line:
           f.write("                  default: false\n")
+        elif puidflag and  "readOnlyRootFilesystemExample" in line:
+          f.write("                  default: false\n")
         elif "runAsGroupExample" in line:
           f.write("            default: 568\n")
         elif "runAsUserExample" in line:
@@ -804,6 +806,8 @@ for name, app in combinedfree.items():
         elif "privilegedExample" in line:
           f.write("                  default: false\n")
         elif "runAsNonRootExample" in line:
+          f.write("                  default: true\n")
+        elif "readOnlyRootFilesystemExample" in line:
           f.write("                  default: true\n")
         else:
           f.write(line)

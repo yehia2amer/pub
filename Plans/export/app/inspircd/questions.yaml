@@ -318,7 +318,7 @@ questions:
                                     default: 6667
 
         - variable: tcp2-clients,tls
-        - variable: tcp2-clients,tls
+          label: "tcp2-clients,tls service"
           description: "The Primary service on which the healthcheck runs, often the webUI"
           schema:
             additional_attrs: true
@@ -378,7 +378,7 @@ questions:
                                     type: int
                                     default: 6697
         - variable: tcp3-server,plaintext
-        - variable: tcp3-server,plaintext
+          label: "tcp3-server,plaintext service"
           description: "The Primary service on which the healthcheck runs, often the webUI"
           schema:
             additional_attrs: true
@@ -438,7 +438,7 @@ questions:
                                     type: int
                                     default: 7000
         - variable: tcp4-server,tls
-        - variable: tcp4-server,tls
+          label: "tcp4-server,tls service"
           description: "The Primary service on which the healthcheck runs, often the webUI"
           schema:
             additional_attrs: true
@@ -621,7 +621,7 @@ questions:
                 label: "ReadOnly Root Filesystem"
                 schema:
                   type: boolean
-                  default: readOnlyRootFilesystemExample
+                  default: false
               - variable: allowPrivilegeEscalation
                 label: "Allow Privilege Escalation"
                 schema:

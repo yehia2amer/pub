@@ -162,7 +162,7 @@ questions:
                                     default: 4711
 
         - variable: port(tcp)
-        - variable: port(tcp)
+          label: "port(tcp) service"
           description: "The Primary service on which the healthcheck runs, often the webUI"
           schema:
             additional_attrs: true
@@ -222,7 +222,7 @@ questions:
                                     type: int
                                     default: 4662
         - variable: port(udp)
-        - variable: port(udp)
+          label: "port(udp) service"
           description: "The Primary service on which the healthcheck runs, often the webUI"
           schema:
             additional_attrs: true
@@ -489,7 +489,7 @@ questions:
                 label: "ReadOnly Root Filesystem"
                 schema:
                   type: boolean
-                  default: readOnlyRootFilesystemExample
+                  default: false
               - variable: allowPrivilegeEscalation
                 label: "Allow Privilege Escalation"
                 schema:
