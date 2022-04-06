@@ -7,8 +7,8 @@ import requests
 import textwrap
 import re
 
-invalid = '<>:"/\|?*$ ()'
-invalidtext = '_<>:"/\|*$'
+invalid = '<>:"/\|?*$ ()+'
+invalidtext = '_<>:"/\|*$+'
 blacklistedenvs = ["UID", "GID", "PUID", "PGID", "TZ"]
 puidcheck = ["UID", "GID", "PUID", "PGID"]
 puidflag = False
@@ -574,7 +574,7 @@ for name, app in combinedfree.items():
   with open("./export/"+"app/"+tmpname+"/Chart.yaml", "w") as f:
       for line in lines2:
           if line.strip("\n") == "  truecharts.org/catagories:":
-            f.write("  truecharts.org/catagories: | \n")
+            f.write("  truecharts.org/catagories: |\n")
           elif "  - " in line:
             f.write("  "+line)
           else:
