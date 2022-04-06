@@ -4,7 +4,7 @@ image:
   repository: kylemanna/bitcoind
   tag: latest
 persistence:
-  blockhain(storage):
+  blockhainstorage:
     enabled: true
     mountPath: /bitcoin/.bitcoin
 podSecurityContext:
@@ -22,10 +22,10 @@ service:
         port: 8332
         protocol: TCP
         targetPort: 8332
-  port(2):
+  port2:
     enabled: true
     ports:
-      port(2):
+      port2:
         enabled: true
         port: 8333
         protocol: TCP

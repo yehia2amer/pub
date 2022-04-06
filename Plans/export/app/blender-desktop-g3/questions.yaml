@@ -161,16 +161,16 @@ questions:
                                     type: int
                                     default: 6901
 
-        - variable: webui(vnc)
-          label: "webui(vnc) service"
+        - variable: webuivnc
+          label: "webuivnc service"
           description: "The Primary service on which the healthcheck runs, often the webUI"
           schema:
             additional_attrs: true
             type: dict
             attrs:
 # Include{serviceSelector}
-                    - variable: webui(vnc)
-                      label: "webui(vnc) Service Port Configuration"
+                    - variable: webuivnc
+                      label: "webuivnc Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -292,8 +292,8 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: storage(projects)
-          label: "storage(projects) Storage"
+# Include{persistenceAdvanced}        - variable: storageprojects
+          label: "storageprojects Storage"
           description: "Used to share projects with the host."
           schema:
             additional_attrs: true

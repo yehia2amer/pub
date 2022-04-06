@@ -8,18 +8,6 @@ Config:
   Path: {}
   Port: {}
   Variable:
-    (optional)serverid:
-      Default: ''
-      Description: 'Input a Ookla Speedtest server ID to use for your tests. This
-        will use this server for every test. '
-      Display: advanced
-      Mask: 'false'
-      Mode: ''
-      Name: (Optional) Server ID
-      Required: 'false'
-      Target: SPEEDTEST_SERVER_ID
-      Type: Variable
-      value: ''
     influxdbaddress:
       Default: ''
       Description: "Container Variable: INFLUX_DB_ADDRESS\r\nIP or Hostname of Influx\
@@ -100,6 +88,18 @@ Config:
       Target: LOG_TYPE
       Type: Variable
       value: info
+    optionalserverid:
+      Default: ''
+      Description: 'Input a Ookla Speedtest server ID to use for your tests. This
+        will use this server for every test. '
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: (Optional) Server ID
+      Required: 'false'
+      Target: SPEEDTEST_SERVER_ID
+      Type: Variable
+      value: ''
     pinginterval:
       Default: '60'
       Description: 'Interval is in seconds. This is how often your latency will be

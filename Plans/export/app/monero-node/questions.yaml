@@ -154,16 +154,16 @@ questions:
                                     type: int
                                     default: 18080
 
-        - variable: port(2)
-          label: "port(2) service"
+        - variable: port2
+          label: "port2 service"
           description: "The Primary service on which the healthcheck runs, often the webUI"
           schema:
             additional_attrs: true
             type: dict
             attrs:
 # Include{serviceSelector}
-                    - variable: port(2)
-                      label: "port(2) Service Port Configuration"
+                    - variable: port2
+                      label: "port2 Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -243,8 +243,8 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: containerdir(1)
-          label: "containerdir(1) Storage"
+        - variable: containerdir1
+          label: "containerdir1 Storage"
           schema:
             additional_attrs: true
             type: dict
@@ -284,8 +284,8 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: containerdir(2)
-          label: "containerdir(2) Storage"
+# Include{persistenceAdvanced}        - variable: containerdir2
+          label: "containerdir2 Storage"
           schema:
             additional_attrs: true
             type: dict
@@ -325,8 +325,8 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: blockchain(storage)
-          label: "blockchain(storage) Storage"
+# Include{persistenceAdvanced}        - variable: blockchainstorage
+          label: "blockchainstorage Storage"
           schema:
             additional_attrs: true
             type: dict

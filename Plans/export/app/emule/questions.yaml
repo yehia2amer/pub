@@ -191,16 +191,16 @@ questions:
                                     type: int
                                     default: 4711
 
-        - variable: port(tcp)
-          label: "port(tcp) service"
+        - variable: porttcp
+          label: "porttcp service"
           description: "The Primary service on which the healthcheck runs, often the webUI"
           schema:
             additional_attrs: true
             type: dict
             attrs:
 # Include{serviceSelector}
-                    - variable: port(tcp)
-                      label: "port(tcp) Service Port Configuration"
+                    - variable: porttcp
+                      label: "porttcp Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -251,16 +251,16 @@ questions:
                                   schema:
                                     type: int
                                     default: 23732
-        - variable: port(udp)
-          label: "port(udp) service"
+        - variable: portudp
+          label: "portudp service"
           description: "The Primary service on which the healthcheck runs, often the webUI"
           schema:
             additional_attrs: true
             type: dict
             attrs:
 # Include{serviceSelector}
-                    - variable: port(udp)
-                      label: "port(udp) Service Port Configuration"
+                    - variable: portudp
+                      label: "portudp Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

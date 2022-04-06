@@ -4,14 +4,14 @@ image:
   repository: andreimarcu/linx-server
   tag: latest
 persistence:
-  storage(configfile):
+  storageconfigfile:
     enabled: true
     mountPath: /data/linx-server.conf
     readOnly: true
-  storage(files):
+  storagefiles:
     enabled: true
     mountPath: /data/files
-  storage(meta):
+  storagemeta:
     enabled: true
     mountPath: /data/meta
 podSecurityContext:

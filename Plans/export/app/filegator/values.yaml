@@ -10,7 +10,7 @@ persistence:
   data:
     enabled: true
     mountPath: /data
-  storage(configfile):
+  storageconfigfile:
     enabled: true
     mountPath: /var/www/localhost/filegator/configuration.php
     readOnly: true
@@ -29,10 +29,10 @@ service:
         port: 8048
         protocol: HTTP
         targetPort: 80
-  webui(https):
+  webuihttps:
     enabled: true
     ports:
-      webui(https):
+      webuihttps:
         enabled: true
         port: 8049
         protocol: TCP

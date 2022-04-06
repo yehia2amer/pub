@@ -30,7 +30,7 @@ Config:
       Target: /var/log/mysql
       Type: Path
       value: /mnt/user/appdata/onlyoffice/mysql/logs
-    onlyofficeentrypointformysqldatabasesetup(setup-sqlcreatedbeforemysqlcontainerisstarted):
+    onlyofficeentrypointformysqldatabasesetupsetup-sqlcreatedbeforemysqlcontainerisstarted:
       Default: /mnt/user/appdata/onlyoffice/mysql/initdb
       Description: 'Container Path: /docker-entrypoint-initdb.d'
       Display: always
@@ -42,7 +42,7 @@ Config:
       Target: /docker-entrypoint-initdb.d
       Type: Path
       value: /mnt/user/appdata/onlyoffice/mysql/initdb
-    onlyofficemysqlconfig(onlyoffice-cnfcreatedbeforemysqlcontainerisstarted):
+    onlyofficemysqlconfigonlyoffice-cnfcreatedbeforemysqlcontainerisstarted:
       Default: /mnt/user/appdata/onlyoffice/mysql/conf.d
       Description: 'Container Path: /etc/mysql/conf.d'
       Display: always
@@ -78,7 +78,7 @@ Config:
       Target: MYSQL_DATABASE
       Type: Variable
       value: onlyoffice
-    mysqlrootpassword(matchtherootpasswordwiththeoneinthesetup-sqlscript):
+    mysqlrootpasswordmatchtherootpasswordwiththeoneinthesetup-sqlscript:
       Default: my-secret-pw
       Description: 'Container Variable: MYSQL_ROOT_PASSWORD'
       Display: always

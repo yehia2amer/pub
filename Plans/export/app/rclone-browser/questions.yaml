@@ -169,16 +169,16 @@ questions:
                                     type: int
                                     default: 5800
 
-        - variable: webui(2)
-          label: "webui(2) service"
+        - variable: webui2
+          label: "webui2 service"
           description: "The Primary service on which the healthcheck runs, often the webUI"
           schema:
             additional_attrs: true
             type: dict
             attrs:
 # Include{serviceSelector}
-                    - variable: webui(2)
-                      label: "webui(2) Service Port Configuration"
+                    - variable: webui2
+                      label: "webui2 Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
@@ -300,8 +300,8 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: storage(media)
-          label: "storage(media) Storage"
+# Include{persistenceAdvanced}        - variable: storagemedia
+          label: "storagemedia Storage"
           description: "This is where downloaded files are stored, or where you put files in your host for uploading."
           schema:
             additional_attrs: true

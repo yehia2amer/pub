@@ -5,13 +5,13 @@ image:
   repository: kannix/monero-full-node
   tag: latest
 persistence:
-  blockchain(storage):
+  blockchainstorage:
     enabled: true
     mountPath: /home/monero/.bitmonero
-  containerdir(1):
+  containerdir1:
     enabled: true
     mountPath: /usr/local
-  containerdir(2):
+  containerdir2:
     enabled: true
     mountPath: /src
 podSecurityContext:
@@ -29,10 +29,10 @@ service:
         port: 18080
         protocol: TCP
         targetPort: 18080
-  port(2):
+  port2:
     enabled: true
     ports:
-      port(2):
+      port2:
         enabled: true
         port: 18081
         protocol: TCP

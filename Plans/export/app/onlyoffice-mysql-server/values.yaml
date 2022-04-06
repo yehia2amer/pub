@@ -12,10 +12,10 @@ persistence:
   mountedmysqllogs:
     enabled: true
     mountPath: /var/log/mysql
-  onlyofficeentrypointformysqldatabasesetup(setup-sqlcreatedbeforemysqlcontainerisstarted):
+  onlyofficeentrypointformysqldatabasesetupsetup-sqlcreatedbeforemysqlcontainerisstarted:
     enabled: true
     mountPath: /docker-entrypoint-initdb.d
-  onlyofficemysqlconfig(onlyoffice-cnfcreatedbeforemysqlcontainerisstarted):
+  onlyofficemysqlconfigonlyoffice-cnfcreatedbeforemysqlcontainerisstarted:
     enabled: true
     mountPath: /etc/mysql/conf.d
 podSecurityContext:

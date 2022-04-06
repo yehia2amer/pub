@@ -142,16 +142,16 @@ questions:
                                     type: int
                                     default: 80
 
-        - variable: port(smtp)
-          label: "port(smtp) service"
+        - variable: portsmtp
+          label: "portsmtp service"
           description: "The Primary service on which the healthcheck runs, often the webUI"
           schema:
             additional_attrs: true
             type: dict
             attrs:
 # Include{serviceSelector}
-                    - variable: port(smtp)
-                      label: "port(smtp) Service Port Configuration"
+                    - variable: portsmtp
+                      label: "portsmtp Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict

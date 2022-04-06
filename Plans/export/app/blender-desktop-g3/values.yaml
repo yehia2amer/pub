@@ -9,7 +9,7 @@ persistence:
   internalshare:
     enabled: true
     mountPath: /UNRAID_SHARE
-  storage(projects):
+  storageprojects:
     enabled: true
     mountPath: /srv/projects
 podSecurityContext:
@@ -27,10 +27,10 @@ service:
         port: 6901
         protocol: HTTP
         targetPort: 6901
-  webui(vnc):
+  webuivnc:
     enabled: true
     ports:
-      webui(vnc):
+      webuivnc:
         enabled: true
         port: 5901
         protocol: TCP
