@@ -85,229 +85,229 @@ questions:
       attrs:
 
         - variable: PROXY_PROTOCOL
-          label: "PROXY_PROTOCOL"
+          label: 'PROXY_PROTOCOL'
           description: "http or socks5"
           schema:
             type: string
             default: ""
         - variable: PROXY_ADDRESS
-          label: "PROXY_ADDRESS"
+          label: 'PROXY_ADDRESS'
           description: "The IP address or domain name of your proxy"
           schema:
             type: string
             default: ""
         - variable: PROXY_PORT
-          label: "PROXY_PORT"
+          label: 'PROXY_PORT'
           description: "TCP Port number on which the proxy is listening for connections"
           schema:
             type: string
             default: "80"
         - variable: EMAIL_TO
-          label: "EMAIL_TO"
+          label: 'EMAIL_TO'
           description: "Destination Email. Defaults to username if not set. Can be comma separated"
           schema:
             type: string
             default: ""
         - variable: EMAIL_USERNAME
-          label: "EMAIL_USERNAME"
+          label: 'EMAIL_USERNAME'
           description: "Email address"
           schema:
             type: string
             default: ""
         - variable: EMAIL_PASSWORD
-          label: "EMAIL_PASSWORD"
+          label: 'EMAIL_PASSWORD'
           description: "Email password. (See below for Gmail MFA users)If you use Gmail and have multi-factor authentication (MFA), you will need to create an app password and use this instead of your Gmail password.httpsmyaccount.google.comapppasswords"
           schema:
             type: string
             default: ""
         - variable: TWITTER_ACCESS_TOKEN_KEY
-          label: "TWITTER_ACCESS_TOKEN_KEY"
+          label: 'TWITTER_ACCESS_TOKEN_KEY'
           description: "Container Variable TWITTERACCESSTOKENKEY"
           schema:
             type: string
             default: ""
         - variable: TWITTER_ACCESS_TOKEN_SECRET
-          label: "TWITTER_ACCESS_TOKEN_SECRET"
+          label: 'TWITTER_ACCESS_TOKEN_SECRET'
           description: "Twitter Token Secret"
           schema:
             type: string
             default: ""
         - variable: TWITTER_CONSUMER_KEY
-          label: "TWITTER_CONSUMER_KEY"
+          label: 'TWITTER_CONSUMER_KEY'
           description: "Twitter Consumer Key"
           schema:
             type: string
             default: ""
         - variable: TWITTER_CONSUMER_SECRET
-          label: "TWITTER_CONSUMER_SECRET"
+          label: 'TWITTER_CONSUMER_SECRET'
           description: "Twitter Consumer Secret"
           schema:
             type: string
             default: ""
         - variable: TWITTER_TWEET_TAGS
-          label: "TWITTER_TWEET_TAGS"
+          label: 'TWITTER_TWEET_TAGS'
           description: "List of hashtags to append to the tweet message, e.g. #nvidia #nvidiastock"
           schema:
             type: string
             default: ""
         - variable: TELEGRAM_ACCESS_TOKEN
-          label: "TELEGRAM_ACCESS_TOKEN"
+          label: 'TELEGRAM_ACCESS_TOKEN'
           description: "Access token"
           schema:
             type: string
             default: ""
         - variable: TELEGRAM_CHAT_ID
-          label: "TELEGRAM_CHAT_ID"
+          label: 'TELEGRAM_CHAT_ID'
           description: "Chat ID. Can be comma separated, e.g. 123456789,987654321"
           schema:
             type: string
             default: ""
         - variable: PUSHBULLET
-          label: "PUSHBULLET"
+          label: 'PUSHBULLET'
           description: "API key"
           schema:
             type: string
             default: ""
         - variable: IN_STOCK_WAIT_TIME
-          label: "IN_STOCK_WAIT_TIME"
+          label: 'IN_STOCK_WAIT_TIME'
           description: "Time to wait between requests to the same link if it has that card in stock. In seconds"
           schema:
             type: string
             default: "0"
         - variable: SCREENSHOT
-          label: "SCREENSHOT"
+          label: 'SCREENSHOT'
           description: "Capture screenshot of page if the product is in stock."
           schema:
             type: string
             default: "true"
         - variable: PHONE_CARRIER
-          label: "PHONE_CARRIER"
+          label: 'PHONE_CARRIER'
           description: "Supported carriers for SMS. E.g. att or att,verizon,google, email configuration required. If multiple phone numbers are listed, enter a carrier for each phone number.httpsjef.codesstreetmerchantreferencenotification#supported-carriers"
           schema:
             type: string
             default: ""
         - variable: PHONE_NUMBER
-          label: "PHONE_NUMBER"
+          label: 'PHONE_NUMBER'
           description: "10 digit phone number(s). E.g. 1234567890 or 1234567890,0987654321,11112223333, email configuration required.  "
           schema:
             type: string
             default: ""
         - variable: SHOW_ONLY_BRANDS
-          label: "SHOW_ONLY_BRANDS"
+          label: 'SHOW_ONLY_BRANDS'
           description: "Filter to show specified brands. Comma separated, e.g. evga,zotachttpsjef.codesstreetmerchantreferencefilter"
           schema:
             type: string
             default: ""
         - variable: SHOW_ONLY_SERIES
-          label: "SHOW_ONLY_SERIES"
+          label: 'SHOW_ONLY_SERIES'
           description: "Filter to show specified series. Comma separated, e.g. 3080,ryzen5900httpsjef.codesstreetmerchantreferencefilter"
           schema:
             type: string
             default: ""
         - variable: SHOW_ONLY_MODELS
-          label: "SHOW_ONLY_MODELS"
+          label: 'SHOW_ONLY_MODELS'
           description: "Filter to show specified models	Both supported formats are comma separated"
           schema:
             type: string
             default: ""
         - variable: STORES
-          label: "STORES"
+          label: 'STORES'
           description: "Supported stores you want to be scraped. Default amazon,bestbuy. Comma separated, can include PAGESLEEPMIN and PAGESLEEPMAX values. E.g. amazon1000030000,bestbuy,newegg5000080000.httpsjef.codesstreetmerchantreferencefilter#supported-stores"
           schema:
             type: string
             default: ""
         - variable: AUTO_ADD_TO_CART
-          label: "AUTO_ADD_TO_CART"
+          label: 'AUTO_ADD_TO_CART'
           description: "Future Feature. Not available yet.Enable auto add to cart on support stores, default true"
           schema:
             type: string
             default: "false"
         - variable: BROWSER_TRUSTED
-          label: "BROWSER_TRUSTED"
+          label: 'BROWSER_TRUSTED'
           description: "Skip Chromium Sandbox. Set to true for containerized environments,"
           schema:
             type: string
             default: "true"
         - variable: HEADLESS
-          label: "HEADLESS"
+          label: 'HEADLESS'
           description: "Puppeteer to run headless or not. Debugging related, default true"
           schema:
             type: string
             default: "true"
         - variable: INCOGNITO
-          label: "INCOGNITO"
+          label: 'INCOGNITO'
           description: "Puppeteer to run incognito or not. Debugging related, default false"
           schema:
             type: string
             default: "false"
         - variable: LOW_BANDWIDTH
-          label: "LOW_BANDWIDTH"
+          label: 'LOW_BANDWIDTH'
           description: "Blocks imagesfonts to reduce traffic. Disables ad blocker, default false"
           schema:
             type: string
             default: "true"
         - variable: PAGE_BACKOFF_MIN
-          label: "PAGE_BACKOFF_MIN"
+          label: 'PAGE_BACKOFF_MIN'
           description: "Minimum backoff time between retrying requests for the same store when a forbidden response is received (ms)"
           schema:
             type: string
             default: "10000"
         - variable: PAGE_BACKOFF_MAX
-          label: "PAGE_BACKOFF_MAX"
+          label: 'PAGE_BACKOFF_MAX'
           description: "Maximum backoff time between retrying requests for the same store when a forbidden response is received. (ms)"
           schema:
             type: string
             default: "3600000"
         - variable: PAGE_SLEEP_MIN
-          label: "PAGE_SLEEP_MIN"
+          label: 'PAGE_SLEEP_MIN'
           description: "Minimum sleep time between queries of the same product page. In milliseconds,"
           schema:
             type: string
             default: "5000"
         - variable: PAGE_SLEEP_MAX
-          label: "PAGE_SLEEP_MAX"
+          label: 'PAGE_SLEEP_MAX'
           description: "Maximum sleep time between queries of the same product page. In milliseconds,"
           schema:
             type: string
             default: "10000"
         - variable: PAGE_TIMEOUT
-          label: "PAGE_TIMEOUT"
+          label: 'PAGE_TIMEOUT'
           description: "Navigation Timeout in milliseconds. 0 for infinite, default 30000"
           schema:
             type: string
             default: "30000"
         - variable: WEB_PORT
-          label: "WEB_PORT"
+          label: 'WEB_PORT'
           description: "This must be synchronized with the Web Interface Port values.This is the internal port the container should serve the web interface on."
           schema:
             type: string
             default: "8081"
         - variable: COUNTRY
-          label: "COUNTRY"
+          label: 'COUNTRY'
           description: "Supported country you want to be scraped	Only used with nvidia-api, default usahttpsjef.codesstreetmerchantreferencefilter#supported-countries"
           schema:
             type: string
             default: "usa"
         - variable: SMTP_PORT
-          label: "SMTP_PORT"
+          label: 'SMTP_PORT'
           description: "TCP Port number on which the smtp server is listening for connections."
           schema:
             type: string
             default: "25"
         - variable: SMTP_ADDRESS
-          label: "SMTP_ADDRESS"
+          label: 'SMTP_ADDRESS'
           description: "IP Address or FQDN of SMTP server"
           schema:
             type: string
             default: ""
         - variable: LOG_LEVEL
-          label: "LOG_LEVEL"
+          label: 'LOG_LEVEL'
           description: "The console output verbosity.  Note This is not logged to the system logger."
           schema:
             type: string
             default: "info"
         - variable: BESTBUY_API_KEY
-          label: "BESTBUY_API_KEY"
+          label: 'BESTBUY_API_KEY'
           description: "Set an optional API key for faster Bestbuy checking via JSON"
           schema:
             type: string
@@ -550,4 +550,3 @@ questions:
 # Include{advanced}
 
 # Include{addons}
-

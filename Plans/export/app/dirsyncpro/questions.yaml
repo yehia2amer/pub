@@ -85,80 +85,80 @@ questions:
       attrs:
 
         - variable: REMOTE_TYPE
-          label: "REMOTE_TYPE"
-          description: "Valid options are local, smb (is removed in the latest version, please use Unassigned Devices Plugin in Unraid and mount the share with the 'local' option), ftp, webdavNote if you enabled encryption with CryFS and set the type to 'local' you must set the container mountpoint to 'mntlocal'"
+          label: 'REMOTE_TYPE'
+          description: "Valid options are local, smb (is removed in the latest version, please use Unassigned Devices Plugin in Unraid and mount the share with the local option), ftp, webdavNote if you enabled encryption with CryFS and set the type to local you must set the container mountpoint to mntlocal"
           schema:
             type: string
             default: "local"
         - variable: REMOTE_DIR
-          label: "REMOTE_DIR"
-          description: "Server to connect and eventually the subdirectory (for ftp '192.168.0.1' or for webdav 'httpsnextcloud.host.comremote.phpwebdav' without quotes)The sahres are mounted inside the conatainer to 'mntftp'(must be provided if ftp is used)"
+          label: 'REMOTE_DIR'
+          description: "Server to connect and eventually the subdirectory (for ftp 192.168.0.1 or for webdav httpsnextcloud.host.comremote.phpwebdav without quotes)The sahres are mounted inside the conatainer to mntftp(must be provided if ftp is used)"
           schema:
             type: string
             default: ""
         - variable: REMOTE_USER
-          label: "REMOTE_USER"
+          label: 'REMOTE_USER'
           description: "Username for the share (must be provided if ftp or webdav is used)"
           schema:
             type: string
             default: ""
         - variable: REMOTE_PWD
-          label: "REMOTE_PWD"
+          label: 'REMOTE_PWD'
           description: "Password for the share (must be provided if ftp or webdav is used)"
           schema:
             type: string
             default: ""
         - variable: START_PARAMS
-          label: "START_PARAMS"
-          description: "Set extra start parameters for DirSyncPro if needed otherwise leave empty (eg '-schedule' to start the schedule engine automatically on start - keep in mind that you have to configure a job first for this to work otherwise you get a error message that no job for a schedule is configured)"
+          label: 'START_PARAMS'
+          description: "Set extra start parameters for DirSyncPro if needed otherwise leave empty (eg -schedule to start the schedule engine automatically on start - keep in mind that you have to configure a job first for this to work otherwise you get a error message that no job for a schedule is configured)"
           schema:
             type: string
             default: ""
         - variable: CRYFS
-          label: "CRYFS"
-          description: "Set to 'true' (without quotes) if you want to enable CryFS encryption."
+          label: 'CRYFS'
+          description: "Set to true (without quotes) if you want to enable CryFS encryption."
           schema:
             type: string
             default: ""
         - variable: CRYFS_PWD
-          label: "CRYFS_PWD"
+          label: 'CRYFS_PWD'
           description: "Password for the EncryptionDecryption."
           schema:
             type: string
             default: ""
         - variable: CRYFS_BLOCKSIZE
-          label: "CRYFS_BLOCKSIZE"
+          label: 'CRYFS_BLOCKSIZE'
           description: "Set your blocksize for the encryped files in bytes (262144 Byte = 256 KiB)"
           schema:
             type: string
             default: "262144"
         - variable: RUNTIME_NAME
-          label: "RUNTIME_NAME"
+          label: 'RUNTIME_NAME'
           description: "Container Variable RUNTIMENAME"
           schema:
             type: string
             default: "basicjre"
         - variable: DL_URL
-          label: "DL_URL"
+          label: 'DL_URL'
           description: "Change only if you know what you are doing"
           schema:
             type: string
             default: "https://sourceforge.net/projects/directorysync/files/DirSync Pro (stable)/1.53/DirSyncPro-1.53-Linux.tar.gz"
         - variable: CMD_MODE
-          label: "CMD_MODE"
-          description: "Set to 'true' (without quotes) if you want to enable the command line mode without the GUI, otherwise leave blank."
+          label: 'CMD_MODE'
+          description: "Set to true (without quotes) if you want to enable the command line mode without the GUI, otherwise leave blank."
           schema:
             type: string
             default: ""
         - variable: CMD_FILE
-          label: "CMD_FILE"
-          description: "Please be sure to put the CMD file in the main directory of the Docker and only specify it without the extension for example if the file is named 'Unraid.dsc' put in 'Unraid' (without quotes)."
+          label: 'CMD_FILE'
+          description: "Please be sure to put the CMD file in the main directory of the Docker and only specify it without the extension for example if the file is named Unraid.dsc put in Unraid (without quotes)."
           schema:
             type: string
             default: ""
         - variable: CRYFS_EXTRA_PARAMETERS
-          label: "CRYFS_EXTRA_PARAMETERS"
-          description: "Extra parameters for CrFS if needed (eg '--unmount-idle 30' without quotes)"
+          label: 'CRYFS_EXTRA_PARAMETERS'
+          description: "Extra parameters for CrFS if needed (eg --unmount-idle 30 without quotes)"
           schema:
             type: string
             default: ""
@@ -443,4 +443,3 @@ questions:
 # Include{advanced}
 
 # Include{addons}
-

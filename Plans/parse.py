@@ -705,7 +705,7 @@ for name, app in combinedfree.items():
             if "PLACEHOLDERNAME" in line:
               f.write("        - variable: "+name+"\n")
             elif "PLACEHOLDERLABEL" in line:
-              f.write('          label: "'+name+'"\n')
+              f.write("          label: '"+name+"'\n")
             elif "PLACEHOLDERDESCRIPTION" in line:
               for name2, value2  in app["Config"]["Variable"].items():
                 if value2["Target"] == name and "Description" in  value2.keys() and value2["Description"]:
@@ -713,6 +713,7 @@ for name, app in combinedfree.items():
                     desc = value2["Description"]
                     desc = desc.replace("\r\n", '')
                     desc = desc.replace("\n", '')
+                    desc = desc.replace("'", '')
                     for char in invalidtext:
                       desc = desc.replace(char, '')
                     desc = desc.encode("utf-8").decode("utf-8")
@@ -742,7 +743,7 @@ for name, app in combinedfree.items():
               if "PLACEHOLDERSVCNAME" in line:
                 f.write("        - variable: "+name+"\n")
               elif "PLACEHOLDERSVCLABEL" in line:
-                f.write('          label: "'+name+' service"\n')
+                f.write("          label: '"+name+" service'\n")
               elif "PLACEHOLDERDESCRIPTION" in line:
                 for name2, value2  in app["Config"]["Port"].items():
                   if name2 == name and "Description" in  value2.keys() and value2["Description"]:
@@ -752,6 +753,7 @@ for name, app in combinedfree.items():
                       desc = desc.replace("\n", '')
                       for char in invalidtext:
                         desc = desc.replace(char, '')
+                      desc = desc.replace("'", '')
                       desc = desc.encode("utf-8").decode("utf-8")
                       f.write('                      description: "'+desc+'"\n')
                     except:
@@ -789,6 +791,7 @@ for name, app in combinedfree.items():
                         desc = desc.replace("\n", '')
                         for char in invalidtext:
                           desc = desc.replace(char, '')
+                        desc = desc.replace("'", '')
                         desc = desc.encode("utf-8").decode("utf-8")
                         f.write('          description: "'+desc+'"\n')
                       except:

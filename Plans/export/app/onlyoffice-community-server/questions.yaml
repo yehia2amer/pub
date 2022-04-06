@@ -85,79 +85,79 @@ questions:
       attrs:
 
         - variable: MYSQL_SERVER_ROOT_PASSWORD
-          label: "MYSQL_SERVER_ROOT_PASSWORD"
+          label: 'MYSQL_SERVER_ROOT_PASSWORD'
           description: "Container Variable MYSQLSERVERROOTPASSWORD"
           schema:
             type: string
             default: "my-secret-pw"
         - variable: MYSQL_SERVER_DB_NAME
-          label: "MYSQL_SERVER_DB_NAME"
+          label: 'MYSQL_SERVER_DB_NAME'
           description: "Container Variable MYSQLSERVERDBNAME"
           schema:
             type: string
             default: "onlyoffice"
         - variable: MYSQL_SERVER_HOST
-          label: "MYSQL_SERVER_HOST"
-          description: "Container Variable MYSQLSERVERHOST  &lt;----&gt; 'localhost' is used when we do not make use of the mail server docker or we do not want external database at all &lt;----&gt; for external local database use ' onlyoffice-mysql-server ' ( name of the docker that is hosting the mysql database, also without the ' ' ) as long is on the 'onlyoffice' network we created before starting the dockers or you can use unraid IP you see in the up right corner, but it will be better to just use the name of the docker hosting mysql if your unraid IP is not static. &lt;----&gt; For database hosted on another server use the external IP ( internet IP )."
+          label: 'MYSQL_SERVER_HOST'
+          description: "Container Variable MYSQLSERVERHOST  &lt;----&gt; localhost is used when we do not make use of the mail server docker or we do not want external database at all &lt;----&gt; for external local database use  onlyoffice-mysql-server  ( name of the docker that is hosting the mysql database, also without the   ) as long is on the onlyoffice network we created before starting the dockers or you can use unraid IP you see in the up right corner, but it will be better to just use the name of the docker hosting mysql if your unraid IP is not static. &lt;----&gt; For database hosted on another server use the external IP ( internet IP )."
           schema:
             type: string
             default: "localhost"
         - variable: MYSQL_SERVER_USER
-          label: "MYSQL_SERVER_USER"
+          label: 'MYSQL_SERVER_USER'
           description: "Container Variable MYSQLSERVERUSER"
           schema:
             type: string
             default: "onlyoffice_user"
         - variable: MYSQL_SERVER_PASS
-          label: "MYSQL_SERVER_PASS"
+          label: 'MYSQL_SERVER_PASS'
           description: "Container Variable MYSQLSERVERPASS"
           schema:
             type: string
             default: "onlyoffice_pass"
         - variable: MAIL_SERVER_API_HOST
-          label: "MAIL_SERVER_API_HOST"
+          label: 'MAIL_SERVER_API_HOST'
           description: "Container Variable MAILSERVERAPIHOST For external mysql server add the values bellow back to value and default value.Value onlyoffice-mail-serverDefault Value onlyoffice-mail-server If you installed them on another server add the IP instead.( For Mail Server Container with External Database )"
           schema:
             type: string
             default: ""
         - variable: MAIL_SERVER_API_PORT
-          label: "MAIL_SERVER_API_PORT"
+          label: 'MAIL_SERVER_API_PORT'
           description: "Container Variable MAILSERVERAPIPORT"
           schema:
             type: string
             default: "8081"
         - variable: MAIL_SERVER_DB_HOST
-          label: "MAIL_SERVER_DB_HOST"
+          label: 'MAIL_SERVER_DB_HOST'
           description: " Container Variable MAILSERVERDBHOST For external mysql server add the values bellow back to value and default value.Value onlyoffice-mysql-serverDefault Value onlyoffice-mysql-serverIf you installed them on another server add the IP instead.( For Mail Server Container with External Database )"
           schema:
             type: string
             default: ""
         - variable: MAIL_SERVER_DB_NAME
-          label: "MAIL_SERVER_DB_NAME"
+          label: 'MAIL_SERVER_DB_NAME'
           description: "Container Variable MAILSERVERDBNAME"
           schema:
             type: string
             default: "onlyoffice_mailserver"
         - variable: MAIL_SERVER_DB_PORT
-          label: "MAIL_SERVER_DB_PORT"
+          label: 'MAIL_SERVER_DB_PORT'
           description: "Container Variable MAILSERVERDBPORT"
           schema:
             type: string
             default: "3306"
         - variable: MAIL_SERVER_DB_USER
-          label: "MAIL_SERVER_DB_USER"
+          label: 'MAIL_SERVER_DB_USER'
           description: "Container Variable MAILSERVERDBUSER"
           schema:
             type: string
             default: "mail_admin"
         - variable: MAIL_SERVER_DB_PASS
-          label: "MAIL_SERVER_DB_PASS"
+          label: 'MAIL_SERVER_DB_PASS'
           description: "Container Variable MAILSERVERDBPASS"
           schema:
             type: string
             default: "Isadmin123"
         - variable: DOCUMENT_SERVER_PORT_80_TCP_ADDR
-          label: "DOCUMENT_SERVER_PORT_80_TCP_ADDR"
+          label: 'DOCUMENT_SERVER_PORT_80_TCP_ADDR'
           description: "Container Variable DOCUMENTSERVERPORT80TCPADDR If you install onlyoffice-document-server container ( and you should, also start onlyoffice-document-server first ) add the values bellow back to value and default value. Value onlyoffice-document-serverDefault Value onlyoffice-document-server"
           schema:
             type: string
@@ -229,7 +229,7 @@ questions:
                                     default: 80
 
         - variable: httpsport
-          label: "httpsport service"
+          label: 'httpsport service'
           description: "The Primary service on which the healthcheck runs, often the webUI"
           schema:
             additional_attrs: true
@@ -289,7 +289,7 @@ questions:
                                     type: int
                                     default: 443
         - variable: portforxmpp-co
-          label: "portforxmpp-co service"
+          label: 'portforxmpp-co service'
           description: "The Primary service on which the healthcheck runs, often the webUI"
           schema:
             additional_attrs: true
@@ -563,4 +563,3 @@ questions:
 # Include{advanced}
 
 # Include{addons}
-
