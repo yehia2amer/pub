@@ -83,45 +83,46 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: TA_USERNAME
           label: "TA_USERNAME"
-          description: "Container Variable TA_USERNAME"
+          description: "Container Variable TAUSERNAME"
           schema:
             type: string
             default: "tubearchivist"
         - variable: TA_PASSWORD
           label: "TA_PASSWORD"
-          description: "Container Variable TA_PASSWORD"
+          description: "Container Variable TAPASSWORD"
           schema:
             type: string
             default: "verysecret"
         - variable: REDIS_HOST
           label: "REDIS_HOST"
-          description: "Container Variable REDIS_HOST"
+          description: "Container Variable REDISHOST"
           schema:
             type: string
             default: "IP"
         - variable: ELASTIC_PASSWORD
           label: "ELASTIC_PASSWORD"
-          description: "Container Variable ELASTIC_PASSWORD"
+          description: "Container Variable ELASTICPASSWORD"
           schema:
             type: string
             default: "verysecret"
         - variable: ES_URL
           label: "ES_URL"
-          description: "Container Variable ES_URL"
+          description: "Container Variable ESURL"
           schema:
             type: string
             default: "http://IP:9200"
         - variable: HOST_GID
           label: "HOST_GID"
-          description: "Container Variable HOST_GID"
+          description: "Container Variable HOSTGID"
           schema:
             type: string
             default: "1000"
         - variable: HOST_UID
           label: "HOST_UID"
-          description: "Container Variable HOST_UID"
+          description: "Container Variable HOSTUID"
           schema:
             type: string
             default: "1000"
@@ -220,6 +221,7 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: youtubemediapath
           label: "youtubemediapath Storage"
           description: "Container Path youtube"
@@ -262,7 +264,8 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: appdata
+# Include{persistenceAdvanced}
+        - variable: appdata
           label: "appdata Storage"
           description: "Container Path cache"
           schema:
@@ -306,7 +309,9 @@ questions:
                       description: "Memory"
 # Include{persistenceAdvanced}
 
+
 # Include{persistenceList}
+
 
   - variable: ingress
     label: ""
@@ -328,7 +333,6 @@ questions:
 # Include{ingressTraefik}
 
 # Include{ingressExpert}
-
 
 # Include{ingressList}
 
@@ -403,3 +407,4 @@ questions:
 # Include{advanced}
 
 # Include{addons}
+

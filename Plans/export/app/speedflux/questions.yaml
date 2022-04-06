@@ -69,7 +69,6 @@ questions:
                       description: "(Legacy) OnDelete: ignore .spec.template changes"
 # Include{controllerExpert}
 
-
   - variable: env
     group: "Container Configuration"
     label: "Image Environment"
@@ -77,33 +76,34 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: INFLUX_DB_ADDRESS
           label: "INFLUX_DB_ADDRESS"
-          description: "Container Variable INFLUX_DB_ADDRESSIP or Hostname of Influx DB"
+          description: "Container Variable INFLUXDBADDRESSIP or Hostname of Influx DB"
           schema:
             type: string
             default: "influxdb"
         - variable: INFLUX_DB_PORT
           label: "INFLUX_DB_PORT"
-          description: "Container Variable INFLUX_DB_PORT"
+          description: "Container Variable INFLUXDBPORT"
           schema:
             type: string
             default: "8086"
         - variable: INFLUX_DB_USER
           label: "INFLUX_DB_USER"
-          description: "Container Variable INFLUX_DB_USER"
+          description: "Container Variable INFLUXDBUSER"
           schema:
             type: string
             default: ""
         - variable: INFLUX_DB_PASSWORD
           label: "INFLUX_DB_PASSWORD"
-          description: "Container Variable INFLUX_DB_PASSWORD"
+          description: "Container Variable INFLUXDBPASSWORD"
           schema:
             type: string
             default: ""
         - variable: INFLUX_DB_DATABASE
           label: "INFLUX_DB_DATABASE"
-          description: "Container Variable INFLUX_DB_DATABASEIf the database doesn't exist, it will be created. "
+          description: "Container Variable INFLUXDBDATABASEIf the database doesn't exist, it will be created. "
           schema:
             type: string
             default: "speedtest"
@@ -241,3 +241,4 @@ questions:
 # Include{advanced}
 
 # Include{addons}
+

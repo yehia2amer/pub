@@ -83,6 +83,7 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: URL
           label: "URL"
           description: "Top url you have control over (`customdomain.com` if you own it, or `customsubdomain.ddnsprovider.com` if dynamic dns)."
@@ -97,7 +98,7 @@ questions:
             default: ""
         - variable: SUBDOMAINS
           label: "SUBDOMAINS"
-          description: "Subdomains you'd like the cert to cover (comma separated, no spaces) ie. `www,ftp,cloud`. For a wildcard cert, set this _exactly_ to `wildcard` (wildcard cert is available via `dns` and `duckdns` validation only)"
+          description: "Subdomains you'd like the cert to cover (comma separated, no spaces) ie. `www,ftp,cloud`. For a wildcard cert, set this exactly to `wildcard` (wildcard cert is available via `dns` and `duckdns` validation only)"
           schema:
             type: string
             default: ""
@@ -310,6 +311,7 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: config
           label: "config Storage"
           description: "All the config files including the webroot reside here."
@@ -354,7 +356,9 @@ questions:
                       description: "Memory"
 # Include{persistenceAdvanced}
 
+
 # Include{persistenceList}
+
 
   - variable: ingress
     label: ""
@@ -376,7 +380,6 @@ questions:
 # Include{ingressTraefik}
 
 # Include{ingressExpert}
-
 
 # Include{ingressList}
 
@@ -451,3 +454,4 @@ questions:
 # Include{advanced}
 
 # Include{addons}
+

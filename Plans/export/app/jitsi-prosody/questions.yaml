@@ -83,6 +83,7 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: AUTH_TYPE
           label: "AUTH_TYPE"
           description: "Select authentication type (internal, jwt or ldap)"
@@ -145,7 +146,7 @@ questions:
             default: "internal-muc.meet.jitsi"
         - variable: XMPP_MODULES
           label: "XMPP_MODULES"
-          description: "Custom Prosody modules for XMPP_DOMAIN (comma separated)"
+          description: "Custom Prosody modules for XMPPDOMAIN (comma separated)"
           schema:
             type: string
             default: "info,alert"
@@ -247,19 +248,19 @@ questions:
             default: "my_jitsi_app_secret"
         - variable: JWT_ACCEPTED_ISSUERS
           label: "JWT_ACCEPTED_ISSUERS"
-          description: "(Optional) Set asap_accepted_issuers as a comma separated list"
+          description: "(Optional) Set asapacceptedissuers as a comma separated list"
           schema:
             type: string
             default: "my_web_client,my_app_client"
         - variable: JWT_ACCEPTED_AUDIENCES
           label: "JWT_ACCEPTED_AUDIENCES"
-          description: "(Optional) Set asap_accepted_audiences as a comma separated list"
+          description: "(Optional) Set asapacceptedaudiences as a comma separated list"
           schema:
             type: string
             default: "my_server1,my_server2"
         - variable: JWT_ASAP_KEYSERVER
           label: "JWT_ASAP_KEYSERVER"
-          description: "(Optional) Set asap_keyserver to a url where public keys can be found"
+          description: "(Optional) Set asapkeyserver to a url where public keys can be found"
           schema:
             type: string
             default: "https://example.com/asap"
@@ -361,7 +362,7 @@ questions:
             default: "/etc/ssl/certs"
         - variable: LDAP_START_TLS
           label: "LDAP_START_TLS"
-          description: "Enable START_TLS, requires LDAPv3, URL must be ldap not ldaps"
+          description: "Enable STARTTLS, requires LDAPv3, URL must be ldap not ldaps"
           schema:
             type: string
             default: "0"
@@ -580,6 +581,7 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: config
           label: "config Storage"
           description: "IMPORTENT Change to mntuserappdatajitsiprosody"
@@ -624,7 +626,9 @@ questions:
                       description: "Memory"
 # Include{persistenceAdvanced}
 
+
 # Include{persistenceList}
+
 
   - variable: ingress
     label: ""
@@ -646,7 +650,6 @@ questions:
 # Include{ingressTraefik}
 
 # Include{ingressExpert}
-
 
 # Include{ingressList}
 
@@ -721,3 +724,4 @@ questions:
 # Include{advanced}
 
 # Include{addons}
+

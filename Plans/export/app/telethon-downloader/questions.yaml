@@ -69,7 +69,6 @@ questions:
                       description: "(Legacy) OnDelete: ignore .spec.template changes"
 # Include{controllerExpert}
 
-
   - variable: env
     group: "Container Configuration"
     label: "Image Environment"
@@ -77,33 +76,34 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: TG_AUTHORIZED_USER_ID
           label: "TG_AUTHORIZED_USER_ID"
-          description: "Container Variable TG_AUTHORIZED_USER_ID"
+          description: "Container Variable TGAUTHORIZEDUSERID"
           schema:
             type: string
             default: " "
         - variable: TG_API_ID
           label: "TG_API_ID"
-          description: "Container Variable TG_API_ID"
+          description: "Container Variable TGAPIID"
           schema:
             type: string
             default: " "
         - variable: TG_API_HASH
           label: "TG_API_HASH"
-          description: "Container Variable TG_API_HASH"
+          description: "Container Variable TGAPIHASH"
           schema:
             type: string
             default: " "
         - variable: TG_BOT_TOKEN
           label: "TG_BOT_TOKEN"
-          description: "Container Variable TG_BOT_TOKEN"
+          description: "Container Variable TGBOTTOKEN"
           schema:
             type: string
             default: ""
         - variable: TG_PROGRESS_DOWNLOAD
           label: "TG_PROGRESS_DOWNLOAD"
-          description: "Container Variable TG_PROGRESS_DOWNLOAD"
+          description: "Container Variable TGPROGRESSDOWNLOAD"
           schema:
             type: string
             default: ""
@@ -136,6 +136,7 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: pathdownload
           label: "pathdownload Storage"
           description: "Container Path download"
@@ -178,7 +179,8 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: pathwatch
+# Include{persistenceAdvanced}
+        - variable: pathwatch
           label: "pathwatch Storage"
           description: "Container Path watch"
           schema:
@@ -220,7 +222,8 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: config
+# Include{persistenceAdvanced}
+        - variable: config
           label: "config Storage"
           description: "Container Path config"
           schema:
@@ -263,6 +266,7 @@ questions:
                     - value: "Memory"
                       description: "Memory"
 # Include{persistenceAdvanced}
+
 
 # Include{persistenceList}
 
@@ -340,3 +344,4 @@ questions:
 # Include{advanced}
 
 # Include{addons}
+

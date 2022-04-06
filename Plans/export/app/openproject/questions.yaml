@@ -69,7 +69,6 @@ questions:
                       description: "(Legacy) OnDelete: ignore .spec.template changes"
 # Include{controllerExpert}
 
-
   - variable: env
     group: "Container Configuration"
     label: "Image Environment"
@@ -77,9 +76,10 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: SECRET_KEY_BASE
           label: "SECRET_KEY_BASE"
-          description: "Container Variable SECRET_KEY_BASE"
+          description: "Container Variable SECRETKEYBASE"
           schema:
             type: string
             default: "secret"
@@ -112,6 +112,7 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: hostpath1
           label: "hostpath1 Storage"
           description: "Container Path varopenprojectpgdata"
@@ -154,7 +155,8 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: hostpath2
+# Include{persistenceAdvanced}
+        - variable: hostpath2
           label: "hostpath2 Storage"
           description: "Container Path varopenprojectassets"
           schema:
@@ -197,6 +199,7 @@ questions:
                     - value: "Memory"
                       description: "Memory"
 # Include{persistenceAdvanced}
+
 
 # Include{persistenceList}
 
@@ -274,3 +277,4 @@ questions:
 # Include{advanced}
 
 # Include{addons}
+

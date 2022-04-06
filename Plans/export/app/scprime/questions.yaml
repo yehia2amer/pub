@@ -83,6 +83,7 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: SCPRIME_WALLET_PASSWORD
           label: "SCPRIME_WALLET_PASSWORD"
           description: "Enter your password to automatically unlock your wallet when the docker starts.&lt;br&gt;&lt;b&gt;NOTE&lt;b&gt; Your default password is your seed phrase unless changed."
@@ -304,6 +305,7 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: metadata
           label: "metadata Storage"
           description: "Location where metadata is stored including consensus, wallets and file contracts. 100Gb of free space is recommended, SSD preferred.&lt;br&gt;Container Path scp-data"
@@ -346,7 +348,8 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: storage
+# Include{persistenceAdvanced}
+        - variable: storage
           label: "storage Storage"
           description: "Path where shared folders are located.&lt;br&gt;Container Path storage"
           schema:
@@ -390,7 +393,9 @@ questions:
                       description: "Memory"
 # Include{persistenceAdvanced}
 
+
 # Include{persistenceList}
+
 
   - variable: ingress
     label: ""
@@ -412,7 +417,6 @@ questions:
 # Include{ingressTraefik}
 
 # Include{ingressExpert}
-
 
 # Include{ingressList}
 
@@ -487,3 +491,4 @@ questions:
 # Include{advanced}
 
 # Include{addons}
+

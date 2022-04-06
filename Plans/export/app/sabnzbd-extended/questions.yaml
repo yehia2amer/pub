@@ -83,6 +83,7 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: AUDIO_FORMAT
           label: "AUDIO_FORMAT"
           description: "FLAC or OPUS or MP3 or AAC or ALAC - converts lossless FLAC files to set format"
@@ -127,7 +128,7 @@ questions:
             default: ""
         - variable: RequireLanguage
           label: "RequireLanguage"
-          description: "true = enabled, disablesenables checking video audiosubtitle language based on VIDEO_LANG setting"
+          description: "true = enabled, disablesenables checking video audiosubtitle language based on VIDEOLANG setting"
           schema:
             type: string
             default: ""
@@ -157,13 +158,13 @@ questions:
             default: ""
         - variable: NVIDIA_VISIBLE_DEVICES
           label: "NVIDIA_VISIBLE_DEVICES"
-          description: "NVIDIA_VISIBLE_DEVICES"
+          description: "NVIDIAVISIBLEDEVICES"
           schema:
             type: string
             default: ""
         - variable: NVIDIA_DRIVER_CAPABILITIES
           label: "NVIDIA_DRIVER_CAPABILITIES"
-          description: "NVIDIA_DRIVER_CAPABILITIES"
+          description: "NVIDIADRIVERCAPABILITIES"
           schema:
             type: string
             default: ""
@@ -322,6 +323,7 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: config
           label: "config Storage"
           description: "Container Path config"
@@ -366,7 +368,9 @@ questions:
                       description: "Memory"
 # Include{persistenceAdvanced}
 
+
 # Include{persistenceList}
+
 
   - variable: ingress
     label: ""
@@ -388,7 +392,6 @@ questions:
 # Include{ingressTraefik}
 
 # Include{ingressExpert}
-
 
 # Include{ingressList}
 
@@ -463,3 +466,4 @@ questions:
 # Include{advanced}
 
 # Include{addons}
+

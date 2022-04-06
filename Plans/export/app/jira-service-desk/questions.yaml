@@ -83,6 +83,7 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: ATL_PROXY_NAME
           label: "ATL_PROXY_NAME"
           description: "If behind a reverse proxy, what's the root address. i.e. jira.example.com"
@@ -91,13 +92,13 @@ questions:
             default: "support.ibracorp.io"
         - variable: ATL_PROXY_PORT
           label: "ATL_PROXY_PORT"
-          description: "Container Variable ATL_PROXY_PORT"
+          description: "Container Variable ATLPROXYPORT"
           schema:
             type: string
             default: "443"
         - variable: ATL_TOMCAT_SCHEME
           label: "ATL_TOMCAT_SCHEME"
-          description: "Container Variable ATL_TOMCAT_SCHEME"
+          description: "Container Variable ATLTOMCATSCHEME"
           schema:
             type: string
             default: "https"
@@ -196,6 +197,7 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: hostpath1
           label: "hostpath1 Storage"
           description: "Container Path varatlassianapplication-datajira"
@@ -240,7 +242,9 @@ questions:
                       description: "Memory"
 # Include{persistenceAdvanced}
 
+
 # Include{persistenceList}
+
 
   - variable: ingress
     label: ""
@@ -262,7 +266,6 @@ questions:
 # Include{ingressTraefik}
 
 # Include{ingressExpert}
-
 
 # Include{ingressList}
 
@@ -337,3 +340,4 @@ questions:
 # Include{advanced}
 
 # Include{addons}
+

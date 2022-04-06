@@ -83,6 +83,7 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: GAME_PARAMS
           label: "GAME_PARAMS"
           description: "Enter your extra start up commands for the server here otherwise leave empty."
@@ -91,7 +92,7 @@ questions:
             default: ""
         - variable: GAME_PORT
           label: "GAME_PORT"
-          description: "Only change if you know what you are doing (intital GAME_PORT  Don't forget to create create a new UDP port mapping with the corresponding port and to delete the old port from the template)"
+          description: "Only change if you know what you are doing (intital GAMEPORT  Don't forget to create create a new UDP port mapping with the corresponding port and to delete the old port from the template)"
           schema:
             type: string
             default: "27016"
@@ -190,6 +191,7 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: steamcmd
           label: "steamcmd Storage"
           schema:
@@ -231,7 +233,8 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: serverfiles
+# Include{persistenceAdvanced}
+        - variable: serverfiles
           label: "serverfiles Storage"
           schema:
             additional_attrs: true
@@ -274,7 +277,9 @@ questions:
                       description: "Memory"
 # Include{persistenceAdvanced}
 
+
 # Include{persistenceList}
+
 
   - variable: ingress
     label: ""
@@ -296,7 +301,6 @@ questions:
 # Include{ingressTraefik}
 
 # Include{ingressExpert}
-
 
 # Include{ingressList}
 
@@ -371,3 +375,4 @@ questions:
 # Include{advanced}
 
 # Include{addons}
+

@@ -83,6 +83,7 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: USER_ID
           label: "USER_ID"
           description: "ID of the user the application runs as."
@@ -103,7 +104,7 @@ questions:
             default: ""
         - variable: APP_NICENESS
           label: "APP_NICENESS"
-          description: "Priority at which the application should run.  A niceness value of -20 is the highest priority and 19 is the lowest priority.&lt;br&gt;&lt;b&gt;NOTE&lt;b&gt; Setting a negative value requires additional permissions.  Thus, &lt;i&gt;&lt;b&gt;--cap-add=SYS_NICE&lt;b&gt;&lt;i&gt; must be added in &lt;i&gt;Extra Parameters&lt;i&gt; (shown when &lt;i&gt;Advanced View&lt;i&gt; is enabled)."
+          description: "Priority at which the application should run.  A niceness value of -20 is the highest priority and 19 is the lowest priority.&lt;br&gt;&lt;b&gt;NOTE&lt;b&gt; Setting a negative value requires additional permissions.  Thus, &lt;i&gt;&lt;b&gt;--cap-add=SYSNICE&lt;b&gt;&lt;i&gt; must be added in &lt;i&gt;Extra Parameters&lt;i&gt; (shown when &lt;i&gt;Advanced View&lt;i&gt; is enabled)."
           schema:
             type: string
             default: ""
@@ -133,7 +134,7 @@ questions:
             default: ""
         - variable: ENABLE_CJK_FONT
           label: "ENABLE_CJK_FONT"
-          description: "ENABLE_CJK_FONT for japanese or chinese character support."
+          description: "ENABLECJKFONT for japanese or chinese character support."
           schema:
             type: string
             default: ""
@@ -358,6 +359,7 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: storage
           label: "storage Storage"
           description: "This location contains files from your host that need to be accessible by the application.&lt;br&gt;Container path storage.raven"
@@ -402,7 +404,9 @@ questions:
                       description: "Memory"
 # Include{persistenceAdvanced}
 
+
 # Include{persistenceList}
+
 
   - variable: ingress
     label: ""
@@ -424,7 +428,6 @@ questions:
 # Include{ingressTraefik}
 
 # Include{ingressExpert}
-
 
 # Include{ingressList}
 
@@ -499,3 +502,4 @@ questions:
 # Include{advanced}
 
 # Include{addons}
+

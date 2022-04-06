@@ -83,6 +83,7 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: PICTHOR_WEB_ADDRESS
           label: "PICTHOR_WEB_ADDRESS"
           description: "The url of your picthor installation.Usually http&lt;your unraid ip&gt;&lt;picthor web ui port&gt;"
@@ -91,31 +92,31 @@ questions:
             default: ""
         - variable: PICTHOR_POSTGRES_HOST
           label: "PICTHOR_POSTGRES_HOST"
-          description: "Container Variable PICTHOR_POSTGRES_HOST"
+          description: "Container Variable PICTHORPOSTGRESHOST"
           schema:
             type: string
             default: ""
         - variable: PICTHOR_POSTGRES_PORT
           label: "PICTHOR_POSTGRES_PORT"
-          description: "Container Variable PICTHOR_POSTGRES_PORT"
+          description: "Container Variable PICTHORPOSTGRESPORT"
           schema:
             type: string
             default: ""
         - variable: PICTHOR_POSTGRES_USERNAME
           label: "PICTHOR_POSTGRES_USERNAME"
-          description: "Container Variable PICTHOR_POSTGRES_USERNAME"
+          description: "Container Variable PICTHORPOSTGRESUSERNAME"
           schema:
             type: string
             default: ""
         - variable: PICTHOR_POSTGRES_PASSWORD
           label: "PICTHOR_POSTGRES_PASSWORD"
-          description: "Container Variable PICTHOR_POSTGRES_PASSWORD"
+          description: "Container Variable PICTHORPOSTGRESPASSWORD"
           schema:
             type: string
             default: ""
         - variable: PICTHOR_POSTGRES_DB
           label: "PICTHOR_POSTGRES_DB"
-          description: "Container Variable PICTHOR_POSTGRES_DB"
+          description: "Container Variable PICTHORPOSTGRESDB"
           schema:
             type: string
             default: ""
@@ -220,6 +221,7 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: cachepath
           label: "cachepath Storage"
           description: "This is the place where all the generated thumbs and other cache files will be placed. Fast SSD is preferable."
@@ -262,7 +264,8 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: rootdirectorypath
+# Include{persistenceAdvanced}
+        - variable: rootdirectorypath
           label: "rootdirectorypath Storage"
           description: "Root path example where you should mount your photos library folder. Use this path when you will be adding a root dir in the web ui. Read only access mode is recommend."
           schema:
@@ -306,7 +309,9 @@ questions:
                       description: "Memory"
 # Include{persistenceAdvanced}
 
+
 # Include{persistenceList}
+
 
   - variable: ingress
     label: ""
@@ -328,7 +333,6 @@ questions:
 # Include{ingressTraefik}
 
 # Include{ingressExpert}
-
 
 # Include{ingressList}
 
@@ -403,3 +407,4 @@ questions:
 # Include{advanced}
 
 # Include{addons}
+

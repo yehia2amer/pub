@@ -83,15 +83,16 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: SALT_PASSWORD
           label: "SALT_PASSWORD"
-          description: "Container Variable SALT_PASSWORD"
+          description: "Container Variable SALTPASSWORD"
           schema:
             type: string
             default: "salty"
         - variable: SALT_LOGLEVEL
           label: "SALT_LOGLEVEL"
-          description: "Container Variable SALT_LOGLEVEL"
+          description: "Container Variable SALTLOGLEVEL"
           schema:
             type: string
             default: "warning"
@@ -310,6 +311,7 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: saltdatadirectory
           label: "saltdatadirectory Storage"
           description: "Container Path srv"
@@ -352,7 +354,8 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: saltconfigdirectory
+# Include{persistenceAdvanced}
+        - variable: saltconfigdirectory
           label: "saltconfigdirectory Storage"
           description: "Container Path etcsalt"
           schema:
@@ -394,7 +397,8 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: pathtoqemuimages
+# Include{persistenceAdvanced}
+        - variable: pathtoqemuimages
           label: "pathtoqemuimages Storage"
           description: "Container Path mntuserdomains"
           schema:
@@ -436,7 +440,8 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: virtualisationpassthrough
+# Include{persistenceAdvanced}
+        - variable: virtualisationpassthrough
           label: "virtualisationpassthrough Storage"
           description: "Container Path varrunlibvirtlibvirt-sock"
           schema:
@@ -478,7 +483,8 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: dockersocket
+# Include{persistenceAdvanced}
+        - variable: dockersocket
           label: "dockersocket Storage"
           description: "Container Path varrundocker.sock"
           schema:
@@ -522,7 +528,9 @@ questions:
                       description: "Memory"
 # Include{persistenceAdvanced}
 
+
 # Include{persistenceList}
+
 
   - variable: ingress
     label: ""
@@ -544,7 +552,6 @@ questions:
 # Include{ingressTraefik}
 
 # Include{ingressExpert}
-
 
 # Include{ingressList}
 
@@ -619,3 +626,4 @@ questions:
 # Include{advanced}
 
 # Include{addons}
+

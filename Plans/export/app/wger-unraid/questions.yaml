@@ -83,6 +83,7 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: DJANGO_DB_ENGINE
           label: "DJANGO_DB_ENGINE"
           description: "Database Engine"
@@ -133,7 +134,7 @@ questions:
     "
         - variable: SITE_URL
           label: "SITE_URL"
-          description: "SITE_URL ex. httpwww.my-local-gym.com"
+          description: "SITEURL ex. httpwww.my-local-gym.com"
           schema:
             type: string
             default: ""
@@ -164,57 +165,57 @@ questions:
     "
         - variable: EMAIL_HOST
           label: "EMAIL_HOST"
-          description: "EMAIL_HOST"
+          description: "EMAILHOST"
           schema:
             type: string
             default: ""
         - variable: EMAIL_PORT
           label: "EMAIL_PORT"
-          description: "EMAIL_PORT"
+          description: "EMAILPORT"
           schema:
             type: string
             default: ""
         - variable: EMAIL_HOST_USER
           label: "EMAIL_HOST_USER"
-          description: "EMAIL_HOST_USER"
+          description: "EMAILHOSTUSER"
           schema:
             type: string
             default: ""
         - variable: EMAIL_HOST_PASSWORD
           label: "EMAIL_HOST_PASSWORD"
-          description: "EMAIL_HOST_PASSWORD"
+          description: "EMAILHOSTPASSWORD"
           schema:
             type: string
             default: ""
         - variable: EMAIL_USE_TLS
           label: "EMAIL_USE_TLS"
-          description: "EMAIL_USE_TLS TrueFalse; Default False"
+          description: "EMAILUSETLS TrueFalse; Default False"
           schema:
             type: string
             default: "True
     "
         - variable: EMAIL_USE_SSL
           label: "EMAIL_USE_SSL"
-          description: "EMAIL_USE_SSL TrueFalse; Default False"
+          description: "EMAILUSESSL TrueFalse; Default False"
           schema:
             type: string
             default: "False
     "
         - variable: FROM_EMAIL
           label: "FROM_EMAIL"
-          description: "FROM_EMAIL"
+          description: "FROMEMAIL"
           schema:
             type: string
             default: ""
         - variable: RECAPTCHA_PUBLIC_KEY
           label: "RECAPTCHA_PUBLIC_KEY"
-          description: "RECAPTCHA_PUBLIC_KEY"
+          description: "RECAPTCHAPUBLICKEY"
           schema:
             type: string
             default: ""
         - variable: RECAPTCHA_PRIVATE_KEY
           label: "RECAPTCHA_PRIVATE_KEY"
-          description: "RECAPTCHA_PRIVATE_KEY"
+          description: "RECAPTCHAPRIVATEKEY"
           schema:
             type: string
             default: ""
@@ -227,7 +228,7 @@ questions:
     "
         - variable: DJANGO_CACHE_BACKEND
           label: "DJANGO_CACHE_BACKEND"
-          description: "Leave blank for no cache. Otherwise use this example for redis django_redis.cache.RedisCache"
+          description: "Leave blank for no cache. Otherwise use this example for redis djangoredis.cache.RedisCache"
           schema:
             type: string
             default: ""
@@ -245,7 +246,7 @@ questions:
             default: ""
         - variable: DJANGO_CACHE_CLIENT_CLASS
           label: "DJANGO_CACHE_CLIENT_CLASS"
-          description: "Container Variable DJANGO_CACHE_CLIENT_CLASS"
+          description: "Container Variable DJANGOCACHECLIENTCLASS"
           schema:
             type: string
             default: "django_redis.client.DefaultClient
@@ -345,6 +346,7 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: django_media_root
           label: "django_media_root Storage"
           description: "Path to uploaded files"
@@ -387,9 +389,10 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: django_static_root
+# Include{persistenceAdvanced}
+        - variable: django_static_root
           label: "django_static_root Storage"
-          description: "DJANGO_STATIC_ROOT"
+          description: "DJANGOSTATICROOT"
           schema:
             additional_attrs: true
             type: dict
@@ -431,7 +434,9 @@ questions:
                       description: "Memory"
 # Include{persistenceAdvanced}
 
+
 # Include{persistenceList}
+
 
   - variable: ingress
     label: ""
@@ -453,7 +458,6 @@ questions:
 # Include{ingressTraefik}
 
 # Include{ingressExpert}
-
 
 # Include{ingressList}
 
@@ -528,3 +532,4 @@ questions:
 # Include{advanced}
 
 # Include{addons}
+

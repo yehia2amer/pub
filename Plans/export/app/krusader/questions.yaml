@@ -83,9 +83,10 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: USER_LOCALES
           label: "USER_LOCALES"
-          description: "Enter your prefered locales, you can find a full list of supported languages in 'usrsharei18nSUPPORTED' simply open up a console from the Container and type in 'cat usrsharei18nSUPPORTED' (eg 'en_US.UTF-8 UTF8' or 'de_DE.UTF-8 UTF-8', 'fr_FR.UTF-8 UTF-8'...)"
+          description: "Enter your prefered locales, you can find a full list of supported languages in 'usrsharei18nSUPPORTED' simply open up a console from the Container and type in 'cat usrsharei18nSUPPORTED' (eg 'enUS.UTF-8 UTF8' or 'deDE.UTF-8 UTF-8', 'frFR.UTF-8 UTF-8'...)"
           schema:
             type: string
             default: "en_US.UTF-8 UTF-8"
@@ -208,6 +209,7 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: containerpath
           label: "containerpath Storage"
           description: "Container Path krusader"
@@ -250,7 +252,8 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: datapath
+# Include{persistenceAdvanced}
+        - variable: datapath
           label: "datapath Storage"
           description: "Main data path to your unRAID shares (if you want to get access to a disk mounted through UnassignedDevices change the Host Path to 'mnt', if you want to get system level access change the Host Path to '', you will then find the mounted path in Kruser in 'mntuser')."
           schema:
@@ -294,7 +297,9 @@ questions:
                       description: "Memory"
 # Include{persistenceAdvanced}
 
+
 # Include{persistenceList}
+
 
   - variable: ingress
     label: ""
@@ -316,7 +321,6 @@ questions:
 # Include{ingressTraefik}
 
 # Include{ingressExpert}
-
 
 # Include{ingressList}
 
@@ -391,3 +395,4 @@ questions:
 # Include{advanced}
 
 # Include{addons}
+

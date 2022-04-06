@@ -83,9 +83,10 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: MONGO_CONNECTION
           label: "MONGO_CONNECTION"
-          description: "Container Variable MONGO_CONNECTION"
+          description: "Container Variable MONGOCONNECTION"
           schema:
             type: string
             default: "mongodb://db-user:db-password@mongodb-instance:port/db-name"
@@ -97,13 +98,13 @@ questions:
             default: ""
         - variable: BASE_URL
           label: "BASE_URL"
-          description: "Container Variable BASE_URL"
+          description: "Container Variable BASEURL"
           schema:
             type: string
             default: ""
         - variable: API_SECRET
           label: "API_SECRET"
-          description: "Container Variable API_SECRET    Should be a complex key"
+          description: "Container Variable APISECRET    Should be a complex key"
           schema:
             type: string
             default: ""
@@ -115,25 +116,25 @@ questions:
             default: "delta direction upbat timeago devicestatus errorcodes ar2 simplealarms profile"
         - variable: BG_HIGH
           label: "BG_HIGH"
-          description: "Container Variable BG_HIGH"
+          description: "Container Variable BGHIGH"
           schema:
             type: string
             default: ""
         - variable: BG_LOW
           label: "BG_LOW"
-          description: "Container Variable BG_LOW"
+          description: "Container Variable BGLOW"
           schema:
             type: string
             default: ""
         - variable: BG_TARGET_BOTTOM
           label: "BG_TARGET_BOTTOM"
-          description: "Container Variable BG_TARGET_BOTTOM"
+          description: "Container Variable BGTARGETBOTTOM"
           schema:
             type: string
             default: ""
         - variable: BG_TARGET_TOP
           label: "BG_TARGET_TOP"
-          description: "Container Variable BG_TARGET_TOP"
+          description: "Container Variable BGTARGETTOP"
           schema:
             type: string
             default: ""
@@ -145,13 +146,13 @@ questions:
             default: "colors"
         - variable: TIME_FORMAT
           label: "TIME_FORMAT"
-          description: "Container Variable TIME_FORMAT"
+          description: "Container Variable TIMEFORMAT"
           schema:
             type: string
             default: "24"
         - variable: INSECURE_USE_HTTP
           label: "INSECURE_USE_HTTP"
-          description: "Container Variable INSECURE_USE_HTTPSet to true if used with reverse proxy"
+          description: "Container Variable INSECUREUSEHTTPSet to true if used with reverse proxy"
           schema:
             type: string
             default: "true"
@@ -245,6 +246,7 @@ questions:
 
 # Include{persistenceList}
 
+
   - variable: ingress
     label: ""
     group: "Ingress"
@@ -265,7 +267,6 @@ questions:
 # Include{ingressTraefik}
 
 # Include{ingressExpert}
-
 
 # Include{ingressList}
 
@@ -340,3 +341,4 @@ questions:
 # Include{advanced}
 
 # Include{addons}
+

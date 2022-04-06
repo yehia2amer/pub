@@ -83,6 +83,7 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: OPTIONAL_WEB_UI_PATH_PREFIX
           label: "OPTIONAL_WEB_UI_PATH_PREFIX"
           description: "Optional can be used to set a path prefix (e.g. ripper-ui). This is useful when you are running multiple services at one domain."
@@ -91,13 +92,13 @@ questions:
             default: ""
         - variable: OPTIONAL_WEB_UI_USERNAME 
           label: "OPTIONAL_WEB_UI_USERNAME "
-          description: "Optional Requires OPTIONAL_WEB_UI_PASSWORD, enables http-Auth in Web UI"
+          description: "Optional Requires OPTIONALWEBUIPASSWORD, enables http-Auth in Web UI"
           schema:
             type: string
             default: ""
         - variable: OPTIONAL_WEB_UI_PASSWORD 
           label: "OPTIONAL_WEB_UI_PASSWORD "
-          description: "Optional Requires OPTIONAL_WEB_UI_USERNAME, enables http-Auth in Web UI"
+          description: "Optional Requires OPTIONALWEBUIUSERNAME, enables http-Auth in Web UI"
           schema:
             type: string
             default: ""
@@ -196,6 +197,7 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: outputdir
           label: "outputdir Storage"
           description: "Output files are stored here"
@@ -238,7 +240,8 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: config
+# Include{persistenceAdvanced}
+        - variable: config
           label: "config Storage"
           description: "Configuration files are stored here"
           schema:
@@ -282,7 +285,9 @@ questions:
                       description: "Memory"
 # Include{persistenceAdvanced}
 
+
 # Include{persistenceList}
+
 
   - variable: ingress
     label: ""
@@ -304,7 +309,6 @@ questions:
 # Include{ingressTraefik}
 
 # Include{ingressExpert}
-
 
 # Include{ingressList}
 
@@ -379,3 +383,4 @@ questions:
 # Include{advanced}
 
 # Include{addons}
+

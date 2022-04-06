@@ -83,6 +83,7 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: UMASK
           label: "UMASK"
           description: "Container Variable UMASK"
@@ -91,13 +92,13 @@ questions:
             default: "000"
         - variable: CUSTOM_RES_W
           label: "CUSTOM_RES_W"
-          description: "Container Variable CUSTOM_RES_W"
+          description: "Container Variable CUSTOMRESW"
           schema:
             type: string
             default: "800"
         - variable: CUSTOM_RES_H
           label: "CUSTOM_RES_H"
-          description: "Container Variable CUSTOM_RES_H"
+          description: "Container Variable CUSTOMRESH"
           schema:
             type: string
             default: "600"
@@ -196,6 +197,7 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: datadir
           label: "datadir Storage"
           description: "Configuration directory"
@@ -238,7 +240,8 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: hostpath
+# Include{persistenceAdvanced}
+        - variable: hostpath
           label: "hostpath Storage"
           description: "Read only (This container was mainly created to backup files to MEGA, if you also want to sync files from and to MEGA please create a new path entry to the preferred share on the server - it's strongly recommended to do that in mnt... within the container)"
           schema:
@@ -282,7 +285,9 @@ questions:
                       description: "Memory"
 # Include{persistenceAdvanced}
 
+
 # Include{persistenceList}
+
 
   - variable: ingress
     label: ""
@@ -304,7 +309,6 @@ questions:
 # Include{ingressTraefik}
 
 # Include{ingressExpert}
-
 
 # Include{ingressList}
 
@@ -379,3 +383,4 @@ questions:
 # Include{advanced}
 
 # Include{addons}
+

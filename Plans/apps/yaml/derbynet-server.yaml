@@ -1,0 +1,144 @@
+CAComment: This template is set up to use a custom network. You may have to adjust
+  the network or IP address etc to match your system
+CategoryList:
+- Cloud
+- Tools-Utilities
+- Other
+Config:
+  Device: {}
+  Label: {}
+  Path:
+    database:
+      Default: /mnt/user/appdata/derbynet_server/data/
+      Description: 'Container Path: /var/lib/derbynet'
+      Display: always
+      Mask: 'false'
+      Mode: rw
+      Name: Database
+      Required: 'false'
+      Target: /var/lib/derbynet
+      Type: Path
+      value: /mnt/cache/appdata/derbynet_server/data
+  Port:
+    securewebserve:
+      Default: '8051'
+      Description: 'The docker has a secure webportal but the certificates are self
+        signed.  '
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Secure Webserver Port (Self Signed Certs)
+      Required: 'false'
+      Target: 443
+      Type: Port
+      value: 8051
+    webserverport:
+      Default: '8050'
+      Description: 'Container Port: 80'
+      Display: always
+      Mask: 'false'
+      Mode: tcp
+      Name: Webserver Port
+      Required: 'true'
+      Target: 80
+      Type: Port
+      value: 8050
+  Variable:
+    pgid:
+      Default: '100'
+      Description: 'Container Variable: PGID'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PGID
+      Required: 'true'
+      Target: PGID
+      Type: Variable
+      value: '100'
+    photopassword:
+      Default: flashbulb
+      Description: "You can upload photos to the web server via HTTP, using the Photo\
+        \ role. The default password for the Photo role is \u201Cflashbulb.\u201D\r\
+        \n\r\nFor an example of this, see extras/photostand/photostand.sh, a shell\
+        \ script for automated photo capture.\r\n(More description at http://www.derbytalk.com/viewtopic.php?f=25&amp;t=8253.)"
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: Photo Password
+      Required: 'true'
+      Target: PHOTO_PASSWORD
+      Type: Variable
+      value: flashbulb
+    puid:
+      Default: '99'
+      Description: 'Container Variable: PUID'
+      Display: advanced
+      Mask: 'false'
+      Mode: ''
+      Name: PUID
+      Required: 'true'
+      Target: PUID
+      Type: Variable
+      value: '99'
+    racecoordinatorpassword:
+      Default: doyourbest
+      Description: "RaceCoordinator, password default is \u201Cdoyourbest\u201D \r\
+        \n\r\nThis role can do anything at all."
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Race Coordinator Password
+      Required: 'false'
+      Target: RACE_COORD_PASSWORD
+      Type: Variable
+      value: doyourbest
+    racecrewpassword:
+      Default: murphy
+      Description: "RaceCrew, password \u201Cmurphy\u201D (as in Don Murphy, not Murphy\u2019\
+        s Law): this role can do things\r\nlike check racers in, but not erase the\
+        \ database."
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Race Crew Password
+      Required: 'false'
+      Target: RACE_CREW_PASSWORD
+      Type: Variable
+      value: murphy
+    timerpassword:
+      Default: ''
+      Description: "The Timer role is intended for use by the derby-timer.jar program\
+        \ running on the remote timer device connected to the track (raspberrypi).\
+        \ \r\n\r\nBy default, the Timer user has an\r\nempty password, so it is not\
+        \ necessary to enter any password in derby-timer.jar. However, this\r\npassword,\
+        \ like all passwords should be updated to secure the server.\r\n\r\nNote:\
+        \ The password must match the password set for TIMER_PASSWORD in the timer\
+        \ device (raspberrypi) /etc/derbynet.conf file.\r\n"
+      Display: always
+      Mask: 'false'
+      Mode: ''
+      Name: Timer Password
+      Required: 'true'
+      Target: TIMER_PASSWORD
+      Type: Variable
+      value: '555'
+Icon: https://raw.githubusercontent.com/mitchellriley/unraid-docker/master/mitchellriley/images/derbynet_server.png
+Keywords:
+- derbynet-server
+- Cloud
+- Tools-Utilities
+- Other
+Name: derbynet-server
+Overview: DerbyNet is the new standard in race management software for Pinewood Derby
+  events. It's free, and it's open source. With DerbyNet, multiple browsers connect
+  to a web server running on your laptop or in the cloud.
+PostArgs: ''
+Privileged: 'false'
+Registry: https://registry.hub.docker.com/r/mitchellriley/derbynet_server
+Repository: mitchellriley/derbynet_server
+Requires: ''
+Sources:
+- http://jeffpiazza.github.io/derbynet/
+- https://registry.hub.docker.com/r/mitchellriley/derbynet_server
+Tag: latest
+WebUI: http://[IP]:[PORT:8050]

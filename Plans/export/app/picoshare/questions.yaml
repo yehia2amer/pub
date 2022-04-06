@@ -83,6 +83,7 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: PORT
           label: "PORT"
           description: "Container Variable PORT"
@@ -91,7 +92,7 @@ questions:
             default: "3001"
         - variable: PS_SHARED_SECRET
           label: "PS_SHARED_SECRET"
-          description: "Container Variable PS_SHARED_SECRET"
+          description: "Container Variable PSSHAREDSECRET"
           schema:
             type: string
             default: "somesecretpass"
@@ -190,6 +191,7 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: data
           label: "data Storage"
           description: "Container Path data"
@@ -234,7 +236,9 @@ questions:
                       description: "Memory"
 # Include{persistenceAdvanced}
 
+
 # Include{persistenceList}
+
 
   - variable: ingress
     label: ""
@@ -256,7 +260,6 @@ questions:
 # Include{ingressTraefik}
 
 # Include{ingressExpert}
-
 
 # Include{ingressList}
 
@@ -331,3 +334,4 @@ questions:
 # Include{advanced}
 
 # Include{addons}
+

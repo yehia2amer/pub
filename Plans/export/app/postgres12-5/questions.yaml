@@ -83,21 +83,22 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: POSTGRES_PASSWORD
           label: "POSTGRES_PASSWORD"
-          description: "Container Variable POSTGRES_PASSWORD"
+          description: "Container Variable POSTGRESPASSWORD"
           schema:
             type: string
             default: "dsmrreader"
         - variable: POSTGRES_USER
           label: "POSTGRES_USER"
-          description: "Container Variable POSTGRES_USER"
+          description: "Container Variable POSTGRESUSER"
           schema:
             type: string
             default: "dsmrreader"
         - variable: POSTGRES_DB
           label: "POSTGRES_DB"
-          description: "Container Variable POSTGRES_DB"
+          description: "Container Variable POSTGRESDB"
           schema:
             type: string
             default: "dsmrdb"
@@ -196,6 +197,7 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: data
           label: "data Storage"
           description: "This is where Postgres will store it's data."
@@ -240,7 +242,9 @@ questions:
                       description: "Memory"
 # Include{persistenceAdvanced}
 
+
 # Include{persistenceList}
+
 
   - variable: ingress
     label: ""
@@ -262,7 +266,6 @@ questions:
 # Include{ingressTraefik}
 
 # Include{ingressExpert}
-
 
 # Include{ingressList}
 
@@ -337,3 +340,4 @@ questions:
 # Include{advanced}
 
 # Include{addons}
+

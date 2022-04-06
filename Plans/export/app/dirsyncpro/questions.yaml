@@ -83,6 +83,7 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: REMOTE_TYPE
           label: "REMOTE_TYPE"
           description: "Valid options are local, smb (is removed in the latest version, please use Unassigned Devices Plugin in Unraid and mount the share with the 'local' option), ftp, webdavNote if you enabled encryption with CryFS and set the type to 'local' you must set the container mountpoint to 'mntlocal'"
@@ -133,7 +134,7 @@ questions:
             default: "262144"
         - variable: RUNTIME_NAME
           label: "RUNTIME_NAME"
-          description: "Container Variable RUNTIME_NAME"
+          description: "Container Variable RUNTIMENAME"
           schema:
             type: string
             default: "basicjre"
@@ -256,6 +257,7 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: datadirectory
           label: "datadirectory Storage"
           description: "Data directory for the container"
@@ -298,7 +300,8 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: sourcedirectory-readonly
+# Include{persistenceAdvanced}
+        - variable: sourcedirectory-readonly
           label: "sourcedirectory-readonly Storage"
           description: "You can change the Acces Mode from Read Only to ReadWrite if you want to sync files back and forth."
           schema:
@@ -342,7 +345,9 @@ questions:
                       description: "Memory"
 # Include{persistenceAdvanced}
 
+
 # Include{persistenceList}
+
 
   - variable: ingress
     label: ""
@@ -364,7 +369,6 @@ questions:
 # Include{ingressTraefik}
 
 # Include{ingressExpert}
-
 
 # Include{ingressList}
 
@@ -439,3 +443,4 @@ questions:
 # Include{advanced}
 
 # Include{addons}
+

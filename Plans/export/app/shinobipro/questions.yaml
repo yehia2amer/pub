@@ -83,15 +83,16 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: ADMIN_USER
           label: "ADMIN_USER"
-          description: "Container Variable ADMIN_USER"
+          description: "Container Variable ADMINUSER"
           schema:
             type: string
             default: "admin"
         - variable: ADMIN_PASSWORD
           label: "ADMIN_PASSWORD"
-          description: "Container Variable ADMIN_PASSWORD"
+          description: "Container Variable ADMINPASSWORD"
           schema:
             type: string
             default: "password"
@@ -109,43 +110,43 @@ questions:
             default: ""
         - variable: MYSQL_ROOT_PASSWORD
           label: "MYSQL_ROOT_PASSWORD"
-          description: "MYSQL_ROOT_PASSWORD"
+          description: "MYSQLROOTPASSWORD"
           schema:
             type: string
             default: ""
         - variable: MYSQL_PORT
           label: "MYSQL_PORT"
-          description: "MYSQL_PORT  standard port 3306"
+          description: "MYSQLPORT  standard port 3306"
           schema:
             type: string
             default: "3306"
         - variable: MYSQL_USER
           label: "MYSQL_USER"
-          description: "MYSQL_USER"
+          description: "MYSQLUSER"
           schema:
             type: string
             default: "majesticflame"
         - variable: MYSQL_DATABASE
           label: "MYSQL_DATABASE"
-          description: "MYSQL_DATABASE NAME"
+          description: "MYSQLDATABASE NAME"
           schema:
             type: string
             default: "ccio"
         - variable: MYSQL_HOST
           label: "MYSQL_HOST"
-          description: "MYSQL_HOST leave as localhost for container built in mariadb"
+          description: "MYSQLHOST leave as localhost for container built in mariadb"
           schema:
             type: string
             default: "localhost"
         - variable: MYSQL_PASSWORD
           label: "MYSQL_PASSWORD"
-          description: "MYSQL_PASSWORD default none for internal mariadb"
+          description: "MYSQLPASSWORD default none for internal mariadb"
           schema:
             type: string
             default: ""
         - variable: MYSQL_ROOT_USER
           label: "MYSQL_ROOT_USER"
-          description: "MYSQL_ROOT_USER"
+          description: "MYSQLROOTUSER"
           schema:
             type: string
             default: "root"
@@ -244,6 +245,7 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: videostoragelocation
           label: "videostoragelocation Storage"
           description: "optshinobivideos"
@@ -286,7 +288,8 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: temporarystreams
+# Include{persistenceAdvanced}
+        - variable: temporarystreams
           label: "temporarystreams Storage"
           description: "Temporary Streams"
           schema:
@@ -328,7 +331,8 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: config
+# Include{persistenceAdvanced}
+        - variable: config
           label: "config Storage"
           description: "config"
           schema:
@@ -370,7 +374,8 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: mariadbdatabaselocation
+# Include{persistenceAdvanced}
+        - variable: mariadbdatabaselocation
           label: "mariadbdatabaselocation Storage"
           description: "varlibmysql"
           schema:
@@ -412,7 +417,8 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: customautoloadmodules
+# Include{persistenceAdvanced}
+        - variable: customautoloadmodules
           label: "customautoloadmodules Storage"
           description: "Container Path optshinobilibscustomAutoLoad"
           schema:
@@ -454,7 +460,8 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: timezone
+# Include{persistenceAdvanced}
+        - variable: timezone
           label: "timezone Storage"
           description: "Container Path usrsharezoneinfo"
           schema:
@@ -496,7 +503,8 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: localtime
+# Include{persistenceAdvanced}
+        - variable: localtime
           label: "localtime Storage"
           description: "Container Path etclocaltime"
           schema:
@@ -540,7 +548,9 @@ questions:
                       description: "Memory"
 # Include{persistenceAdvanced}
 
+
 # Include{persistenceList}
+
 
   - variable: ingress
     label: ""
@@ -562,7 +572,6 @@ questions:
 # Include{ingressTraefik}
 
 # Include{ingressExpert}
-
 
 # Include{ingressList}
 
@@ -637,3 +646,4 @@ questions:
 # Include{advanced}
 
 # Include{addons}
+

@@ -83,15 +83,16 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: OR_PORT
           label: "OR_PORT"
-          description: "Container Variable OR_PORT"
+          description: "Container Variable ORPORT"
           schema:
             type: string
             default: "9393"
         - variable: PT_PORT
           label: "PT_PORT"
-          description: "Container Variable PT_PORT"
+          description: "Container Variable PTPORT"
           schema:
             type: string
             default: "9292"
@@ -103,13 +104,13 @@ questions:
             default: ""
         - variable: OBFS4_ENABLE_ADDITIONAL_VARIABLES
           label: "OBFS4_ENABLE_ADDITIONAL_VARIABLES"
-          description: "Container Variable OBFS4_ENABLE_ADDITIONAL_VARIABLES"
+          description: "Container Variable OBFS4ENABLEADDITIONALVARIABLES"
           schema:
             type: string
             default: "0"
         - variable: OBFS4V_AddressDisableIPv6
           label: "OBFS4V_AddressDisableIPv6"
-          description: "Container Variable OBFS4V_AddressDisableIPv6"
+          description: "Container Variable OBFS4VAddressDisableIPv6"
           schema:
             type: string
             default: "0"
@@ -268,6 +269,7 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: data_dir
           label: "data_dir Storage"
           description: "Container Path varlibtor"
@@ -312,7 +314,9 @@ questions:
                       description: "Memory"
 # Include{persistenceAdvanced}
 
+
 # Include{persistenceList}
+
 
   - variable: ingress
     label: ""
@@ -334,7 +338,6 @@ questions:
 # Include{ingressTraefik}
 
 # Include{ingressExpert}
-
 
 # Include{ingressList}
 
@@ -409,3 +412,4 @@ questions:
 # Include{advanced}
 
 # Include{addons}
+

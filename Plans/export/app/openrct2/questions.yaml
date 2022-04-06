@@ -83,9 +83,10 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: GAME_VERSION
           label: "GAME_VERSION"
-          description: "Preferred game version to install or set to 'latest' to check on every start if there is a newer version available (If you want to install a custom version the version number must look like this 'v0.2.3-develop-e4a2b1f9c' if the source file is named like this 'OpenRCT2-0.2.3-develop-e4a2b1f9c-linux-x86_64.tar')"
+          description: "Preferred game version to install or set to 'latest' to check on every start if there is a newer version available (If you want to install a custom version the version number must look like this 'v0.2.3-develop-e4a2b1f9c' if the source file is named like this 'OpenRCT2-0.2.3-develop-e4a2b1f9c-linux-x8664.tar')"
           schema:
             type: string
             default: "latest"
@@ -109,13 +110,13 @@ questions:
             default: ""
         - variable: ADMIN_HASH
           label: "ADMIN_HASH"
-          description: "The hash of the admin user (you find it on the client computer in the 'user-datakeys' folder from OpenRCT2 - if nothing is in there try to connect to any server and the game will create the hash, it’s the numbers and letters after the username without ‘-’ and without the ending ‘.pubkey’ or just turn on ‘log_server_actions’ in the ‘config.ini’ on the server and you’ll find it in the logs)"
+          description: "The hash of the admin user (you find it on the client computer in the 'user-datakeys' folder from OpenRCT2 - if nothing is in there try to connect to any server and the game will create the hash, it’s the numbers and letters after the username without ‘-’ and without the ending ‘.pubkey’ or just turn on ‘logserveractions’ in the ‘config.ini’ on the server and you’ll find it in the logs)"
           schema:
             type: string
             default: ""
         - variable: GAME_PORT
           label: "GAME_PORT"
-          description: "Container Variable GAME_PORT"
+          description: "Container Variable GAMEPORT"
           schema:
             type: string
             default: "11753"
@@ -214,6 +215,7 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: serverfiles
           label: "serverfiles Storage"
           description: "Container Path serverdataserverfiles"
@@ -258,7 +260,9 @@ questions:
                       description: "Memory"
 # Include{persistenceAdvanced}
 
+
 # Include{persistenceList}
+
 
   - variable: ingress
     label: ""
@@ -280,7 +284,6 @@ questions:
 # Include{ingressTraefik}
 
 # Include{ingressExpert}
-
 
 # Include{ingressList}
 
@@ -355,3 +358,4 @@ questions:
 # Include{advanced}
 
 # Include{addons}
+

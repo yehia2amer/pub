@@ -83,6 +83,7 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: 8075
           label: "8075"
           description: "The port used for streaming data between servers."
@@ -91,7 +92,7 @@ questions:
             default: "8075"
         - variable: MM_SQLSETTINGS_DATASOURCE
           label: "MM_SQLSETTINGS_DATASOURCE"
-          description: "Edit This Change MM_USERNAME, MM_PASSWORD, DB_HOST, DB_PORT_NUMBER To your database configuration "
+          description: "Edit This Change MMUSERNAME, MMPASSWORD, DBHOST, DBPORTNUMBER To your database configuration "
           schema:
             type: string
             default: "MM_USERNAME:MM_PASSWORD@tcp(DB_HOST:DB_PORT_NUMBER)/MM_DBNAME?charset=utf8mb4,utf8&readTimeout=30s&writeTimeout=30s"
@@ -103,7 +104,7 @@ questions:
             default: "IP OR HOSTNAME"
         - variable: MM_SQLSETTINGS_DRIVERNAME
           label: "MM_SQLSETTINGS_DRIVERNAME"
-          description: "Container Variable MM_SQLSETTINGS_DRIVERNAME"
+          description: "Container Variable MMSQLSETTINGSDRIVERNAME"
           schema:
             type: string
             default: "mysql"
@@ -322,6 +323,7 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: data
           label: "data Storage"
           description: "Data Path"
@@ -364,7 +366,8 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: logs
+# Include{persistenceAdvanced}
+        - variable: logs
           label: "logs Storage"
           description: "Logs Path"
           schema:
@@ -406,7 +409,8 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: config
+# Include{persistenceAdvanced}
+        - variable: config
           label: "config Storage"
           description: "Config Path"
           schema:
@@ -448,7 +452,8 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: plugins
+# Include{persistenceAdvanced}
+        - variable: plugins
           label: "plugins Storage"
           description: "Plugins Path"
           schema:
@@ -490,7 +495,8 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: clientplugins
+# Include{persistenceAdvanced}
+        - variable: clientplugins
           label: "clientplugins Storage"
           description: "Client Plugins Path"
           schema:
@@ -534,7 +540,9 @@ questions:
                       description: "Memory"
 # Include{persistenceAdvanced}
 
+
 # Include{persistenceList}
+
 
   - variable: ingress
     label: ""
@@ -556,7 +564,6 @@ questions:
 # Include{ingressTraefik}
 
 # Include{ingressExpert}
-
 
 # Include{ingressList}
 
@@ -631,3 +638,4 @@ questions:
 # Include{advanced}
 
 # Include{addons}
+

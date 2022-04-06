@@ -69,7 +69,6 @@ questions:
                       description: "(Legacy) OnDelete: ignore .spec.template changes"
 # Include{controllerExpert}
 
-
   - variable: env
     group: "Container Configuration"
     label: "Image Environment"
@@ -77,6 +76,7 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: telegraf_hostname
           label: "telegraf_hostname"
           description: "Container Variable This will set the hostname variable in telegraf.conf"
@@ -103,7 +103,7 @@ questions:
             default: ""
         - variable: influx_skip_db_creation
           label: "influx_skip_db_creation"
-          description: "Container Variable This will set the skip_database_creation variable in telegraf.conf"
+          description: "Container Variable This will set the skipdatabasecreation variable in telegraf.conf"
           schema:
             type: string
             default: "false"
@@ -205,3 +205,4 @@ questions:
 # Include{advanced}
 
 # Include{addons}
+

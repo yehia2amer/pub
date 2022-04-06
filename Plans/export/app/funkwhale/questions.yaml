@@ -83,15 +83,16 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: FUNKWHALE_HOSTNAME
           label: "FUNKWHALE_HOSTNAME"
-          description: "Container Variable FUNKWHALE_HOSTNAME"
+          description: "Container Variable FUNKWHALEHOSTNAME"
           schema:
             type: string
             default: "yourdomain.funkwhale"
         - variable: NESTED_PROXY
           label: "NESTED_PROXY"
-          description: "Container Variable NESTED_PROXY  Set to '1' when container is behind a reverse proxy."
+          description: "Container Variable NESTEDPROXY  Set to '1' when container is behind a reverse proxy."
           schema:
             type: string
             default: "0"
@@ -190,6 +191,7 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: musicpath
           label: "musicpath Storage"
           description: "Container Path music"
@@ -232,7 +234,8 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: data
+# Include{persistenceAdvanced}
+        - variable: data
           label: "data Storage"
           description: "Container Path data"
           schema:
@@ -276,7 +279,9 @@ questions:
                       description: "Memory"
 # Include{persistenceAdvanced}
 
+
 # Include{persistenceList}
+
 
   - variable: ingress
     label: ""
@@ -298,7 +303,6 @@ questions:
 # Include{ingressTraefik}
 
 # Include{ingressExpert}
-
 
 # Include{ingressList}
 
@@ -373,3 +377,4 @@ questions:
 # Include{advanced}
 
 # Include{addons}
+

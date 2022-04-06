@@ -83,15 +83,16 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: MYSQL_ROOT_PASSWORD
           label: "MYSQL_ROOT_PASSWORD"
-          description: "Container Variable MYSQL_ROOT_PASSWORD"
+          description: "Container Variable MYSQLROOTPASSWORD"
           schema:
             type: string
             default: "my-secret-pw"
         - variable: MYSQL_DATABASE
           label: "MYSQL_DATABASE"
-          description: "Container Variable MYSQL_DATABASE"
+          description: "Container Variable MYSQLDATABASE"
           schema:
             type: string
             default: "onlyoffice"
@@ -190,6 +191,7 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: onlyofficemysqlconfigonlyoffice-cnfcreatedbeforemysqlcontainerisstarted
           label: "onlyofficemysqlconfigonlyoffice-cnfcreatedbeforemysqlcontainerisstarted Storage"
           description: "Container Path etcmysqlconf.d"
@@ -232,7 +234,8 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: mountedfolderformysqldatabase
+# Include{persistenceAdvanced}
+        - variable: mountedfolderformysqldatabase
           label: "mountedfolderformysqldatabase Storage"
           description: "Container Path varlibmysql"
           schema:
@@ -274,7 +277,8 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: onlyofficeentrypointformysqldatabasesetupsetup-sqlcreatedbeforemysqlcontainerisstarted
+# Include{persistenceAdvanced}
+        - variable: onlyofficeentrypointformysqldatabasesetupsetup-sqlcreatedbeforemysqlcontainerisstarted
           label: "onlyofficeentrypointformysqldatabasesetupsetup-sqlcreatedbeforemysqlcontainerisstarted Storage"
           description: "Container Path docker-entrypoint-initdb.d"
           schema:
@@ -316,7 +320,8 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: mountedmysqllogs
+# Include{persistenceAdvanced}
+        - variable: mountedmysqllogs
           label: "mountedmysqllogs Storage"
           description: "Container Path varlogmysql"
           schema:
@@ -360,7 +365,9 @@ questions:
                       description: "Memory"
 # Include{persistenceAdvanced}
 
+
 # Include{persistenceList}
+
 
   - variable: ingress
     label: ""
@@ -382,7 +389,6 @@ questions:
 # Include{ingressTraefik}
 
 # Include{ingressExpert}
-
 
 # Include{ingressList}
 
@@ -457,3 +463,4 @@ questions:
 # Include{advanced}
 
 # Include{addons}
+

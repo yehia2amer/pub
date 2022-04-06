@@ -83,6 +83,7 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: MENU_VERSION
           label: "MENU_VERSION"
           description: "Specify a specific version of boot files you want to use from NETBOOT.XYZ (unset pulls latest)"
@@ -91,7 +92,7 @@ questions:
             default: ""
         - variable: PORT_RANGE
           label: "PORT_RANGE"
-          description: "Specify the port range tftp will use for data transfers (see Wikipedia)(httpsen.wikipedia.orgwikiTrivial_File_Transfer_Protocol#Details)"
+          description: "Specify the port range tftp will use for data transfers (see Wikipedia)(httpsen.wikipedia.orgwikiTrivialFileTransferProtocol#Details)"
           schema:
             type: string
             default: ""
@@ -322,6 +323,7 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: config
           label: "config Storage"
           description: "Storage for boot menu files and web application config"
@@ -364,7 +366,8 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: pathassets
+# Include{persistenceAdvanced}
+        - variable: pathassets
           label: "pathassets Storage"
           description: "Storage for NETBOOT.XYZ bootable assets (live CDs and other files)"
           schema:
@@ -408,7 +411,9 @@ questions:
                       description: "Memory"
 # Include{persistenceAdvanced}
 
+
 # Include{persistenceList}
+
 
   - variable: ingress
     label: ""
@@ -430,7 +435,6 @@ questions:
 # Include{ingressTraefik}
 
 # Include{ingressExpert}
-
 
 # Include{ingressList}
 
@@ -505,3 +509,4 @@ questions:
 # Include{advanced}
 
 # Include{addons}
+

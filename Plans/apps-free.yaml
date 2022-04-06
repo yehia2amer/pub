@@ -7006,7 +7006,7 @@ avorion:
   Tag: avorion
   WebUI: ''
   caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/Avorion.xml
-backblaze_personal_backup:
+backblaze-personal-backup:
   CategoryList:
   - Backup
   - Cloud
@@ -7153,13 +7153,13 @@ backblaze_personal_backup:
   ExtraParams: --init
   Icon: https://www.backblaze.com/pics/cloud-blaze.png
   Keywords:
-  - backblaze_personal_backup
+  - backblaze-personal-backup
   - Backup
   - Cloud
   - Network-Other
   - Productivity
   - Tools-Utilities
-  Name: backblaze_personal_backup
+  Name: backblaze-personal-backup
   Overview: "This Docker container runs the Backblaze personal backup client via WINE,\
     \ so that you can back up your files with the separation and portability capabilities\
     \ of Docker on Linux.\r\n"
@@ -7546,7 +7546,7 @@ barotrauma:
   Tag: barotrauma
   WebUI: ''
   caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/Barotrauma.xml
-beep_music_converter:
+beep-music-converter:
   CategoryList:
   - Tools-Utilities
   Config:
@@ -7615,9 +7615,9 @@ beep_music_converter:
         value: '98'
   Icon: https://raw.githubusercontent.com/SpaceinvaderOne/Beep-Music-Converter/main/beep_icon.png
   Keywords:
-  - beep_music_converter
+  - beep-music-converter
   - Tools-Utilities
-  Name: beep_music_converter
+  Name: beep-music-converter
   Overview: "Unraid container to convert mp3 or wav to PC beep speaker music\r\n"
   PostArgs: ''
   Privileged: 'true'
@@ -7629,104 +7629,6 @@ beep_music_converter:
   - https://hub.docker.com/repository/docker/spaceinvaderone/wav2beep
   Tag: latest
   WebUI: https://amzn.to/3kwWvlN
-bibliogram:
-  CategoryList:
-  - Network-Web
-  Config:
-    Device: {}
-    Label: {}
-    Path:
-      config-js:
-        Default: /mnt/user/appdata/bibliogram/config.js
-        Description: 'Container Path: /app/config.js'
-        Display: always
-        Mask: 'false'
-        Mode: rw
-        Name: Config.js
-        Required: 'false'
-        Target: /app/config.js
-        Type: Path
-        value: /mnt/user/appdata/bibliogram/config.js
-    Port:
-      main:
-        Default: '10407'
-        Description: Port
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: Port
-        Required: 'false'
-        Target: 10407
-        Type: Port
-        value: 10407
-    Variable: {}
-  ExtraParams: --restart=always
-  Icon: https://raw.githubusercontent.com/Joshndroid/joshndroid-unraid-docker-templates/main/icons/bibliogram.png
-  Keywords:
-  - bibliogram
-  - Network-Web
-  Name: bibliogram
-  Overview: "Bibliogram is an alternative front-end for Instagram\r\n"
-  PostArgs: ''
-  Privileged: 'false'
-  Registry: https://hub.docker.com/r/cloudrac3r/bibliogram/
-  Repository: cloudrac3r/bibliogram
-  Requires: ''
-  Sources:
-  - https://sr.ht/~cadence/bibliogram/
-  - https://hub.docker.com/r/cloudrac3r/bibliogram/
-  Tag: latest
-  WebUI: http://[IP]:[PORT:10407]/
-bigben-discord:
-  CategoryList:
-  - Other
-  Config:
-    Device: {}
-    Label: {}
-    Path: {}
-    Port: {}
-    Variable:
-      bot_token:
-        Default: ''
-        Description: Get an Bot-Token from the Discord Developer Portal and Enter
-          it here
-        Display: always
-        Mask: 'true'
-        Mode: ''
-        Name: BOT_TOKEN
-        Required: 'true'
-        Target: BOT_TOKEN
-        Type: Variable
-        value: ' '
-      database_url:
-        Default: postgres://username:password@localhost:5432/database
-        Description: Change the URL to your PostgreSQL host, to get it working
-        Display: always
-        Mask: 'false'
-        Mode: ''
-        Name: DATABASE_URL
-        Required: 'true'
-        Target: DATABASE_URL
-        Type: Variable
-        value: postgres://username:password@localhost:5432/database
-  Icon: https://raw.githubusercontent.com/HOF-Clan/big-ben-clock-discord-bot-docker/master/Assets/logo.png
-  Keywords:
-  - bigben-discord
-  - Other
-  Name: bigben-discord
-  Overview: "Big Ben Clock Discord-Bot is an self-hosted (useless) Discord Bot, that\
-    \ joins every Hour in an pre selected Voice channel, and plays the Big Ben Bells,\
-    \ to inform you, that you have entered an new Hour.\r\n"
-  PostArgs: ''
-  Privileged: 'false'
-  Registry: https://hub.docker.com/r/kippenhof/bigbendiscord/
-  Repository: kippenhof/bigbendiscord
-  Requires: ''
-  Sources:
-  - https://github.com/Kippenhof/docker-templates
-  - https://hub.docker.com/r/kippenhof/bigbendiscord/
-  Tag: latest
-  WebUI: ''
 bitcoin-node:
   CategoryList:
   - Crypto
@@ -8022,337 +7924,6 @@ bitcoinwalletgui:
   - https://hub.docker.com/r/ulisses1478/bitcoinwallet-gui
   Tag: latest
   WebUI: http://[IP]:[PORT:6901]
-bitnami-openldap:
-  CategoryList:
-  - HomeAutomation
-  - Network-Management
-  - Tools-Utilities
-  Config:
-    Device: {}
-    Label: {}
-    Path:
-      appdata:
-        Default: /mnt/user/appdata/bitnami-openldap
-        Description: 'Container Path: /bitnami/openldap/data'
-        Display: advanced
-        Mask: 'false'
-        Mode: rw
-        Name: Appdata
-        Required: 'true'
-        Target: /bitnami/openldap/
-        Type: Path
-        value: ''
-      certsfolderpath:
-        Default: ''
-        Description: Path to your certificates e.g. if you're using SWAG it would
-          be /mnt/user/appdata/swag/keys
-        Display: always
-        Mask: 'false'
-        Mode: rw
-        Name: Certs folder path
-        Required: 'false'
-        Target: /opt/bitnami/openldap/certs/
-        Type: Path
-        value: ''
-      ldap_custom_ldif_dir:
-        Default: /mnt/user/appdata/bitnami-openldap/ldifs
-        Description: Location of a directory that contains LDIF files that should
-          be used to bootstrap the database. Only files ending in .ldif will be used.
-          Default LDAP tree based on the LDAP_USERS, LDAP_PASSWORDS, LDAP_USER_DC
-          and LDAP_GROUP will be skipped when LDAP_CUSTOM_LDIF_DIR is used. When using
-          this will override the usage of LDAP_ROOT,LDAP_USERS, LDAP_PASSWORDS, LDAP_USER_DC
-          and LDAP_GROUP.
-        Display: advanced
-        Mask: 'false'
-        Mode: rw
-        Name: LDAP_CUSTOM_LDIF_DIR
-        Required: 'false'
-        Target: /ldifs
-        Type: Path
-        value: ''
-      ldap_custom_schema_file:
-        Default: /mnt/user/appdata/bitnami-openldap/custom.ldif
-        Description: Location of a custom internal schema file that could not be added
-          as custom ldif file (i.e. containing some structuralObjectClass). Default
-          is /mnt/user/appdata/bitnami-openldap/custom.ldif
-        Display: advanced
-        Mask: 'false'
-        Mode: rw
-        Name: LDAP_CUSTOM_SCHEMA_FILE
-        Required: 'false'
-        Target: /schema/custom.ldif
-        Type: Path
-        value: ''
-    Port:
-      http_port:
-        Default: '1389'
-        Description: 'Container Port: 1389'
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: HTTP_PORT
-        Required: 'true'
-        Target: 1389
-        Type: Port
-        value: 1389
-      https_port:
-        Default: '1636'
-        Description: 'Container Port: 1636'
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: HTTPS_PORT
-        Required: 'true'
-        Target: 1636
-        Type: Port
-        value: 1636
-    Variable:
-      ldap_admin_password:
-        Default: adminpassword
-        Description: 'Container Variable: LDAP_ADMIN_PASSWORD'
-        Display: always
-        Mask: 'false'
-        Mode: ''
-        Name: LDAP_ADMIN_PASSWORD
-        Required: 'true'
-        Target: LDAP_ADMIN_PASSWORD
-        Type: Variable
-        value: ''
-      ldap_admin_username:
-        Default: admin
-        Description: 'Container Variable: LDAP_ADMIN_USERNAME'
-        Display: always
-        Mask: 'false'
-        Mode: ''
-        Name: LDAP_ADMIN_USERNAME
-        Required: 'true'
-        Target: LDAP_ADMIN_USERNAME
-        Type: Variable
-        value: ''
-      ldap_allow_anon_binding:
-        Default: 'yes'
-        Description: 'Allow anonymous bindings to the LDAP server. Default: yes'
-        Display: advanced
-        Mask: 'false'
-        Mode: ''
-        Name: LDAP_ALLOW_ANON_BINDING
-        Required: 'false'
-        Target: LDAP_ALLOW_ANON_BINDING
-        Type: Variable
-        value: ''
-      ldap_config_admin_enabled:
-        Default: 'no'
-        Description: 'Whether to create a configuration admin user. Default: no.'
-        Display: advanced
-        Mask: 'false'
-        Mode: ''
-        Name: LDAP_CONFIG_ADMIN_ENABLED
-        Required: 'false'
-        Target: LDAP_CONFIG_ADMIN_ENABLED
-        Type: Variable
-        value: ''
-      ldap_config_admin_password:
-        Default: configpassword
-        Description: 'LDAP configuration admin password. Default: configpassword.'
-        Display: advanced
-        Mask: 'false'
-        Mode: ''
-        Name: LDAP_CONFIG_ADMIN_PASSWORD
-        Required: 'false'
-        Target: LDAP_CONFIG_ADMIN_PASSWORD
-        Type: Variable
-        value: ''
-      ldap_config_admin_username:
-        Default: admin
-        Description: 'LDAP configuration admin user. This is separate from LDAP_ADMIN_USERNAME.
-          Default: admin.'
-        Display: advanced
-        Mask: 'false'
-        Mode: ''
-        Name: LDAP_CONFIG_ADMIN_USERNAME
-        Required: 'false'
-        Target: LDAP_CONFIG_ADMIN_USERNAME
-        Type: Variable
-        value: ''
-      ldap_enable_tls:
-        Default: 'no'
-        Description: Whether to enable TLS for traffic or not. Defaults to no
-        Display: always
-        Mask: 'false'
-        Mode: ''
-        Name: LDAP_ENABLE_TLS
-        Required: 'false'
-        Target: LDAP_ENABLE_TLS
-        Type: Variable
-        value: ''
-      ldap_extra_schemas:
-        Default: cosine, inetorgperson, nis
-        Description: 'Extra schemas to add, among OpenLDAP''s distributed schemas.
-          Default: cosine, inetorgperson, nis'
-        Display: advanced
-        Mask: 'false'
-        Mode: ''
-        Name: LDAP_EXTRA_SCHEMAS
-        Required: 'false'
-        Target: LDAP_EXTRA_SCHEMAS
-        Type: Variable
-        value: ''
-      ldap_group:
-        Default: readers
-        Description: 'Group used to group created users. Default: readers'
-        Display: always
-        Mask: 'false'
-        Mode: ''
-        Name: LDAP_GROUP
-        Required: 'true'
-        Target: LDAP_GROUP
-        Type: Variable
-        value: ''
-      ldap_passwords:
-        Default: password1,password2
-        Description: 'Comma separated list of passwords to use for LDAP users. Default:
-          password1,password2'
-        Display: always
-        Mask: 'false'
-        Mode: ''
-        Name: LDAP_PASSWORDS
-        Required: 'true'
-        Target: LDAP_PASSWORDS
-        Type: Variable
-        value: ''
-      ldap_root:
-        Default: dc=example,dc=org
-        Description: 'LDAP database root node of the LDAP tree. Default: dc=example,dc=org'
-        Display: always
-        Mask: 'false'
-        Mode: ''
-        Name: LDAP_ROOT
-        Required: 'true'
-        Target: LDAP_ROOT
-        Type: Variable
-        value: ''
-      ldap_skip_default_tree:
-        Default: 'no'
-        Description: 'Whether to skip creating the default LDAP tree based on LDAP_USERS,
-          LDAP_PASSWORDS, LDAP_USER_DC and LDAP_GROUP. Default: no'
-        Display: advanced
-        Mask: 'false'
-        Mode: ''
-        Name: LDAP_SKIP_DEFAULT_TREE
-        Required: 'false'
-        Target: LDAP_SKIP_DEFAULT_TREE
-        Type: Variable
-        value: ''
-      ldap_tls_ca_file:
-        Default: /opt/bitnami/openldap/certs/openldapCA.crt
-        Description: File containing the CA of the certificate. No defaults. (container's
-          relative path, e.g. /opt/bitnami/openldap/certs/openldapCA.crt)
-        Display: always
-        Mask: 'false'
-        Mode: ''
-        Name: LDAP_TLS_CA_FILE
-        Required: 'false'
-        Target: LDAP_TLS_CA_FILE
-        Type: Variable
-        value: ''
-      ldap_tls_cert_file:
-        Default: /opt/bitnami/openldap/certs/openldap.crt
-        Description: File containing the certificate file for the TSL traffic. No
-          defaults. (container's relative path, e.g. /opt/bitnami/openldap/certs/openldap.crt)
-        Display: always
-        Mask: 'false'
-        Mode: ''
-        Name: LDAP_TLS_CERT_FILE
-        Required: 'false'
-        Target: LDAP_TLS_CERT_FILE
-        Type: Variable
-        value: ''
-      ldap_tls_dh_params_file:
-        Default: ''
-        Description: File containing the DH parameters. No defaults.
-        Display: always
-        Mask: 'false'
-        Mode: ''
-        Name: LDAP_TLS_DH_PARAMS_FILE
-        Required: 'false'
-        Target: LDAP_TLS_DH_PARAMS_FILE
-        Type: Variable
-        value: ''
-      ldap_tls_key_file:
-        Default: /opt/bitnami/openldap/certs/openldap.key
-        Description: File containing the key for certificate. No defaults. (container's
-          relative path, e.g. /opt/bitnami/openldap/certs/openldap.key)
-        Display: always
-        Mask: 'false'
-        Mode: ''
-        Name: LDAP_TLS_KEY_FILE
-        Required: 'false'
-        Target: LDAP_TLS_KEY_FILE
-        Type: Variable
-        value: ''
-      ldap_ulimit_nofiles:
-        Default: '1024'
-        Description: 'Maximum number of open file descriptors. Default: 1024.'
-        Display: advanced
-        Mask: 'false'
-        Mode: ''
-        Name: LDAP_ULIMIT_NOFILES
-        Required: 'false'
-        Target: LDAP_ULIMIT_NOFILES
-        Type: Variable
-        value: ''
-      ldap_user_dc:
-        Default: users
-        Description: 'DC for the users'' organizational unit. Default: users'
-        Display: always
-        Mask: 'false'
-        Mode: ''
-        Name: LDAP_USER_DC
-        Required: 'true'
-        Target: LDAP_USER_DC
-        Type: Variable
-        value: ''
-      ldap_users:
-        Default: user01,user02
-        Description: 'Comma separated list of LDAP users to create in the default
-          LDAP tree. Default: user01,user02'
-        Display: always
-        Mask: 'false'
-        Mode: ''
-        Name: LDAP_USERS
-        Required: 'true'
-        Target: LDAP_USERS
-        Type: Variable
-        value: ''
-      logdebug:
-        Default: 'false'
-        Description: Turn on debug info in logs
-        Display: advanced
-        Mask: 'false'
-        Mode: ''
-        Name: Log debug
-        Required: 'false'
-        Target: BITNAMI_DEBUG
-        Type: Variable
-        value: ''
-  Icon: https://secure.gravatar.com/avatar/b6d982581a58a6a39d12c5d5355dde23.jpg
-  Keywords:
-  - bitnami-openldap
-  - HomeAutomation
-  - Network-Management
-  - Tools-Utilities
-  Name: bitnami-openldap
-  Overview: Docker image to run Bitnami OpenLDAP. Check project site for configuration
-    info
-  Privileged: 'false'
-  Registry: https://hub.docker.com/r/bitnami/openldap/
-  RepoShort: Selfhosters
-  Repository: bitnami/openldap
-  Requires: ''
-  Sources:
-  - https://github.com/bitnami/bitnami-docker-openldap
-  - https://hub.docker.com/r/bitnami/openldap/
-  Tag: latest
 blender:
   CategoryList:
   - Other
@@ -8681,89 +8252,6 @@ bluelinky:
   - https://hub.docker.com/repository/docker/wranglatang/bluelinky
   Tag: latest
   WebUI: ''
-blynk-server:
-  CategoryList:
-  - HomeAutomation
-  - Tools-Utilities
-  Config:
-    Device: {}
-    Label: {}
-    Path:
-      config:
-        Default: ''
-        Description: 'Container Path: /config'
-        Display: always
-        Mask: 'false'
-        Mode: rw
-        Name: Host Path 2
-        Required: 'false'
-        Target: /config
-        Type: Path
-        value: /mnt/user/appdata/blynk-server/config
-      data:
-        Default: ''
-        Description: 'Container Path: /data'
-        Display: always
-        Mask: 'false'
-        Mode: rw
-        Name: Host Path 1
-        Required: 'false'
-        Target: /data
-        Type: Path
-        value: /mnt/user/appdata/blynk-server/data
-    Port:
-      hostport1:
-        Default: ''
-        Description: 'Container Port: 8080'
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: Host Port 1
-        Required: 'false'
-        Target: 8080
-        Type: Port
-        value: 8080
-      hostport3:
-        Default: ''
-        Description: 'Container Port: 8440'
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: Host Port 3
-        Required: 'false'
-        Target: 8440
-        Type: Port
-        value: 8440
-      main:
-        Default: ''
-        Description: 'Container Port: 9443'
-        Display: always
-        Mask: 'false'
-        Mode: HTTP
-        Name: Host Port 2
-        Required: 'false'
-        Target: 9443
-        Type: Port
-        value: 9443
-    Variable: {}
-  Icon: https://lh3.googleusercontent.com/rTRWfl713otPTrmafsJ3OLb7I30XS1iBSZyP1WXYXKAlwkTMhihdMw_gDv5ogjEtQ1P6
-  Keywords:
-  - blynk-server
-  - HomeAutomation
-  - Tools-Utilities
-  Name: blynk-server
-  Overview: 'Template to setup a Blynk server on Unraid
-
-    '
-  PostArgs: ''
-  Privileged: 'false'
-  Registry: https://hub.docker.com/r/mpherg/blynk-server/
-  Repository: mpherg/blynk-server
-  Requires: ''
-  Sources:
-  - https://hub.docker.com/r/mpherg/blynk-server/
-  Tag: latest
-  WebUI: https://[IP]:[PORT:9443]/admin
 borg-mysql-backup:
   CategoryList:
   - Backup
@@ -9314,7 +8802,7 @@ btdex:
   - https://hub.docker.com/r/furritos/docker-btdex:latest
   Tag: latest
   WebUI: http://[IP]:[PORT:8080]/vnc.html?autoconnect=true
-bw_plex:
+bw-plex:
   CategoryList:
   - Tools-Utilities
   - MediaServer-Other
@@ -9370,10 +8858,10 @@ bw_plex:
         value: ''
   Icon: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/bw_plex.png
   Keywords:
-  - bw_plex
+  - bw-plex
   - Tools-Utilities
   - MediaServer-Other
-  Name: bw_plex
+  Name: bw-plex
   Overview: 'binge watching for plex
 
     '
@@ -18322,7 +17810,7 @@ dependency-track-frontend:
   - https://registry.hub.docker.com/r/dependencytrack/frontend
   Tag: latest
   WebUI: http://[IP]:[PORT:8080]
-derbynet_server:
+derbynet-server:
   CAComment: This template is set up to use a custom network. You may have to adjust
     the network or IP address etc to match your system
   CategoryList:
@@ -18449,11 +17937,11 @@ derbynet_server:
         value: '555'
   Icon: https://raw.githubusercontent.com/mitchellriley/unraid-docker/master/mitchellriley/images/derbynet_server.png
   Keywords:
-  - derbynet_server
+  - derbynet-server
   - Cloud
   - Tools-Utilities
   - Other
-  Name: derbynet_server
+  Name: derbynet-server
   Overview: DerbyNet is the new standard in race management software for Pinewood
     Derby events. It's free, and it's open source. With DerbyNet, multiple browsers
     connect to a web server running on your laptop or in the cloud.
@@ -32341,7 +31829,7 @@ hiccup:
   - https://hub.docker.com/r/bleckbeard/hiccup
   Tag: latest
   WebUI: http://[IP]:[PORT:80]
-hideme_privoxy:
+hideme-privoxy:
   CAComment: This template is set up to use a custom network. You may have to adjust
     the network or IP address etc to match your system
   CategoryList:
@@ -32423,10 +31911,10 @@ hideme_privoxy:
     --dns=8.8.8.8
   Icon: https://raw.githubusercontent.com/alturismo/wg_hideme_privoxy/main/hide-me-icon.png
   Keywords:
-  - hideme_privoxy
+  - hideme-privoxy
   - Network-Proxy
   - Network-VPN
-  Name: hideme_privoxy
+  Name: hideme-privoxy
   Overview: "wireguard vpn client with privoxy and microsocks in docker\r\n"
   PostArgs: ''
   Privileged: 'true'
@@ -35621,47 +35109,6 @@ javinizer:
   - https://hub.docker.com/r/angelics/unraid-docker-javinizer
   Tag: latest
   WebUI: http://[IP]:[PORT:8600]
-jbreed-nessus:
-  CategoryList:
-  - Tools-Utilities
-  - Security
-  Config:
-    Device: {}
-    Label: {}
-    Path:
-      config:
-        Mode: rw
-        Name: config
-        Target: /config
-        value: /mnt/cache/appdata/config
-    Port:
-      main:
-        ContainerPort: '8834'
-        HostPort: '8834'
-        Mode: tcp
-        Name: tcp-port-0
-        Protocol: tcp
-        Target: 8834
-        value: 8834
-    Variable: {}
-  Icon: https://raw.githubusercontent.com/jbreed/docker-templates/master/nessus/nessus.png
-  Keywords:
-  - jbreed-nessus
-  - Tools-Utilities
-  - Security
-  Name: jbreed-nessus
-  Overview: Nessus is a network vulnerability scanner. This is a paid product, but
-    for small home deployments one can request a free license during the setup GUI
-    steps for internal/small networks.
-  Privileged: 'false'
-  Registry: https://registry.hub.docker.com/r/jbreed/nessus/
-  Repository: jbreed/nessus
-  Requires: ''
-  Sources:
-  - https://tenable.com/
-  - https://registry.hub.docker.com/r/jbreed/nessus/
-  Tag: latest
-  WebUI: https://[IP]:[PORT:8834]/
 jcr:
   CategoryList:
   - Productivity
@@ -43899,7 +43346,7 @@ maildev:
   - https://hub.docker.com/r/maildev/maildev
   Tag: latest
   WebUI: http://[IP]:[PORT:80]
-mailgun_logger:
+mailgun-logger:
   CategoryList:
   - Backup
   - Cloud
@@ -43968,12 +43415,12 @@ mailgun_logger:
         value: ''
   Icon: https://raw.githubusercontent.com/jackjoe/mailgun_logger/master/public/logo.png
   Keywords:
-  - mailgun_logger
+  - mailgun-logger
   - Backup
   - Cloud
   - Tools-Utilities
   - Other
-  Name: mailgun_logger
+  Name: mailgun-logger
   Overview: MailgunLogger is a simple admin tool that uses the Mailgun API to retrieves
     events on a regular basis from Mailgun - who only provide a limited time of event
     storage - and stores them inside a MySQL database.
@@ -45789,7 +45236,7 @@ meshcentral:
     Device: {}
     Label: {}
     Path:
-      optmeshcentralmeshcentral-data:
+      optmeshcentraldata:
         Default: ''
         Description: 'Container Path: /opt/meshcentral/meshcentral-data'
         Display: always
@@ -45800,7 +45247,7 @@ meshcentral:
         Target: /opt/meshcentral/meshcentral-data
         Type: Path
         value: /mnt/user/appdata/meshcentral/meshcentral-data
-      optmeshcentralmeshcentral-files:
+      optmeshcentralfiles:
         Default: ''
         Description: 'Container Variable: /opt/meshcentral/meshcentral-files '
         Display: always
@@ -49207,6 +48654,47 @@ neotokyo:
   Tag: neotokyo
   WebUI: ''
   caTemplateURL: https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/NEOTOKYO.xml
+nessus:
+  CategoryList:
+  - Tools-Utilities
+  - Security
+  Config:
+    Device: {}
+    Label: {}
+    Path:
+      config:
+        Mode: rw
+        Name: config
+        Target: /config
+        value: /mnt/cache/appdata/config
+    Port:
+      main:
+        ContainerPort: '8834'
+        HostPort: '8834'
+        Mode: tcp
+        Name: tcp-port-0
+        Protocol: tcp
+        Target: 8834
+        value: 8834
+    Variable: {}
+  Icon: https://raw.githubusercontent.com/jbreed/docker-templates/master/nessus/nessus.png
+  Keywords:
+  - nessus
+  - Tools-Utilities
+  - Security
+  Name: nessus
+  Overview: Nessus is a network vulnerability scanner. This is a paid product, but
+    for small home deployments one can request a free license during the setup GUI
+    steps for internal/small networks.
+  Privileged: 'false'
+  Registry: https://registry.hub.docker.com/r/jbreed/nessus/
+  Repository: jbreed/nessus
+  Requires: ''
+  Sources:
+  - https://tenable.com/
+  - https://registry.hub.docker.com/r/jbreed/nessus/
+  Tag: latest
+  WebUI: https://[IP]:[PORT:8834]/
 netbootxyz:
   Branch:
   - Tag: latest
@@ -58505,6 +57993,248 @@ plex-discord-bot:
   - https://hub.docker.com/r/ninjaneer/plex-discord-bot/
   Tag: latest
   WebUI: ''
+plex-discord-role-management:
+  CategoryList:
+  - Tools-Utilities
+  - Other
+  - MediaApp-Other
+  - Network-Messenger
+  Config:
+    Device: {}
+    Label: {}
+    Path:
+      config:
+        Default: ''
+        Description: 'Container Path: /app/config'
+        Display: always
+        Mask: 'false'
+        Mode: rw
+        Name: Appdata
+        Required: 'true'
+        Target: /app/config
+        Type: Path
+        value: ''
+    Port:
+      main:
+        Default: '3000'
+        Description: Webhook Port - Make sure the override port matches this one
+        Display: always
+        Mask: 'false'
+        Mode: tcp
+        Name: Webhook Port
+        Required: 'true'
+        Target: 3000
+        Type: Port
+        value: 3000
+    Variable:
+      debug_mode:
+        Default: '0'
+        Description: 'Container Variable: DEBUG_MODE'
+        Display: advanced-hide
+        Mask: 'false'
+        Mode: ''
+        Name: DEBUG_MODE
+        Required: 'false'
+        Target: DEBUG_MODE
+        Type: Variable
+        value: ''
+      defaultdiscordbotprefix:
+        Default: '!'
+        Description: Default Discord Bot Prefix
+        Display: always
+        Mask: 'false'
+        Mode: ''
+        Name: Default Discord Bot Prefix
+        Required: 'true'
+        Target: defaultPrefix
+        Type: Variable
+        value: ''
+      discordbottoken:
+        Default: ''
+        Description: Discord Bot Token
+        Display: always
+        Mask: 'false'
+        Mode: ''
+        Name: Discord Bot Token
+        Required: 'true'
+        Target: botToken
+        Type: Variable
+        value: ''
+      hostmachineip:
+        Default: ''
+        Description: Host Machine IP - The IP Address of this machine, needed to send
+          to Tautulli for webhook creation
+        Display: always
+        Mask: 'false'
+        Mode: ''
+        Name: Host Machine IP
+        Required: 'true'
+        Target: node_hook_ip
+        Type: Variable
+        value: ''
+      secondsonarrapikey:
+        Default: ''
+        Description: Optional Second Sonarr - API Key
+        Display: advanced-hide
+        Mask: 'false'
+        Mode: ''
+        Name: Second Sonarr API Key
+        Required: 'false'
+        Target: sonarr_api_key_2
+        Type: Variable
+        value: ''
+      secondsonarripaddress:
+        Default: ''
+        Description: Optional Second Sonarr - IP Address (Probably your Host IP)
+        Display: advanced-hide
+        Mask: 'false'
+        Mode: ''
+        Name: Second Sonarr IP Address
+        Required: 'false'
+        Target: sonarr_ip_2
+        Type: Variable
+        value: ''
+      secondsonarrport:
+        Default: ''
+        Description: Optional Second Sonarr - Port Number
+        Display: advanced-hide
+        Mask: 'false'
+        Mode: ''
+        Name: Second Sonarr Port
+        Required: 'false'
+        Target: sonarr_port_2
+        Type: Variable
+        value: ''
+      sonarrapikey:
+        Default: ''
+        Description: Sonarr API Key
+        Display: always
+        Mask: 'false'
+        Mode: ''
+        Name: Sonarr API Key
+        Required: 'false'
+        Target: sonarr_api_key
+        Type: Variable
+        value: ''
+      sonarripaddress:
+        Default: ''
+        Description: Sonarr IP Address (Probably your Host IP)
+        Display: always
+        Mask: 'false'
+        Mode: ''
+        Name: Sonarr IP Address
+        Required: 'false'
+        Target: sonarr_ip
+        Type: Variable
+        value: ''
+      sonarrport:
+        Default: ''
+        Description: Sonarr Port Number
+        Display: always
+        Mask: 'false'
+        Mode: ''
+        Name: Sonarr Port
+        Required: 'false'
+        Target: sonarr_port
+        Type: Variable
+        value: ''
+      tautulliapikey:
+        Default: ''
+        Description: Tautulli API Key
+        Display: always
+        Mask: 'false'
+        Mode: ''
+        Name: Tautulli API Key
+        Required: 'false'
+        Target: tautulli_api_key
+        Type: Variable
+        value: ''
+      tautulliipaddress:
+        Default: ''
+        Description: Tautulli IP Address (Probably your Host IP)
+        Display: always
+        Mask: 'false'
+        Mode: ''
+        Name: Tautulli IP Address
+        Required: 'false'
+        Target: tautulli_ip
+        Type: Variable
+        value: ''
+      tautulliport:
+        Default: ''
+        Description: Tautulli Port Number
+        Display: always
+        Mask: 'false'
+        Mode: ''
+        Name: Tautulli Port
+        Required: 'false'
+        Target: tautulli_port
+        Type: Variable
+        value: ''
+      thirdsonarrapikey:
+        Default: ''
+        Description: Optional Third Sonarr - API Key
+        Display: advanced-hide
+        Mask: 'false'
+        Mode: ''
+        Name: Third Sonarr API Key
+        Required: 'false'
+        Target: sonarr_api_key_3
+        Type: Variable
+        value: ''
+      thirdsonarripaddress:
+        Default: ''
+        Description: Optional Third Sonarr - IP Address (Probably your Host IP)
+        Display: advanced-hide
+        Mask: 'false'
+        Mode: ''
+        Name: Third Sonarr IP Address
+        Required: 'false'
+        Target: sonarr_ip_3
+        Type: Variable
+        value: ''
+      thirdsonarrport:
+        Default: ''
+        Description: Optional Third Sonarr - Port Number
+        Display: advanced-hide
+        Mask: 'false'
+        Mode: ''
+        Name: Third Sonarr Port
+        Required: 'false'
+        Target: sonarr_port_3
+        Type: Variable
+        value: ''
+      webhookportoverride:
+        Default: '3000'
+        Description: Enter the same value as you enter for the port below.
+        Display: always
+        Mask: 'false'
+        Mode: ''
+        Name: Webhook Port Override
+        Required: 'true'
+        Target: node_hook_port
+        Type: Variable
+        value: ''
+  Icon: https://user-images.githubusercontent.com/22354631/72322110-80e74300-3673-11ea-8c38-32b85c1c36b4.png
+  Keywords:
+  - plex-discord-role-management
+  - Tools-Utilities
+  - Other
+  - MediaApp-Other
+  - Network-Messenger
+  Name: plex-discord-role-management
+  Overview: "A discord bot that synchronizes with Tautulli and Sonarr to deliver tailored\
+    \ notifications.\r\n"
+  PostArgs: ''
+  Privileged: 'false'
+  Registry: https://hub.docker.com/r/cyaondanet/plex_discord_role_management
+  Repository: cyaondanet/plex_discord_role_management
+  Requires: ''
+  Sources:
+  - https://github.com/CyaOnDaNet/plex_discord_role_management
+  - https://hub.docker.com/r/cyaondanet/plex_discord_role_management
+  Tag: latest
+  WebUI: ''
 plex-meta-manager:
   CategoryList:
   - Other
@@ -58783,248 +58513,6 @@ plex-web:
   - https://hub.docker.com/r/tronyx/plex-web/
   Tag: latest
   WebUI: http://[IP]:[PORT:5000]/
-plex_discord_role_management:
-  CategoryList:
-  - Tools-Utilities
-  - Other
-  - MediaApp-Other
-  - Network-Messenger
-  Config:
-    Device: {}
-    Label: {}
-    Path:
-      config:
-        Default: ''
-        Description: 'Container Path: /app/config'
-        Display: always
-        Mask: 'false'
-        Mode: rw
-        Name: Appdata
-        Required: 'true'
-        Target: /app/config
-        Type: Path
-        value: ''
-    Port:
-      main:
-        Default: '3000'
-        Description: Webhook Port - Make sure the override port matches this one
-        Display: always
-        Mask: 'false'
-        Mode: tcp
-        Name: Webhook Port
-        Required: 'true'
-        Target: 3000
-        Type: Port
-        value: 3000
-    Variable:
-      debug_mode:
-        Default: '0'
-        Description: 'Container Variable: DEBUG_MODE'
-        Display: advanced-hide
-        Mask: 'false'
-        Mode: ''
-        Name: DEBUG_MODE
-        Required: 'false'
-        Target: DEBUG_MODE
-        Type: Variable
-        value: ''
-      defaultdiscordbotprefix:
-        Default: '!'
-        Description: Default Discord Bot Prefix
-        Display: always
-        Mask: 'false'
-        Mode: ''
-        Name: Default Discord Bot Prefix
-        Required: 'true'
-        Target: defaultPrefix
-        Type: Variable
-        value: ''
-      discordbottoken:
-        Default: ''
-        Description: Discord Bot Token
-        Display: always
-        Mask: 'false'
-        Mode: ''
-        Name: Discord Bot Token
-        Required: 'true'
-        Target: botToken
-        Type: Variable
-        value: ''
-      hostmachineip:
-        Default: ''
-        Description: Host Machine IP - The IP Address of this machine, needed to send
-          to Tautulli for webhook creation
-        Display: always
-        Mask: 'false'
-        Mode: ''
-        Name: Host Machine IP
-        Required: 'true'
-        Target: node_hook_ip
-        Type: Variable
-        value: ''
-      secondsonarrapikey:
-        Default: ''
-        Description: Optional Second Sonarr - API Key
-        Display: advanced-hide
-        Mask: 'false'
-        Mode: ''
-        Name: Second Sonarr API Key
-        Required: 'false'
-        Target: sonarr_api_key_2
-        Type: Variable
-        value: ''
-      secondsonarripaddress:
-        Default: ''
-        Description: Optional Second Sonarr - IP Address (Probably your Host IP)
-        Display: advanced-hide
-        Mask: 'false'
-        Mode: ''
-        Name: Second Sonarr IP Address
-        Required: 'false'
-        Target: sonarr_ip_2
-        Type: Variable
-        value: ''
-      secondsonarrport:
-        Default: ''
-        Description: Optional Second Sonarr - Port Number
-        Display: advanced-hide
-        Mask: 'false'
-        Mode: ''
-        Name: Second Sonarr Port
-        Required: 'false'
-        Target: sonarr_port_2
-        Type: Variable
-        value: ''
-      sonarrapikey:
-        Default: ''
-        Description: Sonarr API Key
-        Display: always
-        Mask: 'false'
-        Mode: ''
-        Name: Sonarr API Key
-        Required: 'false'
-        Target: sonarr_api_key
-        Type: Variable
-        value: ''
-      sonarripaddress:
-        Default: ''
-        Description: Sonarr IP Address (Probably your Host IP)
-        Display: always
-        Mask: 'false'
-        Mode: ''
-        Name: Sonarr IP Address
-        Required: 'false'
-        Target: sonarr_ip
-        Type: Variable
-        value: ''
-      sonarrport:
-        Default: ''
-        Description: Sonarr Port Number
-        Display: always
-        Mask: 'false'
-        Mode: ''
-        Name: Sonarr Port
-        Required: 'false'
-        Target: sonarr_port
-        Type: Variable
-        value: ''
-      tautulliapikey:
-        Default: ''
-        Description: Tautulli API Key
-        Display: always
-        Mask: 'false'
-        Mode: ''
-        Name: Tautulli API Key
-        Required: 'false'
-        Target: tautulli_api_key
-        Type: Variable
-        value: ''
-      tautulliipaddress:
-        Default: ''
-        Description: Tautulli IP Address (Probably your Host IP)
-        Display: always
-        Mask: 'false'
-        Mode: ''
-        Name: Tautulli IP Address
-        Required: 'false'
-        Target: tautulli_ip
-        Type: Variable
-        value: ''
-      tautulliport:
-        Default: ''
-        Description: Tautulli Port Number
-        Display: always
-        Mask: 'false'
-        Mode: ''
-        Name: Tautulli Port
-        Required: 'false'
-        Target: tautulli_port
-        Type: Variable
-        value: ''
-      thirdsonarrapikey:
-        Default: ''
-        Description: Optional Third Sonarr - API Key
-        Display: advanced-hide
-        Mask: 'false'
-        Mode: ''
-        Name: Third Sonarr API Key
-        Required: 'false'
-        Target: sonarr_api_key_3
-        Type: Variable
-        value: ''
-      thirdsonarripaddress:
-        Default: ''
-        Description: Optional Third Sonarr - IP Address (Probably your Host IP)
-        Display: advanced-hide
-        Mask: 'false'
-        Mode: ''
-        Name: Third Sonarr IP Address
-        Required: 'false'
-        Target: sonarr_ip_3
-        Type: Variable
-        value: ''
-      thirdsonarrport:
-        Default: ''
-        Description: Optional Third Sonarr - Port Number
-        Display: advanced-hide
-        Mask: 'false'
-        Mode: ''
-        Name: Third Sonarr Port
-        Required: 'false'
-        Target: sonarr_port_3
-        Type: Variable
-        value: ''
-      webhookportoverride:
-        Default: '3000'
-        Description: Enter the same value as you enter for the port below.
-        Display: always
-        Mask: 'false'
-        Mode: ''
-        Name: Webhook Port Override
-        Required: 'true'
-        Target: node_hook_port
-        Type: Variable
-        value: ''
-  Icon: https://user-images.githubusercontent.com/22354631/72322110-80e74300-3673-11ea-8c38-32b85c1c36b4.png
-  Keywords:
-  - plex_discord_role_management
-  - Tools-Utilities
-  - Other
-  - MediaApp-Other
-  - Network-Messenger
-  Name: plex_discord_role_management
-  Overview: "A discord bot that synchronizes with Tautulli and Sonarr to deliver tailored\
-    \ notifications.\r\n"
-  PostArgs: ''
-  Privileged: 'false'
-  Registry: https://hub.docker.com/r/cyaondanet/plex_discord_role_management
-  Repository: cyaondanet/plex_discord_role_management
-  Requires: ''
-  Sources:
-  - https://github.com/CyaOnDaNet/plex_discord_role_management
-  - https://hub.docker.com/r/cyaondanet/plex_discord_role_management
-  Tag: latest
-  WebUI: ''
 plexanisync:
   CategoryList:
   - MediaApp-Video
@@ -61707,7 +61195,7 @@ psitransfer:
   - https://hub.docker.com/r/psitrax/psitransfer/
   Tag: latest
   WebUI: http://[IP]:[PORT:3000]/
-pt_helper:
+pt-helper:
   CategoryList:
   - Tools-Utilities
   Config:
@@ -61740,9 +61228,9 @@ pt_helper:
     Variable: {}
   Icon: https://vip2.loli.io/2022/02/17/E2u4AY9TrGCfwNo.png
   Keywords:
-  - pt_helper
+  - pt-helper
   - Tools-Utilities
-  Name: pt_helper
+  Name: pt-helper
   Overview: A tool that can automatically download free seeds and delete them after
     the free time expires.
   PostArgs: ''
@@ -62658,7 +62146,7 @@ pyload-ng:
   - https://github.com/linuxserver/docker-pyload-ng#readme
   Tag: latest
   WebUI: http://[IP]:[PORT:8000]
-qbit_manage:
+qbit-manage:
   CategoryList:
   - Tools-Utilities
   Config:
@@ -62884,9 +62372,9 @@ qbit_manage:
         value: '100'
   Icon: https://github.com/StuffAnThings/qbit_manage/blob/master/qbm_logo.png?raw=true
   Keywords:
-  - qbit_manage
+  - qbit-manage
   - Tools-Utilities
-  Name: qbit_manage
+  Name: qbit-manage
   Overview: "This is a program used to manage your qBittorrent instance such as:\r\
     \n"
   PostArgs: ''
@@ -77519,7 +77007,7 @@ telethon-downloader:
   - https://docs.telethon.dev/
   - https://hub.docker.com/r/jsavargas/telethon_downloader
   Tag: latest
-temp_mail:
+temp-mail:
   CategoryList:
   - Network-Messenger
   Config:
@@ -77553,9 +77041,9 @@ temp_mail:
         value: Europe/Paris
   Icon: https://raw.githubusercontent.com/Olprog59/unraid-templates/main/tmpmail/logo.png
   Keywords:
-  - temp_mail
+  - temp-mail
   - Network-Messenger
-  Name: temp_mail
+  Name: temp-mail
   Overview: "tmpmail is a command line utility written in POSIX sh that allows you\
     \ to create a temporary email address and receive emails to the temporary email\
     \ address. It uses 1secmail's API to receive emails.\r\n"
@@ -82421,7 +81909,7 @@ vlmcsd-kms-server:
   - https://hub.docker.com/r/mikolatero/vlmcsd/
   Tag: latest
   WebUI: ''
-vm_custom_icons:
+vm-custom-icons:
   CategoryList:
   - Tools-Utilities
   Config:
@@ -82566,9 +82054,9 @@ vm_custom_icons:
         value: 'yes'
   Icon: https://raw.githubusercontent.com/SpaceinvaderOne/unraid_vm_icons/master/dockericon.png
   Keywords:
-  - vm_custom_icons
+  - vm-custom-icons
   - Tools-Utilities
-  Name: vm_custom_icons
+  Name: vm-custom-icons
   Overview: "Downloads and installs additional custom VM icons to the Unraid VM Manager.\r\
     \n"
   PostArgs: ''
@@ -83858,7 +83346,7 @@ win11-in-react:
   - https://hub.docker.com/r/blueedge/win11react/
   Tag: latest
   WebUI: http://[IP]:[PORT:3000]
-windows11_uupdump:
+windows11-uupdump:
   CategoryList:
   - Tools-Utilities
   Config:
@@ -83926,9 +83414,9 @@ windows11_uupdump:
         value: Window11_Insiders.iso
   Icon: https://raw.githubusercontent.com/SpaceinvaderOne/unraid_vm_icons/master/icons/Windows/Windows_11.png
   Keywords:
-  - windows11_uupdump
+  - windows11-uupdump
   - Tools-Utilities
-  Name: windows11_uupdump
+  Name: windows11-uupdump
   Overview: "A container to download the Window 11 insiders build and put it in the\
     \ iso share to install as a vm\r\n"
   PostArgs: ''

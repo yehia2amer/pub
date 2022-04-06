@@ -83,9 +83,10 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: SYNCSERVER_PUBLIC_URL
           label: "SYNCSERVER_PUBLIC_URL"
-          description: "Replace &lt;URL&gt; in SYNCSERVER_PUBLIC_URL with your URL (For which the SSL certificate was also issued) "
+          description: "Replace &lt;URL&gt; in SYNCSERVERPUBLICURL with your URL (For which the SSL certificate was also issued) "
           schema:
             type: string
             default: ""
@@ -103,7 +104,7 @@ questions:
             default: "sqlite:////data/syncserver.db"
         - variable: SYNCSERVER_ALLOW_NEW_USERS
           label: "SYNCSERVER_ALLOW_NEW_USERS"
-          description: "Container Variable SYNCSERVER_ALLOW_NEW_USERS"
+          description: "Container Variable SYNCSERVERALLOWNEWUSERS"
           schema:
             type: string
             default: ""
@@ -115,13 +116,13 @@ questions:
             default: "5000"
         - variable: SYNCSERVER_BATCH_UPLOAD_ENABLED
           label: "SYNCSERVER_BATCH_UPLOAD_ENABLED"
-          description: "Container Variable SYNCSERVER_BATCH_UPLOAD_ENABLED"
+          description: "Container Variable SYNCSERVERBATCHUPLOADENABLED"
           schema:
             type: string
             default: "true"
         - variable: SYNCSERVER_FORCE_WSGI_ENVIRON
           label: "SYNCSERVER_FORCE_WSGI_ENVIRON"
-          description: "Container Variable SYNCSERVER_FORCE_WSGI_ENVIRON"
+          description: "Container Variable SYNCSERVERFORCEWSGIENVIRON"
           schema:
             type: string
             default: "false"
@@ -220,6 +221,7 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: data
           label: "data Storage"
           description: "Location where durable sqllite db is stored for sync data."
@@ -264,7 +266,9 @@ questions:
                       description: "Memory"
 # Include{persistenceAdvanced}
 
+
 # Include{persistenceList}
+
 
   - variable: ingress
     label: ""
@@ -286,7 +290,6 @@ questions:
 # Include{ingressTraefik}
 
 # Include{ingressExpert}
-
 
 # Include{ingressList}
 
@@ -361,3 +364,4 @@ questions:
 # Include{advanced}
 
 # Include{addons}
+

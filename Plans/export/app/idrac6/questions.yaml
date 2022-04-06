@@ -83,9 +83,10 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: IDRAC_HOST
           label: "IDRAC_HOST"
-          description: "Host for your iDRAC instance. Make sure your instance is reachable with httpsIDRAC_HOST;. See IDRAC_PORT for using custom ports. HTTPS is always used."
+          description: "Host for your iDRAC instance. Make sure your instance is reachable with httpsIDRACHOST;. See IDRACPORT for using custom ports. HTTPS is always used."
           schema:
             type: string
             default: ""
@@ -220,6 +221,7 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: virtualmedia
           label: "virtualmedia Storage"
           description: "Can be used to allow virtual media to be mounted."
@@ -262,7 +264,8 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: libraries
+# Include{persistenceAdvanced}
+        - variable: libraries
           label: "libraries Storage"
           description: "Libraries downloaded from your iDRAC instance will be stored here. Add a volume to cache those files for a faster container startup."
           schema:
@@ -304,7 +307,8 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: screenshots
+# Include{persistenceAdvanced}
+        - variable: screenshots
           label: "screenshots Storage"
           description: "Container Path screenshots"
           schema:
@@ -348,7 +352,9 @@ questions:
                       description: "Memory"
 # Include{persistenceAdvanced}
 
+
 # Include{persistenceList}
+
 
   - variable: ingress
     label: ""
@@ -370,7 +376,6 @@ questions:
 # Include{ingressTraefik}
 
 # Include{ingressExpert}
-
 
 # Include{ingressList}
 
@@ -445,3 +450,4 @@ questions:
 # Include{advanced}
 
 # Include{addons}
+

@@ -83,15 +83,16 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: NVIDIA_VISIBLE_DEVICES
           label: "NVIDIA_VISIBLE_DEVICES"
-          description: "NVIDIA_VISIBLE_DEVICES"
+          description: "NVIDIAVISIBLEDEVICES"
           schema:
             type: string
             default: ""
         - variable: NVIDIA_DRIVER_CAPABILITIES
           label: "NVIDIA_DRIVER_CAPABILITIES"
-          description: "NVIDIA_DRIVER_CAPABILITIES"
+          description: "NVIDIADRIVERCAPABILITIES"
           schema:
             type: string
             default: ""
@@ -190,6 +191,7 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: config
           label: "config Storage"
           description: "Container Path config"
@@ -232,7 +234,8 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: hostpathforstorage
+# Include{persistenceAdvanced}
+        - variable: hostpathforstorage
           label: "hostpathforstorage Storage"
           description: "Container Path storage"
           schema:
@@ -276,7 +279,9 @@ questions:
                       description: "Memory"
 # Include{persistenceAdvanced}
 
+
 # Include{persistenceList}
+
 
   - variable: ingress
     label: ""
@@ -298,7 +303,6 @@ questions:
 # Include{ingressTraefik}
 
 # Include{ingressExpert}
-
 
 # Include{ingressList}
 
@@ -373,3 +377,4 @@ questions:
 # Include{advanced}
 
 # Include{addons}
+

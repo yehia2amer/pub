@@ -69,7 +69,6 @@ questions:
                       description: "(Legacy) OnDelete: ignore .spec.template changes"
 # Include{controllerExpert}
 
-
   - variable: env
     group: "Container Configuration"
     label: "Image Environment"
@@ -77,6 +76,7 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: DELETE_TS
           label: "DELETE_TS"
           description: "Remove the original .ts recording file. 0 = Yes, 1 = No, 2 = Move to backup directory"
@@ -148,6 +148,7 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: config
           label: "config Storage"
           description: "Configuration folder config"
@@ -190,7 +191,8 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: watchfolder
+# Include{persistenceAdvanced}
+        - variable: watchfolder
           label: "watchfolder Storage"
           description: "This location contains .ts files that need converting watch"
           schema:
@@ -232,9 +234,10 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: backupfolder
+# Include{persistenceAdvanced}
+        - variable: backupfolder
           label: "backupfolder Storage"
-          description: "Optional, only used if DELETE_TS is set to 2  backup"
+          description: "Optional, only used if DELETETS is set to 2  backup"
           schema:
             additional_attrs: true
             type: dict
@@ -275,6 +278,7 @@ questions:
                     - value: "Memory"
                       description: "Memory"
 # Include{persistenceAdvanced}
+
 
 # Include{persistenceList}
 
@@ -352,3 +356,4 @@ questions:
 # Include{advanced}
 
 # Include{addons}
+

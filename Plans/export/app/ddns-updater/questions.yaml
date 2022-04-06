@@ -83,6 +83,7 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: PUBLICIP_FETCHERS
           label: "PUBLICIP_FETCHERS"
           description: "Comma separated fetcher types to obtain the public IP address from http and dns"
@@ -91,25 +92,25 @@ questions:
             default: "all"
         - variable: PUBLICIP_HTTP_PROVIDERS
           label: "PUBLICIP_HTTP_PROVIDERS"
-          description: "PUBLICIP_HTTP_PROVIDERS gets your public IPv4 or IPv6 address. It can be one or more of the following (defaultall), opendns, ifconfig, ipinfo, ddns, google.You can also specify an HTTPS URL such as httpsipinfo.ioip"
+          description: "PUBLICIPHTTPPROVIDERS gets your public IPv4 or IPv6 address. It can be one or more of the following (defaultall), opendns, ifconfig, ipinfo, ddns, google.You can also specify an HTTPS URL such as httpsipinfo.ioip"
           schema:
             type: string
             default: "all"
         - variable: PUBLICIPV4_HTTP_PROVIDERS
           label: "PUBLICIPV4_HTTP_PROVIDERS"
-          description: "PUBLICIPV4_HTTP_PROVIDERS gets your public IPv4 address only. It can be one or more of the following (defaultall), ipify, noip.You can also specify an HTTPS URL such as httpsipinfo.ioip"
+          description: "PUBLICIPV4HTTPPROVIDERS gets your public IPv4 address only. It can be one or more of the following (defaultall), ipify, noip.You can also specify an HTTPS URL such as httpsipinfo.ioip"
           schema:
             type: string
             default: "all"
         - variable: PUBLICIPV6_HTTP_PROVIDERS
           label: "PUBLICIPV6_HTTP_PROVIDERS"
-          description: "PUBLICIPV6_HTTP_PROVIDERS gets your public IPv6 address only. It can be one or more of the following (defaultall), ipify, noip.You can also specify an HTTPS URL such as httpsipinfo.ioip"
+          description: "PUBLICIPV6HTTPPROVIDERS gets your public IPv6 address only. It can be one or more of the following (defaultall), ipify, noip.You can also specify an HTTPS URL such as httpsipinfo.ioip"
           schema:
             type: string
             default: "all"
         - variable: PUBLICIP_DNS_PROVIDERS
           label: "PUBLICIP_DNS_PROVIDERS"
-          description: "PUBLICIP_DNS_PROVIDERS gets your public IPv4 address only or IPv6 address only or one of them. It can be one or more of the following (defaultall), google, cloudflare,"
+          description: "PUBLICIPDNSPROVIDERS gets your public IPv4 address only or IPv6 address only or one of them. It can be one or more of the following (defaultall), google, cloudflare,"
           schema:
             type: string
             default: "all"
@@ -151,7 +152,7 @@ questions:
             default: "info"
         - variable: LOG_CALLER
           label: "LOG_CALLER"
-          description: "Container Variable LOG_CALLER"
+          description: "Container Variable LOGCALLER"
           schema:
             type: string
             default: "hidden"
@@ -268,6 +269,7 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: data
           label: "data Storage"
           description: "Container Path updaterdata"
@@ -312,7 +314,9 @@ questions:
                       description: "Memory"
 # Include{persistenceAdvanced}
 
+
 # Include{persistenceList}
+
 
   - variable: ingress
     label: ""
@@ -334,7 +338,6 @@ questions:
 # Include{ingressTraefik}
 
 # Include{ingressExpert}
-
 
 # Include{ingressList}
 
@@ -409,3 +412,4 @@ questions:
 # Include{advanced}
 
 # Include{addons}
+

@@ -69,7 +69,6 @@ questions:
                       description: "(Legacy) OnDelete: ignore .spec.template changes"
 # Include{controllerExpert}
 
-
   - variable: env
     group: "Container Configuration"
     label: "Image Environment"
@@ -77,6 +76,7 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: SERVER_URL
           label: "SERVER_URL"
           description: "URL to TeamCity server"
@@ -124,9 +124,10 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: config
           label: "config Storage"
-          description: "Container Path datateamcity_agentconf"
+          description: "Container Path datateamcityagentconf"
           schema:
             additional_attrs: true
             type: dict
@@ -166,7 +167,8 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: work
+# Include{persistenceAdvanced}
+        - variable: work
           label: "work Storage"
           description: "Container Path optbuildagentwork"
           schema:
@@ -208,7 +210,8 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: temp
+# Include{persistenceAdvanced}
+        - variable: temp
           label: "temp Storage"
           description: "Container Path optbuildagenttemp"
           schema:
@@ -250,7 +253,8 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: dockervolumes
+# Include{persistenceAdvanced}
+        - variable: dockervolumes
           label: "dockervolumes Storage"
           description: "Container Path varlibdocker"
           schema:
@@ -293,6 +297,7 @@ questions:
                     - value: "Memory"
                       description: "Memory"
 # Include{persistenceAdvanced}
+
 
 # Include{persistenceList}
 
@@ -370,3 +375,4 @@ questions:
 # Include{advanced}
 
 # Include{addons}
+

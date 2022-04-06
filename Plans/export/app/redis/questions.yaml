@@ -83,15 +83,16 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: ALLOW_EMPTY_PASSWORD
           label: "ALLOW_EMPTY_PASSWORD"
-          description: "ALLOW_EMPTY_PASSWORD"
+          description: "ALLOWEMPTYPASSWORD"
           schema:
             type: string
             default: "yes"
         - variable: REDIS_PASSWORD
           label: "REDIS_PASSWORD"
-          description: "If you want password put ALLOW_EMPTY_PASSWORD to no, then put the password here."
+          description: "If you want password put ALLOWEMPTYPASSWORD to no, then put the password here."
           schema:
             type: string
             default: "941378"
@@ -185,6 +186,7 @@ questions:
 
 # Include{persistenceList}
 
+
   - variable: ingress
     label: ""
     group: "Ingress"
@@ -205,7 +207,6 @@ questions:
 # Include{ingressTraefik}
 
 # Include{ingressExpert}
-
 
 # Include{ingressList}
 
@@ -280,3 +281,4 @@ questions:
 # Include{advanced}
 
 # Include{addons}
+

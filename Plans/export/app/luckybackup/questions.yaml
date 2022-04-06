@@ -83,6 +83,7 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: ROOT
           label: "ROOT"
           description: "This is only needed if you want to create backups from your boot drive or other directories that require root privileges (please don't forget to change the Shares Host path to  otherwise you can't see it in mnt in the container)."
@@ -208,6 +209,7 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: datadir
           label: "datadir Storage"
           description: "Config path"
@@ -250,7 +252,8 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: shares
+# Include{persistenceAdvanced}
+        - variable: shares
           label: "shares Storage"
           description: "Container Path mntuser"
           schema:
@@ -294,7 +297,9 @@ questions:
                       description: "Memory"
 # Include{persistenceAdvanced}
 
+
 # Include{persistenceList}
+
 
   - variable: ingress
     label: ""
@@ -316,7 +321,6 @@ questions:
 # Include{ingressTraefik}
 
 # Include{ingressExpert}
-
 
 # Include{ingressList}
 
@@ -391,3 +395,4 @@ questions:
 # Include{advanced}
 
 # Include{addons}
+

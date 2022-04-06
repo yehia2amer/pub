@@ -69,7 +69,6 @@ questions:
                       description: "(Legacy) OnDelete: ignore .spec.template changes"
 # Include{controllerExpert}
 
-
   - variable: env
     group: "Container Configuration"
     label: "Image Environment"
@@ -77,6 +76,7 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: mastercontname
           label: "mastercontname"
           description: "Container Variable mastercontname"
@@ -91,43 +91,43 @@ questions:
             default: ""
         - variable: ping_ip
           label: "ping_ip"
-          description: "Container Variable ping_ip"
+          description: "Container Variable pingip"
           schema:
             type: string
             default: ""
         - variable: ping_ip_alt
           label: "ping_ip_alt"
-          description: "Container Variable ping_ip_alt"
+          description: "Container Variable pingipalt"
           schema:
             type: string
             default: ""
         - variable: ping_count
           label: "ping_count"
-          description: "Container Variable ping_count"
+          description: "Container Variable pingcount"
           schema:
             type: string
             default: ""
         - variable: sleep_secs
           label: "sleep_secs"
-          description: "Container Variable sleep_secs"
+          description: "Container Variable sleepsecs"
           schema:
             type: string
             default: ""
         - variable: run_startup
           label: "run_startup"
-          description: "Container Variable run_startup (yesno)"
+          description: "Container Variable runstartup (yesno)"
           schema:
             type: string
             default: ""
         - variable: discord_notifications
           label: "discord_notifications"
-          description: "Container Variable discord_notifications (yesno)"
+          description: "Container Variable discordnotifications (yesno)"
           schema:
             type: string
             default: ""
         - variable: discord_url
           label: "discord_url"
-          description: "Container Variable discord_url"
+          description: "Container Variable discordurl"
           schema:
             type: string
             default: ""
@@ -166,6 +166,7 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: dockersock
           label: "dockersock Storage"
           description: "Container Path varrundocker.sock"
@@ -208,7 +209,8 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: dockertemplatelocation
+# Include{persistenceAdvanced}
+        - variable: dockertemplatelocation
           label: "dockertemplatelocation Storage"
           description: "Container Path configdocker-templates"
           schema:
@@ -250,7 +252,8 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: config
+# Include{persistenceAdvanced}
+        - variable: config
           label: "config Storage"
           description: "Container Path configrebuild-dndc"
           schema:
@@ -293,6 +296,7 @@ questions:
                     - value: "Memory"
                       description: "Memory"
 # Include{persistenceAdvanced}
+
 
 # Include{persistenceList}
 
@@ -370,3 +374,4 @@ questions:
 # Include{advanced}
 
 # Include{addons}
+

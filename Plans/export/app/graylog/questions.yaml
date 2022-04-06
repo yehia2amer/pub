@@ -83,6 +83,7 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: GRAYLOG_PASSWORD_SECRET
           label: "GRAYLOG_PASSWORD_SECRET"
           description: "CHANGE ME (must be at least 16 characters)!"
@@ -91,19 +92,19 @@ questions:
             default: ""
         - variable: GRAYLOG_ROOT_PASSWORD_SHA2
           label: "GRAYLOG_ROOT_PASSWORD_SHA2"
-          description: "Container Variable GRAYLOG_ROOT_PASSWORD_SHA2"
+          description: "Container Variable GRAYLOGROOTPASSWORDSHA2"
           schema:
             type: string
             default: ""
         - variable: GRAYLOG_HTTP_EXTERNAL_URI
           label: "GRAYLOG_HTTP_EXTERNAL_URI"
-          description: "Container Variable GRAYLOG_HTTP_EXTERNAL_URI"
+          description: "Container Variable GRAYLOGHTTPEXTERNALURI"
           schema:
             type: string
             default: ""
         - variable: GRAYLOG_MONGODB_URI
           label: "GRAYLOG_MONGODB_URI"
-          description: "Container Variable GRAYLOG_MONGODB_URI"
+          description: "Container Variable GRAYLOGMONGODBURI"
           schema:
             type: string
             default: ""
@@ -448,6 +449,7 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: appdata
           label: "appdata Storage"
           description: "Container Path usrsharegraylogdatajournal"
@@ -492,7 +494,9 @@ questions:
                       description: "Memory"
 # Include{persistenceAdvanced}
 
+
 # Include{persistenceList}
+
 
   - variable: ingress
     label: ""
@@ -514,7 +518,6 @@ questions:
 # Include{ingressTraefik}
 
 # Include{ingressExpert}
-
 
 # Include{ingressList}
 
@@ -589,3 +592,4 @@ questions:
 # Include{advanced}
 
 # Include{addons}
+

@@ -83,6 +83,7 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: USERNAME
           label: "USERNAME"
           description: "Your Steam password goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION You have to disable Steam Guard)."
@@ -109,7 +110,7 @@ questions:
             default: "+server.maxplayers 10"
         - variable: GAME_ID
           label: "GAME_ID"
-          description: "The GAME_ID that the container downloads at startup. If you want to use a beta version of the game enter this '258550 -beta staging' or '258550 -beta prerelease' (without quotes)."
+          description: "The GAMEID that the container downloads at startup. If you want to use a beta version of the game enter this '258550 -beta staging' or '258550 -beta prerelease' (without quotes)."
           schema:
             type: string
             default: "258550"
@@ -232,6 +233,7 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: steamcmd
           label: "steamcmd Storage"
           description: "Container Path serverdatasteamcmd"
@@ -274,7 +276,8 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: serverfiles
+# Include{persistenceAdvanced}
+        - variable: serverfiles
           label: "serverfiles Storage"
           description: "Container Path serverdataserverfiles"
           schema:
@@ -318,7 +321,9 @@ questions:
                       description: "Memory"
 # Include{persistenceAdvanced}
 
+
 # Include{persistenceList}
+
 
   - variable: ingress
     label: ""
@@ -340,7 +345,6 @@ questions:
 # Include{ingressTraefik}
 
 # Include{ingressExpert}
-
 
 # Include{ingressList}
 
@@ -415,3 +419,4 @@ questions:
 # Include{advanced}
 
 # Include{addons}
+

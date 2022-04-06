@@ -8,7 +8,7 @@ import textwrap
 import re
 
 invalid = '<>:"/\|?*$ ()'
-invalidtext = '<>:"/\|*$'
+invalidtext = '_<>:"/\|*$'
 blacklistedenvs = ["UID", "GID", "PUID", "PGID", "TZ"]
 puidcheck = ["UID", "GID", "PUID", "PGID"]
 puidflag = False
@@ -81,7 +81,10 @@ for n in afList:
     for char in invalid:
       tmp = tmp.replace(char, '')
     tmp = tmp.replace('.', '-')
+    tmp = tmp.replace('_', '-')
     tmp = tmp.replace('binhex-', '')
+    tmp = tmp.replace('jbreed-', '')
+    tmp = tmp.replace('bitnami-', '')
     tmp = tmp.encode("utf-8").decode("utf-8")
     if tmp in n.keys():
       tmp = tmp+"-duplicate-1"
@@ -287,6 +290,7 @@ for n in afList:
         store = value
         basename = os.path.basename(os.path.normpath(value["Target"]))
         name = name.lower()
+        name = re.sub(tmp+'-', '', name)
         for char in invalid:
           name = name.replace(char, '')
         
@@ -346,6 +350,7 @@ for n in afList:
         
         name = re.sub('udp[\d]-', '', name)
         name = re.sub('tcp[\d]-', '', name)
+        name = re.sub(tmp+'-', '', name)
         name = textwrap.shorten(name, 14, placeholder='')
         
         if "value" in value.keys() and value["value"]:
@@ -411,6 +416,7 @@ for n in afList:
         for char in invalid:
           name = name.replace(char, '')
         name = name.replace('.', '-')
+        name = re.sub(tmp+'-', '', name)
         portstore[name] = value
       n["Config"].pop("Port", "")
       n["Config"]["Port"] = portstore

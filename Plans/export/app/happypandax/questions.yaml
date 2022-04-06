@@ -83,15 +83,16 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: RUN_IN_BACKGROUND
           label: "RUN_IN_BACKGROUND"
-          description: "Container Variable RUN_IN_BACKGROUND"
+          description: "Container Variable RUNINBACKGROUND"
           schema:
             type: string
             default: "true"
         - variable: AUTOSTART_ON_BOOT
           label: "AUTOSTART_ON_BOOT"
-          description: "Container Variable AUTOSTART_ON_BOOT"
+          description: "Container Variable AUTOSTARTONBOOT"
           schema:
             type: string
             default: "always"
@@ -316,6 +317,7 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: data
           label: "data Storage"
           description: "Container Path data"
@@ -358,7 +360,8 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: contentpath
+# Include{persistenceAdvanced}
+        - variable: contentpath
           label: "contentpath Storage"
           description: "Container Path content"
           schema:
@@ -402,7 +405,9 @@ questions:
                       description: "Memory"
 # Include{persistenceAdvanced}
 
+
 # Include{persistenceList}
+
 
   - variable: ingress
     label: ""
@@ -424,7 +429,6 @@ questions:
 # Include{ingressTraefik}
 
 # Include{ingressExpert}
-
 
 # Include{ingressList}
 
@@ -499,3 +503,4 @@ questions:
 # Include{advanced}
 
 # Include{addons}
+

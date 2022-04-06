@@ -69,7 +69,6 @@ questions:
                       description: "(Legacy) OnDelete: ignore .spec.template changes"
 # Include{controllerExpert}
 
-
   - variable: env
     group: "Container Configuration"
     label: "Image Environment"
@@ -77,15 +76,16 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: SLACK_WEBHOOK
           label: "SLACK_WEBHOOK"
-          description: "Container Variable SLACK_WEBHOOK"
+          description: "Container Variable SLACKWEBHOOK"
           schema:
             type: string
             default: ""
         - variable: OOKLA_EULA_GDPR
           label: "OOKLA_EULA_GDPR"
-          description: "Container Variable OOKLA_EULA_GDPR"
+          description: "Container Variable OOKLAEULAGDPR"
           schema:
             type: string
             default: ""
@@ -118,6 +118,7 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: config
           label: "config Storage"
           description: "Container Path config"
@@ -161,6 +162,7 @@ questions:
                     - value: "Memory"
                       description: "Memory"
 # Include{persistenceAdvanced}
+
 
 # Include{persistenceList}
 
@@ -238,3 +240,4 @@ questions:
 # Include{advanced}
 
 # Include{addons}
+

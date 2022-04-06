@@ -69,7 +69,6 @@ questions:
                       description: "(Legacy) OnDelete: ignore .spec.template changes"
 # Include{controllerExpert}
 
-
   - variable: env
     group: "Container Configuration"
     label: "Image Environment"
@@ -77,15 +76,16 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: OCR_OUTPUT_MODE
           label: "OCR_OUTPUT_MODE"
-          description: "Controls the output directory layout &lt;br &gt; &lt;code&gt;MIRROR_TREE&lt;code&gt; - (Default) Mirror the directory structure of the input directory, i.e. for an input file &lt;code&gt;inputfoobar.pdf&lt;code&gt; create an output file &lt;code&gt;outputfoobar.pdf&lt;code&gt;. &lt;br &gt; &lt;code&gt;SINGLE_FOLDER&lt;code&gt; - Collect all output files in a single flat folder, i.e. for an input file &lt;code&gt;inputfoobar.pdf&lt;code&gt; create an output file &lt;code&gt;outputbar.pdf&lt;code&gt;."
+          description: "Controls the output directory layout &lt;br &gt; &lt;code&gt;MIRRORTREE&lt;code&gt; - (Default) Mirror the directory structure of the input directory, i.e. for an input file &lt;code&gt;inputfoobar.pdf&lt;code&gt; create an output file &lt;code&gt;outputfoobar.pdf&lt;code&gt;. &lt;br &gt; &lt;code&gt;SINGLEFOLDER&lt;code&gt; - Collect all output files in a single flat folder, i.e. for an input file &lt;code&gt;inputfoobar.pdf&lt;code&gt; create an output file &lt;code&gt;outputbar.pdf&lt;code&gt;."
           schema:
             type: string
             default: "MIRROR_TREE"
         - variable: OCR_ACTION_ON_SUCCESS
           label: "OCR_ACTION_ON_SUCCESS"
-          description: "Controls the action (if any) to perform after successful OCR processing &lt;br &gt; &lt;code&gt;NOTHING&lt;code&gt; - (Default) Do nothing. Input files remain in place where they were found. &lt;br &gt; &lt;code&gt;ARCHIVE_INPUT_FILES&lt;code&gt; - Archive input files by &lt;strong&gt;moving&lt;strong&gt; them &lt;em&gt;(overwriting existing files!)&lt;em&gt; to the &lt;code&gt;archive&lt;code&gt; Volume &lt;br &gt; &lt;code&gt;DELETE_INPUT_FILES&lt;code&gt; - Delete the input file after successful processing."
+          description: "Controls the action (if any) to perform after successful OCR processing &lt;br &gt; &lt;code&gt;NOTHING&lt;code&gt; - (Default) Do nothing. Input files remain in place where they were found. &lt;br &gt; &lt;code&gt;ARCHIVEINPUTFILES&lt;code&gt; - Archive input files by &lt;strong&gt;moving&lt;strong&gt; them &lt;em&gt;(overwriting existing files!)&lt;em&gt; to the &lt;code&gt;archive&lt;code&gt; Volume &lt;br &gt; &lt;code&gt;DELETEINPUTFILES&lt;code&gt; - Delete the input file after successful processing."
           schema:
             type: string
             default: "NOTHING"
@@ -154,6 +154,7 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: inputdirectory
           label: "inputdirectory Storage"
           description: "Input directory from which to process files for OCR. &lt;em&gt;Container path &lt;code&gt;input&lt;code&gt;&lt;em&gt;"
@@ -196,7 +197,8 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: outputdirectory
+# Include{persistenceAdvanced}
+        - variable: outputdirectory
           label: "outputdirectory Storage"
           description: "Output directory to which post-OCR files will be written. &lt;em&gt;Container path &lt;code&gt;output&lt;code&gt;&lt;em&gt;"
           schema:
@@ -238,7 +240,8 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: config
+# Include{persistenceAdvanced}
+        - variable: config
           label: "config Storage"
           description: "Configappdata directory. &lt;em&gt;Container path &lt;code&gt;config&lt;code&gt;&lt;em&gt;"
           schema:
@@ -281,6 +284,7 @@ questions:
                     - value: "Memory"
                       description: "Memory"
 # Include{persistenceAdvanced}
+
 
 # Include{persistenceList}
 
@@ -358,3 +362,4 @@ questions:
 # Include{advanced}
 
 # Include{addons}
+

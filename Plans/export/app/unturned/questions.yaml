@@ -83,9 +83,10 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: GAME_ID
           label: "GAME_ID"
-          description: "The GAME_ID that the container download at startup.(httpsdeveloper.valvesoftware.comwikiDedicated_Servers_List)"
+          description: "The GAMEID that the container download at startup.(httpsdeveloper.valvesoftware.comwikiDedicatedServersList)"
           schema:
             type: string
             default: "1110390"
@@ -133,7 +134,7 @@ questions:
             default: "https://ci.rocketmod.net/job/Rocket.Unturned/lastSuccessfulBuild/artifact/Rocket.Unturned/bin/Release/Rocket.zip"
         - variable: GAME_PORT
           label: "GAME_PORT"
-          description: "If you change this setting don't forget to delete the gameport above and create 3 entries for TCP and 3 entries for UDP (GAME_PORT +2 TCP &amp; GAME_PORT UDP +2)"
+          description: "If you change this setting don't forget to delete the gameport above and create 3 entries for TCP and 3 entries for UDP (GAMEPORT +2 TCP &amp; GAMEPORT UDP +2)"
           schema:
             type: string
             default: "27015"
@@ -232,6 +233,7 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: steamcmd
           label: "steamcmd Storage"
           description: "Container Path serverdatasteamcmd"
@@ -274,7 +276,8 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: serverfiles
+# Include{persistenceAdvanced}
+        - variable: serverfiles
           label: "serverfiles Storage"
           description: "Container Path serverdataserverfiles"
           schema:
@@ -318,7 +321,9 @@ questions:
                       description: "Memory"
 # Include{persistenceAdvanced}
 
+
 # Include{persistenceList}
+
 
   - variable: ingress
     label: ""
@@ -340,7 +345,6 @@ questions:
 # Include{ingressTraefik}
 
 # Include{ingressExpert}
-
 
 # Include{ingressList}
 
@@ -415,3 +419,4 @@ questions:
 # Include{advanced}
 
 # Include{addons}
+

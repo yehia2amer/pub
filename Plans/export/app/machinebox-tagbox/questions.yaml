@@ -83,6 +83,7 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: MB_ADDRESS
           label: "MB_ADDRESS"
           description: "(string) Defaults to 0.0.0.0 - Address where the service will listen. "
@@ -91,13 +92,13 @@ questions:
             default: "0.0.0.0"
         - variable: MB_TAGBOX_READ_ONLY
           label: "MB_TAGBOX_READ_ONLY"
-          description: " (bool) Defaults to false - If true Tagbox will be read only. Teaching and updating state will be disabled. Be sure to provide MB_TAGBOX_STATE_URL to set the initial state, otherwise the box will be useless. "
+          description: " (bool) Defaults to false - If true Tagbox will be read only. Teaching and updating state will be disabled. Be sure to provide MBTAGBOXSTATEURL to set the initial state, otherwise the box will be useless. "
           schema:
             type: string
             default: "false"
         - variable: MB_TAGBOX_ONLY_CUSTOM_TAGS
           label: "MB_TAGBOX_ONLY_CUSTOM_TAGS"
-          description: "Container Variable MB_TAGBOX_ONLY_CUSTOM_TAGS"
+          description: "Container Variable MBTAGBOXONLYCUSTOMTAGS"
           schema:
             type: string
             default: "false"
@@ -109,7 +110,7 @@ questions:
             default: "60"
         - variable: MB_KEY
           label: "MB_KEY"
-          description: "Container Variable MB_KEYGet one here httpsmachinebox.iologin"
+          description: "Container Variable MBKEYGet one here httpsmachinebox.iologin"
           schema:
             type: string
             default: ""
@@ -127,7 +128,7 @@ questions:
             default: ""
         - variable: MB_BASICAUTH_PASS
           label: "MB_BASICAUTH_PASS"
-          description: "Container Variable MB_BASICAUTH_PASS"
+          description: "Container Variable MBBASICAUTHPASS"
           schema:
             type: string
             default: ""
@@ -139,7 +140,7 @@ questions:
             default: ""
         - variable: MB_TAGBOX_STATE_POLL_SECONDS
           label: "MB_TAGBOX_STATE_POLL_SECONDS"
-          description: "(integer) Default to 0 (No polling). If this variable is set, Tagbox would poll the MB_TAGBOX_STATE_URL for changes on the file, based on the ETag or Last-Modified http headers. If the file changes Tagbox will download the new file and update the state of the teaching. This variable is useful for updating multiple running instances of Tagbox. "
+          description: "(integer) Default to 0 (No polling). If this variable is set, Tagbox would poll the MBTAGBOXSTATEURL for changes on the file, based on the ETag or Last-Modified http headers. If the file changes Tagbox will download the new file and update the state of the teaching. This variable is useful for updating multiple running instances of Tagbox. "
           schema:
             type: string
             default: ""
@@ -239,6 +240,7 @@ questions:
 
 # Include{persistenceList}
 
+
   - variable: ingress
     label: ""
     group: "Ingress"
@@ -259,7 +261,6 @@ questions:
 # Include{ingressTraefik}
 
 # Include{ingressExpert}
-
 
 # Include{ingressList}
 
@@ -334,3 +335,4 @@ questions:
 # Include{advanced}
 
 # Include{addons}
+

@@ -83,15 +83,16 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: LISTEN_PORT
           label: "LISTEN_PORT"
-          description: "Container Variable LISTEN_PORT"
+          description: "Container Variable LISTENPORT"
           schema:
             type: string
             default: "4443"
         - variable: DNS_SERVERS
           label: "DNS_SERVERS"
-          description: "Container Variable DNS_SERVERS"
+          description: "Container Variable DNSSERVERS"
           schema:
             type: string
             default: "8.8.8.8,37.235.1.174,8.8.4.4,37.235.1.177"
@@ -133,25 +134,25 @@ questions:
             default: "9999"
         - variable: TUNNEL_MODE
           label: "TUNNEL_MODE"
-          description: "Container Variable TUNNEL_MODE"
+          description: "Container Variable TUNNELMODE"
           schema:
             type: string
             default: "all"
         - variable: TUNNEL_ROUTES
           label: "TUNNEL_ROUTES"
-          description: "Container Variable TUNNEL_ROUTES"
+          description: "Container Variable TUNNELROUTES"
           schema:
             type: string
             default: ""
         - variable: SPLIT_DNS_DOMAINS
           label: "SPLIT_DNS_DOMAINS"
-          description: "Container Variable SPLIT_DNS_DOMAINS"
+          description: "Container Variable SPLITDNSDOMAINS"
           schema:
             type: string
             default: ""
         - variable: POWER_USER
           label: "POWER_USER"
-          description: "Container Variable POWER_USER"
+          description: "Container Variable POWERUSER"
           schema:
             type: string
             default: "no"
@@ -310,6 +311,7 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: config
           label: "config Storage"
           description: "Container Path config"
@@ -354,7 +356,9 @@ questions:
                       description: "Memory"
 # Include{persistenceAdvanced}
 
+
 # Include{persistenceList}
+
 
   - variable: ingress
     label: ""
@@ -376,7 +380,6 @@ questions:
 # Include{ingressTraefik}
 
 # Include{ingressExpert}
-
 
 # Include{ingressList}
 
@@ -451,3 +454,4 @@ questions:
 # Include{advanced}
 
 # Include{addons}
+

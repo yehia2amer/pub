@@ -83,6 +83,7 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: CUSTOM_RES_W
           label: "CUSTOM_RES_W"
           description: "Enter the preferred resolution width"
@@ -103,13 +104,13 @@ questions:
             default: ""
         - variable: DATA_PERM
           label: "DATA_PERM"
-          description: "Container Variable DATA_PERM"
+          description: "Container Variable DATAPERM"
           schema:
             type: string
             default: "770"
         - variable: USER_LOCALES
           label: "USER_LOCALES"
-          description: "Enter your prefered locales, you can find a full list of supported languages in 'usrsharei18nSUPPORTED' (eg 'en_US.UTF-8 UTF8' or 'de_DE.UTF-8 UTF-8',...)"
+          description: "Enter your prefered locales, you can find a full list of supported languages in 'usrsharei18nSUPPORTED' (eg 'enUS.UTF-8 UTF8' or 'deDE.UTF-8 UTF-8',...)"
           schema:
             type: string
             default: "en_US.UTF-8 UTF-8"
@@ -220,6 +221,7 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: homedirectory
           label: "homedirectory Storage"
           description: "All things that are saved in the container should be in the this or a subdirectory in of this folder, all files that are store outside this folder are not persistant and will be wiped if there is an update of the container or you change something in the template."
@@ -264,7 +266,9 @@ questions:
                       description: "Memory"
 # Include{persistenceAdvanced}
 
+
 # Include{persistenceList}
+
 
   - variable: ingress
     label: ""
@@ -286,7 +290,6 @@ questions:
 # Include{ingressTraefik}
 
 # Include{ingressExpert}
-
 
 # Include{ingressList}
 
@@ -361,3 +364,4 @@ questions:
 # Include{advanced}
 
 # Include{addons}
+

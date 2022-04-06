@@ -83,6 +83,7 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: LANCACHE_IP
           label: "LANCACHE_IP"
           description: "IP Address of cache container. (Has to be the same as the HOST's IP. If you set the container's IP to 192.168.1.202 this has to be the same. If you use bridge it has to be the same as unRAID's IP.)"
@@ -115,7 +116,7 @@ questions:
             default: "150d"
         - variable: UPSTREAM_DNS
           label: "UPSTREAM_DNS"
-          description: "Container Variable UPSTREAM_DNS"
+          description: "Container Variable UPSTREAMDNS"
           schema:
             type: string
             default: "1.1.1.1"
@@ -478,6 +479,7 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
+
         - variable: data
           label: "data Storage"
           description: "Location to store the cached files"
@@ -520,7 +522,8 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: dnslogs
+# Include{persistenceAdvanced}
+        - variable: dnslogs
           label: "dnslogs Storage"
           description: "Location to store the DNS logs"
           schema:
@@ -562,7 +565,8 @@ questions:
                       description: "Default"
                     - value: "Memory"
                       description: "Memory"
-# Include{persistenceAdvanced}        - variable: nginxlogs
+# Include{persistenceAdvanced}
+        - variable: nginxlogs
           label: "nginxlogs Storage"
           description: "Location to store the Nginx logs"
           schema:
@@ -606,7 +610,9 @@ questions:
                       description: "Memory"
 # Include{persistenceAdvanced}
 
+
 # Include{persistenceList}
+
 
   - variable: ingress
     label: ""
@@ -628,7 +634,6 @@ questions:
 # Include{ingressTraefik}
 
 # Include{ingressExpert}
-
 
 # Include{ingressList}
 
@@ -703,3 +708,4 @@ questions:
 # Include{advanced}
 
 # Include{addons}
+
