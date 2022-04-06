@@ -7,7 +7,7 @@ import requests
 import textwrap
 import re
 
-invalid = '<>:"/\|?*$ '
+invalid = '<>:"/\|?*$ ()'
 invalidtext = '<>:"/\|*$'
 blacklistedenvs = ["UID", "GID", "PUID", "PGID", "TZ"]
 puidcheck = ["UID", "GID", "PUID", "PGID"]
@@ -286,6 +286,10 @@ for n in afList:
       for name, value in n["Config"]["Path"].items():
         store = value
         basename = os.path.basename(os.path.normpath(value["Target"]))
+        name = name.lower()
+        for char in invalid:
+          name = name.replace(char, '')
+        
         if basename == "config" and not "config" in pathstore.keys():
           name = "config"
         if basename == "data" and not "data" in pathstore.keys():
