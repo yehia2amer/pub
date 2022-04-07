@@ -7,6 +7,9 @@ import requests
 import textwrap
 import re
 
+## This can be set to True to force use of tccr.io repo instead of normal
+genTCCR = True
+
 invalid = '<>:"/\|?*$ ()+'
 invalidtext = '_<>:"/\|*$+'
 blacklistedenvs = ["UID", "GID", "PUID", "PGID", "TZ"]
@@ -582,11 +585,20 @@ for name, app in combinedfree.items():
   
   # Handle values.yaml
   
-  valuesyaml["image"]["repository"] = app["Repository"]
-  valuesyaml["image"]["tag"] = app["Tag"]
+
+  if genTCCR:
+    valuesyaml["image"]["repository"] = "tccr.io/truecharts/"+name
+  else:
+    valuesyaml["image"]["repository"] = app["Repository"]
+
+  repoList = app["Repository"].split("/")
+  if genTCCR and len(repoList) == 2 and repoList[1]  == "steamcmd":
+    valuesyaml["image"]["tag"] = "latest"
+  else:
+    valuesyaml["image"]["tag"] = app["Tag"]
+  
   valuesyaml["env"] = {}
   
-
   for name, value in app["Config"]["Variable"].items():
     if name and name in puidcheck:
       puidflag = True
