@@ -585,19 +585,19 @@ for name, app in combinedfree.items():
   
   # Handle values.yaml
   
-
+  appvaluesyaml = valuesyaml
   if genTCCR:
-    valuesyaml["image"]["repository"] = "tccr.io/truecharts/"+name
+    appvaluesyaml["image"]["repository"] = "tccr.io/truecharts/"+name
   else:
-    valuesyaml["image"]["repository"] = app["Repository"]
+    appvaluesyaml["image"]["repository"] = app["Repository"]
 
   repoList = app["Repository"].split("/")
   if genTCCR and len(repoList) == 2 and repoList[1]  == "steamcmd":
-    valuesyaml["image"]["tag"] = "latest"
+    appvaluesyaml["image"]["tag"] = "latest"
   else:
-    valuesyaml["image"]["tag"] = app["Tag"]
+    appvaluesyaml["image"]["tag"] = app["Tag"]
   
-  valuesyaml["env"] = {}
+  appvaluesyaml["env"] = {}
   
   for name, value in app["Config"]["Variable"].items():
     if name and name in puidcheck:
@@ -605,81 +605,84 @@ for name, app in combinedfree.items():
     if value["Target"] in puidcheck:
       puidflag = True
     if not name in blacklistedenvs and not value["Target"] in blacklistedenvs:
-      valuesyaml["env"][value["Target"]] = value["value"]
+      appvaluesyaml["env"][value["Target"]] = value["value"]
 
-  valuesyaml["securityContext"] = {}
-  valuesyaml["podSecurityContext"] = {}
+  appvaluesyaml["securityContext"] = {}
+  appvaluesyaml["podSecurityContext"] = {}
   if puidflag:
-    valuesyaml["securityContext"]["readOnlyRootFilesystem"] = False
-    valuesyaml["securityContext"]["runAsNonRoot"] = False
-    valuesyaml["podSecurityContext"]["runAsUser"] = 0
-    valuesyaml["podSecurityContext"]["runAsGroup"] = 0
+    appvaluesyaml["securityContext"]["readOnlyRootFilesystem"] = False
+    appvaluesyaml["securityContext"]["runAsNonRoot"] = False
+    appvaluesyaml["podSecurityContext"]["runAsUser"] = 0
+    appvaluesyaml["podSecurityContext"]["runAsGroup"] = 0
 
   privflag = False
   if "Privileged" in app["Config"].keys() and app["Config"]["Privileged"] and ( app["Config"]["Privileged"] == 'true' or app["Config"]["Privileged"] == 'True' or app["Config"]["Privileged"] == True ):
-    valuesyaml["securityContext"]["privileged"] = True
+    appvaluesyaml["securityContext"]["privileged"] = True
     privflag = True
     
   if "PostArgs" in app["Config"].keys() and app["Config"]["PostArgs"]:
-    valuesyaml["args"] = [app["Config"]["PostArgs"]]
+    appvaluesyaml["args"] = [app["Config"]["PostArgs"]]
 
-  valuesyaml["persistence"] = {}
+  appvaluesyaml["persistence"] = {}
   for name, value in app["Config"]["Path"].items():
-    valuesyaml["persistence"][name] = {}
-    valuesyaml["persistence"][name]["mountPath"] = value["Target"]
-    valuesyaml["persistence"][name]["enabled"] = True
+    appvaluesyaml["persistence"][name] = {}
+    appvaluesyaml["persistence"][name]["mountPath"] = value["Target"]
+    appvaluesyaml["persistence"][name]["enabled"] = True
     if "Mode" in value.keys() and value["Mode"] and value["Mode"] == "ro":
-      valuesyaml["persistence"][name]["readOnly"] = True
+      appvaluesyaml["persistence"][name]["readOnly"] = True
       
-  valuesyaml["service"] = {}
+  appvaluesyaml["service"] = {}
   
   if len(app["Config"]["Port"]) == 0:
-    valuesyaml["service"]["main"] = {}
-    valuesyaml["service"]["main"]["enabled"] = False
-    valuesyaml["service"]["main"]["ports"] = {}
-    valuesyaml["service"]["main"]["ports"]["main"] = {}
-    valuesyaml["service"]["main"]["ports"]["main"]["enabled"] = False
-    valuesyaml["probes"] = {}
-    valuesyaml["probes"]["liveness"] = {}
-    valuesyaml["probes"]["readiness"] = {}
-    valuesyaml["probes"]["startup"] = {}
-    valuesyaml["probes"]["liveness"]["enabled"] = False
-    valuesyaml["probes"]["readiness"]["enabled"] = False
-    valuesyaml["probes"]["startup"]["enabled"] = False
+    appvaluesyaml["service"]["main"] = {}
+    appvaluesyaml["service"]["main"]["enabled"] = False
+    appvaluesyaml["service"]["main"]["ports"] = {}
+    appvaluesyaml["service"]["main"]["ports"]["main"] = {}
+    appvaluesyaml["service"]["main"]["ports"]["main"]["enabled"] = False
     
   else:
     for name, value in app["Config"]["Port"].items():
-      valuesyaml["service"][name] = {}
-      valuesyaml["service"][name]["enabled"] = True
+      appvaluesyaml["service"][name] = {}
+      appvaluesyaml["service"][name]["enabled"] = True
     
-      valuesyaml["service"][name]["ports"] = {}
-      valuesyaml["service"][name]["ports"][name] = {}
-      valuesyaml["service"][name]["ports"][name]["enabled"] = True
-      valuesyaml["service"][name]["ports"][name]["protocol"] = value["Mode"].upper()
+      appvaluesyaml["service"][name]["ports"] = {}
+      appvaluesyaml["service"][name]["ports"][name] = {}
+      appvaluesyaml["service"][name]["ports"][name]["enabled"] = True
+      appvaluesyaml["service"][name]["ports"][name]["protocol"] = value["Mode"].upper()
       if "value" in value.keys() and value["value"]:
-        valuesyaml["service"][name]["ports"][name]["port"] = value["value"]
+        appvaluesyaml["service"][name]["ports"][name]["port"] = value["value"]
       else:
-        valuesyaml["service"][name]["ports"][name]["port"] = value["Target"]
+        appvaluesyaml["service"][name]["ports"][name]["port"] = value["Target"]
       if "Target" in value.keys() and value["Target"]:
-        valuesyaml["service"][name]["ports"][name]["targetPort"] = value["Target"]
+        appvaluesyaml["service"][name]["ports"][name]["targetPort"] = value["Target"]
       else: 
-        valuesyaml["service"][name]["ports"][name]["targetPort"] = value["value"]
+        appvaluesyaml["service"][name]["ports"][name]["targetPort"] = value["value"]
         
-  if "main" not in  valuesyaml["service"].keys() or not valuesyaml["service"]["main" ]:
-      placeholder = next(iter(valuesyaml["service"]))
-      valuesyaml["service"]["main"] = valuesyaml["service"][placeholder]
-      valuesyaml["service"]["main"]["ports"]["main"] = valuesyaml["service"][placeholder]["ports"][placeholder]
-      valuesyaml["service"]["main"]["ports"].pop(placeholder, "")
-      valuesyaml["service"].pop(placeholder, "")
+  if "main" not in  appvaluesyaml["service"].keys() or not appvaluesyaml["service"]["main" ]:
+      placeholder = next(iter(appvaluesyaml["service"]))
+      appvaluesyaml["service"]["main"] = appvaluesyaml["service"][placeholder]
+      appvaluesyaml["service"]["main"]["ports"]["main"] = appvaluesyaml["service"][placeholder]["ports"][placeholder]
+      appvaluesyaml["service"]["main"]["ports"].pop(placeholder, "")
+      appvaluesyaml["service"].pop(placeholder, "")
       
         
-  if  "main" not in  valuesyaml["service"].keys() or not valuesyaml["service"]["main" ]:
+  if  "main" not in  appvaluesyaml["service"].keys() or not appvaluesyaml["service"]["main" ]:
     raise Exception("App does not have a main port set: "+app["Name"] )
 
-  valuesyamlString = yaml.dump(valuesyaml)
-  valuesyamlFile = open("./export/"+"app/"+tmpname+"/values.yaml", "w")
-  valuesyamlFile.write(valuesyamlString)
-  valuesyamlFile.close()
+  if not appvaluesyaml["service"]["main"]["enabled"]:
+    print("NONEE")
+    #appvaluesyaml["probes"] = {}
+    #appvaluesyaml["probes"]["liveness"] = {}
+    #appvaluesyaml["probes"]["readiness"] = {}
+    #appvaluesyaml["probes"]["startup"] = {}
+    #appvaluesyaml["probes"]["liveness"]["enabled"] = False
+    #appvaluesyaml["probes"]["readiness"]["enabled"] = False
+    #appvaluesyaml["probes"]["startup"]["enabled"] = False
+
+  appvaluesyamlString = yaml.dump(appvaluesyaml)
+  appvaluesyamlFile = open("./export/"+"app/"+tmpname+"/values.yaml", "w")
+  appvaluesyamlFile.write(appvaluesyamlString)
+  appvaluesyamlFile.close()
   
   # Handle Questions.yaml
   
@@ -709,7 +712,7 @@ for name, app in combinedfree.items():
   with open("./example/questions-env-fixed.yaml", "r") as f:
       questionsenvfixed = f.readlines()
   with open("./export/"+"app/"+tmpname+"/questions.yaml", "w") as f:
-      if not valuesyaml["service"]["main"]["enabled"]:
+      if not appvaluesyaml["service"]["main"]["enabled"]:
         for line in questions1noportal:
           f.write(line)
       else:
@@ -720,7 +723,7 @@ for name, app in combinedfree.items():
         for line in questionsenvfixed:
           f.write(line)
         f.write("\n")
-        for name, value in valuesyaml["env"].items():
+        for name, value in appvaluesyaml["env"].items():
           for line in questionsenv:
             if "PLACEHOLDERNAME" in line:
               f.write("        - variable: "+name+"\n")
@@ -746,7 +749,7 @@ for name, app in combinedfree.items():
             else:
               f.write(line)
       f.write("\n")
-      if valuesyaml["service"]["main"]["enabled"]:
+      if appvaluesyaml["service"]["main"]["enabled"]:
         for line in questions2:
           if "PLACEHOLDERPORTPORT" in line:
             f.write("                              default: "+str(valuesyaml["service"]["main"]["ports"]["main"]["port"])+"\n")
@@ -757,7 +760,7 @@ for name, app in combinedfree.items():
           else:
             f.write(line)
         f.write("\n")
-        for name, value in valuesyaml["service"].items():
+        for name, value in appvaluesyaml["service"].items():
           if name != "main":
             for line in questions2service:
               if "PLACEHOLDERSVCNAME" in line:
@@ -800,7 +803,7 @@ for name, app in combinedfree.items():
         for line in questions4:
           f.write(line)
         f.write("\n")
-        for name, value in valuesyaml["persistence"].items():
+        for name, value in appvaluesyaml["persistence"].items():
           for line in questions4persistence:
             if "PLACEHOLDERDESCRIPTION" in line:
               for name2, value2  in app["Config"]["Path"].items():
@@ -828,7 +831,7 @@ for name, app in combinedfree.items():
       for line in questions5:
         f.write(line)
       f.write("\n")
-      if valuesyaml["service"]["main"]["enabled"]:
+      if appvaluesyaml["service"]["main"]["enabled"]:
         for line in questions6:
           f.write(line)
       f.write("\n")
@@ -856,4 +859,5 @@ for name, app in combinedfree.items():
         else:
           f.write(line)
       f.write("\n")
+  appvaluesyaml = {}
   
