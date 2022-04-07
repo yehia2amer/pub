@@ -639,6 +639,14 @@ for name, app in combinedfree.items():
     valuesyaml["service"]["main"]["ports"] = {}
     valuesyaml["service"]["main"]["ports"]["main"] = {}
     valuesyaml["service"]["main"]["ports"]["main"]["enabled"] = False
+    valuesyaml["probes"] = {}
+    valuesyaml["probes"]["liveness"] = {}
+    valuesyaml["probes"]["readiness"] = {}
+    valuesyaml["probes"]["startup"] = {}
+    valuesyaml["probes"]["liveness"]["enabled"] = False
+    valuesyaml["probes"]["readiness"]["enabled"] = False
+    valuesyaml["probes"]["startup"]["enabled"] = False
+    
   else:
     for name, value in app["Config"]["Port"].items():
       valuesyaml["service"][name] = {}
