@@ -41,6 +41,7 @@ These defaults can of course be changed, but as we guarantee "sane, working defa
 | technitium                 |     dns-tcp     |     dns-tcp     |  53   |   TCP    |   Potential conflict with k8s-gateway, pihole, mosdns   |
 | technitium                 |     dns-udp     |     dns-udp     |  53   |   UDP    |   Potential conflict with k8s-gateway, pihole, mosdns   |
 | mosdns                     |     dns-udp     |     dns-udp     |  53   |   UDP    | Potential conflict with k8s-gateway, pihole, technitium |
+| zabbix-server              |    snmptraps    |    snmptraps    |  162  |   UDP    |                                                         |
 | openldap                   |      main       |      main       |  389  |   TCP    |                                                         |
 | minisatip                  |      rtsp       |      rtsp       |  554  |   TCP    |                                                         |
 | openldap                   |      ldaps      |      ldaps      |  636  |   TCP    |                                                         |
@@ -373,6 +374,8 @@ These defaults can of course be changed, but as we guarantee "sane, working defa
 | xwiki                      |      main       |      main       | 10208 |   TCP    |                                                         |
 | picoshare                  |      main       |      main       | 10209 |   TCP    |                                                         |
 | linkding                   |      main       |      main       | 10210 |   TCP    |                                                         |
+| zabbix-server              |      main       |      main       | 10211 |   TCP    |                                                         |
+| zabbix-server              |     server      |     server      | 10212 |   TCP    |                                                         |
 | storj-node                 |      main       |      main       | 14002 |   TCP    |                                                         |
 | satisfactory               |     beacon      |     beacon      | 15000 |   UDP    |                                                         |
 | satisfactory               |      query      |      query      | 15777 |   UDP    |                                                         |
