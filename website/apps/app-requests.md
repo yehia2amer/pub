@@ -27,7 +27,6 @@ _This is the old list that was used to track `App Requests` from one place._
 - [ ] Shoko #917
 - [ ] kodbox #965
 - [ ] Zabbix-Agent
-- [ ] Zabbix-Server
 - [ ] Filestash #1000
 - [ ] UISP #1007
 - [ ] Openspeedtest #1018
@@ -79,7 +78,6 @@ _This is the old list that was used to track `App Requests` from one place._
 - [ ] nginx ( Should be called "nginx-webserver" to prevent ingress-provider confusion )
 - [ ] openssh-server ( Maybe call this "openssh-sandbox?" )
 - [ ] rutorrent ( needs another container source and has config complications )
-- [ ] snapdrop ( Not sure about networking requirements/design )
 - [ ] serviio ( very niche, no good containers )
 
 
@@ -126,7 +124,6 @@ _This is the old list that was used to track `App Requests` from one place._
 - [ ] prometheus-nut-exporter ( example helm-chart available from [ k8s-at-home ](https://github.com/k8s-at-home/charts) )
 - [ ] traefik-forward-auth ( example helm-chart available from [ k8s-at-home ](https://github.com/k8s-at-home/charts) )
 - [ ] uptimerobot ( example helm-chart available from [ k8s-at-home ](https://github.com/k8s-at-home/charts) )
-- [ ] vikunja ( example helm-chart available from [ k8s-at-home ](https://github.com/k8s-at-home/charts) )
 - [ ] youtubedl-material ( example helm-chart available from [ k8s-at-home ](https://github.com/k8s-at-home/charts) )
 
 ##### TODO: Requires MongoDB to be added first
@@ -520,3 +517,6 @@ _These Apps have specific requirements or need specific customisation and care_
 - [x] MakeMKV #1469
 - [x] Self Service Password  #1482
 - [x] WeKan #1225
+- [x] Zabbix-Server
+- [x] snapdrop ( Not sure about networking requirements/design )
+- [x] vikunja ( example helm-chart available from [ k8s-at-home ](https://github.com/k8s-at-home/charts) )
