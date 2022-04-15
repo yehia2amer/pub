@@ -376,6 +376,14 @@ These defaults can of course be changed, but as we guarantee "sane, working defa
 | linkding                   |      main       |      main       | 10210 |   TCP    |                                                         |
 | zabbix-server              |      main       |      main       | 10211 |   TCP    |                                                         |
 | zabbix-server              |     server      |     server      | 10212 |   TCP    |                                                         |
+| pinry                      |      main       |      main       | 10213 |   TCP    |                                                         |
+| drawio                     |      main       |      main       | 10214 |   TCP    |                                                         |
+| snapdrop                   |      main       |      main       | 10215 |   TCP    |                                                         |
+| metube                     |      main       |      main       | 10216 |   TCP    |                                                         |
+| appsmith                   |      main       |      main       | 10217 |   TCP    |                                                         |
+| appsmith                   |   supervisor    |   supervisor    | 10218 |   TCP    |                                                         |
+| cyberchef                  |      main       |      main       | 10219 |   TCP    |                                                         |
+| vikunja                    |      main       |      main       | 10220 |   TCP    |                                                         |
 | storj-node                 |      main       |      main       | 14002 |   TCP    |                                                         |
 | satisfactory               |     beacon      |     beacon      | 15000 |   UDP    |                                                         |
 | satisfactory               |      query      |      query      | 15777 |   UDP    |                                                         |
