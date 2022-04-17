@@ -384,6 +384,7 @@ These defaults can of course be changed, but as we guarantee "sane, working defa
 | appsmith                   |   supervisor    |   supervisor    | 10218 |   TCP    |                                                         |
 | cyberchef                  |      main       |      main       | 10219 |   TCP    |                                                         |
 | vikunja                    |      main       |      main       | 10220 |   TCP    |                                                         |
+| website-shot               |      main       |      main       | 10221 |   TCP    |                                                         |
 | storj-node                 |      main       |      main       | 14002 |   TCP    |                                                         |
 | satisfactory               |     beacon      |     beacon      | 15000 |   UDP    |                                                         |
 | satisfactory               |      query      |      query      | 15777 |   UDP    |                                                         |
