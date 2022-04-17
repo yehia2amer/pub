@@ -387,6 +387,7 @@ These defaults can of course be changed, but as we guarantee "sane, working defa
 | website-shot               |      main       |      main       | 10221 |   TCP    |                                                         |
 | ntfy                       |      main       |      main       | 10222 |   TCP    |                                                         |
 | audiobookshelf             |      main       |      main       | 10223 |   TCP    |                                                         |
+| fluidd                     |      main       |      main       | 10224 |   TCP    |                                                         |
 | storj-node                 |      main       |      main       | 14002 |   TCP    |                                                         |
 | satisfactory               |     beacon      |     beacon      | 15000 |   UDP    |                                                         |
 | satisfactory               |      query      |      query      | 15777 |   UDP    |                                                         |
