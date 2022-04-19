@@ -41,6 +41,7 @@ These defaults can of course be changed, but as we guarantee "sane, working defa
 | technitium                 |     dns-tcp     |     dns-tcp     |  53   |   TCP    |   Potential conflict with k8s-gateway, pihole, mosdns   |
 | technitium                 |     dns-udp     |     dns-udp     |  53   |   UDP    |   Potential conflict with k8s-gateway, pihole, mosdns   |
 | mosdns                     |     dns-udp     |     dns-udp     |  53   |   UDP    | Potential conflict with k8s-gateway, pihole, technitium |
+| zabbix-server              |    snmptraps    |    snmptraps    |  162  |   UDP    |                                                         |
 | openldap                   |      main       |      main       |  389  |   TCP    |                                                         |
 | minisatip                  |      rtsp       |      rtsp       |  554  |   TCP    |                                                         |
 | openldap                   |      ldaps      |      ldaps      |  636  |   TCP    |                                                         |
@@ -373,6 +374,23 @@ These defaults can of course be changed, but as we guarantee "sane, working defa
 | xwiki                      |      main       |      main       | 10208 |   TCP    |                                                         |
 | picoshare                  |      main       |      main       | 10209 |   TCP    |                                                         |
 | linkding                   |      main       |      main       | 10210 |   TCP    |                                                         |
+| zabbix-server              |      main       |      main       | 10211 |   TCP    |                                                         |
+| zabbix-server              |     server      |     server      | 10212 |   TCP    |                                                         |
+| pinry                      |      main       |      main       | 10213 |   TCP    |                                                         |
+| drawio                     |      main       |      main       | 10214 |   TCP    |                                                         |
+| snapdrop                   |      main       |      main       | 10215 |   TCP    |                                                         |
+| metube                     |      main       |      main       | 10216 |   TCP    |                                                         |
+| appsmith                   |      main       |      main       | 10217 |   TCP    |                                                         |
+| appsmith                   |   supervisor    |   supervisor    | 10218 |   TCP    |                                                         |
+| cyberchef                  |      main       |      main       | 10219 |   TCP    |                                                         |
+| vikunja                    |      main       |      main       | 10220 |   TCP    |                                                         |
+| website-shot               |      main       |      main       | 10221 |   TCP    |                                                         |
+| ntfy                       |      main       |      main       | 10222 |   TCP    |                                                         |
+| audiobookshelf             |      main       |      main       | 10223 |   TCP    |                                                         |
+| fluidd                     |      main       |      main       | 10224 |   TCP    |                                                         |
+| rss-bridge                 |      main       |      main       | 10225 |   TCP    |                                                         |
+| nocodb                     |      main       |      main       | 10226 |   TCP    |                                                         |
+| ddns-updater               |      main       |      main       | 10227 |   TCP    |                                                         |
 | storj-node                 |      main       |      main       | 14002 |   TCP    |                                                         |
 | satisfactory               |     beacon      |     beacon      | 15000 |   UDP    |                                                         |
 | satisfactory               |      query      |      query      | 15777 |   UDP    |                                                         |
