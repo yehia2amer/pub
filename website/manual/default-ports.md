@@ -391,6 +391,7 @@ These defaults can of course be changed, but as we guarantee "sane, working defa
 | rss-bridge                 |      main       |      main       | 10225 |   TCP    |                                                         |
 | nocodb                     |      main       |      main       | 10226 |   TCP    |                                                         |
 | ddns-updater               |      main       |      main       | 10227 |   TCP    |                                                         |
+| baserow                    |      main       |      main       | 10228 |   TCP    |                                                         |
 | storj-node                 |      main       |      main       | 14002 |   TCP    |                                                         |
 | satisfactory               |     beacon      |     beacon      | 15000 |   UDP    |                                                         |
 | satisfactory               |      query      |      query      | 15777 |   UDP    |                                                         |
