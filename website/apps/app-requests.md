@@ -40,7 +40,6 @@ _This is the old list that was used to track `App Requests` from one place._
 - [ ] ArchiSteamFarm #1164
 - [ ] Docker Registry #1165
 - [ ] Monero #1228
-- [ ] AriaNG #1224
 - [ ] FileBrowser #1278
 - [ ] powerdns
 - [ ] rTorrent #1485
@@ -62,7 +61,6 @@ _This is the old list that was used to track `App Requests` from one place._
 - [ ] Appwrite/Parse Framework #278
 - [ ] GitLab #227
 - [ ] Wordpress #437
-- [ ] Steamcmd & 7 Days to die #599
 - [ ] MovieNight #139 (not a good docker container available)
 - [ ] LanCache #138
 
@@ -112,11 +110,9 @@ _This is the old list that was used to track `App Requests` from one place._
 
 - [ ] wallabag ( example helm-chart available from [ k8s-at-home ](https://github.com/k8s-at-home/charts) )
 
-
 ##### TODO: Requires MariaDB to be added first
 
 - [ ] FreePBX #1111
-
 
 ##### TODO: Requires Prometheus to be added first
 
@@ -520,3 +516,5 @@ _These Apps have specific requirements or need specific customisation and care_
 - [x] Zabbix-Server
 - [x] snapdrop ( Not sure about networking requirements/design )
 - [x] vikunja ( example helm-chart available from [ k8s-at-home ](https://github.com/k8s-at-home/charts) )
+- [x] Steamcmd & 7 Days to die #599
+- [x] AriaNG #1224
